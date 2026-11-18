@@ -79,10 +79,10 @@
       "level": 1,
       "q": "Comment calcule-t-on le coût de production par baril sur une période ?",
       "choices": [
-        "OPEX de la période divisé par les barils produits",
-        "CAPEX de la période divisé par les barils vendus",
-        "Chiffre d'affaires divisé par les barils produits",
-        "Salaires du personnel divisés par le nombre de puits"
+        "OPEX de la période divisé par les barils produits sur la même période",
+        "CAPEX de la période divisé par les barils vendus sur la période",
+        "Chiffre d'affaires divisé par les barils produits sur la période",
+        "Salaires du personnel divisés par le nombre de puits actifs"
       ],
       "answer": 0,
       "explain": "Le coût unitaire rapporte l'OPEX au volume produit. Le CAPEX est un investissement, le chiffre d'affaires un revenu : aucun des deux ne donne le coût de production.",
@@ -95,10 +95,10 @@
       "level": 1,
       "q": "Quelle dépense relève du CAPEX plutôt que de l'OPEX ?",
       "choices": [
-        "Le remplacement d'un joint lors d'une maintenance de routine",
+        "Le remplacement d'un joint lors d'une maintenance de routine sur une pompe",
         "L'achat d'une nouvelle unité de compression pour augmenter la capacité",
-        "Les salaires du personnel d'exploitation",
-        "Le carburant des groupes électrogènes"
+        "Les salaires du personnel d'exploitation et de maintenance du site",
+        "Le carburant consommé par les groupes électrogènes du site chaque mois"
       ],
       "answer": 1,
       "explain": "Le CAPEX finance des immobilisations durables. Les consommables, salaires et énergie sont des dépenses d'exploitation courantes (OPEX).",
@@ -111,10 +111,10 @@
       "level": 2,
       "q": "Un site dépense 4 M$ d'OPEX par mois pour 100 000 barils produits (40 $/baril). Le mois suivant, la production tombe à 80 000 barils avec le même OPEX. Quel est le nouveau coût par baril ?",
       "choices": [
-        "32 $/baril",
-        "40 $/baril",
-        "50 $/baril",
-        "60 $/baril"
+        "32 $/baril (4 M$ / 125 000 barils)",
+        "40 $/baril (OPEX identique, coût inchangé)",
+        "50 $/baril (4 M$ / 80 000 barils)",
+        "60 $/baril (4 M$ / 66 000 barils)"
       ],
       "answer": 2,
       "explain": "4 000 000 / 80 000 = 50 $/baril. L'OPEX étant en grande partie fixe, la baisse de volume fait monter le coût unitaire de 25 %.",
@@ -127,10 +127,10 @@
       "level": 2,
       "q": "Le site affiche un dépassement de l'OPEX par rapport au budget. Quelle est la première démarche du chef de site ?",
       "choices": [
-        "Reporter la maintenance préventive pour rattraper l'écart",
-        "Attendre la clôture de l'exercice pour en parler",
-        "Réduire uniformément tous les budgets de 10 %",
-        "Analyser les causes de l'écart (volume, prix, consommation, périmètre), réestimer l'atterrissage et informer rapidement le siège"
+        "Reporter la maintenance préventive pour rattraper l'écart avant la clôture du trimestre",
+        "Attendre la clôture de l'exercice pour en parler lors de la revue budgétaire annuelle",
+        "Réduire uniformément tous les budgets de 10 % pour absorber le dépassement du trimestre",
+        "Analyser les causes de l'écart, réestimer l'atterrissage et informer rapidement le siège"
       ],
       "answer": 3,
       "explain": "Un écart se comprend avant de se corriger. Le rabot uniforme ou le report de la maintenance préventive transfèrent le coût vers un risque, et se taire retarde la décision.",
@@ -145,10 +145,10 @@
       "img": "photo/control-room.jpg",
       "imgAlt": "Salle de contrôle d'un site de production",
       "choices": [
-        "Accepter les propositions du planificateur : ce sont les cibles les plus rapides",
-        "Prioriser par criticité : réduire d'abord déplacements, consommables et doublons, protéger inspection et formations obligatoires, et présenter au siège le risque des coupes refusées",
-        "Refuser toute économie : la sécurité ne doit jamais coûter moins",
-        "Appliquer la coupe de 10 % sur tous les postes sans distinction"
+        "Accepter les propositions du planificateur : l'inspection et la formation sont les cibles les plus rapides et les moins visibles",
+        "Prioriser par criticité : couper déplacements et consommables, protéger inspection et formations, exposer le risque au siège",
+        "Refuser toute économie : la sécurité ne se négocie pas et le budget initial doit être maintenu en l'état face au siège",
+        "Appliquer la coupe de 10 % sur tous les postes sans distinction, pour rester équitable entre les services et les équipes de quart"
       ],
       "answer": 1,
       "explain": "On coupe d'abord là où le risque est nul, on protège les barrières et on documente ce qu'on refuse. Refuser tout effort n'est pas crédible ; couper sans distinction ou sur l'intégrité transfère le coût vers l'accident.",
@@ -163,10 +163,10 @@
       "img": "svg/finance-bar-chart.svg",
       "imgAlt": "Histogramme : chiffre d'affaires 720 et résultat net 95 millions de FCFA en 2024",
       "choices": [
-        "Environ 7,6 %",
-        "Environ 12,5 %",
-        "Environ 13 %",
-        "Environ 19 %"
+        "Environ 7,6 % (95 / 1 250)",
+        "Environ 12,5 % (90 / 720)",
+        "Environ 13 % (95 / 720)",
+        "Environ 19 % (95 / 500)"
       ],
       "answer": 2,
       "explain": "Marge nette = résultat net / chiffre d'affaires = 95 / 720 ≈ 13,2 %. 12,5 % est la croissance du chiffre d'affaires de 2023 à 2024, un piège classique ; 7,6 % inverse le rapport.",
@@ -179,9 +179,9 @@
       "level": 1,
       "q": "Que mesure l'efficacité de production d'un site ?",
       "choices": [
-        "Le nombre d'employés par baril produit",
-        "Le prix de vente par baril",
-        "Le nombre d'heures de travail du personnel",
+        "Le nombre d'employés rapporté à chaque baril produit sur le site",
+        "Le prix de vente moyen par baril, rapporté au coût de revient",
+        "Le nombre d'heures de travail du personnel rapporté à la production",
         "Le rapport entre la production réelle et la production potentielle"
       ],
       "answer": 3,
@@ -195,10 +195,10 @@
       "level": 3,
       "q": "Un puits à forte production d'eau coûte cher à lever et à traiter. Comment le chef de site doit-il arbitrer son maintien en service ?",
       "choices": [
-        "Comparer coût marginal (levage, traitement, énergie) et revenu marginal ; si le premier dépasse durablement le second, étudier une intervention ou un arrêt",
-        "Le garder en service car tout baril compte",
-        "L'arrêter dès que le taux d'eau dépasse un seuil fixé arbitrairement",
-        "Demander au siège de décider sans fournir de données"
+        "Comparer coût marginal (levage, traitement, énergie) et revenu marginal, puis étudier une intervention ou un arrêt si l'écart dure",
+        "Le garder en service sans analyse : chaque baril compte et améliore le revenu global du site, quel que soit son coût",
+        "L'arrêter dès que son taux d'eau dépasse un seuil unique de 80 % fixé pour tous les puits du champ, sans calcul économique",
+        "Demander au siège de décider à sa place sans lui fournir de données, pour ne pas porter seul la responsabilité d'un arrêt de puits"
       ],
       "answer": 0,
       "explain": "La décision est économique et factuelle : marginal contre marginal, en tenant compte des conséquences sur le réservoir et le procédé. Ni principe aveugle ni délégation sans données.",
@@ -211,10 +211,10 @@
       "level": 2,
       "q": "Avant de payer la facture d'un sous-traitant, quels documents doit-on rapprocher ?",
       "choices": [
-        "La facture et l'offre commerciale initiale",
-        "Le devis et le planning prévisionnel",
-        "La commande, la réception du service et la facture",
-        "La facture et le relevé bancaire du sous-traitant"
+        "La facture et l'offre commerciale initiale du sous-traitant",
+        "Le devis et le planning prévisionnel de l'intervention",
+        "La commande, la réception du service rendu et la facture",
+        "La facture et le relevé d'identité bancaire du sous-traitant"
       ],
       "answer": 2,
       "explain": "Le rapprochement commande, réception, facture évite de payer ce qui n'a pas été commandé ou livré. C'est un contrôle interne de base.",
@@ -229,10 +229,10 @@
       "img": "svg/risk-matrix.svg",
       "imgAlt": "Matrice de risque 5 par 5 : criticité = probabilité × gravité",
       "choices": [
-        "9, en zone moyenne",
-        "5, en zone faible",
-        "25, la valeur maximale de la matrice",
-        "20, en zone critique"
+        "9 (4 + 5), en zone moyenne",
+        "5 (5 × 1), en zone faible",
+        "25 (5 × 5), zone la plus élevée",
+        "20 (4 × 5), en zone critique"
       ],
       "answer": 3,
       "explain": "4 × 5 = 20, en zone critique (15 et plus) : le risque doit être réduit avant de démarrer. 25 serait 5 × 5.",
@@ -245,10 +245,10 @@
       "level": 1,
       "q": "Dans la hiérarchie des mesures de maîtrise, quelle action doit-on envisager en premier ?",
       "choices": [
-        "Éliminer le danger",
-        "Fournir un EPI",
-        "Former le personnel à la prudence",
-        "Mettre un panneau d'avertissement"
+        "Éliminer le danger à la source quand c'est possible",
+        "Fournir un EPI adapté à chaque opérateur concerné",
+        "Former le personnel à la prudence et aux bons gestes",
+        "Mettre un panneau d'avertissement près de la zone"
       ],
       "answer": 0,
       "explain": "On cherche d'abord à supprimer le danger ; l'EPI est la dernière barrière, celle qui reste quand tout le reste a échoué.",
@@ -263,10 +263,10 @@
       "img": "svg/bird-pyramid.svg",
       "imgAlt": "Pyramide de Bird : un accident grave pour des centaines de presque-accidents",
       "choices": [
-        "Preuve que la sécurité est excellente puisqu'aucun accident grave n'a eu lieu",
+        "Preuve que la sécurité est excellente, puisqu'aucun accident grave n'a eu lieu cette année",
         "Signal à exploiter : des situations dangereuses existent et la sécurité n'est pas acquise",
-        "Preuve que les déclarations sont exagérées et doivent être limitées",
-        "Indicateur sans rapport avec la sécurité"
+        "Preuve que les déclarations sont exagérées et qu'il faut en limiter le nombre par équipe",
+        "Indicateur sans rapport avec la sécurité réelle, à ne pas suivre dans les tableaux de bord"
       ],
       "answer": 1,
       "explain": "La base de la pyramide alimente le sommet. Plus de déclarations peut aussi être le signe d'une culture qui s'ouvre ; dans les deux cas, on analyse et on agit.",
@@ -279,10 +279,10 @@
       "level": 3,
       "q": "Un chef de quart propose de relever le seuil d'alarme très haut de niveau d'un séparateur, pour éviter les arrêts intempestifs. Que dit la gestion du changement ?",
       "choices": [
-        "C'est un simple réglage opérationnel qui ne demande aucune démarche",
-        "Il suffit de l'inscrire dans le cahier de quart",
-        "Il peut être décidé oralement par le chef de quart",
-        "C'est un changement qui touche une protection : il passe par la MOC avec évaluation de risque et approbation"
+        "C'est un simple réglage opérationnel qui ne demande aucune démarche formelle particulière",
+        "Il suffit de l'inscrire dans le cahier de quart en informant le chef de service",
+        "Il peut être décidé oralement par le chef de quart si le niveau reste sous la valeur du design",
+        "Il touche une protection : il passe par la MOC avec évaluation des risques et approbation"
       ],
       "answer": 3,
       "explain": "Modifier un seuil de protection peut neutraliser une barrière ; il faut analyser les conséquences et obtenir l'approbation. Un cahier ne remplace pas la MOC.",
@@ -297,10 +297,10 @@
       "img": "photo/storage-tanks.jpg",
       "imgAlt": "Parc de stockage de produits",
       "choices": [
-        "Étiqueter et ranger réellement, faire contrôler les extincteurs, déclarer à l'inspecteur les écarts non corrigés avec un plan d'action daté",
-        "Déplacer les fûts hors de vue pour la visite et corriger plus tard",
-        "Masquer les dates et espérer que l'inspecteur ne les vérifiera pas",
-        "Annuler la visite en invoquant un impératif de production"
+        "Corriger réellement (étiquetage, extincteurs), déclarer à l'inspecteur les écarts restants avec un plan d'action daté",
+        "Déplacer les fûts hors de vue pour la visite, puis étiqueter correctement les produits après le départ de l'inspecteur",
+        "Masquer les dates de contrôle des extincteurs et espérer que l'inspecteur ne les vérifie pas dans le détail",
+        "Annuler la visite en invoquant un impératif de production urgent et reporter à la semaine suivante"
       ],
       "answer": 0,
       "explain": "On corrige vraiment ce qui peut l'être, on déclare le reste avec un plan d'action. Dissimuler constitue une faute grave et détruit la crédibilité du site ; annuler la visite aggrave la situation.",
@@ -313,10 +313,10 @@
       "level": 3,
       "q": "Un sous-traitant se blesse gravement. Le siège, soucieux de ses objectifs annuels, suggère de ne pas le classer dans la catégorie « accident avec arrêt » car le travailleur est sous contrat externe. Que fait le chef de site ?",
       "choices": [
-        "Ne pas classer l'accident pour préserver l'indicateur du site",
-        "Classer et déclarer selon les définitions et la réglementation en vigueur, lancer l'enquête et partager les enseignements",
-        "Attendre la fin de l'année pour décider du classement",
-        "Demander au sous-traitant de déclarer seul l'accident"
+        "Ne pas classer l'accident, pour préserver l'indicateur du site et les objectifs annuels demandés par le siège",
+        "Classer et déclarer selon les définitions et la réglementation, lancer l'enquête et partager les enseignements",
+        "Attendre la fin de l'année pour décider du classement lors de la consolidation du bilan statistique",
+        "Demander au sous-traitant de déclarer seul l'accident à l'autorité et à son assureur, sans passer par le site"
       ],
       "answer": 1,
       "explain": "Le classement suit les définitions, pas les objectifs. Truquer expose légalement le site, prive l'organisation d'enseignements et dégrade la confiance.",
@@ -331,10 +331,10 @@
       "img": "photo/workers-ppe.jpg",
       "imgAlt": "Travailleurs équipés de protections individuelles",
       "choices": [
-        "Relire tous les permis classés du mois",
-        "Interroger uniquement le superviseur HSE",
+        "Relire tous les permis classés du mois et vérifier leurs signatures, leurs dates et leurs annexes",
+        "Interroger le superviseur HSE puis valider ses réponses dans un rapport de synthèse",
         "Observer des travaux en cours sur le terrain et comparer la pratique au permis affiché",
-        "Demander aux sous-traitants de s'auto-évaluer"
+        "Demander aux sous-traitants de s'auto-évaluer et de remettre un rapport de conformité"
       ],
       "answer": 2,
       "explain": "La pratique réelle s'observe sur le terrain. Un audit documentaire ne révèle pas les écarts entre papier et réalité.",
@@ -350,9 +350,9 @@
       "imgAlt": "Consignation : cadenas, étiquette et étapes jusqu'à la vérification d'absence de tension",
       "choices": [
         "La vérification d'absence de tension après l'ouverture et la condamnation",
-        "La peinture de l'armoire électrique",
-        "La pose d'un panneau d'information en salle de contrôle seulement",
-        "Le relevé de température du moteur"
+        "La peinture de l'armoire électrique avant la remise en service du moteur",
+        "La pose d'un panneau d'information en salle de contrôle pendant l'intervention",
+        "Le relevé de la température du moteur avant l'ouverture du sectionneur"
       ],
       "answer": 0,
       "explain": "On ne touche jamais un circuit « parce qu'il est ouvert » : on vérifie l'absence de tension avec un appareil adapté. Le cadenas protège contre la remise en énergie, le test prouve l'absence d'énergie.",
@@ -367,10 +367,10 @@
       "img": "photo/crane-lifting.jpg",
       "imgAlt": "Levage par grue",
       "choices": [
-        "Les accepter, en demandant de les utiliser avec précaution",
+        "Les accepter, en demandant de les utiliser avec précaution et sous surveillance renforcée",
         "Refuser l'usage de ces accessoires tant qu'un certificat valide n'est pas fourni",
-        "Accepter pour cette fois, à condition d'un levage à faible hauteur",
-        "Demander au sous-traitant de signer une décharge"
+        "Accepter pour cette fois, à condition d'un levage à faible hauteur et sans personnel dessous",
+        "Demander au sous-traitant de signer une décharge de responsabilité pour ce seul levage"
       ],
       "answer": 1,
       "explain": "Un accessoire de levage sans contrôle valide n'a pas démontré son aptitude. Retard, précaution ou décharge n'enlèvent pas le risque.",
@@ -383,10 +383,10 @@
       "level": 1,
       "q": "Quelle est la différence entre maintenance préventive et corrective ?",
       "choices": [
-        "La préventive s'effectue seulement la nuit",
-        "La corrective est toujours moins coûteuse",
-        "La préventive est planifiée avant la panne ; la corrective répare après la panne",
-        "Il n'y a aucune différence"
+        "La préventive s'effectue de nuit pour limiter la production, la corrective s'effectue de jour",
+        "La corrective est la moins coûteuse car elle évite les inspections et les arrêts planifiés",
+        "La préventive est planifiée avant la panne pour l'éviter ; la corrective répare après la panne",
+        "Il n'y a aucune différence : les deux désignent les interventions de maintenance du site"
       ],
       "answer": 2,
       "explain": "Le préventif vise à éviter la panne par des tâches planifiées ; le correctif répond à une défaillance déjà survenue.",
@@ -399,9 +399,9 @@
       "level": 1,
       "q": "Sur quelle base classe-t-on les équipements par criticité ?",
       "choices": [
-        "Sur leur prix d'achat",
-        "Sur leur ancienneté uniquement",
-        "Sur la demande du fournisseur",
+        "Sur leur prix d'achat et leur valeur comptable résiduelle dans l'inventaire des immobilisations",
+        "Sur leur ancienneté et leur date de mise en service, quelle que soit leur fonction dans l'unité",
+        "Sur la demande du fournisseur et les recommandations de son manuel de maintenance d'origine",
         "Sur la conséquence d'une défaillance (sécurité, environnement, production) et sa probabilité"
       ],
       "answer": 3,
@@ -419,8 +419,8 @@
       "choices": [
         "Supérieure à la pression maximale admissible, pour éviter les ouvertures intempestives",
         "Inférieure ou égale à la pression maximale admissible de l'équipement protégé",
-        "Égale à la pression atmosphérique",
-        "Réglée librement par l'opérateur"
+        "Égale à la pression atmosphérique, pour que la soupape s'ouvre sans délai",
+        "Réglée librement par l'opérateur selon les besoins de la production du jour"
       ],
       "answer": 1,
       "explain": "La soupape doit s'ouvrir avant que l'équipement dépasse ses limites. La régler au-dessus de la pression admissible supprime sa fonction de protection.",
@@ -433,10 +433,10 @@
       "level": 3,
       "q": "Le backlog des ordres de travail correctifs sur éléments critiques double en six mois. Le planificateur propose de « nettoyer le système » en clôturant administrativement les ordres les plus anciens. Que décide le chef de site ?",
       "choices": [
-        "Accepter : cela améliore l'indicateur rapidement",
-        "Geler les nouveaux ordres de travail le temps de résorber le stock",
-        "Refuser la clôture administrative : réévaluer chaque ordre, prioriser par criticité, exécuter et renforcer les ressources",
-        "Confier la décision aux sous-traitants"
+        "Accepter : cela améliore rapidement l'indicateur et allège le suivi du backlog de maintenance critique du site",
+        "Geler les nouveaux ordres de travail correctifs le temps de résorber tout le stock d'ordres anciens",
+        "Refuser la clôture administrative : réévaluer chaque ordre, prioriser par criticité et renforcer les ressources",
+        "Confier la décision de clôture aux sous-traitants de maintenance, qui sont plus proches du terrain et des équipements"
       ],
       "answer": 2,
       "explain": "Fermer sans exécuter masque le risque sans le réduire. On réévalue ordre par ordre, on traite les plus critiques et on dimensionne les ressources.",
@@ -449,10 +449,10 @@
       "level": 2,
       "q": "Une ligne a une épaisseur actuelle de 10 mm, une épaisseur minimale requise de 6 mm et une vitesse de corrosion de 0,5 mm par an. Quelle est la durée de vie restante estimée ?",
       "choices": [
-        "20 ans",
-        "12 ans",
-        "2 ans",
-        "8 ans"
+        "20 ans : 10 / 0,5",
+        "12 ans : 6 / 0,5",
+        "2 ans : (10 − 6) × 0,5",
+        "8 ans : (10 − 6) / 0,5"
       ],
       "answer": 3,
       "explain": "(10 − 6) / 0,5 = 8 ans. Diviser l'épaisseur totale (20 ans) ou l'épaisseur minimale (12 ans) ignore la marge réellement consommable.",
@@ -465,10 +465,10 @@
       "level": 3,
       "q": "La pompe d'exportation principale présente des vibrations en hausse constante. Un opérateur propose de relever le seuil d'alarme de vibration pour éviter le déclenchement. Que fait le chef de site ?",
       "choices": [
-        "Refuser, faire diagnostiquer la cause, réduire la charge ou basculer sur la pompe de secours si nécessaire",
-        "Relever le seuil de vibration jusqu'à la prochaine maintenance",
-        "Désactiver la protection de vibration pour tenir l'export",
-        "Attendre la panne pour intervenir"
+        "Refuser, faire diagnostiquer la cause, réduire la charge ou basculer sur la pompe de secours",
+        "Relever le seuil de vibration jusqu'à la prochaine maintenance, puis le remettre à sa valeur",
+        "Désactiver la protection de vibration pour tenir l'export et les engagements de livraison du mois",
+        "Attendre la panne pour intervenir et prévoir ensuite le remplacement du palier et de l'accouplement"
       ],
       "answer": 0,
       "explain": "Relever un seuil pour éviter une alarme masque le symptôme et supprime la protection. On cherche la cause, on réduit le risque et on utilise le secours.",
@@ -481,10 +481,10 @@
       "level": 2,
       "q": "Un équipement critique a un délai d'approvisionnement de plusieurs mois pour une pièce clé. Quelle stratégie est la plus saine ?",
       "choices": [
-        "Attendre la panne pour commander",
-        "Réduire les inspections pour économiser",
+        "Attendre la panne pour commander la pièce clé auprès du fabricant, au prix de l'urgence",
+        "Réduire les inspections de l'équipement pour économiser et diminuer le nombre de pièces à commander",
         "Constituer un stock de pièces critiques ou un accord d'approvisionnement adapté à la criticité",
-        "Interdire tout achat de rechanges"
+        "Interdire tout achat de rechanges pour limiter le stock immobilisé et les coûts de stockage"
       ],
       "answer": 2,
       "explain": "Pour un équipement critique à long délai, le coût du stock est inférieur à celui d'un arrêt prolongé. Commander après panne multiplie la perte de production.",
@@ -499,9 +499,9 @@
       "img": "photo/storage-tanks.jpg",
       "imgAlt": "Réservoirs de stockage",
       "choices": [
-        "Une simple ouverture du trou d'homme",
-        "Un contrôle visuel extérieur seulement",
-        "L'entrée d'un opérateur avec un masque cartouche",
+        "Une simple ouverture du trou d'homme et une ventilation naturelle de quelques heures",
+        "Un contrôle visuel extérieur complété par un relevé d'épaisseur par ultrasons depuis l'extérieur",
+        "L'entrée d'un opérateur avec un masque à cartouche et un équipier en surveillance",
         "Vidange, dégazage, ventilation, mesure d'atmosphère et permis d'espace confiné"
       ],
       "answer": 3,
@@ -518,9 +518,9 @@
       "imgAlt": "Diagramme de Gantt d'un arrêt programmé avec chemin critique",
       "choices": [
         "La suite d'activités dont tout retard décale la date de fin de l'arrêt",
-        "La liste des activités les plus dangereuses",
-        "Les travaux les plus coûteux de l'arrêt",
-        "Les activités réalisées par les sous-traitants"
+        "La liste des activités les plus dangereuses, avec leurs permis spécifiques",
+        "Les travaux les plus coûteux de l'arrêt, classés par montant décroissant",
+        "Les activités réalisées par les sous-traitants pendant tout l'arrêt"
       ],
       "answer": 0,
       "explain": "Le chemin critique détermine la durée minimale ; on le suit chaque jour car tout retard s'y répercute directement.",
@@ -533,10 +533,10 @@
       "level": 1,
       "q": "Pourquoi prépare-t-on un arrêt programmé plusieurs mois à l'avance ?",
       "choices": [
-        "Pour réduire la durée des réunions",
+        "Pour réduire le nombre et la durée des réunions de suivi pendant l'arrêt",
         "Pour sécuriser pièces à long délai, ressources, périmètre et plan de sécurité",
-        "Pour que le planning ne soit jamais modifié",
-        "Pour éviter de former le personnel"
+        "Pour que le planning reste figé une fois l'arrêt lancé, sans aucune révision",
+        "Pour éviter de former le personnel et les sous-traitants avant l'arrêt"
       ],
       "answer": 1,
       "explain": "Une préparation tardive conduit à des découvertes, des retards et des risques. Les pièces à long délai et les ressources se réservent tôt.",
@@ -549,10 +549,10 @@
       "level": 3,
       "q": "Que signifie geler le périmètre d'un arrêt et comment traite-t-on un ajout tardif ?",
       "choices": [
-        "Interdire tout ajout, quelle que soit sa criticité",
-        "Accepter tout ajout oral du chef de chantier",
-        "Laisser les sous-traitants ajuster le périmètre",
-        "Fixer la liste des travaux à une date donnée ; tout ajout passe par un processus de changement avec analyse d'impact"
+        "Interdire tout ajout, quelle que soit sa criticité, une fois passée la date de gel du périmètre",
+        "Accepter tout ajout demandé oralement par le chef de chantier si les équipes sont disponibles",
+        "Laisser les sous-traitants ajuster eux-mêmes le périmètre selon l'état réel des équipements",
+        "Fixer la liste des travaux à une date donnée ; tout ajout passe par un changement analysé"
       ],
       "answer": 3,
       "explain": "Un périmètre stable permet de planifier. Les ajouts tardifs restent possibles s'ils sont justifiés et analysés pour leur impact sécurité, coût et délai.",
@@ -567,10 +567,10 @@
       "img": "photo/heavy-equipment-maintenance.jpg",
       "imgAlt": "Équipe de maintenance sur un équipement lourd",
       "choices": [
-        "Réunir une revue go/no-go, étudier les alternatives (réparation, pièce équivalente qualifiée, séquence modifiée) et décider en connaissance de l'impact",
-        "Démarrer l'arrêt comme prévu en espérant que la pièce arrive",
-        "Annuler tous les travaux de l'arrêt",
-        "Faire poser une pièce non qualifiée pour tenir le planning"
+        "Réunir une revue go/no-go, étudier les alternatives qualifiées et décider selon l'impact",
+        "Démarrer l'arrêt comme prévu en espérant que la pièce arrive avant l'opération concernée",
+        "Annuler tous les travaux de l'arrêt et reporter l'ensemble du programme à l'exercice suivant",
+        "Faire poser une pièce non qualifiée pour tenir le planning de l'arrêt et la date de redémarrage"
       ],
       "answer": 0,
       "explain": "La préparation réelle doit être vérifiée avant de démarrer. On évalue alternatives et impacts, quitte à décaler. Poser une pièce non qualifiée est un risque d'intégrité.",
@@ -583,10 +583,10 @@
       "level": 2,
       "q": "Pendant un arrêt, la présence sur le site est multipliée par trois. Quelle priorité HSE est la plus importante ?",
       "choices": [
-        "Réduire le nombre de réunions de sécurité",
+        "Réduire le nombre de réunions de sécurité pour libérer du temps aux équipes de chantier",
         "Induction systématique, contrôle d'accès et coordination quotidienne des permis",
-        "Autoriser les sous-traitants à travailler sans induction pour gagner du temps",
-        "Supprimer la matrice SIMOPS"
+        "Autoriser les sous-traitants à démarrer sans induction pour gagner du temps sur le planning",
+        "Supprimer la matrice SIMOPS pour simplifier la coordination entre les différents chantiers"
       ],
       "answer": 1,
       "explain": "Un afflux de personnel augmente la densité d'activités. Inductions, contrôle d'accès et coordination des permis sont les premières barrières.",
@@ -599,10 +599,10 @@
       "level": 3,
       "q": "Au milieu de l'arrêt, l'ouverture d'un échangeur révèle une corrosion étendue : réparation de plusieurs semaines. Le siège souhaite un redémarrage à la date prévue. Que décide le chef de site ?",
       "choices": [
-        "Remettre en service en réduisant la pression de fonctionnement sans évaluation",
-        "Redémarrer et surveiller en continu",
-        "Évaluer la criticité et l'aptitude au service, ne pas remettre un équipement non apte, traiter le changement de périmètre et informer le siège et, si requis, l'autorité",
-        "Reporter la décision à la fin du trimestre"
+        "Remettre en service en réduisant la pression de fonctionnement, sans évaluation de l'état de corrosion ni calcul",
+        "Redémarrer à la date prévue et surveiller en continu la température, la pression et les vibrations de l'échangeur",
+        "Évaluer l'aptitude au service, ne pas remettre un équipement non apte, gérer le changement de périmètre et informer",
+        "Reporter la décision à la fin du trimestre, le temps d'obtenir le budget de réparation et l'accord du siège"
       ],
       "answer": 2,
       "explain": "La date n'autorise pas à remettre un équipement non apte. On évalue, on décide, on informe. Réduire la pression sans étude ou « surveiller » n'est pas une maîtrise du risque.",
@@ -616,9 +616,9 @@
       "q": "À quoi sert la revue de sécurité avant redémarrage (PSSR) ?",
       "choices": [
         "Confirmer que travaux terminés, protections remises en service, consignations levées et documents à jour",
-        "Valider le budget final de l'arrêt",
-        "Choisir le prochain sous-traitant",
-        "Évaluer la performance individuelle des opérateurs"
+        "Valider le budget final de l'arrêt et clôturer tous les engagements financiers auprès des sous-traitants",
+        "Choisir le prochain sous-traitant de maintenance en comparant ses performances sur l'arrêt et ses prix",
+        "Évaluer la performance individuelle des opérateurs et des superviseurs après l'arrêt programmé"
       ],
       "answer": 0,
       "explain": "La PSSR est la dernière barrière avant la remise sous pression. Elle vérifie que l'installation est dans un état sûr et documenté.",
@@ -631,10 +631,10 @@
       "level": 1,
       "q": "Que désigne la gabonisation dans une entreprise pétrolière ?",
       "choices": [
-        "Le remplacement immédiat de tout le personnel étranger",
-        "Le transfert progressif de postes et de compétences vers des cadres et techniciens nationaux, dans le cadre de la réglementation en vigueur",
-        "La traduction des documents en langue locale",
-        "Le changement de siège social vers le Gabon"
+        "Le remplacement immédiat de tout le personnel étranger du site par des nationaux, sans période de transition",
+        "Le transfert progressif de postes et de compétences vers des cadres nationaux, selon la réglementation",
+        "La traduction de tous les documents techniques et des procédures de l'entreprise dans les langues locales du pays",
+        "Le transfert du siège social de l'entreprise vers le Gabon, avec l'obligation d'y domicilier toute la comptabilité"
       ],
       "answer": 1,
       "explain": "Il s'agit d'une démarche progressive de montée en compétences nationale, encadrée par la réglementation et les engagements pris avec les autorités.",
@@ -647,10 +647,10 @@
       "level": 2,
       "q": "Quelle approche est la plus solide pour réussir la gabonisation d'un poste clé ?",
       "choices": [
-        "Remplacer le titulaire dès que possible, sans formation",
-        "Reporter la démarche jusqu'à la fin du contrat de l'expatrié",
+        "Remplacer le titulaire dès que possible par un cadre national, sans formation préalable du successeur",
+        "Reporter la démarche jusqu'à la fin du contrat de l'expatrié, puis recruter un remplaçant externe",
         "Doubler le poste d'un homologue national avec plan de transfert de compétences daté, évalué et suivi",
-        "Afficher un objectif chiffré sans accompagnement"
+        "Afficher un objectif chiffré de gabonisation dans le rapport annuel, sans plan d'accompagnement"
       ],
       "answer": 2,
       "explain": "Sans formation et suivi, le transfert fragilise la sécurité et décrédibilise la démarche. Le doublage progressif crée des compétences durables.",
@@ -665,10 +665,10 @@
       "img": "photo/office-meeting.jpg",
       "imgAlt": "Réunion d'équipe",
       "choices": [
-        "Laisser les deux collègues régler leur différend entre eux",
-        "Retirer la promotion pour apaiser le climat",
-        "Muter le nouveau superviseur dans une autre équipe",
-        "Rappeler la ligne hiérarchique, rencontrer les deux personnes, clarifier les attentes, accompagner le nouveau superviseur et sanctionner si le comportement persiste"
+        "Laisser les deux collègues régler entre eux leur différend, pour ne pas envenimer le climat de l'équipe de quart",
+        "Retirer la promotion pour apaiser rapidement le climat et rétablir l'ancienne organisation de l'équipe de quart",
+        "Muter le nouveau superviseur dans une autre équipe du site pour éviter tout conflit avec l'expatrié senior",
+        "Rappeler la ligne hiérarchique, rencontrer les deux personnes, accompagner le superviseur et sanctionner si cela persiste"
       ],
       "answer": 3,
       "explain": "Le chef de site protège la ligne hiérarchique et traite le comportement. Laisser pourrir ou retirer la promotion récompense la contestation et fragilise la gabonisation.",
@@ -681,10 +681,10 @@
       "level": 2,
       "q": "Un opérateur ignore plusieurs fois une règle de sécurité. Quelle conduite est la plus appropriée ?",
       "choices": [
-        "Le renvoyer immédiatement sans entretien",
-        "Écouter les faits, rappeler la règle, former, puis appliquer des mesures disciplinaires progressives dans le respect du Code du travail et du règlement intérieur",
-        "Ignorer, car il a de l'ancienneté",
-        "Le sanctionner devant tout le personnel"
+        "Le renvoyer immédiatement sans entretien préalable, pour montrer l'exemple à toutes les équipes du site",
+        "Écouter les faits, rappeler la règle, former, puis sanctionner de façon progressive et dans le cadre légal",
+        "Ignorer les écarts, car son ancienneté et son expérience garantissent qu'il connaît les risques du poste",
+        "Le sanctionner devant tout le personnel du quart pour que l'exemple dissuade les autres opérateurs"
       ],
       "answer": 1,
       "explain": "Un traitement équitable, factuel et progressif est plus efficace et juridiquement plus sûr. L'humiliation publique ou le renvoi sommaire produisent crainte et contentieux.",
@@ -697,10 +697,10 @@
       "level": 3,
       "q": "Les représentants du personnel déposent un préavis de grève sur les primes. Le site produit en continu et plusieurs équipes de quart sont concernées. Que fait le chef de site ?",
       "choices": [
-        "Remplacer les grévistes par du personnel non formé",
-        "Ignorer le préavis jusqu'au jour de la grève",
+        "Remplacer les grévistes par du personnel non formé et non habilité pour maintenir la production continue",
+        "Ignorer le préavis jusqu'au jour de la grève, puis réagir selon le nombre réel de grévistes présents",
         "Ouvrir le dialogue tôt avec la DRH, respecter le cadre légal et préparer la continuité sûre des installations",
-        "Arrêter immédiatement la production sans en informer personne"
+        "Arrêter immédiatement toute la production du site, sans informer la DRH, les autorités ni le siège"
       ],
       "answer": 2,
       "explain": "Le dialogue précoce est un outil de prévention. La continuité doit rester sûre : du personnel non formé crée un risque majeur ; l'arrêt non préparé en crée un autre.",
@@ -713,9 +713,9 @@
       "level": 3,
       "q": "Des heures supplémentaires régulières servent à compenser un sous-effectif sur une équipe de quart. Quelle est la bonne lecture ?",
       "choices": [
-        "C'est une solution durable et économique",
-        "C'est un moyen de motiver le personnel",
-        "C'est sans conséquence sur la sécurité",
+        "C'est une solution durable et économique pour absorber le sous-effectif de l'équipe de quart sur l'année",
+        "C'est un bon moyen de motiver le personnel grâce à la rémunération supplémentaire versée chaque mois",
+        "C'est sans conséquence sur la sécurité tant que le personnel est volontaire et déclare être en forme",
         "C'est un signal de mauvaise planification : fatigue et risque augmentent, il faut ajuster les effectifs"
       ],
       "answer": 3,
@@ -732,9 +732,9 @@
       "imgAlt": "Réunion de travail avec une équipe",
       "choices": [
         "Partager les priorités, les risques du jour et la passation, et faire remonter les difficultés",
-        "Remplacer les rapports écrits de fin de mois",
-        "Évaluer les performances individuelles",
-        "Réduire le nombre de superviseurs"
+        "Remplacer les rapports écrits de fin de mois et la revue mensuelle des indicateurs du site",
+        "Évaluer les performances individuelles de chaque opérateur présent et noter les retards de la veille",
+        "Réduire le nombre de superviseurs nécessaires pour encadrer les équipes de quart sur le site"
       ],
       "answer": 0,
       "explain": "Un briefing cadencé aligne les équipes et révèle les problèmes tôt. Il ne remplace ni les rapports ni les entretiens.",
@@ -747,10 +747,10 @@
       "level": 1,
       "q": "Une communauté riveraine dépose une plainte. Quel est le bon réflexe ?",
       "choices": [
-        "L'ignorer si elle n'est pas formulée par écrit",
-        "La renvoyer vers les autorités sans réponse",
+        "L'ignorer si elle n'est pas formulée par écrit auprès du bureau du site ou de la mairie",
+        "La renvoyer vers les autorités locales compétentes, sans réponse au plaignant ni suivi interne",
         "L'enregistrer, en accuser réception, la traiter dans un délai connu et répondre au plaignant",
-        "Attendre qu'elle se répète pour agir"
+        "Attendre qu'elle se répète plusieurs fois pour agir et mesurer l'ampleur réelle du problème"
       ],
       "answer": 2,
       "explain": "Un mécanisme de plaintes crédible repose sur l'accusé de réception, un délai et un retour. Ignorer ou renvoyer sans réponse nourrit la défiance.",
@@ -763,9 +763,9 @@
       "level": 2,
       "q": "Quand doit-on dialoguer avec les communautés riveraines ?",
       "choices": [
-        "Seulement après un incident",
-        "Seulement lors des inspections officielles",
-        "Jamais : c'est le rôle exclusif de l'État",
+        "Après un incident, afin d'expliquer les mesures prises par le site",
+        "Lors des inspections officielles, en présence des services de l'État concernés",
+        "Pas du tout : c'est le rôle de l'État et non celui de l'exploitant",
         "Régulièrement, y compris hors crise, avec des représentants légitimes"
       ],
       "answer": 3,
@@ -781,10 +781,10 @@
       "img": "photo/pipeline-welding.jpg",
       "imgAlt": "Chantier de soudure sur pipeline",
       "choices": [
-        "Protéger les personnes, arrêter le pompage et isoler la source en sécurité, confiner pour protéger le cours d'eau, alerter autorités et riverains selon la réglementation, puis récupérer et documenter",
-        "Estimer d'abord le volume avant d'arrêter la production, pour ne pas la perdre inutilement",
-        "Attendre l'arrivée des autorités avant toute action",
-        "Laver les hydrocarbures au cours d'eau pour les diluer"
+        "Protéger les personnes, isoler la source en sécurité, confiner la nappe, alerter autorités et riverains, puis récupérer",
+        "Estimer d'abord le volume de la fuite avant d'arrêter le pompage, pour ne pas perdre la production inutilement",
+        "Attendre l'arrivée des autorités et du service environnement avant toute action sur la ligne et sur la source",
+        "Laver les hydrocarbures vers le cours d'eau avec de l'eau sous pression, pour diluer la nappe plus rapidement"
       ],
       "answer": 0,
       "explain": "Personnes, source, confinement, alerte, récupération : tout retard à isoler aggrave la pollution. Estimer avant d'isoler ou attendre les autorités, c'est subir ; laver vers l'eau étend la pollution.",
@@ -797,10 +797,10 @@
       "level": 2,
       "q": "À quoi correspondent les niveaux (tiers) d'un plan antipollution ?",
       "choices": [
-        "À des niveaux d'ancienneté du personnel d'intervention",
-        "À des événements de gravité croissante, avec une capacité de réponse locale, régionale puis nationale ou internationale",
-        "À des niveaux de prix des prestations",
-        "À trois types de produits pétroliers"
+        "À des niveaux d'ancienneté du personnel d'intervention, du technicien débutant au responsable senior",
+        "À des événements de gravité croissante, avec une capacité de réponse locale, régionale puis nationale",
+        "À des niveaux de prix des prestations de dépollution facturées par les sous-traitants spécialisés",
+        "À trois catégories de produits pétroliers déversés : brut, produits raffinés et condensats légers"
       ],
       "answer": 1,
       "explain": "Le niveau de réponse est choisi selon la gravité et la capacité locale. On escalade quand les moyens du site ne suffisent plus, pas selon le désir d'éviter une déclaration.",
@@ -813,10 +813,10 @@
       "level": 3,
       "q": "Un groupe de jeunes d'un village bloque la route d'accès au site pour réclamer des emplois, empêchant une relève et des livraisons. Que fait le chef de site ?",
       "choices": [
-        "Appeler la police pour dégager la route par la force immédiatement",
-        "Promettre des embauches immédiates pour faire lever le blocage",
-        "Ignorer le blocage et attendre qu'il cesse",
-        "Dialoguer avec les représentants légitimes via la cellule communautaire, sécuriser sans escalade, éviter les promesses irréalistes et informer les autorités"
+        "Appeler la police pour dégager immédiatement la route par la force, sans dialogue préalable avec les représentants du village",
+        "Promettre des embauches immédiates aux jeunes présents pour faire lever rapidement le blocage de la route d'accès au site",
+        "Ignorer le blocage et attendre qu'il cesse de lui-même, en reportant relèves et livraisons de plusieurs jours",
+        "Dialoguer avec les représentants légitimes, sécuriser sans escalade, éviter les promesses irréalistes et informer les autorités"
       ],
       "answer": 3,
       "explain": "Le dialogue et la désescalade sont les premiers outils. La force immédiate durcit le conflit ; les promesses intenables créent une crise future ; l'inaction laisse le blocage s'installer.",
@@ -830,9 +830,9 @@
       "q": "Quelle pratique caractérise une bonne relation avec les autorités de tutelle ?",
       "choices": [
         "Informer de manière proactive, tenir les échéances de rapports et désigner des interlocuteurs identifiés",
-        "Ne communiquer qu'en cas de contrôle",
-        "Transmettre uniquement les informations favorables",
-        "Multiplier les interlocuteurs pour gagner du temps"
+        "Ne communiquer qu'en cas de contrôle ou de demande écrite formelle de l'administration de tutelle",
+        "Transmettre prioritairement les informations favorables à l'image du site dans tous les rapports annuels",
+        "Multiplier les interlocuteurs côté site pour gagner du temps dans le traitement des demandes de l'autorité"
       ],
       "answer": 0,
       "explain": "La régularité et la transparence construisent la confiance. Informer partiellement ou tardivement expose le site en cas d'incident.",
@@ -847,10 +847,10 @@
       "img": "photo/flare-stack.jpg",
       "imgAlt": "Torche en fonctionnement sur un site",
       "choices": [
-        "Nier tout changement : la torche brûle toujours un peu",
-        "Comprendre et documenter la cause, informer rapidement riverains et autorité, remettre en service ou réduire les rejets selon le plan et en tirer les enseignements",
-        "Éteindre la torche en urgence sans considération de sécurité",
-        "Attendre que la question disparaisse"
+        "Nier tout changement observé : la torche brûle en permanence et ne justifie aucune réponse particulière aux riverains",
+        "Documenter la cause, informer riverains et autorité, réduire les rejets selon le plan et tirer les enseignements",
+        "Éteindre la torche en urgence pour rassurer les riverains, sans tenir compte de la sécurité du procédé",
+        "Attendre que la question des riverains disparaisse d'elle-même, avant d'engager la moindre communication"
       ],
       "answer": 1,
       "explain": "La torche est un équipement de sécurité : on la maintient si nécessaire. La confiance passe par l'explication, la documentation et un plan de réduction ; éteindre sans sécurité est dangereux.",
@@ -865,10 +865,10 @@
       "img": "photo/storage-tanks.jpg",
       "imgAlt": "Parc de stockage de produits",
       "choices": [
-        "Enfouissement sur place des déchets les moins visibles",
-        "Brûlage à l'air libre pour réduire les volumes",
+        "Enfouissement sur place des déchets les moins visibles, loin des voies d'accès",
+        "Brûlage à l'air libre des déchets pour réduire les volumes à évacuer",
         "Tri, registre, évacuation par des prestataires agréés et traçabilité",
-        "Stockage illimité sans suivi"
+        "Stockage sur site en bennes ouvertes, sans limite de durée ni suivi"
       ],
       "answer": 2,
       "explain": "La traçabilité et le recours à des prestataires autorisés protègent l'environnement et le site. Enfouissement ou brûlage sauvage engagent la responsabilité de l'exploitant.",
@@ -881,10 +881,10 @@
       "level": 3,
       "q": "L'analyseur de l'eau rejetée indique un dépassement de spécification. Un opérateur propose d'injecter de l'eau propre juste avant l'analyseur pour ramener la mesure sous la limite. Que décide le chef de site ?",
       "choices": [
-        "Stopper ou réduire le rejet, stocker ou recirculer, corriger la cause, déclarer l'écart ; ne jamais diluer pour tromper la mesure",
-        "Accepter : la mesure sera conforme et la production continue",
-        "Laisser le rejet se poursuivre jusqu'au prochain contrôle externe",
-        "Débrancher l'analyseur pour la durée du problème"
+        "Réduire le rejet, stocker ou recirculer, corriger la cause et déclarer l'écart sans diluer la mesure",
+        "Accepter : la mesure sera conforme à la limite et la production pourra continuer sans aucun arrêt",
+        "Laisser le rejet se poursuivre jusqu'au prochain contrôle externe prévu par l'autorité de tutelle",
+        "Débrancher l'analyseur pour la durée du problème et ne reprendre la mesure qu'après sa réparation par le fournisseur"
       ],
       "answer": 0,
       "explain": "Diluer pour tromper la mesure est une fraude : le rejet reste polluant. Il faut traiter la cause, stocker ou recirculer et déclarer selon la réglementation.",
@@ -897,10 +897,10 @@
       "level": 2,
       "q": "Quel élément de vérification d'un plan d'urgence est le plus révélateur ?",
       "choices": [
-        "La mise à jour de la page de garde du plan",
-        "La chaîne d'alerte testée la nuit et le week-end, avec exercices incluant les services publics quand c'est utile",
-        "Le nombre de pages du plan",
-        "La liste des diplômes de l'équipe d'intervention"
+        "La mise à jour de la page de garde du plan et de la liste de diffusion des exemplaires papier",
+        "La chaîne d'alerte testée la nuit et le week-end, avec exercices incluant les services publics",
+        "Le nombre de pages du plan d'urgence et de ses annexes techniques mises à jour chaque année",
+        "La liste des diplômes et certificats de chaque membre de l'équipe d'intervention interne du site"
       ],
       "answer": 1,
       "explain": "Un plan n'est utile que s'il fonctionne quand les cadres sont absents. Les exercices testent la chaîne d'alerte et les liens avec les secours.",

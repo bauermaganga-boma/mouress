@@ -84,12 +84,12 @@
       "level": 2,
       "q": "Un vérin de benne a un piston de section 100 cm² et reçoit une pression de 200 bar. Quelle force pousse-t-il environ ?",
       "choices": [
-        "200 kN (environ 20 tonnes-force)",
-        "20 kN",
-        "2 000 kN",
-        "100 kN"
+        "20 kN, soit environ 2 tonnes-force",
+        "2 000 kN, soit environ 200 tonnes-force",
+        "100 kN, soit environ 10 tonnes-force",
+        "200 kN, soit environ 20 tonnes-force"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "F = P × S = 20 MPa × 0,01 m² = 200 000 N = 200 kN, soit environ 20 tonnes-force. Attention aux unités : 200 bar = 20 MPa et 100 cm² = 0,01 m².",
       "seconds": 70,
       "status": "draft"
@@ -100,12 +100,12 @@
       "level": 1,
       "q": "Dans un circuit hydraulique, d'où naît la pression ?",
       "choices": [
-        "De la pompe seule, quelle que soit la charge",
-        "Du réservoir surélevé",
-        "De la température de l'huile",
-        "De la résistance opposée à l'écoulement du débit fourni par la pompe"
+        "De la pompe seule, qui impose sa pression quelle que soit la charge",
+        "De la résistance opposée au débit que fournit la pompe (charge, restriction)",
+        "De la hauteur d'huile dans le réservoir, qui pèse sur l'aspiration",
+        "De la température de l'huile, qui dilate le fluide dans les conduites"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "La pompe fournit un débit ; la pression apparaît quand ce débit rencontre une charge ou une restriction. Sans résistance, il n'y a presque pas de pression.",
       "seconds": 40,
       "status": "draft"
@@ -118,12 +118,12 @@
       "img": "photo/heavy-equipment-maintenance.jpg",
       "imgAlt": "Mécaniciens intervenant sur un engin lourd en atelier",
       "choices": [
-        "Dans chaque vérin séparément",
-        "Dans le circuit d'huile moteur",
-        "Dans les éléments communs : pompe, limiteur de pression principal, niveau d'huile et aspiration (crépine, prise d'air)",
-        "Dans le joint de chaque flexible du godet"
+        "Les éléments communs : pompe, limiteur principal, niveau d'huile",
+        "Chaque vérin séparément, en démontant d'abord celui de la flèche",
+        "Le circuit d'huile moteur, notamment la pompe à huile et le filtre",
+        "Les flexibles du godet, en contrôlant chaque joint et chaque raccord"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Quand toutes les fonctions faiblissent ensemble, la cause est dans un élément commun à tout le circuit. Un défaut sur une seule fonction pointerait vers son vérin, son distributeur ou ses flexibles.",
       "seconds": 60,
       "status": "draft"
@@ -134,12 +134,12 @@
       "level": 2,
       "q": "Une pompe hydraulique siffle, l'huile du réservoir est mousseuse et les mouvements sont saccadés. Quelle est la cause la plus probable ?",
       "choices": [
-        "Un filtre de retour neuf",
-        "Une prise d'air ou une crépine d'aspiration colmatée (aération ou cavitation de la pompe)",
-        "Une huile trop propre",
-        "Un vérin trop lubrifié"
+        "Un filtre de retour neuf qui augmente la perte de charge au retour",
+        "Une huile trop propre qui manque d'additifs de lubrification",
+        "Une prise d'air ou une crépine d'aspiration colmatée (cavitation)",
+        "Un vérin trop graissé dont la graisse passe dans le circuit"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Mousse, sifflement et saccades sont les symptômes classiques d'une aspiration défaillante : l'air entre dans le circuit ou la pompe est mal alimentée.",
       "seconds": 55,
       "status": "draft"
@@ -150,12 +150,12 @@
       "level": 3,
       "q": "L'huile hydraulique d'un engin atteint 95 °C en fin de poste, bien au-dessus de la plage du constructeur. Quelle cause est plausible ?",
       "choices": [
-        "Un niveau d'huile trop élevé",
-        "Un radiateur d'huile encrassé de poussière ou une fuite interne (laminage au limiteur) qui transforme l'énergie en chaleur",
-        "Un filtre à air neuf",
-        "Une pression de pneus trop basse"
+        "Un radiateur d'huile encrassé ou une fuite interne au limiteur de pression",
+        "Un niveau d'huile trop élevé dans le réservoir, qui réduit le volume d'air libre",
+        "Un filtre à air moteur neuf, qui modifie le débit d'admission du moteur",
+        "Une pression de pneus trop basse, qui augmente la charge sur les pompes"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "Une huile trop chaude traduit un refroidissement insuffisant ou une dissipation d'énergie anormale (fuite interne, limiteur ouvert). Elle dégrade huile et joints.",
       "seconds": 55,
       "status": "draft"
@@ -168,12 +168,12 @@
       "img": "svg/ppe-icons.svg",
       "imgAlt": "Pictogrammes d'équipements de protection individuelle",
       "choices": [
-        "Machine arrêtée et dépressurisée, ou avec un carton ou une planchette ; jamais avec la main",
-        "En passant la main le long du flexible",
-        "En approchant le visage pour entendre le sifflement",
-        "En serrant le raccord moteur en marche"
+        "En passant la main le long du flexible, avec un gant épais en cuir",
+        "Machine arrêtée et dépressurisée, en s'aidant d'un carton ou d'une planchette",
+        "En approchant le visage pour entendre le sifflement, lunettes portées",
+        "En serrant le raccord à la clé, moteur en marche et circuit sous pression"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Un jet fin sous haute pression peut traverser la peau (injection d'huile) : urgence médicale. On repère la fuite avec un carton, machine à l'arrêt si possible.",
       "seconds": 45,
       "status": "draft"
@@ -186,12 +186,12 @@
       "img": "photo/heavy-equipment-maintenance.jpg",
       "imgAlt": "Mécaniciens intervenant sur un engin lourd en atelier",
       "choices": [
-        "Débrancher moteur tournant pour garder la pression",
-        "Desserrer lentement en restant dans l'axe du raccord",
-        "Lever la flèche pour dégager l'accès",
-        "Poser l'équipement au sol ou le bloquer mécaniquement, arrêter le moteur, dissiper la pression résiduelle puis consigner"
+        "Débrancher moteur tournant, afin de garder toute la pression dans le circuit",
+        "Lever la flèche en butée pour dégager l'accès au raccord à débrancher",
+        "Poser l'équipement au sol, arrêter le moteur, dépressuriser, consigner",
+        "Desserrer lentement le raccord en restant dans l'axe du flexible"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "L'énergie hydraulique résiduelle et la charge suspendue sont dangereuses : l'équipement est immobilisé, dépressurisé et consigné avant toute ouverture.",
       "seconds": 55,
       "status": "draft"
@@ -202,12 +202,12 @@
       "level": 2,
       "q": "Sur un filtre de retour, l'indicateur de colmatage est au rouge au démarrage à froid mais repasse au vert après chauffage de l'huile. Que conclure ?",
       "choices": [
-        "Le filtre est détruit : il faut le remplacer systématiquement",
-        "Le manomètre est faux et doit être débranché",
-        "L'huile froide, plus visqueuse, a fait déclencher l'indicateur ; s'il est vert à chaud, le filtre n'est pas forcément colmaté",
-        "L'huile est contaminée par de l'eau"
+        "Le filtre est détruit et doit être remplacé systématiquement dès le démarrage",
+        "Le manomètre est faux et peut être débranché pour éviter les alarmes",
+        "L'huile est contaminée par de l'eau, ce qui colmate l'élément à froid",
+        "La viscosité à froid fausse l'indication ; on juge à chaud avant de changer"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "La viscosité élevée à froid augmente la perte de charge et peut déclencher l'indicateur. On juge à température de service avant de changer l'élément.",
       "seconds": 55,
       "status": "draft"
@@ -218,12 +218,12 @@
       "level": 2,
       "q": "Avec quel gaz précharge-t-on un accumulateur hydraulique à vessie ?",
       "choices": [
-        "L'oxygène",
-        "L'air comprimé de l'atelier",
-        "L'azote sec",
-        "L'acétylène"
+        "L'air comprimé de l'atelier, facile à obtenir",
+        "L'oxygène pur, pour une meilleure élasticité",
+        "Le dioxyde de carbone, tiré d'un extincteur",
+        "L'azote sec, gaz neutre et sans risque"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Seul l'azote sec convient : l'oxygène ou l'air comprimé avec de l'huile sous pression peuvent provoquer une explosion.",
       "seconds": 40,
       "status": "draft"
@@ -234,10 +234,10 @@
       "level": 3,
       "q": "Pour « gagner de la puissance », un limiteur de pression principal réglé à 280 bar est remonté à 330 bar. Quel est le risque ?",
       "choices": [
-        "Aucun : les composants sont toujours surdimensionnés de 50 %",
-        "Surcharge des composants (flexibles, vérins, pompe, structure), usure prématurée voire éclatement",
-        "Moins de chaleur dans le circuit",
-        "Une durée de vie accrue de la pompe"
+        "Aucun risque : tous les composants sont dimensionnés avec une marge de 50 %",
+        "Surcharge des composants (flexibles, vérins, pompe), usure ou éclatement",
+        "Une baisse de température du circuit grâce à un débit mieux réparti",
+        "Une durée de vie accrue de la pompe grâce à un meilleur rendement"
       ],
       "answer": 1,
       "explain": "Le réglage du limiteur est dimensionné pour protéger l'ensemble. Le dépasser contraint tous les composants au-delà de leurs limites et fait aussi monter la chaleur.",
@@ -250,12 +250,12 @@
       "level": 1,
       "q": "Comment le carburant s'enflamme-t-il dans un moteur diesel ?",
       "choices": [
-        "Par la chaleur de l'air fortement comprimé, sans étincelle",
-        "Par une bougie d'allumage",
-        "Par un arc électrique du démarreur",
-        "Par frottement de la culasse"
+        "Par une bougie d'allumage dont l'étincelle enflamme le mélange",
+        "Par l'arc électrique du démarreur transmis à la chambre de combustion",
+        "Par la chaleur de l'air fortement comprimé dans le cylindre, sans étincelle",
+        "Par le frottement du piston contre la culasse à chaque course"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "La compression échauffe l'air au-delà de la température d'auto-inflammation du gazole. Les bougies de préchauffage n'aident qu'au démarrage à froid.",
       "seconds": 40,
       "status": "draft"
@@ -266,12 +266,12 @@
       "level": 1,
       "q": "Pourquoi purge-t-on régulièrement l'eau du préfiltre à carburant ?",
       "choices": [
-        "Pour augmenter l'indice de cétane",
-        "Pour éviter que le réservoir déborde",
-        "Pour refroidir le carburant",
-        "L'eau et les sédiments endommagent la pompe d'injection et les injecteurs"
+        "Parce que l'eau et les sédiments détruisent pompe d'injection et injecteurs",
+        "Pour augmenter le pouvoir calorifique du gazole stocké dans le réservoir principal",
+        "Pour éviter que le réservoir déborde par dilatation du carburant au soleil",
+        "Pour refroidir le carburant avant son passage dans la pompe d'injection"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Les systèmes d'injection modernes sont très sensibles à l'eau : corrosion, perte de lubrification et destruction rapide des injecteurs.",
       "seconds": 40,
       "status": "draft"
@@ -284,12 +284,12 @@
       "img": "photo/haul-truck.jpg",
       "imgAlt": "Camion de mine à benne sur une piste de carrière",
       "choices": [
-        "Couper immédiatement le moteur et ouvrir le bouchon du radiateur",
-        "Continuer la montée : la température baissera au sommet",
-        "Verser de l'eau froide sur le moteur chaud",
-        "Réduire la charge, s'arrêter en sécurité, laisser tourner au ralenti pour évacuer la chaleur, puis chercher la cause moteur refroidi"
+        "Couper immédiatement le moteur et ouvrir le bouchon pour refroidir plus vite",
+        "Réduire la charge, s'arrêter en sécurité, laisser tourner au ralenti, chercher la cause",
+        "Continuer la montée jusqu'au sommet, la température baissera ensuite à vide",
+        "Verser de l'eau froide sur le moteur chaud pour accélérer son refroidissement"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "On limite l'échauffement en réduisant la charge et l'on évacue la chaleur au ralenti. Ouvrir un bouchon chaud expose à des projections brûlantes ; l'eau froide peut fissurer la culasse.",
       "seconds": 60,
       "status": "draft"
@@ -300,12 +300,12 @@
       "level": 2,
       "q": "Dans une mine poussiéreuse, quelle est la cause la plus fréquente d'une surchauffe qui s'installe progressivement ?",
       "choices": [
-        "Un filtre à carburant neuf",
-        "Un réservoir trop plein",
-        "Un radiateur ou refroidisseur encrassé de poussière",
-        "Un écrou de roue desserré"
+        "Un radiateur ou refroidisseur colmaté de poussière sur ses ailettes",
+        "Un filtre à carburant neuf qui restreint légèrement le débit au moteur",
+        "Un niveau d'huile moteur trop haut dans le carter d'huile",
+        "Un thermostat neuf resté en position ouverte en permanence"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "La poussière colmate les ailettes et réduit l'échange thermique. Le nettoyage régulier des radiateurs est un point clé du préventif en mine.",
       "seconds": 45,
       "status": "draft"
@@ -316,12 +316,12 @@
       "level": 2,
       "q": "Fumée blanche persistante à l'échappement et niveau de liquide de refroidissement qui baisse sans fuite visible. Quelle cause suspecter ?",
       "choices": [
-        "Un filtre à air colmaté",
-        "Une fuite de liquide vers la chambre de combustion (joint de culasse, culasse fissurée)",
-        "Une huile trop épaisse",
-        "Un excès d'air d'admission"
+        "Un filtre à air colmaté qui appauvrit le mélange à l'admission du moteur",
+        "Une huile moteur trop épaisse qui brûle lentement dans les cylindres",
+        "Une fuite de liquide vers la chambre de combustion (joint de culasse)",
+        "Un excès d'air d'admission fourni par un turbo trop performant au moteur"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "La fumée blanche persistante est de la vapeur de liquide de refroidissement brûlée : le liquide passe dans la chambre. Un filtre à air colmaté donnerait plutôt une fumée noire.",
       "seconds": 55,
       "status": "draft"
@@ -332,12 +332,12 @@
       "level": 3,
       "q": "Sur la jauge, l'huile moteur a un aspect laiteux, comme une mayonnaise. Que faire ?",
       "choices": [
-        "Arrêter le moteur : de l'eau ou du liquide de refroidissement est entré dans l'huile ; chercher la cause avant tout redémarrage",
-        "Continuer le poste puis vidanger",
-        "Ajouter de l'huile jusqu'au repère",
-        "Remplacer simplement le bouchon de remplissage"
+        "Continuer le poste en surveillant le niveau, puis vidanger en fin de poste",
+        "Ajouter de l'huile propre jusqu'au repère maxi pour diluer l'émulsion",
+        "Remplacer le bouchon de remplissage dont le joint laisse passer l'humidité",
+        "Arrêter le moteur : de l'eau est entrée dans l'huile ; chercher la cause"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "Une émulsion signale une entrée d'eau (refroidisseur d'huile, joint de culasse). Une huile ainsi contaminée ne lubrifie plus correctement et détruit les paliers.",
       "seconds": 55,
       "status": "draft"
@@ -348,12 +348,12 @@
       "level": 3,
       "q": "Sur un moteur common rail, quelle précaution faut-il prendre avant de desserrer une ligne haute pression ?",
       "choices": [
-        "Arrêter le moteur et attendre le délai de dépressurisation indiqué par le constructeur",
-        "Desserrer moteur au ralenti pour purger",
-        "Desserrer progressivement en restant face au raccord",
-        "Pas de précaution : à l'arrêt la pression est nulle immédiatement"
+        "Desserrer la ligne moteur au ralenti pour purger la pression progressivement",
+        "Desserrer par à-coups en restant face au raccord pour surveiller la fuite",
+        "Arrêter le moteur et attendre le délai de dépressurisation fixé par le constructeur",
+        "Aucun délai nécessaire, la pression du rail étant nulle dès l'arrêt du moteur"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "La pression du rail reste élevée un moment après l'arrêt : un jet de gazole sous haute pression peut blesser gravement. Le délai exact est dans le manuel.",
       "seconds": 55,
       "status": "draft"
@@ -364,12 +364,12 @@
       "level": 3,
       "q": "Pourquoi laisse-t-on généralement tourner un moteur turbocompressé au ralenti quelques minutes après un effort soutenu avant de l'arrêter ?",
       "choices": [
-        "Pour recharger complètement les batteries",
-        "Pour que le carburant refroidisse dans le réservoir",
-        "Pour purger l'air du circuit de freinage",
-        "Le turbo reste lubrifié et refroidi ; un arrêt brutal peut cokéfier l'huile dans ses paliers"
+        "Pour recharger complètement les batteries après les nombreux démarrages du poste",
+        "Le turbo reste lubrifié et refroidi ; l'huile ne cokéfie pas dans ses paliers",
+        "Pour que le carburant chaud refroidisse dans le réservoir avant le redémarrage",
+        "Pour purger l'air du circuit de freinage avant la prochaine descente"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "Le turbo tourne à très haute vitesse et chauffe fortement. Arrêter le moteur coupe la lubrification alors que le turbo est encore chaud : l'huile se dégrade et ses paliers s'usent.",
       "seconds": 60,
       "status": "draft"
@@ -380,12 +380,12 @@
       "level": 1,
       "q": "Système 24 V : au démarrage, la tension aux bornes des batteries chute à 14 V et le démarreur tourne lentement. Que contrôler d'abord ?",
       "choices": [
-        "Le niveau d'huile hydraulique",
-        "Les gicleurs du circuit de refroidissement",
-        "L'état de charge des batteries et le serrage ou la corrosion des cosses (test en charge)",
-        "La pression des pneus"
+        "L'état de charge des batteries et le serrage ou la corrosion des cosses",
+        "Le niveau d'huile hydraulique et l'état du filtre de retour au réservoir",
+        "Les gicleurs du circuit de refroidissement et le niveau de liquide",
+        "La pression des pneus et le serrage des écrous de roue avant"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Une chute marquée de tension au démarrage pointe vers des batteries faibles ou une mauvaise connexion. On teste avant de condamner le démarreur.",
       "seconds": 50,
       "status": "draft"
@@ -396,12 +396,12 @@
       "level": 1,
       "q": "À quoi sert le convertisseur de couple d'une transmission d'engin ?",
       "choices": [
-        "À refroidir l'huile du moteur",
-        "À transmettre la puissance du moteur à la boîte, multiplier le couple à bas régime et amortir les à-coups",
-        "À régler la pression des pneus",
-        "À stocker de l'énergie pour le freinage"
+        "À refroidir l'huile moteur et à la filtrer avant son retour au carter",
+        "À régler la pression de gonflage des pneus selon la charge de l'engin",
+        "À stocker de l'énergie au freinage pour la restituer à l'accélération",
+        "À transmettre la puissance et multiplier le couple à bas régime"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Le convertisseur est un coupleur hydrocinétique : il remplace l'embrayage, multiplie le couple à bas régime et filtre les chocs.",
       "seconds": 40,
       "status": "draft"
@@ -414,12 +414,12 @@
       "img": "photo/haul-truck.jpg",
       "imgAlt": "Camion de mine à benne sur une piste de carrière",
       "choices": [
-        "Pour économiser le carburant uniquement",
-        "Pour limiter l'échauffement des freins de service, qui perdent leur efficacité en cas de surchauffe (fading)",
-        "Pour user plus vite les pneus",
-        "Parce que les freins de service sont interdits en descente"
+        "Pour réduire la consommation de graisse des roulements de roue en rampe",
+        "Parce que la réglementation minière interdit les freins de service en descente",
+        "Pour limiter la surchauffe des freins de service et leur perte d'efficacité",
+        "Pour répartir l'usure des pneus entre les essieux avant et arrière"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Sur de longues descentes, l'énergie à dissiper est considérable. Le ralentisseur et le frein moteur la prennent en charge et préservent les freins pour les arrêts.",
       "seconds": 55,
       "status": "draft"
@@ -430,12 +430,12 @@
       "level": 3,
       "q": "Un camion tire vers la gauche au freinage. Quel défaut est le plus plausible ?",
       "choices": [
-        "Un frein du côté droit qui freine insuffisamment (usure, fuite, réglage) comparé au côté gauche",
-        "Un frein du côté gauche qui ne freine plus",
-        "Un excès de pression dans tous les pneus",
-        "Un niveau d'huile moteur trop élevé"
+        "Un frein du côté gauche qui ne freine plus, à cause d'une fuite ou d'une usure",
+        "Un frein côté droit qui freine insuffisamment (usure, fuite, réglage)",
+        "Un excès de pression dans tous les pneus, qui réduit l'adhérence au freinage",
+        "Un différentiel dont l'huile est trop visqueuse à froid sur les ponts arrière"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Le véhicule tire du côté qui freine le plus : le côté gauche freine plus que le droit, donc le frein droit est déficient (ou le gauche trop actif). Un frein gauche qui ne freine plus ferait tirer à droite.",
       "seconds": 65,
       "status": "draft"
@@ -446,10 +446,10 @@
       "level": 1,
       "q": "Pourquoi un frein de stationnement à ressort appliqué et desserrage par pression est-il considéré comme sûr ?",
       "choices": [
-        "Il ne s'use jamais",
-        "Il se desserre automatiquement en cas de panne",
-        "Il fonctionne sans ressort ni pression",
-        "Une perte de pression l'applique automatiquement : le frein est appliqué par défaut"
+        "Il ne s'use jamais, car le ressort remplace les garnitures de friction",
+        "Il se desserre automatiquement en cas de panne pour libérer la machine",
+        "Il fonctionne sans ressort, par la seule pression du circuit hydraulique",
+        "Une perte de pression applique automatiquement le frein : il est serré par défaut"
       ],
       "answer": 3,
       "explain": "C'est une sécurité intrinsèque : en cas de fuite ou de panne de pression, le ressort serre le frein et immobilise l'engin.",
@@ -462,12 +462,12 @@
       "level": 2,
       "q": "Que provoque une chenille trop tendue sur un train de roulement ?",
       "choices": [
-        "Un déchaussement de la chenille",
-        "Pas de conséquence : plus c'est tendu, mieux c'est",
-        "Une usure accélérée des axes, bagues, galets et barbotin, et une surcharge des paliers",
-        "Un meilleur rendement sans usure"
+        "Une usure accélérée des axes, bagues, galets et barbotin",
+        "Un déchaussement de la chenille dans les virages et en pente",
+        "Un meilleur rendement de traction sans effet notable sur l'usure",
+        "Sans conséquence : plus la chenille est tendue, mieux elle tient"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Une tension excessive augmente les frottements et les efforts sur toute la chaîne. Une chenille trop lâche, au contraire, risque de se déchausser.",
       "seconds": 50,
       "status": "draft"
@@ -480,12 +480,12 @@
       "img": "photo/haul-truck.jpg",
       "imgAlt": "Camion de mine à benne sur une piste de carrière",
       "choices": [
-        "Sa pression maximale de gonflage",
-        "Son diamètre en mètres",
-        "Sa capacité thermique : charge moyenne multipliée par vitesse moyenne ; la dépasser fait surchauffer le pneu",
-        "Sa résistance à la perforation"
+        "Sa pression maximale de gonflage admissible à froid sur la jante de l'engin",
+        "Sa capacité thermique (charge × vitesse moyennes), limite de surchauffe",
+        "Sa résistance à la perforation et à la coupure par les roches du chantier",
+        "Sa durée de vie théorique exprimée en kilomètres parcourus sur piste"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "TKPH = tonnes × km/h : il traduit la quantité de chaleur que le pneu peut évacuer. Au-delà, la température interne monte et le pneu se détruit.",
       "seconds": 60,
       "status": "draft"
@@ -498,12 +498,12 @@
       "img": "svg/ppe-icons.svg",
       "imgAlt": "Pictogrammes d'équipements de protection individuelle",
       "choices": [
-        "Desserrer les écrous pneu gonflé pour garder la roue en place",
         "Dégonfler complètement le pneu et rester hors de l'axe de la jante",
-        "Frapper la jante au marteau pour la décoller",
-        "Chauffer la jante pour la dilater"
+        "Desserrer les écrous le pneu gonflé pour garder la roue en place",
+        "Frapper la jante au maillet pour décoller la roue de son moyeu",
+        "Chauffer la jante au chalumeau pour la dilater et la libérer"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "L'énergie d'un pneu gonflé est considérable : un éclatement ou une projection de jante est mortel. Le dégonflage complet et le placement hors de l'axe sont des règles de base.",
       "seconds": 55,
       "status": "draft"
@@ -516,12 +516,12 @@
       "img": "photo/heavy-equipment-maintenance.jpg",
       "imgAlt": "Mécaniciens intervenant sur un engin lourd en atelier",
       "choices": [
-        "Ne pas continuer : prélever l'huile pour analyse et rechercher l'usure d'engrenages ou de roulements avant remise en service",
-        "Nettoyer le bouchon et le remettre sans autre action",
-        "Ajouter de l'huile",
-        "Passer à une huile plus fluide"
+        "Nettoyer le bouchon et le remettre, la limaille étant normale en rodage",
+        "Ajouter de l'huile jusqu'au maxi pour diluer les particules métalliques",
+        "Prélever l'huile pour analyse et chercher l'usure des engrenages",
+        "Passer à une huile plus fluide pour mieux évacuer les copeaux"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "Une fine limaille est normale ; des copeaux ou éclats signalent une avarie en cours. Continuer risque une casse majeure et coûteuse.",
       "seconds": 55,
       "status": "draft"
@@ -532,9 +532,9 @@
       "level": 1,
       "q": "Pourquoi la pression de gonflage d'un pneu doit-elle être correcte ?",
       "choices": [
-        "Elle n'a aucun effet sur la durée de vie du pneu",
-        "Elle ne concerne que le confort du conducteur",
-        "Plus elle est basse, plus le pneu dure",
+        "Elle n'influence que le confort du conducteur, pas la durée du pneu",
+        "Plus elle est basse, plus l'adhérence et la durée du pneu augmentent",
+        "Elle ne compte que pour les pneus de voiture, pas pour ceux d'engins",
         "Sous-gonflé, le pneu chauffe ; surgonflé, il se coupe et s'use au centre"
       ],
       "answer": 3,
@@ -548,10 +548,10 @@
       "level": 1,
       "q": "Que signifie 15W-40 sur un bidon d'huile moteur ?",
       "choices": [
-        "15 % d'additif et 40 % d'huile de base",
-        "Huile à changer tous les 15 000 puis 40 000 km",
-        "Huile utilisable uniquement entre 15 et 40 °C",
-        "Huile multigrade : grade 15 à froid (W = winter) et grade 40 à chaud"
+        "15 % d'additif pour 40 % d'huile de base dans le mélange",
+        "Intervalle de vidange de 15 000 puis 40 000 km parcourus",
+        "Plage d'utilisation limitée entre 15 et 40 °C ambiants",
+        "Huile multigrade : grade 15 à froid (W) et grade 40 à chaud"
       ],
       "answer": 3,
       "explain": "Les deux nombres sont des grades de viscosité SAE : le premier à froid, le second à chaud.",
@@ -564,12 +564,12 @@
       "level": 1,
       "q": "Avant de graisser un point, que faut-il faire ?",
       "choices": [
-        "Graisser sans nettoyer pour gagner du temps",
-        "Injecter le maximum de graisse jusqu'à la rupture du joint",
-        "Nettoyer le graisseur, puis injecter jusqu'à l'apparition de graisse neuve sans excès",
-        "Remplacer le graisseur par un bouchon"
+        "Nettoyer le graisseur, puis injecter jusqu'à l'apparition de graisse neuve",
+        "Graisser directement sans nettoyer pour gagner du temps sur la ronde",
+        "Injecter le maximum de graisse jusqu'à faire céder le joint d'étanchéité",
+        "Remplacer le graisseur par un bouchon plein après chaque poste"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Un graisseur sale injecte des impuretés ; un excès de graisse rompt les joints. On purge l'ancienne graisse jusqu'à ce que la neuve apparaisse.",
       "seconds": 40,
       "status": "draft"
@@ -580,12 +580,12 @@
       "level": 2,
       "q": "Analyse d'huile moteur : fer 150 ppm (limite 100) et silicium 40 ppm (limite 20). Quelle interprétation est logique ?",
       "choices": [
-        "Fuite de liquide de refroidissement",
-        "Usure interne élevée avec entrée de poussière : contrôler filtre à air, prises d'air et reniflards",
-        "Dilution par du carburant",
-        "Huile en fin de vie sans usure"
+        "Fuite de liquide de refroidissement vers l'huile : contrôler le joint de culasse",
+        "Dilution de l'huile par du gazole : contrôler injecteurs et pompe d'injection",
+        "Usure interne et entrée de poussière : contrôler filtre à air, reniflards",
+        "Huile en fin de vie sans usure : prolonger l'intervalle de vidange prévu"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Le silicium est le marqueur de poussière (sable, terre) ; combiné à un fer élevé, il indique une usure abrasive due à l'entrée d'air non filtré.",
       "seconds": 60,
       "status": "draft"
@@ -596,12 +596,12 @@
       "level": 3,
       "q": "Un échantillon d'huile moteur montre une viscosité à 100 °C passée de 14,5 à 10,5 cSt et un point d'éclair en baisse. Quelle cause est probable ?",
       "choices": [
+        "Une oxydation avancée de l'huile après un intervalle trop long",
         "Une dilution par du gazole (injecteur défaillant, ralenti prolongé)",
-        "Une oxydation avancée de l'huile",
-        "Une contamination par la poussière",
-        "Un excès de suie"
+        "Une contamination par la poussière entrée par le filtre à air",
+        "Un excès de suie dû à une combustion incomplète prolongée"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Le carburant fluidifie l'huile et abaisse son point d'éclair. Oxydation et suie augmentent au contraire la viscosité.",
       "seconds": 65,
       "status": "draft"
@@ -613,9 +613,9 @@
       "q": "Sodium et potassium élevés avec glycol détecté dans l'huile moteur. Que signale cette analyse ?",
       "choices": [
         "Une fuite de liquide de refroidissement vers l'huile",
-        "Une dilution par du carburant",
-        "Une usure de roulements",
-        "Un excès d'additif de graissage"
+        "Une dilution par du carburant due à un injecteur qui fuit",
+        "Une usure des roulements de bielle et des paliers de vilebrequin",
+        "Un excès d'additif de graissage ajouté lors du dernier appoint"
       ],
       "answer": 0,
       "explain": "Sodium, potassium et glycol sont les traceurs du liquide de refroidissement : joint de culasse, refroidisseur d'huile ou chemise fissurée.",
@@ -628,12 +628,12 @@
       "level": 2,
       "q": "Que traduit une baisse importante du TBN d'une huile moteur ?",
       "choices": [
-        "La viscosité a augmenté à cause du froid",
-        "Le moteur manque de carburant",
-        "Le filtre à huile est neuf",
-        "La réserve alcaline qui neutralise les acides de combustion est épuisée : l'huile doit être vidangée"
+        "La viscosité a augmenté à cause du froid ambiant sur le site minier",
+        "Le moteur manque de carburant à haut régime et brûle mal l'huile",
+        "La réserve alcaline qui neutralise les acides est épuisée",
+        "Le filtre à huile est neuf et retient trop d'additifs de l'huile"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "Le TBN (indice de basicité) mesure la capacité de l'huile à neutraliser les acides. Épuisé, l'huile n'est plus protectrice et doit être remplacée.",
       "seconds": 50,
       "status": "draft"
@@ -644,12 +644,12 @@
       "level": 1,
       "q": "Quelles sont les bonnes pratiques pour obtenir un échantillon d'huile représentatif ?",
       "choices": [
-        "Prélever en fond de carter après plusieurs jours d'arrêt",
-        "Utiliser n'importe quel flacon de l'atelier",
-        "Prélever huile chaude, moteur juste arrêté, au même point à chaque fois, dans un flacon propre et étiqueté",
-        "Prélever après avoir ajouté de l'huile neuve"
+        "Prélever en fond de carter après plusieurs jours d'arrêt complet du moteur",
+        "Utiliser le premier flacon disponible à l'atelier, rincé à l'eau claire",
+        "Prélever juste après avoir complété le niveau avec de l'huile neuve",
+        "Prélever huile chaude, moteur juste arrêté, au même point, dans un flacon propre étiqueté"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "L'échantillon doit refléter l'huile en service : chaude, homogène, prélevée de la même façon à chaque fois, sans contamination.",
       "seconds": 45,
       "status": "draft"
@@ -660,10 +660,10 @@
       "level": 3,
       "q": "Dans le code de propreté ISO 4406, que représente chaque incrément d'un chiffre du code ?",
       "choices": [
-        "Une augmentation de 1 % des particules",
+        "Une augmentation de 1 % du nombre de particules de la classe",
         "Environ un doublement du nombre de particules de la classe concernée",
-        "Une hausse de 10 µm de la taille des particules",
-        "Une baisse de la viscosité de 1 cSt"
+        "Une hausse de 10 µm de la taille des particules comptées",
+        "Une baisse de viscosité de 1 cSt due à la contamination"
       ],
       "answer": 1,
       "explain": "Les nombres du code ISO 4406 sont des classes logarithmiques : passer à la classe supérieure correspond à peu près à deux fois plus de particules.",
@@ -676,12 +676,12 @@
       "level": 1,
       "q": "Que remplace-t-on avec l'huile lors d'une vidange moteur ?",
       "choices": [
-        "Le filtre à air uniquement",
-        "Le filtre à huile (et le joint du bouchon de vidange)",
-        "La courroie de ventilateur",
-        "Le thermostat"
+        "Le filtre à air seul, avec son pré-filtre cyclonique",
+        "La courroie de ventilateur et sa poulie de tension",
+        "Le filtre à huile et le joint du bouchon de vidange",
+        "Le thermostat et la durite supérieure de radiateur"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Un filtre saturé n'a plus d'efficacité et contaminerait l'huile neuve : on le change à chaque vidange.",
       "seconds": 40,
       "status": "draft"
@@ -694,10 +694,10 @@
       "img": "photo/heavy-equipment-maintenance.jpg",
       "imgAlt": "Mécaniciens intervenant sur un engin lourd en atelier",
       "choices": [
-        "Caler la benne avec son dispositif de blocage mécanique (béquille, goupille) en plus de la consignation",
-        "Rester sous la benne uniquement si le moteur tourne",
-        "Compter sur la pression du vérin",
-        "Poser un simple panneau d'avertissement"
+        "Caler la benne avec son blocage mécanique, en plus de la consignation",
+        "Rester sous la benne seulement si le moteur tourne, pour garder la pression",
+        "Compter sur la pression du vérin, qui maintient la benne en position",
+        "Poser un panneau d'avertissement et un cône sous la benne relevée"
       ],
       "answer": 0,
       "explain": "Un vérin peut dériver ou perdre sa pression : seul un calage mécanique garantit que la benne ne retombera pas.",
@@ -712,12 +712,12 @@
       "img": "svg/lockout-tagout.svg",
       "imgAlt": "Schéma de consignation : cadenas et étiquette sur un organe d'isolement",
       "choices": [
-        "Poser l'étiquette puis arrêter le moteur à la fin",
-        "Retirer la clé puis laisser le moteur chauffer",
-        "Couper la batterie moteur tournant puis cadenasser",
-        "Arrêter le moteur, retirer la clé, couper le coupe-batterie, cadenasser et étiqueter, puis vérifier l'absence d'énergie"
+        "Poser l'étiquette d'abord, puis cadenasser, et arrêter le moteur en dernier lieu",
+        "Arrêter le moteur, retirer la clé, couper le coupe-batterie, cadenasser, vérifier",
+        "Retirer la clé, laisser chauffer le moteur, puis couper le coupe-batterie, étiqueter",
+        "Couper le coupe-batterie moteur tournant, cadenasser, puis retirer la clé"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "On supprime d'abord la source d'énergie, puis on condamne, enfin on vérifie l'absence d'énergie (pression hydraulique, ressorts, charge suspendue comprises).",
       "seconds": 50,
       "status": "draft"
@@ -730,12 +730,12 @@
       "img": "photo/crane-lifting.jpg",
       "imgAlt": "Grue en train de lever une lourde charge",
       "choices": [
-        "1,6 t",
-        "1,1 t",
-        "Au moins 2,3 t",
-        "0,8 t"
+        "1,6 t par brin, soit la moitié de la charge levée",
+        "1,1 t par brin, soit un tiers de la charge levée",
+        "0,8 t par brin, soit un quart de la charge levée",
+        "Au moins 2,3 t par brin, car l'angle augmente l'effort"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "T = W / (2 cos 45°) = 3,2 / 1,414 ≈ 2,26 t. Répartir simplement la charge en deux (1,6 t) ignore l'effet de l'angle.",
       "seconds": 80,
       "status": "draft"
@@ -746,12 +746,12 @@
       "level": 2,
       "q": "Un code défaut indique « capteur de température de liquide hors plage ». Que fait le mécanicien avant de remplacer le capteur ?",
       "choices": [
-        "Remplacer directement le capteur",
-        "Effacer le code et reprendre le travail",
-        "Contrôler connecteur, câblage et alimentation et mesurer résistance ou tension, car le défaut peut venir du câblage",
-        "Remplacer le calculateur moteur"
+        "Remplacer directement le capteur, le code désignant la pièce défaillante",
+        "Contrôler connecteur, câblage et alimentation, puis mesurer",
+        "Effacer le code et reprendre le travail en surveillant son retour",
+        "Remplacer le calculateur moteur, le défaut venant de son entrée"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Un code défaut indique un symptôme électrique, pas forcément un capteur défectueux. Une mesure confirme la cause avant de changer une pièce.",
       "seconds": 55,
       "status": "draft"
@@ -764,12 +764,12 @@
       "img": "photo/haul-truck.jpg",
       "imgAlt": "Camion de mine à benne sur une piste de carrière",
       "choices": [
-        "Remplacer la graisse des galets",
-        "Détecter fuites, niveaux anormaux, pneus ou fixations endommagés avant qu'ils ne causent une panne ou un accident",
-        "Remplir le carnet d'heures de l'opérateur",
-        "Réchauffer le moteur"
+        "Remplacer la graisse des galets et des articulations avant chaque poste",
+        "Remplir le carnet d'heures de l'opérateur et valider sa prise de poste avec le chef",
+        "Détecter fuites, niveaux anormaux, pneus ou fixations abîmés avant la panne",
+        "Réchauffer le moteur et la transmission avant toute mise en charge du poste"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "La ronde est la première ligne de détection : elle repère les anomalies à un stade où elles sont peu coûteuses et sans danger.",
       "seconds": 40,
       "status": "draft"
@@ -782,10 +782,10 @@
       "img": "photo/haul-truck.jpg",
       "imgAlt": "Camion de mine à benne sur une piste de carrière",
       "choices": [
-        "Environ 7 jours",
-        "Environ 14 jours",
-        "Environ 3 jours",
-        "Environ 21 jours"
+        "Environ 7 jours, soit 120 h restantes",
+        "Environ 14 jours, soit 250 h restantes",
+        "Environ 3 jours, soit 55 h restantes",
+        "Environ 21 jours, soit 380 h restantes"
       ],
       "answer": 0,
       "explain": "Prochain service à 2 500 h : il reste 120 h, soit 120 / 18 ≈ 6,7 jours.",
@@ -800,10 +800,10 @@
       "img": "photo/heavy-equipment-maintenance.jpg",
       "imgAlt": "Mécaniciens intervenant sur un engin lourd en atelier",
       "choices": [
-        "Le remplacer à chaque fois par la même référence sans autre action",
-        "Passer au flexible le moins cher",
-        "Augmenter la pression du limiteur",
-        "Rechercher la cause racine : cheminement et frottement, rayon de courbure, pics de pression, température, montage"
+        "Le remplacer à chaque fois par la même référence, en gardant un stock sur site",
+        "Passer à un flexible moins cher pour limiter le coût de chaque remplacement",
+        "Augmenter le réglage du limiteur pour compenser la perte de débit au vérin",
+        "Rechercher la cause racine : cheminement, frottement, rayon de courbure"
       ],
       "answer": 3,
       "explain": "Une panne répétitive indique une cause non traitée. Remplacer sans analyser fait perdre du temps et expose à un incident plus grave.",
@@ -818,12 +818,12 @@
       "img": "photo/haul-truck.jpg",
       "imgAlt": "Camion de mine à benne sur une piste de carrière",
       "choices": [
-        "S'approcher par l'angle mort pour ne pas le déranger",
-        "S'approcher dès que le moteur semble tourner au ralenti",
-        "Faire signe de la main de loin et approcher",
-        "Contacter le conducteur par radio, obtenir sa confirmation et l'immobilisation (frein serré, benne basse) avant d'approcher"
+        "Contacter le conducteur par radio, obtenir sa confirmation et l'immobilisation",
+        "S'approcher par l'angle mort arrière pour ne pas distraire le conducteur en manœuvre",
+        "S'approcher dès que le moteur semble tourner au ralenti, benne en position basse",
+        "Faire signe de la main de loin puis approcher en restant bien visible du conducteur"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Les angles morts d'un camion de mine sont immenses : on n'approche qu'après contact radio, confirmation du conducteur et immobilisation de l'engin.",
       "seconds": 55,
       "status": "draft"
@@ -836,10 +836,10 @@
       "img": "photo/crane-lifting.jpg",
       "imgAlt": "Grue en train de lever une lourde charge",
       "choices": [
-        "Accepter si la charge est inférieure à la CMU",
-        "Accepter en doublant l'élingue",
-        "Refuser : une élingue endommagée (brins coupés, étiquette illisible, nœud) est retirée du service",
-        "Accepter si l'on reste à distance de la charge"
+        "Accepter si la charge reste inférieure à la CMU marquée sur l'étiquette de l'élingue",
+        "Accepter en doublant l'élingue pour compenser son endommagement visible",
+        "Refuser : une élingue endommagée (brins coupés, étiquette illisible) est retirée",
+        "Accepter si chacun reste à distance de la charge pendant toute l'opération"
       ],
       "answer": 2,
       "explain": "Une élingue endommagée peut céder sous une charge pourtant inférieure à sa CMU. Elle est retirée du service, sans exception.",

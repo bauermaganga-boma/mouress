@@ -1,0 +1,822 @@
+{
+  "profile": "tech-turbines-compresseurs",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "La turbine à gaz : cycle, architecture et composants",
+      "theme": "Cycle et composants d'une turbine à gaz",
+      "minutes": 10,
+      "body": "Une **turbine à gaz** convertit l'énergie chimique d'un combustible en puissance mécanique selon le **cycle de Brayton** : le **compresseur axial** comprime l'air (rapport de compression de l'ordre de 10 à 20 sur les machines industrielles), la **chambre de combustion** y brûle le combustible à pression sensiblement constante, puis les gaz chauds se détendent dans la **turbine**. Environ la moitié à deux tiers du travail de la turbine sert à entraîner le compresseur d'air ; le reste constitue la puissance utile.\n\nIl existe deux architectures. La turbine **monoarbre** entraîne le compresseur d'air et la charge sur le même arbre, par exemple un alternateur à vitesse constante. La turbine à **deux arbres** sépare un **générateur de gaz** (compresseur, chambre, turbine haute pression) d'une **turbine de puissance libre** qui entraîne la charge : elle convient aux compresseurs et aux pompes à vitesse variable, car la charge peut ralentir sans que le générateur de gaz cale.\n\nLes composants à connaître : **filtres et conduit d'admission** (l'air sale encrasse et érode le compresseur), **aubes directrices d'entrée variables** (IGV) qui règlent le débit d'air, **vannes de décharge** (bleed valves) qui protègent contre le pompage au démarrage, **chambre de combustion** (à tubes ou annulaire, avec brûleurs à faibles émissions de NOx), **aubes de turbine** refroidies par air, **échappement**, **démarreur** (moteur électrique, hydraulique ou à air) et **systèmes de combustible, d'huile et de contrôle**.\n\nL'opérateur surveille la **température des gaz d'échappement** (EGT) sur plusieurs thermocouples : un **écart anormal** entre eux signale un problème de combustion (injecteur colmaté, défaut de brûleur). Il suit aussi la vitesse, la pression de refoulement du compresseur, la pression et la température d'huile, les vibrations et le débit de combustible.\n\nPlus l'air est chaud, moins il est dense : la **puissance disponible baisse en saison chaude**. L'**encrassement** du compresseur réduit le débit d'air, la pression de refoulement et le rendement : pour la même puissance, la température d'échappement monte. On le traite par **lavage** en marche ou à l'arrêt, avec les produits et durées du constructeur. Le **rendement thermique** d'une turbine à gaz simple est de l'ordre de 30 à 40 % ; en cycle combiné, il dépasse 50 %.",
+      "keyPoints": [
+        "Cycle : compression, combustion, détente ; la moitié à deux tiers du travail entraîne le compresseur d'air.",
+        "Deux arbres : générateur de gaz + turbine de puissance libre, adaptée à la vitesse variable.",
+        "Écart entre thermocouples d'échappement : problème de combustion ; encrassement : EGT en hausse.",
+        "Air chaud = moins de puissance ; lavage du compresseur selon le constructeur."
+      ],
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un groupe turbo-compresseur à gaz"
+    },
+    {
+      "id": "m2",
+      "title": "Compresseurs alternatifs et gas lift",
+      "theme": "Compresseurs alternatifs et gas lift",
+      "minutes": 10,
+      "body": "Le **compresseur alternatif** comprime le gaz par le mouvement de pistons dans des cylindres. Un vilebrequin entraîne, par bielles et **crosses** (crosshead), les tiges de piston ; le gaz entre et sort par des **clapets d'aspiration et de refoulement** qui s'ouvrent selon la différence de pression. Une **garniture de tige** (packing) assure l'étanchéité au passage de la tige. Les **bouteilles anti-pulsatoires** et les **refroidisseurs** inter-étages complètent le train.\n\nLe rapport de compression par étage est limité (en général de l'ordre de **3 à 4**) pour maîtriser la **température de refoulement** et les efforts sur la tige. Pour un rapport total R en n étages égaux, le rapport par étage vaut R^(1/n). Exemple : de 5 à 125 bar absolus (R = 25) en trois étages, chaque étage a un rapport d'environ 2,9. Les pressions de ces calculs sont des **bar absolus**. Les **ballons d'aspiration** (scrubbers) retiennent le liquide : un coup de liquide dans un cylindre peut casser une tige ou une bielle, car le liquide est incompressible.\n\nLes **clapets** sont l'élément le plus fragile. Un clapet qui fuit réduit le débit de l'étage et élève la température de refoulement. Les **bruits anormaux**, une montée de température d'un cylindre, une baisse du débit ou une chute de pression inter-étage sont des signes à signaler. La **charge sur la tige** (rod load) et les vibrations de la tuyauterie sont surveillées pour éviter fatigue et rupture.\n\nLe **gas lift** utilise du gaz comprimé injecté dans l'annulaire (espace entre tubage et colonne de production) d'un puits, puis admis dans la colonne par une **vanne de gas lift** placée à une profondeur choisie. Le gaz allège la colonne de fluide : la pression au fond baisse et le puits produit davantage. Le **compresseur de gas lift** alimente un réseau de distribution vers plusieurs puits ; son arrêt affecte simultanément tous les puits qui en dépendent.\n\nLes vannes de gas lift à **charge d'azote** s'ouvrent sous l'effet de la pression et se referment à leur pression de fermeture ; la **vanne d'opération** reste le point d'injection principal, les vannes supérieures ayant servi à décharger le puits par étapes. Le gaz d'injection est **déshydraté** avant injection pour éviter hydrates et corrosion. Injecter davantage ne produit pas toujours plus : la courbe de performance présente un optimum, au-delà duquel le surplus de gaz augmente les frottements et réduit la production.",
+      "keyPoints": [
+        "Rapport de compression par étage limité à environ 3-4 ; par étage = R^(1/n), en bar absolus.",
+        "Ballon d'aspiration : empêcher le coup de liquide, qui casse tiges et bielles.",
+        "Gas lift : gaz injecté dans l'annulaire, admis par la vanne ; il allège la colonne.",
+        "Gaz déshydraté ; injection excessive = production en baisse."
+      ],
+      "img": "svg/gas-lift-valve.svg",
+      "imgAlt": "Schéma d'une vanne de gas lift"
+    },
+    {
+      "id": "m3",
+      "title": "Vibrations et surveillance des machines",
+      "theme": "Vibrations et surveillance",
+      "minutes": 10,
+      "body": "Les vibrations sont le meilleur indicateur de santé d'une machine tournante. Trois types de capteurs sont courants : les **sondes de proximité** (sans contact) mesurent le mouvement relatif de l'arbre par rapport au palier, en micromètres crête à crête, et se montent par paires à 90° sur les paliers à film d'huile ; les **accéléromètres** mesurent l'accélération du carter, utile pour les roulements et engrenages ; les **vélocimètres** donnent la vitesse en mm/s. Un capteur de phase (**Keyphasor**) fournit un top par tour qui sert de référence de phase. La norme **API 670** définit les systèmes de protection des machines.\n\nL'**orbite** de l'arbre, tracée avec les deux sondes, montre sa trajectoire. Au démarrage, les diagrammes de **Bode** (amplitude et phase en fonction de la vitesse) révèlent les **vitesses critiques** : l'amplitude passe par un pic et la phase varie d'environ 180°. La **position axiale** de l'arbre, mesurée par des sondes, signale l'usure du palier de butée.\n\nLes signatures classiques : un **balourd** donne une vibration à **1×** la fréquence de rotation, surtout radiale ; un **défaut d'alignement** augmente la composante à **2×** et la composante axiale ; un jeu excessif ou un frottement produit des harmoniques ; le **fouettement d'huile** (oil whirl) apparaît à environ **0,40 à 0,48×** la vitesse de rotation, fréquence sous-synchrone, et peut se bloquer sur une vitesse critique (oil whip) avec des amplitudes dangereuses ; les roulements défectueux émettent des fréquences élevées non synchrones.\n\nLes températures des **paliers** (thermocouples dans le métal antifriction) complètent la surveillance : une montée lente évoque encrassement, manque d'huile ou défaut de réglage ; une montée rapide, un contact. Les **seuils d'alarme et de déclenchement** sont fixés par le constructeur et les normes du site ; **contourner** une protection de vibration obéit à une procédure et à une autorisation.\n\nPour un compresseur centrifuge, le **pompage** (surge) se manifeste par des fluctuations de débit et de pression, de fortes vibrations axiales et un bruit caractéristique ; la vanne **anti-pompage** s'ouvre pour recycler du gaz et ramener la machine dans sa plage stable. La limite de pompage est tracée sur la carte de la machine avec une **marge de sécurité**.\n\nLes tendances sont aussi importantes que les valeurs : une dérive lente de vibration ou de température sur quelques semaines se traite à l'arrêt programmé plutôt qu'au déclenchement.",
+      "keyPoints": [
+        "Sondes de proximité (arbre), accéléromètres et vélocimètres (carter) ; Keyphasor = référence de phase.",
+        "Balourd = 1× ; désalignement = 2× et axial ; oil whirl ≈ 0,4-0,48×.",
+        "Vitesse critique : pic d'amplitude et saut de phase d'environ 180° au démarrage.",
+        "Pompage : fluctuations, vibrations axiales ; ouvrir le recyclage anti-pompage."
+      ],
+      "img": "svg/loop-4-20ma.svg",
+      "imgAlt": "Schéma d'une boucle 4-20 mA d'un capteur de vibration"
+    },
+    {
+      "id": "m4",
+      "title": "Lubrification et étanchéités",
+      "theme": "Lubrification et étanchéités",
+      "minutes": 9,
+      "body": "L'**huile de graissage** réduit le frottement, évacue la chaleur et protège contre la corrosion. Sur une turbine ou un compresseur, le **système d'huile** comprend un réservoir, des pompes (principale, souvent entraînée par l'arbre ou électrique, et **pompe auxiliaire** qui démarre automatiquement en cas de baisse de pression), des **refroidisseurs**, des **filtres** doubles commutables en marche, des clapets de régulation de pression et, souvent, un **réservoir de secours** en hauteur (rundown tank) qui alimente les paliers par gravité pendant la décélération en cas de perte d'huile.\n\nUne **baisse de pression d'huile** déclenche d'abord l'alarme, puis le démarrage de la pompe auxiliaire, puis l'arrêt de la machine si elle persiste : sans huile, un palier est détruit en quelques secondes. Un **filtre colmaté** se repère à la hausse de la pression différentielle ; on commute sur le filtre propre avant de changer la cartouche. Une huile trop chaude perd en viscosité, trop froide elle circule mal : la température est régulée par une vanne trois voies sur le refroidisseur.\n\nL'**analyse d'huile** détecte l'eau, les particules d'usure (fer, cuivre, étain), la dégradation et l'acidité. Les prélèvements se font à fréquence fixe, au même point, dans un flacon propre. L'huile doit être **propre et sèche** avant tout démarrage après un arrêt prolongé.\n\nL'**étanchéité** des compresseurs centrifuges est confiée à des **garnitures à gaz sec** : une face tournante et une face fixe, séparées par un film de gaz de quelques micromètres. Un **gaz d'étanchéité propre et sec** (souvent prélevé au refoulement et filtré) est injecté entre les faces ; le gaz qui fuit s'évacue par l'**évent primaire**, dont le débit est surveillé. Une hausse de ce débit indique l'usure de la garniture. Une **garniture secondaire** et un **gaz de séparation** (azote) empêchent l'huile des paliers de contaminer la garniture. Les **joints labyrinthes** limitent les fuites internes entre étages.\n\nSur un compresseur alternatif, la **garniture de tige** est faite d'anneaux d'un matériau tendre ; la fuite de gaz qu'elle laisse passer est captée dans la pièce intermédiaire (distance piece) et envoyée vers un évent ou la torche.\n\nPour toutes ces étanchéités, la **propreté** est vitale : un filtre de gaz d'étanchéité colmaté ou un gaz humide détruit la garniture en peu de temps.",
+      "keyPoints": [
+        "Pompe à huile auxiliaire : démarre sur baisse de pression ; réservoir de secours pour la décélération.",
+        "Filtre colmaté : pression différentielle en hausse, on commute sur le filtre propre.",
+        "Garniture à gaz sec : gaz propre et sec, débit d'évent primaire surveillé.",
+        "Gaz de séparation (azote) : protège la garniture de l'huile des paliers."
+      ],
+      "img": "svg/centrifugal-pump-curve.svg",
+      "imgAlt": "Courbe caractéristique d'une pompe centrifuge"
+    },
+    {
+      "id": "m5",
+      "title": "Démarrage, protections et déclenchements",
+      "theme": "Démarrage, protections et déclenchements",
+      "minutes": 9,
+      "body": "Le **démarrage d'une turbine à gaz** est séquentiel et automatique, mais le technicien en connaît chaque phase. Après les vérifications (huile, combustible, instruments, absence de défaut), le **démarreur** fait tourner la machine pour la **purger** : l'air balaie plusieurs fois le volume de la chambre et de l'échappement afin d'évacuer tout combustible. L'**allumage** a lieu à une vitesse donnée, puis la flamme est détectée. La machine accélère, soutenue par le démarreur jusqu'à une vitesse où elle devient **autonome** ; les vannes de décharge se ferment, puis on prend la charge progressivement.\n\nLes incidents de démarrage portent des noms : **démarrage raté** (pas d'allumage), **démarrage chaud** (hot start, température d'échappement trop élevée), **démarrage bloqué** (hung start, la vitesse stagne sous le ralenti). Après un échec d'allumage, on **purge de nouveau** avant toute nouvelle tentative : le combustible accumulé peut s'enflammer avec une violence dangereuse. On ne relance jamais plusieurs fois de suite sans analyser.\n\nLes **protections** déclenchent la machine : **survitesse** (l'effort centrifuge croît comme le carré de la vitesse), **température d'échappement très haute**, **vibration très haute**, **pression d'huile très basse**, **perte de flamme**, **pression ou température de combustible** hors limites, **arrêt d'urgence** de l'installation, déclenchement lié à l'équipement entraîné (niveau haut du ballon d'aspiration d'un compresseur). Chaque déclenchement s'enregistre avec sa **première cause** (first-out). Les protections se testent périodiquement ; on ne les inhibe jamais sans autorisation écrite.\n\nAprès l'arrêt, le **refroidissement** compte : un rotor chaud et immobile peut se **déformer** (flèche thermique). Un **vireur** (turning gear) le fait tourner lentement et la pompe d'huile reste en service jusqu'au refroidissement des paliers.\n\nPour un **compresseur centrifuge**, le démarrage exige la vanne de recyclage ouverte, l'aspiration prête, le ballon vide de liquide, la pression d'huile et le gaz d'étanchéité en service. Pour un **compresseur alternatif**, on vérifie la lubrification des cylindres, on purge les liquides, on démarre à vide (vannes de décharge) puis on charge par paliers.\n\nLa règle commune : **jamais de redémarrage sans comprendre la cause** du déclenchement.",
+      "keyPoints": [
+        "Purge avant allumage ; après un échec d'allumage, purger de nouveau.",
+        "Survitesse : effort centrifuge ∝ vitesse² (+10 % de vitesse = +21 % d'effort).",
+        "Déclenchement : lire le first-out, ne jamais redémarrer sans comprendre la cause.",
+        "Après l'arrêt : vireur et huile en service pour éviter la flèche thermique."
+      ],
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un groupe turbo-compresseur à gaz"
+    }
+  ],
+  "questions": [
+    {
+      "id": "tech-turbines-compresseurs-001",
+      "theme": "Cycle et composants d'une turbine à gaz",
+      "level": 1,
+      "q": "Dans quel ordre se succèdent les phases du cycle d'une turbine à gaz ?",
+      "choices": [
+        "Combustion du gaz, compression de l'air, puis détente des gaz",
+        "Détente des gaz, compression de l'air, puis combustion du gaz",
+        "Compression de l'air, combustion du gaz, puis détente dans la turbine",
+        "Compression de l'air, détente des gaz, puis combustion du gaz"
+      ],
+      "answer": 2,
+      "explain": "L'air est d'abord comprimé, le combustible brûle ensuite à pression à peu près constante, et les gaz chauds se détendent dans la turbine pour produire le travail.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-002",
+      "theme": "Cycle et composants d'une turbine à gaz",
+      "level": 1,
+      "q": "Dans une turbine à deux arbres entraînant un compresseur de gaz à vitesse variable, qu'est la turbine de puissance libre ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un groupe turbo-compresseur à gaz",
+      "choices": [
+        "Une turbine séparée du générateur de gaz, qui entraîne la charge",
+        "Une turbine placée avant le compresseur d'air du générateur de gaz",
+        "Un second compresseur d'air monté en série derrière le premier",
+        "Une turbine qui fonctionne sans aucun combustible dans la chambre"
+      ],
+      "answer": 0,
+      "explain": "La turbine de puissance libre n'est reliée qu'à la charge. Elle peut ralentir ou accélérer sans que le générateur de gaz ne cale, d'où son intérêt pour les compresseurs à vitesse variable.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-003",
+      "theme": "Cycle et composants d'une turbine à gaz",
+      "level": 1,
+      "q": "À quoi servent les filtres d'admission d'air d'une turbine à gaz ?",
+      "choices": [
+        "À réchauffer l'air avant sa compression dans la machine",
+        "À mesurer le débit de combustible entrant dans la chambre",
+        "À augmenter la pression d'huile aux paliers de la turbine à gaz",
+        "À retenir poussières et sels qui encrassent le compresseur"
+      ],
+      "answer": 3,
+      "explain": "Une turbine aspire des milliers de mètres cubes d'air par minute : poussières, sels et sable encrassent ou érodent les aubes. Les filtres limitent la perte de puissance.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-004",
+      "theme": "Cycle et composants d'une turbine à gaz",
+      "level": 2,
+      "q": "Une turbine à gaz fonctionne à puissance constante. Sa pression de refoulement du compresseur d'air baisse et la température d'échappement monte. Quelle est la cause la plus probable ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un groupe turbo-compresseur à gaz",
+      "choices": [
+        "Un injecteur de combustible colmaté sur un seul brûleur",
+        "L'encrassement du compresseur d'air",
+        "Une baisse de la tension d'alimentation du démarreur",
+        "Un excès d'huile dans le palier côté échappement"
+      ],
+      "answer": 1,
+      "explain": "L'encrassement réduit le débit d'air et la pression de refoulement : pour la même puissance, la machine consomme plus et l'EGT monte. Un injecteur colmaté créerait plutôt un écart entre thermocouples.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-005",
+      "theme": "Cycle et composants d'une turbine à gaz",
+      "level": 1,
+      "q": "Que signale un écart anormal entre les thermocouples de température d'échappement (EGT) d'une turbine à gaz ?",
+      "choices": [
+        "Un défaut de combustion : injecteur ou brûleur défaillant",
+        "Un encrassement uniforme du filtre d'air d'admission du compresseur",
+        "Une surcharge de la pompe d'huile principale des paliers",
+        "Une vibration de la tuyauterie de gaz combustible en amont"
+      ],
+      "answer": 0,
+      "explain": "Chaque thermocouple voit les gaz d'une zone de chambre. Un écart marqué traduit une combustion inégale (injecteur colmaté, brûleur défaillant). Un encrassement serait plus uniforme.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-006",
+      "theme": "Cycle et composants d'une turbine à gaz",
+      "level": 1,
+      "q": "Pourquoi la puissance disponible d'une turbine à gaz baisse-t-elle quand la température ambiante augmente ?",
+      "choices": [
+        "Le combustible brûle moins bien en saison chaude, à débit égal",
+        "Le rendement de l'alternateur baisse avec la chaleur ambiante",
+        "La vitesse de rotation diminue avec la température extérieure",
+        "L'air chaud est moins dense : le débit massique d'air aspiré baisse"
+      ],
+      "answer": 3,
+      "explain": "Pour un même volume aspiré, l'air chaud contient moins de masse. Moins d'air veut dire moins de combustible brûlé et moins de puissance disponible.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-007",
+      "theme": "Cycle et composants d'une turbine à gaz",
+      "level": 2,
+      "q": "Une turbine de 25 MW de puissance utile consomme 1,6 kg/s de gaz de PCI 50 MJ/kg. Quel est son rendement thermique ?",
+      "choices": [
+        "Environ 50 % (25 ÷ 50)",
+        "Environ 31 % (25 ÷ 80)",
+        "Environ 16 % (25 ÷ 160)",
+        "Environ 62 % (50 ÷ 80)"
+      ],
+      "answer": 1,
+      "explain": "Énergie du combustible = 1,6 × 50 = 80 MW. Rendement = 25 ÷ 80 ≈ 31 %. C'est cohérent avec une turbine à gaz simple (30 à 40 %).",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-008",
+      "theme": "Cycle et composants d'une turbine à gaz",
+      "level": 2,
+      "q": "À quoi servent les aubes directrices d'entrée variables (IGV) du compresseur d'air ?",
+      "choices": [
+        "À régler la pression d'huile des paliers de la machine",
+        "À mesurer la vitesse de rotation du générateur de gaz",
+        "À régler le débit d'air et la marge au pompage",
+        "À filtrer le sel présent dans l'air d'admission"
+      ],
+      "answer": 2,
+      "explain": "Les IGV changent l'angle d'attaque de l'air sur les premiers étages du compresseur. Elles adaptent le débit d'air et protègent du pompage aux faibles vitesses.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-009",
+      "theme": "Cycle et composants d'une turbine à gaz",
+      "level": 3,
+      "q": "Une turbine monoarbre entraînant un alternateur à vitesse constante perd brutalement toute sa charge électrique. Quel risque principal apparaît ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un groupe turbo-alternateur à gaz",
+      "choices": [
+        "Un pompage du compresseur d'alimentation de gaz combustible",
+        "Une chute brutale de pression d'huile sur tous les paliers",
+        "Un gel du combustible dans les injecteurs de la chambre de combustion",
+        "Une survitesse : la puissance produite n'est plus absorbée par l'alternateur"
+      ],
+      "answer": 3,
+      "explain": "Sans charge, la puissance de la turbine accélère le rotor. La protection de survitesse et la coupure rapide du combustible sont décisives.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-010",
+      "theme": "Compresseurs alternatifs et gas lift",
+      "level": 1,
+      "q": "Quelle est la fonction d'un ballon d'aspiration (scrubber) en amont d'un compresseur alternatif ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Ballon sous pression avec soupape de sécurité, comme un ballon d'aspiration",
+      "choices": [
+        "Augmenter la pression d'aspiration du compresseur alternatif",
+        "Retenir le liquide qui provoquerait un coup de liquide au cylindre",
+        "Refroidir le gaz comprimé entre deux étages de compression successifs",
+        "Stocker une réserve de gaz pour le démarrage de la machine à vide"
+      ],
+      "answer": 1,
+      "explain": "Le liquide est incompressible : un coup de liquide dans un cylindre peut casser une tige ou une bielle. Le ballon d'aspiration sépare le liquide du gaz avant l'entrée.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-011",
+      "theme": "Compresseurs alternatifs et gas lift",
+      "level": 2,
+      "q": "Sur une vanne de gas lift chargée à l'azote, que provoque une hausse de la pression d'injection sur le soufflet ?",
+      "img": "svg/gas-lift-valve.svg",
+      "imgAlt": "Schéma d'une vanne de gas lift à soufflet chargé à l'azote, montrant la pression d'injection agissant sur le soufflet",
+      "choices": [
+        "Elle écrase le soufflet contre son siège, ce qui ferme la vanne aussitôt",
+        "Elle reste sans effet, car la vanne est pilotée depuis la surface",
+        "Elle pousse le soufflet : la vanne s'ouvre à sa pression d'ouverture",
+        "Elle augmente la charge d'azote enfermée dans le dôme de la vanne"
+      ],
+      "answer": 2,
+      "explain": "La pression de gaz agit sur le soufflet contre la charge d'azote : à la pression d'ouverture, la vanne s'ouvre et laisse passer le gaz vers la colonne de production.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-012",
+      "theme": "Compresseurs alternatifs et gas lift",
+      "level": 1,
+      "q": "Quel est le rôle du gaz injecté en gas lift ?",
+      "img": "svg/gas-lift-valve.svg",
+      "imgAlt": "Schéma d'un puits en gas lift avec vanne dans la colonne de production",
+      "choices": [
+        "Alléger la colonne de fluide et baisser la pression au fond",
+        "Chauffer la colonne du puits pour fluidifier l'huile brute",
+        "Nettoyer le réservoir autour du puits en dissolvant les dépôts",
+        "Remplacer la pompe de fond en poussant le fluide vers la surface"
+      ],
+      "answer": 0,
+      "explain": "Le gaz injecté diminue la densité moyenne de la colonne. La pression au fond baisse, ce qui permet au réservoir de produire davantage.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-013",
+      "theme": "Compresseurs alternatifs et gas lift",
+      "level": 2,
+      "q": "Un compresseur doit passer le gaz de 5 à 125 bar absolus en trois étages de rapports égaux. Quel est le rapport de compression de chaque étage ?",
+      "choices": [
+        "Environ 8,3",
+        "Environ 2,9",
+        "Environ 5,0",
+        "Environ 12,5"
+      ],
+      "answer": 1,
+      "explain": "Le rapport total est 25. Chaque étage a 25^(1/3) ≈ 2,9. Diviser 25 par 3 (8,3) est une erreur classique : les rapports se multiplient.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-014",
+      "theme": "Compresseurs alternatifs et gas lift",
+      "level": 2,
+      "q": "Un compresseur de gas lift voit son débit baisser de 15 % alors que la vitesse et les pressions d'aspiration et de refoulement sont inchangées. Quelle est la première hypothèse ?",
+      "img": "svg/gas-lift-valve.svg",
+      "imgAlt": "Schéma du circuit de gas lift avec compresseur et vanne de puits",
+      "choices": [
+        "Un excès de pression au refoulement du réseau de gaz lift",
+        "Un encrassement du filtre à air de la turbine d'entraînement",
+        "Une fuite de clapets ou de segments sur un étage de compression",
+        "Une baisse de l'indice de viscosité de l'huile de graissage"
+      ],
+      "answer": 2,
+      "explain": "À vitesse et pressions constantes, une baisse de débit évoque une perte de rendement volumétrique : clapets ou segments qui fuient, donc recompression de gaz sur un étage.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-015",
+      "theme": "Compresseurs alternatifs et gas lift",
+      "level": 2,
+      "q": "Pourquoi déshydrate-t-on le gaz de gas lift ?",
+      "choices": [
+        "Pour éviter hydrates et corrosion",
+        "Pour augmenter son pouvoir calorifique",
+        "Pour réduire sa densité dans l'annulaire",
+        "Pour limiter son odeur aux têtes de puits"
+      ],
+      "answer": 0,
+      "explain": "Un gaz humide peut former des hydrates qui bouchent lignes et vannes, et corroder l'acier en présence de CO2. Il est donc séché avant compression et injection.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-016",
+      "theme": "Compresseurs alternatifs et gas lift",
+      "level": 3,
+      "q": "Sur la courbe de performance d'un puits en gas lift (débit d'huile en fonction du débit de gaz injecté), le débit d'huile passe par un maximum puis baisse. Pourquoi ?",
+      "img": "svg/gas-lift-valve.svg",
+      "imgAlt": "Courbe du débit d'huile en fonction du débit de gaz injecté, avec un maximum",
+      "choices": [
+        "La vanne se bouche par les hydrates à haut débit d'injection",
+        "Le réservoir se vide plus vite avec plus de gaz injecté",
+        "Le gaz se dissout dans l'huile et l'alourdit dans la colonne",
+        "Au-delà de l'optimum, trop de gaz augmente les frottements"
+      ],
+      "answer": 3,
+      "explain": "Trop de gaz fait croître les pertes de charge par frottement dans la colonne : la pression au fond remonte et le débit d'huile diminue. D'où l'intérêt d'allouer le gaz entre puits.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-017",
+      "theme": "Compresseurs alternatifs et gas lift",
+      "level": 3,
+      "q": "Le compresseur de gas lift vient de déclencher puis de redémarrer. Comment relance-t-on les puits dépendants ?",
+      "img": "svg/gas-lift-valve.svg",
+      "imgAlt": "Schéma de distribution de gaz lift vers plusieurs puits",
+      "choices": [
+        "En rouvrant tous les puits d'un coup pour rattraper la production",
+        "En laissant le réseau se dépressuriser complètement avant toute relance",
+        "En attendant la stabilité du réseau, puis en relançant les puits par étapes",
+        "En relevant le tarage des soupapes pour tenir la pression du réseau"
+      ],
+      "answer": 2,
+      "explain": "Une remise en service brutale écroule la pression du réseau et risque un nouveau déclenchement. On stabilise, puis on relance les puits un à un.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-018",
+      "theme": "Compresseurs alternatifs et gas lift",
+      "level": 3,
+      "q": "Un compresseur alternatif aspire du liquide dans un cylindre. Quelle est la conséquence typique ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un groupe compresseur de gaz",
+      "choices": [
+        "Une légère baisse de débit, sans conséquence pour la mécanique",
+        "Un échauffement temporaire du gaz refoulé, sans dommage durable",
+        "Une baisse de pression de l'huile de graissage de la crosse",
+        "Une rupture de tige ou de bielle : liquide incompressible"
+      ],
+      "answer": 3,
+      "explain": "Le piston ne peut pas comprimer le liquide : la pression monte brutalement et les efforts cassent tige, bielle ou cylindre. D'où l'importance du ballon d'aspiration.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-019",
+      "theme": "Vibrations et surveillance",
+      "level": 1,
+      "q": "Quel capteur mesure sans contact le mouvement relatif de l'arbre par rapport au palier ?",
+      "choices": [
+        "L'accéléromètre posé sur le carter",
+        "Le vélocimètre posé sur le carter",
+        "Le thermocouple de palier",
+        "La sonde de proximité"
+      ],
+      "answer": 3,
+      "explain": "Une sonde de proximité mesure la distance à l'arbre en micromètres. Accéléromètre et vélocimètre mesurent le mouvement du carter.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-020",
+      "theme": "Vibrations et surveillance",
+      "level": 1,
+      "q": "À quoi sert le capteur de phase (Keyphasor) ?",
+      "choices": [
+        "À mesurer la température des paliers de la machine",
+        "À fournir un top par tour (référence de phase)",
+        "À mesurer la position axiale de l'arbre au palier de butée",
+        "À compter le nombre de démarrages de la machine"
+      ],
+      "answer": 1,
+      "explain": "Le Keyphasor donne une impulsion par tour. Elle sert de repère pour mesurer la phase des vibrations et tracer les diagrammes de Bode.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-021",
+      "theme": "Vibrations et surveillance",
+      "level": 2,
+      "q": "Un transmetteur de vibration est étalonné de 0 à 25 mm/s en 4-20 mA et délivre 12 mA. Quelle vitesse vibratoire indique-t-il ?",
+      "img": "svg/loop-4-20ma.svg",
+      "imgAlt": "Boucle 4-20 mA : transmetteur de vibration 0 à 25 mm/s, courant lu 12 mA",
+      "choices": [
+        "12,5 mm/s, car le zéro vaut 4 mA",
+        "15 mm/s, en prenant le zéro à 0 mA",
+        "7,5 mm/s, en prenant 12 mA pour 30 %",
+        "25 mm/s, soit la pleine échelle"
+      ],
+      "answer": 0,
+      "explain": "Vitesse = (12 − 4) ÷ 16 × 25 = 12,5 mm/s. Diviser 12 par 20 donne 15 mm/s : le zéro est à 4 mA.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-022",
+      "theme": "Vibrations et surveillance",
+      "level": 3,
+      "q": "Sur un compresseur à paliers lisses tournant à 5 000 tr/min (83,3 Hz), le spectre montre un pic à 40 Hz. De quoi s'agit-il probablement ?",
+      "choices": [
+        "Un balourd résiduel, qui apparaît à 1× la vitesse",
+        "Un désalignement des arbres, visible surtout à 2× la vitesse",
+        "Un défaut de roulement à billes, avec pics non synchrones",
+        "Un fouettement d'huile, composante sous-synchrone vers 0,5×"
+      ],
+      "answer": 3,
+      "explain": "40 ÷ 83,3 ≈ 0,48× : fréquence sous-synchrone typique de l'oil whirl. Un balourd serait à 1× et un désalignement à 2×.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-023",
+      "theme": "Vibrations et surveillance",
+      "level": 2,
+      "q": "En montée en vitesse, l'amplitude vibratoire passe par un pic à 3 200 tr/min et la phase varie d'environ 180°. De quoi s'agit-il ?",
+      "choices": [
+        "D'un défaut de roulement à billes",
+        "Du passage d'une vitesse critique",
+        "D'un pompage du compresseur centrifuge",
+        "D'un filtre d'huile en cours de colmatage"
+      ],
+      "answer": 1,
+      "explain": "Un pic d'amplitude accompagné d'un saut de phase d'environ 180° est la signature d'une vitesse critique. On traverse sans s'y attarder.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-024",
+      "theme": "Vibrations et surveillance",
+      "level": 2,
+      "q": "La position axiale de l'arbre d'un compresseur dérive lentement sur plusieurs semaines. Que signale cette dérive ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un groupe compresseur de gaz",
+      "choices": [
+        "Un encrassement du filtre d'huile",
+        "Un balourd progressif du rotor",
+        "Une usure du palier de butée",
+        "Un gaz d'étanchéité devenu trop chaud"
+      ],
+      "answer": 2,
+      "explain": "Les sondes de position axiale mesurent le déplacement de l'arbre le long de son axe. Une dérive montre l'usure de la butée, qui encaisse la poussée axiale.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-025",
+      "theme": "Vibrations et surveillance",
+      "level": 2,
+      "q": "Les vibrations d'un compresseur ont augmenté de 30 % en trois semaines, sans alarme. Quelle est la meilleure conduite ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un groupe compresseur de gaz",
+      "choices": [
+        "Attendre le seuil d'alarme avant d'agir, la machine marche toujours",
+        "Relever le seuil d'alarme pour éviter de futures fausses alertes",
+        "Débrancher temporairement le capteur pour éviter une alarme intempestive",
+        "Signaler la tendance, analyser le spectre vibratoire et planifier l'arrêt"
+      ],
+      "answer": 3,
+      "explain": "Une tendance en hausse est un signal précoce : mieux vaut agir à l'arrêt programmé qu'au déclenchement. Modifier un seuil ou retirer un capteur masque le défaut.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-026",
+      "theme": "Vibrations et surveillance",
+      "level": 3,
+      "q": "Un compresseur centrifuge présente des fluctuations rapides de pression de refoulement et de débit, de fortes vibrations axiales et un bruit de claquement. Que se passe-t-il et que faire ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un compresseur centrifuge de gaz",
+      "choices": [
+        "Cavitation : augmenter la pression d'aspiration en fermant le recyclage",
+        "Pompage : ouvrir le recyclage anti-pompage ou réduire la charge selon la procédure",
+        "Désalignement : arrêter immédiatement la machine pour réaligner l'arbre",
+        "Colmatage : nettoyer le filtre d'aspiration sans arrêter la machine"
+      ],
+      "answer": 1,
+      "explain": "Les oscillations de débit et de pression avec bruit et vibrations axiales sont typiques du pompage. Le recyclage ramène la machine dans sa plage stable.",
+      "seconds": 65,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-027",
+      "theme": "Vibrations et surveillance",
+      "level": 3,
+      "q": "Une turbine déclenche sur vibration très haute et le superviseur demande de contourner la protection pour tenir la production. Que faites-vous ?",
+      "choices": [
+        "Accepter pour une heure, le temps de repartir et stabiliser",
+        "Doubler le seuil de déclenchement dans la configuration du système",
+        "Refuser sans autorisation écrite et mesures compensatoires",
+        "Accepter et surveiller visuellement la machine pendant la marche"
+      ],
+      "answer": 2,
+      "explain": "Une protection de vibration sert à éviter la destruction de la machine. Elle ne se contourne que par la procédure d'inhibition, avec autorisation écrite et mesures compensatoires.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-028",
+      "theme": "Lubrification et étanchéités",
+      "level": 1,
+      "q": "Quel est le rôle de la pompe à huile auxiliaire d'une turbine ou d'un compresseur ?",
+      "choices": [
+        "Garder la pression d'huile aux paliers à basse vitesse",
+        "Augmenter la vitesse de l'arbre quand la turbine ralentit",
+        "Injecter le combustible dans la chambre lors du démarrage",
+        "Nettoyer le compresseur d'air en marche avec de l'huile"
+      ],
+      "answer": 0,
+      "explain": "La pompe principale est souvent liée à l'arbre : à basse vitesse elle ne suffit pas. La pompe auxiliaire démarre pour garder la pression d'huile.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-029",
+      "theme": "Lubrification et étanchéités",
+      "level": 2,
+      "q": "Pourquoi installe-t-on un réservoir d'huile de secours en hauteur (rundown tank) ?",
+      "choices": [
+        "Stocker l'huile usagée avant son évacuation vers le site de traitement",
+        "Alimenter les paliers par gravité pendant la décélération",
+        "Refroidir l'huile par échange avec l'air ambiant en marche normale",
+        "Fournir le gaz d'étanchéité à la garniture du compresseur"
+      ],
+      "answer": 1,
+      "explain": "Si l'alimentation d'huile s'interrompt, le rotor met du temps à s'arrêter. Le réservoir en hauteur alimente les paliers par gravité pendant cette décélération.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-030",
+      "theme": "Lubrification et étanchéités",
+      "level": 2,
+      "q": "La courbe d'une pompe à huile montre une pression qui baisse quand le débit augmente. Quand le filtre à huile se colmate, qu'arrive-t-il au circuit ?",
+      "img": "svg/centrifugal-pump-curve.svg",
+      "imgAlt": "Courbe caractéristique d'une pompe avec la courbe de résistance du circuit et le point de fonctionnement",
+      "choices": [
+        "Le débit augmente car le filtre se déforme",
+        "La pression d'aspiration de la pompe monte fortement",
+        "La résistance du circuit augmente : le débit baisse",
+        "La température de l'huile baisse immédiatement"
+      ],
+      "answer": 2,
+      "explain": "Un filtre colmaté augmente la perte de charge : à pompe identique, le point de fonctionnement se déplace vers un débit plus faible, et la pression différentielle du filtre monte.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-031",
+      "theme": "Lubrification et étanchéités",
+      "level": 1,
+      "q": "La pression différentielle du filtre d'huile atteint son seuil. Quelle est la bonne première action ?",
+      "choices": [
+        "Commuter sur le filtre propre en marche, puis changer la cartouche encrassée",
+        "Arrêter la machine aussitôt, puis changer la cartouche encrassée",
+        "Retirer la cartouche encrassée sans commuter, machine en marche",
+        "Augmenter la pression de l'huile au réglage maximal du régulateur"
+      ],
+      "answer": 0,
+      "explain": "Les filtres doubles se commutent en marche. On change la cartouche sur le filtre isolé sans interrompre la lubrification.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-032",
+      "theme": "Lubrification et étanchéités",
+      "level": 1,
+      "q": "Que mesure une analyse d'huile de lubrification ?",
+      "choices": [
+        "La vitesse de rotation de l'arbre en charge",
+        "La température de combustion dans la chambre",
+        "Le rapport de compression du compresseur",
+        "Eau, usure et dégradation de l'huile"
+      ],
+      "answer": 3,
+      "explain": "L'analyse d'huile détecte contamination, usure (fer, cuivre, étain) et vieillissement. Elle sert à la maintenance conditionnelle.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-033",
+      "theme": "Lubrification et étanchéités",
+      "level": 2,
+      "q": "Sur une garniture à gaz sec, le débit de gaz à l'évent primaire augmente régulièrement. Que cela indique-t-il ?",
+      "choices": [
+        "Un encrassement du filtre d'air d'admission de la turbine à gaz",
+        "Un excès d'huile dans le palier côté accouplement",
+        "Une usure des faces de la garniture ou du joint primaire",
+        "Une baisse de température du gaz de buffer en entrée"
+      ],
+      "answer": 2,
+      "explain": "Le gaz qui passe entre les faces s'évacue par l'évent primaire. Un débit croissant indique une dégradation de l'étanchéité. On planifie un remplacement.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-034",
+      "theme": "Lubrification et étanchéités",
+      "level": 2,
+      "q": "Pourquoi injecte-t-on de l'azote comme gaz de séparation entre la garniture à gaz sec et le palier ?",
+      "choices": [
+        "Pour empêcher l'huile de contaminer la garniture",
+        "Pour refroidir le palier avec un gaz plus froid que l'huile",
+        "Pour balayer le filtre à gaz d'étanchéité",
+        "Pour augmenter la vitesse du rotor"
+      ],
+      "answer": 0,
+      "explain": "L'huile qui atteindrait la garniture à gaz sec la détruirait. Le gaz de séparation (azote) crée une barrière entre les deux zones.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-035",
+      "theme": "Lubrification et étanchéités",
+      "level": 3,
+      "q": "Le gaz d'étanchéité d'une garniture à gaz sec devient humide. Quel est le risque ?",
+      "choices": [
+        "Aucun risque : la garniture tolère tout gaz d'étanchéité humide",
+        "Une hausse du rendement de la garniture et du compresseur",
+        "Une baisse de la pression d'huile des paliers",
+        "Liquide entre les faces et destruction rapide de la garniture"
+      ],
+      "answer": 3,
+      "explain": "Un film liquide ou un dépôt entre les faces provoque frottement et usure. Le gaz doit être propre, sec et filtré, parfois réchauffé.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-036",
+      "theme": "Lubrification et étanchéités",
+      "level": 3,
+      "q": "La pression d'huile aux paliers baisse, la pompe auxiliaire démarre et la pression se rétablit. Quelle suite est correcte ?",
+      "img": "svg/centrifugal-pump-curve.svg",
+      "imgAlt": "Courbe caractéristique d'une pompe à huile",
+      "choices": [
+        "Considérer l'incident clos puisque la pression est revenue à sa valeur normale",
+        "Rechercher la cause (pompe, fuite, filtre) avant toute remise en charge",
+        "Arrêter la pompe auxiliaire dès le retour de la pression normale",
+        "Augmenter le tarage de la pression d'huile pour éviter la rechute"
+      ],
+      "answer": 1,
+      "explain": "Le démarrage de la pompe auxiliaire n'est qu'un secours. La cause (pompe principale, fuite, colmatage) doit être trouvée avant de continuer.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-037",
+      "theme": "Démarrage, protections et déclenchements",
+      "level": 1,
+      "q": "Pourquoi purge-t-on une turbine à gaz avant l'allumage ?",
+      "choices": [
+        "Pour évacuer le gaz accumulé dans la chambre et l'échappement avant l'allumage",
+        "Pour réchauffer l'huile du système de graissage avant le démarrage",
+        "Pour tester la course des vannes anti-pompage avant l'allumage",
+        "Pour étalonner les capteurs de vibration avant la montée en vitesse"
+      ],
+      "answer": 0,
+      "explain": "Du gaz accumulé dans la chambre et l'échappement peut s'enflammer violemment à l'allumage. La purge par l'air du démarreur l'évacue.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-038",
+      "theme": "Démarrage, protections et déclenchements",
+      "level": 1,
+      "q": "Après un échec d'allumage d'une turbine à gaz, que doit-on faire ?",
+      "choices": [
+        "Relancer immédiatement le démarrage, l'allumeur étant déjà chaud",
+        "Augmenter le débit de combustible pour assurer l'allumage suivant",
+        "Inhiber la protection de flamme pour terminer la séquence",
+        "Purger de nouveau, puis chercher la cause de l'échec avant d'essayer"
+      ],
+      "answer": 3,
+      "explain": "Du combustible non brûlé a pu s'accumuler. On purge, on cherche la cause (allumeur, détection de flamme, combustible) avant de réessayer.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-039",
+      "theme": "Démarrage, protections et déclenchements",
+      "level": 2,
+      "q": "Que désigne un démarrage chaud (hot start) d'une turbine à gaz ?",
+      "choices": [
+        "Un démarrage effectué moins d'une heure après un arrêt",
+        "Un dépassement de l'EGT pendant le démarrage",
+        "Un démarrage avec huile à haute température",
+        "Un démarrage directement à puissance nominale"
+      ],
+      "answer": 1,
+      "explain": "Un hot start est un pic de température d'échappement pendant l'accélération, souvent dû à trop de combustible ou à un compresseur encrassé. Il use les aubes.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-040",
+      "theme": "Démarrage, protections et déclenchements",
+      "level": 2,
+      "q": "Pourquoi la survitesse est-elle si dangereuse pour une machine tournante ?",
+      "choices": [
+        "Les efforts croissent proportionnellement à la vitesse, sans effet de seuil",
+        "L'échauffement des paliers est la seule conséquence, sans effet sur les pièces",
+        "L'effort centrifuge croît avec le carré de la vitesse : +10 % de vitesse donne +21 %",
+        "Elle bloque la pompe d'huile principale et coupe la lubrification des paliers"
+      ],
+      "answer": 2,
+      "explain": "L'effort centrifuge varie en vitesse au carré : 1,1² = 1,21. Une petite survitesse peut dépasser la résistance des aubes et du rotor.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-041",
+      "theme": "Démarrage, protections et déclenchements",
+      "level": 2,
+      "q": "Après l'arrêt d'une turbine à gaz, pourquoi continue-t-on à faire tourner lentement le rotor et à garder l'huile en service ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un groupe turbo-compresseur à gaz",
+      "choices": [
+        "Pour recharger la batterie du démarreur et maintenir sa tension",
+        "Pour nettoyer le compresseur d'air à faible vitesse avec un liquide",
+        "Pour mesurer la vitesse critique du rotor pendant sa décélération lente",
+        "Pour éviter la déformation du rotor chaud et refroidir les paliers"
+      ],
+      "answer": 3,
+      "explain": "Un rotor chaud et immobile se déforme sous son propre poids. Le vireur et l'huile en service assurent un refroidissement homogène.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-042",
+      "theme": "Démarrage, protections et déclenchements",
+      "level": 2,
+      "q": "Quelle condition est requise avant le démarrage d'un compresseur centrifuge de gaz ?",
+      "choices": [
+        "Recyclage fermé, ballon sans liquide, huile et gaz d'étanchéité en service",
+        "Recyclage ouvert, ballon sans liquide, huile et gaz d'étanchéité en service",
+        "Recyclage ouvert, ballon sans liquide, huile en service sans gaz d'étanchéité",
+        "Recyclage ouvert, ballon plein de condensats, huile et gaz d'étanchéité"
+      ],
+      "answer": 1,
+      "explain": "Recyclage ouvert protège du pompage ; ballon sans liquide protège les aubes ; huile et gaz d'étanchéité protègent paliers et garnitures.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-043",
+      "theme": "Démarrage, protections et déclenchements",
+      "level": 3,
+      "q": "Une turbine déclenche sur perte de flamme et le superviseur demande de la relancer aussitôt. Que faites-vous ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un groupe turbo-compresseur à gaz",
+      "choices": [
+        "Redémarrer sans attendre, la séquence de démarrage étant automatique",
+        "Inhiber la détection de flamme pour éviter un autre déclenchement",
+        "Lire le first-out, vérifier le combustible, purger, puis redémarrer",
+        "Monter la pression de gaz au maximum pour faciliter l'allumage"
+      ],
+      "answer": 2,
+      "explain": "Redémarrer sans comprendre la cause peut répéter l'incident, voire créer une explosion. On lit le first-out, on vérifie le combustible, on purge, et on suit la procédure.",
+      "seconds": 65,
+      "status": "draft"
+    },
+    {
+      "id": "tech-turbines-compresseurs-044",
+      "theme": "Démarrage, protections et déclenchements",
+      "level": 3,
+      "q": "Quelle séquence est correcte pour démarrer un compresseur alternatif ?",
+      "choices": [
+        "Contrôler la lubrification, purger les liquides, démarrer à vide, puis charger",
+        "Contrôler la lubrification, démarrer en pleine charge, puis purger les liquides",
+        "Contrôler la lubrification, fermer les clapets d'aspiration, démarrer à vide",
+        "Purger les liquides, démarrer en charge, puis contrôler la lubrification en marche"
+      ],
+      "answer": 0,
+      "explain": "Un démarrage à vide limite les efforts sur la tige et les clapets. La lubrification et la purge des liquides évitent usure et coups de liquide.",
+      "seconds": 55,
+      "status": "draft"
+    }
+  ]
+}

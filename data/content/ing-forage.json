@@ -6,7 +6,7 @@
       "title": "Hydrostatique, boues et fenêtre de forage",
       "theme": "Hydrostatique, boues et fenêtre de forage",
       "minutes": 10,
-      "body": "Forer, c'est maintenir la pression dans le puits dans une fenêtre étroite : assez haute pour empêcher l'entrée de fluides de formation, assez basse pour ne pas fracturer la roche.\n\nLa **pression hydrostatique** d'une colonne de boue s'écrit en unités de champ : P (psi) = 0,052 × ρ (ppg) × TVD (ft). Une boue de 10 ppg à 10 000 ft TVD exerce donc 5 200 psi. En unités métriques : P (bar) = 0,0981 × ρ (sg) × TVD (m). Seule la profondeur verticale (TVD) compte, pas la longueur du trou (MD).\n\nLa **fenêtre de forage** est l'intervalle de densité de boue compris entre la pression de pores (limite basse) et le gradient de fracturation (limite haute). On forme une surpression de sécurité par rapport à la pression de pores, sans dépasser la fracturation. Une boue trop légère expose à la venue (kick), une boue trop lourde aux pertes et à la fracturation.\n\nLa **boue de forage** remplit plusieurs fonctions : contrôler la pression de formation, remonter les déblais, refroidir et lubrifier le trépan, stabiliser le trou, former un gâteau de boue et transmettre la puissance hydraulique. On distingue les boues à l'eau (WBM), à l'huile (OBM) et synthétiques (SBM). La **barytine** est l'agent alourdissant courant. La rhéologie (viscosité plastique, yield point) gouverne le nettoyage du trou.\n\nLa **densité équivalente en circulation** (ECD) est la densité statique augmentée de l'effet des pertes de charge dans l'annulaire : ECD = MW + ΔPann / (0,052 × TVD). Elle est donc supérieure à la densité statique et peut approcher la fracturation.\n\nPendant les manœuvres, la remontée du train crée un effet de piston (**swab**) qui réduit la pression de fond et peut déclencher une venue ; la descente crée un effet de surpression (**surge**). On suit le volume avec le trip tank.\n\nAu Gabon, les puits offshore traversent parfois des séquences salifères (sel aptien) avant les cibles sous-salifères ; le fluage du sel impose boue et tubage adaptés.",
+      "body": "Forer, c'est maintenir la pression dans le puits dans une fenêtre étroite : assez haute pour empêcher l'entrée de fluides de formation, assez basse pour ne pas fracturer la roche.\n\nLa **pression hydrostatique** d'une colonne de boue s'écrit en unités de champ : P (psi) = 0,052 × ρ (ppg) × TVD (ft). Une boue de 10 ppg à 10 000 ft TVD exerce donc 5 200 psi. En unités métriques : P (bar) = 0,0981 × ρ (sg) × TVD (m). Seule la profondeur verticale (TVD) compte, pas la longueur du trou (MD).\n\nLa **fenêtre de forage** est l'intervalle de densité de boue compris entre la pression de pores (limite basse) et le gradient de fracturation (limite haute). On forme une surpression de sécurité par rapport à la pression de pores, sans dépasser la fracturation. Une boue trop légère expose à la venue (kick), une boue trop lourde aux pertes et à la fracturation.\n\nLa **boue de forage** remplit plusieurs fonctions : contrôler la pression de formation, remonter les déblais, refroidir et lubrifier le trépan, stabiliser le trou, former un gâteau de boue et transmettre la puissance hydraulique. On distingue les boues à l'eau (WBM), à l'huile (OBM) et synthétiques (SBM). La **barytine** est l'agent alourdissant courant. La rhéologie (viscosité plastique, yield point) gouverne le nettoyage du trou.\n\nLa **densité équivalente en circulation** (ECD) est la densité statique augmentée de l'effet des pertes de charge dans l'annulaire : ECD = MW + ΔPann / (0,052 × TVD). Elle est donc supérieure à la densité statique et peut approcher la fracturation.\n\nPendant les manœuvres, la remontée du train crée un effet de piston (**swab**) qui réduit la pression de fond et peut déclencher une venue ; la descente crée un effet de surpression (**surge**). On suit le volume avec le trip tank.\n\nAu Gabon, les puits offshore traversent parfois des séquences salifères (sel aptien) avant les cibles sous-salifères ; le fluage du sel impose boue et tubage adaptés.\n\n**Sur le terrain**\n- Utilisez toujours la TVD pour la pression hydrostatique : confondre MD et TVD fausse tous les calculs de contrôle.\n- Quand les pertes apparaissent, gardez le puits plein et recalculez l'ECD avant de remonter la densité.\n- Pesez la boue entrée et sortie à chaque quart et notez : une densité qui dérive est un signal avant la venue.",
       "keyPoints": [
         "P (psi) = 0,052 × ρ (ppg) × TVD (ft) ; P (bar) = 0,0981 × ρ (sg) × TVD (m).",
         "Fenêtre de forage : entre pression de pores et gradient de fracturation.",
@@ -21,7 +21,7 @@
       "title": "Tubage et cimentation",
       "theme": "Tubage et cimentation",
       "minutes": 9,
-      "body": "Le puits est construit par phases emboîtées : **conducteur**, tubage de **surface**, tubage(s) **intermédiaire(s)**, puis tubage de **production** ou liner. Chaque colonne est cimentée pour isoler les formations, protéger les aquifères, supporter le contrôle de puits et préparer la phase suivante. Les profondeurs de sabot se choisissent d'après les pressions de pores et de fracturation : on veut pouvoir forer la phase suivante avec une marge de venue.\n\nLes tubages suivent la norme **API 5CT**. Leur grade traduit la limite d'élasticité minimale : N80 correspond à 80 ksi (80 000 psi), P110 à 110 ksi. Le dimensionnement vérifie trois sollicitations : éclatement (burst), écrasement (collapse) et traction, avec des coefficients de sécurité.\n\nLa **cimentation primaire** assure l'isolation zonale et la fixation du tubage. Le laitier de ciment classe G, préparé avec environ 44 % d'eau, a une densité de 15,8 ppg. La séquence habituelle : fluide de lavage et espaceur, bouchon inférieur, laitier, bouchon supérieur, fluide de déplacement jusqu'au bouchon au sabot (bump). Les bouchons séparent les fluides ; les centraliseurs maintiennent le tubage au centre du trou pour une gaine de ciment uniforme.\n\nLa pression hydrostatique du laitier se calcule comme pour la boue : 15,8 ppg sur 2 000 ft donnent environ 1 643 psi. Le ciment doit rester assez léger pour ne pas fracturer, tout en contrôlant les zones à haute pression.\n\nLe **test de fuite** (LOT) ou test d'intégrité (FIT) est réalisé après avoir foré le sabot et quelques mètres de formation neuve, pour connaître la pression que la formation supporte. On en déduit la densité équivalente à la fracturation et la **MAASP** (pression maximale admissible en surface) : MAASP = (EMW du test − MW) × 0,052 × TVD du sabot.\n\nLa qualité du ciment est évaluée par diagraphie d'adhérence (CBL/VDL) ; un défaut impose parfois une cimentation corrective (squeeze).",
+      "body": "Le puits est construit par phases emboîtées : **conducteur**, tubage de **surface**, tubage(s) **intermédiaire(s)**, puis tubage de **production** ou liner. Chaque colonne est cimentée pour isoler les formations, protéger les aquifères, supporter le contrôle de puits et préparer la phase suivante. Les profondeurs de sabot se choisissent d'après les pressions de pores et de fracturation : on veut pouvoir forer la phase suivante avec une marge de venue.\n\nLes tubages suivent la norme **API 5CT**. Leur grade traduit la limite d'élasticité minimale : N80 correspond à 80 ksi (80 000 psi), P110 à 110 ksi. Le dimensionnement vérifie trois sollicitations : éclatement (burst), écrasement (collapse) et traction, avec des coefficients de sécurité.\n\nLa **cimentation primaire** assure l'isolation zonale et la fixation du tubage. Le laitier de ciment classe G, préparé avec environ 44 % d'eau, a une densité de 15,8 ppg. La séquence habituelle : fluide de lavage et espaceur, bouchon inférieur, laitier, bouchon supérieur, fluide de déplacement jusqu'au bouchon au sabot (bump). Les bouchons séparent les fluides ; les centraliseurs maintiennent le tubage au centre du trou pour une gaine de ciment uniforme.\n\nLa pression hydrostatique du laitier se calcule comme pour la boue : 15,8 ppg sur 2 000 ft donnent environ 1 643 psi. Le ciment doit rester assez léger pour ne pas fracturer, tout en contrôlant les zones à haute pression.\n\nLe **test de fuite** (LOT) ou test d'intégrité (FIT) est réalisé après avoir foré le sabot et quelques mètres de formation neuve, pour connaître la pression que la formation supporte. On en déduit la densité équivalente à la fracturation et la **MAASP** (pression maximale admissible en surface) : MAASP = (EMW du test − MW) × 0,052 × TVD du sabot.\n\nLa qualité du ciment est évaluée par diagraphie d'adhérence (CBL/VDL) ; un défaut impose parfois une cimentation corrective (squeeze).\n\n**Sur le terrain**\n- Contrôlez la balance pressurisée du laitier et comparez à la valeur du programme avant de pomper.\n- Surveillez le bump du bouchon et le volume déplacé : un écart signale un problème d'étanchéité ou de volume.\n- Ne perforez pas en face d'un ciment douteux : un CBL médiocre au contact huile/eau se paie en venues d'eau.",
       "keyPoints": [
         "Conducteur, surface, intermédiaire, production : chaque phase est tubée et cimentée.",
         "Grade API 5CT : le nombre indique la limite d'élasticité minimale en ksi (N80 = 80 ksi).",
@@ -36,7 +36,7 @@
       "title": "Contrôle de puits et BOP",
       "theme": "Contrôle de puits et BOP",
       "minutes": 11,
-      "body": "Une **venue** (kick) est une entrée de fluides de formation dans le puits due à une pression hydrostatique insuffisante. Non maîtrisée, elle devient une éruption (blowout). La première barrière est la boue (contrôle primaire) ; le BOP constitue la barrière secondaire.\n\n**Indicateurs** d'une venue en forage : gain de volume aux bacs, augmentation du débit de retour à pompes constantes, drilling break, parfois baisse de pression de pompage. **Premiers gestes** : arrêter le forage, dégager le trépan du fond et ajuster la position des tool joints (space out), arrêter les pompes, vérifier l'écoulement (flow check), fermer le puits, alerter, puis relever SIDPP, SICP et le gain de volume.\n\nLa **SIDPP** (pression stabilisée aux tiges) mesure l'excès de pression de formation par rapport à la hydrostatique de la boue dans le train de tiges. La **SICP** (pression stabilisée au casing) est souvent plus élevée en cas de venue de gaz, car la venue légère occupe l'annulaire. La densité de contrôle vaut : KMW = MW + SIDPP / (0,052 × TVD). Exemple : 10,0 ppg, SIDPP 520 psi, TVD 10 000 ft donnent 11,0 ppg. La pression de circulation initiale est ICP = SIDPP + pression à débit réduit (SCRP).\n\nLe type de venue s'estime : hauteur = gain / capacité annulaire ; gradient de la venue = gradient de la boue − (SICP − SIDPP) / hauteur. Un gradient d'environ 0,1 à 0,25 psi/ft suggère du gaz, plus de 0,4 de l'eau salée.\n\nDeux méthodes à pression de fond constante : **Driller's** (deux circulations : évacuation avec boue d'origine, puis boue lourde) et **Wait & Weight** (une seule circulation avec la boue de contrôle, plus rapide mais nécessitant l'alourdissement avant).\n\nLe **BOP** comprend l'annulaire, les mâchoires sur tiges, les mâchoires aveugles et les mâchoires de cisaillement qui coupent le train et scellent le puits, les lignes de duse et de contrôle et le manifold de duses. Un accumulateur (système à 3 000 psi) fournit l'énergie de fermeture. Des tests réguliers et des exercices de fermeture sont indispensables.",
+      "body": "Une **venue** (kick) est une entrée de fluides de formation dans le puits due à une pression hydrostatique insuffisante. Non maîtrisée, elle devient une éruption (blowout). La première barrière est la boue (contrôle primaire) ; le BOP constitue la barrière secondaire.\n\n**Indicateurs** d'une venue en forage : gain de volume aux bacs, augmentation du débit de retour à pompes constantes, drilling break, parfois baisse de pression de pompage. **Premiers gestes** : arrêter le forage, dégager le trépan du fond et ajuster la position des tool joints (space out), arrêter les pompes, vérifier l'écoulement (flow check), fermer le puits, alerter, puis relever SIDPP, SICP et le gain de volume.\n\nLa **SIDPP** (pression stabilisée aux tiges) mesure l'excès de pression de formation par rapport à la hydrostatique de la boue dans le train de tiges. La **SICP** (pression stabilisée au casing) est souvent plus élevée en cas de venue de gaz, car la venue légère occupe l'annulaire. La densité de contrôle vaut : KMW = MW + SIDPP / (0,052 × TVD). Exemple : 10,0 ppg, SIDPP 520 psi, TVD 10 000 ft donnent 11,0 ppg. La pression de circulation initiale est ICP = SIDPP + pression à débit réduit (SCRP).\n\nLe type de venue s'estime : hauteur = gain / capacité annulaire ; gradient de la venue = gradient de la boue − (SICP − SIDPP) / hauteur. Un gradient d'environ 0,1 à 0,25 psi/ft suggère du gaz, plus de 0,4 de l'eau salée.\n\nDeux méthodes à pression de fond constante : **Driller's** (deux circulations : évacuation avec boue d'origine, puis boue lourde) et **Wait & Weight** (une seule circulation avec la boue de contrôle, plus rapide mais nécessitant l'alourdissement avant).\n\nLe **BOP** comprend l'annulaire, les mâchoires sur tiges, les mâchoires aveugles et les mâchoires de cisaillement qui coupent le train et scellent le puits, les lignes de duse et de contrôle et le manifold de duses. Un accumulateur (système à 3 000 psi) fournit l'énergie de fermeture. Des tests réguliers et des exercices de fermeture sont indispensables.\n\n**Sur le terrain**\n- Dès un gain aux bacs : stop, space out, arrêt des pompes, flow check, fermeture : jamais de « un dernier mètre ».\n- Notez SIDPP et SICP à la fermeture et stabilisez-les : une pression qui monte signale une migration.\n- Faites le simulacre de fermeture à chaque équipe et testez le BOP selon les échéances du site.",
       "keyPoints": [
         "Indicateurs de venue : gain aux bacs, débit de retour en hausse à pompes constantes.",
         "KMW = MW + SIDPP / (0,052 × TVD) ; ICP = SIDPP + SCRP.",
@@ -51,7 +51,7 @@
       "title": "Opérations de forage et incidents",
       "theme": "Opérations de forage et programme",
       "minutes": 9,
-      "body": "Un rig de forage se compose d'un système de levage (mât, treuil, moufle), d'un système de rotation (top drive ou table de rotation), d'un système de circulation (pompes à boue, tamis vibrants, dégazeur, désilteur) et du BOP. Les **pompes à boue** envoient la boue dans le train de tiges ; elle ressort par l'annulaire avec les déblais, qui sont séparés d'abord par les **tamis vibrants**.\n\nLe **programme de forage** fixe les phases, les diamètres de trépan et de tubage, les densités de boue, les profondeurs de sabot, les plans de cimentation et les barrières de sécurité. Il s'appuie sur les puits de corrélation, la sismique et les pressions prévues.\n\nDans les puits déviés, on distingue la profondeur mesurée (MD) de la profondeur verticale (TVD), avec TVD inférieure ou égale à MD. Le changement d'angle se mesure par la **dogleg severity** en degrés par 100 ft. Le nettoyage du trou est le plus difficile pour des inclinaisons d'environ 30 à 60°, où les déblais forment des lits qui peuvent glisser vers le bas.\n\nLe **drilling break** est une augmentation brutale de la vitesse d'avancement (ROP), qui peut signaler une formation plus poreuse ou à pression anormale ; on arrête donc pour vérifier l'écoulement.\n\nLe **coincement** a deux grandes causes. Le coincement différentiel apparaît avec surpression forte, formation perméable, gâteau épais et train immobile ; on réduit la surpression si possible, on place un bouchon et on bat au jar. Le coincement mécanique vient d'un mauvais nettoyage du trou, d'un effondrement de parois ou d'un trou trop serré.\n\nPendant les manœuvres, on suit le remplissage au **trip tank** : le volume d'acier retiré doit être compensé, un écart signale une venue ou des pertes.\n\nAu Gabon, la logistique, la météo offshore, la gestion des déchets de forage et la sécurité (H2S, levage) font partie du plan d'opération.",
+      "body": "Un rig de forage se compose d'un système de levage (mât, treuil, moufle), d'un système de rotation (top drive ou table de rotation), d'un système de circulation (pompes à boue, tamis vibrants, dégazeur, désilteur) et du BOP. Les **pompes à boue** envoient la boue dans le train de tiges ; elle ressort par l'annulaire avec les déblais, qui sont séparés d'abord par les **tamis vibrants**.\n\nLe **programme de forage** fixe les phases, les diamètres de trépan et de tubage, les densités de boue, les profondeurs de sabot, les plans de cimentation et les barrières de sécurité. Il s'appuie sur les puits de corrélation, la sismique et les pressions prévues.\n\nDans les puits déviés, on distingue la profondeur mesurée (MD) de la profondeur verticale (TVD), avec TVD inférieure ou égale à MD. Le changement d'angle se mesure par la **dogleg severity** en degrés par 100 ft. Le nettoyage du trou est le plus difficile pour des inclinaisons d'environ 30 à 60°, où les déblais forment des lits qui peuvent glisser vers le bas.\n\nLe **drilling break** est une augmentation brutale de la vitesse d'avancement (ROP), qui peut signaler une formation plus poreuse ou à pression anormale ; on arrête donc pour vérifier l'écoulement.\n\nLe **coincement** a deux grandes causes. Le coincement différentiel apparaît avec surpression forte, formation perméable, gâteau épais et train immobile ; on réduit la surpression si possible, on place un bouchon et on bat au jar. Le coincement mécanique vient d'un mauvais nettoyage du trou, d'un effondrement de parois ou d'un trou trop serré.\n\nPendant les manœuvres, on suit le remplissage au **trip tank** : le volume d'acier retiré doit être compensé, un écart signale une venue ou des pertes.\n\nAu Gabon, la logistique, la météo offshore, la gestion des déchets de forage et la sécurité (H2S, levage) font partie du plan d'opération.\n\n**Sur le terrain**\n- Tenez un trip sheet à chaque manœuvre : comparez volume attendu et volume réel du trip tank.\n- Face à un drilling break, flow check d'abord, ROP ensuite.\n- Sur une section déviée, surveillez couple, pression et déblais ensemble pour détecter un mauvais nettoyage.",
       "keyPoints": [
         "Pompes à boue : circulation ; tamis vibrants : séparation des déblais.",
         "TVD inférieure ou égale à MD ; dogleg en °/100 ft.",
@@ -63,45 +63,715 @@
     }
   ],
   "questions": [
-    {"id":"ing-forage-001","theme":"Hydrostatique, boues et fenêtre de forage","level":1,"q":"Quelle formule donne la pression hydrostatique en psi (densité ρ en ppg, profondeur verticale TVD en ft) ?","img":"svg/pressure-gradient-chart.svg","imgAlt":"Graphique de pression hydrostatique en fonction de la profondeur et de la densité","choices":["P = 0,433 × ρ × MD","P = 0,052 × ρ / TVD","P = 0,052 × ρ × TVD","P = ρ × TVD / 0,052"],"answer":2,"explain":"P = 0,052 × ρ (ppg) × TVD (ft). Seule la profondeur verticale compte, pas la MD.","seconds":40,"status":"draft"},
-    {"id":"ing-forage-002","theme":"Hydrostatique, boues et fenêtre de forage","level":1,"q":"Quelle est la pression hydrostatique d'une colonne de boue de 10 ppg à 10 000 ft TVD ?","choices":["5 200 psi","4 330 psi","1 920 psi","52 000 psi"],"answer":0,"explain":"P = 0,052 × 10 × 10 000 = 5 200 psi. 4 330 psi serait la pression de l'eau douce (0,433 × 10 000).","seconds":50,"status":"draft"},
-    {"id":"ing-forage-003","theme":"Hydrostatique, boues et fenêtre de forage","level":1,"q":"Quelle est une fonction correcte de la boue de forage ?","img":"svg/drilling-rig-schematic.svg","imgAlt":"Schéma du circuit de boue d'un rig de forage","choices":["Augmenter la température du puits","Produire l'électricité du rig","Remplacer le tubage","Remonter les déblais, refroidir et lubrifier le trépan et contrôler la pression de formation"],"answer":3,"explain":"La boue remonte les déblais, refroidit le trépan, stabilise le trou et surtout contrôle la pression de formation par sa colonne hydrostatique.","seconds":40,"status":"draft"},
-    {"id":"ing-forage-004","theme":"Hydrostatique, boues et fenêtre de forage","level":2,"q":"Boue de densité 1,20 sg, TVD 3 000 m. Avec P (bar) = 0,0981 × ρ (sg) × TVD (m), quelle est la pression hydrostatique ?","choices":["≈ 294 bar","≈ 353 bar","≈ 3 530 bar","≈ 35 bar"],"answer":1,"explain":"0,0981 × 1,20 × 3 000 ≈ 353 bar. Les autres valeurs viennent d'une erreur de facteur ou d'ordre de grandeur.","seconds":60,"status":"draft"},
-    {"id":"ing-forage-005","theme":"Hydrostatique, boues et fenêtre de forage","level":2,"q":"Qu'appelle-t-on « fenêtre de forage » ?","img":"svg/pressure-gradient-chart.svg","imgAlt":"Fenêtre de densité entre pression de pores et gradient de fracturation","choices":["L'intervalle de densité de boue entre la pression de pores (limite basse) et le gradient de fracturation (limite haute)","La profondeur de la table de rotation","Le diamètre du trépan","La plage de vitesse du top drive"],"answer":0,"explain":"La boue doit rester au-dessus de la pression de pores (sinon venue) et sous la fracturation (sinon pertes).","seconds":45,"status":"draft"},
-    {"id":"ing-forage-006","theme":"Hydrostatique, boues et fenêtre de forage","level":2,"q":"Une boue est trop légère par rapport à la pression de pores. Quel est le risque principal ?","choices":["Fracturation de la formation","Coincement différentiel","Venue (kick) : entrée de fluides de formation dans le puits","Usure du top drive"],"answer":2,"explain":"Si la pression hydrostatique est inférieure à la pression de pores, les fluides de formation entrent dans le puits : c'est une venue.","seconds":35,"status":"draft"},
-    {"id":"ing-forage-007","theme":"Hydrostatique, boues et fenêtre de forage","level":2,"q":"Pourquoi la densité équivalente en circulation (ECD) est-elle supérieure à la densité statique de la boue ?","img":"svg/pressure-gradient-chart.svg","imgAlt":"Pression de fond statique et en circulation, avec pertes de charge annulaires","choices":["Parce que la boue chauffe","Parce que les pertes de charge annulaires s'ajoutent à la pression hydrostatique au fond","Parce que les pompes sont arrêtées","Parce que la pression de pores augmente"],"answer":1,"explain":"En circulation, les frottements dans l'annulaire s'ajoutent à la colonne hydrostatique : la pression de fond équivaut à une densité plus élevée.","seconds":45,"status":"draft"},
-    {"id":"ing-forage-008","theme":"Hydrostatique, boues et fenêtre de forage","level":3,"q":"Lors de la remontée du train de tiges, l'effet de piston (swab) provoque :","choices":["une hausse de la pression de fond","un gain de densité de la boue","une fracturation du réservoir","une baisse temporaire de la pression de fond avec risque de venue"],"answer":3,"explain":"Le train qui monte aspire le fluide sous lui : la pression de fond diminue. C'est pourquoi on suit le remplissage au trip tank.","seconds":40,"status":"draft"},
-    {"id":"ing-forage-009","theme":"Hydrostatique, boues et fenêtre de forage","level":3,"q":"À 9 000 ft TVD, la pression de fond en circulation est de 5 148 psi. Quelle est l'ECD (ECD = P / (0,052 × TVD)) ?","choices":["11,0 ppg","9,0 ppg","12,5 ppg","10,0 ppg"],"answer":0,"explain":"0,052 × 9 000 = 468 ; 5 148 / 468 = 11,0 ppg.","seconds":75,"status":"draft"},
-    {"id":"ing-forage-010","theme":"Hydrostatique, boues et fenêtre de forage","level":3,"q":"Pour augmenter la densité d'une boue à l'eau, on ajoute généralement :","choices":["de la bentonite seule","de la barytine","de l'eau douce","du gasoil seul"],"answer":1,"explain":"La barytine (sulfate de baryum, densité environ 4,2) est l'alourdissant courant. L'eau et le gasoil allègent la boue.","seconds":35,"status":"draft"},
-    {"id":"ing-forage-011","theme":"Tubage et cimentation","level":1,"q":"À quoi sert principalement la colonne de tubage (casing) ?","img":"svg/drilling-rig-schematic.svg","imgAlt":"Puits tubé avec sabot et ciment","choices":["Augmenter le diamètre du puits","Mesurer la température","Remplacer la boue","Isoler et soutenir les formations, protéger les aquifères et permettre le contrôle de puits"],"answer":3,"explain":"Le tubage cimenté isole les zones, protège les nappes et supporte le BOP pour contrôler le puits.","seconds":40,"status":"draft"},
-    {"id":"ing-forage-012","theme":"Tubage et cimentation","level":1,"q":"Dans l'ordre de descente typique d'un puits, quelle colonne est installée en premier ?","img":"svg/drilling-rig-schematic.svg","imgAlt":"Colonnes emboîtées : conducteur, surface, intermédiaire, production","choices":["Le tubage de production","Le liner de production","Le conducteur","Le tubage intermédiaire"],"answer":2,"explain":"Le conducteur est la première colonne, de grand diamètre, qui sert de fondation au puits.","seconds":35,"status":"draft"},
-    {"id":"ing-forage-013","theme":"Tubage et cimentation","level":1,"q":"Que signifie le grade « N80 » d'un tubage API 5CT ?","choices":["Une limite d'élasticité minimale de 80 ksi (80 000 psi)","Un diamètre de 80 mm","Une masse de 80 lb/ft","Une température maximale de 80 °C"],"answer":0,"explain":"Le nombre du grade correspond à la limite d'élasticité minimale en ksi : N80 = 80 ksi, P110 = 110 ksi.","seconds":40,"status":"draft"},
-    {"id":"ing-forage-014","theme":"Tubage et cimentation","level":2,"q":"Quel est l'objectif principal de la cimentation primaire ?","choices":["Augmenter la densité de la boue","Assurer l'isolation zonale et fixer le tubage au terrain","Améliorer la ROP","Perforer le tubage"],"answer":1,"explain":"Le ciment isole les formations les unes des autres, empêche la circulation de fluides derrière le tubage et le maintient en place.","seconds":35,"status":"draft"},
-    {"id":"ing-forage-015","theme":"Tubage et cimentation","level":2,"q":"Un laitier de ciment classe G préparé avec environ 44 % d'eau a une densité d'environ :","choices":["8,6 ppg","12,0 ppg","18,0 ppg","15,8 ppg"],"answer":3,"explain":"Le laitier de classe G « neat » à environ 44 % d'eau a une densité de 15,8 ppg, valeur de référence.","seconds":35,"status":"draft"},
-    {"id":"ing-forage-016","theme":"Tubage et cimentation","level":2,"q":"Quel est le rôle des bouchons de cimentation (haut et bas) ?","choices":["Mesurer la pression de fond","Accélérer la prise du ciment","Séparer les fluides (boue, laitier, déplacement) et signaler par une hausse de pression l'arrivée au sabot (bump)","Centrer le tubage"],"answer":2,"explain":"Les bouchons évitent le mélange des fluides ; le bump de pression indique la fin du déplacement. Le centrage est assuré par les centraliseurs.","seconds":45,"status":"draft"},
-    {"id":"ing-forage-017","theme":"Tubage et cimentation","level":2,"q":"Quel outil permet d'évaluer la qualité de l'adhérence du ciment au tubage ?","img":"svg/well-log.svg","imgAlt":"Exemple de diagraphie en fonction de la profondeur","choices":["CBL/VDL (cement bond log)","Gamma ray de MWD seul","Un débitmètre de surface","Un entonnoir Marsh"],"answer":0,"explain":"Le CBL/VDL, outil acoustique descendu au câble, renseigne sur l'adhérence du ciment au tubage et à la formation.","seconds":35,"status":"draft"},
-    {"id":"ing-forage-018","theme":"Tubage et cimentation","level":2,"q":"Quel est le rôle des centraliseurs ?","choices":["Réduire la densité du ciment","Maintenir le tubage centré dans le trou pour une gaine de ciment uniforme","Mesurer l'inclinaison","Accélérer le déplacement"],"answer":1,"explain":"Un tubage décentré laisse un côté sans ciment et favorise les canaux de boue ; les centraliseurs améliorent l'isolation.","seconds":35,"status":"draft"},
-    {"id":"ing-forage-019","theme":"Tubage et cimentation","level":3,"q":"Un laitier de 15,8 ppg occupe 2 000 ft (TVD). Quelle est sa pression hydrostatique à la base ?","choices":["≈ 822 psi","≈ 3 290 psi","≈ 1 643 psi","≈ 16 430 psi"],"answer":2,"explain":"0,052 × 15,8 × 2 000 ≈ 1 643 psi.","seconds":60,"status":"draft"},
-    {"id":"ing-forage-020","theme":"Tubage et cimentation","level":3,"q":"Sabot à 8 000 ft TVD, boue 10,0 ppg, test de fuite équivalent à 14,0 ppg. Quelle est la MAASP au sabot, avec MAASP = (EMW − MW) × 0,052 × TVD ?","img":"svg/pressure-gradient-chart.svg","imgAlt":"Densité équivalente de fracturation et densité de boue en fonction de la profondeur","choices":["≈ 832 psi","≈ 3 328 psi","≈ 5 824 psi","≈ 1 664 psi"],"answer":3,"explain":"(14,0 − 10,0) × 0,052 × 8 000 = 1 664 psi.","seconds":75,"status":"draft"},
-    {"id":"ing-forage-021","theme":"Contrôle de puits et BOP","level":1,"q":"Quel élément du BOP peut couper le train de tiges et sceller le puits ?","img":"svg/bop-stack.svg","imgAlt":"Empilage BOP : annulaire, mâchoires sur tiges, aveugles et cisaillantes","choices":["Le BOP annulaire","Les mâchoires de cisaillement (blind shear rams)","Le manifold de duses","Le diverter"],"answer":1,"explain":"Les mâchoires de cisaillement coupent le train de tiges puis scellent le puits. L'annulaire n'est pas conçu pour couper.","seconds":40,"status":"draft"},
-    {"id":"ing-forage-022","theme":"Contrôle de puits et BOP","level":1,"q":"Lequel est un indicateur direct de venue en cours de forage ?","choices":["Un gain de volume aux bacs ou un débit de retour en hausse, pompes constantes","Une baisse de ROP uniquement due à l'usure du trépan","Une baisse du niveau de carburant","Une hausse de la densité de la boue à l'entrée"],"answer":0,"explain":"Si les fluides de formation entrent, le volume aux bacs et le débit de retour augmentent alors que les pompes ne changent pas.","seconds":40,"status":"draft"},
-    {"id":"ing-forage-023","theme":"Contrôle de puits et BOP","level":1,"q":"Quelle est la première réaction de l'équipe à la détection d'une venue en forage ?","img":"svg/bop-stack.svg","imgAlt":"BOP en tête de puits, prêt à la fermeture","choices":["Augmenter le débit des pompes","Continuer à forer de 10 ft","Remonter à vitesse maximale","Arrêter le forage, dégager le trépan du fond (space out), arrêter les pompes, vérifier l'écoulement puis fermer le puits"],"answer":3,"explain":"On sécurise rapidement : arrêt du forage, dégagement, arrêt des pompes, flow check, fermeture du puits. Continuer ou pomper davantage aggraverait la venue.","seconds":45,"status":"draft"},
-    {"id":"ing-forage-024","theme":"Contrôle de puits et BOP","level":2,"q":"Après fermeture du puits, on lit une SIDPP de 520 psi. Que représente la SIDPP ?","img":"svg/bop-stack.svg","imgAlt":"Puits fermé avec manomètres sur tiges et sur casing","choices":["La pression dans l'annulaire","La pression de fracturation","L'excès de pression de formation par rapport à l'hydrostatique de la boue dans le train de tiges","La pression de pompage"],"answer":2,"explain":"La SIDPP, lue aux tiges, indique de combien la pression de formation dépasse la colonne de boue ; elle sert à calculer la boue de contrôle.","seconds":45,"status":"draft"},
-    {"id":"ing-forage-025","theme":"Contrôle de puits et BOP","level":2,"q":"Quelle est la densité de boue de contrôle (KMW) pour SIDPP = 520 psi, boue actuelle 10,0 ppg, TVD 10 000 ft ?","choices":["10,5 ppg","11,0 ppg","12,0 ppg","10,0 ppg"],"answer":1,"explain":"KMW = 10,0 + 520 / (0,052 × 10 000) = 10,0 + 1,0 = 11,0 ppg.","seconds":70,"status":"draft"},
-    {"id":"ing-forage-026","theme":"Contrôle de puits et BOP","level":2,"q":"Quelle est la différence essentielle entre la méthode du Foreur (Driller's) et Wait & Weight ?","choices":["Le Foreur utilise une seule circulation avec boue lourde","Wait & Weight n'utilise jamais de duse","Le Foreur n'évacue pas la venue","Driller's : deux circulations (venue évacuée avec la boue d'origine puis boue lourde) ; W&W : une seule circulation avec la boue de contrôle"],"answer":3,"explain":"Driller's circule d'abord avec la boue d'origine pour évacuer la venue, puis avec la boue lourde. Wait & Weight alourdit d'abord puis ne circule qu'une fois.","seconds":50,"status":"draft"},
-    {"id":"ing-forage-027","theme":"Contrôle de puits et BOP","level":2,"q":"Pourquoi la SICP est-elle souvent supérieure à la SIDPP lors d'une venue de gaz ?","img":"svg/bop-stack.svg","imgAlt":"Colonne annulaire contenant la venue légère, colonne de tiges remplie de boue","choices":["Parce que la venue, plus légère que la boue, occupe l'annulaire et réduit sa pression hydrostatique","Parce que la pression des pompes augmente","Parce que la boue est plus lourde dans le train de tiges","Parce que le BOP fuit"],"answer":0,"explain":"L'annulaire contient la venue légère : sa colonne pèse moins, il faut plus de pression en surface pour équilibrer la formation. Les tiges ne contiennent que de la boue.","seconds":50,"status":"draft"},
-    {"id":"ing-forage-028","theme":"Contrôle de puits et BOP","level":3,"q":"Venue : gain 20 bbl, capacité annulaire 0,05 bbl/ft, SIDPP 500 psi, SICP 650 psi, boue 10 ppg. La hauteur de venue est de 400 ft. Quel est le gradient de la venue ?","choices":["≈ 0,45 psi/ft (eau salée)","≈ 0,30 psi/ft (huile)","≈ 0,145 psi/ft (gaz)","≈ 0,52 psi/ft (boue)"],"answer":2,"explain":"Gradient de boue : 0,052 × 10 = 0,52 psi/ft. Venue : 0,52 − (650 − 500)/400 = 0,52 − 0,375 = 0,145 psi/ft, ce qui correspond à du gaz.","seconds":90,"status":"draft"},
-    {"id":"ing-forage-029","theme":"Contrôle de puits et BOP","level":3,"q":"Pour la méthode du Foreur, la pression de circulation initiale ICP vaut :","choices":["SIDPP − SCRP","SICP + SCRP","SIDPP × SCRP","SIDPP + SCRP (pression aux tiges à débit réduit de contrôle)"],"answer":3,"explain":"ICP = SIDPP + pression à débit réduit : on circule en maintenant la pression de fond constante.","seconds":45,"status":"draft"},
-    {"id":"ing-forage-030","theme":"Contrôle de puits et BOP","level":3,"q":"Une venue de gaz migre vers le haut dans un puits fermé et non circulé. Que se passe-t-il ?","img":"svg/bop-stack.svg","imgAlt":"Puits fermé avec bulle de gaz remontant dans l'annulaire","choices":["Les pressions en surface baissent par expansion libre","Le gaz ne peut pas se détendre : les pressions en tête et au fond augmentent, avec risque de fracture au sabot","Rien ne change","Le gaz se dissout toujours dans l'eau"],"answer":1,"explain":"En puits fermé, le gaz conserve sa pression en remontant : les pressions augmentent partout, y compris au sabot. D'où la nécessité de purger de façon contrôlée.","seconds":50,"status":"draft"},
-    {"id":"ing-forage-031","theme":"Opérations de forage et programme","level":1,"q":"Sur un rig, quel équipement fait circuler la boue vers le train de tiges ?","img":"svg/drilling-rig-schematic.svg","imgAlt":"Rig de forage avec pompes à boue, mât et treuil","choices":["Les pompes à boue","Le treuil (drawworks)","Les tamis vibrants","La table de rotation"],"answer":0,"explain":"Les pompes à boue refoulent la boue dans le train de tiges. Le treuil sert au levage ; les tamis séparent les déblais.","seconds":35,"status":"draft"},
-    {"id":"ing-forage-032","theme":"Opérations de forage et programme","level":1,"q":"Quel équipement sépare en premier les déblais de forage de la boue en sortie de puits ?","img":"svg/drilling-rig-schematic.svg","imgAlt":"Circuit de boue avec tamis vibrants après la ligne de retour","choices":["Le dégazeur","Le désilteur","Les tamis vibrants","La pompe de gavage"],"answer":2,"explain":"Les tamis vibrants retiennent les déblais les plus grossiers dès la sortie du puits ; désilteur et dégazeur interviennent ensuite.","seconds":35,"status":"draft"},
-    {"id":"ing-forage-033","theme":"Opérations de forage et programme","level":1,"q":"Dans un puits dévié, la profondeur verticale vraie (TVD) par rapport à la profondeur mesurée (MD) est :","choices":["TVD supérieure à MD","TVD inférieure ou égale à MD","TVD égale à deux fois MD","Sans aucun lien"],"answer":1,"explain":"La TVD est la projection verticale ; elle est au plus égale à la longueur mesurée le long du trou.","seconds":30,"status":"draft"},
-    {"id":"ing-forage-034","theme":"Opérations de forage et programme","level":2,"q":"Quelles conditions favorisent le coincement différentiel ?","choices":["Boue très légère, formation imperméable","Rotation continue du train","Circulation rapide et absence de gâteau","Forte surpression, formation perméable, gâteau épais, train de tiges immobile"],"answer":3,"explain":"Le train immobile se colle au gâteau de boue contre une formation perméable sous surpression : la différence de pression le plaque contre la paroi.","seconds":45,"status":"draft"},
-    {"id":"ing-forage-035","theme":"Opérations de forage et programme","level":2,"q":"Quelle action est pertinente pour dégager un coincement différentiel ?","img":"svg/drilling-rig-schematic.svg","imgAlt":"Train de tiges dans un puits avec zone perméable et gâteau de boue","choices":["Augmenter la densité de la boue","Tirer très fort sans limite","Réduire la surpression si possible, placer un bouchon (pill) et battre au jar","Cimenter le puits"],"answer":2,"explain":"On réduit la force qui plaque le train, on décolle avec un bouchon adapté et on utilise le jar. Alourdir la boue aggraverait la surpression.","seconds":45,"status":"draft"},
-    {"id":"ing-forage-036","theme":"Opérations de forage et programme","level":2,"q":"Qu'est-ce qu'un « drilling break » ?","choices":["Une augmentation brutale de la ROP, pouvant signaler une formation plus poreuse ou à pression anormale","Une panne de la table de rotation","Une pause réglementaire de l'équipe","Une baisse de densité de boue"],"answer":0,"explain":"Une ROP qui augmente brutalement signale un changement de formation ; on arrête pour vérifier l'écoulement (flow check).","seconds":40,"status":"draft"},
-    {"id":"ing-forage-037","theme":"Opérations de forage et programme","level":2,"q":"La dogleg severity d'un puits dévié s'exprime en :","choices":["psi/ft","ppg","bbl/ft","°/100 ft (ou °/30 m)"],"answer":3,"explain":"La dogleg severity mesure la courbure du trou, en degrés par 100 ft ou par 30 m.","seconds":30,"status":"draft"},
-    {"id":"ing-forage-038","theme":"Opérations de forage et programme","level":2,"q":"Dans un puits dévié, pour quelle plage d'inclinaison le nettoyage du trou est-il généralement le plus difficile ?","choices":["0 à 10°","Environ 30 à 60°","Uniquement à 90°","En vertical"],"answer":1,"explain":"Entre 30 et 60°, les déblais forment des lits qui peuvent glisser vers le bas à l'arrêt de la circulation ; le nettoyage est le plus délicat.","seconds":40,"status":"draft"},
-    {"id":"ing-forage-039","theme":"Opérations de forage et programme","level":3,"q":"Pourquoi suit-on le remplissage du puits au trip tank pendant les manœuvres ?","choices":["Pour réduire la ROP","Uniquement pour économiser de la boue","Pour comparer le volume d'acier retiré au volume de boue ajouté et détecter une venue ou des pertes","Pour refroidir le trépan"],"answer":2,"explain":"En remontant, le niveau doit baisser du volume d'acier retiré. Un écart signale une venue (volume en trop) ou des pertes (volume insuffisant).","seconds":45,"status":"draft"},
-    {"id":"ing-forage-040","theme":"Opérations de forage et programme","level":3,"q":"Au Gabon, certains puits offshore traversent des formations salifères avant les cibles sous-salifères. Quel est le risque spécifique à gérer ?","choices":["Le fluage du sel et sa dissolution : boue adaptée (saturée ou densité adaptée), risque de coincement et de déformation du tubage","L'absence totale de pression","L'absence de gaz","Une pression de pores toujours inférieure à celle de l'eau douce"],"answer":0,"explain":"Le sel flue sous contrainte et se dissout dans une boue sous-saturée, ce qui peut resserrer le trou, coincer le train ou déformer le tubage.","seconds":50,"status":"draft"}
+    {
+      "id": "ing-forage-001",
+      "theme": "Hydrostatique, boues et fenêtre de forage",
+      "level": 1,
+      "q": "Le programme prévoit une boue de 10 ppg ; vous êtes à 10 000 ft TVD, pompes arrêtées. Quelle est la pression hydrostatique au fond ?",
+      "choices": [
+        "4 330 psi : 0,433 × 10 000 ft au fond",
+        "1 920 psi : 0,192 × 10 000 ft",
+        "52 000 psi : 0,52 × 10 × 10 000 ft",
+        "5 200 psi : 0,052 × 10 × 10 000"
+      ],
+      "answer": 3,
+      "explain": "P (psi) = 0,052 × densité (ppg) × TVD (ft) = 0,052 × 10 × 10 000 = 5 200 psi.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-002",
+      "theme": "Hydrostatique, boues et fenêtre de forage",
+      "level": 1,
+      "q": "Un puits de 3 000 m TVD est foré avec une boue de 1,20 sg. Avec P (bar) = 0,0981 × ρ (sg) × TVD (m), quelle est la pression hydrostatique au fond ?",
+      "choices": [
+        "Environ 294 bar (0,0981 × 1,00 × 3 000)",
+        "Environ 353 bar (0,0981 × 1,20 × 3 000)",
+        "Environ 3 530 bar (0,981 × 1,20 × 3 000)",
+        "Environ 35 bar (0,0981 × 1,20 × 300)"
+      ],
+      "answer": 1,
+      "explain": "P = 0,0981 × 1,20 × 3 000 ≈ 353 bar.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-003",
+      "theme": "Hydrostatique, boues et fenêtre de forage",
+      "level": 2,
+      "q": "Le débit de retour tombe de 30 à 18 m³/h pompes constantes et le niveau des bacs baisse de 12 bbl en 15 minutes. Que se passe-t-il et que faites-vous ?",
+      "choices": [
+        "Pertes de circulation : arrêter, remonter hors de la zone de pertes, garder le puits plein, préparer un bouchon",
+        "Venue en cours : fermer immédiatement le puits, relever les pressions stabilisées et préparer la circulation de contrôle",
+        "Panne du capteur de débit : on poursuit le forage en surveillant les bacs toutes les heures",
+        "Hausse de la densité de la boue : on remonte à vitesse maximale pour décolmater le trou"
+      ],
+      "answer": 0,
+      "explain": "Retour inférieur à l'entrée et bacs qui baissent signalent des pertes. Il faut garder le niveau du puits pour ne pas perdre la hauteur hydrostatique et un autre fluide.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-004",
+      "theme": "Hydrostatique, boues et fenêtre de forage",
+      "level": 3,
+      "q": "À 9 000 ft : pression de pores 9,0 ppg équivalent, gradient de fracturation 12,5 ppg équivalent, boue de 10,5 ppg. Avec les pompes en marche, l'ECD atteint 12,3 ppg. Quel risque si l'on augmente encore le débit ?",
+      "choices": [
+        "Faire entrer des fluides de formation, car l'ECD dépasse la pression de pores de 9,0 ppg",
+        "Aucun risque tant que la boue statique reste à 10,5 ppg, sous le gradient de fracturation",
+        "Dépasser la fracturation (marge de 0,2 ppg) : pertes ; réduire le débit ou améliorer la rhéologie",
+        "Un coincement différentiel immédiat, la boue dépassant la pression de pores de 3 ppg"
+      ],
+      "answer": 2,
+      "explain": "L'ECD ajoute les pertes de charge annulaires à la densité de boue ; trop proche du gradient de fracturation, il provoque des pertes.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-005",
+      "theme": "Hydrostatique, boues et fenêtre de forage",
+      "level": 2,
+      "q": "Vous forez avec une boue de 9,2 ppg ; un drilling break survient à 9 500 ft et la pression de pores en dessous est estimée à 9,6 ppg. Que faites-vous ?",
+      "choices": [
+        "Arrêter de forer, lever la garniture, faire un flow check ; fermer si le puits coule, sinon alourdir",
+        "Continuer à forer pour traverser rapidement la zone, puis contrôler le puits à la prochaine connexion",
+        "Réduire la densité de la boue pour améliorer la ROP dans la zone de transition de pression",
+        "Augmenter le débit des pompes de 20 % pour mieux nettoyer le trou et évacuer les déblais"
+      ],
+      "answer": 0,
+      "explain": "Une boue plus légère que la pression de pores laisse entrer les fluides de formation ; un drilling break exige un flow check immédiat.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-006",
+      "theme": "Hydrostatique, boues et fenêtre de forage",
+      "level": 3,
+      "q": "Un capteur de fond donne une pression de 5 148 psi en circulation à 9 000 ft TVD avec une boue de 10,0 ppg. Quelle est l'ECD et que représente l'écart ?",
+      "choices": [
+        "9,0 ppg : la boue est plus légère en circulation qu'à l'arrêt",
+        "11,0 ppg : l'écart de 1,0 ppg vient des pertes de charge annulaires",
+        "12,5 ppg : l'écart vient de la température au fond du puits",
+        "10,0 ppg : il n'y a pas d'écart entre statique et dynamique"
+      ],
+      "answer": 1,
+      "explain": "ECD = P / (0,052 × TVD) = 5 148 / 468 = 11,0 ppg. L'écart avec la densité statique est dû aux frottements dans l'annulaire.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-007",
+      "theme": "Hydrostatique, boues et fenêtre de forage",
+      "level": 2,
+      "q": "Lors d'une manœuvre de remontée à grande vitesse dans une boue visqueuse, le trip tank prend moins de boue que le volume d'acier retiré. Que se passe-t-il et que faites-vous ?",
+      "choices": [
+        "Fracturation de la formation par la pression de remontée : ralentir la remontée et continuer à sortir",
+        "Gain de densité de la boue dans le trou : continuer à remonter à la même vitesse sans contrôle",
+        "Effet de piston (swab) : la pression de fond baisse, du fluide peut entrer ; arrêter et faire un flow check",
+        "Pas de conséquence : le trip tank est imprécis et le volume manquant est négligeable"
+      ],
+      "answer": 2,
+      "explain": "Remonter trop vite crée une baisse de pression de fond. Un remplissage inférieur à l'acier retiré indique un apport de fluide de formation.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-008",
+      "theme": "Hydrostatique, boues et fenêtre de forage",
+      "level": 3,
+      "q": "Vous devez passer une boue de 400 bbl de 10,0 à 11,0 ppg avec de la barytine (densité 35 ppg). Environ combien de barytine faut-il ?",
+      "choices": [
+        "Environ 2 450 lb, soit 24 sacs de 100 lb",
+        "Environ 245 000 lb, soit 2 450 sacs de 100 lb",
+        "Environ 12 000 lb, soit 120 sacs de 100 lb",
+        "Environ 24 500 lb, soit 245 sacs de 100 lb"
+      ],
+      "answer": 3,
+      "explain": "Barytine (lb/bbl) = 1 470 × (ρ2 − ρ1) / (35 − ρ2) = 1 470 × 1 / 24 ≈ 61 lb/bbl ; × 400 bbl ≈ 24 500 lb.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-009",
+      "theme": "Hydrostatique, boues et fenêtre de forage",
+      "level": 1,
+      "q": "Sur la figure de l'appareil de forage, un stagiaire vous demande le chemin de la boue. Que répondez-vous ?",
+      "img": "svg/drilling-rig-schematic.svg",
+      "imgAlt": "Appareil de forage terrestre : moufles, top drive, flexible, colonne montante, treuil, pompe à boue, bac à boue, tamis vibrant, flowline, BOP, tiges, masses-tiges, trépan ; boue descendante dans les tiges, retour dans l'annulaire",
+      "choices": [
+        "Du trépan vers les tiges, puis vers le top drive et la pompe à boue en circuit fermé",
+        "Des tamis vers le BOP, puis vers les tiges, le trépan et enfin l'annulaire de forage",
+        "Du bac à boue directement dans l'annulaire, puis vers les tiges et le top drive",
+        "Pompe, colonne montante, top drive, tiges, trépan, puis annulaire et tamis"
+      ],
+      "answer": 3,
+      "explain": "La boue descend dans le train de tiges, sort aux duses du trépan puis remonte par l'annulaire en emportant les déblais.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-010",
+      "theme": "Hydrostatique, boues et fenêtre de forage",
+      "level": 1,
+      "q": "Vous préparez une boue de 12 ppg. Quel est son gradient en psi/ft ?",
+      "choices": [
+        "0,433 psi/ft, soit 0,052 × 8,33 ppg",
+        "0,624 psi/ft, soit 0,052 × 12 ppg",
+        "0,120 psi/ft, soit 12 ÷ 100 ppg",
+        "6,240 psi/ft, soit 0,52 × 12 ppg"
+      ],
+      "answer": 1,
+      "explain": "Gradient (psi/ft) = 0,052 × densité (ppg) = 0,052 × 12 = 0,624.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-011",
+      "theme": "Hydrostatique, boues et fenêtre de forage",
+      "level": 1,
+      "q": "Puits dévié : profondeur mesurée (MD) 12 000 ft, profondeur verticale (TVD) 9 000 ft, boue de 10 ppg. Quelle pression hydrostatique utilisez-vous pour le calcul de contrôle ?",
+      "choices": [
+        "6 240 psi : calculée avec la MD (0,052 × 10 × 12 000) du puits",
+        "5 460 psi : calculée avec la moyenne des deux profondeurs",
+        "4 680 psi : calculée avec la TVD (0,052 × 10 × 9 000)",
+        "9 000 psi : TVD prise directement comme pression hydrostatique"
+      ],
+      "answer": 2,
+      "explain": "La pression hydrostatique dépend de la hauteur verticale de la colonne : on emploie la TVD, jamais la MD.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-012",
+      "theme": "Tubage et cimentation",
+      "level": 1,
+      "q": "Le programme de puits comprend 30 po (conducteur), 20 po, 13 3/8 po, 9 5/8 po, puis un liner. Quelle colonne installez-vous en premier et pourquoi ?",
+      "img": "svg/drilling-rig-schematic.svg",
+      "imgAlt": "Appareil de forage terrestre : moufles, top drive, flexible, colonne montante, treuil, pompe à boue, bac à boue, tamis vibrant, flowline, BOP, tiges, masses-tiges, trépan ; boue descendante dans les tiges, retour dans l'annulaire",
+      "choices": [
+        "Le conducteur : il stabilise le haut du trou et permet de monter le diverter",
+        "Le liner de production, pour protéger le réservoir et isoler les zones productrices",
+        "Le tubage de production, pour mesurer les pressions de fond dès le début du puits",
+        "Le tubage intermédiaire, pour isoler les zones à pertes avant de descendre plus bas"
+      ],
+      "answer": 0,
+      "explain": "Le conducteur est la première colonne, courte et de grand diamètre ; les suivantes vont de plus en plus profond avec des diamètres décroissants.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-013",
+      "theme": "Tubage et cimentation",
+      "level": 3,
+      "q": "Le programme concerne un puits avec H₂S : le magasin livre du tubage N80 pour la colonne de production. Que faites-vous ?",
+      "choices": [
+        "Accepter le tubage : ses 80 ksi de limite d'élasticité suffisent pour la colonne de production",
+        "Vérifier : N80 n'est pas qualifié service acide ; il faut du L80, C90 ou T95 (ISO 15156)",
+        "Accepter le tubage en doublant la quantité d'inhibiteur de corrosion injectée dans le puits",
+        "Accepter le tubage si le puits a un faible débit et une pression de tête réduite en production"
+      ],
+      "answer": 1,
+      "explain": "Le grade N80 désigne une limite d'élasticité minimale de 80 ksi ; la résistance à la fissuration par H₂S demande un grade et un traitement qualifiés.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-014",
+      "theme": "Tubage et cimentation",
+      "level": 2,
+      "q": "Le laitier de ciment classe G mesuré à la balance pressurisée donne 14,4 ppg au lieu des 15,8 ppg du programme. Cause probable et conséquence ?",
+      "choices": [
+        "Trop d'eau : ciment moins résistant, eau libre, isolation douteuse ; corriger avant de pomper",
+        "Pas assez d'eau : ciment trop dense, il faut le diluer après pompage pour le rendre fluide",
+        "Excès de barytine : sans conséquence sur la résistance ni sur l'isolation de l'annulaire",
+        "Température trop basse : l'écart de densité n'a aucun effet sur la prise du ciment"
+      ],
+      "answer": 0,
+      "explain": "À dosage d'eau d'environ 44 %, un laitier G pèse environ 15,8 ppg ; un excès d'eau abaisse la densité et dégrade la qualité du ciment.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-015",
+      "theme": "Tubage et cimentation",
+      "level": 3,
+      "q": "Une colonne de 2 000 ft de laitier à 15,8 ppg est en place dans l'annulaire. Quelle pression hydrostatique exerce-t-elle à sa base ?",
+      "choices": [
+        "Environ 822 psi (0,026 × 15,8 × 2 000)",
+        "Environ 3 290 psi (0,104 × 15,8 × 2 000 ft)",
+        "Environ 1 643 psi (0,052 × 15,8 × 2 000)",
+        "Environ 16 430 psi (0,52 × 15,8 × 2 000 ft)"
+      ],
+      "answer": 2,
+      "explain": "P = 0,052 × 15,8 × 2 000 ≈ 1 643 psi. La pression du ciment doit rester entre la pression de pores et la fracturation.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-016",
+      "theme": "Tubage et cimentation",
+      "level": 2,
+      "q": "Pendant le déplacement du ciment, la pression de pompage monte brutalement à 598 bbl alors que le volume théorique est de 600 bbl. Que signifie ce signal ?",
+      "choices": [
+        "Une perte de circulation en fond de trou : on continue à pomper jusqu'au volume théorique",
+        "Un bouchage des tuyères du sabot par des déblais : on arrête de pomper et on remonte le train",
+        "Une venue de gaz dans le ciment : on ferme le puits et on circule la venue vers les duses",
+        "Le bouchon haut est arrivé sur le collier (bump) : déplacement terminé, contrôle du clapet"
+      ],
+      "answer": 3,
+      "explain": "La hausse de pression à volume théorique indique l'arrivée du bouchon : on arrête de pomper pour ne pas casser le sabot.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-017",
+      "theme": "Tubage et cimentation",
+      "level": 3,
+      "q": "D'après la figure, le grès à huile est entre 2 420 et 2 450 m et le grès aquifère juste en dessous. Le CBL/VDL montre un mauvais ciment entre 2 440 et 2 470 m. Quelle décision prenez-vous avant de perforer ?",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie GR et résistivité entre 2 400 et 2 500 m : argile jusqu'à 2 420 m, grès à huile de 2 420 à 2 450 m, contact huile/eau à 2 450 m, grès aquifère jusqu'à 2 480 m, puis argile",
+      "choices": [
+        "Perforer comme prévu, l'huile se trouvant au-dessus du contact eau-huile et du mauvais ciment",
+        "Perforer plus bas, dans l'aquifère, pour augmenter le débit d'huile et drainer plus de réservoir",
+        "Ne pas perforer en l'état : risque de venues d'eau ; squeeze puis re-contrôler, ou décaler",
+        "Ignorer le CBL, qui n'a pas de valeur contractuelle, et perforer selon le programme initial"
+      ],
+      "answer": 2,
+      "explain": "Un ciment de mauvaise qualité face au contact huile/eau laisse un chemin d'eau vers les perforations. L'isolation zonale prime.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-018",
+      "theme": "Tubage et cimentation",
+      "level": 2,
+      "q": "Sur la section déviée d'un tubage de 9 5/8 po, l'étude donne un standoff de 40 % : le tubage est plaqué contre la paroi. Quel est le risque et quelle action ?",
+      "choices": [
+        "Un excès de ciment dans l'annulaire : réduire le volume de laitier à pomper au prochain puits",
+        "Un canal de boue non déplacée, donc mauvaise isolation ; ajouter des centraliseurs (standoff exigé)",
+        "Un coincement du tubage dû à son poids : retirer le tubage et le redescendre sans centraliseur",
+        "Aucun risque si le laitier est de bonne qualité et si le débit de déplacement est élevé"
+      ],
+      "answer": 1,
+      "explain": "Un tubage décentré laisse un côté étroit où le laitier ne déplace pas la boue : l'isolation zonale est compromise.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-019",
+      "theme": "Tubage et cimentation",
+      "level": 3,
+      "q": "Sabot à 8 000 ft TVD, boue de 10,0 ppg, test de fuite équivalent à 14,0 ppg. Une venue est en cours. Quelle est la MAASP au sabot ?",
+      "choices": [
+        "Environ 1 664 psi : (14,0 − 10,0) × 0,052 × 8 000",
+        "Environ 832 psi : (14,0 − 10,0) × 0,026 × 8 000 ft",
+        "Environ 3 328 psi : (14,0 − 10,0) × 0,104 × 8 000 ft",
+        "Environ 5 824 psi : 14,0 × 0,052 × 8 000 ft"
+      ],
+      "answer": 0,
+      "explain": "MAASP = (EMW − MW) × 0,052 × TVD = 4 × 0,052 × 8 000 = 1 664 psi : pression de surface maximale avant de fracturer au sabot.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-020",
+      "theme": "Tubage et cimentation",
+      "level": 1,
+      "q": "Avant de cimenter un tubage, le chef de poste veut passer directement au pompage du ciment. Pourquoi demandez-vous une circulation de conditionnement (bottom-up) ?",
+      "choices": [
+        "Réduire la température du ciment avant son mélange en surface pour ralentir la prise",
+        "Augmenter la pression de formation autour du sabot pour mieux isoler la zone cimentée",
+        "Économiser de la boue en la réutilisant directement dans le laitier de ciment",
+        "Évacuer déblais et gaz, conditionner la boue, vérifier l'absence de pertes"
+      ],
+      "answer": 3,
+      "explain": "Une boue chargée de déblais ou de gaz et peu mobile déplace mal et réduit la qualité du ciment.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-021",
+      "theme": "Tubage et cimentation",
+      "level": 1,
+      "q": "Après cimentation du tubage 13 3/8 po, l'équipe veut forer le sabot sans attendre. Quelle séquence respectez-vous ?",
+      "choices": [
+        "Forer immédiatement le sabot : le ciment finit sa prise pendant le forage du bouchon",
+        "Tester seulement le BOP, puis reprendre le forage dès que le test de pression est concluant",
+        "Attendre la prise (WOC), tester le tubage, forer le sabot, puis faire le test de fuite",
+        "Réaliser le test de fuite avant de tester le tubage, puis forer les bouchons ensuite"
+      ],
+      "answer": 2,
+      "explain": "Le ciment doit prendre sa résistance ; le tubage est testé avant de forer, puis le test de fuite fixe la limite de pression du sabot.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-022",
+      "theme": "Tubage et cimentation",
+      "level": 2,
+      "q": "Test de tubage 9 5/8 po à l'eau douce : pression de surface 2 000 psi, sabot à 6 000 ft TVD. Quelle est la pression au sabot, d'après la figure ?",
+      "img": "svg/pressure-gradient-chart.svg",
+      "imgAlt": "Gradients de pression : eau douce 0,433 psi/ft, huile 0,35 psi/ft, gaz 0,10 psi/ft",
+      "choices": [
+        "Environ 2 598 psi : 0,433 × 6 000 seulement",
+        "Environ 4 598 psi : 2 000 + 0,433 × 6 000",
+        "Environ 7 196 psi : 2 000 + 0,866 × 6 000",
+        "Environ 2 000 psi : la pression de surface seule"
+      ],
+      "answer": 1,
+      "explain": "La pression au sabot est la pression de surface plus la colonne hydrostatique : 2 000 + 2 598 = 4 598 psi.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-023",
+      "theme": "Contrôle de puits et BOP",
+      "level": 1,
+      "q": "Un train de tiges est dans le BOP de la figure et la venue devient incontrôlable. Quel élément peut couper les tiges et obturer le puits en dernier recours ?",
+      "img": "svg/bop-stack.svg",
+      "imgAlt": "Bloc BOP : obturateur annulaire, mâchoires aveugles cisaillantes (BSR), mâchoires à tiges supérieures et inférieures, ligne de duse avec vannes HCR vers le manifold, ligne de pompage (kill line) avec vanne HCR, tête de tubage",
+      "choices": [
+        "L'obturateur annulaire, qui se ferme sur toute forme de garniture présente",
+        "Les mâchoires à tiges supérieures, ajustées au diamètre des tiges",
+        "La ligne de duse, avec ses vannes hydrauliques HCR en position fermée",
+        "Les mâchoires aveugles cisaillantes (BSR), qui coupent la garniture"
+      ],
+      "answer": 3,
+      "explain": "Seules les mâchoires cisaillantes coupent le train de tiges et ferment le puits ; les mâchoires à tiges se ferment sur un diamètre de tige.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-024",
+      "theme": "Contrôle de puits et BOP",
+      "level": 1,
+      "q": "Vous forez à débit constant : le débit de retour passe de 600 à 640 gpm et les bacs gagnent 8 bbl en 5 minutes. Quelle est la réaction ?",
+      "img": "svg/bop-stack.svg",
+      "imgAlt": "Bloc BOP : obturateur annulaire, mâchoires aveugles cisaillantes (BSR), mâchoires à tiges supérieures et inférieures, ligne de duse avec vannes HCR vers le manifold, ligne de pompage (kill line) avec vanne HCR, tête de tubage",
+      "choices": [
+        "Arrêter le forage, dégager le trépan du fond, arrêter les pompes, contrôler puis fermer",
+        "Augmenter le débit des pompes pour chasser le gaz et rééquilibrer le niveau des bacs",
+        "Continuer à forer 10 ft pour finir la connexion avant de contrôler l'écoulement",
+        "Remonter à vitesse maximale pour sortir du trou avant que la venue atteigne la surface"
+      ],
+      "answer": 0,
+      "explain": "Gain aux bacs et retour en hausse à débit constant sont des indicateurs directs de venue : on arrête, on contrôle, on ferme.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-025",
+      "theme": "Contrôle de puits et BOP",
+      "level": 3,
+      "q": "En manœuvre de remontée, 5 stands ont retiré 5,0 bbl d'acier mais le trip tank n'a donné que 3,8 bbl. Que faites-vous ?",
+      "choices": [
+        "Continuer la manœuvre : la différence reste inférieure à 2 bbl, tolérance usuelle du programme",
+        "Arrêter la manœuvre, faire un flow check ; redescendre au fond si doute ; fermer si le puits coule",
+        "Ouvrir le BOP annulaire pour laisser le puits se rééquilibrer sur les bacs et le trip tank",
+        "Augmenter la vitesse de remontée pour réduire la durée de l'exposition de la formation"
+      ],
+      "answer": 1,
+      "explain": "Un remplissage inférieur au volume d'acier retiré indique que du fluide de formation est entré (swab) : flow check immédiat.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-026",
+      "theme": "Contrôle de puits et BOP",
+      "level": 2,
+      "q": "Après fermeture du puits : SIDPP 520 psi, SICP 650 psi, boue actuelle 10,0 ppg, TVD 10 000 ft. Quelle densité de boue de contrôle visez-vous ?",
+      "choices": [
+        "11,0 ppg : 10,0 + 520 / (0,052 × 10 000)",
+        "10,5 ppg : 10,0 + 260 / (0,052 × 10 000)",
+        "11,25 ppg : 10,0 + 650 / (0,052 × 10 000)",
+        "10,0 ppg : boue d'origine, sans surdensité"
+      ],
+      "answer": 0,
+      "explain": "KMW = MW + SIDPP / (0,052 × TVD) = 10 + 520 / 520 = 11,0 ppg. La SIDPP mesure l'excès de pression de formation sur l'hydrostatique de la boue dans le train de tiges.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-027",
+      "theme": "Contrôle de puits et BOP",
+      "level": 3,
+      "q": "Venue : gain de 20 bbl, capacité annulaire 0,05 bbl/ft, SIDPP 500 psi, SICP 650 psi, boue 10 ppg. Quel est le gradient de la venue (la hauteur de venue est de 400 ft) ?",
+      "choices": [
+        "Environ 0,45 psi/ft : eau salée de formation",
+        "Environ 0,30 psi/ft : huile de formation",
+        "Environ 0,145 psi/ft : gaz (0,52 − 150/400)",
+        "Environ 0,52 psi/ft : la boue elle-même"
+      ],
+      "answer": 2,
+      "explain": "Gradient = gradient boue − (SICP − SIDPP) / hauteur = 0,52 − 150 / 400 = 0,145 psi/ft : valeur de gaz, avec risque de migration.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-028",
+      "theme": "Contrôle de puits et BOP",
+      "level": 2,
+      "q": "Venue de gaz fermée ; la barytine arrivera dans 4 heures. Quelle méthode permet de commencer à évacuer la venue immédiatement ?",
+      "choices": [
+        "Wait & Weight : attendre la barytine, puis circuler une seule fois avec la boue alourdie",
+        "Fermer le puits et attendre quatre heures sans circuler, en surveillant les pressions",
+        "Pomper la boue lourde dans l'annulaire sans circuler, en forçant la venue dans la formation",
+        "Méthode du Foreur : évacuer la venue avec la boue d'origine, puis circuler la boue de contrôle"
+      ],
+      "answer": 3,
+      "explain": "La méthode du Foreur permet d'évacuer la venue sans attendre la boue lourde.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-029",
+      "theme": "Contrôle de puits et BOP",
+      "level": 2,
+      "q": "Après fermeture, la SICP est de 650 psi pour une SIDPP de 520 psi. Comment l'expliquez-vous ?",
+      "img": "svg/bop-stack.svg",
+      "imgAlt": "Bloc BOP : obturateur annulaire, mâchoires aveugles cisaillantes (BSR), mâchoires à tiges supérieures et inférieures, ligne de duse avec vannes HCR vers le manifold, ligne de pompage (kill line) avec vanne HCR, tête de tubage",
+      "choices": [
+        "La pression des pompes a augmenté pendant la fermeture et se reporte à l'annulaire",
+        "La boue est plus lourde dans le train de tiges que dans l'annulaire après fermeture",
+        "Le BOP annulaire fuit : la pression remonte par l'espace annulaire jusqu'au plancher",
+        "La venue, plus légère que la boue, réduit la pression hydrostatique de l'annulaire"
+      ],
+      "answer": 3,
+      "explain": "L'annulaire contient la venue, plus légère que la boue : SICP supérieure à SIDPP traduit l'effet de la venue dans l'annulaire.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-030",
+      "theme": "Contrôle de puits et BOP",
+      "level": 3,
+      "q": "Vous commencez à circuler avec la méthode du Foreur : SIDPP 520 psi, pression à débit réduit de contrôle 600 psi à 30 coups/min. Quelle est la pression de circulation initiale visée au manomètre des tiges ?",
+      "choices": [
+        "1 120 psi : SIDPP + pression réduite (520 + 600)",
+        "80 psi : pression réduite moins SIDPP (600 − 520)",
+        "520 psi : la SIDPP seule, sans pression réduite",
+        "600 psi : la pression réduite seule, sans SIDPP"
+      ],
+      "answer": 0,
+      "explain": "ICP = SIDPP + SCRP : on maintient la Pwf constante à débit de contrôle.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-031",
+      "theme": "Contrôle de puits et BOP",
+      "level": 3,
+      "q": "Puits fermé en attente depuis 30 minutes, les pressions SIDPP et SICP montent de 100 psi tous les 15 minutes. Quelle est la cause et la conduite ?",
+      "img": "svg/bop-stack.svg",
+      "imgAlt": "Bloc BOP : obturateur annulaire, mâchoires aveugles cisaillantes (BSR), mâchoires à tiges supérieures et inférieures, ligne de duse avec vannes HCR vers le manifold, ligne de pompage (kill line) avec vanne HCR, tête de tubage",
+      "choices": [
+        "Le puits est stable : on poursuit l'attente et on relève les pressions toutes les heures",
+        "Le gaz se dissout dans l'eau de boue : on peut réduire la surveillance des pressions",
+        "Migration du gaz : appliquer la méthode volumétrique du programme ou circuler, sans fracturer",
+        "Une fuite au BOP : on réduit la pression de fermeture des obturateurs pour la limiter"
+      ],
+      "answer": 2,
+      "explain": "Un gaz qui migre dans un puits fermé fait monter les pressions partout, avec risque de fracture au sabot.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-032",
+      "theme": "Contrôle de puits et BOP",
+      "level": 2,
+      "q": "Sur la figure du BOP, vous préparez une circulation de contrôle. Par quelle ligne la venue circulée part-elle vers le manifold de duses et par où pompe-t-on la boue de contrôle en secours ?",
+      "img": "svg/bop-stack.svg",
+      "imgAlt": "Bloc BOP : obturateur annulaire, mâchoires aveugles cisaillantes (BSR), mâchoires à tiges supérieures et inférieures, ligne de duse avec vannes HCR vers le manifold, ligne de pompage (kill line) avec vanne HCR, tête de tubage",
+      "choices": [
+        "Sortie par la ligne de pompage (kill line) ; pompage par la ligne de duse (vannes HCR)",
+        "Sortie par la ligne de duse (vannes HCR) vers le manifold ; pompage de secours par la kill line",
+        "Sortie par l'obturateur annulaire vers le manifold ; pompage de secours par la tête de tubage",
+        "Sortie par la tête de tubage vers les tamis ; pompage de secours par la ligne de duse"
+      ],
+      "answer": 1,
+      "explain": "La ligne de duse évacue le puits vers le manifold ; la ligne de pompage sert à pomper dans l'annulaire.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-033",
+      "theme": "Contrôle de puits et BOP",
+      "level": 1,
+      "q": "Le test hebdomadaire des BOP est échu depuis 2 jours. Le chef de poste veut descendre dans le trou « car l'équipement est en bon état ». Que faites-vous ?",
+      "choices": [
+        "Exiger le test avant de forer ou de descendre sous le BOP, selon la fréquence imposée",
+        "Accepter le retard de deux jours, l'équipement étant en bon état d'après le chef de poste",
+        "Accepter en testant seulement l'annulaire, avant de reprendre le forage normal",
+        "Reporter le test au prochain changement de section, prévu dans quelques jours"
+      ],
+      "answer": 0,
+      "explain": "Un BOP non testé est une barrière non prouvée : le test fait partie des conditions de forer.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-034",
+      "theme": "Opérations de forage et programme",
+      "level": 1,
+      "q": "Un tamis vibrant est percé et l'équipe ne le remplace pas. Quels effets observe-t-on dans les heures suivantes ?",
+      "img": "svg/drilling-rig-schematic.svg",
+      "imgAlt": "Appareil de forage terrestre : moufles, top drive, flexible, colonne montante, treuil, pompe à boue, bac à boue, tamis vibrant, flowline, BOP, tiges, masses-tiges, trépan ; boue descendante dans les tiges, retour dans l'annulaire",
+      "choices": [
+        "Moins de déblais retirés dans les bacs, donc une boue plus propre et plus stable",
+        "Une baisse de la pression de pompage grâce à une boue moins chargée en solides",
+        "Plus de solides dans la boue, usure des pompes, hausse de densité ; remplacer la toile",
+        "Une venue immédiate de fluides de formation dans l'annulaire pendant le forage"
+      ],
+      "answer": 2,
+      "explain": "Un tamis percé laisse passer les déblais fins qui chargent la boue et usent les équipements.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-035",
+      "theme": "Opérations de forage et programme",
+      "level": 2,
+      "q": "À 10 000 ft, le train est resté immobile 25 minutes pendant une connexion ; la boue pèse 11,5 ppg contre 9,0 ppg de pression de pores ; le trou traverse un grès perméable. Impossible de monter ou descendre, la circulation est normale. Hypothèse et action ?",
+      "choices": [
+        "Collapse du tubage sous la pression externe : augmenter la densité de la boue de forage",
+        "Venue de gaz : fermer le BOP et relever les pressions de fermeture stabilisées en surface",
+        "Rupture de tige : remonter plus fort pour dégager le train de tiges resté coincé",
+        "Coincement différentiel : réduire la surpression, placer un pill, battre au jar"
+      ],
+      "answer": 3,
+      "explain": "Une forte surpression, un grès perméable et un train immobile sont réunis ; la circulation normale oriente vers un coincement différentiel.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-036",
+      "theme": "Opérations de forage et programme",
+      "level": 2,
+      "q": "Dans la section déviée à 50°, la pression de pompage et le couple augmentent alors que le volume de déblais aux tamis diminue. Que suspectez-vous et que faites-vous ?",
+      "choices": [
+        "Un changement de formation plus dure : on continue à forer avec les mêmes paramètres",
+        "Mauvais nettoyage du trou : augmenter débit et rotation, balayer avant de remonter",
+        "Une venue de gaz : fermer le puits et relever les pressions de fermeture en surface",
+        "Un trépan neuf qui se rode : rien à faire, les valeurs se stabiliseront seules"
+      ],
+      "answer": 1,
+      "explain": "Dans un puits dévié, les déblais s'accumulent à la paroi basse : débit et rotation sont les leviers.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-037",
+      "theme": "Opérations de forage et programme",
+      "level": 1,
+      "q": "À 3 120 m, la ROP passe de 8 à 25 m/h sans changer le poids ni la rotation. Quelle conduite adoptez-vous ?",
+      "choices": [
+        "Poursuivre sans pause pour profiter de la ROP élevée et gagner du temps de forage",
+        "Augmenter le poids sur l'outil pour profiter de la formation tendre rencontrée",
+        "Faire un flow check ; sans écoulement, reprendre prudemment en surveillant bacs et gaz",
+        "Réduire les pompes pour limiter le débit de retour pendant la période de ROP rapide"
+      ],
+      "answer": 2,
+      "explain": "Un drilling break peut signaler une formation poreuse ou à pression anormale ; on contrôle l'écoulement avant de continuer.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-038",
+      "theme": "Opérations de forage et programme",
+      "level": 2,
+      "q": "Un dogleg de 6°/100 ft est mesuré alors que le programme plafonne à 3°/100 ft. Quels sont les risques et l'action ?",
+      "choices": [
+        "Fatigue des tiges, usure du tubage, tubage difficile à descendre ; corriger ou aléser",
+        "Aucun risque pour le tubage tant que le débit de boue reste conforme au programme",
+        "Un gain de ROP et un meilleur contact avec le réservoir : on poursuit le forage normal",
+        "Une venue de gaz dans le dogleg : fermer le puits et relever les pressions de fermeture"
+      ],
+      "answer": 0,
+      "explain": "Un dogleg sévère concentre les contraintes et gêne la descente du tubage.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-039",
+      "theme": "Opérations de forage et programme",
+      "level": 1,
+      "q": "Vous sortez 10 stands de tiges de 5 po (93 ft par stand, déplacement d'acier 0,0075 bbl/ft). Quel volume de boue doit prendre le trip tank ?",
+      "choices": [
+        "Environ 70 bbl : 10 × 93 × 0,075",
+        "Environ 7 bbl : 10 × 93 × 0,0075",
+        "Environ 0,7 bbl : 10 × 93 × 0,00075",
+        "Environ 14 bbl : 20 × 93 × 0,0075"
+      ],
+      "answer": 1,
+      "explain": "Volume = longueur × déplacement = 930 ft × 0,0075 ≈ 7 bbl ; un écart avec le volume observé signale une venue ou des pertes.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-040",
+      "theme": "Opérations de forage et programme",
+      "level": 3,
+      "q": "En traversant un sel plastique offshore, les manœuvres deviennent serrées et le trou se referme malgré une boue de 10 ppg. Quelle réaction ?",
+      "choices": [
+        "Réduire la densité de la boue pour éviter la fracturation de la formation salifère",
+        "Ignorer le phénomène : le sel est inerte et ne se déforme pas sous la charge des terrains",
+        "Augmenter la proportion d'eau douce de la boue pour mieux dissoudre le sel rencontré",
+        "Soutenir le sel par la densité avec une boue saturée en sel et surveiller le calibre"
+      ],
+      "answer": 3,
+      "explain": "Le sel flue sous contrainte et se dissout dans une boue non saturée : densité et formulation sont adaptées pour limiter coincement et déformation du tubage.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-041",
+      "theme": "Opérations de forage et programme",
+      "level": 2,
+      "q": "Au poste de nuit, la pression de refoulement passe de 3 200 à 2 900 psi à débit constant, la ROP est stable. Quelle hypothèse prioritaire ?",
+      "choices": [
+        "Venue de gaz : fermer le BOP et relever les pressions stabilisées de fermeture",
+        "Fuite dans le train (washout, tige percée) : arrêter et contrôler avant rupture",
+        "Colmatage des duses du trépan : la pression de refoulement monterait nettement",
+        "Baisse de densité de la boue : l'effet sur la pression de refoulement serait nul"
+      ],
+      "answer": 1,
+      "explain": "Une baisse de pression de pompage à débit constant signale un chemin de fuite dans le train ; un colmatage la ferait monter.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-042",
+      "theme": "Opérations de forage et programme",
+      "level": 3,
+      "q": "Trépan à 40 000 USD ; rig à 2 500 USD/h ; manœuvre de 10 h ; 100 h de rotation pour 1 200 m forés. Quel est le coût par mètre ?",
+      "choices": [
+        "Environ 242 USD/m : (40 000 + 2 500 × 100 h) / 1 200 m",
+        "Environ 33 USD/m : 40 000 / 1 200 m, trépan seul",
+        "Environ 263 USD/m : (40 000 + 2 500 × 110) / 1 200",
+        "Environ 2 625 USD/m : 2 500 × 105 h / 100 m"
+      ],
+      "answer": 2,
+      "explain": "Coût/m = (coût trépan + coût rig × (temps de manœuvre + temps de rotation)) / mètres forés = 315 000 / 1 200.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "ing-forage-043",
+      "theme": "Opérations de forage et programme",
+      "level": 1,
+      "q": "Pendant une manœuvre de tige, un équipier passe sous la charge suspendue. Que faites-vous ?",
+      "img": "photo/land-drilling-rig.jpg",
+      "imgAlt": "Appareil de forage terrestre avec mât et plancher de forage",
+      "choices": [
+        "Stopper l'opération immédiatement : nul ne reste sous une charge suspendue (zone rouge)",
+        "Continuer la manœuvre : la tige est près du sol et la zone est dégagée en cas de chute",
+        "Demander à l'équipier de se dépêcher de dégager la zone avant la fin du mouvement en cours",
+        "Attendre la fin de la manœuvre pour intervenir et rappeler la consigne ensuite à l'équipe"
+      ],
+      "answer": 0,
+      "explain": "L'arrêt immédiat prime : une charge suspendue peut chuter, et la zone sous la charge est interdite.",
+      "seconds": 70,
+      "status": "draft"
+    }
   ]
 }

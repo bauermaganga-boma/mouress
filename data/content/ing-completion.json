@@ -86,12 +86,12 @@
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël : vanne maîtresse en bas, vanne latérale de production à droite, vanne de curage au sommet",
       "choices": [
-        "La vanne latérale de production (wing valve)",
-        "La vanne d'injection de produits chimiques",
-        "La vanne de curage (swab valve)",
-        "La vanne d'annulaire"
+        "La vanne de curage (swab valve), au sommet de l'arbre, dans l'axe du puits",
+        "La vanne latérale de production (wing valve), sur la branche vers la ligne de production",
+        "La vanne d'injection de produits chimiques, sur le piquage de la tête d'arbre",
+        "La vanne d'annulaire, placée sur la sortie latérale de la tête de tubing"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "La vanne de curage ferme l'accès vertical au sommet de l'arbre ; elle s'ouvre, avec la vanne maîtresse, pour monter le lubricateur de câble. La vanne latérale ouvre la ligne de production.",
       "seconds": 40,
       "status": "draft"
@@ -104,12 +104,12 @@
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël en surface ; la vanne de sécurité de fond se situe plus bas dans le tubing",
       "choices": [
+        "Elle reste dans sa dernière position tant que la ligne n'est pas repressurisée à la main",
         "Elle se ferme automatiquement (sécurité positive) et isole le puits sous la surface",
-        "Elle reste dans sa dernière position",
-        "Elle s'ouvre complètement pour dépressuriser le puits",
-        "Elle ne dépend pas de la ligne de contrôle, seulement de la température"
+        "Elle s'ouvre complètement pour dépressuriser le puits vers la torche de secours",
+        "Elle ne dépend pas de la ligne de contrôle mais seulement de la température de fond"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "La pression de la ligne de contrôle maintient la vanne ouverte contre un ressort ; sa disparition ferme la vanne (fail-safe).",
       "seconds": 40,
       "status": "draft"
@@ -122,12 +122,12 @@
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël en surface ; le packer se situe au fond du puits, au-dessus de la zone productive",
       "choices": [
-        "Centrer le tubing dans le casing, sans étanchéité",
-        "Mesurer la pression de fond en continu",
-        "Retenir le sable de formation",
-        "Isoler l'annulaire tubing-casing au-dessus de la zone productive et protéger le casing de la pression et des fluides"
+        "Isoler l'annulaire tubing-casing au-dessus de la zone productive et protéger le casing",
+        "Centrer le tubing dans le casing en laissant l'annulaire communiquer avec la production",
+        "Mesurer la pression de fond en continu et la transmettre à la surface par câble",
+        "Retenir le sable de formation en amont des perforations pour protéger le tubing"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Le packer crée l'étanchéité dans l'annulaire : l'effluent est canalisé dans le tubing et le casing n'est pas exposé à la pression ni aux fluides de production.",
       "seconds": 40,
       "status": "draft"
@@ -138,12 +138,12 @@
       "level": 2,
       "q": "Quel est l'inconvénient majeur d'une complétion duale (deux tubings, deux packers) par rapport à une complétion simple ?",
       "choices": [
-        "Elle empêche de connaître le débit de chaque zone",
+        "Elle empêche de connaître le débit de chaque zone et rend les allocations impossibles",
+        "Elle impose un lift artificiel dès le démarrage, quelle que soit la pression du réservoir",
         "La complexité, les diamètres réduits et la difficulté des interventions",
-        "Elle exige toujours un lift artificiel",
-        "Elle ne peut être installée qu'en trou ouvert"
+        "Elle ne peut être installée qu'en trou ouvert, jamais en puits tubé et perforé"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "La complétion duale permet justement de produire séparément deux réservoirs ; son coût est la complexité, la réduction des diamètres de passage et la lourdeur des interventions.",
       "seconds": 50,
       "status": "draft"
@@ -154,12 +154,12 @@
       "level": 2,
       "q": "Quels sont l'atout principal et la limite d'une complétion en trou ouvert (open hole) ?",
       "choices": [
-        "Atout : isolation parfaite par zone ; limite : coût des perforations",
-        "Atout : pas de perforation, donc skin potentiellement faible ; limite : aucune sélectivité par zone et risque d'éboulement",
-        "Atout : contrôle des sables intégré ; limite : impossible dans le calcaire",
-        "Atout : pression d'essai plus élevée ; limite : aucune"
+        "Atout : isolation parfaite par zone ; limite : coût élevé des perforations et du ciment en place",
+        "Atout : contrôle des sables intégré au système ; limite : impossible dans les carbonates et les grès durs",
+        "Atout : pression d'essai plus élevée ; limite : diamètre du tubing réduit par le liner",
+        "Atout : pas de perforation, skin faible ; limite : aucune sélectivité par zone, éboulement possible"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Sans casing cimenté ni perforations, l'écoulement vers le puits est direct (faible skin), mais on ne peut ni isoler une zone ni empêcher l'éboulement sans équipement.",
       "seconds": 50,
       "status": "draft"
@@ -170,12 +170,12 @@
       "level": 2,
       "q": "Qu'est-ce qu'un liner de production ?",
       "choices": [
-        "Un tubing de petit diamètre qui relie le packer à l'arbre de Noël",
-        "Une gaine de ciment placée dans l'annulaire",
-        "Un revêtement interne du tubing contre la corrosion",
-        "Une colonne qui n'atteint pas la surface, suspendue dans le casing précédent par un liner hanger"
+        "Un tubing de petit diamètre qui relie le packer à l'arbre de Noël en surface du puits",
+        "Une gaine de ciment placée dans l'annulaire pour isoler les zones perméables traversées",
+        "Une colonne non remontée en surface, suspendue au casing précédent par un liner hanger",
+        "Un revêtement interne du tubing posé pour le protéger contre la corrosion par le CO2"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "Le liner est suspendu à l'intérieur du casing précédent par un liner hanger : il économise de l'acier et permet de descendre une colonne dans un diamètre réduit.",
       "seconds": 45,
       "status": "draft"
@@ -186,10 +186,10 @@
       "level": 3,
       "q": "Cas pratique : pression sur un packer.\nPuits statique, fermé en surface. Tubing rempli d'huile de densité 0,85 ; pression en tête 120 bar. Annulaire rempli de saumure de densité 1,05 ; pression annulaire en surface nulle. Packer à 2 500 m TVD ; 1 m de fluide de densité 1 = 0,0981 bar.\nQuelle est la pression différentielle appliquée au packer par le dessous (pression sous le packer moins pression de l'annulaire au-dessus) ?",
       "choices": [
-        "Environ 71 bar",
-        "Environ 329 bar",
-        "Environ 257 bar",
-        "Environ 137 bar"
+        "Environ 71 bar (pression sous le packer 328 bar moins annulaire 257 bar)",
+        "Environ 329 bar (pression sous le packer seule, annulaire oublié)",
+        "Environ 257 bar (pression hydrostatique de l'annulaire seule)",
+        "Environ 137 bar (écart des seules densités sur 2 500 m)"
       ],
       "answer": 0,
       "explain": "Sous le packer, la pression est celle du tubing à 2 500 m : 120 + 0,0981 × 0,85 × 2 500 = 328,5 bar. Au-dessus, dans l'annulaire : 0,0981 × 1,05 × 2 500 = 257,5 bar. Différence ≈ 71 bar.",
@@ -202,12 +202,12 @@
       "level": 2,
       "q": "Un puits de gaz contient du CO2 et de l'eau, sans H2S significatif. Quel matériau de tubing est couramment retenu ?",
       "choices": [
-        "Un acier au carbone nu, sans inhibiteur ni protection",
-        "Un acier au carbone à très haute dureté (plus de 40 HRC)",
-        "Un acier inoxydable à 13 % de chrome (13Cr)",
-        "Un alliage d'aluminium"
+        "Un acier inoxydable à 13 % de chrome (13Cr), couramment retenu contre le CO2",
+        "Un acier au carbone nu, sans inhibiteur ni protection, pour limiter le coût d'achat",
+        "Un acier au carbone à très haute dureté (plus de 40 HRC) contre la corrosion",
+        "Un alliage d'aluminium léger, insensible à la corrosion par le CO2 humide"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Le 13Cr résiste bien à la corrosion par le CO2. En présence de H2S, les limites de l'ISO 15156 (NACE MR0175) doivent être vérifiées ; l'acier au carbone nu se corroderait vite en CO2 humide.",
       "seconds": 50,
       "status": "draft"
@@ -218,12 +218,12 @@
       "level": 3,
       "q": "Le tubing d'un puits à gas lift est vidé de son fluide (pression interne quasi nulle) alors que l'annulaire est plein de saumure sous pression. Quelle sollicitation du tubing devient dimensionnante ?",
       "choices": [
-        "L'éclatement (burst)",
-        "La traction seule",
-        "La fatigue thermique",
-        "L'écrasement (collapse) sous la pression externe"
+        "L'écrasement (collapse) sous la pression externe de l'annulaire",
+        "L'éclatement (burst), la pression interne étant quasi nulle dans le tubing",
+        "La traction seule, due au poids du tubing vide dans le puits",
+        "La fatigue thermique, due aux cycles de température du gas lift"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "La pression extérieure dépasse la pression intérieure : le risque est l'écrasement. L'éclatement domine quand la pression intérieure est la plus forte.",
       "seconds": 55,
       "status": "draft"
@@ -234,12 +234,12 @@
       "level": 3,
       "q": "Cas pratique : dilatation thermique.\nTubing en acier de 3 000 m, libre de coulisser dans le récepteur à alésage poli du packer. À la mise en production, sa température moyenne passe de 40 à 100 °C. Coefficient de dilatation de l'acier : 12×10⁻⁶ par °C.\nQuel allongement thermique approximatif ?",
       "choices": [
-        "Environ 0,22 m",
-        "Environ 21,6 m",
-        "Environ 2,2 m",
-        "Environ 0,6 m"
+        "Environ 0,22 m : écart de température divisé par dix",
+        "Environ 21,6 m : coefficient surestimé d'un facteur dix",
+        "Environ 0,6 m : conversion de la longueur erronée",
+        "Environ 2,2 m : 3 000 m × 12×10⁻⁶ par °C × 60 °C"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "ΔL = α × L × ΔT = 12×10⁻⁶ × 3 000 × 60 = 2,16 m. Les effets de pression (piston, ballonnement) s'ajoutent : d'où le joint coulissant ou un ancrage prévu.",
       "seconds": 80,
       "status": "draft"
@@ -250,10 +250,10 @@
       "level": 1,
       "q": "Quel est l'objectif d'une perforation en puits tubé et cimenté ?",
       "choices": [
-        "Renforcer le casing face à la pression du réservoir",
-        "Créer des tunnels à travers le casing et le ciment jusqu'à la formation pour établir la communication avec le réservoir",
-        "Remplacer le ciment dégradé par du gravier",
-        "Mesurer la perméabilité de la formation"
+        "Renforcer le casing face à la pression du réservoir en ajoutant de l'acier en place dans le puits",
+        "Créer des tunnels à travers casing et ciment pour mettre la formation en communication",
+        "Remplacer le ciment dégradé de l'annulaire par un massif de gravier posé en place",
+        "Mesurer la perméabilité de la formation par injection locale de fluide dans le puits"
       ],
       "answer": 1,
       "explain": "Sans perforations, le casing cimenté isole le réservoir. Les charges creuses ouvrent des tunnels qui relient la formation au puits.",
@@ -268,12 +268,12 @@
       "img": "photo/land-drilling-rig.jpg",
       "imgAlt": "Appareil de forage terrestre",
       "choices": [
-        "Avantage : l'afflux nettoie les tunnels ; contrepartie : le puits peut venir dès le tir, il faut des barrières et un contrôle de pression en surface",
-        "Avantage : aucun risque de venue ; contrepartie : tunnels bouchés",
-        "Avantage : gain de pénétration d'un facteur deux ; contrepartie : arrêt impossible",
-        "Avantage : plus besoin de BOP ; contrepartie : coût du fluide"
+        "Avantage : aucun risque de venue au moment du tir ; contrepartie : tunnels bouchés par des débris du tir",
+        "Avantage : pénétration doublée des charges ; contrepartie : arrêt du tir impossible après amorçage",
+        "Avantage : l'afflux nettoie les tunnels ; contrepartie : venue dès le tir, barrières et contrôle requis",
+        "Avantage : plus besoin de BOP en surface ; contrepartie : coût du fluide de complétion allégé"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "Le sous-équilibre reste un compromis : l'afflux dégage les débris, mais le puits peut produire immédiatement. Les équipements de contrôle de pression doivent être en place et testés.",
       "seconds": 60,
       "status": "draft"
@@ -284,12 +284,12 @@
       "level": 2,
       "q": "Pour préparer un gravel pack en puits tubé, quel type de perforation est privilégié ?",
       "choices": [
-        "Des charges à gros diamètre d'entrée (big-hole) et forte densité de tirs, pour limiter la perte de charge dans les tunnels remplis de gravier",
-        "Des charges à pénétration maximale et faible densité de tirs",
-        "Pas de perforation : le gravier assure la liaison",
-        "Des tirs uniquement orientés vers le haut du puits"
+        "Des charges à pénétration maximale et faible densité de tirs, pour atteindre la zone saine",
+        "Pas de perforation : le gravier assure seul la liaison entre la formation et la crépine",
+        "Des charges big-hole à forte densité de tirs, pour limiter la perte de charge dans les tunnels",
+        "Des tirs orientés uniquement vers le haut du puits, pour éviter la venue de sable"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "Les tunnels se remplissent de gravier : pour que la chute de pression reste faible, il faut des tunnels larges et nombreux.",
       "seconds": 55,
       "status": "draft"
@@ -300,12 +300,12 @@
       "level": 1,
       "q": "Quel est un effet direct de la production de sable ?",
       "choices": [
-        "Une hausse du pouvoir calorifique du gaz",
+        "Une hausse du pouvoir calorifique du gaz produit, par concentration des hydrocarbures",
+        "Une baisse de la salinité de l'eau produite, par dilution avec les grains",
         "L'érosion des duses, vannes et coudes et le remplissage des séparateurs",
-        "Une baisse de la salinité de l'eau produite",
-        "Un refroidissement de l'effluent en tête"
+        "Un refroidissement de l'effluent en tête, par détente au passage de la duse"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Le sable abrasif use les équipements, se dépose dans les capacités et peut boucher le puits ou l'intervalle productif.",
       "seconds": 40,
       "status": "draft"
@@ -318,10 +318,10 @@
       "img": "svg/well-log.svg",
       "imgAlt": "Diagraphie avec granulométrie du sable de formation",
       "choices": [
-        "Médiane de 150 à 300 µm",
-        "Médiane de 1 500 à 1 800 µm",
-        "Médiane de 25 à 30 µm",
-        "Médiane de 750 à 900 µm"
+        "Médiane de 150 à 300 µm : 1 à 2 fois la médiane",
+        "Médiane de 1 500 à 1 800 µm : 10 à 12 fois 150 µm",
+        "Médiane de 25 à 30 µm : 150 µm divisé par 5 ou 6",
+        "Médiane de 750 à 900 µm : 5 à 6 fois 150 µm"
       ],
       "answer": 3,
       "explain": "5 × 150 = 750 µm et 6 × 150 = 900 µm. Un gravier trop fin se colmate ; un gravier trop gros laisse passer le sable de formation.",
@@ -334,10 +334,10 @@
       "level": 3,
       "q": "Quel type de sable se prête le mieux à une crépine seule (stand-alone screen) plutôt qu'à un gravel pack ?",
       "choices": [
-        "Un sable très argileux, riche en fines et mal classé",
-        "Un sable mal classé avec une forte proportion de grains très fins",
+        "Un sable très argileux, riche en fines, car la crépine retient les argiles",
+        "Un sable mal classé avec une forte proportion de grains très fins, filtrés par la crépine",
         "Un sable propre, bien classé (grains de taille uniforme), peu chargé en fines",
-        "Tout sable, quel que soit son classement"
+        "Un sable de n'importe quel classement, la crépine seule suffisant dans tous les cas"
       ],
       "answer": 2,
       "explain": "Avec un sable uniforme et propre, les grains forment un pont stable sur la crépine ; les fines d'un sable mal classé la colmateraient, d'où le gravel pack.",
@@ -350,12 +350,12 @@
       "level": 2,
       "q": "Qu'est-ce qu'un frac-pack ?",
       "choices": [
-        "Un gravel pack réalisé sans crépine",
-        "Une fracturation sans agent de soutènement",
-        "Une courte fracturation hydraulique immédiatement suivie d'un gravel pack, pour contourner l'endommagement et contrôler le sable",
-        "Une acidification suivie d'une consolidation chimique"
+        "Un gravel pack réalisé sans crépine, avec un gravier consolidé par résine dans le puits",
+        "Une fracturation sans agent de soutènement, suivie d'une longue acidification de la zone traitée",
+        "Une acidification suivie d'une consolidation chimique de la matrice autour du puits",
+        "Une courte fracturation hydraulique suivie d'un gravel pack, contre l'endommagement et le sable"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Le frac-pack dépasse la zone endommagée par une fracture courte et conductive, tout en retenant le sable par le gravel pack.",
       "seconds": 50,
       "status": "draft"
@@ -368,10 +368,10 @@
       "img": "svg/ipr-curve.svg",
       "imgAlt": "Courbe IPR du puits avec deux points de test, avant et après dégradation",
       "choices": [
-        "0,36 puis 0,24 STB/j/psi (division par Pwf) : situation normale",
-        "1,0 puis 1,54 STB/j/psi : amélioration de l'écoulement",
-        "0,8 puis 0,52 STB/j/psi : fuite de packer",
-        "1,0 puis 0,65 STB/j/psi : colmatage ou endommagement du gravel pack (skin en hausse)"
+        "0,36 puis 0,24 STB/j/psi (division par Pwf) : situation normale du puits",
+        "1,0 puis 1,54 STB/j/psi : amélioration de l'écoulement près du puits",
+        "0,8 puis 0,52 STB/j/psi : fuite du packer ou du tubing en fond de puits",
+        "1,0 puis 0,65 STB/j/psi : endommagement du gravel pack (skin en hausse)"
       ],
       "answer": 3,
       "explain": "Pr − Pwf = 800 psi : PI = 800/800 = 1,0 puis 520/800 = 0,65, soit −35 % à pression de réservoir constante. Un skin croissant évoque un colmatage des fines ou des dépôts.",
@@ -384,12 +384,12 @@
       "level": 2,
       "q": "Quel avantage présente la perforation TCP (Tubing Conveyed Perforating) par rapport aux canons descendus à l'e-line ?",
       "choices": [
-        "Elle permet de perforer de longs intervalles en une seule descente, avec un tir en sous-équilibre",
-        "Elle supprime le besoin d'équipement de contrôle de pression",
-        "Elle donne toujours une pénétration double",
-        "Elle se fait sans aucun fluide dans le puits"
+        "Elle supprime le besoin d'équipement de contrôle de pression en tête de puits",
+        "Elle perfore de longs intervalles en une descente, avec un tir en sous-équilibre",
+        "Elle donne une pénétration doublée par rapport à toute autre méthode de tir",
+        "Elle se fait sans aucun fluide dans le puits, le tubing étant vidé"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Les canons suspendus au tubing peuvent porter de très grandes longueurs de charges et être tirés après mise en sous-équilibre.",
       "seconds": 50,
       "status": "draft"
@@ -400,12 +400,12 @@
       "level": 3,
       "q": "Pourquoi la production de sable augmente-t-elle souvent après l'arrivée d'eau dans un puits ?",
       "choices": [
-        "L'eau augmente la résistance de la roche en la lubrifiant",
-        "L'eau annule la cohésion capillaire apparente entre les grains, ce qui fragilise une roche peu consolidée",
-        "L'eau refroidit la roche et la rend plus cassante",
-        "L'eau alourdit la colonne et écrase la formation"
+        "L'eau augmente la résistance de la roche en lubrifiant les contacts entre les grains",
+        "L'eau refroidit la roche et la rend plus cassante au voisinage du puits",
+        "L'eau alourdit la colonne et écrase la formation au droit des perforations",
+        "L'eau annule la cohésion capillaire entre les grains, fragilisant une roche peu consolidée"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Dans une roche peu consolidée, une part de la tenue provient de la tension capillaire de l'eau connée ; la percée d'eau la réduit, et les grains se détachent plus facilement.",
       "seconds": 55,
       "status": "draft"
@@ -416,12 +416,12 @@
       "level": 1,
       "q": "Une acidification matricielle est injectée :",
       "choices": [
-        "À une pression supérieure à la pression de fracture, pour créer une fracture",
         "À une pression inférieure à la pression de fracture de la formation",
-        "Uniquement en remplissant l'annulaire",
-        "Par simple gravité, sans pompage"
+        "À une pression supérieure à la pression de fracture, pour créer une fracture longue",
+        "En remplissant l'annulaire seulement, sans pompage dans le tubing",
+        "Par simple gravité depuis la surface, sans pompage ni pression en tête"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "La stimulation matricielle dissout l'endommagement dans la matrice sans fracturer : la pression doit rester sous la pression de fracture.",
       "seconds": 40,
       "status": "draft"
@@ -433,9 +433,9 @@
       "q": "Pour traiter un endommagement par argiles et fines dans un grès, quel acide est classiquement utilisé ?",
       "choices": [
         "Un mélange HCl-HF (mud acid), précédé d'un préflush à l'HCl",
-        "HCl seul à forte concentration, qui dissout argiles et silice",
-        "Acide sulfurique concentré",
-        "Soude caustique seule"
+        "HCl seul à forte concentration, qui dissout argiles et silice du grès",
+        "Acide sulfurique concentré, qui dissout argiles et fines sans précipité",
+        "Soude caustique seule, qui dissout la silice et peptise les argiles"
       ],
       "answer": 0,
       "explain": "Le HF dissout les silicates (argiles, feldspaths) ; le préflush HCl évite la précipitation de sels de calcium avec le HF. L'HCl seul ne dissout pas les argiles.",
@@ -448,10 +448,10 @@
       "level": 1,
       "q": "Quel est le rôle du proppant dans une fracturation hydraulique ?",
       "choices": [
-        "Dissoudre la roche autour de la fracture",
-        "Réduire la viscosité du fluide de fracturation",
+        "Dissoudre la roche autour de la fracture pour en élargir les parois",
+        "Réduire la viscosité du fluide de fracturation pendant le pompage",
         "Maintenir la fracture ouverte et conductrice après l'arrêt du pompage",
-        "Détecter l'orientation de la fracture"
+        "Détecter l'orientation de la fracture grâce à ses propriétés radioactives"
       ],
       "answer": 2,
       "explain": "Sans agent de soutènement, la fracture se refermerait à la fin du pompage ; le sable ou la céramique garde un canal perméable.",
@@ -464,10 +464,10 @@
       "level": 3,
       "q": "Cas pratique : pression de fracturation.\nFracturation à 8 000 ft TVD. Gradient de fracture 0,75 psi/ft ; fluide de gradient hydrostatique 0,45 psi/ft ; pertes de charge par frottement dans le tubing : 300 psi.\nQuelle pression de pompage en surface faut-il au minimum pour initier la fracture ?",
       "choices": [
-        "2 400 psi",
-        "2 100 psi",
-        "6 300 psi",
-        "2 700 psi"
+        "2 400 psi : 6 000 − 3 600, frottement oublié",
+        "2 100 psi : 6 000 − 3 600 − 300 de frottement",
+        "6 300 psi : 6 000 + 300, hydrostatique oubliée",
+        "2 700 psi : 6 000 − 3 600 + 300 de frottement"
       ],
       "answer": 3,
       "explain": "Pression de fracture au fond = 0,75 × 8 000 = 6 000 psi. Hydrostatique = 0,45 × 8 000 = 3 600 psi. Surface = 6 000 − 3 600 + 300 = 2 700 psi. 2 400 oublie le frottement ; 2 100 le soustrait au lieu de l'ajouter.",
@@ -482,12 +482,12 @@
       "img": "svg/ipr-curve.svg",
       "imgAlt": "Courbes IPR avant et après suppression d'un skin positif",
       "choices": [
-        "Environ 1,1",
-        "Environ 8",
-        "Environ 15",
-        "Environ 2,1"
+        "Environ 1,1 : 8 ÷ 7, skin mal utilisé",
+        "Environ 2,1 : (7 + 8) ÷ 7, soit 15 ÷ 7",
+        "Environ 8 : skin pris pour le facteur",
+        "Environ 15 : dénominateur pris pour le facteur"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "Avant : dénominateur 7 + 8 = 15 ; après : 7. Le rapport est 15/7 ≈ 2,1. Le gain dépend du terme de base : plus il est grand, moins le skin pèse.",
       "seconds": 90,
       "status": "draft"
@@ -499,9 +499,9 @@
       "q": "Dans un carbonate, l'injection d'HCl à débit suffisant crée surtout :",
       "choices": [
         "Des canaux de dissolution ramifiés (wormholes) qui court-circuitent la zone endommagée",
-        "Une dissolution uniforme et homogène de toute la matrice",
-        "Un gonflement des argiles",
-        "Un colmatage par précipitation de silice"
+        "Une dissolution uniforme et homogène de toute la matrice autour du puits",
+        "Un gonflement des argiles qui bouche la zone proche du puits",
+        "Un colmatage par précipitation de silice dans les pores du carbonate"
       ],
       "answer": 0,
       "explain": "La dissolution se concentre dans les chemins les plus perméables et forme des wormholes : quelques canaux suffisent à dépasser l'endommagement.",
@@ -514,10 +514,10 @@
       "level": 2,
       "q": "Avant une acidification, pourquoi réalise-t-on des essais de compatibilité en laboratoire entre l'acide, ses additifs et l'huile ou l'eau de formation ?",
       "choices": [
-        "Pour augmenter la corrosion du tubing",
-        "Pour éviter les émulsions, boues (sludge) ou précipités qui endommageraient davantage la formation",
-        "Pour fixer la pression de pompage maximale en surface",
-        "Pour mesurer la densité du ciment"
+        "Pour augmenter la corrosion du tubing et accélérer l'attaque de la zone traitée",
+        "Pour éviter émulsions, boues ou précipités qui endommageraient davantage la formation",
+        "Pour fixer la pression de pompage maximale admissible en surface avant le traitement acide",
+        "Pour mesurer la densité du ciment et valider son temps de prise avant l'opération"
       ],
       "answer": 1,
       "explain": "Certaines huiles forment des boues avec l'acide, et des précipités secondaires peuvent colmater les pores : ces essais en réduisent le risque.",
@@ -532,10 +532,10 @@
       "img": "photo/wellhead-onshore.jpg",
       "imgAlt": "Tête de puits terrestre prête pour une intervention câble",
       "choices": [
-        "La slickline permet de pomper des fluides, l'e-line non",
-        "La slickline est un tube continu enroulé sur touret",
-        "La slickline est un fil plein sans conducteur ; l'e-line contient un conducteur électrique qui transmet courant et données",
-        "L'e-line sert uniquement à fixer des bouchons de ciment"
+        "La slickline permet de pomper des fluides à travers son âme creuse dans le tubing, l'e-line non",
+        "La slickline est un tube continu enroulé sur un touret de grand diamètre en surface",
+        "La slickline est un fil plein sans conducteur ; l'e-line transmet courant et données",
+        "L'e-line sert uniquement à fixer des bouchons de ciment dans le tubing du puits"
       ],
       "answer": 2,
       "explain": "La slickline est mécanique (mesures en mémoire) ; l'e-line permet le temps réel, la perforation et les diagraphies. Le tube continu est le coiled tubing.",
@@ -548,12 +548,12 @@
       "level": 1,
       "q": "Laquelle de ces opérations n'est PAS une opération courante à la slickline ?",
       "choices": [
+        "Poser ou retirer un bouchon dans un siège de tubing à la slickline",
         "Pomper en continu un gros volume d'acide à travers le câble",
-        "Poser ou retirer un bouchon dans un siège",
-        "Remplacer une vanne de gas lift",
-        "Calibrer le tubing avec un gabarit"
+        "Remplacer une vanne de gas lift dans son mandrin à poche latérale",
+        "Calibrer le tubing avec un gabarit pour vérifier son passage libre"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Le fil plein ne permet aucune circulation de fluide. L'acidification se fait par pompage direct ou par coiled tubing.",
       "seconds": 40,
       "status": "draft"
@@ -564,12 +564,12 @@
       "level": 2,
       "q": "Quel est l'avantage principal du coiled tubing par rapport à la slickline ?",
       "choices": [
-        "Il est toujours moins cher",
-        "Il transmet des mesures en temps réel sans aucun conducteur",
-        "Il permet de circuler des fluides (nettoyage, acide, azote) à travers le tube tout en intervenant en puits vivant",
-        "Il n'exige aucun équipement de contrôle de pression"
+        "Il circule des fluides (nettoyage, acide, azote) tout en intervenant en puits vivant",
+        "Il est moins coûteux que la slickline dans toutes les interventions de puits vivants ou morts",
+        "Il transmet des mesures en temps réel sans conducteur ni fibre intégrée dans le tube",
+        "Il évite tout équipement de contrôle de pression en tête grâce à son diamètre réduit"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Le tube creux sert de conduite : on pompe des fluides au fond sous pression. Il exige, comme le câble, un équipement de contrôle de pression.",
       "seconds": 50,
       "status": "draft"
@@ -580,12 +580,12 @@
       "level": 2,
       "q": "Qu'est-ce que le snubbing ?",
       "choices": [
-        "Une opération de tir de perforation au câble",
-        "Le nettoyage du puits par circulation de coiled tubing",
-        "Le retrait de la colonne après neutralisation du puits par fluide dense",
-        "Une intervention sous pression où une colonne de tubulaires jointés est introduite ou retirée par des vérins hydrauliques, sans tuer le puits"
+        "Une opération de tir de perforation au câble réalisée sous la pression du puits en production",
+        "Le nettoyage du puits par circulation de fluide dans un coiled tubing de petit diamètre",
+        "Une intervention sous pression où des tubulaires jointés sont manœuvrés par vérins, sans tuer le puits",
+        "Le retrait de la colonne après neutralisation du puits par un fluide dense de kill"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "L'unité de snubbing force les tubulaires dans un puits sous pression, tant que la poussée de la pression dépasse le poids de la colonne.",
       "seconds": 50,
       "status": "draft"
@@ -598,12 +598,12 @@
       "img": "photo/land-drilling-rig.jpg",
       "imgAlt": "Appareil de workover sur un puits terrestre",
       "choices": [
-        "Environ 17,7 klbf",
-        "Environ 15,4 klbf",
-        "Environ 2,35 klbf",
-        "Environ 20,1 klbf"
+        "Environ 15,4 klbf : 4 000 × 4,43 − 500 × 4,7",
+        "Environ 17,7 klbf : 4 000 × 4,43, poids du tubing oublié",
+        "Environ 2,35 klbf : 500 × 4,7, effet de pression oublié",
+        "Environ 20,1 klbf : 4 000 × 4,43 + 500 × 4,7, poids ajouté"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "Force de pression = 4 000 × 4,43 = 17 720 lbf, vers le haut. Poids de la colonne = 4,7 × 500 = 2 350 lbf. Force à appliquer vers le bas = 17 720 − 2 350 ≈ 15 370 lbf. 17,7 oublie le poids ; 20,1 l'ajoute.",
       "seconds": 100,
       "status": "draft"
@@ -616,10 +616,10 @@
       "img": "photo/wellhead-onshore.jpg",
       "imgAlt": "Tête de puits terrestre avec lubricateur",
       "choices": [
-        "Fermer la vanne de sécurité de fond",
-        "Vider le tubing de tout fluide",
+        "Fermer la vanne de sécurité de fond pour isoler le puits sous les outils",
+        "Vider le tubing de tout fluide pour réduire la pression sur le lubricateur",
         "Tester le lubricateur et le matériel de contrôle de pression à la pression requise",
-        "Dépressuriser entièrement le réservoir"
+        "Dépressuriser entièrement le réservoir par purge à la torche avant la descente"
       ],
       "answer": 2,
       "explain": "Le lubricateur devient une extension du puits : son étanchéité doit être éprouvée avant exposition à la pression du puits.",
@@ -632,12 +632,12 @@
       "level": 3,
       "q": "Cas pratique : nettoyage de sable au coiled tubing.\nCT de 1,75 po de diamètre extérieur dans un tubing de 2 7/8 po dont le diamètre intérieur est 2,441 po. Débit de retour dans l'espace annulaire : 1,0 bbl/min (1 bbl = 5,615 ft³).\nQuelle est la vitesse approximative dans l'espace annulaire ?",
       "choices": [
+        "Environ 175 ft/min, avec un débit divisé par deux",
         "Environ 355 ft/min (près de 108 m/min)",
-        "Environ 175 ft/min",
-        "Environ 710 ft/min",
-        "Environ 36 ft/min"
+        "Environ 710 ft/min, avec un débit doublé",
+        "Environ 36 ft/min, avec une section annulaire décuplée"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Section annulaire = π/4 × (2,441² − 1,75²) = 2,275 in² = 0,0158 ft². Vitesse = 5,615 / 0,0158 ≈ 355 ft/min. 175 ft/min oublie la section occupée par le CT.",
       "seconds": 100,
       "status": "draft"
@@ -648,12 +648,12 @@
       "level": 2,
       "q": "À quoi sert l'injection d'azote par coiled tubing dans un puits qui ne redémarre pas ?",
       "choices": [
-        "Augmenter la densité du fluide pour tuer le puits",
-        "Dissoudre les dépôts de carbonate",
-        "Refroidir le réservoir",
-        "Alléger la colonne de fluide pour réduire la pression hydrostatique et relancer l'écoulement"
+        "Augmenter la densité du fluide pour tuer le puits avant une intervention lourde",
+        "Dissoudre les dépôts de carbonate présents dans les perforations du puits",
+        "Alléger la colonne de fluide pour réduire la pression hydrostatique",
+        "Refroidir le réservoir pour réduire la viscosité de l'effluent produit"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "L'azote gazeux réduit la masse volumique moyenne de la colonne ; la pression au fond baisse en dessous de celle du réservoir.",
       "seconds": 50,
       "status": "draft"
@@ -664,10 +664,10 @@
       "level": 2,
       "q": "Dans quel cas le snubbing est-il préférable au coiled tubing ?",
       "choices": [
-        "Quand le puits est mort et à pression nulle",
-        "Pour manœuvrer, sous pression, des tubulaires jointés de grand diamètre ou de forte charge, éventuellement avec rotation (fraisage)",
-        "Quand il suffit de descendre un petit diamètre en trou ouvert sans pression",
-        "Quand on veut une mesure de pression en temps réel"
+        "Quand le puits est mort et à pression nulle, sans aucun risque de venue en tête",
+        "Pour manœuvrer sous pression des tubulaires jointés de grand diamètre ou de forte charge",
+        "Quand il suffit de descendre un petit diamètre en trou ouvert sans pression en tête de puits",
+        "Quand on cherche surtout une mesure de pression en temps réel au fond du puits"
       ],
       "answer": 1,
       "explain": "Le snubbing utilise des tubulaires conventionnels, rigides et rotatifs, adaptés aux fraisages et charges élevées sous pression.",
@@ -682,12 +682,12 @@
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël et tête de puits, éléments de barrière en surface",
       "choices": [
-        "Une barrière suffit si un opérateur est présent en permanence",
-        "Au moins deux barrières indépendantes, vérifiées, doivent isoler le réservoir de l'environnement",
-        "Deux barrières identiques du même fabricant sont requises",
-        "Les barrières ne doivent être testées qu'à l'installation"
+        "Une barrière suffit si un opérateur est présent en permanence près du puits",
+        "Deux barrières identiques du même fabricant sont requises pour garantir la fiabilité",
+        "Les barrières sont testées à l'installation puis réputées valides pour la vie du puits",
+        "Au moins deux barrières indépendantes et vérifiées doivent isoler le réservoir de l'environnement"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Le principe exige redondance, indépendance et vérification : les barrières sont testées et surveillées durant toute la vie du puits.",
       "seconds": 40,
       "status": "draft"
@@ -698,12 +698,12 @@
       "level": 1,
       "q": "Lequel de ces éléments peut constituer un élément de barrière dans un puits producteur ?",
       "choices": [
-        "La duse de production",
-        "Le séparateur d'essai",
-        "La ligne de torche",
-        "La DHSV avec sa ligne de contrôle hydraulique"
+        "La duse de production, qui règle le débit en tête de puits",
+        "La DHSV avec sa ligne de contrôle hydraulique",
+        "Le séparateur d'essai, qui sépare les phases en surface",
+        "La ligne de torche, qui évacue le gaz vers la torche"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "Un élément de barrière est un composant qui empêche l'écoulement non contrôlé : DHSV, packer, tubing, casing, tête de puits, bouchons. La duse règle le débit, elle n'isole pas.",
       "seconds": 40,
       "status": "draft"
@@ -714,12 +714,12 @@
       "level": 3,
       "q": "Comment réalise-t-on un test d'afflux (inflow test) d'une DHSV ?",
       "choices": [
-        "On ferme la vanne, on purge la pression au-dessus d'elle et on vérifie que la pression ne remonte pas",
-        "On pressurise au-dessus de la vanne et on observe la chute de pression",
-        "On ouvre la vanne et on mesure le débit",
-        "On remplace le fluide du tubing par du ciment"
+        "On pressurise au-dessus de la vanne fermée et on observe la chute de pression dans le temps",
+        "On ouvre la vanne et on mesure le débit de production obtenu en tête de puits",
+        "On remplace le fluide du tubing par du ciment et on attend sa prise complète",
+        "On ferme la vanne, on purge au-dessus d'elle et on vérifie que la pression ne remonte pas"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "La DHSV est sollicitée par la pression venant du réservoir, par dessous : le test d'afflux reproduit ce sens, ce qu'un test par le dessus ne fait pas.",
       "seconds": 55,
       "status": "draft"
@@ -730,10 +730,10 @@
       "level": 3,
       "q": "Cas pratique : fluide de kill.\nPression de fond statique 4 160 psi à 8 000 ft TVD. On souhaite une marge de surpression de 200 psi. P (psi) = 0,052 × ρ (ppg) × TVD (ft).\nQuelle densité de fluide de kill ?",
       "choices": [
-        "Environ 10,0 ppg",
-        "Environ 9,5 ppg",
-        "Environ 10,5 ppg",
-        "Environ 11,5 ppg"
+        "Environ 10,0 ppg : 4 160 ÷ (0,052 × 8 000), marge oubliée",
+        "Environ 9,5 ppg : (4 160 − 200) ÷ (0,052 × 8 000), marge soustraite",
+        "Environ 10,5 ppg : (4 160 + 200) ÷ (0,052 × 8 000)",
+        "Environ 11,5 ppg : (4 160 + 600) ÷ (0,052 × 8 000), marge triplée"
       ],
       "answer": 2,
       "explain": "(4 160 + 200) / (0,052 × 8 000) = 4 360 / 416 ≈ 10,5 ppg. 10,0 ppg ne fait qu'équilibrer la pression, sans marge.",
@@ -748,12 +748,12 @@
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Tête de puits avec manomètres de tubing et d'annulaire A",
       "choices": [
-        "Un comportement normal de dilatation du fluide d'annulaire",
-        "Un défaut du manomètre uniquement",
-        "Un excès de pression de la ligne de torche",
-        "Une perte d'intégrité d'une barrière (communication avec le tubing ou le réservoir) à investiguer"
+        "Une perte d'intégrité d'une barrière (communication avec le tubing ou le réservoir) à investiguer",
+        "Un comportement normal de dilatation du fluide d'annulaire sous l'effet de la chaleur",
+        "Un défaut du manomètre uniquement, à remplacer lors de la prochaine ronde",
+        "Un excès de pression de la ligne de torche transmis par l'évent de l'annulaire"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Une pression soutenue qui revient après purge indique un apport continu : la barrière est dégradée. La dilatation thermique, elle, suit la température et ne se reconstitue pas indéfiniment.",
       "seconds": 55,
       "status": "draft"
@@ -764,12 +764,12 @@
       "level": 3,
       "q": "Pourquoi un test d'étanchéité par pression positive n'est-il pas toujours suffisant pour qualifier un élément de barrière ?",
       "choices": [
-        "Parce que la pression positive endommage toujours l'élément",
-        "Parce que la pression de test dépasse toujours la pression du réservoir",
-        "La barrière peut tenir dans un sens mais pas dans l'autre : le test doit reproduire le sens de la sollicitation réelle (test d'afflux)",
-        "Parce que seuls les tests visuels sont reconnus"
+        "La pression positive endommage l'élément de barrière à chaque essai répété, quelle que soit sa nature ou son type",
+        "La pression de test dépasse la pression du réservoir et fausse donc le résultat de l'essai en surface",
+        "Seuls les contrôles visuels en atelier sont reconnus pour qualifier un élément de barrière en service",
+        "La barrière peut tenir dans un sens mais pas dans l'autre : le test doit reproduire le sens réel (afflux)"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Un clapet, une vanne ou un bouchon peut être étanche sous pression par un côté et fuir par l'autre. D'où le test d'afflux pour les éléments sollicités par le dessous.",
       "seconds": 60,
       "status": "draft"
@@ -780,12 +780,12 @@
       "level": 3,
       "q": "Une diagraphie d'adhérence du ciment (CBL) montre une forte amplitude du signal sur tout l'intervalle, avec un signal clair de casing libre. Quelle est l'interprétation ?",
       "choices": [
-        "Excellente adhérence ciment-casing",
-        "Mauvaise adhérence ou absence de ciment derrière le casing : il vibre librement",
-        "Casing en parfait état, sans corrosion",
-        "Formation très dure uniquement"
+        "Excellente adhérence ciment-casing sur tout l'intervalle diagraphié",
+        "Casing en parfait état, sans corrosion ni perte d'épaisseur",
+        "Formation très dure uniquement, sans lien avec le ciment",
+        "Mauvaise adhérence ou absence de ciment derrière le casing : il vibre librement"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Le casing libre résonne fortement (amplitude élevée) ; un bon ciment absorbe l'énergie et l'amplitude est faible.",
       "seconds": 55,
       "status": "draft"
@@ -798,12 +798,12 @@
       "img": "svg/bop-stack.svg",
       "imgAlt": "Empilage de BOP : mâchoires pleines, mâchoires à tubes et BOP annulaire au sommet",
       "choices": [
-        "Les mâchoires pleines (blind rams)",
-        "Les mâchoires à tubes (pipe rams)",
-        "La vanne maîtresse de l'arbre de Noël",
-        "Le tubing hanger"
+        "Les mâchoires à tubes (pipe rams), qui se ferment sur le diamètre du tubulaire",
+        "Les mâchoires pleines (blind rams), qui ferment le puits sans tubulaire",
+        "La vanne maîtresse de l'arbre de Noël, qui isole le tubing en production",
+        "Le tubing hanger, qui suspend la colonne dans la tête de puits"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Les mâchoires pleines se rejoignent au centre et ferment le puits ouvert. Les mâchoires à tubes se referment autour d'un tubulaire.",
       "seconds": 40,
       "status": "draft"
@@ -814,12 +814,12 @@
       "level": 2,
       "q": "Que définit la pression maximale admissible en annulaire (MAASP) ?",
       "choices": [
-        "La plus faible des limites de l'annulaire : éclatement du casing dégradé, équipements, résistance de la formation au sabot",
-        "La pression de gisement initiale",
-        "La pression de service du séparateur",
-        "La pression de test du tubing seulement"
+        "La pression de gisement initiale, mesurée avant la mise en production du puits",
+        "La plus faible des limites de l'annulaire : casing dégradé, équipements, formation au sabot",
+        "La pression de service du séparateur d'essai situé en aval de la tête de puits",
+        "La pression de test du tubing seulement, sans tenir compte du casing ni du sabot"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "La MAASP est fixée par l'élément le plus limitant de l'enveloppe annulaire, y compris la tenue de la formation au sabot.",
       "seconds": 55,
       "status": "draft"
@@ -832,12 +832,12 @@
       "img": "photo/land-drilling-rig.jpg",
       "imgAlt": "Appareil de workover sur un puits terrestre",
       "choices": [
-        "Elle se fait toujours au câble, puits en production",
-        "Elle nécessite en général un appareil de workover et le retrait de la complétion après neutralisation du puits",
-        "Elle ne concerne que la tête de puits",
-        "Elle consiste à forer un nouveau puits"
+        "Elle exige en général un appareil de workover et le retrait de la complétion",
+        "Elle se fait au câble, puits en production, sans appareil ni neutralisation du puits",
+        "Elle ne concerne que la tête de puits et l'arbre de Noël en surface du puits",
+        "Elle consiste à forer un nouveau puits depuis la plateforme déjà en place"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "Remplacer le tubing, le packer ou la pompe exige de tuer le puits et de manœuvrer la colonne avec un appareil. Le câble et le CT relèvent de l'intervention légère.",
       "seconds": 40,
       "status": "draft"
@@ -850,12 +850,12 @@
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Tête de puits avec pression de tête de 40 bar et pression d'annulaire A de 38 bar",
       "choices": [
-        "Une dilatation thermique du fluide d'annulaire",
-        "Un colmatage de la duse",
-        "Un défaut de la ligne de torche",
-        "Une communication tubing-annulaire (fuite du tubing, d'un joint ou du packer)"
+        "Une communication tubing-annulaire (fuite du tubing, d'un joint ou du packer)",
+        "Une dilatation thermique du fluide d'annulaire liée à la production",
+        "Un colmatage de la duse qui reporterait la pression sur l'annulaire",
+        "Un défaut de la ligne de torche qui contrepressionnerait l'annulaire"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Une pression d'annulaire qui suit la pression de tête indique que l'effluent passe dans l'annulaire. Un workover est probable après confirmation par test d'intégrité.",
       "seconds": 70,
       "status": "draft"
@@ -866,12 +866,12 @@
       "level": 3,
       "q": "Cas pratique : économie d'un workover.\nWorkover : 4 M$ (appareil et matériel). Gain de production attendu : 600 bbl/j ; recette nette 55 $/bbl après redevances ; aucun coût d'exploitation additionnel ; déclin ignoré.\nQuel délai de retour non actualisé ?",
       "choices": [
-        "Environ 61 jours",
-        "Environ 242 jours",
-        "Environ 121 jours",
-        "Environ 12 jours"
+        "Environ 61 jours : gain doublé à 1 200 bbl/j",
+        "Environ 121 jours : 4 M$ ÷ (600 × 55 $/j)",
+        "Environ 242 jours : gain divisé par deux",
+        "Environ 12 jours : gain décuplé"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Gain journalier = 600 × 55 = 33 000 $/j ; 4 000 000 / 33 000 ≈ 121 jours. Le déclin, les risques et l'actualisation rallongeraient ce délai ; la VAN reste le critère final.",
       "seconds": 80,
       "status": "draft"
@@ -884,10 +884,10 @@
       "img": "photo/oil-rig-offshore.jpg",
       "imgAlt": "Plateforme offshore dont les puits seront abandonnés en fin de vie",
       "choices": [
-        "Laisser le puits ouvert sous surveillance annuelle",
-        "Remplir le tubing d'eau douce et fermer l'arbre",
-        "Isoler de façon permanente les zones perméables par des bouchons de ciment et des barrières, pour empêcher tout flux entre formations et vers la surface",
-        "Retirer l'arbre de Noël sans autre opération"
+        "Laisser le puits ouvert sous surveillance annuelle de la pression en tête de puits",
+        "Remplir le tubing d'eau douce et fermer l'arbre de Noël avant de quitter le site de forage",
+        "Isoler de façon permanente les zones perméables par bouchons de ciment et barrières",
+        "Retirer l'arbre de Noël et refermer le site sans autre opération au fond du puits"
       ],
       "answer": 2,
       "explain": "L'abandon vise une isolation permanente, vérifiée, de toutes les zones perméables, pas une simple fermeture.",
@@ -900,10 +900,10 @@
       "level": 2,
       "q": "Dans la séquence d'abandon d'un puits terrestre, quelle opération intervient en dernier ?",
       "choices": [
-        "Poser le bouchon de ciment face au réservoir",
-        "Tester le bouchon de ciment en pression",
-        "Neutraliser le puits au fluide de kill",
-        "Couper les casings et la tête de puits sous le niveau du sol, puis remettre le site en état"
+        "Poser le bouchon de ciment face au réservoir après neutralisation du puits",
+        "Tester le bouchon de ciment en pression avant de poser le bouchon suivant",
+        "Neutraliser le puits au fluide de kill avant de retirer l'arbre de Noël",
+        "Couper casings et tête de puits sous le niveau du sol, puis remettre le site en état"
       ],
       "answer": 3,
       "explain": "La neutralisation, la pose et le test des bouchons précèdent la coupe des tubulaires et la remise en état du site.",
@@ -918,12 +918,12 @@
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël d'un puits producteur dont la DHSV est défaillante",
       "choices": [
-        "Ouvrir une dérogation temporaire encadrée (évaluation des risques, mesure compensatoire approuvée, plan de réparation) ou arrêter le puits",
-        "Continuer à produire normalement, la vanne maîtresse suffisant",
-        "Remplacer le test par un test moins exigeant",
-        "Retirer la DHSV du programme sans autre mesure"
+        "Continuer à produire normalement, la vanne maîtresse suffisant comme seconde barrière du puits",
+        "Ouvrir une dérogation temporaire encadrée (analyse de risque, mesure compensatoire) ou arrêter le puits",
+        "Remplacer le test par un test moins exigeant pour obtenir un résultat conforme à la procédure",
+        "Retirer la DHSV du programme de surveillance sans autre mesure compensatoire ni analyse"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Une barrière défaillante est un écart : on évalue le risque, on met en place une mesure compensatoire au niveau d'autorité requis, on répare ; sinon on ferme le puits.",
       "seconds": 70,
       "status": "draft"

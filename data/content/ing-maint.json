@@ -2,259 +2,836 @@
   "profile": "ing-maint",
   "modules": [
     {
-      "id": "m1", "title": "Stratégies de maintenance, RCM et criticité", "theme": "Stratégies de maintenance", "minutes": 9,
-      "body": "Le vocabulaire de la maintenance est normalisé (EN 13306). On distingue la **maintenance corrective** (après défaillance : différée ou d'urgence) et la **maintenance préventive**, elle-même divisée en **systématique** (à intervalle fixe de temps ou de cycles, quel que soit l'état) et **conditionnelle** (déclenchée par la mesure d'un état : vibration, thermographie, épaisseur par ultrasons). La maintenance **prévisionnelle** (predictive) ajoute à la conditionnelle un modèle d'évolution pour prévoir le moment de la défaillance. La maintenance **améliorative** modifie l'équipement pour supprimer une cause de panne.\n\nLa norme FD X60-000 définit cinq **niveaux de maintenance** : le niveau 1 correspond à des réglages simples par l'exploitant, le niveau 5 aux travaux de rénovation ou de reconstruction réalisés en atelier central ou par le constructeur.\n\nChoisir la bonne stratégie équipement par équipement, c'est le rôle de la **criticité**. Dans une **AMDEC**, la criticité est le produit **C = F × G × D** (fréquence, gravité, probabilité de non-détection). On place aussi les risques sur une **matrice** probabilité-conséquence : zones verte (acceptable), jaune (à réduire) et rouge (inacceptable, action immédiate). Un équipement peu critique, peu coûteux et redondant peut être exploité jusqu'à défaillance (**run-to-failure**), c'est un choix assumé, pas une négligence.\n\nLe **RCM** (Reliability Centered Maintenance, norme SAE JA1011) est une démarche structurée qui pose sept questions pour chaque fonction d'un équipement : fonctions et standards de performance, défaillances fonctionnelles, modes de défaillance, effets, conséquences, tâches proactives possibles et choix par défaut si aucune tâche n'est rentable. Il aboutit à un plan mêlant tâches conditionnelles, systématiques, recherche de pannes cachées (pour les dispositifs de sécurité) ou reconception.\n\nLe **TPM** (Total Productive Maintenance) fait participer l'exploitant par la **maintenance autonome** (nettoyage, inspection, lubrification de premier niveau) et vise la suppression des six grandes pertes mesurées par le **TRS / OEE**. Un bon ingénieur combine ces approches pour que l'effort de maintenance soit proportionné au risque.",
-      "keyPoints": ["Corrective / préventive systématique / conditionnelle / prévisionnelle (EN 13306)", "Criticité AMDEC C = F × G × D ; matrice de risque probabilité-conséquence", "RCM : choisir la tâche selon la conséquence de chaque mode de défaillance"],
-      "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de risque probabilité par conséquence avec zones verte, jaune et rouge"
+      "id": "m1",
+      "title": "Stratégies de maintenance, RCM et criticité",
+      "theme": "Stratégies de maintenance",
+      "minutes": 9,
+      "body": "Le vocabulaire de la maintenance est normalisé (EN 13306). On distingue la **maintenance corrective** (après défaillance : différée ou d'urgence) et la **maintenance préventive**, elle-même divisée en **systématique** (à intervalle fixe de temps ou de cycles, quel que soit l'état) et **conditionnelle** (déclenchée par la mesure d'un état : vibration, thermographie, épaisseur par ultrasons). La maintenance **prévisionnelle** (predictive) ajoute à la conditionnelle un modèle d'évolution pour prévoir le moment de la défaillance. La maintenance **améliorative** modifie l'équipement pour supprimer une cause de panne.\n\nLa norme FD X60-000 définit cinq **niveaux de maintenance** : le niveau 1 correspond à des réglages simples par l'exploitant, le niveau 5 aux travaux de rénovation ou de reconstruction réalisés en atelier central ou par le constructeur.\n\nChoisir la bonne stratégie équipement par équipement, c'est le rôle de la **criticité**. Dans une **AMDEC**, la criticité est le produit **C = F × G × D** (fréquence, gravité, probabilité de non-détection). On place aussi les risques sur une **matrice** probabilité-conséquence : zones verte (acceptable), jaune (à réduire) et rouge (inacceptable, action immédiate). Un équipement peu critique, peu coûteux et redondant peut être exploité jusqu'à défaillance (**run-to-failure**), c'est un choix assumé, pas une négligence.\n\nLe **RCM** (Reliability Centered Maintenance, norme SAE JA1011) est une démarche structurée qui pose sept questions pour chaque fonction d'un équipement : fonctions et standards de performance, défaillances fonctionnelles, modes de défaillance, effets, conséquences, tâches proactives possibles et choix par défaut si aucune tâche n'est rentable. Il aboutit à un plan mêlant tâches conditionnelles, systématiques, recherche de pannes cachées (pour les dispositifs de sécurité) ou reconception.\n\nLe **TPM** (Total Productive Maintenance) fait participer l'exploitant par la **maintenance autonome** (nettoyage, inspection, lubrification de premier niveau) et vise la suppression des six grandes pertes mesurées par le **TRS / OEE**. Un bon ingénieur combine ces approches pour que l'effort de maintenance soit proportionné au risque.\n\n**Sur le terrain**\n- Classez avant de planifier : la criticité sécurité et production décide qui passe en premier, pas l'ancienneté de l'OT.\n- Un test fonctionnel périodique d'un équipement de secours ne se supprime jamais pour « gagner du temps ».\n- Quand une panne se répète, ne traitez pas le symptôme : déclenchez une analyse de causes avant le remplacement.",
+      "keyPoints": [
+        "Corrective / préventive systématique / conditionnelle / prévisionnelle (EN 13306)",
+        "Criticité AMDEC C = F × G × D ; matrice de risque probabilité-conséquence",
+        "RCM : choisir la tâche selon la conséquence de chaque mode de défaillance"
+      ],
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque probabilité par conséquence avec zones verte, jaune et rouge"
     },
     {
-      "id": "m2", "title": "Fiabilité : MTBF, MTTR, disponibilité, Weibull", "theme": "Fiabilité", "minutes": 10,
-      "body": "La **fiabilité** est l'aptitude d'un équipement à remplir sa fonction pendant une durée donnée. Les indicateurs de base :\n- **MTBF** (Mean Time Between Failures) = temps de bon fonctionnement cumulé / nombre de défaillances (équipement réparable). Exemple : 2000 h et 4 pannes donnent 500 h ;\n- **MTTR** (Mean Time To Repair) = temps de réparation cumulé / nombre de réparations ;\n- **MTTF** pour les composants non réparables ;\n- **Disponibilité intrinsèque** A = MTBF / (MTBF + MTTR). Avec MTBF = 900 h et MTTR = 100 h, A = 90 %.\n\nSi le taux de défaillance λ est constant, la fiabilité suit la loi exponentielle **R(t) = e^(−t/MTBF)** ; à t = MTBF, R = 37 % : seuls 37 % des équipements ont survécu sans panne.\n\nLa **courbe en baignoire** décrit le taux de défaillance dans le temps : phase de **jeunesse** (décroissant, défauts de fabrication ou de montage), phase de **vie utile** (à peu près constant, défaillances aléatoires), phase d'**usure** (croissant). La loi de **Weibull**, de paramètre de forme **β**, permet de les distinguer : β < 1 indique des défaillances précoces, β ≈ 1 des défaillances aléatoires, β > 1 de l'usure. Seul β > 1 justifie une maintenance systématique à intervalle fixe ; pour β ≤ 1, remplacer un composant « par précaution » n'améliore rien et peut dégrader la fiabilité.\n\nCalcul de systèmes :\n- en **série**, les fiabilités se multiplient (trois composants à 0,90 donnent 0,729) ;\n- en **parallèle** (redondance active), la défaillance du système exige celle de tous les éléments : R = 1 − (1 − R1)(1 − R2). Deux pompes à 0,90 en parallèle donnent 0,99.\n\nPour améliorer la disponibilité, on agit sur la MTBF (analyse de causes racines, amélioration de conception, maintenance conditionnelle) et sur la MTTR (pièces en stock, procédures, diagnostic rapide, modularité). L'analyse de défaillances (5 pourquoi, arbre des causes, diagramme d'Ishikawa) évite que la même panne se répète.",
-      "keyPoints": ["A = MTBF / (MTBF + MTTR) ; MTBF = temps de fonctionnement / nombre de pannes", "Courbe en baignoire : jeunesse, vie utile (taux constant), usure ; Weibull β < 1 / = 1 / > 1", "Série : produit des fiabilités ; parallèle : 1 − produit des défaillances"]
+      "id": "m2",
+      "title": "Fiabilité : MTBF, MTTR, disponibilité, Weibull",
+      "theme": "Fiabilité",
+      "minutes": 10,
+      "body": "La **fiabilité** est l'aptitude d'un équipement à remplir sa fonction pendant une durée donnée. Les indicateurs de base :\n- **MTBF** (Mean Time Between Failures) = temps de bon fonctionnement cumulé / nombre de défaillances (équipement réparable). Exemple : 2000 h et 4 pannes donnent 500 h ;\n- **MTTR** (Mean Time To Repair) = temps de réparation cumulé / nombre de réparations ;\n- **MTTF** pour les composants non réparables ;\n- **Disponibilité intrinsèque** A = MTBF / (MTBF + MTTR). Avec MTBF = 900 h et MTTR = 100 h, A = 90 %.\n\nSi le taux de défaillance λ est constant, la fiabilité suit la loi exponentielle **R(t) = e^(−t/MTBF)** ; à t = MTBF, R = 37 % : seuls 37 % des équipements ont survécu sans panne.\n\nLa **courbe en baignoire** décrit le taux de défaillance dans le temps : phase de **jeunesse** (décroissant, défauts de fabrication ou de montage), phase de **vie utile** (à peu près constant, défaillances aléatoires), phase d'**usure** (croissant). La loi de **Weibull**, de paramètre de forme **β**, permet de les distinguer : β < 1 indique des défaillances précoces, β ≈ 1 des défaillances aléatoires, β > 1 de l'usure. Seul β > 1 justifie une maintenance systématique à intervalle fixe ; pour β ≤ 1, remplacer un composant « par précaution » n'améliore rien et peut dégrader la fiabilité.\n\nCalcul de systèmes :\n- en **série**, les fiabilités se multiplient (trois composants à 0,90 donnent 0,729) ;\n- en **parallèle** (redondance active), la défaillance du système exige celle de tous les éléments : R = 1 − (1 − R1)(1 − R2). Deux pompes à 0,90 en parallèle donnent 0,99.\n\nPour améliorer la disponibilité, on agit sur la MTBF (analyse de causes racines, amélioration de conception, maintenance conditionnelle) et sur la MTTR (pièces en stock, procédures, diagnostic rapide, modularité). L'analyse de défaillances (5 pourquoi, arbre des causes, diagramme d'Ishikawa) évite que la même panne se répète.\n\n**Sur le terrain**\n- Calculez MTBF et MTTR par famille d'équipements et par cause, pas en moyenne générale.\n- Regardez la part d'attente de pièce dans le MTTR : le stock critique rapporte souvent plus que la vitesse d'intervention.\n- Doutez d'une MTBF sur peu de pannes : trois pannes ne font pas une statistique.",
+      "keyPoints": [
+        "A = MTBF / (MTBF + MTTR) ; MTBF = temps de fonctionnement / nombre de pannes",
+        "Courbe en baignoire : jeunesse, vie utile (taux constant), usure ; Weibull β < 1 / = 1 / > 1",
+        "Série : produit des fiabilités ; parallèle : 1 − produit des défaillances"
+      ]
     },
     {
-      "id": "m3", "title": "Intégrité mécanique, RBI et codes API", "theme": "Intégrité et RBI", "minutes": 10,
-      "body": "L'**intégrité mécanique** consiste à garantir que les équipements sous pression (récipients, tuyauteries, réservoirs) restent aptes à contenir le fluide pendant toute leur vie. Elle repose sur des codes d'inspection en service :\n- **API 510** : appareils à pression (récipients, échangeurs) ;\n- **API 570** : tuyauteries ;\n- **API 653** : réservoirs de stockage atmosphériques ;\n- **API 571** : catalogue des mécanismes d'endommagement ;\n- **API 579-1 / ASME FFS-1** : évaluation d'**aptitude au service** (Fitness-For-Service) d'un équipement présentant un défaut ou une perte d'épaisseur ;\n- **API 580** (pratique recommandée) et **API 581** (méthodologie quantitative) pour le RBI.\n\nLe **RBI** (Risk-Based Inspection) définit la fréquence et la nature de l'inspection en fonction du **risque = probabilité de défaillance × conséquence**. La probabilité dépend des mécanismes d'endommagement, de la vitesse de dégradation, de l'efficacité des inspections passées. La conséquence dépend de l'inventaire, de l'inflammabilité, de la toxicité, de la population exposée, de l'impact environnemental et économique. Les équipements à risque élevé sont inspectés plus souvent ou par des méthodes plus efficaces ; ceux à risque faible peuvent voir leur intervalle allongé, dans les limites du code. Les **circuits de corrosion** regroupent les lignes soumises aux mêmes mécanismes.\n\nPour les appareils, l'intervalle d'inspection interne ne dépasse pas **la moitié de la durée de vie résiduelle ou 10 ans** (API 510). Les **dispositifs de sécurité** sont des barrières critiques : une **soupape de sûreté (PSV)** est tarée à une pression au plus égale à la **PMS (MAWP)** de l'appareil ; avec une soupape unique, la surpression accumulée admise est de **10 %** de la PMS (hors feu externe, 21 %). Elles sont testées et révisées régulièrement ; ce sont des pannes cachées.\n\nL'ingénieur d'intégrité tient le **dossier de vie** de chaque équipement (conception, épaisseurs, réparations, modifications). Toute modification passe par un **management du changement (MOC)** avec réévaluation des risques.",
-      "keyPoints": ["API 510 appareils, 570 tuyauteries, 653 réservoirs, 571 mécanismes, 579 aptitude au service", "Risque = probabilité × conséquence : le RBI adapte l'inspection au risque (API 580/581)", "PSV tarée ≤ PMS ; 10 % de surpression admise avec une soupape unique"],
-      "img": "svg/pressure-vessel-psv.svg", "imgAlt": "Ballon sous pression avec soupape de sûreté et sa tuyauterie"
+      "id": "m3",
+      "title": "Intégrité mécanique, RBI et codes API",
+      "theme": "Intégrité et RBI",
+      "minutes": 10,
+      "body": "L'**intégrité mécanique** consiste à garantir que les équipements sous pression (récipients, tuyauteries, réservoirs) restent aptes à contenir le fluide pendant toute leur vie. Elle repose sur des codes d'inspection en service :\n- **API 510** : appareils à pression (récipients, échangeurs) ;\n- **API 570** : tuyauteries ;\n- **API 653** : réservoirs de stockage atmosphériques ;\n- **API 571** : catalogue des mécanismes d'endommagement ;\n- **API 579-1 / ASME FFS-1** : évaluation d'**aptitude au service** (Fitness-For-Service) d'un équipement présentant un défaut ou une perte d'épaisseur ;\n- **API 580** (pratique recommandée) et **API 581** (méthodologie quantitative) pour le RBI.\n\nLe **RBI** (Risk-Based Inspection) définit la fréquence et la nature de l'inspection en fonction du **risque = probabilité de défaillance × conséquence**. La probabilité dépend des mécanismes d'endommagement, de la vitesse de dégradation, de l'efficacité des inspections passées. La conséquence dépend de l'inventaire, de l'inflammabilité, de la toxicité, de la population exposée, de l'impact environnemental et économique. Les équipements à risque élevé sont inspectés plus souvent ou par des méthodes plus efficaces ; ceux à risque faible peuvent voir leur intervalle allongé, dans les limites du code. Les **circuits de corrosion** regroupent les lignes soumises aux mêmes mécanismes.\n\nPour les appareils, l'intervalle d'inspection interne ne dépasse pas **la moitié de la durée de vie résiduelle ou 10 ans** (API 510). Les **dispositifs de sécurité** sont des barrières critiques : une **soupape de sûreté (PSV)** est tarée à une pression au plus égale à la **PMS (MAWP)** de l'appareil ; avec une soupape unique, la surpression accumulée admise est de **10 %** de la PMS (hors feu externe, 21 %). Elles sont testées et révisées régulièrement ; ce sont des pannes cachées.\n\nL'ingénieur d'intégrité tient le **dossier de vie** de chaque équipement (conception, épaisseurs, réparations, modifications). Toute modification passe par un **management du changement (MOC)** avec réévaluation des risques.\n\n**Sur le terrain**\n- Comparez épaisseur mesurée, épaisseur minimale et vitesse de corrosion avant de donner une durée de vie.\n- Vérifiez que le tarage de la PSV correspond à la MAWP en vigueur après chaque déclassement.\n- Pour les seuils d'acceptation et les fréquences, appliquez le référentiel et les procédures du site.",
+      "keyPoints": [
+        "API 510 appareils, 570 tuyauteries, 653 réservoirs, 571 mécanismes, 579 aptitude au service",
+        "Risque = probabilité × conséquence : le RBI adapte l'inspection au risque (API 580/581)",
+        "PSV tarée ≤ PMS ; 10 % de surpression admise avec une soupape unique"
+      ],
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Ballon sous pression avec soupape de sûreté et sa tuyauterie"
     },
     {
-      "id": "m4", "title": "Corrosion et mécanismes d'endommagement", "theme": "Corrosion", "minutes": 9,
-      "body": "La corrosion est la première cause de perte d'intégrité en raffinerie. L'ingénieur doit reconnaître les mécanismes, leurs conditions d'apparition et les moyens de les surveiller.\n\n**Corrosion généralisée et vitesse de corrosion** : vitesse = (e1 − e2) / durée ; la **surépaisseur de corrosion** divisée par la vitesse donne la durée de service. Avec 0,25 mm/an et 3 mm, on atteint 12 ans. On distingue la vitesse à court terme et à long terme pour éviter les mauvaises extrapolations.\n\n**Corrosion sous isolation (CUI)** : l'eau pénétrant sous le calorifuge corrode l'acier carbone ; elle se développe surtout entre environ 0 et 150 °C, et avec des cycles chaud-froid. Au-dessus de ces températures, l'eau s'évapore ; l'inox austénitique y est sensible par **fissuration par corrosion sous contrainte aux chlorures (Cl-SCC)**.\n\n**H2S humide (service acide)** : fissuration sous contrainte sulfurée (SSC, aciers durs au-delà de 22 HRC), **cloquage et fissuration induite par l'hydrogène (HIC)** : l'hydrogène atomique diffuse dans l'acier et se recombine en H2 au niveau des inclusions, créant des cloques. Les matériaux de service acide suivent NACE MR0175 / ISO 15156 (amont) ou MR0103 (raffinage).\n\n**CO2 (corrosion douce, sweet)** : acide carbonique, attaque localisée en amont, tenue par des inhibiteurs ou des aciers alliés.\n\n**Corrosion acide en tête de distillation** : le HCl formé à partir des sels des bruts se dissout dans les premières gouttes d'eau qui condensent, au **point de rosée**, d'où une corrosion intense à cet endroit ; on dessale le brut et on injecte une amine neutralisante et un inhibiteur.\n\n**Érosion-corrosion** : vitesse élevée, particules, régimes diphasiques, aux coudes et après les vannes de détente. **Bras morts** : fluide stagnant.\n\nSurveillance : **coupons** de corrosion (perte de masse), sondes de résistance électrique, mesures UT sur CML, inspection interne et internes par « pig » instrumenté, thermographie. Protection : revêtements, **inhibiteurs** (film protecteur à l'interface), choix de matériaux, protection cathodique pour les ouvrages enterrés (−850 mV Cu/CuSO4).",
-      "keyPoints": ["Durée de service = surépaisseur / vitesse de corrosion", "CUI : eau piégée sous isolation, cycles chaud-froid ; Cl-SCC sur inox 300 ; HIC/SSC en H2S humide", "Tête de colonne : HCl corrode au point de rosée ; surveiller coupons, sondes et UT"],
-      "img": "svg/distillation-column.svg", "imgAlt": "Colonne de distillation atmosphérique avec ses soutirages"
+      "id": "m4",
+      "title": "Corrosion et mécanismes d'endommagement",
+      "theme": "Corrosion",
+      "minutes": 9,
+      "body": "La corrosion est la première cause de perte d'intégrité en raffinerie. L'ingénieur doit reconnaître les mécanismes, leurs conditions d'apparition et les moyens de les surveiller.\n\n**Corrosion généralisée et vitesse de corrosion** : vitesse = (e1 − e2) / durée ; la **surépaisseur de corrosion** divisée par la vitesse donne la durée de service. Avec 0,25 mm/an et 3 mm, on atteint 12 ans. On distingue la vitesse à court terme et à long terme pour éviter les mauvaises extrapolations.\n\n**Corrosion sous isolation (CUI)** : l'eau pénétrant sous le calorifuge corrode l'acier carbone ; elle se développe surtout entre environ 0 et 150 °C, et avec des cycles chaud-froid. Au-dessus de ces températures, l'eau s'évapore ; l'inox austénitique y est sensible par **fissuration par corrosion sous contrainte aux chlorures (Cl-SCC)**.\n\n**H2S humide (service acide)** : fissuration sous contrainte sulfurée (SSC, aciers durs au-delà de 22 HRC), **cloquage et fissuration induite par l'hydrogène (HIC)** : l'hydrogène atomique diffuse dans l'acier et se recombine en H2 au niveau des inclusions, créant des cloques. Les matériaux de service acide suivent NACE MR0175 / ISO 15156 (amont) ou MR0103 (raffinage).\n\n**CO2 (corrosion douce, sweet)** : acide carbonique, attaque localisée en amont, tenue par des inhibiteurs ou des aciers alliés.\n\n**Corrosion acide en tête de distillation** : le HCl formé à partir des sels des bruts se dissout dans les premières gouttes d'eau qui condensent, au **point de rosée**, d'où une corrosion intense à cet endroit ; on dessale le brut et on injecte une amine neutralisante et un inhibiteur.\n\n**Érosion-corrosion** : vitesse élevée, particules, régimes diphasiques, aux coudes et après les vannes de détente. **Bras morts** : fluide stagnant.\n\nSurveillance : **coupons** de corrosion (perte de masse), sondes de résistance électrique, mesures UT sur CML, inspection interne et internes par « pig » instrumenté, thermographie. Protection : revêtements, **inhibiteurs** (film protecteur à l'interface), choix de matériaux, protection cathodique pour les ouvrages enterrés (−850 mV Cu/CuSO4).\n\n**Sur le terrain**\n- Un calorifuge abîmé ou mouillé est un signal à traiter : ouvrez une fenêtre d'inspection avant que la CUI ne s'étende.\n- Placez les coupons et sondes là où le risque est le plus élevé, pas là où c'est le plus pratique.\n- Après un changement de procédé (eau, chlorures, H₂S), revoyez les mécanismes attendus avant l'arrêt suivant.",
+      "keyPoints": [
+        "Durée de service = surépaisseur / vitesse de corrosion",
+        "CUI : eau piégée sous isolation, cycles chaud-froid ; Cl-SCC sur inox 300 ; HIC/SSC en H2S humide",
+        "Tête de colonne : HCl corrode au point de rosée ; surveiller coupons, sondes et UT"
+      ],
+      "img": "svg/distillation-column.svg",
+      "imgAlt": "Colonne de distillation atmosphérique avec ses soutirages"
     },
     {
-      "id": "m5", "title": "GMAO, indicateurs (KPI) et arrêts programmés", "theme": "GMAO et KPI", "minutes": 8,
-      "body": "La **GMAO** (gestion de la maintenance assistée par ordinateur : SAP PM, Maximo...) centralise l'inventaire des équipements (arborescence technique, codification), les **ordres de travail (OT)**, les gammes préventives, l'historique des pannes, les pièces de rechange et les coûts. Sans données propres (codes de cause, de défaut, d'action), aucun calcul de fiabilité n'est exploitable : la qualité des données de la GMAO conditionne toute la démarche.\n\nIndicateurs (KPI) courants :\n- **Taux de réalisation du préventif** = OT préventifs réalisés / OT préventifs planifiés ;\n- **Backlog** : travaux identifiés mais non réalisés, exprimé en semaines de travail de l'équipe ;\n- **Taux de travaux planifiés** : une organisation mature réalise la grande majorité de ses heures sur des travaux planifiés ; le réactif dominant coûte plus cher (urgences, pièces express, risque sécurité) ;\n- **MTBF, MTTR, disponibilité** ;\n- **TRS / OEE** = disponibilité × performance × qualité. Exemple : 0,90 × 0,95 × 0,98 ≈ 83,8 % ;\n- **Coût de maintenance** rapporté à la valeur de remplacement (le ratio de référence varie selon le secteur), et **LCC** (coût du cycle de vie : acquisition, exploitation, maintenance, démantèlement).\n\nUn indicateur doit être défini, mesurable, attribué à un responsable et suivi de façon régulière ; on évite l'excès de KPI.\n\nLes **arrêts programmés** (turnarounds) concentrent les travaux qui exigent l'arrêt de l'unité. Leur réussite repose sur : le **périmètre gelé** à une date de référence (scope freeze), la préparation anticipée (pièces, permis, échafaudages, entreprises), un **planning de type Gantt / PERT** et la maîtrise du **chemin critique**, c'est-à-dire la suite de tâches dont tout retard allonge la durée de l'arrêt. Pendant l'arrêt, on suit l'avancement quotidiennement, on gère les travaux émergents (découverts à l'ouverture) et on maîtrise la sécurité (activités simultanées, espaces confinés). Un retour d'expérience clôt le projet.",
-      "keyPoints": ["GMAO : OT, historique, codes de défaut ; données fiables = indicateurs fiables", "KPI : réalisation du préventif, backlog, planifié/réactif, MTBF, TRS = D × P × Q", "Arrêt : périmètre gelé, planning Gantt, maîtrise du chemin critique"],
-      "img": "svg/gantt-chart.svg", "imgAlt": "Diagramme de Gantt de planification d'un arrêt avec chemin critique"
+      "id": "m5",
+      "title": "GMAO, indicateurs (KPI) et arrêts programmés",
+      "theme": "GMAO et KPI",
+      "minutes": 8,
+      "body": "La **GMAO** (gestion de la maintenance assistée par ordinateur : SAP PM, Maximo...) centralise l'inventaire des équipements (arborescence technique, codification), les **ordres de travail (OT)**, les gammes préventives, l'historique des pannes, les pièces de rechange et les coûts. Sans données propres (codes de cause, de défaut, d'action), aucun calcul de fiabilité n'est exploitable : la qualité des données de la GMAO conditionne toute la démarche.\n\nIndicateurs (KPI) courants :\n- **Taux de réalisation du préventif** = OT préventifs réalisés / OT préventifs planifiés ;\n- **Backlog** : travaux identifiés mais non réalisés, exprimé en semaines de travail de l'équipe ;\n- **Taux de travaux planifiés** : une organisation mature réalise la grande majorité de ses heures sur des travaux planifiés ; le réactif dominant coûte plus cher (urgences, pièces express, risque sécurité) ;\n- **MTBF, MTTR, disponibilité** ;\n- **TRS / OEE** = disponibilité × performance × qualité. Exemple : 0,90 × 0,95 × 0,98 ≈ 83,8 % ;\n- **Coût de maintenance** rapporté à la valeur de remplacement (le ratio de référence varie selon le secteur), et **LCC** (coût du cycle de vie : acquisition, exploitation, maintenance, démantèlement).\n\nUn indicateur doit être défini, mesurable, attribué à un responsable et suivi de façon régulière ; on évite l'excès de KPI.\n\nLes **arrêts programmés** (turnarounds) concentrent les travaux qui exigent l'arrêt de l'unité. Leur réussite repose sur : le **périmètre gelé** à une date de référence (scope freeze), la préparation anticipée (pièces, permis, échafaudages, entreprises), un **planning de type Gantt / PERT** et la maîtrise du **chemin critique**, c'est-à-dire la suite de tâches dont tout retard allonge la durée de l'arrêt. Pendant l'arrêt, on suit l'avancement quotidiennement, on gère les travaux émergents (découverts à l'ouverture) et on maîtrise la sécurité (activités simultanées, espaces confinés). Un retour d'expérience clôt le projet.\n\n**Sur le terrain**\n- Saisissez la cause et la durée d'immobilisation dans chaque OT : c'est la matière première de tous vos KPI.\n- Pour raccourcir un arrêt, cherchez dans le chemin critique : les autres tâches ont de la marge.\n- Suivez la part d'urgences : elle mesure le mieux la maturité réelle de la maintenance.",
+      "keyPoints": [
+        "GMAO : OT, historique, codes de défaut ; données fiables = indicateurs fiables",
+        "KPI : réalisation du préventif, backlog, planifié/réactif, MTBF, TRS = D × P × Q",
+        "Arrêt : périmètre gelé, planning Gantt, maîtrise du chemin critique"
+      ],
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt de planification d'un arrêt avec chemin critique"
     }
   ],
   "questions": [
-    { "id": "ing-maint-001", "theme": "Stratégies de maintenance", "level": 1,
-      "q": "Comment nomme-t-on la maintenance réalisée après la détection d'une défaillance ?",
-      "choices": ["Maintenance préventive systématique", "Maintenance corrective", "Maintenance conditionnelle", "Maintenance prévisionnelle"], "answer": 1,
-      "explain": "La maintenance corrective intervient après défaillance pour remettre l'équipement en état. Les trois autres types sont préventifs : ils interviennent avant la panne, à intervalle fixe, selon l'état mesuré ou selon une prévision.",
-      "seconds": 30, "status": "draft" },
-    { "id": "ing-maint-002", "theme": "Stratégies de maintenance", "level": 1,
-      "q": "Une pompe est révisée lorsque ses vibrations dépassent un seuil mesuré. De quel type de maintenance s'agit-il ?",
-      "choices": ["Corrective d'urgence", "Préventive systématique", "Améliorative", "Préventive conditionnelle"], "answer": 3,
-      "explain": "Le déclenchement dépend d'un état mesuré (vibrations) : c'est de la maintenance conditionnelle. La systématique dépendrait d'un calendrier ou d'un nombre d'heures, quel que soit l'état.",
-      "seconds": 35, "status": "draft" },
-    { "id": "ing-maint-003", "theme": "Stratégies de maintenance", "level": 1,
-      "q": "En maintenance préventive systématique, l'intervention est déclenchée :",
-      "choices": ["À intervalle fixe de temps ou de cycles, quel que soit l'état de l'équipement", "Uniquement après une alarme du système de contrôle", "Après chaque défaillance constatée", "Lorsque le budget est disponible"], "answer": 0,
-      "explain": "La systématique repose sur un échéancier (heures de marche, calendrier, nombre de cycles). Elle est pertinente quand l'usure est prévisible (β > 1) ou imposée par la réglementation.",
-      "seconds": 35, "status": "draft" },
-    { "id": "ing-maint-004", "theme": "Stratégies de maintenance", "level": 2,
-      "q": "Quel est l'objectif principal d'une démarche RCM (Reliability Centered Maintenance) ?",
-      "choices": ["Supprimer toute maintenance préventive", "Remplacer systématiquement les équipements âgés", "Déterminer, pour chaque fonction, les modes de défaillance et les tâches adaptées à leurs conséquences", "Réduire uniquement le stock de pièces"], "answer": 2,
-      "explain": "Le RCM analyse fonctions, défaillances fonctionnelles, modes, effets et conséquences, puis choisit la tâche (conditionnelle, systématique, recherche de panne cachée, reconception, ou aucune) qui traite le mieux ces conséquences.",
-      "seconds": 45, "status": "draft" },
-    { "id": "ing-maint-005", "theme": "Stratégies de maintenance", "level": 2,
-      "q": "Sur la matrice de risque, où se place un scénario de probabilité élevée et de conséquence sévère ?",
-      "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de risque probabilité par conséquence avec zones verte, jaune et rouge",
-      "choices": ["Zone verte, risque acceptable", "Zone jaune, risque tolérable sans action", "Zone rouge, risque inacceptable nécessitant une action", "En dehors de la matrice"], "answer": 2,
-      "explain": "Probabilité haute et conséquence grave se combinent en risque élevé, représenté en rouge : réduction du risque prioritaire (élimination, barrières, inspection renforcée).",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-006", "theme": "Stratégies de maintenance", "level": 2,
-      "q": "Dans quel cas la stratégie « exploiter jusqu'à la défaillance » (run-to-failure) est-elle défendable ?",
-      "choices": ["Équipement peu critique, peu coûteux, sans impact sécurité et facile à remplacer ou redondant", "Soupape de sûreté d'un ballon de gaz", "Pompe unique d'alimentation d'un four", "Équipement dont la panne cause un rejet toxique"], "answer": 0,
-      "explain": "Le run-to-failure est un choix économique valable lorsque les conséquences d'une panne sont négligeables. Il serait inacceptable pour les barrières de sécurité ou les équipements dont la défaillance cause un accident.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-007", "theme": "Stratégies de maintenance", "level": 2,
-      "q": "Dans une AMDEC, comment calcule-t-on classiquement la criticité d'un mode de défaillance ?",
-      "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de risque probabilité par conséquence",
-      "choices": ["C = F + G + D", "C = F × G", "C = G / D", "C = F × G × D"], "answer": 3,
-      "explain": "La criticité est le produit de la Fréquence (occurrence), de la Gravité et de la Détectabilité (probabilité de non-détection). Une valeur dépassant le seuil fixé impose une action corrective.",
-      "seconds": 35, "status": "draft" },
-    { "id": "ing-maint-008", "theme": "Stratégies de maintenance", "level": 2,
-      "q": "Que recouvre la « maintenance autonome » dans le TPM ?",
-      "choices": ["Sous-traitance totale de la maintenance", "Nettoyage, inspection et lubrification de premier niveau réalisés par l'exploitant", "Maintenance sans documentation", "Remplacement automatique des pièces par la GMAO"], "answer": 1,
-      "explain": "Dans le TPM, l'exploitant prend en charge l'entretien de base de sa machine, ce qui détecte les anomalies tôt et libère les techniciens pour les tâches à valeur ajoutée.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-009", "theme": "Stratégies de maintenance", "level": 2,
-      "q": "Dans les cinq niveaux de maintenance (FD X60-000), lequel correspond à la rénovation ou reconstruction en atelier central ou chez le constructeur ?",
-      "choices": ["Niveau 5", "Niveau 1", "Niveau 2", "Niveau 3"], "answer": 0,
-      "explain": "Le niveau 5 regroupe les travaux de rénovation, reconstruction ou réparations importantes confiés à un atelier central ou au constructeur. Le niveau 1 correspond aux réglages simples par l'exploitant.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-010", "theme": "Fiabilité", "level": 1,
-      "q": "Que mesure la MTBF d'un équipement réparable ?",
-      "choices": ["Le temps total de réparation divisé par le nombre de pannes", "Le coût moyen d'une panne", "Le nombre de pannes par an", "Le temps moyen de bon fonctionnement entre deux défaillances"], "answer": 3,
-      "explain": "MTBF = temps de bon fonctionnement cumulé / nombre de défaillances. Le temps de réparation moyen est le MTTR.",
-      "seconds": 35, "status": "draft" },
-    { "id": "ing-maint-011", "theme": "Fiabilité", "level": 1,
-      "q": "Que mesure le MTTR ?",
-      "choices": ["Le temps moyen entre deux pannes", "Le temps moyen pour réparer et remettre l'équipement en service", "Le temps moyen de fonctionnement avant mise au rebut", "Le temps de stock de pièces"], "answer": 1,
-      "explain": "MTTR = temps de réparation cumulé / nombre de réparations. Il dépend de la détection, du diagnostic, de la logistique de pièces et de la compétence des équipes.",
-      "seconds": 30, "status": "draft" },
-    { "id": "ing-maint-012", "theme": "Fiabilité", "level": 2,
-      "q": "Un compresseur a fonctionné 2000 h avec 4 défaillances. Quelle est sa MTBF ?",
-      "choices": ["250 h", "400 h", "500 h", "8000 h"], "answer": 2,
-      "explain": "MTBF = 2000 h / 4 = 500 h. Les autres valeurs viennent d'une division ou d'une multiplication erronée.",
-      "seconds": 45, "status": "draft" },
-    { "id": "ing-maint-013", "theme": "Fiabilité", "level": 2,
-      "q": "Un équipement a une MTBF de 900 h et une MTTR de 100 h. Quelle est sa disponibilité intrinsèque ?",
-      "choices": ["80 %", "85 %", "99 %", "90 %"], "answer": 3,
-      "explain": "A = MTBF / (MTBF + MTTR) = 900 / 1000 = 90 %. Réduire la MTTR de moitié la porterait à 94,7 %.",
-      "seconds": 50, "status": "draft" },
-    { "id": "ing-maint-014", "theme": "Fiabilité", "level": 1,
-      "q": "Dans la phase de « vie utile » de la courbe en baignoire, le taux de défaillance est approximativement :",
-      "choices": ["Décroissant", "Croissant", "Constant", "Nul"], "answer": 2,
-      "explain": "Durant la vie utile, les défaillances sont aléatoires et le taux est à peu près constant. Il décroît en période de jeunesse et croît en période d'usure.",
-      "seconds": 35, "status": "draft" },
-    { "id": "ing-maint-015", "theme": "Fiabilité", "level": 3,
-      "q": "Dans une loi de Weibull, un paramètre de forme β inférieur à 1 indique :",
-      "choices": ["Un vieillissement par usure", "Des défaillances précoces (mortalité infantile)", "Des défaillances purement aléatoires", "Un équipement parfaitement fiable"], "answer": 1,
-      "explain": "β < 1 : taux de défaillance décroissant (défauts de jeunesse, montage). β = 1 : aléatoire (loi exponentielle). β > 1 : usure. Une maintenance systématique n'a de sens que pour β > 1.",
-      "seconds": 45, "status": "draft" },
-    { "id": "ing-maint-016", "theme": "Fiabilité", "level": 3,
-      "q": "Deux pompes identiques de fiabilité 0,90 sont installées en redondance active (parallèle). Quelle est la fiabilité de l'ensemble ?",
-      "choices": ["0,99", "0,81", "0,90", "0,95"], "answer": 0,
-      "explain": "R = 1 − (1 − 0,90)² = 1 − 0,01 = 0,99. Le produit 0,81 correspond à une mise en série.",
-      "seconds": 60, "status": "draft" },
-    { "id": "ing-maint-017", "theme": "Fiabilité", "level": 3,
-      "q": "Trois composants de fiabilité 0,90 chacun sont montés en série. Quelle est la fiabilité du système ?",
-      "choices": ["0,90", "0,73", "0,81", "0,97"], "answer": 1,
-      "explain": "En série, on multiplie : 0,90 × 0,90 × 0,90 = 0,729 ≈ 0,73. Plus il y a de composants en série, plus la fiabilité de l'ensemble baisse.",
-      "seconds": 60, "status": "draft" },
-    { "id": "ing-maint-018", "theme": "Fiabilité", "level": 3,
-      "q": "Pour un taux de défaillance constant, quelle est la probabilité qu'un équipement fonctionne sans panne pendant une durée égale à sa MTBF ?",
-      "choices": ["Environ 37 %", "50 %", "Environ 63 %", "90 %"], "answer": 0,
-      "explain": "R(t) = e^(−t/MTBF) ; pour t = MTBF, R = e^(−1) ≈ 0,368. La probabilité d'avoir au moins une panne avant la MTBF est donc d'environ 63 %.",
-      "seconds": 60, "status": "draft" },
-    { "id": "ing-maint-019", "theme": "Intégrité et RBI", "level": 1,
-      "q": "Comment définit-on le risque dans une approche RBI ?",
-      "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de risque probabilité par conséquence",
-      "choices": ["Uniquement la gravité des conséquences", "Uniquement la probabilité de défaillance", "Probabilité de défaillance × conséquence", "Le coût du matériel divisé par son âge"], "answer": 2,
-      "explain": "Le risque combine la probabilité qu'un équipement défaille et la conséquence de cette défaillance. La matrice illustre ces deux axes.",
-      "seconds": 35, "status": "draft" },
-    { "id": "ing-maint-020", "theme": "Intégrité et RBI", "level": 1,
-      "q": "Quel code API couvre l'inspection en service des appareils à pression comme les ballons et les échangeurs ?",
-      "img": "svg/pressure-vessel-psv.svg", "imgAlt": "Ballon sous pression avec soupape de sûreté",
-      "choices": ["API 570", "API 653", "API 650", "API 510"], "answer": 3,
-      "explain": "API 510 s'applique aux appareils à pression en service ; API 570 aux tuyauteries ; API 653 aux réservoirs de stockage atmosphériques ; API 650 à leur construction.",
-      "seconds": 35, "status": "draft" },
-    { "id": "ing-maint-021", "theme": "Intégrité et RBI", "level": 2,
-      "q": "Quelle est la nature d'API 581 ?",
-      "img": "svg/norms-pyramid.svg", "imgAlt": "Pyramide des normes et codes",
-      "choices": ["Un code de soudage", "Une norme d'inspection des tuyauteries", "Une méthodologie quantitative de RBI (calcul probabilité et conséquence)", "Une norme de réservoirs"], "answer": 2,
-      "explain": "API 580 donne les principes du RBI et API 581 la méthodologie de calcul. Les tuyauteries relèvent d'API 570 et les réservoirs d'API 653.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-022", "theme": "Intégrité et RBI", "level": 2,
-      "q": "Quelle conséquence a l'application du RBI sur un plan d'inspection ?",
-      "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de risque avec zones de criticité",
-      "choices": ["Tous les équipements sont inspectés à la même fréquence", "Les équipements à risque élevé sont inspectés plus souvent ou plus efficacement que ceux à risque faible", "L'inspection est supprimée pour les équipements anciens", "Seuls les équipements neufs sont inspectés"], "answer": 1,
-      "explain": "Le RBI concentre l'effort sur les équipements risqués et peut allonger l'intervalle des équipements à faible risque, dans le respect des maxima des codes et de la réglementation.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-023", "theme": "Intégrité et RBI", "level": 2,
-      "q": "Pour un appareil protégé par une soupape unique, la pression de tarage ne doit pas dépasser :",
-      "img": "svg/pressure-vessel-psv.svg", "imgAlt": "Ballon sous pression avec soupape de sûreté (PSV)",
-      "choices": ["La pression d'épreuve", "La pression de service", "110 % de la pression de service", "La pression maximale admissible (PMS / MAWP)"], "answer": 3,
-      "explain": "Une soupape unique est tarée au plus à la PMS (MAWP) de l'appareil. La pression d'épreuve est supérieure à la PMS ; tarer au-dessus de la PMS ne protégerait plus l'appareil.",
-      "seconds": 45, "status": "draft" },
-    { "id": "ing-maint-024", "theme": "Intégrité et RBI", "level": 3,
-      "q": "Avec une soupape unique (hors feu externe), quelle surpression maximale par rapport à la PMS est admise pendant la décharge, selon ASME VIII ?",
-      "img": "svg/pressure-vessel-psv.svg", "imgAlt": "Ballon sous pression avec soupape de sûreté",
-      "choices": ["10 %", "16 %", "21 %", "0 %"], "answer": 0,
-      "explain": "L'accumulation admise est de 10 % avec une seule soupape, 16 % avec plusieurs soupapes et 21 % dans le cas du feu externe.",
-      "seconds": 50, "status": "draft" },
-    { "id": "ing-maint-025", "theme": "Intégrité et RBI", "level": 2,
-      "q": "À quoi sert API 579-1 / ASME FFS-1 ?",
-      "img": "svg/norms-pyramid.svg", "imgAlt": "Pyramide des normes et codes",
-      "choices": ["Évaluer l'aptitude au service d'un équipement présentant un défaut ou une perte d'épaisseur", "Qualifier les soudeurs", "Dimensionner les soupapes", "Fixer les prix de maintenance"], "answer": 0,
-      "explain": "Les méthodes de Fitness-For-Service permettent de décider si un équipement endommagé peut continuer à fonctionner, sous quelles conditions et jusqu'à quand, au lieu de le réparer ou le remplacer automatiquement.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-026", "theme": "Intégrité et RBI", "level": 2,
-      "q": "Quel document API recense les mécanismes d'endommagement des équipements de raffinage ?",
-      "img": "svg/norms-pyramid.svg", "imgAlt": "Pyramide des normes et codes API",
-      "choices": ["API 570", "API 650", "API 571", "API 579"], "answer": 2,
-      "explain": "API 571 décrit les mécanismes (CUI, HIC, SSC, fluage...), leurs conditions d'apparition et les moyens de surveillance ; il est la base d'une analyse RBI.",
-      "seconds": 35, "status": "draft" },
-    { "id": "ing-maint-027", "theme": "Corrosion", "level": 1,
-      "q": "Quelle condition favorise le plus la corrosion sous isolation (CUI) d'un acier carbone calorifugé ?",
-      "img": "photo/storage-tanks.jpg", "imgAlt": "Réservoirs et tuyauteries calorifugés",
-      "choices": ["Une isolation parfaitement étanche et sèche", "Une entrée d'eau sous l'isolation, avec cycles chaud-froid", "Un fonctionnement permanent à plus de 300 °C", "Une peinture neuve sur l'acier"], "answer": 1,
-      "explain": "L'eau piégée contre le métal est le facteur clé ; les cycles chaud-froid et les températures intermédiaires aggravent le phénomène. Au-dessus de 300 °C l'eau s'évapore.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-028", "theme": "Corrosion", "level": 1,
-      "q": "Quel mécanisme menace l'inox austénitique 304/316 en présence de chlorures, de contraintes de traction et de température ?",
-      "choices": ["La fissuration induite par l'hydrogène (HIC)", "La fatigue thermique", "La fissuration sulfurée (SSC)", "La fissuration par corrosion sous contrainte aux chlorures"], "answer": 3,
-      "explain": "La Cl-SCC est typique des inox austénitiques dès 60 °C environ ; elle est un risque en particulier sous calorifuge. HIC et SSC sont liées à l'H2S humide dans les aciers carbone.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-029", "theme": "Corrosion", "level": 2,
+    {
+      "id": "ing-maint-001",
+      "theme": "Stratégies de maintenance",
+      "level": 1,
+      "q": "L'analyse d'huile trimestrielle du réducteur de la pompe P-12 montre une teneur en fer qui passe de 80 à 210 ppm. Vous planifiez une ouverture à l'arrêt du mois prochain. De quel type de maintenance s'agit-il ?",
+      "choices": [
+        "Préventive systématique : intervention planifiée à intervalle fixe de 6 mois",
+        "Corrective d'urgence : arrêt immédiat de la pompe et remplacement du réducteur",
+        "Préventive conditionnelle : décidée à partir de l'état mesuré (analyse d'huile)",
+        "Améliorative : modification du réducteur pour supprimer la cause de l'usure"
+      ],
+      "answer": 2,
+      "explain": "La maintenance conditionnelle repose sur la surveillance d'un paramètre représentatif de l'état (huile, vibrations, thermographie) avec un seuil d'alerte.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-002",
+      "theme": "Stratégies de maintenance",
+      "level": 1,
+      "q": "Dimanche 3 h : le roulement d'une pompe d'eau de refroidissement a grippé ; l'astreinte bascule sur la pompe de secours et remplace le roulement. Comment qualifie-t-on cette intervention ?",
+      "choices": [
+        "Maintenance corrective : réalisée après la défaillance",
+        "Maintenance préventive systématique : réalisée à intervalle fixe",
+        "Maintenance conditionnelle : déclenchée par un seuil de mesure",
+        "Maintenance prévisionnelle : déclenchée par une prédiction d'usure"
+      ],
+      "answer": 0,
+      "explain": "Corrective = après détection d'une panne. Le basculement sur le secours est la mesure de sécurité de production.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-003",
+      "theme": "Stratégies de maintenance",
+      "level": 2,
+      "q": "Selon la matrice de la figure, un scénario de fuite de gaz toxique sur un compresseur est coté probabilité 3 (possible) et gravité 5. Quelle est sa criticité et son niveau ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 × 5 : criticité = probabilité × gravité ; faible 1-4, moyen 5-9, élevé 10-14, critique 15 et plus",
+      "choices": [
+        "8 : moyen, surveillance renforcée lors des rondes de routine",
+        "10 : élevé, traitement à planifier au prochain arrêt programmé",
+        "25 : maximum de la matrice, arrêt immédiat de toute l'unité",
+        "15 : critique (15 et plus), mesures de réduction à engager en priorité"
+      ],
+      "answer": 3,
+      "explain": "Criticité = probabilité × gravité = 3 × 5 = 15, soit le seuil du niveau critique.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-004",
+      "theme": "Stratégies de maintenance",
+      "level": 3,
+      "q": "Une pompe de secours sur un circuit incendie ne démarre que sur demande : sa défaillance n'est découverte qu'au moment du besoin. En démarche RCM, quelle tâche retenez-vous ?",
+      "choices": [
+        "Pas de tâche : à l'arrêt, elle ne s'use pas et ne nécessite aucun contrôle",
+        "Un test fonctionnel périodique, fréquence calculée pour la disponibilité visée",
+        "Un remplacement systématique de la pompe tous les 5 ans, quel que soit son état",
+        "Un fonctionnement jusqu'à la défaillance, avec réparation sur constat de panne"
+      ],
+      "answer": 1,
+      "explain": "Une défaillance cachée ne se révèle que par un essai : le RCM impose un test périodique pour garantir la disponibilité en cas de besoin.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-005",
+      "theme": "Stratégies de maintenance",
+      "level": 2,
+      "q": "Quatre équipements à classer : une pompe unique d'alimentation d'un four, la soupape d'un ballon de gaz, un ventilateur doublé d'un local technique non critique et une pompe de transfert toxique. Lequel peut raisonnablement être exploité jusqu'à la défaillance ?",
+      "choices": [
+        "La soupape du ballon de gaz : elle ne sert qu'en cas de surpression, donc rarement",
+        "Le ventilateur doublé du local non critique : peu coûteux, secours disponible",
+        "La pompe unique d'alimentation du four : sa panne ne coûte que quelques heures",
+        "La pompe de transfert toxique : un secours manuel suffit pour couvrir la panne"
+      ],
+      "answer": 1,
+      "explain": "Le run-to-failure n'est défendable que lorsque la panne n'a aucun impact sécurité, environnement ou production majeur et que le remplacement est simple.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-006",
+      "theme": "Stratégies de maintenance",
+      "level": 3,
+      "q": "Trois modes de défaillance d'une pompe : A (F = 4, G = 2, D = 3), B (F = 2, G = 5, D = 4), C (F = 3, G = 4, D = 3). Lequel traitez-vous en priorité selon la criticité F × G × D ?",
+      "choices": [
+        "A : fréquence la plus élevée, donc criticité maximale des trois",
+        "C : criticité 36, la plus élevée des trois modes de défaillance",
+        "Aucun : les trois criticités restent inférieures à la valeur de 50",
+        "B : criticité 40 (2 × 5 × 4), contre 24 pour A et 36 pour C, soit la plus élevée"
+      ],
+      "answer": 3,
+      "explain": "La criticité de l'AMDEC se calcule C = F × G × D : 4×2×3 = 24 ; 2×5×4 = 40 ; 3×4×3 = 36.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-007",
+      "theme": "Stratégies de maintenance",
+      "level": 2,
+      "q": "En ronde, un opérateur constate un manque d'huile dans le palier d'une pompe et appelle la maintenance. Dans une démarche TPM, que devrait-il faire ?",
+      "choices": [
+        "Faire l'appoint d'huile de premier niveau selon le standard et signaler la cause",
+        "Attendre un technicien de maintenance, même si l'attente dure plusieurs heures",
+        "Arrêter la pompe par précaution, sans signaler le niveau bas à la maintenance",
+        "Ne rien faire : le graissage et les appoints relèvent du seul métier de la maintenance"
+      ],
+      "answer": 0,
+      "explain": "La maintenance autonome confie à l'exploitant nettoyage, inspection et lubrification de premier niveau, avec remontée des anomalies.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-008",
+      "theme": "Stratégies de maintenance",
+      "level": 2,
+      "q": "Une pompe est envoyée chez le constructeur pour une reconstruction complète. À quel niveau de maintenance (FD X60-000) cette opération correspond-elle ?",
+      "choices": [
+        "Niveau 1 : réglages simples prévus par le constructeur, sans démontage",
+        "Niveau 2 : dépannage par échange standard d'éléments accessibles",
+        "Niveau 5 : rénovation ou reconstruction chez le constructeur",
+        "Niveau 3 : diagnostic et réparation par échange de composants fonctionnels"
+      ],
+      "answer": 2,
+      "explain": "Le niveau 5 regroupe les travaux de rénovation, de reconstruction ou de réparations importantes confiés au constructeur ou à l'atelier central.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-009",
+      "theme": "Stratégies de maintenance",
+      "level": 2,
+      "q": "Les données montrent que les garnitures d'une pompe lâchent entre 15 et 21 mois, avec une usure marquée. Quel intervalle de remplacement préventif systématique retenez-vous ?",
+      "choices": [
+        "24 mois, après la fin de la fenêtre où se produisent la plupart des pannes",
+        "6 mois, pour une marge très large quel que soit le coût de l'arrêt",
+        "Aucun : on attend la panne puis on remplace la garniture à l'identique",
+        "Environ 15 mois, avant le début de la fenêtre d'usure observée"
+      ],
+      "answer": 3,
+      "explain": "Quand la défaillance est liée à l'usure avec une dispersion étroite, on remplace juste avant la fenêtre de défaillance pour éviter la panne sans trop gaspiller de durée de vie.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-010",
+      "theme": "Fiabilité",
+      "level": 1,
+      "q": "Un compresseur a fonctionné 2 000 h avec 4 défaillances. Quelle est sa MTBF ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Compresseur alternatif de gaz à plusieurs cylindres, refroidisseurs et tuyauteries colorées",
+      "choices": [
+        "250 h (2 000 h ÷ 8 pannes supposées)",
+        "500 h (2 000 h ÷ 4 défaillances)",
+        "400 h (2 000 h ÷ 5 défaillances)",
+        "8 000 h (2 000 h × 4 défaillances)"
+      ],
+      "answer": 1,
+      "explain": "MTBF = temps de bon fonctionnement / nombre de défaillances = 2 000 / 4 = 500 h.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-011",
+      "theme": "Fiabilité",
+      "level": 2,
+      "q": "Le compresseur alternatif de la photo a une MTBF de 900 h et un MTTR de 100 h. Quelle est sa disponibilité intrinsèque ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Compresseur alternatif de gaz à plusieurs cylindres, refroidisseurs et tuyauteries colorées",
+      "choices": [
+        "80 % : 900 / (900 + 225)",
+        "85 % : 900 / (900 + 160)",
+        "90 % : 900 / (900 + 100)",
+        "99 % : 900 / (900 + 9)"
+      ],
+      "answer": 2,
+      "explain": "Disponibilité = MTBF / (MTBF + MTTR) = 0,90.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-012",
+      "theme": "Fiabilité",
+      "level": 1,
+      "q": "Le camion minier de la photo, en atelier, a connu 5 pannes dans l'année pour un total de 40 h d'immobilisation. Quel est son MTTR ?",
+      "img": "photo/heavy-equipment-maintenance.jpg",
+      "imgAlt": "Camion minier en atelier de maintenance avec deux techniciens en tenue haute visibilité",
+      "choices": [
+        "8 h : 40 / 5",
+        "200 h : 40 × 5",
+        "0,125 h : 5 / 40",
+        "45 h : 40 + 5"
+      ],
+      "answer": 0,
+      "explain": "MTTR = temps total de réparation / nombre de pannes = 40 / 5 = 8 h.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-013",
+      "theme": "Fiabilité",
+      "level": 2,
+      "q": "Une pompe neuve a 3 pannes de garniture en deux mois, puis tourne sans problème pendant 18 mois. Dans quelle phase de la courbe en baignoire se situaient les pannes et que cherchez-vous ?",
+      "choices": [
+        "Jeunesse (taux décroissant) : défauts de montage ou de mise en service ; revoir montage et alignement",
+        "Vie utile (taux constant) : pannes purement aléatoires ; aucune action corrective possible sur la pompe",
+        "Usure (taux croissant) : vieillissement de la garniture ; remplacer systématiquement la pompe entière",
+        "Pas de phase identifiable : trois pannes en deux mois sont trop peu pour conclure ; ne rien changer"
+      ],
+      "answer": 0,
+      "explain": "Des pannes précoces puis plus rien évoquent la mortalité infantile, souvent d'origine montage ou mise en service.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-014",
+      "theme": "Fiabilité",
+      "level": 3,
+      "q": "Une analyse de Weibull de 12 défaillances d'une pompe donne β = 3,2 et η = 14 000 h. Que concluez-vous pour la stratégie de maintenance ?",
+      "choices": [
+        "β élevé signifie des pannes aléatoires : exploiter la pompe jusqu'à la panne",
+        "β > 1 indique une mortalité infantile : revoir la procédure de montage et d'alignement",
+        "β > 1 indique une usure marquée : un préventif systématique avant η est pertinent selon le risque",
+        "β > 1 signifie que la pompe est très fiable : espacer les inspections au-delà de η"
+      ],
+      "answer": 2,
+      "explain": "β < 1 : défaillances précoces ; β ≈ 1 : aléatoires ; β > 1 : usure. Avec β = 3,2, les pannes se concentrent autour de η.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-015",
+      "theme": "Fiabilité",
+      "level": 3,
+      "q": "Deux pompes identiques d'alimentation, de fiabilité 0,90 chacune sur la mission, sont en redondance active (parallèle). Quelle est la fiabilité de l'ensemble ?",
+      "choices": [
+        "0,81 : 0,90 × 0,90",
+        "0,99 : 1 − (1 − 0,90)²",
+        "0,90 : max(0,90 ; 0,90)",
+        "0,95 : 0,90 + 0,10 / 2"
+      ],
+      "answer": 1,
+      "explain": "Pour un parallèle, R = 1 − (1 − R1)(1 − R2) = 1 − 0,01 = 0,99.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-016",
+      "theme": "Fiabilité",
+      "level": 3,
+      "q": "Une chaîne de pompage comprend moteur, accouplement et pompe en série, chacun de fiabilité 0,90. Quelle est la fiabilité de la chaîne ?",
+      "choices": [
+        "0,90 : moyenne des trois fiabilités",
+        "0,81 : 0,90 × 0,90 (deux éléments)",
+        "0,999 : 1 − (1 − 0,90)³ (parallèle)",
+        "Environ 0,73 : 0,90 × 0,90 × 0,90"
+      ],
+      "answer": 3,
+      "explain": "En série, les fiabilités se multiplient : 0,9 × 0,9 × 0,9 = 0,729.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-017",
+      "theme": "Fiabilité",
+      "level": 3,
+      "q": "Un fournisseur garantit une MTBF de 4 000 h (taux de défaillance constant). Quelle est la probabilité que l'équipement tienne 4 000 h sans panne ?",
+      "choices": [
+        "50 % : la MTBF correspond à la médiane",
+        "Environ 63 % : 1 − e⁻¹ (R = 1 − e^(−t/MTBF))",
+        "Environ 37 % : e⁻¹ (R = e^(−t/MTBF))",
+        "90 % : R = 1 − (4 000 / 40 000), par linéarisation"
+      ],
+      "answer": 2,
+      "explain": "Avec un taux de défaillance constant, R(t) = e^(−t / MTBF) ; pour t = MTBF, R = e⁻¹ ≈ 0,37.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-018",
+      "theme": "Fiabilité",
+      "level": 3,
+      "q": "Un équipement a une MTBF de 900 h et un MTTR de 100 h. Quelle action améliore le plus la disponibilité : diviser le MTTR par deux (100 → 50 h) ou augmenter la MTBF de 10 % (900 → 990 h) ?",
+      "choices": [
+        "Diviser le MTTR par deux : ≈ 94,7 %, contre ≈ 90,8 % pour la MTBF à 990 h",
+        "Augmenter la MTBF de 10 % : ≈ 94,7 %, contre ≈ 90,8 % si le MTTR passe à 50 h",
+        "Les deux actions sont équivalentes : ≈ 92 % de disponibilité dans les deux cas",
+        "Ni l'une ni l'autre ne change la disponibilité : elle dépend de la seule fiabilité"
+      ],
+      "answer": 0,
+      "explain": "900 / (900 + 50) ≈ 0,947 ; 990 / (990 + 100) ≈ 0,908. Réduire le temps de réparation (pièces, procédures) est souvent le levier le plus rapide.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-019",
+      "theme": "Fiabilité",
+      "level": 2,
+      "q": "Le MTTR d'un compresseur unique est de 100 h, dont 72 h d'attente de la pièce de rechange. Quel est le levier le plus efficace pour améliorer la disponibilité ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Compresseur alternatif de gaz à plusieurs cylindres, refroidisseurs et tuyauteries colorées",
+      "choices": [
+        "Renouveler d'abord tous les équipements voisins pour réduire le nombre d'arrêts",
+        "Multiplier les rondes de l'opérateur pour détecter plus tôt les anomalies du compresseur",
+        "Augmenter le nombre de réunions de coordination hebdomadaires de la maintenance",
+        "Stocker la pièce critique sur le site pour supprimer l'essentiel des 72 h d'attente de livraison"
+      ],
+      "answer": 3,
+      "explain": "Le MTTR contient les délais logistiques : supprimer l'attente de pièce réduit l'indisponibilité.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-020",
+      "theme": "Intégrité et RBI",
+      "level": 1,
+      "q": "Vous planifiez l'inspection en service du ballon V-201 de la figure. Quel code API encadre l'inspection, la réparation et l'altération des appareils à pression en service ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Ballon V-201, MAWP 10 barg, PSV 201 tarée à 10 barg, alarme PAH à 9 barg, service normal 0 à 8 barg, 11 barg = 110 % de la MAWP, décharge vers la torche",
+      "choices": [
+        "API 570 (inspection des tuyauteries en service)",
+        "API 510 (appareils à pression en service)",
+        "API 653 (inspection des bacs de stockage)",
+        "API 650 (construction de bacs de stockage soudés)"
+      ],
+      "answer": 1,
+      "explain": "API 510 pour les appareils à pression ; API 570 pour les tuyauteries ; API 653 pour les bacs ; API 650 pour leur construction.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-021",
+      "theme": "Intégrité et RBI",
+      "level": 1,
+      "q": "Vous préparez l'inspection d'un bac de stockage atmosphérique de brut (photo). Quel code API s'applique à l'inspection en service ?",
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Parc de bacs de stockage de produits pétroliers au bord de l'eau, avec escaliers et passerelles",
+      "choices": [
+        "API 510 (inspection des appareils à pression)",
+        "API 653 (inspection des bacs de stockage)",
+        "API 570 (inspection des tuyauteries en service)",
+        "API 571 (mécanismes d'endommagement)"
+      ],
+      "answer": 1,
+      "explain": "API 653 couvre l'inspection, la réparation et la reconstruction des bacs de stockage atmosphériques.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-022",
+      "theme": "Intégrité et RBI",
+      "level": 2,
+      "q": "L'étude RBI classe l'échangeur E-104 (service H₂S, ancien) en risque élevé et le bac d'eau incendie en risque faible. Quelle conséquence sur le plan d'inspection ?",
+      "choices": [
+        "Les deux équipements sont inspectés à la même fréquence, par souci d'homogénéité du plan",
+        "L'inspection de E-104 est supprimée car il est ancien : on attend son remplacement",
+        "Seul l'équipement neuf est inspecté, le plan se concentre sur les équipements récents",
+        "E-104 est plus inspecté, avec des méthodes plus efficaces ; le bac d'eau peut être espacé"
+      ],
+      "answer": 3,
+      "explain": "Le RBI concentre l'effort d'inspection là où le risque, produit de la probabilité par la conséquence, est le plus élevé.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-023",
+      "theme": "Intégrité et RBI",
+      "level": 2,
+      "q": "Dans l'étude RBI, l'échangeur E-104 est coté probabilité 4 et conséquence 4. Sur la matrice 5 × 5 de la figure, quelle est sa criticité et son niveau ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 × 5 : criticité = probabilité × gravité ; faible 1-4, moyen 5-9, élevé 10-14, critique 15 et plus",
+      "choices": [
+        "16 : niveau critique (4 × 4, seuil de 15)",
+        "8 : niveau moyen (4 + 4), surveillance simple",
+        "12 : niveau élevé (4 × 3), traitement planifié",
+        "20 : niveau critique (4 × 5), gravité maximale"
+      ],
+      "answer": 0,
+      "explain": "Criticité = 4 × 4 = 16, dans la zone critique ; ces équipements sont inspectés en priorité.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-024",
+      "theme": "Intégrité et RBI",
+      "level": 2,
+      "q": "Sur la figure du ballon V-201 (MAWP 10 barg, soupape unique, hors feu), quelle surpression maximale pendant la décharge est admise selon ASME VIII ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Ballon V-201, MAWP 10 barg, PSV 201 tarée à 10 barg, alarme PAH à 9 barg, service normal 0 à 8 barg, 11 barg = 110 % de la MAWP, décharge vers la torche",
+      "choices": [
+        "10,5 barg : 105 % de la MAWP, soit 5 % de surpression",
+        "12 barg : 120 % de la MAWP, soit 20 % de surpression",
+        "11 barg : 110 % de la MAWP, soit 10 % de surpression",
+        "10 barg : 100 % de la MAWP, aucune surpression admise"
+      ],
+      "answer": 2,
+      "explain": "Avec une soupape unique, la pression pendant la décharge ne doit pas dépasser 110 % de la MAWP (hors feu externe).",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-025",
+      "theme": "Intégrité et RBI",
+      "level": 3,
+      "q": "Après une campagne de mesures d'épaisseur, la MAWP du ballon V-201 est déclassée de 10 à 8,5 barg. La PSV 201 est toujours tarée à 10 barg. Que faites-vous ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Ballon V-201, MAWP 10 barg, PSV 201 tarée à 10 barg, alarme PAH à 9 barg, service normal 0 à 8 barg, 11 barg = 110 % de la MAWP, décharge vers la torche",
+      "choices": [
+        "Laisser la soupape à 10 barg : l'écart de 15 % reste dans la tolérance admise pour une soupape",
+        "Remonter l'alarme PAH vers 10 barg pour éviter les déclenchements intempestifs",
+        "Retirer la soupape et suivre la pression à la main avec un manomètre à chaque ronde",
+        "Faire retarer la soupape à 8,5 barg maximum et revoir alarmes et pression de service"
+      ],
+      "answer": 3,
+      "explain": "Le tarage d'une soupape unique doit rester inférieur ou égal à la MAWP en vigueur ; un déclassement impose de retarer ou de réviser la protection.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-026",
+      "theme": "Intégrité et RBI",
+      "level": 2,
+      "q": "Une mesure d'épaisseur sur une ligne de 8 po donne 6,1 mm, alors que l'épaisseur minimale requise calculée est de 6,5 mm. Que faites-vous ?",
+      "choices": [
+        "La poursuivre normalement : l'écart de 0,4 mm reste dans l'incertitude de mesure",
+        "Évaluer l'aptitude au service (API 579-1), puis réduire la pression ou réparer la ligne si nécessaire",
+        "Remplacer le calorifuge uniquement, puis refaire une mesure au même point au prochain arrêt",
+        "Repeindre la ligne pour stopper la corrosion et poursuivre l'exploitation"
+      ],
+      "answer": 1,
+      "explain": "Sous l'épaisseur minimale, le calcul de tenue n'est plus garanti ; une évaluation FFS ou une réparation est requise.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-027",
+      "theme": "Intégrité et RBI",
+      "level": 2,
+      "q": "Pour une étude RBI d'une unité de raffinage, vous cherchez la liste des mécanismes d'endommagement possibles par service. Quel document consultez-vous ?",
+      "choices": [
+        "API 570 (inspection des tuyauteries en service)",
+        "API 650 (construction des bacs de stockage)",
+        "API 571 (mécanismes d'endommagement)",
+        "API 579 (évaluation de l'aptitude au service)"
+      ],
+      "answer": 2,
+      "explain": "API 571 décrit les mécanismes d'endommagement des équipements de raffinage et de procédé ; il alimente les études RBI (API 581).",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-028",
+      "theme": "Intégrité et RBI",
+      "level": 2,
+      "q": "Une ligne mesure 9,2 mm ; l'épaisseur minimale requise est de 7,0 mm ; la vitesse de corrosion est de 0,4 mm/an. Quelle est la durée de vie résiduelle ?",
+      "choices": [
+        "5,5 ans : (9,2 − 7,0) / 0,4",
+        "2,2 ans : (9,2 − 7,0) / 1",
+        "23 ans : 9,2 mm / 0,4 mm/an",
+        "8,8 ans : (9,2 − 0,4) / 1"
+      ],
+      "answer": 0,
+      "explain": "Durée de vie résiduelle = (épaisseur mesurée − épaisseur minimale) / vitesse de corrosion = 2,2 / 0,4 = 5,5 ans.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-029",
+      "theme": "Intégrité et RBI",
+      "level": 3,
+      "q": "Une ligne mesurait 10,0 mm en 2018 et 9,4 mm en 2023. L'épaisseur minimale requise est de 8,0 mm. Quelle est la durée de vie résiduelle à partir de 2023 ?",
+      "choices": [
+        "Environ 11,7 ans : vitesse 0,12 mm/an ; (9,4 − 8,0) / 0,12",
+        "Environ 16,7 ans : vitesse 0,12 mm/an ; (10,0 − 8,0) / 0,12",
+        "Environ 5 ans : (10,0 − 9,4) / 0,12, perte déjà subie",
+        "Environ 3,3 ans : vitesse 0,12 mm/an ; (9,4 − 9,0) / 0,12"
+      ],
+      "answer": 0,
+      "explain": "La vitesse est (10,0 − 9,4) / 5 = 0,12 mm/an ; la durée de vie résiduelle est la marge actuelle divisée par cette vitesse.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-030",
+      "theme": "Corrosion",
+      "level": 1,
+      "q": "Sur un parc de bacs en bord de mer (photo), vous trouvez du calorifuge fissuré et mouillé sur une ligne de produit chaud (80 °C). Quel mécanisme redoutez-vous en priorité ?",
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Parc de bacs de stockage de produits pétroliers au bord de l'eau, avec escaliers et passerelles",
+      "choices": [
+        "La fissuration par l'hydrogène (HIC) : hydrogène diffusé dans l'acier",
+        "La fatigue thermique : cycles de dilatation répétés sur la ligne",
+        "La corrosion sous isolation (CUI) : eau piégée sous le calorifuge",
+        "La corrosion par le CO₂ sec : acide carbonique en phase gazeuse"
+      ],
+      "answer": 2,
+      "explain": "La CUI se développe sur l'acier calorifugé lorsque l'eau pénètre sous l'isolation, surtout entre 50 et 150 °C environ.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-031",
+      "theme": "Corrosion",
+      "level": 2,
+      "q": "Une ligne en inox 316 à 90 °C, calorifugée et exposée à l'ambiance côtière, présente des fissures ramifiées au niveau des soudures. Quel mécanisme suspectez-vous ?",
+      "choices": [
+        "La fissuration induite par l'hydrogène (HIC) en milieu humide acide",
+        "La fissuration par corrosion sous contrainte aux chlorures",
+        "L'érosion-corrosion due à la vitesse élevée du fluide en ligne",
+        "La fatigue thermique à froid due aux cycles de dilatation"
+      ],
+      "answer": 1,
+      "explain": "Chlorures, contrainte de traction et température sont les conditions types de la SCC des inox austénitiques.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-032",
+      "theme": "Corrosion",
+      "level": 1,
       "q": "Une ligne se corrode à 0,25 mm/an. Combien d'années durera une surépaisseur de corrosion de 3 mm ?",
-      "choices": ["3 ans", "6 ans", "9 ans", "12 ans"], "answer": 3,
-      "explain": "3 mm / 0,25 mm/an = 12 ans. L'inspection en service vérifie régulièrement que la vitesse réelle reste conforme à l'hypothèse de conception.",
-      "seconds": 45, "status": "draft" },
-    { "id": "ing-maint-030", "theme": "Corrosion", "level": 2,
-      "q": "L'érosion-corrosion apparaît typiquement dans quelles conditions ?",
-      "choices": ["Vitesse élevée, particules ou régime diphasique, aux coudes et après les vannes de détente", "Fluide stagnant dans un bras mort", "Eau stagnante sous isolation", "Équipement à l'arrêt prolongé"], "answer": 0,
-      "explain": "L'écoulement détruit localement le film protecteur : on le surveille aux coudes, tés, réducteurs et en aval des détendeurs. Une réduction de la vitesse ou un matériau plus résistant en est le remède.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-031", "theme": "Corrosion", "level": 2,
-      "q": "Comment se forment les cloques (HIC / blistering) dans un acier en service H2S humide ?",
-      "choices": ["Par oxydation à haute température", "Par dilatation thermique du revêtement", "L'hydrogène atomique diffuse et se recombine en H2 gazeux au niveau des inclusions", "Par impact de particules solides"], "answer": 2,
-      "explain": "L'H2S humide libère de l'hydrogène atomique qui pénètre l'acier ; en se recombinant en H2 dans les inclusions, il crée une pression interne qui forme cloques et fissures. Les aciers « HIC resistant » en limitent le risque.",
-      "seconds": 45, "status": "draft" },
-    { "id": "ing-maint-032", "theme": "Corrosion", "level": 3,
-      "q": "Comment agit un inhibiteur de corrosion ?",
-      "choices": ["Il augmente la température de la paroi", "Il forme un film protecteur à l'interface métal-fluide", "Il neutralise toute la phase hydrocarbure", "Il durcit l'acier"], "answer": 1,
-      "explain": "Les inhibiteurs filmants s'adsorbent à la surface du métal et ralentissent les réactions de corrosion. Leur efficacité se suit par coupons et sondes, et dépend de la dose et du régime d'écoulement.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-033", "theme": "Corrosion", "level": 3,
-      "q": "En tête d'une colonne de distillation atmosphérique, où la corrosion par le HCl est-elle la plus intense ?",
-      "img": "svg/distillation-column.svg", "imgAlt": "Colonne de distillation atmosphérique avec circuit de tête",
-      "choices": ["Au fond de la colonne, dans le résidu", "Au point de rosée de l'eau, là où apparaissent les premières gouttes", "Dans le four de charge", "Dans le ballon de charge du brut"], "answer": 1,
-      "explain": "Le HCl gazeux est inoffensif au sec, mais dissous dans les premières gouttes d'eau condensées, il forme un acide fort très corrosif. D'où le dessalage, l'injection d'amine neutralisante et d'inhibiteur.",
-      "seconds": 55, "status": "draft" },
-    { "id": "ing-maint-034", "theme": "Corrosion", "level": 2,
-      "q": "Comment utilise-t-on un coupon de corrosion ?",
-      "choices": ["On le branche comme capteur de pression", "On mesure sa couleur à vue", "On l'utilise comme joint d'étanchéité", "On l'expose dans le procédé puis on le pèse pour calculer la vitesse de corrosion"], "answer": 3,
-      "explain": "La perte de masse pendant la durée d'exposition permet de déduire une vitesse moyenne de corrosion. C'est une mesure simple mais cumulative, complétée par des sondes à résistance électrique pour un suivi plus rapide.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-035", "theme": "GMAO et KPI", "level": 1,
-      "q": "Que signifie le sigle GMAO ?",
-      "choices": ["Gestion de la maintenance assistée par ordinateur", "Gestion des matières et achats organisés", "Groupe de maintenance et d'amélioration opérationnelle", "Guide de mise en application opérationnelle"], "answer": 0,
-      "explain": "La GMAO est le logiciel qui gère équipements, ordres de travail, plans préventifs, pièces et historiques d'une maintenance.",
-      "seconds": 30, "status": "draft" },
-    { "id": "ing-maint-036", "theme": "GMAO et KPI", "level": 1,
-      "q": "À quoi sert un diagramme de Gantt dans la préparation d'un arrêt ?",
-      "img": "svg/gantt-chart.svg", "imgAlt": "Diagramme de Gantt avec tâches en barres horizontales",
-      "choices": ["À calculer la corrosion", "À mesurer la fiabilité", "À planifier les tâches dans le temps et visualiser leurs enchaînements", "À dimensionner les soupapes"], "answer": 2,
-      "explain": "Le Gantt représente chaque tâche par une barre sur l'axe du temps, avec ses dépendances, ce qui permet de suivre l'avancement et le chemin critique.",
-      "seconds": 35, "status": "draft" },
-    { "id": "ing-maint-037", "theme": "GMAO et KPI", "level": 1,
-      "q": "Comment calcule-t-on le taux de réalisation du préventif ?",
-      "choices": ["Coût préventif / coût total", "Nombre de pannes / nombre d'heures", "OT préventifs réalisés / OT préventifs planifiés", "Heures de maintenance / heures de production"], "answer": 2,
-      "explain": "Ce KPI compare ce qui a été fait à ce qui était prévu. Un taux faible annonce un report de la maintenance et des pannes futures.",
-      "seconds": 35, "status": "draft" },
-    { "id": "ing-maint-038", "theme": "GMAO et KPI", "level": 2,
-      "q": "Que comprend le coût du cycle de vie (LCC) d'un équipement ?",
-      "choices": ["Uniquement le prix d'achat", "Acquisition, exploitation, maintenance et démantèlement", "Uniquement la maintenance corrective", "Uniquement l'énergie consommée"], "answer": 1,
-      "explain": "Le LCC compare les options sur toute la vie de l'équipement : un matériel moins cher à l'achat peut coûter plus cher en exploitation et en maintenance.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-039", "theme": "GMAO et KPI", "level": 2,
-      "q": "Qu'appelle-t-on « backlog » en maintenance ?",
-      "choices": ["L'ensemble des travaux identifiés mais non réalisés, souvent exprimé en semaines de travail", "Le stock de pièces dormantes", "Le retard de paiement des fournisseurs", "Le nombre de techniciens absents"], "answer": 0,
-      "explain": "Le backlog mesure la charge en attente. Trop faible, il révèle un manque d'anticipation ; trop élevé, il signale un risque de dégradation des équipements.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-040", "theme": "GMAO et KPI", "level": 3,
-      "q": "Pour raccourcir la durée d'un arrêt, sur quoi faut-il agir en priorité ?",
-      "img": "svg/gantt-chart.svg", "imgAlt": "Diagramme de Gantt d'un arrêt avec chemin critique en évidence",
-      "choices": ["Sur les tâches qui ont de la marge", "Sur le nombre de réunions", "Sur la peinture des bâtiments", "Sur les tâches du chemin critique"], "answer": 3,
-      "explain": "Le chemin critique est la suite de tâches sans marge ; tout gain sur lui raccourcit l'arrêt, alors qu'accélérer une tâche à marge ne change rien à la date de fin.",
-      "seconds": 45, "status": "draft" },
-    { "id": "ing-maint-041", "theme": "GMAO et KPI", "level": 2,
-      "q": "Quel signe indique une organisation de maintenance plus mature ?",
-      "choices": ["Une part dominante de travaux urgents", "Une part croissante de travaux planifiés et préparés", "Un backlog jamais mesuré", "Aucun indicateur suivi"], "answer": 1,
-      "explain": "Les travaux planifiés sont plus sûrs et moins coûteux que les urgences (pièces express, heures supplémentaires, risque d'erreur). Faire progresser le planifié est un objectif central.",
-      "seconds": 40, "status": "draft" },
-    { "id": "ing-maint-042", "theme": "GMAO et KPI", "level": 3,
+      "choices": [
+        "3 ans : 3 mm / 1 mm/an",
+        "6 ans : 3 mm / 0,5 mm/an",
+        "9 ans : 3 mm / 0,33 mm/an",
+        "12 ans : 3 mm / 0,25 mm/an"
+      ],
+      "answer": 3,
+      "explain": "Durée = 3 / 0,25 = 12 ans (à condition que la vitesse de corrosion reste constante).",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-033",
+      "theme": "Corrosion",
+      "level": 2,
+      "q": "Après une vanne de détente, un coude voit son épaisseur baisser de 1 mm/an en écoulement diphasique à 18 m/s. Quel mécanisme et quelles actions ?",
+      "choices": [
+        "Corrosion sous isolation : retirer le calorifuge, refaire la peinture et suivre l'état du coude",
+        "SCC aux chlorures : passer à un inox plus allié et réduire la température du fluide",
+        "Érosion-corrosion : réduire la vitesse, coude à plus grand rayon ou matériau plus résistant, suivre l'épaisseur",
+        "Fatigue thermique : supprimer les cycles de température et renforcer les supports"
+      ],
+      "answer": 2,
+      "explain": "Vitesse élevée, régime diphasique, coude et aval de vanne sont les conditions de l'érosion-corrosion.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-034",
+      "theme": "Corrosion",
+      "level": 2,
+      "q": "Un contrôle par ultrasons sur un ballon en service H₂S humide révèle des indications planes parallèles à la paroi (blisters), alors que la surface paraît intacte. Quel est le mécanisme ?",
+      "choices": [
+        "Cloquage par l'hydrogène (HIC) : H₂ gazeux recombiné au niveau des inclusions",
+        "Oxydation à haute température : couches d'oxyde décollées parallèlement à la paroi",
+        "Érosion par des particules solides : amincissement local de la paroi interne",
+        "Fatigue mécanique : microfissures parallèles à la paroi sous charge cyclique"
+      ],
+      "answer": 0,
+      "explain": "En milieu H₂S humide, l'hydrogène issu de la corrosion pénètre l'acier et crée des cloques ou fissures aux inclusions.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-035",
+      "theme": "Corrosion",
+      "level": 3,
+      "q": "Après le démarrage d'un inhibiteur, le coupon de corrosion passe de 0,8 à 0,1 mm/an. Mais le coupon est en ligne principale, alors que le bras mort voisin se corrode toujours. Que faites-vous ?",
+      "choices": [
+        "Conclure que l'inhibiteur protège aussi le bras mort, car le coupon principal est bon",
+        "Doubler la dose d'inhibiteur sans autre contrôle, par précaution sur tout le circuit",
+        "Retirer le coupon de la ligne principale et se fier au suivi d'épaisseur global",
+        "Mesurer aussi dans le bras mort : l'inhibiteur ne protège que là où le film arrive"
+      ],
+      "answer": 3,
+      "explain": "Un coupon ne représente que son emplacement ; l'inhibiteur forme un film seulement sur les zones balayées.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-036",
+      "theme": "Corrosion",
+      "level": 3,
+      "q": "Sur la colonne de la figure, un trou apparaît sur la ligne de tête, juste en amont du condenseur. Où la corrosion par le HCl est-elle la plus intense ?",
+      "img": "svg/distillation-column.svg",
+      "imgAlt": "Colonne de distillation : alimentation, condenseur de tête, ballon de reflux, reflux, distillat, rebouilleur, résidu, zones de rectification et d'épuisement avec plateaux",
+      "choices": [
+        "Au fond de la colonne, dans le résidu chaud où le HCl est le plus concentré",
+        "Au point de rosée de l'eau : là où apparaissent les premières gouttes d'eau en tête de colonne",
+        "Dans le four de charge, où la température de paroi est la plus élevée du circuit",
+        "Dans le ballon de charge du brut, où l'eau libre se décante avant le dessalage"
+      ],
+      "answer": 1,
+      "explain": "Le HCl se dissout dans la première eau condensée, très acide : c'est le point de rosée en tête qui est le plus agressif.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-037",
+      "theme": "Corrosion",
+      "level": 3,
+      "q": "Un coupon d'acier de 25 cm² exposé 90 jours (2 160 h) perd 0,45 g (ρ = 7,86 g/cm³). Avec CR (mm/an) = 87 600 × W / (A × T × ρ), quelle est la vitesse de corrosion ?",
+      "choices": [
+        "Environ 0,9 mm/an (39 420 / 42 444)",
+        "Environ 0,09 mm/an (39 420 / 424 440)",
+        "Environ 0,009 mm/an (39 420 / 4 244 400)",
+        "Environ 0,5 mm/an (0,45 g ramené à l'année)"
+      ],
+      "answer": 1,
+      "explain": "CR = 87 600 × 0,45 / (25 × 2 160 × 7,86) ≈ 0,093 mm/an.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-038",
+      "theme": "Corrosion",
+      "level": 2,
+      "q": "Une conduite enterrée est protégée par protection cathodique. Une mesure donne −0,70 V par rapport à l'électrode Cu/CuSO₄ ; le critère retenu au site est de −0,85 V. Que concluez-vous ?",
+      "choices": [
+        "La protection est bonne : −0,70 V est plus négatif que −0,85 V, donc le critère est largement atteint",
+        "Le critère ne s'applique pas à l'acier enterré : il vaut seulement pour l'acier immergé",
+        "Il faut inverser la polarité du redresseur, puis refaire la mesure dans la journée",
+        "Protection insuffisante : contrôler le redresseur et les connexions, appliquer la procédure"
+      ],
+      "answer": 3,
+      "explain": "Pour l'acier enterré, un potentiel plus négatif que le critère indique une protection effective ; −0,70 V est moins négatif et donc insuffisant, selon le référentiel du site.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-039",
+      "theme": "GMAO et KPI",
+      "level": 1,
+      "q": "Vous constatez qu'aucun historique de pannes de la pompe P-12 n'est saisi en GMAO depuis 2 ans. Quelle est la conséquence principale ?",
+      "choices": [
+        "On ne peut calculer ni MTBF ni coûts, ni repérer les causes récurrentes : les décisions reposent sur des impressions",
+        "Rien de grave : l'historique est facultatif tant que les rondes sont bien réalisées et tracées sur papier",
+        "Les OT préventifs continuent d'être générés et réalisés automatiquement sans l'historique des pannes",
+        "La fiabilité de la pompe s'améliore d'elle-même grâce aux rondes, l'historique est inutile"
+      ],
+      "answer": 0,
+      "explain": "La GMAO n'a de valeur que par la qualité de la saisie : sans historique, aucun indicateur fiable.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-040",
+      "theme": "GMAO et KPI",
+      "level": 2,
+      "q": "Sur le Gantt de la figure, la direction demande de gagner une semaine. Où agissez-vous ?",
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt sur 13 semaines : chemin critique (étude, génie civil, montage, essais, réception) ; commande et formation avec 1 semaine de marge",
+      "choices": [
+        "Sur la commande des équipements : raccourcir ses délais de fabrication de 3 semaines",
+        "Sur la formation des équipes : la raccourcir libère une semaine sur le planning complet",
+        "Sur les tâches du chemin critique (génie civil, montage, essais), sans marge",
+        "Sur la tâche la moins coûteuse à raccourcir, quelle que soit sa position sur le Gantt"
+      ],
+      "answer": 2,
+      "explain": "Seules les tâches sans marge déterminent la durée totale : raccourcir une tâche à marge ne change pas la date de fin.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-041",
+      "theme": "GMAO et KPI",
+      "level": 1,
+      "q": "En mars, 120 OT préventifs étaient planifiés et 96 ont été réalisés. Quel est le taux de réalisation du préventif ?",
+      "choices": [
+        "96 % : OT réalisés sur la base de 100",
+        "125 % : 120 OT planifiés / 96 OT réalisés",
+        "20 % : 24 OT non réalisés / 120 OT planifiés",
+        "80 % : 96 OT réalisés / 120 OT planifiés"
+      ],
+      "answer": 3,
+      "explain": "Taux de réalisation = OT préventifs réalisés / OT préventifs planifiés = 96 / 120 = 0,80.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-042",
+      "theme": "GMAO et KPI",
+      "level": 3,
+      "q": "Deux pompes sur dix ans, hors actualisation. A : achat 40 k$, énergie 18 k$/an, maintenance 6 k$/an. B : achat 65 k$, énergie 12 k$/an, maintenance 4 k$/an. Laquelle a le coût de cycle de vie le plus bas ?",
+      "choices": [
+        "A : l'achat le moins cher donne le coût total le plus bas",
+        "B : 225 k$ sur dix ans (65 + 10 × 16), contre 280 k$ pour A",
+        "Égalité : les deux pompes coûtent environ 250 k$ sur dix ans",
+        "A : 225 k$ sur dix ans, contre 280 k$ pour B (énergie incluse)"
+      ],
+      "answer": 1,
+      "explain": "LCC A = 40 + 10×(18+6) = 280 k$ ; LCC B = 65 + 10×(12+4) = 225 k$. Le prix d'achat est une partie du LCC.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-043",
+      "theme": "GMAO et KPI",
+      "level": 1,
+      "q": "Le backlog est de 2 400 h et l'équipe réalise 400 h de travaux planifiés par semaine. À combien de semaines de travail correspond-il ?",
+      "choices": [
+        "0,17 semaine : 400 h / 2 400 h de travaux",
+        "24 semaines : 2 400 h / 100 h par semaine",
+        "6 semaines : 2 400 h / 400 h par semaine",
+        "240 semaines : 2 400 h / 10 h par semaine"
+      ],
+      "answer": 2,
+      "explain": "Backlog en semaines = 2 400 / 400 = 6.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-044",
+      "theme": "GMAO et KPI",
+      "level": 2,
+      "q": "Sur les 100 OT du mois, 55 sont des urgences. Que concluez-vous et que décidez-vous ?",
+      "choices": [
+        "Elle est réactive : renforcer la préparation, le préventif conditionnel et l'analyse des pannes récurrentes",
+        "Elle est mature : 55 % d'urgences prouvent la forte capacité de réaction des équipes d'astreinte",
+        "Rien à changer : 55 % d'urgences est un niveau courant, la GMAO suffit à le suivre",
+        "Supprimer la GMAO : elle génère trop de paperasse et ralentit les interventions urgentes"
+      ],
+      "answer": 0,
+      "explain": "Une part dominante d'urgences indique un manque de préparation et de prévention ; la maturité se mesure à la part de travaux planifiés.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-045",
+      "theme": "GMAO et KPI",
+      "level": 3,
       "q": "Un équipement a une disponibilité de 90 %, une performance de 95 % et une qualité de 98 %. Quel est son TRS (OEE) ?",
-      "choices": ["88,0 %", "92,0 %", "83,8 %", "75,0 %"], "answer": 2,
-      "explain": "TRS = 0,90 × 0,95 × 0,98 ≈ 0,838, soit 83,8 %. On multiplie les trois taux : la moyenne arithmétique (94,3 %) surestimerait la performance.",
-      "seconds": 60, "status": "draft" }
+      "choices": [
+        "Environ 83,8 % : 0,90 × 0,95 × 0,98",
+        "94,3 % : moyenne arithmétique des trois taux",
+        "90,0 % : le taux le plus bas des trois",
+        "88,0 % : 0,90 × 0,98 (sans la performance)"
+      ],
+      "answer": 0,
+      "explain": "TRS = disponibilité × performance × qualité = 0,90 × 0,95 × 0,98 ≈ 0,838.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-maint-046",
+      "theme": "GMAO et KPI",
+      "level": 2,
+      "q": "Une panne dure 18 h sur une unité qui produit 4 000 bbl/j d'huile valorisée à 70 USD/bbl. Quel est le manque à gagner ?",
+      "choices": [
+        "5 040 000 USD : 4 000 × 18 × 70",
+        "70 000 USD : 4 000 / 24 × 6 × 70",
+        "210 000 USD : 4 000 / 24 × 18 × 70",
+        "280 000 USD : 4 000 × 70 (jour complet)"
+      ],
+      "answer": 2,
+      "explain": "Production perdue = 4 000 × 18 / 24 = 3 000 bbl ; × 70 USD = 210 000 USD. C'est la base du calcul du coût de non-disponibilité.",
+      "seconds": 90,
+      "status": "draft"
+    }
   ]
 }

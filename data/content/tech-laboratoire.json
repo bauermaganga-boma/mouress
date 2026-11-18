@@ -89,7 +89,7 @@
         "Pulvérisation, concassage, séchage, division, prise d'essai",
         "Séchage, concassage, division, pulvérisation, prise d'essai",
         "Prise d'essai, séchage, pulvérisation, concassage, division",
-        "Concassage, prise d'essai, division, séchage, pulvérisation"
+        "Séchage, division, concassage, prise d'essai, puis pulvérisation"
       ],
       "answer": 1,
       "explain": "On sèche d'abord, on réduit la taille (concassage), on divise pour alléger l'échantillon, on pulvérise la fraction retenue puis on prélève la prise d'essai de quelques dizaines de grammes.",
@@ -104,10 +104,10 @@
       "img": "photo/gold-bars-lab.jpg",
       "imgAlt": "Photo d'un laboratoire d'analyses de minerai : échantillons, balances et matériel de préparation.",
       "choices": [
-        "Pour augmenter la finesse de la pulpe",
-        "Pour refroidir les machines et prolonger leur vie",
-        "Pour mélanger les échantillons voisins",
-        "Pour éviter la contamination croisée entre échantillons"
+        "Pour augmenter la finesse de la pulpe de l'échantillon suivant",
+        "Pour refroidir les machines et prolonger leur durée de vie",
+        "Pour éliminer l'humidité résiduelle de l'échantillon précédent",
+        "Pour éviter la contamination croisée entre deux échantillons successifs"
       ],
       "answer": 3,
       "explain": "Des résidus de l'échantillon précédent peuvent fausser le suivant, surtout après un échantillon riche. Le nettoyage rigoureux évite cette contamination.",
@@ -123,9 +123,9 @@
       "imgAlt": "Photo d'une usine de traitement de minerai avec convoyeurs et installations de concassage.",
       "choices": [
         "Couper toute la section du flux à intervalles réguliers",
-        "Prélever seulement une pelletée en surface au bord de la bande",
-        "Prélever uniquement quand le convoyeur est vide",
-        "Prélever un seul gros fragment au hasard"
+        "Prélever une pelletée en surface au bord de la bande",
+        "Prélever la fraction fine à chaque passage, sans les gros blocs",
+        "Prélever un gros fragment choisi au hasard dans la charge"
       ],
       "answer": 0,
       "explain": "Particules fines et denses se concentrent dans la couche inférieure : seule la coupe complète de la section évite un biais de prélèvement.",
@@ -138,10 +138,10 @@
       "level": 2,
       "q": "Comment utilise-t-on correctement un diviseur à couteaux (riffle splitter) ?",
       "choices": [
-        "On verse tout d'un coup au centre des couloirs",
-        "On retire à la main les plus gros fragments avant de verser",
-        "On verse l'échantillon de façon régulière sur toute la largeur du diviseur et on retient une des deux moitiés selon le protocole",
-        "On verse seulement la partie fine de l'échantillon"
+        "On verse tout d'un coup au centre des couloirs pour que les moitiés restent égales",
+        "On retire à la main les plus gros fragments et on divise le reste",
+        "On verse régulièrement sur toute la largeur et on garde une moitié selon le protocole",
+        "On verse la partie fine en premier puis les gros fragments, en gardant la moitié gauche"
       ],
       "answer": 2,
       "explain": "Un versement régulier sur toutes les cases garantit que chaque moitié est représentative de l'ensemble ; verser au centre ou trier les fragments crée un biais.",
@@ -172,10 +172,10 @@
       "level": 2,
       "q": "Quand la taille maximale des fragments d'un échantillon augmente, que devient la masse minimale pour rester représentatif ?",
       "choices": [
-        "Elle augmente très fortement",
-        "Elle diminue",
-        "Elle ne change pas",
-        "Elle diminue puis remonte uniquement pour les minerais d'or"
+        "Elle augmente fortement, à peu près comme le cube de la taille maximale",
+        "Elle diminue, car les gros fragments sont plus faciles à mélanger",
+        "Elle reste constante, la représentativité dépendant du nombre de fragments",
+        "Elle augmente, mais proportionnellement au diamètre maximal des fragments"
       ],
       "answer": 0,
       "explain": "Plus les fragments sont gros, plus la masse minimale nécessaire est importante (de l'ordre du cube du diamètre) : on concasse avant de diviser.",
@@ -188,10 +188,10 @@
       "level": 2,
       "q": "Pourquoi pulvérise-t-on l'échantillon avant l'analyse ?",
       "choices": [
-        "Pour augmenter la teneur de l'échantillon",
-        "Pour homogénéiser et obtenir une granulométrie fine, afin que la petite prise d'essai soit représentative",
-        "Pour sécher définitivement l'échantillon",
-        "Pour pouvoir l'étiqueter plus facilement"
+        "Pour augmenter la teneur de l'échantillon en concentrant les minéraux utiles",
+        "Pour homogénéiser et affiner la pulpe afin que la prise d'essai soit représentative",
+        "Pour terminer le séchage de l'échantillon avant la pesée de la prise d'essai",
+        "Pour réduire le volume de stockage des pulpes dans les sachets étiquetés"
       ],
       "answer": 1,
       "explain": "Une prise d'essai de quelques dizaines de grammes n'est représentative que si la pulpe est très fine et homogène.",
@@ -206,10 +206,10 @@
       "img": "photo/gold-bars-lab.jpg",
       "imgAlt": "Photo d'un laboratoire d'analyses de minerai : échantillons, balances et matériel de préparation.",
       "choices": [
-        "Je prépare directement l'échantillon suivant pour gagner du temps",
-        "Je souffle seulement un coup d'air sur le plateau",
-        "Je mélange les deux échantillons pour diluer la contamination",
-        "Je nettoie rigoureusement l'équipement, je passe un matériau de nettoyage et je fais suivre un blanc de préparation"
+        "Je prépare directement l'échantillon suivant, car la teneur attendue est très basse",
+        "Je souffle un coup d'air comprimé sur le plateau et je reprends la préparation",
+        "Je passe un chiffon humide sur le plateau et je fais suivre un blanc de dosage",
+        "Je nettoie à fond, je passe un matériau de nettoyage puis un blanc de préparation"
       ],
       "answer": 3,
       "explain": "Après un échantillon très riche, la moindre trace peut multiplier la teneur apparente d'un échantillon pauvre. Nettoyage soigné et blanc de contrôle sont la parade.",
@@ -240,10 +240,10 @@
       "img": "photo/gold-bars-lab.jpg",
       "imgAlt": "Photo d'un laboratoire d'analyses de minerai : échantillons, balances et matériel de préparation.",
       "choices": [
-        "En le chauffant à 1 000 °C pendant dix minutes",
-        "En séchant à l'étuve vers 105 °C jusqu'à masse constante et en calculant la perte de masse",
-        "En mesurant sa densité avec un aréomètre",
-        "En le tamisant à 75 µm"
+        "En chauffant l'échantillon à 1 000 °C pendant dix minutes dans un four à moufle",
+        "En séchant à l'étuve vers 105 °C jusqu'à masse constante, puis en pesant la perte",
+        "En mesurant sa masse volumique à l'aide d'un aréomètre dans un bain d'eau",
+        "En le séchant à l'air libre pendant une heure sans contrôle de température"
       ],
       "answer": 1,
       "explain": "L'humidité correspond à l'eau évaporée à environ 105 °C : (masse humide − masse sèche) / masse humide.",
@@ -258,10 +258,10 @@
       "img": "photo/gold-bars-lab.jpg",
       "imgAlt": "Photo d'un laboratoire d'analyses de minerai : échantillons, balances et matériel de préparation.",
       "choices": [
-        "La distillation fractionnée",
-        "Le titrage acide-base direct",
-        "L'essai au feu avec coupellation",
-        "La mesure de densité"
+        "La distillation fractionnée de la pulpe en milieu acide",
+        "Le titrage acide-base direct de la pulpe en solution",
+        "L'essai au feu avec coupellation sur une prise d'essai de 30 g",
+        "La pesée hydrostatique de la pulpe dans l'eau"
       ],
       "answer": 2,
       "explain": "L'essai au feu concentre l'or dans un bouton après fusion et coupellation ; il reste la méthode de référence pour les teneurs en or.",
@@ -291,8 +291,8 @@
       "q": "Sur 200 g de pulpe, 30 g restent sur le tamis de 75 µm. Quel est le pourcentage passant ?",
       "choices": [
         "85 %",
-        "15 %",
-        "30 %",
+        "15 % (taux de refus)",
+        "30 % (masse du refus)",
         "70 %"
       ],
       "answer": 0,
@@ -306,10 +306,10 @@
       "level": 2,
       "q": "Que mesure la fluorescence X (XRF) appliquée à un minerai ?",
       "choices": [
-        "La couleur de la pulpe en lumière visible",
-        "La masse volumique de l'échantillon",
-        "Les rayons X caractéristiques réémis par les éléments de l'échantillon après excitation, donc leur teneur",
-        "Le point de fusion du minerai"
+        "La couleur de la pulpe en lumière visible, convertie en teneur par colorimétrie",
+        "Les émissions lumineuses d'un plasma d'argon qui excite les éléments en solution",
+        "Les rayons X caractéristiques réémis par chaque élément, donc sa teneur",
+        "La masse volumique apparente de la pulpe, reliée à la teneur par un abaque interne"
       ],
       "answer": 2,
       "explain": "Chaque élément réémet des rayons X de longueurs d'onde propres ; l'intensité permet d'en déduire la concentration après calibration.",
@@ -322,10 +322,10 @@
       "level": 2,
       "q": "Pourquoi fond-on l'échantillon avec du borate de lithium pour faire une perle avant la XRF ?",
       "choices": [
-        "Pour augmenter la teneur en manganèse de l'échantillon",
-        "Pour pouvoir peser moins de matière",
-        "Pour remplacer la calibration",
-        "Pour supprimer les effets de granulométrie et de minéralogie en obtenant un verre homogène"
+        "Pour concentrer le manganèse dans la perle et relever la sensibilité du détecteur",
+        "Pour réduire la masse à peser et accélérer le cycle de préparation des échantillons",
+        "Pour se dispenser de la calibration avec des étalons certifiés matriciels",
+        "Pour supprimer les effets de granulométrie et de minéralogie avec un verre homogène"
       ],
       "answer": 3,
       "explain": "La perle fondue est homogène : les différences de taille et de minéralogie, qui perturbent l'analyse d'une pastille pressée, disparaissent.",
@@ -338,10 +338,10 @@
       "level": 3,
       "q": "Un minerai de manganèse titre 40 % Mn sur produit sec et a une perte au feu de 10 %. Quelle est sa teneur en Mn sur produit calciné (le Mn ne se volatilise pas) ?",
       "choices": [
-        "36 %",
+        "36 % (40 × 0,9)",
         "44,4 %",
         "50 %",
-        "40 %"
+        "40 % (sans correction)"
       ],
       "answer": 1,
       "explain": "Après calcination, 100 g deviennent 90 g, mais la masse de Mn (40 g) est inchangée : 40 / 90 ≈ 44,4 %.",
@@ -354,10 +354,10 @@
       "level": 3,
       "q": "Dans l'essai au feu de l'or, quel est le rôle de la litharge (PbO) dans le flux de fusion ?",
       "choices": [
-        "Elle abaisse le pH de la solution",
+        "Elle neutralise l'humidité du minerai avant la fusion au four",
         "Elle libère le plomb collecteur qui capte l'or lors de la fusion",
-        "Elle sert de colorant du culot",
-        "Elle dissout l'or dans l'acide nitrique"
+        "Elle sert de fondant acide qui dissout la silice du minerai",
+        "Elle colore le culot pour repérer le bouton de plomb après coulée"
       ],
       "answer": 1,
       "explain": "Le plomb produit à partir de la litharge collecte l'or et l'argent ; la coupellation éliminera ensuite le plomb pour laisser le bouton.",
@@ -372,10 +372,10 @@
       "img": "photo/gold-bars-lab.jpg",
       "imgAlt": "Photo d'un laboratoire d'analyses de minerai : échantillons, balances et matériel de préparation.",
       "choices": [
-        "À étalonner la balance",
-        "À mesurer la précision du laboratoire",
-        "À remplacer un doublon",
-        "À vérifier l'absence de contamination"
+        "À étalonner la balance de pesée avant la série d'analyses",
+        "À mesurer la précision du laboratoire sur la série entière",
+        "À remplacer un doublon manquant dans la série d'analyses",
+        "À vérifier l'absence de contamination tout au long de la série"
       ],
       "answer": 3,
       "explain": "Un blanc ne contient pas l'élément dosé : un résultat supérieur à la limite de détection révèle une contamination (préparation ou analyse).",
@@ -390,10 +390,10 @@
       "img": "photo/gold-bars-lab.jpg",
       "imgAlt": "Photo d'un laboratoire d'analyses de minerai : échantillons, balances et matériel de préparation.",
       "choices": [
-        "La justesse (exactitude) des résultats du laboratoire",
-        "La propreté de la verrerie",
-        "La masse de la prise d'essai uniquement",
-        "La température de l'étuve uniquement"
+        "La justesse (exactitude) des résultats du laboratoire sur la série",
+        "La propreté de la verrerie utilisée lors des dilutions finales",
+        "La masse de la prise d'essai pesée sur la balance",
+        "La température de consigne de l'étuve de séchage"
       ],
       "answer": 0,
       "explain": "La teneur de l'étalon est connue : l'écart entre le résultat et la valeur certifiée mesure le biais du laboratoire.",
@@ -408,10 +408,10 @@
       "img": "photo/gold-bars-lab.jpg",
       "imgAlt": "Photo d'un laboratoire d'analyses de minerai : échantillons, balances et matériel de préparation.",
       "choices": [
-        "Détecter une contamination de réactifs",
-        "Corriger la teneur d'un échantillon",
+        "Détecter une contamination des réactifs utilisés",
+        "Corriger la teneur d'un échantillon en cas d'écart",
         "Mesurer la répétabilité (précision) des résultats",
-        "Remplacer l'étalon manquant"
+        "Remplacer l'étalon certifié s'il est manquant"
       ],
       "answer": 2,
       "explain": "Deux prises du même matériau doivent donner des résultats proches ; l'écart mesure la fidélité de la préparation et de l'analyse.",
@@ -424,10 +424,10 @@
       "level": 2,
       "q": "Un étalon certifié à 2,00 g/t donne 2,52 ; 2,50 ; 2,51 et 2,49 g/t. Quel est le diagnostic ?",
       "choices": [
-        "Résultats justes et précis",
-        "Résultats justes mais peu précis",
+        "Résultats justes et précis, l'écart à 2,00 g/t étant faible",
+        "Résultats justes mais peu précis, la dispersion étant forte",
         "Résultats précis mais biaisés : la justesse est mauvaise",
-        "Résultats imprécis et sans biais"
+        "Résultats imprécis et sans biais, la moyenne étant correcte"
       ],
       "answer": 2,
       "explain": "Les valeurs sont groupées (précision correcte) mais environ 25 % trop hautes : il existe un biais systématique à rechercher.",
@@ -440,10 +440,10 @@
       "level": 2,
       "q": "Après un échantillon à 120 g/t d'or, le blanc donne 0,45 g/t alors que la limite de détection est de 0,01 g/t. Que concluez-vous ?",
       "choices": [
-        "Une contamination probable lors de la préparation, à investiguer avant de libérer la série",
-        "Un résultat normal pour un blanc",
-        "Une erreur de pesée sans conséquence",
-        "Une dérive de la balance, sans lien avec la préparation"
+        "Une contamination probable à la préparation, à investiguer avant de libérer le lot",
+        "Un résultat acceptable pour un blanc, placé après un échantillon aussi riche",
+        "Une simple erreur de pesée de l'analyste, sans conséquence sur le reste de la série",
+        "Une dérive de l'appareil de mesure, sans lien avec la préparation des échantillons"
       ],
       "answer": 0,
       "explain": "Un blanc devrait rester proche de la limite de détection ; 45 fois plus indique un report de l'échantillon riche précédent ou une contamination d'un autre type.",
@@ -456,10 +456,10 @@
       "level": 2,
       "q": "Sur la carte de contrôle d'un étalon (moyenne 2,00 g/t, écart-type 0,05 g/t), un résultat tombe à 2,18 g/t. Quelle décision est correcte ?",
       "choices": [
-        "Accepter, car il est proche de 2,00",
+        "Accepter le lot, car 2,18 g/t reste proche de la valeur certifiée de 2,00",
         "Hors limites (plus de 3 σ) : rejeter le lot, chercher la cause et réanalyser",
-        "Corriger tous les résultats du lot de − 0,18 g/t",
-        "Garder le lot et ne rien dire pour ne pas retarder le client"
+        "Corriger tous les résultats du lot en retranchant 0,18 g/t à chacun",
+        "Accepter le lot et ne réanalyser que l'étalon pour confirmer son résultat"
       ],
       "answer": 1,
       "explain": "2,18 − 2,00 = 0,18, soit 3,6 σ : au-delà de la limite de rejet. On n'applique pas de correction arbitraire, on enquête et on réanalyse.",
@@ -472,10 +472,10 @@
       "level": 2,
       "q": "Pourquoi les étalons et les blancs sont-ils insérés sous des numéros ordinaires ?",
       "choices": [
-        "Pour économiser des étiquettes",
-        "Pour ne pas avoir à les facturer",
-        "Pour qu'ils échappent au contrôle des résultats",
-        "Pour que l'analyste ne les reconnaisse pas et ne les traite pas différemment"
+        "Pour économiser des étiquettes et simplifier le plan de numérotation du lot",
+        "Pour ne pas avoir à les facturer au client avec les autres échantillons du lot",
+        "Pour qu'ils échappent au contrôle statistique des résultats de la série",
+        "Pour que l'analyste ne les reconnaisse pas et les traite comme les autres"
       ],
       "answer": 3,
       "explain": "Un contrôle identifiable pourrait être analysé avec plus de soin : les résultats ne refléteraient plus la routine du laboratoire.",
@@ -488,9 +488,9 @@
       "level": 2,
       "q": "Deux résultats de doublons sont 2,00 g/t et 2,20 g/t. Quel est leur écart relatif (différence / moyenne) ?",
       "choices": [
-        "10 %",
-        "0,2 %",
-        "20 %",
+        "Environ 4,8 % (0,2 / 4,2, somme des deux résultats)",
+        "Environ 20 % (0,2 / 1,0)",
+        "Environ 0,2 % (écart brut en g/t)",
         "Environ 9,5 %"
       ],
       "answer": 3,
@@ -504,10 +504,10 @@
       "level": 3,
       "q": "Quatre étalons consécutifs donnent chacun un résultat entre + 1 σ et + 2 σ, donc dans les limites de ± 3 σ. Quelle est la conclusion ?",
       "choices": [
-        "Tout va bien, aucun point ne dépasse 3 σ",
-        "Une dérive ou un biais systématique est probable : on enquête même sans dépassement de limite",
-        "Il faut diviser la série par deux",
-        "Il faut retirer les étalons de la carte"
+        "Tout va bien, puisqu'aucun point ne dépasse la limite de contrôle de ± 3 σ",
+        "Une dérive ou un biais systématique est probable : on enquête sans attendre 3 σ",
+        "Il faut diviser la série en deux lots et réanalyser la première moitié",
+        "Il faut élargir les limites de contrôle à ± 4 σ pour intégrer ces résultats"
       ],
       "answer": 1,
       "explain": "Une suite de points du même côté de la moyenne est statistiquement improbable par hasard : elle révèle une dérive (étalonnage, réactif, appareil).",
@@ -520,10 +520,10 @@
       "level": 3,
       "q": "Quel contrôle détecte spécifiquement la contamination apportée par le concassage et le pulvérisage ?",
       "choices": [
-        "Un étalon certifié analysé deux fois",
-        "Un doublon de pulpe",
-        "Un blanc de préparation, c'est-à-dire un matériau stérile passé par toute la chaîne de préparation",
-        "Un duplicata de dosage de la même solution"
+        "Un étalon certifié inséré avant le concassage et analysé deux fois de suite",
+        "Un doublon de pulpe prélevé après le pulvérisage et dosé deux fois séparément",
+        "Un blanc de préparation, matériau stérile passé par toute la chaîne de préparation",
+        "Un duplicata de dosage de la même solution, repassé sur l'instrument de mesure"
       ],
       "answer": 2,
       "explain": "Le blanc de préparation traverse les mêmes machines que les échantillons : s'il est contaminé, la contamination vient de la préparation et non seulement de l'analyse.",
@@ -552,10 +552,10 @@
       "level": 1,
       "q": "Le pictogramme SGH « tête de mort sur deux tibias » signale :",
       "choices": [
-        "Une toxicité aiguë (produit mortel ou très toxique)",
-        "Un produit seulement irritant",
-        "Un danger pour l'environnement",
-        "Un produit inflammable"
+        "Une toxicité aiguë : produit mortel ou très toxique si inhalé ou avalé",
+        "Un produit simplement irritant pour la peau et les yeux",
+        "Un danger pour le milieu aquatique et l'environnement",
+        "Un produit inflammable au contact d'une source de chaleur"
       ],
       "answer": 0,
       "explain": "La tête de mort signale une toxicité aiguë potentiellement mortelle ; le point d'exclamation concerne des effets moins graves.",
@@ -570,10 +570,10 @@
       "img": "svg/ppe-icons.svg",
       "imgAlt": "Pictogrammes d'équipements de protection individuelle : casque, lunettes, gants, chaussures.",
       "choices": [
-        "Casquette, short et sandales",
-        "Seulement des gants jetables, quelle que soit la manipulation",
+        "Blouse, gants jetables et chaussures de ville, sans protection oculaire",
+        "Lunettes de sécurité et gants, sans blouse si la manipulation est courte",
         "Blouse, lunettes ou écran, gants adaptés au produit et chaussures fermées",
-        "Lunettes de soleil et blouse ouverte"
+        "Blouse ouverte, gants en latex et lunettes de soleil pour les éclaboussures"
       ],
       "answer": 2,
       "explain": "La protection de base associe corps, yeux, mains et pieds ; les gants sont choisis selon le produit manipulé.",
@@ -602,10 +602,10 @@
       "level": 2,
       "q": "Vous devez diluer un acide concentré. Comment procédez-vous ?",
       "choices": [
-        "Je verse l'eau d'un seul coup dans l'acide",
+        "Je verse rapidement l'eau dans l'acide, sous hotte, avec mes EPI",
         "Je verse lentement l'acide dans l'eau, sous hotte, avec mes EPI",
-        "Je mélange les deux dans un flacon fermé et j'agite",
-        "Je verse l'acide dans un récipient sec puis j'ajoute l'eau vite"
+        "Je mélange les deux dans un flacon fermé que j'agite sous hotte",
+        "Je verse l'acide dans un bécher sec puis j'ajoute l'eau d'un coup"
       ],
       "answer": 1,
       "explain": "La dilution d'un acide fort dégage de la chaleur : en versant l'acide dans l'eau, on évite les projections.",
@@ -618,10 +618,10 @@
       "level": 2,
       "q": "Quel stockage est correct ?",
       "choices": [
-        "Les acides et les bases sur la même étagère",
+        "Les acides et les bases rangés sur la même étagère basse",
         "Les comburants (acide nitrique) séparés des solvants inflammables",
-        "Les solvants près du four à moufle",
-        "Tous les produits classés par ordre alphabétique, sans tenir compte des dangers"
+        "Les solvants inflammables stockés près du four à moufle",
+        "Les produits rangés par ordre alphabétique, quel que soit leur danger"
       ],
       "answer": 1,
       "explain": "On sépare les produits incompatibles : un comburant au contact de matières inflammables augmente le risque d'incendie.",
@@ -636,10 +636,10 @@
       "img": "svg/ppe-icons.svg",
       "imgAlt": "Pictogrammes d'EPI dont masque respiratoire, lunettes, casque, protection auditive.",
       "choices": [
-        "Ouvrir les fenêtres de la salle",
-        "Travailler plus vite pour réduire la durée d'exposition",
-        "Humecter un foulard et le porter sur la bouche",
-        "Capter et aspirer les poussières à la source, complété par un masque adapté"
+        "Ouvrir les fenêtres de la salle pour renouveler l'air ambiant en continu",
+        "Travailler plus vite pour réduire la durée d'exposition au pulvérisateur",
+        "Humecter un foulard et le porter sur la bouche pendant le pulvérisage",
+        "Capter les poussières à la source par aspiration, avec un masque adapté"
       ],
       "answer": 3,
       "explain": "La prévention commence par la réduction à la source (captage), puis par la protection individuelle. Les silices cristallines provoquent la silicose.",
@@ -655,9 +655,9 @@
       "imgAlt": "Pictogrammes d'EPI dont gants, écran et protections.",
       "choices": [
         "Pinces, gants et tablier résistant à la chaleur, écran facial",
-        "Gants jetables en latex",
-        "Mains protégées par un chiffon humide",
-        "Aucun équipement si on est rapide"
+        "Gants jetables en latex et blouse en coton pour manipuler le creuset",
+        "Gants de laboratoire en nitrile et lunettes de protection standard",
+        "Pinces et gants en nitrile, sans tablier ni écran facial"
       ],
       "answer": 0,
       "explain": "À ces températures, il faut des EPI thermiques et des pinces ; un chiffon humide peut produire de la vapeur brûlante.",
@@ -670,10 +670,10 @@
       "level": 3,
       "q": "Un flacon de 2,5 L d'acide chlorhydrique concentré se brise au sol. Quelle est la bonne séquence ?",
       "choices": [
-        "Éponger avec un chiffon et le jeter à la poubelle ordinaire",
-        "Rincer à grande eau dans l'évier sans autre précaution",
-        "Alerter, mettre les EPI adaptés, contenir et neutraliser ou absorber avec le kit selon la FDS, éliminer comme déchet chimique",
-        "Quitter la pièce en laissant faire l'évaporation"
+        "Éponger rapidement avec des serviettes en papier et les jeter à la poubelle ordinaire du labo",
+        "Verser de l'eau en grande quantité sur la flaque et rincer à l'évier le plus proche",
+        "Alerter, s'équiper, contenir et absorber avec le kit selon la FDS, éliminer en déchet chimique",
+        "Aérer la pièce, éponger avec un chiffon sec puis laver le sol à l'eau de Javel"
       ],
       "answer": 2,
       "explain": "On protège d'abord les personnes, puis on traite le déversement avec le matériel prévu et on élimine les déchets par la filière chimique.",
@@ -686,10 +686,10 @@
       "level": 3,
       "q": "En cas de projection d'acide fluorhydrique (HF) sur la peau, quel traitement spécifique est recommandé après rinçage ?",
       "choices": [
-        "Application de vinaigre",
-        "Frottement à sec avec une serviette",
-        "Application de gel de gluconate de calcium et consultation médicale urgente",
-        "Attendre de voir si une douleur apparaît"
+        "Application de bicarbonate de sodium en pâte sur la zone touchée",
+        "Frottement à sec avec une serviette puis lavage au savon doux",
+        "Application de gel de gluconate de calcium, avec avis médical urgent",
+        "Surveillance de la zone pendant vingt-quatre heures avec crème apaisante"
       ],
       "answer": 2,
       "explain": "L'ion fluorure du HF pénètre la peau et capte le calcium des tissus : le gluconate de calcium neutralise l'ion fluorure ; même sans douleur immédiate, l'avis médical est indispensable.",
@@ -703,9 +703,9 @@
       "q": "1 ppm en masse équivaut à :",
       "choices": [
         "1 g/t, soit 1 mg/kg",
-        "1 kg/t",
-        "10 g/t",
-        "0,1 g/t"
+        "1 kg/t, soit 1 g/kg",
+        "10 g/t, soit 10 mg/kg",
+        "0,1 g/t, soit 0,1 mg/kg"
       ],
       "answer": 0,
       "explain": "1 ppm = 1 millionième de la masse = 1 g par tonne = 1 mg par kilogramme.",
@@ -720,10 +720,10 @@
       "img": "photo/gold-bars-lab.jpg",
       "imgAlt": "Photo d'un laboratoire d'analyses de minerai : échantillons, balances et matériel de préparation.",
       "choices": [
-        "Pour réduire le nombre de contrôles qualité",
-        "Pour retracer l'échantillon du prélèvement jusqu'au résultat et éviter les confusions",
-        "Pour faciliter l'oubli des échantillons rejetés",
-        "Pour pouvoir analyser deux échantillons ensemble"
+        "Pour réduire le nombre de contrôles qualité à réaliser sur chaque série d'analyses",
+        "Pour retracer l'échantillon du prélèvement au résultat et éviter les confusions",
+        "Pour pouvoir regrouper deux échantillons voisins dans la même prise d'essai",
+        "Pour simplifier l'archivage en supprimant les échantillons rejetés du bordereau"
       ],
       "answer": 1,
       "explain": "La traçabilité garantit que le résultat appartient bien à l'échantillon prélevé et rend le résultat défendable en cas de contestation.",
@@ -802,10 +802,10 @@
       "level": 3,
       "q": "Un minerai à 12 % d'humidité titre 36,0 % Mn sur produit humide. Quelle est sa teneur sur produit sec ?",
       "choices": [
-        "Environ 40,9 %",
-        "Environ 31,7 %",
-        "Environ 36,0 %",
-        "Environ 48,0 %"
+        "Environ 40,9 % (36 / 0,88)",
+        "Environ 31,7 % (36 × 0,88)",
+        "Environ 40,3 % (36 × 1,12)",
+        "Environ 36,0 % (valeur inchangée)"
       ],
       "answer": 0,
       "explain": "Sur 100 g humides, il y a 88 g secs et 36 g de Mn : 36 / 88 = 40,9 %.",
@@ -819,9 +819,9 @@
       "q": "Un lot de 30 t titre 40 % Mn et un autre de 20 t titre 46 % Mn. Quelle est la teneur moyenne pondérée du mélange ?",
       "choices": [
         "42,4 %",
-        "43 %",
+        "43 % (moyenne simple)",
         "46 %",
-        "40,0 %"
+        "40,0 % (teneur du plus gros lot)"
       ],
       "answer": 0,
       "explain": "(30 × 40 + 20 × 46) / 50 = (1 200 + 920) / 50 = 42,4 %. La moyenne simple (43 %) ignore les tonnages.",
@@ -836,10 +836,10 @@
       "img": "svg/mineral-processing-flow.svg",
       "imgAlt": "Schéma d'un circuit de traitement avec alimentation (2,0 g/t), concentré (20 g/t) et rejets (0,2 g/t).",
       "choices": [
-        "Environ 90 %",
-        "Environ 81,8 %",
+        "Environ 90 % (1 − t/f)",
+        "Environ 81,8 % (formule inversée)",
         "Environ 90,9 %",
-        "Environ 99 %"
+        "Environ 99 % (1 − t/c)"
       ],
       "answer": 2,
       "explain": "R = 20 × (2,0 − 0,2) / [2,0 × (20 − 0,2)] = 36 / 39,6 ≈ 0,909, soit 90,9 %.",

@@ -81,12 +81,12 @@
       "img": "photo/oil-rig-offshore.jpg",
       "imgAlt": "Plateforme pétrolière offshore en mer",
       "choices": [
-        "Représentant de l'exploitant et autorité ultime à bord, responsable de la sécurité des personnes et de l'installation",
-        "Chef de la maintenance, responsable uniquement de l'état des équipements",
-        "Coordinateur administratif sans pouvoir de décision sur les sous-traitants",
-        "Responsable de la production, la sécurité relevant exclusivement du service HSE à terre"
+        "Chef de la maintenance, responsable de l'état des équipements et des arrêts planifiés",
+        "Coordinateur administratif, sans pouvoir de décision sur les sous-traitants à bord",
+        "Responsable de la production, la sécurité relevant du service HSE à terre",
+        "Représentant de l'exploitant, autorité ultime à bord pour la sécurité des personnes"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "L'OIM porte l'autorité ultime à bord, sécurité d'abord, y compris sur les contracteurs. Les autres réponses réduisent son rôle à un volet ou le privent de pouvoir de décision.",
       "seconds": 45,
       "status": "draft"
@@ -97,10 +97,10 @@
       "level": 1,
       "q": "Qui peut déclencher l'arrêt d'un travail jugé dangereux (Stop Work Authority) ?",
       "choices": [
-        "Uniquement l'OIM",
-        "Toute personne à bord, sans crainte de sanction",
-        "Uniquement le responsable HSE de l'installation",
-        "Un superviseur, après accord écrit du siège"
+        "L'OIM seul, après avoir consulté le responsable HSE de l'installation",
+        "Toute personne à bord, sans risque de sanction ni accord préalable",
+        "Le responsable HSE de l'installation, après validation de l'OIM",
+        "Un superviseur, après accord écrit du siège et du chef de projet"
       ],
       "answer": 1,
       "explain": "Le droit d'arrêt est universel : c'est ce qui donne sa valeur à la culture sécurité. Le subordonner à une validation hiérarchique le vide de son sens.",
@@ -113,12 +113,12 @@
       "level": 2,
       "q": "Quel est le but d'un document d'interface (bridging document) avec un contracteur ?",
       "choices": [
-        "Fixer le tarif journalier du contracteur",
-        "Remplacer le permis de travail pour les tâches de routine du contracteur",
-        "Articuler le système de management HSE de l'exploitant avec celui du contracteur et fixer qui fait quoi",
-        "Décharger l'exploitant de toute responsabilité sur les opérations du contracteur"
+        "Articuler le système HSE de l'exploitant avec celui du contracteur et fixer les rôles",
+        "Fixer le tarif journalier du contracteur et les pénalités applicables en cas de retard",
+        "Remplacer le permis de travail pour les tâches de routine confiées au contracteur",
+        "Décharger l'exploitant de la responsabilité des opérations menées par le contracteur"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "L'interface évite les zones grises entre deux systèmes de management. Elle ne remplace pas les permis ni ne transfère la responsabilité de l'exploitant sur l'installation.",
       "seconds": 60,
       "status": "draft"
@@ -129,12 +129,12 @@
       "level": 2,
       "q": "L'OIM quitte l'installation en repos. Que doit-on avoir en place pour la suppléance ?",
       "choices": [
-        "Le contracteur le plus ancien, par usage",
-        "Personne : les décisions attendent son retour, sauf urgence",
-        "Le chef de quart production par défaut, sans passation écrite",
-        "Un suppléant désigné formellement, avec passation documentée de l'état de l'installation, des permis et des risques en cours"
+        "Le contracteur le plus ancien à bord, par usage, sans désignation formelle préalable",
+        "Le chef de quart production par défaut, sans passation écrite de l'état de l'installation",
+        "Un suppléant désigné formellement, avec passation écrite des permis et risques en cours",
+        "Personne : les décisions attendent son retour, sauf en cas d'urgence avérée à bord"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "L'autorité ne se délègue pas par habitude : nomination formelle et passation écrite. Le vide de commandement ou l'usage tacite créent des zones d'incertitude en cas d'urgence.",
       "seconds": 50,
       "status": "draft"
@@ -147,12 +147,12 @@
       "img": "photo/control-room.jpg",
       "imgAlt": "Salle de contrôle d'une installation de production",
       "choices": [
-        "Inhiber le détecteur jusqu'à la cargaison, puis réparer après l'enlèvement",
-        "Refuser l'inhibition de routine, faire rechercher la cause, n'accepter un override que par la procédure formelle avec mesures compensatoires, et informer le siège que la sécurité prime",
-        "Laisser le superviseur trancher : il connaît le procédé et assume le quart",
-        "Arrêter toute l'installation sans analyse ni information du siège"
+        "Refuser l'inhibition de routine, faire chercher la cause, n'accepter un override que formel avec mesures compensatoires",
+        "Inhiber le détecteur jusqu'à l'enlèvement de cargaison, puis le réparer sans autre formalité, en prévenant le siège",
+        "Laisser le superviseur trancher : il connaît le procédé, assume le quart et la décision finale à bord",
+        "Arrêter toute l'installation sans analyse préalable et sans prévenir le siège avant le redémarrage"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "Inhiber pour tenir un planning supprime une barrière sans rien comprendre. La bonne réponse traite la cause, encadre tout override et informe. L'arrêt total sans analyse est réactif et non justifié ; déléguer l'arbitrage au superviseur renonce à l'autorité.",
       "seconds": 100,
       "status": "draft"
@@ -163,12 +163,12 @@
       "level": 2,
       "q": "Après un incident significatif, quelle est la bonne conduite de l'OIM ?",
       "choices": [
-        "Attendre les conclusions du siège avant de notifier quiconque",
-        "Faire nettoyer rapidement la zone pour reprendre le travail",
-        "Notifier selon la procédure et la réglementation en vigueur, sécuriser les lieux et les preuves, lancer une enquête centrée sur les causes systémiques",
-        "Identifier le coupable immédiatement et le renvoyer à terre"
+        "Attendre les conclusions complètes du siège avant de notifier quiconque à terre ou en mer",
+        "Notifier selon la procédure, sécuriser les lieux, enquêter sur les causes systémiques",
+        "Faire nettoyer rapidement la zone pour reprendre le travail avant la fin du quart en cours",
+        "Identifier le coupable immédiatement et le renvoyer à terre par le prochain vol disponible"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Notification dans les délais exigés et conservation des preuves sont indispensables. Chercher d'abord un coupable décourage la remontée d'informations et masque les causes réelles.",
       "seconds": 60,
       "status": "draft"
@@ -179,12 +179,12 @@
       "level": 3,
       "q": "Sur une unité flottante, où doivent être définies les limites d'autorité entre l'OIM et le commandant du navire ?",
       "choices": [
-        "Elles se règlent entre eux au moment de l'incident, selon l'ancienneté",
-        "Dans le contrat de l'équipe de restauration",
-        "Elles n'ont pas besoin d'être écrites car le bon sens suffit",
-        "Dans la documentation formalisée de l'unité (organisation d'urgence, manuel d'exploitation), connue de tous avant l'incident"
+        "Elles se règlent entre eux au moment de l'incident, selon l'ancienneté de chacun",
+        "Dans le contrat de l'affréteur du navire de veille, au chapitre des responsabilités",
+        "Dans la documentation formalisée de l'unité, connue de tous avant tout incident",
+        "Elles n'ont pas besoin d'être écrites, car le bon sens suffit en situation d'urgence"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "Une répartition d'autorité improvisée en crise ralentit les décisions. La documentation de l'unité doit trancher à l'avance, l'équipage doit la connaître et l'exercer.",
       "seconds": 60,
       "status": "draft"
@@ -195,12 +195,12 @@
       "level": 1,
       "q": "Pourquoi tient-on un journal de bord (logbook) à jour sur l'installation ?",
       "choices": [
-        "Pour tracer les événements significatifs, décisions et ordres, et permettre la reconstitution et la passation",
-        "Pour occuper le radio-opérateur",
-        "Pour calculer les primes de l'équipage",
-        "Pour remplacer les rapports d'incident officiels"
+        "Remplacer les rapports d'incident officiels destinés aux autorités compétentes et au siège",
+        "Servir de base au calcul des primes de déplacement et des heures de l'équipage",
+        "Archiver les relevés de production et de météo de chaque quart de l'installation",
+        "Tracer les événements, décisions et ordres pour permettre reconstitution et passation"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "Le journal est la mémoire de l'installation : passation, enquête, audit. Il ne remplace pas les rapports officiels.",
       "seconds": 40,
       "status": "draft"
@@ -213,12 +213,12 @@
       "img": "svg/iso-safety-signs.svg",
       "imgAlt": "Panneaux ISO 7010 : interdiction, avertissement, obligation, sauvetage",
       "choices": [
-        "Une interdiction de fumer",
-        "Un danger électrique",
-        "Un point de rassemblement ou un cheminement de secours",
-        "L'obligation de porter un casque"
+        "Une obligation de porter un casque dans la zone signalée",
+        "Un danger électrique à proximité de l'équipement signalé",
+        "Une interdiction de fumer dans l'ensemble de la zone",
+        "Un point de rassemblement ou un cheminement de secours"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Dans la logique ISO 7010, le vert signale sauvetage et secours. Rouge pour interdiction, jaune pour avertissement, bleu pour obligation.",
       "seconds": 45,
       "status": "draft"
@@ -229,12 +229,12 @@
       "level": 1,
       "q": "Vous entendez l'alarme générale. Quel est le bon réflexe ?",
       "choices": [
-        "Terminer la tâche en cours même longue, puis rejoindre le rassemblement",
-        "Aller chercher ses effets personnels dans la cabine avant de partir",
-        "Attendre sur place les instructions du superviseur",
-        "Mettre son poste en sécurité si c'est sans risque, rejoindre le point de rassemblement par le chemin sûr, sans retourner chercher ses effets"
+        "Terminer la tâche en cours, même longue, puis rejoindre le point de rassemblement",
+        "Mettre son poste en sécurité si possible, rejoindre le rassemblement par le chemin sûr",
+        "Aller chercher ses effets personnels à la cabine avant de rejoindre le rassemblement",
+        "Attendre sur place les instructions du superviseur avant de bouger"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "La rapidité et la discipline de rassemblement sauvent des vies. Retourner en cabine ou finir une tâche expose la personne et désorganise le comptage.",
       "seconds": 45,
       "status": "draft"
@@ -245,12 +245,12 @@
       "level": 3,
       "q": "Au rassemblement, deux personnes manquent par rapport au POB. Quelle est l'action prioritaire ?",
       "choices": [
-        "Lancer une recherche organisée par une équipe désignée, protégée, à partir des dernières positions connues (badges, permis, planning)",
-        "Ignorer l'écart et poursuivre l'évacuation, le POB étant approximatif",
-        "Envoyer tout le personnel rassemblé chercher",
-        "Attendre trente minutes que les manquants se présentent"
+        "Ignorer l'écart et poursuivre l'évacuation, le POB étant toujours approximatif en situation de crise",
+        "Envoyer tout le personnel rassemblé chercher les manquants dans leurs cabines et les locaux",
+        "Lancer une recherche organisée par une équipe désignée, à partir des dernières positions",
+        "Attendre trente minutes que les manquants se présentent d'eux-mêmes au point de rassemblement"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "Le POB est fait pour cela : on cherche vite, avec une équipe protégée et ciblée. Disperser tout le monde crée de nouveaux disparus et attendre fait perdre le temps critique.",
       "seconds": 75,
       "status": "draft"
@@ -263,12 +263,12 @@
       "img": "photo/oil-rig-offshore.jpg",
       "imgAlt": "Installation de forage offshore",
       "choices": [
-        "Terminer le transfert pour ne pas retenir le navire, le foreur gère le puits",
-        "Faire déposer le panier en sécurité, suspendre levages et transferts, faire confirmer la fermeture du puits par le foreur, déclencher le niveau d'alerte adapté et préparer le rassemblement",
-        "Déclencher immédiatement l'abandon complet de l'installation sans confirmer l'état du puits",
-        "Attendre la stabilisation de la pression avant toute décision"
+        "Déposer le panier en sécurité, suspendre les levages, faire confirmer la fermeture du puits, déclencher l'alerte adaptée",
+        "Terminer le transfert pour ne pas retenir le navire de support, le foreur gérant le puits seul",
+        "Déclencher l'abandon complet de l'installation sans attendre la confirmation de l'état du puits",
+        "Attendre la stabilisation de la pression au casing avant toute décision sur le panier en l'air"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "La charge humaine suspendue est un risque immédiat qu'on supprime vite, puis on concentre l'effort sur le puits et on prépare le niveau d'alerte. Poursuivre le transfert dilue l'attention ; l'abandon prématuré ou l'attente sont des réponses non proportionnées.",
       "seconds": 100,
       "status": "draft"
@@ -279,12 +279,12 @@
       "level": 3,
       "q": "Alerte H2S en zone process alors qu'un permis SIMOPS est actif et qu'un hélicoptère est à dix minutes, avec une météo qui se dégrade et peu de marge de carburant. Que décide l'OIM ?",
       "choices": [
-        "Laisser atterrir pour ne pas épuiser le carburant, puis traiter l'H2S",
-        "Ne rien communiquer à l'hélicoptère : l'H2S relève de l'équipe d'intervention",
-        "Demander à l'hélicoptère de survoler la zone du rejet pour évaluer",
-        "Déclencher l'alerte H2S, empêcher l'atterrissage (hélipont non disponible), faire dérouter ou mettre en attente l'hélicoptère selon carburant et météo, et suspendre les permis SIMOPS"
+        "Laisser atterrir l'hélicoptère pour ne pas épuiser son carburant, puis traiter l'alerte H2S",
+        "Déclencher l'alerte H2S, interdire l'atterrissage, dérouter ou mettre en attente l'hélicoptère, suspendre les permis SIMOPS",
+        "Ne rien communiquer à l'hélicoptère : l'H2S relève de la seule équipe d'intervention de l'installation",
+        "Demander à l'hélicoptère de survoler la zone du rejet afin d'évaluer visuellement le nuage de gaz"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "Un rejet toxique près d'un hélipont interdit l'atterrissage ; il faut gérer la contrainte carburant en lien avec le pilote (déroutement). Survoler le rejet expose l'équipage ; ignorer l'hélicoptère ou le laisser atterrir mélange les risques.",
       "seconds": 110,
       "status": "draft"
@@ -298,9 +298,9 @@
       "imgAlt": "Triangle du feu : combustible, comburant, énergie d'activation",
       "choices": [
         "Combustible, comburant, énergie d'activation",
-        "Combustible, eau, fumée",
-        "Oxygène, gaz inerte, chaleur latente",
-        "Chaleur, vent, humidité"
+        "Combustible, vapeur d'eau, fumée de combustion",
+        "Oxygène, gaz inerte, chaleur latente d'évaporation",
+        "Chaleur, vent, humidité relative de l'air"
       ],
       "answer": 0,
       "explain": "Le feu exige combustible, comburant (oxygène) et énergie d'activation. En retirer un, par isolement, étouffement ou refroidissement, éteint le feu.",
@@ -315,12 +315,12 @@
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
-        "Éteindre immédiatement à la poudre pour limiter les dégâts, avant tout isolement",
-        "Confirmer ESD, isolement et dépressurisation selon le plan, rassembler le personnel, engager l'équipe avec refroidissement des équipements voisins, et ne pas éteindre un feu de gaz alimenté avant isolement de la source",
-        "Évacuer sans lancer aucun isolement ni refroidissement",
-        "Laisser brûler jusqu'à épuisement du gaz sans engager l'équipe, en gardant l'ESD pour plus tard"
+        "Éteindre immédiatement à la poudre pour limiter les dégâts, l'isolement des sources pouvant attendre l'extinction",
+        "Évacuer le personnel sans lancer aucun isolement ni refroidissement des équipements voisins, pour gagner du temps",
+        "Confirmer ESD, isolement et dépressurisation, rassembler le personnel, refroidir les équipements voisins",
+        "Laisser brûler jusqu'à épuisement du gaz sans engager l'équipe, en gardant l'ESD en réserve pour plus tard"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Éteindre un feu de gaz alimenté sans isoler la fuite peut créer un nuage inflammable avec réallumage explosif. L'isolement et le refroidissement priment. Évacuer sans isoler ou différer l'ESD laisse l'incident s'aggraver.",
       "seconds": 110,
       "status": "draft"
@@ -333,12 +333,12 @@
       "img": "photo/fpso.jpg",
       "imgAlt": "Unité flottante de production en mer",
       "choices": [
-        "Rassembler tout le personnel et attendre le décompte complet avant d'engager toute action de récupération",
-        "Envoyer un volontaire plonger pour le récupérer immédiatement",
-        "Déclencher l'alarme homme à la mer, lancer une bouée, désigner un observateur qui garde la victime en vue en continu, repérer la position, engager l'embarcation de secours et le navire de veille",
-        "Attendre le lever du jour pour de meilleures conditions de recherche"
+        "Rassembler tout le personnel et attendre le décompte complet avant d'engager la moindre action de récupération en mer",
+        "Envoyer un volontaire plonger pour récupérer immédiatement la victime, sans attendre l'embarcation",
+        "Attendre le lever du jour pour de meilleures conditions de recherche, en gardant l'alarme en veille",
+        "Déclencher l'alarme, lancer une bouée, désigner un observateur sur la victime, engager l'embarcation de secours"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Dans l'eau, le temps est critique : alarme, bouée, contact visuel permanent, moyens de récupération. Le comptage se fait en parallèle, pas avant. Plonger sans moyen ni équipement crée une deuxième victime.",
       "seconds": 100,
       "status": "draft"
@@ -349,12 +349,12 @@
       "level": 2,
       "q": "Quel est le principal objectif d'un exercice d'évacuation ou d'urgence ?",
       "choices": [
+        "Battre le meilleur chrono de rassemblement de la rotation précédente",
+        "Satisfaire formellement l'indicateur de conformité du programme d'exercices",
         "Tester l'organisation, révéler les failles et lancer des actions correctives",
-        "Battre le meilleur chrono de rassemblement",
-        "Satisfaire formellement un indicateur de conformité",
-        "Évaluer individuellement la discipline pour sanctionner les retardataires"
+        "Évaluer la discipline individuelle pour sanctionner les retardataires"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "Un exercice est un outil d'apprentissage : retour d'expérience et actions suivies. Les chronos et les sanctions déforment l'exercice et l'engagement des équipes.",
       "seconds": 60,
       "status": "draft"
@@ -365,10 +365,10 @@
       "level": 2,
       "q": "Pourquoi le nez ne suffit-il pas à détecter l'H2S ?",
       "choices": [
-        "Parce que l'H2S n'a jamais d'odeur",
-        "À forte concentration, il paralyse l'odorat : l'absence d'odeur ne prouve rien",
-        "Parce que l'odeur d'œuf pourri n'apparaît qu'à faible concentration",
-        "Parce que l'H2S est plus léger que l'air et monte hors de portée"
+        "Parce que l'H2S est inodore et ne se détecte que par instrument",
+        "À forte concentration il paralyse l'odorat : l'absence d'odeur ne prouve rien",
+        "Parce que l'odeur d'œuf pourri est trop faible pour être perçue sous 10 ppm",
+        "Parce que l'H2S, plus léger que l'air, monte hors de portée du nez"
       ],
       "answer": 1,
       "explain": "L'H2S est détectable à l'odeur à faible concentration, mais l'odorat se paralyse à forte concentration. Il est plus lourd que l'air et s'accumule dans les points bas : on se fie aux détecteurs et aux appareils respiratoires.",
@@ -381,12 +381,12 @@
       "level": 1,
       "q": "Que fait un permis de travail ?",
       "choices": [
-        "Il remplace l'analyse de risque de la tâche",
-        "Il donne à son titulaire un accès illimité à la zone",
-        "Il autorise une tâche à risque, en un lieu et pour une durée donnés, après analyse des risques et définition des mesures",
-        "Il garantit l'absence de risque résiduel"
+        "Il autorise une tâche à risque, en un lieu et pour une durée donnés, après analyse",
+        "Il remplace l'analyse de risque de la tâche pour les travaux répétitifs et de routine",
+        "Il donne à son titulaire un accès permanent à la zone pendant toute la rotation",
+        "Il garantit l'absence de tout risque résiduel pendant l'exécution du travail"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Le permis encadre une tâche précise et limitée dans le temps, à partir d'une analyse des risques. Il ne supprime ni ne remplace cette analyse.",
       "seconds": 45,
       "status": "draft"
@@ -399,10 +399,10 @@
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
-        "Poursuivre : le permis a été signé et reste valable jusqu'à la fin du quart",
-        "Poursuivre en doublant la surveillance incendie",
-        "Demander à l'exécutant de juger par lui-même de la situation",
-        "Suspendre le travail à chaud, mettre la zone en sécurité et ne le reprendre qu'après revalidation du permis"
+        "Poursuivre : le permis a été signé le matin et reste valable jusqu'à la fin du quart",
+        "Poursuivre en doublant la surveillance incendie jusqu'à la fin de la tâche en cours",
+        "Demander à l'exécutant de juger lui-même s'il peut continuer en sécurité sur son poste",
+        "Suspendre le travail à chaud, sécuriser la zone, reprendre après revalidation"
       ],
       "answer": 3,
       "explain": "Un permis n'est valable que si les conditions restent celles évaluées. Une alarme gaz invalide l'hypothèse de départ.",
@@ -415,12 +415,12 @@
       "level": 2,
       "q": "Que désigne-t-on par SIMOPS ?",
       "choices": [
-        "Des opérations simples sans permis",
-        "Des opérations simultanées dont l'association crée un risque que chacune seule ne crée pas",
-        "Des opérations réalisées uniquement la nuit",
-        "Des opérations sous-traitées à un seul contracteur"
+        "Des opérations simples réalisées sans permis, avec un simple accord verbal",
+        "Des opérations réalisées la nuit, lorsque le personnel est réduit",
+        "Des opérations simultanées dont l'association crée un risque nouveau",
+        "Des opérations sous-traitées à un seul contracteur, sous un permis unique"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Le risque des SIMOPS vient de l'interaction (ex. travaux à chaud et levage au-dessus d'un module hydrocarbures). Elles se gèrent par matrice et coordination.",
       "seconds": 60,
       "status": "draft"
@@ -433,12 +433,12 @@
       "img": "photo/crane-lifting.jpg",
       "imgAlt": "Grue effectuant une opération de levage",
       "choices": [
-        "Autoriser oralement, la tâche étant courte",
-        "Laisser les deux superviseurs s'arranger entre eux sur le terrain",
-        "Appliquer la matrice : re-séquencer une des deux activités, ou n'accepter une dérogation que formelle, évaluée et assortie de mesures compensatoires",
-        "Interdire à tout jamais les levages sur l'installation"
+        "Autoriser oralement le levage, la tâche étant courte et le retard du planning étant avéré à terre",
+        "Appliquer la matrice : re-séquencer une activité, ou n'accepter qu'une dérogation formelle, évaluée et compensée",
+        "Laisser les deux superviseurs s'arranger entre eux sur le terrain pour coordonner leurs travaux",
+        "Interdire définitivement tous les levages sur l'installation, quelle que soit la zone concernée"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "La matrice existe pour trancher ce type de conflit. Toute dérogation doit être écrite, évaluée et validée. L'arrangement oral ou l'interdiction totale ne sont pas des décisions de maîtrise du risque.",
       "seconds": 100,
       "status": "draft"
@@ -451,10 +451,10 @@
       "img": "svg/lockout-tagout.svg",
       "imgAlt": "Consignation : cadenas personnel et étiquette sur un organe de coupure",
       "choices": [
-        "Le superviseur, dès que le travail semble terminé",
-        "Le premier arrivé sur la zone à la reprise",
-        "Le responsable de quart, avec la clé de réserve",
-        "Celui qui l'a posé"
+        "Le superviseur du chantier, dès que le travail lui semble terminé",
+        "Le premier arrivé sur la zone à la reprise du travail suivant",
+        "Le responsable de quart, avec la clé de réserve du coffret",
+        "Son propriétaire, celui qui l'a posé sur le point d'isolement"
       ],
       "answer": 3,
       "explain": "Le cadenas personnel protège son porteur : lui seul le retire, après avoir vérifié que son intervention est terminée. Toute autre méthode expose l'intervenant à une remise en énergie.",
@@ -467,10 +467,10 @@
       "level": 2,
       "q": "Quel est l'intérêt de la réunion quotidienne de coordination des permis ?",
       "choices": [
-        "Détecter les interférences entre les activités avant qu'elles ne se produisent",
-        "Valider les congés du personnel",
-        "Remplacer les réunions de sécurité avant la tâche",
-        "Assurer le suivi budgétaire des contracteurs"
+        "Détecter les interférences entre activités avant qu'elles ne se produisent",
+        "Valider les demandes de congés et de relève du personnel à bord de l'installation",
+        "Remplacer les réunions de sécurité avant la tâche tenues par les équipes de terrain",
+        "Assurer le suivi budgétaire des contrats et des heures des contracteurs"
       ],
       "answer": 0,
       "explain": "Les SIMOPS se préviennent en amont : vue d'ensemble des permis, des zones et des moyens, avec l'appui de la matrice.",
@@ -483,12 +483,12 @@
       "level": 3,
       "q": "Quand un détecteur de gaz est inhibé pour travaux, quelle exigence est incontournable ?",
       "choices": [
-        "L'accord oral du chef d'équipe suffit",
-        "L'inhibition est permise jusqu'à la fin du chantier sans suivi",
-        "Autorisation formelle, durée limitée, mesures compensatoires (détection portable, surveillance) et enregistrement au registre",
-        "Aucun formalisme requis si l'inhibition ne dépasse pas une heure"
+        "L'accord oral du chef d'équipe, noté ensuite dans le journal de bord de l'installation",
+        "Autorisation formelle, durée limitée, mesures compensatoires et enregistrement au registre",
+        "Une inhibition libre jusqu'à la fin du chantier, sans suivi particulier de la durée",
+        "Aucun formalisme si l'inhibition ne dépasse pas une heure, avec surveillance visuelle"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Une inhibition supprime une barrière : elle doit rester exceptionnelle, limitée, compensée et tracée. La durée courte ne dispense pas de formalités.",
       "seconds": 75,
       "status": "draft"
@@ -499,12 +499,12 @@
       "level": 3,
       "q": "Une entrée en espace confiné est autorisée, ventilation et mesures conformes. Le surveillant extérieur se sent mal et quitte le poste ; l'entrant est seul à l'intérieur et la radio fonctionne. Que décide l'OIM ?",
       "choices": [
-        "Poursuivre : la radio suffit à garder le contact",
-        "Faire entrer un deuxième opérateur sans surveillant extérieur pour travailler en binôme",
-        "Laisser l'entrant terminer vite puis remplacer le surveillant",
-        "Faire sortir l'entrant et suspendre l'entrée jusqu'à ce qu'un surveillant compétent soit en place en permanence avec un plan de secours disponible"
+        "Faire sortir l'entrant, suspendre l'entrée jusqu'à la présence permanente d'un surveillant compétent",
+        "Poursuivre l'entrée : la radio fonctionne et suffit à garder le contact avec l'entrant",
+        "Faire entrer un deuxième opérateur, sans surveillant extérieur, pour travailler en binôme",
+        "Laisser l'entrant terminer rapidement son travail, puis remplacer le surveillant ensuite"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Le surveillant extérieur permanent et le plan de secours sont des conditions d'entrée, pas des options. Une radio ne remplace pas une présence qui peut déclencher l'alerte et organiser un sauvetage.",
       "seconds": 100,
       "status": "draft"
@@ -517,12 +517,12 @@
       "img": "svg/risk-matrix.svg",
       "imgAlt": "Matrice de risque 5 par 5 : probabilité × gravité, de faible à critique",
       "choices": [
-        "Une réduction du risque par des mesures complémentaires avant de commencer",
-        "L'accord oral du chef d'équipe pour démarrer",
-        "De démarrer avec un équipement de protection renforcé et rien d'autre",
-        "De le requalifier dans une zone plus basse pour ne pas bloquer le planning"
+        "Un accord oral du chef d'équipe pour démarrer sous surveillance renforcée",
+        "Un démarrage avec un équipement de protection renforcé, sans autre mesure",
+        "Une réduction du risque par des mesures complémentaires avant démarrage",
+        "Une requalification dans une zone plus basse pour ne pas bloquer le planning"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "Un risque critique ne démarre pas sans réduction. Requalifier artificiellement la cotation est une dérive classique qui fausse la décision.",
       "seconds": 60,
       "status": "draft"
@@ -535,12 +535,12 @@
       "img": "svg/bird-pyramid.svg",
       "imgAlt": "Pyramide de Bird : 1, 10, 30 et 600 événements",
       "choices": [
-        "Les accidents graves surviennent indépendamment des incidents mineurs",
-        "Il existe beaucoup plus d'incidents et de presque-accidents à la base, qu'il faut traiter pour prévenir le sommet",
-        "La base de la pyramide représente les accidents les plus coûteux",
-        "Seuls les accidents avec blessés doivent être déclarés"
+        "Les accidents graves surviennent indépendamment des incidents mineurs de la base",
+        "La base de la pyramide regroupe les accidents les plus coûteux de l'année",
+        "Seuls les accidents avec blessés doivent être déclarés pour prévenir le sommet",
+        "Il y a beaucoup plus d'incidents et de presque-accidents à la base, à traiter"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "La pyramide justifie de remonter et analyser les presque-accidents : agir à la base réduit le risque au sommet.",
       "seconds": 45,
       "status": "draft"
@@ -552,8 +552,8 @@
       "q": "Dans le modèle du fromage suisse, un accident majeur survient quand :",
       "choices": [
         "Une seule barrière est absente, quelle qu'elle soit",
-        "Un opérateur commet une erreur isolée",
-        "Le temps est mauvais",
+        "Un opérateur commet une erreur isolée de manœuvre",
+        "Les conditions météo sont mauvaises sur l'installation",
         "Les défaillances de plusieurs barrières s'alignent"
       ],
       "answer": 3,
@@ -567,10 +567,10 @@
       "level": 3,
       "q": "Un élément critique pour la sécurité (SCE) est hors service pour maintenance imprévue. Que doit exiger l'OIM ?",
       "choices": [
-        "Une évaluation de risque, des mesures compensatoires, une durée limitée et une approbation au niveau approprié",
-        "Rien de particulier : la production peut continuer comme avant",
-        "Un simple accord verbal de l'équipe de maintenance",
-        "L'arrêt systématique de l'installation quel que soit le SCE"
+        "Une évaluation de risque, des mesures compensatoires, une durée limitée, une approbation adaptée",
+        "Rien de particulier : la production peut continuer comme avant, la maintenance étant déjà planifiée",
+        "Un accord verbal du chef de l'équipe de maintenance, noté ensuite au journal de quart",
+        "L'arrêt immédiat et systématique de l'installation, quel que soit l'élément critique concerné"
       ],
       "answer": 0,
       "explain": "Un SCE en défaut est géré par une dérogation encadrée : risque évalué, compensation, délai, approbation. L'arrêt systématique n'est pas toujours proportionné ; l'absence de mesures est inacceptable.",
@@ -585,12 +585,12 @@
       "img": "svg/bop-stack.svg",
       "imgAlt": "Empilage BOP avec obturateurs annulaire, à mâchoires et de cisaillement",
       "choices": [
-        "L'obturateur annulaire",
+        "L'obturateur annulaire, qui se ferme sur toute forme de garniture",
+        "L'obturateur à mâchoires fixes, ajusté au diamètre de la tige",
         "L'obturateur à mâchoires de cisaillement (blind shear)",
-        "L'obturateur à mâchoires fixes pour tige",
-        "La tête de puits"
+        "Le diverter, qui évacue les fluides loin du plancher de forage"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Le cisaillement coupe la garniture de forage et ferme le puits. L'annulaire et les mâchoires de tige ferment autour de la garniture sans la couper.",
       "seconds": 60,
       "status": "draft"
@@ -601,12 +601,12 @@
       "level": 3,
       "q": "Au forage, le foreur observe un gain de volume aux bacs et un flow check positif. Quel est le bon réflexe ?",
       "choices": [
-        "Reprendre la circulation pour dégazer et continuer",
-        "Faire un nouveau flow check dans une heure",
-        "Fermer le puits selon la procédure, relever les pressions stabilisées et informer",
-        "Augmenter la vitesse de forage pour sortir de la zone"
+        "Reprendre la circulation pour dégazer le puits et continuer à forer",
+        "Fermer le puits selon la procédure, relever les pressions et informer",
+        "Faire un nouveau flow check dans une heure pour confirmer le gain observé",
+        "Augmenter la vitesse de forage pour sortir rapidement de la zone à risque"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Un flow check positif est un puits en venue : on ferme, on stabilise, on informe. Reprendre le forage ou temporiser aggrave la venue.",
       "seconds": 60,
       "status": "draft"
@@ -619,10 +619,10 @@
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Séparateur sous pression avec soupape de sécurité PSV",
       "choices": [
-        "Rétablir immédiatement la protection (rouvrir et verrouiller ouverte) si c'est sûr, sinon réduire ou arrêter l'unité concernée, enquêter et déclarer l'événement",
-        "Terminer le quart et traiter l'écart à la prochaine réunion de sécurité",
-        "Laisser la vanne fermée car le séparateur est en régime stable",
-        "Demander au service qualité de documenter l'écart et laisser la production inchangée"
+        "Rouvrir et verrouiller la vanne si c'est sûr, sinon réduire l'unité, enquêter et déclarer",
+        "Terminer le quart et traiter l'écart lors de la prochaine réunion de sécurité hebdomadaire",
+        "Laisser la vanne fermée tant que le séparateur reste en régime stable, sans alarme de pression",
+        "Demander au service qualité de documenter l'écart et laisser la production tourner sans changement"
       ],
       "answer": 0,
       "explain": "Une PSV isolée sur un appareil sous pression supprime la dernière barrière contre la surpression : on rétablit la protection tout de suite ou on retire le risque en arrêtant. Les autres options acceptent un risque majeur.",
@@ -635,12 +635,12 @@
       "level": 2,
       "q": "Un chef d'équipe pose un contournement temporaire sur une ligne « pour une semaine ». Que dit la gestion du changement ?",
       "choices": [
-        "Une modification temporaire dispense de MOC",
-        "Toute modification, même temporaire, passe par la gestion du changement avec évaluation du risque et approbation",
-        "Seuls les changements permanents nécessitent une MOC",
-        "La MOC ne concerne que les modifications de procédé informatisées"
+        "Une modification temporaire dispense de MOC lorsqu'elle est limitée à quelques semaines",
+        "Seuls les changements permanents nécessitent une MOC avec évaluation de risque formelle",
+        "Toute modification, même temporaire, passe par la MOC avec évaluation du risque",
+        "La MOC ne concerne que les modifications de procédé informatisées du système de contrôle"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Les contournements temporaires oubliés sont une cause classique d'accident. La MOC couvre aussi le temporaire, avec date de retour à la normale.",
       "seconds": 60,
       "status": "draft"
@@ -651,12 +651,12 @@
       "level": 2,
       "q": "Une inspection révèle une corrosion plus rapide que prévue sur une ligne d'hydrocarbures. Que doit demander l'OIM ?",
       "choices": [
-        "De conserver les dates d'inspection d'origine",
-        "D'augmenter la pression pour assécher la ligne",
-        "Une réévaluation par l'ingénierie et l'intégrité (aptitude au service, vitesse, nouvelle fréquence), avec réduction de pression si nécessaire en attendant",
-        "De classer le dossier jusqu'au prochain arrêt programmé"
+        "Conserver les dates d'inspection d'origine tant que la ligne reste en service normal",
+        "Réduire la fréquence des inspections pour limiter l'exposition du personnel à la ligne",
+        "Classer le dossier jusqu'au prochain arrêt programmé de l'unité de traitement",
+        "Une réévaluation par l'ingénierie : aptitude au service, vitesse, nouvelle fréquence d'inspection"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Un écart par rapport à la prévision impose une réévaluation d'aptitude et des mesures conservatoires. Ne rien changer ou différer revient à ignorer le signal.",
       "seconds": 60,
       "status": "draft"
@@ -667,12 +667,12 @@
       "level": 3,
       "q": "Parmi les indicateurs suivants, lequel est un indicateur de tête (leading) de la sécurité des procédés ?",
       "choices": [
-        "Le nombre d'accidents avec arrêt de travail de l'année",
-        "Le nombre de décès sur dix ans",
-        "Le montant des indemnités versées",
-        "Le taux de maintenance préventive des éléments critiques réalisée dans les délais"
+        "Le nombre d'accidents avec arrêt de travail enregistrés sur l'année écoulée",
+        "Le taux de maintenance préventive des éléments critiques réalisée dans les délais",
+        "Le nombre de décès constatés dans le groupe pétrolier sur les dix dernières années",
+        "Le montant total des indemnités versées aux victimes d'accidents l'an dernier"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "Les indicateurs de tête mesurent la santé des barrières avant l'accident. Les autres sont des indicateurs de retard : ils constatent les conséquences.",
       "seconds": 60,
       "status": "draft"
@@ -683,12 +683,12 @@
       "level": 1,
       "q": "À quoi sert le HLO (Helicopter Landing Officer) ?",
       "choices": [
-        "À piloter l'hélicoptère",
+        "À piloter l'hélicoptère lors des relèves et évacuations sanitaires",
+        "À gérer les approvisionnements en kérosène de l'hélicoptère à terre",
         "À superviser la sécurité de l'hélipont et des mouvements d'hélicoptère",
-        "À gérer les approvisionnements en kérosène à terre",
-        "À régler les différends contractuels avec la compagnie aérienne"
+        "À régler les différends contractuels avec la compagnie aérienne affrétée"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Le HLO est le responsable de la zone d'hélipont : état, personnel, communications avec le pilote. Il ne pilote pas et ne gère pas le contrat.",
       "seconds": 45,
       "status": "draft"
@@ -701,12 +701,12 @@
       "img": "photo/flare-stack.jpg",
       "imgAlt": "Torche en fonctionnement sur une installation",
       "choices": [
-        "Le bruit qui ferait vibrer les vitres",
-        "Les interférences radio du feu uniquement",
-        "La turbulence thermique et les gaz chauds ou fumées, selon la direction du vent",
-        "Un surplus de poids sur le pont"
+        "La turbulence thermique et les gaz chauds ou fumées, selon le vent",
+        "Le bruit de la torche, qui fait vibrer les vitres de l'appareil en vol",
+        "Les interférences radio émises par le feu de la torche en service",
+        "Une surcharge du pont d'envol due à la dilatation thermique"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Les gaz chauds provoquent de la turbulence et réduisent les performances ; la direction du vent est un critère déterminant de l'acceptation de l'atterrissage.",
       "seconds": 60,
       "status": "draft"
@@ -719,12 +719,12 @@
       "img": "photo/oil-rig-offshore.jpg",
       "imgAlt": "Plateforme pétrolière offshore en mer",
       "choices": [
-        "La capacité de la cantine",
-        "Le nombre de badges d'accès",
-        "Le choix de la direction du siège selon le calendrier",
-        "La capacité des moyens d'évacuation et des couchettes"
+        "La capacité de la cantine et des locaux de restauration",
+        "La capacité des moyens d'évacuation et des couchettes",
+        "Le nombre de badges d'accès délivrés par le service sécurité",
+        "Le choix de la direction du siège selon le calendrier de projets"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "Chacun doit pouvoir être évacué : les moyens d'évacuation fixent le plafond, avec les couchettes et les installations de vie. Les autres éléments ne sont pas des critères de sécurité.",
       "seconds": 60,
       "status": "draft"
@@ -735,12 +735,12 @@
       "level": 3,
       "q": "Dernier hélicoptère du jour pour une relève de douze personnes, POB au maximum. Une évacuation sanitaire (MEDEVAC) est en attente, la visibilité baisse et un grain approche. Le pilote annonce son arrivée dans dix minutes. Que fait l'OIM ?",
       "choices": [
-        "Fournir météo et état de l'hélipont, préparer le patient pour un départ immédiat si le pilote accepte, laisser le pilote seul juge du vol et préparer une alternative sans pression sur lui",
-        "Exiger l'atterrissage : la vie du patient prime sur toute limite de vol",
-        "Faire repartir le patient plus tard par bateau, quoi qu'en dise le pilote",
-        "Demander au pilote de poser l'hélicoptère malgré la visibilité et de repartir aussitôt"
+        "Exiger l'atterrissage immédiat : la vie du patient prime sur toute limite de vol et de visibilité",
+        "Faire repartir le patient plus tard par bateau, quel que soit l'avis du pilote sur la météo",
+        "Demander au pilote de poser l'hélicoptère malgré la visibilité réduite et de repartir aussitôt",
+        "Donner météo et état de l'hélipont, laisser le pilote juge du vol, préparer une alternative"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "La décision de vol appartient au commandant de bord. L'OIM prépare, informe, organise une alternative ; presser le pilote crée un risque additionnel pour tous.",
       "seconds": 110,
       "status": "draft"
@@ -753,12 +753,12 @@
       "img": "photo/fpso.jpg",
       "imgAlt": "Unité flottante de production, stockage et déchargement en mer",
       "choices": [
-        "Le changement de couleur de la coque",
-        "L'écoulement laminaire en tuyauterie",
-        "L'effet de carène liquide (surface libre)",
-        "La dilatation thermique des cuves vides"
+        "Le phénomène de cavitation dans les pompes de ballast",
+        "L'effet de carène liquide, dû à la surface libre des cuves",
+        "L'écoulement laminaire dans la tuyauterie de transfert",
+        "La dilatation thermique de l'acier des cuves vides"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Un liquide qui bouge librement dans une cuve déplace le centre de gravité apparent et réduit la stabilité. On limite le nombre de cuves partiellement remplies.",
       "seconds": 60,
       "status": "draft"
@@ -769,12 +769,12 @@
       "level": 3,
       "q": "Sur une unité flottante, pendant un transfert entre cuves, le responsable ballast signale une gîte inattendue. Plusieurs alarmes de niveau clignotent. Que décide l'OIM ?",
       "choices": [
-        "Continuer le transfert pour rétablir l'assiette plus vite",
-        "Ignorer les alarmes de niveau tant que la gîte est faible",
-        "Faire évacuer l'unité sans vérifier la situation",
-        "Arrêter le transfert, identifier la cause (vannes, ballast, cargaison) et faire valider par le responsable marine avant de reprendre"
+        "Continuer le transfert pour rétablir l'assiette plus vite, en surveillant la gîte au clinomètre",
+        "Ignorer les alarmes de niveau tant que la gîte reste inférieure à deux degrés",
+        "Arrêter le transfert, identifier la cause (vannes, ballast) et la faire valider par le responsable marine",
+        "Faire évacuer l'unité immédiatement sans vérifier la situation avec le responsable marine"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "Une gîte inattendue est un signal de stabilité. On arrête, on comprend, on fait valider. Continuer aggrave, évacuer sans analyse n'est pas proportionné.",
       "seconds": 100,
       "status": "draft"
@@ -787,10 +787,10 @@
       "img": "photo/crane-lifting.jpg",
       "imgAlt": "Grue effectuant une opération de levage",
       "choices": [
-        "Charge et météo dans les limites, zone dégagée, signaleur désigné, personne sous la charge interdite",
-        "Une charge inférieure au double de la capacité nominale",
-        "Un grutier seul, sans radio, pour éviter les parasites",
-        "Une vitesse de levage maximale pour limiter le temps d'exposition"
+        "Charge et météo dans les limites, zone dégagée, signaleur désigné, nul sous la charge",
+        "Une charge inférieure au double de la capacité nominale indiquée sur le moyen de levage",
+        "Un grutier travaillant seul, sans radio, pour éviter les parasites sur le canal de levage",
+        "Une vitesse de levage maximale pour limiter le temps d'exposition de la charge au vent"
       ],
       "answer": 0,
       "explain": "Un levage sûr respecte les limites de charge et de météo, une zone interdite et une communication claire. Dépasser la capacité ou accélérer est dangereux.",
@@ -803,12 +803,12 @@
       "level": 1,
       "q": "Quel est le rôle principal d'un navire de veille (standby vessel) ?",
       "choices": [
-        "Transporter la production vers la terre",
-        "Surveiller la zone et assurer le sauvetage et la récupération de personnes",
-        "Fournir de l'électricité à l'installation",
-        "Remplacer l'hélicoptère pour les relèves"
+        "Transporter la production d'hydrocarbures vers la terre ferme",
+        "Fournir de l'électricité à l'installation en cas de blackout",
+        "Remplacer l'hélicoptère pour les relèves de personnel en cas de météo",
+        "Surveiller la zone et assurer le sauvetage et la récupération de personnes"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Le navire de veille est un moyen de secours et de surveillance de la zone d'exclusion ; il s'entraîne avec l'installation.",
       "seconds": 45,
       "status": "draft"
@@ -819,12 +819,12 @@
       "level": 2,
       "q": "Un opérateur signale spontanément un quasi-accident causé par sa propre erreur. Quelle réaction renforce la culture sécurité ?",
       "choices": [
-        "Lui infliger un avertissement écrit",
-        "Classer l'événement sans suite pour ne pas alourdir le dossier",
-        "Attendre qu'un second événement confirme le problème",
-        "Le remercier, analyser les causes systémiques et partager les enseignements"
+        "Le remercier, analyser les causes systémiques et partager les enseignements",
+        "Lui infliger un avertissement écrit consigné à son dossier et à celui de son équipe",
+        "Classer l'événement sans suite pour ne pas alourdir le dossier de l'installation",
+        "Attendre qu'un second événement similaire confirme le problème avant d'agir"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Une culture juste récompense la remontée d'informations. Punir une déclaration spontanée tarit la source de signaux faibles.",
       "seconds": 60,
       "status": "draft"
@@ -835,12 +835,12 @@
       "level": 3,
       "q": "Après un incident grave à bord, un journaliste et plusieurs proches appellent la radio qui sature, pendant que le siège réclame un point toutes les dix minutes. Que fait l'OIM ?",
       "choices": [
-        "Transmettre des faits courts et vérifiés par un canal unique au siège, laisser la cellule de crise gérer familles et médias, et garder sa disponibilité pour l'urgence",
-        "Annoncer les causes probables à la presse pour calmer la situation",
-        "Ne rien dire à personne tant que l'enquête n'est pas terminée",
-        "Répondre lui-même à chaque appel pour rassurer les familles"
+        "Annoncer les causes probables à la presse pour calmer la situation et éviter les rumeurs",
+        "Ne rien dire au siège ni aux médias tant que l'enquête interne n'est pas terminée",
+        "Transmettre des faits vérifiés par un canal unique et confier familles et médias à la cellule de crise",
+        "Répondre lui-même à chaque appel des familles et des journalistes pour les rassurer"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "L'OIM informe, ne spécule pas, ne s'épuise pas en communication externe. Les canaux dédiés protègent à la fois l'équipage, les familles et l'enquête.",
       "seconds": 110,
       "status": "draft"
@@ -851,12 +851,12 @@
       "level": 3,
       "q": "Après douze jours de rotation, un chef d'équipe demande des heures supplémentaires pour finir un job avant la relève. Plusieurs opérateurs montrent des signes de fatigue. Que décide l'OIM ?",
       "choices": [
-        "Accorder les heures supplémentaires : c'est la dernière journée",
-        "Évaluer le risque de fatigue : reporter ou renforcer l'équipe plutôt que prolonger les quarts",
-        "Laisser chaque opérateur décider de sa propre fatigue",
-        "Refuser sans expliquer et sans proposer d'alternative"
+        "Accorder les heures supplémentaires demandées, puisque c'est la dernière journée avant la relève",
+        "Laisser chaque opérateur décider seul de son niveau de fatigue et de sa capacité à continuer",
+        "Refuser la demande sans l'expliquer au chef d'équipe et sans proposer d'alternative",
+        "Évaluer le risque de fatigue : reporter ou renforcer l'équipe plutôt que prolonger"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "La fatigue est un danger qui dégrade le jugement. L'OIM arbitre sur le risque, propose une alternative et explique sa décision.",
       "seconds": 100,
       "status": "draft"
@@ -869,12 +869,12 @@
       "img": "photo/office-meeting.jpg",
       "imgAlt": "Réunion de travail d'une équipe",
       "choices": [
-        "Pour remplacer les audits formels",
-        "Pour contrôler la présence de chacun",
-        "Pour observer, parler aux équipes, constater les écarts et montrer l'exemple",
-        "Pour vérifier uniquement l'état de la peinture"
+        "Remplacer les audits formels programmés par des visites informelles",
+        "Observer, parler aux équipes, constater les écarts et montrer l'exemple",
+        "Contrôler la présence de chacun à son poste pendant tout le quart",
+        "Contrôler surtout la propreté des cabines et du réfectoire"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "La présence visible est un levier de leadership : on voit le réel, on donne un message cohérent et on renforce la confiance.",
       "seconds": 45,
       "status": "draft"
@@ -887,10 +887,10 @@
       "img": "svg/finance-bar-chart.svg",
       "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024",
       "choices": [
-        "Arbitrer par criticité : réduire les dépenses sans retarder la maintenance des éléments critiques pour la sécurité",
-        "Reporter la maintenance préventive des éléments critiques",
-        "Supprimer les exercices d'urgence pour économiser du temps de production",
-        "Réduire les inspections de corrosion sur les lignes hydrocarbures"
+        "Arbitrer par criticité sans retarder la maintenance des éléments critiques pour la sécurité",
+        "Reporter la maintenance préventive des éléments critiques jusqu'à la fin de l'exercice",
+        "Supprimer les exercices d'urgence pour économiser du temps de production et de personnel",
+        "Réduire les inspections de corrosion sur les lignes d'hydrocarbures de petit diamètre sans réévaluer leur criticité"
       ],
       "answer": 0,
       "explain": "L'OPEX se pilote, mais pas au détriment des barrières. Retarder les SCE, les exercices ou l'inspection transfère un coût à un risque majeur.",
@@ -905,12 +905,12 @@
       "img": "photo/control-room.jpg",
       "imgAlt": "Salle de contrôle d'une installation de production",
       "choices": [
-        "Dès que la pression est revenue à la normale",
-        "Cause identifiée, état sûr vérifié, listes de contrôle passées et autorisation formelle de l'OIM",
-        "Quand le siège le demande, pour tenir la production du mois",
-        "Après un simple redémarrage des automates"
+        "Dès que la pression est revenue à la valeur normale et que les alarmes sont acquittées",
+        "Quand le siège le demande, pour tenir l'objectif de production du mois en cours",
+        "Cause identifiée, état sûr vérifié, listes de contrôle passées, autorisation formelle",
+        "Après un simple redémarrage des automates de sécurité et un test de communication"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Redémarrer sans comprendre expose à la répétition de l'événement, parfois plus grave. La cause, l'état sûr et l'autorisation formelle sont indispensables.",
       "seconds": 75,
       "status": "draft"

@@ -30,6 +30,13 @@ export function drawBalanced(questions, n) {
 
 export const shuffledOrder = (q) => shuffle(q.choices.map((_, i) => i));
 
+/** Durée effective d'une question : au moins 1 min 30 ; 2 min pour les cas pratiques et calculs ; jamais moins que la durée du contenu. */
+export function qSeconds(q) {
+  const base = q.seconds || 45;
+  const floor = base >= CONFIG.LONG_THRESHOLD ? CONFIG.LONG_QUESTION_SECONDS : CONFIG.MIN_QUESTION_SECONDS;
+  return Math.max(base, floor);
+}
+
 export function examSize(content, requested) {
   const want = requested || CONFIG.EXAM_QUESTIONS;
   return Math.min(want, content.questions.length);
@@ -44,7 +51,7 @@ export function createExamAttempt({ profile, content, count, candidate, session,
     candidate: { name: candidate.name, email: candidate.email || '' },
     startedAt: Date.now(), passMark: passMark || CONFIG.PASS_MARK,
     total: qs.length,
-    items: qs.map((q) => ({ qid: q.id, theme: q.theme, seconds: q.seconds || 45, order: shuffledOrder(q), picked: null, ok: null, timeUsed: null })),
+    items: qs.map((q) => ({ qid: q.id, theme: q.theme, seconds: qSeconds(q), order: shuffledOrder(q), picked: null, ok: null, timeUsed: null })),
     idx: 0, phase: 'transition', qStart: null, status: 'in_progress',
   };
 }

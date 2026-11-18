@@ -6,7 +6,7 @@
       "title": "Pompes centrifuges : fonctionnement et courbes",
       "theme": "Pompes centrifuges",
       "minutes": 9,
-      "body": "Une pompe centrifuge transforme l'énergie mécanique de l'arbre en énergie hydraulique. Le liquide entre au centre de la **roue** (impeller), est accéléré par les aubes, puis ralenti dans la **volute** où la vitesse se convertit en pression. La **courbe caractéristique** donne la hauteur manométrique H en fonction du débit Q : elle descend quand le débit augmente. Sur le même graphique figurent le rendement, la puissance absorbée et le **NPSH requis**.\n\nLe **point de meilleur rendement** (BEP) est le débit où la pompe travaille le mieux. On vise une plage de fonctionnement autour du BEP : trop à gauche, on subit recirculation interne, échauffement et efforts radiaux ; trop à droite, risque de cavitation et de surcharge du moteur. Le **point de fonctionnement** réel est l'intersection de la courbe de la pompe et de la courbe du circuit.\n\nLes **lois de similitude** relient les performances à la vitesse de rotation N : le débit varie comme N, la hauteur comme N au carré et la puissance comme N au cube. Doubler la vitesse donne donc un débit ×2, une hauteur ×4 et une puissance ×8. Le rognage de la roue réduit hauteur et débit selon des lois comparables.\n\nDeux pompes identiques en **série** additionnent leurs hauteurs au même débit ; en **parallèle**, elles additionnent leurs débits à la même hauteur.\n\nLa **cavitation** naît lorsque le NPSH disponible tombe sous le NPSH requis : bulles de vapeur qui implosent, bruit de gravier, vibrations, érosion de la roue, chute de performance. On la corrige à la source : relever le niveau d'aspiration, nettoyer le filtre, réduire les pertes de charge, refroidir le liquide, ouvrir franchement la vanne d'aspiration. On **ne règle jamais le débit avec la vanne d'aspiration**.\n\nUne pompe qui marche vanne de refoulement fermée convertit toute sa puissance en chaleur : le liquide s'échauffe, peut se vaporiser, et la garniture ou les paliers grippent. D'où la **ligne de débit minimal** (recirculation).\n\nLes pompes de l'industrie pétrolière suivent la norme **API 610**. Les **pompes multi-étages** empilent plusieurs roues sur le même arbre pour atteindre une grande hauteur ; c'est le principe des pompes immergées électriques (ESP) utilisées en puits.\n\nAvant tout démontage : consigner (séparer, condamner, dissiper, vérifier), purger, rincer si le produit est dangereux, et porter les EPI adaptés au fluide.",
+      "body": "Une pompe centrifuge transforme l'énergie mécanique de l'arbre en énergie hydraulique. Le liquide entre au centre de la **roue** (impeller), est accéléré par les aubes, puis ralenti dans la **volute** où la vitesse se convertit en pression. La **courbe caractéristique** donne la hauteur manométrique H en fonction du débit Q : elle descend quand le débit augmente. Sur le même graphique figurent le rendement, la puissance absorbée et le **NPSH requis**.\n\nLe **point de meilleur rendement** (BEP) est le débit où la pompe travaille le mieux. On vise une plage de fonctionnement autour du BEP : trop à gauche, on subit recirculation interne, échauffement et efforts radiaux ; trop à droite, risque de cavitation et de surcharge du moteur. Le **point de fonctionnement** réel est l'intersection de la courbe de la pompe et de la courbe du circuit.\n\nLes **lois de similitude** relient les performances à la vitesse de rotation N : le débit varie comme N, la hauteur comme N au carré et la puissance comme N au cube. Doubler la vitesse donne donc un débit ×2, une hauteur ×4 et une puissance ×8. Le rognage de la roue réduit hauteur et débit selon des lois comparables.\n\nDeux pompes identiques en **série** additionnent leurs hauteurs au même débit ; en **parallèle**, elles additionnent leurs débits à la même hauteur.\n\nLa **cavitation** naît lorsque le NPSH disponible tombe sous le NPSH requis : bulles de vapeur qui implosent, bruit de gravier, vibrations, érosion de la roue, chute de performance. On la corrige à la source : relever le niveau d'aspiration, nettoyer le filtre, réduire les pertes de charge, refroidir le liquide, ouvrir franchement la vanne d'aspiration. On **ne règle jamais le débit avec la vanne d'aspiration**.\n\nUne pompe qui marche vanne de refoulement fermée convertit toute sa puissance en chaleur : le liquide s'échauffe, peut se vaporiser, et la garniture ou les paliers grippent. D'où la **ligne de débit minimal** (recirculation).\n\nLes pompes de l'industrie pétrolière suivent la norme **API 610**. Les **pompes multi-étages** empilent plusieurs roues sur le même arbre pour atteindre une grande hauteur ; c'est le principe des pompes immergées électriques (ESP) utilisées en puits.\n\nAvant tout démontage : consigner (séparer, condamner, dissiper, vérifier), purger, rincer si le produit est dangereux, et porter les EPI adaptés au fluide.\n\n**Sur le terrain**\n- Vanne de refoulement fermée = pompe qui chauffe : ne laisse jamais tourner à très faible débit plus de quelques minutes.\n- Bruit de gravier ou vacuomètre trop bas : regarde le niveau du bac et le filtre d'aspiration avant de toucher à la pompe.\n- Un palier plus chaud que d'habitude ou une fuite de garniture se signalent à la relève, pas à la prochaine révision.",
       "keyPoints": [
         "Viser le point de meilleur rendement (BEP).",
         "Lois de similitude : Q proportionnel à N, H à N², P à N³.",
@@ -21,7 +21,7 @@
       "title": "Compresseurs et turbines",
       "theme": "Compresseurs et turbines",
       "minutes": 9,
-      "body": "Les compresseurs augmentent la pression d'un gaz. Il en existe deux grandes familles. Les machines **volumétriques** (alternatifs à pistons, à vis) enferment un volume de gaz puis le réduisent ; les machines **dynamiques** (centrifuges, axiales) accélèrent le gaz avec des roues puis transforment la vitesse en pression.\n\nLe **compresseur alternatif** possède cylindres, pistons, bielles, vilebrequin et des **clapets** d'aspiration et de refoulement qui s'ouvrent selon la pression. Un clapet fuyard est la panne classique : une partie du gaz comprimé revient à l'aspiration, la température de refoulement de l'étage concerné **augmente**, et le rendement baisse. Les pulsations de pression imposent des amortisseurs (bouteilles anti-pulsatoires).\n\nLe **compresseur centrifuge** convient aux grands débits de gaz. Il est exposé au **pompage** (surge) : en dessous d'un débit minimal, l'écoulement s'inverse de façon cyclique, avec bruit, vibrations et risque de destruction des paliers et des joints. La **vanne anti-pompage** recycle le gaz du refoulement vers l'aspiration pour maintenir un débit sûr. Les joints d'arbre sont souvent des **joints à gaz sec**, alimentés en gaz de barrière filtré dont une très faible fuite part à l'évent ou à la torche.\n\nLe **rapport de compression** est le rapport des pressions **absolues** refoulement/aspiration : de 5 bar abs à 20 bar abs, il vaut 4. La compression échauffe le gaz ; on limite la température et le travail absorbé par des **refroidisseurs intermédiaires** entre étages, et on installe en amont un **ballon d'aspiration** qui arrête les liquides, ennemis de toute machine à gaz.\n\nLa **turbine à gaz** comprend trois sections : un compresseur d'air, une chambre de combustion et une turbine de détente qui entraîne le compresseur d'air et la charge. Dans les installations pétrolières, elle entraîne des compresseurs ou des alternateurs. La **turbine à vapeur** utilise la détente de la vapeur ; sa protection majeure est le **déclencheur de survitesse** (overspeed trip), qui doit être testé périodiquement.\n\nPour tout compresseur, le technicien suit la température et la pression de chaque étage, les vibrations, le niveau et la température d'huile, la pression différentielle des filtres, et les fuites de gaz aux joints. Toute dérive est comparée à la tendance habituelle de la machine.",
+      "body": "Les compresseurs augmentent la pression d'un gaz. Il en existe deux grandes familles. Les machines **volumétriques** (alternatifs à pistons, à vis) enferment un volume de gaz puis le réduisent ; les machines **dynamiques** (centrifuges, axiales) accélèrent le gaz avec des roues puis transforment la vitesse en pression.\n\nLe **compresseur alternatif** possède cylindres, pistons, bielles, vilebrequin et des **clapets** d'aspiration et de refoulement qui s'ouvrent selon la pression. Un clapet fuyard est la panne classique : une partie du gaz comprimé revient à l'aspiration, la température de refoulement de l'étage concerné **augmente**, et le rendement baisse. Les pulsations de pression imposent des amortisseurs (bouteilles anti-pulsatoires).\n\nLe **compresseur centrifuge** convient aux grands débits de gaz. Il est exposé au **pompage** (surge) : en dessous d'un débit minimal, l'écoulement s'inverse de façon cyclique, avec bruit, vibrations et risque de destruction des paliers et des joints. La **vanne anti-pompage** recycle le gaz du refoulement vers l'aspiration pour maintenir un débit sûr. Les joints d'arbre sont souvent des **joints à gaz sec**, alimentés en gaz de barrière filtré dont une très faible fuite part à l'évent ou à la torche.\n\nLe **rapport de compression** est le rapport des pressions **absolues** refoulement/aspiration : de 5 bar abs à 20 bar abs, il vaut 4. La compression échauffe le gaz ; on limite la température et le travail absorbé par des **refroidisseurs intermédiaires** entre étages, et on installe en amont un **ballon d'aspiration** qui arrête les liquides, ennemis de toute machine à gaz.\n\nLa **turbine à gaz** comprend trois sections : un compresseur d'air, une chambre de combustion et une turbine de détente qui entraîne le compresseur d'air et la charge. Dans les installations pétrolières, elle entraîne des compresseurs ou des alternateurs. La **turbine à vapeur** utilise la détente de la vapeur ; sa protection majeure est le **déclencheur de survitesse** (overspeed trip), qui doit être testé périodiquement.\n\nPour tout compresseur, le technicien suit la température et la pression de chaque étage, les vibrations, le niveau et la température d'huile, la pression différentielle des filtres, et les fuites de gaz aux joints. Toute dérive est comparée à la tendance habituelle de la machine.\n\n**Sur le terrain**\n- Autour d'une machine en marche : protections auditives obligatoires, et jamais de manche large ni de clé posée sur les carters.\n- Température de refoulement d'un étage qui dérive : suspecte un clapet fuyard ou un refroidisseur intermédiaire encrassé.\n- Avant tout démarrage d'un centrifuge : vérifie que la vanne anti-pompage est en automatique et libre.",
       "keyPoints": [
         "Alternatif : clapets ; clapet fuyard = température de refoulement en hausse.",
         "Centrifuge : pompage en dessous du débit minimal ; vanne anti-pompage.",
@@ -34,7 +34,7 @@
       "title": "Alignement, roulements et lubrification",
       "theme": "Alignement, roulements et lubrification",
       "minutes": 9,
-      "body": "Un moteur et une machine accouplés doivent avoir leurs axes de rotation prolongés l'un dans l'autre. Le **désalignement** est de deux types : **parallèle** (décalage radial des axes) et **angulaire** (axes qui forment un angle), souvent combinés. Il charge les paliers, détruit les accouplements et les garnitures, et provoque des vibrations à 1× et surtout 2× la vitesse de rotation.\n\nAvant l'alignement, on contrôle d'abord le **pied boiteux** (soft foot) : un pied de machine qui ne repose pas à plat se déforme au serrage et fausse tout. On vérifie aussi la tuyauterie (contraintes sur les brides), la propreté des cales et le faux-rond de l'arbre. Les méthodes vont du comparateur à cadran à l'alignement **laser**, plus rapide et plus précis. Plus la vitesse est élevée, plus la tolérance admise est serrée.\n\nLe **roulement** supporte l'arbre. Le code d'un roulement rigide à billes **6205** indique un alésage de **25 mm** (les deux derniers chiffres, de 04 à 96, multipliés par 5). Sa durée de vie nominale **L10** est la durée atteinte ou dépassée par 90 % d'un lot de roulements identiques, dans des conditions données ; elle dépend fortement de la charge, de la lubrification et de la propreté. Causes de défaillance : mauvaise lubrification, contamination, désalignement, montage incorrect (coups sur la bague, chauffage excessif), courants parasites.\n\nLe **graissage** doit être à la bonne quantité : trop peu use le roulement, mais **trop de graisse l'échauffe** par brassage. Respecter graisse, intervalle et quantité du constructeur, et ne jamais mélanger des graisses incompatibles.\n\nPour les huiles, la classe **ISO VG** donne la viscosité cinématique à 40 °C : une ISO VG 46 a une viscosité d'environ 46 mm²/s (cSt). Une huile **laiteuse** trahit une contamination par l'eau ; une huile noire et brûlée indique une surchauffe ; des particules métalliques signalent une usure à analyser.\n\nBonnes pratiques de lubrification : outillage propre et identifié par produit, bouchons et regards en état, niveaux contrôlés à la ronde, échantillonnage d'huile périodique pour les machines critiques. Un roulement qui chauffe de manière inhabituelle se signale tout de suite, il ne se « surveille » pas jusqu'à la panne.",
+      "body": "Un moteur et une machine accouplés doivent avoir leurs axes de rotation prolongés l'un dans l'autre. Le **désalignement** est de deux types : **parallèle** (décalage radial des axes) et **angulaire** (axes qui forment un angle), souvent combinés. Il charge les paliers, détruit les accouplements et les garnitures, et provoque des vibrations à 1× et surtout 2× la vitesse de rotation.\n\nAvant l'alignement, on contrôle d'abord le **pied boiteux** (soft foot) : un pied de machine qui ne repose pas à plat se déforme au serrage et fausse tout. On vérifie aussi la tuyauterie (contraintes sur les brides), la propreté des cales et le faux-rond de l'arbre. Les méthodes vont du comparateur à cadran à l'alignement **laser**, plus rapide et plus précis. Plus la vitesse est élevée, plus la tolérance admise est serrée.\n\nLe **roulement** supporte l'arbre. Le code d'un roulement rigide à billes **6205** indique un alésage de **25 mm** (les deux derniers chiffres, de 04 à 96, multipliés par 5). Sa durée de vie nominale **L10** est la durée atteinte ou dépassée par 90 % d'un lot de roulements identiques, dans des conditions données ; elle dépend fortement de la charge, de la lubrification et de la propreté. Causes de défaillance : mauvaise lubrification, contamination, désalignement, montage incorrect (coups sur la bague, chauffage excessif), courants parasites.\n\nLe **graissage** doit être à la bonne quantité : trop peu use le roulement, mais **trop de graisse l'échauffe** par brassage. Respecter graisse, intervalle et quantité du constructeur, et ne jamais mélanger des graisses incompatibles.\n\nPour les huiles, la classe **ISO VG** donne la viscosité cinématique à 40 °C : une ISO VG 46 a une viscosité d'environ 46 mm²/s (cSt). Une huile **laiteuse** trahit une contamination par l'eau ; une huile noire et brûlée indique une surchauffe ; des particules métalliques signalent une usure à analyser.\n\nBonnes pratiques de lubrification : outillage propre et identifié par produit, bouchons et regards en état, niveaux contrôlés à la ronde, échantillonnage d'huile périodique pour les machines critiques. Un roulement qui chauffe de manière inhabituelle se signale tout de suite, il ne se « surveille » pas jusqu'à la panne.\n\n**Sur le terrain**\n- Premier réflexe avant d'aligner : contrôle le pied boiteux de chaque patte.\n- Pas plus de graisse que la quantité prescrite : l'excès chauffe le roulement autant que le manque.\n- Huile laiteuse ou noire au regard de niveau : stop, cherche l'eau ou la surchauffe avant de remettre de l'huile.",
       "keyPoints": [
         "Désalignement : parallèle et angulaire ; contrôler d'abord le pied boiteux.",
         "Roulement 6205 : alésage 25 mm ; L10 = durée dépassée par 90 % du lot.",
@@ -49,7 +49,7 @@
       "title": "Vibrations : mesurer et diagnostiquer",
       "theme": "Vibrations et diagnostic",
       "minutes": 9,
-      "body": "La vibration est le meilleur indicateur de santé d'une machine tournante. On la mesure avec des accéléromètres ou des capteurs de proximité, et on la lit sous forme de **valeur globale** (par exemple en vitesse efficace, **mm/s RMS**) et de **spectre** (amplitude en fonction de la fréquence, obtenu par transformée de Fourier).\n\nLa **fréquence de rotation**, notée 1×, se calcule par N/60 : une machine à 2 970 tr/min tourne à 49,5 Hz. Chaque défaut laisse une signature spectrale :\n\n- **Balourd (déséquilibre)** : pic dominant à 1×, en direction radiale, phase stable.\n- **Désalignement** : pics à 1× et surtout 2×, avec une composante **axiale** importante.\n- **Jeu mécanique** (desserrage) : série d'harmoniques 1×, 2×, 3×… parfois des sous-harmoniques.\n- **Défaut de roulement** : pics à des fréquences **non synchrones** (non multiples entiers de la rotation) associées aux bagues et aux billes, avec bruit haute fréquence ; l'analyse d'enveloppe les révèle tôt.\n- **Cavitation d'une pompe** : bruit **large bande** haute fréquence, aléatoire.\n- **Défaut d'engrenage** : pics à la fréquence d'engrènement (nombre de dents × vitesse) avec bandes latérales.\n\nLa norme **ISO 20816** (qui a remplacé l'ISO 10816) fournit des zones de sévérité vibratoire pour juger l'état des machines : bon, acceptable, tolérable sous surveillance, inacceptable.\n\nUne démarche rigoureuse : comparer à la **tendance** de la machine (une hausse est plus parlante qu'une valeur isolée), mesurer dans trois directions (horizontale, verticale, axiale) sur chaque palier, vérifier la vitesse et la charge au moment de la mesure, puis recouper avec la température et l'analyse d'huile. Avant de conclure, on élimine les causes simples : boulons de fixation, pied boiteux, accouplement.\n\nEn cas de vibration brutalement croissante ou de dépassement du seuil d'arrêt, on réduit la charge ou on arrête la machine selon la procédure, au lieu d'attendre la panne. Équilibrer un rotor (équilibrage sur place sur plans de correction) se fait seulement après avoir exclu un désalignement ou un jeu.",
+      "body": "La vibration est le meilleur indicateur de santé d'une machine tournante. On la mesure avec des accéléromètres ou des capteurs de proximité, et on la lit sous forme de **valeur globale** (par exemple en vitesse efficace, **mm/s RMS**) et de **spectre** (amplitude en fonction de la fréquence, obtenu par transformée de Fourier).\n\nLa **fréquence de rotation**, notée 1×, se calcule par N/60 : une machine à 2 970 tr/min tourne à 49,5 Hz. Chaque défaut laisse une signature spectrale :\n\n- **Balourd (déséquilibre)** : pic dominant à 1×, en direction radiale, phase stable.\n- **Désalignement** : pics à 1× et surtout 2×, avec une composante **axiale** importante.\n- **Jeu mécanique** (desserrage) : série d'harmoniques 1×, 2×, 3×… parfois des sous-harmoniques.\n- **Défaut de roulement** : pics à des fréquences **non synchrones** (non multiples entiers de la rotation) associées aux bagues et aux billes, avec bruit haute fréquence ; l'analyse d'enveloppe les révèle tôt.\n- **Cavitation d'une pompe** : bruit **large bande** haute fréquence, aléatoire.\n- **Défaut d'engrenage** : pics à la fréquence d'engrènement (nombre de dents × vitesse) avec bandes latérales.\n\nLa norme **ISO 20816** (qui a remplacé l'ISO 10816) fournit des zones de sévérité vibratoire pour juger l'état des machines : bon, acceptable, tolérable sous surveillance, inacceptable.\n\nUne démarche rigoureuse : comparer à la **tendance** de la machine (une hausse est plus parlante qu'une valeur isolée), mesurer dans trois directions (horizontale, verticale, axiale) sur chaque palier, vérifier la vitesse et la charge au moment de la mesure, puis recouper avec la température et l'analyse d'huile. Avant de conclure, on élimine les causes simples : boulons de fixation, pied boiteux, accouplement.\n\nEn cas de vibration brutalement croissante ou de dépassement du seuil d'arrêt, on réduit la charge ou on arrête la machine selon la procédure, au lieu d'attendre la panne. Équilibrer un rotor (équilibrage sur place sur plans de correction) se fait seulement après avoir exclu un désalignement ou un jeu.\n\n**Sur le terrain**\n- Mesure toujours au même point, dans les trois directions, machine à régime stable, pour pouvoir comparer d'un mois à l'autre.\n- La tendance compte plus que la valeur isolée : un niveau qui double en deux mois se traite avant l'alarme.\n- Un pic à 1× n'est pas toujours un balourd : vérifie la phase et la direction avant de conclure.",
       "keyPoints": [
         "Vitesse vibratoire en mm/s RMS ; 1× = N/60.",
         "Balourd : 1× radial ; désalignement : 2× et axial ; jeu : harmoniques multiples.",
@@ -62,7 +62,7 @@
       "title": "Étanchéité, brides et boulonnerie",
       "theme": "Étanchéité et boulonnerie",
       "minutes": 9,
-      "body": "L'étanchéité d'une machine ou d'une tuyauterie repose sur trois éléments : des surfaces propres et en bon état, un **joint** adapté, et une **mise en précontrainte** correcte des boulons.\n\nPour l'étanchéité d'arbre, on distingue la **tresse** (presse-étoupe) et la **garniture mécanique**. La tresse doit laisser fuir quelques gouttes pour se lubrifier et se refroidir ; on la resserre progressivement, sans excès. La garniture mécanique assure l'étanchéité par deux faces, l'une fixe, l'autre tournante, séparées par un film liquide de quelques microns. Elle ne tolère ni la marche à sec, ni le choc, ni les particules ; ses pannes viennent surtout du fonctionnement à sec, de la cavitation, des vibrations et des défauts d'alignement. Les plans de rinçage et de barrage sont définis par la norme **API 682**, tandis que **API 610** couvre les pompes centrifuges pour l'industrie pétrolière.\n\nLes **brides** relient tuyauteries et équipements. La bride **à collerette** (weld neck) est soudée bout à bout au tube : elle résiste bien aux contraintes, d'où son usage en haute pression. La bride **à souder à recouvrement** (slip-on) glisse sur le tube, la bride **pleine** (blind) obture une ligne. Les joints courants sont les joints **spiralés** (spirales métalliques et garniture souple), plus adaptés aux hautes pressions que les joints plats en fibres.\n\nLe **serrage** s'effectue **en croix** (en étoile), par passes progressives, par exemple 30 %, 60 % puis 100 % du couple, suivies d'une passe circulaire finale. Le couple appliqué se traduit en tension dans le goujon, mais seulement grâce au frottement : un goujon **lubrifié** atteint une tension plus élevée qu'un goujon sec pour le même couple, d'où l'importance d'appliquer la valeur correspondant à l'état de lubrification prescrit.\n\nLa classe de résistance **8.8** d'un boulon indique une résistance à la rupture minimale de **800 MPa** (le premier chiffre × 100), et une limite d'élasticité égale à 80 % de cette valeur, soit 640 MPa.\n\nAvant toute ouverture : consigner, purger, vérifier l'absence de pression, utiliser des joints neufs. Un joint ne se réutilise jamais.",
+      "body": "L'étanchéité d'une machine ou d'une tuyauterie repose sur trois éléments : des surfaces propres et en bon état, un **joint** adapté, et une **mise en précontrainte** correcte des boulons.\n\nPour l'étanchéité d'arbre, on distingue la **tresse** (presse-étoupe) et la **garniture mécanique**. La tresse doit laisser fuir quelques gouttes pour se lubrifier et se refroidir ; on la resserre progressivement, sans excès. La garniture mécanique assure l'étanchéité par deux faces, l'une fixe, l'autre tournante, séparées par un film liquide de quelques microns. Elle ne tolère ni la marche à sec, ni le choc, ni les particules ; ses pannes viennent surtout du fonctionnement à sec, de la cavitation, des vibrations et des défauts d'alignement. Les plans de rinçage et de barrage sont définis par la norme **API 682**, tandis que **API 610** couvre les pompes centrifuges pour l'industrie pétrolière.\n\nLes **brides** relient tuyauteries et équipements. La bride **à collerette** (weld neck) est soudée bout à bout au tube : elle résiste bien aux contraintes, d'où son usage en haute pression. La bride **à souder à recouvrement** (slip-on) glisse sur le tube, la bride **pleine** (blind) obture une ligne. Les joints courants sont les joints **spiralés** (spirales métalliques et garniture souple), plus adaptés aux hautes pressions que les joints plats en fibres.\n\nLe **serrage** s'effectue **en croix** (en étoile), par passes progressives, par exemple 30 %, 60 % puis 100 % du couple, suivies d'une passe circulaire finale. Le couple appliqué se traduit en tension dans le goujon, mais seulement grâce au frottement : un goujon **lubrifié** atteint une tension plus élevée qu'un goujon sec pour le même couple, d'où l'importance d'appliquer la valeur correspondant à l'état de lubrification prescrit.\n\nLa classe de résistance **8.8** d'un boulon indique une résistance à la rupture minimale de **800 MPa** (le premier chiffre × 100), et une limite d'élasticité égale à 80 % de cette valeur, soit 640 MPa.\n\nAvant toute ouverture : consigner, purger, vérifier l'absence de pression, utiliser des joints neufs. Un joint ne se réutilise jamais.\n\n**Sur le terrain**\n- Serre en croix, par passes, au couple prescrit : jamais un boulon à fond à la fois.\n- Une bride qui suinte à la remise en pression se dépressurise et se reprend, elle ne se resserre pas sous pression.\n- Une garniture mécanique ne tourne jamais à sec : vérifie le plan de rinçage ouvert avant chaque démarrage.",
       "keyPoints": [
         "Tresse : fuite légère nécessaire ; garniture mécanique : jamais à sec.",
         "Bride à collerette soudée bout à bout ; joint spiralé pour haute pression.",
@@ -78,17 +78,17 @@
       "id": "tech-meca-001",
       "theme": "Pompes centrifuges",
       "level": 1,
-      "q": "Dans quelle zone de la courbe caractéristique doit-on idéalement faire fonctionner une pompe centrifuge ?",
+      "q": "Pendant la nuit, un opérateur laisse la pompe de refroidissement tourner avec la vanne de refoulement presque fermée, pour « économiser de l'eau ». Quel est le risque principal ?",
       "img": "svg/centrifugal-pump-curve.svg",
-      "imgAlt": "Courbes hauteur, rendement et puissance d'une pompe centrifuge avec point de meilleur rendement",
+      "imgAlt": "Courbe H-Q d'une pompe centrifuge : 55 m à débit nul, point de fonctionnement 60 m³/h à 40 m, hauteur statique du réseau 15 m",
       "choices": [
-        "Le plus à gauche possible, à débit minimal",
-        "Le plus à droite possible, à débit maximal",
-        "Au point de hauteur nulle",
-        "Au voisinage du point de meilleur rendement (BEP)"
+        "Échauffement du liquide et efforts radiaux élevés sur l'arbre et les paliers",
+        "Cavitation par excès de débit à l'aspiration, avec érosion des aubes de roue",
+        "Surcharge du moteur par excès de débit et déclenchement du relais thermique",
+        "Risque nul : la pompe fonctionne mieux à faible débit, avec moins d'usure"
       ],
-      "answer": 3,
-      "explain": "Autour du BEP, les efforts radiaux, l'échauffement et le risque de cavitation sont minimaux et la durée de vie des paliers et de la garniture est maximale.",
+      "answer": 0,
+      "explain": "À très faible débit, l'énergie fournie au liquide se transforme en chaleur et la recirculation interne charge l'arbre. La cavitation d'excès de débit et la surcharge se produisent, elles, à fort débit.",
       "seconds": 60,
       "status": "draft"
     },
@@ -96,17 +96,17 @@
       "id": "tech-meca-002",
       "theme": "Pompes centrifuges",
       "level": 1,
-      "q": "Un moteur asynchrone de pompe est démarré en direct (schéma de démarrage DOL). Quel est l'ordre de grandeur du courant de démarrage ?",
+      "q": "Le moteur de 30 A nominal d'une pompe démarre en direct (démarrage DOL). Quel courant attend-on environ pendant le démarrage ?",
       "img": "svg/motor-starter-dol.svg",
-      "imgAlt": "Schéma de démarrage direct d'un moteur : sectionneur, contacteur et relais thermique",
+      "imgAlt": "Schéma d'un démarreur direct : sectionneur Q1, fusibles F3, contacteur KM1, relais thermique F1, moteur M",
       "choices": [
-        "Environ 0,5 fois le courant nominal",
-        "Environ 5 à 8 fois le courant nominal",
-        "Exactement le courant nominal",
-        "Environ 50 fois le courant nominal"
+        "30 A, soit le courant nominal du moteur dès le démarrage en direct",
+        "Entre 150 et 240 A, soit 5 à 8 fois le courant nominal du moteur",
+        "15 A, soit la moitié du courant nominal pendant la montée en vitesse",
+        "1 500 A, soit cinquante fois le courant nominal pendant le démarrage"
       ],
       "answer": 1,
-      "explain": "En démarrage direct, l'appel de courant est typiquement de 5 à 8 fois In pendant quelques secondes, d'où les contraintes sur le réseau et l'intérêt d'un démarreur progressif ou d'un variateur pour les grosses machines.",
+      "explain": "En démarrage direct, l'appel de courant est de 5 à 8 fois In. D'où l'usage de démarreurs étoile-triangle ou progressifs sur les gros moteurs, et le dimensionnement des protections.",
       "seconds": 60,
       "status": "draft"
     },
@@ -114,17 +114,17 @@
       "id": "tech-meca-003",
       "theme": "Pompes centrifuges",
       "level": 2,
-      "q": "Sur la courbe de la pompe, quelle hauteur obtient-on à débit nul (vanne de refoulement fermée) ?",
+      "q": "Par erreur, la vanne de refoulement de la pompe est restée fermée pendant le quart. D'après la courbe, quelle hauteur la pompe développe-t-elle à ce moment, et que devient l'énergie ?",
       "img": "svg/centrifugal-pump-curve.svg",
-      "imgAlt": "Courbe H(Q) décroissante partant de la hauteur à débit nul",
+      "imgAlt": "Courbe H-Q d'une pompe centrifuge : 55 m à débit nul, point de fonctionnement 60 m³/h à 40 m, hauteur statique du réseau 15 m",
       "choices": [
-        "La hauteur maximale de la courbe, avec échauffement du liquide",
-        "Une hauteur nulle",
-        "La hauteur correspondant au BEP",
-        "Une hauteur infinie"
+        "0 m : une pompe ne développe aucune hauteur sans débit, l'énergie est nulle",
+        "40 m, comme au point de fonctionnement ; l'énergie est évacuée par la tuyauterie de refoulement",
+        "55 m, le maximum de la courbe ; l'énergie est dissipée en chaleur dans le liquide",
+        "15 m, la hauteur statique du réseau ; l'énergie est stockée dans la tuyauterie"
       ],
-      "answer": 0,
-      "explain": "La courbe H(Q) d'une centrifuge est à son maximum à débit nul, mais toute la puissance se dissipe en chaleur dans le liquide : on ne reste pas dans cet état.",
+      "answer": 2,
+      "explain": "À débit nul, la courbe de la pompe donne sa hauteur maximale (55 m ici). Le liquide, brassé sans s'écouler, s'échauffe : il faut arrêter rapidement.",
       "seconds": 60,
       "status": "draft"
     },
@@ -132,31 +132,31 @@
       "id": "tech-meca-004",
       "theme": "Pompes centrifuges",
       "level": 2,
-      "q": "On double la vitesse de rotation d'une pompe centrifuge. Que deviennent débit, hauteur et puissance ?",
+      "q": "Une pompe entraînée à 1 450 tr/min absorbe 10 kW. Le variateur la ramène à 1 160 tr/min (− 20 %). Quelle puissance absorbe-t-elle environ ?",
       "choices": [
-        "Débit ×2, hauteur ×2, puissance ×2",
-        "Débit ×2, hauteur ×4, puissance ×4",
-        "Débit ×2, hauteur ×4, puissance ×8",
-        "Débit ×4, hauteur ×8, puissance ×16"
+        "Environ 8 kW",
+        "Environ 6,4 kW",
+        "Environ 9 kW",
+        "Environ 5 kW"
       ],
-      "answer": 2,
-      "explain": "Les lois de similitude : Q proportionnel à N, H à N² et P à N³.",
-      "seconds": 45,
+      "answer": 3,
+      "explain": "Lois de similitude : le débit varie comme N, la hauteur comme N², la puissance comme N³. 0,8³ ≈ 0,51, soit environ 5 kW. Baisser la vitesse économise bien plus qu'étrangler la vanne.",
+      "seconds": 90,
       "status": "draft"
     },
     {
       "id": "tech-meca-005",
       "theme": "Pompes centrifuges",
       "level": 2,
-      "q": "Une pompe présente un début de cavitation. Quelle action corrective va dans le bon sens ?",
+      "q": "Une pompe de bac commence à caviter (bruit de gravier). Le niveau du bac est bas et le vacuomètre d'aspiration lit − 0,6 bar. Quelle action corrective va dans le bon sens ?",
       "choices": [
-        "Nettoyer le filtre d'aspiration et augmenter la pression disponible à l'aspiration",
-        "Fermer partiellement la vanne d'aspiration",
-        "Réchauffer le liquide pompé",
-        "Réduire le diamètre de la ligne d'aspiration"
+        "Fermer partiellement la vanne d'aspiration pour réduire le débit aspiré",
+        "Nettoyer le filtre d'aspiration et remonter le niveau pour gagner du NPSH",
+        "Réchauffer le liquide pompé pour diminuer sa viscosité à l'aspiration",
+        "Réduire le diamètre de la ligne d'aspiration pour accélérer l'écoulement"
       ],
-      "answer": 0,
-      "explain": "Il faut augmenter le NPSH disponible : moins de pertes de charge, niveau plus haut, liquide plus frais. Étrangler l'aspiration l'aggrave.",
+      "answer": 1,
+      "explain": "La cavitation vient d'un NPSH disponible trop faible : il faut le remonter (niveau, filtre propre, ligne dégagée). Étrangler l'aspiration, réchauffer ou rétrécir la ligne l'aggravent.",
       "seconds": 45,
       "status": "draft"
     },
@@ -164,17 +164,17 @@
       "id": "tech-meca-006",
       "theme": "Pompes centrifuges",
       "level": 2,
-      "q": "Sur le graphique, la courbe de la pompe coupe la courbe du circuit. Que représente ce point d'intersection ?",
+      "q": "Un projet relève le niveau d'arrivée du circuit : la hauteur statique passerait de 15 m à 55 m. D'après la courbe de la pompe, que se passerait-il ?",
       "img": "svg/centrifugal-pump-curve.svg",
-      "imgAlt": "Courbe de pompe et courbe de circuit se croisant au point de fonctionnement",
+      "imgAlt": "Courbe H-Q d'une pompe centrifuge : 55 m à débit nul, point de fonctionnement 60 m³/h à 40 m, hauteur statique du réseau 15 m",
       "choices": [
-        "Le point de cavitation",
-        "Le point de fonctionnement (débit et hauteur réellement obtenus)",
-        "La hauteur maximale de la pompe",
-        "Le NPSH requis"
+        "Le débit resterait à 60 m³/h, la hauteur statique n'étant qu'un paramètre secondaire",
+        "Le débit doublerait, car la pompe compenserait par une hauteur manométrique plus forte",
+        "La pompe ne débiterait plus : l'intersection des courbes tomberait à débit nul",
+        "La pompe passerait immédiatement en cavitation, faute de NPSH disponible suffisant"
       ],
-      "answer": 1,
-      "explain": "La pompe fournit exactement la hauteur que le circuit réclame au débit considéré : c'est l'équilibre, donc le point de fonctionnement.",
+      "answer": 2,
+      "explain": "La courbe du réseau part de la hauteur statique. À 55 m, elle rejoint la courbe de la pompe à débit nul (55 m) : la pompe est trop faible pour ce circuit.",
       "seconds": 60,
       "status": "draft"
     },
@@ -182,17 +182,15 @@
       "id": "tech-meca-007",
       "theme": "Pompes centrifuges",
       "level": 2,
-      "q": "Une pompe fonctionne très à gauche de son BEP, à très faible débit. Quel risque principal court-elle ?",
-      "img": "svg/centrifugal-pump-curve.svg",
-      "imgAlt": "Courbe de pompe avec zone de faible débit à gauche du point de meilleur rendement",
+      "q": "Le matin, vous trouvez un corps de pompe très chaud et des traces de passage sur le palier : de nuit, la pompe a tourné refoulement presque fermé. Quel mécanisme est en cause ?",
       "choices": [
-        "Cavitation d'aspiration par excès de débit",
-        "Surcharge du moteur par excès de débit",
-        "Recirculation interne, échauffement du liquide et efforts radiaux élevés sur l'arbre",
-        "Gel du liquide pompé"
+        "Cavitation d'aspiration par excès de débit, avec érosion des aubes de roue et du corps de pompe",
+        "Désamorçage de la pompe par entrée d'air à l'aspiration, avec marche à sec du corps de pompe",
+        "Surtension du moteur d'entraînement due à une variation de tension sur le réseau électrique",
+        "Recirculation interne à très faible débit : liquide échauffé et efforts radiaux sur l'arbre"
       ],
-      "answer": 2,
-      "explain": "À débit très faible, le liquide recircule dans la roue et s'échauffe, et la poussée radiale fatigue paliers et garniture. La ligne de débit minimal sert à éviter cette zone.",
+      "answer": 3,
+      "explain": "Loin à gauche du meilleur rendement, la roue recircule le liquide et la poussée radiale devient forte : chaleur, flexion d'arbre, usure des paliers et garniture.",
       "seconds": 60,
       "status": "draft"
     },
@@ -200,17 +198,15 @@
       "id": "tech-meca-008",
       "theme": "Pompes centrifuges",
       "level": 3,
-      "q": "Une pompe fonctionne très à droite de son BEP, à fort débit. Quels risques accroît-elle ?",
-      "img": "svg/centrifugal-pump-curve.svg",
-      "imgAlt": "Courbe de pompe avec NPSH requis et puissance augmentant à fort débit",
+      "q": "Après changement d'un servomoteur, la vanne de refoulement est restée ouverte en grand : la pompe est bruyante et l'ampèremètre indique 110 % de In. Quel est le mécanisme ?",
       "choices": [
-        "Surchauffe par recirculation interne",
-        "Désamorçage immédiat",
-        "Perte de la courbe de rendement",
-        "Cavitation (NPSH requis en hausse) et surcharge du moteur"
+        "À fort débit, le NPSH requis augmente (cavitation) et la puissance absorbée aussi",
+        "À fort débit, le liquide s'échauffe par recirculation interne dans le corps et les paliers",
+        "La pompe se désamorce par excès de débit et l'intensité chute en dessous du nominal",
+        "La courbe de rendement disparaît et la pompe fonctionne hors de son domaine normal"
       ],
-      "answer": 3,
-      "explain": "À fort débit, le NPSH requis augmente et la puissance absorbée aussi : la pompe cavite et peut surcharger son moteur.",
+      "answer": 0,
+      "explain": "Loin à droite du meilleur rendement, la pompe veut plus de NPSH et plus de puissance : bruit de cavitation et surintensité. Il faut ramener le débit vers le point nominal avec la vanne.",
       "seconds": 60,
       "status": "draft"
     },
@@ -218,49 +214,51 @@
       "id": "tech-meca-009",
       "theme": "Pompes centrifuges",
       "level": 3,
-      "q": "Dans une pompe multi-étages, comment obtient-on une grande hauteur ?",
+      "q": "Une ESP doit relever le fluide de 1 200 m et chaque étage donne en moyenne 6 m. Quel est l'ordre de grandeur du nombre d'étages empilés sur l'arbre ?",
       "img": "svg/esp-system.svg",
-      "imgAlt": "Schéma d'un système de pompage immergé multi-étages ESP",
+      "imgAlt": "Système ESP avec pompe multi-étages, protecteur et moteur en fond de puits",
       "choices": [
-        "En augmentant seulement le diamètre de la volute",
-        "En empilant plusieurs roues sur le même arbre, chaque étage ajoutant de la hauteur",
-        "En supprimant le diffuseur",
-        "En faisant tourner la roue à l'envers"
+        "Environ 20 étages",
+        "Environ 2 000 étages",
+        "Environ 200 étages",
+        "Environ 12 étages"
       ],
-      "answer": 1,
-      "explain": "Chaque étage (roue + diffuseur) ajoute sa hauteur : c'est le principe des pompes immergées ESP, qui comptent des dizaines d'étages.",
-      "seconds": 60,
+      "answer": 2,
+      "explain": "1 200 / 6 = 200 étages. On empile des roues et diffuseurs sur le même arbre : chaque étage ajoute de la hauteur sans ajouter de débit.",
+      "seconds": 75,
       "status": "draft"
     },
     {
       "id": "tech-meca-010",
       "theme": "Compresseurs et turbines",
       "level": 1,
-      "q": "Sur quel type de compresseur trouve-t-on des clapets d'aspiration et de refoulement ?",
+      "q": "Sur le compresseur de la photo (cylindres en V, collecteurs de refoulement), vous démontez une tête de cylindre. Quels organes assurent le sens unique du gaz à l'aspiration et au refoulement ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Compresseur alternatif à pistons à cylindres en V avec collecteurs de refoulement",
       "choices": [
-        "Le compresseur alternatif à pistons",
-        "Le compresseur centrifuge",
-        "La turbine à gaz",
-        "Le compresseur axial"
+        "Les roulements de bielle et le vilebrequin de la machine",
+        "Le démisteur et le séparateur situé en amont du cylindre",
+        "L'accouplement entre le moteur et le vilebrequin",
+        "Les clapets (soupapes) d'aspiration et de refoulement du cylindre"
       ],
-      "answer": 0,
-      "explain": "Les clapets du compresseur alternatif s'ouvrent et se ferment selon l'écart de pression de part et d'autre.",
-      "seconds": 45,
+      "answer": 3,
+      "explain": "Le compresseur alternatif à pistons fonctionne avec des clapets automatiques qui s'ouvrent sous la différence de pression. Les turbomachines n'en ont pas.",
+      "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-011",
       "theme": "Compresseurs et turbines",
       "level": 1,
-      "q": "Quelles sont les trois sections principales d'une turbine à gaz ?",
+      "q": "Lors d'une inspection boroscopique d'une turbine à gaz, on vous demande de nommer les sections dans l'ordre, de l'entrée d'air à l'échappement. Quel est l'ordre ?",
       "choices": [
-        "Pompe, volute et diffuseur",
-        "Cylindre, piston et bielle",
-        "Compresseur d'air, chambre de combustion et turbine de détente",
-        "Évaporateur, condenseur et détendeur"
+        "Compresseur d'air, chambre de combustion, turbine de détente",
+        "Pompe d'alimentation, volute, diffuseur et vanne de refoulement",
+        "Cylindre, piston, bielle, vilebrequin et volant d'inertie",
+        "Évaporateur, condenseur, détendeur, compresseur frigorifique"
       ],
-      "answer": 2,
-      "explain": "L'air comprimé alimente la combustion ; les gaz chauds se détendent dans la turbine, qui entraîne le compresseur d'air et la charge.",
+      "answer": 0,
+      "explain": "L'air est comprimé, brûlé avec le combustible, puis les gaz chauds se détendent dans la turbine qui entraîne le compresseur et la charge.",
       "seconds": 45,
       "status": "draft"
     },
@@ -268,15 +266,15 @@
       "id": "tech-meca-012",
       "theme": "Compresseurs et turbines",
       "level": 2,
-      "q": "Quel phénomène menace un compresseur centrifuge fonctionnant en dessous de son débit minimal ?",
+      "q": "Un compresseur centrifuge est démarré, vanne anti-pompage mise en manuel et fermée par erreur, avec un débit de process très faible. Quel phénomène menace la machine ?",
       "choices": [
         "Le gel des joints",
+        "Le pompage (surge)",
         "Le grippage par manque d'eau",
-        "La surtension de l'alternateur",
-        "Le pompage (surge)"
+        "La surtension de l'alternateur"
       ],
-      "answer": 3,
-      "explain": "Au pompage, le débit s'inverse de façon cyclique avec de fortes vibrations. La vanne anti-pompage recycle le gaz pour s'en protéger.",
+      "answer": 1,
+      "explain": "Sous son débit minimal, un compresseur centrifuge pompe : le gaz refoule par à-coups en sens inverse, ce qui détruit butée et joints. La vanne anti-pompage doit rester libre.",
       "seconds": 45,
       "status": "draft"
     },
@@ -284,31 +282,31 @@
       "id": "tech-meca-013",
       "theme": "Compresseurs et turbines",
       "level": 2,
-      "q": "Un compresseur aspire à 5 bar absolus et refoule à 20 bar absolus. Quel est son rapport de compression ?",
+      "q": "Le compresseur d'air d'instrument aspire à 1 bar absolu et refoule à 8 barg. Quel est son rapport de compression ?",
       "choices": [
-        "3",
-        "4",
-        "5",
-        "15"
+        "8 (pression relative lue au manomètre divisée par 1 bar)",
+        "7 (refoulement de 8 barg moins 1 bar d'aspiration)",
+        "4 (8 barg divisé par deux étages de compression)",
+        "9 (refoulement de 9 bar abs / aspiration de 1 bar abs)"
       ],
-      "answer": 1,
-      "explain": "Rapport = pression absolue de refoulement / pression absolue d'aspiration = 20 / 5 = 4. On utilise toujours des pressions absolues.",
-      "seconds": 45,
+      "answer": 3,
+      "explain": "Le rapport se calcule en pressions absolues : (8 + 1) / 1 = 9. Utiliser les pressions relatives donne 8, erreur classique.",
+      "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-014",
       "theme": "Compresseurs et turbines",
       "level": 3,
-      "q": "Pourquoi place-t-on des refroidisseurs intermédiaires entre les étages d'un compresseur ?",
+      "q": "Sur un compresseur alternatif à deux étages, le refroidisseur intermédiaire est encrassé : le gaz arrive à 90 °C au 2e étage au lieu de 40 °C. Pourquoi est-ce sérieux ?",
       "choices": [
-        "Pour augmenter la teneur en vapeur d'eau",
-        "Pour faire monter la pression d'aspiration",
-        "Pour limiter la température de refoulement et réduire le travail de compression",
-        "Pour supprimer le besoin de lubrification"
+        "Le travail de compression augmente et la température de refoulement monte, d'où un risque pour l'huile",
+        "La température d'aspiration du 2e étage n'a aucun effet sur le travail de compression ni sur le refoulement",
+        "Le gaz chaud est plus facile à comprimer car il est plus léger : c'est un gain d'énergie",
+        "La teneur en vapeur d'eau du gaz est réduite, ce qui améliore le séchage de l'air comprimé"
       ],
-      "answer": 2,
-      "explain": "Un gaz plus froid occupe moins de volume : la compression suivante demande moins de travail et la température reste admissible pour les matériaux et l'huile.",
+      "answer": 0,
+      "explain": "Gaz plus chaud = plus de travail et plus de chaleur au refoulement : l'huile se dégrade, les clapets souffrent. Le refroidisseur intermédiaire limite la température et le travail.",
       "seconds": 60,
       "status": "draft"
     },
@@ -316,15 +314,17 @@
       "id": "tech-meca-015",
       "theme": "Compresseurs et turbines",
       "level": 3,
-      "q": "Sur un compresseur alternatif, la température de refoulement d'un étage augmente nettement et le débit baisse. Cause la plus probable ?",
+      "q": "Sur le compresseur alternatif, la température de refoulement d'un étage monte nettement et le débit baisse. Quelle est la cause la plus probable ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Compresseur alternatif à pistons à cylindres en V",
       "choices": [
-        "Un clapet de refoulement fuyard : le gaz chaud revient et est recomprimé",
-        "Un excès de graisse au palier du moteur",
-        "Un filtre d'huile neuf",
-        "Une baisse de la température ambiante"
+        "Un excès de graisse dans le palier du moteur d'entraînement, avec échauffement du palier",
+        "Un clapet de refoulement fuyard : le gaz chaud revient au cylindre et est recomprimé",
+        "Un filtre d'huile neuf qui augmente légèrement la perte de charge sur le circuit",
+        "Une baisse de la température ambiante qui modifie le rendement du refroidisseur"
       ],
-      "answer": 0,
-      "explain": "Un clapet fuyard fait recirculer du gaz déjà comprimé et chaud : le gaz est comprimé plusieurs fois, la température monte et le débit utile baisse.",
+      "answer": 1,
+      "explain": "Un clapet qui fuit laisse revenir du gaz déjà comprimé : il est recomprimé, donc plus chaud, et le débit utile baisse. On contrôle les clapets de l'étage concerné.",
       "seconds": 60,
       "status": "draft"
     },
@@ -332,15 +332,15 @@
       "id": "tech-meca-016",
       "theme": "Compresseurs et turbines",
       "level": 3,
-      "q": "Quel est le principe d'un joint à gaz sec sur un compresseur centrifuge ?",
+      "q": "Le débit de fuite primaire du joint à gaz sec d'un compresseur centrifuge augmente peu à peu. Quel est le principe du joint et que signifie cette dérive ?",
       "choices": [
-        "Un bain d'huile sous forte pression entre deux joints",
-        "Une tresse graissée en continu",
-        "Un joint en caoutchouc sans circulation",
-        "Un gaz de barrière filtré s'écoule en faible quantité entre deux faces, dont une avec rainures"
+        "Un bain d'huile sous pression entre deux faces planes ; une dérive progressive est normale",
+        "Une tresse graissée serrée autour de l'arbre ; la dérive révèle un manque de graisse à l'arrêt",
+        "Un gaz de barrière filtré entre deux faces dont une rainurée ; la dérive annonce l'usure du joint",
+        "Un joint en caoutchouc sans circulation de fluide ; la fuite croissante est attendue avec l'âge"
       ],
-      "answer": 3,
-      "explain": "Les rainures de la face tournante créent un film de gaz, sans contact. Seule une très faible fuite part à l'évent ou à la torche.",
+      "answer": 2,
+      "explain": "Le joint à gaz sec repose sur un film de gaz propre entre les faces. Une fuite primaire qui croît traduit un début de dégradation à planifier avant la panne.",
       "seconds": 60,
       "status": "draft"
     },
@@ -348,47 +348,49 @@
       "id": "tech-meca-017",
       "theme": "Compresseurs et turbines",
       "level": 1,
-      "q": "Quelle protection est indispensable sur une turbine à vapeur ?",
+      "q": "Après une révision de turbine à vapeur, quel essai de protection est incontournable avant la remise en service, et pourquoi ?",
       "choices": [
-        "Un filtre à air de grande taille",
-        "Un dispositif de déclenchement de survitesse (overspeed trip)",
-        "Un bac de rétention d'huile",
-        "Un clapet de refoulement"
+        "Le déclenchement de survitesse (overspeed trip), pour éviter l'éclatement du rotor",
+        "L'essai de pression du condenseur, pour vérifier l'étanchéité de l'échappement",
+        "Le test de débit du bac de rétention d'huile, pour éviter les débordements",
+        "Le contrôle du clapet de refoulement de la pompe d'huile, pour éviter les retours de fluide"
       ],
-      "answer": 1,
-      "explain": "La survitesse peut détruire le rotor en quelques secondes. Le déclencheur coupe l'admission de vapeur et se teste périodiquement.",
+      "answer": 0,
+      "explain": "Une turbine à vapeur peut s'emballer si la charge disparaît : le dispositif de survitesse coupe la vapeur avant l'éclatement. Il est testé selon la procédure du constructeur.",
       "seconds": 45,
       "status": "draft"
     },
     {
       "id": "tech-meca-018",
-      "theme": "Alignement, roulements et lubrification",
+      "theme": "Compresseurs et turbines",
       "level": 1,
-      "q": "Quels sont les deux types de désalignement entre deux arbres accouplés ?",
+      "q": "Vous partez en ronde près d'un compresseur et d'une turbine en marche. Quel équipement de protection individuelle, parmi ceux du schéma, est indispensable en plus du casque ?",
+      "img": "svg/ppe-icons.svg",
+      "imgAlt": "Équipements de protection individuelle : casque, lunettes, gants, chaussures, casque antibruit, gilet haute visibilité",
       "choices": [
-        "Axial et thermique",
-        "Statique et dynamique",
-        "Parallèle (radial) et angulaire",
-        "Vertical et chimique"
+        "Un masque de soudeur avec filtre teinté à cristaux liquides",
+        "Le casque antibruit ou des protections auditives adaptées",
+        "Des gants de soudage en cuir épais, résistants à la chaleur",
+        "Un gilet de sauvetage à gonflage automatique de type offshore"
       ],
-      "answer": 2,
-      "explain": "Le désalignement parallèle est un décalage des axes ; l'angulaire est un angle entre les axes. Ils sont souvent combinés.",
-      "seconds": 45,
+      "answer": 1,
+      "explain": "Les machines tournantes dépassent souvent 85 dB(A) : la protection auditive est obligatoire. Le masque de soudeur et les gants de soudage n'ont aucun rôle ici.",
+      "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-019",
       "theme": "Alignement, roulements et lubrification",
-      "level": 2,
-      "q": "Que vérifie-t-on en premier, avant de commencer l'alignement d'un groupe motopompe ?",
+      "level": 1,
+      "q": "Le laser d'alignement montre que l'arbre moteur est décalé latéralement et incliné par rapport à l'arbre pompe. Quels sont les deux types de désalignement en présence ?",
       "choices": [
-        "Le pied boiteux (soft foot)",
-        "La couleur de la peinture du socle",
-        "Le nombre de dents de l'accouplement",
-        "La pression de refoulement de la pompe"
+        "Désalignement axial et désalignement thermique à chaud",
+        "Désalignement statique et désalignement dynamique du rotor",
+        "Désalignement parallèle (radial) et désalignement angulaire",
+        "Désalignement vertical et désalignement magnétique de l'accouplement"
       ],
-      "answer": 0,
-      "explain": "Un pied qui ne repose pas à plat déforme la machine au serrage et fausse l'alignement. On le corrige avant de mesurer.",
+      "answer": 2,
+      "explain": "Un désalignement est parallèle (décalage des axes), angulaire (inclinaison) ou combiné. Les autres termes ne décrivent pas deux arbres accouplés.",
       "seconds": 45,
       "status": "draft"
     },
@@ -396,15 +398,15 @@
       "id": "tech-meca-020",
       "theme": "Alignement, roulements et lubrification",
       "level": 2,
-      "q": "Quel est le diamètre d'alésage d'un roulement à billes de référence 6205 ?",
+      "q": "Un moteur neuf est posé sur le socle de la pompe. Avant de mesurer quoi que ce soit pour l'alignement, que contrôlez-vous en premier ?",
       "choices": [
-        "5 mm",
-        "20 mm",
-        "62 mm",
-        "25 mm"
+        "L'état de la peinture et la planéité apparente du socle",
+        "Le nombre de dents de l'accouplement et le type de graisse",
+        "La pression de refoulement et le débit de la pompe",
+        "Le pied boiteux (soft foot) de chaque patte du moteur"
       ],
       "answer": 3,
-      "explain": "Pour les références de 04 à 96, l'alésage est égal aux deux derniers chiffres multipliés par 5 : 05 x 5 = 25 mm.",
+      "explain": "Un pied boiteux fausse l'alignement et déforme le carter au serrage. On le corrige (cales) avant tout réglage fin.",
       "seconds": 45,
       "status": "draft"
     },
@@ -412,15 +414,15 @@
       "id": "tech-meca-021",
       "theme": "Alignement, roulements et lubrification",
       "level": 2,
-      "q": "Quel est l'effet d'un excès de graisse dans un roulement ?",
+      "q": "Pour remplacer le roulement d'un petit moteur, le magasin vous remet un 6205. Quel est le diamètre de l'arbre (alésage) qu'il doit recevoir ?",
       "choices": [
-        "Refroidissement du roulement",
-        "Allongement garanti de la durée de vie",
-        "Échauffement par brassage de la graisse",
-        "Disparition du bruit de fonctionnement"
+        "20 mm (alésage du roulement 6204, une taille en dessous)",
+        "25 mm (05 × 5 pour l'alésage du roulement 6205)",
+        "5 mm (le dernier chiffre du code lu comme un diamètre)",
+        "62 mm (les deux premiers chiffres lus comme un diamètre)"
       ],
-      "answer": 2,
-      "explain": "Une graisse en excès est malaxée par les éléments roulants : elle chauffe, perd ses propriétés et peut déformer le roulement.",
+      "answer": 1,
+      "explain": "Pour les roulements à billes de la série 62, l'alésage vaut 5 fois le nombre à deux chiffres final dès 04 : 05 donne 25 mm.",
       "seconds": 45,
       "status": "draft"
     },
@@ -428,49 +430,47 @@
       "id": "tech-meca-022",
       "theme": "Alignement, roulements et lubrification",
       "level": 2,
-      "q": "Que signifie la classe ISO VG 46 d'une huile ?",
+      "q": "Un graisseur a donné 10 coups de pistolet à un moteur au lieu de 3. Une heure plus tard, le palier passe de 60 à 85 °C. Quelle est la cause la plus probable ?",
       "choices": [
-        "Une température d'inflammation de 46 °C",
-        "Une viscosité cinématique d'environ 46 mm²/s à 40 °C",
-        "Une densité de 0,46",
-        "Un indice de basicité de 46"
+        "Manque de graisse : frottement direct entre les éléments roulants",
+        "Un excès de refroidissement du palier qui épaissit fortement la graisse",
+        "Excès de graisse : brassage de la graisse et échauffement du palier",
+        "Un balourd du rotor qui surcharge le roulement côté accouplement"
       ],
-      "answer": 1,
-      "explain": "La classe ISO VG est définie par la viscosité cinématique à 40 °C, exprimée en mm²/s (cSt).",
+      "answer": 2,
+      "explain": "Trop de graisse est brassée par les billes et chauffe. Il faut respecter la quantité et la périodicité prescrites.",
       "seconds": 45,
       "status": "draft"
     },
     {
       "id": "tech-meca-023",
-      "theme": "Compresseurs et turbines",
-      "level": 1,
-      "q": "Quel équipement de protection individuelle est indispensable à l'approche immédiate d'un compresseur ou d'une turbine en marche ?",
-      "img": "svg/ppe-icons.svg",
-      "imgAlt": "Pictogrammes d'équipements de protection : casque, lunettes, protections auditives, gants, chaussures",
+      "theme": "Alignement, roulements et lubrification",
+      "level": 2,
+      "q": "Le plan de graissage d'un réducteur indique ISO VG 46, mais le magasin n'a que du VG 32 et du VG 68. Que signifie VG 46 et que faites-vous ?",
       "choices": [
-        "Un masque de soudeur",
-        "Des gants de soudage",
-        "Un gilet de sauvetage",
-        "Des protections auditives (bouchons ou casque antibruit)"
+        "Point d'éclair de 46 °C ; prendre n'importe laquelle des deux huiles disponibles",
+        "Densité de 0,46 ; prendre l'huile la plus fluide pour faciliter le démarrage",
+        "Indice de basicité de 46 ; prendre l'huile la plus épaisse par sécurité",
+        "Viscosité d'environ 46 mm²/s à 40 °C ; ne pas substituer sans accord"
       ],
       "answer": 3,
-      "explain": "Les compresseurs et turbines produisent des niveaux sonores élevés ; les protections auditives, avec casque, lunettes et chaussures de sécurité, sont obligatoires dans ces zones.",
-      "seconds": 60,
+      "explain": "La classe ISO VG est la viscosité à 40 °C. Une viscosité inadaptée dégrade le film d'huile : on ne change pas sans validation.",
+      "seconds": 45,
       "status": "draft"
     },
     {
       "id": "tech-meca-024",
       "theme": "Alignement, roulements et lubrification",
       "level": 3,
-      "q": "Que représente la durée de vie L10 d'un roulement ?",
+      "q": "Le fournisseur annonce une durée L10 de 40 000 h pour un roulement. Que signifie cette valeur ?",
       "choices": [
-        "La durée atteinte ou dépassée par 90 % des roulements identiques d'un lot, dans des conditions données",
-        "La durée garantie sans aucune défaillance",
-        "La durée moyenne de 10 roulements",
-        "Le temps de rodage de 10 heures"
+        "Au moins 90 % des roulements identiques atteignent 40 000 h dans les conditions de calcul",
+        "Chaque roulement est garanti sans panne pendant 40 000 heures de fonctionnement",
+        "C'est la durée moyenne observée sur un lot de dix roulements identiques essayés",
+        "C'est le temps de rodage nécessaire avant la mise en charge nominale du roulement"
       ],
       "answer": 0,
-      "explain": "L10 est une durée statistique : 10 % des roulements peuvent défaillir avant. Elle dépend de la charge, de la lubrification et de la propreté.",
+      "explain": "La durée L10 est statistique : 10 % des roulements peuvent défaillir plus tôt. Elle suppose charge, vitesse, lubrification et montage conformes.",
       "seconds": 60,
       "status": "draft"
     },
@@ -480,15 +480,15 @@
       "level": 2,
       "q": "Avant de démonter une pompe de transfert pour changer le roulement, quelle est la séquence de consignation correcte ?",
       "img": "svg/lockout-tagout.svg",
-      "imgAlt": "Cadenas et étiquette de consignation sur une vanne d'isolement",
+      "imgAlt": "Consignation : séparer, condamner, identifier, vérifier l'absence de tension, mettre à la terre",
       "choices": [
-        "Couper le disjoncteur, puis démarrer pour tester que la pompe est bien arrêtée",
-        "Séparer, condamner par cadenas et étiquette, dissiper l'énergie résiduelle, vérifier l'absence d'énergie",
-        "Fermer la vanne de refoulement seulement",
-        "Poser une étiquette sans cadenas"
+        "Couper le disjoncteur puis démarrer brièvement pour tester que la pompe est arrêtée",
+        "Fermer les vannes de refoulement et d'aspiration, puis démonter directement le palier",
+        "Isoler, condamner par cadenas, dissiper l'énergie résiduelle puis vérifier l'absence d'énergie",
+        "Poser une étiquette d'information sans cadenas sur le sectionneur et ouvrir le palier"
       ],
-      "answer": 1,
-      "explain": "La consignation complète sépare l'équipement des sources d'énergie, verrouille, évacue les pressions et vérifie l'absence d'énergie avant intervention.",
+      "answer": 2,
+      "explain": "La consignation sépare toutes les sources, les condamne, purge l'énergie résiduelle et vérifie l'absence d'énergie. Un simple test de démarrage ou une étiquette seule ne protègent pas.",
       "seconds": 60,
       "status": "draft"
     },
@@ -496,179 +496,175 @@
       "id": "tech-meca-026",
       "theme": "Alignement, roulements et lubrification",
       "level": 2,
-      "q": "Comment évolue la tolérance d'alignement quand la vitesse de rotation augmente ?",
+      "q": "Une pompe de 3 000 tr/min remplace un modèle de 1 500 tr/min sur le même socle. Comment adaptez-vous la tolérance d'alignement ?",
       "choices": [
-        "Elle devient plus serrée",
-        "Elle devient plus large",
-        "Elle ne dépend pas de la vitesse",
-        "Elle disparaît au-dessus de 3 000 tr/min"
+        "L'élargir, car une machine plus rapide supporte de plus grands écarts",
+        "La garder identique, car elle ne dépend que de la taille de l'accouplement",
+        "La supprimer au-dessus de 3 000 tr/min, l'alignement étant alors automatique",
+        "La resserrer : plus la vitesse est élevée, plus la tolérance est sévère"
       ],
-      "answer": 0,
-      "explain": "À grande vitesse, un faible désalignement génère de forts efforts et des vibrations : les tolérances constructeur sont plus faibles.",
+      "answer": 3,
+      "explain": "Les tolérances d'alignement sont données par plage de vitesse : plus le régime est élevé, plus elles sont serrées.",
       "seconds": 45,
       "status": "draft"
     },
     {
       "id": "tech-meca-027",
-      "theme": "Vibrations et diagnostic",
-      "level": 1,
-      "q": "En quelle unité s'exprime couramment la vitesse vibratoire globale d'une machine ?",
+      "theme": "Alignement, roulements et lubrification",
+      "level": 2,
+      "q": "À la ronde, l'huile du carter d'un palier de pompe apparaît laiteuse au regard de niveau. Quelle est la cause la plus probable ?",
       "choices": [
-        "bar",
-        "tr/min",
-        "mm/s (RMS)",
-        "kW"
+        "Entrée d'eau ou de condensation (joint de palier abîmé, lavage haute pression)",
+        "Excès de graisse dans le moteur d'entraînement voisin, avec migration vers le carter",
+        "Huile neuve de viscosité trop faible qui a blanchi après le dernier appoint",
+        "Un alignement trop précis qui fait mousser l'huile sous l'effet de la vitesse"
       ],
-      "answer": 2,
-      "explain": "La vitesse vibratoire efficace, en mm/s, est la grandeur de référence des normes de sévérité pour les machines tournantes.",
-      "seconds": 45,
+      "answer": 0,
+      "explain": "Une huile laiteuse est une émulsion eau/huile : l'eau détruit le film lubrifiant. On vidange, on cherche l'entrée d'eau puis on remplace les joints.",
+      "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-028",
       "theme": "Vibrations et diagnostic",
-      "level": 2,
-      "q": "Un spectre montre un pic dominant à 1× la vitesse de rotation, en direction radiale, avec phase stable. Quel est le défaut le plus probable ?",
+      "level": 1,
+      "q": "Votre vibromètre de ronde affiche 4,5 mm/s sur le palier d'une pompe. De quelle grandeur s'agit-il ?",
       "choices": [
-        "Un défaut de roulement à billes",
-        "Un défaut d'engrènement",
-        "Une cavitation de pompe",
-        "Un balourd (déséquilibre)"
+        "Une pression d'huile de graissage en bar mesurée au palier",
+        "La vitesse vibratoire globale du palier, en valeur efficace (RMS)",
+        "Une vitesse de rotation de l'arbre mesurée en tr/min au tachymètre",
+        "Une puissance absorbée par le moteur en kW mesurée à la pince"
       ],
-      "answer": 3,
-      "explain": "Le balourd crée une force radiale tournante à la fréquence de rotation : pic à 1×, phase stable.",
+      "answer": 1,
+      "explain": "La grandeur de référence pour comparer aux seuils d'alerte est la vitesse vibratoire globale, en mm/s RMS, mesurée sur le palier.",
       "seconds": 45,
       "status": "draft"
     },
     {
       "id": "tech-meca-029",
       "theme": "Vibrations et diagnostic",
-      "level": 3,
-      "q": "Une forte vibration axiale avec pics à 1× et 2× oriente vers quel défaut ?",
+      "level": 2,
+      "q": "Sur un ventilateur à pales encrassées de poussière, le spectre montre un pic dominant à 1× en direction radiale, avec phase stable. Quel est le défaut le plus probable ?",
       "choices": [
-        "Un jeu de roulement uniquement",
-        "Un manque de graissage",
-        "Un désalignement",
-        "Un filtre d'aspiration colmaté"
+        "Un défaut de roulement à billes",
+        "Un défaut d'engrènement",
+        "Une cavitation",
+        "Un balourd (déséquilibre)"
       ],
-      "answer": 2,
-      "explain": "Le désalignement, surtout angulaire, génère des efforts axiaux et un pic marqué à 2× la fréquence de rotation.",
+      "answer": 3,
+      "explain": "Un pic dominant à 1× en radial avec phase stable signe le balourd, ici dû à l'encrassement inégal des pales. On nettoie puis on rééquilibre si besoin.",
       "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-030",
       "theme": "Vibrations et diagnostic",
-      "level": 2,
-      "q": "Une machine tourne à 2 970 tr/min. Quelle est sa fréquence de rotation 1× ?",
+      "level": 3,
+      "q": "Après remplacement d'un moteur, une forte vibration axiale apparaît avec des pics à 1× et 2×. Quel défaut est le plus probable ?",
       "choices": [
-        "29,7 Hz",
-        "50,5 Hz",
-        "2 970 Hz",
-        "49,5 Hz"
+        "Un désalignement de l'accouplement (1× et 2×, forte composante axiale)",
+        "Un simple jeu de roulement, qui donnerait surtout des harmoniques élevées",
+        "Un manque de graissage, qui donnerait surtout du bruit haute fréquence",
+        "Un filtre d'aspiration colmaté, qui donnerait des pulsations hydrauliques"
       ],
-      "answer": 3,
-      "explain": "f = N / 60 = 2 970 / 60 = 49,5 Hz.",
-      "seconds": 45,
+      "answer": 0,
+      "explain": "Le désalignement donne de fortes vibrations axiales à 1× et 2×. Le remplacement récent du moteur oriente vers ce défaut.",
+      "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-031",
       "theme": "Vibrations et diagnostic",
-      "level": 3,
-      "q": "Que caractérise un pic spectral à une fréquence non multiple entier de la fréquence de rotation ?",
+      "level": 2,
+      "q": "Le spectre d'un moteur de 2 970 tr/min présente un pic net à 99 Hz. À quel ordre de la rotation correspond-il ?",
       "choices": [
-        "Un balourd pur",
-        "Typiquement un défaut de roulement (bague ou élément roulant)",
-        "Un désalignement angulaire",
-        "Un desserrage de pied"
+        "1×",
+        "2× (la fréquence de rotation vaut 49,5 Hz)",
+        "3×",
+        "Un pic non synchrone, sans lien avec la rotation"
       ],
       "answer": 1,
-      "explain": "Les fréquences de défaut de roulement (passage des billes sur un défaut de bague) ne sont pas synchrones avec la rotation.",
-      "seconds": 60,
+      "explain": "2 970 / 60 = 49,5 Hz pour 1×. Le pic à 99 Hz vaut 2 × 49,5 Hz : c'est l'harmonique 2, caractéristique d'un désalignement ou d'un jeu.",
+      "seconds": 90,
       "status": "draft"
     },
     {
       "id": "tech-meca-032",
       "theme": "Vibrations et diagnostic",
       "level": 3,
-      "q": "Un spectre présente de nombreuses harmoniques 1×, 2×, 3×, 4×… Quel défaut est suspecté ?",
+      "q": "Le spectre montre un pic net à environ 3,57× la fréquence de rotation, non multiple entier, avec des bandes latérales. Quel défaut suspectez-vous ?",
       "choices": [
-        "Un jeu mécanique (desserrage)",
-        "Un simple balourd",
-        "Une surcharge électrique",
-        "Un excès d'huile"
+        "Un balourd pur sur le rotor, qui donnerait un pic à 1×",
+        "Un désalignement angulaire, qui donnerait des pics à 1× et 2×",
+        "Un défaut de roulement, sur la bague ou un élément roulant",
+        "Un desserrage de pied, qui donnerait de nombreuses harmoniques"
       ],
-      "answer": 0,
-      "explain": "Un jeu rend la réponse non linéaire et génère un peigne d'harmoniques, parfois des sous-harmoniques.",
+      "answer": 2,
+      "explain": "Les fréquences de défaut de roulement ne sont pas des multiples entiers de la rotation. On compare aux fréquences théoriques du roulement.",
       "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-033",
       "theme": "Vibrations et diagnostic",
-      "level": 2,
-      "q": "Quelle signature vibratoire est caractéristique de la cavitation d'une pompe ?",
+      "level": 3,
+      "q": "Le spectre d'une machine montre de nombreuses harmoniques 1× à 8×. Un boulon de fixation du châssis est trouvé desserré. Quel défaut est confirmé ?",
       "choices": [
-        "Un pic unique et pur à 1×",
-        "Un bruit large bande haute fréquence, aléatoire",
-        "Un pic unique à 2×",
-        "Un spectre parfaitement plat et silencieux"
+        "Un jeu mécanique (desserrage), confirmé par les harmoniques 1× à 8×",
+        "Un simple balourd, qui donnerait un pic dominant à 1× sans harmoniques",
+        "Une surcharge électrique, qui donnerait des pics à 2× la fréquence réseau",
+        "Un excès d'huile dans le palier, qui donnerait un bruit large bande"
       ],
-      "answer": 1,
-      "explain": "L'implosion des bulles génère un bruit aléatoire sur une large plage de fréquences, perçu comme des cailloux.",
-      "seconds": 45,
+      "answer": 0,
+      "explain": "Une série d'harmoniques traduit un jeu mécanique. Le boulon desserré en est ici la cause directe.",
+      "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-034",
       "theme": "Vibrations et diagnostic",
       "level": 2,
-      "q": "À quoi sert la norme ISO 20816 (ex-ISO 10816) ?",
+      "q": "Une pompe au niveau d'aspiration bas présente une vibration large bande, haute fréquence et aléatoire. Quel défaut est probable ?",
       "choices": [
-        "À définir le couple de serrage des brides",
-        "À classer les huiles de graissage",
-        "À dimensionner les roulements",
-        "À évaluer la sévérité des vibrations des machines par zones d'état"
+        "Un balourd",
+        "La cavitation",
+        "Un défaut d'engrènement",
+        "Un pic unique à 2×"
       ],
-      "answer": 3,
-      "explain": "Elle fournit des seuils de vitesse vibratoire pour décider si l'état est bon, acceptable, tolérable ou inacceptable.",
+      "answer": 1,
+      "explain": "Un bruit large bande haute fréquence aléatoire est la signature de la cavitation : les implosions de bulles excitent de nombreuses fréquences.",
       "seconds": 45,
       "status": "draft"
     },
     {
       "id": "tech-meca-035",
-      "theme": "Étanchéité et boulonnerie",
-      "level": 1,
-      "q": "Quelle bride est soudée bout à bout au tube et convient bien aux fortes contraintes ?",
-      "img": "svg/flange-types.svg",
-      "imgAlt": "Types de brides : collerette, à recouvrement, pleine",
+      "theme": "Vibrations et diagnostic",
+      "level": 2,
+      "q": "On veut classer la sévérité vibratoire d'une machine en zones A à D. Quelle norme utilise-t-on ?",
       "choices": [
-        "La bride pleine (blind)",
-        "La bride à visser",
-        "La bride à collerette (weld neck)",
-        "La bride à souder à recouvrement (slip-on)"
+        "ISO 9001, qui définit les exigences de management de la qualité",
+        "API 5L, qui spécifie les tubes en acier pour conduites pétrolières",
+        "ISO 20816 (ex-ISO 10816), qui fixe les limites de vibration des machines tournantes",
+        "ISO 7010, qui définit les signaux graphiques de sécurité et de santé"
       ],
       "answer": 2,
-      "explain": "La collerette assure une transition progressive d'épaisseur avec le tube et supporte bien la fatigue et la pression.",
-      "seconds": 60,
+      "explain": "L'ISO 20816 (ex-10816) définit les zones de sévérité des vibrations selon le type de machine. Les valeurs limites exactes sont fixées par les procédures du site.",
+      "seconds": 45,
       "status": "draft"
     },
     {
       "id": "tech-meca-036",
-      "theme": "Étanchéité et boulonnerie",
-      "level": 1,
-      "q": "À quoi sert une bride pleine (blind) ?",
-      "img": "svg/flange-types.svg",
-      "imgAlt": "Bride pleine obturant une ligne",
+      "theme": "Vibrations et diagnostic",
+      "level": 2,
+      "q": "En trois mois, le niveau global d'un ventilateur passe de 2,0 à 2,5 puis à 4,5 mm/s. Que faites-vous ?",
       "choices": [
-        "À obturer l'extrémité d'une ligne ou un piquage",
-        "À raccorder deux tubes de diamètres différents",
-        "À mesurer la pression",
-        "À réduire le débit"
+        "Ne rien faire tant que l'alarme ne s'est pas déclenchée sur le ventilateur",
+        "Relever le seuil d'alarme pour éviter les arrêts inutiles du ventilateur",
+        "Doubler la quantité de graisse pour amortir les vibrations du palier",
+        "Lancer une analyse spectrale et planifier l'intervention avant l'alarme"
       ],
-      "answer": 0,
-      "explain": "La bride pleine ferme l'extrémité d'une tuyauterie, pour une isolation par exemple.",
+      "answer": 3,
+      "explain": "La tendance compte : une hausse accélérée annonce un défaut en développement. Il faut diagnostiquer et planifier avant la panne, sans toucher aux seuils.",
       "seconds": 60,
       "status": "draft"
     },
@@ -676,49 +672,51 @@
       "id": "tech-meca-037",
       "theme": "Étanchéité et boulonnerie",
       "level": 1,
-      "q": "Comment doit-on serrer les boulons d'une bride ?",
+      "q": "Vous préparez le remplacement d'une bride soudée bout à bout au tube, recommandée en service sévère. Quelle bride du schéma est concernée ?",
+      "img": "svg/flange-types.svg",
+      "imgAlt": "Types de brides : collerette (WN), à glissement (SO), à emboîtement (SW), libre (LJ), filetée (TH), pleine (BL)",
       "choices": [
-        "Dans l'ordre autour de la bride, au couple final d'un coup",
-        "En croix, par passes progressives",
-        "Un seul côté puis l'autre",
-        "À la main uniquement"
+        "La bride à emboîtement (SW)",
+        "La bride à collerette (WN)",
+        "La bride filetée (TH)",
+        "La bride pleine (BL)"
       ],
       "answer": 1,
-      "explain": "Le serrage en croix par passes (30, 60, 100 %) répartit uniformément la compression du joint et évite de déformer la bride.",
-      "seconds": 45,
+      "explain": "La bride à collerette est soudée bout à bout avec le tube. C'est la plus robuste, adaptée aux fortes pressions, températures et fatigue.",
+      "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-038",
       "theme": "Étanchéité et boulonnerie",
-      "level": 2,
-      "q": "Comment se raccorde par soudure une bride à collerette sur un tube ?",
-      "img": "svg/weld-joint-types.svg",
-      "imgAlt": "Types de soudures : bout à bout, d'angle, en T",
+      "level": 1,
+      "q": "Une ligne de torche en attente d'extension doit être obturée à son extrémité. Quelle bride du schéma utilisez-vous ?",
+      "img": "svg/flange-types.svg",
+      "imgAlt": "Types de brides dont la bride pleine (BL) qui obture l'extrémité de ligne",
       "choices": [
-        "Par un cordon d'angle sur la face de la bride seulement",
-        "Par un point de soudure sur chaque boulon",
-        "Par une soudure bout à bout (butt weld) entre la collerette et le tube",
-        "Par collage"
+        "La bride à collerette (WN)",
+        "La bride libre (LJ)",
+        "La bride pleine (BL)",
+        "La bride à glissement (SO)"
       ],
       "answer": 2,
-      "explain": "La collerette est biseautée comme le tube et soudée bout à bout, ce qui permet un contrôle radiographique de la soudure.",
+      "explain": "La bride pleine obture l'extrémité d'une ligne ou un piquage. Les autres brides sont percées pour raccorder deux tuyauteries.",
       "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-039",
       "theme": "Étanchéité et boulonnerie",
-      "level": 2,
-      "q": "Pour un même couple de serrage, que provoque la lubrification des filets d'un goujon ?",
+      "level": 1,
+      "q": "Vous remontez une bride à huit boulons. Comment les serrez-vous ?",
       "choices": [
-        "Une tension plus élevée dans le goujon",
-        "Une tension plus faible",
-        "Aucun changement",
-        "L'annulation de la précontrainte"
+        "Dans l'ordre autour de la bride, au couple final d'un seul coup",
+        "Un côté puis l'autre",
+        "À la main, sans clé",
+        "En croix, par passes progressives jusqu'au couple prescrit"
       ],
-      "answer": 0,
-      "explain": "Le frottement absorbe une grande part du couple. Si on lubrifie, il en reste plus pour tendre le goujon : on applique donc le couple prévu pour l'état de lubrification prescrit.",
+      "answer": 3,
+      "explain": "Le serrage en croix par passes écrase le joint uniformément. Un serrage circulaire à fond d'un coup fait pivoter la bride et fait fuir.",
       "seconds": 45,
       "status": "draft"
     },
@@ -726,65 +724,97 @@
       "id": "tech-meca-040",
       "theme": "Étanchéité et boulonnerie",
       "level": 2,
-      "q": "Que signifie le « 8.8 » sur la tête d'un boulon ?",
+      "q": "Vous serrez au couple de la procédure des goujons dont les filets sont graissés, alors que le couple est donné pour des filets non lubrifiés. Que se passe-t-il ?",
       "choices": [
-        "Un diamètre de 8,8 mm",
-        "Un poids de 8,8 g",
-        "Une tolérance de 8,8 microns",
-        "Résistance à la rupture mini de 800 MPa et limite d'élasticité égale à 80 % de celle-ci"
+        "La précontrainte dépasse la valeur visée, avec risque de dépasser la limite élastique",
+        "La précontrainte devient plus faible que prévue, car le frottement augmente avec la graisse",
+        "Aucun changement : le couple fixe toujours la même précontrainte quel que soit le filet",
+        "La précontrainte est annulée par le film de graisse qui empêche tout serrage effectif"
       ],
-      "answer": 3,
-      "explain": "Le premier chiffre x 100 donne la résistance à la rupture en MPa (800), le second chiffre indique le rapport limite d'élasticité / résistance en dixièmes : 0,8 x 800 = 640 MPa.",
-      "seconds": 45,
+      "answer": 0,
+      "explain": "La lubrification réduit le frottement : pour le même couple, une plus grande part se transforme en tension. Il faut un couple adapté ou suivre la procédure.",
+      "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-041",
       "theme": "Étanchéité et boulonnerie",
       "level": 2,
-      "q": "Quelle norme couvre les pompes centrifuges pour l'industrie pétrolière et gazière ?",
+      "q": "Un boulon de rechange porte l'inscription 8.8 sur la tête. Quelle information en retirez-vous ?",
       "choices": [
-        "API 610",
-        "API 682",
-        "ISO 9001",
-        "API 5L"
+        "Un diamètre nominal de 8,8 mm, mesuré sur la partie filetée du boulon",
+        "Une masse unitaire de 8,8 g, utile pour le calcul des charges suspendues",
+        "Rupture mini d'environ 800 MPa et limite d'élasticité à 80 % de cette valeur",
+        "Une tolérance de fabrication de 8,8 microns sur le diamètre de la tige"
       ],
-      "answer": 0,
-      "explain": "API 610 traite des pompes centrifuges. API 682 traite des garnitures mécaniques, API 5L des tubes de ligne.",
-      "seconds": 45,
+      "answer": 2,
+      "explain": "Dans la classe 8.8, 8 × 100 = 800 MPa de résistance mini et 0,8 × 800 = 640 MPa de limite d'élasticité.",
+      "seconds": 60,
       "status": "draft"
     },
     {
       "id": "tech-meca-042",
       "theme": "Étanchéité et boulonnerie",
-      "level": 3,
-      "q": "Quelle est la cause la plus fréquente de destruction d'une garniture mécanique ?",
+      "level": 2,
+      "q": "Le cahier des charges demande une pompe centrifuge pour le brut, selon la norme des pompes de procédé pétrolières. Quelle norme est citée ?",
       "choices": [
-        "Un excès de lubrifiant dans le palier",
-        "Le fonctionnement à sec ou avec un film liquide insuffisant",
-        "Un alignement parfait",
-        "Une pression de refoulement trop basse"
+        "API 682",
+        "ISO 9001",
+        "API 5L",
+        "API 610"
       ],
-      "answer": 1,
-      "explain": "Les faces de friction ont besoin d'un film de liquide pour se lubrifier et se refroidir : à sec, elles chauffent et se fissurent en quelques secondes.",
-      "seconds": 60,
+      "answer": 3,
+      "explain": "L'API 610 couvre les pompes centrifuges pour l'industrie pétrolière et gazière. L'API 682 traite des garnitures, l'API 5L des tubes de ligne.",
+      "seconds": 45,
       "status": "draft"
     },
     {
       "id": "tech-meca-043",
       "theme": "Étanchéité et boulonnerie",
       "level": 3,
-      "q": "Dans un échangeur à faisceau tubulaire refroidissant l'huile d'une machine, où place-t-on de préférence le fluide encrassant (eau brute) ?",
-      "img": "svg/heat-exchanger-shell-tube.svg",
-      "imgAlt": "Échangeur à faisceau tubulaire avec côté tubes et côté calandre",
+      "q": "La garniture mécanique d'une pompe de transfert est détruite pour la 3e fois en deux mois : face carbone rayée et brûlée. Quelle est la cause la plus fréquente ?",
       "choices": [
-        "Côté calandre, car on ne peut pas nettoyer les tubes",
-        "Peu importe",
-        "Dans la boîte de distribution seulement",
-        "Côté tubes, plus faciles à nettoyer"
+        "Un fonctionnement à sec ou un film liquide insuffisant (rinçage coupé)",
+        "Un excès de graisse dans le palier, qui échauffe l'arbre et la garniture",
+        "Un alignement trop précis entre pompe et moteur, qui bloque la dilatation de l'arbre",
+        "Une pression de refoulement trop basse qui décharge les faces de friction"
+      ],
+      "answer": 0,
+      "explain": "Les faces de garniture sont lubrifiées par le liquide pompé. Sans film, elles s'échauffent et se détruisent en quelques secondes.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-meca-044",
+      "theme": "Étanchéité et boulonnerie",
+      "level": 3,
+      "q": "On refroidit l'huile d'une machine avec de l'eau brute encrassante dans un échangeur à faisceau tubulaire. Où place-t-on l'eau brute et pourquoi ?",
+      "img": "svg/heat-exchanger-shell-tube.svg",
+      "imgAlt": "Échangeur à calandre et faisceau tubulaire : calandre, chicanes, plaque tubulaire, boîtes de distribution",
+      "choices": [
+        "Côté calandre, car on ne peut pas nettoyer l'intérieur des tubes",
+        "Côté tubes, car ils se nettoient et se remplacent plus facilement",
+        "Peu importe : l'encrassement ne dépend pas du côté choisi",
+        "Dans la boîte de distribution seulement, sans passer par le faisceau"
+      ],
+      "answer": 1,
+      "explain": "Le fluide encrassant se met côté tubes : on les nettoie à la brosse ou à l'eau haute pression en ouvrant les boîtes.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-meca-045",
+      "theme": "Étanchéité et boulonnerie",
+      "level": 2,
+      "q": "Vous venez de remonter une bride et elle suinte à la remise en pression. Que faites-vous ?",
+      "choices": [
+        "Resserrer fortement les boulons pendant que la ligne reste sous pression",
+        "Laisser suinter la bride jusqu'au prochain arrêt programmé de l'unité",
+        "Ajouter du mastic autour du joint pour colmater le suintement en marche",
+        "Dépressuriser, isoler puis reprendre (joint neuf, serrage en croix au couple)"
       ],
       "answer": 3,
-      "explain": "Le côté tubes se nettoie mécaniquement ou par jet haute pression ; le côté calandre est difficile d'accès. On y place donc le fluide propre.",
+      "explain": "Resserrer sous pression est dangereux. On dépressurise, on contrôle la portée et on reprend le serrage selon la procédure.",
       "seconds": 60,
       "status": "draft"
     }

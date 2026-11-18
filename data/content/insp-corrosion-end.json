@@ -118,10 +118,10 @@
       "img": "photo/storage-tanks.jpg",
       "imgAlt": "Photo de réservoirs de stockage posés sur le sol",
       "choices": [
-        "L'intérieur du fond en contact avec le produit stocké",
-        "La virole au-dessus du niveau du produit, sans contact avec l'eau",
-        "La peinture extérieure du réservoir contre les UV",
-        "La face extérieure du fond en contact avec le sol, rendue cathode"
+        "L'intérieur de la virole en contact avec le produit stocké",
+        "La virole au-dessus du niveau du produit, exposée à l'air libre",
+        "La peinture extérieure du réservoir contre le rayonnement UV",
+        "La face extérieure du fond, au contact du sol, rendue cathode du circuit"
       ],
       "answer": 3,
       "explain": "La protection cathodique agit sur l'acier en contact avec un électrolyte (sol, eau). Elle ne protège ni les surfaces aériennes sèches, ni l'intérieur sans électrolyte conducteur de courant.",
@@ -170,10 +170,10 @@
       "img": "svg/flange-types.svg",
       "imgAlt": "Schéma de types de brides sur une ligne horizontale",
       "choices": [
-        "Uniquement sur la génératrice supérieure de la ligne",
-        "Uniquement aux brides de raccord, jamais en ligne droite",
-        "Uniquement près des soudures des supports de tuyauterie",
-        "En partie basse (6 heures) et aux points bas où l'eau se dépose"
+        "Sur la génératrice supérieure de la ligne, là où se condense le gaz",
+        "Aux brides de raccord, plutôt qu'en ligne droite courante",
+        "Près des soudures des supports de tuyauterie, sur les patins",
+        "En partie basse (6 heures) et aux points bas, où l'eau libre se dépose"
       ],
       "answer": 3,
       "explain": "À faible vitesse, l'eau se sépare de l'huile et mouille la partie basse. C'est là que se concentrent les pertes d'épaisseur : les inspections ciblent le fond de tube et les points bas.",
@@ -286,10 +286,10 @@
       "level": 2,
       "q": "Un palpeur à ultrasons mesure un temps aller-retour de 6,8 µs dans de l'acier (vitesse du son 5 900 m/s). Quelle est l'épaisseur ?",
       "choices": [
-        "Environ 40 mm",
-        "Environ 20 mm",
-        "Environ 10 mm",
-        "Environ 2 mm"
+        "Environ 40 mm, sans division par 2",
+        "Environ 20 mm, trajet divisé par 2",
+        "Environ 10 mm, en divisant par 4",
+        "Environ 2 mm, en décalant la virgule"
       ],
       "answer": 1,
       "explain": "Épaisseur = vitesse × temps ÷ 2 = 5 900 × 6,8·10⁻⁶ ÷ 2 ≈ 0,020 m, soit 20 mm. Oublier la division par deux donne 40 mm.",
@@ -302,10 +302,10 @@
       "level": 1,
       "q": "Pourquoi utilise-t-on un gel (couplant) entre le palpeur à ultrasons et la pièce ?",
       "choices": [
-        "Pour refroidir le palpeur pendant les mesures",
-        "Pour nettoyer la corrosion avant la lecture",
-        "Pour chasser l'air, qui bloquerait la transmission des ultrasons",
-        "Pour augmenter la vitesse du son dans l'acier"
+        "Pour refroidir le palpeur pendant les mesures répétées",
+        "Pour nettoyer la corrosion avant la lecture de l'épaisseur mesurée",
+        "Pour chasser l'air, qui bloquerait la transmission des ultrasons vers la pièce",
+        "Pour augmenter la vitesse du son dans l'acier contrôlé"
       ],
       "answer": 2,
       "explain": "L'air entre palpeur et pièce réfléchit presque tout. Le couplant assure la transmission des ultrasons dans la pièce.",
@@ -336,9 +336,9 @@
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Appareil à pression avec zone de tôle contrôlée aux ultrasons",
       "choices": [
-        "Une corrosion uniforme de la face extérieure",
-        "Une tôle saine d'épaisseur normale",
-        "Une couche de peinture épaisse en surface",
+        "Une corrosion uniforme de la face extérieure de la tôle",
+        "Une tôle saine d'épaisseur normale sur toute la zone",
+        "Une couche de peinture épaisse en surface de la tôle",
         "Une délamination (défaut plan parallèle à la surface)"
       ],
       "answer": 3,
@@ -434,10 +434,10 @@
       "level": 2,
       "q": "Épaisseur actuelle 9,7 mm, t_min 7,2 mm, vitesse de corrosion 0,6 mm/an. Quelle est la durée de vie résiduelle ?",
       "choices": [
-        "Environ 12 ans",
-        "Environ 16 ans",
-        "Environ 1,2 an",
-        "Environ 4,2 ans"
+        "Environ 12 ans (7,2 ÷ 0,6)",
+        "Environ 16 ans (9,7 ÷ 0,6)",
+        "Environ 1,2 an (7,2 ÷ 6,0 mm/an)",
+        "Environ 4,2 ans (2,5 ÷ 0,6)"
       ],
       "answer": 3,
       "explain": "Durée = (9,7 − 7,2) ÷ 0,6 ≈ 4,2 ans. Utiliser t_min seul (7,2 ÷ 0,6 = 12 ans) est une erreur : on utilise la marge, pas l'épaisseur totale.",
@@ -450,10 +450,10 @@
       "level": 2,
       "q": "Selon la règle usuelle d'API 570 / 510, quel est l'intervalle maximal avant la prochaine inspection pour une durée de vie résiduelle de 6 ans (hors limite maximale du code) ?",
       "choices": [
-        "6 ans, soit la durée de vie résiduelle",
+        "6 ans, soit la totalité de la durée de vie résiduelle",
         "3 ans, soit la moitié de la durée de vie résiduelle",
-        "10 ans, quel que soit le calcul",
-        "1 an, quelle que soit la durée de vie résiduelle"
+        "10 ans, valeur maximale applicable à toute ligne",
+        "1 an, soit un sixième de la durée de vie résiduelle"
       ],
       "answer": 1,
       "explain": "L'intervalle ne dépasse pas la moitié de la durée de vie résiduelle, dans la limite du maximum fixé par le code. Ici 3 ans.",
@@ -487,9 +487,9 @@
       "imgAlt": "Photo d'un chantier de pipeline : ligne dont l'épaisseur a été mesurée",
       "choices": [
         "Poursuivre sans changement : la ligne dépasse encore 5 mm et reste conforme",
-        "Attendre la prochaine campagne prévue dans quatre ans au titre du plan en cours",
+        "Attendre la prochaine campagne prévue dans quatre ans au titre du plan",
         "Repeindre la zone corrodée et classer le point sans suite particulière",
-        "Alerter l'ingénieur d'intégrité, inspecter sous 1 an, cartographier la zone et évaluer la ligne"
+        "Alerter l'intégrité et inspecter sous 1 an en cartographiant la zone"
       ],
       "answer": 3,
       "explain": "Avec 2 ans de vie résiduelle, l'intervalle maximal est de 1 an. Il faut cartographier, calculer, informer et prévoir réparation ou évaluation d'aptitude à l'emploi. Repeindre ne traite pas la perte d'épaisseur.",
@@ -537,9 +537,9 @@
       "imgAlt": "Schéma de tuyauterie avec bride et point bas",
       "choices": [
         "L'eau et les dépôts s'y accumulent, ce qui favorise la corrosion",
-        "La pression y est toujours la plus faible de la ligne",
-        "La température y est toujours la plus élevée de la ligne",
-        "L'épaisseur y est plus faible dès la fabrication"
+        "La pression y est la plus faible de la ligne, donc la plus sensible",
+        "La température y est la plus élevée de la ligne, donc la plus agressive",
+        "L'épaisseur y est plus faible dès la fabrication de la ligne"
       ],
       "answer": 0,
       "explain": "L'eau et les dépôts se déposent aux points bas et créent un milieu corrosif. Ces points sont donc ciblés dans les plans d'inspection.",
@@ -555,8 +555,8 @@
       "imgAlt": "Matrice de risque 5 × 5 avec la ligne placée en probabilité 4, conséquence D, zone haute",
       "choices": [
         "La déprioriser car le risque est déjà connu des équipes",
-        "Relever sa priorité : inspection plus efficace et intervalle plus court",
-        "L'ignorer : la matrice ne sert qu'aux équipements neufs",
+        "Relever sa priorité : inspecter plus tôt et plus efficacement",
+        "L'ignorer : la matrice ne vise que les équipements neufs ou modifiés",
         "Attendre l'arrêt programmé sans modifier le plan d'inspection"
       ],
       "answer": 1,
@@ -570,10 +570,10 @@
       "level": 1,
       "q": "Quel document API fixe les principes généraux de l'inspection basée sur le risque ?",
       "choices": [
-        "API 650",
-        "API 5L",
-        "API 580",
-        "API 526"
+        "API Std 650",
+        "API Spec 5L",
+        "API RP 580",
+        "API Std 526"
       ],
       "answer": 2,
       "explain": "API 580 définit les principes du RBI et API 581 en donne la méthode quantitative. API 650 concerne les réservoirs, 5L les tubes de ligne et 526 les soupapes.",
@@ -586,10 +586,10 @@
       "level": 2,
       "q": "Qu'est-ce qu'une boucle de corrosion (corrosion loop) ?",
       "choices": [
-        "Un groupe de lignes aux fluide, matériau et conditions identiques",
-        "Une boucle de tuyauterie fermée où le fluide recircule en continu",
+        "Un groupe de lignes de même fluide, matériau et conditions de service",
+        "Une boucle de tuyauterie fermée dans laquelle le fluide recircule en continu",
         "Un circuit électrique de protection cathodique par courant imposé",
-        "Le trajet d'un produit anticorrosion injecté dans le réseau"
+        "Le trajet d'un inhibiteur de corrosion injecté dans tout le réseau"
       ],
       "answer": 0,
       "explain": "Regrouper les lignes homogènes permet d'appliquer un même diagnostic et de partager les résultats d'inspection d'un point à l'ensemble de la boucle.",
@@ -618,10 +618,10 @@
       "level": 2,
       "q": "Quelle zone doit être surveillée en priorité en aval du point d'injection d'un produit chimique ?",
       "choices": [
-        "L'extrémité amont de la ligne, avant l'injection",
-        "Le bout de ligne sans écoulement, au plus loin",
-        "La zone de mélange et les premiers coudes en aval de l'injection",
-        "Les supports de la ligne côté salle de contrôle"
+        "L'extrémité amont de la ligne, avant le point d'injection",
+        "Le bout de ligne sans écoulement, au plus loin du point d'injection",
+        "La zone de mélange et les premiers coudes en aval du point d'injection",
+        "Les supports de la ligne situés côté salle de contrôle"
       ],
       "answer": 2,
       "explain": "Le produit injecté se mélange mal au début : concentration locale et turbulence accélèrent la corrosion et l'érosion dans les premiers coudes. Ce sont des points classiques à contrôler.",
@@ -636,10 +636,10 @@
       "img": "svg/risk-matrix.svg",
       "imgAlt": "Matrice de risque avec l'axe des conséquences de A à E",
       "choices": [
-        "L'effet d'une fuite sur la sécurité, l'environnement et la production",
-        "La probabilité qu'une fuite se produise",
-        "Le coût de l'inspection programmée",
-        "Le temps écoulé depuis la dernière mesure"
+        "La gravité d'une fuite : sécurité, environnement et production",
+        "La probabilité qu'une fuite se produise dans l'année à venir",
+        "Le coût de l'inspection programmée sur la période du plan",
+        "Le temps écoulé depuis la dernière mesure d'épaisseur"
       ],
       "answer": 0,
       "explain": "La conséquence évalue la gravité de la défaillance : inventaire, toxicité ou inflammabilité, exposition des personnes, environnement. La probabilité est l'autre terme.",
@@ -672,10 +672,10 @@
       "img": "svg/risk-matrix.svg",
       "imgAlt": "Matrice de risque 5 × 5 avec un équipement en zone basse",
       "choices": [
-        "Plus aucune inspection n'est nécessaire",
-        "Une inspection allégée mais maintenue, avec respect des exigences réglementaires",
-        "Il n'est inspecté qu'après une première fuite",
-        "Il est exclu du plan d'inspection définitivement"
+        "Plus aucune inspection n'est nécessaire sur cet équipement",
+        "Une inspection allégée mais maintenue, dans le cadre réglementaire",
+        "Il n'est inspecté qu'après une première fuite ou un incident",
+        "Il est exclu du plan d'inspection pour toute la durée de vie"
       ],
       "answer": 1,
       "explain": "Faible risque veut dire effort réduit, pas absence d'inspection. Les exigences légales et les vérifications périodiques restent applicables.",
@@ -688,10 +688,10 @@
       "level": 1,
       "q": "Quel contenu ne doit pas manquer dans un rapport d'inspection ?",
       "choices": [
-        "Repère de l'équipement, date, méthode, résultats, conclusion et recommandations",
-        "Seulement la signature du chef de service",
-        "Seulement la date et le lieu de l'intervention",
-        "Seulement des photos de l'équipement"
+        "Repère, date, méthode, résultats, conclusion et recommandations",
+        "La signature du chef de service et le visa de la direction",
+        "La date, le lieu et le nom de l'entreprise intervenante",
+        "Des photos de l'équipement avec une légende succincte"
       ],
       "answer": 0,
       "explain": "Un rapport doit permettre à un tiers de refaire le contrôle et d'aboutir au même constat : tous ces éléments sont nécessaires.",
@@ -704,9 +704,9 @@
       "level": 2,
       "q": "Que permet un certificat ISO 9712 de niveau 2 en END ?",
       "choices": [
-        "Exécuter uniquement des mesures sous supervision, sans interpréter",
+        "Exécuter des mesures sous la supervision d'un niveau 3, sans interpréter",
         "Qualifier les procédures et le personnel de l'entreprise",
-        "Modifier les critères d'acceptation du code",
+        "Modifier les critères d'acceptation du code applicable",
         "Réaliser, interpréter et consigner les contrôles selon des procédures écrites"
       ],
       "answer": 3,
@@ -738,10 +738,10 @@
       "level": 2,
       "q": "Pourquoi note-t-on la température de surface dans un rapport de mesure d'épaisseur par ultrasons ?",
       "choices": [
-        "Pour vérifier le confort thermique de l'inspecteur",
-        "Parce qu'elle détermine la couleur du revêtement",
+        "Parce que l'inspecteur doit vérifier son confort thermique",
+        "Parce qu'elle détermine la couleur du revêtement à reprendre",
         "Parce qu'elle influence la vitesse du son et donc la mesure",
-        "Parce que la loi l'impose pour les photographies"
+        "Parce que la loi l'impose pour les photographies du rapport"
       ],
       "answer": 2,
       "explain": "La vitesse du son dépend de la température : la mesure doit être corrigée ou étalonnée dans des conditions comparables pour être comparable à la campagne précédente.",
@@ -756,10 +756,10 @@
       "img": "photo/storage-tanks.jpg",
       "imgAlt": "Photo de réservoirs de stockage cylindriques",
       "choices": [
-        "Le toit uniquement",
-        "La main courante de l'escalier d'accès",
-        "Les marches de l'escalier extérieur seulement",
-        "Le fond et la jonction fond-virole (eau stagnante, côté sol)"
+        "Le toit, dont la corrosion est la plus rapide",
+        "La main courante de l'escalier d'accès au toit",
+        "Les marches de l'escalier extérieur et le palier",
+        "Le fond et la jonction fond-virole, au contact du sol"
       ],
       "answer": 3,
       "explain": "Le fond subit la corrosion côté sol et côté produit, avec eau stagnante. La jonction fond-virole concentre les contraintes. Ces zones sont critiques à l'inspection.",
@@ -775,9 +775,9 @@
       "imgAlt": "Appareil à pression avec grille de points de mesure d'épaisseur",
       "choices": [
         "Conserver 8,0 mm comme valeur de référence de la campagne",
-        "Chercher une perte locale : cartographier autour du point bas avant de conclure",
+        "Cartographier autour du point à 7,4 mm avant de conclure sur la perte",
         "Calculer la moyenne de 7,8 mm et la consigner au rapport",
-        "Supprimer la valeur de 7,4 mm comme valeur aberrante"
+        "Supprimer la valeur de 7,4 mm comme valeur aberrante du lot"
       ],
       "answer": 1,
       "explain": "Une valeur plus faible entre deux valeurs plus fortes peut traduire une piqûre ou une perte locale. On cartographie avant de conclure, et on ne retire jamais une valeur sans justification.",
@@ -790,10 +790,10 @@
       "level": 1,
       "q": "Un échafaudage d'accès au point à inspecter n'est pas homologué. Que fait l'inspecteur ?",
       "choices": [
-        "Il monte prudemment avec un harnais",
-        "Il fait le travail depuis le sol à l'estimation",
-        "Il ne monte pas et demande la mise en conformité avant l'inspection",
-        "Il inspecte très rapidement pour limiter le risque"
+        "Il monte prudemment en se protégeant avec un harnais",
+        "Il fait le travail depuis le sol, à l'estimation visuelle",
+        "Il ne monte pas et demande la mise en conformité de l'accès",
+        "Il inspecte très rapidement pour limiter son exposition"
       ],
       "answer": 2,
       "explain": "L'accès sécurisé est un préalable. Monter sur un échafaudage non homologué expose à une chute, même avec harnais si l'ancrage n'est pas prévu.",
@@ -806,10 +806,10 @@
       "level": 3,
       "q": "Le planning d'arrêt est serré : on vous demande de réduire le nombre de points de mesure sur une ligne à fort risque. Que faites-vous ?",
       "choices": [
-        "Maintenir le plan et signaler le risque : toute réduction exige une réévaluation validée",
-        "Réduire comme demandé pour tenir le planning de l'arrêt",
-        "Mesurer seulement les points faciles d'accès et noter le reste",
-        "Reporter les points restants sans en informer personne"
+        "Maintenir le plan et signaler le risque, toute réduction étant réévaluée",
+        "Réduire comme demandé, puisque le planning de l'arrêt est prioritaire",
+        "Mesurer seulement les points faciles d'accès et noter le reste pour plus tard",
+        "Reporter les points restants à l'arrêt suivant sans en informer personne"
       ],
       "answer": 0,
       "explain": "Le plan d'inspection d'une ligne à fort risque ne se réduit pas sous la pression du planning. Toute modification se réévalue et se valide par l'ingénieur d'intégrité.",

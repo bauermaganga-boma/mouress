@@ -104,7 +104,7 @@
       "choices": [
         "Pression (P) et transmetteur (T)",
         "Puissance (P) et température (T)",
-        "Pompe (P) et transfert (T)",
+        "Pompe (P) et transfert de produit (T)",
         "Pression (P) et température (T)"
       ],
       "answer": 0,
@@ -138,9 +138,9 @@
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "P&ID d'une régulation en cascade : LIC maître, FIC esclave, vanne de sortie",
       "choices": [
-        "Supprimer le besoin d'un capteur de niveau dans le séparateur",
-        "Corriger vite les perturbations de débit avant qu'elles touchent le niveau",
-        "Rendre le niveau complètement indépendant de sa propre consigne",
+        "Se passer du capteur de niveau en pilotant le séparateur au débit seul",
+        "Corriger vite les perturbations de débit avant qu'elles n'atteignent le niveau",
+        "Rendre le niveau indépendant de sa propre consigne de régulation",
         "Remplacer la fonction de sécurité de niveau très haut du séparateur"
       ],
       "answer": 1,
@@ -190,10 +190,10 @@
       "img": "svg/loop-4-20ma.svg",
       "imgAlt": "Boucle 4-20 mA : transmetteur étalonné 0 à 60 bar, courant lu 10 mA",
       "choices": [
-        "30,0 bar",
-        "22,5 bar",
-        "16,7 bar",
-        "10,0 bar"
+        "30,0 bar (10 ÷ 20 × 60)",
+        "22,5 bar (6 ÷ 16 × 60)",
+        "16,7 bar (10 ÷ 60 × 100)",
+        "10,0 bar (valeur du courant)"
       ],
       "answer": 1,
       "explain": "Pression = (10 − 4) ÷ 16 × 60 = 22,5 bar. 30 bar correspondrait à 12 mA ; 10 bar n'a aucun lien avec le courant.",
@@ -226,10 +226,10 @@
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Ballon sous pression avec vanne de sortie de gaz et soupape de sécurité PSV",
       "choices": [
-        "La vanne s'ouvre en grand et la pression chute brutalement",
-        "La vanne reste en place et la pression se stabilise",
+        "La vanne s'ouvre en grand et la pression chute jusqu'à la torche",
+        "La vanne garde sa position et la pression se stabilise à la consigne",
         "La vanne se ferme mais la pression baisse par refroidissement",
-        "La vanne se ferme, la pression monte et la PSV peut s'ouvrir à son tarage"
+        "La vanne se ferme et la pression monte jusqu'au tarage de la PSV, qui peut s'ouvrir"
       ],
       "answer": 3,
       "explain": "La perte d'air ferme la vanne : le gaz s'accumule et la pression monte jusqu'au tarage de la PSV, dernière barrière indépendante du DCS. Il faut agir vite sur l'alimentation.",
@@ -244,8 +244,8 @@
       "choices": [
         "Elle signale chaque changement d'état de chaque équipement",
         "Elle signale une situation anormale qui exige une action de l'opérateur",
-        "Elle remplace les rondes de l'opérateur terrain",
-        "Elle informe le chef de poste de chaque démarrage prévu"
+        "Elle remplace les rondes de l'opérateur terrain et les relevés",
+        "Elle informe le chef de poste de chaque démarrage prévu au planning"
       ],
       "answer": 1,
       "explain": "Une alarme sert à déclencher une action. Une alarme sans action associée est du bruit et noie les vraies urgences.",
@@ -274,10 +274,10 @@
       "level": 1,
       "q": "Quel dispositif permet à un opérateur de lancer volontairement un arrêt d'urgence depuis la salle de contrôle ?",
       "choices": [
-        "Le bouton-poussoir d'arrêt d'urgence protégé par un capot",
-        "Le bouton d'acquittement général des alarmes",
-        "La touche d'impression du journal de bord",
-        "Le sélecteur de mode automatique d'un régulateur"
+        "Le bouton d'arrêt d'urgence protégé par un capot",
+        "Le bouton d'acquittement général de toutes les alarmes",
+        "La touche d'impression du journal de bord des alarmes",
+        "Le sélecteur de mode automatique d'un régulateur de débit"
       ],
       "answer": 0,
       "explain": "L'ESD possède des boutons-poussoirs d'arrêt d'urgence protégés contre l'action involontaire. Ils agissent via le système de sécurité, pas via le DCS.",
@@ -326,10 +326,10 @@
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur V-101 avec vanne de sortie de liquide LV-101 et pompe aval",
       "choices": [
-        "Un débit de sortie insuffisant malgré la vanne ouverte (pompe aval, ligne ou vanne grippée)",
-        "Le régulateur est trop lent : il suffit d'attendre que la sortie rattrape le niveau",
-        "Le capteur de pression est en erreur et fausse la lecture du niveau du séparateur",
-        "La consigne de niveau a été mise à 100 % par l'opérateur du quart précédent"
+        "Un débit de sortie insuffisant : pompe aval, ligne ou vanne grippée",
+        "Le régulateur est trop lent : il faut attendre qu'il rattrape le niveau",
+        "Le capteur de pression est en erreur et fausse la lecture du niveau",
+        "La consigne de niveau a été mise à 100 % au quart précédent"
       ],
       "answer": 0,
       "explain": "Une vanne indiquée à 100 % qui ne baisse pas le niveau signale un problème de ligne ou de matériel aval, ou une position affichée qui ne reflète pas la réalité. Le contrôle terrain est indispensable.",
@@ -358,10 +358,10 @@
       "level": 3,
       "q": "Après un ESD, le superviseur vous demande de réarmer vite pour limiter les pertes de production. Que faites-vous ?",
       "choices": [
-        "Réarmer immédiatement puisque toutes les alarmes ont été acquittées au pupitre",
+        "Réarmer tout de suite, les alarmes étant acquittées au pupitre",
         "Inhiber les capteurs concernés pour éviter un nouveau déclenchement",
         "Identifier la cause et vérifier l'installation avec le terrain avant de réarmer",
-        "Redémarrer en manuel sans passer par les permissifs pour gagner du temps"
+        "Redémarrer en manuel sans les permissifs pour gagner du temps"
       ],
       "answer": 2,
       "explain": "Un réarmement précipité peut redonner l'énergie à une situation dangereuse. L'ESD se réarme après analyse de la cause et vérification de l'état de l'installation.",
@@ -409,9 +409,9 @@
       "q": "Quand passe-t-on un régulateur en mode automatique lors d'un démarrage ?",
       "choices": [
         "Avant d'ouvrir l'alimentation, pour gagner du temps",
-        "Lorsque le procédé est stable, sans à-coup de sortie",
-        "Dès que l'alarme basse s'efface",
-        "Jamais pendant la phase de démarrage"
+        "Quand le procédé est stable et la sortie sans à-coup",
+        "Dès que l'alarme basse s'efface, même si la mesure oscille",
+        "Jamais avant la fin complète de la phase de démarrage"
       ],
       "answer": 1,
       "explain": "On pilote d'abord en manuel pour stabiliser, puis on bascule en automatique quand mesure et consigne sont proches, afin d'éviter un à-coup sur la vanne.",
@@ -440,8 +440,8 @@
       "level": 1,
       "q": "Quelle condition fait partie des permissifs de démarrage d'une pompe centrifuge ?",
       "choices": [
-        "Aspiration fermée et refoulement ouvert en grand",
-        "Corps de pompe vide pour réduire l'intensité au démarrage",
+        "Aspiration fermée et refoulement ouvert en grand dès le démarrage",
+        "Corps de pompe vide pour réduire l'intensité au démarrage moteur",
         "Refoulement fermé pendant dix minutes avant le démarrage",
         "Aspiration ouverte, pompe amorcée et huile de graissage en pression"
       ],
@@ -456,10 +456,10 @@
       "level": 2,
       "q": "Quel ensemble de conditions est cohérent avec un démarrage de compresseur ?",
       "choices": [
-        "Niveau haut au ballon d'aspiration pour assurer la charge",
+        "Niveau haut au ballon d'aspiration pour assurer la charge de la machine",
         "Niveau bas au ballon d'aspiration et recyclage antipompage ouvert",
-        "Recyclage antipompage fermé pour maximiser le débit",
-        "Pression d'huile nulle jusqu'à la vitesse nominale"
+        "Recyclage antipompage fermé pour maximiser le débit au démarrage",
+        "Pression d'huile nulle jusqu'à atteindre la vitesse nominale"
       ],
       "answer": 1,
       "explain": "Le ballon d'aspiration doit être vide de liquide, et le recyclage ouvert protège la machine du pompage au démarrage. L'huile doit être en pression avant la rotation.",
@@ -492,10 +492,10 @@
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Ballon sous pression avec manomètre et soupape de sécurité",
       "choices": [
-        "Poursuivre : la soupape de sécurité protège le séparateur",
-        "Couper tous les réchauffeurs du séparateur pour éviter le givre en tête",
+        "Poursuivre la montée : la soupape de sécurité protège le séparateur",
+        "Couper les réchauffeurs du séparateur pour éviter le givre en tête",
         "Augmenter l'alimentation pour atteindre le palier suivant plus vite",
-        "Réduire l'alimentation et reprendre par paliers : une montée trop rapide fatigue les joints"
+        "Réduire l'alimentation et reprendre par paliers selon la procédure"
       ],
       "answer": 3,
       "explain": "Une pressurisation rapide sollicite les joints et brides (fuites) et dépasse la méthode prévue. On revient à la montée contrôlée prévue par la procédure.",
@@ -508,10 +508,10 @@
       "level": 2,
       "q": "Après un déclenchement de compresseur, un permis de travail est encore ouvert sur la machine. Que faites-vous ?",
       "choices": [
-        "Démarrer à distance puisque la machine est prête et que l'alarme est acquittée",
-        "Ne pas démarrer avant clôture du permis et levée de la consignation, vérifiées avec le terrain",
+        "Démarrer à distance, la machine étant prête et l'alarme acquittée",
+        "Ne pas démarrer avant clôture du permis et levée de la consignation, vérifiées au terrain",
         "Démarrer en prévenant simplement l'intervenant par radio avant l'ordre",
-        "Annuler le permis de travail directement depuis le DCS"
+        "Annuler le permis de travail directement depuis le DCS de la salle"
       ],
       "answer": 1,
       "explain": "Démarrer une machine consignée ou en travaux peut tuer. La salle de contrôle connaît les permis en cours et exige leur clôture avant tout démarrage.",
@@ -525,9 +525,9 @@
       "q": "Quel ordre est cohérent pour mettre un équipement hors service avant intervention ?",
       "choices": [
         "Fermer les sorties, couper l'alimentation, puis ouvrir directement à l'air",
-        "Dépressuriser sans isoler les entrées, puis consigner",
+        "Dépressuriser sans isoler les entrées, purger, puis consigner",
         "Réduire la charge, isoler les entrées, dépressuriser, drainer, purger à l'azote, puis consigner",
-        "Consigner d'abord, puis dépressuriser et purger"
+        "Consigner d'abord, puis dépressuriser, drainer et purger à l'azote"
       ],
       "answer": 2,
       "explain": "On réduit la charge, on isole, on dépressurise, on purge et on consigne en dernier avec vérification d'absence d'énergie et de fluide.",
@@ -609,9 +609,9 @@
       "q": "La mesure d'un régulateur de niveau en automatique est perdue (mauvaise qualité). Quelle est l'action immédiate ?",
       "choices": [
         "Laisser le régulateur en automatique et attendre le retour du signal",
-        "Mettre la sortie à 0 % par précaution",
-        "Mettre la sortie à 100 % par précaution",
-        "Passer le régulateur en manuel à la dernière valeur sûre et demander un contrôle terrain"
+        "Mettre la sortie à 0 % par précaution et fermer la vanne",
+        "Mettre la sortie à 100 % par précaution et ouvrir la vanne",
+        "Passer en manuel à la dernière valeur sûre et appeler le terrain"
       ],
       "answer": 3,
       "explain": "Sans mesure fiable, on stabilise en manuel sur une valeur sûre et on fait contrôler le terrain. Fermer ou ouvrir complètement la vanne peut vider ou faire déborder la capacité.",
@@ -624,10 +624,10 @@
       "level": 2,
       "q": "Qu'est-ce qu'un forçage (force) d'une entrée du DCS ?",
       "choices": [
-        "Une mise à jour planifiée du logiciel du DCS",
+        "Une mise à jour planifiée du logiciel du système DCS",
         "Un changement de couleur ou de priorité d'une alarme",
-        "Une dérogation imposant une valeur à la place du signal réel",
-        "Un test d'étalonnage automatique du capteur"
+        "Une dérogation imposant une valeur au lieu du signal réel",
+        "Un test d'étalonnage automatique du capteur de terrain"
       ],
       "answer": 2,
       "explain": "Le forçage remplace temporairement le signal réel : il est dangereux s'il est oublié, donc limité, autorisé, enregistré et retiré dès la fin du besoin.",
@@ -642,10 +642,10 @@
       "img": "photo/control-room.jpg",
       "imgAlt": "Photo d'une salle de contrôle avec postes opérateurs",
       "choices": [
-        "Passer au poste de secours, prévenir le terrain et mettre l'installation en état sûr (arrêt si besoin)",
-        "Attendre calmement que les écrans redémarrent d'eux-mêmes, sans rien changer",
-        "Continuer la conduite de mémoire avec les dernières valeurs lues sur les écrans",
-        "Éteindre et rallumer le DCS en urgence sans informer le superviseur ni le terrain"
+        "Passer au poste de secours, prévenir le terrain et viser l'état sûr",
+        "Attendre que les écrans redémarrent d'eux-mêmes, sans rien changer",
+        "Continuer la conduite de mémoire avec les dernières valeurs lues",
+        "Éteindre et rallumer le DCS en urgence sans prévenir personne"
       ],
       "answer": 0,
       "explain": "Sans visibilité, la priorité est l'état sûr : poste de secours, appel du terrain, arrêt si nécessaire. La règle est de stabiliser d'abord.",
@@ -660,10 +660,10 @@
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "Boucle de régulation de débit FIC-102 avec vanne de régulation à 100 %",
       "choices": [
-        "Le régulateur fonctionne normalement : la mesure rattrapera la consigne seule",
-        "Le transmetteur est en défaut de communication avec le DCS",
+        "Le régulateur fonctionne normalement : la mesure va rattraper la consigne",
+        "Le transmetteur est en défaut de communication avec le DCS de la salle",
         "La consigne a été supprimée par une erreur de configuration du DCS",
-        "Vanne à sa limite : débit limité en amont (pompe, filtre, ligne) ou vanne sous-dimensionnée"
+        "Vanne à sa limite : débit limité en amont ou vanne sous-dimensionnée"
       ],
       "answer": 3,
       "explain": "Une sortie saturée sans atteindre la consigne montre que l'organe ne peut plus suivre. On cherche la cause en amont ou sur la ligne, avec le terrain.",
@@ -676,10 +676,10 @@
       "level": 1,
       "q": "Un technicien veut brancher une clé USB personnelle sur un poste du DCS pour copier une courbe. Que faire ?",
       "choices": [
-        "Accepter si la clé est neuve",
+        "Accepter si la clé est neuve et encore sous emballage",
         "Refuser et utiliser les procédures et supports contrôlés du site",
         "Accepter si le poste n'est pas en cours de conduite",
-        "Accepter après avoir désactivé l'antivirus"
+        "Accepter après avoir désactivé l'antivirus du poste"
       ],
       "answer": 1,
       "explain": "Un support personnel peut introduire un logiciel malveillant dans un système critique. Les échanges de données suivent les procédures de cybersécurité du site.",
@@ -711,9 +711,9 @@
       "imgAlt": "Photo d'une salle de contrôle avec postes opérateurs",
       "choices": [
         "Un mot laissé sur le bureau, l'équipe suivante le lira",
-        "Une relève téléphonique à distance",
-        "Une relève orale rapide à la porte de la salle",
-        "Une relève face à face, au poste, avec le cahier de quart lu et signé"
+        "Une relève par téléphone, à distance, avant l'arrivée de l'équipe",
+        "Une relève orale rapide à la porte de la salle, sans passer au poste",
+        "Une relève face à face, au poste, avec cahier de quart signé"
       ],
       "answer": 3,
       "explain": "La relève se fait sur place, devant les écrans, en échangeant et en vérifiant. Les informations critiques ne se transmettent pas par un mot laissé sans échange.",
@@ -759,9 +759,9 @@
       "q": "Vous demandez au terrain d'« ouvrir un peu » une vanne. Pourquoi est-ce une mauvaise consigne ?",
       "choices": [
         "Elle est trop précise pour être comprise du terrain",
-        "La vanne ne peut pas être ouverte à la main",
-        "Elle n'est pas autorisée par le DCS",
-        "Elle est ambiguë : préciser le repère et l'ouverture visée"
+        "La vanne ne peut pas être ouverte à la main par le terrain",
+        "Elle n'est pas autorisée par le DCS de la salle de contrôle",
+        "Elle est ambiguë : préciser le repère et l'ouverture"
       ],
       "answer": 3,
       "explain": "« Un peu » n'a pas de sens commun. Une consigne précise (repère, nombre de tours ou pourcentage, effet attendu) évite les écarts de conduite.",
@@ -790,10 +790,10 @@
       "level": 2,
       "q": "En cas d'urgence, quel est le rôle de la salle de contrôle ?",
       "choices": [
-        "Quitter immédiatement la salle pour rejoindre le point de rassemblement",
-        "Intervenir au terrain avec les extincteurs",
-        "Déclencher les alarmes, informer l'équipe d'intervention et tenir le registre des présents",
-        "Attendre l'ordre d'une autorité extérieure"
+        "Quitter immédiatement la salle pour gagner le point de rassemblement",
+        "Intervenir seul au terrain avec les extincteurs de la salle",
+        "Déclencher les alarmes, informer l'intervention, tenir le registre",
+        "Attendre l'ordre d'une autorité extérieure avant toute action"
       ],
       "answer": 2,
       "explain": "La salle de contrôle coordonne : alarmes, appels, registre des présents. Elle ne quitte la salle que selon le plan d'urgence.",
@@ -806,10 +806,10 @@
       "level": 3,
       "q": "À la relève, l'opérateur entrant constate que la pompe P-101B est notée « en marche » au cahier alors qu'elle est arrêtée à l'écran. Que doit-il faire ?",
       "choices": [
-        "Clarifier d'abord avec l'opérateur sortant et le terrain avant de prendre le poste",
-        "Prendre le poste et corriger le cahier de quart plus tard",
+        "Clarifier avec l'opérateur sortant et le terrain avant la prise de poste",
+        "Prendre le poste et corriger le cahier de quart en fin de journée",
         "Considérer que l'écran se trompe et ignorer l'écart sans vérifier",
-        "Démarrer la pompe sans en parler à l'opérateur sortant"
+        "Démarrer la pompe sans en parler à l'opérateur sortant ni au terrain"
       ],
       "answer": 0,
       "explain": "Un écart entre le cahier et l'écran doit être clarifié avant de prendre en charge l'installation. Prendre le poste avec une information douteuse est un risque.",

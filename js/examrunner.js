@@ -25,7 +25,7 @@ export function showIntro(root, o) {
         ${o.subtitle ? `<p class="muted">${esc(o.subtitle)}</p>` : ''}
         <ul class="rules">
           <li>${icon('target', 20)}<span><strong>${o.total} questions</strong> sur ${o.themes} thèmes, tirées au hasard, dans un ordre mélangé.</span></li>
-          <li>${icon('clock', 20)}<span>Chaque question est <strong>chronométrée</strong> (durée indiquée à l’écran : de 30 secondes à 3 minutes pour les mises en situation). Temps écoulé = question perdue.</span></li>
+          <li>${icon('clock', 20)}<span>Chaque question est <strong>chronométrée</strong> (durée indiquée à l’écran : 1 min 30 par question, 2 minutes ou plus pour les cas pratiques et mises en situation). Temps écoulé = question perdue.</span></li>
           <li>${icon('lock', 20)}<span><strong>Pas de retour arrière</strong> : une réponse validée est définitive. Choisissez puis cliquez sur « Valider ».</span></li>
           <li>${icon('refresh', 20)}<span>Si la page se recharge, l’examen reprend là où il était. <strong>Le chronomètre continue de tourner.</strong></span></li>
           <li>${icon('award', 20)}<span>Seuil de réussite : <strong>${o.passMark} %</strong>. ${o.certificate ? 'Une attestation vérifiable est délivrée en cas de réussite.' : 'Votre résultat est transmis à l’entreprise.'}</span></li>

@@ -2,261 +2,824 @@
   "profile": "tech-tuyau",
   "modules": [
     {
-      "id": "m1", "title": "Tuyauterie, matériaux et brides", "theme": "Tuyauterie et brides", "minutes": 9,
-      "body": "Une ligne de tuyauterie de procédé se décrit par son **diamètre nominal** (NPS en pouces, DN en millimètres), son **épaisseur** (série ou « schedule » : SCH 40, SCH 80, STD, XS), son **matériau** et sa **classe de pression**. Attention : le NPS n'est pas le diamètre extérieur réel. À partir de NPS 14, le NPS égale le diamètre extérieur en pouces ; en dessous, il faut une table (NPS 2 = 60,3 mm, NPS 4 = 114,3 mm, NPS 6 = 168,3 mm). Le diamètre intérieur se calcule : DI = DE − 2 × épaisseur.\n\nMatériaux courants en raffinerie :\n- tube acier carbone sans soudure **A106 Gr.B** ;\n- brides forgées **A105**, raccords soudés **A234 WPB** ;\n- inox austénitique **A312 TP304/316** ;\n- acier carbone pour basse température **A333 Gr.6** ;\n- goujons **A193 B7** avec écrous **A194 2H**.\n\nLes **brides** sont normalisées par **ASME B16.5** jusqu'à NPS 24, en classes **150, 300, 600, 900, 1500 et 2500**. Plus la classe est élevée, plus la bride est épaisse et lourde. Surtout, la pression admissible d'une classe **diminue quand la température augmente** : une bride de classe 150 en A105 tient environ 19,6 bar à 38 °C, nettement moins à chaud.\n\nTypes de brides : à **collerette à souder** (weld neck, la plus robuste, pour les services sévères), **emmanchée** (slip-on, moins chère, services modestes), **à souder par emboîtement** (socket weld, petits diamètres), **taraudée**, **à recouvrement** (lap joint) et **pleine** (blind) qui obture une ligne. Les **faces** sont plates (FF), **surélevées** (RF, la plus répandue) ou à **joint annulaire** (RTJ) pour les hautes pressions.\n\nLe **joint** doit être adapté : feuille comprimée, **spiralé** (avec bague de centrage extérieure et bague intérieure) ou métallique RTJ. Le **serrage** se fait **en croix** (en étoile), par passes progressives, jusqu'au couple prescrit, avec boulons lubrifiés.\n\nSur un isométrique, on lit les cotes, les repères de soudures (soudures d'atelier et de chantier), la nomenclature et les supports. Sur l'aspiration horizontale d'une pompe, on place un **réducteur excentrique à génératrice plate dessus** pour éviter les poches d'air.",
-      "keyPoints": ["NPS ≠ diamètre extérieur ; DI = DE − 2 × épaisseur", "Classes B16.5 : 150, 300, 600, 900, 1500, 2500 ; la pression admissible baisse avec la température", "Serrage des brides en croix, par passes, avec joint adapté (spiralé, RTJ)"],
-      "img": "svg/flange-types.svg", "imgAlt": "Schéma des principaux types de brides : à collerette, emmanchée, taraudée, à emboîtement, pleine"
+      "id": "m1",
+      "title": "Tuyauterie, matériaux et brides",
+      "theme": "Tuyauterie et brides",
+      "minutes": 9,
+      "body": "Une ligne de tuyauterie de procédé se décrit par son **diamètre nominal** (NPS en pouces, DN en millimètres), son **épaisseur** (série ou « schedule » : SCH 40, SCH 80, STD, XS), son **matériau** et sa **classe de pression**. Attention : le NPS n'est pas le diamètre extérieur réel. À partir de NPS 14, le NPS égale le diamètre extérieur en pouces ; en dessous, il faut une table (NPS 2 = 60,3 mm, NPS 4 = 114,3 mm, NPS 6 = 168,3 mm). Le diamètre intérieur se calcule : DI = DE − 2 × épaisseur.\n\nMatériaux courants en raffinerie :\n- tube acier carbone sans soudure **A106 Gr.B** ;\n- brides forgées **A105**, raccords soudés **A234 WPB** ;\n- inox austénitique **A312 TP304/316** ;\n- acier carbone pour basse température **A333 Gr.6** ;\n- goujons **A193 B7** avec écrous **A194 2H**.\n\nLes **brides** sont normalisées par **ASME B16.5** jusqu'à NPS 24, en classes **150, 300, 600, 900, 1500 et 2500**. Plus la classe est élevée, plus la bride est épaisse et lourde. Surtout, la pression admissible d'une classe **diminue quand la température augmente** : une bride de classe 150 en A105 tient environ 19,6 bar à 38 °C, nettement moins à chaud.\n\nTypes de brides : à **collerette à souder** (weld neck, la plus robuste, pour les services sévères), **emmanchée** (slip-on, moins chère, services modestes), **à souder par emboîtement** (socket weld, petits diamètres), **taraudée**, **à recouvrement** (lap joint) et **pleine** (blind) qui obture une ligne. Les **faces** sont plates (FF), **surélevées** (RF, la plus répandue) ou à **joint annulaire** (RTJ) pour les hautes pressions.\n\nLe **joint** doit être adapté : feuille comprimée, **spiralé** (avec bague de centrage extérieure et bague intérieure) ou métallique RTJ. Le **serrage** se fait **en croix** (en étoile), par passes progressives, jusqu'au couple prescrit, avec boulons lubrifiés.\n\nSur un isométrique, on lit les cotes, les repères de soudures (soudures d'atelier et de chantier), la nomenclature et les supports. Sur l'aspiration horizontale d'une pompe, on place un **réducteur excentrique à génératrice plate dessus** pour éviter les poches d'air.\n\n**Sur le terrain**\n- Avant de monter une bride, contrôle classe, matériau et face de portée, et utilise un joint neuf à chaque ouverture.\n- Serrage en croix, par passes progressives : jamais un boulon à fond à la fois.\n- Réducteur excentrique à l'aspiration d'une pompe, génératrice plate dessus : on ne laisse pas de poche d'air.",
+      "keyPoints": [
+        "NPS ≠ diamètre extérieur ; DI = DE − 2 × épaisseur",
+        "Classes B16.5 : 150, 300, 600, 900, 1500, 2500 ; la pression admissible baisse avec la température",
+        "Serrage des brides en croix, par passes, avec joint adapté (spiralé, RTJ)"
+      ],
+      "img": "svg/flange-types.svg",
+      "imgAlt": "Schéma des principaux types de brides : à collerette, emmanchée, taraudée, à emboîtement, pleine"
     },
     {
-      "id": "m2", "title": "Soudage et qualifications ASME IX", "theme": "Soudage", "minutes": 9,
-      "body": "Les assemblages de tuyauterie sont réalisés surtout par **soudure bout à bout** (butt weld) pour les tubes et raccords, et par **soudure d'angle** (fillet) pour les brides emmanchées, les emboîtements et les supports. Un joint est décrit par sa préparation de chanfrein (angle, talon, écartement) qui conditionne la pénétration.\n\nProcédés usuels : **SMAW** (électrode enrobée), **GTAW/TIG** (électrode de tungstène, protection par **argon**) pour les passes de racine, et **GMAW/FCAW** en atelier. L'électrode basique **E7018** est à faible teneur en hydrogène : elle se conserve en **étuve** car l'humidité apporte de l'hydrogène, cause de **fissuration à froid**. Celle-ci exige trois facteurs réunis : hydrogène diffusible, microstructure dure et contraintes de traction. On la combat par le **préchauffage**, l'électrode sèche et un refroidissement lent.\n\nLa qualité repose sur trois documents d'**ASME section IX** :\n- le **WPS** (descriptif de mode opératoire) : les paramètres que le soudeur doit suivre ;\n- le **PQR** (compte rendu de qualification) : les essais (traction, pliage) qui prouvent que le WPS donne une soudure saine ;\n- le **WPQ** (qualification du soudeur) : l'aptitude personnelle du soudeur, valable pour un procédé et une plage de variables.\n\nUn changement d'une **variable essentielle** (procédé, groupe matière P-No, métal d'apport F-No, épaisseur au-delà de la plage, etc.) impose une nouvelle qualification. Un soudeur qui n'a pas soudé avec un procédé pendant **6 mois** perd sa qualification pour ce procédé.\n\nL'**apport de chaleur** s'estime par : Q (kJ/mm) = U (V) × I (A) × 60 / (1000 × vitesse en mm/min). Trop de chaleur affaiblit certains aciers, trop peu favorise le manque de fusion.\n\nDéfauts classiques : **porosité** (soufflures), **inclusion de laitier**, **manque de fusion**, **manque de pénétration**, **caniveau** (entaille au pied du cordon), **fissures** (le plus grave). Après soudage, un **traitement thermique de détente (PWHT)** est requis au-delà d'une certaine épaisseur (carbone, ordre de 19 mm selon B31.3).",
-      "keyPoints": ["WPS = mode opératoire ; PQR = essais de qualification ; WPQ = qualification du soudeur", "Fissuration à froid : hydrogène + structure dure + contraintes ; remèdes : préchauffage, électrodes sèches", "Qualification soudeur perdue après 6 mois sans souder avec le procédé"],
-      "img": "svg/weld-joint-types.svg", "imgAlt": "Types de joints soudés : bout à bout, d'angle, en T, à recouvrement"
+      "id": "m2",
+      "title": "Soudage et qualifications ASME IX",
+      "theme": "Soudage",
+      "minutes": 9,
+      "body": "Les assemblages de tuyauterie sont réalisés surtout par **soudure bout à bout** (butt weld) pour les tubes et raccords, et par **soudure d'angle** (fillet) pour les brides emmanchées, les emboîtements et les supports. Un joint est décrit par sa préparation de chanfrein (angle, talon, écartement) qui conditionne la pénétration.\n\nProcédés usuels : **SMAW** (électrode enrobée), **GTAW/TIG** (électrode de tungstène, protection par **argon**) pour les passes de racine, et **GMAW/FCAW** en atelier. L'électrode basique **E7018** est à faible teneur en hydrogène : elle se conserve en **étuve** car l'humidité apporte de l'hydrogène, cause de **fissuration à froid**. Celle-ci exige trois facteurs réunis : hydrogène diffusible, microstructure dure et contraintes de traction. On la combat par le **préchauffage**, l'électrode sèche et un refroidissement lent.\n\nLa qualité repose sur trois documents d'**ASME section IX** :\n- le **WPS** (descriptif de mode opératoire) : les paramètres que le soudeur doit suivre ;\n- le **PQR** (compte rendu de qualification) : les essais (traction, pliage) qui prouvent que le WPS donne une soudure saine ;\n- le **WPQ** (qualification du soudeur) : l'aptitude personnelle du soudeur, valable pour un procédé et une plage de variables.\n\nUn changement d'une **variable essentielle** (procédé, groupe matière P-No, métal d'apport F-No, épaisseur au-delà de la plage, etc.) impose une nouvelle qualification. Un soudeur qui n'a pas soudé avec un procédé pendant **6 mois** perd sa qualification pour ce procédé.\n\nL'**apport de chaleur** s'estime par : Q (kJ/mm) = U (V) × I (A) × 60 / (1000 × vitesse en mm/min). Trop de chaleur affaiblit certains aciers, trop peu favorise le manque de fusion.\n\nDéfauts classiques : **porosité** (soufflures), **inclusion de laitier**, **manque de fusion**, **manque de pénétration**, **caniveau** (entaille au pied du cordon), **fissures** (le plus grave). Après soudage, un **traitement thermique de détente (PWHT)** est requis au-delà d'une certaine épaisseur (carbone, ordre de 19 mm selon B31.3).\n\n**Sur le terrain**\n- Électrodes basiques à l'étuve ou en boîte chauffante : une électrode humide, c'est de l'hydrogène dans la soudure.\n- Le WPS applicable doit être à portée du soudeur, et sa qualification doit couvrir le procédé et le métal.\n- Vent, pluie et poussière : protège la zone de soudage, un bain de fusion mal protégé fait des soufflures.",
+      "keyPoints": [
+        "WPS = mode opératoire ; PQR = essais de qualification ; WPQ = qualification du soudeur",
+        "Fissuration à froid : hydrogène + structure dure + contraintes ; remèdes : préchauffage, électrodes sèches",
+        "Qualification soudeur perdue après 6 mois sans souder avec le procédé"
+      ],
+      "img": "svg/weld-joint-types.svg",
+      "imgAlt": "Types de joints soudés : bout à bout, d'angle, en T, à recouvrement"
     },
     {
-      "id": "m3", "title": "Contrôles non destructifs (END)", "theme": "Contrôles non destructifs", "minutes": 8,
-      "body": "Les **END** (essais non destructifs) vérifient une soudure ou un composant sans l'endommager. Chaque méthode a son domaine et ses limites : le bon inspecteur choisit la méthode selon le défaut recherché.\n\n**Contrôle visuel (VT)** : toujours le premier. Il vérifie l'aspect du cordon, les caniveaux, le désalignement, les projections. Il est peu coûteux et indispensable avant tout autre contrôle.\n\n**Ressuage (PT)** : un pénétrant colorant ou fluorescent pénètre par capillarité dans les défauts **débouchant en surface**, puis un révélateur le fait ressortir. Il convient à tous les matériaux **non poreux**, y compris l'inox austénitique et l'aluminium. Étapes : nettoyage, application du pénétrant, temps de pénétration, élimination de l'excès, révélateur, lecture.\n\n**Magnétoscopie (MT)** : on crée un champ magnétique et on dépose des particules ferromagnétiques ; une fuite de flux révèle les défauts de surface et **légèrement sous-cutanés**. Elle ne s'applique **qu'aux matériaux ferromagnétiques** (acier carbone, pas l'inox 304/316).\n\n**Radiographie (RT)** : rayons X ou gamma (iridium 192, sélénium 75) traversent la soudure et impressionnent un film ou détecteur. Elle révèle bien les **défauts volumiques** (porosités, inclusions) mais peut manquer des fissures mal orientées. Un **pénétramètre (IQI)** prouve la sensibilité de l'image. C'est un risque d'**irradiation** : balisage, évacuation, principes temps, distance, écran.\n\n**Ultrasons (UT)** : une onde ultrasonore se réfléchit sur les défauts et les parois ; on mesure le temps aller-retour. L'UT est excellent pour les **défauts plans** (fissures, manques de fusion), pour la **mesure d'épaisseur** et, avec les techniques TOFD ou phased array, pour des enregistrements numériques. Il exige un couplant et un opérateur bien formé.\n\nLes END sont réalisés par du personnel **certifié** (niveaux 1, 2, 3, ISO 9712 / EN 473 ou ASNT), selon une procédure écrite. Les critères d'acceptation viennent du code (ASME B31.3 tableau 341.3.2). Pour un service « normal », l'examen volumique porte sur un échantillon aléatoire de **5 %** des soudures circulaires, tandis que les services sévères exigent davantage.",
-      "keyPoints": ["PT : défauts débouchants, matériaux non poreux ; MT : uniquement ferromagnétiques", "RT : défauts volumiques, risque d'irradiation ; UT : défauts plans et épaisseur", "Personnel END certifié ; critères d'acceptation donnés par le code (B31.3 tab. 341.3.2)"],
-      "img": "photo/pipeline-welding.jpg", "imgAlt": "Soudeurs sur un chantier de pipeline"
+      "id": "m3",
+      "title": "Contrôles non destructifs (END)",
+      "theme": "Contrôles non destructifs",
+      "minutes": 8,
+      "body": "Les **END** (essais non destructifs) vérifient une soudure ou un composant sans l'endommager. Chaque méthode a son domaine et ses limites : le bon inspecteur choisit la méthode selon le défaut recherché.\n\n**Contrôle visuel (VT)** : toujours le premier. Il vérifie l'aspect du cordon, les caniveaux, le désalignement, les projections. Il est peu coûteux et indispensable avant tout autre contrôle.\n\n**Ressuage (PT)** : un pénétrant colorant ou fluorescent pénètre par capillarité dans les défauts **débouchant en surface**, puis un révélateur le fait ressortir. Il convient à tous les matériaux **non poreux**, y compris l'inox austénitique et l'aluminium. Étapes : nettoyage, application du pénétrant, temps de pénétration, élimination de l'excès, révélateur, lecture.\n\n**Magnétoscopie (MT)** : on crée un champ magnétique et on dépose des particules ferromagnétiques ; une fuite de flux révèle les défauts de surface et **légèrement sous-cutanés**. Elle ne s'applique **qu'aux matériaux ferromagnétiques** (acier carbone, pas l'inox 304/316).\n\n**Radiographie (RT)** : rayons X ou gamma (iridium 192, sélénium 75) traversent la soudure et impressionnent un film ou détecteur. Elle révèle bien les **défauts volumiques** (porosités, inclusions) mais peut manquer des fissures mal orientées. Un **pénétramètre (IQI)** prouve la sensibilité de l'image. C'est un risque d'**irradiation** : balisage, évacuation, principes temps, distance, écran.\n\n**Ultrasons (UT)** : une onde ultrasonore se réfléchit sur les défauts et les parois ; on mesure le temps aller-retour. L'UT est excellent pour les **défauts plans** (fissures, manques de fusion), pour la **mesure d'épaisseur** et, avec les techniques TOFD ou phased array, pour des enregistrements numériques. Il exige un couplant et un opérateur bien formé.\n\nLes END sont réalisés par du personnel **certifié** (niveaux 1, 2, 3, ISO 9712 / EN 473 ou ASNT), selon une procédure écrite. Les critères d'acceptation viennent du code (ASME B31.3 tableau 341.3.2). Pour un service « normal », l'examen volumique porte sur un échantillon aléatoire de **5 %** des soudures circulaires, tandis que les services sévères exigent davantage.\n\n**Sur le terrain**\n- Radiographie : zone balisée et évacuée, jamais de passage dans le périmètre pendant le tir.\n- Prépare la surface : meulage et nettoyage avant ressuage ou magnétoscopie, sinon les défauts ne se révèlent pas.\n- Choisis la méthode selon le matériau : pas de magnétoscopie sur inox austénitique.",
+      "keyPoints": [
+        "PT : défauts débouchants, matériaux non poreux ; MT : uniquement ferromagnétiques",
+        "RT : défauts volumiques, risque d'irradiation ; UT : défauts plans et épaisseur",
+        "Personnel END certifié ; critères d'acceptation donnés par le code (B31.3 tab. 341.3.2)"
+      ],
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Soudeurs sur un chantier de pipeline"
     },
     {
-      "id": "m4", "title": "ASME B31.3 et épreuves de pression", "theme": "Codes et épreuves", "minutes": 8,
-      "body": "**ASME B31.3 (Process Piping)** est le code de conception, de fabrication, d'examen et d'épreuve des tuyauteries de procédé (raffineries, chimie, pétrole et gaz en usine). Il se distingue de B31.1 (centrales électriques), B31.4 (transport de liquides par pipeline) et B31.8 (transport de gaz). Les chaudières et réservoirs relèvent de ASME VIII.\n\nLe code définit des **catégories de service** : **fluide normal**, **catégorie D** (non inflammable, non toxique, basse pression et température), **catégorie M** (fluide très toxique) et **haute pression**. Plus le service est sévère, plus l'examen est étendu.\n\nL'**épaisseur de calcul** d'un tube sous pression interne suit : t = P × D / (2 × (S × E × W + P × Y)), où S est la contrainte admissible, E le coefficient de qualité de joint, W le coefficient de réduction de résistance de soudure et Y un coefficient (0,4 pour les aciers ferritiques à basse température). On ajoute la **surépaisseur de corrosion** et la tolérance de fabrication.\n\nL'**épreuve hydraulique** est l'essai normal de résistance et d'étanchéité : de l'**eau** est mise à la **pression d'épreuve = 1,5 × pression de calcul**, multipliée par le rapport ST/S (contrainte admissible à la température d'essai sur celle à la température de calcul) lorsque la température de calcul est élevée. Précautions : purger l'air aux points hauts, **isoler ou déposer les soupapes**, utiliser des manomètres étalonnés, limiter l'accès au personnel, vidanger et sécher ensuite (surtout l'inox).\n\nL'**épreuve pneumatique** (gaz) n'est admise que si l'hydraulique est impossible ; c'est dangereux à cause de l'énergie stockée. La pression est de **1,1 × la pression de calcul**, montée par paliers, avec examen préalable renforcé. Le **test de sensibilité** (bulles, détecteur d'hélium) complète pour certaines catégories.\n\nL'**expansion thermique** est à contrôler : l'acier carbone se dilate d'environ 12 mm par 100 m et par 100 °C ; il faut des boucles de dilatation, des lyres ou des supports adaptés.",
-      "keyPoints": ["B31.3 = tuyauteries de procédé ; hydraulique à 1,5 × pression de calcul (× ST/S)", "Épreuve pneumatique : 1,1 × pression de calcul, en dernier recours", "Isoler les soupapes et purger l'air avant l'épreuve"],
-      "img": "svg/norms-pyramid.svg", "imgAlt": "Pyramide des normes et codes applicables"
+      "id": "m4",
+      "title": "ASME B31.3 et épreuves de pression",
+      "theme": "Codes et épreuves",
+      "minutes": 8,
+      "body": "**ASME B31.3 (Process Piping)** est le code de conception, de fabrication, d'examen et d'épreuve des tuyauteries de procédé (raffineries, chimie, pétrole et gaz en usine). Il se distingue de B31.1 (centrales électriques), B31.4 (transport de liquides par pipeline) et B31.8 (transport de gaz). Les chaudières et réservoirs relèvent de ASME VIII.\n\nLe code définit des **catégories de service** : **fluide normal**, **catégorie D** (non inflammable, non toxique, basse pression et température), **catégorie M** (fluide très toxique) et **haute pression**. Plus le service est sévère, plus l'examen est étendu.\n\nL'**épaisseur de calcul** d'un tube sous pression interne suit : t = P × D / (2 × (S × E × W + P × Y)), où S est la contrainte admissible, E le coefficient de qualité de joint, W le coefficient de réduction de résistance de soudure et Y un coefficient (0,4 pour les aciers ferritiques à basse température). On ajoute la **surépaisseur de corrosion** et la tolérance de fabrication.\n\nL'**épreuve hydraulique** est l'essai normal de résistance et d'étanchéité : de l'**eau** est mise à la **pression d'épreuve = 1,5 × pression de calcul**, multipliée par le rapport ST/S (contrainte admissible à la température d'essai sur celle à la température de calcul) lorsque la température de calcul est élevée. Précautions : purger l'air aux points hauts, **isoler ou déposer les soupapes**, utiliser des manomètres étalonnés, limiter l'accès au personnel, vidanger et sécher ensuite (surtout l'inox).\n\nL'**épreuve pneumatique** (gaz) n'est admise que si l'hydraulique est impossible ; c'est dangereux à cause de l'énergie stockée. La pression est de **1,1 × la pression de calcul**, montée par paliers, avec examen préalable renforcé. Le **test de sensibilité** (bulles, détecteur d'hélium) complète pour certaines catégories.\n\nL'**expansion thermique** est à contrôler : l'acier carbone se dilate d'environ 12 mm par 100 m et par 100 °C ; il faut des boucles de dilatation, des lyres ou des supports adaptés.\n\n**Sur le terrain**\n- Avant une épreuve hydraulique : soupapes isolées ou déposées, évents ouverts aux points hauts, manomètre étalonné en place.\n- Jamais de resserrage sous pression : on dépressurise, on vidange la zone, puis on intervient.\n- Le dossier d'épreuve se signe avec l'inspecteur : pression, durée, fluide et résultat.",
+      "keyPoints": [
+        "B31.3 = tuyauteries de procédé ; hydraulique à 1,5 × pression de calcul (× ST/S)",
+        "Épreuve pneumatique : 1,1 × pression de calcul, en dernier recours",
+        "Isoler les soupapes et purger l'air avant l'épreuve"
+      ],
+      "img": "svg/norms-pyramid.svg",
+      "imgAlt": "Pyramide des normes et codes applicables"
     },
     {
-      "id": "m5", "title": "Corrosion et inspection en service (API 570)", "theme": "Corrosion et inspection", "minutes": 9,
-      "body": "**API 570** est le code d'inspection, de réparation, de modification et de ré-évaluation des tuyauteries **en service** ; **API 510** traite des appareils à pression et **API 653** des réservoirs de stockage atmosphériques. Les tuyauteries sont classées en **classes 1, 2 et 3** selon la gravité des conséquences d'une fuite : la classe 1 est la plus critique et reçoit les intervalles d'inspection les plus courts.\n\nL'inspecteur suit la **perte d'épaisseur** : vitesse de corrosion = (épaisseur précédente − épaisseur actuelle) / durée. La **durée de vie résiduelle** = (épaisseur actuelle − épaisseur minimale requise) / vitesse de corrosion. Les intervalles d'inspection ne doivent pas dépasser **la moitié de la durée de vie résiduelle** (dans la limite du maximum du code). Les mesures se font en points fixes (**CML**, conditions monitoring locations) par UT.\n\nMécanismes de dégradation (API 571) :\n- **CUI** (corrosion sous calorifuge) : corrosion externe de l'acier sous une isolation mouillée, aggravée par les cycles chaud-froid ; vérifier les points bas, supports, piquages ;\n- **corrosion par CO2 humide** (« douce » ou sweet) : acide carbonique, pertes d'épaisseur localisées ;\n- **H2S humide** : fissuration sous contrainte en milieu sulfuré (SSC), cloquage et fissuration induite par l'hydrogène (HIC) ; les aciers durs (> 22 HRC) sont les plus sensibles ;\n- **bras morts** (fluide stagnant), **érosion-corrosion** aux coudes et après les vannes, **corrosion sous contrainte par chlorures** sur inox 300 ;\n- **corrosion externe** des tuyauteries enterrées, limitée par revêtement et **protection cathodique** (potentiel ≤ −850 mV par rapport à Cu/CuSO4).\n\nLes réparations (soudage, rechargement, manchons) suivent un plan approuvé par l'inspecteur autorisé, avec les mêmes qualifications que la construction. Pour toute anomalie, l'**analyse d'aptitude au service** (API 579) peut justifier le maintien en exploitation. Une approche **RBI** adapte la fréquence au risque (probabilité × conséquence).",
-      "keyPoints": ["API 570 = tuyauteries en service ; API 510 = appareils ; API 653 = réservoirs", "Durée de vie résiduelle = (épaisseur actuelle − tmin) / vitesse de corrosion ; intervalle ≤ la moitié", "CUI, CO2, H2S, bras morts : repérer les zones à risque"],
-      "img": "photo/storage-tanks.jpg", "imgAlt": "Réservoirs de stockage d'hydrocarbures"
+      "id": "m5",
+      "title": "Corrosion et inspection en service (API 570)",
+      "theme": "Corrosion et inspection",
+      "minutes": 9,
+      "body": "**API 570** est le code d'inspection, de réparation, de modification et de ré-évaluation des tuyauteries **en service** ; **API 510** traite des appareils à pression et **API 653** des réservoirs de stockage atmosphériques. Les tuyauteries sont classées en **classes 1, 2 et 3** selon la gravité des conséquences d'une fuite : la classe 1 est la plus critique et reçoit les intervalles d'inspection les plus courts.\n\nL'inspecteur suit la **perte d'épaisseur** : vitesse de corrosion = (épaisseur précédente − épaisseur actuelle) / durée. La **durée de vie résiduelle** = (épaisseur actuelle − épaisseur minimale requise) / vitesse de corrosion. Les intervalles d'inspection ne doivent pas dépasser **la moitié de la durée de vie résiduelle** (dans la limite du maximum du code). Les mesures se font en points fixes (**CML**, conditions monitoring locations) par UT.\n\nMécanismes de dégradation (API 571) :\n- **CUI** (corrosion sous calorifuge) : corrosion externe de l'acier sous une isolation mouillée, aggravée par les cycles chaud-froid ; vérifier les points bas, supports, piquages ;\n- **corrosion par CO2 humide** (« douce » ou sweet) : acide carbonique, pertes d'épaisseur localisées ;\n- **H2S humide** : fissuration sous contrainte en milieu sulfuré (SSC), cloquage et fissuration induite par l'hydrogène (HIC) ; les aciers durs (> 22 HRC) sont les plus sensibles ;\n- **bras morts** (fluide stagnant), **érosion-corrosion** aux coudes et après les vannes, **corrosion sous contrainte par chlorures** sur inox 300 ;\n- **corrosion externe** des tuyauteries enterrées, limitée par revêtement et **protection cathodique** (potentiel ≤ −850 mV par rapport à Cu/CuSO4).\n\nLes réparations (soudage, rechargement, manchons) suivent un plan approuvé par l'inspecteur autorisé, avec les mêmes qualifications que la construction. Pour toute anomalie, l'**analyse d'aptitude au service** (API 579) peut justifier le maintien en exploitation. Une approche **RBI** adapte la fréquence au risque (probabilité × conséquence).\n\n**Sur le terrain**\n- Sous un calorifuge abîmé ou une tôle d'habillage perforée, suspecte la corrosion sous isolation et fais ouvrir une fenêtre d'inspection.\n- Mesure les épaisseurs toujours aux mêmes points repérés pour calculer une vitesse de corrosion fiable.\n- Les bras morts et les points bas stagnants se corrodent plus vite : ils figurent dans le plan d'inspection.",
+      "keyPoints": [
+        "API 570 = tuyauteries en service ; API 510 = appareils ; API 653 = réservoirs",
+        "Durée de vie résiduelle = (épaisseur actuelle − tmin) / vitesse de corrosion ; intervalle ≤ la moitié",
+        "CUI, CO2, H2S, bras morts : repérer les zones à risque"
+      ],
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Réservoirs de stockage d'hydrocarbures"
     }
   ],
   "questions": [
-    { "id": "tech-tuyau-001", "theme": "Tuyauterie et brides", "level": 1,
-      "q": "Sur le schéma des types de brides, laquelle est soudée bout à bout au tube et privilégiée pour les services sévères (pression, température, fatigue) ?",
-      "img": "svg/flange-types.svg", "imgAlt": "Schéma des types de brides : à collerette, emmanchée, taraudée, à emboîtement, pleine",
-      "choices": ["Bride emmanchée (slip-on)", "Bride à collerette à souder (weld neck)", "Bride taraudée", "Bride pleine (blind)"], "answer": 1,
-      "explain": "La bride à collerette à souder est soudée bout à bout et sa collerette conique répartit les contraintes : elle est la plus fiable en service sévère. La slip-on est moins chère mais moins résistante en fatigue, la taraudée convient aux petits diamètres sans soudure et la pleine sert à obturer.",
-      "seconds": 45, "status": "draft" },
-    { "id": "tech-tuyau-002", "theme": "Tuyauterie et brides", "level": 1,
-      "q": "Laquelle de ces classes de pression existe dans la norme ASME B16.5 ?",
-      "choices": ["Classe 200", "Classe 450", "Classe 1000", "Classe 600"], "answer": 3,
-      "explain": "ASME B16.5 définit les classes 150, 300, 600, 900, 1500 et 2500. Les classes 200, 450 et 1000 ne font pas partie de cette série.",
-      "seconds": 30, "status": "draft" },
-    { "id": "tech-tuyau-003", "theme": "Tuyauterie et brides", "level": 1,
-      "q": "Quelle est la fonction d'une bride pleine (aveugle) ?",
-      "choices": ["Obturer l'extrémité d'une ligne ou d'un piquage", "Réduire le diamètre de la ligne", "Changer la direction de l'écoulement", "Absorber les dilatations thermiques"], "answer": 0,
-      "explain": "La bride pleine ferme une ligne, un piquage ou une tubulure, par exemple pour isoler un équipement lors d'une intervention. Elle ne réduit pas le diamètre, ne dévie pas le fluide et n'absorbe pas les dilatations.",
-      "seconds": 30, "status": "draft" },
-    { "id": "tech-tuyau-004", "theme": "Tuyauterie et brides", "level": 2,
-      "q": "Quelle face de bride s'associe à un joint métallique annulaire (octogonal ou ovale) pour les hautes pressions ?",
-      "img": "svg/flange-types.svg", "imgAlt": "Schéma des types de brides et de leurs faces",
-      "choices": ["Face plate (FF)", "Face surélevée (RF)", "Face à joint annulaire (RTJ)", "Face lisse sans gorge"], "answer": 2,
-      "explain": "La face RTJ (Ring Type Joint) comporte une gorge usinée dans laquelle se loge le joint métallique, adaptée aux hautes pressions et températures. Les faces plate et surélevée reçoivent des joints plats ou spiralés.",
-      "seconds": 45, "status": "draft" },
-    { "id": "tech-tuyau-005", "theme": "Tuyauterie et brides", "level": 3,
-      "q": "Pour un joint spiralé, quel est le rôle de la bague de centrage extérieure ?",
-      "img": "svg/flange-types.svg", "imgAlt": "Schéma d'une liaison par brides avec joint",
-      "choices": ["Améliorer la résistance chimique du joint", "Remplacer les rondelles des boulons", "Centrer le joint sur la face et limiter son écrasement", "Servir de point de mesure du couple"], "answer": 2,
-      "explain": "La bague extérieure centre le joint sur la face surélevée dans les boulons et fait butée pour limiter la compression ; la bague intérieure évite le flambage de la spirale et protège de l'érosion. Elle n'a aucun rôle chimique.",
-      "seconds": 45, "status": "draft" },
-    { "id": "tech-tuyau-006", "theme": "Tuyauterie et brides", "level": 1,
-      "q": "Dans quel ordre faut-il serrer les boulons d'une bride ?",
-      "img": "svg/flange-types.svg", "imgAlt": "Bride vue de face avec ses boulons repérés",
-      "choices": ["En croix (en étoile), par passes progressives jusqu'au couple prescrit", "Dans l'ordre circulaire, un boulon à fond à la fois", "Un boulon sur deux seulement", "À fond en un seul passage, du haut vers le bas"], "answer": 0,
-      "explain": "Le serrage en croix par passes (par exemple 30 %, 60 %, 100 % du couple) comprime le joint uniformément. Serrer à fond boulon après boulon fausse le plan de la bride et provoque des fuites.",
-      "seconds": 40, "status": "draft" },
-    { "id": "tech-tuyau-007", "theme": "Tuyauterie et brides", "level": 2,
-      "q": "Quand la température de service augmente, la pression admissible d'une bride B16.5 d'une classe donnée :",
-      "choices": ["Augmente proportionnellement", "Reste constante quelle que soit la température", "Dépend uniquement du diamètre", "Diminue"], "answer": 3,
-      "explain": "La résistance de l'acier chute avec la température, donc la pression admissible de chaque classe diminue. Le tableau pression-température de B16.5 donne la valeur selon le matériau (groupe) et la température.",
-      "seconds": 40, "status": "draft" },
-    { "id": "tech-tuyau-008", "theme": "Tuyauterie et brides", "level": 2,
-      "q": "Sur l'aspiration horizontale d'une pompe centrifuge, quel réducteur faut-il placer pour éviter les poches d'air ?",
-      "choices": ["Concentrique", "Excentrique, génératrice plate dessus", "Excentrique, génératrice plate dessous", "Un coude à rayon court"], "answer": 1,
-      "explain": "Le réducteur excentrique avec le dessus plat (FOT) ne crée pas de point haut où l'air s'accumulerait, ce qui protège la pompe contre la cavitation. Le plat dessous formerait une poche d'air.",
-      "seconds": 45, "status": "draft" },
-    { "id": "tech-tuyau-009", "theme": "Tuyauterie et brides", "level": 3,
+    {
+      "id": "tech-tuyau-001",
+      "theme": "Tuyauterie et brides",
+      "level": 1,
+      "q": "Vous préparez une ligne haute pression et haute température. Sur le schéma des brides, laquelle est soudée bout à bout au tube et privilégiée pour les services sévères ?",
+      "img": "svg/flange-types.svg",
+      "imgAlt": "Types de brides en coupe : collerette (WN) soudée bout à bout, glissement (SO), emboîtement (SW), libre (LJ), filetée (TH), pleine (BL)",
+      "choices": [
+        "La bride à collerette (WN), soudée bout à bout au tube",
+        "La bride à glissement (SO), enfilée sur le tube et soudée en angle",
+        "La bride filetée (TH), vissée sur le tube sans soudure",
+        "La bride pleine (BL), qui obture l'extrémité de la ligne"
+      ],
+      "answer": 0,
+      "explain": "La bride à collerette est soudée bout à bout, ce qui offre la meilleure tenue en pression, température et fatigue. La bride à glissement a deux cordons d'angle, la filetée ne se soude pas.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-002",
+      "theme": "Tuyauterie et brides",
+      "level": 1,
+      "q": "La spécification de ligne impose des brides ASME B16.5. Parmi ces classes de pression, laquelle existe réellement ?",
+      "choices": [
+        "Classe 200",
+        "Classe 600",
+        "Classe 450",
+        "Classe 1000"
+      ],
+      "answer": 1,
+      "explain": "La norme ASME B16.5 définit les classes 150, 300, 400, 600, 900, 1500 et 2500. Les valeurs 200, 450 ou 1000 n'existent pas.",
+      "seconds": 30,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-003",
+      "theme": "Tuyauterie et brides",
+      "level": 1,
+      "q": "Fin de ligne provisoire en attente d'une extension : vous devez l'obturer. Quelle bride du schéma utilisez-vous ?",
+      "img": "svg/flange-types.svg",
+      "imgAlt": "Types de brides en coupe : collerette (WN) soudée bout à bout, glissement (SO), emboîtement (SW), libre (LJ), filetée (TH), pleine (BL)",
+      "choices": [
+        "La bride à collerette (WN)",
+        "La bride libre (LJ)",
+        "La bride pleine (BL)",
+        "La bride à emboîtement (SW)"
+      ],
+      "answer": 2,
+      "explain": "La bride pleine obture l'extrémité d'une ligne ou un piquage. Les autres brides sont percées pour continuer la tuyauterie.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-004",
+      "theme": "Tuyauterie et brides",
+      "level": 2,
+      "q": "Une ligne de gaz haute pression reçoit un joint métallique annulaire de forme octogonale. Quelle face de bride lui est associée ?",
+      "choices": [
+        "La face plate (FF), sans gorge ni saillie",
+        "La face surélevée (RF), à portée lisse ou spiralée",
+        "La face à emboîtement mâle-femelle, à gorge et ressaut",
+        "La face à joint annulaire (RTJ), usinée avec une gorge"
+      ],
+      "answer": 3,
+      "explain": "Le joint annulaire se loge dans une gorge usinée dans la face RTJ. Il convient aux hautes pressions. Les faces RF et FF s'utilisent avec des joints plats ou spiralés.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-005",
+      "theme": "Tuyauterie et brides",
+      "level": 3,
+      "q": "Vous montez un joint spiralé muni d'une bague de centrage extérieure. À quoi sert cette bague ?",
+      "choices": [
+        "À améliorer la résistance chimique du joint au contact du fluide",
+        "À centrer le joint sur la face de bride et à limiter son écrasement",
+        "À répartir l'effort des boulons à la place des rondelles de serrage",
+        "À servir de repère de mesure du couple de serrage des boulons"
+      ],
+      "answer": 1,
+      "explain": "La bague extérieure centre le joint dans les boulons et sert de butée : elle évite le sur-écrasement de la spirale.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-006",
+      "theme": "Tuyauterie et brides",
+      "level": 1,
+      "q": "Un jeune de l'équipe serre une bride de douze boulons dans l'ordre circulaire, un boulon à fond à la fois. Que lui faites-vous corriger ?",
+      "choices": [
+        "Serrer un boulon sur deux, puis compléter les autres à la main",
+        "Serrer d'un seul passage du haut vers le bas jusqu'au couple final",
+        "Serrer en croix, par passes progressives, jusqu'au couple prescrit à chaque boulon",
+        "Serrer chaque boulon à fond au couple maximal de la clé à choc"
+      ],
+      "answer": 2,
+      "explain": "Le serrage en croix par passes écrase le joint de façon homogène. Un serrage circulaire à fond fait pivoter la bride et provoque une fuite.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-007",
+      "theme": "Tuyauterie et brides",
+      "level": 2,
+      "q": "La ligne de vapeur monte en température de service. Que devient la pression admissible d'une bride B16.5 d'une classe donnée ?",
+      "choices": [
+        "Elle augmente proportionnellement à la température",
+        "Elle reste constante quelle que soit la température",
+        "Elle ne dépend que du diamètre nominal de la bride",
+        "Elle diminue lorsque la température augmente"
+      ],
+      "answer": 3,
+      "explain": "Les tableaux pression-température d'ASME B16.5 montrent que la pression admissible baisse quand la température monte.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-008",
+      "theme": "Tuyauterie et brides",
+      "level": 2,
+      "q": "Vous montez le réducteur sur l'aspiration horizontale d'une pompe centrifuge. Quel type et quelle position évitent les poches d'air ?",
+      "choices": [
+        "Excentrique, avec la génératrice plate placée au-dessus",
+        "Concentrique, monté dans l'axe de la tuyauterie",
+        "Excentrique, avec la génératrice plate en dessous",
+        "Un coude à rayon court avec purge en point bas"
+      ],
+      "answer": 0,
+      "explain": "Le réducteur excentrique avec la génératrice plate dessus laisse la partie haute rectiligne : l'air s'évacue vers la pompe sans former de poche.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-009",
+      "theme": "Tuyauterie et brides",
+      "level": 3,
       "q": "Un tube NPS 6 a un diamètre extérieur de 168,3 mm et une épaisseur de 7,11 mm (SCH 40). Quel est son diamètre intérieur ?",
-      "choices": ["154,1 mm", "161,2 mm", "147,0 mm", "168,3 mm"], "answer": 0,
-      "explain": "DI = DE − 2 × e = 168,3 − 2 × 7,11 = 154,08 mm, soit environ 154,1 mm. 161,2 mm oublie un des deux côtés de la paroi.",
-      "seconds": 60, "status": "draft" },
-    { "id": "tech-tuyau-010", "theme": "Soudage", "level": 1,
-      "q": "Sur le schéma des joints soudés, quel type de soudure assemble deux tubes alignés, face à face ?",
-      "img": "svg/weld-joint-types.svg", "imgAlt": "Types de joints soudés : bout à bout, d'angle, en T, à recouvrement",
-      "choices": ["Soudure d'angle sur recouvrement", "Soudure en T", "Soudure d'arête", "Soudure bout à bout (butt weld)"], "answer": 3,
-      "explain": "La soudure bout à bout joint deux pièces dans le prolongement l'une de l'autre, c'est l'assemblage standard des tubes et raccords soudés. Les autres sont des soudures d'angle ou d'arête.",
-      "seconds": 35, "status": "draft" },
-    { "id": "tech-tuyau-011", "theme": "Soudage", "level": 1,
-      "q": "Pourquoi les électrodes basiques E7018 sont-elles conservées en étuve ?",
-      "choices": ["Pour augmenter leur conductivité électrique", "Pour éviter l'absorption d'humidité, source d'hydrogène", "Pour accélérer leur fusion", "Pour les durcir avant l'emploi"], "answer": 1,
-      "explain": "L'enrobage basique est hygroscopique : l'eau absorbée libère de l'hydrogène dans le bain et favorise la fissuration à froid. L'étuve (et les cantines chauffantes) maintient l'enrobage sec.",
-      "seconds": 40, "status": "draft" },
-    { "id": "tech-tuyau-012", "theme": "Soudage", "level": 1,
-      "q": "Quel gaz de protection est classiquement utilisé en soudage TIG (GTAW) de l'acier ?",
-      "img": "photo/pipeline-welding.jpg", "imgAlt": "Soudeurs sur un chantier de pipeline",
-      "choices": ["Dioxygène pur", "Dioxyde de carbone pur", "Argon", "Hydrogène pur"], "answer": 2,
-      "explain": "Le TIG utilise un gaz inerte, essentiellement l'argon (parfois avec de l'hélium). L'oxygène détruirait l'électrode de tungstène et oxyderait le bain ; le CO2 pur est réservé à certains procédés MAG.",
-      "seconds": 35, "status": "draft" },
-    { "id": "tech-tuyau-013", "theme": "Soudage", "level": 2,
-      "q": "Selon ASME IX, quel document décrit les paramètres de soudage que le soudeur doit suivre en production ?",
-      "choices": ["Le PQR", "Le WPQ", "L'isométrique", "Le WPS"], "answer": 3,
-      "explain": "Le WPS (Welding Procedure Specification) liste les variables à respecter. Le PQR enregistre les essais de qualification de ce procédé, et le WPQ qualifie le soudeur individuellement.",
-      "seconds": 35, "status": "draft" },
-    { "id": "tech-tuyau-014", "theme": "Soudage", "level": 2,
-      "q": "Que représente le PQR dans le système de qualification ASME IX ?",
-      "choices": ["La carte d'identité du soudeur", "La fiche de contrôle visuel du cordon", "Le compte rendu des essais qui qualifie le mode opératoire", "Le plan de repérage des soudures"], "answer": 2,
-      "explain": "Le PQR (Procedure Qualification Record) consigne les paramètres réels et les résultats d'essais (traction, pliage) d'une éprouvette soudée ; il sert de preuve pour rédiger le WPS.",
-      "seconds": 40, "status": "draft" },
-    { "id": "tech-tuyau-015", "theme": "Soudage", "level": 2,
-      "q": "Selon ASME IX, après quelle durée sans souder avec un procédé donné un soudeur perd-il sa qualification pour ce procédé ?",
-      "choices": ["3 mois", "6 mois", "12 mois", "24 mois"], "answer": 1,
-      "explain": "La qualification d'un soudeur pour un procédé n'est plus valable s'il n'a pas soudé avec ce procédé pendant 6 mois ou plus, sauf renouvellement par un nouvel essai.",
-      "seconds": 35, "status": "draft" },
-    { "id": "tech-tuyau-016", "theme": "Soudage", "level": 2,
-      "q": "Comment appelle-t-on l'entaille laissée dans le métal de base au pied du cordon, due à un courant trop élevé ou une vitesse excessive ?",
-      "img": "svg/weld-joint-types.svg", "imgAlt": "Coupe de joints soudés avec leurs cordons",
-      "choices": ["Caniveau (undercut)", "Soufflure", "Inclusion de laitier", "Manque de pénétration"], "answer": 0,
-      "explain": "Le caniveau est une rainure fondue dans le métal de base au bord du cordon, qui crée une concentration de contraintes. La soufflure est une cavité gazeuse, l'inclusion un résidu de laitier et le manque de pénétration un défaut de racine.",
-      "seconds": 40, "status": "draft" },
-    { "id": "tech-tuyau-017", "theme": "Soudage", "level": 3,
+      "choices": [
+        "161,2 mm (une seule paroi retirée)",
+        "147,0 mm",
+        "154,1 mm",
+        "168,3 mm (diamètre extérieur)"
+      ],
+      "answer": 2,
+      "explain": "Diamètre intérieur = OD − 2 × épaisseur = 168,3 − 14,22 = 154,08 mm. Oublier le facteur 2 donne 161,2 mm.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-010",
+      "theme": "Soudage",
+      "level": 1,
+      "q": "Sur le chantier, vous devez assembler deux tubes alignés, face à face. Quel type de joint du schéma est concerné ?",
+      "img": "svg/weld-joint-types.svg",
+      "imgAlt": "Types de joints soudés : bout à bout en V, en T, à recouvrement, d'angle, de bord, et anatomie d'un cordon d'angle avec gorge, pied et racine",
+      "choices": [
+        "Le joint à recouvrement, tubes superposés",
+        "Le joint en T, un tube soudé perpendiculairement",
+        "Le joint de bord, deux bords relevés soudés ensemble",
+        "Le joint bout à bout (butt weld), tubes face à face"
+      ],
+      "answer": 3,
+      "explain": "Deux tubes alignés bout à bout se soudent avec un joint bout à bout chanfreiné en V. Les joints en T, à recouvrement ou de bord assemblent des pièces dans d'autres positions.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-011",
+      "theme": "Soudage",
+      "level": 1,
+      "q": "Sous la pluie, un soudeur laisse des électrodes basiques E7018 à l'air libre. Que lui dites-vous ?",
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Soudeur à l'électrode enrobée assemblant un tube en plein air, avec étincelles",
+      "choices": [
+        "De les remettre à l'étuve : elles absorbent l'humidité et libèrent de l'hydrogène",
+        "Rien : la pluie ne modifie pas la fusion d'une électrode à enrobage basique",
+        "De les utiliser plus vite pour compenser l'humidité absorbée pendant l'attente",
+        "De les sécher au chalumeau juste avant l'emploi pour chasser l'humidité"
+      ],
+      "answer": 0,
+      "explain": "Les électrodes basiques sont hygroscopiques. L'humidité apporte de l'hydrogène dans le cordon et favorise la fissuration à froid.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-012",
+      "theme": "Soudage",
+      "level": 1,
+      "q": "Sur la photo, le soudeur utilise une électrode enrobée sur un tube. Qu'est-ce qui protège le bain de fusion de l'air ?",
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Soudeur à l'électrode enrobée assemblant un tube en plein air, avec étincelles",
+      "choices": [
+        "Un flux d'argon fourni par une bouteille raccordée au poste",
+        "Les gaz et le laitier issus de la fusion de l'enrobage",
+        "Le vent qui chasse l'air ambiant loin du bain de fusion",
+        "L'air comprimé soufflé autour du bain de fusion par la torche"
+      ],
+      "answer": 1,
+      "explain": "À l'électrode enrobée, l'enrobage se décompose en gaz protecteur et laitier. Pas de gaz de bouteille dans ce procédé.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-013",
+      "theme": "Soudage",
+      "level": 2,
+      "q": "Le soudeur demande où trouver les paramètres (courant, polarité, métal d'apport) à suivre pour la soudure de production. Quel document lui remettez-vous ?",
+      "choices": [
+        "Le PQR (qualification du mode opératoire de soudage)",
+        "Le WPQ (attestation de qualification du soudeur)",
+        "L'isométrique (plan de fabrication de la ligne)",
+        "Le WPS (descriptif du mode opératoire de soudage)"
+      ],
+      "answer": 3,
+      "explain": "Le WPS est la fiche de mode opératoire que suit le soudeur. Le PQR est le rapport des essais qui le qualifie, le WPQ la qualification du soudeur.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-014",
+      "theme": "Soudage",
+      "level": 2,
+      "q": "Le client demande la preuve des essais qui a qualifié le mode opératoire de soudage. Quel document présentez-vous ?",
+      "choices": [
+        "Le PQR (procès-verbal de qualification du mode opératoire)",
+        "La carte du soudeur (attestation de qualification individuelle)",
+        "La fiche de contrôle visuel du cordon, remplie par l'inspecteur",
+        "Le plan de repérage des soudures (isométrique annoté)"
+      ],
+      "answer": 0,
+      "explain": "Le PQR enregistre les essais de qualification du mode opératoire. Il justifie le WPS sur lequel le soudeur travaille.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-015",
+      "theme": "Soudage",
+      "level": 2,
+      "q": "Un soudeur n'a pas soudé avec le procédé à l'électrode enrobée depuis sept mois. Que dit la règle d'ASME IX sur sa qualification ?",
+      "choices": [
+        "Elle reste valable à vie, tant que le soudeur reste dans la même entreprise",
+        "Elle cesse d'être valable pour ce procédé après six mois sans soudage",
+        "Elle est prolongée automatiquement d'un an par le simple renouvellement du WPS",
+        "Elle reste valable douze mois sans soudage, au-delà desquels il faut requalifier"
+      ],
+      "answer": 1,
+      "explain": "ASME IX prévoit une péremption de la qualification du soudeur après six mois sans souder avec un procédé donné. Les règles exactes se vérifient dans les procédures du site.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-016",
+      "theme": "Soudage",
+      "level": 2,
+      "q": "Au contrôle visuel, vous voyez une entaille continue dans le métal de base, au pied du cordon. Quel est ce défaut et quelle est sa cause probable ?",
+      "img": "svg/weld-joint-types.svg",
+      "imgAlt": "Types de joints soudés : bout à bout en V, en T, à recouvrement, d'angle, de bord, et anatomie d'un cordon d'angle avec gorge, pied et racine",
+      "choices": [
+        "Une soufflure : courant trop faible et arc trop court au-dessus du métal de base",
+        "Une inclusion de laitier : chaleur excessive et passe mal nettoyée",
+        "Un caniveau (undercut) : courant trop élevé ou vitesse d'avance excessive",
+        "Un manque de pénétration : électrode de diamètre trop important"
+      ],
+      "answer": 2,
+      "explain": "Le caniveau est une entaille au pied (toe) du cordon qui réduit la section et concentre les contraintes.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-017",
+      "theme": "Soudage",
+      "level": 3,
       "q": "Un soudeur travaille à 24 V, 200 A, avec une vitesse d'avance de 240 mm/min. Quel est l'apport de chaleur (sans rendement d'arc) ?",
-      "img": "photo/pipeline-welding.jpg", "imgAlt": "Soudeur en train de souder un tube",
-      "choices": ["0,6 kJ/mm", "1,2 kJ/mm", "2,4 kJ/mm", "4,8 kJ/mm"], "answer": 1,
-      "explain": "Q = U × I × 60 / (1000 × v) = 24 × 200 × 60 / (1000 × 240) = 1,2 kJ/mm. Les autres valeurs correspondent à une erreur de facteur 2 ou 4.",
-      "seconds": 75, "status": "draft" },
-    { "id": "tech-tuyau-018", "theme": "Soudage", "level": 3,
-      "q": "Quels facteurs doivent être réunis pour provoquer une fissuration à froid (induite par l'hydrogène) dans une soudure d'acier ?",
-      "choices": ["Hydrogène diffusible, microstructure dure et contraintes de traction", "Oxygène, microstructure ductile et compression", "Azote, ferrite et température élevée", "Chlorures, austénite et oxydation"], "answer": 0,
-      "explain": "La fissuration à froid exige simultanément hydrogène, structure sensible (martensite, zone affectée thermiquement dure) et contraintes de traction. On agit sur l'un des trois : électrodes sèches, préchauffage, refroidissement lent.",
-      "seconds": 45, "status": "draft" },
-    { "id": "tech-tuyau-019", "theme": "Contrôles non destructifs", "level": 1,
-      "q": "Quel contrôle utilise un rayonnement et un film ou détecteur pour révéler des défauts internes d'une soudure ?",
-      "img": "photo/pipeline-welding.jpg", "imgAlt": "Chantier de soudage de tuyauterie, contexte des contrôles de soudures",
-      "choices": ["Ressuage (PT)", "Magnétoscopie (MT)", "Radiographie (RT)", "Contrôle visuel (VT)"], "answer": 2,
-      "explain": "La radiographie (rayons X ou gamma) fait une image de l'intérieur de la soudure. Le ressuage et la magnétoscopie ne détectent que les défauts de surface ou proches de la surface, et le contrôle visuel que ce qui est visible.",
-      "seconds": 35, "status": "draft" },
-    { "id": "tech-tuyau-020", "theme": "Contrôles non destructifs", "level": 1,
-      "q": "Le ressuage (PT) permet de détecter :",
-      "choices": ["Des défauts internes profonds", "Des défauts dans les aciers ferromagnétiques uniquement", "Des variations d'épaisseur", "Des défauts débouchant en surface, sur matériaux non poreux"], "answer": 3,
-      "explain": "Le pénétrant entre dans les discontinuités ouvertes en surface par capillarité. Il fonctionne aussi sur l'inox et l'aluminium, mais pas sur les surfaces poreuses ni pour les défauts internes.",
-      "seconds": 35, "status": "draft" },
-    { "id": "tech-tuyau-021", "theme": "Contrôles non destructifs", "level": 1,
-      "q": "La magnétoscopie (MT) ne peut s'appliquer qu'aux matériaux :",
-      "choices": ["Non métalliques", "Inox austénitique 316", "Ferromagnétiques", "Tous les alliages métalliques"], "answer": 2,
-      "explain": "Il faut que la pièce puisse être aimantée pour que les défauts créent une fuite de flux : acier carbone, aciers faiblement alliés. Les inox austénitiques 304/316 ne sont pas ferromagnétiques.",
-      "seconds": 35, "status": "draft" },
-    { "id": "tech-tuyau-022", "theme": "Contrôles non destructifs", "level": 2,
-      "q": "Comment un appareil de contrôle par ultrasons mesure-t-il l'épaisseur d'une paroi ?",
-      "choices": ["Il mesure la température de la paroi", "Il chronomètre le temps aller-retour de l'onde ultrasonore", "Il mesure le champ magnétique rémanent", "Il mesure l'absorption de rayons X"], "answer": 1,
-      "explain": "Épaisseur = vitesse du son dans le matériau × temps aller-retour / 2. D'où l'étalonnage préalable sur un bloc du même matériau et l'usage d'un couplant.",
-      "seconds": 45, "status": "draft" },
-    { "id": "tech-tuyau-023", "theme": "Contrôles non destructifs", "level": 3,
-      "q": "Quelle méthode est la plus sensible pour détecter des défauts plans (fissures, manques de fusion) dans une soudure épaisse ?",
-      "choices": ["La radiographie, toujours", "Le contrôle visuel", "Le jaugeage de l'épaisseur", "Les ultrasons (TOFD, phased array)"], "answer": 3,
-      "explain": "L'UT détecte bien les défauts plans orientés dans l'épaisseur, que la radiographie peut manquer si le défaut n'est pas dans l'axe du faisceau. En revanche, la RT est meilleure pour les défauts volumiques.",
-      "seconds": 50, "status": "draft" },
-    { "id": "tech-tuyau-024", "theme": "Contrôles non destructifs", "level": 2,
-      "q": "Pourquoi balise-t-on et évacue-t-on la zone lors d'une radiographie industrielle ?",
-      "choices": ["Pour protéger les personnes des rayonnements ionisants", "Pour éviter les poussières sur le film", "Pour éviter les interférences radio", "Pour limiter le bruit du générateur"], "answer": 0,
-      "explain": "Les rayons X et gamma sont des rayonnements ionisants dangereux. On applique les principes de temps, distance et écran, avec périmètre balisé et dosimètre individuel.",
-      "seconds": 35, "status": "draft" },
-    { "id": "tech-tuyau-025", "theme": "Contrôles non destructifs", "level": 2,
-      "q": "À quoi sert un pénétramètre (IQI) placé sur la soudure lors d'une radiographie ?",
-      "choices": ["À vérifier la sensibilité et la qualité de l'image radiographique", "À mesurer la dose reçue par l'opérateur", "À mesurer l'épaisseur de la soudure", "À identifier le soudeur"], "answer": 0,
-      "explain": "L'IQI (image quality indicator) contient des fils ou trous de dimensions connues : si on les voit sur le film, la sensibilité exigée est atteinte et l'image est valable.",
-      "seconds": 40, "status": "draft" },
-    { "id": "tech-tuyau-026", "theme": "Contrôles non destructifs", "level": 3,
-      "q": "Pour un service en fluide normal, quel examen volumique ASME B31.3 demande-t-il (en valeur de base) pour les soudures circulaires ?",
-      "img": "svg/norms-pyramid.svg", "imgAlt": "Pyramide des normes et codes applicables aux tuyauteries",
-      "choices": ["100 % en radiographie", "Uniquement un contrôle visuel", "5 % de soudures choisies de façon aléatoire", "50 % des soudures"], "answer": 2,
-      "explain": "Le code prévoit un examen volumique (RT ou UT) de 5 % des soudures circulaires pour le service normal, en plus de l'examen visuel. Les services sévères (cyclique sévère, catégorie M, haute pression) demandent 100 % ou davantage ; la catégorie D n'exige que le visuel.",
-      "seconds": 50, "status": "draft" },
-    { "id": "tech-tuyau-027", "theme": "Codes et épreuves", "level": 1,
-      "q": "Quel code régit la conception et la construction des tuyauteries de procédé d'une raffinerie ?",
-      "img": "svg/norms-pyramid.svg", "imgAlt": "Pyramide des normes et codes applicables",
-      "choices": ["ASME B31.8", "ASME B31.3", "ASME B31.1", "ASME VIII"], "answer": 1,
-      "explain": "ASME B31.3 est le code des tuyauteries de procédé. B31.1 concerne les centrales électriques, B31.8 le transport de gaz et ASME VIII les appareils à pression.",
-      "seconds": 30, "status": "draft" },
-    { "id": "tech-tuyau-028", "theme": "Codes et épreuves", "level": 1,
-      "q": "Quel fluide est normalement utilisé pour l'épreuve de résistance d'une tuyauterie ?",
-      "choices": ["Air comprimé", "Azote", "Huile", "Eau"], "answer": 3,
-      "explain": "L'eau est quasi incompressible : en cas de rupture, l'énergie libérée est faible. Les gaz stockent beaucoup d'énergie et rendent une rupture dangereuse, d'où leur usage limité.",
-      "seconds": 30, "status": "draft" },
-    { "id": "tech-tuyau-029", "theme": "Codes et épreuves", "level": 2,
-      "q": "Selon ASME B31.3, la pression d'épreuve hydraulique de base est égale à :",
-      "choices": ["1,0 fois la pression de calcul", "1,1 fois la pression de calcul", "2,0 fois la pression de calcul", "1,5 fois la pression de calcul"], "answer": 3,
-      "explain": "B31.3 impose 1,5 fois la pression de calcul (corrigée par le rapport ST/S si la température de calcul est élevée). 1,1 correspond à l'épreuve pneumatique.",
-      "seconds": 35, "status": "draft" },
-    { "id": "tech-tuyau-030", "theme": "Codes et épreuves", "level": 2,
-      "q": "Quelle est la pression d'une épreuve pneumatique B31.3 par rapport à la pression de calcul ?",
-      "choices": ["1,1 fois", "1,5 fois", "2,0 fois", "0,9 fois"], "answer": 0,
-      "explain": "L'épreuve pneumatique se fait à 1,1 fois la pression de calcul, par paliers, avec examen préalable et précautions renforcées car l'énergie stockée dans le gaz est élevée.",
-      "seconds": 35, "status": "draft" },
-    { "id": "tech-tuyau-031", "theme": "Codes et épreuves", "level": 2,
-      "q": "Quelle précaution est indispensable avant une épreuve hydraulique d'un circuit comportant une soupape de sûreté ?",
-      "img": "svg/pressure-vessel-psv.svg", "imgAlt": "Ballon sous pression équipé d'une soupape de sûreté (PSV)",
-      "choices": ["Laisser les soupapes en place pour la sécurité", "Remplir le circuit d'huile", "Isoler ou déposer les soupapes et purger l'air aux points hauts", "Fermer tous les évents"], "answer": 2,
-      "explain": "La soupape est réglée à une pression inférieure à la pression d'épreuve : elle s'ouvrirait ou serait endommagée. L'air doit être purgé car il est compressible et dangereux ; les évents sont donc ouverts au remplissage.",
-      "seconds": 45, "status": "draft" },
-    { "id": "tech-tuyau-032", "theme": "Codes et épreuves", "level": 2,
+      "choices": [
+        "1,2 kJ/mm",
+        "0,6 kJ/mm (rendement d'arc 50 %)",
+        "2,4 kJ/mm (vitesse 120 mm/min)",
+        "4,8 kJ/mm (vitesse 60 mm/min)"
+      ],
+      "answer": 0,
+      "explain": "Apport de chaleur = U × I × 60 / vitesse = 24 × 200 × 60 / 240 = 1 200 J/mm = 1,2 kJ/mm.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-018",
+      "theme": "Soudage",
+      "level": 3,
+      "q": "Des fissures apparaissent dans une soudure d'acier épais, 24 heures après soudage. Quels facteurs doivent être réunis pour une fissuration à froid ?",
+      "choices": [
+        "Oxygène, microstructure ductile et contraintes de compression",
+        "Hydrogène diffusible, microstructure dure et contraintes de traction",
+        "Azote, ferrite fine et température de pièce élevée pendant le soudage",
+        "Chlorures, austénite et oxydation de surface en atmosphère humide"
+      ],
+      "answer": 1,
+      "explain": "La fissuration à froid exige hydrogène diffusible, structure dure et contrainte de traction. D'où l'étuve, le préchauffage et la maîtrise de l'apport de chaleur.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-019",
+      "theme": "Soudage",
+      "level": 2,
+      "q": "Vous soudez la passe de fond d'une ligne en inox au procédé TIG. Quel gaz de protection utilisez-vous classiquement ?",
+      "choices": [
+        "L'oxygène pur, gaz oxydant pour l'arc",
+        "Le CO2 pur, gaz actif de protection",
+        "L'argon pur, gaz de protection inerte",
+        "L'hydrogène pur, gaz réducteur de l'arc"
+      ],
+      "answer": 2,
+      "explain": "Le TIG utilise un gaz inerte, généralement l'argon, qui protège sans réagir avec le bain.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-020",
+      "theme": "Contrôles non destructifs",
+      "level": 1,
+      "q": "Vous devez contrôler les soudures circulaires d'une ligne de gaz par rayonnement et film. Quelle méthode est utilisée ?",
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Soudure d'un tube sur chantier avant contrôle",
+      "choices": [
+        "Le ressuage (PT), par liquide pénétrant",
+        "La magnétoscopie (MT), par flux magnétique",
+        "Le contrôle visuel (VT), à l'œil ou à la loupe",
+        "La radiographie (RT), par rayons X ou gamma"
+      ],
+      "answer": 3,
+      "explain": "La radiographie utilise un rayonnement qui traverse la soudure et révèle ses défauts internes sur film ou détecteur.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-021",
+      "theme": "Contrôles non destructifs",
+      "level": 1,
+      "q": "Vous suspectez une fissure fine débouchante sur une soudure en inox austénitique 316. Quelle méthode de surface utilisez-vous ?",
+      "choices": [
+        "La magnétoscopie (MT), par flux magnétique",
+        "Le ressuage (PT), par liquide pénétrant",
+        "La radiographie (RT), par rayons X ou gamma",
+        "Un essai de dureté sur le métal déposé"
+      ],
+      "answer": 1,
+      "explain": "Le ressuage révèle les défauts débouchants sur des matériaux non poreux. La magnétoscopie ne s'applique qu'aux matériaux ferromagnétiques.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-022",
+      "theme": "Contrôles non destructifs",
+      "level": 1,
+      "q": "Vous devez contrôler une soudure en acier au carbone par magnétoscopie. Sur lequel de ces matériaux cette méthode serait-elle impossible ?",
+      "choices": [
+        "L'acier au carbone",
+        "L'acier faiblement allié ferromagnétique",
+        "L'inox austénitique 316",
+        "La fonte ferritique"
+      ],
+      "answer": 2,
+      "explain": "La magnétoscopie nécessite un matériau ferromagnétique. L'inox austénitique 316 est amagnétique : on utilise le ressuage.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-023",
+      "theme": "Contrôles non destructifs",
+      "level": 2,
+      "q": "Vous contrôlez l'épaisseur d'un coude avec une jauge à ultrasons. Quel est son principe ?",
+      "choices": [
+        "Elle mesure la température de surface de la paroi par rayonnement infrarouge",
+        "Elle mesure l'atténuation du champ magnétique rémanent dans la paroi",
+        "Elle mesure l'absorption d'un faisceau de rayons X traversant la paroi",
+        "Elle mesure le temps aller-retour de l'onde ultrasonore dans la paroi"
+      ],
+      "answer": 3,
+      "explain": "L'épaisseur est déduite du temps aller-retour de l'onde et de sa vitesse dans le matériau.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-024",
+      "theme": "Contrôles non destructifs",
+      "level": 3,
+      "q": "Dans une soudure épaisse, vous cherchez des défauts plans (manque de fusion, fissures). Quelle méthode est la plus sensible ?",
+      "choices": [
+        "Les ultrasons avancés (TOFD, phased array)",
+        "La radiographie (RT), à film ou numérique",
+        "Le contrôle visuel (VT), complété à la lampe",
+        "Le jaugeage ultrasonore de l'épaisseur résiduelle"
+      ],
+      "answer": 0,
+      "explain": "Les défauts plans sont mal vus en radiographie s'ils ne sont pas dans l'axe du faisceau. Les ultrasons les détectent bien.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-025",
+      "theme": "Contrôles non destructifs",
+      "level": 2,
+      "q": "Un tir radiographique est prévu cette nuit sur la tuyauterie. Pourquoi balise-t-on et évacue-t-on la zone ?",
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Soudeur à l'électrode enrobée assemblant un tube en plein air, avec étincelles",
+      "choices": [
+        "Pour éviter les poussières sur le film pendant l'exposition",
+        "Pour éviter les interférences avec les radios du chantier",
+        "Pour protéger les personnes des rayonnements ionisants",
+        "Pour limiter le bruit du générateur près des autres équipes"
+      ],
+      "answer": 2,
+      "explain": "Les rayonnements ionisants sont dangereux. Le périmètre est balisé et évacué, et l'accès est contrôlé pendant le tir.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-026",
+      "theme": "Contrôles non destructifs",
+      "level": 2,
+      "q": "Sur la soudure à radiographier, le radiographe place un pénétramètre (IQI). À quoi sert-il ?",
+      "choices": [
+        "À mesurer la dose de rayonnement reçue par l'opérateur pendant le tir",
+        "À mesurer l'épaisseur de la soudure à partir du film développé",
+        "À identifier le soudeur et le repère de la soudure sur le film",
+        "À vérifier la sensibilité et la qualité de l'image radiographique obtenue"
+      ],
+      "answer": 3,
+      "explain": "L'IQI montre que l'image est assez sensible pour révéler les défauts du seuil exigé par le code.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-027",
+      "theme": "Contrôles non destructifs",
+      "level": 3,
+      "q": "Pour une tuyauterie en fluide normal, quel pourcentage d'examen volumique aléatoire des soudures circulaires est demandé de base ? (la spécification du projet et les procédures du site font foi)",
+      "choices": [
+        "5 % des soudures, choisies de façon aléatoire",
+        "100 % en radiographie, sur toutes les soudures circulaires",
+        "Un contrôle visuel seul, sans aucun examen volumique",
+        "50 % des soudures, choisies par l'inspecteur du client"
+      ],
+      "answer": 0,
+      "explain": "En fluide normal, ASME B31.3 demande un examen volumique par sondage de base de 5 %. Les services sévères exigent davantage, et la spécification peut être plus stricte.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-028",
+      "theme": "Contrôles non destructifs",
+      "level": 2,
+      "q": "Sur le film d'une soudure de tube, une ligne sombre continue suit l'axe du cordon, à la racine. Quel défaut est le plus probable ?",
+      "choices": [
+        "Un caniveau extérieur au pied du cordon",
+        "Un manque de pénétration à la racine du cordon",
+        "Une soufflure isolée de forme sphérique",
+        "Une surépaisseur excessive du cordon en finition"
+      ],
+      "answer": 1,
+      "explain": "Une ligne sombre continue dans l'axe, côté racine, correspond à un manque de pénétration : le métal n'a pas fondu jusqu'à la racine.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-029",
+      "theme": "Contrôles non destructifs",
+      "level": 1,
+      "q": "Une soudure vient d'être terminée. Quel est le premier contrôle avant les END ?",
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Soudeur à l'électrode enrobée assemblant un tube en plein air, avec étincelles",
+      "choices": [
+        "La radiographie (RT) de toutes les soudures",
+        "Les ultrasons TOFD sur toute la longueur",
+        "L'épreuve hydraulique de la ligne complète",
+        "Le contrôle visuel (VT) des soudures"
+      ],
+      "answer": 3,
+      "explain": "Le contrôle visuel est le premier examen : il repère les défauts apparents (caniveau, fissures, porosités) et évite des END inutiles.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-030",
+      "theme": "Codes et épreuves",
+      "level": 1,
+      "q": "Le dossier d'une tuyauterie de procédé d'une raffinerie cite un code de conception et de construction. Lequel ?",
+      "choices": [
+        "ASME B31.3, tuyauteries de procédé",
+        "ASME B31.8, transport de gaz par pipeline",
+        "ASME B31.1, tuyauteries de centrales électriques",
+        "ASME VIII, appareils à pression"
+      ],
+      "answer": 0,
+      "explain": "ASME B31.3 couvre les tuyauteries de procédé (raffineries, chimie). B31.8 vise le transport de gaz, B31.1 les tuyauteries de centrales, VIII les appareils à pression.",
+      "seconds": 30,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-031",
+      "theme": "Codes et épreuves",
+      "level": 1,
+      "q": "Vous préparez l'épreuve de résistance d'une ligne neuve. Quel fluide choisit-on normalement ?",
+      "choices": [
+        "L'air comprimé",
+        "L'eau",
+        "L'azote",
+        "L'huile"
+      ],
+      "answer": 1,
+      "explain": "L'eau est quasi incompressible : en cas de rupture, l'énergie libérée est faible. L'épreuve pneumatique n'est qu'une exception encadrée.",
+      "seconds": 30,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-032",
+      "theme": "Codes et épreuves",
+      "level": 2,
+      "q": "Faute d'eau, une ligne de gaz sera testée à l'air. Par rapport à la pression de calcul, quelle est la pression d'épreuve pneumatique B31.3 et quelle précaution prend-on ?",
+      "choices": [
+        "1,5 fois la pression de calcul, avec un simple balisage de la zone",
+        "2,0 fois la pression de calcul, avec évacuation partielle de la zone",
+        "1,1 fois la pression de calcul, avec évacuation et balisage de la zone",
+        "0,9 fois la pression de calcul, avec évacuation et balisage de la zone"
+      ],
+      "answer": 2,
+      "explain": "B31.3 fixe l'épreuve pneumatique à 1,1 fois la pression de calcul. L'énergie stockée dans un gaz est considérable : la zone est évacuée et balisée.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-033",
+      "theme": "Codes et épreuves",
+      "level": 2,
+      "q": "Le ballon V-201 (soupape PSV tarée à 10 barg) doit subir une épreuve hydraulique à 15 barg. Que faites-vous de la soupape et de l'air ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Ballon V-201 protégé par une soupape PSV 201 tarée à 10 barg, MAWP de 10 barg",
+      "choices": [
+        "Isoler ou déposer la soupape et purger l'air aux points hauts",
+        "Laisser la soupape en place, tarée à 10 barg, pour garder la sécurité",
+        "Remplir le ballon d'huile pour éviter la corrosion interne pendant l'essai",
+        "Fermer tous les évents et les purges pour que la pression monte plus vite"
+      ],
+      "answer": 0,
+      "explain": "À 15 barg, la soupape tarée à 10 barg s'ouvrirait : on l'isole ou on la dépose. L'air restant fausserait l'épreuve et stocke de l'énergie.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-034",
+      "theme": "Codes et épreuves",
+      "level": 2,
       "q": "Une ligne a une pression de calcul de 20 bar (rapport ST/S égal à 1). Quelle est la pression d'épreuve hydraulique B31.3 ?",
-      "choices": ["25 bar", "30 bar", "33 bar", "22 bar"], "answer": 1,
-      "explain": "1,5 × 20 bar = 30 bar. 22 bar correspondrait à un coefficient de 1,1 (pneumatique) et 33 bar à un coefficient de 1,65.",
-      "seconds": 45, "status": "draft" },
-    { "id": "tech-tuyau-033", "theme": "Codes et épreuves", "level": 3,
-      "q": "Quand la température de calcul est élevée, la pression d'épreuve hydraulique B31.3 est multipliée par quel rapport ?",
-      "choices": ["S / ST", "ST / S (contrainte admissible à la température d'essai sur celle à la température de calcul)", "E / W", "Y / P"], "answer": 1,
-      "explain": "PT = 1,5 × P × ST/S : on compense la baisse de contrainte admissible à chaud pour que la contrainte réelle pendant l'essai à froid reproduise le niveau voulu. La valeur est plafonnée pour ne pas dépasser la limite d'élasticité.",
-      "seconds": 55, "status": "draft" },
-    { "id": "tech-tuyau-034", "theme": "Codes et épreuves", "level": 3,
+      "choices": [
+        "25 bar (1,25 × P)",
+        "30 bar",
+        "33 bar (1,65 × P)",
+        "22 bar (1,1 × P)"
+      ],
+      "answer": 1,
+      "explain": "La pression d'épreuve hydraulique de base vaut 1,5 × P × (ST/S) = 1,5 × 20 × 1 = 30 bar.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-035",
+      "theme": "Codes et épreuves",
+      "level": 3,
+      "q": "Une ligne de pression de calcul 20 bar est prévue à 300 °C. La contrainte admissible est 138 MPa à la température d'essai et 110 MPa à 300 °C. Quelle est la pression d'épreuve hydraulique B31.3 ?",
+      "choices": [
+        "30 bar (1,5 × P, sans correction)",
+        "25 bar (1,25 × P)",
+        "Environ 37,6 bar (1,5 × P × 138/110)",
+        "45 bar (1,5 × P × 1,5)"
+      ],
+      "answer": 2,
+      "explain": "P épreuve = 1,5 × P × ST/S = 1,5 × 20 × 138/110 ≈ 37,6 bar. Le code limite ensuite la valeur pour ne pas dépasser la limite d'élasticité.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-036",
+      "theme": "Codes et épreuves",
+      "level": 3,
       "q": "Un tube d'acier carbone de 100 m passe de 20 °C à 120 °C. Quelle est approximativement sa dilatation (coefficient environ 12 µm/m·°C) ?",
-      "choices": ["12 mm", "1 200 mm", "36 mm", "120 mm"], "answer": 3,
-      "explain": "ΔL = 12·10⁻⁶ × 100 m × 100 °C = 0,12 m, soit 120 mm. Cet ordre de grandeur justifie les boucles de dilatation et les supports qui guident le mouvement.",
-      "seconds": 60, "status": "draft" },
-    { "id": "tech-tuyau-035", "theme": "Corrosion et inspection", "level": 1,
-      "q": "Qu'est-ce que la corrosion sous calorifuge (CUI) ?",
-      "img": "photo/storage-tanks.jpg", "imgAlt": "Réservoirs et lignes calorifugées d'une installation pétrolière",
-      "choices": ["Une corrosion externe de l'acier sous l'isolation, due à l'humidité piégée", "Une corrosion interne causée par des chlorures", "Une usure mécanique due à l'érosion", "Une fatigue due aux vibrations"], "answer": 0,
-      "explain": "L'eau pénètre sous l'isolation, y reste et corrode l'acier sans que l'on le voie. Les zones à surveiller sont les points bas, les piquages, les supports et les joints de l'isolant abîmés.",
-      "seconds": 40, "status": "draft" },
-    { "id": "tech-tuyau-036", "theme": "Corrosion et inspection", "level": 1,
-      "q": "Quel code encadre l'inspection, la réparation et la ré-évaluation des tuyauteries en service ?",
-      "img": "svg/norms-pyramid.svg", "imgAlt": "Pyramide des normes et codes de l'inspection",
-      "choices": ["API 510", "API 653", "API 570", "ASME IX"], "answer": 2,
-      "explain": "API 570 vise les tuyauteries en service, API 510 les appareils à pression et API 653 les réservoirs de stockage. ASME IX traite des qualifications de soudage.",
-      "seconds": 30, "status": "draft" },
-    { "id": "tech-tuyau-037", "theme": "Corrosion et inspection", "level": 2,
-      "q": "En milieu H2S humide, quels aciers sont les plus sensibles à la fissuration sous contrainte sulfurée (SSC) ?",
-      "choices": ["Les aciers très doux de faible dureté", "Les aciers inoxydables austénitiques", "Les aciers durs, au-delà d'environ 22 HRC", "Les alliages d'aluminium"], "answer": 2,
-      "explain": "La sensibilité à la SSC croît avec la dureté ; les normes NACE limitent la dureté des aciers carbone à 22 HRC (≈ 250 HV). D'où le contrôle de dureté des soudures en service acide.",
-      "seconds": 45, "status": "draft" },
-    { "id": "tech-tuyau-038", "theme": "Corrosion et inspection", "level": 2,
-      "q": "Un tube mesurait 12,0 mm il y a 4 ans et 10,0 mm aujourd'hui ; son épaisseur minimale requise est 7,0 mm. Quelle est sa durée de vie résiduelle ?",
-      "choices": ["4 ans", "6 ans", "8 ans", "10 ans"], "answer": 1,
-      "explain": "Vitesse de corrosion = (12 − 10) / 4 = 0,5 mm/an. Durée de vie résiduelle = (10 − 7) / 0,5 = 6 ans. L'intervalle d'inspection ne dépassera pas la moitié, soit 3 ans.",
-      "seconds": 75, "status": "draft" },
-    { "id": "tech-tuyau-039", "theme": "Corrosion et inspection", "level": 2,
-      "q": "La corrosion « douce » (sweet corrosion) est causée par :",
-      "choices": ["Le CO2 dissous dans l'eau, qui forme de l'acide carbonique", "Les bactéries du sol uniquement", "L'eau de mer sur l'acier galvanisé", "Le soufre élémentaire sec"], "answer": 0,
-      "explain": "Le CO2 dissous donne de l'acide carbonique qui attaque l'acier carbone, d'où des pertes d'épaisseur souvent localisées (piqûres, attaque en mesa). Elle diffère de la corrosion « acide » (sour) due à l'H2S.",
-      "seconds": 40, "status": "draft" },
-    { "id": "tech-tuyau-040", "theme": "Corrosion et inspection", "level": 2,
-      "q": "Qu'appelle-t-on un « bras mort » d'une tuyauterie, que l'on repère sur les P&ID ?",
-      "img": "svg/pid-flow-control.svg", "imgAlt": "Schéma P&ID simplifié d'une boucle de régulation avec ses lignes",
-      "choices": ["Une ligne à très haute vitesse", "Une ligne à isoler lors d'un arrêt", "Une ligne sans isolation thermique", "Une portion de ligne sans circulation où le fluide stagne"], "answer": 3,
-      "explain": "Le fluide stagnant concentre eau, sédiments et agents corrosifs, d'où des corrosions locales imprévues. Les bras morts sont inscrits au programme d'inspection et supprimés ou purgés quand c'est possible.",
-      "seconds": 40, "status": "draft" },
-    { "id": "tech-tuyau-041", "theme": "Corrosion et inspection", "level": 3,
-      "q": "Quel est le critère usuel de protection cathodique d'un acier enterré, par rapport à une électrode Cu/CuSO4 ?",
-      "choices": ["−300 mV ou plus négatif", "−850 mV ou plus négatif", "−500 mV exactement", "+100 mV ou plus positif"], "answer": 1,
-      "explain": "Le critère courant est un potentiel égal ou plus négatif que −850 mV (Cu/CuSO4), mesuré selon les normes (NACE SP0169 / ISO 15589). Un potentiel moins négatif signifie une protection insuffisante.",
-      "seconds": 45, "status": "draft" },
-    { "id": "tech-tuyau-042", "theme": "Corrosion et inspection", "level": 3,
-      "q": "Selon la logique d'API 570, quel principe fixe l'intervalle d'inspection d'une ligne qui se corrode ?",
-      "choices": ["La durée de vie résiduelle complète", "Le double de la durée de vie résiduelle", "La moitié de la durée de vie résiduelle (dans la limite du maximum du code)", "Toujours 1 an"], "answer": 2,
-      "explain": "On inspecte avant d'atteindre l'épaisseur minimale, avec une marge de sécurité : l'intervalle ne dépasse pas la moitié de la durée de vie résiduelle estimée, ni l'intervalle maximal fixé par la classe de la tuyauterie.",
-      "seconds": 45, "status": "draft" }
+      "choices": [
+        "12 mm",
+        "1 200 mm",
+        "36 mm",
+        "120 mm"
+      ],
+      "answer": 3,
+      "explain": "ΔL = α × L × ΔT = 12.10⁻⁶ × 100 × 100 = 0,12 m = 120 mm. Il faut prévoir lyres ou compensateurs.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-037",
+      "theme": "Codes et épreuves",
+      "level": 2,
+      "q": "Pendant l'épreuve hydraulique, vous découvrez une fuite à une bride sous 30 bar. Que faites-vous ?",
+      "choices": [
+        "Resserrer la bride sous pression en restant derrière un écran",
+        "Dépressuriser et vidanger la zone avant d'intervenir sur la bride en fuite",
+        "Mettre un chiffon absorbant autour de la fuite et poursuivre l'épreuve",
+        "Augmenter la pression de 10 % pour tasser le joint spiralé"
+      ],
+      "answer": 1,
+      "explain": "Une fuite sous pression d'épreuve peut se transformer en jet dangereux. On revient à zéro avant d'intervenir.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-038",
+      "theme": "Corrosion et inspection",
+      "level": 1,
+      "q": "Au pied d'un bac isolé, des traînées de rouille coulent sous le calorifuge et la tôle d'habillage est perforée. Quel phénomène suspectez-vous ?",
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Parc de bacs de stockage à parois verticales avec garde-corps et tuyauteries en bordure d'un quai",
+      "choices": [
+        "Une corrosion interne due aux chlorures contenus dans le fluide de procédé",
+        "Une usure par érosion due à la vitesse élevée du fluide dans la ligne",
+        "Une corrosion sous calorifuge (CUI), par humidité piégée sous l'isolation de la ligne",
+        "Une fatigue due aux vibrations transmises par les pompes voisines"
+      ],
+      "answer": 2,
+      "explain": "Les traces au pied d'une isolation endommagée signalent une corrosion externe de l'acier sous l'isolant humide, à contrôler par une fenêtre d'inspection.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-039",
+      "theme": "Corrosion et inspection",
+      "level": 1,
+      "q": "Le plan d'inspection d'une tuyauterie en service d'une raffinerie se réfère à quel code ?",
+      "choices": [
+        "API 510, inspection des appareils à pression",
+        "API 653, inspection des bacs de stockage",
+        "ASME IX, qualification de soudage",
+        "API 570, inspection des tuyauteries en service"
+      ],
+      "answer": 3,
+      "explain": "API 570 encadre l'inspection, la réparation et la ré-évaluation des tuyauteries en service. API 510 vise les récipients, API 653 les bacs.",
+      "seconds": 30,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-040",
+      "theme": "Corrosion et inspection",
+      "level": 2,
+      "q": "Une ligne en milieu H2S humide est en acier de 28 HRC. Pourquoi cela pose-t-il problème ?",
+      "choices": [
+        "Au-delà d'environ 22 HRC, la fissuration sous contrainte sulfurée est possible",
+        "Les aciers durs résistent mieux au H2S humide grâce à leur résistance mécanique",
+        "Le H2S sec attaque davantage les aciers durs, d'où la limite de dureté",
+        "Il n'y a aucun risque tant que la ligne est protégée par une peinture"
+      ],
+      "answer": 0,
+      "explain": "En présence de H2S humide, les aciers durs sont sensibles à la SSC. La limite usuelle est autour de 22 HRC ; les exigences exactes figurent dans la norme et les procédures du site.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-041",
+      "theme": "Corrosion et inspection",
+      "level": 2,
+      "q": "Un tube mesurait 12,0 mm il y a quatre ans et 10,0 mm aujourd'hui. Son épaisseur minimale requise est 7,0 mm. Quelle est sa durée de vie résiduelle ?",
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Parc de bacs de stockage et tuyauteries en bordure d'un quai",
+      "choices": [
+        "4 ans",
+        "8 ans",
+        "6 ans",
+        "10 ans"
+      ],
+      "answer": 2,
+      "explain": "Vitesse de corrosion = 2,0 / 4 = 0,5 mm/an. Marge restante : 10,0 − 7,0 = 3,0 mm, donc 3,0 / 0,5 = 6 ans.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-042",
+      "theme": "Corrosion et inspection",
+      "level": 2,
+      "q": "Sur une ligne de gaz humide contenant du CO2, vous constatez une corrosion générale. Quel est le mécanisme ?",
+      "choices": [
+        "Des bactéries sulfato-réductrices du sol attaquant la paroi extérieure",
+        "L'eau de mer au contact d'un acier galvanisé, par couple galvanique",
+        "Du soufre élémentaire sec déposé en fond de ligne, en l'absence d'eau",
+        "Le CO2 dissous dans l'eau produit de l'acide carbonique corrosif"
+      ],
+      "answer": 3,
+      "explain": "Le CO2 dissous donne de l'acide carbonique qui attaque l'acier : c'est la corrosion douce (sweet corrosion).",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-043",
+      "theme": "Corrosion et inspection",
+      "level": 2,
+      "q": "En ronde, vous trouvez un piquage fermé par une vanne en bout de ligne, où le fluide stagne. Comment l'appelle-t-on et pourquoi l'inspecter ?",
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Parc de bacs de stockage et tuyauteries en bordure d'un quai",
+      "choices": [
+        "Un bras mort : fluide stagnant, corrosion et dépôts locaux, souvent oublié",
+        "Une ligne à grande vitesse : érosion locale sur les coudes de la ligne",
+        "Une ligne de secours : fluide stagnant, à isoler lors des arrêts d'unité",
+        "Une ligne non calorifugée : perte thermique et risque de condensation"
+      ],
+      "answer": 0,
+      "explain": "Dans un bras mort, le fluide ne circule pas : eau et dépôts s'accumulent et corrodent. On le place dans le plan d'inspection.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-044",
+      "theme": "Corrosion et inspection",
+      "level": 3,
+      "q": "Le relevé de potentiel d'un pipeline enterré donne − 720 mV par rapport à une électrode Cu/CuSO4. Que concluez-vous ?",
+      "choices": [
+        "Protection suffisante, car le critère usuel est − 500 mV ou moins négatif",
+        "Protection insuffisante : le critère usuel est − 850 mV ou plus négatif",
+        "Protection suffisante, car le critère usuel est − 300 mV ou plus négatif",
+        "Surprotection : il faut baisser le courant du redresseur de soutirage"
+      ],
+      "answer": 1,
+      "explain": "Pour un acier enterré, le critère usuel est − 850 mV ou plus négatif par rapport à Cu/CuSO4. − 720 mV ne protège pas assez ; les critères exacts viennent des procédures du site.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-tuyau-045",
+      "theme": "Corrosion et inspection",
+      "level": 3,
+      "q": "Une ligne a une durée de vie résiduelle calculée de 8 ans. Quel intervalle d'inspection maximal retient la logique d'API 570 ?",
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Parc de bacs de stockage et tuyauteries en bordure d'un quai",
+      "choices": [
+        "Les 8 ans complets de la durée de vie résiduelle calculée par l'inspecteur",
+        "Le double de la durée résiduelle, soit 16 ans, si la ligne est calorifugée",
+        "Un an, quelle que soit la durée de vie résiduelle calculée de la ligne",
+        "La moitié de la durée de vie résiduelle, soit 4 ans, dans la limite du code"
+      ],
+      "answer": 3,
+      "explain": "API 570 limite l'intervalle à la moitié de la durée de vie résiduelle, dans la limite des intervalles maximaux du code.",
+      "seconds": 60,
+      "status": "draft"
+    }
   ]
 }

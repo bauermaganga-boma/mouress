@@ -2,7 +2,7 @@ import { getProfile, loadContent, themesOf } from '../data.js';
 import { local } from '../store.js';
 import { esc, pct, fmtClock } from '../util.js';
 import { icon, bar, comingSoon } from '../ui.js';
-import { buildPractice, themeBreakdown } from '../quiz.js';
+import { buildPractice, themeBreakdown, qSeconds } from '../quiz.js';
 import { choicesHTML, questionBodyHTML, correctDisplayIndex } from '../qview.js';
 
 export default async function render(ctx, root) {
@@ -50,7 +50,7 @@ export default async function render(ctx, root) {
       const { q, order } = list[i];
       const cd = correctDisplayIndex(q, order);
       let locked = false;
-      const secs = q.seconds || 45;
+      const secs = qSeconds(q);
       root.innerHTML = `<div class="container-narrow page quiz">
         <div class="quiz-top"><span class="small muted">Question ${i + 1} / ${list.length}</span><span class="badge">${esc(q.theme)}</span></div>
         ${bar(pct(i, list.length))}

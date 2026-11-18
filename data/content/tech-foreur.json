@@ -138,10 +138,10 @@
       "img": "svg/pressure-gradient-chart.svg",
       "imgAlt": "Graphique pression-profondeur : droite de la boue de 12,0 ppg depuis 0 psi en surface jusqu'à 5 000 ft",
       "choices": [
-        "2 600 psi",
-        "3 120 psi",
-        "6 240 psi",
-        "3 600 psi"
+        "2 600 psi (0,052 × 10 × 5 000)",
+        "3 120 psi (0,052 × 12 × 5 000)",
+        "6 240 psi (0,104 × 12,0 × 5 000)",
+        "3 600 psi (0,06 × 12 × 5 000)"
       ],
       "answer": 1,
       "explain": "0,052 × 12,0 × 5 000 = 3 120 psi. Les autres valeurs viennent d'une densité ou d'un coefficient erroné.",
@@ -204,10 +204,10 @@
       "img": "svg/pressure-gradient-chart.svg",
       "imgAlt": "Graphique pression-profondeur avec la droite de pression de pores et celles de la boue statique et de l'ECD",
       "choices": [
-        "La densité de la boue baisse brusquement dès l'arrêt des pompes, car les solides en suspension se dissolvent dans la phase liquide",
-        "La pression de formation augmente à chaque arrêt des pompes, car la circulation ne la contient plus",
-        "Les pertes de charge annulaires (ECD) disparaissent : le fond retombe à la seule hydrostatique, parfois inférieure à la pression de pores",
-        "Le trépan se décolle du fond à l'arrêt et libère ainsi les fluides de formation dans le train"
+        "La densité de la boue chute dès l'arrêt, car les solides se dissolvent",
+        "La pression de formation monte à l'arrêt, faute de circulation pour la contenir",
+        "L'ECD disparaît : le fond retombe à la seule hydrostatique, trop faible",
+        "Le trépan se décolle du fond à l'arrêt et libère les fluides de formation"
       ],
       "answer": 2,
       "explain": "En circulation, la pression de fond comprend l'hydrostatique plus les pertes de charge annulaires. À l'arrêt, seule l'hydrostatique reste : si la marge est faible, le fluide de formation entre. Il faut donc surveiller le puits en connexion.",
@@ -221,8 +221,8 @@
       "q": "Quel élément du train de tiges fournit le poids sur l'outil (WOB) ?",
       "choices": [
         "Les tiges de forage (drill pipe)",
-        "Le flexible de boue",
-        "Les stabilisateurs seuls",
+        "Le flexible de boue (rotary hose)",
+        "Les stabilisateurs (stabilizers)",
         "Les masses-tiges (drill collars)"
       ],
       "answer": 3,
@@ -254,10 +254,10 @@
       "level": 1,
       "q": "Que signifie PDC pour un trépan ?",
       "choices": [
-        "Trépan tricône à dents d'acier fraisées",
-        "Trépan à carotter, prélevant des échantillons de roche",
-        "Trépan à taillants fixes en diamant polycristallin, qui cisaille la roche",
-        "Trépan élargisseur utilisé uniquement après la cimentation"
+        "Trépan tricône à dents fraisées, dont les cônes roulent sur le fond",
+        "Trépan à carotter, prélevant des échantillons de roche en continu",
+        "Trépan à taillants fixes en diamant polycristallin, sans cône",
+        "Trépan élargisseur utilisé après la cimentation, pour reprendre le trou"
       ],
       "answer": 2,
       "explain": "PDC signifie Polycrystalline Diamond Compact. Pas de pièce mobile : la roche est cisaillée par des taillants fixes, souvent plus vite dans les formations homogènes.",
@@ -318,10 +318,10 @@
       "level": 2,
       "q": "Pourquoi les tiges de forage sont-elles maintenues en traction plutôt qu'en compression ?",
       "choices": [
-        "Elles flambent facilement en compression, le poids sur l'outil étant donné par les masses-tiges",
-        "Elles ne supportent aucune charge de traction",
-        "La boue ne circule que dans des tiges comprimées",
-        "Cela réduit la densité équivalente de circulation"
+        "Elles flambent facilement en compression ; le poids sur l'outil vient des masses-tiges",
+        "Elles résistent mal à la traction, ce qui impose de les garder comprimées",
+        "La boue circule mieux dans des tiges comprimées que dans des tiges tendues",
+        "Cela réduit la densité équivalente de circulation et les pertes annulaires"
       ],
       "answer": 0,
       "explain": "Un tube long et mince se plie sous compression. Le point neutre est donc placé dans les masses-tiges et les tiges restent tendues.",
@@ -350,10 +350,10 @@
       "level": 3,
       "q": "Le train subit du stick-slip : le couple en surface oscille fortement. Quel réglage atténue généralement ce phénomène ?",
       "choices": [
-        "Augmenter le poids sur l'outil et diminuer la rotation",
-        "Arrêter la circulation de boue pendant le forage",
-        "Réduire le poids sur l'outil et/ou augmenter la vitesse de rotation",
-        "Augmenter fortement la densité de la boue"
+        "Augmenter le poids sur l'outil et réduire la vitesse de rotation",
+        "Diminuer la circulation de boue et conserver les paramètres de forage",
+        "Alléger le poids sur l'outil et/ou accélérer la rotation",
+        "Augmenter la densité de la boue pour amortir les oscillations du train"
       ],
       "answer": 2,
       "explain": "Le stick-slip est un blocage-déblocage du trépan. On le réduit en allégeant le WOB et en augmentant la rotation, selon les conseils du superviseur.",
@@ -369,9 +369,9 @@
       "imgAlt": "Graphique pression-profondeur : pression hydrostatique de la boue supérieure à la pression de pores",
       "choices": [
         "La pression hydrostatique de la boue",
-        "Le BOP fermé",
-        "La tête de puits",
-        "Le tubage de surface"
+        "Le préventeur de sécurité (BOP) fermé",
+        "La tête de puits et ses vannes latérales",
+        "Le tubage de surface cimenté"
       ],
       "answer": 0,
       "explain": "La boue équilibre la pression de formation en continu. Le BOP est la seconde barrière, activée quand la première cède.",
@@ -402,10 +402,10 @@
       "img": "svg/bop-stack.svg",
       "imgAlt": "Schéma d'un empilage de BOP : préventeur annulaire, mâchoires à tiges, mâchoires aveugles et de cisaillement, lignes de duse et de neutralisation",
       "choices": [
-        "Il coupe le train de tiges",
-        "Son élément en caoutchouc se referme sur des formes et diamètres variés",
-        "Il ne se ferme que sur un diamètre de tige précis",
-        "Il sert uniquement à injecter la boue de neutralisation"
+        "Il cisaille le train de tiges pour fermer complètement le puits",
+        "Son élastomère se referme sur des formes et diamètres variés",
+        "Il se ferme sur un seul diamètre de tige, déterminé par ses mâchoires",
+        "Il sert à injecter la boue de neutralisation dans le puits fermé"
       ],
       "answer": 1,
       "explain": "L'élément élastomère de l'annulaire épouse tiges, outils ou carré. Les mâchoires à tiges sont dédiées à un diamètre, et les mâchoires de cisaillement coupent le train.",
@@ -420,10 +420,10 @@
       "img": "svg/pressure-gradient-chart.svg",
       "imgAlt": "Graphique pression-profondeur : pression de pores supérieure à la droite de la boue de 9,5 ppg à 6 000 ft",
       "choices": [
-        "Environ 10,5 ppg",
-        "Environ 9,8 ppg",
-        "Environ 10,0 ppg",
-        "Environ 12,5 ppg"
+        "Environ 10,5 ppg (9,5 + 0,96)",
+        "Environ 9,8 ppg (9,5 + 300 ÷ 1 000)",
+        "Environ 10,0 ppg (9,5 + 0,5)",
+        "Environ 12,5 ppg (9,5 + 3,0)"
       ],
       "answer": 0,
       "explain": "KMW = 9,5 + 300 ÷ (0,052 × 6 000) = 9,5 + 0,96 ≈ 10,5 ppg. La pression au fond est ainsi rétablie.",
@@ -436,10 +436,10 @@
       "level": 2,
       "q": "La pression réduite de pompage (SCR) à 30 coups/min est de 600 psi et la SIDPP vaut 400 psi. Quelle est la pression initiale de circulation (ICP) ?",
       "choices": [
-        "600 psi",
-        "400 psi",
-        "1 600 psi",
-        "1 000 psi"
+        "600 psi (SCR seule)",
+        "400 psi (SIDPP seule)",
+        "1 600 psi (SCR × 2 + SIDPP)",
+        "1 000 psi (SCR + SIDPP)"
       ],
       "answer": 3,
       "explain": "ICP = SCR + SIDPP = 600 + 400 = 1 000 psi. Elle maintient la pression de fond constante au début du contrôle.",
@@ -455,9 +455,9 @@
       "imgAlt": "Schéma d'un empilage de BOP avec préventeur annulaire et mâchoires à tiges",
       "choices": [
         "Augmenter le débit de pompe pour chasser la venue, puis fermer le puits",
-        "Arrêter le forage, dégager l'outil du fond, arrêter les pompes, contrôler l'écoulement, fermer le puits",
-        "Terminer la longueur en cours de forage, puis fermer le puits",
-        "Circuler pour mesurer le gain avant de fermer le puits"
+        "Arrêter, dégager l'outil, couper les pompes, vérifier l'écoulement, puis fermer",
+        "Terminer la longueur en cours pour sécuriser le train, puis fermer le puits",
+        "Circuler un fond-en-haut pour mesurer le gain, puis fermer le puits"
       ],
       "answer": 1,
       "explain": "La fermeture rapide limite le volume de la venue. On dégage l'outil pour que le joint se trouve au-dessus de la table et que les mâchoires puissent se fermer sur tige.",
@@ -473,9 +473,9 @@
       "imgAlt": "Graphique pression-profondeur : pression de pores de 4 900 psi et pression de la boue de 4 680 psi à 10 000 ft",
       "choices": [
         "Boue sur-équilibrée d'environ 220 psi : risque de coincement différentiel",
-        "Équilibre exact entre la boue et la formation",
-        "Boue sous-équilibrée d'environ 220 psi : le fluide de formation peut entrer dans le puits",
-        "Sous-équilibre de 4 680 psi"
+        "Équilibre quasi exact : la boue et la formation se contrebalancent",
+        "Sous-équilibre d'environ 220 psi : le fluide de formation peut entrer dans le puits",
+        "Sous-équilibre d'environ 4 680 psi : la boue ne retient plus rien"
       ],
       "answer": 2,
       "explain": "Hydrostatique = 0,052 × 9,0 × 10 000 = 4 680 psi, inférieure aux 4 900 psi de la formation : sous-équilibre de 220 psi, donc venue possible.",
@@ -491,7 +491,7 @@
         "Considérer que la SIDPP vaut zéro et se baser sur la seule valeur de la SICP",
         "Rouvrir le puits et laisser couler le fluide pour mesurer le débit de venue",
         "Pomper rapidement jusqu'à 1 000 psi puis lire la pression au tube vertical",
-        "Pomper très lentement par paliers et lire la pression stabilisée à l'ouverture du clapet"
+        "Pomper très lentement par paliers et lire la pression à l'ouverture du clapet"
       ],
       "answer": 3,
       "explain": "Le clapet bloque la transmission de pression : on pompe doucement jusqu'à l'ouverture et on relève la pression sans la dépasser. Pomper vite fausserait la lecture et chargerait le puits.",
@@ -540,10 +540,10 @@
       "level": 1,
       "q": "Quel est le rôle du trip tank ?",
       "choices": [
-        "Mesurer précisément le volume de boue qui entre ou sort du puits pendant les manœuvres",
-        "Stocker la boue lourde de neutralisation",
-        "Séparer le gaz de la boue",
-        "Préparer le laitier de ciment"
+        "Mesurer le volume de boue qui entre ou sort du puits en manœuvre",
+        "Stocker la boue lourde de neutralisation près de la goulotte",
+        "Séparer le gaz de la boue de retour avant son passage aux tamis",
+        "Préparer le laitier de ciment avant les opérations de cimentation"
       ],
       "answer": 0,
       "explain": "Le trip tank est un petit bac calibré. Il montre si le puits prend le volume attendu à la remontée ou rend le bon volume à la descente.",
@@ -556,10 +556,10 @@
       "level": 1,
       "q": "Pourquoi pompe-t-on souvent un bouchon lourd (slug) avant de remonter ?",
       "choices": [
-        "Pour refroidir le trépan avant la remontée",
-        "Pour vider les tiges et les remonter à sec sans répandre la boue sur le plancher",
-        "Pour augmenter la vitesse de rotation à la remontée",
-        "Pour étalonner l'indicateur de poids"
+        "Pour refroidir le trépan avant la remontée du train",
+        "Pour sortir les tiges à sec sans répandre de boue sur le plancher de forage",
+        "Pour augmenter la vitesse de remontée et gagner du temps de manœuvre",
+        "Pour étalonner l'indicateur de poids avant la remontée"
       ],
       "answer": 1,
       "explain": "Le bouchon lourd fait descendre le niveau de boue dans les tiges, qui sortent donc sans boue. C'est plus propre et plus sûr au plancher.",
@@ -572,10 +572,10 @@
       "level": 2,
       "q": "Pompes arrêtées avant la remontée, le foreur fait un flow check. Que vérifie-t-il ?",
       "choices": [
-        "Que la pression de pompe se maintient",
-        "Que le trépan est propre",
-        "Que le puits ne coule pas : le retour doit être nul",
-        "Que le poids sur l'outil reste stable"
+        "Que la pression de refoulement des pompes reste stable à l'arrêt",
+        "Que le trépan est propre et que les duses ne sont pas bouchées",
+        "Que le puits ne coule pas : le retour à la goulotte doit être nul",
+        "Que le poids sur l'outil reste stable pendant l'arrêt des pompes"
       ],
       "answer": 2,
       "explain": "Le flow check, pompes arrêtées, confirme que le puits est stable avant de retirer le train. Un retour qui continue est une venue.",
@@ -590,10 +590,10 @@
       "img": "svg/drilling-rig-schematic.svg",
       "imgAlt": "Schéma d'un rig avec trip tank relié à l'annulaire par une ligne de remplissage",
       "choices": [
-        "Environ 3,45 bbl",
-        "Environ 0,35 bbl",
-        "Environ 34,5 bbl",
-        "Environ 6,9 bbl"
+        "Environ 3,45 bbl (460 × 0,0075)",
+        "Environ 0,35 bbl (460 × 0,00075)",
+        "Environ 34,5 bbl (460 × 0,075)",
+        "Environ 6,9 bbl (920 × 0,0075)"
       ],
       "answer": 0,
       "explain": "5 × 92 = 460 ft ; 460 × 0,0075 = 3,45 bbl. Le trip tank doit baisser de cette valeur.",
@@ -604,7 +604,7 @@
       "id": "tech-foreur-032",
       "theme": "Manœuvres et incidents de forage",
       "level": 2,
-      "q": "Après 10 longueurs remontées, le trip tank n'a baissé que de 2,0 bbl au lieu des 5,0 bbl attendus. Que faire ?",
+      "q": "Après 10 longueurs remontées, le trip tank n'a baissé que de 2,0 bbl au lieu des 6,9 bbl attendus (920 ft d'acier × 0,0075 bbl/ft). Que faire ?",
       "choices": [
         "Considérer un simple défaut d'étalonnage du trip tank et accélérer la remontée",
         "Ajouter de l'eau en continu dans le trip tank pour compenser l'écart",
@@ -622,10 +622,10 @@
       "level": 2,
       "q": "Que provoque l'effet de piston (swab) lors de la remontée du train ?",
       "choices": [
-        "Une hausse de pression de fond, pouvant fracturer la formation en place",
-        "Un échauffement notable de la boue dans l'annulaire du puits",
-        "Une baisse de pression de fond, pouvant faire entrer du fluide de formation",
-        "Une usure accélérée des cales et des élévateurs de manœuvre"
+        "Une hausse de la pression de fond, qui risque de fracturer la formation",
+        "Un échauffement notable de la boue dans l'annulaire, en face du trépan",
+        "Une baisse de pression de fond, qui peut laisser entrer du fluide de formation",
+        "Une usure accélérée des cales et des élévateurs de manœuvre du plancher"
       ],
       "answer": 2,
       "explain": "À la remontée, le train aspire comme un piston et réduit la pression de fond. L'effet inverse (surge) à la descente la fait monter.",
@@ -654,10 +654,10 @@
       "level": 3,
       "q": "Après chaque connexion, un pic de gaz apparaît lors de la remontée du fond de la boue. Que suggère ce phénomène ?",
       "choices": [
-        "Le trépan est usé et doit être changé immédiatement",
-        "La boue est trop lourde et provoque des pertes",
-        "Le dégazeur est trop efficace",
-        "La pression de fond est proche de la pression de pores : du gaz entre pendant l'arrêt des pompes"
+        "Le trépan est usé et doit être remplacé à la prochaine manœuvre",
+        "La boue est trop lourde : elle provoque des pertes et libère du gaz",
+        "Le dégazeur est trop efficace et libère le gaz piégé dans la boue",
+        "La pression de fond frôle la pression de pores : du gaz entre à l'arrêt"
       ],
       "answer": 3,
       "explain": "Pendant la connexion l'ECD disparaît et du gaz entre. Le signal impose de surveiller de près et de réévaluer la densité avec le superviseur.",
@@ -670,9 +670,9 @@
       "level": 2,
       "q": "En remontant, le train montre à chaque fois une surtension (overpull) au même point. Quelle est la bonne conduite ?",
       "choices": [
-        "Tirer plus fort jusqu'à ce que le point soit franchi",
-        "Ne pas dépasser la limite fixée, redescendre, circuler et réalésir selon la procédure, en informant le superviseur",
-        "Arrêter les pompes et attendre que le point cède seul",
+        "Tirer plus fort au-delà de la limite jusqu'à franchir le point",
+        "Respecter la limite de traction, redescendre, circuler et réalésir le passage",
+        "Arrêter les pompes et attendre que le point se libère seul",
         "Augmenter la vitesse de remontée pour franchir le point par inertie"
       ],
       "answer": 1,
@@ -688,10 +688,10 @@
       "img": "photo/land-drilling-rig.jpg",
       "imgAlt": "Photo d'un rig de forage terrestre",
       "choices": [
-        "Ne jamais passer ni stationner sous la charge",
-        "Passer rapidement si la charge est basse",
-        "Rester dessous si la charge ne bouge pas",
-        "S'y placer uniquement avec un casque"
+        "Ne jamais passer ni stationner sous la charge, même brièvement",
+        "Passer rapidement sous la charge quand elle est proche du sol",
+        "Rester dessous tant que la charge est immobile et bien élinguée",
+        "S'y placer avec un casque et des lunettes pour l'accrochage"
       ],
       "answer": 0,
       "explain": "Une charge suspendue peut tomber à tout moment. La seule protection est de ne jamais se placer dessous.",
@@ -706,10 +706,10 @@
       "img": "photo/land-drilling-rig.jpg",
       "imgAlt": "Photo d'un rig de forage terrestre",
       "choices": [
-        "Une zone de stockage des produits inflammables",
-        "Une zone équipée du défibrillateur",
-        "Le point de rassemblement en cas d'alarme",
-        "Une zone dangereuse où un mouvement d'équipement peut blesser, interdite pendant l'opération"
+        "Une zone de stockage des produits inflammables du plancher",
+        "Une zone équipée du défibrillateur et de la trousse de secours",
+        "Le point de rassemblement en cas d'alarme sur le plancher",
+        "Une zone dangereuse où un mouvement d'équipement peut blesser"
       ],
       "answer": 3,
       "explain": "Les zones rouges sont balisées autour des tongs, de la table de rotation et des charges en mouvement : personne n'y entre pendant le mouvement.",
@@ -738,10 +738,10 @@
       "level": 2,
       "q": "Quel est l'objectif de la consignation avant une intervention sur le top drive ?",
       "choices": [
-        "Réduire la vitesse de rotation pendant le travail",
-        "Éviter les pertes de boue à l'arrêt",
-        "Isoler et verrouiller les énergies, puis vérifier l'absence d'énergie résiduelle",
-        "Enregistrer l'heure d'arrêt de la machine"
+        "Réduire la vitesse de rotation à 10 % pendant toute la durée du travail",
+        "Éviter les pertes de boue par les joints à l'arrêt de la machine",
+        "Isoler et verrouiller les énergies, puis contrôler l'énergie résiduelle restante",
+        "Enregistrer l'heure d'arrêt de la machine et le nom de l'opérateur"
       ],
       "answer": 2,
       "explain": "La consignation empêche tout redémarrage ou mouvement imprévu : cadenas personnel, étiquette, vérification, purge des énergies hydrauliques et pneumatiques.",
@@ -773,7 +773,7 @@
       "imgAlt": "Photo d'un rig de forage terrestre",
       "choices": [
         "À augmenter la capacité de levage de l'élingue utilisée",
-        "À guider la charge à distance, sans se placer dessous ni contre un obstacle",
+        "À guider la charge à distance, sans placer les mains sous elle",
         "À remplacer le signaleur pendant toute la durée de l'opération",
         "À attacher la charge à la table de rotation pendant la pause"
       ],
@@ -790,10 +790,10 @@
       "img": "photo/land-drilling-rig.jpg",
       "imgAlt": "Photo d'un rig de forage terrestre",
       "choices": [
-        "Retenir son souffle et courir vers la source du gaz pour la fermer",
-        "Poursuivre le travail jusqu'à la fin de la longueur en cours",
-        "Arrêter, mettre l'appareil respiratoire et gagner le point de rassemblement hors vent",
-        "Retirer les détecteurs fixes pour vérifier leur étalonnage"
+        "Retenir son souffle et courir vers la source pour fermer la vanne",
+        "Poursuivre le travail jusqu'à la fin de la longueur en cours de forage",
+        "Arrêter, mettre l'appareil respiratoire et gagner le point hors vent",
+        "Retirer les détecteurs fixes pour vérifier leur étalonnage au calme"
       ],
       "answer": 2,
       "explain": "L'alarme impose l'arrêt, la protection respiratoire et le rassemblement au point désigné, en évitant les zones sous le vent. Les procédures du site précisent le détail.",

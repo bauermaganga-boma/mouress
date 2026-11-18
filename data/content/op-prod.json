@@ -84,12 +84,12 @@
       "level": 1,
       "q": "Poste de nuit, première ronde. Le niveau d'huile du séparateur monte régulièrement et affiche 85 % pour une consigne de 50 %, alors que la vanne de sortie huile est déjà ouverte à 100 %. Que faites-vous en premier ?",
       "choices": [
-        "Chercher la cause en aval (pompe d'expédition arrêtée, ligne ou vanne bloquée) et prévenir la salle de contrôle avant le niveau très haut",
-        "Fermer l'arrivée du puits sans prévenir et reprendre la ronde",
-        "Inhiber l'alarme niveau très haut pour éviter l'arrêt intempestif",
-        "Ouvrir la purge d'eau en grand pour faire baisser le niveau d'huile"
+        "Fermer l'arrivée du puits sans prévenir personne, puis reprendre la ronde normalement",
+        "Inhiber l'alarme niveau très haut pour éviter l'arrêt intempestif de l'unité de traitement",
+        "Ouvrir la purge d'eau en grand pour faire baisser le niveau d'huile du séparateur",
+        "Chercher la cause en aval (pompe d'expédition, ligne ou vanne bloquée) et prévenir la salle"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "Vanne de sortie déjà à fond : le blocage est en aval. On cherche la cause et on prévient avant le niveau HH ; inhiber une alarme de sécurité est exclu, et la purge d'eau n'agit pas sur le niveau d'huile.",
       "seconds": 60,
       "status": "draft"
@@ -102,10 +102,10 @@
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique : entrée, déflecteur, déversoir, extracteur de brouillard, sorties gaz, huile et eau",
       "choices": [
-        "L'extracteur de brouillard",
-        "Le déversoir (weir)",
-        "Le déflecteur d'entrée",
-        "La sortie gaz"
+        "L'extracteur de brouillard, en haut du séparateur",
+        "Le déversoir (weir), qui retient la couche d'huile",
+        "Le déflecteur d'entrée, qui casse la vitesse du jet",
+        "La sortie gaz, au sommet de la capacité"
       ],
       "answer": 1,
       "explain": "Le déversoir fixe la hauteur d'huile : l'huile passe par-dessus, l'eau est soutirée dessous. L'extracteur de brouillard travaille côté gaz, le déflecteur casse la vitesse d'entrée.",
@@ -120,12 +120,12 @@
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique : gaz en haut, huile au milieu, eau au fond, interface huile/eau repérée",
       "choices": [
-        "Entre le gaz et l'huile",
-        "Entre le gaz et l'eau",
         "Entre l'huile (au-dessus) et l'eau (en dessous)",
-        "Entre l'entrée et le déflecteur"
+        "Entre le gaz (au-dessus) et l'huile (en dessous)",
+        "Entre le gaz (au-dessus) et l'eau (en dessous)",
+        "Entre l'entrée et le déflecteur d'entrée du ballon"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "L'interface huile/eau sépare les deux liquides : l'huile surnage, l'eau est au fond. Le niveau gaz/huile est un autre niveau, régulé par la sortie huile.",
       "seconds": 60,
       "status": "draft"
@@ -136,12 +136,12 @@
       "level": 2,
       "q": "Le niveau d'interface huile/eau d'un séparateur monte et reste haut, alors que la vanne de soutirage d'eau est déjà ouverte à 100 %. Quel est le risque immédiat pour le brut expédié ?",
       "choices": [
-        "De l'huile part avec le gaz vers la torche",
-        "La pression du séparateur tombe à zéro",
-        "Le gaz devient plus riche en soufre",
-        "De l'eau passe dans la sortie huile : brut hors spécification (BSW trop élevé)"
+        "De l'huile part avec le gaz vers la torche, en saturant le ballon de torche",
+        "La pression du séparateur tombe à zéro à cause de la vanne d'eau ouverte",
+        "De l'eau passe dans la sortie huile : brut hors spécification (BSW trop élevé)",
+        "Le gaz devient plus riche en soufre, ce qui le rend corrosif pour la ligne de torche"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "Quand l'interface monte, l'eau n'a plus la place de se décanter et rejoint la sortie huile : le brut part chargé en eau. Les autres effets n'ont aucun lien avec ce niveau.",
       "seconds": 45,
       "status": "draft"
@@ -152,12 +152,12 @@
       "level": 2,
       "q": "Les niveaux du séparateur oscillent, le régulateur « chasse » et une couche de mousse blanche est visible au regard. Du liquide part dans la ligne gaz. Quelle action est adaptée ?",
       "choices": [
-        "Fermer la sortie gaz pour calmer la mousse",
-        "Injecter l'antimousse prévu à la consigne et réduire le débit d'entrée en prévenant la salle de contrôle",
-        "Ouvrir l'évent à l'atmosphère pour baisser la pression",
-        "Augmenter l'injection d'inhibiteur de corrosion"
+        "Injecter l'antimousse prévu et réduire l'entrée, en prévenant la salle de contrôle",
+        "Fermer la sortie gaz pour calmer la mousse et laisser le niveau se stabiliser seul",
+        "Ouvrir l'évent à l'atmosphère pour baisser la pression et évacuer la mousse vers la torche",
+        "Augmenter l'injection d'inhibiteur de corrosion pour casser la couche de mousse"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "L'antimousse casse les bulles et la baisse de débit redonne du temps de séparation. Fermer la sortie gaz fait monter la pression, ouvrir à l'atmosphère est dangereux, l'inhibiteur de corrosion ne traite pas la mousse.",
       "seconds": 45,
       "status": "draft"
@@ -168,12 +168,12 @@
       "level": 2,
       "q": "Un séparateur contient 30 m³ de liquide et reçoit 60 m³/h. On ouvre un puits supplémentaire : l'entrée passe à 90 m³/h, le niveau restant constant. Quel est le nouveau temps de rétention ?",
       "choices": [
-        "30 minutes",
-        "45 minutes",
-        "20 minutes",
-        "60 minutes"
+        "30 minutes : 30 m³ / 60 m³/h, ancien débit",
+        "20 minutes : 30 m³ / 90 m³/h, soit 0,33 h",
+        "45 minutes : moyenne des deux temps de rétention",
+        "60 minutes : 30 m³ / 30 m³/h, volume divisé"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Temps de rétention = volume / débit. Avant : 30 / 60 = 0,5 h = 30 min. Après : 30 / 90 = 0,33 h = 20 min. Moins de temps pour séparer : risque de brut moins propre.",
       "seconds": 90,
       "status": "draft"
@@ -184,12 +184,12 @@
       "level": 2,
       "q": "Le brut du bac de stockage dégaze (évents qui soufflent, odeur d'hydrocarbure) alors que l'étage basse pression (LP) de séparation est hors service pour maintenance. Quelle est la cause la plus probable ?",
       "choices": [
-        "Le brut contient trop d'eau",
-        "Le compresseur de recyclage chauffe le bac",
-        "L'antimousse a été sur-injecté",
-        "Le brut n'a pas été détendu jusqu'à basse pression : il contient encore des légers qui se libèrent au stockage"
+        "Le brut contient trop d'eau, qui se vaporise à la température du bac de stockage de brut",
+        "Le compresseur de recyclage chauffe le bac par la ligne de retour de gaz vers le bac",
+        "Brut non détendu à basse pression : il contient encore des légers qui se libèrent au bac de stockage",
+        "L'antimousse a été sur-injecté et libère des gaz dissous dans le brut du bac de stockage"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "La détente par paliers (HP, MP, LP) libère les légers avant le stockage. Sans l'étage LP, ils partent dans le bac et sortent par les évents.",
       "seconds": 60,
       "status": "draft"
@@ -200,12 +200,12 @@
       "level": 3,
       "q": "Un bouchon de liquide (slug) arrive au séparateur HP : le niveau passe de 40 à 80 % en deux minutes et la pression monte. Quel est le risque et que faites-vous ?",
       "choices": [
-        "Entraînement de liquide dans la ligne gaz : prendre le niveau en main, réduire l'entrée selon la procédure et prévenir avant le niveau très haut",
-        "Soufflage de gaz dans la sortie huile : fermer la sortie huile",
-        "Perte de l'interface : ouvrir la purge d'eau en grand",
-        "Aucun risque tant que la soupape reste fermée : continuer la ronde"
+        "Soufflage de gaz dans la sortie huile : fermer la sortie huile et attendre le retour du niveau",
+        "Perte de l'interface eau-huile : ouvrir la purge d'eau en grand et surveiller le niveau",
+        "Aucun risque tant que la soupape de sécurité reste fermée : continuer la ronde normale",
+        "Entraînement de liquide dans la ligne gaz : reprendre le niveau, réduire l'entrée, prévenir"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "Un niveau qui monte vite menace de noyer la ligne gaz (et le compresseur en aval). Il faut agir avant le HH : reprise en main, réduction du débit, information de la salle. Fermer la sortie huile aggraverait la montée.",
       "seconds": 75,
       "status": "draft"
@@ -216,12 +216,12 @@
       "level": 3,
       "q": "Le labo annonce 8 % d'eau (BSW) sur le brut expédié, pour une spécification à 0,5 %. L'échantillon montre une « mayonnaise » à l'interface. Quelle est la cause la plus probable et la bonne piste ?",
       "choices": [
-        "Capteur d'interface en défaut : l'ignorer et attendre",
-        "Séparateur trop chaud : refroidir le brut à l'eau",
-        "Émulsion stable (cisaillement dans duse et pompes, agents émulsifiants) : contrôler l'injection de démulsifiant et le temps de rétention",
-        "Excès de gaz : fermer la sortie gaz"
+        "Capteur d'interface en défaut : l'ignorer et attendre la prochaine analyse du labo",
+        "Séparateur trop chaud : refroidir le brut à l'eau avant de le renvoyer au bac",
+        "Excès de gaz dans le liquide : fermer la sortie gaz pour réduire le BSW",
+        "Émulsion stable : contrôler l'injection de démulsifiant et le temps de rétention"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Une émulsion stable ne se décante pas : on agit par le démulsifiant, la chaleur ou le temps de rétention. Ignorer l'alarme, refroidir ou fermer le gaz ne traitent pas le problème.",
       "seconds": 75,
       "status": "draft"
@@ -234,12 +234,12 @@
       "img": "svg/centrifugal-pump-curve.svg",
       "imgAlt": "Courbe H-Q d'une pompe centrifuge : 55 m à débit nul, point de fonctionnement 60 m³/h à 40 m, hauteur statique 15 m",
       "choices": [
-        "Le débit et la hauteur baissent ensemble",
-        "La hauteur tombe à 0 m",
-        "Le débit augmente, la hauteur reste à 40 m",
-        "Le débit baisse et la hauteur monte vers 55 m (valeur à débit nul)"
+        "Le débit et la hauteur baissent ensemble le long de la courbe de pompe",
+        "Le débit baisse, la hauteur monte vers 55 m (valeur à débit nul)",
+        "La hauteur tombe à 0 m quand la vanne atteint la fermeture",
+        "Le débit augmente et la hauteur reste à 40 m, courbe plate"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "La courbe de la pompe monte quand le débit diminue et atteint 55 m à débit nul. La pompe ne doit pourtant pas tourner longtemps ainsi : le liquide s'échauffe.",
       "seconds": 60,
       "status": "draft"
@@ -250,12 +250,12 @@
       "level": 1,
       "q": "Vous redémarrez la pompe de transfert après une maintenance. Corps purgé par l'évent, bac plein. Quelle séquence respectez-vous ?",
       "choices": [
-        "Aspiration ouverte, corps amorcé, refoulement fermé ou presque, démarrage, puis ouverture progressive du refoulement",
-        "Refoulement ouvert en grand pour aller plus vite",
-        "Corps vide : la rotation amorcera la pompe",
-        "Aspiration fermée pour éviter une fuite à la garniture"
+        "Refoulement ouvert en grand pour aller plus vite, puis démarrage du moteur sans amorçage",
+        "Corps vide : la rotation de la roue amorcera la pompe d'elle-même après quelques tours",
+        "Aspiration ouverte, corps amorcé, refoulement presque fermé, démarrage, ouverture progressive",
+        "Aspiration fermée pour éviter une fuite à la garniture, puis démarrage et ouverture de l'aspiration"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "Une centrifuge radiale démarre à faible puissance vanne de refoulement presque fermée, puis on ouvre progressivement. À sec ou sans aspiration, la garniture est détruite en quelques secondes.",
       "seconds": 60,
       "status": "draft"
@@ -266,12 +266,12 @@
       "level": 1,
       "q": "Pompe de charge : bruit de gravier, aiguille du manomètre de refoulement qui tremble, débit en baisse. Le bac d'aspiration est presque vide. Quel diagnostic posez-vous ?",
       "choices": [
-        "Palier sans graisse",
         "Cavitation par manque de pression à l'aspiration (NPSH disponible insuffisant)",
-        "Roue bloquée par un corps étranger",
-        "Fuite de garniture mécanique"
+        "Palier sans graisse, avec échauffement et vibrations du côté accouplement",
+        "Roue partiellement bloquée par un corps étranger entré avec le brut",
+        "Fuite de garniture mécanique, avec perte de pression au refoulement"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "Le bruit de gravier, les vibrations et la baisse de débit avec un bac bas désignent la cavitation : des bulles de vapeur se forment et implosent à l'aspiration.",
       "seconds": 60,
       "status": "draft"
@@ -282,12 +282,12 @@
       "level": 2,
       "q": "Le NPSH requis d'une pompe est de 5 m. Le NPSH disponible est de 6 m avec un filtre d'aspiration propre. Le filtre se colmate et ajoute 1,5 m de perte de charge. Que va-t-il se passer ?",
       "choices": [
-        "NPSH disponible monte à 7,5 m : aucun risque",
-        "Rien : seule la pression de refoulement compte",
-        "La pompe se désamorce, le NPSH reste à 6 m",
-        "NPSH disponible = 4,5 m, inférieur à 5 m : la pompe va caviter"
+        "NPSH disponible monte à 7,5 m : aucun risque de cavitation",
+        "NPSH disponible = 4,5 m, inférieur à 5 m : la pompe va caviter",
+        "Rien : seule la pression de refoulement compte pour la cavitation",
+        "La pompe se désamorce mais le NPSH disponible reste à 6 m"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "Les pertes de charge d'aspiration réduisent le NPSH disponible : 6 − 1,5 = 4,5 m. Il faut un NPSH disponible supérieur au NPSH requis, sinon cavitation. Nettoyer le filtre rétablit la marge.",
       "seconds": 75,
       "status": "draft"
@@ -298,10 +298,10 @@
       "level": 2,
       "q": "En ronde, vous entendez un grincement et sentez une odeur de brûlé à la pompe P-101 : le palier côté accouplement est à 95 °C au thermomètre infrarouge, contre 60 °C d'habitude. Que faites-vous ?",
       "choices": [
-        "Prévenir la salle de contrôle, basculer sur la pompe de secours et arrêter la pompe pour contrôle du palier et de la lubrification",
-        "Attendre la fin du poste pour le signaler",
-        "Arroser le palier à l'eau froide en marche",
-        "Ajouter beaucoup de graisse en marche"
+        "Prévenir la salle, passer sur la pompe de secours, arrêter la pompe et contrôler le palier",
+        "Attendre la fin du poste pour le signaler au chef d'équipe de jour, sans arrêter la pompe",
+        "Arroser le palier à l'eau froide en marche pour le refroidir et poursuivre la ronde",
+        "Ajouter beaucoup de graisse en marche pour abaisser la température du palier de la pompe"
       ],
       "answer": 0,
       "explain": "Un palier à +35 °C avec bruit et odeur annonce une casse proche. On bascule sur la pompe de secours puis on contrôle. Le choc thermique à l'eau ou un excès de graisse aggravent la situation.",
@@ -316,12 +316,12 @@
       "img": "svg/centrifugal-pump-curve.svg",
       "imgAlt": "Courbe de pompe et courbe du réseau : point de fonctionnement à 60 m³/h et 40 m, débit nul à 55 m",
       "choices": [
-        "Même débit, hauteur à 55 m",
+        "Même débit de 60 m³/h, mais hauteur remontée à 55 m sur la courbe de la pompe",
+        "À droite : débit supérieur à 60 m³/h et hauteur inférieure à 40 m",
         "À gauche : débit inférieur à 60 m³/h et hauteur supérieure à 40 m",
-        "À droite : débit supérieur et hauteur plus basse",
-        "Débit de 60 m³/h et hauteur de 15 m"
+        "Débit de 60 m³/h et hauteur de 15 m, par déplacement vertical"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Fermer la vanne rend le circuit plus résistant : l'intersection des deux courbes glisse vers la gauche, donc moins de débit et plus de hauteur. Le débit ne peut pas rester à 60 m³/h.",
       "seconds": 60,
       "status": "draft"
@@ -332,12 +332,12 @@
       "level": 3,
       "q": "Sur le compresseur centrifuge de gaz, à faible charge, la pression de refoulement oscille, on entend des « coups » et les vibrations montent. De quel phénomène s'agit-il et quelle est la protection ?",
       "choices": [
-        "Cavitation ; il faut un ballon d'aspiration plus grand",
-        "Pompage ; fermer totalement l'aspiration",
-        "Pompage (surge) ; la vanne anti-pompage recycle le refoulement vers l'aspiration",
-        "Givrage ; chauffer le gaz de refoulement"
+        "Cavitation ; il faut un ballon d'aspiration plus grand pour stabiliser le gaz",
+        "Pompage ; fermer totalement la vanne d'aspiration pour arrêter les coups",
+        "Givrage de la volute ; chauffer le gaz de refoulement avant son entrée dans la roue",
+        "Pompage (surge) ; la vanne anti-pompage recycle le refoulement vers l'aspiration"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Sous le débit minimal, le gaz refoule en sens inverse par cycles : c'est le pompage. La vanne anti-pompage ouvre le recyclage pour maintenir un débit suffisant dans la machine.",
       "seconds": 75,
       "status": "draft"
@@ -348,12 +348,12 @@
       "level": 3,
       "q": "Un collègue veut démarrer la pompe à piston d'injection de produit chimique avec le refoulement fermé « pour ne pas arroser le sol ». Que lui dites-vous ?",
       "choices": [
-        "Non : une pompe volumétrique refoule un volume fixe, la pression monte jusqu'à la rupture ou l'ouverture de la soupape de décharge",
-        "Oui, elle s'arrêtera d'elle-même quand la pression sera atteinte",
-        "Oui, mais seulement pendant dix secondes",
-        "Non : elle se désamorcerait immédiatement"
+        "Oui, elle s'arrêtera d'elle-même dès que la pression de refoulement sera atteinte dans la ligne",
+        "Oui, mais seulement pendant dix secondes, le temps de vérifier le débit de la pompe",
+        "Non : une pompe volumétrique refoule un volume fixe, la pression monte jusqu'à la décharge",
+        "Non : elle se désamorcerait immédiatement, comme une pompe centrifuge à débit nul"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "Contrairement à une centrifuge, la pompe volumétrique ne limite pas sa pression : tuyauterie ou corps de pompe peuvent éclater. Le refoulement doit être ouvert avant le démarrage.",
       "seconds": 60,
       "status": "draft"
@@ -364,10 +364,10 @@
       "level": 3,
       "q": "Pompe centrifuge : débit nul au refoulement, intensité du moteur en baisse, corps de pompe qui chauffe. Quelle est la cause la plus probable ?",
       "choices": [
-        "Roue trop grande pour le circuit",
+        "Roue trop grande pour le circuit, qui sature le moteur",
         "Pompe désamorcée (air dans le corps) ou marche à sec",
-        "Excès de lubrification du palier",
-        "Vanne de refoulement ouverte en grand"
+        "Excès de lubrification du palier, qui freine la rotation",
+        "Vanne de refoulement ouverte en grand sur un circuit court"
       ],
       "answer": 1,
       "explain": "Sans liquide, la pompe ne charge plus (intensité basse), ne refoule rien et chauffe par frottement. Il faut l'arrêter, purger et ré-amorcer.",
@@ -382,12 +382,12 @@
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël : vannes maîtresses inférieure et supérieure, vanne de pistonnage (swab) en haut, vanne latérale de production, duse, vanne latérale de curage (kill)",
       "choices": [
-        "La vanne de pistonnage (swab), en haut",
-        "La duse (choke)",
         "Les vannes maîtresses (inférieure et supérieure)",
-        "La vanne latérale de curage (kill)"
+        "La vanne de pistonnage (swab), au sommet de l'arbre de Noël",
+        "La duse (choke), qui règle le débit de la ligne de production",
+        "La vanne latérale de curage (kill), côté ligne de pompage"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Les vannes maîtresses, au bas de l'arbre, ferment le puits. La swab sert à l'accès vertical, la duse règle le débit, la vanne de curage permet de pomper vers le puits.",
       "seconds": 60,
       "status": "draft"
@@ -400,10 +400,10 @@
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël avec vanne de pistonnage (swab) au sommet, vannes maîtresses en bas",
       "choices": [
-        "La vanne latérale de curage (kill)",
-        "La vanne maîtresse inférieure",
-        "La duse (choke)",
-        "La vanne de pistonnage (swab)"
+        "La vanne latérale de curage (kill), côté pompage",
+        "La vanne maîtresse inférieure, au bas de l'arbre",
+        "La duse (choke), sur la ligne de production",
+        "La vanne de pistonnage (swab), au sommet de l'arbre"
       ],
       "answer": 3,
       "explain": "La vanne de pistonnage, au sommet, ouvre l'axe vertical pour le câble ou l'outil. Les vannes latérales servent à la production et au curage, pas à l'accès vertical.",
@@ -417,11 +417,11 @@
       "q": "Le puits produit trop : on vous demande de baisser le débit de 600 à 400 m³/j. Quel organe manœuvrez-vous et que fait la pression de tête ?",
       "choices": [
         "Fermer la duse : le débit et la pression de tête baissent ensemble",
+        "Fermer la vanne maîtresse à moitié pour réduire le débit du puits",
         "Fermer un peu la duse : le débit baisse et la pression en tête monte",
-        "Fermer la vanne maîtresse à moitié",
-        "Ouvrir la duse pour que la pression monte"
+        "Ouvrir un peu la duse pour que la pression de tête monte et le débit baisse"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "La duse règle le débit par la chute de pression. En la fermant, on retient le puits : le débit baisse, la pression amont (tête) augmente. Les vannes maîtresses ne servent jamais à régler.",
       "seconds": 45,
       "status": "draft"
@@ -433,11 +433,11 @@
       "q": "Vous ouvrez la duse d'un petit palier sur un puits éruptif. Que constatez-vous normalement quelques minutes après ?",
       "choices": [
         "Le débit baisse et la pression de tête augmente",
-        "Le débit et la pression de tête augmentent ensemble",
         "Le débit augmente et la pression de tête diminue",
-        "Rien ne change tant que le puits n'est pas fermé"
+        "Le débit et la pression de tête augmentent ensemble",
+        "Rien ne change tant que le puits n'est pas refermé à fond"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Ouvrir la duse diminue la contre-pression : le fluide sort plus vite, le débit augmente et la pression en tête baisse. On ouvre par petits paliers en surveillant les alarmes.",
       "seconds": 45,
       "status": "draft"
@@ -448,10 +448,10 @@
       "level": 2,
       "q": "En salle de contrôle, la pression de la ligne de commande hydraulique de la vanne de sécurité de fond (SCSSV) tombe à zéro après la rupture d'un flexible. Que va faire la vanne ?",
       "choices": [
-        "Elle reste ouverte jusqu'à l'ordre de l'opérateur",
-        "Elle s'ouvre en grand",
-        "Elle ferme la duse en surface",
-        "Elle se ferme automatiquement (sécurité positive) et isole le puits en fond"
+        "Elle reste ouverte jusqu'à l'ordre de l'opérateur en salle de contrôle",
+        "Elle s'ouvre en grand pour laisser le puits produire sans restriction",
+        "Elle ferme la duse en surface par la ligne de commande restante",
+        "Elle se ferme automatiquement (sécurité positive) et isole le puits"
       ],
       "answer": 3,
       "explain": "La SCSSV est maintenue ouverte par la pression hydraulique : si cette pression disparaît, un ressort la ferme. C'est une sécurité positive, indépendante de la surface.",
@@ -464,10 +464,10 @@
       "level": 3,
       "q": "Ronde de nuit : la pression d'annulaire (casing) du puits P-12 est passée de 20 à 45 bar en 48 h sans aucune intervention. Que faites-vous ?",
       "choices": [
-        "Noter, signaler au superviseur et appliquer la procédure ; ne pas purger sans autorisation",
-        "La purger aussitôt vers la torche pour la ramener à zéro",
-        "Ne rien faire tant qu'elle reste sous la pression d'épreuve",
-        "Fermer toutes les vannes de l'arbre et partir sans prévenir"
+        "Noter, signaler au superviseur et appliquer la procédure, sans purger sans accord",
+        "La purger aussitôt vers la torche pour la ramener à zéro et éviter tout risque",
+        "Ne rien faire tant qu'elle reste sous la pression d'épreuve de l'annulaire du puits",
+        "Fermer toutes les vannes de l'arbre et quitter la zone sans prévenir le superviseur"
       ],
       "answer": 0,
       "explain": "Une pression d'annulaire qui monte seule peut révéler une fuite de tubing ou de packer : il faut un diagnostic. Purger de sa propre initiative efface l'indice et peut être dangereux.",
@@ -482,12 +482,12 @@
       "img": "svg/esp-system.svg",
       "imgAlt": "Système ESP : variateur, câble, pompe multi-étages, protecteur, moteur et capteur de fond",
       "choices": [
-        "Une hausse de la fréquence du variateur",
-        "Une ouverture de la duse en grand",
-        "Chute du débit de fluide (pompe désamorcée, bloquée par du gaz ou usée) : le fluide se refroidit dans la remontée",
-        "Une hausse du débit de gaz de torche"
+        "Une hausse de la fréquence du variateur, qui augmente la vitesse de la pompe de fond",
+        "Chute du débit de fluide (pompe désamorcée, gazée ou usée) : le fluide se refroidit",
+        "Une ouverture de la duse en grand, qui fait chuter la pression de tête du puits",
+        "Une hausse du débit de gaz de torche, qui refroidit la tête de puits en surface"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Le fluide produit arrive chaud par son débit. Quand la pompe ne débite plus, il se refroidit pendant la lente remontée. Une fréquence plus haute ou une duse plus ouverte augmenteraient le débit.",
       "seconds": 60,
       "status": "draft"
@@ -500,12 +500,12 @@
       "img": "svg/esp-system.svg",
       "imgAlt": "Schéma ESP : capteur de fond, moteur, protecteur, admission, pompe multi-étages",
       "choices": [
-        "Le variateur de fréquence",
-        "La vanne de pistonnage",
-        "Le séparateur de production",
-        "Le protecteur (section d'étanchéité)"
+        "Le protecteur (section d'étanchéité) du moteur",
+        "Le variateur de fréquence, installé au pied du puits",
+        "La vanne de pistonnage de la tête de puits",
+        "Le séparateur de production, en surface"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Le protecteur isole le moteur du fluide du puits et compense la dilatation de l'huile moteur. Le variateur est en surface, la swab est sur l'arbre.",
       "seconds": 60,
       "status": "draft"
@@ -518,12 +518,12 @@
       "img": "svg/fire-triangle.svg",
       "imgAlt": "Triangle du feu : combustible, comburant, énergie d'activation, et moyens de supprimer chaque côté",
       "choices": [
-        "Isoler l'arrivée d'hydrocarbure (fermer la vanne d'isolement) en plus d'attaquer le feu à l'extincteur",
-        "Arroser le brut enflammé à grande eau",
-        "Ouvrir les portes du local pour ventiler",
-        "Couper l'éclairage du local"
+        "Arroser le brut enflammé à grande eau pour l'étouffer et refroidir la pompe en feu",
+        "Ouvrir les portes du local pour ventiler et disperser les vapeurs d'hydrocarbure",
+        "Fermer la vanne d'isolement (combustible) et attaquer le feu à l'extincteur",
+        "Couper l'éclairage du local pour supprimer toute source d'énergie électrique du poste"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "On supprime un côté du triangle : ici le combustible, en coupant l'alimentation. L'eau étale un feu d'hydrocarbure, et ouvrir les portes apporte de l'oxygène.",
       "seconds": 60,
       "status": "draft"
@@ -536,12 +536,12 @@
       "img": "svg/iso-safety-signs.svg",
       "imgAlt": "Panneaux ISO 7010 : interdiction rouge, avertissement jaune, obligation bleue, sauvetage vert",
       "choices": [
-        "Interdiction de porter un casque",
-        "Obligation : le casque est obligatoire dans la zone",
-        "Danger : risque de chute d'objets",
-        "Local de premiers secours"
+        "Interdiction de porter un casque dans la zone signalée",
+        "Danger : risque de chute d'objets dans la zone de chargement",
+        "Local de premiers secours situé à proximité du quai",
+        "Obligation : le casque est obligatoire dans la zone"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Un cercle bleu avec symbole blanc indique une obligation. Une interdiction est un cercle rouge barré, un danger un triangle jaune, un secours un carré vert.",
       "seconds": 60,
       "status": "draft"
@@ -552,10 +552,10 @@
       "level": 1,
       "q": "Vous êtes sur le terrain quand l'alarme générale sonne et que l'arrêt d'urgence (ESD) se déclenche. Quel est votre premier réflexe ?",
       "choices": [
-        "Terminer ma manœuvre en cours puis aviser",
-        "Rouvrir les vannes d'isolement pour relancer vite",
-        "Aller voir le détecteur à l'origine de l'alarme",
-        "Arrêter ce que je fais, mettre en sécurité sans prendre de risque et rejoindre le point de rassemblement indiqué"
+        "Terminer ma manœuvre en cours puis aviser la salle de contrôle de l'alarme générale",
+        "Rouvrir les vannes d'isolement pour relancer vite la production après l'arrêt",
+        "Aller voir le détecteur à l'origine de l'alarme pour confirmer la fuite de gaz",
+        "Arrêter ce que je fais, mettre en sécurité sans risque, rejoindre le rassemblement"
       ],
       "answer": 3,
       "explain": "À l'alarme, la priorité est de mettre les personnes en sécurité et de se rassembler pour être comptées. Rouvrir des vannes ou aller voir la source expose inutilement.",
@@ -568,10 +568,10 @@
       "level": 2,
       "q": "Votre explosimètre indique 20 % de la LIE près du séparateur après une fuite de gaz. Sachant que la LIE du méthane est d'environ 5 % en volume, quelle concentration cela représente-t-il ?",
       "choices": [
-        "Environ 1 % de méthane dans l'air",
-        "20 % de méthane dans l'air",
-        "5 % de méthane dans l'air",
-        "0,2 % de méthane dans l'air"
+        "Environ 1 % de méthane dans l'air (20 % × 5 %)",
+        "20 % de méthane dans l'air (valeur lue)",
+        "5 % de méthane dans l'air (valeur de la LIE)",
+        "0,2 % de méthane dans l'air (20 ÷ 100)"
       ],
       "answer": 0,
       "explain": "20 % de la LIE = 0,20 × 5 % = 1 % en volume. On est loin de la plage explosive (5 à 15 %) mais on ne travaille pas là, on cherche la fuite et on alerte.",
@@ -584,12 +584,12 @@
       "level": 2,
       "q": "Au puits, vous sentez une odeur d'œuf pourri, puis plus rien au bout de quelques secondes, alors que votre détecteur H2S portable sonne. Que faites-vous ?",
       "choices": [
-        "Continuer : l'odeur a disparu donc le gaz aussi",
-        "Quitter la zone immédiatement vers la zone sûre, donner l'alerte ; l'absence d'odeur ne prouve pas la disparition du gaz",
-        "Descendre dans la fosse voisine chercher la fuite",
-        "Respirer à travers un chiffon humide et poursuivre le travail"
+        "Continuer le travail : l'odeur a disparu, donc le gaz a disparu aussi du puits",
+        "Descendre dans la fosse voisine chercher la fuite pour l'isoler à la main",
+        "Quitter la zone vers la zone sûre et donner l'alerte ; l'absence d'odeur ne prouve rien",
+        "Respirer à travers un chiffon humide et poursuivre le travail jusqu'à la fin du poste"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "À forte concentration, le H2S paralyse l'odorat : on ne sent plus rien alors que le danger est maximal. Seul le détecteur fait foi ; on s'éloigne et on alerte.",
       "seconds": 45,
       "status": "draft"
@@ -602,12 +602,12 @@
       "img": "svg/lockout-tagout.svg",
       "imgAlt": "Consignation en cinq étapes : séparer, condamner, identifier, vérifier l'absence de tension, mettre à la terre",
       "choices": [
-        "Retirer son cadenas pour gagner du temps",
-        "Redémarrer la pompe quelques secondes pour tester",
-        "Dissiper l'énergie résiduelle (purge, dépressurisation) et vérifier l'absence d'énergie",
-        "Prévenir l'équipe suivante par message"
+        "Retirer son cadenas pour gagner du temps pendant le démontage de la garniture",
+        "Dissiper l'énergie résiduelle (purge, dépressurisation) et vérifier son absence",
+        "Redémarrer la pompe quelques secondes pour tester l'efficacité de l'isolement",
+        "Prévenir l'équipe suivante par message de la fin prochaine de la consignation"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "La consignation se termine par la vérification de l'absence d'énergie, après purge de la pression résiduelle. Tester par redémarrage est dangereux, retirer le cadenas annule la protection.",
       "seconds": 60,
       "status": "draft"
@@ -618,10 +618,10 @@
       "level": 2,
       "q": "La nuit, vous voyez des gouttes enflammées retomber au pied de la torche. Quel équipement est probablement débordé ?",
       "choices": [
-        "Le ballon de torche (KO drum) : du liquide est entraîné vers la torche",
-        "Le compresseur de recyclage",
-        "Le séparateur de test",
-        "La pompe d'injection d'antimousse"
+        "Le ballon de torche (KO drum) : du liquide est entraîné",
+        "Le compresseur de recyclage, qui renvoie du liquide vers la torche",
+        "Le séparateur de test, dont la ligne de gaz est reliée à la torche",
+        "La pompe d'injection d'antimousse, qui sature la ligne de torche"
       ],
       "answer": 0,
       "explain": "Le ballon de torche retient les liquides avant la torche. S'il déborde, le liquide brûle en gouttes : alerte immédiate et zone à évacuer.",
@@ -636,12 +636,12 @@
       "img": "photo/flare-stack.jpg",
       "imgAlt": "Torche d'une installation pétrolière avec flamme et épaisse fumée noire",
       "choices": [
-        "Combustion parfaite d'un gaz très pauvre : rien à faire",
-        "Combustion incomplète (gaz lourd ou riche, manque d'air ou de vapeur d'assistance) : prévenir la salle de contrôle pour réduire le débit brûlé",
-        "Excès d'oxygène dans le gaz : ouvrir le ballon de torche",
-        "Fumée de vapeur d'eau : sans conséquence"
+        "Combustion parfaite d'un gaz très pauvre : rien à faire sur la torche et continuer la ronde",
+        "Excès d'oxygène dans le gaz : ouvrir le ballon de torche pour le purger vers l'atmosphère",
+        "Combustion incomplète (gaz riche, vapeur d'assistance insuffisante) : prévenir la salle de contrôle",
+        "Fumée de vapeur d'eau condensée en sortie de torche : sans conséquence, poursuivre la ronde"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Une fumée noire traduit du carbone non brûlé, donc une combustion incomplète, souvent liée à un gaz lourd et à un débit élevé. On alerte pour agir sur les rejets et la vapeur d'assistance.",
       "seconds": 60,
       "status": "draft"
@@ -652,12 +652,12 @@
       "level": 3,
       "q": "On vous demande de souder un support à 5 m d'un séparateur ayant contenu du brut. Le permis est signé mais l'explosimétrie n'a pas été faite « car il n'y a pas d'odeur ». Que faites-vous ?",
       "choices": [
-        "Commencer : pas d'odeur, donc pas de gaz",
-        "Commencer en gardant un seau d'eau à portée",
-        "Refuser de commencer tant que l'explosimétrie n'est pas faite et notée au permis, extincteur en place",
-        "Se contenter d'un contrôle visuel de l'absence de fuite"
+        "Commencer : pas d'odeur, donc pas de gaz près du séparateur ni du support",
+        "Commencer en gardant un seau d'eau et une couverture à portée en cas de départ de feu",
+        "Se contenter d'un contrôle visuel de l'absence de fuite autour du séparateur",
+        "Refuser tant que l'explosimétrie n'est pas faite et notée au permis"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Le permis point chaud n'est valable qu'avec une mesure de gaz explosif juste avant et pendant le travail. L'odorat ne détecte pas tous les gaz et l'absence de fuite visible ne prouve rien.",
       "seconds": 60,
       "status": "draft"
@@ -670,12 +670,12 @@
       "img": "svg/risk-matrix.svg",
       "imgAlt": "Matrice de risque 5 × 5 : criticité = probabilité × gravité, niveaux faible, moyen, élevé et critique à partir de 15",
       "choices": [
-        "8 : risque moyen, travail autorisé tel quel",
-        "10 : élevé mais toléré sans action",
-        "5 : faible, simple surveillance",
-        "15 : niveau critique, ne pas lancer le travail sans mesures supplémentaires"
+        "8 : risque moyen, travail autorisé tel quel sans mesure complémentaire",
+        "15 : niveau critique, pas de travail sans mesures supplémentaires",
+        "10 : niveau élevé, toléré sans action tant que le permis est signé",
+        "5 : faible, simple surveillance de la ligne en cours de travail"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "Criticité = probabilité × gravité = 3 × 5 = 15, soit « critique » (15 et plus) sur la matrice. Il faut réduire le risque (isolement, consignation, procédure) avant de commencer.",
       "seconds": 60,
       "status": "draft"
@@ -688,12 +688,12 @@
       "img": "svg/loop-4-20ma.svg",
       "imgAlt": "Boucle 4-20 mA : 4 mA = 0 %, 8 mA = 25 %, 12 mA = 50 %, 16 mA = 75 %, 20 mA = 100 %",
       "choices": [
-        "8 bar",
-        "2,5 bar",
-        "4 bar",
-        "0,8 bar"
+        "8 bar : valeur en mA lue comme des bar",
+        "4 bar : 8 mA − 4 mA, sans mise à l'échelle",
+        "2,5 bar : (8 − 4) / 16 × 10 bar",
+        "0,8 bar : 8 mA × 0,1, sans décalage de 4 mA"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "4 mA = 0 %, 20 mA = 100 % : (8 − 4) / 16 = 25 % de 10 bar, soit 2,5 bar, comme le montre le tableau du schéma (8 mA = 25 %).",
       "seconds": 60,
       "status": "draft"
@@ -706,12 +706,12 @@
       "img": "svg/loop-4-20ma.svg",
       "imgAlt": "Boucle 4-20 mA avec zéro vivant à 4 mA et seuil de défaut NAMUR inférieur à 3,6 mA",
       "choices": [
-        "Le séparateur est réellement vide",
-        "Le niveau est réellement très bas, signal normal",
-        "Boucle ouverte (câble coupé ou transmetteur sans alimentation) : 0 mA est impossible en service normal",
-        "Le transmetteur est réglé en 0-100 mA"
+        "Boucle ouverte (câble coupé ou transmetteur hors tension) : 0 mA est anormal",
+        "Le séparateur est réellement vide après une vidange rapide du ballon de tête",
+        "Le niveau est réellement très bas, ce qui donne un signal normal de 4 mA",
+        "Le transmetteur est réglé en 0-100 mA au lieu de 4-20 mA depuis son étalonnage"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Le zéro vivant est à 4 mA : un signal à 0 mA, ou sous 3,6 mA (NAMUR), est un défaut de boucle. Une vraie mesure basse affiche 4 mA, pas 0.",
       "seconds": 60,
       "status": "draft"
@@ -724,12 +724,12 @@
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "P&ID de régulation de débit : FE 103 diaphragme, FT 103, FIC 103, FV 103, LT 101, LIC 101",
       "choices": [
-        "FIC 103",
-        "LT 101",
-        "FV 103",
-        "FE 103"
+        "FIC 103, le régulateur-indicateur de débit",
+        "FE 103, l'élément primaire de débit",
+        "LT 101, le transmetteur de niveau",
+        "FV 103, la vanne de régulation de débit"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "FE désigne l'élément primaire de débit, ici le diaphragme, sur la ligne. FIC est le régulateur en salle de contrôle, LT un transmetteur de niveau, FV la vanne de régulation.",
       "seconds": 60,
       "status": "draft"
@@ -742,12 +742,12 @@
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Ballon V-201 : service normal 0 à 8 barg, alarme PAH à 9 barg, PSV tarée à 10 barg, MAWP de 10 barg",
       "choices": [
-        "L'alarme PAH retentit ; la soupape, tarée à 10 barg, ne s'ouvre pas encore",
-        "La soupape s'ouvre déjà à 9 barg",
-        "Rien ne se passe, le service normal va jusqu'à 10 barg",
-        "La soupape s'ouvre à 11 barg"
+        "La soupape s'ouvre déjà à 9 barg pour protéger le ballon V-201 de la montée",
+        "Rien ne se passe, le service normal allant jusqu'à 10 barg sans aucune alarme",
+        "La soupape s'ouvre à 11 barg, soit 10 % au-dessus de la MAWP du ballon",
+        "L'alarme PAH retentit ; la soupape, tarée à 10 barg, ne s'ouvre pas encore"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "Le schéma place le service normal jusqu'à 8 barg, l'alarme PAH à 9 barg et le tarage de la PSV à 10 barg, soit la MAWP. À 9 barg, l'opérateur doit déjà agir.",
       "seconds": 60,
       "status": "draft"
@@ -758,12 +758,12 @@
       "level": 2,
       "q": "L'alarme niveau très haut (HH) du séparateur provoque un arrêt. Un collègue propose de la shunter pour redémarrer plus vite. Que répondez-vous ?",
       "choices": [
-        "Oui, c'est seulement une information",
-        "Oui, si c'est pour moins de 10 minutes",
-        "Non : on n'inhibe pas une sécurité sans autorisation ; on traite d'abord la cause du niveau haut",
-        "Oui, puis ouvrir la soupape de sécurité"
+        "Oui, c'est seulement une information et non une vraie sécurité du séparateur",
+        "Non : on n'inhibe pas une sécurité sans autorisation ; on traite d'abord la cause",
+        "Oui, si c'est pour moins de 10 minutes, le temps de relancer la production",
+        "Oui, puis ouvrir la soupape de sécurité pour faire baisser le niveau du séparateur"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "L'arrêt sur niveau très haut protège le compresseur et la torche. Le contourner supprime la dernière barrière : seule une dérogation formelle avec mesures compensatoires est possible.",
       "seconds": 45,
       "status": "draft"
@@ -774,12 +774,12 @@
       "level": 2,
       "q": "Pendant une ronde, vous découvrez une fuite de brut à une bride d'un séparateur en service. Quelle est la bonne conduite ?",
       "choices": [
-        "Resserrer les boulons immédiatement avec une clé",
-        "Photographier la fuite et la signaler en fin de poste",
-        "Poser un chiffon et reprendre la ronde",
-        "Sécuriser la zone, alerter la salle de contrôle et suivre la procédure, sans serrer sous pression"
+        "Resserrer les boulons immédiatement avec une clé dynamométrique pour arrêter la fuite",
+        "Photographier la fuite et la signaler en fin de poste dans le cahier de quart",
+        "Sécuriser la zone, alerter la salle de contrôle, appliquer la procédure sans serrer",
+        "Poser un chiffon absorbant sur la bride et reprendre la ronde en repassant plus tard"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "Une fuite d'hydrocarbure est un risque d'incendie et de gaz. On balise, on alerte et on laisse la procédure décider. Serrer sous pression peut aggraver la fuite ou créer une étincelle.",
       "seconds": 45,
       "status": "draft"
@@ -792,10 +792,10 @@
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Puits en gas-lift : gaz injecté dans l'annulaire, vannes de décharge et opérante sur mandrins latéraux, packer",
       "choices": [
-        "Par l'annulaire, puis à travers la vanne de gas-lift (mandrin latéral) vers le tubing",
-        "Directement dans le séparateur",
-        "Par la duse de production",
-        "Par le packer"
+        "Par l'annulaire, puis par la vanne de gas-lift (mandrin latéral) vers le tubing",
+        "Directement dans le séparateur de production en surface, par la ligne de gaz",
+        "Par la duse de production, en sens inverse du débit du puits vers le fond",
+        "Par le packer, qui laisse passer le gaz de l'annulaire vers le tubing"
       ],
       "answer": 0,
       "explain": "Le gaz est injecté dans l'annulaire puis entre dans le tubing par les vannes montées sur mandrins latéraux, ce qui allège la colonne de fluide. Le packer isole l'annulaire, il ne laisse rien passer.",
@@ -810,12 +810,12 @@
       "img": "svg/pump-jack-beam.svg",
       "imgAlt": "Unité de pompage à balancier : tête de cheval, balancier, tige lisse, tiges de pompage, pompe de fond",
       "choices": [
-        "Par un câble électrique",
-        "Par la tige lisse et le train de tiges de pompage",
-        "Par un tuyau d'air comprimé",
-        "Par la ligne de gaz-lift"
+        "Par un câble électrique descendu le long du tubing",
+        "Par un tuyau d'air comprimé relié à la pompe de fond",
+        "Par la ligne de gaz-lift injectée dans l'annulaire",
+        "Par la tige lisse et le train de tiges de pompage"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Le balancier tire la tige lisse, qui entraîne les tiges de pompage jusqu'au piston de la pompe de fond. Débit nul malgré le mouvement : tiges rompues ou pompe de fond défaillante.",
       "seconds": 60,
       "status": "draft"
@@ -826,12 +826,12 @@
       "level": 1,
       "q": "Vous prenez le quart à 18 h. Votre collègue part en disant « tout va bien ». Que lui demandez-vous en priorité avant son départ ?",
       "choices": [
-        "Le menu de la cantine",
-        "Combien de bidons de lubrifiant il reste",
-        "Rien : le cahier de quart est facultatif",
-        "L'état des permis ouverts, des travaux en cours, des alarmes inhibées et des équipements en secours"
+        "L'état des permis ouverts, travaux en cours, alarmes inhibées et équipements en secours",
+        "Le résultat de la dernière ronde, sans détailler les permis ni les alarmes",
+        "Le niveau des bacs de stockage et le débit de production moyen du poste",
+        "La consommation de produits chimiques du poste et les stocks de lubrifiant"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "La relève de poste transmet l'état réel de l'installation : permis, travaux, inhibitions d'alarme, équipements à l'arrêt. C'est là que naissent les accidents de changement d'équipe.",
       "seconds": 45,
       "status": "draft"

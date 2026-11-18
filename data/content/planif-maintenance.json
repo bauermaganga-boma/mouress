@@ -84,12 +84,12 @@
       "level": 1,
       "q": "Dans une GMAO, qu'est-ce qu'un ordre de travail (OT) ?",
       "choices": [
-        "Le document qui décrit, autorise et trace une intervention : tâche, équipement, ressources, durée, pièces, comptes rendus et coûts",
-        "La liste des pièces en stock avec leurs prix",
-        "Le contrat annuel signé avec un sous-traitant",
-        "Le planning des congés de l'équipe de maintenance"
+        "La liste des pièces en stock avec leurs prix, leurs emplacements et leurs seuils de réapprovisionnement",
+        "Le contrat annuel signé avec un sous-traitant, avec ses tarifs, ses délais et ses pénalités",
+        "Le document qui décrit, autorise et trace une intervention : tâche, équipement, ressources, durée, coûts",
+        "Le planning des congés et des postes de l'équipe de maintenance sur l'année en cours"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "L'OT est le document central de la GMAO : il porte toute l'information d'une intervention, de la préparation à la clôture. Les autres propositions décrivent des documents ou données différents.",
       "seconds": 40,
       "status": "draft"
@@ -100,10 +100,10 @@
       "level": 1,
       "q": "Dans SAP PM, comment appelle-t-on le document par lequel un exploitant signale une anomalie avant la création d'un ordre ?",
       "choices": [
-        "Une gamme d'inspection",
-        "Un bon de sortie magasin",
-        "Une nomenclature d'équipement",
-        "Un avis (notification) de maintenance"
+        "Une gamme d'inspection, qui décrit les opérations à réaliser de façon répétitive",
+        "Un bon de sortie magasin, qui autorise le retrait des pièces du stock",
+        "Une nomenclature d'équipement, qui liste les composants et pièces associées",
+        "Un avis (notification) de maintenance, créé par l'exploitant avant l'ordre"
       ],
       "answer": 3,
       "explain": "L'avis (notification) signale l'anomalie ou le besoin ; après qualification et priorisation, il peut donner lieu à un OT. La gamme décrit les opérations, la nomenclature les pièces.",
@@ -116,10 +116,10 @@
       "level": 1,
       "q": "À quoi sert la structure technique (site, unité, système, équipement) d'une GMAO ?",
       "choices": [
-        "À remplacer l'organigramme de l'entreprise",
-        "À stocker les factures des fournisseurs",
+        "À remplacer l'organigramme de l'entreprise pour désigner les responsables de chaque unité",
+        "À stocker les factures des fournisseurs de pièces et de services par équipement",
         "À rattacher plans, pièces, historiques de pannes et coûts à chaque équipement pour les analyser",
-        "À définir les horaires de poste des techniciens"
+        "À définir les horaires de poste et les astreintes des techniciens de chaque unité"
       ],
       "answer": 2,
       "explain": "L'arborescence technique permet d'imputer coûts et pannes au bon niveau et d'exploiter l'historique. Elle ne décrit ni l'organisation du personnel ni la comptabilité fournisseurs.",
@@ -132,12 +132,12 @@
       "level": 2,
       "q": "Un technicien clôture ses OT avec le seul commentaire « RAS », sans code de cause ni d'action. Pourquoi est-ce un problème pour la fiabilité ?",
       "choices": [
-        "Le logiciel refuse ensuite de générer de nouveaux plans préventifs",
-        "L'historique devient inexploitable : on ne peut ni calculer un MTBF fiable ni repérer les pannes répétitives et leurs causes",
-        "Les heures du technicien sont automatiquement annulées",
-        "L'OT ne peut plus être rouvert en cas de garantie"
+        "Le logiciel refuse ensuite de générer de nouveaux plans préventifs sur les équipements concernés",
+        "Les heures du technicien sont annulées automatiquement lors de la clôture de l'OT concerné",
+        "L'historique devient inexploitable : pas de MTBF fiable ni de repérage des pannes répétitives",
+        "L'OT ne peut plus être rouvert en cas de recours en garantie auprès du fournisseur"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Les codes de défaut, de cause et d'action sont la matière première de l'analyse de fiabilité. Sans eux, l'historique ne permet pas d'agir sur les causes récurrentes.",
       "seconds": 50,
       "status": "draft"
@@ -150,12 +150,12 @@
       "img": "svg/risk-matrix.svg",
       "imgAlt": "Matrice de risques 5 par 5 croisant gravité et probabilité, du vert (faible) au rouge (élevé)",
       "choices": [
-        "L'ampoule grillée : c'est la plus rapide à régler",
+        "L'ampoule grillée : c'est la plus rapide à régler et la plus visible du personnel",
+        "La peinture : c'est l'OT le plus ancien du programme et il est déjà planifié",
         "La fuite de gaz sur la bride : risque pour les personnes et l'installation",
-        "La peinture : c'est l'OT le plus ancien",
-        "La pompe de service : une pompe en panne passe toujours avant"
+        "La pompe de service : une pompe en panne passe avant tout autre OT ouvert"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "La priorité se fixe d'abord selon la sécurité des personnes et de l'environnement, puis l'impact sur la production. Une fuite de gaz passe avant tout ; la pompe est secourue, l'ampoule et la peinture ne présentent pas de risque.",
       "seconds": 55,
       "status": "draft"
@@ -166,10 +166,10 @@
       "level": 2,
       "q": "Quels éléments rendent un OT « prêt à planifier » ?",
       "choices": [
-        "Gamme opératoire rédigée, pièces réservées et disponibles, outillage et levage identifiés, permis anticipés, heures et métiers estimés",
-        "Un numéro d'équipement et la date souhaitée par l'exploitant",
-        "L'accord oral du chef d'équipe et une estimation en jours sans détail",
-        "La seule signature du directeur de site"
+        "Gamme rédigée, pièces réservées, outillage et levage identifiés, permis anticipés, heures estimées",
+        "Un numéro d'équipement, la description de l'anomalie et la date souhaitée par l'exploitant du site",
+        "L'accord oral du chef d'équipe et une estimation en jours, sans détail des tâches",
+        "La signature du directeur de site et un budget global validé pour l'intervention"
       ],
       "answer": 0,
       "explain": "Un OT est prêt lorsque rien n'empêchera le technicien de travailler sans attente une fois programmé. Sans gamme, pièces ni permis, l'ordonnancement est illusoire.",
@@ -182,10 +182,10 @@
       "level": 3,
       "q": "Un OT sur une pompe de réinjection est « en attente de pièces » depuis 60 jours alors que la pièce était annoncée sous trois semaines. Que fait d'abord le planificateur ?",
       "choices": [
-        "Annuler l'OT pour assainir le backlog",
-        "Le replanifier la semaine suivante avec les mêmes pièces manquantes",
-        "Attendre : le magasin finira par livrer",
-        "Relancer l'approvisionnement, vérifier la réservation et la date réelle, chercher une alternative (interchangeable, remise en état) et sortir l'OT du backlog prêt en attendant"
+        "Annuler l'OT pour assainir le backlog, quitte à le recréer à l'arrivée de la pièce commandée",
+        "Le replanifier la semaine suivante avec les mêmes pièces manquantes et la même équipe affectée",
+        "Attendre : le magasin finira par livrer la pièce et l'OT repartira de lui-même ensuite",
+        "Relancer l'approvisionnement, chercher une alternative et sortir l'OT du backlog prêt"
       ],
       "answer": 3,
       "explain": "Un OT bloqué doit être traité activement : la cause du retard est identifiée, des solutions sont cherchées, et l'OT est classé « non prêt » pour ne pas fausser le backlog prêt ni le programme.",
@@ -198,12 +198,12 @@
       "level": 3,
       "q": "Pendant la révision d'une pompe, le technicien découvre un défaut non prévu sur l'accouplement. Quelle est la bonne pratique ?",
       "choices": [
-        "Le corriger sans rien noter puisque l'équipement est déjà ouvert",
-        "Clore l'OT initial et ignorer le défaut jusqu'à la panne",
-        "Émettre un avis ou un OT complémentaire qui évalue le travail (sécurité, priorité, pièces) avant de l'intégrer au programme",
-        "Ajouter les heures supplémentaires à l'OT initial sans le dire pour ne pas perturber le programme"
+        "Émettre un avis ou un OT complémentaire qui évalue le travail (sécurité, priorité, pièces)",
+        "Corriger le défaut sans rien noter, puisque l'équipement est déjà ouvert et disponible",
+        "Clore l'OT initial et traiter le défaut seulement quand une panne surviendra sur l'accouplement",
+        "Ajouter les heures supplémentaires à l'OT initial sans le signaler, pour garder le programme intact"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Les travaux additionnels doivent être tracés et évalués : cela protège la sécurité, les coûts et la fiabilité du programme et alimente l'historique de l'équipement.",
       "seconds": 60,
       "status": "draft"
@@ -214,12 +214,12 @@
       "level": 2,
       "q": "Pourquoi le planificateur doit-il auditer régulièrement les OT ouverts depuis plusieurs mois ?",
       "choices": [
-        "Pour augmenter le nombre d'OT ouverts affiché au tableau de bord",
-        "Parce que les OT anciens sont toujours urgents",
-        "Pour clôturer ou annuler les OT obsolètes, sans quoi le backlog est surévalué et les indicateurs faussés",
-        "Parce que la GMAO supprime automatiquement les OT de plus de 30 jours"
+        "Pour augmenter le nombre d'OT ouverts affiché au tableau de bord et justifier les effectifs",
+        "Pour clôturer ou annuler les OT obsolètes, sans quoi backlog surévalué et indicateurs faussés",
+        "Parce que les OT anciens sont systématiquement les plus urgents et les plus critiques du site",
+        "Parce que la GMAO supprime automatiquement les OT de plus de 30 jours sans action"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Des OT oubliés ou périmés gonflent le backlog et donnent une image fausse de la charge réelle. Un audit régulier maintient des données fiables.",
       "seconds": 45,
       "status": "draft"
@@ -230,10 +230,10 @@
       "level": 1,
       "q": "Une huile moteur est vidangée toutes les 500 heures de marche, quel que soit son état. De quel type de maintenance s'agit-il ?",
       "choices": [
-        "Conditionnelle",
-        "Préventive systématique",
-        "Corrective différée",
-        "Améliorative"
+        "Conditionnelle : intervention déclenchée par la mesure d'un état ou d'un seuil",
+        "Préventive systématique : intervention à intervalle fixe, quel que soit l'état",
+        "Corrective différée : intervention après la panne, planifiée selon la disponibilité",
+        "Améliorative : modification du matériel pour réduire la fréquence des défaillances"
       ],
       "answer": 1,
       "explain": "Une action à intervalle fixe d'heures, indépendante de l'état mesuré, est de la maintenance préventive systématique.",
@@ -246,12 +246,12 @@
       "level": 1,
       "q": "Remplacer un joint d'un matériau standard par un joint d'un autre matériau pour supprimer des fuites répétées relève de quel type de maintenance ?",
       "choices": [
-        "Améliorative",
-        "Préventive systématique",
-        "Corrective d'urgence",
-        "Conditionnelle"
+        "Préventive systématique : remplacement du joint à intervalle fixe, à l'identique",
+        "Améliorative : modification du matériau pour supprimer la cause des fuites",
+        "Corrective d'urgence : remplacement immédiat du joint après chaque fuite constatée",
+        "Conditionnelle : remplacement du joint lorsqu'un seuil de fuite est mesuré"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Modifier le matériel pour supprimer une cause de panne est de la maintenance améliorative.",
       "seconds": 40,
       "status": "draft"
@@ -262,10 +262,10 @@
       "level": 2,
       "q": "Un compresseur tourne 20 heures par jour. Son plan prévoit un contrôle toutes les 500 heures de marche. Tous les combien de jours faut-il le planifier ?",
       "choices": [
-        "Tous les 21 jours (en comptant 24 h par jour)",
-        "Tous les 50 jours",
-        "Tous les 10 jours",
-        "Tous les 25 jours"
+        "Tous les 21 jours : 500 h ÷ 24 h, marche continue",
+        "Tous les 50 jours : 500 h ÷ 10 h par jour",
+        "Tous les 10 jours : 500 h ÷ 50 h par jour",
+        "Tous les 25 jours : 500 h ÷ 20 h par jour de marche"
       ],
       "answer": 3,
       "explain": "L'intervalle est exprimé en heures de marche : 500 h / 20 h par jour = 25 jours. Compter 24 h par jour serait une erreur.",
@@ -278,12 +278,12 @@
       "level": 2,
       "q": "Un agitateur de bassin non critique, bon marché et sans danger en cas de panne, est remplaçable en deux heures avec stock disponible. Selon l'approche RCM, quelle stratégie est la plus pertinente ?",
       "choices": [
-        "Le remplacer systématiquement tous les mois",
-        "Le surveiller par capteurs de vibrations en continu",
-        "Installer un équipement identique en secours",
-        "Le laisser fonctionner jusqu'à la défaillance, puis le remplacer (correctif planifié)"
+        "Le laisser fonctionner jusqu'à la défaillance, puis le remplacer (correctif planifié)",
+        "Le remplacer systématiquement tous les mois, avant toute défaillance possible",
+        "Le surveiller par capteurs de vibrations en continu, avec alarme automatique",
+        "Installer un équipement identique en secours, prêt à démarrer en cas de panne"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Quand les conséquences d'une panne sont faibles et la réparation peu coûteuse, le RCM admet le fonctionnement jusqu'à la défaillance : toute autre stratégie coûterait plus cher que la panne.",
       "seconds": 55,
       "status": "draft"
@@ -294,12 +294,12 @@
       "level": 3,
       "q": "Un composant électronique de commande subit des pannes aléatoires, à taux de défaillance à peu près constant. Que penser de son remplacement systématique tous les deux ans ?",
       "choices": [
-        "Il garantit une fiabilité croissante car la pièce est toujours neuve",
-        "Il est indispensable car le taux de défaillance augmente avec l'âge",
-        "Il n'améliore pas la fiabilité et peut introduire des défaillances de jeunesse (mauvais montage, pièce neuve défectueuse)",
-        "Il supprime totalement les pannes aléatoires"
+        "Il n'améliore pas la fiabilité et peut introduire des défaillances de jeunesse (montage)",
+        "Il garantit une fiabilité croissante, puisque la pièce montée est toujours neuve et testée",
+        "Il est indispensable, car le taux de défaillance augmente avec l'âge du composant électronique",
+        "Il supprime totalement les pannes aléatoires de la commande électronique du système concerné"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Si le taux de défaillance est constant, l'âge ne joue pas : changer la pièce ne réduit pas le risque et peut même réintroduire des pannes de jeunesse.",
       "seconds": 55,
       "status": "draft"
@@ -312,12 +312,12 @@
       "img": "svg/risk-matrix.svg",
       "imgAlt": "Matrice de risques 5 par 5 croisant gravité et probabilité, du vert (faible) au rouge (élevé)",
       "choices": [
-        "Criticité 9 : équipement peu critique",
+        "Criticité 9 : équipement peu critique, sans besoin de plan préventif renforcé",
+        "Criticité 20, mais sans conséquence sur le plan de maintenance de l'équipement",
         "Criticité 20 : très critique, il justifie un plan préventif renforcé et des pièces dédiées",
-        "Criticité 20, mais sans conséquence sur le plan de maintenance",
-        "Criticité 1,25 : équipement négligeable"
+        "Criticité 1,25 : équipement négligeable, à traiter en maintenance corrective"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "5 × 4 = 20, au-dessus du seuil de 15 : l'équipement est très critique. La criticité sert à calibrer plan préventif, priorité d'OT et pièces de rechange.",
       "seconds": 60,
       "status": "draft"
@@ -328,12 +328,12 @@
       "level": 2,
       "q": "Les vibrations du palier d'une pompe passent de 2,1 à 4,8 mm/s en trois semaines ; le seuil d'alarme du site est 7,1 mm/s. Que fait le planificateur ?",
       "choices": [
-        "Programmer l'intervention dans la prochaine fenêtre adaptée, pièces réservées, et augmenter la fréquence des mesures",
-        "Ne rien faire tant que le seuil d'alarme n'est pas atteint",
-        "Arrêter immédiatement la pompe sans analyse",
-        "Remplacer la pompe entière dès demain par une pompe neuve"
+        "Ne rien faire tant que le seuil d'alarme de 7,1 mm/s n'est pas atteint par la pompe concernée",
+        "Arrêter immédiatement la pompe sans analyse, la hausse étant jugée dangereuse",
+        "Remplacer la pompe entière dès demain par une pompe neuve prélevée au magasin",
+        "Programmer l'intervention à la prochaine fenêtre adaptée, pièces réservées, mesures rapprochées"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "Une tendance rapide à la hausse justifie d'anticiper : l'intervention est préparée et planifiée avant l'alarme, avec un suivi resserré. Attendre l'alarme expose à la panne subie.",
       "seconds": 60,
       "status": "draft"
@@ -344,12 +344,12 @@
       "level": 3,
       "q": "Un défaut détectable par thermographie a un intervalle P-F de trois semaines. Quel intervalle d'inspection est le plus adapté ?",
       "choices": [
+        "Six semaines, pour limiter les coûts d'inspection de l'équipement concerné",
         "Environ la moitié de l'intervalle P-F, soit 10 jours ou moins",
-        "Six semaines, pour limiter les coûts d'inspection",
-        "Trois mois, selon le planning trimestriel",
-        "Un an, avec l'arrêt annuel"
+        "Trois mois, selon le planning trimestriel habituel de la thermographie",
+        "Un an, en profitant de l'arrêt annuel de l'unité pour tout contrôler"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Pour détecter la dégradation avant la défaillance, la fréquence de contrôle doit être inférieure à l'intervalle P-F ; on retient en général la moitié.",
       "seconds": 60,
       "status": "draft"
@@ -360,12 +360,12 @@
       "level": 1,
       "q": "Une équipe repousse chaque mois les OT préventifs « non urgents » pour traiter les urgences. Quelle est la conséquence typique ?",
       "choices": [
-        "Le taux de respect du programme monte durablement",
-        "Le coût de maintenance baisse de façon stable",
-        "La fiabilité s'améliore car il y a moins d'interventions",
-        "Les pannes augmentent, donc les urgences aussi : c'est la spirale réactive"
+        "Le taux de respect du programme monte durablement, faute d'OT non urgents",
+        "Les pannes augmentent, donc les urgences aussi : c'est la spirale réactive",
+        "Le coût de maintenance baisse de façon stable, les interventions étant moins nombreuses",
+        "La fiabilité s'améliore, car il y a moins d'interventions sur les équipements"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "Négliger le préventif accroît les défaillances futures, donc la charge d'urgence, qui chasse encore plus le préventif. Il faut le protéger dans le programme.",
       "seconds": 45,
       "status": "draft"
@@ -376,12 +376,12 @@
       "level": 1,
       "q": "Que mesure le MTTR ?",
       "choices": [
-        "Le temps moyen entre deux pannes consécutives",
-        "Le temps moyen de livraison d'une pièce",
+        "Le temps moyen entre deux pannes consécutives d'un même équipement",
         "Le temps moyen de réparation (remise en service) par panne",
-        "Le temps total d'ouverture d'un OT"
+        "Le temps moyen de livraison d'une pièce commandée au fournisseur",
+        "Le temps total d'ouverture d'un OT, de la création à la clôture"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "MTTR = temps total de réparation / nombre de pannes. Le MTBF mesure au contraire le temps moyen entre pannes.",
       "seconds": 35,
       "status": "draft"
@@ -392,12 +392,12 @@
       "level": 1,
       "q": "Que représente le backlog de maintenance ?",
       "choices": [
-        "Le nombre de pannes du mois",
-        "Le volume de travaux identifiés mais non encore réalisés, en heures ou en semaines de charge",
-        "Les heures supplémentaires effectuées",
-        "Le stock de pièces de rechange"
+        "Le volume de travaux identifiés mais non réalisés, en heures ou en semaines de charge",
+        "Le nombre de pannes du mois écoulé sur l'ensemble des équipements du site",
+        "Les heures supplémentaires effectuées par l'équipe sur la période",
+        "Le stock de pièces de rechange immobilisé pour les interventions à venir"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "Le backlog est la charge de travail en attente. On distingue le backlog prêt (préparé) du backlog non prêt.",
       "seconds": 40,
       "status": "draft"
@@ -410,12 +410,12 @@
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation pétrolière",
       "choices": [
-        "MTBF = 15 h ; MTTR = 750 h",
-        "MTBF = 750 h ; MTTR = 15 h",
-        "MTBF = 735 h ; MTTR = 15 h",
-        "MTBF = 3 000 h ; MTTR = 60 h"
+        "MTBF = 750 h ; MTTR = 15 h : 3 000 ÷ 4 et 60 ÷ 4 pannes",
+        "MTBF = 15 h ; MTTR = 750 h : valeurs inversées",
+        "MTBF = 735 h ; MTTR = 15 h : réparation déduite de la marche",
+        "MTBF = 3 000 h ; MTTR = 60 h : totaux non divisés"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "MTBF = 3 000 / 4 = 750 h ; MTTR = 60 / 4 = 15 h. Comme les 3 000 h sont déjà des heures de marche, on ne retranche pas les 60 h pour obtenir 735 h.",
       "seconds": 70,
       "status": "draft"
@@ -426,12 +426,12 @@
       "level": 2,
       "q": "Le backlog prêt est de 2 400 heures. L'équipe compte 8 techniciens offrant chacun 30 heures réellement productives par semaine. À combien de semaines de travail correspond le backlog ?",
       "choices": [
-        "10 semaines",
-        "7,5 semaines (en comptant 40 h par technicien)",
-        "80 semaines (pour un seul technicien)",
-        "300 semaines"
+        "7,5 semaines : 2 400 ÷ (8 × 40), présence comptée",
+        "80 semaines : 2 400 ÷ 30, un seul technicien",
+        "300 semaines : 2 400 ÷ 8, sans heures par semaine",
+        "10 semaines : 2 400 h ÷ (8 techniciens × 30 h)"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "Capacité réelle = 8 × 30 = 240 h par semaine ; 2 400 / 240 = 10 semaines. Compter les heures de présence (40 h) surestime la capacité.",
       "seconds": 70,
       "status": "draft"
@@ -442,12 +442,12 @@
       "level": 2,
       "q": "80 OT figurent au programme de la semaine. Dans la semaine, 62 d'entre eux sont clôturés et 14 OT urgents hors programme sont aussi réalisés. Quel est le taux de respect du programme ?",
       "choices": [
-        "95 %",
-        "82 %",
-        "17,5 %",
-        "77,5 %"
+        "77,5 % : 62 OT clôturés ÷ 80 OT au programme",
+        "95 % : (62 + 14) ÷ 80, urgences hors programme comptées",
+        "82 % : 62 ÷ 76, base réduite aux OT clôturés",
+        "17,5 % : 14 ÷ 80, seules les urgences rapportées au programme"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Taux = OT du programme réalisés / OT du programme = 62 / 80 = 77,5 %. Les urgences hors programme ne comptent pas au numérateur (95 % les compterait à tort).",
       "seconds": 70,
       "status": "draft"
@@ -458,12 +458,12 @@
       "level": 2,
       "q": "Quel facteur réduit le plus directement le temps de clé (wrench time) d'un technicien ?",
       "choices": [
-        "Un nombre élevé d'OT dans le backlog",
-        "L'utilisation d'une GMAO",
+        "Un nombre élevé d'OT dans le backlog, qui disperse l'attention des équipes",
         "Les attentes de pièces, d'outils, de permis ou d'échafaudages dues à une mauvaise préparation",
-        "La présence d'un planificateur dans l'équipe"
+        "L'utilisation d'une GMAO, dont la saisie occupe une part du temps de travail",
+        "La présence d'un planificateur dans l'équipe, qui impose des tâches administratives"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Le temps de clé baisse quand le technicien attend ou se déplace sans travailler : la préparation (pièces, outils, permis) est le principal levier pour l'augmenter.",
       "seconds": 50,
       "status": "draft"
@@ -474,10 +474,10 @@
       "level": 3,
       "q": "En un mois, le taux de respect du programme passe de 90 % à 65 % alors que le backlog est stable. Quelle démarche d'analyse est la plus pertinente ?",
       "choices": [
-        "Sanctionner les équipes : le planning n'est plus respecté",
-        "Réduire le programme à 10 OT pour retrouver 90 %",
-        "Examiner la part d'urgences hors programme, la fiabilité des estimations d'heures et le gel du programme avant de conclure",
-        "Ignorer la baisse : seul le backlog compte"
+        "Sanctionner les équipes : le planning n'est plus respecté et la discipline doit être rétablie",
+        "Réduire le programme à 10 OT pour retrouver un taux de respect de 90 %",
+        "Examiner les urgences hors programme, la fiabilité des estimations et le gel du programme",
+        "Ignorer la baisse : seul le backlog compte pour juger la performance de la maintenance du site"
       ],
       "answer": 2,
       "explain": "Un indicateur ne se lit pas seul : une chute du respect peut venir d'urgences, d'estimations erronées ou d'un programme modifié en cours de semaine. On cherche la cause avant d'agir.",
@@ -490,12 +490,12 @@
       "level": 3,
       "q": "Un responsable fait passer le MTBF d'une flotte de 400 à 520 h en excluant du calcul les pannes de moins d'une heure. Que penser ?",
       "choices": [
-        "C'est légitime : les petites pannes n'ont aucune importance",
-        "L'indicateur est biaisé : sans définition constante, l'évolution ne reflète pas une amélioration réelle de la fiabilité",
-        "C'est une vraie amélioration de 30 %",
-        "Le MTBF ne peut jamais être modifié"
+        "C'est légitime : les petites pannes de moins d'une heure n'ont pas d'importance pour la fiabilité du parc",
+        "C'est une vraie amélioration de 30 %, validée par le nouveau calcul de la flotte",
+        "L'indicateur est biaisé : sans définition constante, l'évolution ne reflète pas une vraie fiabilité",
+        "Le MTBF d'une flotte est figé, sa définition ne pouvant pas être ajustée en cours d'année"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Changer la règle de calcul rend l'avant et l'après incomparables. Pour mesurer un progrès, la définition de l'indicateur doit rester stable (ou être recalculée sur toute la période).",
       "seconds": 65,
       "status": "draft"
@@ -508,10 +508,10 @@
       "img": "svg/abc-stock-curve.svg",
       "imgAlt": "Courbe ABC cumulée : peu de références (A) représentent la majeure partie de la valeur consommée",
       "choices": [
-        "P-101 et C-201",
-        "P-101 et V-310",
-        "C-201 et V-310",
-        "V-310 et les autres équipements"
+        "P-101 et C-201 : 42 h + 28 h = 70 h, soit 70 %",
+        "P-101 et V-310 : 42 h + 12 h = 54 h",
+        "C-201 et V-310 : 28 h + 12 h = 40 h",
+        "V-310 et les autres équipements : 12 h + 18 h = 30 h"
       ],
       "answer": 0,
       "explain": "42 + 28 = 70 h sur 100 h, soit 70 % : c'est le principe de Pareto. Les deux autres combinaisons donnent 54 h, 40 h et 30 h.",
@@ -526,12 +526,12 @@
       "img": "svg/gantt-chart.svg",
       "imgAlt": "Diagramme de Gantt d'un arrêt programmé : barres de tâches sur un axe de temps, liens de dépendance et jalons en losange",
       "choices": [
-        "Une tâche de deux jours",
-        "Un retard confirmé sur le chemin critique",
-        "Une ressource surchargée",
-        "Un jalon : événement de durée nulle marquant une étape clé"
+        "Un jalon : événement de durée nulle marquant une étape clé",
+        "Une tâche de deux jours, symbolisée par un losange sur la ligne de temps",
+        "Un retard confirmé sur le chemin critique, signalé par un losange rouge",
+        "Une ressource surchargée, signalée par un losange sur la ligne de la tâche"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Un losange est le symbole d'un jalon, un événement de durée nulle qui marque une étape importante (ici la fin de la mise en sécurité).",
       "seconds": 40,
       "status": "draft"
@@ -542,9 +542,9 @@
       "level": 1,
       "q": "Pourquoi les pièces à long délai d'un arrêt programmé sont-elles commandées plusieurs mois à l'avance ?",
       "choices": [
-        "Pour bénéficier systématiquement d'un meilleur prix",
-        "Parce que le magasin refuse les commandes tardives",
-        "Parce que les pièces doivent vieillir en stock avant montage",
+        "Pour bénéficier d'un meilleur prix grâce à une commande groupée en début d'année",
+        "Parce que le magasin refuse les commandes passées moins de trois mois avant l'arrêt",
+        "Parce que les pièces doivent vieillir en stock avant d'être montées sur l'équipement",
         "Une pièce absente sur le chemin critique allonge directement la durée de l'arrêt"
       ],
       "answer": 3,
@@ -560,10 +560,10 @@
       "img": "svg/gantt-chart.svg",
       "imgAlt": "Diagramme de Gantt d'un arrêt programmé : barres de tâches sur un axe de temps, liens de dépendance et jalons en losange",
       "choices": [
-        "8 jours ; A-B-D-F",
-        "14 jours ; toutes les tâches s'enchaînent",
-        "10 jours ; A-C-E-F",
-        "12 jours ; A-C-E-F plus deux jours de marge"
+        "8 jours ; A-B-D-F : 2 + 1 + 3 + 2, branche la plus courte retenue",
+        "14 jours ; toutes les tâches s'enchaînent l'une après l'autre sans parallélisme",
+        "10 jours ; A-C-E-F : 2 + 2 + 4 + 2 jours sur la branche la plus longue",
+        "12 jours ; A-C-E-F plus deux jours de marge pour imprévus"
       ],
       "answer": 2,
       "explain": "A-C-E-F = 2 + 2 + 4 + 2 = 10 jours ; A-B-D-F = 2 + 1 + 3 + 2 = 8 jours. Le chemin le plus long est critique et fixe la durée. B et D ont 2 jours de marge.",
@@ -578,12 +578,12 @@
       "img": "svg/gantt-chart.svg",
       "imgAlt": "Diagramme de Gantt d'un arrêt programmé : barres de tâches sur un axe de temps, liens de dépendance et jalons en losange",
       "choices": [
-        "0 jour : elle est critique",
-        "2 jours",
-        "4 jours",
-        "1 jour"
+        "2 jours : A-B-D dure 6 jours, A-C-E dure 8 jours",
+        "0 jour : D est sur le chemin critique de l'arrêt",
+        "4 jours : écart entre la durée de E et celle de D",
+        "1 jour : écart entre D (3 jours) et B (1 jour)"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "Branche B-D : 1 + 3 = 4 jours ; branche C-E : 2 + 4 = 6 jours. L'écart de 2 jours est la marge de B et de D : D peut glisser de 2 jours sans toucher la fin.",
       "seconds": 75,
       "status": "draft"
@@ -596,12 +596,12 @@
       "img": "svg/gantt-chart.svg",
       "imgAlt": "Diagramme de Gantt d'un arrêt programmé : barres de tâches sur un axe de temps, liens de dépendance et jalons en losange",
       "choices": [
-        "Maintenir T1 et décaler T2 dans sa marge, après T1",
-        "Décaler T1 pour que T2 démarre à temps",
+        "Décaler T1 pour que T2 démarre à temps, malgré son statut critique",
         "Affecter un seul soudeur à chaque tâche pour tout garder en parallèle",
-        "Appeler en urgence un sous-traitant pour les deux tâches"
+        "Appeler en urgence un sous-traitant pour les deux tâches, sans analyse de coût",
+        "Maintenir T1 au plus tôt et décaler T2 dans sa marge de 5 jours, après T1"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "Le lissage des ressources consiste à utiliser la marge des tâches non critiques : T2 peut attendre sans retarder l'arrêt, T1 non.",
       "seconds": 60,
       "status": "draft"
@@ -614,12 +614,12 @@
       "img": "photo/crane-lifting.jpg",
       "imgAlt": "Grue en train de lever une lourde charge sur un site industriel",
       "choices": [
-        "Comparer la location d'une seconde grue et un nouveau séquencement (avec prolongation d'un jour), en pesant le coût de chaque option face au coût d'un jour d'arrêt",
-        "Reséquencer d'office : aucun coût n'est à calculer",
-        "Faire lever les deux charges ensemble avec la même grue",
-        "Décaler une tâche à la fin de l'arrêt sans analyser l'impact"
+        "Reséquencer d'office : aucun coût n'est à calculer, un jour de décalage étant acceptable",
+        "Faire lever les deux charges ensemble avec la même grue, sous la surveillance du chef de levage",
+        "Décaler une des deux tâches à la fin de l'arrêt sans analyser l'impact sur le chemin critique",
+        "Comparer location d'une seconde grue et reséquencement, en pesant chaque coût face au coût d'un jour d'arrêt"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "Sur le chemin critique, un conflit de ressource coûte des jours d'arrêt. On chiffre les options (seconde ressource, reséquencement) et on retient la moins coûteuse, en respectant les règles de levage.",
       "seconds": 70,
       "status": "draft"
@@ -630,9 +630,9 @@
       "level": 2,
       "q": "Accélérer une tâche critique de 2 jours coûte 6 millions de FCFA de surcoût. Un jour d'arrêt coûte 15 millions de FCFA de production perdue, et le chemin restera critique. Que décider ?",
       "choices": [
-        "Ne pas accélérer : un surcoût n'est jamais justifié",
-        "Accélérer seulement si le surcoût est nul",
-        "Accélérer plutôt une tâche non critique",
+        "Ne pas accélérer : un surcoût n'est jamais justifié dans un budget d'arrêt validé",
+        "Accélérer seulement si le surcoût est nul pour le budget de l'arrêt programmé",
+        "Accélérer plutôt une tâche non critique, dont le coût d'accélération est plus faible",
         "Accélérer : le gain de 2 jours vaut 30 millions pour 6 millions de surcoût"
       ],
       "answer": 3,
@@ -648,12 +648,12 @@
       "img": "svg/gantt-chart.svg",
       "imgAlt": "Diagramme de Gantt d'un arrêt programmé : barres de tâches sur un axe de temps, liens de dépendance et jalons en losange",
       "choices": [
-        "0 jour",
-        "3 jours",
-        "4 jours",
-        "7 jours"
+        "0 jour : la tâche est supposée sur le chemin critique",
+        "4 jours : fin au plus tard (12) − fin au plus tôt (8)",
+        "3 jours : durée de la tâche, fin au plus tôt (8) − début (5)",
+        "7 jours : fin au plus tard (12) − début au plus tôt (5)"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Marge totale = fin au plus tard − fin au plus tôt = 12 − 8 = 4 jours. La durée de 3 jours (8 − 5) n'est pas la marge.",
       "seconds": 55,
       "status": "draft"
@@ -666,12 +666,12 @@
       "img": "svg/gantt-chart.svg",
       "imgAlt": "Diagramme de Gantt d'un arrêt programmé : barres de tâches sur un axe de temps, liens de dépendance et jalons en losange",
       "choices": [
-        "SPI = 1,25 : l'arrêt a 25 % d'avance",
+        "SPI = 1,25 : l'arrêt a 25 % d'avance, rapport inversé entre plan et réalisé",
+        "SPI = 6 : retard de 6 points d'avancement par rapport au plan prévu",
         "SPI = 0,8 : l'arrêt avance à 80 % du rythme prévu, donc en retard",
-        "SPI = 6 : retard de 6 points",
-        "SPI = 0,8 : l'arrêt a 20 % d'avance"
+        "SPI = 0,8 : l'arrêt a 20 % d'avance sur le plan, la valeur étant sous 1"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "SPI = avancement réalisé / avancement planifié = 24 / 30 = 0,8. Inférieur à 1 : retard, qui impose une analyse des écarts sur le chemin critique et un plan de rattrapage.",
       "seconds": 65,
       "status": "draft"
@@ -684,12 +684,12 @@
       "img": "photo/warehouse.jpg",
       "imgAlt": "Magasin de pièces de rechange avec rayonnages",
       "choices": [
-        "À baisser son prix d'achat",
-        "À garantir sa disponibilité à la date prévue et à empêcher qu'elle soit consommée ailleurs",
-        "À la renvoyer au fournisseur",
-        "À la sortir du patrimoine de l'entreprise"
+        "À baisser son prix d'achat grâce à un engagement de volume auprès du fournisseur",
+        "À la renvoyer au fournisseur en cas de retard de l'intervention concernée",
+        "À la sortir du patrimoine de l'entreprise dès l'ouverture de l'OT",
+        "À garantir sa disponibilité à la date prévue et à empêcher sa consommation ailleurs"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "La réservation bloque la quantité pour l'OT, assure la disponibilité au moment de l'exécution et permet d'imputer le coût au bon travail.",
       "seconds": 40,
       "status": "draft"
@@ -701,9 +701,9 @@
       "q": "Pourquoi un catalogue d'articles à désignation normalisée est-il utile ?",
       "choices": [
         "Il évite les doublons (même pièce sous plusieurs références) et facilite recherches et commandes",
-        "Il dispense de tout stock de sécurité",
-        "Il augmente automatiquement le taux de service",
-        "Il remplace l'inventaire annuel"
+        "Il dispense de tout stock de sécurité, la désignation normalisée garantissant la disponibilité",
+        "Il augmente automatiquement le taux de service, sans changement de politique de stock du magasin",
+        "Il remplace l'inventaire annuel, le catalogue étant mis à jour à chaque mouvement"
       ],
       "answer": 0,
       "explain": "Une référence unique par pièce évite les stocks dupliqués et les erreurs de commande. Il ne supprime pas le besoin d'un stock de sécurité ni d'inventaire.",
@@ -718,12 +718,12 @@
       "img": "svg/abc-stock-curve.svg",
       "imgAlt": "Courbe ABC cumulée : peu de références (A) représentent la majeure partie de la valeur consommée",
       "choices": [
-        "Même suivi pour toutes les références",
-        "Suivi serré des C car ils sont les plus nombreux",
-        "Retirer les articles A du stock car ils sont chers",
-        "Suivi serré et revues fréquentes des A ; gestion simple et automatisée des C"
+        "Même suivi pour toutes les références, afin de garantir l'équité de traitement des articles",
+        "Suivi serré des C car ils sont les plus nombreux, et gestion allégée des A",
+        "Suivi serré et revues fréquentes des A ; gestion simple et automatisée des C",
+        "Retirer les articles A du stock car ils sont chers, et les commander à la demande"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "L'effort de gestion se concentre là où est la valeur : peu de références A pèsent l'essentiel du capital. Les C, nombreux mais peu coûteux, se simplifient.",
       "seconds": 55,
       "status": "draft"
@@ -734,12 +734,12 @@
       "level": 2,
       "q": "Une pompe consomme 2 joints par semaine, le délai de réapprovisionnement est de 6 semaines et le stock de sécurité de 4 joints. Quel est le point de commande ?",
       "choices": [
-        "12 joints",
-        "10 joints",
-        "16 joints",
-        "24 joints"
+        "12 joints : 2 × 6, stock de sécurité oublié",
+        "10 joints : 2 × 3 + 4, délai de 3 semaines retenu",
+        "24 joints : 2 × 6 × 2, stock de sécurité doublé par erreur",
+        "16 joints : 2 × 6 semaines + 4 de stock de sécurité"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Point de commande = consommation × délai + stock de sécurité = 2 × 6 + 4 = 16. Oublier le stock de sécurité donne 12.",
       "seconds": 60,
       "status": "draft"
@@ -750,12 +750,12 @@
       "level": 1,
       "q": "Qu'est-ce qu'une pièce de rechange stratégique (d'assurance) ?",
       "choices": [
-        "Une pièce consommable utilisée chaque semaine",
-        "Une pièce toujours achetée au prix le plus bas",
+        "Une pièce consommable utilisée chaque semaine, stockée en grande quantité au magasin",
         "Une pièce rarement consommée, coûteuse, à long délai, dont l'absence peut arrêter la production",
-        "Une pièce reçue en don d'un autre site"
+        "Une pièce achetée systématiquement au prix le plus bas, sans critère de disponibilité",
+        "Une pièce reçue en don d'un autre site, conservée sans suivi ni valorisation"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Sa présence en stock se justifie par le risque (impact et délai) et non par sa consommation, par exemple le rotor d'une turbine.",
       "seconds": 45,
       "status": "draft"
@@ -768,10 +768,10 @@
       "img": "photo/warehouse.jpg",
       "imgAlt": "Magasin de pièces de rechange avec rayonnages",
       "choices": [
-        "88 %",
-        "94 %",
-        "6 %",
-        "98 %"
+        "88 % : 188 ÷ 214, base de demandes erronée",
+        "94 % : 188 demandes servies ÷ 200 demandes",
+        "6 % : 12 ÷ 200, taux de rupture, non de service",
+        "98 % : 196 ÷ 200, deux demandes servies en plus"
       ],
       "answer": 1,
       "explain": "Taux de service = 188 / 200 = 94 %.",
@@ -786,12 +786,12 @@
       "img": "photo/oil-rig-offshore.jpg",
       "imgAlt": "Plateforme pétrolière offshore en mer",
       "choices": [
-        "Vérifier l'interchangeabilité, l'emprunt formalisé ou la remise en état, puis la livraison express, et n'autoriser la cannibalisation que tracée et régularisée",
-        "Cannibaliser immédiatement la pompe d'une autre unité sans le déclarer",
-        "Attendre la livraison sans rien changer",
-        "Arrêter la production et commander une pompe neuve sans analyse"
+        "Cannibaliser immédiatement la pompe d'une autre unité, sans le déclarer, pour gagner du temps sur la remise en service",
+        "Vérifier interchangeabilité, emprunt ou remise en état, puis livraison express ; cannibalisation tracée seulement",
+        "Attendre la livraison de la pièce sans rien changer à l'exploitation ni au programme de maintenance",
+        "Arrêter la production et commander une pompe neuve sans analyse préalable des options ni des délais"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "On épuise d'abord les solutions qui n'affaiblissent pas un autre équipement. La cannibalisation, dernier recours, doit être autorisée, tracée et compensée par une commande de remplacement.",
       "seconds": 65,
       "status": "draft"
@@ -804,12 +804,12 @@
       "img": "photo/warehouse.jpg",
       "imgAlt": "Magasin de pièces de rechange avec rayonnages",
       "choices": [
-        "Même méthode pour les deux : stock calculé sur la consommation moyenne",
-        "Aucun stock de rotor car il se consomme trop peu, et gros stock de roulements",
-        "Plusieurs rotors de précaution, aucun roulement",
-        "Roulement : stock géré au point de commande ; rotor : décision fondée sur le risque (stock d'assurance, pool ou accord de partage)"
+        "Même méthode pour les deux articles : stock calculé sur la consommation moyenne annuelle de chacun",
+        "Pas de stock de rotor car il se consomme trop peu, et gros stock de roulements en magasin local",
+        "Roulement : stock au point de commande ; rotor : décision fondée sur le risque (assurance, pool)",
+        "Plusieurs rotors de précaution en magasin et aucun roulement, livrable pourtant en trois jours"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "Le roulement relève d'une gestion par consommation ; le rotor, d'une analyse de risque (impact, délai, probabilité, coût) : sa consommation ne suffit pas à décider.",
       "seconds": 70,
       "status": "draft"
@@ -820,12 +820,12 @@
       "level": 3,
       "q": "20 % de la valeur du stock n'a connu aucun mouvement depuis cinq ans. Que faire ?",
       "choices": [
-        "Tout jeter immédiatement pour libérer de la place",
-        "Tout conserver : une pièce peut toujours servir un jour",
-        "Tout vendre à n'importe quel prix avant la fin de l'exercice",
-        "Trier par criticité : conserver les pièces stratégiques justifiées, revaloriser, céder ou déclasser le reste, et mettre le catalogue à jour"
+        "Trier par criticité : conserver les stratégiques justifiées, céder ou déclasser le reste",
+        "Tout jeter immédiatement pour libérer de la place et réduire la valeur du stock au bilan annuel",
+        "Tout conserver : une pièce peut toujours servir un jour, même sans mouvement depuis cinq ans",
+        "Tout vendre à n'importe quel prix avant la fin de l'exercice pour assainir le bilan comptable"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Un stock dormant n'est pas forcément inutile (pièces d'assurance), mais il doit être analysé. Jeter ou conserver sans trier gaspille du capital ou fait perdre une protection.",
       "seconds": 60,
       "status": "draft"

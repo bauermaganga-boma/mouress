@@ -82,9 +82,9 @@
       "imgAlt": "Salle de contrôle d'une installation de production",
       "choices": [
         "La lire, la comprendre, agir selon la procédure et la tracer",
-        "L'acquitter immédiatement pour libérer l'écran",
-        "L'inhiber si elle revient souvent",
-        "Attendre qu'elle soit confirmée par un second opérateur absent"
+        "L'acquitter aussitôt pour libérer l'écran, puis la traiter plus tard",
+        "L'inhiber temporairement si elle revient souvent sur la même boucle",
+        "Attendre qu'elle soit confirmée par un second opérateur de la salle"
       ],
       "answer": 0,
       "explain": "Une alarme est un message à traiter. Acquitter ou inhiber sans analyse est une dérive qui conduit à ignorer le signal qui comptait.",
@@ -97,10 +97,10 @@
       "level": 1,
       "q": "Pourquoi maintient-on des rondes sur le terrain alors que le système de conduite surveille l'unité ?",
       "choices": [
-        "Parce que le système de conduite n'est jamais fiable",
-        "Pour détecter ce que les capteurs ne voient pas : fuites naissantes, bruits, vibrations, odeurs, vannes mal positionnées",
-        "Pour occuper les opérateurs de nuit",
-        "Pour remplacer les inspections réglementaires"
+        "Parce que le système de conduite est peu fiable dès qu'une vanne est en manuel",
+        "Pour détecter fuites naissantes, bruits, vibrations et odeurs",
+        "Pour occuper les opérateurs de nuit et maintenir la présence terrain",
+        "Pour remplacer les inspections réglementaires des équipements sous pression"
       ],
       "answer": 1,
       "explain": "Les sens humains complètent l'instrumentation. La ronde détecte souvent la première anomalie, avant l'alarme.",
@@ -115,10 +115,10 @@
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique avec sorties gaz, huile et eau",
       "choices": [
-        "Un manque de liquide à la pompe de la ligne gaz",
-        "Une baisse de la pression d'huile à la sortie du séparateur sans autre conséquence",
+        "Un manque de liquide à l'aspiration de la pompe d'huile en aval",
+        "Une baisse de la pression d'huile du séparateur, sans autre conséquence",
         "L'entraînement de liquide dans la ligne gaz vers le compresseur",
-        "Une meilleure séparation du gaz"
+        "Une meilleure séparation du gaz grâce au temps de séjour plus long"
       ],
       "answer": 2,
       "explain": "Quand le niveau est trop haut, la zone gaz diminue et du liquide est emporté vers l'aval, ce qui peut endommager un compresseur. La régulation, les alarmes et les arrêts haut-haut sont les barrières.",
@@ -131,10 +131,10 @@
       "level": 1,
       "q": "Que représente l'enveloppe d'exploitation d'un équipement ?",
       "choices": [
-        "Les limites de conception, que l'on peut atteindre en pointe",
-        "La plage de réglage des alarmes basses seulement",
-        "Les limites du contrat avec le client",
-        "Les limites de fonctionnement à respecter, plus étroites que les limites de conception"
+        "Les limites de conception, atteignables en pointe de production",
+        "La plage de réglage des seules alarmes basses de l'équipement",
+        "Les limites fixées par le contrat de vente avec le client",
+        "Les limites de fonctionnement, plus étroites que celles de conception"
       ],
       "answer": 3,
       "explain": "Les limites d'exploitation laissent une marge par rapport à la conception : on opère à l'intérieur, on ne les considère jamais comme des cibles.",
@@ -149,12 +149,12 @@
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique avec sorties gaz, huile et eau",
       "choices": [
-        "Attendre le haut-haut : c'est la fonction de l'arrêt automatique",
-        "Reprendre la main selon la procédure, réduire l'entrée avant le trip, faire vérifier la vanne par le terrain et informer",
-        "Inhiber l'arrêt haut-haut pour éviter le trip",
-        "Augmenter la pression du séparateur pour compenser"
+        "Attendre le haut-haut : l'arrêt automatique est là pour traiter ce cas",
+        "Inhiber l'arrêt haut-haut pour éviter un trip pendant la correction",
+        "Reprendre la main, réduire l'entrée, faire vérifier la vanne",
+        "Augmenter la pression du séparateur pour compenser la montée du niveau"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Le superviseur anticipe : on n'attend pas la dernière barrière. Inhiber l'arrêt supprime la protection ; augmenter la pression ne traite pas la cause.",
       "seconds": 100,
       "status": "draft"
@@ -165,12 +165,12 @@
       "level": 3,
       "q": "Pendant une ronde, vous sentez une odeur de gaz près d'un compresseur, sans aucune alarme. Que faites-vous ?",
       "choices": [
-        "Chercher la fuite avec une flamme pour la localiser",
-        "Ignorer, puisque les détecteurs fixes n'ont rien signalé",
-        "Vous éloigner, alerter la salle de contrôle, contrôler avec un détecteur portable et appliquer la procédure, sans source d'ignition",
-        "Vous approcher pour mieux identifier la source avant d'alerter"
+        "Chercher la fuite avec une flamme pour la localiser rapidement",
+        "Ignorer l'odeur, puisque les détecteurs fixes n'ont rien signalé",
+        "Vous approcher pour identifier la source avant d'alerter la salle",
+        "Vous éloigner, alerter la salle, contrôler au détecteur portable"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "L'absence d'alarme n'écarte pas une fuite locale. On s'éloigne, on alerte, on mesure, on traite. Une flamme est une source d'ignition.",
       "seconds": 75,
       "status": "draft"
@@ -181,12 +181,12 @@
       "level": 3,
       "q": "Le siège demande une hausse de 5 % de la production pour le week-end, en poussant les puits au-delà des limites de débit fixées pour éviter l'érosion et les venues de sable. Que fait le superviseur ?",
       "choices": [
-        "Pousser les puits : le siège connaît les enjeux",
-        "Pousser seulement la nuit, quand moins de personnes surveillent",
-        "Appliquer la demande puis la signaler à l'ingénierie après coup",
-        "Refuser par écrit de sortir de l'enveloppe d'exploitation et proposer les optimisations possibles (duses, gas-lift) dans les limites autorisées"
+        "Refuser par écrit de sortir de l'enveloppe, proposer des optimisations autorisées",
+        "Pousser les puits : le siège connaît les enjeux et assume la décision du week-end entier",
+        "Pousser les puits la nuit seulement, quand le sable est plus facile à surveiller",
+        "Appliquer la demande, puis la signaler à l'ingénierie après le week-end"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "On ne sort pas de l'enveloppe pour tenir un chiffre. Le superviseur propose ce qui est possible dans les limites et justifie par écrit.",
       "seconds": 100,
       "status": "draft"
@@ -199,12 +199,12 @@
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "Boucle de régulation de débit avec transmetteur, régulateur et vanne",
       "choices": [
-        "La surveiller, la tracer et la remettre en automatique dès que possible",
-        "Ne plus s'en occuper : le manuel est plus fiable",
-        "La laisser en manuel toute la journée sans suivi",
-        "L'indiquer seulement dans le journal du lendemain"
+        "Ne plus s'en occuper : le mode manuel est plus fiable que l'automatique",
+        "La surveiller, la tracer et la remettre en automatique ensuite",
+        "La laisser en manuel toute la journée, sans suivi particulier",
+        "L'indiquer seulement dans le journal du quart suivant"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "En manuel, plus rien ne corrige automatiquement les écarts : la variable peut dériver. On suit de près et on revient en automatique.",
       "seconds": 60,
       "status": "draft"
@@ -215,12 +215,12 @@
       "level": 1,
       "q": "À quoi servent les tendances (trends) du système de conduite ?",
       "choices": [
-        "À remplacer les rondes",
-        "À calculer les salaires des opérateurs",
-        "À détecter les dérives lentes avant qu'elles ne déclenchent une alarme",
-        "À régler les alarmes sans rien analyser"
+        "À remplacer les rondes terrain par une surveillance continue",
+        "À détecter les dérives lentes avant le déclenchement d'une alarme",
+        "À calculer les temps de présence des opérateurs en salle",
+        "À régler les seuils d'alarme sans analyser l'historique des mesures"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Les tendances montrent l'évolution dans le temps et révèlent les dérives avant l'alarme, ce qui permet d'anticiper.",
       "seconds": 45,
       "status": "draft"
@@ -233,12 +233,12 @@
       "img": "svg/risk-matrix.svg",
       "imgAlt": "Matrice de risque probabilité par gravité",
       "choices": [
-        "Production, intégrité, environnement, puis personnes",
-        "Environnement, production, intégrité, puis personnes",
-        "Coûts, production, personnes, puis environnement",
-        "Personnes, environnement, intégrité des installations, puis production"
+        "Personnes, environnement, intégrité, puis production",
+        "Production, intégrité, environnement, puis sécurité des personnes",
+        "Environnement, production, intégrité, puis sécurité des personnes",
+        "Intégrité, production, personnes, puis environnement"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "La sécurité des personnes passe avant tout, suivie de l'environnement et de l'intégrité ; la production vient en dernier dans un conflit de priorités.",
       "seconds": 45,
       "status": "draft"
@@ -249,12 +249,12 @@
       "level": 3,
       "q": "La production est en retard sur l'objectif. La maintenance demande l'isolement planifié d'une ligne pour un permis. L'exploitation voudrait maintenir la ligne en service pour un enlèvement de cargaison demain. Que fait le superviseur ?",
       "choices": [
-        "Arbitrer sur le risque : honorer l'isolement planifié si la sécurité ou l'intégrité le justifie, chercher une reprogrammation partagée, documenter et escalader en cas de désaccord",
-        "Annuler l'isolement sans en parler à la maintenance",
-        "Faire intervenir la maintenance sans isolement pour gagner du temps",
-        "Laisser les deux équipes se débrouiller entre elles"
+        "Annuler l'isolement planifié pour sécuriser la cargaison, sans informer la maintenance",
+        "Faire intervenir la maintenance sans isolement pour tenir le planning de production",
+        "Laisser maintenance et exploitation s'arranger entre elles sur la ligne concernée",
+        "Arbitrer sur le risque, honorer l'isolement si la sécurité le justifie, escalader"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "L'arbitrage est une décision de risque, partagée et documentée. Intervenir sans isolement ou annuler sans dialogue crée un danger ou un conflit durable.",
       "seconds": 110,
       "status": "draft"
@@ -265,12 +265,12 @@
       "level": 2,
       "q": "Deux demandes arrivent en même temps : un permis de travail à chaud non urgent et la purge urgente d'une ligne contenant du gaz sous pression. Que priorise le superviseur ?",
       "choices": [
-        "Le permis à chaud, car planifié",
-        "La purge urgente, liée à la sécurité immédiate, et reporte explicitement le permis à chaud",
-        "Les deux en parallèle avec le même opérateur",
-        "La première arrivée, quelle que soit la nature"
+        "Le permis à chaud, car il est planifié et que l'équipe est déjà mobilisée",
+        "Les deux en parallèle, avec le même opérateur affecté aux deux tâches",
+        "La purge urgente, liée à la sécurité immédiate, en reportant le permis à chaud",
+        "La première demande arrivée, quelle que soit sa nature ou son urgence"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Une urgence sécurité passe avant une tâche planifiée. Les reports sont explicites et tracés ; faire les deux avec un seul opérateur crée une erreur.",
       "seconds": 60,
       "status": "draft"
@@ -283,10 +283,10 @@
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
-        "Garder A à plein et étrangler B, soit environ 925 barils/jour",
-        "Fermer B pour dédier toute la compression à A",
-        "Ouvrir les deux à plein et laisser le compresseur se déclencher",
-        "Garder B à plein et étrangler A pour respecter la capacité, soit environ 1 200 barils/jour"
+        "Garder A à plein et étrangler B, soit environ 1 050 barils/jour",
+        "Fermer B pour dédier toute la compression à A, soit 800 barils/jour",
+        "Ouvrir les deux à plein, au risque d'un déclenchement du compresseur",
+        "Garder B à plein et étrangler A, soit environ 1 200 barils/jour"
       ],
       "answer": 3,
       "explain": "Garder B à plein utilise 200 unités et laisse 700 pour A : 500 + 700 = 1 200 barils/jour. Privilégier A donne 800 + environ 125. Dépasser la capacité cause un trip.",
@@ -299,12 +299,12 @@
       "level": 3,
       "q": "Un chef de projet vous demande oralement de contourner une procédure de sécurité « juste ce soir » pour tenir un délai. Que faites-vous ?",
       "choices": [
-        "Refuser, expliquer, proposer l'alternative conforme et escalader si nécessaire",
-        "Accepter si vous connaissez la personne",
-        "Accepter si l'opération dure moins d'une heure",
-        "Accepter en demandant une trace écrite après coup"
+        "Accepter si vous connaissez bien la personne et qu'elle assume le risque",
+        "Accepter si l'opération dure moins d'une heure et reste sous surveillance",
+        "Refuser, expliquer, proposer l'alternative conforme et escalader",
+        "Accepter en demandant une trace écrite après coup à son responsable"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "Un ordre contraire à une procédure de sécurité n'est pas recevable. L'exception orale, même brève ou régularisée plus tard, fragilise toutes les barrières.",
       "seconds": 60,
       "status": "draft"
@@ -317,10 +317,10 @@
       "img": "photo/control-room.jpg",
       "imgAlt": "Salle de contrôle d'une installation de production",
       "choices": [
-        "Les acquitter toutes pour clarifier l'écran",
-        "Traiter d'abord les alarmes de haute priorité et chercher l'alarme initiale pour agir sur la cause",
-        "Traiter la dernière arrivée, qui est la plus récente",
-        "Attendre que le système les regroupe seul"
+        "Les acquitter toutes pour clarifier l'écran et repartir d'une page propre",
+        "Traiter les alarmes prioritaires et chercher l'alarme initiale pour agir sur la cause",
+        "Traiter la dernière arrivée, qui est la plus récente et donc la plus informative",
+        "Attendre que le système les regroupe seul avant d'intervenir sur le procédé"
       ],
       "answer": 1,
       "explain": "En cascade, les alarmes suivantes sont souvent des conséquences. L'alarme initiale et la priorité guident l'action.",
@@ -335,12 +335,12 @@
       "img": "photo/storage-tanks.jpg",
       "imgAlt": "Parc de stockage de produits",
       "choices": [
-        "Expédier : le client mélangera avec d'autres produits",
-        "Diluer en brut propre juste avant le chargement sans le signaler",
-        "Ne pas expédier hors spécification sans accord formel de la qualité et du client ; recirculer ou traiter le brut et informer le planning",
-        "Charger puis déclarer l'écart après le départ du navire"
+        "Ne pas expédier hors spécification sans accord qualité et client ; recirculer ou traiter",
+        "Expédier en l'état : le client mélangera ce brut avec d'autres produits à l'arrivée",
+        "Diluer en brut propre juste avant le chargement, sans le signaler au client",
+        "Charger puis déclarer l'écart de spécification après le départ du navire"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Expédier un produit hors spécification engage la responsabilité du site. On traite, on informe et on ne dilue jamais sans accord.",
       "seconds": 110,
       "status": "draft"
@@ -351,10 +351,10 @@
       "level": 2,
       "q": "Pourquoi double-t-on la vérification d'une opération critique (alignement de lignes, ouverture sous pression) ?",
       "choices": [
-        "Pour détecter l'erreur humaine par un contrôle indépendant avant l'action irréversible",
-        "Pour doubler les effectifs nécessaires",
-        "Pour ralentir volontairement les opérations",
-        "Pour réaliser des économies d'énergie"
+        "Détecter l'erreur humaine par un contrôle indépendant avant l'action",
+        "Doubler les effectifs mobilisés sur chaque opération critique du quart",
+        "Ralentir volontairement les opérations pour limiter les risques de production",
+        "Réaliser des économies d'énergie sur les lignes concernées par l'opération"
       ],
       "answer": 0,
       "explain": "Une double vérification est une barrière contre l'erreur individuelle, notamment pour les opérations dont les conséquences sont graves.",
@@ -367,12 +367,12 @@
       "level": 1,
       "q": "Qu'est-ce qu'un trip ?",
       "choices": [
-        "Un arrêt manuel décidé par le superviseur pour maintenance",
-        "Un arrêt automatique déclenché par un système de protection quand une variable dépasse un seuil",
-        "Une alarme de basse priorité",
-        "Une panne de communication entre salle et terrain"
+        "Un arrêt manuel décidé par le superviseur pour réaliser une maintenance planifiée",
+        "Une alarme de basse priorité signalant une dérive lente sans action requise",
+        "Une panne de communication entre la salle de contrôle et le terrain",
+        "Un arrêt automatique déclenché par une protection quand un seuil est dépassé"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Le trip est un acte de protection. On ne le « remet pas en route » sans comprendre ce qui l'a causé.",
       "seconds": 45,
       "status": "draft"
@@ -383,12 +383,12 @@
       "level": 3,
       "q": "Après le trip d'un compresseur, quelle séquence est la plus juste ?",
       "choices": [
-        "Réinitialiser immédiatement et redémarrer",
-        "Attendre la prochaine relève pour décider",
-        "Stabiliser le procédé, diagnostiquer, vérifier l'absence de dommage ou fuite, réinitialiser selon la procédure puis redémarrer avec les permissifs satisfaits",
-        "Contourner la protection qui a déclenché pour accélérer"
+        "Réinitialiser immédiatement et redémarrer, pour limiter les pertes de production",
+        "Stabiliser, diagnostiquer, vérifier l'absence de fuite, réinitialiser selon la procédure",
+        "Attendre la prochaine relève pour décider, en laissant le compresseur à l'arrêt",
+        "Contourner la protection qui a déclenché, le temps de redémarrer le compresseur"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "On ne redémarre qu'après compréhension de la cause et vérification de l'état sûr. Réinitialiser à l'aveugle expose à répéter l'événement.",
       "seconds": 60,
       "status": "draft"
@@ -401,12 +401,12 @@
       "img": "photo/flare-stack.jpg",
       "imgAlt": "Torche en fonctionnement sur une installation",
       "choices": [
-        "Redémarrer tout de suite : s'il y a un faux trip, c'est inutile de chercher",
-        "Fermer la torche pour réduire le bruit",
-        "Attendre l'arrivée du chef de site pour toute action",
-        "Stabiliser (réduire l'alimentation), surveiller la torche et les pressions, diagnostiquer et ne réinitialiser qu'après identification de la cause"
+        "Redémarrer tout de suite : si le trip est parasite, chercher la cause est inutile",
+        "Réduire l'ouverture de la torche pour limiter les rejets, le temps d'un redémarrage",
+        "Stabiliser, surveiller torche et pressions, ne réinitialiser qu'après diagnostic",
+        "Attendre l'arrivée du chef de site avant d'engager la moindre action sur le procédé"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "La stabilisation est prioritaire, puis la compréhension. Un trip « parasite » se prouve ; sinon on redémarre sur une cause réelle. La torche est un équipement de sécurité.",
       "seconds": 100,
       "status": "draft"
@@ -419,12 +419,12 @@
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
-        "Aller vérifier la source pour confirmer visuellement",
-        "Déclencher l'alarme, éloigner et mettre les personnes en sécurité, laisser les séquences d'arrêt et d'isolement agir, ne retourner sur zone qu'avec autorisation",
-        "Inhiber un détecteur pour confirmer si l'autre persiste",
-        "Attendre un troisième détecteur avant d'agir"
+        "Aller vérifier la source de la fuite sur place pour la confirmer visuellement",
+        "Inhiber l'un des deux détecteurs pour voir si la lecture de l'autre persiste",
+        "Déclencher l'alarme, mettre le personnel en sécurité, ne revenir qu'avec autorisation",
+        "Attendre la confirmation d'un troisième détecteur avant de déclencher l'alarme"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Un gaz confirmé par plusieurs détecteurs est traité comme réel. Mettre en sécurité d'abord ; vérifier « pour voir » expose des personnes.",
       "seconds": 100,
       "status": "draft"
@@ -437,12 +437,12 @@
       "img": "photo/flare-stack.jpg",
       "imgAlt": "Torche en fonctionnement sur une installation",
       "choices": [
-        "Le compresseur de gaz",
-        "La pompe de fond de puits",
-        "Le ballon de torche (knock-out drum)",
+        "Le compresseur de gaz de torche",
+        "Le ballon de torche (KO drum)",
+        "La pompe de fond du ballon de purge",
         "Le stockage de produits finis"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Le ballon de torche sépare les liquides du gaz envoyé à la torche, pour éviter les retombées enflammées. Son niveau fait partie de la surveillance.",
       "seconds": 60,
       "status": "draft"
@@ -455,10 +455,10 @@
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Récipient sous pression protégé par une soupape de sécurité",
       "choices": [
-        "Ignorer : elle a fonctionné comme prévu",
-        "Augmenter le tarage pour éviter une réouverture",
-        "Fermer le circuit d'évacuation vers la torche",
-        "Rechercher et traiter la cause de la surpression, déclarer l'événement et faire vérifier la soupape"
+        "Ignorer l'événement : la soupape a fonctionné comme prévue et s'est refermée",
+        "Augmenter le tarage pour éviter toute réouverture lors d'une prochaine montée",
+        "Isoler le circuit d'évacuation vers la torche pour protéger la soupape",
+        "Rechercher la cause de la surpression et faire vérifier la soupape"
       ],
       "answer": 3,
       "explain": "Une ouverture de soupape est un événement : la cause de surpression doit être comprise et la soupape vérifiée. Modifier le tarage ou isoler l'évacuation supprime la protection.",
@@ -471,10 +471,10 @@
       "level": 3,
       "q": "Une coupure électrique survient la nuit sur un site alimenté par des groupes. Les pompes s'arrêtent, les pressions évoluent. Que fait le superviseur ?",
       "choices": [
-        "Mettre le procédé en sécurité, puis redémarrer d'abord les utilités et les charges de manière séquentielle selon la procédure",
-        "Redémarrer toutes les charges en même temps pour gagner du temps",
-        "Attendre le matin sans rien faire",
-        "Forcer les protections pour redémarrer plus vite"
+        "Mettre le procédé en sécurité, puis redémarrer utilités et charges en séquence",
+        "Redémarrer toutes les charges simultanément pour retrouver la production plus vite",
+        "Attendre le matin pour redémarrer, en laissant le procédé en l'état",
+        "Forcer les protections de basse tension pour redémarrer les pompes plus vite"
       ],
       "answer": 0,
       "explain": "Un redémarrage simultané provoque des appels de courant qui peuvent faire retomber le réseau. On sécurise, puis on suit la séquence prévue.",
@@ -487,12 +487,12 @@
       "level": 2,
       "q": "Plusieurs vibrations anormales sont détectées sur une pompe en service. Quelle conduite est correcte ?",
       "choices": [
-        "Relever le seuil d'alarme de vibration pour éviter le trip",
-        "Désactiver la protection de vibration",
-        "Réduire la charge ou basculer sur le secours et faire diagnostiquer, sans relever le seuil d'alarme",
+        "Relever le seuil d'alarme de vibration pour éviter le trip de la pompe",
+        "Réduire la charge ou basculer sur le secours et faire diagnostiquer",
+        "Désactiver la protection de vibration le temps de finir le poste",
         "Laisser tourner jusqu'à la panne pour savoir si c'est grave"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Relever un seuil masque le symptôme. On réduit le risque, on utilise le secours et on diagnostique.",
       "seconds": 60,
       "status": "draft"
@@ -503,12 +503,12 @@
       "level": 1,
       "q": "Qu'est-ce qu'un presque-accident à déclarer ?",
       "choices": [
-        "Un accident avec arrêt de travail",
-        "Un accident sans conséquence juridique",
-        "Un événement déjà déclaré par un tiers",
-        "Un événement qui aurait pu causer un dommage ou une blessure mais n'en a pas causé"
+        "Un accident ayant entraîné un arrêt de travail pour le blessé",
+        "Un accident sans conséquence juridique ni dommage matériel",
+        "Un événement qui aurait pu blesser ou endommager, sans conséquence",
+        "Un événement déjà déclaré par un tiers présent sur site"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "Les presque-accidents sont les signaux faibles qui permettent de prévenir l'accident. Tout le monde doit pouvoir les déclarer sans crainte.",
       "seconds": 45,
       "status": "draft"
@@ -519,10 +519,10 @@
       "level": 1,
       "q": "Pourquoi utilise-t-on une check-list lors d'un démarrage ?",
       "choices": [
-        "Pour garantir une séquence complète et la vérification des permissifs, sans oubli",
-        "Pour justifier l'ancienneté des opérateurs",
-        "Pour remplacer le permis de travail",
-        "Pour accélérer le démarrage en sautant des étapes"
+        "Garantir une séquence complète et la vérification des permissifs",
+        "Justifier l'ancienneté et l'expérience des opérateurs de quart",
+        "Remplacer le permis de travail pendant les démarrages planifiés",
+        "Accélérer le démarrage en regroupant ou en sautant certaines étapes"
       ],
       "answer": 0,
       "explain": "La check-list évite les oublis dans une phase à risque. Elle ne dispense d'aucune étape de la procédure.",
@@ -535,12 +535,12 @@
       "level": 2,
       "q": "Avant la remise en service d'une ligne après maintenance, quel ensemble de vérifications est le plus complet ?",
       "choices": [
-        "Un simple contrôle visuel de l'extérieur",
-        "Consignations levées, permis clos, lignes alignées, essai d'étanchéité, détecteurs actifs",
-        "La confirmation orale du sous-traitant",
-        "L'ouverture progressive de la vanne amont"
+        "Un contrôle visuel de l'extérieur de la ligne, des brides et des supports",
+        "La confirmation orale du sous-traitant et la signature de l'exécutant",
+        "L'ouverture progressive de la vanne amont avec surveillance de la pression",
+        "Consignations levées, permis clos, lignes alignées, essai d'étanchéité"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "La remise en service exige des preuves : état des isolations, permis, alignement, étanchéité, protections actives. L'oral ou le visuel seul ne suffisent pas.",
       "seconds": 60,
       "status": "draft"
@@ -553,10 +553,10 @@
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
-        "Resserrer sous pression avec des gants et un détecteur portable",
-        "Ignorer la fuite si elle est petite",
-        "Poursuivre la montée en pression pour vérifier si elle s'aggrave",
-        "Dépressuriser et isoler, réparer sous permis, refaire le test avant de remonter en pression"
+        "Resserrer sous pression avec des gants et un détecteur portable à proximité",
+        "Ignorer la fuite si elle est petite et surveiller régulièrement le manomètre",
+        "Poursuivre la montée en pression pour observer si la fuite s'aggrave ou non",
+        "Dépressuriser et isoler, réparer sous permis, refaire le test avant de remonter"
       ],
       "answer": 3,
       "explain": "Intervenir sous pression sur une fuite d'hydrocarbures est un risque inutile. On dépressurise, on isole, on répare, on retest.",
@@ -569,9 +569,9 @@
       "level": 2,
       "q": "Quelle condition doit être remplie avant de démarrer une pompe centrifuge ?",
       "choices": [
-        "La pompe est amorcée, l'aspiration ouverte, et elle ne tourne jamais à sec",
-        "Démarrer à sec brièvement pour évacuer l'air",
-        "Fermer l'aspiration pour éviter les remous",
+        "La pompe est amorcée, aspiration ouverte, pour ne pas tourner à sec",
+        "Démarrer brièvement à sec pour chasser l'air de la ligne d'aspiration",
+        "Fermer l'aspiration pour éviter les remous dans le corps de pompe",
         "Ouvrir complètement le refoulement avant le démarrage dans tous les cas"
       ],
       "answer": 0,
@@ -587,12 +587,12 @@
       "img": "svg/centrifugal-pump-curve.svg",
       "imgAlt": "Courbe hauteur-débit d'une pompe centrifuge",
       "choices": [
-        "Augmente de manière proportionnelle",
-        "Diminue",
-        "Reste constante",
-        "Devient négative"
+        "Elle augmente proportionnellement au débit",
+        "Elle reste constante quel que soit le débit",
+        "Elle diminue quand le débit augmente",
+        "Elle devient nulle dès que le débit augmente"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "La courbe H-Q d'une pompe centrifuge est décroissante : plus le débit est élevé, plus la hauteur développée est faible. Le point de fonctionnement est l'intersection avec la courbe du circuit.",
       "seconds": 75,
       "status": "draft"
@@ -605,12 +605,12 @@
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
-        "Ouvrir lentement la vanne amont et voir",
-        "Injecter directement du gaz sous pression",
-        "Purger ou inerter pour éliminer l'air",
-        "Attendre que l'air s'évacue seul par les évents"
+        "Ouvrir lentement la vanne amont et observer la pression",
+        "Purger ou inerter le circuit pour éliminer l'air",
+        "Injecter directement le gaz sous pression dans le circuit",
+        "Attendre que l'air s'évacue seul par les évents ouverts"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "L'air dans un circuit d'hydrocarbures peut créer une atmosphère explosive. La purge ou l'inertage est un préalable.",
       "seconds": 60,
       "status": "draft"
@@ -621,10 +621,10 @@
       "level": 3,
       "q": "Après un trip, le démarrage est urgent pour tenir un contrat. Un permissif de basse pression d'huile refuse le démarrage. Un opérateur propose de le shunter « juste pour démarrer ». Que fait le superviseur ?",
       "choices": [
-        "Refuser le shunt, chercher la cause et n'envisager une dérogation que par la procédure formelle d'override avec mesures compensatoires",
-        "Shunter : la machine sera surveillée à proximité",
-        "Shunter seulement si le chef de site n'est pas informé",
-        "Remplacer le capteur par un autre sans contrôle"
+        "Refuser le shunt, chercher la cause, passer par l'override formel",
+        "Shunter : la machine sera surveillée de près par un opérateur sur place",
+        "Shunter uniquement le temps du démarrage, puis rétablir le permissif",
+        "Remplacer le capteur par un autre sans contrôle préalable ni étalonnage"
       ],
       "answer": 0,
       "explain": "Un permissif protège la machine et les personnes. Le shunter pour tenir un délai l'expose à la casse et à l'accident ; une dérogation éventuelle suit la procédure formelle.",
@@ -637,10 +637,10 @@
       "level": 1,
       "q": "Pourquoi monte-t-on en pression par paliers lors d'un démarrage ?",
       "choices": [
-        "Pour consommer moins d'énergie",
-        "Pour contrôler l'étanchéité à chaque palier et détecter une fuite avant la pleine pression",
-        "Pour faire durer plus longtemps la formation",
-        "Parce que les manomètres sont lents"
+        "Consommer moins d'énergie de compression pendant la mise en pression",
+        "Contrôler l'étanchéité à chaque palier avant la pleine pression",
+        "Prolonger la durée du démarrage pour la formation des équipes",
+        "Compenser la lenteur de réponse des manomètres de la ligne de gaz"
       ],
       "answer": 1,
       "explain": "Un palier permet de repérer une fuite à pression modérée et de la traiter avant la pleine charge.",
@@ -655,10 +655,10 @@
       "img": "svg/lockout-tagout.svg",
       "imgAlt": "Consignation avec cadenas, étiquette et vérification d'absence d'énergie",
       "choices": [
-        "La pose de l'étiquette de condamnation",
-        "La signature du permis",
-        "La vérification d'absence d'énergie (par exemple d'absence de tension) avant intervention",
-        "La ronde du lendemain"
+        "La pose de l'étiquette de condamnation sur le dispositif d'isolement",
+        "La signature du permis de travail par l'émetteur et l'exécutant",
+        "La vérification d'absence d'énergie avant intervention",
+        "La ronde de contrôle du lendemain sur tous les équipements consignés"
       ],
       "answer": 2,
       "explain": "L'étiquette et le cadenas empêchent la remise en énergie, mais seule la vérification démontre l'absence d'énergie à l'instant de l'intervention.",
@@ -671,10 +671,10 @@
       "level": 2,
       "q": "Quelle est la responsabilité de l'émetteur d'un permis de travail ?",
       "choices": [
-        "Signer à distance sur la base du dossier de l'exécutant",
-        "Déléguer la signature à l'exécutant",
-        "Signer après le début des travaux",
-        "Vérifier la zone, l'état des équipements et les isolations avant de signer, en se rendant sur place"
+        "Signer à distance sur la base du dossier présenté par l'exécutant",
+        "Déléguer la signature à l'exécutant pour gagner du temps sur le chantier",
+        "Signer après le début des travaux, une fois la zone sécurisée par l'équipe",
+        "Vérifier sur place la zone, les équipements et les isolations"
       ],
       "answer": 3,
       "explain": "Un permis signé sans présence sur le terrain est une formalité. L'émetteur doit constater la réalité des conditions.",
@@ -689,12 +689,12 @@
       "img": "photo/heavy-equipment-maintenance.jpg",
       "imgAlt": "Équipe de maintenance sur un équipement lourd",
       "choices": [
-        "Autoriser avec une surveillance renforcée",
-        "Ne pas autoriser l'intervention tant que l'isolement n'est pas fiable : double isolement, purge ou bride pleine, sinon reporter",
-        "Autoriser si les exécutants portent des protections respiratoires",
-        "Autoriser la nuit, quand moins de personnes sont exposées"
+        "Autoriser avec une surveillance renforcée du débit de fuite pendant l'intervention",
+        "Autoriser si les exécutants portent des protections respiratoires adaptées",
+        "Refuser tant que l'isolement n'est pas fiable : double isolement ou bride pleine",
+        "Autoriser la nuit, quand moins de personnes sont exposées sur l'unité"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Une vanne qui passe n'isole pas. On ne laisse pas intervenir sur un circuit potentiellement sous pression ou avec produit. L'EPI ne remplace pas un isolement fiable.",
       "seconds": 110,
       "status": "draft"
@@ -705,12 +705,12 @@
       "level": 2,
       "q": "À la fin d'une intervention, comment se fait la remise en exploitation d'un équipement ?",
       "choices": [
-        "Par un simple appel téléphonique de la maintenance",
-        "Dès que l'équipement est visuellement propre",
-        "Avec preuve des essais, retrait des consignations et contrôle conjoint exploitation et maintenance",
-        "Au retour du superviseur de jour"
+        "Par un simple appel téléphonique de la maintenance à la salle de contrôle",
+        "Dès que l'équipement est visuellement propre et que la zone est rangée",
+        "Au retour du superviseur de jour, lors de la relève du matin",
+        "Avec preuve des essais, retrait des consignations et contrôle conjoint"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "La remise en exploitation est un acte documenté : essais, consignations retirées, contrôle partagé. Elle ferme la boucle de responsabilité.",
       "seconds": 60,
       "status": "draft"
@@ -721,12 +721,12 @@
       "level": 2,
       "q": "Un prestataire veut commencer avant la signature complète du permis car « tout le monde se connaît ». Que répondez-vous ?",
       "choices": [
-        "C'est acceptable pour une tâche courte",
-        "C'est acceptable s'il a déjà fait le travail la veille",
-        "C'est acceptable si un opérateur le surveille",
-        "Les travaux ne commencent qu'après signature complète du permis et briefing"
+        "Les travaux ne commencent qu'après signature du permis et briefing",
+        "C'est acceptable pour une tâche courte et bien connue de l'équipe",
+        "C'est acceptable si le prestataire a déjà fait le travail la veille",
+        "C'est acceptable si un opérateur surveille le chantier pendant l'exécution"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Le permis est la condition de démarrage : sans signature complète et briefing, la tâche n'est pas autorisée.",
       "seconds": 60,
       "status": "draft"
@@ -739,12 +739,12 @@
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
-        "Faire arrêter immédiatement le travail à chaud, mettre en sécurité, isoler la fuite, mesurer le gaz et informer",
-        "Finir la soudure en cours puis traiter la fuite",
-        "Éloigner la soudeuse de quelques mètres et continuer",
-        "Demander au sous-traitant de coller la fuite avec un produit"
+        "Finir la soudure en cours avant de traiter la fuite signalée par le sous-traitant",
+        "Faire arrêter le travail à chaud, mettre en sécurité, isoler la fuite, informer",
+        "Éloigner le poste de soudage de quelques mètres et continuer à souder",
+        "Demander au sous-traitant de colmater la fuite avec un produit adapté"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Fuite de gaz et source d'ignition ne cohabitent pas. L'arrêt du travail à chaud est immédiat, puis on traite la fuite.",
       "seconds": 100,
       "status": "draft"
@@ -757,12 +757,12 @@
       "img": "svg/iso-safety-signs.svg",
       "imgAlt": "Panneaux ISO 7010 : interdiction, avertissement, obligation, sauvetage",
       "choices": [
-        "Tout équipement électrique ordinaire est admis s'il est éteint",
-        "Les appareils sont admis après nettoyage",
-        "Seuls des équipements adaptés à la zone y sont admis ; les appareils ordinaires (téléphone, par exemple) sont interdits",
-        "Seuls les visiteurs sont soumis à la règle"
+        "Tout équipement électrique ordinaire est admis s'il est éteint avant l'entrée",
+        "Seuls des équipements adaptés à la zone sont admis, pas un téléphone ordinaire",
+        "Les appareils ordinaires sont admis après un nettoyage extérieur soigneux",
+        "Seuls les visiteurs et sous-traitants sont soumis à cette règle de zone"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "Dans les zones classées, les sources d'ignition sont maîtrisées : équipements certifiés pour la zone, appareils ordinaires interdits.",
       "seconds": 60,
       "status": "draft"
@@ -773,12 +773,12 @@
       "level": 3,
       "q": "Un travail non prévu au planning doit être exécuté d'urgence. Quelle exigence reste incontournable ?",
       "choices": [
-        "Réaliser le travail sans permis pour gagner du temps",
-        "Le confier au plus ancien sans formalité",
-        "Le faire pendant le changement de quart",
-        "Analyse de risque, permis et coordination avec les autres activités avant d'exécuter"
+        "Analyse de risque, permis et coordination avec les autres activités",
+        "Réaliser le travail sans permis, si l'urgence est reconnue par le superviseur",
+        "Le confier au plus ancien sans autre formalité qu'un accord oral",
+        "Le faire pendant le changement de quart, quand la zone est calme"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "L'urgence ne dispense pas des barrières ; elle impose de les appliquer rapidement. Le changement de quart est un moment où le risque de perte d'information est élevé.",
       "seconds": 60,
       "status": "draft"
@@ -789,12 +789,12 @@
       "level": 1,
       "q": "À quoi sert un test de puits ?",
       "choices": [
-        "À mesurer la production individuelle (huile, gaz, eau) pour le suivi et l'allocation",
-        "À remplacer la maintenance du puits",
-        "À nettoyer les lignes de production",
-        "À réduire la pression du réservoir"
+        "Remplacer la maintenance préventive du puits par un suivi continu",
+        "Nettoyer les lignes de production en les purgeant à l'azote",
+        "Réduire la pression du réservoir pour augmenter le débit du puits",
+        "Mesurer la production individuelle d'un puits (huile, gaz, eau)"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "Le test de puits individualise la production : suivi du réservoir, optimisation, allocation entre puits.",
       "seconds": 45,
       "status": "draft"
@@ -807,12 +807,12 @@
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Tête de puits avec vannes et duse de production",
       "choices": [
-        "Une baisse du prix du baril",
-        "La venue de sable ou le coning d'eau ou de gaz, selon l'enveloppe fixée par l'ingénierie",
-        "Un excès de pression dans la salle de contrôle",
-        "Un arrêt des rondes terrain"
+        "Une hausse de la pression de tête qui améliore toujours la stabilité",
+        "Une surcharge du réseau électrique de la salle de contrôle",
+        "La venue de sable ou le coning d'eau ou de gaz selon l'enveloppe",
+        "Une baisse du taux d'eau de la production qui réduit le débit utile"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Un débit élevé peut déstabiliser le réservoir autour du puits ou entraîner du sable. L'optimisation reste dans les limites de l'ingénierie.",
       "seconds": 60,
       "status": "draft"
@@ -825,10 +825,10 @@
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Vanne de gas-lift dans une colonne de production",
       "choices": [
-        "La production d'huile augmente toujours",
-        "La pression de réservoir augmente",
-        "L'eau disparaît de la production",
-        "La production d'huile peut diminuer"
+        "La production d'huile augmente toujours, proportionnellement au gaz injecté",
+        "La pression du réservoir augmente avec la quantité de gaz injecté",
+        "L'eau disparaît de la production dès que le débit de gaz augmente",
+        "La production d'huile peut diminuer au-delà de l'optimum"
       ],
       "answer": 3,
       "explain": "La courbe de performance du gas-lift présente un optimum : trop de gaz injecté augmente les frottements et réduit la production. Le gaz coûte aussi en compression.",
@@ -841,12 +841,12 @@
       "level": 2,
       "q": "Comment réalise-t-on l'allocation de production entre plusieurs puits ?",
       "choices": [
-        "En répartissant la production totale mesurée à partir des tests de puits, avec des facteurs d'allocation réconciliés",
-        "En divisant la production en parts égales",
-        "Sur la base des demandes des puits",
-        "En fonction de l'ancienneté du puits"
+        "Diviser la production totale en parts égales entre tous les puits",
+        "Répartir selon les demandes de débit formulées par chaque puits",
+        "Répartir la production mesurée selon les tests de puits et des facteurs réconciliés",
+        "Répartir selon l'ancienneté de mise en production de chaque puits"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "L'allocation répartit une mesure globale selon les contributions estimées des puits, réconciliées avec la production totale.",
       "seconds": 60,
       "status": "draft"
@@ -859,10 +859,10 @@
       "img": "photo/control-room.jpg",
       "imgAlt": "Salle de contrôle d'une installation de production",
       "choices": [
-        "Uniquement l'état de la production",
-        "État des équipements, travaux en cours (permis), inhibitions, consignes et tâches à terminer",
-        "Uniquement les plaintes du personnel",
-        "Seulement les consignes du siège"
+        "Uniquement l'état de la production et les volumes expédiés pendant le quart",
+        "État des équipements, travaux en cours (permis), inhibitions et consignes",
+        "Uniquement les remarques du personnel et les demandes de congés",
+        "Seulement les consignes générales transmises par le siège et la direction"
       ],
       "answer": 1,
       "explain": "La passation couvre l'état, les travaux en cours, les inhibitions et les consignes : tout ce qui peut créer un risque si on l'ignore.",
@@ -875,12 +875,12 @@
       "level": 3,
       "q": "Le superviseur sortant dit « RAS » et se prépare à partir. Dans le journal, vous voyez une inhibition de niveau haut et un permis à chaud actif. Que faites-vous ?",
       "choices": [
-        "Accepter le « RAS » : il connaît son quart",
-        "Vérifier plus tard dans la nuit si quelque chose arrive",
-        "Retenir le sortant le temps d'une passation complète et vérifier sur le terrain l'inhibition et le permis",
-        "Annuler le permis à chaud sans en parler"
+        "Retenir le sortant et vérifier l'inhibition et le permis sur le terrain",
+        "Accepter le « RAS » : le sortant connaît bien son quart et son unité",
+        "Vérifier plus tard dans la nuit, seulement si un événement survient",
+        "Annuler le permis à chaud et l'inhibition sans en parler au sortant"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Un « RAS » contredit par le journal ne vaut rien. La passation est une barrière : on la complète, on vérifie sur le terrain, on répond du risque.",
       "seconds": 100,
       "status": "draft"
@@ -891,10 +891,10 @@
       "level": 2,
       "q": "Pourquoi doubler l'échange oral de passation par une trace écrite et une visite conjointe ?",
       "choices": [
-        "Parce que l'oral seul perd de l'information et que la visite confirme l'état réel",
-        "Pour allonger la durée de la passation",
-        "Pour décharger l'équipe sortante de sa responsabilité",
-        "Parce que le système de conduite est peu fiable"
+        "L'oral seul perd de l'information ; la visite confirme l'état réel",
+        "Cela allonge la passation pour faire preuve de plus de rigueur",
+        "Cela décharge l'équipe sortante de sa responsabilité après le départ",
+        "Le système de conduite ne conserve pas les informations de quart"
       ],
       "answer": 0,
       "explain": "L'oral s'oublie, l'écrit se relit, la visite confirme. Le triptyque réduit la perte d'information au changement de quart.",
@@ -907,12 +907,12 @@
       "level": 2,
       "q": "Quand le taux d'eau (water cut) d'un champ augmente, quelle conséquence est la plus directe sur l'installation ?",
       "choices": [
-        "Une baisse des besoins en énergie",
-        "Une charge accrue sur le traitement de l'eau et sur la capacité de séparation et de levage",
-        "Une diminution du nombre de puits",
-        "Une augmentation de la pression de tête de puits"
+        "Une baisse des besoins en énergie de l'installation de séparation",
+        "Une diminution du nombre de puits nécessaires pour tenir l'objectif",
+        "Une hausse de la pression de tête de puits et du débit d'huile",
+        "Une charge accrue sur le traitement de l'eau et la séparation"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Plus d'eau produite signifie plus de volume à séparer, traiter et rejeter ou réinjecter : le goulot se déplace vers le traitement de l'eau.",
       "seconds": 60,
       "status": "draft"

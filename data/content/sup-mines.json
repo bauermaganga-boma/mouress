@@ -2,78 +2,797 @@
   "profile": "sup-mines",
   "modules": [
     {
-      "id": "m1", "title": "Conduire un poste : cycle d'exploitation, briefing et relève", "theme": "Conduite du poste et cycle d'exploitation", "minutes": 9,
-      "body": "Le chef de poste est responsable de la sécurité et de la production de son équipe pendant toute la durée du poste. Son travail commence avant le démarrage : il lit le **cahier de relève** de l'équipe précédente (tirs ratés, zones interdites, engins en panne, anomalies de ventilation ou de stabilité), fait une **tournée du front** pour vérifier les conditions réelles, puis anime le **briefing de début de poste** : objectifs du jour, risques, répartition des tâches, consignes particulières.\n\nLe **cycle d'exploitation à ciel ouvert** se déroule ainsi : décapage du stérile, **forage**, **chargement des explosifs et tir**, **chargement** (pelle ou chargeuse), **transport** (tombereaux) vers le concasseur ou la verse, puis entretien des pistes. Dans une **mine souterraine**, le cycle d'avancement comprend : forage, chargement des explosifs, tir, **ventilation**, **purge**, **marinage** et **soutènement**. Chaque phase libère le front pour la suivante : un retard au forage se répercute sur toute la chaîne.\n\nLe chef de poste coordonne les **interfaces** : foreurs, boutefeu, conducteurs d'engins, mécaniciens, géotechnicien, régulation. Il vérifie que les zones de travail sont libres de personnes avant un tir et que les **permis de travail** sont délivrés pour les tâches à risque.\n\nIndicateurs de base suivis à chaque poste :\n- les **tonnes de minerai et de stérile** déplacées ;\n- le **nombre de voyages** des tombereaux ;\n- les **mètres forés** et le nombre de trous chargés ;\n- les **arrêts** (pannes, attente de front, météo) et leurs causes ;\n- les **événements sécurité** (presque-accidents, incidents).\n\nLa **teneur** d'un minerai s'exprime en g/t pour l'or (10 000 t à 2 g/t contiennent 20 kg d'or). Le **ratio stérile/minerai** compare les tonnes de stérile aux tonnes de minerai extraites.\n\nEn fin de poste, la **relève** est faite en face-à-face sur le terrain quand c'est possible, **verbale et écrite** : zones instables, ratés, travaux en cours, engins immobilisés. Une relève bâclée est une cause fréquente d'accident.",
-      "keyPoints": ["Tournée du front et lecture de la relève avant le briefing.", "Cycle à ciel ouvert : forage, tir, chargement, transport.", "Cycle souterrain : forage, tir, ventilation, purge, marinage, soutènement.", "Relève verbale et écrite : continuité des informations de sécurité."],
-      "img": "svg/underground-mine-layout.svg", "imgAlt": "Schéma d'une mine souterraine : galeries, chantiers et accès."
+      "id": "m1",
+      "title": "Conduire un poste : cycle d'exploitation, briefing et relève",
+      "theme": "Conduite du poste et cycle d'exploitation",
+      "minutes": 9,
+      "body": "Le chef de poste est responsable de la sécurité et de la production de son équipe pendant toute la durée du poste. Son travail commence avant le démarrage : il lit le **cahier de relève** de l'équipe précédente (tirs ratés, zones interdites, engins en panne, anomalies de ventilation ou de stabilité), fait une **tournée du front** pour vérifier les conditions réelles, puis anime le **briefing de début de poste** : objectifs du jour, risques, répartition des tâches, consignes particulières.\n\nLe **cycle d'exploitation à ciel ouvert** se déroule ainsi : décapage du stérile, **forage**, **chargement des explosifs et tir**, **chargement** (pelle ou chargeuse), **transport** (tombereaux) vers le concasseur ou la verse, puis entretien des pistes. Dans une **mine souterraine**, le cycle d'avancement comprend : forage, chargement des explosifs, tir, **ventilation**, **purge**, **marinage** et **soutènement**. Chaque phase libère le front pour la suivante : un retard au forage se répercute sur toute la chaîne.\n\nLe chef de poste coordonne les **interfaces** : foreurs, boutefeu, conducteurs d'engins, mécaniciens, géotechnicien, régulation. Il vérifie que les zones de travail sont libres de personnes avant un tir et que les **permis de travail** sont délivrés pour les tâches à risque.\n\nIndicateurs de base suivis à chaque poste :\n- les **tonnes de minerai et de stérile** déplacées ;\n- le **nombre de voyages** des tombereaux ;\n- les **mètres forés** et le nombre de trous chargés ;\n- les **arrêts** (pannes, attente de front, météo) et leurs causes ;\n- les **événements sécurité** (presque-accidents, incidents).\n\nLa **teneur** d'un minerai s'exprime en g/t pour l'or (10 000 t à 2 g/t contiennent 20 kg d'or). Le **ratio stérile/minerai** compare les tonnes de stérile aux tonnes de minerai extraites.\n\nEn fin de poste, la **relève** est faite en face-à-face sur le terrain quand c'est possible, **verbale et écrite** : zones instables, ratés, travaux en cours, engins immobilisés. Une relève bâclée est une cause fréquente d'accident.\n\n**Sur le terrain**\n- Lis le cahier de relève et fais ta tournée du front avant de lancer la production : ratés, zones interdites, engins en panne et anomalies de ventilation changent ton plan.\n- Au briefing, donne trois choses : l'objectif du poste, les risques du jour et qui fait quoi ; un briefing qui ne parle que de tonnes est un briefing raté.\n- Ne quitte jamais le poste sans relève verbale et écrite, de préférence sur le terrain : une relève bâclée est une cause fréquente d'accident.",
+      "keyPoints": [
+        "Tournée du front et lecture de la relève avant le briefing.",
+        "Cycle à ciel ouvert : forage, tir, chargement, transport.",
+        "Cycle souterrain : forage, tir, ventilation, purge, marinage, soutènement.",
+        "Relève verbale et écrite : continuité des informations de sécurité."
+      ],
+      "img": "svg/underground-mine-layout.svg",
+      "imgAlt": "Schéma d'une mine souterraine : galeries, chantiers et accès."
     },
     {
-      "id": "m2", "title": "Productivité et indicateurs : disponibilité, utilisation, TRS", "theme": "Productivité et indicateurs", "minutes": 9,
-      "body": "Un superviseur pilote avec des chiffres simples, calculés de la même façon par tous.\n\n- **Disponibilité mécanique** = heures où l'engin est en état de marche / heures calendaires. Un engin de 24 h immobilisé 3 h pour maintenance a une disponibilité de 21/24 = 87,5 %.\n- **Utilisation** = heures réellement travaillées / heures disponibles. Un engin disponible 20 h et travaillé 16 h a un taux d'utilisation de 80 %.\n- **Rendement ou performance** = production réelle / production théorique.\n- **TRS** (taux de rendement synthétique, ou OEE) = disponibilité × performance × qualité. Avec 90 %, 80 % et 95 %, le TRS vaut 0,90 × 0,80 × 0,95 = 68,4 %.\n- **MTBF** = temps moyen entre pannes (200 h de marche et 4 pannes donnent 50 h) ; **MTTR** = temps moyen de réparation.\n\nLa **production d'un tombereau** = charge utile × nombre de voyages. Le nombre de voyages par heure vaut 60 / temps de cycle (en minutes). Pour une flotte de n camions identiques, la production horaire vaut n × charge utile × 60 / cycle. Si la distance de transport augmente, le cycle s'allonge et, à flotte égale, la production baisse. Pour une pelle, la production réelle est la capacité théorique multipliée par un **coefficient d'efficience** (par exemple 75 %).\n\nLe **jumelage pelle-camions** vise l'équilibre : trop peu de camions, la pelle attend ; trop de camions, ils font la queue et le coût de transport augmente. Le nombre de camions nécessaires est voisin du rapport entre le temps de cycle et le temps de chargement.\n\nLe **coût unitaire** se calcule en divisant le coût total par les tonnes : 150 millions de FCFA pour 50 000 t donnent 3 000 FCFA/t. Le superviseur agit sur ce qu'il maîtrise : temps morts, files d'attente, qualité des pistes, qualité du tir (une bonne fragmentation augmente la productivité de la pelle), consommations de carburant et de pneus.\n\nLa **dilution** (mélange de stérile au minerai) abaisse la teneur : 1 000 t à 3 g/t mélangées à 250 t de stérile à 0 g/t donnent 3 000 g / 1 250 t = 2,4 g/t.",
-      "keyPoints": ["Disponibilité = heures de marche / heures calendaires ; utilisation = travaillées / disponibles.", "TRS = disponibilité × performance × qualité.", "Production flotte = n × charge × 60 / cycle.", "La dilution abaisse la teneur : calcul pondéré par les tonnes."],
-      "img": "photo/haul-truck.jpg", "imgAlt": "Tombereau de mine sur une piste d'exploitation."
+      "id": "m2",
+      "title": "Productivité et indicateurs : disponibilité, utilisation, TRS",
+      "theme": "Productivité et indicateurs",
+      "minutes": 9,
+      "body": "Un superviseur pilote avec des chiffres simples, calculés de la même façon par tous.\n\n- **Disponibilité mécanique** = heures où l'engin est en état de marche / heures calendaires. Un engin de 24 h immobilisé 3 h pour maintenance a une disponibilité de 21/24 = 87,5 %.\n- **Utilisation** = heures réellement travaillées / heures disponibles. Un engin disponible 20 h et travaillé 16 h a un taux d'utilisation de 80 %.\n- **Rendement ou performance** = production réelle / production théorique.\n- **TRS** (taux de rendement synthétique, ou OEE) = disponibilité × performance × qualité. Avec 90 %, 80 % et 95 %, le TRS vaut 0,90 × 0,80 × 0,95 = 68,4 %.\n- **MTBF** = temps moyen entre pannes (200 h de marche et 4 pannes donnent 50 h) ; **MTTR** = temps moyen de réparation.\n\nLa **production d'un tombereau** = charge utile × nombre de voyages. Le nombre de voyages par heure vaut 60 / temps de cycle (en minutes). Pour une flotte de n camions identiques, la production horaire vaut n × charge utile × 60 / cycle. Si la distance de transport augmente, le cycle s'allonge et, à flotte égale, la production baisse. Pour une pelle, la production réelle est la capacité théorique multipliée par un **coefficient d'efficience** (par exemple 75 %).\n\nLe **jumelage pelle-camions** vise l'équilibre : trop peu de camions, la pelle attend ; trop de camions, ils font la queue et le coût de transport augmente. Le nombre de camions nécessaires est voisin du rapport entre le temps de cycle et le temps de chargement.\n\nLe **coût unitaire** se calcule en divisant le coût total par les tonnes : 150 millions de FCFA pour 50 000 t donnent 3 000 FCFA/t. Le superviseur agit sur ce qu'il maîtrise : temps morts, files d'attente, qualité des pistes, qualité du tir (une bonne fragmentation augmente la productivité de la pelle), consommations de carburant et de pneus.\n\nLa **dilution** (mélange de stérile au minerai) abaisse la teneur : 1 000 t à 3 g/t mélangées à 250 t de stérile à 0 g/t donnent 3 000 g / 1 250 t = 2,4 g/t.\n\n**Sur le terrain**\n- Calcule disponibilité, utilisation et TRS toujours de la même façon, avec la même base d'heures, sinon tes chiffres ne se comparent pas d'un poste à l'autre.\n- Tombereaux qui font la queue à la pelle : compte d'abord le rapport temps de cycle sur temps de chargement avant de demander plus de camions.\n- Une piste dégradée allonge les cycles, use les pneus et augmente les risques : le coût de transport se gagne souvent sur la piste.",
+      "keyPoints": [
+        "Disponibilité = heures de marche / heures calendaires ; utilisation = travaillées / disponibles.",
+        "TRS = disponibilité × performance × qualité.",
+        "Production flotte = n × charge × 60 / cycle.",
+        "La dilution abaisse la teneur : calcul pondéré par les tonnes."
+      ],
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Tombereau de mine sur une piste d'exploitation."
     },
     {
-      "id": "m3", "title": "Gestion des risques au front : permis, consignation, arrêt de travail", "theme": "Gestion des risques au front", "minutes": 9,
-      "body": "Le superviseur est le premier maillon de la prévention : il n'attend pas l'accident pour agir.\n\n**Hiérarchie des mesures** : éliminer, substituer, protéger collectivement (garde-corps, merlons), organiser (consignes, formation), puis seulement fournir des EPI. L'EPI est la dernière barrière.\n\n**Analyse de risque de la tâche** (minute sécurité, JSA) : avant de commencer, l'équipe identifie les dangers, évalue le risque et choisit les mesures. Le niveau de risque combine **gravité** et **probabilité** : un risque de gravité 5 et de probabilité 4 (score 20) passe avant un risque 3 × 2 (score 6). Les risques élevés se traitent en priorité.\n\n**Permis de travail** : exigé pour le **travail par point chaud** (soudage, meulage), l'**espace confiné**, le **travail en hauteur**, les fouilles, les levages exceptionnels. Il précise la tâche, la zone, les dangers, les mesures, la durée et est signé par l'émetteur et le réalisateur. Il est suspendu en cas de changement de conditions.\n\n**Consignation** : séparer l'énergie, condamner avec cadenas et étiquette, vérifier l'absence d'énergie, puis travailler. Quand plusieurs équipes interviennent sur le même équipement, **chacune pose son propre cadenas** ; on utilise une pince multi-cadenas. Personne ne retire le cadenas d'un autre.\n\n**Espace confiné** (trémie, cuve, réservoir) : permis, test de l'atmosphère (oxygène, gaz inflammables et toxiques), surveillant à l'extérieur, moyens de sauvetage prêts. On n'entre jamais seul.\n\n**Travail en hauteur** : protection collective (garde-corps, plateforme) d'abord ; le harnais ancré n'est que le recours quand la protection collective est impossible.\n\n**Retour d'expérience** : le **presque-accident** est un signal gratuit. D'après la **pyramide de Bird** (environ 1 accident grave pour 10 blessures légères, 30 dommages matériels et 600 incidents sans gravité), agir sur la base de la pyramide réduit la probabilité des accidents graves. On enregistre, on analyse les causes racines (arbre des causes), on partage.\n\n**Droit et devoir d'arrêt** : tout salarié, et a fortiori le superviseur, arrête le travail en cas de danger grave. La production ne reprend qu'une fois les conditions de sécurité rétablies, même sous pression hiérarchique.",
-      "keyPoints": ["Risque = gravité × probabilité ; traiter d'abord les scores élevés.", "Chaque intervenant pose son propre cadenas.", "Espace confiné : permis, test d'atmosphère, surveillant extérieur.", "Pas de reprise tant que les conditions de sécurité ne sont pas rétablies."],
-      "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de risque croisant gravité et probabilité."
+      "id": "m3",
+      "title": "Gestion des risques au front : permis, consignation, arrêt de travail",
+      "theme": "Gestion des risques au front",
+      "minutes": 9,
+      "body": "Le superviseur est le premier maillon de la prévention : il n'attend pas l'accident pour agir.\n\n**Hiérarchie des mesures** : éliminer, substituer, protéger collectivement (garde-corps, merlons), organiser (consignes, formation), puis seulement fournir des EPI. L'EPI est la dernière barrière.\n\n**Analyse de risque de la tâche** (minute sécurité, JSA) : avant de commencer, l'équipe identifie les dangers, évalue le risque et choisit les mesures. Le niveau de risque combine **gravité** et **probabilité** : un risque de gravité 5 et de probabilité 4 (score 20) passe avant un risque 3 × 2 (score 6). Les risques élevés se traitent en priorité.\n\n**Permis de travail** : exigé pour le **travail par point chaud** (soudage, meulage), l'**espace confiné**, le **travail en hauteur**, les fouilles, les levages exceptionnels. Il précise la tâche, la zone, les dangers, les mesures, la durée et est signé par l'émetteur et le réalisateur. Il est suspendu en cas de changement de conditions.\n\n**Consignation** : séparer l'énergie, condamner avec cadenas et étiquette, vérifier l'absence d'énergie, puis travailler. Quand plusieurs équipes interviennent sur le même équipement, **chacune pose son propre cadenas** ; on utilise une pince multi-cadenas. Personne ne retire le cadenas d'un autre.\n\n**Espace confiné** (trémie, cuve, réservoir) : permis, test de l'atmosphère (oxygène, gaz inflammables et toxiques), surveillant à l'extérieur, moyens de sauvetage prêts. On n'entre jamais seul.\n\n**Travail en hauteur** : protection collective (garde-corps, plateforme) d'abord ; le harnais ancré n'est que le recours quand la protection collective est impossible.\n\n**Retour d'expérience** : le **presque-accident** est un signal gratuit. D'après la **pyramide de Bird** (environ 1 accident grave pour 10 blessures légères, 30 dommages matériels et 600 incidents sans gravité), agir sur la base de la pyramide réduit la probabilité des accidents graves. On enregistre, on analyse les causes racines (arbre des causes), on partage.\n\n**Droit et devoir d'arrêt** : tout salarié, et a fortiori le superviseur, arrête le travail en cas de danger grave. La production ne reprend qu'une fois les conditions de sécurité rétablies, même sous pression hiérarchique.\n\n**Sur le terrain**\n- Fais l'analyse de risque de la tâche avant de commencer, avec l'équipe : on ne la fait pas après l'incident.\n- Consignation à plusieurs équipes : chacun son cadenas, pince multi-cadenas, et personne ne retire le cadenas d'un autre.\n- Sous pression de la direction pour reprendre la production, tu maintiens l'arrêt tant que les conditions de sécurité ne sont pas rétablies et tu rends compte.",
+      "keyPoints": [
+        "Risque = gravité × probabilité ; traiter d'abord les scores élevés.",
+        "Chaque intervenant pose son propre cadenas.",
+        "Espace confiné : permis, test d'atmosphère, surveillant extérieur.",
+        "Pas de reprise tant que les conditions de sécurité ne sont pas rétablies."
+      ],
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque croisant gravité et probabilité."
     },
     {
-      "id": "m4", "title": "Forage-tir et circulation : superviser les opérations à risque", "theme": "Forage-tir et circulation", "minutes": 8,
-      "body": "Le tir est l'opération la plus dangereuse du cycle. Le superviseur ne le réalise pas lui-même, mais il en assure la **coordination**.\n\n**Avant le tir** : le boutefeu habilité contrôle le plan de tir ; la zone est évacuée de tout personnel et engin ; des **gardes** sont placés à tous les accès ; un **signal sonore** précède la mise à feu ; on confirme par radio que la zone est dégagée. En cas d'**orage**, le chargement des explosifs est suspendu et la zone évacuée : l'électricité atmosphérique peut provoquer une amorce accidentelle.\n\n**Après le tir** : attente de la dissipation des fumées et poussières, inspection du tir par le boutefeu, recherche des ratés. Un **raté** est traité uniquement par le personnel habilité selon la procédure.\n\n**Repères de calcul** : nombre de trous = surface du tir / maille. Par exemple, 840 m² avec une maille de 4 m × 5 m (20 m²) donnent 42 trous. Le **facteur de charge** (kg/m³) est la masse d'explosif divisée par le volume abattu : passer de 0,5 à 0,8 kg/m³ sur 10 000 m³ ajoute 3 000 kg d'explosif.\n\n**Forage** : la foration produit des poussières de silice dangereuses. On utilise l'**injection d'eau** ou un **système de captage** des poussières, et le masque adapté. Les foreuses ont des zones de danger (mât, tiges tournantes) interdites au personnel au sol.\n\n**Circulation** : la largeur d'une piste à double sens est d'environ 3,5 fois la largeur du plus gros engin (24,5 m pour un engin de 7 m de large). Les merlons atteignent au moins l'axe des roues. Les véhicules légers cèdent le passage aux engins lourds, la ceinture est obligatoire, les limitations de vitesse sont affichées, les angles morts des gros engins sont connus de tous. Un engin en panne sur la piste est **signalé à la régulation**, balisé, et la circulation est déviée.\n\nLe superviseur veille aussi à l'état des pistes (arrosage contre la poussière, drainage, entretien) : une piste dégradée augmente les temps de cycle, les coûts de pneus et le risque d'accident.",
-      "keyPoints": ["Évacuer, garder les accès, signal sonore avant le tir.", "Orage : suspendre le chargement et évacuer.", "Nombre de trous = surface / maille.", "Engin en panne : signaler, baliser, dévier."],
-      "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin avec trous de mine, banquette, espacement et bourrage."
+      "id": "m4",
+      "title": "Forage-tir et circulation : superviser les opérations à risque",
+      "theme": "Forage-tir et circulation",
+      "minutes": 8,
+      "body": "Le tir est l'opération la plus dangereuse du cycle. Le superviseur ne le réalise pas lui-même, mais il en assure la **coordination**.\n\n**Avant le tir** : le boutefeu habilité contrôle le plan de tir ; la zone est évacuée de tout personnel et engin ; des **gardes** sont placés à tous les accès ; un **signal sonore** précède la mise à feu ; on confirme par radio que la zone est dégagée. En cas d'**orage**, le chargement des explosifs est suspendu et la zone évacuée : l'électricité atmosphérique peut provoquer une amorce accidentelle.\n\n**Après le tir** : attente de la dissipation des fumées et poussières, inspection du tir par le boutefeu, recherche des ratés. Un **raté** est traité uniquement par le personnel habilité selon la procédure.\n\n**Repères de calcul** : nombre de trous = surface du tir / maille. Par exemple, 840 m² avec une maille de 4 m × 5 m (20 m²) donnent 42 trous. Le **facteur de charge** (kg/m³) est la masse d'explosif divisée par le volume abattu : passer de 0,5 à 0,8 kg/m³ sur 10 000 m³ ajoute 3 000 kg d'explosif.\n\n**Forage** : la foration produit des poussières de silice dangereuses. On utilise l'**injection d'eau** ou un **système de captage** des poussières, et le masque adapté. Les foreuses ont des zones de danger (mât, tiges tournantes) interdites au personnel au sol.\n\n**Circulation** : la largeur d'une piste à double sens est d'environ 3,5 fois la largeur du plus gros engin (24,5 m pour un engin de 7 m de large). Les merlons atteignent au moins l'axe des roues. Les véhicules légers cèdent le passage aux engins lourds, la ceinture est obligatoire, les limitations de vitesse sont affichées, les angles morts des gros engins sont connus de tous. Un engin en panne sur la piste est **signalé à la régulation**, balisé, et la circulation est déviée.\n\nLe superviseur veille aussi à l'état des pistes (arrosage contre la poussière, drainage, entretien) : une piste dégradée augmente les temps de cycle, les coûts de pneus et le risque d'accident.\n\n**Sur le terrain**\n- Avant la mise à feu, vérifie toi-même les gardes aux accès, le signal sonore et la confirmation radio de zone dégagée : tu coordonnes, le boutefeu tire.\n- Orage : suspendre le chargement et évacuer la zone, sans discussion et sans chercher à finir vite.\n- Engin en panne sur la piste : signale à la régulation, balise et dévie la circulation avant de chercher la cause.",
+      "keyPoints": [
+        "Évacuer, garder les accès, signal sonore avant le tir.",
+        "Orage : suspendre le chargement et évacuer.",
+        "Nombre de trous = surface / maille.",
+        "Engin en panne : signaler, baliser, dévier."
+      ],
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Gradin avec trous de mine, banquette, espacement et bourrage."
     },
     {
-      "id": "m5", "title": "Stabilité, ventilation et urgences", "theme": "Stabilité, ventilation et urgences", "minutes": 8,
-      "body": "Le superviseur détecte les signaux faibles et déclenche les bonnes réactions.\n\n**Stabilité des talus** : fissures de traction en crête, chutes de petits blocs, nouveaux suintements, affaissements de berme sont des signaux d'alerte. Réaction : stopper l'accès à la zone, baliser, alerter le géotechnicien et attendre son avis. Le **facteur de sécurité** (rapport des forces résistantes aux forces motrices) vaut 1 à l'équilibre limite ; après de fortes pluies il peut chuter, par exemple de 1,3 à 1,05, ce qui impose une surveillance renforcée, une restriction d'accès au pied du talus et l'alerte à la géotechnique. L'eau augmente la pression interstitielle : on draine les talus.\n\n**Ventilation** : la loi de base est Q = V × S (m³/s = m/s × m²). Une galerie de 15 m² traversée par 6 m³/s a une vitesse de 6 / 15 = 0,4 m/s. Les détecteurs de gaz sont étalonnés et portés. Une alarme de **CO** impose d'arrêter les travaux, d'évacuer par la voie d'air frais et d'alerter. Le méthane est explosif entre 5 et 15 % environ. Le CO2 stagne dans les points bas. Le H2S paralyse l'odorat : on se fie au détecteur.\n\n**Poussières de silice** : l'exposition prolongée provoque la **silicose**, maladie pulmonaire irréversible. Arrosage, captage et masque sont obligatoires.\n\n**Incendie en souterrain** : donner l'alerte, revêtir l'**auto-sauveteur**, rejoindre l'issue ou la **chambre refuge** par l'itinéraire d'évacuation indiqué, s'assurer de l'appel de chaque membre de l'équipe au point de rassemblement. On ne retourne jamais chercher du matériel.\n\n**Plan d'urgence** : organisation des secours, annuaire, points de rassemblement, exercices périodiques. Le superviseur connaît son rôle (alerte, comptage, premiers secours, accueil des secours externes).\n\n**Enquête d'incident** : on recherche les **causes racines** (arbre des causes) et pas seulement l'erreur individuelle. On cherche ce qui a rendu l'erreur possible : organisation, formation, matériel, supervision. Les actions correctives sont suivies jusqu'à leur clôture.",
-      "keyPoints": ["Fissures de traction : balisage, alerte géotechnique.", "Alarme CO : arrêter, évacuer par l'air frais, alerter.", "Silice : silicose ; eau, captage, masque.", "Enquête : causes racines, pas seulement l'erreur individuelle."],
-      "img": "svg/mine-ventilation.svg", "imgAlt": "Schéma de ventilation d'une mine : air frais, air vicié, ventilateurs."
+      "id": "m5",
+      "title": "Stabilité, ventilation et urgences",
+      "theme": "Stabilité, ventilation et urgences",
+      "minutes": 8,
+      "body": "Le superviseur détecte les signaux faibles et déclenche les bonnes réactions.\n\n**Stabilité des talus** : fissures de traction en crête, chutes de petits blocs, nouveaux suintements, affaissements de berme sont des signaux d'alerte. Réaction : stopper l'accès à la zone, baliser, alerter le géotechnicien et attendre son avis. Le **facteur de sécurité** (rapport des forces résistantes aux forces motrices) vaut 1 à l'équilibre limite ; après de fortes pluies il peut chuter, par exemple de 1,3 à 1,05, ce qui impose une surveillance renforcée, une restriction d'accès au pied du talus et l'alerte à la géotechnique. L'eau augmente la pression interstitielle : on draine les talus.\n\n**Ventilation** : la loi de base est Q = V × S (m³/s = m/s × m²). Une galerie de 15 m² traversée par 6 m³/s a une vitesse de 6 / 15 = 0,4 m/s. Les détecteurs de gaz sont étalonnés et portés. Une alarme de **CO** impose d'arrêter les travaux, d'évacuer par la voie d'air frais et d'alerter. Le méthane est explosif entre 5 et 15 % environ. Le CO2 stagne dans les points bas. Le H2S paralyse l'odorat : on se fie au détecteur.\n\n**Poussières de silice** : l'exposition prolongée provoque la **silicose**, maladie pulmonaire irréversible. Arrosage, captage et masque sont obligatoires.\n\n**Incendie en souterrain** : donner l'alerte, revêtir l'**auto-sauveteur**, rejoindre l'issue ou la **chambre refuge** par l'itinéraire d'évacuation indiqué, s'assurer de l'appel de chaque membre de l'équipe au point de rassemblement. On ne retourne jamais chercher du matériel.\n\n**Plan d'urgence** : organisation des secours, annuaire, points de rassemblement, exercices périodiques. Le superviseur connaît son rôle (alerte, comptage, premiers secours, accueil des secours externes).\n\n**Enquête d'incident** : on recherche les **causes racines** (arbre des causes) et pas seulement l'erreur individuelle. On cherche ce qui a rendu l'erreur possible : organisation, formation, matériel, supervision. Les actions correctives sont suivies jusqu'à leur clôture.\n\n**Sur le terrain**\n- Fissure de traction en crête, nouveau suintement, chute de petits blocs : interdis l'accès, balise, alerte la géotechnique et ne laisse personne travailler sous le talus.\n- Alarme CO : arrête, évacue par la voie d'air frais et alerte ; ne cherche pas la source seul.\n- Après un incident, cherche les causes racines (organisation, formation, matériel, supervision) et suis les actions jusqu'à leur clôture.",
+      "keyPoints": [
+        "Fissures de traction : balisage, alerte géotechnique.",
+        "Alarme CO : arrêter, évacuer par l'air frais, alerter.",
+        "Silice : silicose ; eau, captage, masque.",
+        "Enquête : causes racines, pas seulement l'erreur individuelle."
+      ],
+      "img": "svg/mine-ventilation.svg",
+      "imgAlt": "Schéma de ventilation d'une mine : air frais, air vicié, ventilateurs."
     }
   ],
   "questions": [
-    { "id": "sup-mines-001", "theme": "Conduite du poste et cycle d'exploitation", "level": 1, "q": "Quel est l'objectif principal du briefing de début de poste animé par le chef de poste ?", "choices": ["Distribuer les primes de production", "Transmettre les consignes, l'état des engins et des zones et les risques du jour", "Évaluer individuellement chaque salarié", "Décider de la fermeture de la mine"], "answer": 1, "explain": "Le briefing aligne l'équipe sur les objectifs, les risques, la répartition des tâches et l'état du terrain. Il ne sert ni à payer, ni à évaluer, ni à décider de la fermeture.", "seconds": 40, "status": "draft" },
-    { "id": "sup-mines-002", "theme": "Conduite du poste et cycle d'exploitation", "level": 1, "q": "Quel est l'ordre correct du cycle d'avancement d'une galerie souterraine ?", "img": "svg/underground-mine-layout.svg", "imgAlt": "Schéma d'une mine souterraine avec galerie en avancement.", "choices": ["Tir, forage, chargement des explosifs, marinage, ventilation, purge", "Marinage, forage, tir, soutènement, purge, ventilation", "Soutènement, tir, forage, ventilation, marinage, purge", "Forage, chargement des explosifs, tir, ventilation, purge, marinage, soutènement"], "answer": 3, "explain": "On fore, on charge, on tire, on ventile pour évacuer les gaz, on purge les blocs instables, on marine (évacuation des déblais) puis on soutient la zone dégagée.", "seconds": 50, "status": "draft" },
-    { "id": "sup-mines-003", "theme": "Conduite du poste et cycle d'exploitation", "level": 1, "q": "Dans une mine à ciel ouvert, quel est l'ordre normal des opérations de production ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin avec trous de mine et front à abattre.", "choices": ["Forage, tir, chargement, transport", "Tir, forage, transport, chargement", "Transport, chargement, forage, tir", "Chargement, forage, transport, tir"], "answer": 0, "explain": "La roche est d'abord forée, chargée d'explosif et abattue au tir, puis reprise par la pelle ou la chargeuse et transportée par les tombereaux.", "seconds": 40, "status": "draft" },
-    { "id": "sup-mines-004", "theme": "Conduite du poste et cycle d'exploitation", "level": 1, "q": "Vous prenez votre poste comme chef de poste. Quelle est votre première action sur le terrain ?", "choices": ["Lancer immédiatement la production pour rattraper le retard", "Attendre que l'équipe précédente vous appelle", "Lire la relève et faire une tournée du front pour vérifier les conditions de sécurité", "Déléguer toute la vérification à l'équipe"], "answer": 2, "explain": "La relève et la tournée du front permettent de connaître les ratés, zones instables et engins en panne avant de lancer le travail. La production vient après.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-005", "theme": "Conduite du poste et cycle d'exploitation", "level": 1, "q": "Cinq tombereaux de 100 t de charge utile font chacun 10 voyages pendant un poste. Quel est le tonnage transporté ?", "img": "photo/haul-truck.jpg", "imgAlt": "Tombereau de mine chargé de minerai.", "choices": ["4 000 t", "4 500 t", "5 500 t", "5 000 t"], "answer": 3, "explain": "5 camions × 10 voyages × 100 t = 5 000 t.", "seconds": 60, "status": "draft" },
-    { "id": "sup-mines-006", "theme": "Conduite du poste et cycle d'exploitation", "level": 2, "q": "Un tas de 10 000 t de minerai a une teneur de 2 g/t d'or. Quelle quantité d'or contient-il ?", "choices": ["2 kg", "20 kg", "200 kg", "2 000 kg"], "answer": 1, "explain": "10 000 t × 2 g/t = 20 000 g = 20 kg.", "seconds": 60, "status": "draft" },
-    { "id": "sup-mines-007", "theme": "Conduite du poste et cycle d'exploitation", "level": 1, "q": "Au cours d'un poste, 3 000 t de stérile et 1 000 t de minerai ont été extraites. Quel est le ratio stérile/minerai ?", "choices": ["0,33", "1", "3", "4"], "answer": 2, "explain": "Ratio stérile/minerai = 3 000 / 1 000 = 3 t de stérile pour 1 t de minerai.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-008", "theme": "Conduite du poste et cycle d'exploitation", "level": 3, "q": "On mélange 1 000 t de minerai à 3 g/t avec 250 t de stérile à 0 g/t lors du chargement. Quelle est la teneur du mélange ?", "choices": ["2,4 g/t", "2,7 g/t", "3,0 g/t", "1,5 g/t"], "answer": 0, "explain": "Métal total = 1 000 × 3 = 3 000 g ; tonnage total = 1 250 t ; teneur = 3 000 / 1 250 = 2,4 g/t. La dilution abaisse la teneur.", "seconds": 75, "status": "draft" },
-    { "id": "sup-mines-009", "theme": "Conduite du poste et cycle d'exploitation", "level": 3, "q": "Pourquoi la relève entre deux équipes doit-elle être à la fois verbale et écrite ?", "choices": ["Pour économiser du papier", "Pour garantir la continuité des informations de sécurité : ratés, zones instables, engins en panne", "Pour remplacer le briefing de sécurité", "Pour que la direction puisse sanctionner l'équipe sortante"], "answer": 1, "explain": "L'écrit laisse une trace fiable, l'oral permet les questions et l'échange sur le terrain. Les deux assurent que les dangers en cours sont transmis.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-010", "theme": "Productivité et indicateurs", "level": 1, "q": "Comment définit-on la disponibilité mécanique d'un engin ?", "choices": ["Heures de panne divisées par les heures totales", "Tonnes produites divisées par les heures", "Heures travaillées divisées par les heures disponibles", "Heures où l'engin est en état de marche divisées par les heures calendaires"], "answer": 3, "explain": "La disponibilité mesure la part du temps où l'engin est en état de marche. Heures travaillées / heures disponibles est l'utilisation, un indicateur différent.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-011", "theme": "Productivité et indicateurs", "level": 1, "q": "Un engin est immobilisé 3 h sur 24 h pour maintenance. Quelle est sa disponibilité mécanique ?", "choices": ["87,5 %", "12,5 %", "80 %", "90 %"], "answer": 0, "explain": "Heures disponibles = 24 − 3 = 21 h ; 21 / 24 = 87,5 %.", "seconds": 60, "status": "draft" },
-    { "id": "sup-mines-012", "theme": "Productivité et indicateurs", "level": 2, "q": "Un tombereau est disponible 20 h et a réellement travaillé 16 h. Quel est son taux d'utilisation ?", "choices": ["60 %", "70 %", "80 %", "90 %"], "answer": 2, "explain": "Utilisation = heures travaillées / heures disponibles = 16 / 20 = 80 %.", "seconds": 60, "status": "draft" },
-    { "id": "sup-mines-013", "theme": "Productivité et indicateurs", "level": 2, "q": "Un engin a une disponibilité de 90 %, une performance de 80 % et une qualité de 95 %. Quel est son TRS ?", "choices": ["72 %", "85 %", "91 %", "68,4 %"], "answer": 3, "explain": "TRS = 0,90 × 0,80 × 0,95 = 0,684, soit 68,4 %. La valeur de 72 % oublie le facteur qualité.", "seconds": 75, "status": "draft" },
-    { "id": "sup-mines-014", "theme": "Productivité et indicateurs", "level": 2, "q": "Les tombereaux font systématiquement la queue à la pelle. Quelle est l'explication la plus probable ?", "choices": ["La pelle est trop disponible", "Il y a trop de camions par rapport à la capacité de chargement : la flotte doit être ajustée", "La piste est trop large", "Les camions sont trop bien entretenus"], "answer": 1, "explain": "Quand les camions attendent la pelle, la flotte est surdimensionnée : on réaffecte des camions. Une pelle disponible, une piste large ou des camions entretenus ne provoquent pas de file d'attente.", "seconds": 50, "status": "draft" },
-    { "id": "sup-mines-015", "theme": "Productivité et indicateurs", "level": 2, "q": "Un poste a coûté 150 millions de FCFA pour 50 000 t déplacées. Quel est le coût unitaire ?", "choices": ["300 FCFA/t", "1 500 FCFA/t", "3 000 FCFA/t", "30 000 FCFA/t"], "answer": 2, "explain": "150 000 000 / 50 000 = 3 000 FCFA par tonne.", "seconds": 60, "status": "draft" },
-    { "id": "sup-mines-016", "theme": "Productivité et indicateurs", "level": 3, "q": "Six tombereaux de 100 t font un cycle de 30 min. La piste s'allonge et le cycle passe à 40 min. Quelle est la nouvelle production horaire de la flotte ?", "img": "photo/haul-truck.jpg", "imgAlt": "Tombereau de mine sur piste de roulage.", "choices": ["900 t/h", "1 000 t/h", "1 100 t/h", "1 200 t/h"], "answer": 0, "explain": "Voyages par heure et par camion = 60 / 40 = 1,5 ; production = 6 × 1,5 × 100 = 900 t/h (avant : 1 200 t/h). Un cycle plus long réduit la production à flotte égale.", "seconds": 80, "status": "draft" },
-    { "id": "sup-mines-017", "theme": "Productivité et indicateurs", "level": 2, "q": "Un engin a fonctionné 200 h et a subi 4 pannes. Quel est son MTBF ?", "choices": ["25 h", "50 h", "200 h", "800 h"], "answer": 1, "explain": "MTBF = temps de fonctionnement / nombre de pannes = 200 / 4 = 50 h.", "seconds": 60, "status": "draft" },
-    { "id": "sup-mines-018", "theme": "Productivité et indicateurs", "level": 2, "q": "Une pelle a une capacité théorique de 800 t/h et une efficience de 75 %. Quelle est sa production réelle ?", "choices": ["450 t/h", "500 t/h", "800 t/h", "600 t/h"], "answer": 3, "explain": "Production réelle = 800 × 0,75 = 600 t/h.", "seconds": 60, "status": "draft" },
-    { "id": "sup-mines-019", "theme": "Gestion des risques au front", "level": 1, "q": "Parmi ces travaux, lequel exige obligatoirement un permis de travail (point chaud) ?", "img": "svg/iso-safety-signs.svg", "imgAlt": "Panneaux de sécurité normalisés.", "choices": ["Le soudage ou le meulage en zone à risque", "Marcher sur une piste balisée", "Boire de l'eau au poste", "Lire une consigne"], "answer": 0, "explain": "Le soudage et le meulage produisent flammes et étincelles : ce sont des travaux par point chaud soumis à permis. Les autres actions sont courantes.", "seconds": 40, "status": "draft" },
-    { "id": "sup-mines-020", "theme": "Gestion des risques au front", "level": 2, "q": "Trois équipes interviennent en même temps sur le même convoyeur consigné. Comment doit se faire la condamnation ?", "img": "svg/lockout-tagout.svg", "imgAlt": "Consignation avec cadenas personnels sur un point de consignation.", "choices": ["Seul le chef de poste pose un cadenas", "L'équipe la plus rapide pose le cadenas pour tous", "Chaque intervenant pose son propre cadenas", "Aucun cadenas si l'intervention est brève"], "answer": 2, "explain": "Chaque personne protège sa propre sécurité avec son cadenas personnel, retiré par elle seule. On utilise une pince multi-cadenas. Même brève, une intervention exige la consignation.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-021", "theme": "Gestion des risques au front", "level": 3, "q": "Avec une échelle de 1 à 5 pour la gravité et la probabilité, quel danger traiter en premier ?", "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de risque 5 par 5 avec scores.", "choices": ["Gravité 3 et probabilité 2", "Gravité 2 et probabilité 2", "Gravité 1 et probabilité 1", "Gravité 5 et probabilité 4"], "answer": 3, "explain": "Score = gravité × probabilité : 20, contre 6, 4 et 1. Le danger de score 20 est le plus élevé et se traite en premier.", "seconds": 50, "status": "draft" },
-    { "id": "sup-mines-022", "theme": "Gestion des risques au front", "level": 1, "q": "À quel moment réalise-t-on l'analyse de risque de la tâche (minute sécurité) ?", "choices": ["Après un incident", "Avant de commencer la tâche, avec l'équipe", "À la fin du poste", "Une fois par an"], "answer": 1, "explain": "L'analyse de risque de la tâche est préventive : on identifie dangers et mesures avant de démarrer, avec ceux qui vont faire le travail.", "seconds": 40, "status": "draft" },
-    { "id": "sup-mines-023", "theme": "Gestion des risques au front", "level": 2, "q": "Un opérateur vous signale un presque-accident sans blessé. Que faites-vous ?", "choices": ["Vous l'ignorez, il n'y a pas eu de dégâts", "Vous sanctionnez l'opérateur concerné", "Vous l'enregistrez, analysez les causes et partagez le retour d'expérience", "Vous attendez un accident avant d'agir"], "answer": 2, "explain": "Le presque-accident révèle un danger sans avoir causé de dommage. L'analyser et partager l'enseignement évite que la prochaine fois soit un accident.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-024", "theme": "Gestion des risques au front", "level": 3, "q": "D'après la pyramide de Bird, que permet de réduire le traitement systématique des presque-accidents et incidents sans gravité ?", "img": "svg/bird-pyramid.svg", "imgAlt": "Pyramide de Bird : 1 accident grave, 10 blessures légères, 30 dommages matériels, 600 incidents.", "choices": ["La probabilité des accidents graves, en agissant sur la base de la pyramide", "Uniquement les dommages matériels", "Le nombre d'employés", "Rien : les accidents graves sont indépendants des incidents mineurs"], "answer": 0, "explain": "Selon Bird, les accidents graves sont rares mais les incidents de la base sont nombreux et ont des causes communes : agir sur la base réduit la probabilité des événements graves.", "seconds": 50, "status": "draft" },
-    { "id": "sup-mines-025", "theme": "Gestion des risques au front", "level": 2, "q": "Un opérateur doit entrer dans une trémie vide du concasseur pour la nettoyer. Quelles sont les mesures indispensables ?", "choices": ["Entrer rapidement avant l'arrivée du minerai", "Permis de travail, test d'atmosphère, surveillant extérieur et moyens de sauvetage", "Entrer seul avec un masque anti-poussières", "Ventiler une minute puis entrer"], "answer": 1, "explain": "Une trémie est un espace confiné : permis, test de l'atmosphère (oxygène, gaz), surveillant à l'extérieur, consignation et secours prêts. Jamais seul, et un masque anti-poussières ne protège pas du manque d'oxygène.", "seconds": 50, "status": "draft" },
-    { "id": "sup-mines-026", "theme": "Gestion des risques au front", "level": 3, "q": "Pour un travail en hauteur sur une plateforme de maintenance, quelle est l'approche à privilégier ?", "choices": ["Le harnais uniquement, c'est plus rapide", "Pas de protection nécessaire sous 5 m", "Une consigne verbale", "Une protection collective (garde-corps) d'abord, le harnais ancré en dernier recours"], "answer": 3, "explain": "La hiérarchie de prévention place la protection collective avant la protection individuelle : le garde-corps protège tout le monde sans dépendre du comportement de chacun.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-027", "theme": "Gestion des risques au front", "level": 3, "q": "La direction vous demande de reprendre la production alors que les conditions de sécurité d'une zone arrêtée ne sont pas rétablies. Que faites-vous ?", "choices": ["Maintenir l'arrêt tant que les conditions de sécurité ne sont pas rétablies et rendre compte", "Reprendre si le chef d'équipe est d'accord", "Reprendre avec un EPI supplémentaire", "Reprendre pour une heure seulement"], "answer": 0, "explain": "Le droit d'arrêt prime sur les objectifs de production. La reprise ne se fait qu'après levée du danger, validée par les personnes compétentes.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-028", "theme": "Forage-tir et circulation", "level": 1, "q": "Avant la mise à feu d'un tir sur un gradin, quelle mesure est indispensable ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin chargé prêt pour le tir.", "choices": ["Laisser le personnel travailler à 50 m du tir", "Prévenir seulement le chef de poste", "Évacuer la zone, placer des gardes aux accès et émettre un signal sonore", "Faire le tir sans prévenir pour éviter la panique"], "answer": 2, "explain": "La zone de tir est évacuée et gardée, un signal sonore précède la mise à feu, et on confirme par radio que tout est dégagé.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-029", "theme": "Forage-tir et circulation", "level": 2, "q": "Le facteur de charge d'un tir passe de 0,5 à 0,8 kg/m³ sur un volume de 10 000 m³. Quelle quantité d'explosif est ajoutée ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin avec trous et volume de roche à abattre.", "choices": ["300 kg", "1 500 kg", "5 000 kg", "3 000 kg"], "answer": 3, "explain": "Différence = 0,8 − 0,5 = 0,3 kg/m³ ; 0,3 × 10 000 = 3 000 kg.", "seconds": 70, "status": "draft" },
-    { "id": "sup-mines-030", "theme": "Forage-tir et circulation", "level": 2, "q": "Un tir couvre une surface de 840 m² avec une maille de 4 m (banquette) sur 5 m (espacement). Combien de trous faut-il ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Plan de tir avec banquette et espacement.", "choices": ["34 trous", "42 trous", "48 trous", "168 trous"], "answer": 1, "explain": "Maille = 4 × 5 = 20 m² par trou ; 840 / 20 = 42 trous.", "seconds": 70, "status": "draft" },
-    { "id": "sup-mines-031", "theme": "Forage-tir et circulation", "level": 2, "q": "Le plus gros tombereau mesure 7 m de large. Quelle largeur de piste à double sens retenir selon la règle usuelle de 3,5 fois la largeur ?", "img": "photo/haul-truck.jpg", "imgAlt": "Piste de roulage et tombereau.", "choices": ["14 m", "17,5 m", "24,5 m", "35 m"], "answer": 2, "explain": "3,5 × 7 m = 24,5 m. Une piste plus étroite ne laisse pas assez de marge pour le croisement de deux engins.", "seconds": 60, "status": "draft" },
-    { "id": "sup-mines-032", "theme": "Forage-tir et circulation", "level": 1, "q": "Un tombereau tombe en panne au milieu de la piste de roulage. Que faites-vous ?", "img": "photo/haul-truck.jpg", "imgAlt": "Tombereau arrêté sur la piste.", "choices": ["Le signaler à la régulation, baliser et dévier la circulation", "Le laisser sans signalisation en attendant le mécanicien", "Demander aux autres camions de le contourner au hasard", "Le pousser avec un véhicule léger"], "answer": 0, "explain": "Un engin en panne est un obstacle dangereux : on informe la régulation, on balise et on dévie la circulation. Le pousser avec un véhicule léger est dangereux.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-033", "theme": "Forage-tir et circulation", "level": 3, "q": "Quelle mesure limite l'exposition aux poussières de silice lors du forage ?", "choices": ["Forer plus vite", "Injection d'eau ou captage des poussières, et masque adapté", "Ouvrir les fenêtres de la cabine", "Interdire l'arrosage des pistes"], "answer": 1, "explain": "L'eau injectée ou le captage à la source empêche la poussière de se disperser ; le masque est une protection complémentaire.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-034", "theme": "Forage-tir et circulation", "level": 3, "q": "Un trou amorcé n'a pas explosé lors d'un tir. Qui est autorisé à traiter ce raté ?", "choices": ["N'importe quel foreur, rapidement", "Le chef de poste seul", "Le conducteur de pelle", "Uniquement le boutefeu habilité, selon la procédure ratés"], "answer": 3, "explain": "Le traitement d'un raté est réservé au personnel habilité qui applique la procédure : balisage, délai d'attente, désamorçage ou nouveau tir contrôlé.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-035", "theme": "Forage-tir et circulation", "level": 2, "q": "Un orage approche pendant le chargement d'un tir. Que faut-il faire ?", "choices": ["Suspendre le chargement et évacuer la zone", "Accélérer le chargement pour finir avant l'orage", "Continuer avec des gants isolants", "Se réfugier dans les camions chargés d'explosifs"], "answer": 0, "explain": "L'électricité atmosphérique peut amorcer accidentellement des détonateurs : on suspend le chargement, on évacue et on reprend après l'orage selon la procédure.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-036", "theme": "Stabilité, ventilation et urgences", "level": 1, "q": "Le détecteur individuel signale du CO au-dessus du seuil d'alarme dans une galerie. Que faites-vous ?", "img": "svg/mine-ventilation.svg", "imgAlt": "Schéma de ventilation indiquant la voie d'air frais.", "choices": ["Vous continuez en surveillant le détecteur", "Vous coupez le détecteur car il gêne", "Vous arrêtez les travaux, évacuez par la voie d'air frais et alertez", "Vous cherchez la source de gaz seul"], "answer": 2, "explain": "Une alarme de gaz toxique impose l'arrêt, l'évacuation par l'air frais et l'alerte. On ne cherche pas la source sans moyens adaptés.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-037", "theme": "Stabilité, ventilation et urgences", "level": 1, "q": "Vous voyez une fissure de traction apparaître en crête d'un talus au-dessus de votre zone de travail. Que faites-vous ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Talus de gradin avec crête et pied.", "choices": ["Vous continuez en observant la fissure", "Vous accélérez le chargement pour évacuer le minerai", "Vous placez des cônes sans autre action", "Vous interdisez l'accès, balisez et alertez le géotechnicien"], "answer": 3, "explain": "Une fissure de traction annonce un possible glissement. On évacue, on interdit l'accès et on attend l'avis de la géotechnique.", "seconds": 45, "status": "draft" },
-    { "id": "sup-mines-038", "theme": "Stabilité, ventilation et urgences", "level": 2, "q": "Un incendie se déclare en souterrain. Quelle est la bonne conduite pour l'équipe ?", "img": "svg/underground-mine-layout.svg", "imgAlt": "Plan d'une mine souterraine avec issues et refuges.", "choices": ["Retourner chercher le matériel", "Mettre l'auto-sauveteur et rejoindre l'issue ou la chambre refuge par l'itinéraire d'évacuation", "Éteindre le feu seul sans alerter", "Attendre sur place les secours"], "answer": 1, "explain": "On alerte, on met l'auto-sauveteur et on rejoint l'issue ou la chambre refuge selon le plan d'évacuation, sans retourner chercher du matériel.", "seconds": 50, "status": "draft" },
-    { "id": "sup-mines-039", "theme": "Stabilité, ventilation et urgences", "level": 1, "q": "Quelle maladie pulmonaire est causée par l'inhalation prolongée de poussières de silice ?", "choices": ["Le saturnisme", "Le paludisme", "La silicose", "La scoliose"], "answer": 2, "explain": "La silicose est une fibrose pulmonaire irréversible due aux poussières de silice cristalline. Le saturnisme est dû au plomb, le paludisme est parasitaire, la scoliose touche la colonne.", "seconds": 35, "status": "draft" },
-    { "id": "sup-mines-040", "theme": "Stabilité, ventilation et urgences", "level": 3, "q": "Après de fortes pluies, le facteur de sécurité calculé d'un talus passe de 1,3 à 1,05. Que faites-vous ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Talus de fosse avec gradins.", "choices": ["Renforcer la surveillance, restreindre l'accès au pied du talus et alerter la géotechnique", "Ne rien faire : le facteur reste supérieur à 1", "Augmenter les tirs au pied du talus", "Attendre le prochain relevé mensuel"], "answer": 0, "explain": "À 1,05, la marge est presque nulle. On limite l'accès, on renforce la surveillance et on alerte les spécialistes. Les tirs au pied aggraveraient la situation.", "seconds": 55, "status": "draft" },
-    { "id": "sup-mines-041", "theme": "Stabilité, ventilation et urgences", "level": 2, "q": "Une galerie de 15 m² de section est traversée par un débit de 6 m³/s. Quelle est la vitesse de l'air ?", "img": "svg/mine-ventilation.svg", "imgAlt": "Galerie ventilée avec débit et section indiqués.", "choices": ["0,2 m/s", "0,4 m/s", "0,9 m/s", "2,5 m/s"], "answer": 1, "explain": "Q = V × S donc V = Q / S = 6 / 15 = 0,4 m/s.", "seconds": 60, "status": "draft" },
-    { "id": "sup-mines-042", "theme": "Stabilité, ventilation et urgences", "level": 3, "q": "Après un incident, quelle approche d'enquête est la plus efficace ?", "choices": ["Trouver le coupable et le sanctionner", "S'arrêter à l'erreur de l'opérateur", "Classer l'incident sans suite s'il n'y a pas de blessé", "Rechercher les causes racines (organisation, formation, matériel, supervision) et suivre les actions correctives"], "answer": 3, "explain": "L'erreur individuelle est rarement la seule cause : on cherche pourquoi elle a été possible et on corrige le système pour éviter la répétition.", "seconds": 50, "status": "draft" }
+    {
+      "id": "sup-mines-001",
+      "theme": "Conduite du poste et cycle d'exploitation",
+      "level": 1,
+      "q": "Tu prépares le briefing de 6 h. Le cahier de relève signale un raté non traité sur le gradin 4, le tombereau 12 en panne et le ventilateur auxiliaire arrêté au niveau −200. Que fais-tu du briefing ?",
+      "choices": [
+        "Je ne présente que l'objectif de production du poste",
+        "Je n'informe que les chefs d'équipe, après le poste",
+        "Je transmets consignes, état des engins et zones, risques du jour",
+        "Je ne signale que les engins en panne et leur remise en service"
+      ],
+      "answer": 2,
+      "explain": "Le briefing de début de poste transmet les consignes, l'état des engins et des zones et les risques du jour : un raté ou un ventilateur arrêté concernent toute l'équipe.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-002",
+      "theme": "Conduite du poste et cycle d'exploitation",
+      "level": 1,
+      "q": "Tu planifies le poste de nuit sur le niveau −200 de la mine. Quel enchaînement imposes-tu pour chaque volée d'avancement ?",
+      "img": "svg/underground-mine-layout.svg",
+      "imgAlt": "Coupe d'une mine souterraine : chevalement, puits d'extraction, rampe d'accès, cheminée d'aération, niveaux 1, 2 et 3 (−100, −200 et −300 m), corps minéralisé, chantier d'exploitation, puisard.",
+      "choices": [
+        "Forage, chargement, tir, ventilation, purge, marinage, puis soutènement",
+        "Tir, forage, chargement, marinage, ventilation, purge, soutènement",
+        "Marinage, forage, tir, soutènement, purge, ventilation, chargement final",
+        "Soutènement, tir, forage, ventilation, marinage, purge, chargement"
+      ],
+      "answer": 0,
+      "explain": "Le cycle d'avancement souterrain suit : forage, chargement des explosifs, tir, ventilation, purge, marinage, soutènement.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-003",
+      "theme": "Conduite du poste et cycle d'exploitation",
+      "level": 1,
+      "q": "Sur le gradin 6, le forage a pris 2 heures de retard à cause d'une foreuse en panne. Quelle conséquence anticipes-tu sur le reste du poste ?",
+      "choices": [
+        "Pas de décalage : chaque phase est indépendante des autres",
+        "Seul le transport est touché, le front reste libre",
+        "Le chargement avance, car la pelle est déjà libre",
+        "Un décalage du tir, du chargement, puis du transport"
+      ],
+      "answer": 3,
+      "explain": "Chaque phase libère le front pour la suivante : un retard au forage se répercute sur le tir, le chargement et le transport.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-004",
+      "theme": "Conduite du poste et cycle d'exploitation",
+      "level": 1,
+      "q": "Tu prends ton poste à 6 h, l'équipe précédente est déjà partie et la pelle attend. Quelle est ta première action sur le terrain ?",
+      "choices": [
+        "Lancer la production de suite pour rattraper le retard",
+        "Lire la relève et vérifier le front par une tournée",
+        "Attendre que l'équipe précédente t'appelle",
+        "Déléguer la vérification du front à l'équipe sur place"
+      ],
+      "answer": 1,
+      "explain": "Le chef de poste lit le cahier de relève et fait une tournée du front avant de lancer la production.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-005",
+      "theme": "Conduite du poste et cycle d'exploitation",
+      "level": 1,
+      "q": "Cinq tombereaux de 100 t de charge utile, comme celui de la photo, ont chacun fait 10 voyages pendant ton poste. Quel tonnage as-tu transporté ?",
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Photo d'un tombereau de mine chargé de minerai en vrac sur une piste d'exploitation.",
+      "choices": [
+        "4 000 t",
+        "5 000 t",
+        "4 500 t",
+        "50 000 t"
+      ],
+      "answer": 1,
+      "explain": "5 camions × 10 voyages × 100 t = 5 000 t.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-006",
+      "theme": "Conduite du poste et cycle d'exploitation",
+      "level": 2,
+      "q": "Le stock au concasseur est de 10 000 t de minerai à 2 g/t d'or. Quelle quantité d'or ce tas contient-il ?",
+      "choices": [
+        "2 kg",
+        "200 kg",
+        "2 000 kg",
+        "20 kg"
+      ],
+      "answer": 3,
+      "explain": "10 000 t × 2 g/t = 20 000 g = 20 kg d'or contenu.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-007",
+      "theme": "Conduite du poste et cycle d'exploitation",
+      "level": 1,
+      "q": "Au rapport de poste, 3 000 t de stérile et 1 000 t de minerai ont été extraites. Quel est le ratio stérile/minerai ?",
+      "choices": [
+        "3",
+        "0,33",
+        "1",
+        "4"
+      ],
+      "answer": 0,
+      "explain": "Ratio stérile/minerai = 3 000/1 000 = 3.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-008",
+      "theme": "Conduite du poste et cycle d'exploitation",
+      "level": 3,
+      "q": "Le conducteur de la chargeuse a repris 250 t de stérile à 0 g/t dans un tas de 1 000 t de minerai à 3 g/t avant de charger les camions. Quelle teneur arrive à l'usine ?",
+      "choices": [
+        "2,7 g/t",
+        "3,75 g/t",
+        "2,4 g/t",
+        "1,5 g/t"
+      ],
+      "answer": 2,
+      "explain": "Or : 3 000 g pour 1 250 t, soit 2,4 g/t. La dilution a fait chuter la teneur de 20 %.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-009",
+      "theme": "Conduite du poste et cycle d'exploitation",
+      "level": 3,
+      "q": "Le chef de poste sortant te donne la relève uniquement de vive voix et ne laisse rien d'écrit. Pourquoi est-ce insuffisant ?",
+      "choices": [
+        "Parce que le papier est obligatoire pour les primes de poste",
+        "Parce que le verbal remplace le briefing de sécurité de l'équipe",
+        "Parce que la direction doit pouvoir sanctionner l'équipe sortante",
+        "Parce que ratés, zones instables et pannes se perdent à l'oral"
+      ],
+      "answer": 3,
+      "explain": "La relève doit être verbale et écrite pour garantir la continuité des informations de sécurité : ratés, zones instables, engins immobilisés.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-010",
+      "theme": "Productivité et indicateurs",
+      "level": 1,
+      "q": "Le mécanicien te dit que son tombereau est « à 90 % de disponibilité ». Que mesure cet indicateur ?",
+      "choices": [
+        "Tonnes produites divisées par les heures travaillées",
+        "Heures en état de marche divisées par les heures calendaires",
+        "Heures travaillées divisées par les heures disponibles",
+        "Heures de panne divisées par les heures calendaires"
+      ],
+      "answer": 1,
+      "explain": "La disponibilité mécanique est le rapport entre les heures où l'engin est en état de marche et les heures calendaires.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-011",
+      "theme": "Productivité et indicateurs",
+      "level": 1,
+      "q": "Le tombereau 7 est resté immobilisé 3 h sur 24 h pour une réparation. Quelle est sa disponibilité mécanique ?",
+      "choices": [
+        "12,5 %",
+        "83,25 %",
+        "87,5 %",
+        "90 %"
+      ],
+      "answer": 2,
+      "explain": "(24 − 3)/24 = 21/24 = 87,5 %.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-012",
+      "theme": "Productivité et indicateurs",
+      "level": 2,
+      "q": "Le tombereau 9 était disponible 20 h sur la journée et il n'a réellement travaillé que 16 h. Quel est son taux d'utilisation ?",
+      "choices": [
+        "80 %",
+        "62,5 %",
+        "70 %",
+        "90 %"
+      ],
+      "answer": 0,
+      "explain": "Utilisation = heures travaillées / heures disponibles = 16/20 = 80 %.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-013",
+      "theme": "Productivité et indicateurs",
+      "level": 2,
+      "q": "Le rapport mensuel de la pelle donne une disponibilité de 90 %, une performance de 80 % et une qualité de 95 %. Quel TRS annonces-tu ?",
+      "choices": [
+        "68,4 %",
+        "72 %",
+        "85,25 %",
+        "91 %"
+      ],
+      "answer": 0,
+      "explain": "TRS = 0,90 × 0,80 × 0,95 = 0,684 soit 68,4 %.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-014",
+      "theme": "Productivité et indicateurs",
+      "level": 2,
+      "q": "Le cycle total d'un tombereau est de 24 min et la pelle charge un camion en 6 min. Six camions sont affectés et font la queue à la pelle. Que décides-tu ?",
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Photo d'un tombereau de mine chargé de minerai en vrac sur une piste d'exploitation.",
+      "choices": [
+        "Ajouter 2 camions pour fluidifier le cycle",
+        "Garder 6 camions et ralentir la pelle de chargement",
+        "Réaffecter 2 camions : 4 suffisent (24 / 6 min)",
+        "Augmenter la charge utile de chaque camion"
+      ],
+      "answer": 2,
+      "explain": "Le nombre de camions nécessaire est voisin du rapport cycle / temps de chargement = 24/6 = 4. Au-delà, les camions font la queue et le coût de transport augmente.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-015",
+      "theme": "Productivité et indicateurs",
+      "level": 2,
+      "q": "Le rapport du mois indique 150 millions de FCFA de coûts pour 50 000 t déplacées. Quel est le coût unitaire ?",
+      "choices": [
+        "300 FCFA/t",
+        "3 000 FCFA/t",
+        "1 500 FCFA/t",
+        "30 000 FCFA/t"
+      ],
+      "answer": 1,
+      "explain": "150 000 000 / 50 000 = 3 000 FCFA/t.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-016",
+      "theme": "Productivité et indicateurs",
+      "level": 3,
+      "q": "En saison des pluies, la piste s'allonge et le cycle des 6 tombereaux de 100 t passe de 30 à 40 min. Quelle est la nouvelle production horaire de la flotte ?",
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Photo d'un tombereau de mine chargé de minerai en vrac sur une piste d'exploitation.",
+      "choices": [
+        "1 000 t/h",
+        "1 100 t/h",
+        "1 200 t/h",
+        "900 t/h"
+      ],
+      "answer": 3,
+      "explain": "6 × 100 × 60/40 = 900 t/h (contre 1 200 t/h avec un cycle de 30 min).",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-017",
+      "theme": "Productivité et indicateurs",
+      "level": 2,
+      "q": "Une chargeuse a fonctionné 200 h et subi 4 pannes sur le mois. Quel est son MTBF ?",
+      "choices": [
+        "25 h",
+        "200 h",
+        "50 h",
+        "800 h"
+      ],
+      "answer": 2,
+      "explain": "MTBF = temps de marche / nombre de pannes = 200/4 = 50 h.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-018",
+      "theme": "Productivité et indicateurs",
+      "level": 2,
+      "q": "La pelle a une capacité théorique de 800 t/h et une efficience de 75 %. Quelle production réelle prévois-tu ?",
+      "choices": [
+        "600 t/h",
+        "450 t/h",
+        "1 066 t/h",
+        "800 t/h"
+      ],
+      "answer": 0,
+      "explain": "Production réelle = 800 × 0,75 = 600 t/h.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-019",
+      "theme": "Gestion des risques au front",
+      "level": 1,
+      "q": "Un soudeur doit réparer un garde-corps sur la passerelle du concasseur. Que faut-il avant de commencer ?",
+      "choices": [
+        "Une simple autorisation orale du chef de poste",
+        "Rien de particulier, la tâche est trop courte",
+        "Seulement un extincteur à proximité de la zone",
+        "Un permis de point chaud signé par émetteur et réalisateur"
+      ],
+      "answer": 3,
+      "explain": "Le soudage est un travail par point chaud : il exige un permis de travail précisant tâche, zone, dangers et mesures, signé avant le début.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-020",
+      "theme": "Gestion des risques au front",
+      "level": 2,
+      "q": "Trois équipes interviennent en même temps sur le même convoyeur consigné. Comment organises-tu la condamnation ?",
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Consignation : organe de coupure condamné par cadenas et étiquette ; étapes séparer, condamner, identifier, vérifier l'absence de tension, mettre à la terre.",
+      "choices": [
+        "Seul le chef de poste pose un cadenas pour tous",
+        "Chaque intervenant pose son propre cadenas sur la pince",
+        "L'équipe la plus rapide cadenasse pour toutes les autres",
+        "Un seul cadenas suffit si l'intervention reste brève"
+      ],
+      "answer": 1,
+      "explain": "Quand plusieurs équipes interviennent, chacune pose son propre cadenas ; personne ne retire le cadenas d'un autre.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-021",
+      "theme": "Gestion des risques au front",
+      "level": 3,
+      "q": "Ton analyse de risque donne quatre dangers : A (gravité 3, probabilité 2), B (2, 2), C (1, 1) et D (gravité 5, probabilité 4). Lequel traites-tu en premier ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 × 5 : probabilité en abscisse, gravité en ordonnée, criticité = probabilité × gravité ; faible 1-4, moyen 5-9, élevé 10-14, critique 15 et plus.",
+      "choices": [
+        "A : criticité de 6, soit 3 × 2",
+        "D : criticité de 20 (5 × 4)",
+        "B : criticité de 4, soit 2 × 2",
+        "C : criticité de 1 (1 × 1)"
+      ],
+      "answer": 1,
+      "explain": "Criticité = probabilité × gravité : D = 20 (critique), A = 6, B = 4, C = 1. On traite d'abord le plus élevé.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-022",
+      "theme": "Gestion des risques au front",
+      "level": 1,
+      "q": "Ton équipe va changer un flexible hydraulique sur la pelle. À quel moment fais-tu l'analyse de risque de la tâche (minute sécurité) ?",
+      "choices": [
+        "Une fois le travail terminé, au bilan",
+        "À la fin du poste, avec le chef d'équipe",
+        "Une fois par an, lors de la revue de site",
+        "Avant de commencer la tâche, avec l'équipe"
+      ],
+      "answer": 3,
+      "explain": "L'analyse de risque de la tâche se fait avant de commencer, avec l'équipe : on identifie les dangers et on choisit les mesures.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-023",
+      "theme": "Gestion des risques au front",
+      "level": 2,
+      "q": "Un opérateur te signale un presque-accident : un bloc est tombé à côté de lui, sans blessé. Que fais-tu ?",
+      "choices": [
+        "J'enregistre, j'analyse les causes et je partage le retour",
+        "Je l'ignore car il n'y a eu aucun dégât ni blessé",
+        "Je sanctionne l'opérateur pour avoir été mal placé",
+        "J'attends un accident avant d'agir sur la zone"
+      ],
+      "answer": 0,
+      "explain": "Le presque-accident est un signal gratuit : on l'enregistre, on analyse les causes racines et on partage le retour d'expérience.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-024",
+      "theme": "Gestion des risques au front",
+      "level": 3,
+      "q": "Le site enregistre 600 presque-accidents par an et 1 accident grave. La direction propose de ne traiter que les accidents graves. Que réponds-tu ?",
+      "img": "svg/bird-pyramid.svg",
+      "imgAlt": "Pyramide de Bird 1-10-30-600 : 1 accident grave, 10 lésions légères, 30 dégâts matériels, 600 presque-accidents ; agir sur la base réduit les accidents graves.",
+      "choices": [
+        "Ne rien traiter de plus : les deux types sont indépendants",
+        "Traiter uniquement les dommages matériels les plus coûteux",
+        "Traiter aussi les presque-accidents : base de la pyramide de Bird",
+        "Réduire seulement les effectifs exposés dans la zone"
+      ],
+      "answer": 2,
+      "explain": "D'après la pyramide de Bird (1-10-30-600), agir sur les presque-accidents réduit la probabilité des accidents graves au sommet.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-025",
+      "theme": "Gestion des risques au front",
+      "level": 2,
+      "q": "Un opérateur doit entrer dans la trémie vide du concasseur pour la nettoyer. Quelles mesures exiges-tu ?",
+      "choices": [
+        "Entrer vite avant l'arrivée du minerai dans la trémie",
+        "Entrer seul avec un masque anti-poussières et une lampe",
+        "Ventiler une minute puis entrer sans autre contrôle",
+        "Permis, test d'atmosphère, surveillant et sauvetage prêts"
+      ],
+      "answer": 3,
+      "explain": "La trémie est un espace confiné : permis, test de l'atmosphère, surveillant à l'extérieur et moyens de sauvetage prêts. On n'entre jamais seul.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-026",
+      "theme": "Gestion des risques au front",
+      "level": 3,
+      "q": "Une équipe doit travailler en hauteur sur une plateforme de maintenance. Quelle approche privilégies-tu ?",
+      "choices": [
+        "Le harnais seul, car il est plus rapide à mettre",
+        "Le garde-corps d'abord, le harnais en dernier recours",
+        "Pas de protection particulière sous 5 m de hauteur",
+        "Une consigne verbale rappelée avant chaque montée"
+      ],
+      "answer": 1,
+      "explain": "En hauteur, on privilégie la protection collective ; le harnais ancré n'est que le recours quand elle est impossible.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-027",
+      "theme": "Gestion des risques au front",
+      "level": 3,
+      "q": "La direction te demande de reprendre la production dans une zone arrêtée alors que les conditions de sécurité ne sont pas rétablies. Que fais-tu ?",
+      "choices": [
+        "Je reprends si le chef d'équipe est d'accord",
+        "Je reprends avec un EPI supplémentaire pour l'équipe",
+        "Je maintiens l'arrêt et je rends compte à la direction",
+        "Je reprends pour une heure seulement sous surveillance"
+      ],
+      "answer": 2,
+      "explain": "La production ne reprend qu'une fois les conditions de sécurité rétablies, même sous pression hiérarchique.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-028",
+      "theme": "Forage-tir et circulation",
+      "level": 1,
+      "q": "Il est 14 h 50 et le tir est prévu à 15 h. Un mécanicien travaille sur une pelle à 50 m du bord de la zone. Que fais-tu ?",
+      "choices": [
+        "Je fais évacuer la zone, poster des gardes et sonner le signal",
+        "Je le laisse finir, car 50 m semble une distance sûre",
+        "Je préviens uniquement le chef de poste du tir prévu",
+        "Je décale le tir de 10 minutes sans prévenir le mécanicien"
+      ],
+      "answer": 0,
+      "explain": "Avant la mise à feu : évacuation de tout personnel et engin de la zone, gardes aux accès, signal sonore et confirmation radio. Le rayon de sécurité exact est fixé par les procédures du site.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-029",
+      "theme": "Forage-tir et circulation",
+      "level": 2,
+      "q": "Pour mieux fragmenter, le plan de tir passe de 0,5 à 0,8 kg/m³ sur 10 000 m³. Quelle masse d'explosif ajoutes-tu à la commande ?",
+      "choices": [
+        "3 000 kg",
+        "300 kg",
+        "1 500 kg",
+        "10 000 kg"
+      ],
+      "answer": 0,
+      "explain": "Écart de facteur de charge : 0,3 kg/m³ × 10 000 m³ = 3 000 kg.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-030",
+      "theme": "Forage-tir et circulation",
+      "level": 2,
+      "q": "Le tir couvre une surface de 840 m² avec une maille de 4 m (banquette) sur 5 m (espacement). Combien de trous le foreur doit-il réaliser ?",
+      "choices": [
+        "34 trous",
+        "48 trous",
+        "42 trous",
+        "168 trous"
+      ],
+      "answer": 2,
+      "explain": "Surface par trou = 4 × 5 = 20 m² ; 840/20 = 42 trous.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-031",
+      "theme": "Forage-tir et circulation",
+      "level": 2,
+      "q": "Tu dimensionnes une piste à double sens pour un tombereau de 7 m de large, comme celui de la photo. Quelle largeur retiens-tu selon la règle usuelle de 3,5 fois la largeur ?",
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Photo d'un tombereau de mine chargé de minerai en vrac sur une piste d'exploitation.",
+      "choices": [
+        "14 m",
+        "24,5 m",
+        "17,5 m (2,5 fois)",
+        "35 m"
+      ],
+      "answer": 1,
+      "explain": "Largeur de piste à double sens ≈ 3,5 × 7 = 24,5 m.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-032",
+      "theme": "Forage-tir et circulation",
+      "level": 1,
+      "q": "Un tombereau tombe en panne au milieu de la piste de roulage. Que fais-tu ?",
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Photo d'un tombereau de mine chargé de minerai en vrac sur une piste d'exploitation.",
+      "choices": [
+        "Je le laisse sans balisage en attendant le mécanicien",
+        "Je demande aux autres camions de le contourner à vue",
+        "Je le pousse avec un véhicule léger vers le bas-côté",
+        "Je préviens la régulation, je balise et je dévie"
+      ],
+      "answer": 3,
+      "explain": "Un engin en panne sur la piste est signalé à la régulation, balisé, et la circulation est déviée.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-033",
+      "theme": "Forage-tir et circulation",
+      "level": 3,
+      "q": "La pompe d'injection d'eau de la foreuse est en panne et une poussière blanche envahit la cabine. Que décides-tu ?",
+      "choices": [
+        "Je fore plus vite pour finir le trou avant l'arrêt",
+        "J'ouvre les fenêtres de la cabine pour évacuer la poussière",
+        "J'arrête le forage tant que l'eau ou le captage manque",
+        "Je fais arroser les pistes et je continue de forer"
+      ],
+      "answer": 2,
+      "explain": "La foration produit des poussières de silice dangereuses : on exige l'injection d'eau ou le captage, avec le masque adapté.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-034",
+      "theme": "Forage-tir et circulation",
+      "level": 3,
+      "q": "Un trou amorcé n'a pas explosé. Un foreur propose de s'en occuper tout de suite pour libérer le front. Que réponds-tu ?",
+      "choices": [
+        "Non : seul le boutefeu habilité traite le raté",
+        "Oui : il connaît bien les trous qu'il a lui-même forés",
+        "Oui, avec l'accord du conducteur de la pelle",
+        "Non : le chef de poste traite seul le raté"
+      ],
+      "answer": 0,
+      "explain": "Un raté est traité uniquement par le personnel habilité (boutefeu) selon la procédure ratés.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-035",
+      "theme": "Forage-tir et circulation",
+      "level": 2,
+      "q": "Un orage approche pendant le chargement du tir. Que fais-tu ?",
+      "choices": [
+        "J'accélère pour finir avant l'orage",
+        "Je continue avec des gants isolants",
+        "Je réfugie l'équipe dans les camions chargés d'explosifs",
+        "Je suspends le chargement et j'évacue la zone"
+      ],
+      "answer": 3,
+      "explain": "En cas d'orage, le chargement est suspendu et la zone évacuée : l'électricité atmosphérique peut provoquer une amorce accidentelle.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-036",
+      "theme": "Stabilité, ventilation et urgences",
+      "level": 1,
+      "q": "En souterrain, le détecteur individuel d'un foreur signale du CO au-dessus du seuil d'alarme dans la galerie. Que fais-tu ?",
+      "img": "svg/mine-ventilation.svg",
+      "imgAlt": "Ventilation d'une mine souterraine : air frais par le puits d'entrée, galerie d'entrée, chantier, galerie de retour d'air vicié, puits de sortie avec ventilateur principal, cul-de-sac avec gaine et ventilateur auxiliaire.",
+      "choices": [
+        "Je continue en surveillant le détecteur de près",
+        "J'arrête, j'évacue par l'air frais et j'alerte vite",
+        "Je coupe le détecteur car son alarme gêne le travail",
+        "Je cherche seul la source de gaz avant d'évacuer"
+      ],
+      "answer": 1,
+      "explain": "Une alarme de CO impose d'arrêter les travaux, d'évacuer par la voie d'air frais et d'alerter.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-037",
+      "theme": "Stabilité, ventilation et urgences",
+      "level": 1,
+      "q": "Un conducteur te signale une fissure qui apparaît en crête du talus, au-dessus de la zone de chargement du gradin de la figure. Que fais-tu ?",
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Coupe d'un gradin de mine à ciel ouvert : hauteur H = 10 m, angle de talus 70°, crête, pied, berme de 15 m, merlon de sécurité, piste de roulage de 24 m.",
+      "choices": [
+        "Je continue en observant la fissure de loin",
+        "J'interdis l'accès, je balise et j'alerte la géotechnique",
+        "J'accélère le chargement pour évacuer le minerai vite",
+        "Je pose des cônes sans autre action sur la zone"
+      ],
+      "answer": 1,
+      "explain": "Une fissure de traction en crête est un signal d'alerte : on stoppe l'accès, on balise, on alerte la géotechnique et on attend son avis.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-038",
+      "theme": "Stabilité, ventilation et urgences",
+      "level": 2,
+      "q": "Un incendie se déclare dans une galerie souterraine. Quelle est la bonne conduite pour ton équipe ?",
+      "choices": [
+        "Retourner chercher le matériel de l'équipe au front",
+        "Éteindre le feu seul avec l'extincteur sans alerter",
+        "Attendre sur place l'arrivée des secours de la mine",
+        "Mettre l'auto-sauveteur et rejoindre l'issue de secours"
+      ],
+      "answer": 3,
+      "explain": "On donne l'alerte, on met l'auto-sauveteur et on rejoint l'issue ou la chambre refuge par l'itinéraire d'évacuation, avec appel de chacun au point de rassemblement.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-039",
+      "theme": "Stabilité, ventilation et urgences",
+      "level": 1,
+      "q": "Un foreur de 12 ans de métier tousse et s'essouffle. Il a travaillé sans masque dans de la poussière de silice. Quelle maladie suspectes-tu ?",
+      "choices": [
+        "La silicose",
+        "Le saturnisme",
+        "Le paludisme",
+        "La scoliose"
+      ],
+      "answer": 0,
+      "explain": "L'inhalation prolongée de poussières de silice cause la silicose, maladie pulmonaire irréversible.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-040",
+      "theme": "Stabilité, ventilation et urgences",
+      "level": 3,
+      "q": "Après de fortes pluies, le facteur de sécurité calculé d'un talus est passé de 1,3 à 1,05. Que fais-tu ?",
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Coupe d'un gradin de mine à ciel ouvert : hauteur H = 10 m, angle de talus 70°, crête, pied, berme de 15 m, merlon de sécurité, piste de roulage de 24 m.",
+      "choices": [
+        "Je ne fais rien de plus, car 1,05 reste supérieur à 1",
+        "J'augmente les tirs au pied du talus pour purger",
+        "Surveillance renforcée, accès restreint, alerte géotechnique",
+        "J'attends le prochain relevé mensuel de surveillance"
+      ],
+      "answer": 2,
+      "explain": "Un facteur de sécurité tombé à 1,05, proche de 1 (équilibre limite), impose surveillance renforcée, restriction d'accès et alerte à la géotechnique.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-041",
+      "theme": "Stabilité, ventilation et urgences",
+      "level": 2,
+      "q": "Un contrôle de ventilation donne 6 m³/s dans une galerie de 15 m² de section. Quelle est la vitesse de l'air ?",
+      "img": "svg/mine-ventilation.svg",
+      "imgAlt": "Ventilation d'une mine souterraine : air frais par le puits d'entrée, galerie d'entrée, chantier, galerie de retour d'air vicié, puits de sortie avec ventilateur principal, cul-de-sac avec gaine et ventilateur auxiliaire.",
+      "choices": [
+        "0,25 m/s",
+        "0,9 m/s",
+        "2,5 m/s",
+        "0,4 m/s"
+      ],
+      "answer": 3,
+      "explain": "V = Q / S = 6/15 = 0,4 m/s.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-042",
+      "theme": "Stabilité, ventilation et urgences",
+      "level": 3,
+      "q": "Après un incident, l'enquête conclut « erreur du conducteur ». Quelle approche est la plus efficace pour éviter la répétition ?",
+      "choices": [
+        "Sanctionner le conducteur, puis clore l'enquête",
+        "Chercher les causes racines, puis suivre les actions",
+        "S'arrêter à l'erreur de l'opérateur, cause immédiate",
+        "Classer l'incident sans suite s'il n'y a pas de blessé"
+      ],
+      "answer": 1,
+      "explain": "On cherche ce qui a rendu l'erreur possible (arbre des causes) et on suit les actions correctives jusqu'à leur clôture.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-mines-043",
+      "theme": "Forage-tir et circulation",
+      "level": 2,
+      "q": "En saison des pluies, le cycle moyen des tombereaux passe de 24 à 28 min : la piste de roulage est creusée d'ornières et le coût des pneus grimpe. Quelle action engages-tu en premier ?",
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Photo d'un tombereau de mine chargé de minerai en vrac sur une piste d'exploitation.",
+      "choices": [
+        "Ajouter des camions pour compenser le cycle plus long",
+        "Augmenter la vitesse autorisée sur les pistes humides",
+        "Rectifier et bien drainer la piste avec la niveleuse",
+        "Laisser faire jusqu'à la fin des pluies"
+      ],
+      "answer": 2,
+      "explain": "Une piste dégradée allonge les cycles, augmente le coût des pneus et le risque d'accident : entretien et drainage de la piste sont prioritaires.",
+      "seconds": 75,
+      "status": "draft"
+    }
   ]
 }

@@ -2,78 +2,815 @@
   "profile": "tech-mines",
   "modules": [
     {
-      "id": "m1", "title": "Forage-tir et explosifs : bien lire un plan de tir", "theme": "Forage-tir et explosifs", "minutes": 9,
-      "body": "Le forage-tir a pour but de fragmenter le massif rocheux pour que les engins de chargement puissent le reprendre. Sur un gradin, chaque trou est défini par sa **banquette** (distance entre le trou et la face libre la plus proche) et son **espacement** (distance entre deux trous d'une même rangée). Le produit banquette × espacement s'appelle la **maille** ; il fixe la surface de roche que chaque trou doit abattre.\n\nUn trou de mine comprend : la colonne d'explosif, le **bourrage** (matériau inerte, gravillon, en tête de trou) et, au pied, le **surforage**, petite hauteur forée sous le niveau de la plateforme pour que le pied du gradin soit bien cassé et ne laisse pas de « bosses ». Règles empiriques courantes : banquette de l'ordre de 25 à 40 fois le diamètre du trou, bourrage proche de 0,7 fois la banquette, surforage proche de 0,3 fois la banquette. Ce sont des repères de départ, à ajuster selon la roche.\n\nLe **facteur de charge** (consommation spécifique) se calcule ainsi : masse totale d'explosif divisée par le volume de roche abattu, en kg/m³. Le volume par trou vaut approximativement banquette × espacement × hauteur du gradin.\n\nL'**ANFO** est un mélange de nitrate d'ammonium (environ 94 %) et de fioul (environ 6 %). Il est économique mais **ne résiste pas à l'eau** : en trou humide ou mouillé, on utilise une **émulsion** ou un explosif en cartouches résistant à l'eau. Les détonateurs (électroniques ou non électriques) permettent d'échelonner les tirs avec des **retards** : on réduit ainsi la charge qui explose au même instant et donc les vibrations.\n\nCauses fréquentes d'incidents : bourrage insuffisant ou banquette trop faible (projections de roche), trous mal repérés, charge excessive. Un **raté de tir** (charge qui n'a pas explosé) est une urgence : on balise, on interdit l'accès, on prévient le boutefeu responsable et on applique la procédure de traitement des ratés. On ne fore jamais à proximité immédiate d'un trou raté.\n\nSeul du personnel habilité manipule les explosifs, avec registre des quantités reçues, utilisées et retournées.",
-      "keyPoints": ["Banquette = distance à la face libre ; espacement = distance entre trous ; maille = banquette × espacement.", "Facteur de charge = kg d'explosif / m³ abattu.", "ANFO non résistant à l'eau : utiliser une émulsion en trou mouillé.", "Raté de tir : balisage, interdiction d'accès, boutefeu responsable, procédure ratés."],
-      "img": "svg/mine-bench-geometry.svg", "imgAlt": "Géométrie d'un gradin : hauteur, banquette, espacement, bourrage, surforage, berme."
+      "id": "m1",
+      "title": "Forage-tir et explosifs : bien lire un plan de tir",
+      "theme": "Forage-tir et explosifs",
+      "minutes": 9,
+      "body": "Le forage-tir a pour but de fragmenter le massif rocheux pour que les engins de chargement puissent le reprendre. Sur un gradin, chaque trou est défini par sa **banquette** (distance entre le trou et la face libre la plus proche) et son **espacement** (distance entre deux trous d'une même rangée). Le produit banquette × espacement s'appelle la **maille** ; il fixe la surface de roche que chaque trou doit abattre.\n\nUn trou de mine comprend : la colonne d'explosif, le **bourrage** (matériau inerte, gravillon, en tête de trou) et, au pied, le **surforage**, petite hauteur forée sous le niveau de la plateforme pour que le pied du gradin soit bien cassé et ne laisse pas de « bosses ». Règles empiriques courantes : banquette de l'ordre de 25 à 40 fois le diamètre du trou, bourrage proche de 0,7 fois la banquette, surforage proche de 0,3 fois la banquette. Ce sont des repères de départ, à ajuster selon la roche.\n\nLe **facteur de charge** (consommation spécifique) se calcule ainsi : masse totale d'explosif divisée par le volume de roche abattu, en kg/m³. Le volume par trou vaut approximativement banquette × espacement × hauteur du gradin.\n\nL'**ANFO** est un mélange de nitrate d'ammonium (environ 94 %) et de fioul (environ 6 %). Il est économique mais **ne résiste pas à l'eau** : en trou humide ou mouillé, on utilise une **émulsion** ou un explosif en cartouches résistant à l'eau. Les détonateurs (électroniques ou non électriques) permettent d'échelonner les tirs avec des **retards** : on réduit ainsi la charge qui explose au même instant et donc les vibrations.\n\nCauses fréquentes d'incidents : bourrage insuffisant ou banquette trop faible (projections de roche), trous mal repérés, charge excessive. Un **raté de tir** (charge qui n'a pas explosé) est une urgence : on balise, on interdit l'accès, on prévient le boutefeu responsable et on applique la procédure de traitement des ratés. On ne fore jamais à proximité immédiate d'un trou raté.\n\nSeul du personnel habilité manipule les explosifs, avec registre des quantités reçues, utilisées et retournées.\n\n**Sur le terrain**\n- Relis le plan de tir avec le boutefeu avant le chargement : banquette, espacement et bourrage de chaque trou, surtout les trous du premier rang près de la face libre.\n- Trou humide ou noyé : ne charge jamais d'ANFO en vrac sans protection, signale-le et utilise l'explosif résistant à l'eau prévu.\n- Un raté se traite par la procédure, pas par l'initiative : balise, interdis l'accès et préviens le boutefeu responsable.",
+      "keyPoints": [
+        "Banquette = distance à la face libre ; espacement = distance entre trous ; maille = banquette × espacement.",
+        "Facteur de charge = kg d'explosif / m³ abattu.",
+        "ANFO non résistant à l'eau : utiliser une émulsion en trou mouillé.",
+        "Raté de tir : balisage, interdiction d'accès, boutefeu responsable, procédure ratés."
+      ],
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Géométrie d'un gradin : hauteur, banquette, espacement, bourrage, surforage, berme."
     },
     {
-      "id": "m2", "title": "Engins de chargement et de transport : circuler sans accident", "theme": "Engins et circulation", "minutes": 8,
-      "body": "Dans une mine à ciel ouvert, la chaîne de production associe une **pelle** ou une **chargeuse** et des **tombereaux** (camions de mine). Le **cycle** d'un tombereau comprend : attente et chargement, roulage chargé, déchargement (au concasseur ou à la verse), roulage à vide et retour. La **production horaire** se calcule en multipliant la charge utile par le nombre de voyages par heure ; le nombre de camions nécessaires dépend du rapport entre le temps de cycle total et le temps de chargement.\n\nLa **ronde de prise de poste** est obligatoire : pneus, fuites, freins, direction, avertisseur de recul, feux, rétroviseurs, extincteur, ceinture. Toute anomalie est signalée sur la fiche de contrôle et un engin non conforme n'est pas mis en service.\n\nRègles de circulation essentielles :\n- **Ceinture attachée** dès que l'engin roule.\n- **Priorité au véhicule chargé**, notamment en rampe, au véhicule le moins maniable ; les véhicules légers cèdent toujours le passage aux gros engins.\n- Les pistes sont dotées d'un **merlon de sécurité** en rive, dont la hauteur atteint au minimum l'axe des roues du plus gros engin.\n- Largeur de piste à double sens : environ 3,5 fois la largeur du plus gros engin. Pente usuelle de piste : de l'ordre de 8 à 10 %.\n- Dans une descente, on **choisit le rapport avant de s'engager** et on utilise le ralentisseur ou le frein moteur ; on ne passe jamais au point mort.\n\nUn tombereau de grande taille possède de vastes **angles morts**. On ne s'en approche qu'après accord par radio et contact visuel avec le conducteur, jamais derrière lui. Le véhicule léger porte un fanion ou un gyrophare et se tient à bonne distance.\n\nAu chargement, la pelle dépose la charge au centre de la benne, ne passe jamais le godet au-dessus de la cabine et ne surcharge pas. Une charge dissymétrique ou excessive use les pneus, fatigue la structure et augmente le risque de renversement.",
-      "keyPoints": ["Ronde de prise de poste avant toute mise en service.", "Ceinture, priorité au chargé, merlon à hauteur de l'axe des roues.", "Descente : rapport choisi avant, ralentisseur, jamais de point mort.", "Angles morts : radio et contact visuel avant d'approcher."],
-      "img": "photo/haul-truck.jpg", "imgAlt": "Tombereau de mine en circulation sur une piste d'exploitation."
+      "id": "m2",
+      "title": "Engins de chargement et de transport : circuler sans accident",
+      "theme": "Engins et circulation",
+      "minutes": 8,
+      "body": "Dans une mine à ciel ouvert, la chaîne de production associe une **pelle** ou une **chargeuse** et des **tombereaux** (camions de mine). Le **cycle** d'un tombereau comprend : attente et chargement, roulage chargé, déchargement (au concasseur ou à la verse), roulage à vide et retour. La **production horaire** se calcule en multipliant la charge utile par le nombre de voyages par heure ; le nombre de camions nécessaires dépend du rapport entre le temps de cycle total et le temps de chargement.\n\nLa **ronde de prise de poste** est obligatoire : pneus, fuites, freins, direction, avertisseur de recul, feux, rétroviseurs, extincteur, ceinture. Toute anomalie est signalée sur la fiche de contrôle et un engin non conforme n'est pas mis en service.\n\nRègles de circulation essentielles :\n- **Ceinture attachée** dès que l'engin roule.\n- **Priorité au véhicule chargé**, notamment en rampe, au véhicule le moins maniable ; les véhicules légers cèdent toujours le passage aux gros engins.\n- Les pistes sont dotées d'un **merlon de sécurité** en rive, dont la hauteur atteint au minimum l'axe des roues du plus gros engin.\n- Largeur de piste à double sens : environ 3,5 fois la largeur du plus gros engin. Pente usuelle de piste : de l'ordre de 8 à 10 %.\n- Dans une descente, on **choisit le rapport avant de s'engager** et on utilise le ralentisseur ou le frein moteur ; on ne passe jamais au point mort.\n\nUn tombereau de grande taille possède de vastes **angles morts**. On ne s'en approche qu'après accord par radio et contact visuel avec le conducteur, jamais derrière lui. Le véhicule léger porte un fanion ou un gyrophare et se tient à bonne distance.\n\nAu chargement, la pelle dépose la charge au centre de la benne, ne passe jamais le godet au-dessus de la cabine et ne surcharge pas. Une charge dissymétrique ou excessive use les pneus, fatigue la structure et augmente le risque de renversement.\n\n**Sur le terrain**\n- Fais la ronde de prise de poste en entier et note chaque anomalie sur la fiche : un engin avec fuite, freins ou avertisseur de recul douteux ne roule pas.\n- Ne t'approche jamais d'un tombereau sans accord radio et contact visuel avec le conducteur, et jamais par l'arrière.\n- En descente, choisis le rapport avant de t'engager et garde le ralentisseur ou le frein moteur : le point mort est interdit.",
+      "keyPoints": [
+        "Ronde de prise de poste avant toute mise en service.",
+        "Ceinture, priorité au chargé, merlon à hauteur de l'axe des roues.",
+        "Descente : rapport choisi avant, ralentisseur, jamais de point mort.",
+        "Angles morts : radio et contact visuel avant d'approcher."
+      ],
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Tombereau de mine en circulation sur une piste d'exploitation."
     },
     {
-      "id": "m3", "title": "Soutènement et stabilité : gradins, talus et galeries", "theme": "Soutènement et stabilité", "minutes": 9,
-      "body": "Qu'elle soit à ciel ouvert ou souterraine, une excavation reste stable seulement si le massif est surveillé et, au besoin, soutenu.\n\nEn **souterrain**, un cycle d'avancement comprend : forage, chargement, tir, ventilation, **purge**, marinage (évacuation des déblais) puis **soutènement**. La **purge** consiste à faire tomber les blocs instables du toit et des parois ; elle précède tout travail sous une voûte fraîchement tirée. Le soutènement associe selon le terrain :\n- les **boulons d'ancrage** (scellés à la résine, au ciment ou à friction), qui arment le massif en reliant les blocs instables au terrain sain ;\n- le **grillage**, qui retient les petits blocs entre les boulons ;\n- le **béton projeté**, qui scelle la surface et confine la roche ;\n- les **cintres métalliques** dans les terrains très médiocres.\n\nL'**avancement** par volée vaut la longueur forée multipliée par le rendement du tir (souvent 90 à 95 %).\n\nÀ **ciel ouvert**, la géométrie des gradins est décisive : la **hauteur de gradin**, l'**angle du talus de gradin**, la **berme** (palier) qui retient les chutes de blocs et l'**angle global** de la fosse, toujours plus faible que l'angle de chaque gradin. Une berme encombrée de déblais ne remplit plus son rôle.\n\nLa qualité du massif s'évalue notamment par le **RQD** (pourcentage de carotte en morceaux de plus de 10 cm) : 90-100 % excellent, 75-90 % bon, 50-75 % moyen, 25-50 % médiocre, moins de 25 % très médiocre. **L'eau** est l'ennemi numéro un : elle augmente la pression interstitielle et réduit la résistance au cisaillement ; on drainera donc les talus.\n\nSignes avant-coureurs d'instabilité : **fissures de traction** en crête, chutes de petits blocs, venues d'eau nouvelles, bruits. On arrête, on balise, on alerte et on attend l'avis de la géotechnique. Le **facteur de sécurité** est le rapport entre forces résistantes et forces motrices : à 1, le talus est à l'équilibre limite.",
-      "keyPoints": ["Purge avant tout travail sous une voûte fraîchement tirée.", "Boulons, grillage, béton projeté : chacun a un rôle précis.", "La berme retient les chutes de blocs et doit rester dégagée.", "Fissures en crête et venues d'eau : arrêt, balisage, alerte."],
-      "img": "svg/underground-mine-layout.svg", "imgAlt": "Schéma d'une mine souterraine : puits, galeries, chantiers et accès."
+      "id": "m3",
+      "title": "Soutènement et stabilité : gradins, talus et galeries",
+      "theme": "Soutènement et stabilité",
+      "minutes": 9,
+      "body": "Qu'elle soit à ciel ouvert ou souterraine, une excavation reste stable seulement si le massif est surveillé et, au besoin, soutenu.\n\nEn **souterrain**, un cycle d'avancement comprend : forage, chargement, tir, ventilation, **purge**, marinage (évacuation des déblais) puis **soutènement**. La **purge** consiste à faire tomber les blocs instables du toit et des parois ; elle précède tout travail sous une voûte fraîchement tirée. Le soutènement associe selon le terrain :\n- les **boulons d'ancrage** (scellés à la résine, au ciment ou à friction), qui arment le massif en reliant les blocs instables au terrain sain ;\n- le **grillage**, qui retient les petits blocs entre les boulons ;\n- le **béton projeté**, qui scelle la surface et confine la roche ;\n- les **cintres métalliques** dans les terrains très médiocres.\n\nL'**avancement** par volée vaut la longueur forée multipliée par le rendement du tir (souvent 90 à 95 %).\n\nÀ **ciel ouvert**, la géométrie des gradins est décisive : la **hauteur de gradin**, l'**angle du talus de gradin**, la **berme** (palier) qui retient les chutes de blocs et l'**angle global** de la fosse, toujours plus faible que l'angle de chaque gradin. Une berme encombrée de déblais ne remplit plus son rôle.\n\nLa qualité du massif s'évalue notamment par le **RQD** (pourcentage de carotte en morceaux de plus de 10 cm) : 90-100 % excellent, 75-90 % bon, 50-75 % moyen, 25-50 % médiocre, moins de 25 % très médiocre. **L'eau** est l'ennemi numéro un : elle augmente la pression interstitielle et réduit la résistance au cisaillement ; on drainera donc les talus.\n\nSignes avant-coureurs d'instabilité : **fissures de traction** en crête, chutes de petits blocs, venues d'eau nouvelles, bruits. On arrête, on balise, on alerte et on attend l'avis de la géotechnique. Le **facteur de sécurité** est le rapport entre forces résistantes et forces motrices : à 1, le talus est à l'équilibre limite.\n\n**Sur le terrain**\n- Après le tir et la ventilation, purge d'abord, sous le toit tu ne travailles qu'après avoir fait tomber les blocs instables.\n- Une fissure de traction en crête, une venue d'eau nouvelle ou des chutes de petits blocs : arrête, balise, alerte la géotechnique et n'attends pas la fin du poste.\n- Garde les bermes dégagées d'éboulis : une berme pleine ne retient plus rien.",
+      "keyPoints": [
+        "Purge avant tout travail sous une voûte fraîchement tirée.",
+        "Boulons, grillage, béton projeté : chacun a un rôle précis.",
+        "La berme retient les chutes de blocs et doit rester dégagée.",
+        "Fissures en crête et venues d'eau : arrêt, balisage, alerte."
+      ],
+      "img": "svg/underground-mine-layout.svg",
+      "imgAlt": "Schéma d'une mine souterraine : puits, galeries, chantiers et accès."
     },
     {
-      "id": "m4", "title": "Ventilation et gaz : respirer sous terre", "theme": "Ventilation et gaz", "minutes": 8,
-      "body": "La ventilation fournit de l'air frais, dilue et évacue les gaz, poussières et fumées de tir, et contrôle la température. Le circuit principal est créé par un ou plusieurs **ventilateurs principaux** : l'air frais entre par un puits ou une descenderie, circule dans les galeries et ressort, vicié, par une autre voie. Les galeries en cul-de-sac sont ventilées par une **ventilation auxiliaire** : ventilateur et **gaine**. En gaine **soufflante**, la sortie est placée près du front pour balayer l'air vicié. On ne **recircule** jamais l'air vicié.\n\nLe **débit** se calcule par Q = V × S (m³/s = m/s × m²). Une galerie de 12 m² parcourue à 0,5 m/s reçoit 6 m³/s.\n\nGaz à connaître :\n- **Oxygène** : l'air normal en contient environ 20,9 %. En dessous de 19 à 19,5 %, l'atmosphère est dangereuse.\n- **Monoxyde de carbone (CO)** : incolore, inodore, très toxique ; produit par les moteurs diesel, les tirs et les incendies.\n- **Dioxyde de carbone (CO2)** : plus lourd que l'air, il s'accumule dans les points bas.\n- **Méthane (CH4)** : léger, il monte au toit ; explosif entre 5 et 15 % environ dans l'air. Rare en mine métallique, fréquent en charbon.\n- **Oxydes d'azote** : fumées de tir et moteurs, irritants.\n- **Sulfure d'hydrogène (H2S)** : odeur d'œuf pourri, mais à forte concentration il paralyse l'odorat : ne jamais se fier au nez, mais au détecteur.\n\nAprès un tir, nul ne retourne au front avant la fin du **temps de ventilation** fixé par la procédure et un contrôle des gaz conforme. Les poussières de silice causent la silicose : arrosage, captage et masque adapté.\n\nL'**auto-sauveteur** permet de rejoindre un refuge ou une issue en cas d'incendie ou d'enfumage ; chacun doit savoir l'enfiler et connaître les itinéraires d'évacuation et les chambres refuges.",
-      "keyPoints": ["Q = V × S : débit = vitesse × section.", "CO2 au sol, CH4 au toit ; CH4 explosif de 5 à 15 %.", "Pas de retour au front après tir sans temps de ventilation et contrôle des gaz.", "H2S : se fier au détecteur, pas à l'odeur."],
-      "img": "svg/mine-ventilation.svg", "imgAlt": "Schéma de ventilation d'une mine : air frais, air vicié, ventilateur principal et ventilation auxiliaire."
+      "id": "m4",
+      "title": "Ventilation et gaz : respirer sous terre",
+      "theme": "Ventilation et gaz",
+      "minutes": 8,
+      "body": "La ventilation fournit de l'air frais, dilue et évacue les gaz, poussières et fumées de tir, et contrôle la température. Le circuit principal est créé par un ou plusieurs **ventilateurs principaux** : l'air frais entre par un puits ou une descenderie, circule dans les galeries et ressort, vicié, par une autre voie. Les galeries en cul-de-sac sont ventilées par une **ventilation auxiliaire** : ventilateur et **gaine**. En gaine **soufflante**, la sortie est placée près du front pour balayer l'air vicié. On ne **recircule** jamais l'air vicié.\n\nLe **débit** se calcule par Q = V × S (m³/s = m/s × m²). Une galerie de 12 m² parcourue à 0,5 m/s reçoit 6 m³/s.\n\nGaz à connaître :\n- **Oxygène** : l'air normal en contient environ 20,9 %. En dessous de 19 à 19,5 %, l'atmosphère est dangereuse.\n- **Monoxyde de carbone (CO)** : incolore, inodore, très toxique ; produit par les moteurs diesel, les tirs et les incendies.\n- **Dioxyde de carbone (CO2)** : plus lourd que l'air, il s'accumule dans les points bas.\n- **Méthane (CH4)** : léger, il monte au toit ; explosif entre 5 et 15 % environ dans l'air. Rare en mine métallique, fréquent en charbon.\n- **Oxydes d'azote** : fumées de tir et moteurs, irritants.\n- **Sulfure d'hydrogène (H2S)** : odeur d'œuf pourri, mais à forte concentration il paralyse l'odorat : ne jamais se fier au nez, mais au détecteur.\n\nAprès un tir, nul ne retourne au front avant la fin du **temps de ventilation** fixé par la procédure et un contrôle des gaz conforme. Les poussières de silice causent la silicose : arrosage, captage et masque adapté.\n\nL'**auto-sauveteur** permet de rejoindre un refuge ou une issue en cas d'incendie ou d'enfumage ; chacun doit savoir l'enfiler et connaître les itinéraires d'évacuation et les chambres refuges.\n\n**Sur le terrain**\n- Après un tir, ne retourne au front qu'à la fin du temps de ventilation fixé et avec un contrôle des gaz conforme, même si la fumée semble partie.\n- H2S : fie-toi au détecteur, pas à ton nez, car il paralyse l'odorat à forte concentration.\n- Avant de descendre dans un point bas (puisard, fond de puits), contrôle l'atmosphère : le CO2 est plus lourd que l'air et s'y accumule.",
+      "keyPoints": [
+        "Q = V × S : débit = vitesse × section.",
+        "CO2 au sol, CH4 au toit ; CH4 explosif de 5 à 15 %.",
+        "Pas de retour au front après tir sans temps de ventilation et contrôle des gaz.",
+        "H2S : se fier au détecteur, pas à l'odeur."
+      ],
+      "img": "svg/mine-ventilation.svg",
+      "imgAlt": "Schéma de ventilation d'une mine : air frais, air vicié, ventilateur principal et ventilation auxiliaire."
     },
     {
-      "id": "m5", "title": "Sécurité au front : EPI, signalisation, consignation, droit d'arrêt", "theme": "Sécurité au front", "minutes": 8,
-      "body": "La sécurité minière repose sur quelques réflexes simples, appliqués sans exception.\n\n**EPI de base** : casque, lunettes, chaussures de sécurité, vêtement et gilet haute visibilité, gants adaptés, protection auditive (obligatoire à partir d'une exposition de 85 dB(A) sur 8 heures), masque anti-poussières. En souterrain s'ajoutent la lampe frontale et l'auto-sauveteur. L'EPI est la **dernière barrière** : il ne remplace pas la protection collective.\n\n**Hiérarchie des mesures de prévention** : 1) éliminer le danger, 2) substituer, 3) protections collectives (garde-corps, merlons, capotage), 4) organisation et consignes, 5) EPI.\n\n**Signalisation (normes ISO)** : le rond rouge barré indique une **interdiction**, le rond bleu une **obligation** (port d'un EPI), le triangle jaune un **danger**, le carré vert un **secours ou sauvetage**.\n\n**Consignation** (cadenassage) avant toute intervention sur une machine : 1) séparer la machine de toutes ses sources d'énergie (électrique, hydraulique, pneumatique, gravitaire), 2) condamner avec un cadenas personnel et une étiquette, 3) vérifier l'absence d'énergie résiduelle, 4) seulement ensuite commencer le travail. Chaque intervenant pose son propre cadenas et le retire lui-même.\n\n**Évaluation du risque** : le niveau de risque combine la **gravité** et la **probabilité**. Une matrice classe les risques en faibles, moyens et élevés ; les plus élevés sont traités en priorité.\n\n**Droit et devoir d'arrêt de travail** : tout travailleur qui constate un danger grave arrête sa tâche, met la zone en sécurité, prévient sa hiérarchie et ne reprend qu'après levée du danger. Aucune sanction ne frappe celui qui arrête de bonne foi.\n\nUn **permis de travail** est requis pour les tâches particulières (travail par point chaud, en hauteur, espace confiné). Avant de commencer : analyse de risque de la tâche (« minute sécurité »), vérification des conditions et accord signé.",
-      "keyPoints": ["EPI = dernière barrière, après élimination et protections collectives.", "Rond bleu = obligation ; rond rouge barré = interdiction.", "Consigner : séparer, condamner, vérifier l'absence d'énergie, puis travailler.", "Danger grave : arrêter, sécuriser, alerter."],
-      "img": "svg/ppe-icons.svg", "imgAlt": "Pictogrammes des équipements de protection individuelle : casque, lunettes, gants, chaussures, gilet."
+      "id": "m5",
+      "title": "Sécurité au front : EPI, signalisation, consignation, droit d'arrêt",
+      "theme": "Sécurité au front",
+      "minutes": 8,
+      "body": "La sécurité minière repose sur quelques réflexes simples, appliqués sans exception.\n\n**EPI de base** : casque, lunettes, chaussures de sécurité, vêtement et gilet haute visibilité, gants adaptés, protection auditive (obligatoire à partir d'une exposition de 85 dB(A) sur 8 heures), masque anti-poussières. En souterrain s'ajoutent la lampe frontale et l'auto-sauveteur. L'EPI est la **dernière barrière** : il ne remplace pas la protection collective.\n\n**Hiérarchie des mesures de prévention** : 1) éliminer le danger, 2) substituer, 3) protections collectives (garde-corps, merlons, capotage), 4) organisation et consignes, 5) EPI.\n\n**Signalisation (normes ISO)** : le rond rouge barré indique une **interdiction**, le rond bleu une **obligation** (port d'un EPI), le triangle jaune un **danger**, le carré vert un **secours ou sauvetage**.\n\n**Consignation** (cadenassage) avant toute intervention sur une machine : 1) séparer la machine de toutes ses sources d'énergie (électrique, hydraulique, pneumatique, gravitaire), 2) condamner avec un cadenas personnel et une étiquette, 3) vérifier l'absence d'énergie résiduelle, 4) seulement ensuite commencer le travail. Chaque intervenant pose son propre cadenas et le retire lui-même.\n\n**Évaluation du risque** : le niveau de risque combine la **gravité** et la **probabilité**. Une matrice classe les risques en faibles, moyens et élevés ; les plus élevés sont traités en priorité.\n\n**Droit et devoir d'arrêt de travail** : tout travailleur qui constate un danger grave arrête sa tâche, met la zone en sécurité, prévient sa hiérarchie et ne reprend qu'après levée du danger. Aucune sanction ne frappe celui qui arrête de bonne foi.\n\nUn **permis de travail** est requis pour les tâches particulières (travail par point chaud, en hauteur, espace confiné). Avant de commencer : analyse de risque de la tâche (« minute sécurité »), vérification des conditions et accord signé.\n\n**Sur le terrain**\n- Avant d'intervenir sur une machine, consigne dans l'ordre : sépare les énergies, condamne avec ton cadenas personnel, vérifie l'absence d'énergie résiduelle, puis seulement travaille.\n- Tu as le droit et le devoir d'arrêter ta tâche devant un danger grave : mets la zone en sécurité et préviens avant de redémarrer.\n- Déclare les presque-accidents : ils sont la base de la pyramide de Bird, c'est là qu'on évite les accidents graves.",
+      "keyPoints": [
+        "EPI = dernière barrière, après élimination et protections collectives.",
+        "Rond bleu = obligation ; rond rouge barré = interdiction.",
+        "Consigner : séparer, condamner, vérifier l'absence d'énergie, puis travailler.",
+        "Danger grave : arrêter, sécuriser, alerter."
+      ],
+      "img": "svg/ppe-icons.svg",
+      "imgAlt": "Pictogrammes des équipements de protection individuelle : casque, lunettes, gants, chaussures, gilet."
     }
   ],
   "questions": [
-    { "id": "tech-mines-001", "theme": "Forage-tir et explosifs", "level": 1, "q": "Sur le schéma d'un gradin, la distance mesurée entre un trou de mine et la face libre la plus proche s'appelle :", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin avec trous de mine, banquette, espacement, bourrage et surforage.", "choices": ["L'espacement", "La banquette", "Le bourrage", "Le surforage"], "answer": 1, "explain": "La banquette est la distance entre le trou et la face libre. L'espacement est la distance entre deux trous d'une même rangée, le bourrage est le matériau inerte en tête de trou et le surforage la hauteur forée sous le niveau de la plateforme.", "seconds": 40, "status": "draft" },
-    { "id": "tech-mines-002", "theme": "Forage-tir et explosifs", "level": 1, "q": "Quel est le rôle principal du bourrage en tête d'un trou de mine ?", "choices": ["Augmenter la quantité d'explosif", "Refroidir le trou avant le tir", "Amorcer la charge", "Confiner l'énergie des gaz et limiter les projections"], "answer": 3, "explain": "Le bourrage (gravillon) confine les gaz de l'explosion pour que l'énergie fragmente la roche au lieu de s'échapper par le trou. Un bourrage insuffisant provoque des projections.", "seconds": 40, "status": "draft" },
-    { "id": "tech-mines-003", "theme": "Forage-tir et explosifs", "level": 1, "q": "L'ANFO, explosif très utilisé en mine à ciel ouvert, est un mélange de :", "choices": ["Nitrate d'ammonium et fioul", "Nitroglycérine et sable", "Poudre noire et eau", "TNT et cyanure"], "answer": 0, "explain": "ANFO signifie Ammonium Nitrate / Fuel Oil : environ 94 % de nitrate d'ammonium et 6 % de fioul. Les autres mélanges ne correspondent pas à un explosif de mine courant.", "seconds": 40, "status": "draft" },
-    { "id": "tech-mines-004", "theme": "Forage-tir et explosifs", "level": 2, "q": "Un tir est conçu avec une banquette de 3 m, un espacement de 4 m et un gradin de 10 m de hauteur. Chaque trou contient 120 kg d'explosif. Quel est le facteur de charge (on néglige le surforage) ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin avec banquette, espacement et hauteur de gradin.", "choices": ["0,5 kg/m³", "0,8 kg/m³", "1,0 kg/m³", "1,2 kg/m³"], "answer": 2, "explain": "Volume par trou = 3 × 4 × 10 = 120 m³. Facteur de charge = 120 kg / 120 m³ = 1,0 kg/m³.", "seconds": 75, "status": "draft" },
-    { "id": "tech-mines-005", "theme": "Forage-tir et explosifs", "level": 2, "q": "Les trous d'un tir sont remplis d'eau. Quel type d'explosif convient ?", "choices": ["ANFO en vrac, sans protection", "Poudre sèche en sac papier", "Nitrate d'ammonium seul", "Une émulsion résistante à l'eau"], "answer": 3, "explain": "L'ANFO absorbe l'eau et perd ses propriétés ; en trou mouillé on emploie une émulsion ou un explosif conditionné résistant à l'eau.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-006", "theme": "Forage-tir et explosifs", "level": 2, "q": "Lors d'un tir, de la roche est projetée à grande distance. Parmi ces causes, laquelle est la plus probable ?", "choices": ["Un trou parfaitement bourré", "Une banquette trop faible ou un bourrage insuffisant", "Un retard de détonateur bien réglé", "Une température de l'air élevée"], "answer": 1, "explain": "Quand la banquette est trop faible ou que le bourrage est insuffisant, l'énergie s'échappe par la face libre ou par le haut du trou et projette des blocs. Les autres propositions ne sont pas des causes de projection.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-007", "theme": "Forage-tir et explosifs", "level": 2, "q": "Après le tir, vous constatez qu'une charge n'a pas explosé (raté). Quelle est la bonne conduite ?", "choices": ["Forer juste à côté pour la désamorcer vite", "Poser un nouveau détonateur sans contrôle pour retirer la charge", "Baliser la zone, interdire l'accès, informer le boutefeu responsable et suivre la procédure ratés", "Reprendre le chargement des autres trous en évitant celui-ci"], "answer": 2, "explain": "Un raté est traité uniquement par le personnel habilité selon la procédure. On ne fore pas à proximité et on ne tente aucune manipulation improvisée.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-008", "theme": "Forage-tir et explosifs", "level": 3, "q": "Sur le schéma d'un gradin, on fore les trous légèrement sous le niveau de la plateforme (surforage). Pourquoi ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin avec zone de surforage sous le niveau de la plateforme.", "choices": ["Obtenir un pied de gradin bien cassé, au niveau de la plateforme, sans bosses", "Réduire la consommation d'explosif", "Augmenter la largeur de la berme", "Supprimer le besoin de bourrage"], "answer": 0, "explain": "La charge au pied doit agir jusqu'au niveau de la plateforme : sans surforage, il reste des pieds (bosses) qui gênent les engins et le forage suivant. Le surforage n'économise pas d'explosif et ne remplace pas le bourrage.", "seconds": 50, "status": "draft" },
-    { "id": "tech-mines-009", "theme": "Forage-tir et explosifs", "level": 3, "q": "Une carrière voisine se plaint des vibrations des tirs. Quelle action technique est la plus efficace ?", "choices": ["Tirer tous les trous au même instant", "Réduire la charge explosive par retard en séquençant les trous avec des détonateurs à retard", "Supprimer le bourrage", "Augmenter le diamètre des trous sans changer la maille"], "answer": 1, "explain": "Les vibrations dépendent surtout de la charge qui explose au même instant. Séquencer avec des retards réduit cette charge instantanée. Tirer en bloc ou agrandir les trous l'augmente.", "seconds": 50, "status": "draft" },
-    { "id": "tech-mines-010", "theme": "Engins et circulation", "level": 1, "q": "Sur une piste d'exploitation, un tombereau chargé et un véhicule léger se croisent. Qui a priorité ?", "img": "photo/haul-truck.jpg", "imgAlt": "Tombereau de mine sur une piste.", "choices": ["Le véhicule léger, car il est plus rapide", "Le premier arrivé", "Le véhicule le plus récent", "Le tombereau chargé : le véhicule léger lui cède le passage"], "answer": 3, "explain": "Les engins lourds, surtout chargés ou en montée, sont les moins manœuvrables : ils ont priorité et les véhicules légers leur cèdent le passage.", "seconds": 40, "status": "draft" },
-    { "id": "tech-mines-011", "theme": "Engins et circulation", "level": 1, "q": "Vous prenez votre poste sur un tombereau. Que faites-vous avant de démarrer ?", "choices": ["La ronde de contrôle (pneus, fuites, freins, feux, avertisseur de recul) et la fiche de contrôle", "Vous démarrez et vérifiez les freins en roulant", "Vous attendez le premier voyage pour repérer une panne", "Vous contrôlez seulement le niveau de carburant"], "answer": 0, "explain": "La ronde de prise de poste est obligatoire : elle détecte les défauts de sécurité avant qu'ils ne causent un accident. Un engin non conforme n'est pas mis en service.", "seconds": 40, "status": "draft" },
-    { "id": "tech-mines-012", "theme": "Engins et circulation", "level": 1, "q": "Quand la ceinture de sécurité doit-elle être attachée sur un engin ?", "choices": ["Seulement sur piste goudronnée", "Seulement en descente", "Toujours, dès que l'engin est en mouvement", "Elle est facultative pour les trajets courts"], "answer": 2, "explain": "La ceinture est obligatoire en permanence pendant le déplacement : elle évite l'éjection ou les blessures lors d'un choc ou d'un renversement.", "seconds": 35, "status": "draft" },
-    { "id": "tech-mines-013", "theme": "Engins et circulation", "level": 2, "q": "Un tombereau de 100 t de charge utile a un cycle complet de 40 minutes. Il travaille 8 heures effectives. Combien de tonnes transporte-t-il ?", "img": "photo/haul-truck.jpg", "imgAlt": "Tombereau de mine chargé.", "choices": ["800 t", "960 t", "1 000 t", "1 200 t"], "answer": 3, "explain": "8 h = 480 min ; 480 / 40 = 12 voyages ; 12 × 100 t = 1 200 t.", "seconds": 75, "status": "draft" },
-    { "id": "tech-mines-014", "theme": "Engins et circulation", "level": 2, "q": "Le cycle total d'un tombereau est de 24 minutes et la pelle charge un camion en 6 minutes. Combien de camions faut-il pour que la pelle ne soit jamais en attente ?", "choices": ["3 camions", "4 camions", "5 camions", "6 camions"], "answer": 1, "explain": "Nombre de camions = temps de cycle / temps de chargement = 24 / 6 = 4. Avec moins, la pelle attend ; avec plus, les camions font la queue.", "seconds": 75, "status": "draft" },
-    { "id": "tech-mines-015", "theme": "Engins et circulation", "level": 2, "q": "Quelle hauteur minimale doit avoir le merlon de sécurité en rive d'une piste ?", "choices": ["Dix centimètres", "La hauteur d'un trottoir", "Au moins la hauteur de l'axe des roues du plus gros engin", "Plus haut que la cabine du plus gros engin"], "answer": 2, "explain": "La règle usuelle est un merlon d'au moins l'axe (le milieu de l'essieu) des roues du plus gros engin pour retenir un véhicule qui dérive. Plus bas, il ne retient rien.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-016", "theme": "Engins et circulation", "level": 2, "q": "Vous devez approcher un tombereau à l'arrêt avec un véhicule léger. Comment procédez-vous ?", "choices": ["Vous attendez l'accord du conducteur par radio et le contact visuel avant d'approcher", "Vous vous placez juste derrière lui pour qu'il vous voie", "Vous klaxonnez puis vous passez", "Vous passez toujours côté cabine sans vous arrêter"], "answer": 0, "explain": "Les angles morts d'un tombereau sont immenses. On ne s'approche qu'après accord radio et contact visuel avec le conducteur.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-017", "theme": "Engins et circulation", "level": 3, "q": "Vous allez descendre une longue rampe avec un tombereau chargé. Quelle est la bonne pratique ?", "choices": ["Passer au point mort pour économiser du carburant", "Choisir le rapport avant de s'engager et utiliser le ralentisseur ou le frein moteur", "Freiner en continu uniquement avec les freins de service", "Débrayer et laisser rouler"], "answer": 1, "explain": "Le rapport se choisit avant la descente. Le frein moteur et le ralentisseur évitent la surchauffe des freins de service, qui peuvent s'user ou lâcher. Le point mort est interdit.", "seconds": 50, "status": "draft" },
-    { "id": "tech-mines-018", "theme": "Engins et circulation", "level": 3, "q": "Comment la pelle doit-elle charger un tombereau ?", "choices": ["Passer le godet au-dessus de la cabine pour gagner du temps", "Surcharger légèrement pour réduire le nombre de voyages", "Charger uniquement l'avant de la benne", "Répartir la charge au centre de la benne, sans passer le godet au-dessus de la cabine ni surcharger"], "answer": 3, "explain": "Le godet ne survole jamais la cabine, la charge est centrée et la charge utile respectée : une surcharge ou une charge dissymétrique use les pneus et augmente le risque de renversement.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-019", "theme": "Soutènement et stabilité", "level": 1, "q": "Sur un schéma de mine souterraine, vous arrivez au front après un tir et la ventilation. Quelle est la première opération avant de travailler sous la voûte ?", "img": "svg/underground-mine-layout.svg", "imgAlt": "Schéma d'une mine souterraine avec galeries et front d'avancement.", "choices": ["La purge des blocs instables", "L'installation du matériel de forage", "Le début du marinage sans contrôle", "La pause de début de poste"], "answer": 0, "explain": "La purge fait tomber les blocs instables du toit et des parois avant que quiconque ne travaille dessous. Elle précède le soutènement et le marinage.", "seconds": 40, "status": "draft" },
-    { "id": "tech-mines-020", "theme": "Soutènement et stabilité", "level": 1, "q": "Quel est le rôle d'un boulon d'ancrage en galerie ?", "choices": ["Éclairer la galerie", "Ventiler le front", "Armer le massif en reliant les blocs instables au terrain sain", "Drainer l'eau du toit"], "answer": 2, "explain": "Le boulon d'ancrage « coud » les terrains : il retient les blocs fracturés en les liant à la roche saine plus profonde.", "seconds": 40, "status": "draft" },
-    { "id": "tech-mines-021", "theme": "Soutènement et stabilité", "level": 2, "q": "À quoi sert principalement le béton projeté associé aux boulons ?", "choices": ["À remplacer la ventilation", "À augmenter la teneur du minerai", "À servir de remblai pour le tir", "À sceller la surface de la roche et retenir les petits blocs entre les boulons"], "answer": 3, "explain": "Le béton projeté scelle la surface, confine la roche et retient les petits blocs que les boulons ne maintiennent pas. Il n'a aucun rôle dans la ventilation ou le tir.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-022", "theme": "Soutènement et stabilité", "level": 2, "q": "Une volée est forée sur 3,0 m de longueur. Le rendement du tir est de 90 %. Quel est l'avancement de la galerie ?", "img": "svg/underground-mine-layout.svg", "imgAlt": "Schéma d'une galerie en cours d'avancement.", "choices": ["2,3 m", "2,7 m", "3,0 m", "3,3 m"], "answer": 1, "explain": "Avancement = longueur forée × rendement = 3,0 × 0,90 = 2,7 m. Il ne peut pas dépasser la longueur forée.", "seconds": 60, "status": "draft" },
-    { "id": "tech-mines-023", "theme": "Soutènement et stabilité", "level": 2, "q": "Sur un schéma de fosse à gradins, quel est le rôle de la berme située entre deux gradins ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradins successifs séparés par des bermes.", "choices": ["Évacuer l'eau uniquement", "Augmenter l'angle global de la fosse", "Retenir les éboulis et les blocs qui tombent du gradin supérieur", "Stocker le minerai en attente"], "answer": 2, "explain": "La berme est un palier qui retient les chutes de blocs ; elle doit rester dégagée. Elle diminue l'angle global de la fosse, elle ne l'augmente pas.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-024", "theme": "Soutènement et stabilité", "level": 2, "q": "Quel signe constitue un avertissement possible de glissement de talus ?", "choices": ["Des fissures de traction qui apparaissent en crête du talus", "De la poussière blanche sur la piste", "Le bruit des engins", "Une baisse de température"], "answer": 0, "explain": "Des fissures de traction en crête, des chutes de petits blocs ou de nouvelles venues d'eau signalent un mouvement du massif. On balise, on alerte et on attend l'avis de la géotechnique.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-025", "theme": "Soutènement et stabilité", "level": 2, "q": "Un sondage donne un RQD de 80 %. Comment qualifie-t-on la roche ?", "choices": ["Médiocre", "Bonne", "Très médiocre", "Excellente"], "answer": 1, "explain": "RQD : 90-100 % excellente, 75-90 % bonne, 50-75 % moyenne, 25-50 % médiocre, moins de 25 % très médiocre. 80 % tombe dans la classe « bonne ».", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-026", "theme": "Soutènement et stabilité", "level": 3, "q": "Après de fortes pluies, l'eau s'infiltre dans un talus. Quel est l'effet sur la stabilité ?", "choices": ["Elle augmente la cohésion de la roche", "Elle renforce le talus par poids supplémentaire", "Elle n'a pas d'effet mesurable", "Elle augmente la pression interstitielle et diminue la résistance au cisaillement"], "answer": 3, "explain": "La pression d'eau dans les fractures réduit les contraintes effectives et donc la résistance au glissement. C'est pourquoi on draine les talus.", "seconds": 50, "status": "draft" },
-    { "id": "tech-mines-027", "theme": "Soutènement et stabilité", "level": 3, "q": "Le calcul géotechnique donne un facteur de sécurité de 1,0 pour un talus. Que signifie ce résultat ?", "choices": ["Le talus est à l'équilibre limite, sans aucune marge", "Le talus est parfaitement sûr", "Le talus a déjà glissé", "Le talus est renforcé de 100 %"], "answer": 0, "explain": "Le facteur de sécurité est le rapport des forces résistantes aux forces motrices : à 1, elles s'équilibrent, il n'y a aucune marge. On vise une valeur nettement supérieure à 1.", "seconds": 50, "status": "draft" },
-    { "id": "tech-mines-028", "theme": "Ventilation et gaz", "level": 1, "q": "Sur le schéma de ventilation d'une mine, quel est le rôle de l'air frais qui entre par le puits ?", "img": "svg/mine-ventilation.svg", "imgAlt": "Schéma de ventilation avec entrée d'air frais, circulation et sortie d'air vicié.", "choices": ["Refroidir le minerai", "Éteindre les incendies", "Fournir de l'oxygène et évacuer gaz, poussières et fumées", "Chauffer les galeries"], "answer": 2, "explain": "La ventilation apporte l'air respirable, dilue et chasse les gaz toxiques, les fumées de tir et les poussières. Le refroidissement est un effet secondaire, pas la fonction première.", "seconds": 40, "status": "draft" },
-    { "id": "tech-mines-029", "theme": "Ventilation et gaz", "level": 1, "q": "Quel gaz, incolore et inodore, est très toxique et produit par les moteurs diesel et les tirs ?", "choices": ["Le méthane", "L'azote", "L'argon", "Le monoxyde de carbone (CO)"], "answer": 3, "explain": "Le CO est incolore, inodore et toxique : il se fixe sur l'hémoglobine à la place de l'oxygène. L'azote et l'argon ne sont pas toxiques, le méthane est inflammable.", "seconds": 40, "status": "draft" },
-    { "id": "tech-mines-030", "theme": "Ventilation et gaz", "level": 2, "q": "Une galerie de 12 m² de section est parcourue par un air à 0,5 m/s. Quel est le débit d'air ?", "img": "svg/mine-ventilation.svg", "imgAlt": "Circulation d'air dans une galerie de section donnée.", "choices": ["4 m³/s", "6 m³/s", "8 m³/s", "12 m³/s"], "answer": 1, "explain": "Q = V × S = 0,5 m/s × 12 m² = 6 m³/s.", "seconds": 60, "status": "draft" },
-    { "id": "tech-mines-031", "theme": "Ventilation et gaz", "level": 2, "q": "Dans quelle plage de concentration dans l'air le méthane est-il explosif ?", "choices": ["Entre 1 et 3 %", "Entre 20 et 30 %", "Entre 5 et 15 % environ", "Entre 50 et 60 %"], "answer": 2, "explain": "Le méthane est explosif environ de 5 % (limite inférieure) à 15 % (limite supérieure). En dessous c'est trop pauvre, au-dessus trop riche, mais la zone reste dangereuse lors d'une dilution.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-032", "theme": "Ventilation et gaz", "level": 2, "q": "Le dioxyde de carbone étant plus lourd que l'air, où risque-t-il de s'accumuler ?", "choices": ["Dans les points bas : puits, fonds de galeries", "Au toit des galeries", "Uniquement au centre de la galerie", "Nulle part, il se mélange toujours"], "answer": 0, "explain": "Gaz plus lourd que l'air, le CO2 stagne dans les zones basses mal ventilées. Le méthane, plus léger, monte au toit.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-033", "theme": "Ventilation et gaz", "level": 3, "q": "Après un tir souterrain, quand peut-on retourner au front ?", "choices": ["Immédiatement pour contrôler le tir", "Après le temps de ventilation prévu par la procédure et un contrôle des gaz conforme", "Dès que la fumée visible a disparu", "Quand un seul opérateur s'est porté volontaire pour vérifier"], "answer": 1, "explain": "Les gaz de tir (CO, oxydes d'azote) restent invisibles et dangereux. On attend le temps de ventilation fixé et on contrôle l'atmosphère avant toute rentrée.", "seconds": 50, "status": "draft" },
-    { "id": "tech-mines-034", "theme": "Ventilation et gaz", "level": 3, "q": "Sur le schéma, une galerie en cul-de-sac est ventilée par une gaine soufflante. Où placer la sortie de la gaine ?", "img": "svg/mine-ventilation.svg", "imgAlt": "Galerie en cul-de-sac avec ventilateur auxiliaire et gaine.", "choices": ["Loin du front, pour ne pas gêner", "Elle peut rester arrêtée pendant le chargement", "À l'entrée de la galerie", "Près du front, pour balayer l'air vicié"], "answer": 3, "explain": "La gaine soufflante amène l'air frais près du front : cet air chasse l'air vicié vers l'entrée. Trop loin, le front reste mal ventilé.", "seconds": 50, "status": "draft" },
-    { "id": "tech-mines-035", "theme": "Ventilation et gaz", "level": 1, "q": "Quelle est la teneur en oxygène de l'air normal ?", "choices": ["Environ 20,9 %", "Environ 15 %", "Environ 30 %", "Environ 50 %"], "answer": 0, "explain": "L'air contient environ 20,9 % d'oxygène. En dessous de 19 à 19,5 %, l'atmosphère est considérée comme dangereuse.", "seconds": 35, "status": "draft" },
-    { "id": "tech-mines-036", "theme": "Ventilation et gaz", "level": 3, "q": "Vous sentez une odeur d'œuf pourri, qui disparaît après quelques minutes alors que le détecteur de H2S sonne. Que faites-vous ?", "choices": ["Vous restez : l'odeur a disparu, le gaz aussi", "Vous respirez profondément pour vérifier", "Vous vous fiez au détecteur et évacuez selon la procédure", "Vous retirez votre casque pour mieux sentir"], "answer": 2, "explain": "À forte concentration, le H2S paralyse l'odorat : l'absence d'odeur ne prouve rien. Seul le détecteur fait foi, on évacue dès l'alarme.", "seconds": 50, "status": "draft" },
-    { "id": "tech-mines-037", "theme": "Sécurité au front", "level": 1, "q": "Sur le panneau de sécurité normalisé, un pictogramme blanc dans un rond bleu indique :", "img": "svg/iso-safety-signs.svg", "imgAlt": "Panneaux ISO : interdiction rouge, obligation bleu, danger jaune, secours vert.", "choices": ["Une interdiction", "Un danger", "Un secours", "Une obligation (par exemple port de l'EPI)"], "answer": 3, "explain": "Rond bleu : obligation. Rond rouge barré : interdiction. Triangle jaune : danger. Carré vert : secours ou sauvetage.", "seconds": 35, "status": "draft" },
-    { "id": "tech-mines-038", "theme": "Sécurité au front", "level": 1, "q": "À partir de quel niveau d'exposition sonore sur 8 heures la protection auditive devient-elle obligatoire ?", "img": "svg/ppe-icons.svg", "imgAlt": "Pictogrammes d'EPI dont la protection auditive.", "choices": ["75 dB(A)", "85 dB(A)", "105 dB(A)", "120 dB(A)"], "answer": 1, "explain": "Le seuil d'action usuel est de 85 dB(A) sur 8 heures. Au-delà, la protection auditive est obligatoire ; le seuil de 75 est trop bas, 105 et 120 sont déjà dangereux.", "seconds": 40, "status": "draft" },
-    { "id": "tech-mines-039", "theme": "Sécurité au front", "level": 2, "q": "Quel est l'ordre correct pour consigner une machine avant une intervention ?", "img": "svg/lockout-tagout.svg", "imgAlt": "Étapes de consignation : séparer, condamner, vérifier.", "choices": ["Travailler d'abord, cadenasser ensuite", "Poser le cadenas sans couper l'énergie", "Séparer les sources d'énergie, condamner (cadenas et étiquette), vérifier l'absence d'énergie résiduelle", "Vérifier d'abord, couper après"], "answer": 2, "explain": "On sépare la machine de ses énergies, on la condamne avec son cadenas personnel et une étiquette, puis on vérifie qu'il ne reste aucune énergie avant de commencer.", "seconds": 50, "status": "draft" },
-    { "id": "tech-mines-040", "theme": "Sécurité au front", "level": 2, "q": "Vous constatez un danger grave et immédiat sur votre tâche et votre chef de poste est absent. Que faites-vous ?", "choices": ["Vous arrêtez, mettez la zone en sécurité et prévenez votre hiérarchie", "Vous terminez rapidement pour ne pas perdre de production", "Vous continuez, le chef n'est pas là pour décider", "Vous attendez la fin du poste pour en parler"], "answer": 0, "explain": "Chaque travailleur a le droit et le devoir d'arrêter un travail en cas de danger grave. Il met en sécurité et alerte, sans sanction.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-041", "theme": "Sécurité au front", "level": 2, "q": "Dans une matrice des risques, le niveau de risque résulte de la combinaison de :", "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de risque croisant probabilité et gravité.", "choices": ["La gravité et le coût de l'équipement", "La probabilité d'occurrence et la gravité", "La gravité seulement", "Le nombre de salariés présents seulement"], "answer": 1, "explain": "Le risque se définit par la probabilité (ou fréquence) d'un événement et sa gravité. La matrice croise ces deux axes pour hiérarchiser les actions.", "seconds": 45, "status": "draft" },
-    { "id": "tech-mines-042", "theme": "Sécurité au front", "level": 3, "q": "Parmi ces mesures de prévention, laquelle est la plus efficace selon la hiérarchie des mesures ?", "choices": ["Le port d'un EPI", "Une consigne écrite affichée", "Un panneau d'avertissement", "La suppression du danger à la source"], "answer": 3, "explain": "L'élimination du danger est la mesure la plus efficace ; viennent ensuite la substitution, les protections collectives, l'organisation et enfin l'EPI, dernière barrière.", "seconds": 45, "status": "draft" }
+    {
+      "id": "tech-mines-001",
+      "theme": "Forage-tir et explosifs",
+      "level": 1,
+      "q": "Sur ton plan de tir, le trou n° 3 est à 3 m de la face libre la plus proche et à 4 m du trou voisin de la même rangée. Quelle est la banquette et quel est l'espacement ?",
+      "choices": [
+        "Banquette 4 m, espacement 3 m",
+        "Banquette 3 m, espacement 12 m (la maille)",
+        "Banquette 3 m, espacement 4 m",
+        "Banquette 7 m, espacement 4 m"
+      ],
+      "answer": 2,
+      "explain": "La banquette est la distance entre le trou et la face libre la plus proche (3 m) ; l'espacement est la distance entre deux trous d'une même rangée (4 m). Leur produit donne la maille (12 m²).",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-002",
+      "theme": "Forage-tir et explosifs",
+      "level": 1,
+      "q": "En chargeant, il reste 1,2 m de colonne vide dans un trou dont le bourrage prévu est de 2,1 m. Le chargeur propose de la remplir d'explosif « pour plus de puissance ». Que réponds-tu ?",
+      "choices": [
+        "Non : le bourrage confine l'énergie des gaz et limite les projections, il doit être respecté au plan de tir",
+        "Oui : une colonne explosive plus haute fragmente mieux la tête de gradin, on compense donc le vide",
+        "Oui : le bourrage sert surtout à refroidir le trou, on peut le réduire de moitié",
+        "Non : le bourrage sert à maintenir l'amorce en place et ne doit pas dépasser 1 m"
+      ],
+      "answer": 0,
+      "explain": "Le bourrage inerte en tête de trou confine l'énergie des gaz et limite les projections. Le réduire pour mettre plus d'explosif expose à des projections de roche.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-003",
+      "theme": "Forage-tir et explosifs",
+      "level": 1,
+      "q": "Au camion mélangeur, le boutefeu prépare de l'ANFO en vrac pour un tir à ciel ouvert. De quoi est-il fait ?",
+      "choices": [
+        "De nitroglycérine et de sable fin tamisé",
+        "De poudre noire et d'eau en émulsion",
+        "De TNT et de nitrate de sodium",
+        "De nitrate d'ammonium et de fioul"
+      ],
+      "answer": 3,
+      "explain": "L'ANFO est un mélange économique d'environ 94 % de nitrate d'ammonium et 6 % de fioul, résistant mal à l'eau.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-004",
+      "theme": "Forage-tir et explosifs",
+      "level": 2,
+      "q": "Pour le gradin de la figure (H = 10 m), le plan de tir donne une banquette de 3 m, un espacement de 4 m et 120 kg d'explosif par trou. Quel est le facteur de charge, surforage négligé ?",
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Coupe d'un gradin de mine à ciel ouvert : hauteur de gradin H = 10 m, angle de talus α = 70°, crête, pied, berme de 15 m de large, merlon de sécurité, piste de roulage de 24 m, plateformes supérieure et inférieure.",
+      "choices": [
+        "0,5 kg/m³ (120 kg pour 240 m³ de roche)",
+        "1,0 kg/m³ (120 kg pour 120 m³)",
+        "0,8 kg/m³ (120 kg pour 150 m³)",
+        "1,2 kg/m³ (120 kg pour 100 m³)"
+      ],
+      "answer": 1,
+      "explain": "Volume par trou = 3 × 4 × 10 = 120 m³ ; facteur de charge = 120 kg / 120 m³ = 1,0 kg/m³.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-005",
+      "theme": "Forage-tir et explosifs",
+      "level": 2,
+      "q": "Saison des pluies : plusieurs trous sont remplis d'eau sur 3 m de hauteur. Quel explosif prévois-tu pour ces trous ?",
+      "choices": [
+        "L'ANFO en vrac avec un surdosage en fioul pour compenser l'eau",
+        "Une émulsion résistante à l'eau, en cartouches ou pompée dans le trou noyé",
+        "Un explosif en poudre sèche conditionné en sac papier ordinaire",
+        "Du nitrate d'ammonium seul, versé directement dans l'eau du trou"
+      ],
+      "answer": 1,
+      "explain": "L'ANFO ne résiste pas à l'eau : en trou humide ou noyé, on utilise une émulsion ou un explosif en cartouches résistant à l'eau.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-006",
+      "theme": "Forage-tir et explosifs",
+      "level": 2,
+      "q": "Le tir de ce matin a projeté des roches à 150 m. À la fiche de tir, la banquette du premier rang était de 1,8 m au lieu des 3 m prévus. Quelle est la cause la plus probable ?",
+      "choices": [
+        "Un bourrage trop long, qui a confiné les gaz à l'excès",
+        "Une température de l'air élevée, qui a dilaté l'explosif dans les trous",
+        "Un trou parfaitement bourré avec du gravier calibré conforme",
+        "Une banquette trop faible : l'énergie est partie vers la face libre"
+      ],
+      "answer": 3,
+      "explain": "Une banquette trop faible ou un bourrage insuffisant provoque des projections de roche. Ici le premier rang était trop près de la face libre.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-007",
+      "theme": "Forage-tir et explosifs",
+      "level": 2,
+      "q": "Après le tir, tu constates qu'un trou n'a pas explosé (raté). Que fais-tu ?",
+      "choices": [
+        "Je balise, j'interdis l'accès, j'informe le boutefeu responsable et j'applique la procédure ratés",
+        "Je fore à 30 cm du trou raté pour le désamorcer, puis je reprends le chargement",
+        "Je pose un détonateur neuf sans contrôle pour faire partir la charge, puis je rouvre la zone",
+        "Je reprends le chargement des autres trous en évitant celui-ci, puis j'avertis après le tir"
+      ],
+      "answer": 0,
+      "explain": "Un raté est une urgence : balisage, interdiction d'accès, information du boutefeu responsable et procédure de traitement des ratés. On ne fore jamais près d'un trou raté.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-008",
+      "theme": "Forage-tir et explosifs",
+      "level": 3,
+      "q": "Au pied du gradin tiré hier, il reste des bosses (« pieds ») qui gênent la chargeuse. Quelle est la cause la plus probable dans la conception du tir ?",
+      "choices": [
+        "Un bourrage trop long en tête de trou, qui confine l'énergie",
+        "Une berme trop large au pied du gradin supérieur, gênant le tir",
+        "Un surforage insuffisant sous le niveau de la plateforme de tir",
+        "Un excès de retards de détonateurs entre les rangées successives"
+      ],
+      "answer": 2,
+      "explain": "Le surforage, petite hauteur forée sous le niveau de la plateforme, permet de bien casser le pied du gradin. S'il est insuffisant, il reste des bosses.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-009",
+      "theme": "Forage-tir et explosifs",
+      "level": 3,
+      "q": "Une carrière voisine se plaint des vibrations de vos tirs. Quelle action technique est la plus efficace pour les réduire ?",
+      "choices": [
+        "Tirer tous les trous au même instant pour concentrer l'énergie en une fois",
+        "Supprimer le bourrage pour laisser les gaz s'échapper plus vite du trou",
+        "Augmenter le diamètre des trous sans changer la maille ni la charge",
+        "Séquencer les trous avec des détonateurs à retard pour réduire la charge par instant"
+      ],
+      "answer": 3,
+      "explain": "Les retards réduisent la charge explosive qui détone au même instant, donc les vibrations. Tirer tout en même temps les augmente.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-010",
+      "theme": "Engins et circulation",
+      "level": 1,
+      "q": "Sur la rampe, ton pick-up croise un tombereau chargé comme celui de la photo, qui monte vers le concasseur. Qui a la priorité ?",
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Photo d'un tombereau de mine chargé de minerai en vrac, vu de dessus sur une piste d'exploitation.",
+      "choices": [
+        "Le pick-up, car il est plus rapide et plus maniable en rampe",
+        "Le tombereau chargé : le véhicule léger lui cède le passage",
+        "Le premier arrivé au croisement, quel que soit son gabarit",
+        "Le véhicule dont le conducteur a le plus d'ancienneté"
+      ],
+      "answer": 1,
+      "explain": "La priorité va au véhicule chargé, au moins maniable ; les véhicules légers cèdent toujours le passage aux gros engins.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-011",
+      "theme": "Engins et circulation",
+      "level": 1,
+      "q": "Poste de nuit, ronde de contrôle d'un tombereau : tu vois une fuite d'huile hydraulique goutte à goutte au vérin de benne. Que fais-tu ?",
+      "choices": [
+        "Je démarre et je surveille la fuite pendant les voyages, puis je signale en fin de poste",
+        "Je complète le niveau d'huile hydraulique et je mets l'engin en service normalement",
+        "Je le note sur la fiche, je préviens le mécanicien et je ne mets pas l'engin en service avant réparation",
+        "Je laisse le conducteur du poste suivant décider, sans remplir la fiche de contrôle"
+      ],
+      "answer": 2,
+      "explain": "Toute anomalie est signalée sur la fiche et un engin non conforme n'est pas mis en service.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-012",
+      "theme": "Engins et circulation",
+      "level": 1,
+      "q": "Tu dois ramener un camion de l'atelier au parc, 200 m à faible vitesse, et tu es pressé. À quel moment attaches-tu la ceinture ?",
+      "choices": [
+        "Dès que l'engin se déplace, y compris sur un court trajet",
+        "Seulement sur la piste de roulage, pas sur l'aire de l'atelier",
+        "Seulement en descente, quand la vitesse dépasse 20 km/h",
+        "Pas nécessaire sur un trajet de 200 m à faible vitesse"
+      ],
+      "answer": 0,
+      "explain": "La ceinture est attachée dès que l'engin est en mouvement, quelle que soit la distance.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-013",
+      "theme": "Engins et circulation",
+      "level": 2,
+      "q": "Le tombereau de la photo a une charge utile de 100 t et un cycle complet de 40 minutes. Il travaille 8 heures effectives. Combien de tonnes transporte-t-il sur le poste ?",
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Photo d'un tombereau de mine chargé de minerai en vrac, vu de dessus sur une piste d'exploitation.",
+      "choices": [
+        "1 200 t (12 voyages de 100 t sur 8 h)",
+        "800 t (8 voyages de 100 t sur 8 h)",
+        "960 t (cycle compté à 50 min au lieu de 40)",
+        "1 000 t (10 voyages de 100 t sur le poste)"
+      ],
+      "answer": 0,
+      "explain": "8 h = 480 min ; 480/40 = 12 voyages ; 12 × 100 = 1 200 t.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-014",
+      "theme": "Engins et circulation",
+      "level": 2,
+      "q": "Le cycle total d'un tombereau est de 24 minutes et la pelle charge un camion en 6 minutes. Combien de camions faut-il pour que la pelle ne soit jamais en attente ?",
+      "choices": [
+        "3 camions (cycle de 18 min ÷ 6 min)",
+        "5 camions (30 min ÷ 6 min)",
+        "4 camions (24 min ÷ 6 min)",
+        "6 camions (36 min ÷ 6 min)"
+      ],
+      "answer": 2,
+      "explain": "Nombre de camions = temps de cycle / temps de chargement = 24/6 = 4.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-015",
+      "theme": "Engins et circulation",
+      "level": 2,
+      "q": "Les roues du plus gros tombereau du site ont 3,6 m de diamètre. Quelle hauteur minimale donnes-tu au merlon de sécurité en rive de piste ?",
+      "choices": [
+        "0,9 m, soit un quart du diamètre des roues",
+        "Au moins 1,8 m, soit l'axe des roues",
+        "3,6 m, soit le diamètre complet des roues",
+        "1,0 m, soit la hauteur standard d'un merlon"
+      ],
+      "answer": 1,
+      "explain": "Le merlon doit atteindre au minimum l'axe des roues du plus gros engin, soit la moitié du diamètre : 1,8 m. Les procédures du site peuvent exiger plus.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-016",
+      "theme": "Engins et circulation",
+      "level": 2,
+      "q": "Tu dois approcher en véhicule léger d'un tombereau à l'arrêt, comme celui de la photo, pour parler au conducteur. Comment procèdes-tu ?",
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Photo d'un tombereau de mine chargé de minerai en vrac, vu de dessus sur une piste d'exploitation.",
+      "choices": [
+        "Je me place juste derrière lui, dans l'axe, pour qu'il me voie dans ses rétroviseurs",
+        "Je klaxonne deux coups, puis j'approche feux allumés côté cabine sans m'arrêter",
+        "J'approche par l'avant en faisant de grands signes de bras, sans attendre de réponse",
+        "J'attends l'accord radio et le contact visuel avant d'approcher, jamais par derrière"
+      ],
+      "answer": 3,
+      "explain": "Un gros tombereau a de vastes angles morts : on n'approche qu'après accord radio et contact visuel, et jamais par derrière.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-017",
+      "theme": "Engins et circulation",
+      "level": 3,
+      "q": "Tu descends une longue rampe avec un tombereau chargé. Quelle est la bonne pratique ?",
+      "choices": [
+        "Passer au point mort pour économiser le carburant en descente",
+        "Freiner en continu avec les freins de service jusqu'au pied de la rampe",
+        "Choisir le rapport avant la descente et utiliser le ralentisseur ou le frein moteur",
+        "Débrayer et laisser rouler pour garder la vitesse sous contrôle"
+      ],
+      "answer": 2,
+      "explain": "On choisit le rapport avant de s'engager et on utilise le ralentisseur ou le frein moteur : le point mort est interdit en descente.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-018",
+      "theme": "Engins et circulation",
+      "level": 3,
+      "q": "Tu conduis la pelle. Le tombereau est en place, la benne n'est pas pleine et tu veux gagner du temps. Que fais-tu ?",
+      "img": "photo/haul-truck.jpg",
+      "imgAlt": "Photo d'un tombereau de mine chargé de minerai en vrac, vu de dessus sur une piste d'exploitation.",
+      "choices": [
+        "Je répartis la charge au centre de la benne, sans surcharger ni passer sur la cabine",
+        "Je passe le godet au-dessus de la cabine pour charger plus vite, le conducteur étant averti par radio",
+        "Je surcharge légèrement la benne de 5 % pour réduire le nombre de voyages du poste",
+        "Je charge uniquement l'avant de la benne pour garder l'essieu arrière léger"
+      ],
+      "answer": 0,
+      "explain": "Une charge au centre protège les pneus et la structure. Passer le godet au-dessus de la cabine ou surcharger est interdit.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-019",
+      "theme": "Soutènement et stabilité",
+      "level": 1,
+      "q": "En souterrain, tu arrives au front après le tir et la ventilation. Quelle est la première opération avant de travailler sous la voûte ?",
+      "choices": [
+        "L'installation du matériel de forage pour la volée suivante",
+        "Le marinage immédiat des déblais, sans contrôle préalable",
+        "La pause de début de poste, le temps de laisser la poussière retomber",
+        "La purge des blocs instables du toit et des parois, avant tout autre travail"
+      ],
+      "answer": 3,
+      "explain": "La purge fait tomber les blocs instables du toit et des parois ; elle précède tout travail sous une voûte fraîchement tirée.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-020",
+      "theme": "Soutènement et stabilité",
+      "level": 1,
+      "q": "Tu poses des boulons d'ancrage dans le toit d'une galerie fraîchement purgée. À quoi servent-ils ?",
+      "choices": [
+        "À éclairer la galerie en supportant les luminaires de toit",
+        "À armer le massif en reliant les blocs instables au terrain sain",
+        "À ventiler le front en soutenant les gaines d'air contre le toit",
+        "À drainer l'eau du toit en perçant des chemins d'écoulement dans la roche"
+      ],
+      "answer": 1,
+      "explain": "Les boulons d'ancrage arment le massif : ils relient les blocs instables au terrain sain.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-021",
+      "theme": "Soutènement et stabilité",
+      "level": 2,
+      "q": "Le chef de poste fait projeter du béton sur le grillage entre les boulons. Quel est son intérêt ?",
+      "choices": [
+        "Remplacer la ventilation en limitant les échanges d'air avec la paroi",
+        "Sceller la surface de la roche et retenir les petits blocs tombants",
+        "Augmenter la teneur du minerai en y mélangeant du ciment projeté",
+        "Servir de bourrage pour les trous de la prochaine volée de tir"
+      ],
+      "answer": 1,
+      "explain": "Le béton projeté scelle la surface et confine la roche entre les boulons, avec le grillage qui retient les petits blocs.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-022",
+      "theme": "Soutènement et stabilité",
+      "level": 2,
+      "q": "Pour planifier, une volée est forée sur 3,0 m de longueur avec un rendement de tir de 90 %. Quel avancement de galerie prévois-tu ?",
+      "choices": [
+        "3,0 m (rendement de 100 % supposé)",
+        "3,3 m (3,0 m × 110 %)",
+        "2,3 m (3,0 m × 77 %)",
+        "2,7 m (3,0 m × 90 %)"
+      ],
+      "answer": 3,
+      "explain": "Avancement = longueur forée × rendement = 3,0 × 0,90 = 2,7 m.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-023",
+      "theme": "Soutènement et stabilité",
+      "level": 2,
+      "q": "La berme de 15 m de large du gradin de la figure est encombrée d'éboulis. Quelle est la conséquence et que fais-tu ?",
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Coupe d'un gradin de mine à ciel ouvert : hauteur de gradin H = 10 m, angle de talus α = 70°, crête, pied, berme de 15 m de large, merlon de sécurité, piste de roulage de 24 m, plateformes supérieure et inférieure.",
+      "choices": [
+        "Elle ne retient plus les blocs : je signale et je fais nettoyer la berme vite",
+        "Pas de conséquence : la berme ne sert qu'au drainage des eaux, je laisse en l'état",
+        "L'angle global de la fosse augmente tout seul : je mesure cet angle et je continue",
+        "Elle sert de stock tampon de minerai en attente : je la laisse encombrée"
+      ],
+      "answer": 0,
+      "explain": "La berme retient les éboulis et les blocs qui tombent du gradin supérieur ; encombrée, elle ne remplit plus son rôle et il faut la nettoyer.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-024",
+      "theme": "Soutènement et stabilité",
+      "level": 2,
+      "q": "En ronde sur le haut du talus, tu vois une fissure parallèle à la crête, ouverte de 5 cm depuis hier. Que fais-tu ?",
+      "choices": [
+        "Je continue le poste en mesurant l'ouverture de la fissure à chaque ronde",
+        "Je comble la fissure avec du gravier et je repars sur mon circuit",
+        "J'arrête, je balise, j'alerte la géotechnique et j'attends son avis avant de reprendre",
+        "Je l'ignore : une fissure de 5 cm n'est qu'un défaut de surface sans risque"
+      ],
+      "answer": 2,
+      "explain": "Les fissures de traction en crête sont un signe avant-coureur de glissement. On arrête, on balise, on alerte et on attend l'avis de la géotechnique.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-025",
+      "theme": "Soutènement et stabilité",
+      "level": 2,
+      "q": "Sur une passe de carottage de 1 m, les morceaux de plus de 10 cm cumulent 80 cm. Quel RQD en déduis-tu et comment qualifies-tu la roche ?",
+      "choices": [
+        "RQD de 80 % : roche excellente",
+        "RQD de 20 % : roche très médiocre",
+        "RQD de 50 % : roche médiocre",
+        "RQD de 80 % : roche bonne"
+      ],
+      "answer": 3,
+      "explain": "RQD = 80/100 = 80 %, soit la classe 75 à 90 % : bon. L'excellent commence à 90 %.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-026",
+      "theme": "Soutènement et stabilité",
+      "level": 3,
+      "q": "Après trois jours de forte pluie, de nouvelles venues d'eau apparaissent au pied d'un talus. Quel est l'effet sur la stabilité et que prévois-tu ?",
+      "choices": [
+        "La cohésion augmente avec l'eau, ce qui consolide le talus : je poursuis l'exploitation normale",
+        "La pression interstitielle monte et la résistance baisse : j'alerte et je prévois le drainage",
+        "Le poids de l'eau plaque le talus et le renforce : je maintiens le rythme d'extraction",
+        "Aucun effet mesurable à court terme : je note seulement les venues d'eau au registre"
+      ],
+      "answer": 1,
+      "explain": "L'eau augmente la pression interstitielle et réduit la résistance au cisaillement : on alerte la géotechnique et on draine.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-027",
+      "theme": "Soutènement et stabilité",
+      "level": 3,
+      "q": "Le géotechnicien annonce un facteur de sécurité de 1,0 pour le talus est. Que signifie ce résultat ?",
+      "choices": [
+        "Le talus est parfaitement sûr : on peut déplacer la limite d'excavation",
+        "Le talus a déjà rompu : il faut reconstituer la pente par remblayage",
+        "Le talus est à l'équilibre limite, sans marge : une action est requise",
+        "Le talus est renforcé de 100 % : on peut augmenter la hauteur des gradins"
+      ],
+      "answer": 2,
+      "explain": "Le facteur de sécurité est le rapport forces résistantes / forces motrices ; à 1,0, le talus est à l'équilibre limite, sans marge de sécurité.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-028",
+      "theme": "Ventilation et gaz",
+      "level": 1,
+      "q": "Le ventilateur principal de la mine du schéma tombe en panne. Quelle fonction de l'air frais n'est plus assurée ?",
+      "img": "svg/mine-ventilation.svg",
+      "imgAlt": "Ventilation d'une mine souterraine : air frais par le puits d'entrée, galerie d'entrée, chantier, galerie de retour d'air vicié, puits de sortie avec ventilateur principal, galerie en cul-de-sac avec gaine soufflante et ventilateur auxiliaire.",
+      "choices": [
+        "Fournir l'oxygène et évacuer les gaz, poussières et fumées",
+        "Refroidir le minerai avant son transport vers le concasseur",
+        "Éteindre les incendies de la galerie par noyage à l'eau",
+        "Chauffer les galeries pour limiter la condensation sur les parois"
+      ],
+      "answer": 0,
+      "explain": "La ventilation fournit de l'air frais, dilue et évacue gaz, poussières et fumées, et contrôle la température.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-029",
+      "theme": "Ventilation et gaz",
+      "level": 1,
+      "q": "Après un tir, un opérateur à l'entrée du front se plaint de maux de tête et de nausées, sans aucune odeur perçue. Quel gaz suspectes-tu ?",
+      "choices": [
+        "Le monoxyde de carbone (CO), gaz incolore et inodore",
+        "Le méthane (CH₄), gaz léger responsable du grisou en mine",
+        "L'azote (N₂), gaz inerte qui représente 78 % de l'air",
+        "L'argon (Ar), gaz rare plus dense que l'air ambiant"
+      ],
+      "answer": 0,
+      "explain": "Le CO est incolore, inodore, très toxique, produit par les moteurs diesel, les tirs et les incendies.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-030",
+      "theme": "Ventilation et gaz",
+      "level": 2,
+      "q": "Sur le schéma, la galerie fait 12 m² de section et l'anémomètre indique 0,5 m/s. La procédure du site exige 8 m³/s. Le débit est-il suffisant ?",
+      "img": "svg/mine-ventilation.svg",
+      "imgAlt": "Ventilation d'une mine souterraine : air frais par le puits d'entrée, galerie d'entrée, chantier, galerie de retour d'air vicié, puits de sortie avec ventilateur principal, galerie en cul-de-sac avec gaine soufflante et ventilateur auxiliaire.",
+      "choices": [
+        "Oui : Q = 6 m³/s est jugé suffisant pour la section de 12 m²",
+        "Oui : Q = 12 m³/s, soit largement plus que les 8 m³/s exigés",
+        "Non : Q = 6 m³/s, inférieur aux 8 m³/s exigés par le site",
+        "Non : Q = 4 m³/s, inférieur aux 8 m³/s exigés"
+      ],
+      "answer": 2,
+      "explain": "Q = V × S = 0,5 × 12 = 6 m³/s, inférieur à l'exigence : il faut relever le débit avant de travailler.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-031",
+      "theme": "Ventilation et gaz",
+      "level": 2,
+      "q": "À l'avancement, le détecteur indique 7 % de méthane. Que conclus-tu ?",
+      "choices": [
+        "C'est sans danger : le méthane ne devient toxique qu'au-dessus de 20 %, je continue le travail",
+        "Plage explosive (5 à 15 %) : j'évacue, je coupe les sources d'inflammation et j'alerte",
+        "Plage explosive atteinte seulement entre 1 et 3 % : je continue en surveillant le détecteur",
+        "C'est normal en mine métallique : je continue et je relève la valeur au poste suivant"
+      ],
+      "answer": 1,
+      "explain": "Le méthane est explosif entre environ 5 et 15 %. On évacue, on coupe les sources d'inflammation et on alerte selon la procédure du site.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-032",
+      "theme": "Ventilation et gaz",
+      "level": 2,
+      "q": "Tu dois descendre dans le puisard au fond du puits pour le nettoyer. Quel danger lié au CO₂ prends-tu en compte ?",
+      "choices": [
+        "Il monte au toit comme les gaz chauds, donc le fond est sûr : j'entre sans contrôle préalable",
+        "Il se dilue dans l'air ambiant dès que le puits est ventilé : j'entre sans détecteur de gaz",
+        "Il n'est dangereux qu'au-dessus de 50 % dans l'air : j'entre normalement, sans détecteur",
+        "Plus lourd que l'air, il s'accumule dans les points bas : je contrôle l'air avant d'entrer"
+      ],
+      "answer": 3,
+      "explain": "Le CO₂, plus lourd que l'air, s'accumule dans les puits, puisards et fonds de galeries : on contrôle l'atmosphère avant d'entrer.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-033",
+      "theme": "Ventilation et gaz",
+      "level": 3,
+      "q": "Le chef de poste, pressé, veut retourner au front 5 minutes après le tir parce que la fumée visible a disparu. Que réponds-tu ?",
+      "choices": [
+        "Oui : sans fumée visible, l'air est considéré sain et le front peut être réoccupé",
+        "Oui : un volontaire peut aller vérifier seul avec un simple détecteur de poche",
+        "Non : j'attends la fin du temps de ventilation de la procédure et un contrôle des gaz conforme",
+        "Oui : on se fie à l'odeur des fumées de tir, qui disparaît quand l'air est sain"
+      ],
+      "answer": 2,
+      "explain": "On ne retourne au front qu'après le temps de ventilation fixé et un contrôle des gaz conforme. La fumée visible n'est qu'un indice partiel.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-034",
+      "theme": "Ventilation et gaz",
+      "level": 3,
+      "q": "Le traçage en cul-de-sac du schéma est ventilé par une gaine soufflante. Où places-tu la sortie de la gaine ?",
+      "img": "svg/mine-ventilation.svg",
+      "imgAlt": "Ventilation d'une mine souterraine : air frais par le puits d'entrée, galerie d'entrée, chantier, galerie de retour d'air vicié, puits de sortie avec ventilateur principal, galerie en cul-de-sac avec gaine soufflante et ventilateur auxiliaire.",
+      "choices": [
+        "Près du front, à quelques mètres, pour balayer l'air vicié",
+        "À l'entrée de la galerie, pour réduire les pertes de charge",
+        "Loin du front, pour ne pas gêner le chargement des trous",
+        "Elle peut rester arrêtée pendant le chargement de la volée"
+      ],
+      "answer": 0,
+      "explain": "En ventilation soufflante, la sortie de gaine est placée près du front pour balayer l'air vicié ; la ventilation reste en marche pendant les travaux.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-035",
+      "theme": "Ventilation et gaz",
+      "level": 1,
+      "q": "L'air normal contient environ 20,9 % d'oxygène. Ton détecteur affiche 17 % dans un cul-de-sac. Que fais-tu ?",
+      "choices": [
+        "Je continue : 17 % reste suffisant pour un travail à faible effort physique",
+        "Je continue en respirant plus lentement pour économiser l'oxygène du front",
+        "Je cherche d'abord la source de la baisse avant de décider de sortir ou non",
+        "Je sors et j'alerte : sous 19 à 19,5 % d'O₂, l'atmosphère est dangereuse"
+      ],
+      "answer": 3,
+      "explain": "Sous 19 à 19,5 % d'oxygène, l'atmosphère est dangereuse : on sort, on alerte et on attend un contrôle. Le seuil exact est fixé par les procédures du site.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-036",
+      "theme": "Ventilation et gaz",
+      "level": 3,
+      "q": "Tu sens une odeur d'œuf pourri qui disparaît après quelques minutes, alors que le détecteur de H₂S sonne toujours. Que fais-tu ?",
+      "choices": [
+        "Je reste : l'odeur a disparu donc le gaz a disparu aussi du front",
+        "Je me fie au détecteur et j'évacue selon la procédure du site",
+        "Je respire profondément pour vérifier si l'odeur revient vraiment",
+        "J'enlève mon casque pour mieux sentir l'odeur éventuelle du H₂S"
+      ],
+      "answer": 1,
+      "explain": "À forte concentration, le H₂S paralyse l'odorat : l'absence d'odeur ne veut pas dire que le gaz est parti. Le détecteur fait foi.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-037",
+      "theme": "Sécurité au front",
+      "level": 1,
+      "q": "À l'entrée du front, un panneau montre un symbole blanc dans un cercle bleu. Que signifie-t-il ?",
+      "img": "svg/iso-safety-signs.svg",
+      "imgAlt": "Panneaux ISO 7010 : interdiction (cercle rouge barré), avertissement (triangle jaune), obligation (cercle bleu, symbole blanc, par exemple casque obligatoire), sauvetage (carré vert).",
+      "choices": [
+        "Une interdiction, par exemple l'accès au front",
+        "Une obligation, par exemple le port d'un EPI",
+        "Un danger, par exemple un risque de chute de blocs",
+        "Un secours, par exemple un poste de premiers soins"
+      ],
+      "answer": 1,
+      "explain": "Le cercle bleu à symbole blanc indique une obligation ; le rond rouge barré est une interdiction, le triangle jaune un danger, le carré vert un secours.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-038",
+      "theme": "Sécurité au front",
+      "level": 1,
+      "q": "À l'atelier de forage, le sonomètre donne 92 dB(A) sur 8 h. À partir de quel niveau la protection auditive devient-elle obligatoire en règle générale (valeur à confirmer dans les procédures du site) ?",
+      "img": "svg/ppe-icons.svg",
+      "imgAlt": "Pictogrammes d'obligation sur cercle bleu : casque, lunettes, gants, chaussures de sécurité, casque antibruit, gilet haute visibilité.",
+      "choices": [
+        "À partir de 105 dB(A) : elle n'est pas obligatoire ici",
+        "À partir de 120 dB(A) : elle n'est pas obligatoire ici",
+        "À partir de 75 dB(A) : elle est obligatoire dès le niveau d'ambiance",
+        "À partir de 85 dB(A) sur 8 h : elle est donc obligatoire ici"
+      ],
+      "answer": 3,
+      "explain": "Le repère courant est de 85 dB(A) sur 8 heures : à 92 dB(A), la protection auditive est obligatoire. Les seuils exacts sont fixés par les procédures du site.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-039",
+      "theme": "Sécurité au front",
+      "level": 2,
+      "q": "Le convoyeur du concasseur est bourré et tu dois intervenir. Dans quel ordre consignes-tu avant de toucher la machine ?",
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Consignation d'une installation : organe de coupure condamné par cadenas et étiquette, avec les étapes séparer, condamner, identifier, vérifier l'absence de tension, mettre à la terre.",
+      "choices": [
+        "Séparer l'énergie, condamner par cadenas, puis vérifier l'absence d'énergie résiduelle",
+        "Débourrer d'abord, puis séparer l'énergie et poser le cadenas avant de redémarrer",
+        "Poser le cadenas et l'étiquette sans couper l'énergie, puis vérifier l'arrêt de la bande",
+        "Vérifier d'abord l'arrêt de la bande, couper l'énergie, puis cadenasser en fin d'opération"
+      ],
+      "answer": 0,
+      "explain": "La consignation suit l'ordre : séparer, condamner (cadenas et étiquette), vérifier l'absence d'énergie résiduelle, et seulement ensuite commencer le travail.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-040",
+      "theme": "Sécurité au front",
+      "level": 2,
+      "q": "Tu constates un danger grave et immédiat sur ta tâche et ton chef de poste est absent. Que fais-tu ?",
+      "choices": [
+        "Je termine vite la tâche pour limiter la perte de production, puis je préviens",
+        "Je continue : sans chef de poste, personne ne peut décider d'arrêter",
+        "J'arrête, je mets la zone en sécurité et je préviens ma hiérarchie sans attendre le retour du chef",
+        "J'attends la fin du poste pour en parler au chef de poste à son retour"
+      ],
+      "answer": 2,
+      "explain": "Tout travailleur qui constate un danger grave arrête sa tâche, met la zone en sécurité et prévient sa hiérarchie ; il est protégé s'il agit de bonne foi.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-041",
+      "theme": "Sécurité au front",
+      "level": 2,
+      "q": "Sur la figure, un éboulement de blocs se produit presque chaque semaine (probabilité 4) et peut causer une blessure grave (gravité 5). Quel est le niveau de risque ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 × 5 : probabilité en abscisse, gravité en ordonnée ; criticité = probabilité × gravité ; niveaux faible 1-4, moyen 5-9, élevé 10-14, critique 15 et plus.",
+      "choices": [
+        "9 : moyen, à surveiller lors des rondes",
+        "4 : faible, sans action particulière",
+        "5 : moyen, à traiter sous trois mois",
+        "20 : critique, à traiter en priorité"
+      ],
+      "answer": 3,
+      "explain": "Criticité = probabilité × gravité = 4 × 5 = 20, niveau critique (15 et plus) : traitement prioritaire.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-042",
+      "theme": "Sécurité au front",
+      "level": 3,
+      "q": "Des piétons traversent la piste des tombereaux pour rejoindre le vestiaire. Quelle mesure est la plus efficace dans la hiérarchie de prévention ?",
+      "choices": [
+        "Un panneau d'avertissement et un feu clignotant à chaque traversée",
+        "Supprimer le croisement : cheminement piéton séparé de la piste",
+        "Une consigne affichée rappelant de regarder avant de traverser",
+        "Un gilet haute visibilité renforcé de bandes rétroréfléchissantes"
+      ],
+      "answer": 1,
+      "explain": "La suppression ou la séparation du danger à la source est la mesure la plus efficace ; consignes, panneaux et EPI viennent après.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-043",
+      "theme": "Sécurité au front",
+      "level": 2,
+      "q": "En fin de poste, ton coéquipier propose de retirer ton cadenas de consignation pour redémarrer plus vite la machine. Que réponds-tu ?",
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Consignation d'une installation : organe de coupure condamné par cadenas et étiquette, avec les étapes séparer, condamner, identifier, vérifier l'absence de tension, mettre à la terre.",
+      "choices": [
+        "Oui, s'il est habilité à intervenir et a signé le registre de consignation",
+        "Oui, si le chef de poste donne son accord par téléphone en fin de poste",
+        "Non : chaque intervenant retire lui-même son cadenas personnel",
+        "Oui, après avoir retiré l'étiquette et inspecté visuellement la machine"
+      ],
+      "answer": 2,
+      "explain": "Chaque intervenant pose son propre cadenas et le retire lui-même : c'est la garantie qu'aucun collègue ne soit encore en danger.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-mines-044",
+      "theme": "Sécurité au front",
+      "level": 2,
+      "q": "Sur le front, tu vois chaque semaine plusieurs presque-accidents (bloc tombé à côté d'un opérateur) qui ne sont jamais déclarés. Que fais-tu ?",
+      "img": "svg/bird-pyramid.svg",
+      "imgAlt": "Pyramide de Bird 1-10-30-600 : 1 accident grave, 10 accidents avec lésions légères, 30 accidents avec dégâts matériels, 600 presque-accidents ; agir sur la base réduit les accidents graves.",
+      "choices": [
+        "Je les déclare : traiter la base de la pyramide de Bird évite les accidents graves futurs",
+        "Je ne déclare rien : sans blessé, il n'y a aucun événement à enregistrer au registre",
+        "Je ne déclare que les accidents avec arrêt de travail, seuls suivis par la direction",
+        "Je les déclare seulement si le même presque-accident se répète plus d'un mois"
+      ],
+      "answer": 0,
+      "explain": "Dans la pyramide de Bird, 600 presque-accidents correspondent à 1 accident grave : les déclarer et les traiter agit à la base et évite les accidents graves.",
+      "seconds": 60,
+      "status": "draft"
+    }
   ]
 }

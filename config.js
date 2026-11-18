@@ -8,7 +8,12 @@ export const CONFIG = {
 
   PASS_MARK: 70,            // seuil de réussite (%)
   EXAM_QUESTIONS: 30,       // nombre de questions par examen (ou moins si le profil en a moins)
-  EXAM_TRANSITION_SECONDS: 3,
+  EXAM_TRANSITION_SECONDS: 5,   // pause entre deux questions
+  // Durée des questions : minimum 1 min 30 ; 2 min pour les cas pratiques / calculs (durée de base >= LONG_THRESHOLD).
+  // Une question dont le contenu prévoit plus (mise en situation jusqu'à 3 min) garde sa durée.
+  MIN_QUESTION_SECONDS: 90,
+  LONG_QUESTION_SECONDS: 120,
+  LONG_THRESHOLD: 75,
   CURRENCY: 'FCFA',
   // Les candidats invités par un lien RH voient-ils la correction détaillée ?
   SHOW_CORRECTION_FOR_SESSIONS: false,

@@ -2,78 +2,849 @@
   "profile": "ing-mines",
   "modules": [
     {
-      "id": "m1", "title": "Conception du tir : maille, facteur de charge, vibrations", "theme": "Forage-tir et explosifs", "minutes": 10,
-      "body": "Un plan de tir vise une fragmentation adaptée au chargement et au concassage, avec un minimum de vibrations, de projections et d'onde aérienne. Les paramètres géométriques sont la **banquette** B, l'**espacement** E, la **hauteur de gradin** H, le **surforage** U et le **bourrage** T. Repères empiriques : B de 25 à 40 fois le diamètre du trou, T voisin de 0,7 B, U voisin de 0,3 B. La **maille** vaut B × E (en m²) ; le volume abattu par trou vaut approximativement B × E × H.\n\nLe **facteur de charge** (consommation spécifique, ou powder factor) est la masse d'explosif par volume abattu, en kg/m³ ; on l'exprime aussi en g/t. La masse d'explosif d'un tir vaut le facteur de charge multiplié par le volume abattu. La masse linéique d'une colonne d'explosif vaut π d²/4 × ρ : pour un trou de 165 mm rempli d'ANFO de densité 0,85 g/cm³, on obtient environ 18 kg par mètre.\n\nLe choix de l'explosif dépend de l'eau : **ANFO** en trou sec (densité en vrac environ 0,8 à 0,85 g/cm³), **émulsion** ou mélange émulsion/ANFO (« heavy ANFO ») en trou mouillé. Une banquette trop grande provoque un confinement excessif : fragmentation grossière, pieds, fortes vibrations et onde aérienne. Une banquette trop faible provoque projections et fines.\n\n**Séquencement** : les détonateurs à retard permettent de limiter la **charge maximale par retard** Q. Les **détonateurs électroniques**, programmables avec une précision de l'ordre de la milliseconde, améliorent le contrôle de la fragmentation et des vibrations. Les vibrations sont caractérisées par la **vitesse particulaire maximale** (PPV, en mm/s) ; elles suivent une loi d'atténuation en fonction de la **distance réduite** D/√Q : quand Q est divisée par 4 à distance constante, la distance réduite double et la PPV diminue.\n\nL'ingénieur analyse aussi la **fragmentation** (granulométrie mesurée par analyse d'images), la forme du tas, les **ratés**, les projections, et optimise le coût total forage-tir plus chargement plus concassage, pas seulement le coût de l'explosif.",
-      "keyPoints": ["Maille = B × E ; volume par trou ≈ B × E × H.", "Facteur de charge = kg d'explosif / m³ abattu.", "Charge par retard Q : distance réduite D/√Q.", "ANFO en trou sec, émulsion en trou mouillé."],
-      "img": "svg/mine-bench-geometry.svg", "imgAlt": "Géométrie d'un gradin : banquette, espacement, hauteur, bourrage, surforage."
+      "id": "m1",
+      "title": "Conception du tir : maille, facteur de charge, vibrations",
+      "theme": "Forage-tir et explosifs",
+      "minutes": 10,
+      "body": "Un plan de tir vise une fragmentation adaptée au chargement et au concassage, avec un minimum de vibrations, de projections et d'onde aérienne. Les paramètres géométriques sont la **banquette** B, l'**espacement** E, la **hauteur de gradin** H, le **surforage** U et le **bourrage** T. Repères empiriques : B de 25 à 40 fois le diamètre du trou, T voisin de 0,7 B, U voisin de 0,3 B. La **maille** vaut B × E (en m²) ; le volume abattu par trou vaut approximativement B × E × H.\n\nLe **facteur de charge** (consommation spécifique, ou powder factor) est la masse d'explosif par volume abattu, en kg/m³ ; on l'exprime aussi en g/t. La masse d'explosif d'un tir vaut le facteur de charge multiplié par le volume abattu. La masse linéique d'une colonne d'explosif vaut π d²/4 × ρ : pour un trou de 165 mm rempli d'ANFO de densité 0,85 g/cm³, on obtient environ 18 kg par mètre.\n\nLe choix de l'explosif dépend de l'eau : **ANFO** en trou sec (densité en vrac environ 0,8 à 0,85 g/cm³), **émulsion** ou mélange émulsion/ANFO (« heavy ANFO ») en trou mouillé. Une banquette trop grande provoque un confinement excessif : fragmentation grossière, pieds, fortes vibrations et onde aérienne. Une banquette trop faible provoque projections et fines.\n\n**Séquencement** : les détonateurs à retard permettent de limiter la **charge maximale par retard** Q. Les **détonateurs électroniques**, programmables avec une précision de l'ordre de la milliseconde, améliorent le contrôle de la fragmentation et des vibrations. Les vibrations sont caractérisées par la **vitesse particulaire maximale** (PPV, en mm/s) ; elles suivent une loi d'atténuation en fonction de la **distance réduite** D/√Q : quand Q est divisée par 4 à distance constante, la distance réduite double et la PPV diminue.\n\nL'ingénieur analyse aussi la **fragmentation** (granulométrie mesurée par analyse d'images), la forme du tas, les **ratés**, les projections, et optimise le coût total forage-tir plus chargement plus concassage, pas seulement le coût de l'explosif.\n\n**Sur le terrain**\n- Avant de valider un plan de tir, contrôle sur le terrain la banquette réelle de chaque trou du premier rang : une banquette plus forte que prévue donne des pieds, du gros et des vibrations.\n- Plaintes de riverains : commence par la charge maximale par retard et la distance réduite, puis ajuste le séquencement avec le boutefeu avant de toucher à la maille.\n- Raisonne en coût global forage-tir plus chargement plus concassage, pas seulement en coût d'explosif : un tir plus cher qui fragmente mieux peut faire gagner de l'argent.",
+      "keyPoints": [
+        "Maille = B × E ; volume par trou ≈ B × E × H.",
+        "Facteur de charge = kg d'explosif / m³ abattu.",
+        "Charge par retard Q : distance réduite D/√Q.",
+        "ANFO en trou sec, émulsion en trou mouillé."
+      ],
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Géométrie d'un gradin : banquette, espacement, hauteur, bourrage, surforage."
     },
     {
-      "id": "m2", "title": "Géotechnique : massif, talus, piliers", "theme": "Géotechnique et stabilité", "minutes": 10,
-      "body": "La stabilité d'une excavation dépend de la **résistance de la roche intacte**, des **discontinuités** (diaclases, failles, schistosité), des contraintes et de l'eau.\n\n**Qualité du massif** : le **RQD** est le pourcentage de la longueur de carotte constituée de morceaux de plus de 10 cm. Une carotte de 2,0 m dont les morceaux supérieurs à 10 cm totalisent 1,5 m a un RQD de 75 %. Les classifications **RMR** et **Q** combinent RQD, résistance, espacement et état des joints, présence d'eau et orientation.\n\n**Résistance au cisaillement** (critère de Mohr-Coulomb) : τ = c + σ' tan φ, avec c la cohésion, φ l'angle de frottement et σ' la contrainte normale effective (contrainte totale moins pression d'eau). L'eau réduit σ' donc la résistance. Exemple : c = 20 kPa, σ' = 100 kPa, φ = 45° donnent τ = 20 + 100 = 120 kPa.\n\n**Facteur de sécurité** : FS = forces résistantes / forces motrices ; FS = 1 correspond à l'équilibre limite. Avec 1 800 kN de forces résistantes et 1 500 kN de forces motrices, FS = 1,2. Les critères d'acceptation dépendent de la conséquence d'une rupture (talus de gradin, talus inter-rampes, talus global).\n\n**Modes de rupture** : planaire, en dièdre (coin), par basculement (toppling) et circulaire. La rupture **planaire** exige cinématiquement une discontinuité plongeant vers l'excavation, de pendage **inférieur à l'angle du talus** (elle affleure en face) et **supérieur à l'angle de frottement**. La rupture **circulaire** concerne les sols, les roches très altérées (latérites, saprolites) et les massifs très fracturés.\n\n**Contraintes in situ** : la contrainte verticale vaut ρ g H, soit environ 0,027 MPa par mètre de profondeur (2,7 MPa à 100 m). Pour des piliers en chambres et piliers, la contrainte moyenne dans le pilier vaut σv / (1 − e), où e est le taux de défruitement. À 200 m (5,4 MPa) avec e = 0,6, la contrainte atteint 13,5 MPa.\n\n**Drainage et surveillance** : drains sub-horizontaux, fossés de crête, pompage ; prismes, radar de talus, extensomètres, piézomètres. Des critères d'alerte graduels (TARP) relient mesures et actions.",
-      "keyPoints": ["RQD : carotte en morceaux de plus de 10 cm.", "τ = c + σ' tan φ ; l'eau réduit σ'.", "Rupture planaire : pendage entre l'angle de frottement et l'angle du talus.", "Pilier : σp = σv / (1 − e)."],
-      "img": "svg/underground-mine-layout.svg", "imgAlt": "Schéma d'une mine souterraine avec chantiers et piliers."
+      "id": "m2",
+      "title": "Géotechnique : massif, talus, piliers",
+      "theme": "Géotechnique et stabilité",
+      "minutes": 10,
+      "body": "La stabilité d'une excavation dépend de la **résistance de la roche intacte**, des **discontinuités** (diaclases, failles, schistosité), des contraintes et de l'eau.\n\n**Qualité du massif** : le **RQD** est le pourcentage de la longueur de carotte constituée de morceaux de plus de 10 cm. Une carotte de 2,0 m dont les morceaux supérieurs à 10 cm totalisent 1,5 m a un RQD de 75 %. Les classifications **RMR** et **Q** combinent RQD, résistance, espacement et état des joints, présence d'eau et orientation.\n\n**Résistance au cisaillement** (critère de Mohr-Coulomb) : τ = c + σ' tan φ, avec c la cohésion, φ l'angle de frottement et σ' la contrainte normale effective (contrainte totale moins pression d'eau). L'eau réduit σ' donc la résistance. Exemple : c = 20 kPa, σ' = 100 kPa, φ = 45° donnent τ = 20 + 100 = 120 kPa.\n\n**Facteur de sécurité** : FS = forces résistantes / forces motrices ; FS = 1 correspond à l'équilibre limite. Avec 1 800 kN de forces résistantes et 1 500 kN de forces motrices, FS = 1,2. Les critères d'acceptation dépendent de la conséquence d'une rupture (talus de gradin, talus inter-rampes, talus global).\n\n**Modes de rupture** : planaire, en dièdre (coin), par basculement (toppling) et circulaire. La rupture **planaire** exige cinématiquement une discontinuité plongeant vers l'excavation, de pendage **inférieur à l'angle du talus** (elle affleure en face) et **supérieur à l'angle de frottement**. La rupture **circulaire** concerne les sols, les roches très altérées (latérites, saprolites) et les massifs très fracturés.\n\n**Contraintes in situ** : la contrainte verticale vaut ρ g H, soit environ 0,027 MPa par mètre de profondeur (2,7 MPa à 100 m). Pour des piliers en chambres et piliers, la contrainte moyenne dans le pilier vaut σv / (1 − e), où e est le taux de défruitement. À 200 m (5,4 MPa) avec e = 0,6, la contrainte atteint 13,5 MPa.\n\n**Drainage et surveillance** : drains sub-horizontaux, fossés de crête, pompage ; prismes, radar de talus, extensomètres, piézomètres. Des critères d'alerte graduels (TARP) relient mesures et actions.\n\n**Sur le terrain**\n- Après de fortes pluies, vérifie piézomètres et radar avant de ré-autoriser l'accès au pied d'un talus : l'eau fait chuter le facteur de sécurité.\n- Avant de conclure à un risque de rupture planaire, relève le pendage des discontinuités et compare-le à l'angle du talus et à l'angle de frottement.\n- Dans les latérites et saprolites, pense rupture circulaire et drainage, pas seulement discontinuités structurales.",
+      "keyPoints": [
+        "RQD : carotte en morceaux de plus de 10 cm.",
+        "τ = c + σ' tan φ ; l'eau réduit σ'.",
+        "Rupture planaire : pendage entre l'angle de frottement et l'angle du talus.",
+        "Pilier : σp = σv / (1 − e)."
+      ],
+      "img": "svg/underground-mine-layout.svg",
+      "imgAlt": "Schéma d'une mine souterraine avec chantiers et piliers."
     },
     {
-      "id": "m3", "title": "Planification minière : ressources, réserves, teneur de coupure, fosse", "theme": "Planification minière", "minutes": 11,
-      "body": "Le plan minier transforme un gisement en flux de minerai économiquement exploitable.\n\n**Ressources et réserves** (codes CRIRSCO, JORC, NI 43-101) : une **ressource** est une minéralisation présentant des perspectives raisonnables d'extraction économique ; elle est classée **mesurée, indiquée ou présumée** selon la confiance géologique. Une **réserve** est la partie des ressources mesurées et indiquées qui est exploitable économiquement après application des **facteurs modificateurs** (minier, métallurgique, économique, juridique, environnemental). Elle est classée prouvée ou probable.\n\n**Teneur de coupure** (cut-off) : teneur à partir de laquelle un bloc couvre ses coûts. Teneur de coupure = coûts (exploitation, traitement, frais généraux) par tonne / (prix × récupération). Avec 30 $/t, 60 $/g et 90 % de récupération : 30 / (60 × 0,9) ≈ 0,56 g/t. Si le prix augmente, la teneur de coupure diminue et les réserves augmentent.\n\n**Ratio stérile/minerai** (stripping ratio) : tonnes de stérile par tonne de minerai. Le **ratio limite** (break-even) vaut (marge sur le minerai avant décapage) / (coût d'extraction d'une tonne de stérile) : 45 $/t de marge pour 3 $/t de stérile donnent 15. Une fosse de 40 Mt de stérile pour 8 Mt de minerai a un ratio de 5.\n\n**Optimisation de fosse** : l'algorithme de **Lerchs-Grossmann** (et ses variantes, implémentées dans les logiciels de modèles de blocs) détermine le **contour de fosse de valeur maximale**. On produit des fosses emboîtées en faisant varier le prix, puis on définit des phases (pushbacks) et un calendrier.\n\n**Facteurs de transformation** : le **foisonnement** augmente le volume (1 000 m³ en place à 30 % de foisonnement donnent 1 300 m³ foisonnés) ; la **dilution** abaisse la teneur et les **pertes** diminuent le tonnage. 100 000 t à 4 g/t avec 10 % de dilution à 0 g/t donnent 110 000 t à 3,64 g/t. La **récupération métallurgique** s'applique ensuite : 1 000 000 t à 2 g/t contiennent 2 000 kg, dont 1 800 kg récupérés à 90 %.\n\nLe **plan de production** équilibre capacité de la fosse, du concasseur et de l'usine, et vise un flux régulier de teneur. Un ratio de 3 pour 6 Mt/an de minerai signifie 18 Mt de stérile, soit 24 Mt à déplacer.",
-      "keyPoints": ["Réserve = ressources mesurées et indiquées exploitables après facteurs modificateurs.", "Teneur de coupure = coûts / (prix × récupération).", "Lerchs-Grossmann : contour de fosse de valeur maximale.", "Dilution et pertes modifient teneur et tonnage."],
-      "img": "svg/mineral-processing-flow.svg", "imgAlt": "Circuit de traitement du minerai : concassage, broyage, concentration."
+      "id": "m3",
+      "title": "Planification minière : ressources, réserves, teneur de coupure, fosse",
+      "theme": "Planification minière",
+      "minutes": 11,
+      "body": "Le plan minier transforme un gisement en flux de minerai économiquement exploitable.\n\n**Ressources et réserves** (codes CRIRSCO, JORC, NI 43-101) : une **ressource** est une minéralisation présentant des perspectives raisonnables d'extraction économique ; elle est classée **mesurée, indiquée ou présumée** selon la confiance géologique. Une **réserve** est la partie des ressources mesurées et indiquées qui est exploitable économiquement après application des **facteurs modificateurs** (minier, métallurgique, économique, juridique, environnemental). Elle est classée prouvée ou probable.\n\n**Teneur de coupure** (cut-off) : teneur à partir de laquelle un bloc couvre ses coûts. Teneur de coupure = coûts (exploitation, traitement, frais généraux) par tonne / (prix × récupération). Avec 30 $/t, 60 $/g et 90 % de récupération : 30 / (60 × 0,9) ≈ 0,56 g/t. Si le prix augmente, la teneur de coupure diminue et les réserves augmentent.\n\n**Ratio stérile/minerai** (stripping ratio) : tonnes de stérile par tonne de minerai. Le **ratio limite** (break-even) vaut (marge sur le minerai avant décapage) / (coût d'extraction d'une tonne de stérile) : 45 $/t de marge pour 3 $/t de stérile donnent 15. Une fosse de 40 Mt de stérile pour 8 Mt de minerai a un ratio de 5.\n\n**Optimisation de fosse** : l'algorithme de **Lerchs-Grossmann** (et ses variantes, implémentées dans les logiciels de modèles de blocs) détermine le **contour de fosse de valeur maximale**. On produit des fosses emboîtées en faisant varier le prix, puis on définit des phases (pushbacks) et un calendrier.\n\n**Facteurs de transformation** : le **foisonnement** augmente le volume (1 000 m³ en place à 30 % de foisonnement donnent 1 300 m³ foisonnés) ; la **dilution** abaisse la teneur et les **pertes** diminuent le tonnage. 100 000 t à 4 g/t avec 10 % de dilution à 0 g/t donnent 110 000 t à 3,64 g/t. La **récupération métallurgique** s'applique ensuite : 1 000 000 t à 2 g/t contiennent 2 000 kg, dont 1 800 kg récupérés à 90 %.\n\nLe **plan de production** équilibre capacité de la fosse, du concasseur et de l'usine, et vise un flux régulier de teneur. Un ratio de 3 pour 6 Mt/an de minerai signifie 18 Mt de stérile, soit 24 Mt à déplacer.\n\n**Sur le terrain**\n- Recalcule la teneur de coupure à chaque changement de prix, de coût ou de récupération : elle change le tonnage de réserves.\n- Ne confonds jamais ressource et réserve : une réserve passe par les facteurs modificateurs et n'est pas un simple volume géologique.\n- Applique la dilution et les pertes avant de comparer la teneur du modèle à la teneur qui arrive au concasseur.",
+      "keyPoints": [
+        "Réserve = ressources mesurées et indiquées exploitables après facteurs modificateurs.",
+        "Teneur de coupure = coûts / (prix × récupération).",
+        "Lerchs-Grossmann : contour de fosse de valeur maximale.",
+        "Dilution et pertes modifient teneur et tonnage."
+      ],
+      "img": "svg/mineral-processing-flow.svg",
+      "imgAlt": "Circuit de traitement du minerai : concassage, broyage, concentration."
     },
     {
-      "id": "m4", "title": "Ventilation, sécurité et environnement", "theme": "Ventilation, sécurité et environnement", "minutes": 9,
-      "body": "Le **réseau de ventilation** est dimensionné pour fournir le débit nécessaire à chaque poste de travail (dilution des gaz de tir, des gaz d'échappement diesel, des poussières, contrôle de la chaleur) tout en maîtrisant la dépression. Le débit se calcule par Q = V × S. Les pertes de charge sont à peu près proportionnelles au carré du débit (loi d'Atkinson, régime turbulent) : doubler le débit multiplie la perte de charge par 4, donc la puissance du ventilateur par environ 8. Deux ventilateurs en **série** additionnent leurs pressions à débit égal ; en **parallèle**, ils additionnent leurs débits à pression égale.\n\nUn **temps de ventilation après tir** se déduit du volume à renouveler : 60 000 m³ avec 10 m³/s demandent 6 000 s, soit 100 minutes (valeur indicative, sans tenir compte du mélange). L'atmosphère est surveillée : oxygène (environ 20,9 % dans l'air normal), CO, CO2, NOx, méthane (explosif de 5 à 15 % environ).\n\n**Secours** : l'**auto-sauveteur filtrant** transforme le CO en CO2 mais ne produit pas d'oxygène : il est inefficace si l'atmosphère est appauvrie en oxygène, d'où l'usage d'appareils isolants à oxygène dans certains cas. Chambres refuges, issues de secours, plan d'évacuation et exercices sont obligatoires.\n\n**Gestion des risques** : méthode HAZID/HAZOP pour les installations, matrice gravité × probabilité, principe **ALARP** (réduire le risque aussi bas que raisonnablement possible). Les indicateurs de sécurité : le **taux de fréquence** = nombre d'accidents avec arrêt × 1 000 000 / heures travaillées (3 accidents pour 1 500 000 h donnent 2,0).\n\n**Environnement** : le **drainage minier acide** résulte de l'oxydation des sulfures (par exemple la pyrite) au contact de l'air et de l'eau ; il acidifie les eaux et mobilise les métaux. On le prévient par la gestion des stériles réactifs, le recouvrement, le traitement des eaux. La **réhabilitation** et le plan de fermeture sont planifiés dès la conception, avec garantie financière.",
-      "keyPoints": ["Perte de charge proportionnelle à Q² : débit ×2 donne ΔP ×4.", "Série : pressions additionnées ; parallèle : débits additionnés.", "Taux de fréquence = accidents × 10⁶ / heures.", "DMA : oxydation des sulfures."],
-      "img": "svg/mine-ventilation.svg", "imgAlt": "Schéma de ventilation d'une mine souterraine."
+      "id": "m4",
+      "title": "Ventilation, sécurité et environnement",
+      "theme": "Ventilation, sécurité et environnement",
+      "minutes": 9,
+      "body": "Le **réseau de ventilation** est dimensionné pour fournir le débit nécessaire à chaque poste de travail (dilution des gaz de tir, des gaz d'échappement diesel, des poussières, contrôle de la chaleur) tout en maîtrisant la dépression. Le débit se calcule par Q = V × S. Les pertes de charge sont à peu près proportionnelles au carré du débit (loi d'Atkinson, régime turbulent) : doubler le débit multiplie la perte de charge par 4, donc la puissance du ventilateur par environ 8. Deux ventilateurs en **série** additionnent leurs pressions à débit égal ; en **parallèle**, ils additionnent leurs débits à pression égale.\n\nUn **temps de ventilation après tir** se déduit du volume à renouveler : 60 000 m³ avec 10 m³/s demandent 6 000 s, soit 100 minutes (valeur indicative, sans tenir compte du mélange). L'atmosphère est surveillée : oxygène (environ 20,9 % dans l'air normal), CO, CO2, NOx, méthane (explosif de 5 à 15 % environ).\n\n**Secours** : l'**auto-sauveteur filtrant** transforme le CO en CO2 mais ne produit pas d'oxygène : il est inefficace si l'atmosphère est appauvrie en oxygène, d'où l'usage d'appareils isolants à oxygène dans certains cas. Chambres refuges, issues de secours, plan d'évacuation et exercices sont obligatoires.\n\n**Gestion des risques** : méthode HAZID/HAZOP pour les installations, matrice gravité × probabilité, principe **ALARP** (réduire le risque aussi bas que raisonnablement possible). Les indicateurs de sécurité : le **taux de fréquence** = nombre d'accidents avec arrêt × 1 000 000 / heures travaillées (3 accidents pour 1 500 000 h donnent 2,0).\n\n**Environnement** : le **drainage minier acide** résulte de l'oxydation des sulfures (par exemple la pyrite) au contact de l'air et de l'eau ; il acidifie les eaux et mobilise les métaux. On le prévient par la gestion des stériles réactifs, le recouvrement, le traitement des eaux. La **réhabilitation** et le plan de fermeture sont planifiés dès la conception, avec garantie financière.\n\n**Sur le terrain**\n- Avant d'ajouter un ventilateur ou de doubler un débit, calcule l'effet sur la perte de charge (×4) et la puissance (×8) : le réseau et le moteur doivent suivre.\n- Un auto-sauveteur filtrant ne protège pas d'un manque d'oxygène : en atmosphère appauvrie, il faut un appareil isolant.\n- Pour des stériles pyriteux, anticipe le drainage minier acide dès le plan de verse : tri, recouvrement, traitement des eaux.",
+      "keyPoints": [
+        "Perte de charge proportionnelle à Q² : débit ×2 donne ΔP ×4.",
+        "Série : pressions additionnées ; parallèle : débits additionnés.",
+        "Taux de fréquence = accidents × 10⁶ / heures.",
+        "DMA : oxydation des sulfures."
+      ],
+      "img": "svg/mine-ventilation.svg",
+      "imgAlt": "Schéma de ventilation d'une mine souterraine."
     },
     {
-      "id": "m5", "title": "Coûts d'exploitation et économie du projet", "theme": "Coûts et économie", "minutes": 9,
-      "body": "L'ingénieur mines relie chaque décision technique à son effet sur les coûts et la valeur.\n\n**CAPEX et OPEX** : les dépenses d'investissement (CAPEX) concernent l'achat d'équipements, la construction, le décapage initial ; les dépenses d'exploitation (OPEX) concernent les coûts courants : main-d'œuvre, carburant, explosifs, pneus, maintenance, énergie. Un tombereau acheté est du CAPEX ; son carburant est de l'OPEX.\n\n**Coût unitaire** = coût total / tonnes. 12 M$ pour 3 Mt font 4 $/t. On distingue le coût par tonne extraite (mine), par tonne traitée (usine) et par once ou kg de métal produit.\n\n**Coûts fixes et variables** : le **seuil de rentabilité** (point mort) vaut coûts fixes / (prix unitaire − coût variable unitaire). Avec 6 M$ de coûts fixes par an, un prix de 100 $/t et un coût variable de 60 $/t, il atteint 6 000 000 / 40 = 150 000 t.\n\n**Valeur actuelle nette** : VAN = somme des flux actualisés − investissement. Un flux de 110 M$ dans un an, actualisé à 10 %, vaut 100 M$ aujourd'hui ; avec un investissement de 90 M$, la VAN est de +10 M$. Le **TRI** est le taux qui annule la VAN.\n\n**Coût du forage-tir** : explosif + forage + accessoires, ramené au m³ ou à la tonne. À 0,45 kg/m³ d'explosif à 1,2 $/kg, on obtient 0,54 $/m³ ; avec 0,30 $/m³ de forage, 0,84 $/m³, soit environ 0,31 $/t pour une densité de 2,7 t/m³. Un tir plus coûteux qui améliore la fragmentation peut réduire le coût global en augmentant la productivité des pelles et du concassage.\n\n**Sensibilité** : si le carburant représente 25 % des coûts de transport et augmente de 20 %, les coûts de transport augmentent de 5 %. Si la marge est de 20 % du revenu et que le prix baisse de 10 % à coûts constants, la marge tombe à 10 % du revenu initial, soit une division par deux : l'effet de levier des marges faibles est fort.\n\nLe **coût complet** (AISC) rassemble exploitation, frais généraux, redevances, investissements de maintien et réhabilitation.",
-      "keyPoints": ["CAPEX = investissement ; OPEX = exploitation courante.", "Point mort = coûts fixes / (prix − coût variable).", "VAN = flux actualisés − investissement.", "Un tir plus cher peut réduire le coût global."],
-      "img": "svg/finance-bar-chart.svg", "imgAlt": "Histogramme de coûts d'exploitation par poste."
+      "id": "m5",
+      "title": "Coûts d'exploitation et économie du projet",
+      "theme": "Coûts et économie",
+      "minutes": 9,
+      "body": "L'ingénieur mines relie chaque décision technique à son effet sur les coûts et la valeur.\n\n**CAPEX et OPEX** : les dépenses d'investissement (CAPEX) concernent l'achat d'équipements, la construction, le décapage initial ; les dépenses d'exploitation (OPEX) concernent les coûts courants : main-d'œuvre, carburant, explosifs, pneus, maintenance, énergie. Un tombereau acheté est du CAPEX ; son carburant est de l'OPEX.\n\n**Coût unitaire** = coût total / tonnes. 12 M$ pour 3 Mt font 4 $/t. On distingue le coût par tonne extraite (mine), par tonne traitée (usine) et par once ou kg de métal produit.\n\n**Coûts fixes et variables** : le **seuil de rentabilité** (point mort) vaut coûts fixes / (prix unitaire − coût variable unitaire). Avec 6 M$ de coûts fixes par an, un prix de 100 $/t et un coût variable de 60 $/t, il atteint 6 000 000 / 40 = 150 000 t.\n\n**Valeur actuelle nette** : VAN = somme des flux actualisés − investissement. Un flux de 110 M$ dans un an, actualisé à 10 %, vaut 100 M$ aujourd'hui ; avec un investissement de 90 M$, la VAN est de +10 M$. Le **TRI** est le taux qui annule la VAN.\n\n**Coût du forage-tir** : explosif + forage + accessoires, ramené au m³ ou à la tonne. À 0,45 kg/m³ d'explosif à 1,2 $/kg, on obtient 0,54 $/m³ ; avec 0,30 $/m³ de forage, 0,84 $/m³, soit environ 0,31 $/t pour une densité de 2,7 t/m³. Un tir plus coûteux qui améliore la fragmentation peut réduire le coût global en augmentant la productivité des pelles et du concassage.\n\n**Sensibilité** : si le carburant représente 25 % des coûts de transport et augmente de 20 %, les coûts de transport augmentent de 5 %. Si la marge est de 20 % du revenu et que le prix baisse de 10 % à coûts constants, la marge tombe à 10 % du revenu initial, soit une division par deux : l'effet de levier des marges faibles est fort.\n\nLe **coût complet** (AISC) rassemble exploitation, frais généraux, redevances, investissements de maintien et réhabilitation.\n\n**Sur le terrain**\n- Classe toujours une dépense en CAPEX ou OPEX avant de la mettre dans le modèle : la VAN et le coût unitaire n'ont pas le même traitement.\n- Quand la marge est faible, une petite variation de prix ou de coût a un effet de levier fort : teste la sensibilité avant de présenter un résultat.\n- Mets les chiffres en face de la base : coût par tonne extraite, par tonne traitée ou par once ne se comparent pas.",
+      "keyPoints": [
+        "CAPEX = investissement ; OPEX = exploitation courante.",
+        "Point mort = coûts fixes / (prix − coût variable).",
+        "VAN = flux actualisés − investissement.",
+        "Un tir plus cher peut réduire le coût global."
+      ],
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme de coûts d'exploitation par poste."
     }
   ],
   "questions": [
-    { "id": "ing-mines-001", "theme": "Forage-tir et explosifs", "level": 1, "q": "Un tir est conçu avec une banquette de 3,5 m et un espacement de 4 m. Quelle est la maille ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin avec banquette et espacement.", "choices": ["7,5 m²", "14 m²", "28 m²", "0,875 m²"], "answer": 1, "explain": "La maille est le produit banquette × espacement : 3,5 × 4 = 14 m².", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-002", "theme": "Forage-tir et explosifs", "level": 1, "q": "Avec une banquette de 3 m, quel surforage retient-on selon la règle empirique U ≈ 0,3 B ?", "choices": ["0,3 m", "0,6 m", "1,5 m", "0,9 m"], "answer": 3, "explain": "U = 0,3 × 3 = 0,9 m. Ce repère est à ajuster selon la roche et le diamètre.", "seconds": 45, "status": "draft" },
-    { "id": "ing-mines-003", "theme": "Forage-tir et explosifs", "level": 2, "q": "Banquette 3,5 m, espacement 4 m, hauteur de gradin 10 m (surforage négligé), 98 kg d'explosif par trou. Quel est le facteur de charge ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin avec banquette, espacement et hauteur.", "choices": ["0,70 kg/m³", "0,98 kg/m³", "1,40 kg/m³", "7,0 kg/m³"], "answer": 0, "explain": "Volume par trou = 3,5 × 4 × 10 = 140 m³ ; 98 / 140 = 0,70 kg/m³.", "seconds": 70, "status": "draft" },
-    { "id": "ing-mines-004", "theme": "Forage-tir et explosifs", "level": 2, "q": "Un tir abat 20 000 m³ de roche avec un facteur de charge de 0,45 kg/m³. Quelle masse d'explosif faut-il ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin abattu par un tir de production.", "choices": ["4 500 kg", "6 000 kg", "9 000 kg", "12 000 kg"], "answer": 2, "explain": "Masse = facteur de charge × volume = 0,45 × 20 000 = 9 000 kg.", "seconds": 60, "status": "draft" },
-    { "id": "ing-mines-005", "theme": "Forage-tir et explosifs", "level": 3, "q": "Un trou de 165 mm de diamètre est rempli d'ANFO de densité 0,85 g/cm³. Quelle est la masse d'explosif par mètre de colonne ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Trou de mine chargé en colonne d'ANFO.", "choices": ["9,1 kg/m", "12,5 kg/m", "25,4 kg/m", "18,2 kg/m"], "answer": 3, "explain": "Section = π × 0,165² / 4 ≈ 0,0214 m² ; masse linéique = 0,0214 × 850 kg/m³ ≈ 18,2 kg/m.", "seconds": 90, "status": "draft" },
-    { "id": "ing-mines-006", "theme": "Forage-tir et explosifs", "level": 3, "q": "À distance D constante, on divise par 4 la charge maximale par retard Q. Comment évolue la distance réduite D/√Q ?", "choices": ["Elle est divisée par 2", "Elle est multipliée par 2", "Elle est multipliée par 4", "Elle reste inchangée"], "answer": 1, "explain": "√(Q/4) = √Q / 2, donc D/√(Q/4) = 2 × D/√Q. La distance réduite double et la vitesse particulaire (PPV) diminue.", "seconds": 60, "status": "draft" },
-    { "id": "ing-mines-007", "theme": "Forage-tir et explosifs", "level": 2, "q": "Quel est l'apport principal des détonateurs électroniques programmables ?", "choices": ["Ils remplacent l'explosif", "Ils suppriment la banquette", "Une précision des temps de retard qui améliore le contrôle de la fragmentation et des vibrations", "Ils suppriment le besoin de bourrage"], "answer": 2, "explain": "La programmation fine des retards, de l'ordre de la milliseconde, permet d'optimiser la séquence d'initiation, la fragmentation et les vibrations. Ils ne remplacent ni l'explosif ni le bourrage.", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-008", "theme": "Forage-tir et explosifs", "level": 3, "q": "Sur un gradin, la banquette réelle est nettement supérieure à la banquette de conception. Quelle conséquence est probable ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin avec banquette trop importante par rapport à la charge.", "choices": ["Fragmentation grossière, pieds de gradin et vibrations ou onde aérienne élevées", "Fragmentation très fine et projections nombreuses", "Aucun effet sur le résultat du tir", "Baisse du coût de chargement uniquement"], "answer": 0, "explain": "Une banquette trop grande confine excessivement la charge : l'énergie fragmente mal, laisse des pieds et se dissipe en vibrations et onde aérienne. Les projections et fines sont typiques d'une banquette trop faible.", "seconds": 55, "status": "draft" },
-    { "id": "ing-mines-009", "theme": "Forage-tir et explosifs", "level": 1, "q": "Quel est l'ordre de grandeur de la densité de l'ANFO en vrac ?", "choices": ["0,2 g/cm³", "0,85 g/cm³", "1,6 g/cm³", "2,4 g/cm³"], "answer": 1, "explain": "L'ANFO en vrac a une densité d'environ 0,8 à 0,85 g/cm³. Les émulsions sont plus denses (environ 1,1 à 1,3 g/cm³).", "seconds": 40, "status": "draft" },
-    { "id": "ing-mines-010", "theme": "Géotechnique et stabilité", "level": 1, "q": "Comment définit-on le RQD d'une carotte de sondage ?", "choices": ["Pourcentage de morceaux de plus de 1 cm", "Pourcentage de morceaux de plus de 5 cm", "Pourcentage de morceaux de plus de 50 cm", "Pourcentage de la longueur en morceaux de plus de 10 cm"], "answer": 3, "explain": "Le RQD (Rock Quality Designation) est la proportion de la longueur de carotte composée de morceaux de plus de 10 cm.", "seconds": 40, "status": "draft" },
-    { "id": "ing-mines-011", "theme": "Géotechnique et stabilité", "level": 1, "q": "Sur une carotte de 2,0 m, les morceaux de plus de 10 cm totalisent 1,5 m. Quel est le RQD ?", "choices": ["75 %", "25 %", "50 %", "87 %"], "answer": 0, "explain": "RQD = 1,5 / 2,0 = 75 %, ce qui correspond à une roche de qualité moyenne à bonne.", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-012", "theme": "Géotechnique et stabilité", "level": 2, "q": "Avec c = 20 kPa, une contrainte normale effective σ' = 100 kPa et φ = 45°, quelle est la résistance au cisaillement selon Mohr-Coulomb ?", "choices": ["100 kPa", "110 kPa", "120 kPa", "145 kPa"], "answer": 2, "explain": "τ = c + σ' tan φ = 20 + 100 × tan 45° = 20 + 100 = 120 kPa.", "seconds": 70, "status": "draft" },
-    { "id": "ing-mines-013", "theme": "Géotechnique et stabilité", "level": 3, "q": "Sur un talus de fosse, une discontinuité plonge vers l'excavation. À quelle condition cinématique une rupture planaire est-elle possible ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Talus de fosse avec plan de discontinuité plongeant vers la fosse.", "choices": ["Son pendage est supérieur à l'angle du talus", "Son pendage est inférieur à l'angle de frottement", "Son pendage est nul", "Son pendage est compris entre l'angle de frottement et l'angle du talus"], "answer": 3, "explain": "Il faut que le plan affleure en face (pendage inférieur à l'angle du talus) et que le glissement soit possible (pendage supérieur à l'angle de frottement).", "seconds": 60, "status": "draft" },
-    { "id": "ing-mines-014", "theme": "Géotechnique et stabilité", "level": 1, "q": "Les forces résistantes valent 1 800 kN et les forces motrices 1 500 kN. Quel est le facteur de sécurité ?", "choices": ["0,83", "1,2", "1,5", "3 300"], "answer": 1, "explain": "FS = forces résistantes / forces motrices = 1 800 / 1 500 = 1,2. L'inverse (0,83) est une erreur de rapport.", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-015", "theme": "Géotechnique et stabilité", "level": 2, "q": "Quel type de massif est typiquement concerné par une rupture circulaire ?", "choices": ["Une roche massive peu fracturée", "Une roche présentant un seul plan de discontinuité", "Des sols, roches très altérées (latérites) ou massifs très fracturés", "Un massif de granite frais"], "answer": 2, "explain": "La rupture circulaire se développe dans les matériaux assimilables à un milieu continu de faible résistance : sols, saprolites, latérites, massifs très fracturés.", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-016", "theme": "Géotechnique et stabilité", "level": 3, "q": "Un chantier par chambres et piliers est à 200 m de profondeur (contrainte verticale 5,4 MPa) avec un taux de défruitement de 0,6. Quelle est la contrainte moyenne dans les piliers ?", "img": "svg/underground-mine-layout.svg", "imgAlt": "Chantier par chambres et piliers en souterrain.", "choices": ["13,5 MPa", "5,4 MPa", "8,1 MPa", "21,6 MPa"], "answer": 0, "explain": "σp = σv / (1 − e) = 5,4 / 0,4 = 13,5 MPa. Plus le taux de défruitement est élevé, plus les piliers sont chargés.", "seconds": 80, "status": "draft" },
-    { "id": "ing-mines-017", "theme": "Géotechnique et stabilité", "level": 2, "q": "Quel est l'ordre de grandeur de la contrainte verticale à 100 m de profondeur dans une roche de densité 2 700 kg/m³ ?", "img": "svg/underground-mine-layout.svg", "imgAlt": "Profondeur d'un chantier souterrain.", "choices": ["0,27 MPa", "2,7 MPa", "27 MPa", "270 MPa"], "answer": 1, "explain": "σv = ρ g H ≈ 2 700 × 9,81 × 100 ≈ 2,65 MPa, soit environ 2,7 MPa (environ 0,027 MPa par mètre).", "seconds": 60, "status": "draft" },
-    { "id": "ing-mines-018", "theme": "Géotechnique et stabilité", "level": 2, "q": "Un talus de fosse est exposé à une forte pression d'eau. Quelle mesure est la plus pertinente ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Talus de fosse avec infiltrations d'eau.", "choices": ["Raidir le talus", "Charger la crête avec du stérile", "Augmenter la hauteur des gradins", "Installer des drains sub-horizontaux et des fossés en crête"], "answer": 3, "explain": "Réduire la pression d'eau augmente la contrainte effective et donc la résistance. Raidir, charger la crête ou augmenter la hauteur aggraveraient l'instabilité.", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-019", "theme": "Planification minière", "level": 1, "q": "Qu'est-ce qu'une réserve minérale selon les codes de déclaration (CRIRSCO, JORC, NI 43-101) ?", "choices": ["La partie des ressources mesurées et indiquées exploitable économiquement après facteurs modificateurs", "Toute la minéralisation connue du gisement", "Le minerai déjà extrait et stocké", "Les ressources présumées uniquement"], "answer": 0, "explain": "Une réserve est la part des ressources mesurées et indiquées démontrée comme économiquement exploitable après prise en compte des facteurs modificateurs. Les ressources présumées ne peuvent pas être converties directement en réserves.", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-020", "theme": "Planification minière", "level": 2, "q": "Coûts totaux (mine, traitement, frais généraux) : 30 $/t ; prix de l'or : 60 $/g ; récupération : 90 %. Quelle est la teneur de coupure ?", "choices": ["0,33 g/t", "0,50 g/t", "0,56 g/t", "0,90 g/t"], "answer": 2, "explain": "Teneur de coupure = coûts / (prix × récupération) = 30 / (60 × 0,9) ≈ 0,56 g/t. Ignorer la récupération donne 0,50, une erreur.", "seconds": 70, "status": "draft" },
-    { "id": "ing-mines-021", "theme": "Planification minière", "level": 2, "q": "La marge sur une tonne de minerai avant décapage est de 45 $/t et l'extraction d'une tonne de stérile coûte 3 $/t. Quel est le ratio stérile/minerai limite ?", "choices": ["3", "9", "45", "15"], "answer": 3, "explain": "Ratio limite = 45 / 3 = 15 t de stérile par tonne de minerai : au-delà, l'extraction de la tonne de minerai perd de l'argent.", "seconds": 60, "status": "draft" },
-    { "id": "ing-mines-022", "theme": "Planification minière", "level": 1, "q": "Une fosse contient 40 Mt de stérile pour 8 Mt de minerai. Quel est son ratio stérile/minerai ?", "choices": ["0,2", "5", "8", "48"], "answer": 1, "explain": "Ratio = 40 / 8 = 5 t de stérile par tonne de minerai.", "seconds": 40, "status": "draft" },
-    { "id": "ing-mines-023", "theme": "Planification minière", "level": 2, "q": "Un tir abat 1 000 m³ de roche en place, avec un foisonnement de 30 %. Quel est le volume foisonné ?", "img": "svg/mine-bench-geometry.svg", "imgAlt": "Gradin et tas de roche abattue.", "choices": ["770 m³", "1 000 m³", "1 300 m³", "1 430 m³"], "answer": 2, "explain": "Volume foisonné = volume en place × (1 + foisonnement) = 1 000 × 1,3 = 1 300 m³. Le calcul 1 000 / 0,7 est une erreur de méthode.", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-024", "theme": "Planification minière", "level": 2, "q": "L'usine traite 1 000 000 t à 2,0 g/t avec 90 % de récupération. Quelle quantité d'or est récupérée ?", "img": "svg/mineral-processing-flow.svg", "imgAlt": "Circuit de traitement avec récupération métallurgique.", "choices": ["1 800 kg", "2 000 kg", "200 kg", "18 000 kg"], "answer": 0, "explain": "Or contenu = 1 000 000 × 2 g = 2 000 kg ; récupéré = 2 000 × 0,9 = 1 800 kg.", "seconds": 60, "status": "draft" },
-    { "id": "ing-mines-025", "theme": "Planification minière", "level": 3, "q": "100 000 t de minerai à 4 g/t sont extraites avec 10 % de dilution à 0 g/t (soit 10 000 t ajoutées). Quelle est la teneur diluée ?", "choices": ["3,60 g/t", "3,64 g/t", "4,00 g/t", "4,40 g/t"], "answer": 1, "explain": "Métal = 400 000 g ; tonnage = 110 000 t ; teneur = 400 000 / 110 000 ≈ 3,64 g/t. Le 3,60 vient d'une erreur (4 × 0,9).", "seconds": 80, "status": "draft" },
-    { "id": "ing-mines-026", "theme": "Planification minière", "level": 2, "q": "À quoi sert l'algorithme de Lerchs-Grossmann en planification minière ?", "choices": ["À maximiser le nombre de gradins", "À réduire l'angle des talus", "À minimiser le stérile à tout prix", "À déterminer le contour de fosse de valeur économique maximale"], "answer": 3, "explain": "L'algorithme calcule, sur le modèle de blocs, le contour de fosse qui maximise la valeur nette en tenant compte des angles de talus.", "seconds": 45, "status": "draft" },
-    { "id": "ing-mines-027", "theme": "Planification minière", "level": 2, "q": "On vise 6 Mt de minerai par an avec un ratio stérile/minerai de 3. Quel tonnage total faut-il extraire ?", "choices": ["24 Mt", "18 Mt", "12 Mt", "6 Mt"], "answer": 0, "explain": "Stérile = 6 × 3 = 18 Mt ; total = 6 + 18 = 24 Mt par an.", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-028", "theme": "Planification minière", "level": 2, "q": "Le prix de l'or augmente, les coûts restant stables. Que devient la teneur de coupure ?", "choices": ["Elle augmente", "Elle reste inchangée", "Elle diminue, ce qui augmente le tonnage de réserves", "Elle devient nulle"], "answer": 2, "explain": "La teneur de coupure est inversement proportionnelle au prix : une hausse du prix l'abaisse et fait entrer plus de blocs dans les réserves.", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-029", "theme": "Ventilation, sécurité et environnement", "level": 3, "q": "Quel est l'effet de deux ventilateurs identiques montés en série sur un réseau ?", "img": "svg/mine-ventilation.svg", "imgAlt": "Réseau de ventilation avec ventilateurs principaux.", "choices": ["Les débits s'additionnent à pression égale", "La consommation électrique diminue", "Les pertes de charge du réseau disparaissent", "Les pressions s'additionnent à débit égal"], "answer": 3, "explain": "En série, les pressions des ventilateurs s'additionnent à débit égal ; c'est le montage en parallèle qui additionne les débits à pression égale.", "seconds": 55, "status": "draft" },
-    { "id": "ing-mines-030", "theme": "Ventilation, sécurité et environnement", "level": 2, "q": "Dans un réseau en régime turbulent, on double le débit d'air. De quel facteur la perte de charge est-elle multipliée ?", "img": "svg/mine-ventilation.svg", "imgAlt": "Réseau de ventilation avec ventilateur principal.", "choices": ["2", "4", "8", "1"], "answer": 1, "explain": "La perte de charge est proportionnelle à Q² (loi d'Atkinson) : doubler Q multiplie ΔP par 4, et la puissance (ΔP × Q) par environ 8.", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-031", "theme": "Ventilation, sécurité et environnement", "level": 2, "q": "Après un tir, 60 000 m³ d'air vicié doivent être renouvelés avec un débit de 10 m³/s. Quel est le temps de renouvellement indicatif ?", "img": "svg/mine-ventilation.svg", "imgAlt": "Galerie ventilée après tir.", "choices": ["10 min", "60 min", "100 min", "600 min"], "answer": 2, "explain": "Temps = volume / débit = 60 000 / 10 = 6 000 s, soit 100 minutes. Valeur indicative, sans tenir compte du mélange.", "seconds": 60, "status": "draft" },
-    { "id": "ing-mines-032", "theme": "Ventilation, sécurité et environnement", "level": 1, "q": "Que signifie le principe ALARP en gestion des risques ?", "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de risque avec zones acceptable, tolérable et inacceptable.", "choices": ["Réduire le risque aussi bas que raisonnablement possible", "Accepter tous les risques", "Supprimer tout risque quel qu'en soit le coût", "Transférer le risque à l'assureur"], "answer": 0, "explain": "ALARP : As Low As Reasonably Practicable. On réduit le risque tant que le coût de la mesure n'est pas disproportionné par rapport au bénéfice.", "seconds": 45, "status": "draft" },
-    { "id": "ing-mines-033", "theme": "Ventilation, sécurité et environnement", "level": 2, "q": "Une mine compte 3 accidents avec arrêt pour 1 500 000 heures travaillées. Quel est le taux de fréquence (par million d'heures) ?", "choices": ["0,5", "2,0", "3,0", "4,5"], "answer": 1, "explain": "Taux de fréquence = 3 × 1 000 000 / 1 500 000 = 2,0.", "seconds": 60, "status": "draft" },
-    { "id": "ing-mines-034", "theme": "Ventilation, sécurité et environnement", "level": 3, "q": "Pourquoi un auto-sauveteur filtrant (CO vers CO2) est-il inadapté dans une atmosphère appauvrie en oxygène ?", "img": "svg/ppe-icons.svg", "imgAlt": "Équipements de protection individuelle respiratoire.", "choices": ["Il fournit trop d'oxygène", "Il est très efficace dans ce cas", "Il protège contre tous les gaz", "Il ne produit pas d'oxygène : il ne protège pas contre le manque d'oxygène"], "answer": 3, "explain": "Un filtre transforme ou retient certains gaz mais ne crée pas d'oxygène. Quand l'air en manque, il faut un appareil isolant fournissant de l'oxygène.", "seconds": 50, "status": "draft" },
-    { "id": "ing-mines-035", "theme": "Ventilation, sécurité et environnement", "level": 1, "q": "Quelle est l'origine du drainage minier acide ?", "choices": ["L'oxydation des sulfures au contact de l'air et de l'eau", "L'évaporation de l'eau", "La dissolution du quartz", "Le refroidissement des roches"], "answer": 0, "explain": "Des sulfures comme la pyrite s'oxydent en présence d'oxygène et d'eau, produisant de l'acide sulfurique et libérant des métaux.", "seconds": 40, "status": "draft" },
-    { "id": "ing-mines-036", "theme": "Coûts et économie", "level": 1, "q": "L'achat d'un tombereau neuf est classé comme :", "choices": ["OPEX", "Coût variable d'exploitation", "CAPEX", "Provision pour réhabilitation"], "answer": 2, "explain": "L'achat d'un équipement durable est un investissement (CAPEX). Le carburant, les pneus ou la main-d'œuvre sont des OPEX.", "seconds": 40, "status": "draft" },
-    { "id": "ing-mines-037", "theme": "Coûts et économie", "level": 1, "q": "Une mine dépense 12 M$ pour extraire 3 Mt. Quel est le coût unitaire ?", "choices": ["0,25 $/t", "2 $/t", "36 $/t", "4 $/t"], "answer": 3, "explain": "Coût unitaire = 12 000 000 / 3 000 000 = 4 $/t.", "seconds": 45, "status": "draft" },
-    { "id": "ing-mines-038", "theme": "Coûts et économie", "level": 2, "q": "Coûts fixes : 6 M$/an ; prix de vente : 100 $/t ; coût variable : 60 $/t. Quel est le seuil de rentabilité ?", "choices": ["60 000 t", "150 000 t", "100 000 t", "375 000 t"], "answer": 1, "explain": "Marge unitaire = 100 − 60 = 40 $/t ; seuil = 6 000 000 / 40 = 150 000 t.", "seconds": 70, "status": "draft" },
-    { "id": "ing-mines-039", "theme": "Coûts et économie", "level": 2, "q": "Un projet demande 90 M$ aujourd'hui et rapporte 110 M$ dans un an. Taux d'actualisation 10 %. Quelle est la VAN ?", "choices": ["−10 M$", "0 M$", "+10 M$", "+20 M$"], "answer": 2, "explain": "Valeur actuelle du flux = 110 / 1,10 = 100 M$ ; VAN = 100 − 90 = +10 M$. Le +20 oublie l'actualisation.", "seconds": 70, "status": "draft" },
-    { "id": "ing-mines-040", "theme": "Coûts et économie", "level": 2, "q": "Le carburant représente 25 % des coûts de transport et son prix augmente de 20 %. De combien augmentent les coûts de transport ?", "choices": ["5 %", "20 %", "25 %", "45 %"], "answer": 0, "explain": "Effet = 25 % × 20 % = 5 % des coûts de transport.", "seconds": 60, "status": "draft" },
-    { "id": "ing-mines-041", "theme": "Coûts et économie", "level": 3, "q": "Explosif à 0,45 kg/m³ et 1,2 $/kg, forage à 0,30 $/m³, densité de la roche 2,7 t/m³. Quel est le coût forage-tir par tonne ?", "choices": ["0,16 $/t", "0,31 $/t", "0,84 $/t", "2,27 $/t"], "answer": 1, "explain": "Explosif : 0,45 × 1,2 = 0,54 $/m³ ; avec le forage : 0,84 $/m³ ; par tonne : 0,84 / 2,7 ≈ 0,31 $/t.", "seconds": 80, "status": "draft" },
-    { "id": "ing-mines-042", "theme": "Coûts et économie", "level": 3, "q": "La marge d'une mine vaut 20 % du revenu. Le prix baisse de 10 % à coûts constants. De combien la marge absolue diminue-t-elle ?", "choices": ["10 %", "20 %", "25 %", "50 %"], "answer": 3, "explain": "Revenu initial 100, coûts 80, marge 20. Après baisse : revenu 90, coûts 80, marge 10. La marge est divisée par deux (−50 %).", "seconds": 70, "status": "draft" }
+    {
+      "id": "ing-mines-001",
+      "theme": "Forage-tir et explosifs",
+      "level": 1,
+      "q": "Le plan de tir du gradin 4 retient une banquette de 3,5 m et un espacement de 4 m. La surface à tirer est de 700 m². Combien de trous faut-il forer ?",
+      "choices": [
+        "100 trous",
+        "25 trous",
+        "50 trous",
+        "175 trous"
+      ],
+      "answer": 2,
+      "explain": "Maille = 3,5 × 4 = 14 m² ; nombre de trous = 700/14 = 50.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-002",
+      "theme": "Forage-tir et explosifs",
+      "level": 1,
+      "q": "Le plan de tir donne une banquette de 3 m et le pied du gradin tiré hier présente des bosses. Quel surforage recommandes-tu avec la règle empirique U ≈ 0,3 B ?",
+      "choices": [
+        "0,9 m, soit 0,3 × 3 m de banquette (casse du pied)",
+        "0,3 m, soit 0,1 × 3 m de banquette (pied du gradin)",
+        "0,6 m, soit 0,2 × 3 m de banquette (pied du gradin)",
+        "1,5 m, soit 0,5 × 3 m de banquette en roche dure"
+      ],
+      "answer": 0,
+      "explain": "U ≈ 0,3 × 3 = 0,9 m : le surforage permet de bien casser le pied du gradin au niveau de la plateforme.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-003",
+      "theme": "Forage-tir et explosifs",
+      "level": 2,
+      "q": "Sur le gradin de la figure (H = 10 m), le plan de tir donne une banquette de 3,5 m, un espacement de 4 m et 98 kg d'explosif par trou, surforage négligé. Quel est le facteur de charge ?",
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Coupe d'un gradin de mine à ciel ouvert : hauteur H = 10 m, angle de talus α = 70°, crête, pied, berme de 15 m, merlon de sécurité, piste de roulage de 24 m.",
+      "choices": [
+        "0,98 kg/m³ (98 kg / 100 m³ de roche)",
+        "1,40 kg/m³ (140 m³ / 98 kg, ratio inversé)",
+        "7,0 kg/m³ (98 kg / 14 m³ de roche)",
+        "0,70 kg/m³ (98 kg / 140 m³)"
+      ],
+      "answer": 3,
+      "explain": "Volume par trou = 3,5 × 4 × 10 = 140 m³ ; facteur de charge = 98/140 = 0,70 kg/m³.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-004",
+      "theme": "Forage-tir et explosifs",
+      "level": 2,
+      "q": "Le prochain tir abat 20 000 m³ de roche avec un facteur de charge de 0,45 kg/m³. Le stock d'explosif est de 8 000 kg. Est-ce suffisant ?",
+      "choices": [
+        "Oui : il faut 6 000 kg",
+        "Non : il faut 9 000 kg",
+        "Oui : il faut 4 500 kg",
+        "Non : il faut 12 000 kg"
+      ],
+      "answer": 1,
+      "explain": "Masse d'explosif = facteur de charge × volume = 0,45 × 20 000 = 9 000 kg, supérieure au stock de 8 000 kg.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-005",
+      "theme": "Forage-tir et explosifs",
+      "level": 3,
+      "q": "Tu prépares le chargement d'un trou de 165 mm de diamètre avec 9 m de colonne d'ANFO de densité 0,85 g/cm³. Quelle masse d'ANFO prévois-tu ?",
+      "choices": [
+        "Environ 82 kg, soit la moitié du volume réel du trou",
+        "Environ 164 kg, soit 0,19 m³ à 0,85 t/m³ de densité",
+        "Environ 229 kg, soit une densité de 1,19 g/cm³",
+        "Environ 113 kg, soit un trou chargé sur 6,2 m"
+      ],
+      "answer": 1,
+      "explain": "Section = π × 0,165²/4 = 0,0214 m² ; masse linéique = 0,0214 × 850 ≈ 18,2 kg/m ; sur 9 m, environ 164 kg.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-006",
+      "theme": "Forage-tir et explosifs",
+      "level": 3,
+      "q": "Des riverains à 600 m se plaignent des vibrations. Tu passes la charge maximale par retard de 400 kg à 100 kg, la distance restant la même. Comment évolue la distance réduite D/√Q et que devient la PPV ?",
+      "choices": [
+        "La distance réduite est divisée par 2 et la PPV augmente",
+        "La distance réduite est multipliée par 4 et la PPV est inchangée",
+        "La distance réduite reste inchangée",
+        "La distance réduite double et la PPV diminue"
+      ],
+      "answer": 3,
+      "explain": "Q est divisée par 4, donc √Q par 2 et D/√Q est multipliée par 2 : la PPV diminue.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-007",
+      "theme": "Forage-tir et explosifs",
+      "level": 2,
+      "q": "Pour mieux maîtriser vibrations et fragmentation, la direction propose de passer aux détonateurs électroniques programmables. Quel est l'apport principal ?",
+      "choices": [
+        "Des retards précis à la milliseconde, pour mieux piloter fragmentation et vibrations",
+        "Ils remplacent l'explosif en vrac et suppriment le besoin de chargement en colonne",
+        "Ils suppriment la banquette en rendant inutile le séquençage des retards entre trous",
+        "Ils suppriment le bourrage en rendant la fragmentation indépendante du confinement"
+      ],
+      "answer": 0,
+      "explain": "Les détonateurs électroniques sont programmables avec une précision de l'ordre de la milliseconde, d'où un meilleur contrôle de la fragmentation et des vibrations.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-008",
+      "theme": "Forage-tir et explosifs",
+      "level": 3,
+      "q": "Après le tir, tu observes de gros blocs, des pieds de gradin et des vibrations fortes. Le relevé laser donne une banquette réelle de 5 m pour 3,5 m prévus. Quelle est la conséquence probable de cet écart ?",
+      "choices": [
+        "Fragmentation très fine et projections nombreuses, par excès de charge spécifique",
+        "Aucun effet notable sur le résultat du tir tant que la charge reste identique",
+        "Confinement excessif : fragmentation grossière, pieds de gradin et vibrations élevées",
+        "Baisse du coût de chargement, sans effet sur la fragmentation ni sur les vibrations"
+      ],
+      "answer": 2,
+      "explain": "Une banquette trop grande provoque un confinement excessif : fragmentation grossière, pieds, fortes vibrations et onde aérienne. Trop faible, elle donne projections et fines.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-009",
+      "theme": "Forage-tir et explosifs",
+      "level": 1,
+      "q": "Pour calculer la masse chargée dans des trous secs, quelle densité d'ANFO en vrac retiens-tu ?",
+      "choices": [
+        "Environ 0,2 g/cm³, soit celle d'un matériau très léger",
+        "Environ 1,6 g/cm³, soit celle d'une émulsion pompée dense",
+        "Environ 2,4 g/cm³, soit celle de la roche encaissante",
+        "Environ 0,85 g/cm³, soit la densité d'un ANFO en vrac non pompé"
+      ],
+      "answer": 3,
+      "explain": "La densité de l'ANFO en vrac est d'environ 0,8 à 0,85 g/cm³. Les émulsions sont plus denses et résistent à l'eau.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-010",
+      "theme": "Géotechnique et stabilité",
+      "level": 1,
+      "q": "Le géologue te donne un RQD de 45 % pour la passe de 12 à 15 m. Que mesure-t-il et que conclus-tu sur le massif ?",
+      "choices": [
+        "Le pourcentage de carotte en morceaux de plus de 1 cm : massif très bon",
+        "Le pourcentage de carotte en morceaux de plus de 10 cm : massif médiocre",
+        "Le pourcentage de carotte en morceaux de plus de 50 cm : massif excellent",
+        "La résistance en compression de la roche intacte en MPa : massif moyen"
+      ],
+      "answer": 1,
+      "explain": "Le RQD est le pourcentage de la longueur de carotte constituée de morceaux de plus de 10 cm. 45 % tombe dans la classe 25 à 50 % : médiocre.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-011",
+      "theme": "Géotechnique et stabilité",
+      "level": 1,
+      "q": "Sur une passe de carottage de 2,0 m, les morceaux de plus de 10 cm totalisent 1,5 m. Quel est le RQD ?",
+      "choices": [
+        "25 % (0,5 m / 2,0 m)",
+        "50 % (1,0 m / 2,0 m)",
+        "75 % (1,5 m / 2,0 m)",
+        "87 % (1,75 m / 2,0 m de passe)"
+      ],
+      "answer": 2,
+      "explain": "RQD = 1,5/2,0 = 75 %, soit un massif de qualité bonne (75 à 90 %).",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-012",
+      "theme": "Géotechnique et stabilité",
+      "level": 2,
+      "q": "Sur un joint au pied du talus (c = 20 kPa, φ = 45°), la contrainte normale totale est de 100 kPa. Après de fortes pluies, la pression d'eau atteint 40 kPa. Quelle est la résistance au cisaillement et que conclus-tu ?",
+      "choices": [
+        "80 kPa : l'eau réduit la contrainte effective, donc la résistance",
+        "120 kPa : l'eau n'a aucun effet sur la résistance de ce joint",
+        "100 kPa : l'eau compense la cohésion et laisse la résistance stable",
+        "160 kPa : l'eau augmente la contrainte normale et la résistance"
+      ],
+      "answer": 0,
+      "explain": "σ' = 100 − 40 = 60 kPa ; τ = 20 + 60 × tan 45° = 80 kPa, contre 120 kPa à sec : la résistance diminue d'un tiers.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-013",
+      "theme": "Géotechnique et stabilité",
+      "level": 3,
+      "q": "Sur le gradin de la figure, dont le talus est à 70°, une discontinuité plonge à 55° vers la fosse. L'angle de frottement est de 35°. Une rupture planaire est-elle cinématiquement possible ?",
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Coupe d'un gradin de mine à ciel ouvert : hauteur H = 10 m, angle de talus α = 70°, crête, pied, berme de 15 m, merlon de sécurité, piste de roulage de 24 m.",
+      "choices": [
+        "Oui : le pendage (55°) est inférieur au talus (70°) et supérieur au frottement (35°)",
+        "Non : une rupture planaire exige un pendage supérieur à l'angle du talus de 70°",
+        "Non : le pendage de 55° est trop faible pour vaincre l'angle de frottement de 35°",
+        "Non : une rupture planaire n'existe que pour un pendage nul ou horizontal"
+      ],
+      "answer": 0,
+      "explain": "La rupture planaire exige un plan plongeant vers l'excavation, de pendage inférieur à l'angle du talus (il affleure) et supérieur à l'angle de frottement (il glisse).",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-014",
+      "theme": "Géotechnique et stabilité",
+      "level": 1,
+      "q": "Pour le talus est, les forces résistantes valent 1 800 kN et les forces motrices 1 500 kN. Quel est le facteur de sécurité et que dis-tu ?",
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Coupe d'un gradin de mine à ciel ouvert : hauteur H = 10 m, angle de talus α = 70°, crête, pied, berme de 15 m, merlon de sécurité, piste de roulage de 24 m.",
+      "choices": [
+        "FS = 0,83 : le talus est déjà rompu et doit être purgé en urgence",
+        "FS = 1,5 : marge confortable, valable pour tous les types de talus",
+        "FS = 1,2 : marge faible, à comparer au critère d'acceptation du talus",
+        "FS = 3 300 : talus ultra-stable, sans besoin de suivi ni de surveillance"
+      ],
+      "answer": 2,
+      "explain": "FS = 1 800/1 500 = 1,2. Supérieur à 1, mais l'acceptabilité dépend des critères du site pour ce type de talus (gradin, inter-rampes, global).",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-015",
+      "theme": "Géotechnique et stabilité",
+      "level": 2,
+      "q": "La future fosse traverse une épaisse latérite et des saprolites très altérées. Quel mode de rupture redoutes-tu en priorité ?",
+      "choices": [
+        "La rupture planaire sur une discontinuité unique",
+        "La rupture circulaire",
+        "Le basculement (toppling) de colonnes",
+        "La rupture en dièdre sur deux joints"
+      ],
+      "answer": 1,
+      "explain": "La rupture circulaire concerne les sols, les roches très altérées (latérites, saprolites) et les massifs très fracturés.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-016",
+      "theme": "Géotechnique et stabilité",
+      "level": 3,
+      "q": "Au niveau 2 de la mine de la figure (−200 m), un chantier par chambres et piliers est prévu avec un taux de défruitement de 0,6 et une contrainte verticale de 5,4 MPa. Quelle contrainte moyenne attends-tu dans les piliers ?",
+      "img": "svg/underground-mine-layout.svg",
+      "imgAlt": "Coupe d'une mine souterraine : chevalement, puits d'extraction, rampe, cheminée d'aération, niveaux 1, 2 et 3 repérés à −100, −200 et −300 m, corps minéralisé, chantier d'exploitation, puisard.",
+      "choices": [
+        "5,4 MPa, soit la contrainte verticale initiale inchangée",
+        "8,1 MPa, soit 5,4 × 1,5 pour un pilier moyennement chargé",
+        "21,6 MPa, soit 5,4 × 4 pour un pilier très chargé",
+        "13,5 MPa, soit 5,4 / (1 − 0,6) de contrainte moyenne"
+      ],
+      "answer": 3,
+      "explain": "σ pilier = σv/(1 − e) = 5,4/0,4 = 13,5 MPa. Cette valeur sera comparée à la résistance du pilier.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-017",
+      "theme": "Géotechnique et stabilité",
+      "level": 2,
+      "q": "Pour dimensionner le soutènement du niveau 1 de la figure (−100 m), roche de densité 2 700 kg/m³, quel ordre de grandeur de contrainte verticale retiens-tu ?",
+      "img": "svg/underground-mine-layout.svg",
+      "imgAlt": "Coupe d'une mine souterraine : chevalement, puits d'extraction, rampe, cheminée d'aération, niveaux 1, 2 et 3 repérés à −100, −200 et −300 m, corps minéralisé, chantier d'exploitation, puisard.",
+      "choices": [
+        "Environ 0,27 MPa",
+        "Environ 27 MPa",
+        "Environ 2,7 MPa",
+        "Environ 270 MPa"
+      ],
+      "answer": 2,
+      "explain": "σv = ρ g H = 2 700 × 9,81 × 100 ≈ 2,65 MPa, soit environ 0,027 MPa par mètre de profondeur.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-018",
+      "theme": "Géotechnique et stabilité",
+      "level": 2,
+      "q": "Les piézomètres d'un talus montrent une montée de pression d'eau et des suintements apparaissent en pied. Quelle mesure est la plus pertinente ?",
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Coupe d'un gradin de mine à ciel ouvert : hauteur H = 10 m, angle de talus α = 70°, crête, pied, berme de 15 m, merlon de sécurité, piste de roulage de 24 m.",
+      "choices": [
+        "Poser des drains sub-horizontaux et des fossés de crête pour abaisser la nappe",
+        "Raidir le talus pour réduire la surface d'infiltration en pied",
+        "Charger la crête avec du stérile pour augmenter le poids stabilisant",
+        "Augmenter la hauteur des gradins pour réduire le nombre de risbermes"
+      ],
+      "answer": 0,
+      "explain": "L'eau augmente la pression interstitielle et réduit la résistance : on draine (drains sub-horizontaux, fossés de crête, pompage) et on surveille.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-019",
+      "theme": "Planification minière",
+      "level": 1,
+      "q": "Un rapport d'investisseur parle de « réserves de 2 Moz ». Qu'est-ce qui distingue une réserve d'une ressource selon les codes (CRIRSCO, JORC, NI 43-101) ?",
+      "choices": [
+        "Une réserve est l'ensemble de la minéralisation connue, y compris les ressources présumées",
+        "Une réserve est le minerai déjà abattu et stocké sur les aires de stockage de la mine",
+        "Une réserve ne contient que des ressources présumées validées par un géologue interne",
+        "Une réserve est la part des ressources mesurées et indiquées exploitable économiquement"
+      ],
+      "answer": 3,
+      "explain": "Une réserve est la part des ressources mesurées et indiquées qui est exploitable économiquement après application des facteurs modificateurs (minier, métallurgique, économique, juridique, environnemental).",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-020",
+      "theme": "Planification minière",
+      "level": 2,
+      "q": "Pour le modèle de blocs, les coûts totaux (mine, traitement, frais généraux) sont de 30 $/t, le prix de l'or de 60 $/g et la récupération de 90 %. Quelle teneur de coupure retiens-tu ?",
+      "choices": [
+        "Environ 0,33 g/t, soit 30 / 90 en ignorant la récupération",
+        "Environ 0,56 g/t, soit 30 / (60 × 0,9), récupération incluse",
+        "Environ 0,50 g/t, soit 30 / 60 en ignorant la récupération",
+        "Environ 0,90 g/t, soit la récupération prise pour teneur"
+      ],
+      "answer": 1,
+      "explain": "Teneur de coupure = coûts/(prix × récupération) = 30/(60 × 0,9) ≈ 0,56 g/t.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-021",
+      "theme": "Planification minière",
+      "level": 2,
+      "q": "La marge sur une tonne de minerai avant décapage est de 45 $/t et l'extraction d'une tonne de stérile coûte 3 $/t. La fosse de la photo a un ratio moyen de 12. Est-elle rentable ?",
+      "img": "photo/open-pit-mine.jpg",
+      "imgAlt": "Photo d'une fosse à ciel ouvert : un tombereau chargé de minerai remonte une piste en lacet bordée de gradins de roche.",
+      "choices": [
+        "Non : le ratio limite est de 9",
+        "Oui : le ratio limite est de 15, supérieur à 12",
+        "Non : le ratio limite est de 3",
+        "Oui : le ratio limite est de 45, quel que soit le ratio de la fosse"
+      ],
+      "answer": 1,
+      "explain": "Ratio limite = 45/3 = 15. Un ratio moyen de 12 reste inférieur : l'exploitation couvre le coût du décapage.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-022",
+      "theme": "Planification minière",
+      "level": 1,
+      "q": "Les études donnent 40 Mt de stérile pour 8 Mt de minerai pour la fosse de la photo. Quel est le ratio stérile/minerai ?",
+      "img": "photo/open-pit-mine.jpg",
+      "imgAlt": "Photo d'une fosse à ciel ouvert : un tombereau chargé de minerai remonte une piste en lacet bordée de gradins de roche.",
+      "choices": [
+        "0,2",
+        "8",
+        "48",
+        "5"
+      ],
+      "answer": 3,
+      "explain": "Ratio = 40/8 = 5 tonnes de stérile par tonne de minerai.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-023",
+      "theme": "Planification minière",
+      "level": 2,
+      "q": "Un tir abat 1 000 m³ de roche en place avec un foisonnement de 30 %. Quel volume les tombereaux devront-ils transporter ?",
+      "choices": [
+        "1 300 m³, soit 1 000 m³ × 1,30 de foisonnement (+30 %)",
+        "770 m³, soit 1 000 m³ divisés par le foisonnement",
+        "1 000 m³, soit le volume en place sans foisonnement",
+        "1 430 m³, soit 1 000 m³ × 1,43 de foisonnement"
+      ],
+      "answer": 0,
+      "explain": "Volume foisonné = 1 000 × 1,30 = 1 300 m³.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-024",
+      "theme": "Planification minière",
+      "level": 2,
+      "q": "L'usine du circuit de la figure traite 1 000 000 t à 2,0 g/t avec une récupération de 90 %. Quelle quantité d'or est récupérée ?",
+      "img": "svg/mineral-processing-flow.svg",
+      "imgAlt": "Circuit de traitement : minerai brut, concassage primaire, criblage, concassage secondaire, broyage et hydrocyclone, flottation, épaississement et filtration, concentré final et parc à résidus.",
+      "choices": [
+        "2 000 kg",
+        "200 kg",
+        "1 800 kg",
+        "18 000 kg"
+      ],
+      "answer": 2,
+      "explain": "Or contenu : 1 000 000 × 2 g = 2 000 kg ; récupéré à 90 % : 1 800 kg.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-025",
+      "theme": "Planification minière",
+      "level": 3,
+      "q": "100 000 t de minerai à 4 g/t sont extraites avec 10 000 t de stérile à 0 g/t ajoutées par dilution. Quelle teneur arrive à l'usine ?",
+      "choices": [
+        "Environ 3,60 g/t, soit 4 g/t moins 10 % de dilution",
+        "4,00 g/t, la dilution n'ayant aucun effet sur la teneur",
+        "4,40 g/t, la dilution concentrant le métal dans le minerai",
+        "Environ 3,64 g/t, soit 400 000 g de métal / 110 000 t de minerai"
+      ],
+      "answer": 3,
+      "explain": "Or : 400 000 g pour 110 000 t soit environ 3,64 g/t. Sans dilution, 4,00 g/t.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-026",
+      "theme": "Planification minière",
+      "level": 2,
+      "q": "Le logiciel de planification te sort une série de fosses emboîtées lorsque tu fais varier le prix de l'or. À quoi sert l'algorithme de Lerchs-Grossmann derrière ces fosses ?",
+      "img": "photo/open-pit-mine.jpg",
+      "imgAlt": "Photo d'une fosse à ciel ouvert : un tombereau chargé de minerai remonte une piste en lacet bordée de gradins de roche.",
+      "choices": [
+        "À maximiser le nombre de gradins exploitables dans la fosse",
+        "À trouver le contour de fosse de valeur maximale",
+        "À réduire l'angle global des talus pour limiter les risques",
+        "À minimiser le tonnage de stérile, quel que soit le revenu"
+      ],
+      "answer": 1,
+      "explain": "L'algorithme de Lerchs-Grossmann et ses variantes déterminent le contour de fosse de valeur maximale sur le modèle de blocs. En faisant varier le prix, on obtient des fosses emboîtées puis des phases.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-027",
+      "theme": "Planification minière",
+      "level": 2,
+      "q": "Tu vises 6 Mt de minerai par an avec un ratio stérile/minerai de 3. Quel tonnage total la flotte doit-elle déplacer ?",
+      "choices": [
+        "18 Mt par an, soit le tonnage de stérile à extraire seul",
+        "12 Mt par an, soit 6 Mt de minerai multipliés par 2",
+        "24 Mt par an, soit 6 Mt de minerai + 18 Mt de stérile",
+        "6 Mt par an, soit le seul tonnage de minerai à traiter"
+      ],
+      "answer": 2,
+      "explain": "Stérile = 3 × 6 = 18 Mt ; total = 18 + 6 = 24 Mt.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-028",
+      "theme": "Planification minière",
+      "level": 2,
+      "q": "Le prix de l'or monte de 20 % alors que les coûts restent stables. Quel effet attends-tu sur la teneur de coupure et les réserves ?",
+      "choices": [
+        "La teneur de coupure baisse et le tonnage de réserves augmente",
+        "La teneur de coupure augmente et le tonnage de réserves diminue",
+        "Aucun effet sur les réserves, car les coûts restent stables",
+        "La teneur de coupure devient nulle et tout le stérile est traité"
+      ],
+      "answer": 0,
+      "explain": "La teneur de coupure vaut coûts/(prix × récupération) : si le prix monte, elle baisse et des blocs plus pauvres deviennent économiques, donc les réserves augmentent.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-029",
+      "theme": "Ventilation, sécurité et environnement",
+      "level": 3,
+      "q": "Le réseau de la mine de la figure s'allonge et il manque de pression. Tu ajoutes un second ventilateur identique, monté en série avec le premier. Quel effet attends-tu ?",
+      "img": "svg/mine-ventilation.svg",
+      "imgAlt": "Ventilation d'une mine souterraine : air frais par le puits d'entrée, galeries d'entrée et de retour, chantier, puits de sortie avec ventilateur principal, cul-de-sac avec gaine et ventilateur auxiliaire.",
+      "choices": [
+        "Les pressions s'additionnent à débit égal",
+        "Les débits s'additionnent à pression égale",
+        "La consommation électrique diminue",
+        "Les pertes de charge du réseau disparaissent"
+      ],
+      "answer": 0,
+      "explain": "Deux ventilateurs en série additionnent leurs pressions à débit égal ; en parallèle, ils additionnent leurs débits à pression égale.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-030",
+      "theme": "Ventilation, sécurité et environnement",
+      "level": 2,
+      "q": "Pour un chantier en développement, on veut doubler le débit d'air du réseau de la figure (régime turbulent). Quel effet sur la puissance du ventilateur ?",
+      "img": "svg/mine-ventilation.svg",
+      "imgAlt": "Ventilation d'une mine souterraine : air frais par le puits d'entrée, galeries d'entrée et de retour, chantier, puits de sortie avec ventilateur principal, cul-de-sac avec gaine et ventilateur auxiliaire.",
+      "choices": [
+        "Multipliée par 2, la puissance variant proportionnellement au débit",
+        "Multipliée par 4, la puissance variant comme le carré du débit",
+        "Multipliée par 8, la puissance variant comme le cube du débit (Q³)",
+        "Inchangée, la puissance ne dépendant que de la pression du réseau"
+      ],
+      "answer": 2,
+      "explain": "La perte de charge croît comme le carré du débit (×4) ; la puissance, produit débit × pression, est multipliée par environ 8.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-031",
+      "theme": "Ventilation, sécurité et environnement",
+      "level": 2,
+      "q": "Après un tir, 60 000 m³ d'air vicié sont à renouveler avec un débit de 10 m³/s. Le chef de poste veut retourner au front 20 minutes après le tir. Quel temps indicatif de renouvellement calcules-tu ?",
+      "img": "svg/mine-ventilation.svg",
+      "imgAlt": "Ventilation d'une mine souterraine : air frais par le puits d'entrée, galeries d'entrée et de retour, chantier, puits de sortie avec ventilateur principal, cul-de-sac avec gaine et ventilateur auxiliaire.",
+      "choices": [
+        "Environ 10 min : les 20 min prévues suffisent largement",
+        "Environ 100 min (6 000 s) : 20 min sont insuffisantes",
+        "Environ 60 min : le temps d'un renouvellement par heure",
+        "Environ 600 min : il faut attendre un poste entier"
+      ],
+      "answer": 1,
+      "explain": "t = V/Q = 60 000/10 = 6 000 s ≈ 100 min (valeur indicative, sans tenir compte du mélange). Le retour dépend en plus de la procédure du site et du contrôle des gaz.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-032",
+      "theme": "Ventilation, sécurité et environnement",
+      "level": 1,
+      "q": "Dans un rapport HAZID, un risque résiduel est classé « moyen ». Que signifie le principe ALARP pour la décision ?",
+      "choices": [
+        "Accepter tous les risques moyens sans action supplémentaire",
+        "Supprimer tout risque, quel qu'en soit le coût de mise en œuvre",
+        "Transférer le risque à l'assureur sans mesure de prévention",
+        "Réduire le risque aussi bas que raisonnablement possible (ALARP)"
+      ],
+      "answer": 3,
+      "explain": "ALARP signifie réduire le risque aussi bas que raisonnablement possible : on compare l'effort de réduction à son bénéfice.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-033",
+      "theme": "Ventilation, sécurité et environnement",
+      "level": 2,
+      "q": "Sur l'année, la mine compte 3 accidents avec arrêt pour 1 500 000 heures travaillées. Quel est le taux de fréquence ?",
+      "choices": [
+        "0,5 (3 accidents rapportés à 6 000 000 d'heures)",
+        "3,0 (3 accidents rapportés à 1 000 000 d'heures)",
+        "2,0 (3 accidents × 1 000 000 / 1 500 000 d'heures)",
+        "4,5 (3 accidents multipliés par 1,5 million d'heures)"
+      ],
+      "answer": 2,
+      "explain": "TF = 3 × 1 000 000 / 1 500 000 = 2,0 accidents avec arrêt par million d'heures.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-034",
+      "theme": "Ventilation, sécurité et environnement",
+      "level": 3,
+      "q": "Un incendie confiné appauvrit l'atmosphère en oxygène. Le chef d'équipe veut distribuer des auto-sauveteurs filtrants. Pourquoi est-ce inadapté ?",
+      "choices": [
+        "Ils transforment le CO en CO₂ mais ne fournissent pas d'oxygène",
+        "Ils fournissent trop d'oxygène au porteur et provoquent une hyperoxie",
+        "Ils sont très efficaces dans ce cas car ils filtrent toutes les fumées",
+        "Ils protègent contre tous les gaz, y compris l'atmosphère sans oxygène"
+      ],
+      "answer": 0,
+      "explain": "Un auto-sauveteur filtrant ne fournit pas d'oxygène : il est inefficace si l'atmosphère en manque. Dans certains cas, on utilise des appareils isolants à oxygène.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-035",
+      "theme": "Ventilation, sécurité et environnement",
+      "level": 1,
+      "q": "Les eaux d'une verse à stériles pyriteux sont à pH 3 en saison des pluies. Quelle est l'origine la plus probable ?",
+      "choices": [
+        "L'évaporation de l'eau, qui concentre les sels et acidifie le milieu",
+        "La dissolution du quartz, qui libère de l'acide dans les eaux de verse",
+        "Le refroidissement des roches, qui modifie la chimie de l'eau de ruissellement",
+        "Le drainage minier acide, dû à l'oxydation des sulfures par l'air et l'eau"
+      ],
+      "answer": 3,
+      "explain": "Le drainage minier acide résulte de l'oxydation des sulfures (pyrite) au contact de l'air et de l'eau ; il acidifie les eaux et mobilise les métaux.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-036",
+      "theme": "Coûts et économie",
+      "level": 1,
+      "q": "Le service financier te demande comment classer l'achat de deux tombereaux neufs et le carburant qu'ils consommeront. Que réponds-tu ?",
+      "choices": [
+        "Tombereaux en OPEX (consommés), carburant en CAPEX (immobilisé)",
+        "Tombereaux en CAPEX (immobilisés), carburant en OPEX (consommé annuellement)",
+        "Tout en OPEX, car l'ensemble est dépensé pendant l'exploitation",
+        "Tout en CAPEX, car l'ensemble sert à produire sur plusieurs années"
+      ],
+      "answer": 1,
+      "explain": "L'achat d'équipements est un investissement (CAPEX) ; le carburant est une dépense courante (OPEX).",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-037",
+      "theme": "Coûts et économie",
+      "level": 1,
+      "q": "Le rapport trimestriel indique 12 M$ de dépenses pour 3 Mt extraites. Quel est le coût unitaire ?",
+      "choices": [
+        "0,25 $/t",
+        "4 $/t",
+        "2 $/t",
+        "36 $/t"
+      ],
+      "answer": 1,
+      "explain": "Coût unitaire = 12/3 = 4 $/t.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-038",
+      "theme": "Coûts et économie",
+      "level": 2,
+      "q": "Le projet a 6 M$ de coûts fixes par an, un prix de vente de 100 $/t et un coût variable de 60 $/t. Quel est le seuil de rentabilité ?",
+      "choices": [
+        "60 000 t par an, soit 6 M$ / 100 $/t de prix de vente brut",
+        "100 000 t par an, soit 6 M$ / 60 $/t de coût variable",
+        "375 000 t par an, soit 6 M$ / 16 $/t de marge nette",
+        "150 000 t par an, soit 6 M$ / 40 $/t de marge unitaire"
+      ],
+      "answer": 3,
+      "explain": "Seuil = coûts fixes/(prix − coût variable) = 6 000 000/40 = 150 000 t.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-039",
+      "theme": "Coûts et économie",
+      "level": 2,
+      "q": "Un projet demande 90 M$ aujourd'hui et rapporte 110 M$ dans un an. Le taux d'actualisation est de 10 %. Quelle est la VAN ?",
+      "choices": [
+        "+10 M$ (110 / 1,1 = 100 M$, moins 90 M$ investis)",
+        "−10 M$ (90 M$ investis moins 110 / 1,1 de recettes)",
+        "0 M$ (le revenu actualisé égale l'investissement)",
+        "+20 M$ (110 − 90 sans actualiser les recettes)"
+      ],
+      "answer": 0,
+      "explain": "110/1,10 = 100 M$ aujourd'hui ; VAN = 100 − 90 = +10 M$.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-040",
+      "theme": "Coûts et économie",
+      "level": 2,
+      "q": "Le prix du gazole augmente de 20 % ; le carburant représente 25 % des coûts de transport. De combien augmentent les coûts de transport ?",
+      "choices": [
+        "20 %",
+        "25 %",
+        "5 %",
+        "45 %"
+      ],
+      "answer": 2,
+      "explain": "Effet = 25 % × 20 % = 5 % d'augmentation des coûts de transport.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-041",
+      "theme": "Coûts et économie",
+      "level": 3,
+      "q": "Explosif à 0,45 kg/m³ et 1,2 $/kg, forage à 0,30 $/m³, densité de la roche 2,7 t/m³. Quel est le coût forage-tir par tonne ?",
+      "choices": [
+        "Environ 0,16 $/t, soit 0,45 $/m³ divisés par 2,7 t/m³",
+        "Environ 0,84 $/t, soit le coût par m³ sans conversion en tonne",
+        "Environ 2,27 $/t, soit 0,84 $/m³ multipliés par 2,7 t/m³",
+        "Environ 0,31 $/t, soit 0,84 $/m³ divisés par la densité de 2,7 t/m³"
+      ],
+      "answer": 3,
+      "explain": "Explosif : 0,45 × 1,2 = 0,54 $/m³ ; + forage 0,30 = 0,84 $/m³ ; par tonne : 0,84/2,7 ≈ 0,31 $/t.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-042",
+      "theme": "Coûts et économie",
+      "level": 3,
+      "q": "La marge d'une mine représente 20 % du revenu. Le prix de vente baisse de 10 % à coûts constants. De combien la marge absolue diminue-t-elle ?",
+      "choices": [
+        "10 % (la baisse du prix se répercute à l'identique sur la marge)",
+        "50 % (la marge passe de 20 à 10 pour 100 de revenu)",
+        "20 % (la baisse du prix équivaut à la marge initiale)",
+        "25 % (la baisse du prix rapportée à un revenu de 40)"
+      ],
+      "answer": 1,
+      "explain": "Revenu 100 devient 90, coûts 80 inchangés : marge de 20 à 10, soit une division par deux (−50 %).",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-043",
+      "theme": "Ventilation, sécurité et environnement",
+      "level": 2,
+      "q": "Des stériles pyriteux doivent être mis en verse. Quelle mesure prévient au mieux le drainage minier acide ?",
+      "choices": [
+        "Les stocker à l'air libre, en laissant les eaux de pluie ruisseler librement",
+        "Les arroser davantage pour accélérer l'évacuation des sulfures solubles",
+        "Trier les stériles réactifs, les recouvrir puis traiter les eaux de drainage",
+        "Les mélanger au minerai pour que l'usine traite les sulfures en continu"
+      ],
+      "answer": 2,
+      "explain": "On prévient le drainage minier acide par la gestion des stériles réactifs, le recouvrement et le traitement des eaux ; réhabilitation et fermeture sont planifiées dès la conception.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-044",
+      "theme": "Coûts et économie",
+      "level": 2,
+      "q": "D'après l'histogramme de la figure, le chiffre d'affaires 2024 est de 720 M FCFA et le résultat net de 95 M FCFA. Quelle est la marge nette 2024 ?",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA : CA 420, 510, 480, 640, 720 ; résultat net 35, 52, 41, 78, 95.",
+      "choices": [
+        "Environ 13,2 %, soit 95 M FCFA rapportés à 720 M FCFA de ventes",
+        "Environ 7,6 %, soit 95 M FCFA rapportés à 1 250 M de capitaux",
+        "Environ 95 %, soit le résultat net lu directement en pourcentage",
+        "Environ 24 %, soit 95 M FCFA rapportés à 400 M de capitaux"
+      ],
+      "answer": 0,
+      "explain": "Marge nette = 95/720 ≈ 13,2 %.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-045",
+      "theme": "Coûts et économie",
+      "level": 2,
+      "q": "Sur la même figure, le chiffre d'affaires passe de 640 M FCFA en 2023 à 720 M FCFA en 2024. Quelle est la croissance ?",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA : CA 420, 510, 480, 640, 720 ; résultat net 35, 52, 41, 78, 95.",
+      "choices": [
+        "12,5 % (80 M FCFA de hausse / 640 M FCFA en 2023)",
+        "8 % (80 M FCFA de hausse / 1 000 M FCFA de base)",
+        "80 % (la hausse en M FCFA lue comme un pourcentage)",
+        "11,1 % (80 M FCFA de hausse / 720 M FCFA en 2024)"
+      ],
+      "answer": 0,
+      "explain": "Croissance = (720 − 640)/640 = 80/640 = 12,5 %.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-mines-046",
+      "theme": "Ventilation, sécurité et environnement",
+      "level": 2,
+      "q": "Au HAZID, le scénario « chute de toit en galerie d'accès » est jugé possible (probabilité 3) avec une gravité de 4. Quel niveau lis-tu sur la matrice et que fais-tu ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 × 5 : probabilité en abscisse, gravité en ordonnée, criticité = probabilité × gravité ; faible 1-4, moyen 5-9, élevé 10-14, critique 15 et plus.",
+      "choices": [
+        "12 : critique, arrêt immédiat obligatoire de toutes les activités",
+        "7 : moyen, aucune action supplémentaire n'est requise sur ce scénario",
+        "12 : élevé, à réduire aussi bas que raisonnablement possible (ALARP)",
+        "15 : critique, abandon définitif de la mine pour raisons de sécurité"
+      ],
+      "answer": 2,
+      "explain": "Criticité = 3 × 4 = 12, niveau élevé (10 à 14). On applique le principe ALARP : mesures complémentaires, car le risque ne peut pas rester tel quel.",
+      "seconds": 75,
+      "status": "draft"
+    }
   ]
 }

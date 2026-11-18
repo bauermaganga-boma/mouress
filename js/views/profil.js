@@ -3,7 +3,7 @@ import { getProfilesData, loadContent, sectorOf, levelOf, themesOf } from '../da
 import { local } from '../store.js';
 import { esc, fmtDate, pct } from '../util.js';
 import { icon, badge, bar, comingSoon, sectorIcon } from '../ui.js';
-import { examSize } from '../quiz.js';
+import { examSize, qSeconds } from '../quiz.js';
 
 export default async function render(ctx, root) {
   const data = await getProfilesData();
@@ -30,7 +30,7 @@ export default async function render(ctx, root) {
   const attempts = (await ctx.store.listAttemptsByDevice()).filter((a) => a.profileId === profile.id && a.status === 'done' && !a.sessionId);
   const best = attempts.reduce((m, a) => Math.max(m, a.percent), 0);
   const n = examSize(content);
-  const minutes = Math.round(content.questions.slice(0, n).reduce((s, q) => s + (q.seconds || 45), 0) / 60);
+  const minutes = Math.round(content.questions.slice(0, n).reduce((s, q) => s + qSeconds(q), 0) / 60);
 
   root.innerHTML = `<div class="container page">${head}
     <div class="btn-row" style="margin-bottom:var(--sp-6)">
