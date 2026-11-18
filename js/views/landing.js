@@ -1,114 +1,155 @@
+// Page d'accueil institutionnelle MOURESS : prestataire de services industriels.
+// Le Training (tests d'aptitude, formation) n'en est qu'une offre, mise en avant en fin de page.
 import { CONFIG } from '../../config.js';
-import { getProfilesData, domainOf, levelOf, postes } from '../data.js';
-import { passPrice } from '../pass.js';
-import { esc, fmtMoney } from '../util.js';
-import { icon, sectorIcon } from '../ui.js';
+import { esc } from '../util.js';
+import { icon } from '../ui.js';
 
-const STEPS = [
-  { n: 1, ico: 'target', t: 'Choisissez un profil', d: 'Opérateur, technicien, superviseur, ingénieur, support : sélectionnez le profil du poste, le nombre de questions et la date limite.' },
-  { n: 2, ico: 'link', t: 'Envoyez le lien', d: 'Chaque candidat reçoit un lien personnel par WhatsApp ou e-mail. Aucun compte à créer, il passe le test depuis son téléphone.' },
-  { n: 3, ico: 'chart', t: 'Décidez sur des faits', d: 'Score global, résultat par thème, temps passé et statut : tout est dans votre tableau de bord, exportable en CSV.' },
+const PH = (f) => `assets/img/photo/${f}`;
+
+const SERVICES = [
+  { ico: 'users', t: 'Placement de personnel', d: 'Ouvriers, techniciens, superviseurs, ingénieurs, management : qualifiés ou non, évalués avant d’être placés.' },
+  { ico: 'flag', t: 'Supervision de travaux', d: 'Préparation (planning, méthodes, coordination), suivi journalier, reporting, contrôle qualité et gestion des effectifs.' },
+  { ico: 'shield', t: 'HSE', d: 'Personnel formé aux normes HSE, supervision de chantier, analyses de risques, permis de travail, audits et inspections.' },
+  { ico: 'chart', t: 'Engineering et études', d: 'PID, plans iso, 3D, notes de calcul, plans de génie civil : coordination des études et support engineering.' },
+  { ico: 'check', t: 'Mise en service (commissioning)', d: 'Profils expérimentés, procédures de test, SAT, tests électriques, cause & effet, PV et suivi documentaire.' },
+  { ico: 'wrench', t: 'Assistance technique et exploitation', d: 'Mise à disposition de personnel pour l’exploitation continue ; réglage, dépannage et maintenance ponctuels.' },
 ];
 
-const MOURESS = [
-  { ico: 'bolt', t: 'Prestation technique EIA', d: 'Études, réalisation, mise en service et maintenance en électricité, instrumentation et automatisme.' },
-  { ico: 'users', t: 'Placement de personnel et assistance technique', d: 'Des profils techniques qualifiés, évalués avant d’être placés.' },
-  { ico: 'book', t: 'Formation professionnelle', d: 'Des parcours adaptés aux réalités de vos installations et de vos équipes.' },
+const METIERS = [
+  { t: 'Maintenance', d: 'Préventive, corrective, arrêts programmés.', img: 'heavy-equipment-maintenance.jpg', alt: 'Maintenance d’engins lourds' },
+  { t: 'Mécanique', d: 'Machines tournantes, turbines, compresseurs, levage.', img: 'gas-compressor.jpg', alt: 'Compresseur de gaz' },
+  { t: 'Tuyauterie', d: 'Iso, supports, soudage, QMOS/QS, tests de pression, CND.', img: 'pipeline-welding.jpg', alt: 'Soudure de pipeline' },
+  { t: 'Instrumentation', d: 'Capteurs, calibration, boucles 4-20 mA, tests de boucle.', img: 'wellhead-onshore.jpg', alt: 'Tête de puits équipée d’instruments' },
+  { t: 'Automatisme', d: 'Contrôle-commande, cause & effet, Grafcet, supervision Siemens / Schneider, FAT/SAT.', img: 'control-room.jpg', alt: 'Salle de contrôle' },
+  { t: 'Électricité', d: 'Tirage de câbles, armoires, tableaux BT/HT, essais, mise en service.', img: 'power-transformer.jpg', alt: 'Transformateur de puissance' },
 ];
+
+const SECTEURS = [
+  { t: 'Pétrole & gaz', d: 'Amont, aval, raffinerie, terminaux.', img: 'oil-rig-offshore.jpg', alt: 'Plateforme pétrolière offshore' },
+  { t: 'Mines', d: 'Exploitation, traitement du minerai, engins.', img: 'open-pit-mine.jpg', alt: 'Mine à ciel ouvert' },
+  { t: 'Énergie', d: 'Centrales thermiques, valorisation d’énergie, postes électriques.', img: 'electrical-substation.jpg', alt: 'Poste électrique' },
+  { t: 'Infrastructures', d: 'Génie civil, structures métalliques, levage, logistique portuaire.', img: 'crane-lifting.jpg', alt: 'Grue de levage' },
+];
+
+const PHASES = [
+  { n: '01', t: 'Construction', l: ['Placement de personnel', 'Supervision de travaux', 'HSE, sécurité, gardiennage'] },
+  { n: '02', t: 'Mise en service', l: ['Profils commissioning, instrumentation, électricité, automatisme', 'Procédures de test, SAT, cause & effet', 'PV et suivi documentaire'] },
+  { n: '03', t: 'Exploitation', l: ['Mise à disposition de personnel', 'Réglage, dépannage, maintenance', 'Accompagnement technique ponctuel'] },
+];
+
+const COMPETENCES = [
+  ['Études & ingénierie', 'PID, plans iso, 3D, notes de calcul, plans, AutoCAD'],
+  ['Génie civil', 'Fondations, terrassement, béton armé, plateformes, micropieux, longrines'],
+  ['Mécanique / piping', 'Soudure, tests de pression, CND, montage de structures métalliques'],
+  ['Électricité', 'BT/HT, armoires, tirage de câbles, essais, normes'],
+  ['Instrumentation', 'Capteurs, calibration, tests de boucle, 4-20 mA'],
+  ['Automatisme', 'Cause & effet, supervision, FAT/SAT, Grafcet'],
+  ['Mise en service', 'Coordination, tests, essais, supervision, PV'],
+  ['HSE', 'Analyse de risques, permis de travail, audits, habilitations'],
+  ['RH technique', 'Recrutement, encadrement, formation, gestion de personnel'],
+  ['Management de projet industriel', 'Cahier des charges, sous-traitants, planification, résolution de problèmes techniques'],
+];
+
+const card = (m) => `<article class="card corp-card"><img src="${PH(m.img)}" alt="${esc(m.alt)}" loading="lazy"><div class="corp-card-body"><h3>${esc(m.t)}</h3><p class="muted small">${esc(m.d)}</p></div></article>`;
 
 export default async function render(ctx, root) {
   ctx.setTitle('');
-  const data = await getProfilesData();
-  if (!ctx.alive()) return;
-  const featured = [];
-  for (const dm of data.domains || []) { const p = data.profiles.find((x) => (x.domains || []).includes(dm.id)); if (p && !featured.includes(p)) featured.push(p); }
-  for (const p of data.profiles) { if (featured.length >= 8) break; if (!featured.includes(p)) featured.push(p); }
   const C = CONFIG.CONTACT;
-
   root.innerHTML = `
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">MOURESS Académie</p>
-        <h1>Testez, formez, recrutez vos équipes techniques</h1>
-        <p class="hero-lead">Des tests d’aptitude et des parcours de formation pour le pétrole &amp; gaz, les mines, l’industrie et leurs fonctions support. Cours, entraînement, examen chronométré, attestation vérifiable.</p>
-        <div class="btn-row">
-          <a class="btn btn-primary btn-lg" href="#/inscription">Créer un compte entreprise</a>
-          <a class="btn btn-lg hero-btn-2" href="#/formation">Découvrir la formation</a>
-        </div>
-        <p class="hero-note">${icon('check', 16)} Compte démo disponible &nbsp; ${icon('check', 16)} Paiement par carte ou Airtel Money &nbsp; ${icon('check', 16)} Fonctionne sur téléphone</p>
+  <section class="hero corp-hero" style="--hero-img:url('../assets/img/photo/fpso.jpg')">
+    <div class="container corp-hero-inner">
+      <p class="eyebrow">Prestataire de services industriels · Libreville</p>
+      <h1>Des équipes et une expertise technique pour vos sites industriels</h1>
+      <p class="hero-lead">MOURESS accompagne les industriels du pétrole &amp; gaz, des mines, de l’énergie et des infrastructures : placement de personnel, supervision de travaux, engineering, mise en service et assistance technique, de la construction à l’exploitation.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary btn-lg" href="#/?s=contact">Demander un devis</a>
+        <a class="btn btn-lg hero-btn-2" href="#/?s=services">Nos services</a>
+        <a class="btn btn-lg hero-btn-2" href="#/training">${icon('award', 18)} MOURESS Training</a>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="mock mock-a"><span class="mock-label">Candidat</span><strong>Jean-Pierre M.</strong><span class="mock-sub">Opérateur de production</span>
-          <div class="mock-score"><span>82 %</span><em>Réussi</em></div>
-          <div class="mock-bars"><i style="width:90%"></i><i style="width:78%"></i><i style="width:84%"></i><i style="width:70%"></i></div></div>
-        <div class="mock mock-b"><span class="mock-label">Session</span><strong>4 candidats</strong><span class="mock-sub">3 terminés · 1 en cours</span></div>
-        <div class="mock mock-c">${icon('award', 26)}<span>MRS-2026-K7M2QX</span></div>
-      </div>
+      <ul class="corp-facts">
+        <li><strong>4</strong> secteurs servis</li><li><strong>6</strong> métiers techniques</li><li><strong>3</strong> phases de projet couvertes</li>
+      </ul>
     </div>
   </section>
 
-  <section class="section" id="comment">
+  <section class="section" id="services">
     <div class="container">
-      <div class="section-head"><p class="eyebrow dark">Pour les RH</p><h2>Évaluer vos candidats en trois étapes</h2></div>
-      <div class="grid grid-3">${STEPS.map((s) => `<article class="card step"><div class="step-n">${s.n}</div><div class="step-ico">${icon(s.ico, 26)}</div><h3>${s.t}</h3><p class="muted">${s.d}</p></article>`).join('')}</div>
-      <div class="path">
-        <p class="label">Côté candidat, un parcours comme pour le code de la route</p>
-        <ol class="path-list"><li>${icon('book', 18)} Cours</li><li>${icon('target', 18)} Entraînement</li><li>${icon('clock', 18)} Examen chronométré</li><li>${icon('award', 18)} Attestation</li></ol>
-      </div>
+      <div class="section-head"><p class="eyebrow dark">Nos services</p><h2>Un partenaire sur toute la vie du projet</h2>
+        <p class="muted">Sous-traitance industrielle et prestations intellectuelles, pour les maîtres d’ouvrage comme pour les entreprises contractantes.</p></div>
+      <div class="grid grid-3">${SERVICES.map((s) => `<article class="card step"><div class="step-ico">${icon(s.ico, 26)}</div><h3>${esc(s.t)}</h3><p class="muted">${esc(s.d)}</p></article>`).join('')}</div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="metiers">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow dark">Nos métiers techniques</p><h2>Maintenance, mécanique, tuyauterie, instrumentation, automatisme, électricité</h2></div>
+      <div class="grid grid-3">${METIERS.map(card).join('')}</div>
+    </div>
+  </section>
+
+  <section class="section" id="phases">
+    <div class="container">
+      <div class="section-head"><p class="eyebrow dark">Nos interventions</p><h2>De la construction à l’exploitation</h2></div>
+      <div class="grid grid-3">${PHASES.map((p) => `<article class="card phase"><span class="phase-n">${p.n}</span><h3>${esc(p.t)}</h3><ul class="phase-list">${p.l.map((x) => `<li>${icon('check', 16)}<span>${esc(x)}</span></li>`).join('')}</ul></article>`).join('')}</div>
     </div>
   </section>
 
   <section class="section section-alt" id="secteurs">
     <div class="container">
-      <div class="section-head"><p class="eyebrow dark">Secteurs et profils</p><h2>${data.profiles.length} profils métiers, du technicien à l’ingénieur</h2>
-        <p class="muted">Chaque profil comprend des modules de cours, des questions illustrées par thème et un examen équilibré.</p></div>
-      <div class="grid grid-3 sectors">${(data.domains || []).map((d) => {
-        const n = postes(data, { domain: d.id }).length;
-        return `<a class="card card-link sector-card" href="#/formation/${esc(d.id)}"><div class="sector-ico">${icon(d.icon || 'briefcase', 28)}</div><h3>${esc(d.name)}</h3><p class="muted small">${esc(d.desc)}</p><span class="badge">${n} poste${n > 1 ? 's' : ''}</span></a>`;
-      }).join('')}</div>
-      <h3 class="sub-h">Profils les plus demandés</h3>
-      <div class="grid grid-4">${featured.map((p) => `<a class="card card-link profile-mini" href="#/profil/${esc(p.id)}"><span class="badge badge-info">${esc(levelOf(data, p.level)?.name || '')}</span><h4>${esc(p.name)}</h4><p class="muted xs">${esc(domainOf(data, p.domains?.[0])?.name || '')}</p></a>`).join('')}</div>
-      <p class="center" style="margin-top:var(--sp-5)"><a class="btn btn-outline" href="#/formation">Voir les ${data.profiles.length} profils ${icon('arrow', 16)}</a></p>
+      <div class="section-head"><p class="eyebrow dark">Nos secteurs</p><h2>Là où l’industrie a besoin de monde et de méthode</h2></div>
+      <div class="grid grid-4 corp-sectors">${SECTEURS.map(card).join('')}</div>
     </div>
   </section>
 
-  <section class="section" id="offre">
+  <section class="section" id="engineering">
     <div class="container">
-      <div class="section-head"><p class="eyebrow dark">Offre entreprise</p><h2>1 Pass = 1 personne</h2>
-        <p class="muted">Vous payez par personne et par poste, sans abonnement. Tarifs provisoires, selon le niveau du poste.</p></div>
-      <div class="grid grid-2 packs">
-        <article class="card pack"><h3>Technicien</h3><p class="pack-price">${esc(fmtMoney(passPrice('tech')))}</p><p class="muted small">Opérateur, technicien, superviseur (tarif technicien pour l’instant)</p></article>
-        <article class="card pack pack-featured"><h3>Ingénieur / Cadre</h3><p class="pack-price">${esc(fmtMoney(passPrice('ing')))}</p><p class="muted small">Ingénieur, cadre, chef de site et management</p></article>
-      </div>
-      <div class="card included"><h3>Ce que comprend chaque Pass</h3>
-        <ul class="incl-list"><li>${icon('book', 18)} Formation : modules de cours du poste</li><li>${icon('target', 18)} Entraînement illimité, avec corrections expliquées</li>
-        <li>${icon('clock', 18)} Examen de ${CONFIG.EXAM_QUESTIONS} questions, ${CONFIG.ATTEMPTS_PER_PASS} tentatives</li><li>${icon('award', 18)} Attestation vérifiable en cas de réussite</li><li>${icon('chart', 18)} Résultat par thème transmis à votre entreprise</li></ul>
-        <div class="btn-row"><a class="btn btn-primary btn-lg" href="#/inscription">Créer un compte entreprise</a><a class="btn btn-outline btn-lg" href="${esc(C.whatsapp)}" target="_blank" rel="noopener">${icon('whatsapp', 18)} Parler à un conseiller</a></div></div>
+      <div class="section-head"><p class="eyebrow dark">Engineering et support</p><h2>Nos compétences techniques</h2>
+        <p class="muted">Études, plans, coordination des lots et pilotage de projet : la prestation intellectuelle qui sécurise le chantier.</p></div>
+      <div class="table-wrap"><table class="table"><caption class="sr-only">Compétences techniques de MOURESS</caption><thead><tr><th>Domaine</th><th>Compétences clés</th></tr></thead><tbody>
+        ${COMPETENCES.map(([a, b]) => `<tr><td><strong>${esc(a)}</strong></td><td>${esc(b)}</td></tr>`).join('')}</tbody></table></div>
+      <article class="card corp-ref"><span class="badge badge-info">Référence</span>
+        <h3>Construction d’une centrale thermique et d’une unité de valorisation d’énergie</h3>
+        <p class="muted">Site de gaz, énergie et pétrole-gaz. Rôle de chef de projet et coordination de plusieurs lots : génie civil, métallerie, piping, électricité, instrumentation, automatisme et contrôle-commande, HSE, levage.</p></article>
     </div>
   </section>
 
-  <section class="section section-navy" id="mouress">
-    <div class="container">
-      <div class="section-head"><p class="eyebrow">Qui est MOURESS</p><h2>Une entreprise technique qui évalue comme elle recrute</h2>
-        <p class="lead-light">MOURESS accompagne les opérateurs de l’industrie gabonaise et sous-régionale. Nos tests viennent du terrain : ce sont les questions que nous poserions à un technicien avant de l’envoyer sur site.</p></div>
-      <div class="grid grid-3">${MOURESS.map((m) => `<article class="card card-dark"><div class="step-ico dark">${icon(m.ico, 26)}</div><h3>${m.t}</h3><p>${m.d}</p></article>`).join('')}</div>
-      <p class="sectors-line"><strong>Secteurs :</strong> pétrole &amp; gaz · mines · industrie · BTP · énergie</p>
+  <section class="section section-navy" id="training">
+    <div class="container corp-training">
+      <div><p class="eyebrow">Un service de MOURESS</p><h2>MOURESS Training</h2>
+        <p class="lead-light">Des tests d’aptitude et des parcours de formation pour évaluer vos candidats avant de les recruter et faire monter vos équipes en compétence : cours, entraînement, examen chronométré, attestation vérifiable. Pétrole &amp; gaz, mines, énergie, industrie et fonctions support.</p>
+        <div class="btn-row"><a class="btn btn-primary btn-lg" href="#/training">Découvrir MOURESS Training ${icon('arrow', 18)}</a><a class="btn btn-lg hero-btn-2" href="#/formation">Voir les profils</a></div></div>
+      <ul class="corp-training-list"><li>${icon('book', 20)}<span>Cours et entraînement par thème</span></li><li>${icon('clock', 20)}<span>Examen de 20 questions, chronométré</span></li><li>${icon('award', 20)}<span>Attestation vérifiable</span></li><li>${icon('chart', 20)}<span>Suivi des recrutements et des équipes</span></li></ul>
     </div>
   </section>
 
   <section class="section" id="contact">
     <div class="container contact">
-      <div><p class="eyebrow dark">Contact</p><h2>Parlons de vos besoins</h2>
-        <p class="muted">Un test sur mesure, un devis de volume, une démonstration : nous répondons rapidement.</p>
+      <div><p class="eyebrow dark">Contact</p><h2>Parlons de votre projet</h2>
+        <p class="muted">Besoin de personnel, d’une supervision, d’une étude ou d’une mise en service : décrivez-nous votre besoin, nous répondons rapidement.</p>
         <ul class="contact-list">
           <li>${icon('pin', 20)}<span>${esc(C.address)}</span></li>
           <li>${icon('phone', 20)}<a href="${esc(C.phoneHref)}">${esc(C.phone)}</a></li>
         </ul>
-        <div class="btn-row"><a class="btn btn-whatsapp btn-lg" href="${esc(C.whatsapp)}" target="_blank" rel="noopener">${icon('whatsapp', 20)} Écrire sur WhatsApp</a>
-        <a class="btn btn-outline btn-lg" href="${esc(C.phoneHref)}">${icon('phone', 20)} Appeler</a></div></div>
-      <div class="card contact-card"><h3>Essayez la démo RH</h3><p class="muted">Une entreprise fictive avec des sessions et des candidats est prête : connectez-vous en un clic pour explorer le tableau de bord.</p>
-        <a class="btn btn-primary" href="#/connexion">Accéder à la démo ${icon('arrow', 16)}</a></div>
+        <div class="btn-row"><a class="btn btn-whatsapp btn-lg" href="${esc(C.whatsapp)}" target="_blank" rel="noopener">${icon('whatsapp', 20)} Écrire sur WhatsApp</a><a class="btn btn-outline btn-lg" href="${esc(C.phoneHref)}">${icon('phone', 20)} Appeler</a></div></div>
+      <form class="card contact-card" id="cform" novalidate>
+        <h3>Envoyer votre demande</h3>
+        <div class="field"><label for="c-n">Nom et société</label><input id="c-n" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="c-b">Votre besoin</label><textarea id="c-b" rows="4" placeholder="Ex. 6 techniciens instrumentistes pour un arrêt de 3 mois à Port-Gentil"></textarea></div>
+        <p class="field-error" id="c-e" role="alert"></p>
+        <button class="btn btn-primary" type="submit">${icon('whatsapp', 18)} Envoyer par WhatsApp</button>
+        <p class="xs muted">Votre message s’ouvre dans WhatsApp, prêt à être envoyé.</p>
+      </form>
     </div>
   </section>`;
+
+  root.querySelector('#cform').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const n = root.querySelector('#c-n').value.trim(); const b = root.querySelector('#c-b').value.trim();
+    if (b.length < 5) { root.querySelector('#c-e').textContent = 'Décrivez brièvement votre besoin.'; return; }
+    root.querySelector('#c-e').textContent = '';
+    window.open(`${C.whatsapp}?text=${encodeURIComponent(`Bonjour MOURESS, ${n ? n + ' : ' : ''}${b}`)}`, '_blank', 'noopener');
+  });
+
+  const s = ctx.query.get('s');
+  if (s) requestAnimationFrame(() => root.querySelector('#' + CSS.escape(s))?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
 }

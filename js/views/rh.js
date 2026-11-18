@@ -282,7 +282,7 @@ export async function receipt(ctx, root) {
       ${o.demo ? '<p class="demo-banner"><strong>Reçu de démonstration</strong> — paiement simulé, aucune somme n’a été débitée.</p>' : ''}
       <p><span class="muted small">Client</span><br><strong>${esc(company.name)}</strong></p>
       <table class="table" style="min-width:0"><thead><tr><th>Désignation</th><th>Qté</th><th>Prix unitaire</th><th>Total</th></tr></thead><tbody>
-        <tr><td>Pass MOURESS Académie — ${esc(o.profileName || o.sessionTitle)}<br><span class="xs muted">${esc(o.sessionTitle)} · formation, entraînement illimité, examen (${CONFIG.ATTEMPTS_PER_PASS} tentatives), attestation si réussite</span></td><td>${o.qty}</td><td>${esc(fmtMoney(o.unitPrice))}</td><td><strong>${esc(fmtMoney(o.total))}</strong></td></tr></tbody></table>
+        <tr><td>Pass MOURESS Training — ${esc(o.profileName || o.sessionTitle)}<br><span class="xs muted">${esc(o.sessionTitle)} · formation, entraînement illimité, examen (${CONFIG.ATTEMPTS_PER_PASS} tentatives), attestation si réussite</span></td><td>${o.qty}</td><td>${esc(fmtMoney(o.unitPrice))}</td><td><strong>${esc(fmtMoney(o.total))}</strong></td></tr></tbody></table>
       <p class="right"><strong>Total payé : ${esc(fmtMoney(o.total))}</strong><br><span class="xs muted">Mode : ${methodLabel(o.method)} · réf. ${esc(o.ref)}</span></p>
       <p class="xs muted">MOURESS SAS — ${esc(CONFIG.CONTACT.address)} — ${esc(CONFIG.CONTACT.phone)}. Prix provisoires. Document simple, ne tient pas lieu de facture fiscale.</p></article></div>`;
   root.querySelector('#print').addEventListener('click', () => window.print());

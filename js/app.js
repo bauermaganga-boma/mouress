@@ -6,6 +6,7 @@ import { icon, logo } from './ui.js';
 
 const ROUTES = [
   { p: '', view: 'landing' },
+  { p: 'training', view: 'training' },
   { p: 'formation', view: 'formation' },
   { p: 'formation/:d', view: 'formation' },
   { p: 'formation/:d/:b', view: 'formation' },
@@ -67,35 +68,50 @@ async function refreshUser() {
   return state.user;
 }
 
-const NAV = [
-  { key: '', label: 'Accueil', href: '#/', icon: 'home' },
+const NAV_CORP = [
+  { key: 'top', label: 'Accueil', href: '#/', icon: 'home' },
+  { key: 'services', label: 'Services', href: '#/?s=services', icon: 'wrench' },
+  { key: 'secteurs', label: 'Secteurs', href: '#/?s=secteurs', icon: 'factory' },
+  { key: 'training', label: 'Training', href: '#/training', icon: 'award' },
+  { key: 'contact', label: 'Contact', href: '#/?s=contact', icon: 'phone' },
+];
+const NAV_TRAINING = [
+  { key: 'training', label: 'Training', href: '#/training', icon: 'home' },
   { key: 'formation', label: 'Formation', href: '#/formation', icon: 'book', also: ['profil', 'cours', 'entrainement', 'examen', 'resultat'] },
   { key: 'rh', label: 'Espace entreprise', href: '#/rh', icon: 'building', also: ['connexion', 'inscription', 't'] },
   { key: 'mon-espace', label: 'Mon espace', href: '#/mon-espace', icon: 'user', also: ['attestation'] },
   { key: 'verifier', label: 'Vérifier', href: '#/verifier', icon: 'award' },
 ];
+const isCorp = () => parseHash().segs.length === 0;
 
 function activeKey() {
-  const seg = parseHash().segs[0] || '';
-  const hit = NAV.find((n) => n.key === seg || (n.also || []).includes(seg));
+  const { segs, query } = parseHash();
+  if (isCorp()) return query.get('s') || 'top';
+  const hit = NAV_TRAINING.find((n) => n.key === segs[0] || (n.also || []).includes(segs[0]));
   return hit ? hit.key : null;
 }
 
 function renderShell() {
+  const corp = isCorp();
+  const NAV = corp ? NAV_CORP : NAV_TRAINING;
   const key = activeKey();
   const cur = (k) => (k === key ? ' aria-current="page"' : '');
   document.getElementById('site-header').innerHTML = `<div class="container bar-inner">
-    <a class="brand" href="#/" aria-label="MOURESS Académie — accueil">${logo('clair')}<span class="brand-sub">Académie</span></a>
+    <a class="brand" href="${corp ? '#/' : '#/training'}" aria-label="${corp ? 'MOURESS — accueil' : 'MOURESS Training — accueil'}">${logo('clair')}<span class="brand-sub">${corp ? '' : 'Training'}</span></a>
     <nav class="nav-main" aria-label="Navigation principale">${NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${n.label}</a>`).join('')}</nav>
-    <div class="header-actions">${state.user
+    <div class="header-actions">${corp ? `<a class="btn btn-primary btn-sm" href="#/training">${icon('award', 16)} MOURESS Training</a>` : `<a class="back-site" href="#/">← Site MOURESS</a>`}${corp ? '' : state.user
       ? `<span class="user-chip">${esc(state.user.name)}</span><button type="button" class="btn btn-light btn-sm" data-logout>Déconnexion</button>`
       : `<a class="btn btn-primary btn-sm" href="#/connexion">${icon('login', 16)} Connexion entreprise</a>`}</div></div>`;
   document.getElementById('tabbar').innerHTML = NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${icon(n.icon)}<span>${n.label}</span></a>`).join('');
-  document.getElementById('site-footer').innerHTML = `<div class="container"><div class="footer-grid">
+  document.getElementById('site-footer').innerHTML = corp ? `<div class="container"><div class="footer-grid">
+    <div>${logo('sombre')}<p>Prestataire de services industriels : placement de personnel, supervision, engineering, mise en service, assistance technique.</p></div>
+    <div><h4>MOURESS</h4><ul><li><a href="#/?s=services">Services</a></li><li><a href="#/?s=secteurs">Secteurs</a></li><li><a href="#/training">MOURESS Training</a></li><li><a href="#/?s=contact">Contact</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>${esc(CONFIG.CONTACT.address)}</li><li><a href="${CONFIG.CONTACT.phoneHref}">${esc(CONFIG.CONTACT.phone)}</a></li><li><a href="${CONFIG.CONTACT.whatsapp}" target="_blank" rel="noopener">WhatsApp</a></li></ul></div></div>
+    <p class="footer-legal">© ${new Date().getFullYear()} MOURESS SAS — Libreville. · <a href="credits.html">Crédits photos</a></p></div>` : `<div class="container"><div class="footer-grid">
     <div>${logo('sombre')}<p>Tests d’aptitude et formation pour les équipes techniques et leurs fonctions support.</p></div>
-    <div><h4>Plateforme</h4><ul><li><a href="#/formation">Catalogue de formation</a></li><li><a href="#/rh">Espace entreprise</a></li><li><a href="#/mon-espace">Mon espace candidat</a></li><li><a href="#/verifier">Vérifier une attestation</a></li></ul></div>
+    <div><h4>Plateforme</h4><ul><li><a href="#/training">MOURESS Training</a></li><li><a href="#/formation">Catalogue de formation</a></li><li><a href="#/rh">Espace entreprise</a></li><li><a href="#/mon-espace">Mon espace candidat</a></li><li><a href="#/verifier">Vérifier une attestation</a></li></ul></div>
     <div><h4>MOURESS</h4><ul><li>${esc(CONFIG.CONTACT.address)}</li><li><a href="${CONFIG.CONTACT.phoneHref}">${esc(CONFIG.CONTACT.phone)}</a></li><li><a href="${CONFIG.CONTACT.whatsapp}" target="_blank" rel="noopener">WhatsApp</a></li></ul></div></div>
-    <p class="footer-legal">© ${new Date().getFullYear()} MOURESS SAS — Libreville. Les attestations MOURESS Académie ne constituent pas des diplômes officiels. · <a href="credits.html">Crédits photos</a></p></div>`;
+    <p class="footer-legal">© ${new Date().getFullYear()} MOURESS SAS — Libreville. Les attestations MOURESS Training ne constituent pas des diplômes officiels. · <a href="credits.html">Crédits photos</a></p></div>`;
 }
 
 async function render() {
@@ -115,7 +131,7 @@ async function render() {
     path, query, params: m ? m.params : {}, store, user: state.user, root,
     alive: () => token === state.token,
     onLeave: (fn) => state.leave.push(fn),
-    setTitle: (t) => { document.title = t ? `${t} — MOURESS Académie` : 'MOURESS Académie — Tests d’aptitude et formation'; },
+    setTitle: (t) => { document.title = t ? `${t} — MOURESS Training` : 'MOURESS — Services industriels et Training'; },
     setChrome: (c) => { document.body.dataset.chrome = c; },
     toast, go, refreshUser,
   };

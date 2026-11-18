@@ -2,7 +2,7 @@
 import { CONFIG } from '../../config.js';
 import { getProfilesData, levelOf, loadContent } from '../data.js';
 import { esc, fmtDate, fmtDateInput, fmtMoney, absUrl, downloadFile, toCsv, isEmail, pct } from '../util.js';
-import { icon, badge, bar, pageHead, crumbs, whatsappLink } from '../ui.js';
+import { icon, badge, bar, pageHead, crumbs, whatsappLink, avatar } from '../ui.js';
 import { COMPLIANCE, habilitations, compliance, passPrice, validity } from '../pass.js';
 import { band, BAND_LABEL, collabStats, matrixThemes, gaps, recommend } from '../skills.js';
 
@@ -124,7 +124,7 @@ export async function renderTeamTab(ctx, host, company, data, trainingSessions, 
     const q = norm(f.q);
     const list = rows.filter((r) => (!q || norm(`${r.e.name} ${r.e.email}`).includes(q)) && (!f.team || r.e.team === f.team) && (!f.profile || r.e.profileId === f.profile) && (!f.status || r.status === f.status));
     $('#d-count').textContent = `${list.length} collaborateur${list.length > 1 ? 's' : ''}`;
-    $('#dir').innerHTML = list.map((r) => `<a class="card card-link emp-card" href="#/rh/equipe/${esc(r.e.id)}"><div class="emp-main"><strong>${esc(r.e.name)}</strong><span class="xs muted">${esc(r.e.email)}</span>
+    $('#dir').innerHTML = list.map((r) => `<a class="card card-link emp-card" href="#/rh/equipe/${esc(r.e.id)}">${avatar(r.e, 52)}<div class="emp-main"><strong>${esc(r.e.name)}</strong><span class="xs muted">${esc(r.e.email)}</span>
       <span class="small">${esc(pById.get(r.e.profileId)?.name || 'Poste non renseigné')}${r.e.team ? ` · ${esc(r.e.team)}` : ''}</span></div>
       <div class="emp-side">${pill(r.status)}<span class="funnel-go sm">${icon('arrow', 18)}</span></div></a>`).join('') || '<div class="card"><p class="muted">Aucun collaborateur ne correspond. Ajoutez-en un ou importez un CSV.</p></div>';
   };
@@ -210,9 +210,10 @@ export async function employee(ctx, root) {
     root.innerHTML = `<div class="container page">
       ${pageHead({ crumbs: [{ label: 'Espace entreprise', href: '#/rh' }, { label: 'Mes équipes', href: back }, { label: emp.name }], back, eyebrow: emp.team || 'Collaborateur', title: emp.name,
         text: `${poste ? poste.name + (levelOf(data, poste.level) ? ' — ' + levelOf(data, poste.level).name : '') : 'Poste non renseigné'}${emp.hireDate ? ` · embauché le ${fmtDate(emp.hireDate)}` : ''}` })}
-      <div class="btn-row emp-head-row">${pill(st)}<span class="muted small">${esc(emp.email)}</span></div>
+      <div class="emp-id">${avatar(emp, 84)}<div class="btn-row emp-head-row" style="margin:0">${pill(st)}<span class="muted small">${esc(emp.email)}</span></div></div>
       <div class="btn-row" style="margin:var(--sp-3) 0 var(--sp-5)"><details class="inline-details"><summary class="btn btn-light btn-sm">Modifier la fiche</summary>
         <form id="emp-edit" class="card" novalidate style="margin-top:var(--sp-3)"><div class="form-grid">
+          <div class="photo-field">${avatar(emp, 56)}<label class="btn btn-light btn-sm" for="x-photo">Changer la photo</label><input id="x-photo" type="file" accept="image/*" hidden>${emp.photo ? '<button type="button" class="btn btn-ghost btn-sm" id="x-photo-del">Retirer la photo</button>' : ''}</div>
           <div class="field"><label for="x-name">Nom</label><input id="x-name" type="text" value="${esc(emp.name)}"></div>
           <div class="field"><label for="x-email">E-mail</label><input id="x-email" type="email" value="${esc(emp.email)}"></div>
           <div class="field"><label for="x-prof">Poste / profil</label><select id="x-prof"><option value="">— Aucun —</option>${profileOptions(data, emp.profileId)}</select></div>
@@ -259,6 +260,16 @@ export async function employee(ctx, root) {
 
   await draw();
   if (!ctx.alive()) return;
+
+  const setPhoto = async (photo) => { const { emp } = root._ctxData; await ctx.store.saveEmployee({ ...emp, photo }); ctx.toast(photo ? 'Photo enregistrée.' : 'Photo retirée.'); await draw(); };
+  root.addEventListener('change', (ev) => {
+    if (ev.target.id !== 'x-photo') return;
+    const file = ev.target.files?.[0]; if (!file || !file.type.startsWith('image/')) return;
+    const img = new Image(); const url = URL.createObjectURL(file);
+    img.onload = () => { const S = 240, c = document.createElement('canvas'); c.width = c.height = S; const k = Math.max(S / img.width, S / img.height); const w = img.width * k, h = img.height * k; c.getContext('2d').drawImage(img, (S - w) / 2, (S - h) / 2, w, h); URL.revokeObjectURL(url); setPhoto(c.toDataURL('image/jpeg', 0.82)); };
+    img.onerror = () => URL.revokeObjectURL(url); img.src = url;
+  });
+  root.addEventListener('click', (ev) => { if (ev.target.closest('#x-photo-del')) setPhoto(''); });
 
   root.addEventListener('submit', async (e) => {
     const { emp } = root._ctxData;

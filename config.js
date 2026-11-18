@@ -1,7 +1,7 @@
-// Configuration MOURESS Académie.
+// Configuration MOURESS Training.
 // Tous les prix sont PROVISOIRES (FCFA) : à valider par la direction commerciale.
 export const CONFIG = {
-  APP_NAME: 'MOURESS Académie',
+  APP_NAME: 'MOURESS Training',
   // Renseigner les deux valeurs pour activer SupabaseStore (adaptateur non testé, voir js/store-supabase.js).
   SUPABASE_URL: '',
   SUPABASE_ANON_KEY: '',

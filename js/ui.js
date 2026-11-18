@@ -122,3 +122,35 @@ export function pageHead({ crumbs: c = [], back, title, text = '', actions = '',
 }
 
 export function whatsappLink(text) { return `https://wa.me/?text=${encodeURIComponent(text)}`; }
+
+// ---------- Avatars : photo du collaborateur si elle existe, sinon portrait illustré (stable pour un même nom) ----------
+const hash = (s) => { let h = 2166136261; for (const c of String(s || '')) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+const SKIN = ['#6B4A36', '#7A5440', '#8D6249', '#A9785A', '#4E3527', '#C79A7A'];
+const HAIR = ['#14110F', '#1E1814', '#2B211A'];
+const SHIRT = ['#F28C28', '#0B2C5F', '#1F7A52', '#C0392B', '#2E6DA4'];
+const BGS = ['#DCE8F7', '#FBE7CF', '#DDF0E6', '#EBE3F5', '#F6E1E1'];
+
+export function avatarSvg(name) {
+  const h = hash(name);
+  const skin = SKIN[h % SKIN.length], hair = HAIR[(h >>> 3) % HAIR.length], shirt = SHIRT[(h >>> 5) % SHIRT.length], bg = BGS[(h >>> 7) % BGS.length];
+  const style = (h >>> 9) % 5; // 0 court, 1 ras, 2 afro, 3 tresses/long, 4 court + barbe
+  const helmet = (h >>> 12) % 3 !== 0;
+  const helmetCol = ['#F2C200', '#FFFFFF', '#F28C28'][(h >>> 14) % 3];
+  const hairShape = style === 1 ? '' : style === 2 ? `<circle cx="50" cy="38" r="22" fill="${hair}"/>` : style === 3 ? `<path d="M27 40c0-17 10-24 23-24s23 7 23 24v22H66V42H34v20H27z" fill="${hair}"/>` : `<path d="M30 40c0-13 8-20 20-20s20 7 20 20c-6-6-12-8-20-8s-14 2-20 8z" fill="${hair}"/>`;
+  const beard = style === 4 ? `<path d="M34 50c0 13 7 19 16 19s16-6 16-19c-3 6-8 9-16 9s-13-3-16-9z" fill="${hair}" opacity=".9"/>` : '';
+  const hat = helmet ? `<path d="M29 38c0-13 9-21 21-21s21 8 21 21z" fill="${helmetCol}"/><rect x="25" y="37" width="50" height="5" rx="2.5" fill="${helmetCol}" stroke="rgba(0,0,0,.15)"/><rect x="47" y="17" width="6" height="9" rx="2" fill="rgba(0,0,0,.12)"/>` : '';
+  return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" fill="${bg}"/>
+    <path d="M12 100c0-20 16-30 38-30s38 10 38 30z" fill="${shirt}"/><path d="M38 72l12 12 12-12" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
+    <rect x="43" y="56" width="14" height="16" rx="6" fill="${skin}"/>
+    ${style === 2 || style === 3 ? hairShape : ''}
+    <ellipse cx="50" cy="44" rx="16" ry="19" fill="${skin}"/>
+    ${style !== 2 && style !== 3 ? hairShape : ''}${beard}
+    <circle cx="44" cy="44" r="1.8" fill="#1a1a1a"/><circle cx="56" cy="44" r="1.8" fill="#1a1a1a"/><path d="M45 54c3 2.5 7 2.5 10 0" fill="none" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round"/>
+    ${hat}</svg>`;
+}
+
+/** @param {{name:string, photo?:string}} p  @param {number} size */
+export function avatar(p, size = 44) {
+  const photo = typeof p?.photo === 'string' && /^data:image\/(jpeg|png|webp);base64,/.test(p.photo) ? p.photo : null;
+  return `<span class="avatar" style="width:${size}px;height:${size}px">${photo ? `<img src="${photo}" alt="" width="${size}" height="${size}">` : avatarSvg(p?.name)}</span>`;
+}

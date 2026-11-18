@@ -266,7 +266,7 @@ class LocalStore {
   async saveEmployee(emp) {
     const email = String(emp.email || '').trim().toLowerCase();
     const i = emp.id ? this.db.employees.findIndex((x) => x.id === emp.id) : -1;
-    const row = { id: emp.id || uid('e'), companyId: emp.companyId, name: String(emp.name).trim(), email, profileId: emp.profileId || '', team: String(emp.team || '').trim(), hireDate: emp.hireDate || null, createdAt: emp.createdAt || Date.now() };
+    const row = { id: emp.id || uid('e'), companyId: emp.companyId, name: String(emp.name).trim(), email, profileId: emp.profileId || '', team: String(emp.team || '').trim(), hireDate: emp.hireDate || null, photo: typeof emp.photo === 'string' ? emp.photo : '', createdAt: emp.createdAt || Date.now() };
     if (i >= 0) this.db.employees[i] = row; else this.db.employees.push(row);
     this._save();
     return { ...row };

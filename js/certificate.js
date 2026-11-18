@@ -25,10 +25,10 @@ export function certificateHTML(cert, profileName, sectorName = '', val = null) 
       <div class="cert-corner cert-corner-tl"></div><div class="cert-corner cert-corner-br"></div>
       <header class="cert-head">
         <img class="cert-logo" src="assets/logo/mouress-logo-horizontal-couleur-pour-fond-clair.svg" alt="MOURESS">
-        <span class="cert-academy">Académie</span>
+        <span class="cert-academy">Training</span>
       </header>
       <p class="cert-kicker">Attestation de réussite</p>
-      <p class="cert-intro">MOURESS Académie atteste que</p>
+      <p class="cert-intro">MOURESS Training atteste que</p>
       <h2 class="cert-name">${esc(cert.name)}</h2>
       <p class="cert-text">a réussi le test d’aptitude</p>
       <p class="cert-profile">${esc(profileName)}</p>
@@ -41,7 +41,7 @@ export function certificateHTML(cert, profileName, sectorName = '', val = null) 
       <footer class="cert-foot">
         <div class="cert-qr">${qrSvg(url)}</div>
         <p class="cert-mention">${esc(MENTION)}.<br>Vérification en ligne : <span class="cert-url">${esc(url)}</span></p>
-        <div class="cert-seal"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 21l5-3 5 3-1.5-7"/></svg><span>MOURESS<br>Académie</span></div>
+        <div class="cert-seal"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 21l5-3 5 3-1.5-7"/></svg><span>MOURESS<br>Training</span></div>
       </footer>
     </div>
   </article>`;

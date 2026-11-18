@@ -16,7 +16,7 @@ export default async function render(ctx, root) {
       <div class="btn-row"><button class="btn btn-primary" type="submit">${icon('search', 18)} Vérifier</button>${demo ? `<button type="button" class="btn btn-ghost btn-sm" id="demo">Utiliser un code de démonstration</button>` : ''}</div>
     </form>
     <div id="out" aria-live="polite" style="margin-top:var(--sp-5)"></div>
-    <p class="xs muted" style="margin-top:var(--sp-5)">Une attestation MOURESS Académie atteste de la réussite à un test d’aptitude. Elle ne constitue pas un diplôme officiel.</p></div>`;
+    <p class="xs muted" style="margin-top:var(--sp-5)">Une attestation MOURESS Training atteste de la réussite à un test d’aptitude. Elle ne constitue pas un diplôme officiel.</p></div>`;
 
   const out = root.querySelector('#out');
   const input = root.querySelector('#code');
