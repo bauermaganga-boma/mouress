@@ -20,6 +20,8 @@ const ROUTES = [
   { p: 't/:token', view: 'candidat' },
   { p: 'rh', view: 'rh', fn: 'dashboard', auth: true },
   { p: 'rh/inviter', view: 'rh', fn: 'invite', auth: true },
+  { p: 'rh/equipe', view: 'rh', fn: 'teamHome', auth: true },
+  { p: 'rh/equipe/:id', view: 'rh', fn: 'employee', auth: true },
   { p: 'rh/nouvelle-session', view: 'rh', fn: 'invite', auth: true },
   { p: 'rh/session/:id', view: 'rh', fn: 'session', auth: true },
   { p: 'rh/facturation', view: 'rh', fn: 'billing', auth: true },

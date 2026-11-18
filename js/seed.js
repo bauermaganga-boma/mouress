@@ -2,7 +2,7 @@
 // Les thèmes sont lus dans le contenu du profil s'il existe, sinon des thèmes génériques sont utilisés.
 import { CONFIG } from '../config.js';
 import { loadContent, themesOf, getProfilesData } from './data.js';
-import { sha256 } from './util.js';
+import { sha256, addMonths } from './util.js';
 import { passPrice } from './pass.js';
 
 const DAY = 86400000;
@@ -46,7 +46,7 @@ export async function buildSeed() {
   const now = Date.now();
   const hash = await sha256(CONFIG.DEMO_ACCOUNT.password);
   const db = {
-    v: 2, companies: [], users: [], sessions: [], invitations: [], attempts: [], certificates: [], orders: [], assignments: [],
+    v: 3, companies: [], users: [], sessions: [], invitations: [], attempts: [], certificates: [], orders: [], assignments: [], employees: [], plan: [],
   };
   db.companies.push({ id: 'c_demo', name: 'Entreprise Démo', createdAt: now - 40 * DAY, demo: true });
   db.users.push({ id: 'u_demo', companyId: 'c_demo', email: CONFIG.DEMO_ACCOUNT.email, name: 'Aurélie Démo (RH)', hash });
@@ -78,7 +78,7 @@ export async function buildSeed() {
 
   let n = 0;
   for (const s of sessions) {
-    db.sessions.push({ id: s.id, level: levelOfProfile(s.profileId), type: 'recruitment', companyId: 'c_demo', title: s.title, profileId: s.profileId, questionCount: s.questionCount, passMark: s.passMark, createdAt: s.createdAt, deadline: s.deadline });
+    db.sessions.push({ id: s.id, status: 'open', level: levelOfProfile(s.profileId), type: 'recruitment', companyId: 'c_demo', title: s.title, profileId: s.profileId, questionCount: s.questionCount, passMark: s.passMark, createdAt: s.createdAt, deadline: s.deadline });
     for (const c of s.cands) {
       n++;
       const [name, email, kind, percent, dur, code] = c;
@@ -149,6 +149,38 @@ export async function buildSeed() {
     as('i_team3', 'practice', t3[0], 5),
     as('i_team3', 'practice', t3[2], 5),
   ];
+  // Recrutements : quelques décisions
+  const dec = (id, d) => { const i = db.invitations.find((x) => x.id === id); if (i) i.decision = d; };
+  dec('i_demo1', 'hired'); dec('i_demo2', 'rejected');
+
+  // Mes équipes : collaborateurs aux cas variés (valide, expire bientôt, expirée, à planifier, plan en retard, plan à venir)
+  const P4 = pick('hse-agent', 3); const P5 = pick('tech-instru', 4);
+  const mAgo = (n) => addMonths(now, -n);
+  const people = [
+    ['e_demo1', 'Alain Obiang', 'a.obiang@exemple.com', P3, 'Maintenance Port-Gentil', mAgo(40), { cert: [P3, mAgo(5), 'MRS-2026-E1A111'] }],
+    ['e_demo2', 'Nadège Koumba', 'n.koumba@exemple.com', P3, 'Maintenance Port-Gentil', mAgo(30), { cert: [P3, addMonths(now, -24) + 45 * DAY, 'MRS-2024-E2B222'] }],
+    ['e_demo3', 'Hervé Ndzigou', 'h.ndzigou@exemple.com', P3, 'Maintenance Port-Gentil', mAgo(60), { cert: [P3, mAgo(26), 'MRS-2024-E3C333'] }],
+    ['e_demo4', 'Chantal Mboumba', 'c.mboumba@exemple.com', P3, 'Maintenance Port-Gentil', mAgo(8), {}],
+    ['e_demo5', 'Lionel Essono', 'l.essono@exemple.com', P3, 'Maintenance Port-Gentil', mAgo(3), {}],
+    ['e_demo6', 'Marc Obame', 'm.obame@exemple.com', P1, 'Production offshore', mAgo(18), { cert: [P1, mAgo(1), 'MRS-2026-E6F666'] }],
+    ['e_demo7', 'Estelle Ndong', 'e.ndong@exemple.com', P4, 'QHSE', mAgo(50), { cert: [P4, mAgo(30), 'MRS-2024-E7G777'] }],
+    ['e_demo8', 'Karim Mba', 'k.mba@exemple.com', P1, 'Production offshore', mAgo(22), { cert: [P1, mAgo(3), 'MRS-2026-E8H888'] }],
+  ];
+  for (const [id, name, email, profileId, team, hire, extra] of people) {
+    db.employees.push({ id, companyId: 'c_demo', name, email, profileId, team, hireDate: hire, createdAt: now - 20 * DAY });
+    if (extra.cert) {
+      const [pid, date, code] = extra.cert;
+      db.certificates.push({ code, attemptId: 'a_' + id, name, email, profileId: pid, profileName: '', percent: 74 + (id.length + name.length) % 17, passMark: 70, date });
+    }
+  }
+  const pl = (employeeId, profileId, dueDays, reason, priority, status = 'planned', extra = {}) =>
+    db.plan.push({ id: 'p_demo' + db.plan.length, employeeId, profileId, due: now + dueDays * DAY, reason, priority, status, invitationId: null, sessionId: null, createdAt: now - 12 * DAY, doneAt: null, ...extra });
+  pl('e_demo1', P5, -10, 'obligation', 'haute');                 // plan en retard
+  pl('e_demo3', P3, 20, 'recyclage', 'haute');                   // renouvellement à venir
+  pl('e_demo5', P3, 30, 'montee', 'normale');                    // plan à venir
+  pl('e_demo7', P4, 10, 'recyclage', 'haute', 'in_progress');    // en cours
+  pl('e_demo8', P2, -3, 'montee', 'normale');                    // plan en retard
+
   // Un Pass par personne : une commande payée (démo) par session.
   const inv = db.invitations.find((i) => i.id === 'i_demo7');
   if (inv) inv.trainingAt = now - 2 * DAY;

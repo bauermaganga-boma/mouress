@@ -1,6 +1,7 @@
 import { getProfilesData } from '../data.js';
 import { esc, fmtDate, CODE_RE } from '../util.js';
 import { icon } from '../ui.js';
+import { validity } from '../pass.js';
 
 export default async function render(ctx, root) {
   ctx.setTitle('Vérifier une attestation');
@@ -25,12 +26,13 @@ export default async function render(ctx, root) {
     const cert = await ctx.store.getCertificate(code);
     if (!cert) { out.innerHTML = `<div class="alert alert-ko"><strong>Code non reconnu.</strong> Aucune attestation ne correspond à ${esc(code)}. Vérifiez la saisie.</div>`; return; }
     const profile = data.profiles.find((p) => p.id === cert.profileId);
-    out.innerHTML = `<div class="card verified"><span class="badge badge-ok">${icon('check', 14)} Attestation authentique</span>
+    const val = validity(cert, profile);
+    out.innerHTML = `<div class="card verified">${val.status === 'expired' ? `<span class="badge badge-ko">${icon('x', 14)} Attestation authentique mais expirée</span>` : `<span class="badge badge-ok">${icon('check', 14)} Attestation authentique et valide</span>`}
       <h2 class="h1-md" style="margin-top:.6rem">${esc(cert.name)}</h2>
       <dl class="dl"><div><dt>Test réussi</dt><dd>${esc(profile?.name || cert.profileName || cert.profileId)}</dd></div>
       <div><dt>Score</dt><dd>${esc(cert.percent)} % (seuil ${esc(cert.passMark)} %)</dd></div>
       <div><dt>Délivrée le</dt><dd>${esc(fmtDate(cert.date))}</dd></div>
-      <div><dt>Code</dt><dd>${esc(cert.code)}</dd></div></dl>
+      <div><dt>${val.status === 'expired' ? 'Expirée le' : 'Valable jusqu’au'}</dt><dd>${esc(fmtDate(val.until))}</dd></div><div><dt>Code</dt><dd>${esc(cert.code)}</dd></div></dl>
       <a class="btn btn-outline" href="#/attestation/${esc(cert.code)}">Voir l’attestation</a></div>`;
   };
   root.querySelector('#vf').addEventListener('submit', (e) => { e.preventDefault(); check(); });

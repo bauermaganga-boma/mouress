@@ -131,3 +131,12 @@ export function mdLite(text) {
     return out;
   }).join('');
 }
+
+/** Ajoute n mois à un horodatage (le 31 + 1 mois tombe sur le dernier jour du mois suivant). */
+export function addMonths(ts, n) {
+  const d = new Date(ts);
+  const day = d.getDate();
+  d.setMonth(d.getMonth() + n);
+  if (d.getDate() < day) d.setDate(0);
+  return d.getTime();
+}

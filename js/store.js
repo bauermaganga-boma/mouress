@@ -13,6 +13,10 @@
 //   getInvitationByToken(token) -> {invitation,session,company}|null     touchInvitation(token)
 //   saveAttempt(attempt)  getAttempt(id)  listAttemptsByDevice()  listAttemptsBySession(sessionId)
 //   listAssignments(sessionId)  addAssignments(sessionId,list)  listCollabByEmail(email)  markAssignmentsDone(email,{profileId,moduleId?,theme?})
+//   setSessionStatus(sessionId,'open'|'closed')   setDecision(invitationId,'hired'|'rejected'|null)
+//   listEmployees(companyId) getEmployee(id) saveEmployee(emp) addEmployees(companyId,list) deleteEmployee(id)
+//   listPlan(companyId,employeeId?) getPlanItem(id) addPlanItem(item) updatePlanItem(id,patch) deletePlanItem(id) linkPlanItem(id,{sessionId,invitationId})
+//   listCertificatesByEmail(email)  listAttemptsByEmail(companyId,email)
 //   createCertificate(attempt)  getCertificate(code)  listCertificatesByDevice()
 // Progression de cours et identité du candidat : toujours locales à l'appareil (voir `local` ci-dessous).
 
@@ -64,12 +68,14 @@ class LocalStore {
 
   async init() {
     this.db = readJSON(KEY, null);
-    if (!this.db || this.db.v !== 2) {
+    if (!this.db || this.db.v !== 3) {
       this.db = await buildSeed();
       this._save();
     }
     this.db.assignments = this.db.assignments || [];
     this.db.orders = this.db.orders || [];
+    this.db.employees = this.db.employees || [];
+    this.db.plan = this.db.plan || [];
   }
   _save() {
     if (!writeJSON(KEY, this.db)) console.warn('Stockage local indisponible ou plein.');
@@ -108,7 +114,7 @@ class LocalStore {
   // ---------- Sessions et invitations ----------
   _decorate(s) {
     const invitations = this.db.invitations.filter((i) => i.sessionId === s.id).map((i) => this._decorateInv(i, s));
-    return { ...s, type: s.type || 'recruitment', invitations };
+    return { ...s, type: s.type || 'recruitment', status: s.status || 'open', invitations };
   }
   _decorateInv(i, s) {
     const attempts = this.db.attempts.filter((a) => a.invitationId === i.id).map((a) => ({ ...a, items: undefined })).sort((a, b) => a.startedAt - b.startedAt);
@@ -242,6 +248,87 @@ class LocalStore {
     }
     if (n) this._save();
     return n;
+  }
+
+  // ---------- Recrutements : statut du poste et décision ----------
+  async setSessionStatus(sessionId, status) {
+    const s = this.db.sessions.find((x) => x.id === sessionId);
+    if (s) { s.status = status; this._save(); }
+  }
+  async setDecision(invitationId, decision) {
+    const i = this.db.invitations.find((x) => x.id === invitationId);
+    if (i) { i.decision = decision || null; this._save(); }
+  }
+
+  // ---------- Mes équipes : collaborateurs, plan de formation ----------
+  async listEmployees(companyId) { return this.db.employees.filter((e) => e.companyId === companyId).map((e) => ({ ...e })); }
+  async getEmployee(id) { const e = this.db.employees.find((x) => x.id === id); return e ? { ...e } : null; }
+  async saveEmployee(emp) {
+    const email = String(emp.email || '').trim().toLowerCase();
+    const i = emp.id ? this.db.employees.findIndex((x) => x.id === emp.id) : -1;
+    const row = { id: emp.id || uid('e'), companyId: emp.companyId, name: String(emp.name).trim(), email, profileId: emp.profileId || '', team: String(emp.team || '').trim(), hireDate: emp.hireDate || null, createdAt: emp.createdAt || Date.now() };
+    if (i >= 0) this.db.employees[i] = row; else this.db.employees.push(row);
+    this._save();
+    return { ...row };
+  }
+  /** Import en lot : ignore les e-mails déjà présents dans l'entreprise. Renvoie {added, skipped}. */
+  async addEmployees(companyId, list) {
+    let added = 0; let skipped = 0;
+    for (const e of list) {
+      const email = String(e.email || '').trim().toLowerCase();
+      if (!email || this.db.employees.some((x) => x.companyId === companyId && x.email === email)) { skipped++; continue; }
+      this.db.employees.push({ id: uid('e'), companyId, name: String(e.name).trim(), email, profileId: e.profileId || '', team: String(e.team || '').trim(), hireDate: e.hireDate || null, createdAt: Date.now() });
+      added++;
+    }
+    this._save();
+    return { added, skipped };
+  }
+  async deleteEmployee(id) {
+    this.db.employees = this.db.employees.filter((e) => e.id !== id);
+    this.db.plan = this.db.plan.filter((p) => p.employeeId !== id);
+    this._save();
+  }
+  _plan(item) {
+    let status = item.status || 'planned';
+    let token = null;
+    if (item.invitationId) {
+      const i = this.db.invitations.find((x) => x.id === item.invitationId);
+      const sess = i && this.db.sessions.find((x) => x.id === i.sessionId);
+      if (i && sess) { const d = this._decorateInv(i, sess); token = d.token; status = d.status === 'passed' ? 'done' : 'in_progress'; }
+    }
+    return { ...item, status, token, late: status !== 'done' && item.due < Date.now() };
+  }
+  async listPlan(companyId, employeeId) {
+    const ids = new Set(this.db.employees.filter((e) => e.companyId === companyId && (!employeeId || e.id === employeeId)).map((e) => e.id));
+    return this.db.plan.filter((p) => ids.has(p.employeeId)).map((p) => this._plan(p)).sort((a, b) => a.due - b.due);
+  }
+  async getPlanItem(id) { const p = this.db.plan.find((x) => x.id === id); return p ? this._plan(p) : null; }
+  async addPlanItem(item) {
+    const row = { id: uid('p'), employeeId: item.employeeId, profileId: item.profileId, due: item.due, priority: item.priority || 'normale', reason: item.reason || 'montee', status: 'planned', invitationId: null, sessionId: null, createdAt: Date.now(), doneAt: null, fromCert: item.fromCert || null };
+    this.db.plan.push(row);
+    this._save();
+    return this._plan(row);
+  }
+  async updatePlanItem(id, patch) {
+    const p = this.db.plan.find((x) => x.id === id);
+    if (p) { Object.assign(p, patch); this._save(); }
+  }
+  async deletePlanItem(id) { this.db.plan = this.db.plan.filter((p) => p.id !== id); this._save(); }
+  async linkPlanItem(id, { sessionId, invitationId }) {
+    const p = this.db.plan.find((x) => x.id === id);
+    if (p) { p.sessionId = sessionId; p.invitationId = invitationId; p.status = 'in_progress'; this._save(); }
+  }
+  /** Attestations rattachées à un collaborateur par e-mail. */
+  async listCertificatesByEmail(email) {
+    const e = String(email || '').trim().toLowerCase();
+    return e ? this.db.certificates.filter((c) => (c.email || '').toLowerCase() === e).map((c) => ({ ...c })) : [];
+  }
+  /** Examens terminés d'un collaborateur (par e-mail) dans les sessions de l'entreprise. */
+  async listAttemptsByEmail(companyId, email) {
+    const e = String(email || '').trim().toLowerCase();
+    const sessionIds = new Set(this.db.sessions.filter((s) => s.companyId === companyId).map((s) => s.id));
+    return e ? this.db.attempts.filter((a) => sessionIds.has(a.sessionId) && (a.candidate?.email || '').toLowerCase() === e && a.status === 'done')
+      .map((a) => ({ ...a, items: undefined })).sort((x, y) => x.finishedAt - y.finishedAt) : [];
   }
 
   // ---------- Attestations ----------

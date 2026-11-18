@@ -18,7 +18,7 @@ export function qrSvg(text) {
 
 export const MENTION = 'Attestation de réussite à un test d’aptitude MOURESS — ne constitue pas un diplôme officiel';
 
-export function certificateHTML(cert, profileName, sectorName = '') {
+export function certificateHTML(cert, profileName, sectorName = '', val = null) {
   const url = verifyUrl(cert.code);
   return `<article class="certificate" aria-label="Attestation de réussite">
     <div class="cert-frame">
@@ -35,7 +35,7 @@ export function certificateHTML(cert, profileName, sectorName = '') {
       ${sectorName ? `<p class="cert-sector">${esc(sectorName)}</p>` : ''}
       <div class="cert-meta">
         <div><span>Score obtenu</span><strong>${esc(cert.percent)} %</strong><small>seuil de réussite ${esc(cert.passMark)} %</small></div>
-        <div><span>Délivrée le</span><strong>${esc(fmtDate(cert.date))}</strong><small>Libreville, Gabon</small></div>
+        <div><span>Délivrée le</span><strong>${esc(fmtDate(cert.date))}</strong><small>${val ? `Valable jusqu’au ${esc(fmtDate(val.until))}` : 'Libreville, Gabon'}</small></div>
         <div><span>Code de vérification</span><strong class="cert-code">${esc(cert.code)}</strong><small>à vérifier sur la page « Vérifier »</small></div>
       </div>
       <footer class="cert-foot">

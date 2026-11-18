@@ -29,7 +29,7 @@ const toPayload = (a) => ({
   startedAt: a.startedAt, finishedAt: a.finishedAt || '', state: { phase: a.phase, idx: a.idx, qStart: a.qStart, items: a.items },
 });
 const fromAssignment = (r) => ({ id: r.id, sessionId: r.session_id, invitationId: r.invitation_id, kind: r.kind, profileId: r.profile_id, moduleId: r.module_id, theme: r.theme, due: ts(r.due), createdAt: ts(r.created_at), doneAt: ts(r.done_at) });
-const fromSession = (r) => ({ id: r.id, level: r.level, type: r.type, companyId: r.company_id, title: r.title, profileId: r.profile_id, questionCount: r.question_count, passMark: r.pass_mark, deadline: ts(r.deadline), createdAt: ts(r.created_at) });
+const fromSession = (r) => ({ id: r.id, status: r.status || 'open', level: r.level, type: r.type, companyId: r.company_id, title: r.title, profileId: r.profile_id, questionCount: r.question_count, passMark: r.pass_mark, deadline: ts(r.deadline), createdAt: ts(r.created_at) });
 
 function decorateInv(inv, s, attempts) {
   const list = attempts.sort((a, b) => a.startedAt - b.startedAt);
@@ -38,7 +38,7 @@ function decorateInv(inv, s, attempts) {
   if (last) status = last.status === 'done' ? (last.passed ? 'passed' : 'failed') : 'started';
   else if (inv.training_at) status = 'training';
   else if (s.deadline && Date.now() > s.deadline) status = 'expired';
-  return { id: inv.id, sessionId: inv.session_id, token: inv.token, name: inv.name, email: inv.email, createdAt: ts(inv.created_at), status, orderId: inv.order_id, price: inv.price, trainingAt: ts(inv.training_at), attempt: last && { ...last, items: undefined }, attempts: list.map((a) => ({ ...a, items: undefined })) };
+  return { id: inv.id, sessionId: inv.session_id, token: inv.token, name: inv.name, email: inv.email, createdAt: ts(inv.created_at), status, decision: inv.decision || null, orderId: inv.order_id, price: inv.price, trainingAt: ts(inv.training_at), attempt: last && { ...last, items: undefined }, attempts: list.map((a) => ({ ...a, items: undefined })) };
 }
 
 export class SupabaseStore {
@@ -163,6 +163,60 @@ export class SupabaseStore {
     const out = [];
     for (const a of atts) { const c = await this.getCertificate(a.certCode); if (c) out.push(c); }
     return out;
+  }
+
+  // ---------- Recrutements, équipes, plan de formation (NON TESTÉ, comme le reste de cet adaptateur) ----------
+  async setSessionStatus(id, status) { await this._rest(`sessions?id=eq.${id}`, { method: 'PATCH', body: { status } }); }
+  async setDecision(invitationId, decision) { await this._rest(`invitations?id=eq.${invitationId}`, { method: 'PATCH', body: { decision: decision || null } }); }
+
+  _emp(r) { return { id: r.id, companyId: r.company_id, name: r.name, email: r.email, profileId: r.profile_id || '', team: r.team || '', hireDate: ts(r.hire_date), createdAt: ts(r.created_at) }; }
+  _empRow(e) { return { company_id: e.companyId, name: e.name, email: String(e.email).trim().toLowerCase(), profile_id: e.profileId || null, team: e.team || null, hire_date: iso(e.hireDate) }; }
+  async listEmployees(companyId) { return (await this._rest(`employees?company_id=eq.${companyId}&select=*`)).map((r) => this._emp(r)); }
+  async getEmployee(id) { const r = (await this._rest(`employees?id=eq.${id}&select=*`))[0]; return r ? this._emp(r) : null; }
+  async saveEmployee(e) {
+    const res = e.id
+      ? await this._rest(`employees?id=eq.${e.id}`, { method: 'PATCH', body: this._empRow(e), headers: { Prefer: 'return=representation' } })
+      : await this._rest('employees', { method: 'POST', body: this._empRow(e), headers: { Prefer: 'return=representation' } });
+    return this._emp(res[0]);
+  }
+  async addEmployees(companyId, list) {
+    const existing = new Set((await this.listEmployees(companyId)).map((e) => e.email));
+    const fresh = list.filter((e) => e.email && !existing.has(String(e.email).toLowerCase()));
+    if (fresh.length) await this._rest('employees', { method: 'POST', body: fresh.map((e) => this._empRow({ ...e, companyId })) });
+    return { added: fresh.length, skipped: list.length - fresh.length };
+  }
+  async deleteEmployee(id) { await this._rest(`employees?id=eq.${id}`, { method: 'DELETE' }); }
+
+  async _planRows(filter) {
+    const rows = await this._rest(`plan_items?${filter}&select=*,employees(company_id),invitations(token,id,session_id)`);
+    return rows.map((r) => ({ id: r.id, employeeId: r.employee_id, profileId: r.profile_id, due: ts(r.due), priority: r.priority, reason: r.reason, invitationId: r.invitation_id, sessionId: r.session_id,
+      fromCert: r.from_cert, createdAt: ts(r.created_at), doneAt: ts(r.done_at), token: r.invitations?.token || null,
+      status: r.status, late: r.status !== 'done' && ts(r.due) < Date.now() }));
+  }
+  async listPlan(companyId, employeeId) {
+    const emps = employeeId ? [employeeId] : (await this.listEmployees(companyId)).map((e) => e.id);
+    if (!emps.length) return [];
+    return (await this._planRows(`employee_id=in.(${emps.join(',')})`)).sort((a, b) => a.due - b.due);
+  }
+  async getPlanItem(id) { return (await this._planRows(`id=eq.${id}`))[0] || null; }
+  async addPlanItem(i) {
+    const r = await this._rest('plan_items', { method: 'POST', headers: { Prefer: 'return=representation' }, body: { employee_id: i.employeeId, profile_id: i.profileId, due: iso(i.due), priority: i.priority || 'normale', reason: i.reason || 'montee', from_cert: i.fromCert || null } });
+    return this.getPlanItem(r[0].id);
+  }
+  async updatePlanItem(id, patch) {
+    const body = {}; if (patch.status) body.status = patch.status; if (patch.doneAt) body.done_at = iso(patch.doneAt);
+    await this._rest(`plan_items?id=eq.${id}`, { method: 'PATCH', body });
+  }
+  async deletePlanItem(id) { await this._rest(`plan_items?id=eq.${id}`, { method: 'DELETE' }); }
+  async linkPlanItem(id, { sessionId, invitationId }) { await this._rest(`plan_items?id=eq.${id}`, { method: 'PATCH', body: { session_id: sessionId, invitation_id: invitationId, status: 'in_progress' } }); }
+  // Rattachement par e-mail : la RLS limite les lignes aux attestations / examens des sessions de l'entreprise.
+  async listCertificatesByEmail(email) {
+    const rows = await this._rest(`certificates?holder_email=ilike.${encodeURIComponent(String(email).trim())}&select=*`);
+    return rows.map((r) => ({ code: r.code, attemptId: r.attempt_id, name: r.holder_name, email: r.holder_email, profileId: r.profile_id, profileName: r.profile_name, percent: r.percent, passMark: r.pass_mark, date: ts(r.issued_at) }));
+  }
+  async listAttemptsByEmail(companyId, email) {
+    const rows = await this._rest(`attempts?candidate_email=ilike.${encodeURIComponent(String(email).trim())}&status=eq.done&select=*&order=finished_at.asc`);
+    return rows.map((r) => ({ ...fromAttempt(r), items: undefined }));
   }
 
   // ---------- Montée en compétences ----------

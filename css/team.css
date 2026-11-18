@@ -1,0 +1,59 @@
+/* Recrutements, Mes équipes, fiche collaborateur */
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-2); padding: 6px; background: var(--c-surface-2); border-radius: var(--r-lg); margin-bottom: var(--sp-5); position: sticky; top: var(--header-h); z-index: 20; }
+.seg-tab { display: flex; align-items: center; justify-content: center; gap: .6rem; min-height: 56px; padding: .5rem .75rem; border-radius: calc(var(--r-lg) - 4px); text-decoration: none; color: var(--c-muted); text-align: left; }
+.seg-tab > span { display: grid; line-height: 1.25; }
+.seg-tab strong { color: inherit; font-size: var(--fs-sm); }
+.seg-tab svg { flex: none; }
+.seg-tab[aria-selected="true"] { background: var(--c-navy); color: #fff; box-shadow: var(--shadow-sm); }
+.seg-tab[aria-selected="true"] svg { color: var(--c-orange-light); }
+.seg-tab:not([aria-selected="true"]):hover { background: #fff; color: var(--c-navy); }
+
+/* Recrutement : cartes candidats */
+.recruit-status { margin-bottom: var(--sp-4); }
+.toolbar { display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: flex-end; justify-content: space-between; margin-bottom: var(--sp-2); }
+.toolbar .field { margin: 0; min-width: 200px; }
+.cand { display: grid; gap: var(--sp-3); padding: var(--sp-4); }
+.cand-hired { border-left: 6px solid var(--c-ok); }
+.cand-rejected { border-left: 6px solid var(--c-ko); opacity: .9; }
+.cand-top { display: grid; grid-template-columns: auto auto 1fr auto; gap: var(--sp-3); align-items: center; }
+.cmp-check { min-height: 44px; min-width: 32px; margin: 0; }
+.cand-rank { font-weight: 800; color: var(--c-orange-dark); min-width: 2rem; }
+.cand-id { display: grid; min-width: 0; overflow-wrap: anywhere; }
+.cand-score { display: grid; text-align: right; }
+.cand-score strong { font-size: 1.5rem; color: var(--c-navy); line-height: 1.1; }
+.cand-meta { display: flex; flex-wrap: wrap; gap: .4rem .6rem; align-items: center; }
+.cand-actions { gap: var(--sp-2); }
+.link-d summary { list-style: none; cursor: pointer; }
+.link-d summary::-webkit-details-marker { display: none; }
+.link-d[open] { flex-basis: 100%; }
+.compare { margin-bottom: var(--sp-4); }
+.cmp-table th, .cmp-table td { min-width: 110px; }
+.cmp-table th:first-child { position: sticky; left: 0; background: var(--c-surface-2); }
+.cmp-best { font-weight: 800; color: var(--c-ok); }
+
+/* Mes équipes */
+.emp-card { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); padding: var(--sp-3) var(--sp-4); min-height: 76px; }
+.emp-main { display: grid; min-width: 0; overflow-wrap: anywhere; }
+.emp-side { display: flex; align-items: center; gap: var(--sp-3); flex: none; }
+.filters-card { margin-bottom: var(--sp-3); }
+.filters-card .field { margin-bottom: var(--sp-2); }
+.emp-head-row { align-items: center; margin-top: var(--sp-2); }
+.inline-details > summary { list-style: none; cursor: pointer; display: inline-flex; }
+.inline-details > summary::-webkit-details-marker { display: none; }
+.hab-expired td:first-child { box-shadow: inset 4px 0 0 var(--c-ko); }
+.hab-soon td:first-child { box-shadow: inset 4px 0 0 var(--c-orange); }
+.hab-valid td:first-child { box-shadow: inset 4px 0 0 var(--c-ok); }
+.histo { margin-bottom: var(--sp-4); }
+.histo h3 { margin-bottom: var(--sp-3); }
+code { background: var(--c-surface-2); padding: .05rem .35rem; border-radius: 6px; font-size: .85em; }
+
+@media (max-width: 599px) {
+  .seg { top: 0; }
+  .seg-tab { flex-direction: column; gap: .15rem; text-align: center; min-height: 64px; }
+  .seg-tab > span { justify-items: center; }
+  .cand-top { grid-template-columns: auto 1fr auto; }
+  .cand-rank { display: none; }
+  .cand-actions .btn { flex: 1 1 auto; }
+  .toolbar .btn-row { width: 100%; }
+  .toolbar .btn-row .btn { flex: 1 1 auto; }
+}

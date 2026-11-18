@@ -20,6 +20,11 @@ export const CONFIG = {
   PASS_PRICES: { tech: 50000, sup: 50000, ing: 80000, mgr: 80000 },
   ATTEMPTS_PER_PASS: 2,     // examen + 1 repassage
 
+  // Durée de validité d'une attestation (habilitation), en mois. PROVISOIRE : à valider par la direction.
+  // Un champ facultatif `validityMonths` dans data/profiles.json l'emporte pour un profil donné.
+  VALIDITY_MONTHS_DEFAULT: 24,
+  ALERT_DAYS: 90,           // alerte « expire bientôt » : habilitations qui expirent sous ce délai
+
   CONTACT: {
     address: 'Libreville, Nzeng-Ayong, Carrefour Fobert',
     phone: '+241 07 46 19 132',

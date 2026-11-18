@@ -30,32 +30,37 @@ export async function invite(ctx, root, helpers) {
   const company = await ctx.store.getCompany(ctx.user.companyId);
   const existing = ctx.query.get('session') ? await ctx.store.getSession(ctx.query.get('session')) : null;
   if (existing && existing.companyId !== company.id) { ctx.go('/rh'); return; }
+  // Activation d'un élément du plan de formation d'un collaborateur : poste et personne imposés.
+  const planItem = ctx.query.get('plan') ? await ctx.store.getPlanItem(ctx.query.get('plan')) : null;
+  const planEmp = planItem ? await ctx.store.getEmployee(planItem.employeeId) : null;
+  if (ctx.query.get('plan') && (!planItem || !planEmp || planEmp.companyId !== company.id || planItem.invitationId)) { ctx.go('/rh?vue=equipes'); return; }
+  const locked = !!(existing || planItem);
   if (!ctx.alive()) return;
 
-  let type = existing?.type || (ctx.query.get('type') === 'training' ? 'training' : 'recruitment');
-  let profileId = existing?.profileId || ctx.query.get('profil') || '';
+  let type = planItem ? 'training' : existing?.type || (ctx.query.get('type') === 'training' ? 'training' : 'recruitment');
+  let profileId = planItem?.profileId || existing?.profileId || ctx.query.get('profil') || '';
   const profileOf = (id) => data.profiles.find((p) => p.id === id);
   const available = (id) => !avail || !!avail[id];
 
   root.innerHTML = `<div class="container-narrow page">
-    ${pageHead({ crumbs: [{ label: 'Espace entreprise', href: '#/rh' }, { label: 'Inviter' }], back: '#/rh', title: existing ? `Ajouter des Pass — ${existing.title}` : 'Inviter un collaborateur ou un candidat', text: 'Un Pass = une personne pour un poste : formation, entraînement illimité, examen, attestation si réussite et résultat transmis à votre entreprise.' })}
+    ${pageHead({ crumbs: [{ label: 'Espace entreprise', href: '#/rh' }, { label: 'Inviter' }], back: '#/rh', title: planItem ? `Activer le Pass — ${planEmp.name}` : existing ? `Ajouter des Pass — ${existing.title}` : 'Inviter un collaborateur ou un candidat', text: 'Un Pass = une personne pour un poste : formation, entraînement illimité, examen, attestation si réussite et résultat transmis à votre entreprise.' })}
     ${demoBanner()}
     <form id="nf" class="stack" novalidate>
-      ${existing ? '' : `<fieldset class="card type-pick"><legend class="label">1. Type de session</legend>
+      ${locked ? '' : `<fieldset class="card type-pick"><legend class="label">1. Type de session</legend>
         <label class="type-opt"><input type="radio" name="type" value="recruitment"><span><strong>Recrutement</strong><span class="muted small">Candidats externes : chacun reçoit un lien personnel.</span></span></label>
         <label class="type-opt"><input type="radio" name="type" value="training"><span><strong>Montée en compétences</strong><span class="muted small">Équipe nommée : suivi avant / après et plan d’action.</span></span></label></fieldset>`}
-      <div class="card" id="poste-box"><h2 class="h3-sm">${existing ? 'Poste' : '2. Poste'}</h2>
-        ${existing ? `<p><strong>${esc(profileOf(profileId)?.name || profileId)}</strong></p>` : `
+      <div class="card" id="poste-box"><h2 class="h3-sm">${locked ? 'Poste' : '2. Poste'}</h2>
+        ${locked ? `<p><strong>${esc(profileOf(profileId)?.name || profileId)}</strong></p>` : `
         <div class="field"><label for="p-q">Rechercher un poste</label><input id="p-q" type="search" placeholder="Ex. technicien, forage, comptable…" autocomplete="off"></div>
         <div class="form-grid"><div class="field"><label for="p-d">Secteur</label><select id="p-d"><option value="">Tous</option>${(data.domains || []).map((d) => `<option value="${esc(d.id)}">${esc(d.name)}</option>`).join('')}</select></div>
         <div class="field"><label for="p-l">Niveau</label><select id="p-l"><option value="">Tous</option>${(data.levels || []).map((l) => `<option value="${esc(l.id)}">${esc(l.name)} — ${esc(fmtMoney(passPrice(l.id)))}</option>`).join('')}</select></div></div>
         <div class="poste-list" id="poste-list" role="radiogroup" aria-label="Poste"></div>`}
       </div>
-      <div class="card"><h2 class="h3-sm">${existing ? 'Personnes' : '3. Personnes'}</h2>
-        ${existing ? '' : `<div class="field"><label for="n-title" id="l-title">Intitulé du poste</label><input id="n-title" type="text" maxlength="120"></div>
+      <div class="card"><h2 class="h3-sm">${locked ? 'Personnes' : '3. Personnes'}</h2>
+        ${locked ? '' : `<div class="field"><label for="n-title" id="l-title">Intitulé du poste</label><input id="n-title" type="text" maxlength="120"></div>
         <div class="form-grid"><div class="field"><label for="n-due" id="l-due">Date limite</label><input id="n-due" type="date" value="${fmtDateInput(Date.now() + 30 * DAY)}"></div>
         <div class="field"><label for="n-pass">Seuil de réussite</label><select id="n-pass">${[60, 70, 80].map((v) => `<option value="${v}" ${v === CONFIG.PASS_MARK ? 'selected' : ''}>${v} %</option>`).join('')}</select></div></div>`}
-        <div class="field"><label for="n-people" id="l-people">Une personne par ligne : nom, e-mail</label><textarea id="n-people" placeholder="Jean Mba, jean.mba@exemple.com&#10;Marie Nzamba, marie@exemple.com"></textarea><span class="hint" id="h-people"></span></div>
+        <div class="field"><label for="n-people" id="l-people">Une personne par ligne : nom, e-mail</label><textarea id="n-people" ${planItem ? 'readonly' : ''} placeholder="Jean Mba, jean.mba@exemple.com&#10;Marie Nzamba, marie@exemple.com">${planItem ? esc(`${planEmp.name}, ${planEmp.email}`) : ''}</textarea><span class="hint" id="h-people"></span></div>
       </div>
       <div class="card summary" aria-live="polite"><h2 class="h3-sm">Récapitulatif</h2><div id="sum"></div></div>
       <div class="card"><h2 class="h3-sm">Paiement</h2>
@@ -81,7 +86,7 @@ export async function invite(ctx, root, helpers) {
 
   const sync = () => {
     root.querySelectorAll('input[name=type]').forEach((r) => { r.checked = r.value === type; });
-    if (!existing) {
+    if (!locked) {
       $('#l-title').textContent = type === 'training' ? 'Nom de l’équipe' : 'Intitulé du poste';
       $('#n-title').placeholder = type === 'training' ? 'Ex. Équipe maintenance Port-Gentil' : 'Ex. Opérateur de production — Libreville';
       $('#l-due').textContent = type === 'training' ? 'Échéance du parcours' : 'Date limite pour passer l’examen';
@@ -101,7 +106,7 @@ export async function invite(ctx, root, helpers) {
   };
   const paySync = () => { $('#pay-fields').innerHTML = paymentFormHTML(method()); };
 
-  if (!existing) drawList();
+  if (!locked) drawList();
   sync();
   root.addEventListener('input', (e) => { if (['p-q'].includes(e.target.id)) drawList(); if (e.target.id === 'n-people') sync(); });
   root.addEventListener('change', (e) => {
@@ -121,7 +126,11 @@ export async function invite(ctx, root, helpers) {
     if (errors.length) { err.textContent = errors[0]; return; }
     if (!list.length) { err.textContent = 'Ajoutez au moins une personne.'; return; }
     let title; let due; let passMark;
-    if (!existing) {
+    if (planItem) {
+      title = `${planEmp.name} — ${p.name}`;
+      due = planItem.due > Date.now() ? planItem.due : Date.now() + 30 * 86400000;
+      passMark = CONFIG.PASS_MARK;
+    } else if (!existing) {
       title = $('#n-title').value.trim();
       if (title.length < 3) { err.textContent = type === 'training' ? 'Donnez un nom à l’équipe.' : 'Saisissez l’intitulé du poste.'; return; }
       due = new Date($('#n-due').value + 'T23:59:59').getTime();
@@ -142,6 +151,7 @@ export async function invite(ctx, root, helpers) {
         const qn = Math.min(CONFIG.EXAM_QUESTIONS, content?.questions.length || CONFIG.EXAM_QUESTIONS);
         const r = await ctx.store.createOrder({ companyId: company.id, type, title, profileId: p.id, profileName: p.name, level: p.level, unitPrice: unit, questionCount: qn, passMark, deadline: due, candidates: list, payment: res });
         sessionId = r.session.id; order = r.order;
+        if (planItem) { const inv = r.session.invitations.find((i) => i.orderId === order.id); if (inv) await ctx.store.linkPlanItem(planItem.id, { sessionId, invitationId: inv.id }); }
       }
       const s = await ctx.store.getSession(sessionId);
       const mine = s.invitations.filter((i) => i.orderId === order.id);
@@ -151,7 +161,7 @@ export async function invite(ctx, root, helpers) {
       $('#done').innerHTML = `<div class="card done-card"><div class="alert alert-ok" role="status"><strong>Paiement simulé accepté.</strong> ${list.length} Pass créé${list.length > 1 ? 's' : ''} — ${esc(fmtMoney(order.total))} (réf. ${esc(res.ref)}).</div>
         <h2 class="h3-sm">Liens personnels à envoyer</h2><p class="muted small">Chaque lien donne accès à la formation, à l’entraînement et à l’examen de la personne.</p>
         <div class="stack">${mine.map((i) => `<div class="link-row"><div><strong>${esc(i.name)}</strong><br><span class="xs muted">${esc(i.email || '')}</span></div>${helpers.shareButtons(i, s, company.name)}</div>`).join('')}</div>
-        <div class="btn-row" style="margin-top:var(--sp-5)"><a class="btn btn-primary" href="#/rh/session/${esc(sessionId)}">Voir la session</a><a class="btn btn-outline" href="#/rh/recu/${esc(order.id)}">Voir le reçu</a><a class="btn btn-ghost" href="#/rh">Tableau de bord</a></div></div>`;
+        <div class="btn-row" style="margin-top:var(--sp-5)"><a class="btn btn-primary" href="#/rh/session/${esc(sessionId)}">Voir la session</a><a class="btn btn-outline" href="#/rh/recu/${esc(order.id)}">Voir le reçu</a><a class="btn btn-ghost" href="#/rh${planItem ? '?vue=equipes' : ''}">Tableau de bord</a></div></div>`;
       window.scrollTo(0, 0);
     } catch (ex) { err.textContent = ex.message; btn.disabled = false; sync(); }
   });

@@ -35,6 +35,7 @@ create table if not exists sessions (
   title text not null,
   profile_id text not null,               -- identifiant du profil métier (data/profiles.json)
   level text not null default 'tech',     -- niveau du poste (détermine le prix du Pass)
+  status text not null default 'open' check (status in ('open', 'closed')),   -- recrutement ouvert / clôturé
   question_count integer not null default 30 check (question_count between 5 and 60),
   pass_mark integer not null default 70 check (pass_mark between 1 and 100),
   deadline timestamptz,
@@ -50,6 +51,7 @@ create table if not exists invitations (
   order_id uuid,
   price integer,                          -- prix du Pass payé (FCFA)
   training_at timestamptz,                -- premier suivi de formation / entraînement
+  decision text check (decision in ('hired', 'rejected')),   -- recrutement : retenu / refusé
   created_at timestamptz not null default now()
 );
 create index if not exists invitations_session_idx on invitations (session_id);
@@ -117,6 +119,36 @@ create table if not exists assignments (
   created_at timestamptz not null default now()
 );
 
+-- Mes équipes : collaborateurs en poste d'une entreprise. Rattachés aux attestations / examens PAR E-MAIL (jointure souple :
+-- une personne peut passer son examen avec un Pass acheté par une autre entreprise sans qu'il y ait de lien en base).
+create table if not exists employees (
+  id uuid primary key default gen_random_uuid(),
+  company_id uuid not null references companies (id) on delete cascade,
+  name text not null,
+  email text not null,
+  profile_id text,                        -- poste (profil du catalogue)
+  team text,
+  hire_date timestamptz,
+  created_at timestamptz not null default now(),
+  unique (company_id, email)
+);
+
+-- Plan de formation : formations à venir / à repasser. Activé par l'achat du Pass (invitation liée).
+create table if not exists plan_items (
+  id uuid primary key default gen_random_uuid(),
+  employee_id uuid not null references employees (id) on delete cascade,
+  profile_id text not null,
+  due timestamptz not null,
+  priority text not null default 'normale' check (priority in ('haute', 'normale', 'basse')),
+  reason text not null default 'montee' check (reason in ('recyclage', 'montee', 'obligation')),
+  status text not null default 'planned' check (status in ('planned', 'in_progress', 'done')),
+  invitation_id uuid references invitations (id) on delete set null,
+  session_id uuid references sessions (id) on delete set null,
+  from_cert text,                         -- code de l'attestation à renouveler
+  done_at timestamptz,
+  created_at timestamptz not null default now()
+);
+
 -- Commandes de Pass (une par achat : N personnes pour un poste). Aucune donnée de carte n'est stockée.
 create table if not exists orders (
   id uuid primary key default gen_random_uuid(),
@@ -151,6 +183,8 @@ alter table answers enable row level security;
 alter table certificates enable row level security;
 alter table assignments enable row level security;
 alter table orders enable row level security;
+alter table employees enable row level security;
+alter table plan_items enable row level security;
 
 create policy companies_read on companies for select using (id = current_company());
 create policy profiles_read on profiles for select using (company_id = current_company());
@@ -169,6 +203,10 @@ create policy assignments_all on assignments for all
   using (session_id in (select id from sessions where company_id = current_company()))
   with check (session_id in (select id from sessions where company_id = current_company()));
 create policy orders_read on orders for select using (company_id = current_company());
+create policy employees_all on employees for all using (company_id = current_company()) with check (company_id = current_company());
+create policy plan_items_all on plan_items for all
+  using (employee_id in (select id from employees where company_id = current_company()))
+  with check (employee_id in (select id from employees where company_id = current_company()));
 -- Pas d'écriture directe des tentatives / attestations / commandes par les clients : uniquement via les fonctions ci-dessous.
 
 -- ---------------------------------------------------------------- Fonctions RH

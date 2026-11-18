@@ -5,7 +5,8 @@ import { esc, fmtDate, fmtDateInput, fmtDuration, fmtMoney, absUrl, copyText, do
 import { icon, badge, bar, statusBadge, whatsappLink } from '../ui.js';
 import { demoBanner, methodLabel } from '../payments.js';
 import { passPrice, attemptsUsed } from '../pass.js';
-import { invite as inviteImpl, parsePeople } from './rh-invite.js';
+import { invite as inviteImpl } from './rh-invite.js';
+import { recruitView } from './rh-recruit.js';
 import { band, BAND_LABEL, collabStats, matrixThemes, gaps, recommend, dueState, assignmentTitle, assignmentHref } from '../skills.js';
 
 const DAY = 86400000;
@@ -49,46 +50,10 @@ const sessionStats = (s) => {
     avg: done.length ? Math.round(done.reduce((a, i) => a + i.attempt.percent, 0) / done.length) : null };
 };
 
-/* ------------------------------------------------------------------ Tableau de bord */
-export async function dashboard(ctx, root) {
-  ctx.setTitle('Tableau de bord entreprise');
-  const data = await getProfilesData();
-  const company = await ctx.store.getCompany(ctx.user.companyId);
-  const sessions = await ctx.store.listSessions(company.id);
-  const trainings = sessions.filter((s) => s.type === 'training');
-  const assignments = [];
-  for (const s of trainings) for (const a of await ctx.store.listAssignments(s.id)) assignments.push({ ...a, session: s, inv: s.invitations.find((i) => i.id === a.invitationId) });
-  if (!ctx.alive()) return;
-  const all = sessions.flatMap((s) => s.invitations);
-  const finished = all.filter((i) => i.attempt?.status === 'done');
-  const rate = finished.length ? pct(finished.filter((i) => i.attempt.passed).length, finished.length) : null;
-  const pending = assignments.filter((a) => !a.doneAt).map((a) => ({ ...a, st: dueState(a) })).sort((a, b) => a.due - b.due);
-  const late = pending.filter((a) => a.st.key === 'late').length;
-
-  root.innerHTML = `<div class="container page">
-    <div class="page-head split"><div><p class="eyebrow dark">Espace entreprise</p><h1 class="h1-md">${esc(company.name)}</h1></div>
-      <div class="btn-row"><a class="btn btn-primary" href="#/rh/inviter">${icon('plus', 18)} Inviter une personne</a><a class="btn btn-outline" href="#/rh/facturation">${icon('card', 18)} Facturation / Mes Pass</a></div></div>
-    ${company.demo ? '<div class="alert alert-warn"><strong>Entreprise Démo</strong> — données fictives, stockées dans ce navigateur.</div>' : ''}
-
-    <div class="grid grid-4 stats">
-      <div class="card stat"><span class="stat-n">${all.length}</span><span class="muted small">Pass achetés · ${finished.length} examen(s) terminé(s)</span></div>
-      <div class="card stat"><span class="stat-n">${sessions.length}</span><span class="muted small">sessions (${trainings.length} montée en compétences)</span></div>
-      <div class="card stat"><span class="stat-n">${all.filter((i) => ['training', 'started'].includes(i.status)).length}</span><span class="muted small">en formation ou en examen</span></div>
-      <div class="card stat"><span class="stat-n">${rate == null ? '—' : rate + ' %'}</span><span class="muted small">taux de réussite</span></div></div>
-    ${pending.length ? `<section class="block"><div class="split"><h2>Échéances à suivre</h2>${late ? badge(`${late} en retard`, 'ko') : ''}</div>
-      <div class="card"><ul class="due-list">${pending.slice(0, 6).map((a) => `<li><span>${badge(a.st.label, a.st.tone)}</span>
-        <span><strong>${esc(a.inv?.name || '—')}</strong> — ${esc(assignmentTitle(a, null))}<br><span class="xs muted">${esc(a.session.title)} · avant le ${fmtDate(a.due)}</span></span>
-        <a class="btn btn-light btn-sm" href="#/rh/session/${esc(a.session.id)}?tab=gaps">Suivre</a></li>`).join('')}</ul></div></section>` : ''}
-    <section class="block"><h2>Sessions</h2>
-      ${sessions.length ? `<div class="grid grid-2">${sessions.map((s) => {
-        const st = sessionStats(s); const p = data.profiles.find((x) => x.id === s.profileId);
-        return `<a class="card card-link sess" href="#/rh/session/${esc(s.id)}"><div class="split" style="align-items:flex-start">${badge(TYPE[s.type].label, TYPE[s.type].tone)}<span class="xs muted">${s.deadline ? 'jusqu’au ' + fmtDate(s.deadline) : ''}</span></div>
-          <h3>${esc(s.title)}</h3><p class="muted small">${esc(p?.name || s.profileId)} · ${s.questionCount} questions</p>
-          <div class="sess-nums"><span><strong>${st.invited}</strong> ${TYPE[s.type].units}</span><span><strong>${st.done}</strong> terminé(s)</span><span><strong>${st.passed}</strong> réussi(s)</span>${st.avg != null ? `<span>moy. <strong>${st.avg} %</strong></span>` : ''}</div>
-          ${bar(pct(st.done, st.invited))}</a>`;
-      }).join('')}</div>` : `<div class="card"><h3>Aucune session pour l’instant</h3><p class="muted">Achetez un premier Pass pour inviter un candidat ou un collaborateur.</p><a class="btn btn-primary" href="#/rh/inviter">Inviter une personne</a></div>`}</section>
-  </div>`;
-}
+/* ------------------------------------------------------------------ Tableau de bord, recrutements, équipes */
+export { dashboard } from './rh-dash.js';
+export { employee } from './rh-teams.js';
+export const teamHome = (ctx) => ctx.go('/rh?vue=equipes');
 
 /* ------------------------------------------------------------------ Achat de Pass */
 export const invite = (ctx, root) => inviteImpl(ctx, root, { shareButtons, bindCopy });
@@ -122,39 +87,7 @@ function bindAddForm() { /* l'ajout passe par la page d'achat de Pass */ }
 
 /* ---- Recrutement */
 function recruitmentView(env) {
-  const { ctx, root, s, company } = env;
-  const st = sessionStats(s);
-  const themes = matrixThemes(s.invitations);
-  root.innerHTML = `<div class="container page">${sessionHead(env)}
-    <div class="grid grid-4 stats">
-      <div class="card stat"><span class="stat-n">${st.invited}</span><span class="muted small">invités</span></div>
-      <div class="card stat"><span class="stat-n">${st.started}</span><span class="muted small">en cours</span></div>
-      <div class="card stat"><span class="stat-n">${st.done}</span><span class="muted small">terminés · ${st.passed} réussi(s)</span></div>
-      <div class="card stat"><span class="stat-n">${st.avg == null ? '—' : st.avg + ' %'}</span><span class="muted small">score moyen</span></div></div>
-    <div class="btn-row" style="margin-bottom:var(--sp-4)"><button type="button" class="btn btn-navy" id="csv">${icon('download', 18)} Exporter en CSV</button></div>
-    <div class="btn-row" style="margin-bottom:var(--sp-4)">${addPeopleForm(s)}</div>
-    <section class="block"><h2>Candidats</h2><div class="table-wrap"><table class="table"><caption class="sr-only">Candidats de la session</caption>
-      <thead><tr><th>Candidat</th><th>Statut</th><th>Score</th><th>Tentatives</th><th>Temps</th><th>Lien à envoyer</th></tr></thead><tbody>
-      ${s.invitations.map((inv) => {
-        const a = inv.attempt;
-        const done = a?.status === 'done';
-        const th = done ? Object.entries(a.themes || {}) : [];
-        return `<tr><td><strong>${esc(inv.name || '—')}</strong><br><span class="xs muted">${esc(inv.email || '')}</span></td>
-          <td>${statusBadge(inv.status)}</td>
-          <td>${done ? `<strong>${a.percent} %</strong>${th.length ? `<details class="mini"><summary class="xs">Détail par thème</summary>${th.map(([t, v]) => `<div class="theme-row"><span class="xs">${esc(t)}</span><span class="xs muted">${pct(v.ok, v.total)} %</span>${bar(pct(v.ok, v.total), pct(v.ok, v.total) >= s.passMark ? 'ok' : 'ko')}</div>`).join('')}${a.synthetic ? '' : `<a class="xs" href="#/resultat/${esc(a.id)}">Voir la correction</a>`}</details>` : ''}` : '—'}</td>
-          <td>${attemptsUsed(inv.attempts)} / ${CONFIG.ATTEMPTS_PER_PASS}</td><td>${done ? fmtDuration(a.durationMs) : '—'}</td><td>${shareButtons(inv, s, company.name)}</td></tr>`;
-      }).join('')}</tbody></table></div>
-      <p class="xs muted" style="margin-top:var(--sp-3)">Le lien est personnel. Le candidat saisit son nom et son e-mail, passe le test, et le résultat apparaît ici.</p></section></div>`;
-  bindAddForm(env);
-  root.querySelector('#csv').addEventListener('click', () => {
-    const rows = [['Candidat', 'E-mail', 'Statut', 'Tentatives', 'Score (%)', 'Résultat', 'Temps', 'Date', ...themes.map((t) => `${t} (%)`)]];
-    for (const inv of s.invitations) {
-      const a = inv.attempt; const done = a?.status === 'done';
-      rows.push([inv.name, inv.email, { invited: 'Invité', training: 'En formation', started: 'En examen', passed: 'Réussi', failed: 'Échoué', expired: 'Expiré' }[inv.status], attemptsUsed(inv.attempts), done ? a.percent : '', done ? (a.passed ? 'Réussi' : 'Échoué') : '', done ? fmtDuration(a.durationMs) : '', done ? fmtDate(a.finishedAt) : '',
-        ...themes.map((t) => (done && a.themes?.[t] ? pct(a.themes[t].ok, a.themes[t].total) : ''))]);
-    }
-    downloadFile(`session-${s.id}.csv`, toCsv(rows));
-  });
+  recruitView(env, { sessionHead, shareButtons, addPeopleForm, bindCopy });
 }
 
 /* ---- Montée en compétences */
