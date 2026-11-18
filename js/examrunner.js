@@ -25,7 +25,7 @@ export function showIntro(root, o) {
         ${o.subtitle ? `<p class="muted">${esc(o.subtitle)}</p>` : ''}
         <ul class="rules">
           <li>${icon('target', 20)}<span><strong>${o.total} questions</strong> sur ${o.themes} thèmes, tirées au hasard, dans un ordre mélangé.</span></li>
-          <li>${icon('clock', 20)}<span>Chaque question est <strong>chronométrée</strong> (durée indiquée à l’écran : 1 min 30 par question, 2 minutes ou plus pour les cas pratiques et mises en situation). Temps écoulé = question perdue.</span></li>
+          <li>${icon('clock', 20)}<span>Chaque question est <strong>chronométrée</strong> (1 min 30 par question, avec une pause de 5 secondes entre deux questions). Temps écoulé = question perdue.</span></li>
           <li>${icon('lock', 20)}<span><strong>Pas de retour arrière</strong> : une réponse validée est définitive. Choisissez puis cliquez sur « Valider ».</span></li>
           <li>${icon('refresh', 20)}<span>Si la page se recharge, l’examen reprend là où il était. <strong>Le chronomètre continue de tourner.</strong></span></li>
           <li>${icon('award', 20)}<span>Seuil de réussite : <strong>${o.passMark} %</strong>. ${o.certificate ? 'Une attestation vérifiable est délivrée en cas de réussite.' : 'Votre résultat est transmis à l’entreprise.'}</span></li>
@@ -70,10 +70,10 @@ export function runExam(ctx, root, { attempt: att, content, onDone }) {
   const cleanup = () => { stopTimers(); window.removeEventListener('beforeunload', beforeUnload); if (keyH) document.removeEventListener('keydown', keyH); };
   ctx.onLeave(cleanup);
 
-  const frame = (inner) => {
+  const frame = (inner, timer = '') => {
     root.innerHTML = `<div class="container-narrow page quiz exam-frame">
-      <div class="quiz-top"><span class="small"><strong>Question ${Math.min(att.idx + 1, att.total)}</strong> / ${att.total}</span><span class="badge badge-navy">Examen</span></div>
-      ${bar(pct(att.idx, att.total))}${inner}</div>`;
+      <div class="quiz-head"><div class="quiz-top"><span class="small"><strong>Question ${Math.min(att.idx + 1, att.total)}</strong> / ${att.total}</span><span class="badge badge-navy">Examen</span></div>
+      ${bar(pct(att.idx, att.total))}${timer}</div>${inner}</div>`;
   };
 
   const save = () => ctx.store.saveAttempt(att);
@@ -118,10 +118,10 @@ export function runExam(ctx, root, { attempt: att, content, onDone }) {
     }
     let picked = null;
     const deadline = att.qStart + it.seconds * 1000;
-    frame(`<div class="timer" role="timer" aria-label="Temps restant"><div class="timer-bar"><span id="tbar"></span></div><span id="tsec" class="timer-sec">${fmtClock(it.seconds)}</span></div>
-      <div class="card q-card">${questionBodyHTML(q)}<div id="choices">${choicesHTML(q, it.order)}</div></div>
+    frame(`<div class="card q-card">${questionBodyHTML(q)}<div id="choices">${choicesHTML(q, it.order)}</div></div>
       <div class="btn-row quiz-actions"><button class="btn btn-primary btn-lg" type="button" id="validate" disabled>Valider ma réponse</button></div>
-      <p class="xs muted center">Touches 1 à 4 ou A à D pour choisir, Entrée pour valider.</p>`);
+      <p class="xs muted center kbd-hint">Touches 1 à 4 ou A à D pour choisir, Entrée pour valider.</p>`,
+      `<div class="timer" role="timer" aria-label="Temps restant"><div class="timer-bar"><span id="tbar"></span></div><span id="tsec" class="timer-sec">${fmtClock(it.seconds)}</span></div>`);
     const vbtn = root.querySelector('#validate');
     const choose = (d) => {
       picked = d;

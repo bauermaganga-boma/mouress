@@ -3,6 +3,7 @@
 import { CONFIG } from '../config.js';
 import { loadContent, themesOf, getProfilesData } from './data.js';
 import { sha256 } from './util.js';
+import { passPrice } from './pass.js';
 
 const DAY = 86400000;
 
@@ -38,20 +39,22 @@ function synthThemes(names, total, percent, salt) {
   return themes;
 }
 
+let LEVELS = {};
+const levelOfProfile = (id) => LEVELS[id] || 'tech';
+
 export async function buildSeed() {
   const now = Date.now();
   const hash = await sha256(CONFIG.DEMO_ACCOUNT.password);
   const db = {
-    v: 1, companies: [], users: [], sessions: [], invitations: [], attempts: [], certificates: [], transactions: [], assignments: [],
+    v: 2, companies: [], users: [], sessions: [], invitations: [], attempts: [], certificates: [], orders: [], assignments: [],
   };
-  db.companies.push({ id: 'c_demo', name: 'Entreprise Démo', credits: 12, createdAt: now - 40 * DAY, demo: true });
+  db.companies.push({ id: 'c_demo', name: 'Entreprise Démo', createdAt: now - 40 * DAY, demo: true });
   db.users.push({ id: 'u_demo', companyId: 'c_demo', email: CONFIG.DEMO_ACCOUNT.email, name: 'Aurélie Démo (RH)', hash });
-  db.transactions.push({ id: 't_seed1', companyId: 'c_demo', type: 'purchase', credits: 20, amount: 90000, method: 'card', ref: 'DEMO-0001', date: now - 38 * DAY });
-  db.transactions.push({ id: 't_seed2', companyId: 'c_demo', type: 'use', credits: -7, amount: 0, method: '', ref: 'Invitations de test', date: now - 12 * DAY });
 
   const pdata = await getProfilesData();
   const ids = new Set(pdata.profiles.map((p) => p.id));
   const pick = (id, i) => (ids.has(id) ? id : pdata.profiles[i % pdata.profiles.length].id);
+  LEVELS = Object.fromEntries(pdata.profiles.map((p) => [p.id, p.level]));
   const P1 = pick('op-prod', 0); const P2 = pick('ing-eia', 1); const P3 = pick('tech-elec', 2);
   const t3 = await themeNames(P3, ['Distribution électrique', 'Moteurs et variateurs', 'Protections et ATEX', 'Consignation et sécurité']);
   const t1 = await themeNames(P1, ['Procédés de production', 'Machines tournantes', 'Sécurité et permis', 'Lecture de schémas']);
@@ -75,7 +78,7 @@ export async function buildSeed() {
 
   let n = 0;
   for (const s of sessions) {
-    db.sessions.push({ id: s.id, type: 'recruitment', companyId: 'c_demo', title: s.title, profileId: s.profileId, questionCount: s.questionCount, passMark: s.passMark, createdAt: s.createdAt, deadline: s.deadline });
+    db.sessions.push({ id: s.id, level: levelOfProfile(s.profileId), type: 'recruitment', companyId: 'c_demo', title: s.title, profileId: s.profileId, questionCount: s.questionCount, passMark: s.passMark, createdAt: s.createdAt, deadline: s.deadline });
     for (const c of s.cands) {
       n++;
       const [name, email, kind, percent, dur, code] = c;
@@ -118,7 +121,7 @@ export async function buildSeed() {
     ['Chantal Mboumba', 'c.mboumba@exemple.com', [[35, 50, 40, 50]]],
     ['Lionel Essono', 'l.essono@exemple.com', []],
   ];
-  const s3 = { id: 's_demo3', type: 'training', companyId: 'c_demo', title: 'Équipe maintenance — montée en compétences 2026', profileId: P3, questionCount: total3, passMark: 70, createdAt: now - 45 * DAY, deadline: now + 30 * DAY };
+  const s3 = { id: 's_demo3', level: levelOfProfile(P3), type: 'training', companyId: 'c_demo', title: 'Équipe maintenance — montée en compétences 2026', profileId: P3, questionCount: total3, passMark: 70, createdAt: now - 45 * DAY, deadline: now + 30 * DAY };
   db.sessions.push(s3);
   const per = Math.max(1, Math.floor(total3 / t3.length));
   biasRows.forEach(([name, email, tries], k) => {
@@ -146,5 +149,17 @@ export async function buildSeed() {
     as('i_team3', 'practice', t3[0], 5),
     as('i_team3', 'practice', t3[2], 5),
   ];
+  // Un Pass par personne : une commande payée (démo) par session.
+  const inv = db.invitations.find((i) => i.id === 'i_demo7');
+  if (inv) inv.trainingAt = now - 2 * DAY;
+  db.sessions.forEach((sess, k) => {
+    const list = db.invitations.filter((i) => i.sessionId === sess.id);
+    const unit = passPrice(sess.level);
+    const order = { id: 'o_demo' + (k + 1), number: 'MRS-' + new Date(now).getFullYear() + '-' + String(k + 1).padStart(4, '0'), companyId: 'c_demo', sessionId: sess.id, sessionTitle: sess.title,
+      profileId: sess.profileId, profileName: pdata.profiles.find((p) => p.id === sess.profileId)?.name || '', level: sess.level, unitPrice: unit, qty: list.length, total: unit * list.length,
+      method: k === 1 ? 'airtel' : 'card', ref: 'DEMO-000' + (k + 1), demo: true, date: sess.createdAt };
+    db.orders.push(order);
+    list.forEach((i) => { i.orderId = order.id; i.price = unit; });
+  });
   return db;
 }

@@ -1,0 +1,58 @@
+/* Entonnoir de formation, Pass, en-têtes de page homogènes */
+.page-head2 { margin-bottom: var(--sp-5); display: grid; gap: var(--sp-2); }
+.page-head2 .crumbs { margin: 0; }
+.page-title { font-size: var(--fs-2xl); line-height: 1.2; margin: 0; overflow-wrap: anywhere; }
+.page-sub { color: var(--c-muted); margin: 0; max-width: 62ch; }
+.back-link { display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; font-weight: 700; font-size: var(--fs-sm); text-decoration: none; color: var(--c-navy-3); width: fit-content; }
+.back-link:hover { color: var(--c-navy); text-decoration: underline; }
+.ico.flip { transform: scaleX(-1); }
+.crumbs { align-items: center; row-gap: .1rem; }
+.crumbs [aria-current="page"] { color: var(--c-navy); font-weight: 600; }
+
+.search-card { margin-bottom: var(--sp-5); }
+.search-card .field { margin: 0; }
+.funnel-grid { gap: var(--sp-4); }
+.funnel-card { display: grid; grid-template-columns: auto 1fr auto; gap: var(--sp-4); align-items: center; padding: var(--sp-4) var(--sp-5); min-height: 96px; }
+.funnel-ico { width: 56px; height: 56px; border-radius: 16px; background: var(--c-navy); color: var(--c-orange-light); display: grid; place-items: center; flex: none; }
+.funnel-body { display: grid; gap: .25rem; min-width: 0; }
+.funnel-title { font-size: var(--fs-lg); color: var(--c-navy); line-height: 1.25; }
+.funnel-meta { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .2rem; }
+.funnel-go { color: var(--c-orange-dark); display: grid; place-items: center; }
+.funnel-go.sm { justify-self: end; }
+.card-link:hover .funnel-go { transform: translateX(3px); }
+
+/* Pass : accueil du candidat */
+.pass-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-4); }
+.pass-step { display: grid; grid-template-columns: auto 1fr; gap: var(--sp-4); align-items: start; }
+.pass-step > div { display: grid; gap: var(--sp-3); min-width: 0; }
+.pass-step h2, .pass-step p { margin: 0; }
+.step-n2 { width: 40px; height: 40px; border-radius: 50%; background: var(--c-navy); color: #fff; display: grid; place-items: center; font-weight: 800; }
+.pass-exam { border: 2px solid var(--c-orange); }
+.chip-link { text-decoration: none; display: inline-flex; align-items: center; }
+.chip-link:hover { background: var(--c-navy); color: #fff; }
+.plain { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--sp-2); font-size: var(--fs-sm); }
+
+/* Achat de Pass */
+.poste-list { display: grid; gap: var(--sp-2); max-height: 380px; overflow-y: auto; padding: 2px; }
+.poste-opt { display: grid; grid-template-columns: auto 1fr auto; gap: var(--sp-3); align-items: center; padding: var(--sp-3) var(--sp-4); border: 2px solid var(--c-line-strong); border-radius: var(--r-md); background: #fff; cursor: pointer; min-height: var(--tap); }
+.poste-opt:has(input:checked) { border-color: var(--c-navy); background: var(--c-info-bg); }
+.poste-opt input { width: 20px; height: 20px; accent-color: var(--c-navy); }
+.poste-body { display: grid; gap: .1rem; min-width: 0; }
+.poste-price { font-weight: 800; color: var(--c-accent-text); font-size: var(--fs-sm); white-space: nowrap; }
+.summary .sum-row { display: flex; justify-content: space-between; gap: var(--sp-3); margin: 0 0 var(--sp-2); align-items: flex-start; }
+.sum-total { border-top: 2px solid var(--c-line-strong); padding-top: var(--sp-3); font-size: var(--fs-lg); }
+.link-row { display: grid; gap: var(--sp-2); padding: var(--sp-3) 0; border-top: 1px solid var(--c-line); }
+.incl-list { list-style: none; padding: 0; margin: var(--sp-3) 0 var(--sp-5); display: grid; gap: var(--sp-3); }
+.incl-list li { display: flex; gap: .6rem; align-items: center; }
+.incl-list svg { color: var(--c-orange-dark); flex: none; }
+.included { margin-top: var(--sp-5); }
+.receipt { display: grid; gap: var(--sp-4); }
+.right { text-align: right; }
+
+@media (max-width: 520px) {
+  .funnel-card { padding: var(--sp-4); gap: var(--sp-3); }
+  .funnel-ico { width: 48px; height: 48px; border-radius: 14px; }
+  .poste-opt { grid-template-columns: auto 1fr; }
+  .poste-price { grid-column: 2; }
+}
+@media print { .receipt { box-shadow: none; border: 0; } }

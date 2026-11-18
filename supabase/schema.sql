@@ -16,7 +16,6 @@ create extension if not exists pgcrypto;
 create table if not exists companies (
   id uuid primary key default gen_random_uuid(),
   name text not null,
-  credits integer not null default 0 check (credits >= 0),
   created_at timestamptz not null default now()
 );
 
@@ -35,6 +34,7 @@ create table if not exists sessions (
   type text not null default 'recruitment' check (type in ('recruitment', 'training')),
   title text not null,
   profile_id text not null,               -- identifiant du profil métier (data/profiles.json)
+  level text not null default 'tech',     -- niveau du poste (détermine le prix du Pass)
   question_count integer not null default 30 check (question_count between 5 and 60),
   pass_mark integer not null default 70 check (pass_mark between 1 and 100),
   deadline timestamptz,
@@ -47,6 +47,9 @@ create table if not exists invitations (
   token text not null unique default encode(gen_random_bytes(10), 'hex'),
   name text not null default '',
   email text not null default '',
+  order_id uuid,
+  price integer,                          -- prix du Pass payé (FCFA)
+  training_at timestamptz,                -- premier suivi de formation / entraînement
   created_at timestamptz not null default now()
 );
 create index if not exists invitations_session_idx on invitations (session_id);
@@ -114,12 +117,19 @@ create table if not exists assignments (
   created_at timestamptz not null default now()
 );
 
-create table if not exists credit_transactions (
+-- Commandes de Pass (une par achat : N personnes pour un poste). Aucune donnée de carte n'est stockée.
+create table if not exists orders (
   id uuid primary key default gen_random_uuid(),
+  number text not null,
   company_id uuid not null references companies (id) on delete cascade,
-  type text not null check (type in ('purchase', 'use', 'bonus')),
-  credits integer not null,
-  amount integer not null default 0,
+  session_id uuid references sessions (id) on delete set null,
+  session_title text,
+  profile_id text not null,
+  profile_name text,
+  level text not null,
+  unit_price integer not null,
+  qty integer not null check (qty > 0),
+  total integer not null,
   method text,
   ref text,
   demo boolean not null default false,
@@ -140,7 +150,7 @@ alter table attempts enable row level security;
 alter table answers enable row level security;
 alter table certificates enable row level security;
 alter table assignments enable row level security;
-alter table credit_transactions enable row level security;
+alter table orders enable row level security;
 
 create policy companies_read on companies for select using (id = current_company());
 create policy profiles_read on profiles for select using (company_id = current_company());
@@ -158,61 +168,62 @@ create policy certificates_read on certificates for select
 create policy assignments_all on assignments for all
   using (session_id in (select id from sessions where company_id = current_company()))
   with check (session_id in (select id from sessions where company_id = current_company()));
-create policy tx_read on credit_transactions for select using (company_id = current_company());
--- Pas d'écriture directe des tentatives / attestations / crédits par les clients : uniquement via les fonctions ci-dessous.
+create policy orders_read on orders for select using (company_id = current_company());
+-- Pas d'écriture directe des tentatives / attestations / commandes par les clients : uniquement via les fonctions ci-dessous.
 
 -- ---------------------------------------------------------------- Fonctions RH
 -- Création d'entreprise + profil RH juste après l'inscription Auth.
-create or replace function rpc_create_company(p_company text, p_name text, p_bonus integer default 3) returns uuid
+create or replace function rpc_create_company(p_company text, p_name text) returns uuid
 language plpgsql security definer set search_path = public as $$
 declare cid uuid;
 begin
   if auth.uid() is null then raise exception 'Non authentifié'; end if;
-  insert into companies (name, credits) values (p_company, p_bonus) returning id into cid;
+  insert into companies (name) values (p_company) returning id into cid;
   insert into profiles (id, company_id, full_name) values (auth.uid(), cid, p_name);
-  if p_bonus > 0 then
-    insert into credit_transactions (company_id, type, credits, ref) values (cid, 'bonus', p_bonus, 'Crédits de bienvenue');
-  end if;
   return cid;
 end $$;
 
--- Création de session : débite 1 crédit par personne invitée, de façon atomique.
-create or replace function rpc_create_session(p_type text, p_title text, p_profile text, p_questions int, p_pass int, p_deadline timestamptz, p_people jsonb)
-returns uuid language plpgsql security definer set search_path = public as $$
-declare cid uuid := current_company(); sid uuid; n int := jsonb_array_length(p_people);
+-- Commande de Pass : crée session + Pass (invitations) + commande.
+-- EN PRODUCTION : ne l'appeler qu'après confirmation du paiement par l'agrégateur (webhook, service_role) ;
+-- la retirer alors aux clients (revoke) et la faire appeler par une fonction serveur.
+-- En mode démo (paiement simulé), on la laisse exécutable par les utilisateurs authentifiés.
+create or replace function rpc_create_order(p_type text, p_title text, p_profile text, p_profile_name text, p_level text, p_unit int, p_questions int,
+                                            p_pass int, p_deadline timestamptz, p_people jsonb, p_method text, p_ref text, p_demo boolean)
+returns jsonb language plpgsql security definer set search_path = public as $$
+declare cid uuid := current_company(); sid uuid; oid uuid; n int := jsonb_array_length(p_people); k int;
 begin
   if cid is null then raise exception 'Non autorisé'; end if;
-  update companies set credits = credits - n where id = cid and credits >= n;
-  if not found then raise exception 'Crédits insuffisants'; end if;
-  insert into sessions (company_id, type, title, profile_id, question_count, pass_mark, deadline)
-    values (cid, p_type, p_title, p_profile, p_questions, p_pass, p_deadline) returning id into sid;
-  insert into invitations (session_id, name, email)
-    select sid, coalesce(x->>'name', ''), coalesce(x->>'email', '') from jsonb_array_elements(p_people) x;
-  insert into credit_transactions (company_id, type, credits, ref) values (cid, 'use', -n, 'Session « ' || p_title || ' »');
-  return sid;
+  insert into sessions (company_id, type, title, profile_id, level, question_count, pass_mark, deadline)
+    values (cid, p_type, p_title, p_profile, p_level, p_questions, p_pass, p_deadline) returning id into sid;
+  select count(*) + 1 into k from orders where company_id = cid;
+  insert into orders (number, company_id, session_id, session_title, profile_id, profile_name, level, unit_price, qty, total, method, ref, demo)
+    values ('MRS-' || to_char(now(), 'YYYY') || '-' || lpad(k::text, 4, '0'), cid, sid, p_title, p_profile, p_profile_name, p_level, p_unit, n, p_unit * n, p_method, p_ref, p_demo)
+    returning id into oid;
+  insert into invitations (session_id, name, email, order_id, price)
+    select sid, coalesce(x->>'name', ''), coalesce(x->>'email', ''), oid, p_unit from jsonb_array_elements(p_people) x;
+  return jsonb_build_object('session_id', sid, 'order_id', oid);
 end $$;
 
-create or replace function rpc_add_invitations(p_session uuid, p_people jsonb) returns void
-language plpgsql security definer set search_path = public as $$
-declare cid uuid := current_company(); n int := jsonb_array_length(p_people);
+create or replace function rpc_add_passes(p_session uuid, p_people jsonb, p_unit int, p_profile_name text, p_method text, p_ref text, p_demo boolean)
+returns uuid language plpgsql security definer set search_path = public as $$
+declare cid uuid := current_company(); s sessions; oid uuid; n int := jsonb_array_length(p_people); k int;
 begin
-  if not exists (select 1 from sessions where id = p_session and company_id = cid) then raise exception 'Non autorisé'; end if;
-  update companies set credits = credits - n where id = cid and credits >= n;
-  if not found then raise exception 'Crédits insuffisants'; end if;
-  insert into invitations (session_id, name, email)
-    select p_session, coalesce(x->>'name', ''), coalesce(x->>'email', '') from jsonb_array_elements(p_people) x;
-  insert into credit_transactions (company_id, type, credits, ref) values (cid, 'use', -n, 'Invitations ajoutées');
+  select * into s from sessions where id = p_session and company_id = cid;
+  if not found then raise exception 'Non autorisé'; end if;
+  select count(*) + 1 into k from orders where company_id = cid;
+  insert into orders (number, company_id, session_id, session_title, profile_id, profile_name, level, unit_price, qty, total, method, ref, demo)
+    values ('MRS-' || to_char(now(), 'YYYY') || '-' || lpad(k::text, 4, '0'), cid, s.id, s.title, s.profile_id, p_profile_name, s.level, p_unit, n, p_unit * n, p_method, p_ref, p_demo)
+    returning id into oid;
+  insert into invitations (session_id, name, email, order_id, price)
+    select s.id, coalesce(x->>'name', ''), coalesce(x->>'email', ''), oid, p_unit from jsonb_array_elements(p_people) x;
+  return oid;
 end $$;
 
--- Achat de crédits : à appeler UNIQUEMENT depuis un webhook serveur de l'agrégateur de paiement (service_role),
--- jamais depuis le navigateur. Révoqué pour anon/authenticated ci-dessous.
-create or replace function rpc_credit_purchase(p_company uuid, p_credits int, p_amount int, p_method text, p_ref text, p_demo boolean default false) returns void
-language plpgsql security definer set search_path = public as $$
-begin
-  update companies set credits = credits + p_credits where id = p_company;
-  insert into credit_transactions (company_id, type, credits, amount, method, ref, demo) values (p_company, 'purchase', p_credits, p_amount, p_method, p_ref, p_demo);
-end $$;
-revoke execute on function rpc_credit_purchase(uuid, int, int, text, text, boolean) from public, anon, authenticated;
+create or replace function rpc_touch_invitation(p_token text) returns void
+language sql security definer set search_path = public as $$
+  update invitations set training_at = coalesce(training_at, now()) where token = p_token
+$$;
+grant execute on function rpc_touch_invitation(text) to anon, authenticated;
 
 -- ---------------------------------------------------------------- Fonctions candidat (sans compte)
 create or replace function rpc_get_invitation(p_token text) returns jsonb

@@ -7,6 +7,9 @@ import { icon, logo } from './ui.js';
 const ROUTES = [
   { p: '', view: 'landing' },
   { p: 'formation', view: 'formation' },
+  { p: 'formation/:d', view: 'formation' },
+  { p: 'formation/:d/:b', view: 'formation' },
+  { p: 'formation/:d/:b/:l', view: 'formation' },
   { p: 'profil/:id', view: 'profil' },
   { p: 'cours/:id/:mod', view: 'cours' },
   { p: 'entrainement/:id', view: 'entrainement' },
@@ -16,9 +19,12 @@ const ROUTES = [
   { p: 'verifier', view: 'verifier' },
   { p: 't/:token', view: 'candidat' },
   { p: 'rh', view: 'rh', fn: 'dashboard', auth: true },
-  { p: 'rh/nouvelle-session', view: 'rh', fn: 'newSession', auth: true },
+  { p: 'rh/inviter', view: 'rh', fn: 'invite', auth: true },
+  { p: 'rh/nouvelle-session', view: 'rh', fn: 'invite', auth: true },
   { p: 'rh/session/:id', view: 'rh', fn: 'session', auth: true },
-  { p: 'rh/credits', view: 'rh', fn: 'credits', auth: true },
+  { p: 'rh/facturation', view: 'rh', fn: 'billing', auth: true },
+  { p: 'rh/credits', view: 'rh', fn: 'billing', auth: true },
+  { p: 'rh/recu/:id', view: 'rh', fn: 'receipt', auth: true },
   { p: 'connexion', view: 'auth', fn: 'login' },
   { p: 'inscription', view: 'auth', fn: 'signup' },
   { p: 'mon-espace', view: 'espace' },
@@ -62,7 +68,7 @@ async function refreshUser() {
 const NAV = [
   { key: '', label: 'Accueil', href: '#/', icon: 'home' },
   { key: 'formation', label: 'Formation', href: '#/formation', icon: 'book', also: ['profil', 'cours', 'entrainement', 'examen', 'resultat'] },
-  { key: 'rh', label: 'Espace RH', href: '#/rh', icon: 'building', also: ['connexion', 'inscription', 't'] },
+  { key: 'rh', label: 'Espace entreprise', href: '#/rh', icon: 'building', also: ['connexion', 'inscription', 't'] },
   { key: 'mon-espace', label: 'Mon espace', href: '#/mon-espace', icon: 'user', also: ['attestation'] },
   { key: 'verifier', label: 'Vérifier', href: '#/verifier', icon: 'award' },
 ];
@@ -81,7 +87,7 @@ function renderShell() {
     <nav class="nav-main" aria-label="Navigation principale">${NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${n.label}</a>`).join('')}</nav>
     <div class="header-actions">${state.user
       ? `<span class="user-chip">${esc(state.user.name)}</span><button type="button" class="btn btn-light btn-sm" data-logout>Déconnexion</button>`
-      : `<a class="btn btn-primary btn-sm" href="#/connexion">${icon('login', 16)} Connexion RH</a>`}</div></div>`;
+      : `<a class="btn btn-primary btn-sm" href="#/connexion">${icon('login', 16)} Connexion entreprise</a>`}</div></div>`;
   document.getElementById('tabbar').innerHTML = NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${icon(n.icon)}<span>${n.label}</span></a>`).join('');
   document.getElementById('site-footer').innerHTML = `<div class="container"><div class="footer-grid">
     <div>${logo('sombre')}<p>Tests d’aptitude et formation pour les équipes techniques et leurs fonctions support.</p></div>

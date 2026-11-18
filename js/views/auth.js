@@ -12,7 +12,7 @@ export async function login(ctx, root) {
   const demo = ctx.store.kind === 'local';
   root.innerHTML = `<div class="container page auth-wrap">
     <div class="card auth-card"><h1 class="h1-md">Connexion entreprise</h1>
-      <p class="muted">Espace réservé aux responsables RH : sessions de test, résultats, crédits.</p>
+      <p class="muted">Espace réservé aux entreprises : Pass, sessions de test, résultats, facturation.</p>
       <form id="lf" novalidate>
         <div class="field"><label for="l-email">E-mail professionnel</label><input id="l-email" type="email" autocomplete="username" required></div>
         <div class="field"><label for="l-pass">Mot de passe</label><input id="l-pass" type="password" autocomplete="current-password" required></div>
@@ -40,7 +40,7 @@ export async function signup(ctx, root) {
   ctx.setTitle('Créer un compte entreprise');
   if (ctx.user) { ctx.go('/rh'); return; }
   root.innerHTML = `<div class="container page auth-wrap"><div class="card auth-card"><h1 class="h1-md">Créer un compte entreprise</h1>
-    <p class="muted">${CONFIG.FREE_CREDITS_ON_SIGNUP ? `${CONFIG.FREE_CREDITS_ON_SIGNUP} crédits offerts pour essayer la plateforme.` : 'Quelques minutes suffisent.'}</p>
+    <p class="muted">Quelques minutes suffisent : vous achetez ensuite un Pass par personne invitée.</p>
     <form id="sf" novalidate>
       <div class="field"><label for="s-co">Nom de l’entreprise</label><input id="s-co" type="text" autocomplete="organization" required></div>
       <div class="field"><label for="s-name">Votre nom</label><input id="s-name" type="text" autocomplete="name" required></div>

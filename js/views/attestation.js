@@ -1,4 +1,4 @@
-import { getProfilesData, sectorOf } from '../data.js';
+import { getProfilesData, domainOf } from '../data.js';
 import { esc, copyText, CODE_RE } from '../util.js';
 import { icon } from '../ui.js';
 import { certificateHTML, verifyUrl } from '../certificate.js';
@@ -16,7 +16,7 @@ export default async function render(ctx, root) {
   const data = await getProfilesData();
   const profile = data.profiles.find((p) => p.id === cert.profileId);
   const profileName = profile?.name || cert.profileName || cert.profileId;
-  const sector = profile ? sectorOf(data, profile.sector)?.name : '';
+  const sector = profile ? domainOf(data, profile.domains?.[0])?.name : '';
   ctx.setTitle(`Attestation ${cert.code}`);
   if (!ctx.alive()) return;
 

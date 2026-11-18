@@ -1,5 +1,6 @@
 import { CONFIG } from '../../config.js';
-import { getProfilesData, sectorOf, levelOf } from '../data.js';
+import { getProfilesData, domainOf, levelOf, postes } from '../data.js';
+import { passPrice } from '../pass.js';
 import { esc, fmtMoney } from '../util.js';
 import { icon, sectorIcon } from '../ui.js';
 
@@ -20,7 +21,7 @@ export default async function render(ctx, root) {
   const data = await getProfilesData();
   if (!ctx.alive()) return;
   const featured = [];
-  for (const sec of data.sectors) { const p = data.profiles.find((x) => x.sector === sec.id); if (p) featured.push(p); }
+  for (const dm of data.domains || []) { const p = data.profiles.find((x) => (x.domains || []).includes(dm.id)); if (p && !featured.includes(p)) featured.push(p); }
   for (const p of data.profiles) { if (featured.length >= 8) break; if (!featured.includes(p)) featured.push(p); }
   const C = CONFIG.CONTACT;
 
@@ -62,26 +63,28 @@ export default async function render(ctx, root) {
     <div class="container">
       <div class="section-head"><p class="eyebrow dark">Secteurs et profils</p><h2>${data.profiles.length} profils métiers, du technicien à l’ingénieur</h2>
         <p class="muted">Chaque profil comprend des modules de cours, des questions illustrées par thème et un examen équilibré.</p></div>
-      <div class="grid grid-3 sectors">${data.sectors.map((s) => {
-        const n = data.profiles.filter((p) => p.sector === s.id).length;
-        return `<a class="card card-link sector-card" href="#/formation?secteur=${esc(s.id)}"><div class="sector-ico">${sectorIcon(s, 28)}</div><h3>${esc(s.name)}</h3><p class="muted small">${esc(s.desc)}</p><span class="badge">${n} profil${n > 1 ? 's' : ''}</span></a>`;
+      <div class="grid grid-3 sectors">${(data.domains || []).map((d) => {
+        const n = postes(data, { domain: d.id }).length;
+        return `<a class="card card-link sector-card" href="#/formation/${esc(d.id)}"><div class="sector-ico">${icon(d.icon || 'briefcase', 28)}</div><h3>${esc(d.name)}</h3><p class="muted small">${esc(d.desc)}</p><span class="badge">${n} poste${n > 1 ? 's' : ''}</span></a>`;
       }).join('')}</div>
       <h3 class="sub-h">Profils les plus demandés</h3>
-      <div class="grid grid-4">${featured.map((p) => `<a class="card card-link profile-mini" href="#/profil/${esc(p.id)}"><span class="badge badge-info">${esc(levelOf(data, p.level)?.name || '')}</span><h4>${esc(p.name)}</h4><p class="muted xs">${esc(sectorOf(data, p.sector)?.short || '')}</p></a>`).join('')}</div>
+      <div class="grid grid-4">${featured.map((p) => `<a class="card card-link profile-mini" href="#/profil/${esc(p.id)}"><span class="badge badge-info">${esc(levelOf(data, p.level)?.name || '')}</span><h4>${esc(p.name)}</h4><p class="muted xs">${esc(domainOf(data, p.domains?.[0])?.name || '')}</p></a>`).join('')}</div>
       <p class="center" style="margin-top:var(--sp-5)"><a class="btn btn-outline" href="#/formation">Voir les ${data.profiles.length} profils ${icon('arrow', 16)}</a></p>
     </div>
   </section>
 
   <section class="section" id="offre">
     <div class="container">
-      <div class="section-head"><p class="eyebrow dark">Offre entreprise</p><h2>Un crédit = un candidat évalué</h2>
-        <p class="muted">Payez à l’usage, sans abonnement. Les crédits n’expirent pas. Tarifs provisoires, hors négociation de volume.</p></div>
-      <div class="grid grid-3 packs">${CONFIG.PACKS.map((p) => `<article class="card pack ${p.featured ? 'pack-featured' : ''}">${p.featured ? '<span class="pack-flag">Le plus choisi</span>' : ''}
-        <h3>${esc(p.label)}</h3><p class="pack-credits"><strong>${p.credits}</strong> crédits</p><p class="pack-price">${fmtMoney(p.price)}</p>
-        <p class="muted small">${esc(Math.round(p.price / p.credits).toLocaleString('fr-FR'))} FCFA par candidat · ${esc(p.note)}</p>
-        <a class="btn ${p.featured ? 'btn-primary' : 'btn-outline'} btn-block" href="#/rh/credits">Choisir ce pack</a></article>`).join('')}</div>
-      <div class="card offer"><div><h3>Suivi de montée en compétences</h3><p class="muted">Faites passer le même profil à vos collaborateurs à intervalles réguliers et mesurez la progression thème par thème. Sessions illimitées, export CSV, accompagnement MOURESS.</p></div>
-        <a class="btn btn-navy" href="${esc(C.whatsapp)}" target="_blank" rel="noopener">${icon('whatsapp', 18)} Parler à un conseiller</a></div>
+      <div class="section-head"><p class="eyebrow dark">Offre entreprise</p><h2>1 Pass = 1 personne</h2>
+        <p class="muted">Vous payez par personne et par poste, sans abonnement. Tarifs provisoires, selon le niveau du poste.</p></div>
+      <div class="grid grid-2 packs">
+        <article class="card pack"><h3>Technicien</h3><p class="pack-price">${esc(fmtMoney(passPrice('tech')))}</p><p class="muted small">Opérateur, technicien, superviseur (tarif technicien pour l’instant)</p></article>
+        <article class="card pack pack-featured"><h3>Ingénieur / Cadre</h3><p class="pack-price">${esc(fmtMoney(passPrice('ing')))}</p><p class="muted small">Ingénieur, cadre, chef de site et management</p></article>
+      </div>
+      <div class="card included"><h3>Ce que comprend chaque Pass</h3>
+        <ul class="incl-list"><li>${icon('book', 18)} Formation : modules de cours du poste</li><li>${icon('target', 18)} Entraînement illimité, avec corrections expliquées</li>
+        <li>${icon('clock', 18)} Examen de ${CONFIG.EXAM_QUESTIONS} questions, ${CONFIG.ATTEMPTS_PER_PASS} tentatives</li><li>${icon('award', 18)} Attestation vérifiable en cas de réussite</li><li>${icon('chart', 18)} Résultat par thème transmis à votre entreprise</li></ul>
+        <div class="btn-row"><a class="btn btn-primary btn-lg" href="#/inscription">Créer un compte entreprise</a><a class="btn btn-outline btn-lg" href="${esc(C.whatsapp)}" target="_blank" rel="noopener">${icon('whatsapp', 18)} Parler à un conseiller</a></div></div>
     </div>
   </section>
 

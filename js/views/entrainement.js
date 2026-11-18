@@ -13,11 +13,15 @@ export default async function render(ctx, root) {
   if (!ctx.alive()) return;
   if (!content || !content.questions.length) { root.innerHTML = `<div class="container page">${comingSoon(profile.name)}</div>`; return; }
   const themes = themesOf(content);
+  const pass = ctx.query.get('pass');
+  const home = pass ? `#/t/${pass}` : `#/profil/${profile.id}`;
+  if (pass) ctx.store.touchInvitation?.(pass);
   const wanted = ctx.query.get('theme') || '';
 
   const setup = () => {
+    ctx.setChrome('full');
     root.innerHTML = `<div class="container-narrow page">
-      <div class="crumbs"><a href="#/formation">Formation</a><span>›</span><a href="#/profil/${esc(profile.id)}">${esc(profile.name)}</a><span>›</span><span>Entraînement</span></div>
+      <nav class="crumbs" aria-label="Fil d’Ariane">${pass ? `<a href="${esc(home)}">Mon Pass</a>` : `<a href="#/formation">Formation</a><span>›</span><a href="${esc(home)}">${esc(profile.name)}</a>`}<span>›</span><span>Entraînement</span></nav>
       <h1 class="h1-md">Entraînement</h1>
       <p class="muted">Réponse corrigée et expliquée immédiatement. Rien n’est noté : c’est l’endroit pour progresser.</p>
       <form class="card" id="setup" novalidate>
@@ -27,7 +31,7 @@ export default async function render(ctx, root) {
         <div class="field"><label for="s-n">Nombre de questions</label><select id="s-n"><option value="10">10</option><option value="20">20</option><option value="999">Toutes</option></select></div>
         <label class="check"><input type="checkbox" id="s-timer"> Activer le chronomètre (temps indicatif de chaque question)</label>
         <div class="btn-row" style="margin-top:var(--sp-4)"><button class="btn btn-primary btn-lg" type="submit">${icon('target', 20)} Commencer</button>
-        <a class="btn btn-ghost" href="#/profil/${esc(profile.id)}">Retour</a></div></form></div>`;
+        <a class="btn btn-ghost" href="${esc(home)}">Retour</a></div></form></div>`;
     root.querySelector('#setup').addEventListener('submit', (e) => {
       e.preventDefault();
       run({ theme: root.querySelector('#s-theme').value, n: Number(root.querySelector('#s-n').value), timer: root.querySelector('#s-timer').checked });
@@ -51,13 +55,14 @@ export default async function render(ctx, root) {
       const cd = correctDisplayIndex(q, order);
       let locked = false;
       const secs = qSeconds(q);
+      ctx.setChrome('focus');
       root.innerHTML = `<div class="container-narrow page quiz">
-        <div class="quiz-top"><span class="small muted">Question ${i + 1} / ${list.length}</span><span class="badge">${esc(q.theme)}</span></div>
+        <div class="quiz-head"><div class="quiz-top"><span class="small"><strong>Question ${i + 1}</strong> / ${list.length}</span><span class="badge">${esc(q.theme)}</span></div>
         ${bar(pct(i, list.length))}
-        ${opts.timer ? `<div class="timer" aria-hidden="true"><div class="timer-bar"><span id="tbar"></span></div><span id="tsec" class="timer-sec">${fmtClock(secs)}</span></div>` : ''}
+        ${opts.timer ? `<div class="timer" aria-hidden="true"><div class="timer-bar"><span id="tbar"></span></div><span id="tsec" class="timer-sec">${fmtClock(secs)}</span></div>` : ''}</div>
         <div class="card q-card">${questionBodyHTML(q)}<div id="choices">${choicesHTML(q, order)}</div>
         <div id="feedback" aria-live="polite"></div></div>
-        <div class="btn-row quiz-actions"><a class="btn btn-ghost btn-sm" href="#/profil/${esc(profile.id)}">Quitter</a></div></div>`;
+        <div class="btn-row quiz-actions"><a class="btn btn-ghost btn-sm" href="${esc(home)}">Quitter</a></div></div>`;
       const fb = root.querySelector('#feedback');
 
       const reveal = (picked, timedOut) => {
@@ -103,6 +108,7 @@ export default async function render(ctx, root) {
 
     const finish = () => {
       stop();
+      ctx.setChrome('full');
       const by = themeBreakdown(results);
       local.addPractice(profile.id, by);
       for (const t of Object.keys(by)) ctx.store.markAssignmentsDone(local.getMe().email, { profileId: profile.id, theme: t }).catch(() => {});
@@ -115,8 +121,8 @@ export default async function render(ctx, root) {
         <div class="theme-rows">${Object.entries(by).map(([t, v]) => `<div class="theme-row"><span>${esc(t)}</span><span class="xs muted">${v.ok}/${v.total}</span>${bar(pct(v.ok, v.total), pct(v.ok, v.total) >= 70 ? 'ok' : 'ko')}</div>`).join('')}</div>
         <div class="btn-row" style="justify-content:center;margin-top:var(--sp-5)">
           <button type="button" class="btn btn-primary" id="again">${icon('refresh', 18)} Recommencer</button>
-          <a class="btn btn-outline" href="#/examen/${esc(profile.id)}">Passer l’examen</a>
-          <a class="btn btn-ghost" href="#/profil/${esc(profile.id)}">Retour au profil</a></div></div></div>`;
+          <a class="btn btn-outline" href="${pass ? esc(home) : `#/examen/${esc(profile.id)}`}">Passer l’examen</a>
+          <a class="btn btn-ghost" href="${esc(home)}">${pass ? 'Retour à mon Pass' : 'Retour au profil'}</a></div></div></div>`;
       root.querySelector('#again').addEventListener('click', setup);
     };
     show();

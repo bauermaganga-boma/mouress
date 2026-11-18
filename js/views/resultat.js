@@ -41,7 +41,7 @@ export default async function render(ctx, root) {
         <div class="btn-row" style="gap:.4rem">${badge(`Seuil ${att.passMark} %`, att.passed ? 'ok' : 'warn')}${badge(`Durée ${fmtDuration(att.durationMs)}`)}${badge(fmtDate(att.finishedAt))}</div>
       </div>
     </div>
-    ${att.sessionId && !isOwnerRH ? `<div class="alert alert-info">${icon('check', 16)} ${training ? 'Votre résultat a été ajouté à votre parcours de montée en compétences.' : 'Votre résultat a été transmis à l’entreprise qui vous a invité. Merci de votre participation.'}</div>` : ''}
+    ${att.sessionId && !isOwnerRH ? `<div class="alert alert-info">${icon('check', 16)} Votre résultat a été transmis à l’entreprise qui vous a invité.${training ? ' Il alimente votre parcours de montée en compétences.' : ''}</div>` : ''}
     ${att.passed && att.certCode ? `<div class="card cert-cta"><div><h3>Votre attestation est prête</h3><p class="muted">Code <strong>${esc(att.certCode)}</strong> — vérifiable en ligne, imprimable en PDF.</p></div>
       <a class="btn btn-primary" href="#/attestation/${esc(att.certCode)}">${icon('award', 18)} Voir l’attestation</a></div>` : ''}
     ${themes.length ? `<section class="block"><h2>Résultat par thème</h2><div class="card">${themes.map(([t, v]) => {
@@ -51,7 +51,7 @@ export default async function render(ctx, root) {
       ${weak.length ? `<p class="muted small" style="margin-top:var(--sp-3)">À renforcer : ${weak.map(([t]) => esc(t)).join(', ')}.</p>` : best.length ? '<p class="muted small" style="margin-top:var(--sp-3)">Tous les thèmes atteignent le seuil.</p>' : ''}</section>` : ''}
     ${showCorrection ? correctionHTML(att, content) : ''}
     <div class="btn-row" style="margin-top:var(--sp-6)">
-      ${att.sessionId ? (isOwnerRH ? `<a class="btn btn-navy" href="#/rh/session/${esc(att.sessionId)}">Retour à la session</a>` : training ? `<a class="btn btn-primary" href="#/mon-espace">Mon parcours</a><a class="btn btn-outline" href="#/entrainement/${esc(att.profileId)}">S’entraîner</a>` : '') : `<a class="btn btn-primary" href="#/examen/${esc(att.profileId)}">${icon('refresh', 18)} Repasser l’examen</a><a class="btn btn-outline" href="#/entrainement/${esc(att.profileId)}">S’entraîner</a><a class="btn btn-ghost" href="#/mon-espace">Mon espace</a>`}
+      ${att.sessionId ? (isOwnerRH ? `<a class="btn btn-navy" href="#/rh/session/${esc(att.sessionId)}">Retour à la session</a>` : `${att.passToken ? `<a class="btn btn-primary" href="#/t/${esc(att.passToken)}">Retour à mon Pass</a>` : ''}<a class="btn btn-outline" href="#/entrainement/${esc(att.profileId)}${att.passToken ? `?pass=${esc(att.passToken)}` : ''}">S’entraîner</a>${training ? '<a class="btn btn-ghost" href="#/mon-espace">Mon parcours</a>' : ''}`) : `<a class="btn btn-primary" href="#/examen/${esc(att.profileId)}">${icon('refresh', 18)} Repasser l’examen</a><a class="btn btn-outline" href="#/entrainement/${esc(att.profileId)}">S’entraîner</a><a class="btn btn-ghost" href="#/mon-espace">Mon espace</a>`}
     </div></div>`;
 }
 

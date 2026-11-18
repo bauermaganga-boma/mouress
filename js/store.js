@@ -8,12 +8,12 @@
 //   signIn(email,password)                   signOut()                getCompany(id)
 //   listSessions(companyId)  -> sessions avec .invitations[] (chacune avec .attempt résumé)
 //   getSession(id)           -> session avec .invitations[]
-//   createSession({companyId,title,profileId,questionCount,passMark,deadline,candidates:[{name,email}]})
-//   addInvitations(sessionId,candidates)     getInvitationByToken(token) -> {invitation,session,company}|null
+//   createOrder({companyId,type,title,profileId,level,unitPrice,questionCount,passMark,deadline,candidates,payment}) -> {session,order}
+//   addPasses(sessionId,candidates,unitPrice,payment) -> order     listOrders(companyId)     getOrder(id)
+//   getInvitationByToken(token) -> {invitation,session,company}|null     touchInvitation(token)
 //   saveAttempt(attempt)  getAttempt(id)  listAttemptsByDevice()  listAttemptsBySession(sessionId)
 //   listAssignments(sessionId)  addAssignments(sessionId,list)  listCollabByEmail(email)  markAssignmentsDone(email,{profileId,moduleId?,theme?})
 //   createCertificate(attempt)  getCertificate(code)  listCertificatesByDevice()
-//   purchaseCredits(companyId,pack,payment)  listTransactions(companyId)
 // Progression de cours et identité du candidat : toujours locales à l'appareil (voir `local` ci-dessous).
 
 import { CONFIG } from '../config.js';
@@ -64,11 +64,12 @@ class LocalStore {
 
   async init() {
     this.db = readJSON(KEY, null);
-    if (!this.db || this.db.v !== 1) {
+    if (!this.db || this.db.v !== 2) {
       this.db = await buildSeed();
       this._save();
     }
     this.db.assignments = this.db.assignments || [];
+    this.db.orders = this.db.orders || [];
   }
   _save() {
     if (!writeJSON(KEY, this.db)) console.warn('Stockage local indisponible ou plein.');
@@ -85,13 +86,10 @@ class LocalStore {
   async signUp({ companyName, name, email, password }) {
     email = String(email).trim().toLowerCase();
     if (this.db.users.some((u) => u.email === email)) throw new Error('Un compte existe déjà avec cet e-mail.');
-    const company = { id: uid('c'), name: String(companyName).trim(), credits: CONFIG.FREE_CREDITS_ON_SIGNUP, createdAt: Date.now() };
+    const company = { id: uid('c'), name: String(companyName).trim(), createdAt: Date.now() };
     const user = { id: uid('u'), companyId: company.id, email, name: String(name).trim(), hash: await sha256(password) };
     this.db.companies.push(company);
     this.db.users.push(user);
-    if (CONFIG.FREE_CREDITS_ON_SIGNUP) {
-      this.db.transactions.push({ id: uid('t'), companyId: company.id, type: 'bonus', credits: CONFIG.FREE_CREDITS_ON_SIGNUP, amount: 0, method: '', ref: 'Crédits de bienvenue', date: Date.now() });
-    }
     this._save();
     writeJSON(AUTH, user.id);
     return this.currentUser();
@@ -117,6 +115,7 @@ class LocalStore {
     const last = attempts[attempts.length - 1] || null;
     let status = 'invited';
     if (last) status = last.status === 'done' ? (last.passed ? 'passed' : 'failed') : 'started';
+    else if (i.trainingAt) status = 'training';
     else if (s.deadline && Date.now() > s.deadline) status = 'expired';
     return { ...i, status, attempt: last, attempts };
   }
@@ -127,37 +126,47 @@ class LocalStore {
     const s = this.db.sessions.find((x) => x.id === id);
     return s ? this._decorate(s) : null;
   }
-  _spend(company, n, ref) {
-    if (company.credits < n) throw new Error(`Crédits insuffisants : ${n} nécessaire(s), ${company.credits} disponible(s).`);
-    company.credits -= n;
-    this.db.transactions.push({ id: uid('t'), companyId: company.id, type: 'use', credits: -n, amount: 0, method: '', ref, date: Date.now() });
-  }
-  _invite(sessionId, candidates) {
+  _invite(sessionId, candidates, orderId, price) {
     return candidates.map((c) => {
-      const inv = { id: uid('i'), sessionId, token: makeToken(), name: String(c.name || '').trim(), email: String(c.email || '').trim(), status: 'invited', attemptId: null, createdAt: Date.now(), startedAt: null, finishedAt: null };
+      const inv = { id: uid('i'), sessionId, orderId, price, token: makeToken(), name: String(c.name || '').trim(), email: String(c.email || '').trim(), status: 'invited', attemptId: null, createdAt: Date.now(), startedAt: null, finishedAt: null, trainingAt: null };
       this.db.invitations.push(inv);
       return inv;
     });
   }
-  async createSession({ companyId, title, profileId, questionCount, passMark, deadline, candidates, type = 'recruitment' }) {
+  /** Commande de Pass : appelée APRÈS un paiement accepté. Crée la session, les Pass (invitations) et la commande. */
+  async createOrder({ companyId, type = 'recruitment', title, profileId, profileName, level, unitPrice, questionCount, passMark, deadline, candidates, payment }) {
     const company = this.db.companies.find((c) => c.id === companyId);
     if (!company) throw new Error('Entreprise introuvable.');
-    if (!candidates?.length) throw new Error('Ajoutez au moins un candidat.');
-    this._spend(company, candidates.length, `Session « ${title} » : ${candidates.length} candidat(s)`);
-    const s = { id: uid('s'), type, companyId, title: String(title).trim(), profileId, questionCount, passMark: passMark || CONFIG.PASS_MARK, createdAt: Date.now(), deadline };
+    if (!candidates?.length) throw new Error('Ajoutez au moins une personne.');
+    const s = { id: uid('s'), type, companyId, title: String(title).trim(), profileId, level, questionCount, passMark: passMark || CONFIG.PASS_MARK, createdAt: Date.now(), deadline };
     this.db.sessions.push(s);
-    this._invite(s.id, candidates);
+    const order = this._order(company, s, profileName, unitPrice, candidates.length, payment);
+    this._invite(s.id, candidates, order.id, unitPrice);
     this._save();
-    return this._decorate(s);
+    return { session: this._decorate(s), order: { ...order } };
   }
-  async addInvitations(sessionId, candidates) {
+  async addPasses(sessionId, candidates, unitPrice, payment, profileName) {
     const s = this.db.sessions.find((x) => x.id === sessionId);
     if (!s) throw new Error('Session introuvable.');
     const company = this.db.companies.find((c) => c.id === s.companyId);
-    this._spend(company, candidates.length, `Session « ${s.title} » : ${candidates.length} candidat(s) ajouté(s)`);
-    this._invite(sessionId, candidates);
+    const order = this._order(company, s, profileName, unitPrice, candidates.length, payment);
+    this._invite(sessionId, candidates, order.id, unitPrice);
     this._save();
-    return this._decorate(s);
+    return { ...order };
+  }
+  // Aucune donnée de paiement sensible n'est conservée : seulement le mode et la référence.
+  _order(company, s, profileName, unitPrice, qty, payment) {
+    const n = this.db.orders.filter((o) => o.companyId === company.id).length + 1;
+    const order = { id: uid('o'), number: `MRS-${new Date().getFullYear()}-${String(n).padStart(4, '0')}`, companyId: company.id, sessionId: s.id, sessionTitle: s.title, profileId: s.profileId, profileName: profileName || '', level: s.level, unitPrice, qty, total: unitPrice * qty, method: payment.method, ref: payment.ref, demo: payment.provider === 'simulated', date: Date.now() };
+    this.db.orders.push(order);
+    return order;
+  }
+  async listOrders(companyId) { return this.db.orders.filter((o) => o.companyId === companyId).sort((a, b) => b.date - a.date).map((o) => ({ ...o })); }
+  async getOrder(id) { const o = this.db.orders.find((x) => x.id === id); return o ? { ...o } : null; }
+  /** Le candidat a ouvert son Pass / suivi un cours ou un entraînement : statut « en formation ». */
+  async touchInvitation(token) {
+    const inv = this.db.invitations.find((i) => i.token === token);
+    if (inv && !inv.trainingAt) { inv.trainingAt = Date.now(); this._save(); }
   }
   async getInvitationByToken(token) {
     const inv = this.db.invitations.find((i) => i.token === token);
@@ -259,19 +268,6 @@ class LocalStore {
     return this.db.certificates.filter((c) => ids.has(c.attemptId)).sort((a, b) => b.date - a.date);
   }
 
-  // ---------- Crédits ----------
-  async purchaseCredits(companyId, pack, payment) {
-    const company = this.db.companies.find((c) => c.id === companyId);
-    if (!company) throw new Error('Entreprise introuvable.');
-    company.credits += pack.credits;
-    // Aucune donnée de paiement sensible n'est conservée : seulement le mode et la référence.
-    this.db.transactions.push({ id: uid('t'), companyId, type: 'purchase', credits: pack.credits, amount: pack.price, method: payment.method, ref: payment.ref, date: Date.now(), demo: payment.provider === 'simulated' });
-    this._save();
-    return { ...company };
-  }
-  async listTransactions(companyId) {
-    return this.db.transactions.filter((t) => t.companyId === companyId).sort((a, b) => b.date - a.date);
-  }
 }
 
 export let store = null;

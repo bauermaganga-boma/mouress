@@ -48,5 +48,32 @@ export function imgSrc(p) {
   return `assets/img/${p}`;
 }
 
-export function sectorOf(data, id) { return data.sectors.find((s) => s.id === id); }
+export function sectorOf(data, id) { return (data.sectors || []).find((s) => s.id === id); }
 export function levelOf(data, id) { return data.levels.find((l) => l.id === id); }
+
+// ---------- Entonnoir « secteur › branche › niveau › poste » (tout vient de profiles.json) ----------
+export const domainOf = (data, id) => (data.domains || []).find((d) => d.id === id);
+export const branchOf = (data, id) => (data.branches || []).find((b) => b.id === id);
+
+export function postes(data, { domain, branch, level } = {}) {
+  return data.profiles.filter((p) => (!domain || (p.domains || []).includes(domain)) && (!branch || p.branch === branch) && (!level || p.level === level));
+}
+
+/** Disponibilité des contenus (content-index.json généré par tools/build-index.mjs). null si absent. */
+let availP = null;
+export function getAvailability() {
+  if (!availP) availP = fetch('content-index.json').then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  return availP;
+}
+
+/** Mémorise le chemin d'entonnoir suivi, pour le fil d'Ariane de la fiche profil. */
+export function rememberFunnel(profileId, domain) {
+  try { const m = JSON.parse(sessionStorage.getItem('mrs.funnel') || '{}'); m[profileId] = domain; sessionStorage.setItem('mrs.funnel', JSON.stringify(m)); } catch { /* ignore */ }
+}
+export function funnelDomainFor(data, profile) {
+  try {
+    const d = JSON.parse(sessionStorage.getItem('mrs.funnel') || '{}')[profile.id];
+    if (d && (profile.domains || []).includes(d)) return d;
+  } catch { /* ignore */ }
+  return (profile.domains || [])[0] || null;
+}

@@ -29,15 +29,16 @@ const toPayload = (a) => ({
   startedAt: a.startedAt, finishedAt: a.finishedAt || '', state: { phase: a.phase, idx: a.idx, qStart: a.qStart, items: a.items },
 });
 const fromAssignment = (r) => ({ id: r.id, sessionId: r.session_id, invitationId: r.invitation_id, kind: r.kind, profileId: r.profile_id, moduleId: r.module_id, theme: r.theme, due: ts(r.due), createdAt: ts(r.created_at), doneAt: ts(r.done_at) });
-const fromSession = (r) => ({ id: r.id, type: r.type, companyId: r.company_id, title: r.title, profileId: r.profile_id, questionCount: r.question_count, passMark: r.pass_mark, deadline: ts(r.deadline), createdAt: ts(r.created_at) });
+const fromSession = (r) => ({ id: r.id, level: r.level, type: r.type, companyId: r.company_id, title: r.title, profileId: r.profile_id, questionCount: r.question_count, passMark: r.pass_mark, deadline: ts(r.deadline), createdAt: ts(r.created_at) });
 
 function decorateInv(inv, s, attempts) {
   const list = attempts.sort((a, b) => a.startedAt - b.startedAt);
   const last = list[list.length - 1] || null;
   let status = 'invited';
   if (last) status = last.status === 'done' ? (last.passed ? 'passed' : 'failed') : 'started';
+  else if (inv.training_at) status = 'training';
   else if (s.deadline && Date.now() > s.deadline) status = 'expired';
-  return { id: inv.id, sessionId: inv.session_id, token: inv.token, name: inv.name, email: inv.email, createdAt: ts(inv.created_at), status, attempt: last && { ...last, items: undefined }, attempts: list.map((a) => ({ ...a, items: undefined })) };
+  return { id: inv.id, sessionId: inv.session_id, token: inv.token, name: inv.name, email: inv.email, createdAt: ts(inv.created_at), status, orderId: inv.order_id, price: inv.price, trainingAt: ts(inv.training_at), attempt: last && { ...last, items: undefined }, attempts: list.map((a) => ({ ...a, items: undefined })) };
 }
 
 export class SupabaseStore {
@@ -92,7 +93,7 @@ export class SupabaseStore {
 
   async getCompany(id) {
     const r = (await this._rest(`companies?id=eq.${id}&select=*`))[0];
-    return r ? { id: r.id, name: r.name, credits: r.credits, createdAt: ts(r.created_at) } : null;
+    return r ? { id: r.id, name: r.name, createdAt: ts(r.created_at) } : null;
   }
 
   // ---------- Sessions ----------
@@ -107,14 +108,19 @@ export class SupabaseStore {
   }
   async listSessions(companyId) { return this._sessions(`company_id=eq.${companyId}`); }
   async getSession(id) { return (await this._sessions(`id=eq.${id}`))[0] || null; }
-  async createSession({ type = 'recruitment', title, profileId, questionCount, passMark, deadline, candidates }) {
-    const id = await this._rpc('rpc_create_session', { p_type: type, p_title: title, p_profile: profileId, p_questions: questionCount, p_pass: passMark, p_deadline: iso(deadline), p_people: candidates });
-    return this.getSession(id);
+  // Commande de Pass : à n'appeler qu'APRÈS confirmation du paiement (en production : webhook serveur de l'agrégateur).
+  async createOrder({ type = 'recruitment', title, profileId, profileName, level, unitPrice, questionCount, passMark, deadline, candidates, payment }) {
+    const r = await this._rpc('rpc_create_order', { p_type: type, p_title: title, p_profile: profileId, p_profile_name: profileName || '', p_level: level, p_unit: unitPrice, p_questions: questionCount, p_pass: passMark, p_deadline: iso(deadline), p_people: candidates, p_method: payment.method, p_ref: payment.ref, p_demo: payment.provider === 'simulated' });
+    return { session: await this.getSession(r.session_id), order: await this.getOrder(r.order_id) };
   }
-  async addInvitations(sessionId, candidates) {
-    await this._rpc('rpc_add_invitations', { p_session: sessionId, p_people: candidates });
-    return this.getSession(sessionId);
+  async addPasses(sessionId, candidates, unitPrice, payment, profileName) {
+    const id = await this._rpc('rpc_add_passes', { p_session: sessionId, p_people: candidates, p_unit: unitPrice, p_profile_name: profileName || '', p_method: payment.method, p_ref: payment.ref, p_demo: payment.provider === 'simulated' });
+    return this.getOrder(id);
   }
+  _order(o) { return { id: o.id, number: o.number, companyId: o.company_id, sessionId: o.session_id, sessionTitle: o.session_title, profileId: o.profile_id, profileName: o.profile_name, level: o.level, unitPrice: o.unit_price, qty: o.qty, total: o.total, method: o.method, ref: o.ref, demo: o.demo, date: ts(o.created_at) }; }
+  async listOrders(companyId) { return (await this._rest(`orders?company_id=eq.${companyId}&select=*&order=created_at.desc`)).map((o) => this._order(o)); }
+  async getOrder(id) { const o = (await this._rest(`orders?id=eq.${id}&select=*`))[0]; return o ? this._order(o) : null; }
+  async touchInvitation(token) { await this._rpc('rpc_touch_invitation', { p_token: token }).catch(() => {}); }
   async getInvitationByToken(token) {
     const r = await this._rpc('rpc_get_invitation', { p_token: token });
     if (!r) return null;
@@ -157,13 +163,6 @@ export class SupabaseStore {
     const out = [];
     for (const a of atts) { const c = await this.getCertificate(a.certCode); if (c) out.push(c); }
     return out;
-  }
-
-  // ---------- Crédits ----------
-  // L'achat réel doit être confirmé côté serveur (webhook de l'agrégateur -> rpc_credit_purchase, service_role).
-  async purchaseCredits() { throw new Error('Paiement réel non branché : voir payments.js et la fonction serveur rpc_credit_purchase.'); }
-  async listTransactions(companyId) {
-    return (await this._rest(`credit_transactions?company_id=eq.${companyId}&select=*&order=created_at.desc`)).map((t) => ({ id: t.id, companyId, type: t.type, credits: t.credits, amount: t.amount, method: t.method, ref: t.ref, date: ts(t.created_at), demo: t.demo }));
   }
 
   // ---------- Montée en compétences ----------

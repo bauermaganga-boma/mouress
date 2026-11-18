@@ -39,6 +39,7 @@ const P = {
   link: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
   login: '<path d="M14 4h5v16h-5M9 8l-4 4 4 4M5 12h11"/>',
   zoom: '<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M11 8.5v5M8.5 11h5"/>',
+  factory: '<path d="M3 21V10l6 4V10l6 4V7h3v14M3 21h18M7 17h2M12 17h2M17 17h1"/>',
   refresh: '<path d="M20 11a8 8 0 0 0-14-4M4 4v4h4M4 13a8 8 0 0 0 14 4M20 20v-4h-4"/>',
   settings: '<circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>',
 };
@@ -97,11 +98,27 @@ export function scoreRing(percent, passed) {
 
 export const STATUS = {
   invited: { label: 'Invité', tone: '' },
-  started: { label: 'En cours', tone: 'info' },
+  training: { label: 'En formation', tone: 'info' },
+  started: { label: 'En examen', tone: 'info' },
   passed: { label: 'Réussi', tone: 'ok' },
   failed: { label: 'Échoué', tone: 'ko' },
   expired: { label: 'Expiré', tone: 'warn' },
 };
 export const statusBadge = (s) => badge((STATUS[s] || STATUS.invited).label, (STATUS[s] || STATUS.invited).tone);
+
+/** Fil d'Ariane cliquable : items = [{label, href?}] (le dernier est la page courante). */
+export function crumbs(items) {
+  return `<nav class="crumbs" aria-label="Fil d’Ariane">${items.map((c, i) => (c.href && i < items.length - 1
+    ? `<a href="${esc(c.href)}">${esc(c.label)}</a><span aria-hidden="true">›</span>`
+    : `<span ${i === items.length - 1 ? 'aria-current="page"' : ''}>${esc(c.label)}</span>`)).join('')}</nav>`;
+}
+
+/** En-tête de page homogène : fil d'Ariane, bouton retour, titre, texte. */
+export function pageHead({ crumbs: c = [], back, title, text = '', actions = '', eyebrow = '' }) {
+  return `<header class="page-head2">${c.length ? crumbs(c) : ''}
+    ${back ? `<a class="back-link" href="${esc(back)}">${icon('arrow', 16, 'flip')} Retour</a>` : ''}
+    ${eyebrow ? `<p class="eyebrow dark">${esc(eyebrow)}</p>` : ''}
+    <h1 class="page-title">${esc(title)}</h1>${text ? `<p class="page-sub">${esc(text)}</p>` : ''}${actions}</header>`;
+}
 
 export function whatsappLink(text) { return `https://wa.me/?text=${encodeURIComponent(text)}`; }

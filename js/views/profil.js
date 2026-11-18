@@ -1,8 +1,8 @@
 import { CONFIG } from '../../config.js';
-import { getProfilesData, loadContent, sectorOf, levelOf, themesOf } from '../data.js';
+import { getProfilesData, loadContent, domainOf, branchOf, levelOf, themesOf, funnelDomainFor } from '../data.js';
 import { local } from '../store.js';
 import { esc, fmtDate, pct } from '../util.js';
-import { icon, badge, bar, comingSoon, sectorIcon } from '../ui.js';
+import { icon, badge, bar, comingSoon, crumbs } from '../ui.js';
 import { examSize, qSeconds } from '../quiz.js';
 
 export default async function render(ctx, root) {
@@ -10,14 +10,18 @@ export default async function render(ctx, root) {
   const profile = data.profiles.find((p) => p.id === ctx.params.id);
   if (!profile) { (await import('./notfound.js')).default(ctx, root); return; }
   ctx.setTitle(profile.name);
-  const sector = sectorOf(data, profile.sector);
+  const dom = domainOf(data, funnelDomainFor(data, profile));
+  const branch = branchOf(data, profile.branch);
+  const lvl = levelOf(data, profile.level);
+  const bc = crumbs([{ label: 'Formation', href: '#/formation' }, { label: dom?.name || 'Secteur', href: dom ? `#/formation/${dom.id}` : '#/formation' }, { label: branch?.name || 'Métiers', href: dom ? `#/formation/${dom.id}/${profile.branch}` : '#/formation' }, { label: lvl?.name || 'Niveau', href: dom ? `#/formation/${dom.id}/${profile.branch}/${profile.level}` : '#/formation' }]);
   const content = await loadContent(profile.id);
   if (!ctx.alive()) return;
 
-  const head = `<div class="crumbs"><a href="#/formation">Formation</a><span>›</span><a href="#/formation?secteur=${esc(profile.sector)}">${esc(sector?.short || '')}</a></div>
-    <div class="profile-head"><span class="pcard-ico big">${sectorIcon(sector, 30)}</span>
-    <div><div class="btn-row" style="gap:.4rem">${badge(levelOf(data, profile.level)?.name || '', 'info')}${badge(sector?.name || '')}</div>
-    <h1 class="h1-md">${esc(profile.name)}</h1><p class="muted">${esc(profile.desc)}</p></div></div>`;
+  const head = `${bc}
+    <a class="back-link" href="${dom ? `#/formation/${dom.id}/${profile.branch}/${profile.level}` : '#/formation'}">${icon('arrow', 16, 'flip')} Retour à la liste des postes</a>
+    <div class="profile-head"><span class="pcard-ico big">${icon(dom?.icon || 'briefcase', 30)}</span>
+    <div><div class="btn-row" style="gap:.4rem">${badge(lvl?.name || '', 'info')}${badge(dom?.name || '')}</div>
+    <h1 class="page-title">${esc(profile.name)}</h1><p class="muted">${esc(profile.desc)}</p></div></div>`;
 
   if (!content || (!content.questions.length && !content.modules.length)) {
     root.innerHTML = `<div class="container page">${head}${comingSoon(profile.name)}</div>`;

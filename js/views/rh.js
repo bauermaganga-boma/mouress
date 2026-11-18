@@ -1,9 +1,11 @@
-// Espace entreprise : tableau de bord, création de session, session (recrutement / montée en compétences), crédits.
+// Espace entreprise : tableau de bord, achat de Pass, session (recrutement / montée en compétences), facturation.
 import { CONFIG } from '../../config.js';
 import { getProfilesData, loadContent, sectorOf, levelOf } from '../data.js';
 import { esc, fmtDate, fmtDateInput, fmtDuration, fmtMoney, absUrl, copyText, downloadFile, toCsv, isEmail, pct } from '../util.js';
 import { icon, badge, bar, statusBadge, whatsappLink } from '../ui.js';
-import { pay, demoBanner, METHODS, paymentFormHTML, methodLabel } from '../payments.js';
+import { demoBanner, methodLabel } from '../payments.js';
+import { passPrice, attemptsUsed } from '../pass.js';
+import { invite as inviteImpl, parsePeople } from './rh-invite.js';
 import { band, BAND_LABEL, collabStats, matrixThemes, gaps, recommend, dueState, assignmentTitle, assignmentHref } from '../skills.js';
 
 const DAY = 86400000;
@@ -16,9 +18,9 @@ const linkOf = (inv) => absUrl(`#/t/${inv.token}`);
 function inviteMessage(inv, s, company) {
   const when = s.deadline ? ` avant le ${fmtDate(s.deadline)}` : '';
   if (s.type === 'training') {
-    return `Bonjour ${inv.name || ''}, ${company} vous invite à suivre votre parcours de montée en compétences « ${s.title} »${when}. Vous pouvez passer le test et vous entraîner autant de fois que nécessaire : ${linkOf(inv)}`;
+    return `Bonjour ${inv.name || ''}, ${company} vous invite à suivre votre parcours de montée en compétences « ${s.title} »${when}. Votre Pass donne accès à la formation, à l’entraînement et à l’examen : ${linkOf(inv)}`;
   }
-  return `Bonjour ${inv.name || ''}, ${company} vous invite à passer un test d’aptitude « ${s.title} » (${s.questionCount} questions)${when}. Votre lien personnel : ${linkOf(inv)}`;
+  return `Bonjour ${inv.name || ''}, ${company} vous invite à passer un test d’aptitude « ${s.title} » (${s.questionCount} questions)${when}. Votre Pass personnel (formation, entraînement, examen) : ${linkOf(inv)}`;
 }
 
 function shareButtons(inv, s, company) {
@@ -40,20 +42,6 @@ function bindCopy(ctx, root) {
   });
 }
 
-/** « Nom, e-mail » | « Nom <e-mail> » | e-mail seul | nom seul, un par ligne. */
-export function parsePeople(text, requireEmail) {
-  const list = []; const errors = [];
-  String(text || '').split(/\r?\n|;/).map((l) => l.trim()).filter(Boolean).forEach((line, i) => {
-    const m = line.match(/[^\s,<>;]+@[^\s,<>;]+\.[^\s,<>;]{2,}/);
-    const email = m ? m[0] : '';
-    const name = line.replace(email, '').replace(/[<>,]/g, ' ').replace(/\s+/g, ' ').trim();
-    if (requireEmail && !isEmail(email)) { errors.push(`Ligne ${i + 1} : e-mail manquant ou invalide (« ${line} »).`); return; }
-    if (!name && !email) return;
-    list.push({ name: name || email.split('@')[0], email });
-  });
-  return { list, errors };
-}
-
 const sessionStats = (s) => {
   const inv = s.invitations;
   const done = inv.filter((i) => i.attempt?.status === 'done');
@@ -63,7 +51,7 @@ const sessionStats = (s) => {
 
 /* ------------------------------------------------------------------ Tableau de bord */
 export async function dashboard(ctx, root) {
-  ctx.setTitle('Tableau de bord RH');
+  ctx.setTitle('Tableau de bord entreprise');
   const data = await getProfilesData();
   const company = await ctx.store.getCompany(ctx.user.companyId);
   const sessions = await ctx.store.listSessions(company.id);
@@ -79,13 +67,13 @@ export async function dashboard(ctx, root) {
 
   root.innerHTML = `<div class="container page">
     <div class="page-head split"><div><p class="eyebrow dark">Espace entreprise</p><h1 class="h1-md">${esc(company.name)}</h1></div>
-      <div class="btn-row"><a class="btn btn-primary" href="#/rh/nouvelle-session">${icon('plus', 18)} Nouvelle session</a><a class="btn btn-outline" href="#/rh/credits">${icon('card', 18)} Acheter des crédits</a></div></div>
+      <div class="btn-row"><a class="btn btn-primary" href="#/rh/inviter">${icon('plus', 18)} Inviter une personne</a><a class="btn btn-outline" href="#/rh/facturation">${icon('card', 18)} Facturation / Mes Pass</a></div></div>
     ${company.demo ? '<div class="alert alert-warn"><strong>Entreprise Démo</strong> — données fictives, stockées dans ce navigateur.</div>' : ''}
-    ${company.credits < 3 ? `<div class="alert alert-warn">Il vous reste ${company.credits} crédit(s). <a href="#/rh/credits">Recharger</a></div>` : ''}
+
     <div class="grid grid-4 stats">
-      <div class="card stat"><span class="stat-n">${company.credits}</span><span class="muted small">crédits disponibles</span></div>
+      <div class="card stat"><span class="stat-n">${all.length}</span><span class="muted small">Pass achetés · ${finished.length} examen(s) terminé(s)</span></div>
       <div class="card stat"><span class="stat-n">${sessions.length}</span><span class="muted small">sessions (${trainings.length} montée en compétences)</span></div>
-      <div class="card stat"><span class="stat-n">${all.length}</span><span class="muted small">personnes invitées · ${finished.length} terminé(s)</span></div>
+      <div class="card stat"><span class="stat-n">${all.filter((i) => ['training', 'started'].includes(i.status)).length}</span><span class="muted small">en formation ou en examen</span></div>
       <div class="card stat"><span class="stat-n">${rate == null ? '—' : rate + ' %'}</span><span class="muted small">taux de réussite</span></div></div>
     ${pending.length ? `<section class="block"><div class="split"><h2>Échéances à suivre</h2>${late ? badge(`${late} en retard`, 'ko') : ''}</div>
       <div class="card"><ul class="due-list">${pending.slice(0, 6).map((a) => `<li><span>${badge(a.st.label, a.st.tone)}</span>
@@ -98,86 +86,12 @@ export async function dashboard(ctx, root) {
           <h3>${esc(s.title)}</h3><p class="muted small">${esc(p?.name || s.profileId)} · ${s.questionCount} questions</p>
           <div class="sess-nums"><span><strong>${st.invited}</strong> ${TYPE[s.type].units}</span><span><strong>${st.done}</strong> terminé(s)</span><span><strong>${st.passed}</strong> réussi(s)</span>${st.avg != null ? `<span>moy. <strong>${st.avg} %</strong></span>` : ''}</div>
           ${bar(pct(st.done, st.invited))}</a>`;
-      }).join('')}</div>` : `<div class="card"><h3>Aucune session pour l’instant</h3><p class="muted">Créez votre première session de test ou de montée en compétences.</p><a class="btn btn-primary" href="#/rh/nouvelle-session">Créer une session</a></div>`}</section>
+      }).join('')}</div>` : `<div class="card"><h3>Aucune session pour l’instant</h3><p class="muted">Achetez un premier Pass pour inviter un candidat ou un collaborateur.</p><a class="btn btn-primary" href="#/rh/inviter">Inviter une personne</a></div>`}</section>
   </div>`;
 }
 
-/* ------------------------------------------------------------------ Nouvelle session */
-export async function newSession(ctx, root) {
-  ctx.setTitle('Nouvelle session');
-  const data = await getProfilesData();
-  const company = await ctx.store.getCompany(ctx.user.companyId);
-  if (!ctx.alive()) return;
-  let type = ctx.query.get('type') === 'training' ? 'training' : 'recruitment';
-  const pre = ctx.query.get('profil') || '';
-  const options = data.sectors.map((sec) => {
-    const ps = data.profiles.filter((p) => p.sector === sec.id).sort((a, b) => data.levels.findIndex((l) => l.id === a.level) - data.levels.findIndex((l) => l.id === b.level));
-    return ps.length ? `<optgroup label="${esc(sec.name)}">${ps.map((p) => `<option value="${esc(p.id)}" ${p.id === pre ? 'selected' : ''}>${esc(p.name)} — ${esc(levelOf(data, p.level)?.name || '')}</option>`).join('')}</optgroup>` : '';
-  }).join('');
-
-  root.innerHTML = `<div class="container-narrow page">
-    <div class="crumbs"><a href="#/rh">Tableau de bord</a><span>›</span><span>Nouvelle session</span></div>
-    <h1 class="h1-md">Nouvelle session</h1>
-    <form id="nf" class="stack" novalidate>
-      <fieldset class="card type-pick"><legend class="label">Type de session</legend>
-        <label class="type-opt"><input type="radio" name="type" value="recruitment"><span><strong>Recrutement</strong><span class="muted small">Lien envoyé à des candidats externes, un seul passage par candidat.</span></span></label>
-        <label class="type-opt"><input type="radio" name="type" value="training"><span><strong>Montée en compétences</strong><span class="muted small">Équipe nommée de collaborateurs en poste, plusieurs passages, suivi avant / après et plan d’action.</span></span></label></fieldset>
-      <div class="card">
-        <div class="field"><label for="n-title" id="l-title">Poste</label><input id="n-title" type="text" required maxlength="120"><span class="hint" id="h-title"></span></div>
-        <div class="field"><label for="n-profile">Profil de test</label><select id="n-profile">${options}</select><span class="hint" id="h-profile"></span></div>
-        <div class="form-grid">
-          <div class="field"><label for="n-q">Nombre de questions</label><input id="n-q" type="number" min="5" max="60" value="${CONFIG.EXAM_QUESTIONS}"><span class="hint">Limité au nombre de questions disponibles pour le profil.</span></div>
-          <div class="field"><label for="n-due" id="l-due">Date limite</label><input id="n-due" type="date" value="${fmtDateInput(Date.now() + 30 * DAY)}"></div>
-          <div class="field"><label for="n-pass">Seuil de réussite</label><select id="n-pass">${[60, 70, 80].map((v) => `<option value="${v}" ${v === CONFIG.PASS_MARK ? 'selected' : ''}>${v} %</option>`).join('')}</select></div></div>
-        <div class="field"><label for="n-people" id="l-people">Candidats</label><textarea id="n-people" placeholder="Jean Mba, jean.mba@exemple.com&#10;Marie Nzamba, marie@exemple.com"></textarea><span class="hint" id="h-people"></span></div>
-      </div>
-      <div class="card cost" aria-live="polite"><div><strong id="cost-line"></strong><div class="muted small">Solde : ${company.credits} crédit(s)</div></div><a class="btn btn-ghost btn-sm" href="#/rh/credits">Acheter des crédits</a></div>
-      <div class="field-error" id="n-err" role="alert"></div>
-      <div class="btn-row"><button class="btn btn-primary btn-lg" type="submit">Créer la session</button><a class="btn btn-ghost" href="#/rh">Annuler</a></div>
-    </form></div>`;
-
-  const $ = (s) => root.querySelector(s);
-  const count = () => parsePeople($('#n-people').value, type === 'training').list.length;
-  const sync = () => {
-    const t = TYPE[type];
-    root.querySelectorAll('input[name=type]').forEach((r) => { r.checked = r.value === type; });
-    $('#l-title').textContent = type === 'training' ? 'Nom de l’équipe' : 'Intitulé du poste';
-    $('#n-title').placeholder = type === 'training' ? 'Ex. Équipe maintenance Port-Gentil' : 'Ex. Opérateur de production — Libreville';
-    $('#h-title').textContent = type === 'training' ? 'Visible par les collaborateurs dans leur parcours.' : '';
-    $('#l-due').textContent = type === 'training' ? 'Échéance du parcours' : 'Date limite pour passer le test';
-    $('#l-people').textContent = type === 'training' ? 'Collaborateurs (un par ligne : nom, e-mail)' : 'Candidats (un par ligne : nom, e-mail)';
-    $('#h-people').textContent = type === 'training'
-      ? 'L’e-mail est obligatoire : il relie le collaborateur à son parcours. Plusieurs passages autorisés.'
-      : 'L’e-mail est facultatif. Chaque ligne reçoit un lien personnel, à usage unique.';
-    const n = count();
-    $('#cost-line').textContent = `${n} ${n > 1 ? t.units : t.unit} = ${n} crédit${n > 1 ? 's' : ''}`;
-  };
-  sync();
-  root.addEventListener('change', (e) => { if (e.target.name === 'type') { type = e.target.value; sync(); } });
-  $('#n-people').addEventListener('input', sync);
-
-  $('#nf').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const err = $('#n-err'); err.textContent = '';
-    const title = $('#n-title').value.trim();
-    const { list, errors } = parsePeople($('#n-people').value, type === 'training');
-    if (title.length < 3) { err.textContent = type === 'training' ? 'Donnez un nom à l’équipe.' : 'Saisissez l’intitulé du poste.'; return; }
-    if (errors.length) { err.textContent = errors[0]; return; }
-    if (!list.length) { err.textContent = 'Ajoutez au moins une personne.'; return; }
-    if (list.length > company.credits) { err.innerHTML = `Crédits insuffisants : ${list.length} nécessaire(s), ${company.credits} disponible(s). <a href="#/rh/credits">Acheter des crédits</a>`; return; }
-    const profileId = $('#n-profile').value;
-    const content = await loadContent(profileId);
-    let qn = Math.max(5, Math.min(60, Number($('#n-q').value) || CONFIG.EXAM_QUESTIONS));
-    if (content) qn = Math.min(qn, content.questions.length);
-    const due = new Date($('#n-due').value + 'T23:59:59').getTime();
-    if (!due || due < Date.now()) { err.textContent = 'La date limite doit être dans le futur.'; return; }
-    try {
-      const s = await ctx.store.createSession({ companyId: company.id, type, title, profileId, questionCount: qn, passMark: Number($('#n-pass').value), deadline: due, candidates: list });
-      ctx.toast(`Session créée : ${list.length} lien(s) généré(s).`);
-      ctx.go(`/rh/session/${s.id}`);
-    } catch (ex) { err.textContent = ex.message; }
-  });
-}
+/* ------------------------------------------------------------------ Achat de Pass */
+export const invite = (ctx, root) => inviteImpl(ctx, root, { shareButtons, bindCopy });
 
 /* ------------------------------------------------------------------ Session */
 export async function session(ctx, root) {
@@ -202,20 +116,9 @@ function sessionHead({ s, profile, data }) {
 }
 
 function addPeopleForm(s) {
-  return `<details class="card add-box"><summary class="btn btn-outline btn-sm">${icon('plus', 14)} Ajouter des ${TYPE[s.type].units}</summary>
-    <form id="addf" novalidate style="margin-top:var(--sp-4)"><div class="field"><label for="add-people">Un par ligne : nom, e-mail</label><textarea id="add-people"></textarea><span class="hint">1 crédit par ${TYPE[s.type].unit}.</span></div>
-    <div class="field-error" id="add-err" role="alert"></div><button class="btn btn-primary" type="submit">Ajouter et générer les liens</button></form></details>`;
+  return `<a class="btn btn-outline btn-sm" href="#/rh/inviter?session=${esc(s.id)}">${icon('plus', 14)} Ajouter des Pass (${esc(fmtMoney(passPrice(s.level)))} / personne)</a>`;
 }
-function bindAddForm({ ctx, root, s }) {
-  root.querySelector('#addf')?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const err = root.querySelector('#add-err'); err.textContent = '';
-    const { list, errors } = parsePeople(root.querySelector('#add-people').value, s.type === 'training');
-    if (errors.length) { err.textContent = errors[0]; return; }
-    if (!list.length) { err.textContent = 'Saisissez au moins une personne.'; return; }
-    try { await ctx.store.addInvitations(s.id, list); ctx.toast('Ajouté.'); await session(ctx, root); } catch (ex) { err.innerHTML = `${esc(ex.message)} <a href="#/rh/credits">Acheter des crédits</a>`; }
-  });
-}
+function bindAddForm() { /* l'ajout passe par la page d'achat de Pass */ }
 
 /* ---- Recrutement */
 function recruitmentView(env) {
@@ -229,9 +132,9 @@ function recruitmentView(env) {
       <div class="card stat"><span class="stat-n">${st.done}</span><span class="muted small">terminés · ${st.passed} réussi(s)</span></div>
       <div class="card stat"><span class="stat-n">${st.avg == null ? '—' : st.avg + ' %'}</span><span class="muted small">score moyen</span></div></div>
     <div class="btn-row" style="margin-bottom:var(--sp-4)"><button type="button" class="btn btn-navy" id="csv">${icon('download', 18)} Exporter en CSV</button></div>
-    ${addPeopleForm(s)}
+    <div class="btn-row" style="margin-bottom:var(--sp-4)">${addPeopleForm(s)}</div>
     <section class="block"><h2>Candidats</h2><div class="table-wrap"><table class="table"><caption class="sr-only">Candidats de la session</caption>
-      <thead><tr><th>Candidat</th><th>Statut</th><th>Score</th><th>Temps</th><th>Lien à envoyer</th></tr></thead><tbody>
+      <thead><tr><th>Candidat</th><th>Statut</th><th>Score</th><th>Tentatives</th><th>Temps</th><th>Lien à envoyer</th></tr></thead><tbody>
       ${s.invitations.map((inv) => {
         const a = inv.attempt;
         const done = a?.status === 'done';
@@ -239,15 +142,15 @@ function recruitmentView(env) {
         return `<tr><td><strong>${esc(inv.name || '—')}</strong><br><span class="xs muted">${esc(inv.email || '')}</span></td>
           <td>${statusBadge(inv.status)}</td>
           <td>${done ? `<strong>${a.percent} %</strong>${th.length ? `<details class="mini"><summary class="xs">Détail par thème</summary>${th.map(([t, v]) => `<div class="theme-row"><span class="xs">${esc(t)}</span><span class="xs muted">${pct(v.ok, v.total)} %</span>${bar(pct(v.ok, v.total), pct(v.ok, v.total) >= s.passMark ? 'ok' : 'ko')}</div>`).join('')}${a.synthetic ? '' : `<a class="xs" href="#/resultat/${esc(a.id)}">Voir la correction</a>`}</details>` : ''}` : '—'}</td>
-          <td>${done ? fmtDuration(a.durationMs) : '—'}</td><td>${shareButtons(inv, s, company.name)}</td></tr>`;
+          <td>${attemptsUsed(inv.attempts)} / ${CONFIG.ATTEMPTS_PER_PASS}</td><td>${done ? fmtDuration(a.durationMs) : '—'}</td><td>${shareButtons(inv, s, company.name)}</td></tr>`;
       }).join('')}</tbody></table></div>
       <p class="xs muted" style="margin-top:var(--sp-3)">Le lien est personnel. Le candidat saisit son nom et son e-mail, passe le test, et le résultat apparaît ici.</p></section></div>`;
   bindAddForm(env);
   root.querySelector('#csv').addEventListener('click', () => {
-    const rows = [['Candidat', 'E-mail', 'Statut', 'Score (%)', 'Résultat', 'Temps', 'Date', ...themes.map((t) => `${t} (%)`)]];
+    const rows = [['Candidat', 'E-mail', 'Statut', 'Tentatives', 'Score (%)', 'Résultat', 'Temps', 'Date', ...themes.map((t) => `${t} (%)`)]];
     for (const inv of s.invitations) {
       const a = inv.attempt; const done = a?.status === 'done';
-      rows.push([inv.name, inv.email, { invited: 'Invité', started: 'En cours', passed: 'Réussi', failed: 'Échoué', expired: 'Expiré' }[inv.status], done ? a.percent : '', done ? (a.passed ? 'Réussi' : 'Échoué') : '', done ? fmtDuration(a.durationMs) : '', done ? fmtDate(a.finishedAt) : '',
+      rows.push([inv.name, inv.email, { invited: 'Invité', training: 'En formation', started: 'En examen', passed: 'Réussi', failed: 'Échoué', expired: 'Expiré' }[inv.status], attemptsUsed(inv.attempts), done ? a.percent : '', done ? (a.passed ? 'Réussi' : 'Échoué') : '', done ? fmtDuration(a.durationMs) : '', done ? fmtDate(a.finishedAt) : '',
         ...themes.map((t) => (done && a.themes?.[t] ? pct(a.themes[t].ok, a.themes[t].total) : ''))]);
     }
     downloadFile(`session-${s.id}.csv`, toCsv(rows));
@@ -414,52 +317,40 @@ function bindAssign(env, assignments, indivRecs, invs, teamRecs) {
   });
 }
 
-/* ------------------------------------------------------------------ Crédits */
-export async function credits(ctx, root) {
-  ctx.setTitle('Crédits');
-  const draw = async () => {
-    const company = await ctx.store.getCompany(ctx.user.companyId);
-    const tx = await ctx.store.listTransactions(company.id);
-    if (!ctx.alive()) return;
-    root.innerHTML = `<div class="container-narrow page">
-      <div class="crumbs"><a href="#/rh">Tableau de bord</a><span>›</span><span>Crédits</span></div>
-      <h1 class="h1-md">Crédits</h1>${demoBanner()}
-      <div class="card stat" style="margin-bottom:var(--sp-5)"><span class="stat-n" id="balance">${company.credits}</span><span class="muted small">crédits disponibles · 1 crédit = 1 candidat ou 1 collaborateur invité</span></div>
-      <div id="paid"></div>
-      <form id="pf" class="stack" novalidate>
-        <fieldset class="card"><legend class="label">1. Choisissez un pack</legend><div class="pack-pick">${CONFIG.PACKS.map((p, i) => `<label class="pack-opt"><input type="radio" name="pack" value="${esc(p.id)}" ${p.featured || i === 0 ? 'checked' : ''}><span><strong>${p.credits} crédits</strong><span class="muted small">${esc(p.label)} · ${fmtMoney(p.price)}</span></span></label>`).join('')}</div>
-          <p class="xs muted">Prix provisoires, susceptibles d’évoluer.</p></fieldset>
-        <fieldset class="card"><legend class="label">2. Mode de paiement</legend>
-          <div class="method-pick">${METHODS.map((m, i) => `<label class="pack-opt"><input type="radio" name="method" value="${m.id}" ${i === 0 ? 'checked' : ''}><span><strong>${esc(m.label)}</strong><span class="muted small">${esc(m.hint)}</span></span></label>`).join('')}</div>
-          <div id="pay-fields" style="margin-top:var(--sp-4)"></div></fieldset>
-        <div class="field-error" id="p-err" role="alert"></div>
-        <button class="btn btn-primary btn-lg" type="submit" id="pay-btn"></button></form>
-      <section class="block"><h2>Historique</h2>${tx.length ? `<div class="table-wrap"><table class="table"><thead><tr><th>Date</th><th>Opération</th><th>Crédits</th><th>Montant</th></tr></thead><tbody>
-        ${tx.map((t) => `<tr><td>${fmtDate(t.date)}</td><td>${t.type === 'purchase' ? `Achat ${t.demo ? '(démo) ' : ''}· ${methodLabel(t.method)}<br><span class="xs muted">${esc(t.ref)}</span>` : esc(t.ref || (t.type === 'bonus' ? 'Crédits offerts' : 'Utilisation'))}</td>
-        <td><strong style="color:${t.credits > 0 ? 'var(--c-ok)' : 'var(--c-ko)'}">${t.credits > 0 ? '+' : ''}${t.credits}</strong></td><td>${t.amount ? fmtMoney(t.amount) : '—'}</td></tr>`).join('')}</tbody></table></div>` : '<p class="muted">Aucune opération.</p>'}</section></div>`;
+/* ------------------------------------------------------------------ Facturation / Mes Pass */
+export async function billing(ctx, root) {
+  ctx.setTitle('Facturation et Pass');
+  const company = await ctx.store.getCompany(ctx.user.companyId);
+  const orders = await ctx.store.listOrders(company.id);
+  const sessions = await ctx.store.listSessions(company.id);
+  if (!ctx.alive()) return;
+  const passes = sessions.flatMap((s) => s.invitations.map((i) => ({ ...i, session: s })));
+  const total = orders.reduce((a, o) => a + o.total, 0);
+  root.innerHTML = `<div class="container page">
+    <div class="crumbs"><a href="#/rh">Tableau de bord</a><span>›</span><span>Facturation</span></div>
+    <div class="page-head split"><div><h1 class="h1-md">Facturation / Mes Pass</h1><p class="muted">Un Pass = une personne pour un poste. Prix provisoires par niveau : Technicien / Superviseur ${esc(fmtMoney(CONFIG.PASS_PRICES.tech))}, Ingénieur / Cadre ${esc(fmtMoney(CONFIG.PASS_PRICES.ing))}.</p></div>
+      <a class="btn btn-primary" href="#/rh/inviter">${icon('plus', 18)} Acheter des Pass</a></div>${demoBanner()}
+    <div class="grid grid-3 stats"><div class="card stat"><span class="stat-n">${passes.length}</span><span class="muted small">Pass achetés</span></div>
+      <div class="card stat"><span class="stat-n">${orders.length}</span><span class="muted small">commandes</span></div>
+      <div class="card stat"><span class="stat-n">${esc(fmtMoney(total))}</span><span class="muted small">total facturé (démo)</span></div></div>
+    <section class="block"><h2>Commandes</h2>${orders.length ? `<div class="table-wrap"><table class="table"><thead><tr><th>N°</th><th>Date</th><th>Poste</th><th>Pass</th><th>Montant</th><th>Paiement</th><th></th></tr></thead><tbody>
+      ${orders.map((o) => `<tr><td class="nowrap">${esc(o.number)}</td><td class="nowrap">${fmtDate(o.date)}</td><td>${esc(o.profileName || o.sessionTitle)}<br><span class="xs muted">${esc(o.sessionTitle)}</span></td><td>${o.qty} × ${esc(fmtMoney(o.unitPrice))}</td><td><strong>${esc(fmtMoney(o.total))}</strong></td><td>${methodLabel(o.method)}${o.demo ? ' <span class="badge badge-warn">démo</span>' : ''}</td><td><a href="#/rh/recu/${esc(o.id)}">Reçu</a></td></tr>`).join('')}</tbody></table></div>` : '<div class="card"><p class="muted">Aucune commande pour l’instant.</p></div>'}</section>
+    <section class="block"><h2>Mes Pass</h2>${passes.length ? `<div class="table-wrap"><table class="table"><thead><tr><th>Personne</th><th>Poste</th><th>Statut</th><th>Tentatives</th><th>Prix</th></tr></thead><tbody>
+      ${passes.map((p) => `<tr><td><strong>${esc(p.name)}</strong><br><span class="xs muted">${esc(p.email || '')}</span></td><td><a href="#/rh/session/${esc(p.session.id)}">${esc(p.session.title)}</a></td><td>${statusBadge(p.status)}</td><td>${attemptsUsed(p.attempts)} / ${CONFIG.ATTEMPTS_PER_PASS}</td><td>${p.price ? esc(fmtMoney(p.price)) : '—'}</td></tr>`).join('')}</tbody></table></div>` : '<div class="card"><p class="muted">Aucun Pass.</p></div>'}</section></div>`;
+}
 
-    const $ = (q) => root.querySelector(q);
-    const pack = () => CONFIG.PACKS.find((p) => p.id === root.querySelector('input[name=pack]:checked').value);
-    const method = () => root.querySelector('input[name=method]:checked').value;
-    const syncBtn = () => { $('#pay-btn').textContent = `Payer ${fmtMoney(pack().price)} (démo)`; };
-    const syncFields = () => { $('#pay-fields').innerHTML = paymentFormHTML(method()); };
-    syncBtn(); syncFields();
-    $('#pf').addEventListener('change', (e) => { if (e.target.name === 'pack') syncBtn(); if (e.target.name === 'method') syncFields(); });
-    $('#pf').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const err = $('#p-err'); err.textContent = '';
-      const btn = $('#pay-btn'); btn.disabled = true; btn.textContent = 'Traitement en cours…';
-      const details = Object.fromEntries([...root.querySelectorAll('#pay-fields input')].map((i) => [i.name, i.value]));
-      const pk = pack();
-      try {
-        const res = await pay({ amount: pk.price, method: method(), company: { id: company.id, name: company.name }, details });
-        if (!res.ok) { err.textContent = res.message || 'Le paiement a échoué.'; btn.disabled = false; syncBtn(); return; }
-        root.querySelectorAll('#pay-fields input').forEach((i) => { i.value = ''; }); // aucune donnée de paiement conservée
-        await ctx.store.purchaseCredits(company.id, pk, res);
-        await draw();
-        root.querySelector('#paid').innerHTML = `<div class="alert alert-ok" role="status"><strong>Paiement simulé accepté.</strong> ${pk.credits} crédits ajoutés (référence ${esc(res.ref)}).</div>`;
-      } catch (ex) { err.textContent = ex.message; btn.disabled = false; syncBtn(); }
-    });
-  };
-  await draw();
+export async function receipt(ctx, root) {
+  const o = await ctx.store.getOrder(ctx.params.id);
+  const company = o && (await ctx.store.getCompany(ctx.user.companyId));
+  if (!o || o.companyId !== ctx.user.companyId) { (await import('./notfound.js')).default(ctx, root); return; }
+  ctx.setTitle(`Reçu ${o.number}`);
+  root.innerHTML = `<div class="container-narrow page"><div class="no-print btn-row" style="margin-bottom:var(--sp-4)"><a class="btn btn-light" href="#/rh/facturation">← Facturation</a><button type="button" class="btn btn-primary" id="print">${icon('print', 18)} Imprimer / PDF</button></div>
+    <article class="card receipt"><header class="split"><img src="assets/logo/mouress-logo-horizontal-couleur-pour-fond-clair.svg" alt="MOURESS" height="32" style="height:32px"><div class="right"><strong>Reçu n° ${esc(o.number)}</strong><br><span class="small muted">${fmtDate(o.date, true)}</span></div></header>
+      ${o.demo ? '<p class="demo-banner"><strong>Reçu de démonstration</strong> — paiement simulé, aucune somme n’a été débitée.</p>' : ''}
+      <p><span class="muted small">Client</span><br><strong>${esc(company.name)}</strong></p>
+      <table class="table" style="min-width:0"><thead><tr><th>Désignation</th><th>Qté</th><th>Prix unitaire</th><th>Total</th></tr></thead><tbody>
+        <tr><td>Pass MOURESS Académie — ${esc(o.profileName || o.sessionTitle)}<br><span class="xs muted">${esc(o.sessionTitle)} · formation, entraînement illimité, examen (${CONFIG.ATTEMPTS_PER_PASS} tentatives), attestation si réussite</span></td><td>${o.qty}</td><td>${esc(fmtMoney(o.unitPrice))}</td><td><strong>${esc(fmtMoney(o.total))}</strong></td></tr></tbody></table>
+      <p class="right"><strong>Total payé : ${esc(fmtMoney(o.total))}</strong><br><span class="xs muted">Mode : ${methodLabel(o.method)} · réf. ${esc(o.ref)}</span></p>
+      <p class="xs muted">MOURESS SAS — ${esc(CONFIG.CONTACT.address)} — ${esc(CONFIG.CONTACT.phone)}. Prix provisoires. Document simple, ne tient pas lieu de facture fiscale.</p></article></div>`;
+  root.querySelector('#print').addEventListener('click', () => window.print());
 }
