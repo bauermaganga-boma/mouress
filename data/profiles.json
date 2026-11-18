@@ -360,7 +360,7 @@
       "domains": [
         "petrole-gaz-amont"
       ],
-      "branch": "support"
+      "branch": "technique"
     },
     {
       "id": "meca-engins-lourds",
@@ -489,7 +489,7 @@
         "energie",
         "industrie"
       ],
-      "branch": "support"
+      "branch": "technique"
     },
     {
       "id": "qhse-resp",
@@ -504,7 +504,7 @@
         "energie",
         "industrie"
       ],
-      "branch": "support"
+      "branch": "technique"
     },
     {
       "id": "rh",
@@ -587,13 +587,15 @@
       "id": "petrole-gaz-amont",
       "name": "Pétrole & gaz — Amont",
       "icon": "rig",
-      "desc": "Exploration-production : offshore, onshore, puits, installations de production."
+      "desc": "Exploration-production : offshore, onshore, puits, installations de production.",
+      "group": "petrole-gaz"
     },
     {
       "id": "petrole-gaz-aval",
       "name": "Pétrole & gaz — Aval / Raffinerie",
       "icon": "refinery",
-      "desc": "Raffinage, procédés, stockage et terminaux."
+      "desc": "Raffinage, procédés, stockage et terminaux.",
+      "group": "petrole-gaz"
     },
     {
       "id": "mines",
@@ -618,12 +620,21 @@
     {
       "id": "technique",
       "name": "Métiers techniques",
-      "desc": "Opérateurs, techniciens, superviseurs, ingénieurs."
+      "desc": "Opérateurs, techniciens, superviseurs, ingénieurs, HSE / QHSE."
     },
     {
       "id": "support",
-      "name": "Fonctions support & QHSE",
-      "desc": "RH, comptabilité, logistique, juridique, QHSE."
+      "name": "Fonctions support",
+      "desc": "RH, comptabilité, fiscalité, logistique, juridique.",
+      "noLevel": true
+    }
+  ],
+  "groups": [
+    {
+      "id": "petrole-gaz",
+      "name": "Pétrole & gaz",
+      "icon": "rig",
+      "desc": "Amont (exploration-production) ou aval (raffinerie, stockage, terminaux)."
     }
   ]
 }

@@ -51,7 +51,14 @@ export default async function render(ctx, root) {
     const draw = () => {
       const q = norm(root.querySelector('#f-q').value.trim());
       if (!q) {
-        out.innerHTML = `<div class="grid grid-2 funnel-grid">${(data.domains || []).map((dm) => bigCard({ href: `#/formation/${dm.id}`, ico: dm.icon, title: dm.name, desc: dm.desc, count: postes(data, { domain: dm.id }).length })).join('')}</div>`;
+        const groups = data.groups || [];
+        const items = [];
+        for (const dm of data.domains || []) {
+          const g = groups.find((x) => x.id === dm.group);
+          if (g) { if (!items.some((i) => i.id === g.id)) items.push({ id: g.id, name: g.name, icon: g.icon, desc: g.desc, count: new Set((data.domains || []).filter((x) => x.group === g.id).flatMap((x) => postes(data, { domain: x.id }).map((p) => p.id))).size }); }
+          else items.push({ id: dm.id, name: dm.name, icon: dm.icon, desc: dm.desc, count: postes(data, { domain: dm.id }).length });
+        }
+        out.innerHTML = `<div class="grid grid-2 funnel-grid">${items.map((i) => bigCard({ href: `#/formation/${i.id}`, ico: i.icon, title: i.name, desc: i.desc, count: i.count })).join('')}</div>`;
         return;
       }
       const list = data.profiles.filter((p) => norm(`${p.name} ${p.desc} ${(p.domains || []).map((x) => domainOf(data, x)?.name).join(' ')}`).includes(q));
@@ -64,30 +71,52 @@ export default async function render(ctx, root) {
     return;
   }
 
+  const home = { label: 'Formation', href: '#/formation' };
+
+  /* Étape 2 (pétrole & gaz) : amont ou aval */
+  const grp = (data.groups || []).find((g) => g.id === d);
+  if (grp) {
+    ctx.setTitle(grp.name);
+    const cards = (data.domains || []).filter((x) => x.group === grp.id).map((x) => bigCard({ href: `#/formation/${x.id}`, ico: x.icon, title: x.name.replace(grp.name + ' — ', ''), desc: x.desc, count: postes(data, { domain: x.id }).length })).join('');
+    root.innerHTML = `<div class="container page">${pageHead({ crumbs: [home, { label: grp.name }], back: '#/formation', eyebrow: 'Étape 2', title: grp.name, text: 'Amont ou aval ?' })}<div class="grid grid-2 funnel-grid">${cards}</div></div>`;
+    return;
+  }
+
   const dm = domainOf(data, d);
   if (!dm) return notFound();
-  const home = { label: 'Formation', href: '#/formation' };
+  const pg = (data.groups || []).find((g) => g.id === dm.group);
+  const home2 = pg ? [home, { label: pg.name, href: `#/formation/${pg.id}` }] : [home];
+  const back1 = pg ? `#/formation/${pg.id}` : '#/formation';
 
   /* Étape 2 : branche */
   if (!b) {
     ctx.setTitle(dm.name);
     const cards = (data.branches || []).map((br) => ({ br, n: postes(data, { domain: d, branch: br.id }).length })).filter((x) => x.n)
       .map(({ br, n }) => bigCard({ href: `#/formation/${d}/${br.id}`, ico: br.id === 'support' ? 'briefcase' : 'wrench', title: br.name, desc: br.desc, count: n })).join('');
-    root.innerHTML = `<div class="container page">${pageHead({ crumbs: [home, { label: dm.name }], back: '#/formation', eyebrow: 'Étape 2 sur 4', title: dm.name, text: 'Quel type de métier ?' })}
+    root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...home2, { label: dm.name }], back: back1, eyebrow: 'Type de métier', title: dm.name, text: 'Quel type de métier ?' })}
       <div class="grid grid-2 funnel-grid">${cards}</div></div>`;
     return;
   }
 
   const br = branchOf(data, b);
   if (!br) return notFound();
-  const c2 = { label: dm.name, href: `#/formation/${d}` };
+  const c2 = [...home2, { label: dm.name, href: `#/formation/${d}` }];
+
+  /* Fonctions support : pas de niveau, on liste directement les fonctions */
+  if (br.noLevel) {
+    const fl = postes(data, { domain: d, branch: b });
+    ctx.setTitle(`${dm.name} — ${br.name}`);
+    root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...c2, { label: br.name }], back: `#/formation/${d}`, eyebrow: 'Fonctions', title: `${dm.name} › ${br.name}`, text: `${plural(fl.length)}. Choisissez la fonction à travailler ou à tester.` })}<div class="grid grid-3">${fl.map((p) => posteCard(data, p, avail, d)).join('')}</div></div>`;
+    remember(root);
+    return;
+  }
 
   /* Étape 3 : niveau */
   if (!l) {
     ctx.setTitle(`${dm.name} — ${br.name}`);
     const cards = (data.levels || []).map((lv) => ({ lv, n: postes(data, { domain: d, branch: b, level: lv.id }).length })).filter((x) => x.n)
       .map(({ lv, n }) => bigCard({ href: `#/formation/${d}/${b}/${lv.id}`, ico: 'users', title: lv.name, count: n })).join('');
-    root.innerHTML = `<div class="container page">${pageHead({ crumbs: [home, c2, { label: br.name }], back: `#/formation/${d}`, eyebrow: 'Étape 3 sur 4', title: `${dm.name} › ${br.name}`, text: 'Choisissez le niveau du poste.' })}
+    root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...c2, { label: br.name }], back: `#/formation/${d}`, eyebrow: 'Niveau', title: `${dm.name} › ${br.name}`, text: 'Choisissez le niveau du poste.' })}
       <div class="grid grid-2 funnel-grid">${cards}</div></div>`;
     return;
   }
@@ -97,7 +126,7 @@ export default async function render(ctx, root) {
   if (!lv) return notFound();
   const list = postes(data, { domain: d, branch: b, level: l });
   ctx.setTitle(`${dm.name} — ${lv.name}`);
-  root.innerHTML = `<div class="container page">${pageHead({ crumbs: [home, c2, { label: br.name, href: `#/formation/${d}/${b}` }, { label: lv.name }], back: `#/formation/${d}/${b}`, eyebrow: 'Étape 4 sur 4', title: `${dm.name} › ${br.name} › ${lv.name}`, text: `${plural(list.length)}. Choisissez le profil à travailler ou à tester.` })}
+  root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...c2, { label: br.name, href: `#/formation/${d}/${b}` }, { label: lv.name }], back: `#/formation/${d}/${b}`, eyebrow: 'Postes', title: `${dm.name} › ${br.name} › ${lv.name}`, text: `${plural(list.length)}. Choisissez le profil à travailler ou à tester.` })}
     <div class="grid grid-3">${list.map((p) => posteCard(data, p, avail, d)).join('') || '<div class="card"><p class="muted">Aucun poste à ce niveau pour le moment.</p></div>'}</div></div>`;
   remember(root);
 }
