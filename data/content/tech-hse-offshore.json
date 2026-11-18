@@ -1,0 +1,852 @@
+{
+  "profile": "tech-hse-offshore",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Permis de travail, isolement et consignation offshore",
+      "theme": "Permis de travail et consignation",
+      "minutes": 9,
+      "body": "Sur une installation offshore, tout travail non routinier dans une zone exploitée passe par un **système de permis de travail** (PTW). Le permis précise la tâche, le lieu, la durée, les risques, les mesures de maîtrise et les signatures de l'autorité émettrice, de l'exécutant et, selon les sites, de la salle de contrôle. Il n'est valable que pour **la tâche, le lieu et la période** indiqués ; il est affiché sur le lieu des travaux, avec une copie en salle de contrôle (CCR), qui garde la vision d'ensemble des activités simultanées.\n\nOn distingue les travaux **à froid** et les travaux **à chaud** (permis de feu) : soudage, oxycoupage, mais aussi **meulage** ou tout outil produisant des étincelles, car une étincelle suffit à enflammer un mélange explosif. Un permis de feu exige un contrôle de l'atmosphère, des moyens d'extinction, un guetteur et une surveillance après travaux. Si le détecteur indique du gaz pendant les travaux, on **arrête, on met en sécurité, on prévient la salle de contrôle** et l'on cherche la source avant toute reprise.\n\nLe **certificat d'isolement** atteste que l'équipement est isolé de toute énergie ou fluide dangereux. L'**isolation positive** (plaque pleine, jeu de brides, déconnexion physique) est exigée pour les lignes dangereuses, comme le gaz acide contenant du H2S : une simple vanne fermée, même cadenassée, n'est pas une barrière suffisante. La double barrière avec purge (DBB) reste la référence lorsque l'isolation positive n'est pas requise.\n\nLa **consignation** suit la séquence : séparer, condamner (cadenas et étiquette personnels), dissiper l'énergie résiduelle, vérifier l'absence d'énergie. Pour l'électricité, on applique « tester, prouver, retester » : le testeur est contrôlé sur une source connue, on mesure l'absence de tension, puis on contrôle de nouveau le testeur. Un cadenas oublié par une personne rentrée à terre n'est jamais coupé à la hâte : la procédure de levée, menée par l'autorité désignée, impose les vérifications et les tentatives de contact.\n\nLors des **relèves**, le superviseur sortant et l'entrant revoient ensemble les permis ouverts et visitent les chantiers. Les **analyses de risques** s'appuient sur une matrice gravité × probabilité : un risque moyen se réduit par des mesures supplémentaires avant de démarrer.\n\nEnfin, chacun détient l'**autorité d'arrêt du travail** (Stop Work Authority) : toute personne à bord peut et doit stopper une tâche qu'elle juge dangereuse, sans crainte de sanction. Les seuils et délais précis relèvent des procédures du site.",
+      "keyPoints": [
+        "Un permis vaut pour une tâche, un lieu, une période ; copie en salle de contrôle.",
+        "Meulage et étincelles = permis de feu ; gaz détecté = arrêt, mise en sécurité, alerte.",
+        "Lignes dangereuses (H2S) : isolation positive, pas seulement une vanne fermée.",
+        "Tester, prouver, retester ; levée de cadenas oublié par procédure uniquement."
+      ],
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Schéma de consignation avec cadenas et étiquette"
+    },
+    {
+      "id": "m2",
+      "title": "H2S, gaz inflammables et atmosphères explosives",
+      "theme": "Gaz, H2S et atmosphères explosives",
+      "minutes": 10,
+      "body": "Les détecteurs de gaz sont les sens de l'installation. L'explosimètre mesure en pourcentage de la **LIE** (limite inférieure d'explosivité, LEL en anglais) : 100 % de la LIE correspond à la concentration minimale à laquelle le mélange gaz-air peut s'enflammer. Pour le méthane, la LIE est d'environ 5 % en volume : 50 % de la LIE représente donc environ 2,5 % de méthane dans l'air. Un détecteur portable se vérifie avant usage par un **test fonctionnel (bump test)** et se calibre périodiquement selon la procédure du site.\n\nLes détecteurs catalytiques ont besoin d'oxygène : dans une capacité inertée, ils peuvent sous-estimer ou ne rien indiquer, et l'on utilise des détecteurs adaptés avec une mesure d'oxygène. L'air normal contient environ 20,9 % d'oxygène ; sous 19,5 % l'atmosphère est déficiente ; au-dessus d'environ 23,5 % elle est enrichie et les vêtements s'enflamment plus facilement.\n\nSur l'installation, le système **feu et gaz (F&G)** relie détecteurs fixes, alarmes et actions automatiques décrites dans une **matrice cause-effet** : alarme à deux seuils, puis, sur gaz haut confirmé, alarmes générales, isolement des sources d'ignition non protégées, arrêts et isolements de la zone. Les seuils exacts sont fixés par chaque installation : référez-vous toujours à ses procédures.\n\nLes zones à risque sont classées (zone 0, 1, 2) et l'on n'y utilise que du matériel certifié **Ex/ATEX** : un téléphone ordinaire ou une lampe non certifiée sont des sources d'inflammation potentielles, d'où les panneaux d'interdiction.\n\nLe **H2S** (sulfure d'hydrogène) est un gaz très toxique, plus lourd que l'air, à odeur d'œuf pourri à faible concentration mais qui **paralyse l'odorat** à forte concentration : l'absence d'odeur ne prouve rien. À la torche, sa combustion produit du **dioxyde de soufre (SO2)**, lui-même toxique et irritant. En cas d'alarme H2S, on évacue vers un point au vent en s'aidant de la manche à air.\n\nLe sauvetage obéit à une règle : **ne jamais entrer sans appareil respiratoire isolant**. Le sauveteur donne l'alerte, s'équipe d'un ARI, sort la victime à l'air frais, puis entame les premiers secours (oxygène, réanimation). Beaucoup de victimes en atmosphère toxique sont des sauveteurs entrés sans protection. Un masque à cartouche filtrante ne convient ni aux atmosphères pauvres en oxygène ni aux fortes concentrations de H2S.",
+      "keyPoints": [
+        "100 % de la LIE = concentration minimale d'inflammation ; méthane : LIE d'environ 5 % vol.",
+        "Détecteur catalytique : exige de l'oxygène ; bump test avant usage.",
+        "H2S : toxique, plus lourd que l'air, paralyse l'odorat ; sauveteur avec ARI uniquement.",
+        "Zone classée : matériel Ex/ATEX seulement."
+      ],
+      "img": "svg/iso-safety-signs.svg",
+      "imgAlt": "Panneaux de sécurité ISO 7010"
+    },
+    {
+      "id": "m3",
+      "title": "Alarmes, évacuation, BOSIET et survie en mer",
+      "theme": "Alarmes, évacuation et survie en mer",
+      "minutes": 9,
+      "body": "Le **plan d'urgence** de l'installation décrit les scénarios (incendie, rejet de gaz, homme à la mer, évacuation) et le rôle de chacun. Tout arrivant reçoit une induction ; le personnel navigant suit la formation **BOSIET** (Basic Offshore Safety Induction and Emergency Training, standard OPITO), valable en général quatre ans avant un recyclage (FOET). Elle couvre l'évacuation d'hélicoptère immergé (HUET), le système respiratoire de secours (EBS), la survie en mer, la lutte contre l'incendie et les premiers secours.\n\nLors d'une **alarme générale** (signal continu), on arrête le travail, on le sécurise s'il ne faut que quelques secondes, et l'on rejoint son **poste de rassemblement** (muster) sans courir ni repasser par la cabine. Si l'itinéraire est bloqué par la fumée, on prend l'itinéraire alternatif balisé. Au poste, on se fait pointer : la liste du **personnel à bord (POB)** est comparée au pointage. Les manquants sont signalés immédiatement, avec leur dernier lieu connu ; personne ne repart seul les chercher. Seul le **chef d'installation (OIM)** ou son suppléant ordonne l'abandon.\n\nEn cas d'immersion, la règle **1-10-1** résume les dangers : environ une minute pour maîtriser sa respiration après le choc du froid, dix minutes de mouvements utiles, une heure avant que l'hypothermie ne fasse perdre conscience. Dans l'eau tropicale, l'hypothermie est plus lente mais le risque de noyade reste entier. Seul dans l'eau, on adopte la position **HELP** (genoux ramenés, bras contre le torse) ; à plusieurs, on se serre en cercle (huddle).\n\nEn **hélicoptère**, on porte la combinaison, le gilet et l'EBS selon le règlement de la compagnie. Si l'appareil amerrit et chavire : rester attaché, garder une main sur un repère fixe, attendre la fin des mouvements, se détacher puis sortir en suivant le repère. L'**EBS** offre une courte réserve d'air pour cette sortie ; le gilet ne se gonfle qu'après la sortie de la cabine, sous peine de rester coincé.\n\nLes **exercices** réguliers (incendie, abandon, homme à la mer) testent le plan : chaque exercice est suivi d'un retour d'expérience. Le comportement attendu : rester calme, suivre les consignes de la sonorisation, ne jamais prendre l'ascenseur, aider les autres sans se mettre en danger.",
+      "keyPoints": [
+        "Alarme générale : stopper, sécuriser, rejoindre le muster, se faire pointer.",
+        "Manquants au pointage : les signaler, ne pas repartir seul.",
+        "Hélicoptère immergé : rester attaché, repère fixe, sortir après arrêt des mouvements.",
+        "Position HELP seul ; cercle serré en groupe ; BOSIET valable en général 4 ans."
+      ],
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Plateforme pétrolière offshore"
+    },
+    {
+      "id": "m4",
+      "title": "Levage, hélistation et travail en hauteur",
+      "theme": "Levage, hélistation et travail en hauteur",
+      "minutes": 10,
+      "body": "Le **levage** est l'une des activités à plus fort potentiel de gravité. Chaque accessoire porte sa **CMU** (charge maximale d'utilisation, WLL en anglais), qui ne doit jamais être dépassée. Avant de lever, on connaît la masse, on repère le centre de gravité, on vérifie l'état des élingues (brins coupés, étiquette illisible, déformations : on retire du service) et la capacité de la grue selon sa table de charges (rayon, flèche, vent).\n\nL'angle des brins joue un rôle majeur. Pour une élingue à deux brins, la tension dans chaque brin vaut T = W / (2 × cos α), α étant l'angle de chaque brin avec la verticale. Avec 8 t et un angle total de 120° (α = 60°), la tension atteint 8 t par brin ; à 90° (α = 45°), elle est d'environ 5,7 t ; brins verticaux, de 4 t. On limite donc l'angle, généralement à 90° sauf prescription du constructeur.\n\nUn **seul signaleur** désigné dirige la manœuvre, mais toute personne peut donner l'ordre d'arrêt. Personne ne passe sous une charge suspendue ; on guide la charge par des cordes (tag lines). Près des zones classées, la grue est une source potentielle d'ignition : sur alarme gaz, on arrête le levage, on sécurise la charge si cela ne crée pas de risque supplémentaire, on coupe les sources d'ignition selon la procédure et l'on suit l'alarme.\n\nL'**hélistation** est placée sous la responsabilité du **HLO** (Helicopter Landing Officer) et de son équipe : pont dégagé de tout objet mobile, moyens d'incendie en place, conditions de vent et d'état de la plateforme vérifiées. Pendant les mouvements, les levages sont suspendus et les purges de gaz froid (cold vent) interdites : un gaz non brûlé peut gagner l'hélistation, être enflammé par l'échappement chaud ou faire perdre de la puissance moteur. On n'approche l'hélicoptère que sur autorisation du pilote ou du HLO, par l'avant, dans le champ de vision du pilote, jamais par l'arrière.\n\nLe **travail en hauteur** impose un harnais avec **double longe** : on accroche le second point avant de décrocher le premier. Les outils sont attachés, la zone en dessous est balisée, car un objet de quelques centaines de grammes tombant de plusieurs mètres peut tuer. Une personne suspendue dans son harnais risque le **syndrome de suspension** en quelques minutes : le plan de sauvetage est prêt avant de commencer.",
+      "keyPoints": [
+        "Ne jamais dépasser la CMU ; tension par brin = W / (2 cos α).",
+        "Un seul signaleur, arrêt possible par tous ; jamais sous une charge.",
+        "Hélistation : HLO, pas de levage ni de purge froide, approche par l'avant sur autorisation.",
+        "Double longe, outils attachés, plan de sauvetage contre le syndrome de suspension."
+      ],
+      "img": "photo/crane-lifting.jpg",
+      "imgAlt": "Grue en train de lever une charge"
+    },
+    {
+      "id": "m5",
+      "title": "Incendie, déversements et culture sécurité",
+      "theme": "Incendie, déversements et culture sécurité",
+      "minutes": 9,
+      "body": "Un incendie a besoin de trois éléments : un **combustible**, un **comburant** (oxygène) et une **source d'énergie** (chaleur, étincelle) : c'est le **triangle du feu**. On l'éteint en supprimant l'un d'eux : fermer l'alimentation d'une fuite retire le combustible, un noyage au CO2 ou aux gaz inertes réduit l'oxygène, l'eau pulvérisée refroidit. Offshore, la protection combine détection, déluge, réseau d'eau d'incendie et équipes d'intervention. Dans un local protégé par du CO2, l'alarme de pré-décharge impose d'évacuer, de vérifier que personne ne reste, de fermer portes et ventilation : le CO2 asphyxie.\n\nLa **pyramide de Bird** (1-10-30-600) relie événements mineurs et accidents graves : pour un accident grave, des dizaines d'accidents légers ou dommages et des centaines de presque-accidents. Agir sur la base, c'est prévenir le sommet. Un nombre élevé de **presque-accidents déclarés** est donc souvent le signe d'une culture de déclaration saine, et non d'une dégradation.\n\nEn cas de **déversement d'hydrocarbures**, la séquence est : alerter, arrêter la source si cela est sans danger, empêcher que le produit gagne la mer (obturer drains et scuppers), contenir et absorber, nettoyer, déclarer. On ne rince jamais vers la mer. Le plan **SOPEP** (plan d'urgence de bord contre la pollution par les hydrocarbures) et les plans nationaux organisent la réponse en niveaux : **Tier 1** (moyens de l'installation), **Tier 2** (moyens régionaux), **Tier 3** (moyens nationaux ou internationaux). L'emploi de dispersants dépend d'une autorisation de l'autorité compétente.\n\nLa convention **MARPOL** (annexe I) encadre les rejets : les eaux de cale de salle des machines ne peuvent être rejetées en mer qu'après traitement et avec une teneur en hydrocarbures ne dépassant pas **15 ppm**. Les produits chimiques se manipulent avec la **fiche de données de sécurité (FDS)**, qui indique dangers, EPI, premiers secours et conduite en cas de déversement.\n\nL'**enquête** après incident vise les **causes racines** (méthode des 5 pourquoi, arbre des causes) : procédure absente, outillage non étalonné, charge de travail. Se contenter de sanctionner l'exécutant est inefficace, car les mêmes conditions produiront le même incident. Une culture juste distingue l'erreur humaine, la prise de risque et la violation délibérée, et partage les enseignements avec les autres équipes.",
+      "keyPoints": [
+        "Triangle du feu : retirer combustible, oxygène ou énergie ; CO2 : évacuer avant décharge.",
+        "Bird 1-10-30-600 : beaucoup de presque-accidents déclarés = culture saine.",
+        "Déversement : alerter, stopper, protéger les drains, contenir, déclarer ; Tier 1-2-3.",
+        "MARPOL annexe I : 15 ppm pour les eaux de cale traitées ; enquête = causes racines."
+      ],
+      "img": "svg/bird-pyramid.svg",
+      "imgAlt": "Pyramide de Bird"
+    }
+  ],
+  "questions": [
+    {
+      "id": "tech-hse-offshore-001",
+      "theme": "Permis de travail et consignation",
+      "level": 1,
+      "q": "Un meulage est prévu sur le pont, à proximité d'une zone process classée. Quel permis faut-il ?",
+      "img": "svg/ppe-icons.svg",
+      "imgAlt": "Pictogrammes d'équipements de protection individuelle",
+      "choices": [
+        "Un permis de feu (travail par point chaud), car les étincelles sont une source d'inflammation",
+        "Un permis de travail à froid, car il n'y a pas de flamme nue",
+        "Aucun permis : un meulage est un travail courant",
+        "Un permis de levage"
+      ],
+      "answer": 0,
+      "explain": "Tout outil produisant des étincelles (meulage, tronçonnage) est un travail par point chaud et requiert un permis de feu avec contrôle de l'atmosphère, moyens d'extinction et guetteur.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-002",
+      "theme": "Permis de travail et consignation",
+      "level": 1,
+      "q": "Que certifie un certificat d'isolement ?",
+      "choices": [
+        "Que le technicien est qualifié pour la tâche",
+        "Que le matériel est neuf",
+        "Que l'installation est assurée",
+        "Que l'équipement est isolé de toute source d'énergie ou de fluide dangereux, avec des isolements identifiés et vérifiés"
+      ],
+      "answer": 3,
+      "explain": "Le certificat d'isolement atteste de la mise en sécurité de l'équipement avant intervention. La qualification du personnel et l'état du matériel sont des sujets distincts.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-003",
+      "theme": "Permis de travail et consignation",
+      "level": 1,
+      "q": "Selon le principe d'autorité d'arrêt du travail (Stop Work Authority), qui peut arrêter un travail jugé dangereux ?",
+      "img": "svg/iso-safety-signs.svg",
+      "imgAlt": "Planche de panneaux de sécurité ISO 7010 dont un panneau d'interdiction",
+      "choices": [
+        "Seul le chef d'installation",
+        "Seul le responsable HSE",
+        "Toute personne à bord, sans crainte de sanction",
+        "Seul l'émetteur du permis"
+      ],
+      "answer": 2,
+      "explain": "Le principe est universel : chacun a le droit et le devoir d'arrêter une tâche dangereuse. Le travail ne reprend qu'après traitement du risque.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-004",
+      "theme": "Permis de travail et consignation",
+      "level": 3,
+      "q": "Un permis de feu est en cours sur le pont. Le détecteur portable placé près du poste de soudage lit 12 % de la LIE. Quelle est la réaction immédiate ?",
+      "choices": [
+        "Continuer : 12 % reste sous 20 %",
+        "Arrêter le travail à chaud, mettre le poste en sécurité, prévenir la salle de contrôle et rechercher la source avant toute reprise",
+        "Souffler la zone à l'air comprimé pour disperser le gaz",
+        "Terminer rapidement la soudure en cours pour ne pas laisser un travail inachevé"
+      ],
+      "answer": 1,
+      "explain": "Un travail à chaud ne se poursuit pas en présence d'un gaz inflammable à ce niveau (le seuil exact relève de la procédure du site, mais 12 % de la LIE est bien trop élevé). On arrête, on sécurise, on alerte, puis on cherche la source.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-005",
+      "theme": "Permis de travail et consignation",
+      "level": 2,
+      "q": "À la relève, que doivent faire le superviseur sortant et le superviseur entrant ?",
+      "choices": [
+        "Se transmettre un message écrit sans visiter les chantiers",
+        "Passer ensemble en revue les permis ouverts et visiter les chantiers avant que l'entrant ne reprenne",
+        "Laisser expirer les permis et en émettre de nouveaux sans revue",
+        "Laisser les équipes continuer seules sans informer"
+      ],
+      "answer": 1,
+      "explain": "La relève est un moment de risque : la revue conjointe des permis et des chantiers garantit que l'information critique est transmise.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-006",
+      "theme": "Permis de travail et consignation",
+      "level": 3,
+      "q": "Un technicien rentré à terre à la fin de sa rotation a laissé son cadenas sur une vanne consignée. Que faire ?",
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Schéma de consignation : cadenas et étiquette posés sur un organe d'isolement",
+      "choices": [
+        "Appliquer la procédure de levée de cadenas par l'autorité désignée, après vérification que l'équipement est sûr et tentative de contact",
+        "Couper le cadenas immédiatement pour remettre en service",
+        "Remplacer son cadenas par celui d'un collègue sans avis",
+        "Ignorer : un cadenas est périmé après la rotation"
+      ],
+      "answer": 0,
+      "explain": "Le cadenas personnel protège son propriétaire. Une levée n'est possible que par la procédure prévue, qui impose de s'assurer que l'équipement peut être remis en service sans danger.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-007",
+      "theme": "Permis de travail et consignation",
+      "level": 2,
+      "q": "Avant de travailler sur un câble consigné, comment vérifier l'absence de tension ?",
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Schéma de consignation : cadenas et étiquette posés sur un organe d'isolement",
+      "choices": [
+        "Se fier au cadenas posé sur le disjoncteur",
+        "Toucher le câble avec le dos de la main",
+        "Observer si le voyant du tableau est éteint",
+        "Tester le testeur sur une source connue, mesurer l'absence de tension, puis retester le testeur"
+      ],
+      "answer": 3,
+      "explain": "La méthode « tester, prouver, retester » garantit que le testeur fonctionne avant et après la mesure. Un cadenas ou un voyant ne prouvent pas l'absence de tension.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-008",
+      "theme": "Permis de travail et consignation",
+      "level": 3,
+      "q": "Une bride sur une ligne de gaz acide contenant du H2S doit être ouverte pour remplacer un joint. Quelle isolation est requise ?",
+      "choices": [
+        "Une seule vanne fermée suffit si elle est cadenassée",
+        "La fermeture de la vanne côté torche uniquement",
+        "Une isolation positive (joint plein ou jeu de plaques) avec purge et vérification, en plus de la fermeture des vannes",
+        "Une baisse de pression sous 1 bar sans autre isolation"
+      ],
+      "answer": 2,
+      "explain": "Sur une ligne dangereuse, une vanne seule peut fuir ou être mal fermée : on exige une isolation positive vérifiée. Les exigences exactes sont celles de la procédure du site.",
+      "seconds": 65,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-009",
+      "theme": "Permis de travail et consignation",
+      "level": 2,
+      "q": "Un travail en hauteur au-dessus du pont obtient gravité 4 et probabilité 3 sur des échelles de 1 à 5. Le site classe : 1 à 4 faible ; 5 à 12 moyen ; 15 à 25 élevé. Quel est le niveau de risque et que faire ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risques 5 par 5 croisant gravité et probabilité",
+      "choices": [
+        "Score 7 : risque faible, on démarre sans mesure",
+        "Score 12 : risque élevé, travail interdit en toutes circonstances",
+        "Score 12 : risque moyen, à réduire par des mesures supplémentaires (antichute, balisage) avant d'autoriser le travail",
+        "Score 1 : aucun risque à signaler"
+      ],
+      "answer": 2,
+      "explain": "4 × 3 = 12, soit risque moyen dans cette grille : il se maîtrise par des mesures de prévention supplémentaires avant démarrage.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-010",
+      "theme": "Gaz, H2S et atmosphères explosives",
+      "level": 1,
+      "q": "Que signifie une lecture de 100 % de la LIE sur un explosimètre ?",
+      "choices": [
+        "Le mélange est trop riche pour s'enflammer",
+        "Le mélange gaz-air est à la concentration minimale pour s'enflammer : l'atmosphère est explosive",
+        "Il y a 100 % de gaz dans l'air",
+        "Le détecteur est en panne"
+      ],
+      "answer": 1,
+      "explain": "100 % de la LIE correspond à la limite inférieure d'explosivité : le mélange peut s'enflammer. Ce n'est pas une teneur de 100 % en gaz.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-011",
+      "theme": "Gaz, H2S et atmosphères explosives",
+      "level": 2,
+      "q": "Un détecteur indique 50 % de la LIE pour du méthane, dont la LIE vaut 5 % en volume. Quelle est la concentration réelle de méthane ?",
+      "choices": [
+        "2,5 % en volume",
+        "50 % en volume",
+        "5 % en volume",
+        "0,5 % en volume"
+      ],
+      "answer": 0,
+      "explain": "50 % de la LIE = 0,5 × 5 % = 2,5 % de méthane dans l'air.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-012",
+      "theme": "Gaz, H2S et atmosphères explosives",
+      "level": 1,
+      "q": "Pourquoi réalise-t-on un test fonctionnel (bump test) du détecteur portable avant usage ?",
+      "choices": [
+        "Pour recharger la cellule de mesure",
+        "Pour effacer l'historique du détecteur",
+        "Uniquement pour satisfaire un audit",
+        "Pour vérifier qu'il réagit au gaz et que ses alarmes fonctionnent"
+      ],
+      "answer": 3,
+      "explain": "Le bump test confirme que le capteur répond et que les alarmes sont opérationnelles : un détecteur non vérifié peut donner une fausse sécurité.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-013",
+      "theme": "Gaz, H2S et atmosphères explosives",
+      "level": 3,
+      "q": "On mesure l'atmosphère d'une capacité inertée à l'azote avec un détecteur catalytique de LIE ; il affiche 0 %. Pourquoi cette lecture n'est-elle pas fiable ?",
+      "choices": [
+        "Le détecteur est trop sensible à l'azote",
+        "L'azote est un gaz explosif qui fausse la mesure",
+        "Il lit en pourcentage de volume et non en LIE",
+        "Le capteur catalytique a besoin d'oxygène : en atmosphère pauvre en oxygène, il peut sous-estimer ou ne rien indiquer"
+      ],
+      "answer": 3,
+      "explain": "Les capteurs catalytiques brûlent le gaz sur un filament et exigent de l'oxygène. En milieu inerté, on emploie d'autres technologies et l'on mesure aussi l'oxygène.",
+      "seconds": 65,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-014",
+      "theme": "Gaz, H2S et atmosphères explosives",
+      "level": 2,
+      "q": "Un gaz haut est confirmé dans une zone de la plateforme. Que fait typiquement le système feu et gaz (F&G) ?",
+      "choices": [
+        "Il enregistre seulement la valeur dans l'historique",
+        "Il ouvre les vannes de torche pour évacuer le gaz vers la zone",
+        "Il déclenche les alarmes, isole les sources d'ignition non protégées et lance les arrêts et isolements prévus par la matrice cause-effet",
+        "Il relance les équipements arrêtés pour maintenir la production"
+      ],
+      "answer": 2,
+      "explain": "Le F&G applique automatiquement la matrice cause-effet de l'installation (alarmes, isolement des sources d'ignition, arrêts). Les actions exactes dépendent de chaque site.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-015",
+      "theme": "Gaz, H2S et atmosphères explosives",
+      "level": 2,
+      "q": "Un collègue est inconscient dans une zone où l'alarme H2S est active. Quelle est la conduite du sauveteur ?",
+      "choices": [
+        "Entrer en retenant sa respiration pour aller plus vite",
+        "Donner l'alerte et s'équiper d'un appareil respiratoire isolant avant d'entrer, puis sortir la victime à l'air frais et débuter les premiers secours",
+        "Entrer avec un masque à cartouche filtrante ordinaire",
+        "Attendre la fin de l'alarme"
+      ],
+      "answer": 1,
+      "explain": "Entrer sans appareil respiratoire isolant transforme le sauveteur en seconde victime. Les masques à cartouche ne conviennent pas à ces atmosphères.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-016",
+      "theme": "Gaz, H2S et atmosphères explosives",
+      "level": 2,
+      "q": "Que produit la combustion de l'H2S à la torche ?",
+      "choices": [
+        "Du dioxyde de soufre (SO₂), lui-même toxique et irritant",
+        "De la vapeur d'eau uniquement",
+        "Du dioxyde de carbone uniquement",
+        "Du méthane"
+      ],
+      "answer": 0,
+      "explain": "2 H₂S + 3 O₂ donnent 2 SO₂ + 2 H₂O. Brûler l'H2S le transforme en un gaz moins dangereux mais encore toxique.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-017",
+      "theme": "Gaz, H2S et atmosphères explosives",
+      "level": 2,
+      "q": "À partir de quelle teneur en oxygène une atmosphère est-elle considérée comme enrichie, avec un risque accru d'inflammation des vêtements ?",
+      "choices": [
+        "Au-dessus d'environ 23,5 %",
+        "Au-dessus de 20,9 %",
+        "Au-dessus de 19,5 %",
+        "Seulement au-dessus de 30 %"
+      ],
+      "answer": 0,
+      "explain": "L'air normal contient 20,9 % d'oxygène ; le seuil usuel d'enrichissement est autour de 23,5 %. Sous 19,5 %, l'atmosphère est déficiente.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-018",
+      "theme": "Gaz, H2S et atmosphères explosives",
+      "level": 1,
+      "q": "Un panneau montre un téléphone portable barré dans un cercle rouge à l'entrée d'une zone classée explosive. Pourquoi cette interdiction ?",
+      "img": "svg/iso-safety-signs.svg",
+      "imgAlt": "Planche de panneaux de sécurité ISO 7010 dont un panneau d'interdiction",
+      "choices": [
+        "Il perturbe les signaux radio de l'hélicoptère",
+        "Il gêne la concentration des opérateurs",
+        "Il consomme l'énergie du réseau de secours",
+        "Un téléphone non certifié Ex peut être une source d'inflammation (étincelle, batterie)"
+      ],
+      "answer": 3,
+      "explain": "En zone classée, seul le matériel certifié Ex/ATEX est admis : un appareil ordinaire peut produire une étincelle capable d'enflammer l'atmosphère.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-019",
+      "theme": "Alarmes, évacuation et survie en mer",
+      "level": 1,
+      "q": "L'alarme générale retentit (son continu). Quelle est la première réaction attendue ?",
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Plateforme pétrolière offshore en mer",
+      "choices": [
+        "Terminer la tâche en cours avant de bouger",
+        "Aller chercher ses affaires dans la cabine",
+        "Arrêter le travail, le sécuriser s'il ne faut que quelques secondes, et rejoindre calmement son poste de rassemblement",
+        "Se rendre à la salle de contrôle pour aider"
+      ],
+      "answer": 2,
+      "explain": "On stoppe, on sécurise brièvement et on rejoint le muster sans courir ni repasser par la cabine, afin d'être pointé et de ne pas encombrer les coursives.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-020",
+      "theme": "Alarmes, évacuation et survie en mer",
+      "level": 2,
+      "q": "Vous rejoignez le poste de rassemblement quand la coursive habituelle est envahie de fumée. Que faites-vous ?",
+      "choices": [
+        "Traverser la fumée en courant pour gagner du temps",
+        "Prendre l'itinéraire alternatif balisé, alerter si possible par radio et ne pas traverser la fumée",
+        "Attendre sur place les secours",
+        "Retourner en cabine et fermer la porte"
+      ],
+      "answer": 1,
+      "explain": "Des itinéraires alternatifs sont prévus pour ce cas. Traverser la fumée expose à l'intoxication ; s'isoler en cabine empêche d'être pointé.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-021",
+      "theme": "Alarmes, évacuation et survie en mer",
+      "level": 2,
+      "q": "Au poste de rassemblement, le pointage donne 84 personnes alors que la liste du personnel à bord (POB) en compte 86. Que faire ?",
+      "img": "photo/fpso.jpg",
+      "imgAlt": "Unité flottante de production et de stockage (FPSO)",
+      "choices": [
+        "Retourner chercher les deux absents dans la zone de l'incident",
+        "Signaler immédiatement les deux absents (noms, dernier lieu connu) au responsable du rassemblement, sans repartir les chercher seul",
+        "Attendre quelques minutes qu'ils arrivent avant de prévenir",
+        "Considérer que 84 est suffisant"
+      ],
+      "answer": 1,
+      "explain": "Le comparatif POB / pointage sert à déclencher la recherche organisée. Repartir seul crée de nouvelles victimes ; retarder l'alerte fait perdre un temps précieux.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-022",
+      "theme": "Alarmes, évacuation et survie en mer",
+      "level": 2,
+      "q": "Lors d'une chute à l'eau, quel est le danger le plus immédiat dans la première minute (règle 1-10-1) ?",
+      "choices": [
+        "Le choc de l'eau froide : hyperventilation et risque de noyade, d'où l'importance de contrôler sa respiration",
+        "L'hypothermie profonde",
+        "La déshydratation",
+        "L'épuisement musculaire"
+      ],
+      "answer": 0,
+      "explain": "La première minute est celle du choc thermique ; ensuite viennent dix minutes de mouvements utiles, puis l'hypothermie (environ une heure).",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-023",
+      "theme": "Alarmes, évacuation et survie en mer",
+      "level": 3,
+      "q": "L'hélicoptère se retourne à l'amerrissage. Quelle est la bonne conduite ?",
+      "choices": [
+        "Se détacher immédiatement dès l'impact",
+        "Gonfler le gilet à l'intérieur de la cabine",
+        "Attendre que le pilote donne l'ordre de sortir",
+        "Rester attaché, garder un repère fixe de la main, attendre l'arrêt des mouvements, puis se détacher et sortir en suivant le repère"
+      ],
+      "answer": 3,
+      "explain": "Rester attaché évite d'être déséquilibré dans la cabine qui se retourne ; le repère fixe permet de retrouver l'issue. Gonfler le gilet dans la cabine empêche de sortir.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-024",
+      "theme": "Alarmes, évacuation et survie en mer",
+      "level": 1,
+      "q": "À quoi sert l'EBS (Emergency Breathing System) porté lors des vols offshore ?",
+      "choices": [
+        "À respirer longtemps sous l'eau après l'évacuation",
+        "À filtrer le H2S sur la plateforme",
+        "À fournir une courte réserve d'air pour sortir d'un hélicoptère immergé",
+        "À gonfler le gilet de sauvetage"
+      ],
+      "answer": 2,
+      "explain": "L'EBS donne quelques instants d'air pour s'extraire de la cabine immergée ; ce n'est pas un scaphandre.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-025",
+      "theme": "Alarmes, évacuation et survie en mer",
+      "level": 1,
+      "q": "Qui peut donner l'ordre d'abandon de l'installation ?",
+      "choices": [
+        "Tout technicien qui voit un incendie",
+        "Le chef de l'équipe de maintenance",
+        "Le chef d'installation (OIM) ou son suppléant désigné",
+        "Le pilote de l'hélicoptère"
+      ],
+      "answer": 2,
+      "explain": "L'ordre d'abandon relève de l'OIM (ou de son suppléant), qui a la vision d'ensemble de l'urgence.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-026",
+      "theme": "Alarmes, évacuation et survie en mer",
+      "level": 2,
+      "q": "Quand gonfle-t-on le gilet de sauvetage lors de l'évacuation d'un hélicoptère immergé ?",
+      "choices": [
+        "Avant l'impact, pour être prêt",
+        "Après être sorti de la cabine, pour ne pas rester bloqué par la flottabilité",
+        "Dès que la cabine commence à se remplir d'eau, à l'intérieur",
+        "Jamais : il se gonfle seul au soleil"
+      ],
+      "answer": 1,
+      "explain": "Un gilet gonflé dans la cabine plaque la personne contre le plafond et gêne la sortie : on le gonfle une fois dehors.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-027",
+      "theme": "Alarmes, évacuation et survie en mer",
+      "level": 3,
+      "q": "Un groupe de naufragés attend dans l'eau sans radeau. Quelle conduite limite le plus la perte de chaleur ?",
+      "choices": [
+        "Seul : position HELP (genoux ramenés, bras contre le torse) ; en groupe : se serrer en cercle (huddle)",
+        "Nager en permanence pour se réchauffer",
+        "Rester à plat, bras écartés",
+        "Se disperser pour être plus visibles"
+      ],
+      "answer": 0,
+      "explain": "La position HELP et le huddle protègent les zones où la chaleur s'échappe le plus vite. Nager inutilement accélère le refroidissement.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-028",
+      "theme": "Levage, hélistation et travail en hauteur",
+      "level": 1,
+      "q": "Que signifie la CMU (ou WLL) marquée sur une élingue ?",
+      "img": "photo/crane-lifting.jpg",
+      "imgAlt": "Grue en train de lever une charge sur une installation",
+      "choices": [
+        "Le poids de l'élingue elle-même",
+        "La charge à laquelle elle se rompt",
+        "La longueur maximale de l'élingue en mètres",
+        "La charge maximale d'utilisation que l'élingue peut lever dans les conditions prévues"
+      ],
+      "answer": 3,
+      "explain": "La CMU est la charge à ne jamais dépasser en service ; la charge de rupture est bien supérieure (coefficient de sécurité).",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-029",
+      "theme": "Levage, hélistation et travail en hauteur",
+      "level": 3,
+      "q": "Une charge de 8 t est levée par une élingue à deux brins, l'angle entre les brins étant de 120°. Quelle est environ la tension dans chaque brin ?",
+      "img": "photo/crane-lifting.jpg",
+      "imgAlt": "Grue en train de lever une charge sur une installation",
+      "choices": [
+        "4 t",
+        "5,7 t",
+        "16 t",
+        "8 t"
+      ],
+      "answer": 3,
+      "explain": "T = W / (2 cos α) avec α = 60° (demi-angle) : 8 / (2 × 0,5) = 8 t. 4 t correspondrait à des brins verticaux, 5,7 t à un angle de 90°.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-030",
+      "theme": "Levage, hélistation et travail en hauteur",
+      "level": 1,
+      "q": "Qui donne les signaux au grutier pendant un levage ?",
+      "choices": [
+        "Tous les opérateurs au sol en même temps",
+        "Le dernier arrivé sur le chantier",
+        "Un seul signaleur désigné ; toute personne peut cependant donner un arrêt d'urgence",
+        "Le grutier seul, sans signaleur"
+      ],
+      "answer": 2,
+      "explain": "Un signaleur unique évite les ordres contradictoires ; l'arrêt d'urgence, lui, peut être demandé par tous.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-031",
+      "theme": "Levage, hélistation et travail en hauteur",
+      "level": 3,
+      "q": "Un levage est en cours au-dessus de la zone process quand l'alarme de gaz bas se déclenche à proximité. Quelle conduite est correcte ?",
+      "img": "photo/crane-lifting.jpg",
+      "imgAlt": "Grue en train de lever une charge sur une installation",
+      "choices": [
+        "Terminer le levage en cours puis réagir",
+        "Arrêter le levage, sécuriser la charge si cela ne crée pas de risque supplémentaire, couper les sources d'ignition de la grue selon la procédure et suivre l'alarme",
+        "Accélérer la manœuvre pour sortir de la zone",
+        "Laisser la charge suspendue et quitter la grue sans couper le moteur"
+      ],
+      "answer": 1,
+      "explain": "La grue est une source d'ignition potentielle. On arrête, on sécurise la charge sans créer de danger, on supprime les sources d'ignition selon la procédure du site et on suit l'alarme.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-032",
+      "theme": "Levage, hélistation et travail en hauteur",
+      "level": 1,
+      "q": "Quel est le rôle du HLO (Helicopter Landing Officer) ?",
+      "choices": [
+        "Superviser l'hélistation : pont dégagé, équipe incendie en place, autorisation d'approche de l'hélicoptère",
+        "Piloter l'hélicoptère à l'approche",
+        "Charger les bagages dans la soute",
+        "Contrôler les billets des passagers"
+      ],
+      "answer": 0,
+      "explain": "Le HLO est responsable de la sécurité sur l'hélistation pendant les mouvements.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-033",
+      "theme": "Levage, hélistation et travail en hauteur",
+      "level": 2,
+      "q": "Comment s'approche-t-on d'un hélicoptère dont les rotors tournent ?",
+      "choices": [
+        "Sur autorisation du pilote ou du HLO, par l'avant, dans le champ de vision du pilote, jamais par l'arrière",
+        "Par l'arrière, zone la plus dégagée",
+        "En courant dès l'atterrissage",
+        "Par n'importe quel côté, en gardant la tête haute"
+      ],
+      "answer": 0,
+      "explain": "Le rotor de queue est très dangereux et peu visible : on n'approche que sur autorisation, par l'avant, dans le champ de vision du pilote.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-034",
+      "theme": "Levage, hélistation et travail en hauteur",
+      "level": 3,
+      "q": "Pourquoi suspend-on les purges de gaz froid (cold vent) pendant un atterrissage d'hélicoptère ?",
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Plateforme pétrolière offshore en mer",
+      "choices": [
+        "Le bruit gêne les communications radio",
+        "Le gaz abîme la peinture du pont d'envol",
+        "Le gaz réduit la visibilité du pilote en plein jour",
+        "Le gaz peut atteindre l'hélistation : risque d'inflammation par l'échappement chaud et de perte de puissance moteur"
+      ],
+      "answer": 3,
+      "explain": "Un nuage de gaz non brûlé près de l'hélicoptère peut s'enflammer sur les parties chaudes ou priver le moteur d'oxygène : d'où l'interdiction de purge pendant les mouvements.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-035",
+      "theme": "Levage, hélistation et travail en hauteur",
+      "level": 2,
+      "q": "En travail en hauteur avec un harnais, comment reste-t-on protégé pendant un déplacement ?",
+      "choices": [
+        "Avec une longe simple, en la décrochant brièvement",
+        "Sans longe si l'on reste à moins de 3 m",
+        "Avec une double longe : on accroche le second point avant de décrocher le premier",
+        "En s'accrochant à une conduite de process"
+      ],
+      "answer": 2,
+      "explain": "La double longe garantit une connexion permanente à un point d'ancrage adapté. Une conduite de process n'est pas un point d'ancrage.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-036",
+      "theme": "Levage, hélistation et travail en hauteur",
+      "level": 2,
+      "q": "Pourquoi attache-t-on les outils et balise-t-on la zone située sous un travail en hauteur ?",
+      "choices": [
+        "Pour éviter de perdre les outils quand il y a du vent seulement",
+        "Pour éviter la chute d'objets sur les personnes et les équipements situés en dessous",
+        "Pour limiter le bruit",
+        "Pour réduire le poids de la charge"
+      ],
+      "answer": 1,
+      "explain": "Un objet de faible masse tombant de plusieurs mètres peut être mortel : on l'attache et on interdit l'accès sous la zone de travail.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-037",
+      "theme": "Levage, hélistation et travail en hauteur",
+      "level": 2,
+      "q": "Une personne reste suspendue immobile dans son harnais après une chute. Quel est le risque et que faire ?",
+      "img": "svg/ppe-icons.svg",
+      "imgAlt": "Pictogrammes d'équipements de protection individuelle",
+      "choices": [
+        "Aucun risque : elle peut attendre une heure",
+        "Le syndrome de suspension peut apparaître en quelques minutes : déclencher immédiatement le plan de sauvetage",
+        "Risque de froid uniquement, il suffit de la couvrir",
+        "Il faut la laisser immobile jusqu'à l'arrivée du médecin"
+      ],
+      "answer": 1,
+      "explain": "Une suspension prolongée comprime la circulation et peut entraîner la perte de conscience : le sauvetage doit être rapide, d'où un plan préparé à l'avance.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-038",
+      "theme": "Incendie, déversements et culture sécurité",
+      "level": 1,
+      "q": "Fermer la vanne d'alimentation d'une fuite de gaz enflammée supprime lequel des trois côtés du triangle du feu ?",
+      "img": "svg/fire-triangle.svg",
+      "imgAlt": "Triangle du feu : combustible, comburant, énergie d'activation",
+      "choices": [
+        "Le combustible",
+        "Le comburant (oxygène)",
+        "L'énergie d'activation (la chaleur)",
+        "Aucun : on ne peut pas agir sur le triangle"
+      ],
+      "answer": 0,
+      "explain": "Couper l'alimentation retire le combustible : sans lui, le feu s'éteint. Le triangle indique les leviers d'extinction.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-039",
+      "theme": "Incendie, déversements et culture sécurité",
+      "level": 3,
+      "q": "Un incendie se déclare dans un local protégé par un système de noyage au CO₂. Que faire avant la décharge ?",
+      "img": "svg/fire-triangle.svg",
+      "imgAlt": "Triangle du feu : combustible, comburant, énergie d'activation",
+      "choices": [
+        "Rester pour combattre le feu jusqu'à la décharge",
+        "Ouvrir les portes pour que le CO₂ se disperse",
+        "Déclencher la décharge avec du personnel encore à l'intérieur",
+        "Évacuer le local, vérifier qu'il est vide, fermer portes et ventilation, respecter l'alarme de pré-décharge"
+      ],
+      "answer": 3,
+      "explain": "Le CO₂ éteint en réduisant l'oxygène et asphyxie les personnes présentes. Le local doit être évacué, vérifié et fermé avant la décharge.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-040",
+      "theme": "Incendie, déversements et culture sécurité",
+      "level": 2,
+      "q": "En 12 mois, une installation enregistre 1 188 presque-accidents déclarés, contre 600 l'année précédente. Comment interpréter cette hausse ?",
+      "img": "svg/bird-pyramid.svg",
+      "imgAlt": "Pyramide de Bird : 1 accident grave, 10 légers, 30 dommages matériels, 600 presque-accidents",
+      "choices": [
+        "Un signe certain que la sécurité s'est dégradée",
+        "Un problème à cacher aux auditeurs",
+        "Souvent le signe d'une culture de déclaration qui progresse : c'est l'occasion de corriger avant l'accident",
+        "Un indicateur sans intérêt"
+      ],
+      "answer": 2,
+      "explain": "Sur la pyramide de Bird, la base est faite de presque-accidents : plus ils sont déclarés, plus on corrige tôt. Il faut toutefois suivre aussi les accidents graves.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-041",
+      "theme": "Incendie, déversements et culture sécurité",
+      "level": 1,
+      "q": "Quel ordre d'actions est correct en cas de fuite d'hydrocarbure sur le pont ?",
+      "choices": [
+        "Nettoyer à grande eau vers la mer, puis alerter",
+        "Ignorer si la fuite est petite",
+        "Alerter, arrêter la source si c'est sans danger, contenir et absorber, puis nettoyer et déclarer",
+        "Disperser avec un produit chimique, puis déclarer"
+      ],
+      "answer": 2,
+      "explain": "Les produits ne doivent jamais atteindre la mer : on alerte, on stoppe la source, on contient, puis on nettoie et on déclare.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-042",
+      "theme": "Incendie, déversements et culture sécurité",
+      "level": 1,
+      "q": "Que signifie SOPEP ?",
+      "choices": [
+        "Système d'Obturation des Puits en Eau Profonde",
+        "Plan d'urgence de bord contre la pollution par les hydrocarbures (Shipboard Oil Pollution Emergency Plan)",
+        "Standard d'Organisation des Postes d'Évacuation",
+        "Service d'Observation des Pollutions Externes"
+      ],
+      "answer": 1,
+      "explain": "Le SOPEP est le plan d'urgence antipollution exigé à bord des navires ; il organise l'alerte et la réponse à un déversement.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-043",
+      "theme": "Incendie, déversements et culture sécurité",
+      "level": 2,
+      "q": "Dans MARPOL (annexe I), quelle teneur maximale en hydrocarbures est admise pour le rejet en mer des eaux de cale de salle des machines après traitement ?",
+      "choices": [
+        "15 ppm",
+        "150 ppm",
+        "1 500 ppm",
+        "0,15 ppm"
+      ],
+      "answer": 0,
+      "explain": "La limite internationale de 15 ppm s'applique aux rejets d'eaux de cale traitées par un séparateur agréé. Les rejets locaux peuvent être plus stricts : voir la réglementation applicable.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-044",
+      "theme": "Incendie, déversements et culture sécurité",
+      "level": 2,
+      "q": "Que désignent les niveaux Tier 1, 2 et 3 d'un plan d'intervention antipollution ?",
+      "choices": [
+        "Trois catégories de produits chimiques",
+        "Trois classes de détecteurs de gaz",
+        "Trois grades d'hydrocarbures",
+        "Des niveaux de réponse croissants : moyens de l'installation, moyens régionaux, puis moyens nationaux et internationaux"
+      ],
+      "answer": 3,
+      "explain": "Le niveau est choisi selon l'ampleur du déversement : un petit événement se traite avec les moyens de l'installation, un plus grand fait appel à des moyens extérieurs.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-045",
+      "theme": "Incendie, déversements et culture sécurité",
+      "level": 2,
+      "q": "Après une fuite de gazole d'un réservoir de grue, le liquide coule vers des drains menant à la mer. Quelles actions immédiates ?",
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Plateforme pétrolière offshore en mer",
+      "choices": [
+        "Rincer abondamment le pont pour diluer",
+        "Attendre l'évaporation",
+        "Ouvrir les drains pour évacuer plus vite",
+        "Alerter, stopper la fuite si c'est sans danger, obturer les drains vers la mer, poser barrages et absorbants"
+      ],
+      "answer": 3,
+      "explain": "L'objectif est d'empêcher que le produit atteigne la mer : obturer les drains, contenir et absorber. Diluer ou évacuer aggrave la pollution.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "tech-hse-offshore-046",
+      "theme": "Incendie, déversements et culture sécurité",
+      "level": 3,
+      "q": "Un technicien a mal serré une bride. L'enquête révèle qu'aucune procédure de serrage n'était disponible et que la clé dynamométrique n'était plus étalonnée. Quelle est la bonne conclusion ?",
+      "choices": [
+        "La faute revient au seul technicien : sanction",
+        "Ne rien changer, c'est un cas isolé",
+        "Traiter les causes racines (procédure, outillage) plutôt que sanctionner seulement le technicien",
+        "Supprimer la clé dynamométrique"
+      ],
+      "answer": 2,
+      "explain": "Une enquête efficace remonte aux causes organisationnelles : sans procédure ni outillage fiable, le même incident se reproduira avec un autre exécutant.",
+      "seconds": 55,
+      "status": "draft"
+    }
+  ]
+}

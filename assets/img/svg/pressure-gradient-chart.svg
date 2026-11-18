@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Gradients de pression hydrostatique : pression en psi en fonction de la profondeur en pieds pour l'eau douce (0,433 psi/ft), l'huile (0,35 psi/ft) et le gaz (0,10 psi/ft), avec les pressions à 10 000 ft : 4 330, 3 500 et 1 000 psi</title>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.gd{stroke:#C9CED8;stroke-width:1;fill:none}
+</style>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Gradients de pression hydrostatique</text>
+
+<path class="gd" d="M110,150H730M110,220H730M110,290H730M110,360H730M110,430H730M234,80V430M358,80V430M482,80V430M606,80V430M730,80V430"/>
+<line x1="110" y1="80" x2="748" y2="80" class="s" marker-end="url(#ar)"/>
+<line x1="110" y1="80" x2="110" y2="446" class="s" marker-end="url(#ar)"/>
+<g class="c">
+<text x="110" y="70">0</text><text x="234" y="70">1 000</text><text x="358" y="70">2 000</text><text x="482" y="70">3 000</text><text x="606" y="70">4 000</text><text x="730" y="70">5 000</text>
+</g>
+<g class="e">
+<text x="100" y="85">0</text><text x="100" y="155">2 000</text><text x="100" y="225">4 000</text><text x="100" y="295">6 000</text><text x="100" y="365">8 000</text><text x="100" y="435">10 000</text>
+</g>
+<text x="420" y="50" class="c b">Pression (psi)</text>
+<text x="28" y="255" class="c b" transform="rotate(-90 28 255)">Profondeur verticale (ft)</text>
+
+<!-- gradients -->
+<line x1="110" y1="80" x2="646.9" y2="430" stroke="#061F44" stroke-width="3.5"/>
+<line x1="110" y1="80" x2="544" y2="430" stroke="#F28C28" stroke-width="3.5"/>
+<line x1="110" y1="80" x2="234" y2="430" stroke="#061F44" stroke-width="3.5" stroke-dasharray="9 6"/>
+<circle cx="646.9" cy="430" r="6" fill="#061F44"/>
+<circle cx="544" cy="430" r="6" fill="#F28C28" stroke="#061F44" stroke-width="2"/>
+<circle cx="234" cy="430" r="6" fill="#FCFBF8" stroke="#061F44" stroke-width="2.5"/>
+
+<text x="445" y="285" class="b">Eau douce : 0,433 psi/ft</text>
+<text x="448" y="375" class="e o">Huile : 0,35 psi/ft</text>
+<text x="212" y="330" class="b">Gaz : 0,10 psi/ft</text>
+<text x="655" y="424" class="b">4 330 psi</text>
+<text x="515" y="424" class="e b">3 500 psi</text>
+<text x="242" y="424" class="b">1 000 psi</text>
+
+<text x="720" y="470" class="e b">Pression = gradient × profondeur</text>
+<text x="720" y="490" class="e">(pressions lues à 10 000 ft de profondeur)</text>
+</svg>

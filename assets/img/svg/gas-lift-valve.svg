@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Gas-lift : puits avec gaz injecté dans l'espace annulaire, deux mandrins à poche latérale (vanne de décharge et vanne opérante), packer, et détail d'une vanne de gas-lift avec dôme chargé en azote, soufflet, bille sur siège et clapet anti-retour</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Vanne de gas-lift : injection de gaz dans le tubing</text>
+
+<!-- ===== puits ===== -->
+<rect x="30" y="462" width="290" height="34" fill="#E8EAEE"/>
+<text x="175" y="484" class="c">Réservoir (fluide du puits)</text>
+<rect x="60" y="88" width="85" height="367" fill="#DCE6F5"/>
+<rect x="195" y="88" width="95" height="367" fill="#DCE6F5"/>
+<rect x="145" y="88" width="50" height="367" fill="#FCFBF8"/>
+<path d="M60,88V455M290,88V455" stroke="#061F44" stroke-width="3.5" fill="none"/>
+<path d="M145,88V455M195,88V455" class="s"/>
+<line x1="20" y1="88" x2="330" y2="88" class="s"/>
+<rect x="140" y="62" width="60" height="26" class="gr"/>
+<rect x="60" y="420" width="85" height="18" class="gr"/>
+<rect x="195" y="420" width="95" height="18" class="gr"/>
+
+<line x1="170" y1="452" x2="170" y2="106" class="or" marker-end="url(#ao)"/>
+<line x1="200" y1="75" x2="322" y2="75" class="or" marker-end="url(#ao)"/>
+<text x="262" y="66" class="c">Production</text>
+
+<text x="14" y="104">Gaz injecté</text>
+<path d="M20,115H102V400" class="nv" marker-end="url(#ar)"/>
+<text x="242" y="126" class="c">Annulaire</text>
+<text x="242" y="144" class="c">(gaz)</text>
+
+<rect x="195" y="170" width="34" height="46" class="gr"/>
+<rect x="195" y="310" width="34" height="46" class="gr"/>
+<circle cx="212" cy="193" r="7" class="of"/>
+<circle cx="212" cy="333" r="7" class="of"/>
+
+<path d="M220,193H298M220,333H298M195,387H298" class="ld"/>
+<text x="302" y="198">Vanne de décharge</text>
+<text x="302" y="215">(mandrin latéral)</text>
+<text x="302" y="338">Vanne opérante</text>
+<text x="302" y="355">(mandrin latéral)</text>
+<text x="302" y="292">Cuvelage (casing)</text>
+<text x="302" y="392">Tubing (production)</text>
+<text x="302" y="434">Packer</text>
+
+<!-- ===== détail de la vanne ===== -->
+<text x="515" y="108" class="c b">Détail d'une vanne de gas-lift</text>
+<path d="M470,425V125H560V425" class="wh"/>
+<rect x="480" y="135" width="70" height="60" class="bl"/>
+<text x="515" y="172" class="c b" style="font-size:16px">N₂</text>
+<polyline points="485,200 545,210 485,220 545,230 485,240 545,250" fill="none" stroke="#061F44" stroke-width="2"/>
+<line x1="515" y1="250" x2="515" y2="296" stroke="#061F44" stroke-width="4"/>
+<circle cx="515" cy="305" r="9" class="of"/>
+<path d="M480,316H504M526,316H550M480,372H504M526,372H550" stroke="#061F44" stroke-width="4" fill="none"/>
+<circle cx="515" cy="361" r="9" class="wh"/>
+<rect x="466" y="262" width="8" height="20" fill="#FCFBF8"/>
+<text x="352" y="260">Gaz d'injection</text>
+<path d="M352,272H490" class="nv" marker-end="url(#ar)"/>
+<path d="M515,384V445" class="nv" marker-end="url(#ar)"/>
+<text x="515" y="468" class="c">Vers le tubing</text>
+
+<path d="M550,167H568M545,230H568M525,305H568M524,361H568" class="ld"/>
+<text x="572" y="172">Dôme chargé en azote (N₂)</text>
+<text x="572" y="235">Soufflet (bellows)</text>
+<text x="572" y="310">Tige, bille et siège</text>
+<text x="572" y="366">Clapet anti-retour</text>
+
+<text x="580" y="400" class="o">Vanne à pression de casing :</text>
+<text x="580" y="418" class="o">ouverture quand la pression</text>
+<text x="580" y="436" class="o">du gaz dépasse celle du dôme</text>
+</svg>

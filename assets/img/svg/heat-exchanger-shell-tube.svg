@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Échangeur à calandre et faisceau tubulaire en contre-courant : fluide chaud côté tubes, fluide froid côté calandre, chicanes, plaques tubulaires et boîtes de distribution</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Échangeur à calandre et faisceau tubulaire (contre-courant)</text>
+
+<!-- tuyauteries tubes -->
+<rect x="40" y="240" width="95" height="20" class="gr"/>
+<rect x="665" y="240" width="95" height="20" class="gr"/>
+<!-- boîtes de distribution -->
+<path d="M180,170Q128,170 128,250Q128,330 180,330Z" class="gr"/>
+<path d="M620,170Q672,170 672,250Q672,330 620,330Z" class="gr"/>
+<!-- calandre -->
+<rect x="180" y="170" width="440" height="160" class="bl"/>
+<!-- tubes -->
+<path d="M180,200H620M180,225H620M180,275H620M180,300H620" fill="none" stroke="#061F44" stroke-width="2"/>
+<!-- chicanes -->
+<path d="M290,172V285M400,328V215M510,172V285" fill="none" stroke="#061F44" stroke-width="5"/>
+<!-- plaques tubulaires -->
+<path d="M180,168V332M620,168V332" fill="none" stroke="#061F44" stroke-width="7"/>
+<!-- tubulures calandre -->
+<rect x="555" y="138" width="20" height="34" class="gr"/>
+<rect x="225" y="328" width="20" height="34" class="gr"/>
+
+<!-- écoulements -->
+<path d="M45,250H760" class="or" marker-end="url(#ao)"/>
+<path d="M565,112V300H455V200H345V300H235V396" fill="none" stroke="#061F44" stroke-width="3" marker-end="url(#ar)"/>
+
+<!-- libellés flux -->
+<text x="565" y="98" class="c b">Entrée calandre (fluide froid)</text>
+<text x="235" y="418" class="c b">Sortie calandre</text>
+<text x="80" y="228" class="c b">Entrée tubes</text>
+<text x="80" y="278" class="c">(fluide chaud)</text>
+<text x="722" y="228" class="c b">Sortie tubes</text>
+<text x="722" y="278" class="c">(refroidi)</text>
+
+<!-- libellés équipements -->
+<text x="380" y="150" class="c">Calandre (shell)</text>
+<path d="M380,154V170M400,332V372M620,334V372M150,326V446M480,277V446" class="ld"/>
+<text x="400" y="392" class="c">Chicane (baffle)</text>
+<text x="620" y="392" class="c">Plaque tubulaire</text>
+<text x="150" y="464" class="c">Boîte de distribution</text>
+<text x="480" y="464" class="c">Faisceau de tubes</text>
+</svg>

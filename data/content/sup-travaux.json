@@ -1,0 +1,908 @@
+{
+  "profile": "sup-travaux",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Permis de travail, consignation et isolation",
+      "theme": "Permis de travail et consignation",
+      "minutes": 9,
+      "body": "Le **permis de travail** est l'autorisation écrite qui encadre une intervention dans une zone exploitée. Il définit la tâche, le lieu, la durée (souvent un poste), les risques, les mesures de prévention et les signatures de l'émetteur et de l'exécutant. Il n'est valable que pour **la tâche, le lieu et la période** pour lesquels il a été délivré : tout changement impose de le suspendre et de le revalider. Le superviseur veille à son affichage sur le lieu des travaux et à la compréhension des mesures par chaque intervenant.\n\nLes permis spécialisés les plus fréquents sont le **permis de feu** (travaux par point chaud : soudage, meulage), l'**entrée en espace confiné**, le travail en hauteur, la levée de charges lourdes et les interventions électriques. Pour un point chaud, on exige un contrôle d'explosimétrie, des moyens d'extinction, un guetteur, et une surveillance maintenue après la fin des travaux pendant la durée fixée par la procédure. Pour un espace confiné, on contrôle l'atmosphère avant l'entrée et en continu : l'air normal contient environ **20,9 % d'oxygène**, et en dessous de **19,5 %** l'atmosphère est considérée comme déficiente. Un surveillant reste à l'extérieur.\n\nLa **consignation** (LOTO, lock-out tag-out) protège contre toute énergie dangereuse : électrique, hydraulique, pneumatique, mécanique, thermique, chimique. La séquence est : **séparer** l'équipement de ses sources d'énergie, **condamner** les points d'isolement (cadenas, étiquette), **dissiper** l'énergie résiduelle (purge, décharge, blocage mécanique), puis **vérifier l'absence d'énergie** (essai de démarrage, manomètre à zéro). Chaque intervenant pose **son propre cadenas** et le retire lui-même.\n\nSur les circuits sous pression, l'isolation standard est la **double barrière avec purge** (DBB, double block and bleed) : deux vannes d'isolement avec une purge entre elles pour vérifier l'étanchéité. On n'isole jamais une soupape de sécurité sans procédure : l'équipement ne serait plus protégé contre la surpression.\n\nLes zones à risque d'explosion sont classées **ATEX** : zone 0 pour une atmosphère explosive présente en permanence ou longtemps, zone 1 pour une présence occasionnelle, zone 2 pour une présence rare et brève. Le matériel doit être certifié pour la zone.\n\nQuand deux activités se déroulent en même temps dans la même zone (**SIMOPS**), une matrice d'opérations simultanées indique ce qui est autorisé ; un soudage près d'une purge d'hydrocarbures est typiquement incompatible. En fin de poste avec travaux inachevés, on sécurise, on suspend le permis, on assure une passation écrite, et le nouvel exécutant revalide avant de reprendre.\n\n**Sur le terrain**\n- Ne cédez jamais à « le voyant est éteint » : seule la vérification d'absence de tension avec un appareil adapté prouve l'absence d'énergie.\n- Visite conjointe sur place avant de signer : lisez les plaques d'équipement, comparez avec les schémas, vérifiez les cadenas un par un.\n- Chaque cadenas reste à son propriétaire ; en cas d'absence, appliquez la procédure du site de levée exceptionnelle.",
+      "keyPoints": [
+        "Un permis vaut pour une tâche, un lieu et une durée donnés.",
+        "Consignation : séparer, condamner, dissiper, vérifier l'absence d'énergie.",
+        "Espace confiné : oxygène normal 20,9 %, déficient sous 19,5 %.",
+        "SIMOPS : coordonner les activités simultanées avec une matrice."
+      ],
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Cadenas et étiquette de consignation"
+    },
+    {
+      "id": "m2",
+      "title": "Planifier et ordonnancer : chemin critique et Gantt",
+      "theme": "Planification et ordonnancement",
+      "minutes": 9,
+      "body": "Planifier consiste à décider **quoi, quand, avec qui et avec quoi** ; ordonnancer, c'est placer les interventions dans le calendrier selon les ressources et les contraintes. Un bon superviseur prépare ses chantiers **avant** de les lancer : une intervention préparée est plus sûre, plus courte et moins coûteuse.\n\nLe **dossier d'intervention** (work pack) rassemble la gamme de travail, le détail des tâches, les pièces et outils, les plans, les permis nécessaires, l'analyse de risques et les contrôles de réception. L'**ordre de travail** (OT) est le document de référence : toute intervention passe par un OT, même urgente.\n\nLa **priorisation** croise la criticité de l'équipement et l'urgence. Les travaux touchant à la sécurité (soupapes, systèmes d'arrêt d'urgence, détection gaz) passent avant le confort. Le **backlog** est le stock d'OT en attente ; un backlog qui grossit sans contrôle signale un manque de ressources ou une mauvaise priorisation.\n\nLe **WBS** (découpage structuré du projet) décompose le travail en lots, puis en tâches. On estime ensuite durées et ressources, puis on relie les tâches par des dépendances. Le **diagramme de Gantt** les affiche sous forme de barres sur une échelle de temps, avec des **jalons** (losanges) pour les dates clés.\n\nLe **chemin critique** est la suite de tâches dépendantes qui détermine la durée minimale du projet : leur **marge totale est nulle**. Un retard d'un jour sur une de ces tâches retarde la fin du projet d'un jour ; une tâche non critique peut glisser de sa marge sans conséquence. Exemple : A (3 j) précède B (4 j) et C (6 j), puis D (2 j) suit B et C : le chemin A-C-D totalise 11 jours et est critique, B a une marge de 2 jours.\n\nPour raccourcir un projet, on agit sur les tâches critiques : **accélération** (crashing, ajouter des ressources) ou **recouvrement** de tâches (fast-tracking), en acceptant un surcoût ou un risque supplémentaire. Raccourcir une tâche non critique ne change rien à la date de fin.\n\nLe suivi se fait par comparaison à la référence : avancement réel contre prévu, consommation d'heures, jalons tenus. Un planning n'est utile que s'il est mis à jour et partagé : réunion d'avancement courte et régulière, écarts expliqués, décisions tracées.\n\n**Sur le terrain**\n- Prenez 10 minutes le matin pour repérer sur le Gantt les tâches à marge nulle et surveillez-les en priorité.\n- Vérifiez dès la veille pièces, échafaudage et permis : un OT « prêt sur le papier » bloque l'équipe sur le terrain.\n- Annoncez tôt un retard critique avec son impact chiffré : une mauvaise nouvelle tardive coûte plus cher.",
+      "keyPoints": [
+        "Planifier = quoi/quand/avec qui ; ordonnancer = placer dans le calendrier.",
+        "Chemin critique : marge nulle, tout retard décale la fin.",
+        "Dossier d'intervention : gamme, pièces, permis, analyse de risques.",
+        "Raccourcir : agir sur le chemin critique (crashing, fast-tracking)."
+      ],
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt avec chemin critique"
+    },
+    {
+      "id": "m3",
+      "title": "Arrêts programmés et coordination des corps de métier",
+      "theme": "Arrêts et coordination des corps de métier",
+      "minutes": 9,
+      "body": "Un **arrêt programmé** (turnaround, shutdown) est une période où l'unité est mise à l'arrêt pour réaliser des travaux et inspections impossibles en marche. Il mobilise souvent des centaines d'intervenants de nombreuses entreprises, avec un coût de manque à produire élevé : chaque jour compte.\n\nLa réussite d'un arrêt se joue **avant** l'arrêt, pendant la préparation, qui commence des mois à l'avance. Les étapes : définition du périmètre, **gel du périmètre** (scope freeze) à une date fixée, préparation des dossiers d'intervention, commande des pièces à long délai, planification détaillée, planning des ressources, analyse de risques globale, formation et accueil sécurité des intervenants.\n\nPassé le gel, tout travail ajouté passe par la **gestion du changement** : évaluation de l'impact sur la durée, le coût et la sécurité, puis validation par un responsable. Découvrir des travaux supplémentaires à l'ouverture des équipements est fréquent ; sans maîtrise, ce **dérapage de périmètre** (scope creep) fait déraper le planning.\n\nPendant l'arrêt, le superviseur coordonne les corps de métier : échafaudeurs, calorifugeurs, chaudronniers, tuyauteurs, soudeurs, mécaniciens, électriciens, instrumentistes, inspecteurs. L'ordre est dicté par le chemin critique et par la logique des tâches : l'échafaudage monte avant les travaux en hauteur, le calorifuge est déposé avant l'inspection ou la réparation, remis après les essais. Une réunion de coordination chaque jour, des tableaux d'avancement et des points de situation par zone évitent les conflits d'accès et les activités simultanées dangereuses.\n\nL'avancement se suit avec la **courbe en S**, qui trace l'avancement cumulé réel contre le prévu, accompagnée de la consommation d'heures et des indicateurs de sécurité.\n\nLa **remise en service** est une phase à risque. Avant le redémarrage : toutes les tâches sont closes, les permis sont clôturés, les consignations levées, les cadenas retirés, les brides et vannes remises dans leur position de service, les essais d'étanchéité réalisés, les échafaudages et déchets évacués, les systèmes de sécurité testés. Une **revue de pré-démarrage** (pre-start-up safety review) donne l'autorisation formelle.\n\nAprès l'arrêt, un retour d'expérience documente ce qui a marché, les écarts de durée et de coût, et sert à préparer le suivant.\n\n**Sur le terrain**\n- Tenez la réunion de coordination debout, 20 minutes, avec les chefs d'équipe de chaque métier : conflits d'accès et levages d'abord.\n- Toute découverte à l'ouverture d'un équipement passe par la gestion du changement, jamais par une décision verbale isolée.\n- Avant le redémarrage, faites la ronde complète : permis clôturés, consignations levées, outils sortis, échafaudages déposés.",
+      "keyPoints": [
+        "Le succès d'un arrêt se joue dans la préparation ; gel du périmètre à date fixée.",
+        "Travaux hors périmètre : gestion du changement, pas d'ajout informel.",
+        "Courbe en S : avancement cumulé réel contre prévu.",
+        "Redémarrage : revue de pré-démarrage, permis clôturés, consignations levées, essais faits."
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Sécurité chantier et analyse de risques",
+      "theme": "Sécurité chantier et analyse de risques",
+      "minutes": 9,
+      "body": "La sécurité d'un chantier repose sur trois piliers : le **risque est analysé**, les **mesures sont appliquées**, et chacun peut **arrêter le travail** s'il juge la situation dangereuse (droit et devoir d'arrêt, « stop work authority »).\n\nL'**analyse de risques de la tâche** (JSA, JHA, ARTT selon les entreprises) décompose le travail en étapes, identifie pour chacune les dangers, évalue le risque et définit les mesures. Elle est faite avec l'équipe qui exécute, juste avant le travail, et relue à chaque changement de conditions. La **matrice de risques** croise gravité et probabilité : un risque de gravité élevée et de probabilité élevée est inacceptable et doit être traité avant de commencer.\n\nLa **hiérarchie des mesures de prévention**, du plus au moins efficace : **éliminer** le danger, le **substituer** par un moindre danger, les **protections collectives** (garde-corps, ventilation), les mesures **organisationnelles** (procédures, signalisation, formation), puis les **EPI** en dernier recours. Le port de l'EPI ne dispense jamais de chercher mieux en amont.\n\nLa **pyramide de Bird** illustre le lien entre événements : sur 600 presque accidents environ, on compte 30 accidents avec dommages matériels, 10 blessures légères et 1 accident grave. Traiter les presque accidents et les situations dangereuses réduit les accidents graves.\n\nPour le **travail en hauteur**, la protection collective prime ; à défaut, le harnais est relié par une longe avec absorbeur à un point d'ancrage résistant, situé au-dessus du poste, et le matériel est vérifié avant usage. Pour les **levages**, on contrôle la charge, les élingues et leur état, l'angle entre brins : **plus l'angle augmente, plus la tension dans chaque brin augmente**. Personne ne passe sous une charge suspendue et le chef de manœuvre est identifié.\n\nLes **panneaux** suivent la norme ISO 7010 : rond rouge barré pour l'interdiction, triangle jaune pour l'avertissement, rond bleu pour l'obligation, carré vert pour les secours.\n\nUn indicateur classique est le **LTIFR** : nombre d'accidents avec arrêt multiplié par 1 000 000, divisé par les heures travaillées. Avec 2 accidents pour 500 000 heures, il vaut 4.\n\nAprès un incident ou un presque accident, le superviseur sécurise la zone, soigne les personnes, signale, puis conduit une analyse des causes racines (par exemple la méthode des 5 pourquoi) et partage les enseignements. L'objectif n'est pas de désigner un coupable, mais de corriger le système.\n\n**Sur le terrain**\n- Faites l'ARTT sur place, avec l'équipe, à la tâche : une analyse copiée d'un autre chantier ne voit pas les dangers du jour.\n- Un presque-accident déclaré est un accident évité : remerciez celui qui le signale au lieu de chercher un coupable.\n- Vérifiez les accessoires de levage avant la manœuvre : CMU, angle entre brins, état et vérification périodique.",
+      "keyPoints": [
+        "Hiérarchie : éliminer, substituer, collectif, organisationnel, EPI.",
+        "Pyramide de Bird : 1 grave / 10 légers / 30 dégâts matériels / 600 presque accidents.",
+        "Levage : plus l'angle entre brins augmente, plus la tension augmente.",
+        "LTIFR = accidents avec arrêt x 1 000 000 / heures travaillées."
+      ],
+      "img": "svg/bird-pyramid.svg",
+      "imgAlt": "Pyramide de Bird"
+    },
+    {
+      "id": "m5",
+      "title": "Maintenance, fiabilité et indicateurs",
+      "theme": "Maintenance et fiabilité",
+      "minutes": 9,
+      "body": "La norme européenne **NF EN 13306** définit les types de maintenance. La maintenance **corrective** intervient après la défaillance. La maintenance **préventive** intervient avant : **systématique** (selon un calendrier ou un nombre d'heures de marche) ou **conditionnelle** (selon l'état réel mesuré : vibrations, thermographie, analyse d'huile, épaisseurs). La maintenance **prévisionnelle** s'appuie sur l'analyse des tendances pour prédire l'échéance. La maintenance **améliorative** modifie le matériel pour supprimer une cause de panne.\n\nLes principaux indicateurs de fiabilité sont : le **MTBF** (temps moyen entre pannes) = temps de bon fonctionnement divisé par le nombre de pannes ; le **MTTR** (temps moyen de réparation) = temps total de réparation divisé par le nombre de pannes ; et la **disponibilité** = MTBF / (MTBF + MTTR). Avec un MTBF de 900 heures et un MTTR de 100 heures, elle vaut 900 / 1 000 = 90 %.\n\nLe **taux de respect du programme** (schedule compliance) mesure la part des travaux planifiés réellement réalisés dans la période. Le ratio **préventif/correctif** et le backlog complètent le tableau. Un indicateur ne sert que s'il déclenche une action : on suit les tendances, pas une valeur isolée.\n\nPour comprendre une panne, on cherche la **cause racine** : méthode des **5 pourquoi**, arbre des causes, diagramme d'Ishikawa. Le **diagramme de Pareto** montre que souvent environ 20 % des causes expliquent 80 % des effets : on traite d'abord les pannes récurrentes les plus coûteuses. L'**AMDEC** (analyse des modes de défaillance, de leurs effets et de leur criticité) classe les défaillances potentielles selon leur gravité, leur fréquence et leur détectabilité, pour construire un plan de maintenance adapté. La démarche **RCM** (maintenance centrée sur la fiabilité) part de la fonction de chaque équipement.\n\nLa **gestion des pièces de rechange** applique l'analyse **ABC** : les articles de classe A, peu nombreux (environ 20 %), représentent l'essentiel de la valeur du stock (environ 80 %) et demandent un suivi serré ; ceux de classe C sont nombreux et peu coûteux. Les pièces critiques (dont l'absence arrête la production) sont stockées même si elles sont peu utilisées.\n\nLe superviseur est l'interface entre planification et terrain : il remonte les défauts, vérifie que la réparation traite la cause, renseigne l'historique dans la GMAO et veille à la remise en état du site à la fin du travail.\n\n**Sur le terrain**\n- Notez l'heure et la valeur des vibrations ou températures à chaque ronde : c'est la tendance qui prévient la panne.\n- Ne comptez pas les urgences dans le taux de respect du programme : un programme qui saute à chaque urgence est un signal de dérive.\n- Concentrez votre énergie sur les 20 % d'équipements qui causent 80 % des pertes plutôt que sur les « petites pannes » visibles.",
+      "keyPoints": [
+        "Corrective, préventive systématique, conditionnelle, prévisionnelle, améliorative.",
+        "MTBF, MTTR ; disponibilité = MTBF / (MTBF + MTTR).",
+        "Cause racine : 5 pourquoi, Pareto ; AMDEC pour hiérarchiser.",
+        "ABC : peu d'articles représentent l'essentiel de la valeur du stock."
+      ],
+      "img": "svg/abc-stock-curve.svg",
+      "imgAlt": "Courbe ABC de gestion de stock"
+    }
+  ],
+  "questions": [
+    {
+      "id": "sup-travaux-001",
+      "theme": "Permis de travail et consignation",
+      "level": 1,
+      "q": "Vous consignez le départ moteur 400 V d'une pompe avant de changer son roulement. L'électricien vous dit : « Le voyant Marche du coffret est éteint, le disjoncteur est ouvert, on peut démonter. » Que répondez-vous, au vu de la séquence de la figure ?",
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Schéma de consignation en 5 étapes : séparer, condamner (cadenas et étiquette), identifier, vérifier l'absence de tension (VAT), mettre à la terre si nécessaire",
+      "choices": [
+        "Oui : un disjoncteur ouvert et un voyant éteint prouvent l'absence de tension",
+        "Oui, à condition de poser l'étiquette « Ne pas manœuvrer » sur le coffret",
+        "Pas encore : il faut condamner (cadenas + étiquette), identifier le bon circuit puis faire la VAT en amont et en aval avant de toucher le moteur",
+        "Pas encore : il manque seulement la mise à la terre, la VAT n'est utile que si le moteur est en HT"
+      ],
+      "answer": 2,
+      "explain": "Un voyant ou un disjoncteur ouvert ne prouvent rien (voyant grillé, retour de tension, mauvais départ). La séquence impose séparer, condamner, identifier, puis vérifier l'absence de tension avec un appareil adapté ; la VAT s'applique aussi en BT.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-002",
+      "theme": "Permis de travail et consignation",
+      "level": 1,
+      "q": "Le matin, un chef d'équipe vous demande d'utiliser le permis signé hier pour la vanne V-12 afin d'intervenir aussi sur la pompe P-07 « puisque c'est la même zone ». Que faites-vous ?",
+      "choices": [
+        "Vous refusez : le permis vaut pour une tâche, un lieu et une durée définis ; P-07 demande une analyse de risques et un nouveau permis (ou un avenant validé)",
+        "Vous acceptez, la pompe étant dans la même zone que la vanne",
+        "Vous ajoutez P-07 à la main sur le permis existant, sans refaire l'analyse de risques",
+        "Vous acceptez si l'équipe est la même et si l'intervention dure moins d'une heure"
+      ],
+      "answer": 0,
+      "explain": "Un permis est lié à une tâche, un lieu et une durée précis. Une autre machine a d'autres énergies, d'autres dangers et d'autres isolations à vérifier.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-003",
+      "theme": "Permis de travail et consignation",
+      "level": 1,
+      "q": "Remplacement d'une garniture mécanique sur la pompe P-07. La procédure du site impose un isolement DBB sur l'aspiration. Lors de votre visite conjointe, que devez-vous constater sur place ?",
+      "choices": [
+        "Une seule vanne fermée, cadenassée et étiquetée",
+        "Deux vannes ouvertes et une purge fermée entre elles",
+        "Deux vannes fermées sans purge entre elles, pour éviter tout rejet de produit",
+        "Deux vannes fermées avec, entre elles, une purge ouverte qui ne débite pas, preuve que l'étanchéité est assurée"
+      ],
+      "answer": 3,
+      "explain": "DBB = double block and bleed : deux organes d'isolement et une purge intermédiaire dont l'absence de débit prouve que les vannes tiennent. Sans purge, une fuite de vanne reste invisible.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-004",
+      "theme": "Permis de travail et consignation",
+      "level": 2,
+      "q": "Meulage d'un support de ligne à 8 m d'un bac de brut dégazé ce matin. Vent faible. Avant d'émettre le permis de feu, quelles conditions attendez-vous ?",
+      "img": "svg/fire-triangle.svg",
+      "imgAlt": "Triangle du feu : combustible, comburant (oxygène) et énergie d'activation, avec les moyens de supprimer chaque côté",
+      "choices": [
+        "Un balayage à l'air comprimé et la mesure faite ce matin dans le bac suffisent",
+        "Explosimétrie sur le lieu du travail (aucune lecture selon le seuil de la procédure du site), extincteurs à portée, guetteur incendie et protection des égouts et évents proches",
+        "Un avertissement oral au chef de poste et une couverture ignifuge sur la ligne",
+        "L'explosimétrie du bac suffit : pas besoin de guetteur à 8 m"
+      ],
+      "answer": 1,
+      "explain": "Le point chaud exige de supprimer ou de maîtriser un côté du triangle du feu : atmosphère mesurée au poste de travail, moyens d'extinction, surveillance et obturation des sources de vapeurs (égouts). Une mesure ancienne dans un autre volume ne vaut pas.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-005",
+      "theme": "Permis de travail et consignation",
+      "level": 2,
+      "q": "Entrée dans le ballon V-201 pour inspection. Le détecteur 4 gaz affiche : O₂ 17,8 %, LIE 0 %, H₂S 0 ppm, CO 0 ppm. Que décidez-vous ?",
+      "choices": [
+        "On entre : aucun gaz toxique ou explosif n'est détecté",
+        "Pas d'entrée : l'oxygène est sous le minimum de la procédure du site (de l'ordre de 19,5 %) ; on ventile, on remesure et on revoit le plan de sauvetage",
+        "On entre avec un détecteur individuel, 17,8 % suffit pour un travail court",
+        "On entre avec un masque à cartouche filtrante"
+      ],
+      "answer": 1,
+      "explain": "L'air normal contient environ 20,9 % d'oxygène ; un taux de 17,8 % indique une atmosphère appauvrie. Un masque à cartouche ne fournit pas d'oxygène : seul un appareil isolant (ARI ou adduction d'air) est admissible, selon les procédures du site.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-006",
+      "theme": "Permis de travail et consignation",
+      "level": 2,
+      "q": "Consignation collective du compresseur C-101 : quatre équipes ont chacune posé leur cadenas. L'électricien a terminé et propose de retirer le cadenas de l'équipe mécanique, partie déjeuner, pour gagner du temps. Votre réponse ?",
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Schéma de consignation en 5 étapes : séparer, condamner (cadenas et étiquette), identifier, vérifier l'absence de tension (VAT), mettre à la terre si nécessaire",
+      "choices": [
+        "Oui, si l'électricien signe une décharge",
+        "Oui, le superviseur peut retirer tous les cadenas à la fin de son poste",
+        "Non, mais on peut remplacer le cadenas mécanique par celui de l'électricien",
+        "Non : chaque cadenas n'est retiré que par son propriétaire ; en cas d'absence, seule la procédure de levée exceptionnelle du site, avec vérifications, s'applique"
+      ],
+      "answer": 3,
+      "explain": "Le cadenas personnel garantit que l'équipement ne redémarre que lorsque tous les intervenants ont quitté la zone. Retirer celui d'un autre expose l'équipe absente à un redémarrage.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-007",
+      "theme": "Permis de travail et consignation",
+      "level": 3,
+      "q": "17 h 30, fin de poste. La réparation de la ligne de 6 po sous permis est à moitié faite : la ligne est ouverte, la consignation en place, et l'équipe de nuit n'est pas affectée à cette tâche. Que faites-vous ?",
+      "choices": [
+        "Mettre en sécurité (obturer l'ouverture, ranger), suspendre le permis, faire une passation écrite et revalider le permis avant toute reprise",
+        "Laisser le permis ouvert : l'équipe de nuit le reprendra",
+        "Retirer les isolations pour simplifier le travail du lendemain",
+        "Faire une passation orale, l'équipe de nuit connaît la ligne"
+      ],
+      "answer": 0,
+      "explain": "Un permis ne se transmet pas tacitement : il est suspendu, la zone sécurisée, l'état des isolations et des travaux tracé par écrit, et la reprise est revalidée avec les conditions du jour.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-008",
+      "theme": "Permis de travail et consignation",
+      "level": 3,
+      "q": "Un soudeur muni d'un permis de feu valide doit travailler à 15 m d'une purge d'hydrocarbures qui dispose elle aussi d'un permis valide ; les deux démarrent à 8 h. Que conclut le superviseur ?",
+      "choices": [
+        "Autoriser : 15 m est toujours une distance suffisante",
+        "Autoriser si le soudeur prévient le chef de purge par radio",
+        "C'est un conflit d'activités simultanées (SIMOPS) : on sépare les deux activités dans le temps ou l'espace avant d'autoriser le point chaud",
+        "Annuler la purge sans en informer personne"
+      ],
+      "answer": 2,
+      "explain": "Deux permis valides pris isolément peuvent être incompatibles ensemble : une purge peut libérer des vapeurs vers la zone de soudage. Le superviseur coordonne les permis (SIMOPS) avant tout démarrage.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-009",
+      "theme": "Permis de travail et consignation",
+      "level": 3,
+      "q": "Vous devez préciser le matériel d'une lampe d'inspection pour l'intérieur d'un bac de stockage de brut en service, dont le ciel gazeux est inflammable en permanence. Quelle zone ATEX gaz retenez-vous ?",
+      "choices": [
+        "Zone 1, matériel de catégorie 2",
+        "Zone 2, matériel de catégorie 3",
+        "Zone 20, matériel conçu pour les poussières",
+        "Zone 0 : atmosphère explosive gazeuse présente en permanence ou très longtemps, donc matériel certifié pour cette zone"
+      ],
+      "answer": 3,
+      "explain": "La zone 0 correspond à une atmosphère explosive gazeuse permanente ou de longue durée. Les zones 20 à 22 concernent les poussières.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-010",
+      "theme": "Permis de travail et consignation",
+      "level": 2,
+      "q": "Un électricien sous-traitant se présente pour la vérification d'absence de tension. Sa carte d'habilitation électrique est périmée depuis deux semaines et le chef de chantier insiste : « il a 15 ans d'expérience ». Décision ?",
+      "choices": [
+        "Vous acceptez, l'expérience compense le titre périmé",
+        "Vous refusez : seule une personne habilitée en cours de validité consigne, vérifie et déconsigne ; on le remplace ou on régularise d'abord",
+        "Vous acceptez s'il travaille accompagné d'un manœuvre non habilité",
+        "Vous acceptez uniquement pour la VAT, pas pour la consignation"
+      ],
+      "answer": 1,
+      "explain": "L'habilitation est une condition réglementaire : l'expérience ne remplace pas un titre valide. La VAT fait partie des opérations réservées au personnel habilité.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-011",
+      "theme": "Permis de travail et consignation",
+      "level": 3,
+      "q": "Soudage sous permis de feu, explosimétrie initiale à 0 % de la LIE. Deux heures plus tard, le détecteur portatif du guetteur affiche 8 % de la LIE près du soudeur. Quelle est la bonne conduite ?",
+      "choices": [
+        "Continuer : 8 % est inférieur à la limite d'explosivité",
+        "Continuer en doublant la fréquence des mesures",
+        "Arrêter immédiatement le point chaud, mettre en sécurité, rechercher la source, suspendre le permis ; reprise seulement après nouvelle mesure et revalidation",
+        "Arrêter le soudeur mais laisser le permis ouvert pour la reprise"
+      ],
+      "answer": 2,
+      "explain": "Une dérive de la mesure signale qu'une source de vapeurs est apparue. Le permis a été délivré sur des conditions qui ne sont plus vraies : on arrête, on traite la source, on revalide. Les seuils d'arrêt exacts sont ceux des procédures du site.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-012",
+      "theme": "Planification et ordonnancement",
+      "level": 1,
+      "q": "Sur le Gantt de la figure, la commande des équipements (3 sem) affiche une marge d'1 semaine. Le fournisseur annonce 1 semaine de retard de livraison. Quel est l'impact sur la fin du projet ?",
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt sur 13 semaines : étude 2 sem, génie civil 4, commande 3 (marge 1), montage 4, essais 2, formation 4 (marge 1), réception 1 ; chemin critique en orange",
+      "choices": [
+        "Aucun : le retard est absorbé par la marge d'1 semaine, le montage peut toujours démarrer en S7",
+        "Un retard d'1 semaine sur la réception, soit 14 semaines",
+        "Un retard de 3 semaines, la durée de la commande",
+        "Un retard d'1 semaine sur la formation uniquement"
+      ],
+      "answer": 0,
+      "explain": "La commande n'est pas sur le chemin critique (marge d'1 semaine). Tant que le retard reste inférieur ou égal à la marge, la date de fin ne bouge ; au-delà, la tâche devient critique.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-013",
+      "theme": "Planification et ordonnancement",
+      "level": 2,
+      "q": "Même Gantt. Le génie civil prend 1 semaine de retard (5 semaines au lieu de 4). Quelle est la nouvelle durée du projet ?",
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt sur 13 semaines : étude 2 sem, génie civil 4, commande 3 (marge 1), montage 4, essais 2, formation 4 (marge 1), réception 1 ; chemin critique en orange",
+      "choices": [
+        "14 semaines : le génie civil est critique, le retard se propage au montage, aux essais et à la réception",
+        "13 semaines : les marges de la commande et de la formation absorbent le retard",
+        "15 semaines : le retard se cumule avec celui de la commande",
+        "18 semaines : tous les retards s'additionnent"
+      ],
+      "answer": 0,
+      "explain": "Le génie civil est sur le chemin critique (marge nulle) : tout jour perdu se retrouve sur la fin, 13 + 1 = 14 semaines.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-014",
+      "theme": "Planification et ordonnancement",
+      "level": 2,
+      "q": "Sur le Gantt de la figure, quelle suite de tâches constitue le chemin critique et quelle est sa durée ?",
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt sur 13 semaines : étude 2 sem, génie civil 4, commande 3 (marge 1), montage 4, essais 2, formation 4 (marge 1), réception 1 ; chemin critique en orange",
+      "choices": [
+        "Étude, commande, montage, essais, réception : 2 + 3 + 4 + 2 + 1 = 12 semaines",
+        "Étude, génie civil, montage, formation, réception : 15 semaines",
+        "Étude, génie civil, montage, essais, réception : 2 + 4 + 4 + 2 + 1 = 13 semaines",
+        "Toutes les tâches additionnées : 20 semaines"
+      ],
+      "answer": 2,
+      "explain": "Le chemin critique est la suite de tâches sans marge : les tâches à marge (commande, formation) en sont exclues. Les durées de la figure donnent 13 semaines.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-015",
+      "theme": "Planification et ordonnancement",
+      "level": 3,
+      "q": "Remplacement d'une vanne : dépose du calorifuge et consignation (A, 3 j), puis en parallèle contrôle de la ligne (B, 4 j) et préparation du siège (C, 6 j), enfin essais (D, 2 j) qui exigent B et C terminés. Quelle est la durée minimale du chantier ?",
+      "choices": [
+        "9 jours : A + B + D",
+        "11 jours : A (3) + C (6) + D (2), C étant la branche la plus longue",
+        "13 jours : A + B + C",
+        "15 jours : toutes les tâches additionnées"
+      ],
+      "answer": 1,
+      "explain": "Les tâches B et C se font en parallèle ; D attend la plus longue. Chemin critique : A, C, D = 3 + 6 + 2 = 11 jours ; B a 2 jours de marge.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-016",
+      "theme": "Planification et ordonnancement",
+      "level": 3,
+      "q": "Le jalon redémarrage est menacé de 3 jours de retard. Vous disposez de renforts pour une seule action : doubler l'équipe sur la peinture d'un abri (marge de 5 jours), renforcer l'équipe de montage qui est sur le chemin critique, ou avancer la livraison des consommables. Que choisissez-vous ?",
+      "choices": [
+        "Doubler l'équipe de peinture : cela libère de la marge",
+        "Avancer la livraison des consommables, sans lien avec le retard",
+        "Ne rien faire : 3 jours sont toujours absorbés par les marges",
+        "Renforcer le montage critique, après avoir vérifié l'accès, les permis et les risques d'activités simultanées pour ne pas dégrader la sécurité"
+      ],
+      "answer": 3,
+      "explain": "Seule une accélération d'une tâche critique raccourcit le projet. Ajouter des moyens sur une tâche à marge ne change pas la date de fin ; l'accélération doit rester compatible avec la sécurité.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-017",
+      "theme": "Planification et ordonnancement",
+      "level": 2,
+      "q": "Vous n'avez qu'une équipe mécanique vendredi. OT-1 : remplacement de la soupape PSV-201 du ballon V-201, contrôle en retard de 3 mois. OT-2 : peinture de l'abri de pompe. Lequel passe en premier ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Ballon V-201 protégé par la soupape PSV 201 tarée à 10 barg, égale à la MAWP, avec alarme PAH à 9 barg",
+      "choices": [
+        "L'OT-2, plus rapide à réaliser",
+        "Celui qui est le plus ancien dans la GMAO, sans autre critère",
+        "L'OT-1 : la soupape protège le ballon contre la surpression (tarée à sa MAWP de 10 barg), un risque majeur, alors que la peinture est cosmétique",
+        "Les deux sont reportés à l'arrêt annuel"
+      ],
+      "answer": 2,
+      "explain": "La priorité se fixe par la criticité sécurité et production. Une soupape en retard de contrôle est un équipement critique de sécurité ; le délai ne se justifie pas par la durée du travail.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-018",
+      "theme": "Planification et ordonnancement",
+      "level": 2,
+      "q": "Un OT est prêt côté dossier, mais les pièces arrivent jeudi et l'échafaudeur n'est libre que mercredi. Quelle action relève de l'ordonnancement ?",
+      "choices": [
+        "Placer l'OT dans le programme de la semaine à partir de jeudi après-midi, en fonction des pièces, des accès et des ressources disponibles",
+        "Rédiger la gamme de travail et lister les pièces",
+        "Faire l'analyse de risques de la tâche",
+        "Revoir le budget annuel de maintenance"
+      ],
+      "answer": 0,
+      "explain": "Planifier prépare le quoi, avec quoi et comment (gamme, pièces, permis) ; ordonnancer place l'OT dans le calendrier selon les contraintes et les ressources.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-019",
+      "theme": "Planification et ordonnancement",
+      "level": 1,
+      "q": "Vous préparez le remplacement d'un échangeur : échafaudage, consignation, dépose du calorifuge, levage du faisceau, essais. Quel est l'intérêt de découper ces travaux en lots puis en tâches dans un WBS ?",
+      "choices": [
+        "Classer les intervenants par ancienneté",
+        "Calculer la paie des sous-traitants",
+        "Mesurer la météo du site pendant les travaux",
+        "Estimer durées, coûts et ressources de chaque tâche, les affecter à un responsable et construire le planning sans rien oublier"
+      ],
+      "answer": 3,
+      "explain": "Le WBS décompose le périmètre en éléments gérables, base de l'estimation, du planning et du suivi.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-020",
+      "theme": "Planification et ordonnancement",
+      "level": 2,
+      "q": "Votre équipe arrive devant la pompe P-07 : le dossier ne contient que le numéro d'OT et le nom de l'exécutant. Quels éléments d'un dossier d'intervention prêt manquent ?",
+      "choices": [
+        "Uniquement le coût estimé de l'intervention",
+        "Gamme de travail, pièces et outils, plans et schémas de l'équipement, permis et consignations requis, analyse de risques",
+        "La liste des primes de l'équipe",
+        "Le planning de l'arrêt annuel de toute l'usine"
+      ],
+      "answer": 1,
+      "explain": "Un dossier prêt évite les attentes sur le terrain : sans pièces, sans permis ni gamme, la tâche s'arrête et le temps de l'équipe est perdu.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-021",
+      "theme": "Planification et ordonnancement",
+      "level": 2,
+      "q": "Dépose de 240 m² de calorifuge sur une ligne. Un calorifugeur dépose en moyenne 6 m² par heure. Vous affectez 4 calorifugeurs en parallèle. Quelle durée prévoyez-vous, hors imprévus ?",
+      "choices": [
+        "40 heures : 240 / 6",
+        "10 heures : 240 / (6 × 4)",
+        "60 heures : 240 / 4",
+        "5 heures : 240 / (6 × 8)"
+      ],
+      "answer": 1,
+      "explain": "Capacité de l'équipe = 6 × 4 = 24 m²/h ; 240 / 24 = 10 h. On ajoute ensuite les temps de préparation, de pause et d'accès.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-022",
+      "theme": "Arrêts et coordination des corps de métier",
+      "level": 1,
+      "q": "Le périmètre de l'arrêt de 28 jours a été gelé à J-60. À J-20, l'exploitant demande d'ajouter le remplacement d'une vanne de régulation. Que fait le superviseur ?",
+      "choices": [
+        "Accepter, la vanne étant petite",
+        "Refuser définitivement, un périmètre gelé ne bouge jamais",
+        "Ajouter le travail au planning sans prévenir le responsable de l'arrêt",
+        "Passer par la gestion du changement : évaluer durée, coût, matériel disponible et risques, puis obtenir la validation du responsable de l'arrêt"
+      ],
+      "answer": 3,
+      "explain": "Le gel du périmètre n'interdit pas les changements : il les soumet à une évaluation d'impact et à une décision formelle.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-023",
+      "theme": "Arrêts et coordination des corps de métier",
+      "level": 3,
+      "q": "Jour 6 d'un arrêt de 28 jours. À l'ouverture de l'échangeur E-104, le faisceau est corrodé et doit être remplacé : travail non prévu, pièce non disponible. Que fait le superviseur ?",
+      "choices": [
+        "Évaluer l'impact sur durée, coût et sécurité, rechercher la pièce et une solution (réparation, neuf, location), puis faire valider la décision par le responsable de l'arrêt",
+        "Refermer l'échangeur sans rien signaler pour tenir le planning",
+        "Lancer la commande et les travaux sans en parler pour gagner du temps",
+        "Attendre la fin de l'arrêt pour décider"
+      ],
+      "answer": 0,
+      "explain": "Un travail découvert à l'ouverture est une information majeure pour le chemin critique et le budget. Il se traite par la gestion du changement, avec transparence.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-024",
+      "theme": "Arrêts et coordination des corps de métier",
+      "level": 2,
+      "q": "Inspection d'une ligne de 6 po calorifugée, à 7 m de hauteur, suspectée de corrosion sous isolation. Quel enchaînement des tâches est cohérent ?",
+      "choices": [
+        "Inspecter depuis le sol, puis monter l'échafaudage",
+        "Déposer le calorifuge depuis une échelle, puis monter l'échafaudage",
+        "Monter l'échafaudage, déposer le calorifuge, inspecter ou réparer, essayer, puis reposer le calorifuge",
+        "Reposer le calorifuge avant les essais pour gagner du temps"
+      ],
+      "answer": 2,
+      "explain": "L'accès sécurisé précède la dépose ; le calorifuge est reposé après l'essai d'étanchéité, sinon une fuite resterait cachée et il faudrait le redéposer.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-025",
+      "theme": "Arrêts et coordination des corps de métier",
+      "level": 2,
+      "q": "Jour 10 d'un arrêt : la courbe en S donne un avancement cumulé réel de 32 % pour 40 % prévu. Que lisez-vous et que faites-vous ?",
+      "choices": [
+        "Une avance de 8 points : on peut réduire les équipes",
+        "Un écart normal en début d'arrêt : aucune action nécessaire",
+        "Un indicateur de sécurité sans lien avec le planning",
+        "Un retard de 8 points : identifier les activités en retard et celles du chemin critique, puis décider d'un plan de rattrapage"
+      ],
+      "answer": 3,
+      "explain": "La courbe en S compare l'avancement réel au prévu. Un écart négatif de 8 points au jour 10 doit être expliqué et traité tant qu'il reste du temps pour rattraper.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-026",
+      "theme": "Arrêts et coordination des corps de métier",
+      "level": 3,
+      "q": "Sur le chemin critique d'un arrêt, la dépose de la colonne a 2 jours de retard ; chaque jour de retard coûte environ 150 000 USD de production différée. Que fait un superviseur averti ?",
+      "choices": [
+        "Ne rien faire : les marges absorberont",
+        "Chercher à rattraper sur les tâches critiques suivantes (travail posté, renforts, recouvrement), chiffrer l'impact et informer le responsable de l'arrêt",
+        "Accélérer les tâches non critiques pour compenser",
+        "Attendre que le retard se résorbe"
+      ],
+      "answer": 1,
+      "explain": "Seul le chemin critique détermine la fin : un retard sans action se répercute sur la date de redémarrage et coûte du manque à gagner.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-027",
+      "theme": "Arrêts et coordination des corps de métier",
+      "level": 3,
+      "q": "Jeudi 18 h : le planning annonce le redémarrage vendredi 6 h. Il reste deux permis ouverts, une consignation non levée et des échafaudages sur la colonne. L'exploitant presse. Que faites-vous ?",
+      "choices": [
+        "Vous redémarrez sur l'accord oral du chef de poste",
+        "Vous redémarrez en levant les consignations restantes sans les vérifier",
+        "Vous ne redémarrez pas tant que la revue de pré-démarrage n'est pas faite : travaux clos, permis clôturés, consignations levées, échafaudages déposés, essais réalisés",
+        "Vous redémarrez en ignorant les échafaudages, qui ne gênent pas"
+      ],
+      "answer": 2,
+      "explain": "La revue de pré-démarrage est le dernier barrage : une consignation oubliée ou un outil dans une capacité se paie par un accident.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-028",
+      "theme": "Arrêts et coordination des corps de métier",
+      "level": 2,
+      "q": "À la réunion de 6 h 30 : les calorifugeurs veulent travailler sous la zone où la grue doit lever un faisceau à 9 h. Que fait le coordinateur ?",
+      "img": "photo/crane-lifting.jpg",
+      "imgAlt": "Grue mobile sur un chantier avec échafaudages et grues à tour : zone de levage au-dessus d'autres équipes",
+      "choices": [
+        "Séparer les activités dans le temps ou l'espace (levage d'abord, zone dégagée et balisée, calorifugeurs ensuite) et le consigner dans le planning du jour",
+        "Laisser faire, le grutier surveillera",
+        "Faire lever en premier mais sans évacuer la zone",
+        "Annuler le levage"
+      ],
+      "answer": 0,
+      "explain": "Un levage au-dessus de personnes est exclu. La réunion de coordination sert à résoudre ces conflits avant le démarrage.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-029",
+      "theme": "Arrêts et coordination des corps de métier",
+      "level": 2,
+      "q": "Pendant l'arrêt : 120 intervenants et une vingtaine de permis à émettre chaque jour ; le bureau des permis est saturé à 7 h. Comment fluidifier ?",
+      "choices": [
+        "Préparer les permis la veille avec les dossiers prêts, échelonner les créneaux de signature et faire des visites conjointes groupées par zone",
+        "Supprimer les visites conjointes",
+        "Faire signer les permis par les chefs d'équipe sans visite",
+        "Retarder le démarrage de tous les travaux à 10 h"
+      ],
+      "answer": 0,
+      "explain": "Un permis préparé la veille et un créneau de visite évitent le goulot du matin sans rogner sur la sécurité.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-030",
+      "theme": "Arrêts et coordination des corps de métier",
+      "level": 2,
+      "q": "Une vanne de remplacement du chemin critique, attendue pour J+4, est bloquée en douane. Que faites-vous ?",
+      "choices": [
+        "Attendre la livraison sans rien chiffrer",
+        "Remonter l'ancienne vanne sans contrôle",
+        "Chiffrer l'impact, activer les options (pièce équivalente du magasin ou d'un site voisin, transport express, réparation) et informer le responsable de l'arrêt",
+        "Retirer la tâche du planning"
+      ],
+      "answer": 2,
+      "explain": "L'impact d'une pièce manquante sur le chemin critique se traite tôt, avec des alternatives, sans compromettre la qualité.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-031",
+      "theme": "Sécurité chantier et analyse de risques",
+      "level": 1,
+      "q": "Votre site a relevé ce trimestre 600 presque-accidents, 30 dégâts matériels, 10 blessures légères et 1 accident grave, ce qui correspond à la pyramide de Bird. Où concentrer l'effort de prévention pour réduire l'accident grave ?",
+      "img": "svg/bird-pyramid.svg",
+      "imgAlt": "Pyramide de Bird : 600 presque-accidents, 30 dégâts matériels, 10 lésions légères, 1 accident grave",
+      "choices": [
+        "Uniquement sur l'accident grave au sommet",
+        "Sur la base : traiter les presque-accidents et les situations dangereuses avant qu'elles ne produisent des blessures",
+        "Sur les blessures légères, qui sont les plus coûteuses",
+        "Sur les dégâts matériels uniquement"
+      ],
+      "answer": 1,
+      "explain": "La pyramide montre que les mêmes causes produisent les presque-accidents en grand nombre et, plus rarement, les accidents graves. Agir à la base réduit le sommet.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-032",
+      "theme": "Sécurité chantier et analyse de risques",
+      "level": 1,
+      "q": "Dans votre ARTT, le risque « chute d'objet depuis l'échafaudage » est coté probabilité 4 et gravité 4 sur la matrice 5 × 5. Quelle est la criticité et que faites-vous ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 × 5 : criticité = probabilité × gravité, niveaux faible 1-4, moyen 5-9, élevé 10-14, critique 15 et plus",
+      "choices": [
+        "16 : niveau élevé, on démarre avec le casque",
+        "8 : niveau moyen, on note et on poursuit",
+        "12 : niveau élevé, on reporte au prochain audit",
+        "16 : niveau critique (15 et plus) ; on ne démarre pas sans mesures supplémentaires (filets, plinthes, zone balisée en dessous)"
+      ],
+      "answer": 3,
+      "explain": "Criticité = probabilité × gravité = 4 × 4 = 16, dans la zone critique (15+). Le risque se traite avant le travail.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-033",
+      "theme": "Sécurité chantier et analyse de risques",
+      "level": 3,
+      "q": "Une pompe très bruyante expose l'équipe de nuit. Quelle option est la plus efficace selon la hiérarchie des mesures de prévention ?",
+      "choices": [
+        "Distribuer un casque antibruit à tous",
+        "Faire tourner les équipes toutes les 2 heures",
+        "Remplacer la pompe par un modèle plus silencieux (substitution à la source)",
+        "Installer un capotage autour de la pompe existante"
+      ],
+      "answer": 2,
+      "explain": "Hiérarchie : éliminer, substituer, protections collectives, organisation, EPI. Ici, remplacer à la source est préférable au capotage, à la rotation et à l'EPI.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-034",
+      "theme": "Sécurité chantier et analyse de risques",
+      "level": 1,
+      "q": "On vous demande de remplacer le panneau « casque obligatoire » abîmé à l'entrée d'une zone de levage. Selon la figure ISO 7010, quelle forme et quelle couleur choisissez-vous ?",
+      "img": "svg/iso-safety-signs.svg",
+      "imgAlt": "Panneaux ISO 7010 : interdiction (cercle rouge barré), avertissement (triangle jaune), obligation (cercle bleu), sauvetage (carré vert)",
+      "choices": [
+        "Un cercle bleu avec un symbole blanc (obligation)",
+        "Un cercle rouge barré (interdiction)",
+        "Un triangle jaune à bord noir (avertissement)",
+        "Un carré vert (sauvetage)"
+      ],
+      "answer": 0,
+      "explain": "Les panneaux d'obligation sont ronds, bleus, au symbole blanc ; rouge = interdiction, jaune = danger, vert = secours.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-035",
+      "theme": "Sécurité chantier et analyse de risques",
+      "level": 2,
+      "q": "Pendant une opération sous permis, un échafaudeur remarque qu'un garde-corps n'est pas fixé. Le chef d'équipe répond : « Le permis est signé, on finit d'abord. » Que dit le principe d'arrêt de travail ?",
+      "choices": [
+        "Il poursuit pour respecter le planning",
+        "Il attend la fin du poste pour en parler",
+        "Il demande une prime de risque",
+        "L'échafaudeur peut et doit arrêter le travail, sécuriser la zone et informer le superviseur ; reprise après correction"
+      ],
+      "answer": 3,
+      "explain": "Un permis signé ne rend pas sûre une situation qui a changé. Chacun a le droit et le devoir d'arrêter.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-036",
+      "theme": "Sécurité chantier et analyse de risques",
+      "level": 2,
+      "q": "Une charge de 4 t est levée avec une élingue à deux brins, chacun de CMU 3 t, avec 120° entre les brins. Peut-on lever et que faire sinon ?",
+      "img": "photo/crane-lifting.jpg",
+      "imgAlt": "Grue mobile levant une charge sur un chantier : le calcul porte sur l'angle entre brins d'élingue",
+      "choices": [
+        "Oui : 2 brins de 3 t supportent 6 t au total",
+        "Non : la tension par brin est d'environ 4 t, supérieure à 3 t ; il faut réduire l'angle (90° maximum, soit environ 2,8 t par brin) avec des brins plus longs ou un palonnier",
+        "Oui : la tension est de 2 t par brin",
+        "Non, mais il suffit d'augmenter l'angle à 150°"
+      ],
+      "answer": 1,
+      "explain": "Pour un angle θ entre brins, T = W / (2 × cos θ/2) : à 120°, T = 4 / (2 × 0,5) = 4 t ; à 90°, ≈ 2,83 t. Plus l'angle est grand, plus la tension augmente.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-037",
+      "theme": "Sécurité chantier et analyse de risques",
+      "level": 3,
+      "q": "Un entrepreneur a eu 2 accidents avec arrêt en 400 000 heures travaillées. Quel est son LTIFR (base 1 000 000 d'heures) ?",
+      "choices": [
+        "0,5",
+        "5",
+        "50",
+        "8"
+      ],
+      "answer": 1,
+      "explain": "LTIFR = nombre d'accidents avec arrêt × 1 000 000 / heures travaillées = 2 × 1 000 000 / 400 000 = 5.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-038",
+      "theme": "Sécurité chantier et analyse de risques",
+      "level": 2,
+      "q": "L'équipe veut démarrer la dépose de calorifuge à 6 m avec l'ARTT signée l'an dernier pour une autre ligne : « c'est pareil ». Que faites-vous ?",
+      "choices": [
+        "Vous réutilisez l'ARTT telle quelle, elle est signée",
+        "Vous faites signer l'ancienne par chaque membre",
+        "Vous commencez et complétez l'ARTT après l'intervention",
+        "Vous refaites ou adaptez l'ARTT sur le site avec l'équipe : tâche, accès, conditions du jour et activités voisines"
+      ],
+      "answer": 3,
+      "explain": "L'analyse de risques se fait avant la tâche, sur le terrain et avec l'équipe : les dangers changent avec le lieu et les conditions.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-039",
+      "theme": "Sécurité chantier et analyse de risques",
+      "level": 2,
+      "q": "Une clé à molette tombe d'un échafaudage à 1 m d'un opérateur, sans blessé. Le chef d'équipe : « Pas de blessé, on classe. » Que faites-vous ?",
+      "choices": [
+        "Sécuriser la zone, déclarer le presque-accident, analyser les causes (plinthes, outils non attachés) et partager le retour d'expérience",
+        "Classer l'affaire, il n'y a pas de blessé",
+        "Sanctionner l'ouvrier sans analyse",
+        "Attendre un accident pour agir"
+      ],
+      "answer": 0,
+      "explain": "Un presque-accident est un accident évité par chance : c'est une information gratuite pour supprimer la cause.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-040",
+      "theme": "Sécurité chantier et analyse de risques",
+      "level": 1,
+      "q": "Un nouveau sous-traitant doit travailler de nuit sur un axe où circulent des engins. D'après la figure des EPI, quels équipements protègent de la chute d'objets et permettent d'être vu des conducteurs ?",
+      "img": "svg/ppe-icons.svg",
+      "imgAlt": "Pictogrammes d'EPI : casque, lunettes, gants, chaussures, casque antibruit, gilet haute visibilité",
+      "choices": [
+        "Les lunettes et les gants",
+        "Le casque antibruit et les chaussures de sécurité",
+        "Le casque de sécurité et le gilet haute visibilité",
+        "Le gilet seul, le casque n'est pas nécessaire de nuit"
+      ],
+      "answer": 2,
+      "explain": "Le casque protège la tête ; le gilet haute visibilité rend visible du personnel d'engins.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-041",
+      "theme": "Sécurité chantier et analyse de risques",
+      "level": 2,
+      "q": "Le détecteur portatif H₂S de l'un de vos opérateurs sonne pendant un travail près d'une bride. Que faites-vous en premier ?",
+      "choices": [
+        "Chercher la fuite à la main avec l'équipe",
+        "Se placer en point bas pour respirer de l'air frais",
+        "Couper l'alarme du détecteur, probablement un faux positif",
+        "Arrêter, donner l'alarme et gagner le point de rassemblement en marchant à contre-vent (plan d'urgence du site), sans retourner chercher du matériel"
+      ],
+      "answer": 3,
+      "explain": "L'H₂S est toxique et plus dense que l'air ; l'odorat peut être paralysé. On évacue vers le rassemblement, sans exposition supplémentaire. Les seuils d'action sont ceux des procédures du site.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-042",
+      "theme": "Maintenance et fiabilité",
+      "level": 1,
+      "q": "Les vibrations de la pompe P-07 relevées chaque mois passent de 2,8 à 4,5 mm/s RMS en quatre mois. Vous planifiez une intervention avant la panne. De quel type de maintenance s'agit-il ?",
+      "choices": [
+        "Corrective, on répare après la panne",
+        "Préventive conditionnelle : l'intervention est déclenchée par l'état mesuré",
+        "Préventive systématique, à intervalle fixe",
+        "Palliative, un dépannage provisoire"
+      ],
+      "answer": 1,
+      "explain": "La maintenance conditionnelle s'appuie sur une mesure de l'état réel (vibrations, thermographie, huile) pour décider du moment.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-043",
+      "theme": "Maintenance et fiabilité",
+      "level": 2,
+      "q": "Un compresseur a un MTBF de 900 h et un MTTR de 100 h. Quelle est sa disponibilité intrinsèque ?",
+      "choices": [
+        "10 % : 100 / 1 000",
+        "80 % : 800 / 1 000",
+        "90 % : 900 / (900 + 100)",
+        "99 % : 990 / 1 000"
+      ],
+      "answer": 2,
+      "explain": "Disponibilité = MTBF / (MTBF + MTTR) = 900 / 1 000 = 0,90.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-044",
+      "theme": "Maintenance et fiabilité",
+      "level": 2,
+      "q": "Une pompe a fonctionné 8 760 h dans l'année avec 6 pannes. Quel est son MTBF ?",
+      "choices": [
+        "1 460 h : 8 760 / 6",
+        "146 h",
+        "8 760 h",
+        "52 560 h"
+      ],
+      "answer": 0,
+      "explain": "MTBF = temps de bon fonctionnement / nombre de pannes = 8 760 / 6 = 1 460 h.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-045",
+      "theme": "Maintenance et fiabilité",
+      "level": 2,
+      "q": "Cette semaine, 120 OT étaient au programme ; 90 ont été réalisés, dont 10 urgences hors programme. Quel est le taux de respect du programme ?",
+      "choices": [
+        "Environ 67 % : 80 OT programmés réalisés sur 120",
+        "75 % : 90 réalisés sur 120",
+        "83 % : 100 sur 120",
+        "92 % : 110 sur 120"
+      ],
+      "answer": 0,
+      "explain": "Seuls les OT planifiés et réalisés comptent : (90 − 10) / 120 ≈ 0,67.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-046",
+      "theme": "Maintenance et fiabilité",
+      "level": 3,
+      "q": "AMDEC sur une pompe : fuite de garniture F = 3, G = 4, D = 2 ; défaut de roulement F = 2, G = 5, D = 4. Quel mode traitez-vous en priorité ?",
+      "choices": [
+        "La garniture : 3 × 4 × 2 = 24, la plus élevée",
+        "Les deux sont égaux",
+        "Le roulement : criticité 2 × 5 × 4 = 40, contre 24 pour la garniture",
+        "Aucun, la criticité est inférieure à 50"
+      ],
+      "answer": 2,
+      "explain": "La criticité se calcule C = F × G × D. Plus la détection est difficile et la gravité forte, plus la priorité monte.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-047",
+      "theme": "Maintenance et fiabilité",
+      "level": 2,
+      "q": "L'analyse annuelle des pannes montre que 5 équipements sur 25 concentrent 78 % des heures d'arrêt. Que faites-vous ?",
+      "choices": [
+        "Répartir l'effort également sur les 25 équipements",
+        "Concentrer les analyses de causes racines et les actions de fiabilité sur ces cinq équipements, qui expliquent l'essentiel des pertes",
+        "Remplacer immédiatement les 25 équipements",
+        "Ne rien faire : la répartition est normale"
+      ],
+      "answer": 1,
+      "explain": "Le principe de Pareto oriente l'effort vers les quelques causes qui pèsent le plus lourd.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-048",
+      "theme": "Maintenance et fiabilité",
+      "level": 2,
+      "q": "Le magasin compte 1 000 références ; la courbe ABC montre que 200 d'entre elles (20 %) représentent environ 80 % de la valeur du stock. Où appliquez-vous l'inventaire tournant strict ?",
+      "img": "svg/abc-stock-curve.svg",
+      "imgAlt": "Courbe ABC : zone A = 20 % des articles pour 80 % de la valeur, B = 30 % pour 15 %, C = 50 % pour 5 %",
+      "choices": [
+        "Sur la classe C, la plus nombreuse",
+        "Sur toutes les références avec la même fréquence",
+        "Sur les références sans mouvement depuis dix ans",
+        "Sur la classe A : peu de références mais l'essentiel de la valeur"
+      ],
+      "answer": 3,
+      "explain": "La classe A (20 % des articles, 80 % de la valeur) mérite un suivi strict ; la classe C une gestion simple.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-049",
+      "theme": "Maintenance et fiabilité",
+      "level": 1,
+      "q": "Votre backlog est de 1 200 heures et votre équipe réalise 300 heures de travaux planifiés par semaine. À combien de semaines de travail correspond le backlog ?",
+      "choices": [
+        "0,25 semaine",
+        "6 semaines",
+        "4 semaines",
+        "12 semaines"
+      ],
+      "answer": 2,
+      "explain": "Backlog en semaines = 1 200 / 300 = 4. C'est l'indicateur courant pour juger de la charge de travail en attente.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "sup-travaux-050",
+      "theme": "Maintenance et fiabilité",
+      "level": 2,
+      "q": "Un équipement est révisé tous les 6 mois, qu'il ait tourné 200 h ou 4 000 h. Quel est le défaut de cette stratégie systématique ?",
+      "choices": [
+        "On intervient sans connaître l'état réel : trop tôt sur certains équipements, trop tard sur d'autres",
+        "Elle ne nécessite aucun dossier d'intervention",
+        "Elle évite toute panne",
+        "Elle coûte toujours moins qu'une stratégie conditionnelle"
+      ],
+      "answer": 0,
+      "explain": "Le préventif systématique ignore l'état réel et peut provoquer des révisions inutiles ou manquer une dégradation rapide.",
+      "seconds": 80,
+      "status": "draft"
+    }
+  ]
+}

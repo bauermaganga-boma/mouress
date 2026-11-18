@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ti">
+<title id="ti">Circuit de traitement du minerai : minerai brut, concassage primaire, criblage, concassage secondaire, broyage avec hydrocyclone, flottation, épaississement et filtration, concentré final et parc à résidus</title>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.t{font-size:20px;font-weight:700}.b{font-weight:700}.m{text-anchor:middle}
+.k{stroke:#061F44;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.x{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}.y{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+</style>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#061F44"/></marker>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text class="t m" x="400" y="34">Circuit de traitement du minerai</text>
+
+<text class="b" x="25" y="80">Préparation mécanique (comminution)</text>
+<rect class="x" x="25" y="90" width="165" height="60" rx="8"/><text class="m b" x="107" y="116">Minerai brut</text><text class="m" x="107" y="136">tout-venant (ROM)</text>
+<rect class="x" x="220" y="90" width="165" height="60" rx="8"/><text class="m b" x="302" y="116">Concassage</text><text class="m" x="302" y="136">primaire (mâchoires)</text>
+<rect class="x" x="415" y="90" width="165" height="60" rx="8"/><text class="m b" x="497" y="116">Criblage</text><text class="m" x="497" y="136">crible vibrant</text>
+<rect class="x" x="610" y="90" width="165" height="60" rx="8"/><text class="m b" x="692" y="116">Concassage</text><text class="m" x="692" y="136">secondaire (cône)</text>
+<line class="k" x1="190" y1="120" x2="218" y2="120" marker-end="url(#ar)"/>
+<line class="k" x1="385" y1="120" x2="413" y2="120" marker-end="url(#ar)"/>
+<line class="k" x1="580" y1="120" x2="608" y2="120" marker-end="url(#ar)"/>
+<path class="k" d="M692,90 V68 H497 V88" marker-end="url(#ar)" stroke="#F28C28"/>
+<text class="m" x="595" y="62" style="fill:#D9741A;font-weight:700">refus recyclé</text>
+
+<text class="b" x="25" y="220">Broyage et concentration</text>
+<line class="k" x1="692" y1="150" x2="692" y2="228" marker-end="url(#ar)"/>
+<rect class="y" x="610" y="230" width="165" height="60" rx="8"/><text class="m b" x="692" y="256">Broyage</text><text class="m" x="692" y="276">broyeur à boulets</text>
+<rect class="y" x="415" y="230" width="165" height="60" rx="8"/><text class="m b" x="497" y="256">Classification</text><text class="m" x="497" y="276">hydrocyclone</text>
+<rect class="y" x="220" y="230" width="165" height="60" rx="8"/><text class="m b" x="302" y="256">Flottation</text><text class="m" x="302" y="276">cellules + réactifs</text>
+<rect class="y" x="25" y="230" width="165" height="60" rx="8"/><text class="m b" x="107" y="256">Épaississement</text><text class="m" x="107" y="276">et filtration</text>
+<line class="k" x1="610" y1="260" x2="582" y2="260" marker-end="url(#ar)"/>
+<line class="k" x1="415" y1="260" x2="387" y2="260" marker-end="url(#ar)"/>
+<line class="k" x1="220" y1="260" x2="192" y2="260" marker-end="url(#ar)"/>
+<path class="k" d="M497,290 V312 H692 V292" marker-end="url(#ar)" stroke="#F28C28"/>
+<text class="m" x="595" y="332" style="fill:#D9741A;font-weight:700">sousverse (grossiers) recyclée</text>
+
+<line class="k" x1="107" y1="290" x2="107" y2="368" marker-end="url(#ar)"/>
+<text x="117" y="334">Concentré</text>
+<line class="k" x1="302" y1="290" x2="302" y2="368" marker-end="url(#ar)"/>
+<text x="312" y="334">Stériles</text>
+<rect x="25" y="370" width="165" height="60" rx="8" fill="#FFB766" stroke="#061F44" stroke-width="2.5"/><text class="m b" x="107" y="396">Concentré final</text><text class="m" x="107" y="416">produit vendable</text>
+<rect x="220" y="370" width="165" height="60" rx="8" fill="#FCFBF8" stroke="#061F44" stroke-width="2.5" stroke-dasharray="7 5"/><text class="m b" x="302" y="396">Parc à résidus</text><text class="m" x="302" y="416">stériles de flottation</text>
+
+<text class="m" x="400" y="474">Comminution (concassage, broyage) puis concentration par flottation.</text>
+</svg>

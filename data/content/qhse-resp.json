@@ -1,0 +1,416 @@
+{
+  "profile": "qhse-resp",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Les normes ISO 9001, 14001 et 45001 et le système intégré",
+      "theme": "Normes ISO & management",
+      "minutes": 9,
+      "body": "Trois normes de systèmes de management structurent la fonction QHSE : **ISO 9001** (management de la qualité), **ISO 14001** (management environnemental) et **ISO 45001** (santé et sécurité au travail). Dans leurs versions actuelles (ISO 9001:2015, ISO 14001:2015, ISO 45001:2018), elles partagent la même **structure de haut niveau** (Annexe SL), ce qui facilite l'intégration en un système QSE unique : contexte de l'organisme, leadership, planification, support, réalisation des activités opérationnelles, évaluation des performances, amélioration. ISO 45001 a remplacé le référentiel britannique OHSAS 18001.\n\nTous ces référentiels reposent sur le cycle **PDCA** (roue de Deming) : **Plan** (planifier : politique, objectifs, analyse des risques), **Do** (réaliser), **Check** (surveiller, mesurer, auditer), **Act** (agir pour corriger et améliorer). L'amélioration continue est le moteur du système.\n\nPoints clés :\n- **Leadership** : la direction est responsable de l'efficacité du système. Elle établit la politique, fournit les ressources, intègre les exigences dans les processus. Le responsable QHSE anime et conseille mais ne se substitue pas à elle.\n- **Approche par les risques et opportunités** : ISO 9001:2015 a remplacé l'action préventive formalisée par une pensée fondée sur les risques.\n- **ISO 14001** : l'organisme identifie ses **aspects environnementaux** (rejets, consommations, déchets, bruit) et leurs **impacts** (pollution du sol, épuisement de ressources), évalue leur importance, respecte les obligations de conformité et maîtrise les situations d'urgence.\n- **ISO 45001** : consultation et participation des travailleurs, identification des dangers, hiérarchie des mesures de maîtrise, enquêtes sur les incidents.\n- **Documentation** : procédures, enregistrements, preuves, maîtrisés (versions, accès, conservation).\n\nLa **certification** est délivrée par un organisme tiers indépendant à l'issue d'un audit initial, puis surveillée par des audits annuels et renouvelée tous les trois ans. Elle atteste la conformité du système au référentiel, non la qualité intrinsèque d'un produit ni l'absence d'accident. Un système vivant privilégie les résultats (moins d'accidents, clients satisfaits, moins de pollution) plutôt que le papier. Les audits internes, les revues de direction et le traitement des non-conformités alimentent ce progrès.",
+      "keyPoints": [
+        "ISO 9001 = qualité, ISO 14001 = environnement, ISO 45001 = santé-sécurité au travail.",
+        "Structure de haut niveau commune : intégration facilitée ; PDCA = moteur de l'amélioration continue.",
+        "La direction est responsable de l'efficacité du système (leadership).",
+        "Certification : audit par un tiers indépendant ; surveillance annuelle, renouvellement tous les trois ans."
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Analyse de risques : matrice, hiérarchie des mesures et pyramide de Bird",
+      "theme": "Analyse de risques",
+      "minutes": 10,
+      "body": "Un **danger** est une source potentielle de dommage (produit toxique, énergie, hauteur, machine en mouvement). Le **risque** est la combinaison de la probabilité qu'un événement dangereux se produise et de la gravité de ses conséquences. Un danger sans exposition ne crée pas de risque.\n\nMéthode générale : identifier les dangers (par activité, poste, zone), identifier les personnes exposées, évaluer le risque, décider des mesures, appliquer, vérifier et réviser. On évalue en général la **criticité = probabilité × gravité** sur des échelles de 1 à 4 ou de 1 à 5, puis on place le risque dans une **matrice** colorée (vert acceptable, jaune à réduire, orange à traiter rapidement, rouge intolérable). Les outils courants sont le document unique d'évaluation des risques, l'analyse des risques par tâche (JSA), l'HAZID, le HAZOP en procédé, l'AMDEC en fiabilité et le nœud papillon qui relie causes, événement redouté, barrières et conséquences.\n\nLa **hiérarchie des mesures de maîtrise** (ISO 45001) du plus au moins efficace :\n1. **Éliminer** le danger ;\n2. **Substituer** par un procédé ou produit moins dangereux ;\n3. **Mesures techniques** et protections collectives (capotage, ventilation, garde-corps) ;\n4. **Mesures administratives** : procédures, formation, signalisation, permis, rotation des postes ;\n5. **EPI**, dernier recours.\n\nAprès mise en œuvre, il subsiste un **risque résiduel** qu'on compare au niveau jugé acceptable ; le principe « aussi bas que raisonnablement praticable » (ALARP) guide la décision lorsqu'on ne peut pas descendre davantage à un coût proportionné.\n\nLa **pyramide de Bird** (étude d'environ 1969 sur un grand nombre d'événements) illustre le rapport approximatif **1 accident grave : 10 blessures légères : 30 dommages matériels : 600 incidents sans dommage ni blessure**. Ces ratios sont indicatifs, mais le message est solide : les accidents graves partagent des causes avec les événements mineurs et les signaux faibles ; agir sur la base du triangle réduit le sommet. À l'inverse, un site sans événement déclaré n'est pas forcément sûr : il peut être sous-déclarant. Enfin, tout accident grave ou potentiellement grave doit faire l'objet d'une analyse de cause (arbre des causes, 5 pourquoi) afin de traiter les causes racines et non seulement les causes immédiates.",
+      "keyPoints": [
+        "Risque = probabilité × gravité ; la matrice hiérarchise les risques.",
+        "Hiérarchie : éliminer, substituer, techniques collectives, administratives, EPI en dernier.",
+        "Risque résiduel : ce qui reste après les mesures ; principe ALARP.",
+        "Bird : 1 – 10 – 30 – 600 ; traiter les signaux faibles protège contre les accidents graves."
+      ],
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de criticité des risques probabilité par gravité"
+    },
+    {
+      "id": "m3",
+      "title": "Indicateurs de performance HSE et audits",
+      "theme": "Indicateurs",
+      "minutes": 10,
+      "body": "Un indicateur mesure ; il n'a de valeur que s'il est défini clairement, calculé de façon constante et utilisé pour décider. On distingue les indicateurs **réactifs** (retard : accidents, jours perdus) et **proactifs** (avance : observations, causeries, actions closes dans les délais, formations réalisées).\n\nDéfinitions : un **LTI** (Lost Time Injury) est un accident ayant entraîné un arrêt de travail au-delà du jour de l'accident. Un événement « enregistrable » (**recordable**) comprend les décès, les LTI, les cas de travail restreint ou de transfert et les accidents nécessitant un traitement médical au-delà des premiers soins.\n\nFormules (les bases 200 000 ou 1 000 000 heures doivent être précisées, car elles dépendent des référentiels) :\n- **LTIF** (taux de fréquence des accidents avec arrêt) = nombre de LTI × 1 000 000 ÷ heures travaillées ;\n- **TRIR** (Total Recordable Incident Rate, base OSHA) = nombre d'accidents enregistrables × 200 000 ÷ heures travaillées ;\n- **Taux de gravité** (TG) = jours d'arrêt × 1 000 ÷ heures travaillées.\n\nExemple : 3 LTI pour 1 500 000 heures donnent un LTIF de 3 × 1 000 000 ÷ 1 500 000 = 2,0. Rapporter à des heures permet de comparer des sites de tailles différentes.\n\nUn **audit** est un processus systématique, indépendant et documenté pour obtenir des preuves et les évaluer objectivement au regard de critères (norme, procédures, exigences légales). Lignes directrices : **ISO 19011**. Types : audit de première partie (interne), de deuxième partie (client chez son fournisseur) et de troisième partie (organisme de certification). Étapes : programme d'audit, plan, **réunion d'ouverture**, collecte de preuves (documents, entretiens, observations par échantillonnage), constats, **réunion de clôture**, rapport. Les constats peuvent être des conformités, des points forts, des pistes de progrès ou des **non-conformités** (écart par rapport à une exigence), parfois qualifiées de majeures ou mineures. Après correction immédiate, on cherche la cause racine, on définit une **action corrective** et on vérifie son efficacité. L'auditeur doit être indépendant de l'activité qu'il audite.",
+      "keyPoints": [
+        "LTIF = LTI × 1 000 000 ÷ heures ; TRIR = recordables × 200 000 ÷ heures ; TG = jours × 1 000 ÷ heures.",
+        "Indicateurs proactifs (avance) et réactifs (retard) sont complémentaires.",
+        "Audit selon ISO 19011 : ouverture, preuves, constats, clôture, rapport.",
+        "Non-conformité : correction, cause racine, action corrective, vérification d'efficacité."
+      ],
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt d'un programme d'audits"
+    },
+    {
+      "id": "m4",
+      "title": "Gestion de crise, déchets et déversements",
+      "theme": "Crise & environnement",
+      "minutes": 9,
+      "body": "Une situation d'urgence se prépare : analyse des scénarios (incendie, explosion, déversement, blessé grave, fuite toxique, évacuation), plans d'urgence, moyens, rôles, exercices périodiques et retour d'expérience. Le **plan d'urgence** décrit alerte, intervention, évacuation, secours, liaison avec les autorités. Une **cellule de crise** réunit la direction et les fonctions clés (exploitation, HSE, RH, juridique, communication). Elle vérifie les faits, décide, coordonne, tient une **main courante** chronologique, informe les parties prenantes (familles, autorités, clients) et désigne un **porte-parole unique** qui ne communique que des faits vérifiés.\n\nAprès tout incident, l'analyse des causes (arbre des causes, méthode des **5 pourquoi**) vise la **cause racine** (organisationnelle ou systémique) plutôt qu'un coupable. Les actions correctives sont suivies avec un responsable et une échéance, puis le retour d'expérience est partagé.\n\n**Déchets** : la hiérarchie de gestion est **prévenir ou réduire**, **réutiliser**, **recycler**, **valoriser** (énergie), puis **éliminer** en dernier recours. Sur site : tri à la source, contenants étiquetés, zones de stockage avec **rétention**, séparation des déchets dangereux (huiles usagées, solvants, batteries, chiffons souillés) des déchets banals, traçabilité par bordereau, filière agréée. Les déchets dangereux ne se mélangent pas aux autres.\n\n**Déversement accidentel** (hydrocarbures, produits chimiques) : réflexe en cinq temps : **1) sécuriser** (personnes, sources d'ignition) et **arrêter la fuite à la source** si c'est possible sans risque ; **2) contenir** (barrages, boudins absorbants, obturation des avaloirs) ; **3) récupérer** (absorbants, pompage) ; **4) éliminer** les produits souillés par la filière adaptée ; **5) déclarer, analyser et corriger**. On préfère la prévention : stockage sur rétention, remplissage contrôlé, inspection des flexibles, kits antipollution accessibles, personnel formé.\n\nDans ISO 14001, un **aspect environnemental** est un élément des activités pouvant interagir avec l'environnement (rejet d'eaux huileuses), l'**impact** est la modification qui en résulte (pollution de la nappe).",
+      "keyPoints": [
+        "Cellule de crise : faits vérifiés, main courante, porte-parole unique.",
+        "Déchets : prévenir, réutiliser, recycler, valoriser, éliminer en dernier.",
+        "Déversement : sécuriser et stopper la source, contenir, récupérer, éliminer, déclarer.",
+        "Aspect environnemental = cause ; impact = effet sur le milieu."
+      ],
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Bacs de stockage d'hydrocarbures"
+    }
+  ],
+  "questions": [
+    {
+      "id": "qhse-resp-001", "theme": "Normes ISO & management", "level": 1,
+      "q": "Quelle norme internationale porte sur le management de la qualité ?",
+      "choices": ["ISO 14001", "ISO 45001", "ISO 9001", "ISO 19011"],
+      "answer": 2,
+      "explain": "ISO 9001 définit les exigences d'un système de management de la qualité. ISO 14001 concerne l'environnement, ISO 45001 la santé et sécurité au travail, ISO 19011 les audits.",
+      "seconds": 30, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-002", "theme": "Normes ISO & management", "level": 1,
+      "q": "ISO 14001 est la norme de référence pour :",
+      "choices": ["Le management environnemental", "La sécurité informatique", "La santé et sécurité au travail", "La responsabilité sociétale uniquement"],
+      "answer": 0,
+      "explain": "ISO 14001 spécifie les exigences d'un système de management environnemental : aspects environnementaux, conformité, objectifs, maîtrise opérationnelle, urgences.",
+      "seconds": 30, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-003", "theme": "Normes ISO & management", "level": 1,
+      "q": "Quelle norme spécifie les exigences d'un système de management de la santé et sécurité au travail ?",
+      "choices": ["ISO 9001", "ISO 50001", "ISO 26000", "ISO 45001"],
+      "answer": 3,
+      "explain": "ISO 45001:2018 est la norme SST. ISO 50001 traite de l'énergie, ISO 26000 donne des lignes directrices sur la responsabilité sociétale (non certifiable).",
+      "seconds": 30, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-004", "theme": "Normes ISO & management", "level": 2,
+      "q": "Dans le cycle PDCA, que recouvre l'étape « Check » ?",
+      "choices": ["La rédaction de la politique", "La surveillance, la mesure et l'audit des résultats par rapport aux objectifs", "La mise en œuvre des actions", "La formation initiale du personnel"],
+      "answer": 1,
+      "explain": "Plan = planifier, Do = réaliser, Check = vérifier (surveiller, mesurer, auditer), Act = agir pour corriger et améliorer.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-005", "theme": "Normes ISO & management", "level": 2,
+      "q": "ISO 45001 a remplacé quel référentiel largement utilisé auparavant ?",
+      "choices": ["ISO 31000", "ISO 9004", "OHSAS 18001", "ISO 22000"],
+      "answer": 2,
+      "explain": "ISO 45001 (2018) a remplacé OHSAS 18001, avec une période de migration. ISO 31000 est consacrée au management du risque, ISO 22000 à la sécurité des denrées alimentaires.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-006", "theme": "Normes ISO & management", "level": 2,
+      "q": "Quel est l'intérêt principal de la structure de haut niveau (Annexe SL) commune aux normes de management ?",
+      "choices": ["Faciliter l'intégration de plusieurs systèmes de management dans l'organisation", "Supprimer la nécessité d'audits", "Remplacer les exigences légales", "Rendre la certification obligatoire"],
+      "answer": 0,
+      "explain": "Une structure et des termes communs permettent de fusionner politique, objectifs, audits internes et revue de direction dans un système intégré.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-007", "theme": "Normes ISO & management", "level": 3,
+      "q": "Comment ISO 9001:2015 aborde-t-elle la prévention des problèmes ?",
+      "choices": ["Par une procédure d'action préventive obligatoire et séparée", "Uniquement par des contrôles finaux", "Par l'audit client", "Par une pensée fondée sur les risques et opportunités intégrée à tout le système"],
+      "answer": 3,
+      "explain": "La version 2015 supprime l'action préventive en tant qu'exigence distincte : la prévention est intégrée à la planification par la prise en compte des risques et opportunités.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-008", "theme": "Normes ISO & management", "level": 3,
+      "q": "Selon la logique des normes ISO de management, qui est responsable de l'efficacité du système ?",
+      "choices": ["Uniquement le responsable QHSE", "La direction, par son leadership et l'allocation des ressources", "Le consultant extérieur", "L'organisme certificateur"],
+      "answer": 1,
+      "explain": "Le leadership de la direction est une exigence centrale : politique, rôles, ressources, revue de direction. Le responsable QHSE anime le système sans porter seul la responsabilité.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-009", "theme": "Analyse de risques", "level": 1,
+      "q": "Quelle est la différence entre un danger et un risque ?",
+      "choices": ["Ce sont deux synonymes parfaits", "Le danger est la conséquence, le risque est la cause", "Le danger est une source potentielle de dommage ; le risque combine la probabilité et la gravité du dommage", "Le risque est toujours nul si on porte des EPI"],
+      "answer": 2,
+      "explain": "Un produit toxique est un danger ; le risque dépend de l'exposition, de la probabilité et de la gravité. Les EPI réduisent le risque sans supprimer le danger.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-010", "theme": "Analyse de risques", "level": 1,
+      "q": "Comment calcule-t-on classiquement la criticité d'un risque lue dans une matrice ?",
+      "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de criticité avec axes probabilité et gravité",
+      "choices": ["Gravité − probabilité", "Gravité ÷ probabilité", "Gravité + coût", "Probabilité × gravité"],
+      "answer": 3,
+      "explain": "La criticité est le produit de la probabilité par la gravité ; la matrice regroupe les valeurs en zones de couleur qui guident la priorité d'action.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-011", "theme": "Analyse de risques", "level": 2,
+      "q": "Avec des échelles de 1 à 5, un risque de probabilité 3 et de gravité 4 a une criticité de :",
+      "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de criticité 5 par 5",
+      "choices": ["7", "9", "12", "15"],
+      "answer": 2,
+      "explain": "Criticité = 3 × 4 = 12. La somme 3 + 4 = 7 est une erreur fréquente : la matrice repose sur un produit.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-012", "theme": "Analyse de risques", "level": 2,
+      "q": "Quel est l'ordre correct de la hiérarchie des mesures de maîtrise, du plus au moins efficace ?",
+      "img": "svg/ppe-icons.svg", "imgAlt": "Équipements de protection individuelle, dernier niveau de la hiérarchie",
+      "choices": ["Éliminer, substituer, mesures techniques collectives, mesures administratives, EPI", "EPI, procédures, protections collectives, substitution, élimination", "Procédures, EPI, élimination, substitution, protections collectives", "Formation, EPI, substitution, élimination, signalisation"],
+      "answer": 0,
+      "explain": "On privilégie les mesures qui agissent sur le danger lui-même et qui ne dépendent pas du comportement. Les EPI protègent seulement l'individu et sont le dernier recours.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-013", "theme": "Analyse de risques", "level": 2,
+      "q": "Installer un capot d'insonorisation autour d'un compresseur bruyant relève de quel niveau de la hiérarchie ?",
+      "choices": ["Élimination du danger", "Mesure technique (protection collective)", "Équipement de protection individuelle", "Mesure administrative"],
+      "answer": 1,
+      "explain": "Le capot réduit le bruit à la source pour toutes les personnes présentes : c'est une mesure technique collective. Il n'élimine pas le bruit mais il le réduit sans dépendre du port d'un EPI.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-014", "theme": "Analyse de risques", "level": 2,
+      "q": "Dans le rapport indicatif de la pyramide de Bird, combien d'incidents sans blessure ni dommage correspondent à 1 accident grave ?",
+      "img": "svg/bird-pyramid.svg", "imgAlt": "Pyramide de Bird : 1, 10, 30, 600",
+      "choices": ["10", "30", "100", "600"],
+      "answer": 3,
+      "explain": "La pyramide de Bird donne 1 accident grave, 10 blessures légères, 30 dommages matériels, 600 incidents sans dommage. Ces ratios sont indicatifs mais illustrent le poids des signaux faibles.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-015", "theme": "Analyse de risques", "level": 3,
+      "q": "Comment appelle-t-on le risque subsistant après la mise en place des mesures de maîtrise ?",
+      "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de criticité : risque brut et risque résiduel",
+      "choices": ["Risque résiduel", "Risque intrinsèque", "Risque initial", "Risque assuré"],
+      "answer": 0,
+      "explain": "Le risque résiduel est comparé au seuil d'acceptabilité ; si le niveau est trop élevé, on ajoute des barrières. Le risque initial ou brut est évalué avant les mesures.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-016", "theme": "Analyse de risques", "level": 3,
+      "q": "Un atelier remplace un solvant toxique par un produit aqueux non classé dangereux. À quel niveau de la hiérarchie cela correspond-il ?",
+      "img": "svg/risk-matrix.svg", "imgAlt": "Matrice de criticité avant et après la mesure",
+      "choices": ["Équipement de protection individuelle", "Mesure administrative", "Substitution", "Mesure technique de ventilation"],
+      "answer": 2,
+      "explain": "Remplacer un produit ou procédé dangereux par un autre moins dangereux est la substitution, juste après l'élimination. C'est plus efficace qu'une ventilation ou un masque.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-017", "theme": "Indicateurs", "level": 1,
+      "q": "Que signifie LTI en sécurité ?",
+      "choices": ["Level of Technical Inspection", "Long Term Insurance", "Local Training Index", "Lost Time Injury : accident avec arrêt de travail"],
+      "answer": 3,
+      "explain": "Un LTI est un accident du travail ayant entraîné au moins un jour d'arrêt au-delà du jour de l'accident. Il sert au calcul du LTIF et des taux de gravité.",
+      "seconds": 30, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-018", "theme": "Indicateurs", "level": 2,
+      "q": "Un site a enregistré 3 accidents avec arrêt pour 1 500 000 heures travaillées. Quel est son LTIF (base 1 000 000 heures) ?",
+      "choices": ["2,0", "0,5", "4,5", "3,0"],
+      "answer": 0,
+      "explain": "LTIF = 3 × 1 000 000 ÷ 1 500 000 = 2,0. Se tromper en divisant les heures par les accidents donne un résultat sans sens.",
+      "seconds": 60, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-019", "theme": "Indicateurs", "level": 2,
+      "q": "Un site a 5 accidents enregistrables pour 400 000 heures travaillées. Quel est son TRIR (base 200 000 heures) ?",
+      "choices": ["1,0", "5,0", "2,5", "12,5"],
+      "answer": 2,
+      "explain": "TRIR = 5 × 200 000 ÷ 400 000 = 2,5. Avec la base 1 000 000 on trouverait 12,5 : il faut toujours préciser la base utilisée.",
+      "seconds": 60, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-020", "theme": "Indicateurs", "level": 2,
+      "q": "60 jours d'arrêt ont été perdus pour 300 000 heures travaillées. Quel est le taux de gravité (jours × 1 000 ÷ heures) ?",
+      "choices": ["0,02", "0,2", "2,0", "20"],
+      "answer": 1,
+      "explain": "TG = 60 × 1 000 ÷ 300 000 = 0,2 jour perdu pour 1 000 heures.",
+      "seconds": 60, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-021", "theme": "Indicateurs", "level": 1,
+      "q": "Pourquoi rapporte-t-on le nombre d'accidents aux heures travaillées ?",
+      "choices": ["Pour réduire artificiellement le nombre d'accidents", "Pour calculer les salaires", "Pour comparer des entités ou des périodes d'exposition différentes", "Parce que la loi impose de ne publier que des taux"],
+      "answer": 2,
+      "explain": "Un site de 2 000 personnes a mécaniquement plus d'accidents qu'un site de 50 personnes ; le taux ramène l'exposition à une base commune.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-022", "theme": "Indicateurs", "level": 2,
+      "q": "Lequel de ces indicateurs est de type proactif (indicateur avancé) ?",
+      "img": "photo/control-room.jpg", "imgAlt": "Salle de contrôle où sont suivis les indicateurs",
+      "choices": ["Nombre de décès de l'année", "Taux de réalisation des observations de tâches planifiées", "Nombre de jours perdus", "Coût des accidents du travail"],
+      "answer": 1,
+      "explain": "Un indicateur proactif mesure des activités de prévention avant l'accident. Décès, jours perdus et coûts sont des résultats a posteriori, donc réactifs.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-023", "theme": "Indicateurs", "level": 3,
+      "q": "Site A : 2 LTI pour 500 000 h. Site B : 3 LTI pour 1 000 000 h. Quel site a le meilleur LTIF (base 1 000 000 h) ?",
+      "choices": ["Le site B (3,0 contre 4,0)", "Le site A (2,0 contre 3,0)", "Ils sont égaux", "On ne peut pas comparer"],
+      "answer": 0,
+      "explain": "LTIF A = 2 × 1 000 000 ÷ 500 000 = 4,0 ; LTIF B = 3 × 1 000 000 ÷ 1 000 000 = 3,0. Le site B est meilleur malgré plus d'accidents en valeur absolue.",
+      "seconds": 70, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-024", "theme": "Indicateurs", "level": 3,
+      "q": "Quelle différence principale entre TRIR et LTIF ?",
+      "choices": ["Le TRIR ne compte que les décès", "Le LTIF inclut les premiers soins", "Ils sont identiques", "Le TRIR inclut aussi les cas de travail restreint et de traitement médical, pas seulement les arrêts"],
+      "answer": 3,
+      "explain": "Le TRIR porte sur tous les événements enregistrables (décès, LTI, travail restreint, traitement médical) tandis que le LTIF ne compte que les accidents avec arrêt. Les premiers soins simples ne sont pas comptés.",
+      "seconds": 50, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-025", "theme": "Audits", "level": 1,
+      "q": "Qu'est-ce qu'un audit interne ?",
+      "img": "photo/office-meeting.jpg", "imgAlt": "Réunion d'audit autour d'une table",
+      "choices": ["Un contrôle de l'inspection du travail", "Un audit réalisé par l'organisme lui-même ou en son nom pour évaluer son propre système", "Un audit de certification", "Un audit demandé par un client"],
+      "answer": 1,
+      "explain": "L'audit interne est un audit de première partie : il prépare la revue de direction et les audits externes. Il doit être réalisé par des auditeurs impartiaux.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-026", "theme": "Audits", "level": 2,
+      "q": "Quel document donne les lignes directrices pour auditer les systèmes de management ?",
+      "choices": ["ISO 9000", "ISO 14040", "ISO 19011", "ISO 17025"],
+      "answer": 2,
+      "explain": "ISO 19011 décrit principes, programme et conduite d'audit ainsi que la compétence des auditeurs. ISO 17025 concerne les laboratoires d'essais et d'étalonnage.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-027", "theme": "Audits", "level": 2,
+      "q": "Qu'est-ce qu'une non-conformité ?",
+      "choices": ["La non-satisfaction d'une exigence (norme, procédure, loi, client)", "Une simple remarque d'amélioration", "Un point fort de l'organisation", "Un accident du travail"],
+      "answer": 0,
+      "explain": "Une non-conformité est un écart par rapport à une exigence. Une piste de progrès n'est pas une non-conformité.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-028", "theme": "Audits", "level": 2,
+      "q": "Un client vient auditer son fournisseur pour qualifier celui-ci. De quel type d'audit s'agit-il ?",
+      "choices": ["Audit de première partie", "Audit de troisième partie", "Audit interne", "Audit de deuxième partie"],
+      "answer": 3,
+      "explain": "Première partie : l'organisme sur lui-même ; deuxième partie : un client chez son fournisseur ; troisième partie : un organisme indépendant (certification).",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-029", "theme": "Audits", "level": 2,
+      "q": "Une non-conformité a été corrigée immédiatement. Quelle est l'étape suivante pour éviter la récidive ?",
+      "choices": ["La clôturer sans autre analyse", "Analyser la cause racine et définir une action corrective, puis vérifier son efficacité", "Sanctionner l'opérateur concerné", "Attendre le prochain audit"],
+      "answer": 1,
+      "explain": "La correction traite l'effet ; l'action corrective traite la cause pour qu'elle ne revienne pas. L'efficacité doit être vérifiée.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-030", "theme": "Audits", "level": 3,
+      "q": "Pourquoi un auditeur ne doit-il pas auditer son propre travail ?",
+      "img": "photo/office-meeting.jpg", "imgAlt": "Équipe d'audit en réunion",
+      "choices": ["Pour l'indépendance et l'impartialité du jugement", "Parce que c'est interdit par la police", "Pour faire gagner du temps", "Parce que cela coûte plus cher"],
+      "answer": 0,
+      "explain": "L'indépendance de l'auditeur par rapport à l'activité auditée garantit des constats objectifs : c'est un principe fondamental de l'audit.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-031", "theme": "Audits", "level": 3,
+      "q": "Lors d'un audit, vous constatez qu'une procédure de consignation existe mais que les opérateurs ne l'appliquent pas sur le terrain. Quel constat formuler ?",
+      "choices": ["Une conformité, car le document existe", "Une piste de progrès uniquement", "Une non-conformité : l'exigence documentée n'est pas mise en œuvre", "Une observation sans suite"],
+      "answer": 2,
+      "explain": "Une exigence ne se limite pas à son existence documentaire : elle doit être appliquée. L'écart entre le documenté et le réel est une non-conformité.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-032", "theme": "Audits", "level": 1,
+      "q": "À quel moment présente-t-on officiellement les constats à l'audité ?",
+      "choices": ["Dans un courriel envoyé six mois plus tard", "Pendant l'audit, à chaque question", "Lors de la réunion d'ouverture", "Lors de la réunion de clôture"],
+      "answer": 3,
+      "explain": "La réunion de clôture présente les constats et conclusions pour éviter les surprises à la réception du rapport. La réunion d'ouverture sert à confirmer objectifs, périmètre et planning.",
+      "seconds": 30, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-033", "theme": "Crise & environnement", "level": 1,
+      "q": "Un flexible fuit et du gazole s'écoule sur le sol du parc de stockage. Quel est le premier réflexe ?",
+      "img": "photo/storage-tanks.jpg", "imgAlt": "Bacs de stockage d'hydrocarbures",
+      "choices": ["Sécuriser la zone et arrêter la fuite à la source si c'est possible sans danger", "Laver le sol à grande eau vers le caniveau", "Attendre la fin de la journée", "Recouvrir de terre sans autre action"],
+      "answer": 0,
+      "explain": "Il faut d'abord protéger les personnes et supprimer les sources d'ignition, puis arrêter la fuite, avant de contenir et de récupérer. Laver à l'eau disperse la pollution vers le milieu.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-034", "theme": "Crise & environnement", "level": 1,
+      "q": "Dans la hiérarchie de gestion des déchets, quelle action est prioritaire ?",
+      "choices": ["L'enfouissement", "Prévenir ou réduire la production de déchets", "L'incinération sans valorisation", "Le stockage durable sur site"],
+      "answer": 1,
+      "explain": "Le meilleur déchet est celui qu'on ne produit pas. Viennent ensuite réutilisation, recyclage, valorisation, puis élimination en dernier recours.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-035", "theme": "Crise & environnement", "level": 2,
+      "q": "Pour des fûts d'huile usagée stockés sur le site, quelle disposition est correcte ?",
+      "img": "photo/storage-tanks.jpg", "imgAlt": "Zone de stockage industriel",
+      "choices": ["Sur sol nu pour faciliter la manutention", "Mélangés aux déchets ménagers", "Sous un arbre pour l'ombre", "Étiquetés, fermés, sur rétention, avec traçabilité vers une filière agréée"],
+      "answer": 3,
+      "explain": "Les déchets dangereux sont identifiés, stockés sur rétention pour contenir une fuite, séparés des autres et suivis par un bordereau jusqu'à une filière autorisée.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-036", "theme": "Crise & environnement", "level": 2,
+      "q": "Quel est le rôle du porte-parole d'une cellule de crise ?",
+      "img": "photo/office-meeting.jpg", "imgAlt": "Cellule de crise en réunion",
+      "choices": ["Communiquer toutes les hypothèses en cours", "Communiquer des faits vérifiés, d'une seule voix, aux parties prenantes", "Attribuer rapidement la faute", "Se taire jusqu'à la fin de l'enquête"],
+      "answer": 1,
+      "explain": "Un porte-parole unique évite les messages contradictoires ; il ne communique que des faits vérifiés, sans spéculation sur les causes ni les responsabilités.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-037", "theme": "Crise & environnement", "level": 2,
+      "q": "Dans la conduite à tenir pour un déversement, quel enchaînement est correct ?",
+      "choices": ["Sécuriser et stopper la source, contenir, récupérer, éliminer les déchets, déclarer et analyser", "Récupérer, contenir, stopper la source, sécuriser", "Déclarer, attendre, nettoyer", "Contenir, laver à l'eau, oublier"],
+      "answer": 0,
+      "explain": "Tant que la source n'est pas stoppée, la pollution continue ; il faut contenir avant de récupérer, puis traiter les déchets et tirer les enseignements.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-038", "theme": "Crise & environnement", "level": 3,
+      "q": "Des fûts d'huile sont stockés sur sol nu, sans rétention, près d'un caniveau. Quel est le risque principal et la mesure à privilégier ?",
+      "img": "photo/storage-tanks.jpg", "imgAlt": "Zone de stockage industriel avec bacs et fûts",
+      "choices": ["Aucun risque s'il ne pleut pas", "Risque d'incendie uniquement : ajouter un extincteur", "Pollution du sol et de l'eau en cas de fuite : installer une rétention et protéger le caniveau", "Risque esthétique : repeindre les fûts"],
+      "answer": 2,
+      "explain": "Sans rétention, une fuite atteint le sol, le caniveau et le milieu naturel. Une rétention adaptée contient le produit et permet de le récupérer.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-039", "theme": "Crise & environnement", "level": 3,
+      "q": "Selon ISO 14001, lequel des éléments suivants est un aspect environnemental (et non un impact) ?",
+      "choices": ["La pollution de la nappe phréatique", "La mort de la faune aquatique", "La dégradation de la qualité du sol", "Le rejet d'eaux huileuses d'un atelier"],
+      "answer": 3,
+      "explain": "L'aspect est un élément des activités qui interagit avec l'environnement (le rejet). L'impact est la modification qui en résulte (pollution de la nappe, atteinte à la faune, dégradation du sol).",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-040", "theme": "Crise & environnement", "level": 3,
+      "q": "Après un incident grave, quel est l'objectif principal de l'analyse de causes ?",
+      "img": "photo/office-meeting.jpg", "imgAlt": "Équipe d'analyse d'accident en réunion",
+      "choices": ["Désigner un responsable individuel", "Identifier les causes racines, notamment organisationnelles, pour éviter la récidive", "Rédiger un rapport pour archivage uniquement", "Réduire la durée d'arrêt de l'enquête"],
+      "answer": 1,
+      "explain": "L'analyse recherche les causes profondes (organisation, procédure, conception, management) afin de définir des actions correctives efficaces. Chercher un coupable décourage la déclaration des incidents.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-041", "theme": "Crise & environnement", "level": 2,
+      "q": "Dans la méthode des « 5 pourquoi », on s'arrête quand :",
+      "img": "photo/refinery-night.jpg", "imgAlt": "Installation industrielle de nuit",
+      "choices": ["On a trouvé une cause sur laquelle on peut agir durablement (cause racine)", "On a trouvé le nom de l'opérateur", "On a posé exactement cinq questions, quelle que soit la réponse", "On a obtenu une cause matérielle"],
+      "answer": 0,
+      "explain": "Le chiffre 5 est indicatif : on poursuit jusqu'à atteindre une cause racine actionnable. S'arrêter à une cause immédiate ou à un individu empêche une correction durable.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "qhse-resp-042", "theme": "Crise & environnement", "level": 3,
+      "q": "Le déclenchement du plan d'urgence d'un site doit s'accompagner prioritairement de :",
+      "choices": ["La publication immédiate des causes sur les réseaux sociaux", "La reprise rapide de la production", "L'alerte, la mise en sécurité des personnes, le comptage au point de rassemblement et la remontée à la cellule de crise", "Le nettoyage des lieux de l'incident"],
+      "answer": 2,
+      "explain": "La priorité absolue est la protection des personnes : alerte, évacuation, comptage, secours, puis information de la cellule de crise. Les lieux d'un incident grave sont préservés pour l'enquête.",
+      "seconds": 45, "status": "draft"
+    }
+  ]
+}

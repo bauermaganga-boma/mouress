@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ti">
+<title id="ti">Chaîne logistique : fournisseurs, achats, stockage, production, distribution, clients, avec flux physique des marchandises, flux d'information et flux financier</title>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.t{font-size:20px;font-weight:700}.b{font-weight:700}.m{text-anchor:middle}
+.k{stroke:#061F44;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.x{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+</style>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#D9741A"/></marker>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text class="t m" x="400" y="34">La chaîne logistique (supply chain)</text>
+
+<!-- zones -->
+<path d="M15,108 H253" stroke="#F28C28" stroke-width="4"/><text class="m b" x="134" y="98">AMONT</text>
+<path d="M281,108 H519" stroke="#F28C28" stroke-width="4"/><text class="m b" x="400" y="98">INTERNE</text>
+<path d="M547,108 H785" stroke="#F28C28" stroke-width="4"/><text class="m b" x="666" y="98">AVAL</text>
+
+<!-- boîtes : x = 15 + 133 i -->
+<rect class="x" x="15" y="130" width="105" height="100" rx="8"/><text class="m b" x="67" y="166">Fournisseurs</text><text class="m" x="67" y="190">matières,</text><text class="m" x="67" y="208">pièces</text>
+<rect class="x" x="148" y="130" width="105" height="100" rx="8"/><text class="m b" x="200" y="166">Achats</text><text class="m" x="200" y="190">commandes,</text><text class="m" x="200" y="208">contrats</text>
+<rect class="x" x="281" y="130" width="105" height="100" rx="8"/><text class="m b" x="333" y="166">Stockage</text><text class="m" x="333" y="190">entrepôt,</text><text class="m" x="333" y="208">stocks</text>
+<rect class="x" x="414" y="130" width="105" height="100" rx="8"/><text class="m b" x="466" y="166">Production</text><text class="m" x="466" y="190">fabrication,</text><text class="m" x="466" y="208">assemblage</text>
+<rect class="x" x="547" y="130" width="105" height="100" rx="8"/><text class="m b" x="599" y="166">Distribution</text><text class="m" x="599" y="190">transport,</text><text class="m" x="599" y="208">livraison</text>
+<rect class="x" x="680" y="130" width="105" height="100" rx="8"/><text class="m b" x="732" y="166">Clients</text><text class="m" x="732" y="190">demande,</text><text class="m" x="732" y="208">besoin</text>
+<line class="k" x1="120" y1="180" x2="146" y2="180" marker-end="url(#ar)"/>
+<line class="k" x1="253" y1="180" x2="279" y2="180" marker-end="url(#ar)"/>
+<line class="k" x1="386" y1="180" x2="412" y2="180" marker-end="url(#ar)"/>
+<line class="k" x1="519" y1="180" x2="545" y2="180" marker-end="url(#ar)"/>
+<line class="k" x1="652" y1="180" x2="678" y2="180" marker-end="url(#ar)"/>
+
+<!-- flux -->
+<text class="b" x="15" y="276">Flux physique : marchandises</text>
+<line x1="15" y1="288" x2="785" y2="288" stroke="#F28C28" stroke-width="5" stroke-linecap="round" marker-end="url(#ao)"/>
+<text class="b" x="785" y="336" style="text-anchor:end">Flux d'information : commandes, prévisions de vente</text>
+<line x1="785" y1="348" x2="15" y2="348" stroke="#061F44" stroke-width="3" stroke-dasharray="9 6" marker-end="url(#ar)"/>
+<text class="b" x="785" y="396" style="text-anchor:end">Flux financier : paiements</text>
+<line x1="785" y1="408" x2="15" y2="408" stroke="#061F44" stroke-width="3" marker-end="url(#ar)"/>
+
+<text class="m" x="400" y="458">Objectif : le bon produit, au bon endroit, au bon moment, au moindre coût.</text>
+</svg>

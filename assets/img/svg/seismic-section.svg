@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Section sismique interprétée : temps double en millisecondes en fonction de la distance, horizons réflecteurs, anticlinal (piège structural), faille normale et point brillant indiquant un réservoir potentiel</title>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+<pattern id="tr" width="8" height="10" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="10" stroke="#D3D8E2" stroke-width="1"/></pattern>
+<clipPath id="pl"><rect x="90" y="70" width="640" height="370"/></clipPath>
+<clipPath id="cL"><polygon points="90,70 545,70 625,440 90,440"/></clipPath>
+<clipPath id="cR"><polygon points="545,70 730,70 730,440 625,440"/></clipPath>
+<path id="h1" d="M90,118C250,112 450,124 730,116"/>
+<path id="h2" d="M90,190C200,185 300,150 410,145C520,150 620,190 730,196"/>
+<path id="h3" d="M90,235C200,228 310,190 410,184C520,190 630,232 730,240"/>
+<path id="h4" d="M90,285C200,278 310,235 410,226C520,235 640,282 730,290"/>
+<path id="h5" d="M90,350C200,345 320,303 410,294C520,303 640,346 730,352"/>
+<path id="h6" d="M90,410C250,405 350,380 410,372C520,376 640,405 730,412"/>
+<g id="hz" fill="none" stroke="#061F44">
+<use href="#h4" stroke="#F28C28" stroke-width="9"/>
+<use href="#h1" stroke-width="3.5"/><use href="#h1" y="-6" stroke-width="1.2"/><use href="#h1" y="6" stroke-width="1.2"/>
+<use href="#h2" stroke-width="3.5"/><use href="#h2" y="-6" stroke-width="1.2"/><use href="#h2" y="6" stroke-width="1.2"/>
+<use href="#h3" stroke-width="3.5"/><use href="#h3" y="-6" stroke-width="1.2"/><use href="#h3" y="6" stroke-width="1.2"/>
+<use href="#h4" stroke-width="3.5"/><use href="#h4" y="-6" stroke-width="1.2"/><use href="#h4" y="6" stroke-width="1.2"/>
+<use href="#h5" stroke-width="3.5"/><use href="#h5" y="-6" stroke-width="1.2"/><use href="#h5" y="6" stroke-width="1.2"/>
+<use href="#h6" stroke-width="3.5"/><use href="#h6" y="-6" stroke-width="1.2"/><use href="#h6" y="6" stroke-width="1.2"/>
+</g>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Section sismique interprétée (sismique réflexion)</text>
+
+<rect x="90" y="70" width="640" height="370" fill="#E8EAEE"/>
+<rect x="90" y="70" width="640" height="370" fill="url(#tr)"/>
+<g clip-path="url(#pl)">
+<g clip-path="url(#cL)"><use href="#hz"/></g>
+<g clip-path="url(#cR)"><g transform="translate(0,18)"><use href="#hz"/></g></g>
+<line x1="545" y1="70" x2="625" y2="440" stroke="#061F44" stroke-width="3" stroke-dasharray="10 5"/>
+</g>
+<rect x="90" y="70" width="640" height="370" class="s"/>
+
+<!-- axes -->
+<path d="M82,70H90M82,162.5H90M82,255H90M82,347.5H90M82,440H90M90,440V448M218,440V448M346,440V448M474,440V448M602,440V448M730,440V448" class="s"/>
+<g class="e">
+<text x="76" y="75">0</text><text x="76" y="167">500</text><text x="76" y="260">1000</text><text x="76" y="352">1500</text><text x="76" y="445">2000</text>
+</g>
+<g class="c">
+<text x="90" y="466">0</text><text x="218" y="466">1</text><text x="346" y="466">2</text><text x="474" y="466">3</text><text x="602" y="466">4</text><text x="730" y="466">5</text>
+<text x="410" y="488" class="b">Distance horizontale (km)</text>
+<text x="26" y="255" class="b" transform="rotate(-90 26 255)">Temps double (ms)</text>
+</g>
+
+<!-- annotations -->
+<text x="120" y="98" class="b">Anticlinal (piège structural)</text>
+<path d="M362,102L408,141" class="ld"/>
+<text x="565" y="95" class="b">Faille normale</text>
+<text x="100" y="308" class="b">Point brillant :</text>
+<text x="100" y="324" class="o">réservoir potentiel</text>
+<path d="M172,296L198,281" class="ld"/>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Arbre de Noël (tête de puits) : têtes de tubage et de tubing, vannes maîtresses inférieure et supérieure, croix, vanne latérale de production, duse, vanne de curage et vanne de pistonnage</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+<g id="vv"><rect x="-30" y="-20" width="60" height="40" class="gr"/><path d="M-24,-16H24L0,0ZM-24,16H24L0,0Z" class="wh"/></g>
+<g id="vh"><rect x="-22" y="-20" width="44" height="40" class="gr"/><path d="M-17,-15V15L0,0ZM17,-15V15L0,0Z" class="wh"/></g>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Arbre de Noël – tête de puits de production</text>
+
+<!-- tube central -->
+<rect x="312" y="102" width="36" height="200" class="bl"/>
+<!-- bras latéraux -->
+<rect x="370" y="178" width="330" height="24" class="bl"/>
+<rect x="215" y="178" width="75" height="24" class="bl"/>
+<line x1="212" y1="168" x2="212" y2="212" stroke="#061F44" stroke-width="6"/>
+
+<!-- manomètre -->
+<circle cx="330" cy="86" r="16" class="wh"/>
+<path d="M330,86L338,78" class="ld"/>
+<text x="356" y="91">Manomètre (PT)</text>
+
+<!-- croix, têtes -->
+<rect x="290" y="160" width="80" height="60" class="gr"/>
+<rect x="290" y="300" width="80" height="40" class="gr"/>
+<rect x="270" y="340" width="120" height="50" class="gr"/>
+<!-- cuvelage et tubing -->
+<path d="M300,390V480M360,390V480M318,390V480M342,390V480" class="s"/>
+
+<!-- vannes verticales -->
+<use href="#vv" x="330" y="140"/>
+<use href="#vv" x="330" y="240"/>
+<use href="#vv" x="330" y="280"/>
+<!-- vannes horizontales -->
+<use href="#vh" x="415" y="190"/>
+<use href="#vh" x="245" y="190"/>
+<!-- duse -->
+<rect x="500" y="176" width="50" height="28" class="gr"/>
+<path d="M506,200L544,180" class="s"/>
+
+<!-- flux -->
+<path d="M330,486V190H735" class="or" marker-end="url(#ao)"/>
+
+<!-- libellés gauche -->
+<g class="ld"><path d="M266,245H296M266,285H296M266,325H290M266,365H270"/></g>
+<text x="262" y="250" class="e">Vanne maîtresse supérieure</text>
+<text x="262" y="290" class="e">Vanne maîtresse inférieure</text>
+<text x="262" y="330" class="e">Tête de tubing</text>
+<text x="262" y="362" class="e">Tête de tubage</text>
+<text x="262" y="380" class="e">(casing head)</text>
+<text x="285" y="165" class="e">Vanne latérale de curage (kill)</text>
+<text x="374" y="166">Croix (cross)</text>
+<text x="288" y="445" class="e">Cuvelage (casing)</text>
+
+<!-- libellés droite -->
+<g class="ld"><path d="M356,140H368M415,208V220M525,170V176M342,437H368"/></g>
+<text x="372" y="145">Vanne de pistonnage (swab)</text>
+<text x="380" y="233">Vanne latérale de production (wing)</text>
+<text x="525" y="164" class="c">Duse (choke)</text>
+<text x="610" y="170">Vers ligne de production</text>
+<text x="372" y="442">Tubing (production)</text>
+<text x="372" y="486">Fluide du puits</text>
+</svg>

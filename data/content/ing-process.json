@@ -1,0 +1,761 @@
+{
+  "profile": "ing-process",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Bilans matière, bilans d'énergie et pompage",
+      "theme": "Bilans matière & énergie",
+      "minutes": 9,
+      "body": "Tout calcul de procédé commence par un **bilan matière** : accumulation = entrées − sorties + génération − consommation. En **régime permanent**, l'accumulation est nulle : ce qui entre (ajouté de ce qui est généré par réaction) égale ce qui sort (ajouté de ce qui est consommé). On écrit un bilan global et un bilan par constituant, sur un système aux frontières bien définies.\n\nExemple de mélange : 100 kg/h d'une solution à 10 % massique et 50 kg/h d'une solution à 40 % sont réunis. Masse totale : 150 kg/h ; soluté : 10 + 20 = 30 kg/h ; titre final : 30/150 = 20 %. En distillation, pour une alimentation F = 100 kmol/h à 40 % molaire de léger, un distillat à 90 % et un résidu à 10 %, les bilans donnent D = F (xF − xB)/(xD − xB) = 100 × 0,30/0,80 = 37,5 kmol/h et B = 62,5 kmol/h.\n\nPour une réaction, la **conversion** est la fraction du réactif entrante qui a réagi : si 100 mol/h de A entrent et 40 mol/h sortent, la conversion est de 60 %. La sélectivité et le rendement décrivent la part transformée en produit voulu. Avec recyclage des réactifs non convertis, la conversion globale peut dépasser la conversion par passe. En combustion, CH₄ + 2 O₂ → CO₂ + 2 H₂O : 1 kmol de méthane exige 2 kmol d'oxygène, soit environ 9,5 kmol d'air (21 % d'oxygène).\n\nLe **bilan d'énergie** sensible s'écrit Q = ṁ × cp × ΔT. Chauffer 10 kg/s d'eau (cp ≈ 4,18 kJ/kg.K) de 20 K demande 10 × 4,18 × 20 = 836 kW. Pour un changement d'état, Q = ṁ × chaleur latente.\n\nCôté écoulement, le **nombre de Reynolds** Re = ρ·v·D/μ distingue le régime laminaire (Re inférieur à environ 2 300 en conduite) du régime turbulent (supérieur à environ 4 000). Pour l'eau (1 000 kg/m³, 0,001 Pa.s) à 1 m/s dans 0,1 m, Re = 10⁵ : turbulent. En régime turbulent, la perte de charge varie approximativement comme le carré de la vitesse : doubler le débit multiplie la perte de charge par environ quatre.\n\nPour une pompe centrifuge, la puissance hydraulique est P = ρ·g·Q·H. Avec Q = 0,01 m³/s et H = 30 m d'eau : 1 000 × 9,81 × 0,01 × 30 ≈ 2,94 kW ; avec un rendement de 60 %, la puissance à l'arbre est de 4,9 kW. Le **point de fonctionnement** se trouve à l'intersection de la courbe de la pompe et de la courbe du réseau, et la pompe exige un NPSH disponible supérieur au NPSH requis pour éviter la cavitation.\n\n**Sur le terrain**\n- Quand un bilan matière ne boucle pas, cherche d'abord l'instrument (débitmètre, étalonnage, densité) puis l'accumulation (niveaux), avant de soupçonner une réaction ou une fuite.\n- Écris toujours les unités et la base (massique, molaire, kg/h ou kmol/h) avant de calculer : la plupart des erreurs de poste viennent d'un mélange kg/mol.\n- Avant de relever le débit d'une pompe, regarde la courbe : fermer le refoulement fait monter H et baisser Q, la puissance et le NPSH requis changent aussi.",
+      "keyPoints": [
+        "Accumulation = entrées − sorties + génération − consommation ; nulle en régime permanent.",
+        "Q = ṁ·cp·ΔT ; P hydraulique = ρ·g·Q·H ; Re = ρvD/μ.",
+        "Point de fonctionnement d'une pompe : intersection courbe pompe et courbe réseau ; NPSHa supérieur à NPSHr."
+      ],
+      "img": "svg/centrifugal-pump-curve.svg",
+      "imgAlt": "Courbe caractéristique d'une pompe centrifuge et courbe du réseau"
+    },
+    {
+      "id": "m2",
+      "title": "Transfert thermique et échangeurs",
+      "theme": "Échangeurs & transfert thermique",
+      "minutes": 9,
+      "body": "Un échangeur transfère de la chaleur d'un fluide chaud vers un fluide froid à travers une paroi. Le dimensionnement de base repose sur **Q = U × A × ΔTml**, où U est le coefficient global d'échange (W/m².K), A la surface et ΔTml la **différence de température moyenne logarithmique** (LMTD). Pour des écarts aux extrémités ΔT1 et ΔT2, ΔTml = (ΔT1 − ΔT2)/ln(ΔT1/ΔT2) ; si ΔT1 = ΔT2, la LMTD vaut simplement cet écart. Avec ΔT1 = 60 °C et ΔT2 = 20 °C, ΔTml = 40/ln 3 ≈ 36,4 °C, valeur inférieure à la moyenne arithmétique (40 °C).\n\nExemple : pour échanger Q = 500 kW avec U = 500 W/m².K et une LMTD de 50 °C, la surface nécessaire est A = 500 000/(500 × 50) = 20 m².\n\nLe **coefficient global** combine les résistances en série : 1/U = 1/h₁ + 1/h₂ + résistances de paroi et d'encrassement. C'est le plus petit coefficient de film qui limite l'échange : avec h₁ = 1 000 et h₂ = 100 W/m².K, U ≈ 91 W/m².K. L'**encrassement** ajoute une résistance, réduit U, puis la puissance échangée et fait monter la perte de charge ; on prévoit donc des facteurs d'encrassement et un nettoyage périodique.\n\nL'**échangeur à calandre et faisceau tubulaire** reste le plus répandu : le fluide circule dans les tubes (souvent le fluide le plus encrassant ou le plus sous pression, car il est plus facile à nettoyer et à contenir) et dans la calandre autour du faisceau. Les **chicanes** (baffles) imposent un trajet transversal, augmentent la turbulence côté calandre et soutiennent les tubes. Plusieurs **passes** côté tubes augmentent la vitesse et donc le coefficient de film, au prix d'une perte de charge plus élevée.\n\nEn **contre-courant**, les fluides circulent en sens opposés : la LMTD est plus élevée qu'en co-courant et un croisement de températures est possible (la sortie froide peut dépasser la sortie chaude), ce qui est impossible à co-courant. L'échangeur à **plaques** est compact, offre un U élevé, mais est limité en pression et en température par ses joints. Pour un changement de phase, Q = ṁ × chaleur latente : condenser 2 kg/s de vapeur avec une chaleur latente de 2 000 kJ/kg libère 4 000 kW.\n\n**Sur le terrain**\n- Un refroidisseur qui sort plus chaud qu'à la mise en service, avec une perte de charge qui monte, signale presque toujours l'encrassement : demande le relevé ΔP et ΔT avant tout nettoyage.\n- Contrôle le sens de circulation à la mise en service : un échangeur raccordé à co-courant par erreur perd de la LMTD.\n- Avant de choisir un échangeur à plaques, vérifie les limites de pression et de température des joints dans la fiche technique.",
+      "keyPoints": [
+        "Q = U·A·LMTD ; LMTD = (ΔT1 − ΔT2)/ln(ΔT1/ΔT2).",
+        "1/U = somme des résistances ; l'encrassement réduit U.",
+        "Contre-courant : LMTD plus grande et croisement possible ; passes : vitesse plus élevée, perte de charge plus forte."
+      ],
+      "img": "svg/heat-exchanger-shell-tube.svg",
+      "imgAlt": "Échangeur à calandre et faisceau tubulaire avec chicanes"
+    },
+    {
+      "id": "m3",
+      "title": "Distillation et séparation",
+      "theme": "Distillation & séparation",
+      "minutes": 10,
+      "body": "La **distillation** sépare des constituants selon leur volatilité. La colonne comporte des plateaux ou un garnissage, un **condenseur** en tête qui produit le reflux et le distillat, et un **rebouilleur** au fond qui apporte la chaleur de vaporisation. Les composés les plus volatils se concentrent en tête, les plus lourds au fond. L'alimentation entre à l'étage où sa composition correspond le mieux ; un liquide saturé a un paramètre thermique q = 1.\n\nLe critère de faisabilité est la **volatilité relative** α = (yA/xA)/(yB/xB) : plus α est proche de 1, plus la séparation est difficile et exige de plateaux et de reflux. Avec xA = 0,4 et yA = 0,6, α = (0,6/0,4)/(0,4/0,6) = 2,25. Pour une solution idéale, la **loi de Raoult** donne la pression totale P = Σ xi·Pi_sat. Avec x₁ = 0,4 (100 kPa) et x₂ = 0,6 (50 kPa) : P = 40 + 30 = 70 kPa, et y₁ = 40/70 ≈ 0,57.\n\nLe **taux de reflux** est le levier opérationnel : augmenter le reflux améliore la pureté du distillat mais augmente la charge du rebouilleur et du condenseur. À **reflux total** (aucun soutirage), on obtient le nombre minimal de plateaux (relation de Fenske) ; au reflux minimal, il faudrait un nombre infini de plateaux. Les limites hydrauliques sont l'**engorgement** (flooding : vapeur excessive, liquide entraîné, perte de séparation) et le **pleurage** (weeping : vapeur insuffisante, le liquide traverse les orifices).\n\nEn raffinage, le pétrole brut dessalé et chauffé alimente la **colonne atmosphérique** : de haut en bas, on soutire gaz et essence légère, naphta, kérosène, gazole, puis le résidu atmosphérique. Ce résidu est envoyé en **distillation sous vide** : abaisser la pression diminue les températures d'ébullition et évite le craquage thermique des coupes lourdes. Les raffineries côtières d'Afrique centrale, dont celle de Port-Gentil au Gabon, appliquent ces principes à leurs bruts locaux.\n\nCertains mélanges forment un **azéotrope** : l'éthanol et l'eau, par exemple, ne dépassent pas environ 95,6 % massique d'éthanol par distillation simple ; il faut alors changer de pression, ajouter un entraîneur ou utiliser des tamis moléculaires. D'autres procédés de séparation complètent la distillation : absorption et stripping, extraction liquide-liquide, adsorption, membranes.\n\n**Sur le terrain**\n- Un ΔP de colonne qui grimpe d'un coup avec un distillat qui se dégrade évoque l'engorgement : baisse la charge ou le reflux, ne l'augmente pas.\n- Augmenter le reflux améliore la pureté mais fait monter la charge du rebouilleur et du condenseur : vérifie qu'il en reste avant d'agir.\n- Pour les coupes lourdes, ne chauffe jamais le résidu atmosphérique au-delà de la limite de craquage du four : passe sous vide.",
+      "keyPoints": [
+        "Volatils en tête, lourds au fond ; reflux plus fort : distillat plus pur mais énergie plus forte.",
+        "α = (yA/xA)/(yB/xB) ; Raoult : P = Σ xi·Pi_sat.",
+        "Vide pour les coupes lourdes (pas de craquage) ; engorgement et pleurage limitent la plage hydraulique."
+      ],
+      "img": "svg/distillation-column.svg",
+      "imgAlt": "Colonne de distillation avec condenseur, rebouilleur et soutirages"
+    },
+    {
+      "id": "m4",
+      "title": "P&ID, sécurité procédé et HAZOP",
+      "theme": "P&ID, sécurité & HAZOP",
+      "minutes": 9,
+      "body": "Le **P&ID** (diagramme de tuyauterie et d'instrumentation) représente équipements, lignes, vannes et boucles de régulation. L'identification suit la norme ISA : la première lettre désigne la grandeur (F débit, T température, P pression, L niveau), les suivantes la fonction (I indicateur, T transmetteur, C contrôleur, A alarme, H haut, L bas, V vanne). Une boucle de régulation de débit se lit : **FT** (transmetteur) mesure, **FIC** (indicateur-contrôleur) compare à la consigne, **FV** ou FCV (vanne de régulation) corrige. **LAH** désigne une alarme de niveau haut.\n\nLa position de sécurité des vannes se choisit selon le risque : en cas de perte d'air instrument, la vanne de vapeur de chauffe se ferme (**fail closed**) pour éviter l'emballement thermique ; la vanne d'eau de refroidissement d'un réacteur exothermique s'ouvre (**fail open**) pour continuer à refroidir.\n\nLes **soupapes de sécurité (PSV)** protègent les capacités contre la surpression. La pression de tarage ne doit pas dépasser la pression maximale admissible de service (MAWP) de l'équipement protégé. Les scénarios de décharge typiques sont : sortie bloquée, incendie externe, défaillance d'une vanne de régulation, perte d'utilités, dilatation thermique. Un liquide piégé entre deux vannes fermées se dilate en chauffant : une **soupape de dilatation thermique** est nécessaire. Les rejets sont dirigés vers une torche ou un système fermé.\n\nL'**HAZOP** est une revue systématique en équipe pluridisciplinaire. Le procédé est découpé en nœuds ; pour chaque nœud, on applique des **mots-guides** (PAS DE, PLUS DE, MOINS DE, EN PLUS DE, PARTIE DE, INVERSE, AUTRE QUE) à des paramètres (débit, pression, température, niveau) pour former des **déviations** (par exemple plus de pression), on recherche les causes, les conséquences et les protections, puis on émet des recommandations.\n\nLa **matrice de risque** croise la gravité et la probabilité (fréquence) : plus on monte dans l'échelle, plus les barrières requises sont nombreuses. L'analyse LOPA évalue les couches de protection indépendantes. Pour les pompes, vérifier le **NPSH** : le NPSH disponible doit dépasser le NPSH requis avec une marge, sinon la cavitation endommage la pompe. Toute modification d'installation suit un processus de gestion du changement (MOC).\n\n**Sur le terrain**\n- Sur un P&ID, vérifie la position de sécurité (fail open ou fail closed) de chaque vanne de régulation avant de valider un test de perte d'air.\n- Ne modifie jamais un tarage de soupape : il reste au plus égal à la MAWP et toute modification passe par la gestion du changement (MOC).\n- En HAZOP, applique les mots-guides un par un à chaque paramètre du nœud : on cherche les causes et les protections existantes avant d'ajouter une recommandation.",
+      "keyPoints": [
+        "FT mesure, FIC régule, FV agit ; LAH = alarme niveau haut.",
+        "Tarage de la PSV inférieur ou égal à la MAWP ; vanne vapeur fail closed, vanne eau de refroidissement fail open.",
+        "HAZOP : mot-guide + paramètre = déviation ; risque = gravité × probabilité."
+      ],
+      "img": "svg/pid-flow-control.svg",
+      "imgAlt": "Boucle de régulation de débit sur un P&ID"
+    }
+  ],
+  "questions": [
+    {
+      "id": "ing-process-001",
+      "theme": "Bilans matière & énergie",
+      "level": 1,
+      "q": "Poste de nuit sur l'unité de dessalage, régime permanent, aucune réaction : l'entrée brut est de 120 t/h, les sorties sont de 114 t/h de brut dessalé et 4 t/h de saumure. Que conclus-tu ?",
+      "choices": [
+        "Le bilan est correct car la génération compense l'écart",
+        "L'écart est normal : les sorties sont toujours inférieures aux entrées",
+        "Le bilan ne boucle pas (2 t/h d'écart) : je contrôle les débitmètres, les niveaux (accumulation) et je cherche une fuite",
+        "Il faut simplement ajouter 2 t/h à l'entrée sur le DCS"
+      ],
+      "answer": 2,
+      "explain": "En régime permanent sans réaction, entrées = sorties. Un écart de 2 t/h (1,7 %) est un défaut de bilan : mesure mal étalonnée, accumulation dans un niveau ou fuite à chercher.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-002",
+      "theme": "Bilans matière & énergie",
+      "level": 2,
+      "q": "Au poste de dilution, tu mélanges 100 kg/h d'une solution à 10 % massique de soude avec 50 kg/h d'une solution à 40 %. Le client attend 20 %. Quel titre obtiens-tu ?",
+      "choices": [
+        "20 %",
+        "15 %",
+        "25 %",
+        "30 %"
+      ],
+      "answer": 0,
+      "explain": "Masse totale 150 kg/h ; soluté 10 + 20 = 30 kg/h ; titre 30/150 = 20 %. Une simple moyenne arithmétique (25 %) oublierait les débits différents.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-003",
+      "theme": "Bilans matière & énergie",
+      "level": 2,
+      "q": "Colonne de fractionnement : alimentation F = 100 kmol/h à 40 % molaire de léger. Le cahier des charges impose un distillat à 90 % et un résidu à 10 %. Quel débit de distillat dois-tu soutirer pour respecter ces puretés ?",
+      "choices": [
+        "40 kmol/h",
+        "50 kmol/h",
+        "62,5 kmol/h",
+        "37,5 kmol/h"
+      ],
+      "answer": 3,
+      "explain": "D = F (xF − xB)/(xD − xB) = 100 × 0,30/0,80 = 37,5 kmol/h, et B = 62,5 kmol/h. Soutirer plus de distillat dégraderait sa pureté.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-004",
+      "theme": "Bilans matière & énergie",
+      "level": 1,
+      "q": "Poste de nuit : le réchauffeur d'eau de procédé doit porter 10 kg/s d'eau de 20 °C à 40 °C (cp = 4,18 kJ/kg.K). Quelle puissance thermique minimale doit-il fournir ?",
+      "choices": [
+        "83,6 kW",
+        "836 kW",
+        "418 kW",
+        "1 672 kW"
+      ],
+      "answer": 1,
+      "explain": "Q = ṁ·cp·ΔT = 10 × 4,18 × 20 = 836 kW. Se tromper d'un facteur 10 ou 2 vient d'une erreur sur le débit ou sur ΔT.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-005",
+      "theme": "Bilans matière & énergie",
+      "level": 2,
+      "q": "Le four d'une chaudière brûle 50 kmol/h de méthane avec de l'air à 21 % d'oxygène. Tu dois régler le débit d'air stoechiométrique du ventilateur. Quelle valeur retiens-tu ?",
+      "choices": [
+        "Environ 100 kmol/h d'air",
+        "Environ 476 kmol/h d'air",
+        "Environ 238 kmol/h d'air",
+        "Environ 1 000 kmol/h d'air"
+      ],
+      "answer": 1,
+      "explain": "CH₄ + 2 O₂ : 2 kmol d'O₂ par kmol de CH₄, soit 100 kmol/h d'O₂, et 100/0,21 ≈ 476 kmol/h d'air. 100 serait l'oxygène seul.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-006",
+      "theme": "Bilans matière & énergie",
+      "level": 1,
+      "q": "Sur un réacteur, 100 mol/h de A entrent et l'analyseur de sortie indique 40 mol/h de A non converti. Quelle conversion par passe annonces-tu au chef d'unité ?",
+      "choices": [
+        "40 %",
+        "25 %",
+        "140 %",
+        "60 %"
+      ],
+      "answer": 3,
+      "explain": "Conversion = (entrée − sortie)/entrée = (100 − 40)/100 = 60 %. Les 40 % sont la fraction non convertie.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-007",
+      "theme": "Bilans matière & énergie",
+      "level": 1,
+      "q": "Une pompe de transfert débite 0,01 m³/s d'eau (36 m³/h) sur 30 m de hauteur manométrique. L'électricien te demande la puissance hydraulique. Que réponds-tu (g = 9,81 m/s²) ?",
+      "choices": [
+        "2,94 kW",
+        "29,4 kW",
+        "0,294 kW",
+        "9,81 kW"
+      ],
+      "answer": 0,
+      "explain": "P = ρ·g·Q·H = 1 000 × 9,81 × 0,01 × 30 = 2 943 W ≈ 2,94 kW. La puissance à l'arbre sera plus élevée à cause du rendement.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-008",
+      "theme": "Bilans matière & énergie",
+      "level": 2,
+      "q": "Sur la figure, la pompe de la ligne fonctionne à 60 m³/h. Un opérateur ferme à moitié la vanne de refoulement. Que devient le point de fonctionnement ?",
+      "img": "svg/centrifugal-pump-curve.svg",
+      "imgAlt": "Courbe d'une pompe centrifuge (H de 55 m à débit nul, décroissante) et courbe du réseau (H statique 15 m, croissante) : le point de fonctionnement est à Q = 60 m³/h et H = 40 m.",
+      "choices": [
+        "Il reste au même point car la courbe de pompe est fixe",
+        "Il passe à un débit plus fort et une hauteur plus faible",
+        "Il se déplace le long de la courbe de pompe vers un débit plus faible et une hauteur plus forte",
+        "Il tombe à H = 15 m, la hauteur statique"
+      ],
+      "answer": 2,
+      "explain": "Fermer le refoulement rend la courbe du réseau plus raide : l'intersection avec la courbe de pompe glisse vers un débit plus faible et une hauteur plus forte (au maximum 55 m à débit nul).",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-009",
+      "theme": "Bilans matière & énergie",
+      "level": 3,
+      "q": "La pompe demande 2,94 kW hydrauliques avec un rendement global de 60 %. Le moteur monté sur le skid fait 4 kW. Que décides-tu ?",
+      "choices": [
+        "Oui : 2,94 kW est inférieur à 4 kW",
+        "Oui : l'arbre demande seulement 1,8 kW",
+        "Non : l'arbre demande 7,4 kW",
+        "Non : l'arbre demande 4,9 kW, le moteur est sous-dimensionné"
+      ],
+      "answer": 3,
+      "explain": "Puissance à l'arbre = 2,94 / 0,60 = 4,9 kW, supérieure aux 4 kW du moteur : risque de surcharge et de déclenchement thermique.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-010",
+      "theme": "Bilans matière & énergie",
+      "level": 1,
+      "q": "Avant de choisir la corrélation de perte de charge pour une conduite DN100, tu calcules Re pour de l'eau (1 000 kg/m³, 0,001 Pa.s) à 1 m/s. Quel régime et quelle valeur obtiens-tu ?",
+      "choices": [
+        "Laminaire, Re d'environ 1 000",
+        "Turbulent, Re d'environ 100 000",
+        "Laminaire, Re d'environ 100",
+        "Transitoire, Re d'environ 3 000"
+      ],
+      "answer": 1,
+      "explain": "Re = ρ·v·D/μ = 1 000 × 1 × 0,1 / 0,001 = 10⁵, très supérieur à 4 000 : régime turbulent.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-011",
+      "theme": "Bilans matière & énergie",
+      "level": 3,
+      "q": "La production veut doubler le débit de la ligne de transfert (régime turbulent établi). Que dis-tu de la perte de charge par frottement ?",
+      "choices": [
+        "Elle sera multipliée par 2",
+        "Elle restera constante car le diamètre ne change pas",
+        "Elle sera multipliée par environ 4 : la pompe devra fournir la hauteur correspondante",
+        "Elle sera multipliée par 8"
+      ],
+      "answer": 2,
+      "explain": "En régime turbulent, la perte de charge varie à peu près comme le carré de la vitesse : doubler le débit la multiplie par environ 4. Il faut vérifier que la pompe a la marge.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-012",
+      "theme": "Échangeurs & transfert thermique",
+      "level": 1,
+      "q": "Lors du démontage du faisceau, tu repères des plaques percées perpendiculaires aux tubes sur la calandre. Un apprenti te demande à quoi servent ces chicanes. Que réponds-tu ?",
+      "img": "svg/heat-exchanger-shell-tube.svg",
+      "imgAlt": "Échangeur à calandre et faisceau tubulaire à contre-courant : fluide froid côté calandre avec chicanes, fluide chaud côté tubes, plaques tubulaires et boîtes de distribution.",
+      "choices": [
+        "Guider le fluide côté calandre, augmenter la turbulence et soutenir les tubes",
+        "Stocker la chaleur pour le démarrage",
+        "Isoler thermiquement la calandre",
+        "Mélanger les deux fluides"
+      ],
+      "answer": 0,
+      "explain": "Les chicanes imposent un trajet transversal au fluide côté calandre, augmentent la turbulence (donc le coefficient d'échange) et soutiennent les tubes contre les vibrations.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-013",
+      "theme": "Échangeurs & transfert thermique",
+      "level": 2,
+      "q": "Sur le refroidisseur à contre-courant de la figure, les écarts de température aux deux extrémités sont de 60 °C et 20 °C. Tu dois calculer la LMTD pour vérifier la surface. Que trouves-tu ?",
+      "img": "svg/heat-exchanger-shell-tube.svg",
+      "imgAlt": "Échangeur à calandre et faisceau tubulaire à contre-courant : fluide froid côté calandre avec chicanes, fluide chaud côté tubes, plaques tubulaires et boîtes de distribution.",
+      "choices": [
+        "Environ 36,4 °C",
+        "40 °C",
+        "Environ 34,6 °C",
+        "80 °C"
+      ],
+      "answer": 0,
+      "explain": "LMTD = (60 − 20)/ln(60/20) = 40/1,0986 ≈ 36,4 °C, inférieure à la moyenne arithmétique (40 °C).",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-014",
+      "theme": "Échangeurs & transfert thermique",
+      "level": 2,
+      "q": "Le bureau d'études doit échanger 500 kW avec U = 500 W/m².K et une LMTD de 50 °C. Le fournisseur propose 10 m². Que lui réponds-tu ?",
+      "choices": [
+        "Suffisant : 10 m² convient",
+        "Il en faut environ 200 m²",
+        "Insuffisant : il faut environ 20 m²",
+        "Il en faut environ 50 m²"
+      ],
+      "answer": 2,
+      "explain": "A = Q/(U·LMTD) = 500 000/(500 × 50) = 20 m². Avec 10 m², l'échangeur ne tiendrait que la moitié de la puissance.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-015",
+      "theme": "Échangeurs & transfert thermique",
+      "level": 1,
+      "q": "Un fournisseur propose un échangeur raccordé en co-courant ; tu préfères le contre-courant avec les mêmes températures d'entrée. Quel est ton argument ?",
+      "choices": [
+        "La LMTD est identique, c'est seulement une question de raccordement",
+        "La LMTD est plus grande en contre-courant, donc la surface nécessaire est plus faible",
+        "Le co-courant permet toujours un croisement de températures",
+        "Le contre-courant réduit le débit des fluides"
+      ],
+      "answer": 1,
+      "explain": "À températures d'entrée identiques, le contre-courant donne en général la plus grande LMTD : pour la même puissance, moins de surface.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-016",
+      "theme": "Échangeurs & transfert thermique",
+      "level": 2,
+      "q": "Après 18 mois de service, le refroidisseur de la figure sort le produit à 85 °C au lieu de 60 °C, et la perte de charge côté tubes a augmenté. Quelle est la cause la plus probable ?",
+      "img": "svg/heat-exchanger-shell-tube.svg",
+      "imgAlt": "Échangeur à calandre et faisceau tubulaire à contre-courant : fluide froid côté calandre avec chicanes, fluide chaud côté tubes, plaques tubulaires et boîtes de distribution.",
+      "choices": [
+        "Un débit d'eau de refroidissement trop élevé",
+        "Des chicanes devenues trop efficaces",
+        "Un changement de pression atmosphérique",
+        "Encrassement des tubes : U a baissé"
+      ],
+      "answer": 3,
+      "explain": "Un encrassement ajoute une résistance thermique : U baisse, la puissance échangée diminue donc la température de sortie monte, et la perte de charge augmente. Il faut planifier un nettoyage.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-017",
+      "theme": "Échangeurs & transfert thermique",
+      "level": 1,
+      "q": "Un condenseur de tête reçoit 2 kg/s de vapeur condensant avec une chaleur latente de 2 000 kJ/kg. Quelle puissance l'eau de refroidissement doit-elle emporter ?",
+      "choices": [
+        "1 000 kW",
+        "2 000 kW",
+        "4 000 kW",
+        "8 000 kW"
+      ],
+      "answer": 2,
+      "explain": "Q = ṁ × chaleur latente = 2 × 2 000 = 4 000 kW. Il faut vérifier que le débit d'eau disponible peut absorber cette puissance.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-018",
+      "theme": "Échangeurs & transfert thermique",
+      "level": 3,
+      "q": "Un procédé de récupération de chaleur exige que le fluide froid sorte plus chaud que le fluide chaud en sortie (croisement de températures). Quel arrangement d'échange choisis-tu ?",
+      "choices": [
+        "Contre-courant",
+        "Co-courant uniquement",
+        "Aucun, c'est thermodynamiquement impossible",
+        "Un échangeur à plaques monté en co-courant"
+      ],
+      "answer": 0,
+      "explain": "Le croisement de températures n'est possible qu'à contre-courant ; en co-courant, la sortie froide reste inférieure à la sortie chaude.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-019",
+      "theme": "Échangeurs & transfert thermique",
+      "level": 2,
+      "q": "Côté tubes, la vitesse mesurée n'est que de 0,4 m/s et le coefficient de film est faible, avec un encrassement rapide. Quelle modification proposes-tu pour améliorer le service ?",
+      "choices": [
+        "Diminuer le nombre de tubes pour ralentir l'écoulement",
+        "Supprimer les chicanes de la calandre",
+        "Remplacer l'échangeur par une cuve de stockage",
+        "Augmenter le nombre de passes côté tubes pour accélérer le fluide, en acceptant plus de perte de charge"
+      ],
+      "answer": 3,
+      "explain": "Plusieurs passes côté tubes augmentent la vitesse et donc le coefficient de film, au prix d'une perte de charge plus élevée. Il faut vérifier la pompe.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-020",
+      "theme": "Échangeurs & transfert thermique",
+      "level": 2,
+      "q": "Tu envisages un échangeur à plaques pour un service à 40 bar et 250 °C sur une plateforme où la place est comptée. Quel point vérifies-tu avant tout ?",
+      "choices": [
+        "Qu'il ne nécessite aucun joint",
+        "Les limites de pression et de température des joints de plaques",
+        "Qu'il supporte sans limite la haute pression",
+        "Qu'il ne s'encrasse jamais"
+      ],
+      "answer": 1,
+      "explain": "Les échangeurs à plaques sont compacts avec un U élevé, mais limités en pression et température par leurs joints. À 40 bar et 250 °C, une solution à calandre ou soudée est plus probable.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-021",
+      "theme": "Échangeurs & transfert thermique",
+      "level": 3,
+      "q": "Côté eau de refroidissement le coefficient de film est de 1 000 W/m².K, côté huile visqueuse de 100 W/m².K (paroi et encrassement négligés). Quel est U et où agis-tu pour l'améliorer ?",
+      "choices": [
+        "U environ 550 W/m².K ; agir côté eau",
+        "U environ 91 W/m².K ; agir côté huile, coefficient limitant",
+        "U environ 1 100 W/m².K ; peu d'amélioration possible",
+        "U environ 10 W/m².K ; agir côté eau"
+      ],
+      "answer": 1,
+      "explain": "1/U = 1/1 000 + 1/100 = 0,011, d'où U ≈ 91 W/m².K. Le plus petit coefficient (côté huile) limite l'échange : c'est là qu'il faut gagner (vitesse, passes, température).",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-022",
+      "theme": "Distillation & séparation",
+      "level": 1,
+      "q": "Sur la colonne de la figure, tu veux prélever le produit le plus volatil. Où le soutires-tu ?",
+      "img": "svg/distillation-column.svg",
+      "imgAlt": "Colonne de distillation : alimentation au milieu, zone de rectification en haut avec condenseur, ballon de reflux, reflux et distillat de tête ; zone d'épuisement en bas avec rebouilleur chauffé par un fluide chauffant et résidu de fond.",
+      "choices": [
+        "Au fond, comme résidu",
+        "Dans le rebouilleur seulement",
+        "Dans la conduite d'alimentation",
+        "En tête, comme distillat après le condenseur"
+      ],
+      "answer": 3,
+      "explain": "Les constituants les plus volatils se concentrent en tête et sortent comme distillat ; les plus lourds descendent et sortent en fond.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-023",
+      "theme": "Distillation & séparation",
+      "level": 1,
+      "q": "Pendant un incident, la vapeur de chauffe du rebouilleur est coupée alors que la colonne de la figure est en marche. Que va-t-il se passer ?",
+      "img": "svg/distillation-column.svg",
+      "imgAlt": "Colonne de distillation : alimentation au milieu, zone de rectification en haut avec condenseur, ballon de reflux, reflux et distillat de tête ; zone d'épuisement en bas avec rebouilleur chauffé par un fluide chauffant et résidu de fond.",
+      "choices": [
+        "La vapeur montante diminue et la colonne perd progressivement sa séparation",
+        "Rien, car le condenseur produit à lui seul la vapeur",
+        "La pureté du distillat s'améliore",
+        "La colonne se vide uniquement par le distillat"
+      ],
+      "answer": 0,
+      "explain": "Le rebouilleur apporte la chaleur de vaporisation qui génère la vapeur montante. Sans lui, la colonne perd son contact liquide-vapeur et sa séparation.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-024",
+      "theme": "Distillation & séparation",
+      "level": 2,
+      "q": "Le distillat de la colonne de la figure sort à 88 % de pureté au lieu des 95 % visés. L'opérateur propose d'augmenter le taux de reflux. Quel est l'effet attendu et son coût ?",
+      "img": "svg/distillation-column.svg",
+      "imgAlt": "Colonne de distillation : alimentation au milieu, zone de rectification en haut avec condenseur, ballon de reflux, reflux et distillat de tête ; zone d'épuisement en bas avec rebouilleur chauffé par un fluide chauffant et résidu de fond.",
+      "choices": [
+        "Pureté plus faible et moins d'énergie",
+        "Aucun effet sur la séparation",
+        "Meilleure pureté du distillat, au prix d'une consommation énergétique plus élevée au rebouilleur et au condenseur",
+        "Suppression du besoin du rebouilleur"
+      ],
+      "answer": 2,
+      "explain": "Augmenter le reflux améliore la pureté en tête mais demande plus de vapeur au rebouilleur et plus de froid au condenseur. Il faut vérifier la marge de ces équipements et de la colonne.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-025",
+      "theme": "Distillation & séparation",
+      "level": 2,
+      "q": "Pour estimer le nombre de plateaux, le laboratoire te donne xA = 0,4 dans le liquide et yA = 0,6 dans la vapeur à l'équilibre. Quelle volatilité relative de A par rapport à B retiens-tu ?",
+      "choices": [
+        "1,5",
+        "0,67",
+        "3,0",
+        "2,25"
+      ],
+      "answer": 3,
+      "explain": "α = (yA/xA)/(yB/xB) = (0,6/0,4)/(0,4/0,6) = 1,5/0,667 = 2,25. Plus α est proche de 1, plus la séparation est difficile.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-026",
+      "theme": "Distillation & séparation",
+      "level": 2,
+      "q": "Le chef de quart te demande l'ordre des soutirages de la colonne atmosphérique de brut, du bas vers le haut. Que réponds-tu ?",
+      "choices": [
+        "Gaz, naphta, kérosène, gazole, puis résidu en tête",
+        "Résidu, gazole, kérosène, naphta, puis gaz et essence légère en tête",
+        "Kérosène, résidu, naphta, gazole, gaz",
+        "Gazole, gaz, résidu, kérosène, naphta"
+      ],
+      "answer": 1,
+      "explain": "Plus la coupe est volatile, plus elle est soutirée haut : le résidu sort en fond, puis gazole, kérosène, naphta, et les gaz et l'essence légère en tête.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-027",
+      "theme": "Distillation & séparation",
+      "level": 2,
+      "q": "Dans un simulateur, tu simules un mélange idéal : x₁ = 0,4 avec une pression de vapeur saturante de 100 kPa, x₂ = 0,6 avec 50 kPa. Quelle pression de bulle obtiens-tu ?",
+      "choices": [
+        "50 kPa",
+        "75 kPa",
+        "70 kPa",
+        "150 kPa"
+      ],
+      "answer": 2,
+      "explain": "Loi de Raoult : P = 0,4 × 100 + 0,6 × 50 = 40 + 30 = 70 kPa.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-028",
+      "theme": "Distillation & séparation",
+      "level": 3,
+      "q": "Pour le même mélange (P = 70 kPa, composant 1 à 40 kPa de pression partielle), tu dois donner la composition de la première vapeur formée. Quelle fraction molaire y₁ obtiens-tu ?",
+      "choices": [
+        "0,57",
+        "0,40",
+        "0,70",
+        "0,29"
+      ],
+      "answer": 0,
+      "explain": "y₁ = x₁ × P1sat / P = 40/70 ≈ 0,57 : la vapeur est enrichie en constituant léger.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-029",
+      "theme": "Distillation & séparation",
+      "level": 2,
+      "q": "Le four du résidu atmosphérique à 360 °C commence à cokéfier : dépôt de coke dans les tubes et coupe qui se dégrade. Que fais-tu pour récupérer les coupes lourdes ?",
+      "choices": [
+        "Les distiller sous vide pour abaisser les températures d'ébullition et éviter le craquage",
+        "Augmenter la température du four",
+        "Ajouter de l'eau dans la colonne",
+        "Supprimer le four"
+      ],
+      "answer": 0,
+      "explain": "Abaisser la pression diminue les températures d'ébullition : on peut séparer les coupes lourdes sans les craquer thermiquement. C'est le rôle de la distillation sous vide.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-030",
+      "theme": "Distillation & séparation",
+      "level": 3,
+      "q": "Sur une unité d'éthanol, le distillat plafonne à environ 95,6 % massique malgré une hausse du reflux. Quelle est la cause et que proposes-tu ?",
+      "choices": [
+        "Un rebouilleur trop petit : le monter à pleine puissance",
+        "Un pleurage dans les plateaux de tête",
+        "L'azéotrope éthanol-eau : passer par tamis moléculaires, entraîneur ou changement de pression",
+        "Une pompe de reflux en cavitation"
+      ],
+      "answer": 2,
+      "explain": "L'éthanol et l'eau forment un azéotrope à environ 95,6 % massique d'éthanol : la distillation simple ne le dépasse pas. Il faut changer de pression, ajouter un entraîneur ou utiliser des tamis moléculaires.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-031",
+      "theme": "Distillation & séparation",
+      "level": 2,
+      "q": "Après une augmentation de charge de 15 %, la perte de charge de la colonne monte brutalement et le distillat se dégrade, avec entraînement de liquide en tête. Quel est le diagnostic le plus probable ?",
+      "choices": [
+        "Pleurage (weeping) : vapeur insuffisante",
+        "Engorgement (flooding) : vapeur excessive",
+        "Rebouilleur à l'arrêt",
+        "Condenseur sous-dimensionné uniquement"
+      ],
+      "answer": 1,
+      "explain": "L'engorgement se manifeste par une vapeur excessive qui entraîne le liquide, une perte de charge qui grimpe et une perte de séparation. Il faut réduire charge ou reflux.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-032",
+      "theme": "Distillation & séparation",
+      "level": 3,
+      "q": "Au démarrage, l'équipe met la colonne en reflux total (aucun soutirage). À quoi cela sert-il et que caractérise ce régime ?",
+      "choices": [
+        "À produire le maximum de distillat ; c'est le nombre maximal de plateaux",
+        "À arrêter le rebouilleur ; la pureté tombe à zéro",
+        "À vider la colonne ; le débit d'alimentation devient infini",
+        "À stabiliser les profils ; il correspond au nombre minimal de plateaux"
+      ],
+      "answer": 3,
+      "explain": "À reflux total, on obtient le nombre minimal de plateaux (relation de Fenske). C'est un état de démarrage stable où l'on règle les températures avant de soutirer.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-033",
+      "theme": "P&ID, sécurité & HAZOP",
+      "level": 1,
+      "q": "Sur la cascade de la figure, le LIC 101 envoie sa consigne au FIC 103. Que fait le FIC 103 ?",
+      "img": "svg/pid-flow-control.svg",
+      "imgAlt": "Cascade niveau vers débit : ballon V 101 avec LT 101 et LIC 101 ; pompe P 101 ; ligne avec diaphragme FE 103, FT 103, FIC 103 qui reçoit la consigne du LIC 101 et commande la vanne de régulation FV 103.",
+      "choices": [
+        "Il mesure directement le débit dans la ligne",
+        "Il remplace la vanne de régulation",
+        "Il compare la mesure du FT 103 à la consigne et commande la vanne FV 103",
+        "Il protège la ligne contre la surpression"
+      ],
+      "answer": 2,
+      "explain": "Le FIC est l'indicateur-contrôleur de débit : il reçoit la mesure du FT et la consigne (ici issue du LIC en cascade) et pilote la FV.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-034",
+      "theme": "P&ID, sécurité & HAZOP",
+      "level": 1,
+      "q": "En salle de contrôle, l'alarme LAH 101 s'allume sur le ballon V 101. Que signifie-t-elle et que fais-tu en premier ?",
+      "choices": [
+        "Niveau haut : je vérifie la sortie (pompe P 101 et vanne FV 103) et le niveau réel sur site",
+        "Pression haute : je lève la soupape",
+        "Température haute : j'arrête le rebouilleur",
+        "Débit haut : j'ouvre la FV 103 à fond"
+      ],
+      "answer": 0,
+      "explain": "LAH = alarme de niveau haut. On vérifie que le soutirage fonctionne (pompe en marche, vanne ouverte) et on confirme le niveau localement avant d'agir.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-035",
+      "theme": "P&ID, sécurité & HAZOP",
+      "level": 2,
+      "q": "Test de perte d'air instrument sur le rebouilleur : en quelle position la vanne de régulation de vapeur de chauffe doit-elle aller par sécurité ?",
+      "choices": [
+        "Ouverte (fail open)",
+        "Dernière position",
+        "Ouverte à moitié",
+        "Fermée (fail closed)"
+      ],
+      "answer": 3,
+      "explain": "La vapeur de chauffe se ferme en cas de perte d'air pour éviter une montée de température incontrôlée ; on choisit la position selon le risque du procédé.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-036",
+      "theme": "P&ID, sécurité & HAZOP",
+      "level": 1,
+      "q": "Test de perte d'air sur la vanne d'eau de refroidissement d'un réacteur exothermique : quelle position de sécurité attends-tu ?",
+      "choices": [
+        "Fermée (fail closed)",
+        "Ouverte (fail open) pour continuer à refroidir",
+        "Dernière position",
+        "Position aléatoire"
+      ],
+      "answer": 1,
+      "explain": "Pour un réacteur exothermique, la perte d'air doit laisser le refroidissement ouvert afin d'éviter l'emballement.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-037",
+      "theme": "P&ID, sécurité & HAZOP",
+      "level": 1,
+      "q": "Sur la figure, la sortie liquide du ballon V-201 est bloquée et la pression monte jusqu'à 10 barg. Que fait la PSV 201 et où part la décharge ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Ballon V-201 sous pression, MAWP = 10 barg, avec PT 201, alarme PAH 201 à 9 barg et PSV 201 tarée à 10 barg déchargeant vers la torche ; service normal de 0 à 8 barg, 11 barg = 110 % de la MAWP.",
+      "choices": [
+        "Elle se ferme pour garder la pression",
+        "Elle s'ouvre à sa pression de tarage et évacue vers la torche",
+        "Elle mesure la pression et ferme la sortie liquide",
+        "Elle envoie le gaz dans l'atelier"
+      ],
+      "answer": 1,
+      "explain": "La PSV 201, tarée à 10 barg, s'ouvre et décharge vers la torche pour protéger le ballon. L'alarme PAH est déjà passée à 9 barg.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-038",
+      "theme": "P&ID, sécurité & HAZOP",
+      "level": 2,
+      "q": "En gestion du changement, on propose de retarer la PSV 201 de la figure à 12 barg pour éviter des ouvertures intempestives. Quelle est ta réponse ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Ballon V-201 sous pression, MAWP = 10 barg, avec PT 201, alarme PAH 201 à 9 barg et PSV 201 tarée à 10 barg déchargeant vers la torche ; service normal de 0 à 8 barg, 11 barg = 110 % de la MAWP.",
+      "choices": [
+        "Accord : 12 barg est inférieur à 110 % de la MAWP",
+        "Accord si on double l'épaisseur du tube",
+        "Accord si l'alarme PAH est supprimée",
+        "Refus : le tarage doit rester au plus égal à la MAWP de 10 barg"
+      ],
+      "answer": 3,
+      "explain": "La pression de tarage ne doit pas dépasser la MAWP de l'équipement protégé. Retarer à 12 barg exposerait le ballon à plus que sa limite.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-039",
+      "theme": "P&ID, sécurité & HAZOP",
+      "level": 2,
+      "q": "En séance HAZOP, au nœud « ligne de refoulement de P 101 », tu étudies l'effet de la FV 103 bloquée fermée. Quelle déviation notes-tu ?",
+      "img": "svg/pid-flow-control.svg",
+      "imgAlt": "Cascade niveau vers débit : ballon V 101 avec LT 101 et LIC 101 ; pompe P 101 ; ligne avec diaphragme FE 103, FT 103, FIC 103 qui reçoit la consigne du LIC 101 et commande la vanne de régulation FV 103.",
+      "choices": [
+        "PAS DE débit (mot-guide PAS DE appliqué au débit)",
+        "Pression de 12 bar",
+        "Remplacement d'une vanne",
+        "Corrosion externe du support"
+      ],
+      "answer": 0,
+      "explain": "Une déviation associe un mot-guide à un paramètre : ici PAS DE débit. Les autres propositions ne sont pas formées ainsi.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-040",
+      "theme": "P&ID, sécurité & HAZOP",
+      "level": 3,
+      "q": "Sur la matrice de la figure, un scénario de fuite de gaz est jugé probable (4) avec une gravité de 4. Quel niveau de risque en déduis-tu et que fais-tu ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 × 5 : probabilité en abscisse (1 improbable à 5 fréquent), gravité en ordonnée ; criticité = probabilité × gravité ; niveaux : faible 1-4, moyen 5-9, élevé 10-14, critique 15 et plus.",
+      "choices": [
+        "8 : moyen, on peut poursuivre sans action",
+        "4 : faible, aucune mesure",
+        "16 : critique, il faut des barrières supplémentaires avant de continuer",
+        "25 : maximum, arrêt définitif de l'usine"
+      ],
+      "answer": 2,
+      "explain": "Criticité = probabilité × gravité = 4 × 4 = 16, soit niveau critique (15 et plus) selon la figure. Il faut ajouter des protections avant de poursuivre.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-041",
+      "theme": "P&ID, sécurité & HAZOP",
+      "level": 3,
+      "q": "À l'arrêt, un tronçon de 40 m de ligne rempli de liquide sera isolé entre deux vannes fermées, au soleil, sans protection au P&ID. Que demandes-tu ?",
+      "choices": [
+        "Un clapet anti-retour",
+        "Un purgeur de vapeur",
+        "Un débitmètre vortex",
+        "Une soupape de dilatation thermique sur ce tronçon"
+      ],
+      "answer": 3,
+      "explain": "Un liquide piégé entre deux vannes fermées se dilate en chauffant : la pression peut monter très vite. Une soupape de dilatation thermique est nécessaire.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-process-042",
+      "theme": "P&ID, sécurité & HAZOP",
+      "level": 3,
+      "q": "La pompe P 101 cavite (bruit de gravier, vibrations) depuis que le niveau de V 101 est descendu à 20 %. Quelle mesure immédiate prends-tu ?",
+      "img": "svg/pid-flow-control.svg",
+      "imgAlt": "Cascade niveau vers débit : ballon V 101 avec LT 101 et LIC 101 ; pompe P 101 ; ligne avec diaphragme FE 103, FT 103, FIC 103 qui reçoit la consigne du LIC 101 et commande la vanne de régulation FV 103.",
+      "choices": [
+        "Fermer la vanne d'aspiration pour augmenter la pression",
+        "Remonter le niveau de V 101 pour que le NPSH disponible dépasse le NPSH requis avec marge",
+        "Augmenter la vitesse de la pompe",
+        "Ignorer, le niveau ne joue aucun rôle"
+      ],
+      "answer": 1,
+      "explain": "La cavitation apparaît quand le NPSH disponible tombe sous le NPSH requis. Remonter le niveau augmente la charge à l'aspiration et rétablit la marge.",
+      "seconds": 90,
+      "status": "draft"
+    }
+  ]
+}

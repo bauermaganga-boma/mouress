@@ -1,0 +1,69 @@
+/* Entraînement, examen, résultat */
+.quiz { display: grid; gap: var(--sp-3); align-content: start; }
+.quiz-top { display: flex; justify-content: space-between; align-items: center; gap: var(--sp-3); }
+.q-card { padding: clamp(1.1rem, 3vw, 2rem); }
+.q-text { font-size: var(--fs-xl); line-height: 1.4; margin-bottom: var(--sp-5); }
+.q-fig .qfig-btn img { max-height: 320px; }
+.choices { display: grid; gap: var(--sp-3); }
+.choice {
+  position: relative; display: flex; align-items: center; gap: var(--sp-3); width: 100%; min-height: 56px; text-align: left;
+  padding: .75rem 1rem; font: inherit; font-size: var(--fs-md); color: var(--c-ink); background: #fff;
+  border: 2px solid var(--c-line-strong); border-radius: var(--r-md); cursor: pointer; transition: border-color .12s, background .12s;
+}
+.choice:hover:not([disabled]) { border-color: var(--c-navy-3); background: var(--c-info-bg); }
+.choice[disabled] { cursor: default; }
+.choice-key { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--c-surface-2); color: var(--c-navy); display: grid; place-items: center; font-weight: 800; font-size: var(--fs-sm); }
+.choice-text { flex: 1; }
+.choice.selected { border-color: var(--c-navy); background: var(--c-info-bg); box-shadow: inset 0 0 0 1px var(--c-navy); }
+.choice.selected .choice-key { background: var(--c-navy); color: #fff; }
+.choice.correct { border-color: var(--c-ok); background: var(--c-ok-bg); }
+.choice.correct .choice-key { background: var(--c-ok); color: #fff; }
+.choice.wrong { border-color: var(--c-ko); background: var(--c-ko-bg); }
+.choice.wrong .choice-key { background: var(--c-ko); color: #fff; }
+.choice-mark { font-weight: 800; font-size: var(--fs-lg); }
+.choice.correct .choice-mark { color: var(--c-ok); } .choice.wrong .choice-mark { color: var(--c-ko); }
+.feedback { margin-top: var(--sp-4); padding: var(--sp-4); border-radius: var(--r-md); border-left: 6px solid; }
+.feedback.ok { background: var(--c-ok-bg); border-color: var(--c-ok); }
+.feedback.ko { background: var(--c-ko-bg); border-color: var(--c-ko); }
+.feedback p { margin: .4rem 0 var(--sp-3); }
+.quiz-actions { justify-content: flex-end; }
+.exam-frame .quiz-actions .btn { width: 100%; }
+
+.timer { display: flex; align-items: center; gap: var(--sp-3); }
+.timer-bar { flex: 1; height: 14px; background: var(--c-surface-2); border-radius: 99px; overflow: hidden; }
+.timer-bar span { display: block; height: 100%; width: 100%; background: var(--c-navy-3); border-radius: 99px; }
+.timer-bar.low span { background: var(--c-ko); }
+.timer-sec { font-weight: 800; font-variant-numeric: tabular-nums; min-width: 3.5rem; text-align: right; color: var(--c-navy); }
+.transition { padding: var(--sp-7) var(--sp-5); }
+
+.intro .rules { list-style: none; padding: 0; margin: var(--sp-5) 0; display: grid; gap: var(--sp-4); }
+.intro .rules li { display: flex; gap: var(--sp-3); align-items: flex-start; }
+.intro .rules svg { color: var(--c-orange-dark); flex: none; margin-top: 2px; }
+
+.big-score { font-size: 2.6rem; font-weight: 800; color: var(--c-navy); margin: 0 0 var(--sp-2); }
+.theme-rows, .result .card > .theme-row:first-child { text-align: left; }
+.theme-row { display: grid; grid-template-columns: 1fr auto; gap: .3rem var(--sp-3); margin-bottom: var(--sp-4); align-items: center; }
+.theme-row .bar { grid-column: 1 / -1; }
+.result-head { display: flex; gap: var(--sp-5); align-items: center; flex-wrap: wrap; border-width: 2px; }
+.result-head.is-pass { border-color: var(--c-ok); } .result-head.is-fail { border-color: var(--c-ko); }
+.ring { position: relative; width: 140px; height: 140px; flex: none; }
+.ring-val { position: absolute; inset: 0; display: grid; place-items: center; font-size: 1.9rem; color: var(--c-navy); }
+.cert-cta { display: flex; gap: var(--sp-4); align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: var(--sp-4); background: var(--c-warn-bg); border-color: var(--c-orange-light); }
+.cert-cta h3 { margin: 0 0 .2rem; } .cert-cta p { margin: 0; }
+.corr { padding: var(--sp-4); border-left: 6px solid var(--c-line-strong); }
+.corr-ok { border-left-color: var(--c-ok); } .corr-ko { border-left-color: var(--c-ko); }
+.corr-head { display: flex; gap: var(--sp-3); align-items: center; margin-bottom: var(--sp-3); }
+.corr .q-text { font-size: var(--fs-lg); margin-bottom: var(--sp-3); }
+.result .block { margin-top: var(--sp-6); }
+.update-bar { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(var(--tabbar-h) + 4.2rem); z-index: 160; background: var(--c-navy); color: #fff; padding: .6rem 1rem; border-radius: var(--r-pill); display: flex; gap: .75rem; align-items: center; font-size: var(--fs-sm); box-shadow: var(--shadow-lg); }
+@media (min-width: 900px) { .update-bar { bottom: 1.5rem; } }
+@media (max-width: 480px) { .q-text { font-size: var(--fs-lg); } .ring { width: 110px; height: 110px; } .ring svg { width: 110px; height: 110px; } }
+
+/* Questions longues (mises en situation) : énoncé défilable, chrono et bouton toujours visibles */
+.q-statement { margin-bottom: var(--sp-4); }
+.q-statement .q-text { margin-bottom: 0; }
+.quiz .q-long { max-height: 32vh; overflow-y: auto; padding: var(--sp-3) var(--sp-4); border: 1px solid var(--c-line); border-radius: var(--r-md); background: linear-gradient(#fff 30%, rgba(255,255,255,0)), linear-gradient(rgba(255,255,255,0), #fff 70%) 0 100%, linear-gradient(rgba(6,31,68,.12), rgba(6,31,68,0)), linear-gradient(rgba(6,31,68,0), rgba(6,31,68,.12)) 0 100%; background-repeat: no-repeat; background-size: 100% 36px, 100% 36px, 100% 10px, 100% 10px; background-attachment: local, local, scroll, scroll; }
+.quiz .q-long .q-text { font-size: var(--fs-md); line-height: 1.55; font-weight: 600; }
+.exam-frame .timer { position: sticky; top: var(--header-h); z-index: 20; background: var(--c-cream); padding: .5rem 0; }
+.exam-frame .quiz-actions { position: sticky; bottom: 0; z-index: 20; background: linear-gradient(rgba(252,251,248,0), var(--c-cream) 30%); padding: var(--sp-3) 0 calc(var(--sp-3) + env(safe-area-inset-bottom)); }
+@media (min-width: 900px) { .quiz .q-long { max-height: 50vh; } .quiz .q-long .q-text { font-size: var(--fs-lg); } }

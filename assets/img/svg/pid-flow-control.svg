@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Schéma P&amp;ID d'une boucle de régulation de débit en cascade : ballon V-101 avec transmetteur de niveau LT-101 et régulateur LIC-101, pompe P-101, diaphragme FE-103, transmetteur de débit FT-103, régulateur FIC-103, vanne de régulation FV-103 et transmetteur de pression PT-102</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+.pp{fill:none;stroke:#061F44;stroke-width:4}
+.sg{fill:none;stroke:#061F44;stroke-width:2;stroke-dasharray:7 5}
+.t2{font-weight:bold;text-anchor:middle}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Boucle de régulation de débit (cascade niveau → débit)</text>
+
+<!-- ballon V-101 -->
+<path d="M41,290H139V330Q139,359 110,359H70Q41,359 41,330Z" fill="#DCE6F5"/>
+<rect x="40" y="200" width="100" height="160" rx="30" class="s"/>
+<path d="M41,290H139" fill="none" stroke="#061F44" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="90" y="250" class="t2" style="font-size:16px">V 101</text>
+
+<!-- lignes procédé -->
+<path d="M90,360V400H188" class="pp"/>
+<path d="M232,400H772" class="pp" marker-end="url(#ar)"/>
+<circle cx="210" cy="400" r="22" class="wh"/>
+<path d="M200,388V412L222,400Z" class="s" style="stroke-width:2"/>
+<text x="210" y="444" class="c b">P 101</text>
+<text x="780" y="385" class="e">Vers procédé</text>
+
+<!-- diaphragme FE-103 -->
+<line x1="440" y1="386" x2="440" y2="414" stroke="#061F44" stroke-width="5"/>
+<text x="440" y="436" class="c b">FE 103</text>
+<text x="440" y="454" class="c">(diaphragme)</text>
+
+<!-- prises d'impulsion -->
+<path d="M428,400V289M452,400V289" class="ld"/>
+
+<!-- piquages LT et PT -->
+<path d="M140,250H183M140,335H205V272" class="ld"/>
+<path d="M320,400V322" class="ld"/>
+
+<!-- instruments de terrain -->
+<circle cx="205" cy="250" r="22" class="wh"/>
+<text x="205" y="248" class="t2">LT</text><text x="205" y="264" class="t2">101</text>
+<circle cx="320" cy="300" r="22" class="wh"/>
+<text x="320" y="298" class="t2">PT</text><text x="320" y="314" class="t2">102</text>
+<circle cx="440" cy="270" r="22" class="wh"/>
+<text x="440" y="268" class="t2">FT</text><text x="440" y="284" class="t2">103</text>
+
+<!-- instruments en salle de contrôle (DCS) -->
+<circle cx="300" cy="150" r="24" class="wh"/>
+<line x1="276" y1="150" x2="324" y2="150" class="ld"/>
+<text x="300" y="145" class="t2">LIC</text><text x="300" y="165" class="t2">101</text>
+<circle cx="520" cy="150" r="24" class="wh"/>
+<line x1="496" y1="150" x2="544" y2="150" class="ld"/>
+<text x="520" y="145" class="t2">FIC</text><text x="520" y="165" class="t2">103</text>
+
+<!-- vanne de régulation FV-103 -->
+<path d="M596,382V418L620,400ZM644,382V418L620,400Z" class="wh"/>
+<line x1="620" y1="382" x2="620" y2="352" class="s"/>
+<path d="M598,352A22,22 0 0 1 642,352Z" class="wh"/>
+<text x="654" y="350" class="b">FV 103</text>
+<text x="620" y="436" class="c">Vanne de régulation</text>
+
+<!-- signaux électriques -->
+<path d="M205,228V150H272" class="sg" marker-end="url(#ar)"/>
+<path d="M324,150H494" class="sg" marker-end="url(#ar)"/>
+<path d="M462,270H520V176" class="sg" marker-end="url(#ar)"/>
+<path d="M544,150H620V328" class="sg" marker-end="url(#ar)"/>
+<path d="M320,278V236" class="sg" marker-end="url(#ar)"/>
+<text x="409" y="140" class="c">Consigne (cascade)</text>
+<text x="320" y="226" class="c">vers DCS</text>
+
+<!-- légende -->
+<circle cx="50" cy="478" r="8" class="wh"/>
+<text x="64" y="483">Instrument de terrain</text>
+<circle cx="240" cy="478" r="8" class="wh"/>
+<line x1="232" y1="478" x2="248" y2="478" class="ld"/>
+<text x="254" y="483">Instrument en salle de contrôle</text>
+<line x1="490" y1="478" x2="520" y2="478" class="sg"/>
+<text x="528" y="483">Signal électrique</text>
+<line x1="665" y1="478" x2="695" y2="478" class="pp"/>
+<text x="703" y="483">Procédé</text>
+</svg>

@@ -1,0 +1,50 @@
+/* Attestation : gabarit A4 paysage (297 x 210 mm). Les tailles utilisent cqw : le gabarit s'adapte à l'écran et à l'impression. */
+.cert-actions { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--sp-4); flex-wrap: wrap; margin-bottom: var(--sp-3); }
+.cert-stage { container-type: inline-size; width: 100%; max-width: 1060px; margin: var(--sp-5) auto 0; }
+.certificate { width: 100%; aspect-ratio: 297 / 210; background: #FFFEFB; color: var(--c-navy); box-shadow: var(--shadow-lg); position: relative; padding: 2.6cqw; font-family: var(--font); }
+.cert-frame { position: relative; height: 100%; border: .45cqw solid var(--c-navy); outline: .15cqw solid var(--c-orange); outline-offset: -1.1cqw; display: flex; flex-direction: column; align-items: center; padding: 2.2cqw 4cqw 2cqw; text-align: center; overflow: hidden; }
+.cert-corner { position: absolute; width: 14cqw; height: 14cqw; background: var(--c-navy); opacity: .06; }
+.cert-corner-tl { top: 0; left: 0; clip-path: polygon(0 0, 100% 0, 0 100%); }
+.cert-corner-br { bottom: 0; right: 0; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.cert-head { display: flex; align-items: center; gap: 1.2cqw; }
+.cert-logo { height: 5.2cqw; width: auto; }
+.cert-academy { font-weight: 700; letter-spacing: .3em; text-transform: uppercase; font-size: 1.15cqw; color: var(--c-accent-text); border-left: .2cqw solid var(--c-orange); padding-left: 1.2cqw; }
+.cert-kicker { margin: 2cqw 0 0; font-size: 3.4cqw; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--c-navy); }
+.cert-intro { margin: 1.2cqw 0 0; font-size: 1.5cqw; color: var(--c-muted); }
+.cert-name { margin: .6cqw 0 .4cqw; font-size: 4.6cqw; line-height: 1.1; font-weight: 800; color: var(--c-navy); border-bottom: .25cqw solid var(--c-orange); padding: 0 3cqw .6cqw; max-width: 100%; overflow-wrap: anywhere; }
+.cert-text { margin: .8cqw 0 0; font-size: 1.5cqw; color: var(--c-muted); }
+.cert-profile { margin: .5cqw 0 0; font-size: 2.5cqw; font-weight: 700; line-height: 1.2; max-width: 80%; }
+.cert-sector { margin: .3cqw 0 0; font-size: 1.3cqw; color: var(--c-muted); }
+.cert-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2cqw; margin-top: auto; width: 100%; padding-top: 1.6cqw; }
+.cert-meta div { display: grid; gap: .2cqw; }
+.cert-meta span { font-size: 1.05cqw; text-transform: uppercase; letter-spacing: .12em; color: var(--c-muted); font-weight: 600; }
+.cert-meta strong { font-size: 2.2cqw; line-height: 1.15; }
+.cert-meta small { font-size: 1cqw; color: var(--c-muted); }
+.cert-code { font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace; letter-spacing: .06em; font-size: 2cqw !important; }
+.cert-foot { display: flex; align-items: center; gap: 2cqw; width: 100%; margin-top: 1.6cqw; padding-top: 1.2cqw; border-top: .12cqw solid var(--c-line-strong); text-align: left; }
+.cert-qr { width: 8.5cqw; height: 8.5cqw; flex: none; background: #fff; padding: .4cqw; border: .12cqw solid var(--c-line-strong); }
+.cert-qr svg { display: block; width: 100%; height: 100%; }
+.cert-mention { margin: 0; flex: 1; font-size: 1.05cqw; line-height: 1.5; color: var(--c-muted); }
+.cert-url { word-break: break-all; font-size: .9cqw; }
+.cert-seal { display: flex; align-items: center; gap: .8cqw; color: var(--c-orange-dark); font-weight: 800; font-size: 1.05cqw; line-height: 1.15; text-transform: uppercase; letter-spacing: .08em; }
+.cert-seal svg { width: 4cqw; height: 4cqw; }
+.dl { display: grid; gap: .6rem; margin: var(--sp-4) 0; }
+.dl div { display: grid; grid-template-columns: 9rem 1fr; gap: .5rem; }
+.dl dt { color: var(--c-muted); font-weight: 600; font-size: var(--fs-sm); } .dl dd { margin: 0; font-weight: 600; }
+.verified { border-color: var(--c-ok); }
+
+@media (max-width: 640px) {
+  /* sur téléphone : le gabarit paysage reste lisible grâce à un défilement horizontal doux, sinon trop petit */
+  .cert-stage { overflow-x: auto; }
+  .certificate { min-width: 640px; }
+}
+
+@page { size: A4 landscape; margin: 0; }
+@media print {
+  html, body { background: #fff !important; }
+  body > *:not(main), .no-print, .tabbar, .site-header, .site-footer, .toast, .update-bar { display: none !important; }
+  main { padding: 0 !important; }
+  .cert-page { padding: 0 !important; max-width: none; }
+  .cert-stage { max-width: none; width: 297mm; margin: 0; overflow: visible; }
+  .certificate { width: 297mm; height: 210mm; min-width: 0; aspect-ratio: auto; box-shadow: none; page-break-after: avoid; break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

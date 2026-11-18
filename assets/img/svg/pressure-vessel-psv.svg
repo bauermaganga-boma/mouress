@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Ballon sous pression V-201 protégé par une soupape de sécurité PSV-201 tarée à 10 barg (MAWP), avec transmetteur de pression PT-201 et alarme PAH-201 à 9 barg, et échelle des pressions : service 8 barg, alarme 9 barg, tarage 10 barg, surpression maximale 11 barg</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+.sg{fill:none;stroke:#061F44;stroke-width:2;stroke-dasharray:7 5}
+.t2{font-weight:bold;text-anchor:middle}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Ballon sous pression protégé par une soupape (PSV)</text>
+
+<!-- ballon -->
+<path d="M181,330H319V370Q319,419 270,419H230Q181,419 181,370Z" fill="#DCE6F5"/>
+<rect x="180" y="170" width="140" height="250" rx="50" class="s"/>
+<path d="M181,330H319" fill="none" stroke="#061F44" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="250" y="222" class="t2" style="font-size:16px">Ballon V-201</text>
+<text x="250" y="262" class="c">Gaz</text>
+<text x="250" y="300" class="c b">MAWP = 10 barg</text>
+<text x="250" y="380" class="c">Liquide</text>
+
+<!-- alimentation / soutirage -->
+<text x="30" y="288">Alimentation</text>
+<line x1="20" y1="300" x2="176" y2="300" stroke="#061F44" stroke-width="3.5" marker-end="url(#ar)"/>
+<line x1="250" y1="420" x2="250" y2="474" stroke="#061F44" stroke-width="3.5" marker-end="url(#ar)"/>
+<text x="266" y="458">Soutirage liquide</text>
+
+<!-- PSV -->
+<rect x="240" y="140" width="20" height="30" class="gr"/>
+<path d="M232,140H268L250,108Z" class="wh"/>
+<polyline points="250,108 238,100 262,92 238,84 262,76 250,70" fill="none" stroke="#061F44" stroke-width="2"/>
+<line x1="259" y1="124" x2="432" y2="124" class="or" marker-end="url(#ao)"/>
+<text x="275" y="114">Décharge vers la torche (flare)</text>
+<text x="226" y="96" class="e b">PSV 201</text>
+<text x="226" y="114" class="e">tarée à 10 barg</text>
+
+<!-- PT et PAH -->
+<path d="M180,215H132" class="ld"/>
+<circle cx="110" cy="215" r="22" class="wh"/>
+<text x="110" y="213" class="t2">PT</text><text x="110" y="229" class="t2">201</text>
+<circle cx="110" cy="150" r="22" class="wh"/>
+<line x1="88" y1="150" x2="132" y2="150" class="ld"/>
+<text x="110" y="146" class="t2">PAH</text><text x="110" y="165" class="t2">201</text>
+<path d="M110,193V174" class="sg" marker-end="url(#ar)"/>
+
+<!-- échelle de pression -->
+<text x="680" y="108" class="c b">Échelle de pression (barg)</text>
+<rect x="560" y="216" width="24" height="224" fill="#DCE6F5" stroke="#061F44" stroke-width="2.5"/>
+<rect x="560" y="160" width="24" height="56" fill="#FFE2BD" stroke="#061F44" stroke-width="2.5"/>
+<rect x="560" y="132" width="24" height="28" fill="#F28C28" stroke="#061F44" stroke-width="2.5"/>
+<path d="M584,440H594M584,216H594M584,188H594M584,160H594M584,132H594" class="s"/>
+<text x="598" y="445">0 barg</text>
+<text x="598" y="221">8 barg : service normal</text>
+<text x="598" y="193">9 barg : alarme PAH</text>
+<text x="598" y="165" class="b">10 barg : tarage PSV = MAWP</text>
+<text x="598" y="137" class="o">11 barg : 110 % de la MAWP</text>
+<text x="598" y="300">Plage de service</text>
+<text x="598" y="318">normal : 0 à 8 barg</text>
+</svg>

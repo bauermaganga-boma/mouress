@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Courbe IPR (Inflow Performance Relationship) : pression de fond dynamique Pwf en psi en fonction du débit q en stb/j, avec Pws = 3 000 psi, point d'essai Pwf = 1 500 psi pour q = 700 stb/j et débit maximal de 1 000 stb/j</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.gd{stroke:#C9CED8;stroke-width:1;fill:none}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Courbe IPR (Inflow Performance Relationship)</text>
+
+<path class="gd" d="M110,70H730M110,128.3H730M110,186.7H730M110,245H730M110,303.3H730M110,361.7H730M234,70V420M358,70V420M482,70V420M606,70V420M730,70V420"/>
+<line x1="110" y1="420" x2="748" y2="420" class="s" marker-end="url(#ar)"/>
+<line x1="110" y1="420" x2="110" y2="56" class="s" marker-end="url(#ar)"/>
+<g class="c">
+<text x="110" y="441">0</text><text x="234" y="441">200</text><text x="358" y="441">400</text><text x="482" y="441">600</text><text x="606" y="441">800</text><text x="730" y="441">1000</text>
+</g>
+<g class="e">
+<text x="100" y="425">0</text><text x="100" y="366">500</text><text x="100" y="308">1000</text><text x="100" y="250">1500</text><text x="100" y="191">2000</text><text x="100" y="133">2500</text><text x="100" y="75">3000</text>
+</g>
+<text x="420" y="474" class="c b">Débit de liquide q (stb/j)</text>
+<text x="30" y="245" class="c b" transform="rotate(-90 30 245)">Pression de fond dynamique Pwf (psi)</text>
+
+<!-- courbe IPR (Vogel) -->
+<polyline points="110,70 216.6,105 313.4,140 400.2,175 477,210 544,245 601,280 648.2,315 685.4,350 712.6,385 730,420" fill="none" stroke="#F28C28" stroke-width="4" stroke-linejoin="round"/>
+<text x="430" y="152">Courbe IPR (Vogel)</text>
+
+<!-- Pws -->
+<circle cx="110" cy="70" r="6" fill="#061F44"/>
+<text x="124" y="62" class="b">Pws = 3 000 psi (pression statique du réservoir)</text>
+
+<!-- point d'essai -->
+<path d="M110,245H544V420" fill="none" stroke="#061F44" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="544" cy="245" r="8" fill="#F28C28" stroke="#061F44" stroke-width="2.5"/>
+<text x="544" y="441" class="c o">700</text>
+<text x="150" y="300" class="b">Point d'essai du puits</text>
+<text x="150" y="320" class="o">Pwf = 1 500 psi</text>
+<text x="150" y="340" class="o">q = 700 stb/j</text>
+<path d="M300,306L536,250" class="ld"/>
+
+<!-- AOF -->
+<circle cx="730" cy="420" r="6" fill="#061F44"/>
+<text x="570" y="388" class="b">q max (AOF)</text>
+<text x="570" y="406" class="b">= 1 000 stb/j</text>
+<path d="M660,398L722,416" class="ld"/>
+</svg>

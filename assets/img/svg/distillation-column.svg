@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Colonne de distillation : alimentation, plateaux, condenseur de tête, ballon de reflux, distillat, rebouilleur et résidu de fond</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Colonne de distillation (schéma de principe)</text>
+
+<!-- colonne et plateaux -->
+<rect x="270" y="110" width="120" height="340" rx="40" class="bl"/>
+<path d="M272,145H368M292,175H388M272,205H368M292,235H388M272,265H368M292,295H388M272,325H368M292,355H388M272,385H368M292,415H388" fill="none" stroke="#061F44" stroke-width="2"/>
+
+<!-- alimentation -->
+<text x="60" y="240">Alimentation (charge)</text>
+<path d="M60,250H268" class="nv" marker-end="url(#ar)"/>
+
+<!-- tête : vapeur, condenseur, ballon, reflux, distillat -->
+<path d="M330,112V95H436" class="or" marker-end="url(#ao)"/>
+<rect x="440" y="75" width="80" height="40" class="gr"/>
+<polyline points="448,95 462,82 476,108 490,82 504,108 512,95" fill="none" stroke="#061F44" stroke-width="2"/>
+<text x="480" y="66" class="c b">Condenseur</text>
+<path d="M520,95H580V122" class="nv" marker-end="url(#ar)"/>
+<rect x="530" y="125" width="120" height="50" rx="25" class="gr"/>
+<text x="660" y="155">Ballon de reflux</text>
+<path d="M590,175V215H440V150H394" class="nv" marker-end="url(#ar)"/>
+<text x="470" y="207">Reflux</text>
+<path d="M590,215V268" class="nv" marker-end="url(#ar)"/>
+<text x="602" y="262" class="b">Distillat</text>
+<text x="602" y="280">(produit de tête)</text>
+
+<!-- fond : rebouilleur, résidu -->
+<path d="M390,425H438" class="nv" marker-end="url(#ar)"/>
+<rect x="440" y="405" width="80" height="40" class="gr"/>
+<polyline points="448,425 462,412 476,438 490,412 504,438 512,425" fill="none" stroke="#061F44" stroke-width="2"/>
+<path d="M480,405V375H394" class="or" marker-end="url(#ao)"/>
+<text x="400" y="367">Retour de vapeur</text>
+<text x="530" y="398">Fluide chauffant</text>
+<path d="M660,415H524" class="nv" marker-end="url(#ar)"/>
+<text x="530" y="440" class="b">Rebouilleur</text>
+<path d="M330,450V490" class="nv" marker-end="url(#ar)"/>
+<text x="345" y="482" class="b">Résidu (produit de fond)</text>
+
+<!-- libellés de la colonne -->
+<text x="262" y="190" class="e">Zone de rectification</text>
+<text x="262" y="330" class="e">Plateaux</text>
+<path d="M266,326H274" class="ld"/>
+<text x="262" y="390" class="e">Zone d'épuisement</text>
+</svg>

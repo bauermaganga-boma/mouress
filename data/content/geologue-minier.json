@@ -1,0 +1,850 @@
+{
+  "profile": "geologue-minier",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Cartographie et modèle géologique : de l'affleurement au bloc",
+      "theme": "Cartographie et modèle géologique",
+      "minutes": 9,
+      "body": "Le géologue minier transforme des observations dispersées (affleurements, fronts de gradins, galeries, sondages) en un **modèle géologique** utilisable pour planifier l'exploitation.\n\n**Mesures structurales.** La **direction** (strike) d'une couche est l'orientation d'une ligne horizontale du plan ; le **pendage** (dip) est l'angle que fait le plan avec l'horizontale, mesuré perpendiculairement à la direction, dans le sens de la plus grande pente. On les mesure à la boussole-clinomètre. Sur une coupe qui ne coupe pas la couche perpendiculairement à sa direction, on observe un **pendage apparent**, toujours inférieur ou égal au pendage vrai.\n\n**Objets géologiques.** Lithologies, contacts, plis, **failles** (cassures avec déplacement relatif des deux compartiments, par opposition aux **diaclases**, sans déplacement notable), veines, zones d'altération. En zone tropicale, le profil d'altération est déterminant : la **saprolite** est une roche altérée qui conserve sa texture et sa structure d'origine, surmontée de la **latérite** où ces structures ont disparu. Les teneurs, densités et propriétés métallurgiques varient fortement le long de ce profil.\n\n**Cartographie.** Elle suit des conventions précises : carte, coupes et logs aux mêmes échelles, légende unique, positionnement GPS ou topographique, photographies. En exploitation, on cartographie systématiquement les **fronts de gradin** et les **galeries** : cela permet de confirmer ou corriger le modèle, de repérer les failles avant qu'elles ne perturbent la production et d'anticiper les limites de minerai.\n\n**Du levé au modèle.** On interprète les contacts sur des coupes successives, puis on les relie en **surfaces et solides** (wireframes) représentant les unités et les enveloppes minéralisées. Le **modèle de blocs** découpe ensuite le volume en blocs auxquels on affecte teneur, densité, domaine et catégorie de confiance. Un wireframe décrit la géométrie, le modèle de blocs décrit les propriétés.\n\n**Épaisseur vraie.** La longueur recoupée par un sondage n'est pas l'épaisseur réelle d'une couche : si α est l'angle entre l'axe du sondage et le plan de la couche, épaisseur vraie = longueur forée × sin α. Un sondage vertical qui recoupe 20 m d'une couche pendant à 60° donne donc 20 × cos 60° = 10 m d'épaisseur vraie.\n\n**Pendage apparent entre deux sondages.** Si le toit d'une couche est à 40 m de profondeur en A et 60 m en B, deux sondages verticaux distants de 100 m, la pente apparente vaut arctan (20 / 100) ≈ 11,3°.",
+      "keyPoints": [
+        "Direction et pendage décrivent l'orientation d'une couche ; le pendage apparent est inférieur ou égal au vrai.",
+        "Faille = cassure avec rejet ; diaclase = sans déplacement ; saprolite conserve la structure de la roche mère.",
+        "Wireframes pour la géométrie, modèle de blocs pour les propriétés.",
+        "Épaisseur vraie = longueur forée × sin (angle entre le sondage et le plan)."
+      ],
+      "img": "svg/underground-mine-layout.svg",
+      "imgAlt": "Plan d'une mine souterraine avec galeries de traçage et chantiers"
+    },
+    {
+      "id": "m2",
+      "title": "Sondages carottés : forer, décrire, échantillonner",
+      "theme": "Sondages carottés et description",
+      "minutes": 9,
+      "body": "Le sondage est l'outil principal de reconnaissance du sous-sol. Le **carottage au diamant** ramène un cylindre continu de roche : il permet la description lithologique et structurale, la mesure de densité, des essais géotechniques et un échantillonnage de bonne qualité. Les calibres courants sont **BQ** (environ 36 mm de carotte), **NQ** (environ 48 mm) et **HQ** (environ 63,5 mm) : plus le diamètre est grand, plus l'échantillon est volumineux et la récupération meilleure, mais plus le forage coûte cher. La **circulation inverse (RC)** ramène des débris (cuttings) : plus rapide et moins chère, elle ne donne ni structure ni carotte continue.\n\n**Récupération et RQD.** Le **taux de récupération** d'une passe est (longueur de carotte récupérée / longueur forée) × 100 : 2,7 m récupérés sur 3,0 m forés donnent 90 %. Une récupération faible dans une zone friable peut fausser les teneurs, car on perd sélectivement les fines ou les phases tendres. On y remédie par un forage au **triple tube**, une vitesse adaptée ou un autre mode de forage. Le **RQD** (Rock Quality Designation) renseigne sur la fracturation.\n\n**Levé de déviation.** Un sondage dévie de sa trajectoire : on mesure azimut et inclinaison à intervalles réguliers pour connaître la position réelle des intersections.\n\n**Log géologique.** Pour chaque intervalle, on note la lithologie, l'altération, la minéralisation, les structures (avec angles par rapport à l'axe), la couleur, la texture, le RQD et la récupération. La carotte est photographiée humide et sèche, repérée par des étiquettes de profondeur, puis stockée dans des caisses.\n\n**Échantillonnage.** On fend la carotte longitudinalement : une moitié part à l'analyse, l'autre est conservée comme **témoin**. Les intervalles d'échantillonnage (souvent 1 m) respectent les **contacts géologiques** : on ne mélange pas deux unités dans un même échantillon. Le numéro d'échantillon, la profondeur, la masse et le laboratoire destinataire sont enregistrés.\n\n**Épaisseur vraie en sondage incliné.** Si l'angle entre l'axe du sondage et le plan d'une veine est de 30° et que la longueur forée dans la veine est de 8 m, l'épaisseur vraie est 8 × sin 30° = 4 m.",
+      "keyPoints": [
+        "Carotte = information continue ; RC = rapide mais sans structure ni carotte.",
+        "Récupération = longueur récupérée / longueur forée ; une récupération faible biaise souvent les teneurs.",
+        "Levé de déviation pour connaître la trajectoire réelle.",
+        "Échantillonner en respectant les contacts géologiques, garder la moitié de carotte en témoin."
+      ],
+      "img": "photo/land-drilling-rig.jpg",
+      "imgAlt": "Photo de contexte : appareil de forage sur plateforme."
+    },
+    {
+      "id": "m3",
+      "title": "Teneurs, composites et teneur de coupure",
+      "theme": "Teneurs et teneur de coupure",
+      "minutes": 9,
+      "body": "Une **teneur** exprime la quantité d'élément utile par unité de masse de minerai : g/t pour l'or, % pour le manganèse ou le fer. Toute estimation commence par le calcul de teneurs moyennes représentatives.\n\n**Moyenne pondérée par la longueur.** Une intersection se compose d'intervalles de longueurs différentes : on pondère chaque teneur par sa longueur. Pour 2 m à 5 g/t, 1 m à 2 g/t et 3 m à 0,5 g/t, on obtient (2 × 5 + 1 × 2 + 3 × 0,5) / 6 = 13,5 / 6 = 2,25 g/t. Quand les densités diffèrent, on pondère par **longueur × densité** : 2 m à 4 g/t (densité 2,0) et 2 m à 1 g/t (densité 3,0) donnent (2 × 2 × 4 + 2 × 3 × 1) / (2 × 2 + 2 × 3) = 22 / 10 = 2,2 g/t. Pour des blocs, on pondère par le **tonnage** : 1 000 t à 2 g/t et 3 000 t à 1 g/t donnent 1,25 g/t.\n\n**Régularisation (composites).** Les échantillons de longueurs variées sont ramenés à une longueur commune (par exemple 2 m) pour que chaque donnée ait le même poids dans l'estimation.\n\n**Valeurs extrêmes.** Une valeur isolée très élevée (250 g/t parmi des voisins à 2 à 5 g/t) peut dominer une moyenne. On l'**écrête** (capping ou top-cut) à une valeur justifiée statistiquement et documentée, ou on limite son rayon d'influence.\n\n**Teneur de coupure.** C'est la teneur minimale à partir de laquelle un bloc rapporte plus qu'il ne coûte à extraire et traiter. Pour un produit vendu au gramme : teneur de coupure = coût total par tonne / (récupération × prix par gramme). Exemple : 24 $/t, récupération 80 %, prix 60 $/g donnent 24 / (0,8 × 60) = 0,5 g/t. Si le coût de traitement monte, la teneur de coupure monte ; si le prix monte, elle baisse.\n\n**Courbe tonnage-teneur.** Quand on relève la teneur de coupure, le tonnage de minerai diminue mais sa teneur moyenne augmente. Choisir la teneur de coupure revient à arbitrer entre tonnage, teneur et durée de vie de la mine.\n\n**Teneur de coupure et catégorie.** La teneur de coupure d'une ressource reflète des perspectives d'extraction raisonnables ; celle d'une réserve intègre en plus les facteurs modificateurs. Les paramètres économiques précis se vérifient dans l'étude du projet.",
+      "keyPoints": [
+        "Pondérer par la longueur (et la densité, ou le tonnage pour les blocs).",
+        "Composites : ramener les échantillons à une longueur commune.",
+        "Écrêtage justifié des valeurs extrêmes.",
+        "Teneur de coupure = coût / (récupération × prix) ; la monter réduit le tonnage et relève la teneur moyenne."
+      ],
+      "img": "photo/open-pit-mine.jpg",
+      "imgAlt": "Photo d'une fosse à ciel ouvert avec gradins et pistes."
+    },
+    {
+      "id": "m4",
+      "title": "Ressources et réserves : JORC, NI 43-101 et facteurs modificateurs",
+      "theme": "Ressources et réserves (JORC, NI 43-101)",
+      "minutes": 9,
+      "body": "Les codes de déclaration publique (JORC pour l'Australasie, **NI 43-101** pour le Canada, tous deux alignés sur le modèle CRIRSCO) encadrent la façon dont une société communique ses ressources et réserves. Le **NI 43-101** est une norme canadienne d'information sur les projets miniers : elle impose, entre autres, un rapport technique signé par une **personne qualifiée**. Dans le code JORC, ce rôle revient à la **personne compétente**. Dans les deux cas, il s'agit d'un professionnel expérimenté, membre d'un organisme reconnu, qui engage sa responsabilité.\n\n**Ressources minérales.** Une ressource est une concentration naturelle de matière présentant des **perspectives raisonnables d'extraction économique éventuelle**. Elle est classée selon la **confiance géologique** croissante :\n- **Présumée** (inferred) : continuité supposée, données limitées.\n- **Indiquée** : données suffisantes pour estimer tonnage et teneur avec une confiance raisonnable.\n- **Mesurée** : confiance élevée, données denses et fiables.\nL'estimation du tonnage contenu est simple : volume × densité × teneur. Par exemple, 2 000 000 m³ à 2,5 t/m³ font 5 Mt ; à 1,6 g/t, cela représente 8 t d'or contenu.\n\n**Réserves minérales.** Une réserve est la partie économiquement exploitable d'une ressource **Mesurée ou Indiquée**, après application des **facteurs modificateurs** : minier (méthode, dilution, pertes), métallurgique (récupération), économique, commercial, juridique, environnemental, social et gouvernemental, démontrés par une étude au moins de niveau préfaisabilité. Elle se classe en **Probable** (issue d'une ressource Indiquée, ou parfois Mesurée) et **Prouvée** (issue d'une ressource Mesurée). Une ressource **Présumée ne peut jamais être convertie en réserve**.\n\n**Pourquoi la réserve est plus petite que la ressource.** Pertes à l'extraction, dilution, zones exclues, rendements de traitement et seuils économiques réduisent le volume retenu. Annoncer des « réserves » qui incluent de la ressource présumée est non conforme.\n\n**Bonnes pratiques.** On documente les hypothèses, la qualité des données, la méthode d'estimation, la validation et les risques. Les mêmes mots ne doivent pas être utilisés pour des estimations qui ne respectent pas le code. Pour toute application réglementaire, on se réfère au texte à jour du code et à l'avis de la personne compétente ou qualifiée.",
+      "keyPoints": [
+        "NI 43-101 = norme canadienne ; JORC = code australasien ; personne qualifiée ou compétente signe.",
+        "Ressources : Présumée < Indiquée < Mesurée ; elles exigent des perspectives raisonnables d'extraction économique.",
+        "Réserves : Probable ou Prouvée, issues de ressources Indiquées ou Mesurées après facteurs modificateurs.",
+        "Une ressource Présumée ne devient jamais réserve directement."
+      ],
+      "img": "svg/underground-mine-layout.svg",
+      "imgAlt": "Plan de mine souterraine illustrant corps minéralisé, galeries et chantiers"
+    },
+    {
+      "id": "m5",
+      "title": "Contrôle des teneurs et géostatistique",
+      "theme": "Contrôle des teneurs et géostatistique",
+      "minutes": 9,
+      "body": "**Contrôle des teneurs (grade control).** En exploitation, le modèle de ressources n'a pas l'échelle d'un gradin. On resserre l'information, par des sondages de contrôle ou des échantillons de **trous de tir**, pour délimiter minerai, minerai de faible teneur et stérile à l'échelle de la sélectivité minière. Le résultat est un plan de gradin avec polygones de destination (usine, stock, verse).\n\n**Réconciliation.** On compare les tonnages et teneurs prévus par le modèle, ceux du contrôle de teneur et ceux reçus à l'usine. Si le modèle annonce 100 000 t à 2,0 g/t et que l'usine reçoit 100 000 t à 1,7 g/t, le rapport est 0,85 : un écart de − 15 %. Les écarts persistants imposent de revoir les échantillonnages, la dilution, les densités ou les domaines.\n\n**Contrôle qualité du sondage.** Étalons, blancs et doublons sont insérés dans les lots envoyés au laboratoire. Si un blanc passé après un échantillon très riche ressort à 0,8 g/t, on demande une enquête et une réanalyse du lot avant de l'utiliser.\n\n**Domaines.** On découpe le gisement en domaines géologiques homogènes (lithologie, altération, minéralisation) pour ne pas mélanger des populations statistiques différentes.\n\n**Variogramme.** Il décrit comment la ressemblance entre deux échantillons diminue avec la distance. Ses paramètres : **effet de pépite** (variabilité à très courte distance, erreurs d'échantillonnage et d'analyse comprises), **portée** (distance au-delà de laquelle les échantillons ne sont plus corrélés) et **palier** (niveau où la courbe se stabilise, proche de la variance). Si la portée est de 80 m et que les sondages sont espacés de 200 m, deux sondages voisins n'apportent pas d'information corrélée : l'estimation sera peu fiable et la classification se limitera à une catégorie de faible confiance.\n\n**Krigeage.** Estimateur linéaire non biaisé à variance d'estimation minimale, il utilise le variogramme pour pondérer les échantillons voisins ; il fournit aussi une variance d'estimation. D'autres méthodes (inverse des distances) existent.\n\n**Support.** Plus le volume de support augmente (blocs de 10 m comparés à des échantillons de 1 m), plus la variabilité diminue : la courbe tonnage-teneur dépend du support choisi. Un bloc très petit par rapport à l'espacement des sondages donne une estimation locale peu fiable ; un ordre de grandeur courant est un bloc de l'ordre du quart à la moitié de l'espacement.",
+      "keyPoints": [
+        "Grade control : informations serrées pour délimiter minerai et stérile à l'échelle du gradin.",
+        "Réconciliation modèle / contrôle / usine ; un écart de − 15 % impose une enquête.",
+        "Variogramme : pépite, portée, palier ; krigeage = estimateur non biaisé de variance minimale.",
+        "Support plus grand = variabilité plus faible ; blocs adaptés à l'espacement des sondages."
+      ],
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Coupe d'un gradin avec trous de tir, crête et pied"
+    }
+  ],
+  "questions": [
+    {
+      "id": "geologue-minier-001",
+      "theme": "Cartographie et modèle géologique",
+      "level": 1,
+      "q": "Le pendage d'une couche géologique est :",
+      "choices": [
+        "L'orientation de la ligne horizontale du plan de la couche",
+        "L'angle que fait la couche avec l'horizontale, mesuré dans le sens de la plus grande pente",
+        "L'épaisseur de la couche mesurée à la verticale",
+        "La distance entre deux affleurements de la couche"
+      ],
+      "answer": 1,
+      "explain": "Le pendage est une inclinaison (un angle) ; la direction est l'orientation d'une ligne horizontale du plan, perpendiculaire au sens du pendage.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-002",
+      "theme": "Cartographie et modèle géologique",
+      "level": 1,
+      "q": "Comment définit-on la direction (strike) d'une couche ?",
+      "choices": [
+        "L'angle de la couche avec l'horizontale",
+        "La direction du sondage qui la recoupe",
+        "La distance entre deux failles",
+        "L'orientation d'une ligne horizontale contenue dans le plan de la couche"
+      ],
+      "answer": 3,
+      "explain": "La direction se mesure par rapport au nord ; elle est perpendiculaire au sens du pendage.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-003",
+      "theme": "Cartographie et modèle géologique",
+      "level": 1,
+      "q": "Sur un plan de mine souterraine, une galerie de traçage rencontre une cassure qui décale la couche minéralisée de 3 m, les deux compartiments s'étant déplacés l'un par rapport à l'autre. De quoi s'agit-il ?",
+      "img": "svg/underground-mine-layout.svg",
+      "imgAlt": "Plan d'une mine souterraine : galeries, chantiers et décalage d'une couche par une cassure de 3 m.",
+      "choices": [
+        "D'une faille",
+        "D'une diaclase",
+        "D'un litage",
+        "D'une schistosité"
+      ],
+      "answer": 0,
+      "explain": "Une faille est une cassure avec déplacement relatif des deux compartiments ; une diaclase est une fissure sans déplacement notable.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-004",
+      "theme": "Cartographie et modèle géologique",
+      "level": 2,
+      "q": "Dans un profil d'altération tropical, la saprolite est :",
+      "choices": [
+        "Un sol argileux sans trace de la structure d'origine",
+        "Une roche saine non altérée",
+        "Une roche altérée qui conserve la texture et la structure de la roche mère",
+        "Une cuirasse ferrugineuse indurée"
+      ],
+      "answer": 2,
+      "explain": "La saprolite préserve la structure originelle ; la latérite, au-dessus, l'a perdue. Cette distinction compte pour les teneurs, densités et récupérations.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-005",
+      "theme": "Cartographie et modèle géologique",
+      "level": 3,
+      "q": "Sur une coupe non perpendiculaire à la direction de la couche, quel rapport existe entre pendage apparent et pendage vrai ?",
+      "choices": [
+        "Le pendage apparent est toujours supérieur au pendage vrai",
+        "Les deux sont toujours égaux",
+        "Le pendage apparent est inférieur ou égal au pendage vrai",
+        "Le pendage apparent est indépendant du pendage vrai"
+      ],
+      "answer": 2,
+      "explain": "Le pendage vrai est le maximum d'inclinaison du plan ; dans toute autre direction de coupe, l'inclinaison observée est plus faible, ou égale dans la direction du pendage.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-006",
+      "theme": "Cartographie et modèle géologique",
+      "level": 2,
+      "q": "Pourquoi cartographie-t-on systématiquement les fronts de gradin en exploitation ?",
+      "img": "photo/open-pit-mine.jpg",
+      "imgAlt": "Photo d'une fosse à ciel ouvert avec gradins et pistes.",
+      "choices": [
+        "Pour confirmer ou corriger le modèle, repérer failles et contacts et anticiper les limites de minerai",
+        "Pour remplacer les sondages définitivement",
+        "Pour mesurer uniquement la hauteur des gradins",
+        "Pour tracer les pistes de roulage"
+      ],
+      "answer": 0,
+      "explain": "Le front expose la géologie réelle : la cartographie valide le modèle, détecte les accidents avant qu'ils ne perturbent la production et guide le contrôle des teneurs.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-007",
+      "theme": "Cartographie et modèle géologique",
+      "level": 2,
+      "q": "Quelle est la différence essentielle entre un wireframe et un modèle de blocs ?",
+      "choices": [
+        "Le wireframe contient les teneurs et le modèle de blocs la topographie",
+        "Le wireframe décrit la géométrie des unités ; le modèle de blocs attribue à chaque bloc teneur, densité et domaine",
+        "Les deux sont identiques et interchangeables",
+        "Le modèle de blocs sert uniquement à dessiner la carte de surface"
+      ],
+      "answer": 1,
+      "explain": "Les surfaces et solides interprétés délimitent unités et enveloppes ; on remplit ensuite un modèle de blocs de valeurs estimées (teneur, densité, catégorie).",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-008",
+      "theme": "Cartographie et modèle géologique",
+      "level": 3,
+      "q": "Un sondage vertical recoupe 20 m d'une couche dont le pendage est de 60°. Quelle est l'épaisseur vraie de la couche ?",
+      "choices": [
+        "20 m",
+        "17,3 m",
+        "40 m",
+        "10 m"
+      ],
+      "answer": 3,
+      "explain": "Épaisseur vraie = longueur × cos(pendage) pour un sondage vertical : 20 × cos 60° = 10 m. (Équivalent : angle entre l'axe et le plan = 30°, soit 20 × sin 30°.)",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-009",
+      "theme": "Cartographie et modèle géologique",
+      "level": 3,
+      "q": "Deux sondages verticaux A et B, distants de 100 m à l'horizontale, recoupent le toit d'une couche à 40 m (A) et 60 m (B) de profondeur, avec la même altitude de collet. Quel est le pendage apparent de la couche dans la direction A vers B ?",
+      "choices": [
+        "Environ 20°",
+        "Environ 21,8°",
+        "Environ 45°",
+        "Environ 11,3°"
+      ],
+      "answer": 3,
+      "explain": "Dénivelé 60 − 40 = 20 m sur 100 m : tan δ = 0,2 soit δ ≈ 11,3°.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-010",
+      "theme": "Sondages carottés et description",
+      "level": 1,
+      "q": "Que mesure le taux de récupération d'une passe de carottage ?",
+      "img": "photo/land-drilling-rig.jpg",
+      "imgAlt": "Photo de contexte : appareil de forage sur plateforme.",
+      "choices": [
+        "Le diamètre de la carotte rapporté à celui du trou",
+        "La longueur de carotte récupérée rapportée à la longueur forée",
+        "La masse de carotte rapportée à celle de l'eau de forage",
+        "Le nombre de morceaux de plus de 10 cm"
+      ],
+      "answer": 1,
+      "explain": "Récupération (%) = longueur récupérée / longueur forée × 100 ; une valeur faible traduit une perte de matière.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-011",
+      "theme": "Sondages carottés et description",
+      "level": 1,
+      "q": "Une passe de 3,0 m ramène 2,7 m de carotte. Quel est le taux de récupération ?",
+      "choices": [
+        "10 %",
+        "81 %",
+        "90 %",
+        "111 %"
+      ],
+      "answer": 2,
+      "explain": "2,7 / 3,0 = 0,90, soit 90 %.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-012",
+      "theme": "Sondages carottés et description",
+      "level": 1,
+      "q": "Pourquoi fend-on la carotte en deux avant l'échantillonnage ?",
+      "img": "photo/land-drilling-rig.jpg",
+      "imgAlt": "Photo de contexte : appareil de forage sur plateforme.",
+      "choices": [
+        "Une moitié part à l'analyse, l'autre est conservée comme témoin",
+        "Pour pouvoir analyser les deux moitiés dans deux laboratoires sans témoin",
+        "Pour faciliter le transport des caisses",
+        "Pour réduire la teneur de l'échantillon"
+      ],
+      "answer": 0,
+      "explain": "La moitié conservée permet une vérification, un nouvel échantillonnage ou des essais ultérieurs ; elle reste la preuve physique du sondage.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-013",
+      "theme": "Sondages carottés et description",
+      "level": 2,
+      "q": "Parmi les calibres de carottage BQ, NQ et HQ, lequel donne la carotte de plus grand diamètre ?",
+      "choices": [
+        "HQ",
+        "BQ",
+        "NQ",
+        "Tous trois donnent le même diamètre"
+      ],
+      "answer": 0,
+      "explain": "Les diamètres de carotte sont d'environ 36 mm (BQ), 48 mm (NQ) et 63,5 mm (HQ).",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-014",
+      "theme": "Sondages carottés et description",
+      "level": 2,
+      "q": "Quel est l'avantage principal du carottage au diamant sur la circulation inverse (RC) ?",
+      "img": "photo/land-drilling-rig.jpg",
+      "imgAlt": "Photo de contexte : appareil de forage sur plateforme.",
+      "choices": [
+        "Il est toujours plus rapide et moins coûteux",
+        "Il ne nécessite aucune eau ni machine",
+        "Il fournit une carotte continue qui permet de décrire structures et lithologies et de mesurer la densité",
+        "Il évite tout levé de déviation"
+      ],
+      "answer": 2,
+      "explain": "La carotte est un échantillon intact : structure, densité et géotechnique en sont issues. La RC est plus rapide et moins chère mais ne donne que des débris.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-015",
+      "theme": "Sondages carottés et description",
+      "level": 2,
+      "q": "Pourquoi les intervalles d'échantillonnage d'une carotte doivent-ils respecter les contacts géologiques ?",
+      "choices": [
+        "Pour produire des échantillons de masse identique quelle que soit la lithologie",
+        "Pour réduire le nombre d'analyses facturées",
+        "Pour éviter d'avoir à décrire la carotte",
+        "Pour ne pas mélanger deux unités différentes dans un même échantillon"
+      ],
+      "answer": 3,
+      "explain": "Un échantillon à cheval sur un contact donne une teneur moyenne sans signification géologique et dégrade la modélisation.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-016",
+      "theme": "Sondages carottés et description",
+      "level": 2,
+      "q": "À quoi sert le levé de déviation (azimut et inclinaison) d'un sondage ?",
+      "img": "photo/land-drilling-rig.jpg",
+      "imgAlt": "Photo de contexte : appareil de forage sur plateforme.",
+      "choices": [
+        "À augmenter la récupération de la carotte",
+        "À connaître la position réelle des intersections le long du trou",
+        "À mesurer la teneur de la roche en continu",
+        "À remplacer le log géologique"
+      ],
+      "answer": 1,
+      "explain": "Un sondage dévie ; sans levé, la position tridimensionnelle des intersections serait fausse et le modèle erroné.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-017",
+      "theme": "Sondages carottés et description",
+      "level": 3,
+      "q": "Un sondage incliné recoupe une veine dont le plan fait un angle de 30° avec l'axe du trou. La longueur forée dans la veine est de 8 m. Quelle est l'épaisseur vraie ?",
+      "choices": [
+        "8 m",
+        "4 m",
+        "6,9 m",
+        "16 m"
+      ],
+      "answer": 1,
+      "explain": "Épaisseur vraie = longueur forée × sin(angle entre l'axe et le plan) = 8 × sin 30° = 4 m.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-018",
+      "theme": "Sondages carottés et description",
+      "level": 3,
+      "q": "La récupération de carotte n'est que de 55 % dans une zone minéralisée friable, alors qu'elle dépasse 95 % dans la roche dure voisine. Quel est le risque principal ?",
+      "img": "photo/land-drilling-rig.jpg",
+      "imgAlt": "Photo de contexte : appareil de forage sur plateforme.",
+      "choices": [
+        "Aucun, la teneur reste exacte quelle que soit la récupération",
+        "Une surestimation certaine du tonnage uniquement",
+        "Un simple retard dans le planning",
+        "Un biais de teneur, car la perte est sélective et la carotte récupérée n'est pas représentative"
+      ],
+      "answer": 3,
+      "explain": "La matière perdue (souvent fine ou tendre) peut avoir une teneur différente. On remédie par triple tube, autre mode de forage ou, au besoin, sondages jumelés.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-019",
+      "theme": "Teneurs et teneur de coupure",
+      "level": 1,
+      "q": "Pourquoi calcule-t-on une teneur moyenne pondérée par la longueur sur une intersection de sondage ?",
+      "choices": [
+        "Parce que les intervalles ont des longueurs différentes et pèsent différemment dans la moyenne",
+        "Parce que la teneur dépend de la couleur de la carotte",
+        "Pour ignorer les intervalles de faible teneur",
+        "Pour que la moyenne soit toujours la plus élevée possible"
+      ],
+      "answer": 0,
+      "explain": "Une moyenne simple donne le même poids à un intervalle d'un mètre et à un intervalle de trois mètres ; la pondération restitue la teneur réelle de la longueur totale.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-020",
+      "theme": "Teneurs et teneur de coupure",
+      "level": 2,
+      "q": "Une intersection comprend 2 m à 5 g/t, 1 m à 2 g/t et 3 m à 0,5 g/t. Quelle est sa teneur moyenne pondérée ?",
+      "choices": [
+        "2,5 g/t",
+        "3,5 g/t",
+        "2,25 g/t",
+        "1,5 g/t"
+      ],
+      "answer": 2,
+      "explain": "(2 × 5 + 1 × 2 + 3 × 0,5) / 6 = 13,5 / 6 = 2,25 g/t. La moyenne simple (2,5 g/t) est fausse.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-021",
+      "theme": "Teneurs et teneur de coupure",
+      "level": 2,
+      "q": "Un bloc A contient 1 000 t à 2 g/t et un bloc B 3 000 t à 1 g/t. Quelle est la teneur moyenne de l'ensemble ?",
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Gradin découpé en blocs de minerai de tonnages différents.",
+      "choices": [
+        "1,5 g/t",
+        "1,0 g/t",
+        "1,25 g/t",
+        "2,0 g/t"
+      ],
+      "answer": 2,
+      "explain": "(1 000 × 2 + 3 000 × 1) / 4 000 = 5 000 / 4 000 = 1,25 g/t, pondération par le tonnage.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-022",
+      "theme": "Teneurs et teneur de coupure",
+      "level": 1,
+      "q": "Que représente la teneur de coupure économique ?",
+      "choices": [
+        "La teneur minimale à partir de laquelle une tonne couvre ses coûts d'extraction et de traitement",
+        "La teneur maximale que peut traiter l'usine",
+        "La teneur moyenne de tous les échantillons",
+        "La teneur mesurée au laboratoire dans un étalon"
+      ],
+      "answer": 0,
+      "explain": "En dessous de la teneur de coupure, le bloc coûte plus qu'il ne rapporte : il est traité comme stérile ou stocké.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-023",
+      "theme": "Teneurs et teneur de coupure",
+      "level": 2,
+      "q": "Coût total 24 $/t de minerai ; récupération 80 % ; prix du métal 60 $/g. Quelle est la teneur de coupure ?",
+      "choices": [
+        "0,4 g/t",
+        "0,5 g/t",
+        "2,0 g/t",
+        "0,32 g/t"
+      ],
+      "answer": 1,
+      "explain": "Teneur de coupure = coût / (récupération × prix) = 24 / (0,8 × 60) = 24 / 48 = 0,5 g/t.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-024",
+      "theme": "Teneurs et teneur de coupure",
+      "level": 2,
+      "q": "À prix du métal constant, que devient la teneur de coupure si le coût de traitement augmente ?",
+      "choices": [
+        "Elle diminue",
+        "Elle reste identique",
+        "Elle devient nulle",
+        "Elle augmente"
+      ],
+      "answer": 3,
+      "explain": "Un coût plus élevé exige une teneur plus élevée pour rester rentable : le numérateur de la formule augmente.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-025",
+      "theme": "Teneurs et teneur de coupure",
+      "level": 2,
+      "q": "Quand on relève la teneur de coupure, que deviennent le tonnage et la teneur moyenne du minerai ?",
+      "img": "photo/open-pit-mine.jpg",
+      "imgAlt": "Photo d'une fosse à ciel ouvert avec gradins et pistes.",
+      "choices": [
+        "Le tonnage et la teneur moyenne augmentent",
+        "Le tonnage augmente et la teneur moyenne diminue",
+        "Les deux restent identiques",
+        "Le tonnage diminue et la teneur moyenne augmente"
+      ],
+      "answer": 3,
+      "explain": "Moins de blocs passent le seuil (tonnage en baisse), mais ceux qui le passent sont plus riches : c'est la logique de la courbe tonnage-teneur.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-026",
+      "theme": "Teneurs et teneur de coupure",
+      "level": 3,
+      "q": "Un échantillon isolé titre 250 g/t d'or alors que les échantillons voisins sont entre 2 et 5 g/t. Quelle pratique est usuelle avant l'estimation ?",
+      "choices": [
+        "La supprimer sans trace écrite",
+        "Écrêter (top-cut) la valeur à un seuil justifié statistiquement et documenté, ou limiter son rayon d'influence",
+        "La conserver telle quelle sans aucune analyse",
+        "La multiplier par la densité du minerai"
+      ],
+      "answer": 1,
+      "explain": "Une valeur extrême non traitée peut dominer l'estimation locale et surestimer la teneur ; l'écrêtage doit être justifié et documenté.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-027",
+      "theme": "Teneurs et teneur de coupure",
+      "level": 3,
+      "q": "2 m à 4 g/t (densité 2,0 t/m³) puis 2 m à 1 g/t (densité 3,0 t/m³). Quelle est la teneur moyenne pondérée par longueur et densité ?",
+      "choices": [
+        "2,5 g/t",
+        "2,0 g/t",
+        "2,2 g/t",
+        "3,0 g/t"
+      ],
+      "answer": 2,
+      "explain": "(2 × 2,0 × 4 + 2 × 3,0 × 1) / (2 × 2,0 + 2 × 3,0) = 22 / 10 = 2,2 g/t. La moyenne simple (2,5 g/t) ignore la différence de densité.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-028",
+      "theme": "Ressources et réserves (JORC, NI 43-101)",
+      "level": 1,
+      "q": "Dans l'ordre de confiance géologique croissante, les catégories de ressources minérales sont :",
+      "choices": [
+        "Présumée, Indiquée, Mesurée",
+        "Mesurée, Indiquée, Présumée",
+        "Indiquée, Présumée, Mesurée",
+        "Présumée, Mesurée, Indiquée"
+      ],
+      "answer": 0,
+      "explain": "La confiance dans la continuité et l'estimation augmente de la ressource Présumée à la Mesurée, avec la densité et la qualité des données.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-029",
+      "theme": "Ressources et réserves (JORC, NI 43-101)",
+      "level": 1,
+      "q": "Le NI 43-101 est :",
+      "choices": [
+        "Une norme canadienne encadrant la déclaration publique d'informations techniques sur les projets miniers",
+        "Un code australien de classification des produits pétroliers",
+        "Une norme ISO de laboratoire d'analyses",
+        "Une règle comptable de l'OHADA"
+      ],
+      "answer": 0,
+      "explain": "C'est une norme canadienne, alignée sur le modèle CRIRSCO comme le code JORC australasien, qui impose notamment l'intervention d'une personne qualifiée.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-030",
+      "theme": "Ressources et réserves (JORC, NI 43-101)",
+      "level": 2,
+      "q": "Une ressource minérale Présumée peut-elle être convertie directement en réserve ?",
+      "choices": [
+        "Oui, si le prix du métal augmente",
+        "Oui, si la teneur dépasse la teneur de coupure",
+        "Non, il faut qu'elle soit d'abord requalifiée Indiquée ou Mesurée par des données complémentaires",
+        "Oui, après avis du comptable"
+      ],
+      "answer": 2,
+      "explain": "Les codes interdisent d'inclure de la ressource Présumée dans les réserves : la confiance géologique est jugée insuffisante.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-031",
+      "theme": "Ressources et réserves (JORC, NI 43-101)",
+      "level": 2,
+      "q": "Quels éléments transforment une ressource Indiquée ou Mesurée en réserve ?",
+      "choices": [
+        "La seule augmentation du nombre de sondages",
+        "La décision unilatérale du directeur général",
+        "Le volume du stock de minerai déjà extrait",
+        "Les facteurs modificateurs : minier, métallurgique, économique, juridique, environnemental, social et gouvernemental, démontrés par une étude"
+      ],
+      "answer": 3,
+      "explain": "Une réserve exige la démonstration, au niveau d'une étude de préfaisabilité au moins, que l'extraction est techniquement, économiquement et réglementairement réalisable.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-032",
+      "theme": "Ressources et réserves (JORC, NI 43-101)",
+      "level": 2,
+      "q": "Qui engage sa responsabilité sur la déclaration des ressources dans un rapport NI 43-101 (ou JORC) ?",
+      "img": "svg/underground-mine-layout.svg",
+      "imgAlt": "Plan de mine souterraine : corps minéralisé et galeries.",
+      "choices": [
+        "Le directeur financier de l'entreprise",
+        "Une personne qualifiée (NI 43-101) ou compétente (JORC), professionnel expérimenté membre d'un organisme reconnu",
+        "Le client acheteur de la production",
+        "Tout géologue de l'équipe, sans condition particulière"
+      ],
+      "answer": 1,
+      "explain": "Les codes exigent un professionnel qui répond de la méthode et des classifications, afin de protéger les investisseurs.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-033",
+      "theme": "Ressources et réserves (JORC, NI 43-101)",
+      "level": 3,
+      "q": "Une minéralisation à 0,1 g/t d'or se trouve à 800 m de profondeur, sans aucune perspective d'extraction économique. Peut-elle être déclarée ressource minérale ?",
+      "choices": [
+        "Oui, toute minéralisation prouvée par un sondage est une ressource",
+        "Non, car une ressource doit présenter des perspectives raisonnables d'extraction économique éventuelle",
+        "Oui, à condition de la classer Mesurée",
+        "Oui, à condition qu'elle soit près d'un village"
+      ],
+      "answer": 1,
+      "explain": "Le critère de perspectives raisonnables d'extraction économique distingue une ressource d'une simple occurrence minéralisée.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-034",
+      "theme": "Ressources et réserves (JORC, NI 43-101)",
+      "level": 2,
+      "q": "Un corps minéralisé de 2 000 000 m³ a une densité de 2,5 t/m³ et une teneur de 1,6 g/t. Quelle quantité d'or contient-il ?",
+      "img": "photo/open-pit-mine.jpg",
+      "imgAlt": "Photo d'une fosse à ciel ouvert avec gradins et pistes.",
+      "choices": [
+        "3,2 t",
+        "0,8 t",
+        "80 t",
+        "8 t"
+      ],
+      "answer": 3,
+      "explain": "Tonnage = 2 000 000 × 2,5 = 5 Mt ; or contenu = 5 000 000 t × 1,6 g/t = 8 000 000 g = 8 t.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-035",
+      "theme": "Ressources et réserves (JORC, NI 43-101)",
+      "level": 2,
+      "q": "Pourquoi une réserve est-elle généralement plus petite que la ressource dont elle est issue ?",
+      "img": "photo/open-pit-mine.jpg",
+      "imgAlt": "Photo d'une fosse à ciel ouvert avec gradins et pistes.",
+      "choices": [
+        "Pertes à l'extraction, dilution, zones exclues et seuils économiques réduisent la part exploitable",
+        "Parce que les réserves se mesurent en unités différentes",
+        "Parce que les réserves ne comptent que les sondages récents",
+        "Parce que la ressource est toujours surestimée"
+      ],
+      "answer": 0,
+      "explain": "Les facteurs modificateurs filtrent la ressource : ce qui n'est pas exploitable de façon rentable n'entre pas en réserve.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-036",
+      "theme": "Ressources et réserves (JORC, NI 43-101)",
+      "level": 3,
+      "q": "Un rapport annonce 3 Mt de « réserves » dont 40 % proviennent de ressources Présumées. Que dire de cette déclaration ?",
+      "img": "photo/open-pit-mine.jpg",
+      "imgAlt": "Photo d'une fosse à ciel ouvert avec gradins et pistes.",
+      "choices": [
+        "Elle est conforme si le prix du métal est élevé",
+        "Elle est conforme si le rapport est signé par un banquier",
+        "Elle est non conforme aux codes : la ressource Présumée ne peut pas figurer en réserve",
+        "Elle est conforme car les ressources Présumées sont proches des Mesurées"
+      ],
+      "answer": 2,
+      "explain": "Les codes JORC et NI 43-101 interdisent de convertir de la ressource Présumée en réserve ; annoncer le contraire est trompeur pour les investisseurs.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-037",
+      "theme": "Contrôle des teneurs et géostatistique",
+      "level": 1,
+      "q": "À quoi sert le contrôle des teneurs (grade control) en exploitation ?",
+      "img": "svg/mine-bench-geometry.svg",
+      "imgAlt": "Coupe d'un gradin avec trous de tir échantillonnés pour le contrôle des teneurs.",
+      "choices": [
+        "À fixer le prix de vente du métal",
+        "À mesurer la hauteur des gradins",
+        "À délimiter minerai et stérile à l'échelle du gradin à partir d'une information resserrée",
+        "À remplacer le modèle de ressources définitivement"
+      ],
+      "answer": 2,
+      "explain": "Les sondages de contrôle ou les échantillons de trous de tir donnent une information plus dense que l'exploration, pour choisir la destination de chaque polygone.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-038",
+      "theme": "Contrôle des teneurs et géostatistique",
+      "level": 1,
+      "q": "Que représente l'effet de pépite sur un variogramme ?",
+      "choices": [
+        "La variabilité à très courte distance, erreurs d'échantillonnage et d'analyse comprises",
+        "La distance au-delà de laquelle les échantillons ne sont plus corrélés",
+        "La variance totale des données",
+        "La teneur moyenne du gisement"
+      ],
+      "answer": 0,
+      "explain": "L'effet de pépite est la discontinuité à l'origine du variogramme ; il traduit la microvariabilité et les erreurs de mesure.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-039",
+      "theme": "Contrôle des teneurs et géostatistique",
+      "level": 1,
+      "q": "Que représente la portée d'un variogramme ?",
+      "choices": [
+        "La profondeur maximale d'un sondage",
+        "La distance au-delà de laquelle deux échantillons ne sont plus corrélés",
+        "Le diamètre de la carotte",
+        "La distance entre le collet et le toit de la couche"
+      ],
+      "answer": 1,
+      "explain": "Au-delà de la portée, le variogramme atteint le palier : la connaissance d'un échantillon n'apporte plus d'information sur l'autre.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-040",
+      "theme": "Contrôle des teneurs et géostatistique",
+      "level": 2,
+      "q": "Le krigeage est :",
+      "choices": [
+        "Une méthode de comptage des sondages",
+        "Une moyenne simple des échantillons les plus proches",
+        "Une méthode de calcul de la teneur de coupure",
+        "Un estimateur linéaire non biaisé à variance d'estimation minimale, qui s'appuie sur le variogramme"
+      ],
+      "answer": 3,
+      "explain": "Le krigeage pondère les échantillons voisins selon leur position et le variogramme, et fournit une variance d'estimation.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-041",
+      "theme": "Contrôle des teneurs et géostatistique",
+      "level": 2,
+      "q": "Le modèle de contrôle des teneurs annonce 100 000 t à 2,0 g/t. L'usine reçoit 100 000 t à 1,7 g/t. Quel est l'écart relatif de teneur ?",
+      "choices": [
+        "− 0,3 %",
+        "− 30 %",
+        "+ 15 %",
+        "− 15 %"
+      ],
+      "answer": 3,
+      "explain": "(1,7 − 2,0) / 2,0 = − 0,15 : un écart de − 15 % qui doit conduire à une enquête (échantillonnage, dilution, densité, domaines).",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-042",
+      "theme": "Contrôle des teneurs et géostatistique",
+      "level": 2,
+      "q": "Pourquoi découpe-t-on le gisement en domaines géologiques avant l'estimation ?",
+      "img": "photo/open-pit-mine.jpg",
+      "imgAlt": "Photo d'une fosse à ciel ouvert avec gradins et pistes.",
+      "choices": [
+        "Pour augmenter la teneur moyenne affichée",
+        "Pour ne pas mélanger des populations de teneurs statistiquement différentes",
+        "Pour réduire le nombre de sondages",
+        "Pour éviter de calculer un variogramme"
+      ],
+      "answer": 1,
+      "explain": "Altération, lithologie et minéralisation modifient la distribution des teneurs : on estime chaque domaine avec ses propres données et paramètres.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-043",
+      "theme": "Contrôle des teneurs et géostatistique",
+      "level": 2,
+      "q": "Un blanc inséré juste après un échantillon très riche ressort à 0,8 g/t alors que la limite de détection est de 0,01 g/t. Que faites-vous ?",
+      "img": "photo/gold-bars-lab.jpg",
+      "imgAlt": "Photo d'un laboratoire d'analyses : échantillons et balances.",
+      "choices": [
+        "Je ne fais rien car les blancs ne comptent pas",
+        "Je soustrais 0,8 g/t à tous les résultats du lot",
+        "Je demande une enquête et une réanalyse du lot avant de l'utiliser dans le modèle",
+        "Je supprime le blanc de la base de données"
+      ],
+      "answer": 2,
+      "explain": "Le blanc signale une contamination possible ; on l'investigue avec le laboratoire et on réanalyse si nécessaire avant d'intégrer les données.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-044",
+      "theme": "Contrôle des teneurs et géostatistique",
+      "level": 3,
+      "q": "Le variogramme d'un domaine a un effet de pépite de 0,2, un palier de 1,0 et une portée de 80 m. Les sondages sont espacés de 200 m. Quelle conclusion tirer ?",
+      "choices": [
+        "Les sondages voisins ne sont plus corrélés à cette distance : l'estimation sera peu fiable et la classification restera à faible confiance",
+        "L'estimation est excellente car le palier est élevé",
+        "Il faut doubler la portée en affinant le variogramme",
+        "La catégorie Mesurée est justifiée automatiquement"
+      ],
+      "answer": 0,
+      "explain": "Avec 200 m d'espacement, supérieur à la portée de 80 m, l'information d'un sondage ne renseigne pas le voisin : un resserrement est nécessaire pour monter en confiance.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-045",
+      "theme": "Contrôle des teneurs et géostatistique",
+      "level": 3,
+      "q": "Pourquoi la variabilité des teneurs de blocs de 10 m est-elle plus faible que celle d'échantillons de 1 m ?",
+      "choices": [
+        "Parce qu'un support plus grand moyenne les valeurs extrêmes et lisse la variabilité",
+        "Parce que les blocs sont analysés plus soigneusement",
+        "Parce que les blocs ont toujours la même teneur",
+        "Parce que le support n'a aucune influence sur la teneur"
+      ],
+      "answer": 0,
+      "explain": "C'est l'effet de support : plus le volume est grand, plus les valeurs hautes et basses se compensent. Il influe sur la courbe tonnage-teneur à une teneur de coupure donnée.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "geologue-minier-046",
+      "theme": "Contrôle des teneurs et géostatistique",
+      "level": 3,
+      "q": "Une société estime des blocs de 2 m alors que ses sondages sont espacés de 100 m. Quel est le défaut principal ?",
+      "choices": [
+        "Aucun, plus les blocs sont petits, meilleure est l'estimation",
+        "Les blocs seraient trop grands pour l'usine",
+        "L'estimation locale est peu fiable : les blocs sont trop petits par rapport à l'espacement de l'information",
+        "Le nombre de sondages est excessif"
+      ],
+      "answer": 2,
+      "explain": "Un bloc très petit devant l'espacement des données est estimé avec beaucoup d'incertitude et un lissage excessif ; on choisit une taille de l'ordre du quart à la moitié de l'espacement, à valider.",
+      "seconds": 60,
+      "status": "draft"
+    }
+  ]
+}

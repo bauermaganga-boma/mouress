@@ -1,0 +1,773 @@
+{
+  "profile": "ing-reservoir",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Système pétrolier et bassin côtier gabonais",
+      "theme": "Géologie pétrolière",
+      "minutes": 9,
+      "body": "Un **système pétrolier** réunit quatre éléments indispensables et un phénomène temporel : une **roche mère** qui génère les hydrocarbures, une **roche réservoir** poreuse et perméable qui les stocke, une **couverture** imperméable qui les retient, un **piège** géométrique qui les concentre, et un **synchronisme** correct entre génération, migration et formation du piège. Il suffit qu'un seul élément manque, ou arrive trop tard, pour que la zone soit stérile.\n\nLa roche mère est typiquement un schiste ou une argilite riche en matière organique (carbone organique total, COT). Sous l'effet de l'enfouissement et de la température, le kérogène se transforme : la **fenêtre à huile** correspond grossièrement à une réflectance de la vitrinite d'environ 0,6 à 1,3 %Ro, au-delà on entre dans la fenêtre à gaz humide puis gaz sec. L'expulsion puis la **migration** (primaire hors de la roche mère, secondaire dans les roches carrières et le long des failles) sont gouvernées par la flottabilité : l'huile et le gaz, plus légers que l'eau, remontent jusqu'à être arrêtés.\n\nLes réservoirs sont surtout des grès (dont la porosité décroît avec la profondeur par compaction et cimentation) et des carbonates (porosité de moule, de vacuoles, fractures, très dépendante de la diagenèse). Les couvertures classiques sont les argiles et le **sel**, excellente couverture car imperméable et ductile. Les pièges sont **structuraux** (anticlinaux, blocs faillés), **stratigraphiques** (biseaux, chenaux, discordances) ou mixtes.\n\nLe **bassin côtier gabonais** est un bassin de marge passive ouvert avec l'Atlantique Sud. On y distingue deux grands ensembles séparés par le **sel aptien** : la série **pré-salifère** (rift du Crétacé inférieur, dépôts continentaux et lacustres, avec roches mères lacustres et grès réservoirs) et la série **post-salifère** (marge ouverte, dépôts marins, avec une tectonique salifère marquée par des mouvements de sel, des failles de croissance et des structures associées). Les champs pré-salifères et post-salifères obéissent à des logiques d'exploration différentes, et l'imagerie sismique sous le sel est un enjeu technique majeur.\n\nLe géologue réservoir raisonne en environnements de dépôt (deltaïque, fluviatile, turbiditique, carbonaté) et en stratigraphie séquentielle : les surfaces d'inondation maximale donnent souvent les argiles de couverture régionales, tandis que les corps gréseux de bas niveau marin forment les meilleurs réservoirs.\n\n**Sur le terrain**\n- Un puits sec n'est pas forcément un mauvais piège : demande d'abord si la charge existait (roche mère mature, migration avant la formation du piège).\n- Lis toujours le rapport de fin de sondage avec la carotte ou les cuttings sous les yeux : COT, Ro et traces d'huile valent plus qu'un bel attribut sismique.\n- Ne mélange jamais pré-salifère et post-salifère dans une analogie de champ : les réservoirs, la charge et l'imagerie n'ont rien à voir.",
+      "keyPoints": [
+        "Quatre éléments (roche mère, réservoir, couverture, piège) plus le synchronisme.",
+        "Fenêtre à huile : environ 0,6 à 1,3 %Ro ; migration gouvernée par la flottabilité.",
+        "Au Gabon, le sel aptien sépare le pré-salifère (rift) du post-salifère (marge ouverte)."
+      ],
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Coupe sismique schématique montrant des réflecteurs, une structure et des failles"
+    },
+    {
+      "id": "m2",
+      "title": "Sismique réflexion : principes et interprétation",
+      "theme": "Sismique",
+      "minutes": 9,
+      "body": "La **sismique réflexion** émet une onde acoustique (source vibrante terrestre, canon à air en mer) et enregistre les échos renvoyés par les interfaces où l'**impédance acoustique** change. L'impédance est le produit de la masse volumique par la vitesse : Z = ρ × V. Le **coefficient de réflexion** à incidence normale vaut R = (Z2 − Z1) / (Z2 + Z1) ; plus le contraste est fort, plus la réflexion est intense.\n\nLa grandeur mesurée est le **temps double** (TWT, aller-retour). La profondeur se déduit de la vitesse : z = V × t / 2. Exemple : un réflecteur à 2,0 s de temps double avec une vitesse moyenne de 2 500 m/s est à 2 500 m. La conversion temps-profondeur dépend d'un modèle de vitesse, calibré par les puits (profil sismique vertical, checkshots) ; les formules de type Dix permettent de passer de vitesses de sommation à des vitesses d'intervalle.\n\nLa **résolution verticale** est d'environ un quart de la longueur d'onde dominante, λ/4, avec λ = V / f. Avec V = 3 000 m/s et f = 30 Hz, λ = 100 m et la résolution est d'environ 25 m : une couche plus mince est vue sous forme composite (effet d'accord). Plus la profondeur augmente, plus les fréquences sont atténuées et plus la résolution se dégrade. L'**échantillonnage temporel** impose la fréquence de Nyquist : f_N = 1 / (2 Δt) ; avec 4 ms, f_N = 125 Hz.\n\nLe traitement vise à améliorer le rapport signal/bruit (sommation des traces d'un même point milieu, CMP), à atténuer les **multiples** et à **migrer** les données : la migration replace les réflecteurs inclinés à leur vraie position et referme les diffractions. La migration en profondeur avant sommation est indispensable en présence de sel.\n\nÀ l'interprétation, on repère les **failles** (décalage ou rupture des réflecteurs), les anticlinaux, les discordances, et des **attributs directs** d'hydrocarbures : point brillant, **flat spot** (réflexion horizontale d'un contact de fluides), anomalies d'amplitude avec l'offset (AVO). Dans le bassin gabonais, le sel est homogène, rapide (environ 4 500 m/s) et déforme les rais : l'imagerie du pré-salifère est difficile. La sismique 4D (répétée dans le temps) suit enfin les fluides en production.\n\n**Sur le terrain**\n- Avant de valider un point d'implantation, vérifie que la section est migrée et que le modèle de vitesse est calé sur les checkshots du puits voisin.\n- Une anomalie d'amplitude seule ne prouve pas l'huile : cherche le flat spot, la conformité à la structure et la réponse AVO.\n- Sous une épaisse couche de sel, une image floue n'est pas une preuve d'absence de réservoir : demande une migration en profondeur avant sommation.",
+      "keyPoints": [
+        "Z = ρ·V ; R = (Z2 − Z1)/(Z2 + Z1) ; profondeur = V·TWT/2.",
+        "Résolution verticale ≈ λ/4 ; Nyquist = 1/(2Δt).",
+        "La migration replace les réflecteurs inclinés ; le sel complique l'imagerie."
+      ],
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Coupe sismique schématique avec réflecteurs et failles"
+    },
+    {
+      "id": "m3",
+      "title": "Diagraphies et pétrophysique",
+      "theme": "Diagraphies & pétrophysique",
+      "minutes": 10,
+      "body": "Les **diagraphies** (well logs) sont des mesures continues en fonction de la profondeur, réalisées par câble (wireline) ou en cours de forage (LWD). Le **gamma ray (GR)** mesure la radioactivité naturelle : élevé dans les argiles (potassium, thorium, uranium), faible dans les grès propres et les carbonates. Il sert à calculer le volume d'argile par l'indice IGR = (GR − GRmin) / (GRmax − GRmin). Avec GRmin = 20, GRmax = 120 et GR = 45, on obtient 0,25. Le **potentiel spontané (SP)** dévie en face des couches perméables par rapport à la ligne de base des argiles. Le **caliper** mesure le diamètre du trou : un cavage rend les mesures de densité peu fiables.\n\nLes **résistivités** (profonde Rt, moyenne, micro Rxo) distinguent les fluides : l'eau salée est conductrice, les hydrocarbures sont résistants. Une forte résistivité dans un réservoir poreux est donc un indice d'hydrocarbures. La boue envahit la formation : en zone aquifère avec une boue douce, la résistivité proche du trou (Rxo) est supérieure à la résistivité profonde.\n\nLa **porosité** vient de trois outils : la densité (φ = (ρma − ρb)/(ρma − ρf)), le neutron (indice d'hydrogène) et le sonique (temps de transit, loi de Wyllie φ = (Δt − Δtma)/(Δtf − Δtma)). Masses volumiques de matrice usuelles : grès 2,65, calcaire 2,71, dolomie 2,87 g/cm³. Le croisement densité-neutron, avec le neutron lisant moins que la densité en échelle compatible, signale le **gaz**.\n\nLa saturation en eau se calcule par l'**équation d'Archie** : Sw = [(a·Rw) / (φ^m · Rt)]^(1/n), avec a = 1, m = 2 et n = 2 dans l'hypothèse de base. Avec Rw = 0,05 ohm.m, φ = 0,20 et Rt = 20 ohm.m : φ² = 0,04, d'où Sw = (0,05 / 0,8)^0,5 = 0,25. Le **facteur de formation** F = a/φ^m vaut 16 pour φ = 0,25 et m = 2. Archie est valable surtout en grès propres ; en présence d'argile, on utilise des modèles corrigés (Simandoux, double eau).\n\nLa **perméabilité** n'est pas lue directement par les diagraphies : elle est calibrée sur les carottes et les essais de puits. Les coupures (cutoffs) de Vsh, de porosité et de Sw définissent la hauteur utile et le rapport net/brut (NTG).\n\n**Sur le terrain**\n- Contrôle le caliper avant d'utiliser la densité : dans un cavage, la porosité lue est fausse, il faut recourir au neutron ou au sonique.\n- Une résistivité élevée sans porosité n'est pas un réservoir : croise toujours Rt avec GR, porosité et, si possible, un gradient de pression ou un échantillon.\n- Calcule Rw dans l'aquifère propre du même puits avant d'appliquer Archie dans la zone à huile ; une valeur de Rw reprise d'un autre champ fausse Sw.",
+      "keyPoints": [
+        "GR : argile ; Rt élevée en zone poreuse : hydrocarbures ; caliper : qualité du trou.",
+        "Archie : Sw = [(a·Rw)/(φ^m·Rt)]^(1/n) ; F = a/φ^m.",
+        "Porosité densité : (ρma − ρb)/(ρma − ρf) ; croisement densité-neutron : gaz."
+      ],
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphies : gamma ray, résistivité, densité et neutron en fonction de la profondeur"
+    },
+    {
+      "id": "m4",
+      "title": "Fluides, pression et mécanismes de drainage",
+      "theme": "Réservoir & réserves",
+      "minutes": 9,
+      "body": "La **loi de Darcy** relie le débit à la perméabilité k, à la section A, à la chute de pression ΔP et à la viscosité μ : q est proportionnel à k·A·ΔP / (μ·L). À ΔP égal, doubler la viscosité divise le débit par deux ; doubler la perméabilité le double.\n\nLa **pression** augmente avec la profondeur selon le gradient du fluide, ρ·g. L'eau douce vaut environ 0,0981 bar/m (0,433 psi/ft) ; l'eau de formation salée un peu plus ; l'huile moins (typiquement 0,07 à 0,09 bar/m) et le gaz nettement moins. Sur un graphique pression-profondeur, les fluides forment des droites de pentes différentes : plus la pente est faible, plus le fluide est léger. L'intersection de la droite de l'huile et de celle de l'eau donne le **niveau d'eau libre (FWL)** ; le contact huile-eau observé est un peu plus haut à cause de la pression capillaire.\n\nLes propriétés PVT décrivent le comportement de l'huile : le **point de bulle** Pb est la pression à laquelle le premier gaz se libère ; le facteur volumétrique **Bo** est supérieur à 1 car l'huile en gisement contient du gaz dissous et se contracte en surface ; le rapport de solubilité Rs est le volume de gaz dissous par volume d'huile.\n\nLes **mécanismes de drainage** conditionnent le taux de récupération : expansion de l'huile et gaz dissous (récupération faible, de l'ordre de quelques pourcents à une trentaine de pourcents), expansion d'un chapeau de gaz, **aquifère actif** (souvent le meilleur, entretien de pression), compaction, et récupération assistée. Le **rapport de mobilité** M = (krw/μw)/(kro/μo) caractérise l'injection d'eau : M > 1 est défavorable et favorise le doigtage.\n\nLes **essais de puits** (build-up, drawdown) fournissent kh, le skin et parfois les limites du réservoir : en écoulement radial, la pente de la droite semi-log (Horner) donne le produit kh. La courbe **IPR** relie le débit à la pression de fond ; le débit maximal théorique (AOF) correspond à une pression de fond de référence nulle.\n\nEnfin, le **déclin exponentiel** q = qi·e^(−Dt) est la forme de base de l'analyse des courbes de déclin : si le débit est divisé par deux en 5 ans, il est divisé par quatre en 10 ans.\n\n**Sur le terrain**\n- Un GOR qui monte alors que la pression de fond passe sous le point de bulle indique du gaz libre dans le réservoir : ne tire pas sur le puits plus fort.\n- Une percée d'eau précoce avec une huile visqueuse pointe d'abord le rapport de mobilité et les couloirs de forte perméabilité, pas une panne de pompe.\n- Les gradients de pression mesurés au testeur (MDT) donnent la nature du fluide et le contact : ne les remplace pas par la seule lecture des logs.",
+      "keyPoints": [
+        "Darcy : q ∝ k·A·ΔP/(μ·L) ; gradient de pression = ρ·g, pente faible = fluide léger.",
+        "Pb, Bo > 1, Rs : bases du PVT ; M > 1 défavorable.",
+        "Aquifère actif : mécanisme souvent le plus efficace ; pente de Horner : kh."
+      ],
+      "img": "svg/pressure-gradient-chart.svg",
+      "imgAlt": "Graphique pression en fonction de la profondeur avec gradients de gaz, huile et eau"
+    },
+    {
+      "id": "m5",
+      "title": "Volumes en place, taux de récupération et réserves",
+      "theme": "Réservoir & réserves",
+      "minutes": 8,
+      "body": "Le **volume d'huile en place** (STOIIP, stock tank oil initially in place) se calcule par la méthode volumétrique : STOIIP = A × h × φ × (1 − Sw) / Bo, où A est la surface, h l'épaisseur utile, φ la porosité, Sw la saturation en eau et Bo le facteur volumétrique. En unités de champ, la formule devient 7 758 × A(acres) × h(ft) × φ × (1 − Sw) / Bo en barils.\n\nExemple métrique : A = 10 km² = 10⁷ m², h = 20 m, φ = 0,20, Sw = 0,30, Bo = 1,25. Volume de roche = 2 × 10⁸ m³ ; volume de pores = 4 × 10⁷ m³ ; volume d'huile = 2,8 × 10⁷ m³ ; en conditions standard, 2,8 × 10⁷ / 1,25 = 2,24 × 10⁷ m³, soit 22,4 millions de m³ de STOIIP. Chaque terme est incertain, d'où l'usage de scénarios bas, moyen et haut ou de simulations de Monte-Carlo.\n\nLe **taux de récupération** RF est la fraction du volume en place effectivement produite : réserves récupérables = STOIIP × RF. Pour 100 millions de barils en place et un RF de 35 %, les récupérables sont de 35 millions de barils. Le RF dépend du mécanisme de drainage, de la perméabilité, de la viscosité, de l'hétérogénéité, du schéma de développement et des contraintes économiques.\n\nLa classification **PRMS** distingue les **réserves** (volumes commercialement récupérables, avec projet décidé et engagé), les **ressources contingentes** (découvertes mais conditions non remplies) et les **ressources prospectives** (non encore découvertes). Les réserves sont classées 1P (prouvées), 2P (prouvées plus probables) et 3P (prouvées, probables et possibles). En approche probabiliste, 1P correspond à P90 (au moins 90 % de probabilité que le volume réel soit égal ou supérieur), 2P à P50 et 3P à P10.\n\nLes modèles statiques (géomodèle, pétrophysique, facies) alimentent la **simulation dynamique** qui prédit débits, pression et fronts d'eau. Le bilan de matière donne une vérification globale à partir de l'historique de pression et de production. Le calage historique (history match) puis la prévision sous plusieurs scénarios guident les décisions de développement.\n\n**Sur le terrain**\n- Ne confonds jamais volume en place (STOIIP) et réserves : les réserves exigent un facteur de récupération et un projet décidé.\n- Annonce toujours la plage (P90, P50, P10) et pas une seule valeur : chaque paramètre du calcul volumétrique est incertain.\n- Vérifie les unités et les conditions (gisement ou standard) avant de comparer deux STOIIP, en particulier le Bo.",
+      "keyPoints": [
+        "STOIIP = A·h·φ·(1 − Sw)/Bo ; récupérables = STOIIP × RF.",
+        "PRMS : réserves, ressources contingentes, ressources prospectives.",
+        "1P ≈ P90, 2P ≈ P50, 3P ≈ P10 en approche probabiliste."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ing-reservoir-001",
+      "theme": "Géologie pétrolière",
+      "level": 1,
+      "q": "Le puits d'exploration, foré au sommet d'un anticlinal bien fermé, a traversé 60 m de grès propre poreux sous une couverture argileuse épaisse, mais il ressort entièrement aquifère. Piège, réservoir et couverture sont donc là. Quelle est la cause la plus probable de l'échec ?",
+      "choices": [
+        "Une couverture trop épaisse qui a empêché l'huile de se former",
+        "Une porosité trop élevée du grès qui a vidé le piège de son huile",
+        "Absence de charge : roche mère non mature ou piège formé après la migration",
+        "Un excès de fermeture structurale sur la carte"
+      ],
+      "answer": 2,
+      "explain": "Quand piège, réservoir et couverture sont avérés et que le puits est sec, on suspecte l'élément manquant : la charge (roche mère immature, migration absente ou piège postérieur à la migration). Les autres explications ne tiennent pas.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-002",
+      "theme": "Géologie pétrolière",
+      "level": 1,
+      "q": "En laboratoire, une carotte d'un niveau de schiste noir feuilleté donne un COT de 5 % et une réflectance de la vitrinite de 0,9 %Ro. Le chef de projet te demande quel rôle ce niveau peut jouer dans le système pétrolier.",
+      "choices": [
+        "Roche mère mature, dans la fenêtre à huile",
+        "Réservoir de premier ordre car la roche est noire donc imprégnée d'huile",
+        "Couverture uniquement, sans potentiel de génération",
+        "Roche sans intérêt car 0,9 %Ro est trop faible pour générer"
+      ],
+      "answer": 0,
+      "explain": "Un COT de 5 % est excellent et 0,9 %Ro se situe dans la fenêtre à huile (environ 0,6 à 1,3 %Ro) : roche mère mature. Un schiste noir est peu perméable et ne sert pas de réservoir.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-003",
+      "theme": "Géologie pétrolière",
+      "level": 1,
+      "q": "Dans le rapport géologique du puits, la couverture du réservoir est décrite comme « argile silteuse de 4 m d'épaisseur, fracturée ». Le directeur technique te demande quel est le risque principal pour le piège.",
+      "choices": [
+        "Une porosité du réservoir trop faible sous cette couverture",
+        "Un excès de roche mère au-dessus du réservoir",
+        "Une pression de pore trop basse dans le piège",
+        "Fuite verticale des hydrocarbures à travers la couverture mince et fracturée"
+      ],
+      "answer": 3,
+      "explain": "Le rôle de la couverture est d'empêcher la fuite verticale. Mince, silteuse et fracturée, elle risque de laisser fuir la colonne d'hydrocarbures, donc de limiter la hauteur de colonne retenue.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-004",
+      "theme": "Géologie pétrolière",
+      "level": 2,
+      "q": "Trois puits d'un même bassin donnent la réflectance de la vitrinite de la roche mère : 0,45 %Ro à 1 500 m, 0,9 %Ro à 2 800 m, 2,0 %Ro à 4 500 m. Tu dois recommander la profondeur la plus favorable pour une charge en huile.",
+      "choices": [
+        "Vers 1 500 m, car la matière organique est mieux conservée",
+        "Autour de 2 800 m (fenêtre à huile)",
+        "Vers 4 500 m, car plus profond signifie plus d'huile",
+        "Nulle part : toute la série est stérile"
+      ],
+      "answer": 1,
+      "explain": "La fenêtre à huile se situe environ entre 0,6 et 1,3 %Ro, soit vers 2 800 m. À 0,45 %Ro la roche est immature ; à 2,0 %Ro on est en gaz sec, l'huile a été craquée.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-005",
+      "theme": "Géologie pétrolière",
+      "level": 1,
+      "q": "Deux puits recoupent le même grès : à 1 800 m il affiche 28 % de porosité, à 4 200 m seulement 9 %, avec des surcroissances de quartz sous la lame mince. Que dis-tu à l'équipe de développement ?",
+      "choices": [
+        "Les grains sont devenus plus gros avec la profondeur",
+        "La perte de porosité vient de la compaction et de la cimentation avec l'enfouissement",
+        "L'eau de formation est devenue plus douce en profondeur",
+        "La température plus basse en profondeur ferme les pores"
+      ],
+      "answer": 1,
+      "explain": "La porosité des grès décroît avec l'enfouissement par compaction mécanique et cimentation (ici surcroissances de quartz). Cela impose de prévoir une porosité plus faible pour les cibles profondes.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-006",
+      "theme": "Géologie pétrolière",
+      "level": 2,
+      "q": "Ton prospect côtier gabonais vise des grès situés sous le sel aptien. Le géologue de la compagnie veut savoir quelle série tu t'attends à trouver sous ce sel.",
+      "choices": [
+        "Des sédiments marins actuels et non consolidés du Quaternaire",
+        "Le manteau terrestre et le socle volcanique uniquement",
+        "Une série marine de marge ouverte identique à celle du post-salifère",
+        "La série pré-salifère de rift, continentale et lacustre, avec roches mères lacustres et grès réservoirs"
+      ],
+      "answer": 3,
+      "explain": "Le sel aptien sépare le pré-salifère (rift du Crétacé inférieur, dépôts continentaux et lacustres) du post-salifère (marge ouverte, dépôts marins). Les cibles sous le sel sont donc de la série de rift.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-007",
+      "theme": "Géologie pétrolière",
+      "level": 2,
+      "q": "Un prospect cartographié est un chenal gréseux qui s'amincit jusqu'à disparaître latéralement dans des argiles, sans plissement ni faille associée. Comment le classes-tu dans la liste des prospects ?",
+      "choices": [
+        "Piège stratigraphique (biseau de grès scellé par les argiles)",
+        "Piège structural par fermeture anticlinale",
+        "Piège structural par bloc faillé",
+        "Piège par diapir de sel"
+      ],
+      "answer": 0,
+      "explain": "Quand la fermeture vient du changement latéral de faciès (biseau, pinch-out) et non d'une déformation, le piège est stratigraphique.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-008",
+      "theme": "Géologie pétrolière",
+      "level": 2,
+      "q": "Le comité d'exploration demande d'implanter le puits au sommet de la structure signalée « Anticlinal (piège structural) » sur la section figurée. À quelle distance horizontale approximative faut-il implanter ?",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée, temps double en ms (0 à 2 000) en fonction de la distance (0 à 5 km) : horizons réflecteurs, anticlinal vers 2,5 km, faille normale en pointillés entre 3,6 et 4,2 km, point brillant orangé vers 0,5 à 1 km.",
+      "choices": [
+        "Environ 0,5 km",
+        "Environ 4 km, près de la faille",
+        "Environ 2,5 km",
+        "Environ 4,8 km"
+      ],
+      "answer": 2,
+      "explain": "Sur la figure, les horizons sont bombés avec leur sommet vers 2,5 km. Vers 4 km on est sur la faille normale en pointillés, qu'il faut éviter.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-009",
+      "theme": "Géologie pétrolière",
+      "level": 3,
+      "q": "Un piège stratigraphique est rempli d'huile alors que la roche mère mature se trouve à 40 km en aval, plus bas dans le bassin. Le chef de projet demande quel mécanisme a permis cette migration secondaire vers le haut du pendage.",
+      "choices": [
+        "La gravité, qui fait descendre l'huile le long de la pente",
+        "La seule pression de surcharge des sédiments",
+        "La force de Coriolis liée à la rotation terrestre",
+        "La flottabilité, car l'huile est moins dense que l'eau de formation"
+      ],
+      "answer": 3,
+      "explain": "La migration secondaire est gouvernée par la flottabilité : l'huile et le gaz, plus légers que l'eau, remontent le long des couches perméables et des failles jusqu'à être arrêtés par la couverture.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-010",
+      "theme": "Géologie pétrolière",
+      "level": 3,
+      "q": "Un puits foré au flanc d'un diapir de sel trouve un grès à huile directement en contact avec le sel. Un collègue craint une fuite latérale. Pourquoi le sel retient-il généralement l'huile ?",
+      "choices": [
+        "Il est très poreux et absorbe l'eau puis la bloque",
+        "Il est pratiquement imperméable et ductile, donc il se referme au lieu de se fracturer",
+        "Il est riche en matière organique qui piège l'huile",
+        "Il est fracturé en permanence et draine les fluides vers le réservoir"
+      ],
+      "answer": 1,
+      "explain": "Le sel est une excellente couverture car imperméable et ductile : il fluage et colmate les fractures. C'est pour cela que les pièges au flanc des diapirs sont réputés étanches.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-011",
+      "theme": "Sismique",
+      "level": 1,
+      "q": "Le géophysicien te remet la section figurée, dont l'axe vertical est gradué de 0 à 2 000 ms. Avant de la lire en profondeur, tu dois préciser ce que représente cet axe.",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée, temps double en ms (0 à 2 000) en fonction de la distance (0 à 5 km) : horizons réflecteurs, anticlinal vers 2,5 km, faille normale en pointillés entre 3,6 et 4,2 km, point brillant orangé vers 0,5 à 1 km.",
+      "choices": [
+        "La profondeur vraie en millisecondes",
+        "Le temps d'arrivée de l'onde directe uniquement",
+        "Le temps double aller-retour de l'onde jusqu'au réflecteur",
+        "La durée totale de l'enregistrement sur le terrain"
+      ],
+      "answer": 2,
+      "explain": "La sismique réflexion enregistre le temps double (aller-retour). La profondeur n'en découle qu'avec un modèle de vitesse : z = V·t/2.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-012",
+      "theme": "Sismique",
+      "level": 1,
+      "q": "Au contrôle qualité des vitesses, un banc affiche une masse volumique de 2,4 g/cm³ et une vitesse de 3 000 m/s. Tu recalcules son impédance acoustique pour l'étude de réflectivité.",
+      "choices": [
+        "7 200 (ρ × V)",
+        "1 250 (V / ρ)",
+        "5 400 (somme avec erreur d'unités)",
+        "800 (ρ / V × 10⁶)"
+      ],
+      "answer": 0,
+      "explain": "L'impédance est Z = ρ × V = 2,4 × 3 000 = 7 200 en unités g/cm³·m/s. Les autres résultats viennent de formules erronées.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-013",
+      "theme": "Sismique",
+      "level": 2,
+      "q": "Sur la section figurée, le point brillant orangé ressort à environ 1 200 ms de temps double. Avec une vitesse moyenne de 2 500 m/s, à quelle profondeur le géologue doit-il l'attendre pour programmer le puits ?",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée, temps double en ms (0 à 2 000) en fonction de la distance (0 à 5 km) : horizons réflecteurs, anticlinal vers 2,5 km, faille normale en pointillés entre 3,6 et 4,2 km, point brillant orangé vers 0,5 à 1 km.",
+      "choices": [
+        "Environ 1 500 m",
+        "Environ 3 000 m",
+        "Environ 1 200 m",
+        "Environ 750 m"
+      ],
+      "answer": 0,
+      "explain": "z = V × t / 2 = 2 500 × 1,2 / 2 = 1 500 m. Oublier le /2 donnerait 3 000 m ; confondre ms et m donnerait 1 200 m.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-014",
+      "theme": "Sismique",
+      "level": 2,
+      "q": "Le réservoir visé fait 12 m d'épaisseur. À sa profondeur, la vitesse est de 3 000 m/s et la fréquence dominante de 30 Hz. Le client demande si la sismique permet de distinguer clairement le toit de la base.",
+      "choices": [
+        "Oui : 12 m est supérieur à la longueur d'onde de 100 m",
+        "Oui : la résolution verticale est de 3 m",
+        "Non : la résolution λ/4 vaut environ 25 m, la couche donnera un signal composite",
+        "Non : la résolution dépend uniquement de l'amplitude"
+      ],
+      "answer": 2,
+      "explain": "λ = V/f = 3 000/30 = 100 m ; résolution verticale ≈ λ/4 = 25 m. Une couche de 12 m est sous la limite : toit et base se mélangent (effet d'accord).",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-015",
+      "theme": "Sismique",
+      "level": 2,
+      "q": "Le puits proposé est à 300 m de la faille sur la section figurée. Le chef de projet hésite entre la section stack non migrée et la section migrée. Pourquoi imposes-tu la section migrée pour fixer la position du puits ?",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée, temps double en ms (0 à 2 000) en fonction de la distance (0 à 5 km) : horizons réflecteurs, anticlinal vers 2,5 km, faille normale en pointillés entre 3,6 et 4,2 km, point brillant orangé vers 0,5 à 1 km.",
+      "choices": [
+        "La migration augmente les fréquences pour mieux voir la couche",
+        "La migration replace les réflecteurs inclinés à leur vraie position et referme les diffractions près de la faille",
+        "La migration supprime toutes les failles de la section",
+        "La migration convertit directement le temps en température"
+      ],
+      "answer": 1,
+      "explain": "Près d'une faille et sur des réflecteurs pentés, la section non migrée place mal les réflecteurs latéralement. La migration corrige cette position, essentielle pour l'implantation.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-016",
+      "theme": "Sismique",
+      "level": 2,
+      "q": "L'étude de réflectivité prend un schiste d'impédance 4 × 10⁶ au-dessus d'un grès d'impédance 6 × 10⁶. Tu dois donner l'amplitude de réflexion à incidence normale pour calibrer la synthétique.",
+      "choices": [
+        "R = +0,5",
+        "R = −0,2",
+        "R = +1,5",
+        "R = +0,2"
+      ],
+      "answer": 3,
+      "explain": "R = (Z2 − Z1)/(Z2 + Z1) = (6 − 4)/(6 + 4) = 0,2, positif car l'impédance augmente. +1,5 est impossible (|R| ≤ 1).",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-017",
+      "theme": "Sismique",
+      "level": 1,
+      "q": "Sur la section figurée, tu veux implanter un puits à 4 km de distance. Le trait pointillé qui traverse la section entre 3,6 et 4,2 km coupe les horizons. Quel risque géologique cela représente-t-il pour ce puits ?",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée, temps double en ms (0 à 2 000) en fonction de la distance (0 à 5 km) : horizons réflecteurs, anticlinal vers 2,5 km, faille normale en pointillés entre 3,6 et 4,2 km, point brillant orangé vers 0,5 à 1 km.",
+      "choices": [
+        "Rencontrer un diapir de sel",
+        "Tomber dans un chenal sans réservoir",
+        "Traverser une faille normale qui décale les horizons : la cible peut être plus haute ou plus basse que prévu",
+        "Aucun risque : le trait est un simple repère de la figure"
+      ],
+      "answer": 2,
+      "explain": "Le pointillé marque une faille normale : les réflecteurs sont décalés de part et d'autre. Un puits proche peut manquer l'horizon cible ou recouper la faille.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-018",
+      "theme": "Sismique",
+      "level": 3,
+      "q": "L'acquisition a été enregistrée au pas de 4 ms. Le client veut absolument voir de l'information utile jusqu'à 150 Hz sur le réservoir. Que lui réponds-tu ?",
+      "choices": [
+        "Impossible : la fréquence de Nyquist est de 125 Hz avec ce pas",
+        "Possible : la fréquence de Nyquist est de 250 Hz",
+        "Possible : il suffit d'augmenter le gain",
+        "Impossible : la fréquence de Nyquist est de 62,5 Hz"
+      ],
+      "answer": 0,
+      "explain": "f_N = 1/(2Δt) = 1/(2 × 0,004) = 125 Hz. Au-delà, le signal est replié (aliasing) et n'est plus exploitable.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-019",
+      "theme": "Sismique",
+      "level": 3,
+      "q": "Les images sous une couche de sel de 1 200 m d'épaisseur restent floues malgré une migration en temps. Quelle mesure demandes-tu au centre de traitement en priorité ?",
+      "choices": [
+        "Augmenter la fréquence de la source pour la prochaine campagne",
+        "Sommer davantage de traces avec le même modèle de vitesse",
+        "Appliquer un gain automatique plus fort sur la section",
+        "Une migration en profondeur avant sommation avec un modèle de vitesse incluant le sel, calé sur les puits"
+      ],
+      "answer": 3,
+      "explain": "Le sel est rapide (environ 4 500 m/s) et déforme les rais : une migration en temps est insuffisante. La migration en profondeur avant sommation avec un modèle de vitesse fiable est la réponse standard.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-020",
+      "theme": "Sismique",
+      "level": 3,
+      "q": "Sur la section figurée, le point brillant orangé attire l'attention. Pour décider du forage, le géophysicien veut s'assurer qu'il s'agit bien d'hydrocarbures et pas d'une lithologie dure. Quelle observation est la plus convaincante ?",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée, temps double en ms (0 à 2 000) en fonction de la distance (0 à 5 km) : horizons réflecteurs, anticlinal vers 2,5 km, faille normale en pointillés entre 3,6 et 4,2 km, point brillant orangé vers 0,5 à 1 km.",
+      "choices": [
+        "Une amplitude simplement très forte sur un seul profil",
+        "Un flat spot horizontal concordant avec la courbe de niveau structurale, avec une réponse AVO cohérente",
+        "Une réflexion de fréquence plus basse que les voisines",
+        "Un décalage vertical de 50 ms sur la faille"
+      ],
+      "answer": 1,
+      "explain": "Une amplitude forte seule ne suffit pas (lithologie dure, carbonates). Le flat spot, contact de fluides horizontal conforme à la structure, associé à l'AVO, appuie la présence d'hydrocarbures.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-021",
+      "theme": "Diagraphies & pétrophysique",
+      "level": 1,
+      "q": "Tu dois choisir l'intervalle à perforer sur la diagraphie figurée : tu cherches le grès propre (GR bas), résistant, au-dessus du contact huile/eau. Quel intervalle retiens-tu ?",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie entre 2 400 et 2 500 m : GR (0 à 150 API) et résistivités profonde et peu profonde en échelle log (0,2 à 2 000 Ω·m). Argile jusqu'à 2 420 m, grès à huile de 2 420 à 2 450 m, contact huile/eau à 2 450 m, grès aquifère de 2 450 à 2 480 m, argile en dessous.",
+      "choices": [
+        "2 400 à 2 420 m",
+        "2 420 à 2 450 m",
+        "2 450 à 2 480 m",
+        "2 480 à 2 500 m"
+      ],
+      "answer": 1,
+      "explain": "Entre 2 420 et 2 450 m le GR est faible (grès propre) et la résistivité profonde élevée : grès à huile, au-dessus de l'OWC à 2 450 m. 2 400-2 420 et 2 480-2 500 sont des argiles ; 2 450-2 480 est l'aquifère.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-022",
+      "theme": "Diagraphies & pétrophysique",
+      "level": 1,
+      "q": "Sur la diagraphie figurée, à 2 465 m le GR est bas (grès propre) mais la résistivité profonde ne dépasse pas 1 à 2 Ω·m. Le chef de poste voulait y tester l'huile. Que lui réponds-tu ?",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie entre 2 400 et 2 500 m : GR (0 à 150 API) et résistivités profonde et peu profonde en échelle log (0,2 à 2 000 Ω·m). Argile jusqu'à 2 420 m, grès à huile de 2 420 à 2 450 m, contact huile/eau à 2 450 m, grès aquifère de 2 450 à 2 480 m, argile en dessous.",
+      "choices": [
+        "C'est de l'huile, car le GR est bas",
+        "C'est une argile gonflante",
+        "C'est du gaz qui fait baisser la résistivité",
+        "C'est un grès aquifère : sous l'OWC l'eau salée est conductrice"
+      ],
+      "answer": 3,
+      "explain": "Un grès propre à faible résistivité sous l'OWC (2 450 m) est saturé d'eau salée conductrice. L'huile donne une résistivité élevée.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-023",
+      "theme": "Diagraphies & pétrophysique",
+      "level": 2,
+      "q": "Sur la diagraphie figurée, la résistivité profonde du grès à huile vaut environ 50 Ω·m. La porosité de carotte est de 20 % et Rw = 0,05 Ω·m (mesurée dans l'aquifère voisin). Avec a = 1, m = 2, n = 2, quelle saturation en eau retiens-tu ?",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie entre 2 400 et 2 500 m : GR (0 à 150 API) et résistivités profonde et peu profonde en échelle log (0,2 à 2 000 Ω·m). Argile jusqu'à 2 420 m, grès à huile de 2 420 à 2 450 m, contact huile/eau à 2 450 m, grès aquifère de 2 450 à 2 480 m, argile en dessous.",
+      "choices": [
+        "Environ 16 %",
+        "Environ 50 %",
+        "Environ 4 %",
+        "Environ 65 %"
+      ],
+      "answer": 0,
+      "explain": "Sw = [(a·Rw)/(φ^m·Rt)]^(1/n) = [0,05 / (0,04 × 50)]^0,5 = (0,025)^0,5 ≈ 0,16. La saturation en huile avoisine donc 84 %.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-024",
+      "theme": "Diagraphies & pétrophysique",
+      "level": 2,
+      "q": "Dans un intervalle propre de grès, la densité lue est de 2,35 g/cm³. Avec une matrice de 2,65 g/cm³ et un fluide de 1,0 g/cm³, tu dois fournir la porosité densité à l'équipe de simulation.",
+      "choices": [
+        "30 %",
+        "35 %",
+        "18 %",
+        "12 %"
+      ],
+      "answer": 2,
+      "explain": "φ = (ρma − ρb)/(ρma − ρf) = (2,65 − 2,35)/(2,65 − 1,0) = 0,30/1,65 ≈ 0,18.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-025",
+      "theme": "Diagraphies & pétrophysique",
+      "level": 2,
+      "q": "Sur l'enregistrement du puits, la courbe neutron lit moins que la densité face à un grès propre : les deux courbes se croisent nettement. Quelle mesure complémentaire confirme le fluide soupçonné ?",
+      "choices": [
+        "Un nouveau passage du caliper seul",
+        "Un calcul de l'IGR à partir du gamma ray",
+        "Une mesure de la température de surface",
+        "Un échantillon de fluide et un gradient de pression au testeur de formation"
+      ],
+      "answer": 3,
+      "explain": "Le croisement densité-neutron signale probablement du gaz. Le testeur de formation (gradient de pression et échantillon) confirme la nature du fluide et la position du contact.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-026",
+      "theme": "Diagraphies & pétrophysique",
+      "level": 1,
+      "q": "Au cours de la deuxième passe, le gamma ray est en panne. Quelle courbe disponible peut le remplacer pour distinguer les grès perméables des argiles, sous réserve d'un contraste de salinité boue-formation ?",
+      "choices": [
+        "Le caliper, qui indique directement la lithologie",
+        "Le potentiel spontané (SP), qui dévie face aux couches perméables",
+        "La résistivité profonde, qui donne le volume d'argile",
+        "Le sonique, qui mesure la radioactivité"
+      ],
+      "answer": 1,
+      "explain": "Le SP dévie par rapport à la ligne de base des argiles face aux couches perméables : il aide à séparer grès et argiles quand le GR manque. Le caliper mesure le diamètre du trou, pas la lithologie.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-027",
+      "theme": "Diagraphies & pétrophysique",
+      "level": 2,
+      "q": "Ton cahier des charges impose un volume d'argile Vsh inférieur à 0,30 pour retenir un niveau. Le GR lu dans le grès est de 45 API, avec GRmin = 20 et GRmax = 120. Que décides-tu ?",
+      "choices": [
+        "Il est rejeté : IGR = 0,45",
+        "Il est rejeté : IGR = 0,75",
+        "Il passe : IGR = 0,25, inférieur à 0,30",
+        "Il passe : IGR = 0,10"
+      ],
+      "answer": 2,
+      "explain": "IGR = (45 − 20)/(120 − 20) = 0,25, donc sous la coupure de 0,30 : le niveau est retenu comme réservoir propre.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-028",
+      "theme": "Diagraphies & pétrophysique",
+      "level": 2,
+      "q": "Dans l'aquifère propre de la diagraphie figurée (2 450 à 2 480 m), la porosité est de 25 %, Rw = 0,05 Ω·m, avec a = 1 et m = 2. Quelle résistivité Ro attends-tu en face de ce grès saturé à 100 % d'eau ?",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie entre 2 400 et 2 500 m : GR (0 à 150 API) et résistivités profonde et peu profonde en échelle log (0,2 à 2 000 Ω·m). Argile jusqu'à 2 420 m, grès à huile de 2 420 à 2 450 m, contact huile/eau à 2 450 m, grès aquifère de 2 450 à 2 480 m, argile en dessous.",
+      "choices": [
+        "0,8 Ω·m",
+        "0,2 Ω·m",
+        "1,25 Ω·m",
+        "0,0125 Ω·m"
+      ],
+      "answer": 0,
+      "explain": "F = a/φ^m = 1/0,0625 = 16 ; Ro = F × Rw = 16 × 0,05 = 0,8 Ω·m. Une résistivité nettement supérieure à Ro indique des hydrocarbures. La courbe profonde de la figure, de l'ordre de 1 Ω·m dans l'aquifère, est cohérente avec cette valeur.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-029",
+      "theme": "Diagraphies & pétrophysique",
+      "level": 3,
+      "q": "Sur la diagraphie figurée, dans le grès aquifère la courbe peu profonde (orange) est légèrement à droite de la courbe profonde (noire). Le puits a été foré avec une boue à l'eau douce. Que conclus-tu ?",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie entre 2 400 et 2 500 m : GR (0 à 150 API) et résistivités profonde et peu profonde en échelle log (0,2 à 2 000 Ω·m). Argile jusqu'à 2 420 m, grès à huile de 2 420 à 2 450 m, contact huile/eau à 2 450 m, grès aquifère de 2 450 à 2 480 m, argile en dessous.",
+      "choices": [
+        "C'est normal : le filtrat de boue douce plus résistant remplace l'eau salée près du trou, donc Rxo est supérieure à Rt",
+        "C'est une erreur d'outil : les deux courbes devraient être identiques",
+        "Cela indique des hydrocarbures dans l'aquifère",
+        "Cela indique un cavage important"
+      ],
+      "answer": 0,
+      "explain": "Dans une zone aquifère avec une boue douce, le filtrat plus résistant envahit la formation : la résistivité proche du trou est supérieure à la profonde. Dans la zone à huile de la même figure, c'est l'inverse.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-030",
+      "theme": "Diagraphies & pétrophysique",
+      "level": 3,
+      "q": "Le sonique lit 80 µs/ft dans un grès dont la matrice vaut 56 µs/ft et le fluide 189 µs/ft. Tu dois fournir la porosité sonique de Wyllie au géomodeleur.",
+      "choices": [
+        "Environ 30 %",
+        "Environ 42 %",
+        "Environ 18 %",
+        "Environ 8 %"
+      ],
+      "answer": 2,
+      "explain": "φ = (Δt − Δtma)/(Δtf − Δtma) = (80 − 56)/(189 − 56) = 24/133 ≈ 0,18.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-031",
+      "theme": "Diagraphies & pétrophysique",
+      "level": 2,
+      "q": "Entre 2 440 et 2 446 m, le caliper indique 14 pouces pour un trou foré à 8 1/2 pouces, et la densité y lit 2,10 g/cm³, ce qui donnerait une porosité très élevée. Que fais-tu ?",
+      "choices": [
+        "J'utilise la porosité densité telle quelle, car la densité est la mesure la plus fiable",
+        "Je rejette la porosité densité de cet intervalle (cavage) et je m'appuie sur le neutron ou le sonique",
+        "Je considère l'intervalle comme un super-réservoir à 40 % de porosité",
+        "J'ignore le caliper car il ne sert qu'au forage"
+      ],
+      "answer": 1,
+      "explain": "Un cavage empêche le bon contact du patin densité : la densité lue est faussée. On marque l'intervalle comme non fiable et on utilise les autres outils de porosité.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-032",
+      "theme": "Réservoir & réserves",
+      "level": 1,
+      "q": "Deux puits du même réservoir, à même chute de pression et mêmes k et h, produisent l'un une huile de 2 cP, l'autre une huile de 4 cP. Que devient le débit du second par rapport au premier ?",
+      "choices": [
+        "Il est doublé",
+        "Il est multiplié par quatre",
+        "Il est identique",
+        "Il est divisé par deux"
+      ],
+      "answer": 3,
+      "explain": "Darcy : q est proportionnel à k·A·ΔP/(μ·L). À ΔP égal, doubler la viscosité divise le débit par deux.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-033",
+      "theme": "Réservoir & réserves",
+      "level": 1,
+      "q": "Dans un rapport, un collègue écrit « STOIIP = 22 Mm³ » et en déduit qu'on produira 22 Mm³. Que lui réponds-tu ?",
+      "choices": [
+        "C'est déjà le volume produit à ce jour",
+        "C'est le volume d'eau à injecter",
+        "C'est l'huile en place en conditions standard : le produit dépend du facteur de récupération",
+        "C'est la capacité de stockage en surface"
+      ],
+      "answer": 2,
+      "explain": "Le STOIIP est le volume initialement en place, en conditions standard. Les récupérables valent STOIIP × RF, par exemple 35 % de 22 Mm³ environ 7,7 Mm³.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-034",
+      "theme": "Réservoir & réserves",
+      "level": 2,
+      "q": "Nouveau champ : surface 10 km², épaisseur utile 20 m, porosité 20 %, Sw = 30 %, Bo = 1,25. Le comité te demande le STOIIP en m³ standard.",
+      "choices": [
+        "22,4 millions de m³",
+        "28 millions de m³",
+        "40 millions de m³",
+        "14 millions de m³"
+      ],
+      "answer": 0,
+      "explain": "Roche : 10⁷ × 20 = 2 × 10⁸ m³ ; pores : 4 × 10⁷ ; huile : × 0,7 = 2,8 × 10⁷ m³ au gisement ; divisé par Bo = 2,24 × 10⁷ m³ standard.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-035",
+      "theme": "Réservoir & réserves",
+      "level": 2,
+      "q": "Le comité de réserves demande de présenter les réserves « 1P » en approche probabiliste selon PRMS. Quel percentile cites-tu ?",
+      "choices": [
+        "P10 (scénario optimiste)",
+        "P50 (estimation centrale)",
+        "P1 (valeur extrême)",
+        "P90 (au moins 90 % de probabilité d'être atteint ou dépassé)"
+      ],
+      "answer": 3,
+      "explain": "En PRMS, 1P (prouvées) correspond à P90, 2P à P50 et 3P à P10 dans l'approche probabiliste.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-036",
+      "theme": "Réservoir & réserves",
+      "level": 1,
+      "q": "Un puits voit sa pression de fond tomber à 180 bar, alors que le point de bulle est à 200 bar. Le GOR de production monte et le débit d'huile chute. Quelle est la cause la plus probable ?",
+      "choices": [
+        "Une fuite sur la tête de puits",
+        "Le gaz se libère dans le réservoir sous le point de bulle",
+        "Un dépôt de sel dans le choke",
+        "Une pression qui est montée au-dessus de la pression de rosée"
+      ],
+      "answer": 1,
+      "explain": "Sous la pression de bulle, le gaz dissous se libère dans le réservoir, le GOR monte et la mobilité de l'huile baisse. Il faut limiter le drawdown.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-037",
+      "theme": "Réservoir & réserves",
+      "level": 2,
+      "q": "Le testeur de formation donne un gradient de pression de 0,35 psi/ft dans un grès à 2 400 m. En t'appuyant sur le graphique de gradients, quel fluide est présent ?",
+      "img": "svg/pressure-gradient-chart.svg",
+      "imgAlt": "Graphique pression-profondeur avec trois droites : eau douce 0,433 psi/ft (4 330 psi à 10 000 ft), huile 0,35 psi/ft (3 500 psi) et gaz 0,10 psi/ft (1 000 psi).",
+      "choices": [
+        "Du gaz (gradient proche de 0,10 psi/ft)",
+        "De l'huile",
+        "De l'eau douce (0,433 psi/ft)",
+        "Un mélange sans pente mesurable"
+      ],
+      "answer": 1,
+      "explain": "Le graphique donne : gaz 0,10 ; huile 0,35 ; eau douce 0,433 psi/ft. Une pente de 0,35 caractérise l'huile. À 10 000 ft, une colonne d'huile donne 3 500 psi.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-038",
+      "theme": "Réservoir & réserves",
+      "level": 2,
+      "q": "Sur un projet d'injection d'eau, la percée d'eau arrive après 4 mois au lieu des 18 mois prévus. Les données donnent krw/μw = 0,3/0,5 et kro/μo = 0,8/12. Quelle est la cause la plus probable ?",
+      "choices": [
+        "Une panne de la pompe d'injection",
+        "Un excès de perméabilité à l'huile",
+        "Une température d'injection trop basse uniquement",
+        "Rapport de mobilité défavorable : M environ 9, avec doigtage de l'eau"
+      ],
+      "answer": 3,
+      "explain": "M = (0,3/0,5)/(0,8/12) = 0,6/0,067 ≈ 9, bien supérieur à 1 : l'eau, beaucoup plus mobile, double l'huile par doigtage et perce tôt.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-039",
+      "theme": "Réservoir & réserves",
+      "level": 3,
+      "q": "Un puits suit un déclin exponentiel pur : son débit est divisé par deux en 5 ans. Il produit 1 000 b/j aujourd'hui. Pour le budget, quel débit prévois-tu dans 10 ans ?",
+      "choices": [
+        "250 b/j",
+        "500 b/j",
+        "0 b/j",
+        "125 b/j"
+      ],
+      "answer": 0,
+      "explain": "Division par deux tous les 5 ans : 1 000 → 500 (5 ans) → 250 (10 ans).",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-040",
+      "theme": "Réservoir & réserves",
+      "level": 3,
+      "q": "Tu analyses un essai de remontée de pression. En fin d'essai, le tracé de Horner donne une droite en écoulement radial. Que fournit la pente de cette droite ?",
+      "choices": [
+        "La température du réservoir",
+        "Le volume de gaz dissous",
+        "Le produit perméabilité-épaisseur kh",
+        "La porosité de la roche"
+      ],
+      "answer": 2,
+      "explain": "En écoulement radial, la pente de la droite semi-log (Horner) donne kh, d'où la perméabilité en divisant par l'épaisseur utile.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-041",
+      "theme": "Réservoir & réserves",
+      "level": 2,
+      "q": "Sur la courbe IPR figurée, le puits a été testé à 700 stb/j pour Pwf = 1 500 psi avec Pws = 3 000 psi. Le chef de production veut 1 000 stb/j (AOF). À quelle pression de fond cela correspond-il ?",
+      "img": "svg/ipr-curve.svg",
+      "imgAlt": "Courbe IPR de Vogel : Pws = 3 000 psi, point d'essai à Pwf = 1 500 psi pour q = 700 stb/j, q max (AOF) = 1 000 stb/j.",
+      "choices": [
+        "3 000 psi, égale à la pression de gisement",
+        "1 500 psi, soit le point d'essai",
+        "La pression de bulle du gisement",
+        "0 psi (pression atmosphérique), valeur théorique non atteignable en pratique"
+      ],
+      "answer": 3,
+      "explain": "L'AOF est le débit maximal théorique obtenu pour une pression de fond nulle. Il est inatteignable en pratique, mais il sert à caler la courbe IPR.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-reservoir-042",
+      "theme": "Réservoir & réserves",
+      "level": 3,
+      "q": "Un stagiaire demande pourquoi 1,25 m³ d'huile au gisement ne donnent que 1 m³ en cuve de stockage. Que lui réponds-tu ?",
+      "choices": [
+        "L'huile gagne de l'eau en remontant dans le puits",
+        "L'huile contient du gaz dissous qui se libère et elle se contracte en surface : Bo > 1",
+        "La température plus basse en surface densifie l'huile et fait perdre du volume",
+        "Une partie de l'huile reste collée aux parois du tubing"
+      ],
+      "answer": 1,
+      "explain": "Le facteur volumétrique Bo est supérieur à 1 car l'huile en gisement renferme du gaz dissous et se contracte une fois dégazée en surface.",
+      "seconds": 75,
+      "status": "draft"
+    }
+  ]
+}

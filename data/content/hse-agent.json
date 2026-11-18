@@ -1,0 +1,850 @@
+{
+  "profile": "hse-agent",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "EPI et signalisation de sécurité ISO 7010",
+      "theme": "EPI & signalisation",
+      "minutes": 8,
+      "body": "Les équipements de protection individuelle (EPI) sont la **dernière barrière** entre le travailleur et le danger. Dans la hiérarchie des mesures de maîtrise, on cherche d'abord à éliminer le risque, puis à le réduire à la source, puis à installer des protections collectives, puis à organiser le travail (procédures, formation) et seulement ensuite à fournir des EPI. Un EPI ne supprime pas le danger : il limite les conséquences si les autres barrières ont échoué.\n\nLes principaux EPI d'un site pétrolier ou minier sont :\n- le **casque** de sécurité contre les chutes d'objets et les chocs ;\n- les **lunettes ou l'écran facial** contre les projections et les poussières ;\n- les **protections auditives** lorsque le bruit est élevé (le seuil de 85 dB(A) d'exposition quotidienne est le repère le plus courant) ;\n- les **gants**, choisis selon le risque (coupure, chimique, chaleur) : il n'existe pas de gant universel ;\n- les **chaussures de sécurité** : S1 (embout, antistatique), S2 (S1 + résistance à la pénétration d'eau), S3 (S2 + semelle anti-perforation) ;\n- les **vêtements** adaptés (haute visibilité, ignifugés si risque d'incendie) ;\n- les **appareils de protection respiratoire** et le **harnais antichute** pour les cas spécifiques.\n\nUn EPI doit être adapté au risque, à la morphologie de l'utilisateur, compatible avec les autres EPI, entretenu, vérifié avant chaque usage et remplacé s'il est abîmé ou périmé. L'employeur le fournit gratuitement et forme le personnel ; le travailleur le porte et signale tout défaut.\n\nLa signalisation de sécurité suit la norme **ISO 7010**, fondée sur la forme et la couleur :\n- **interdiction** : cercle à bordure rouge avec barre diagonale ;\n- **obligation** : cercle bleu avec pictogramme blanc ;\n- **avertissement** : triangle jaune à bordure noire ;\n- **sauvetage et secours** : carré ou rectangle vert ;\n- **matériel de lutte contre l'incendie** : carré ou rectangle rouge.\n\nUn agent HSE contrôle que les panneaux sont visibles, propres, cohérents avec les risques réels de la zone et compris de tous, y compris des visiteurs et sous-traitants.\n\n**Sur le terrain**\n- Un EPI abîmé (visière rayée, sangle effilochée, casque fissuré) sort du service le jour même : on ne « fait pas avec ».\n- Choisis l'EPI selon le danger réel de la tâche, pas selon ce qui est dans le magasin : des gants de manutention ne protègent pas d'un acide, la FDS le dit.\n- Quand tu vois quelqu'un sans EPI, demande d'abord pourquoi (taille, inconfort, rupture de stock) : la vraie cause est souvent là.",
+      "keyPoints": [
+        "Les EPI sont la dernière barrière dans la hiérarchie des mesures de maîtrise.",
+        "Chaussures S3 = embout + semelle anti-perforation + antistatique et étanchéité à l'eau.",
+        "ISO 7010 : rouge = interdiction ou incendie, bleu = obligation, jaune = avertissement, vert = secours."
+      ],
+      "img": "svg/ppe-icons.svg",
+      "imgAlt": "Planche de pictogrammes d'équipements de protection individuelle"
+    },
+    {
+      "id": "m2",
+      "title": "Permis de travail, hauteur, espaces confinés et consignation",
+      "theme": "Permis & travaux à risque",
+      "minutes": 10,
+      "body": "Le **permis de travail** est un document formel qui autorise une tâche à risque, à un endroit précis, pour une durée limitée, après analyse des dangers et définition des mesures de prévention. Il est signé par l'émetteur (côté exploitation) et l'exécutant, affiché sur la zone et clôturé à la fin des travaux. Les permis courants sont : permis général, **permis de feu** (travaux par points chauds), entrée en espace confiné, travail en hauteur, fouille, intervention électrique. Un permis ne remplace jamais l'analyse de risques sur le terrain : on vérifie sur place que les conditions décrites sont réelles.\n\n**Travail en hauteur** : on privilégie toujours la **protection collective** (garde-corps, plateforme, échafaudage conforme) avant la protection individuelle. Si un harnais est nécessaire, il est relié à un point d'ancrage résistant, avec une longueur de longe adaptée pour limiter la hauteur de chute. Le harnais est inspecté avant chaque usage. Une personne suspendue inerte doit être secourue très vite : prévoir le plan de sauvetage avant le début du travail.\n\n**Espaces confinés** (cuves, bacs, séparateurs, fosses) : l'atmosphère peut être déficiente en oxygène, toxique ou explosive. Avant l'entrée : isoler et consigner, vidanger, nettoyer, ventiler, **mesurer l'atmosphère** (oxygène, gaz inflammables, gaz toxiques tels que H2S), désigner un **surveillant** resté à l'extérieur, prévoir moyens de communication et de sauvetage. Le surveillant ne pénètre jamais dans l'espace pour secourir : il donne l'alerte. De nombreux accidents mortels touchent des sauveteurs improvisés.\n\n**Consignation (LOTO, Lock Out Tag Out)** : elle protège contre le démarrage intempestif ou la libération d'énergie (électrique, hydraulique, pneumatique, thermique, gravitaire, chimique). Séquence : informer, arrêter, isoler les sources, **verrouiller et étiqueter**, dissiper les énergies résiduelles, puis **vérifier l'absence d'énergie** (essai de démarrage). Chaque intervenant pose son propre cadenas et seul lui le retire. Le travail à chaud exige en plus un contrôle d'atmosphère à l'explosimètre et un moyen d'extinction à portée de main.\n\n**Sur le terrain**\n- Avant de signer un permis, va sur place : le papier décrit une situation, le terrain peut être différent.\n- Une tâche répétitive n'est pas une tâche sans risque : permis et consignation s'appliquent à chaque fois.\n- Tout changement de conditions (fuite, orage, alarme du détecteur, nouvelle équipe) suspend le permis jusqu'à une nouvelle vérification.",
+      "keyPoints": [
+        "Un permis de travail est limité dans le temps et dans l'espace, et signé de deux parties.",
+        "Hauteur : protection collective d'abord, puis individuelle avec plan de sauvetage.",
+        "Espace confiné : tester l'atmosphère, surveillant à l'extérieur, jamais de sauvetage improvisé.",
+        "LOTO : verrouiller, étiqueter, dissiper l'énergie résiduelle, vérifier l'absence d'énergie."
+      ],
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Schéma de consignation avec cadenas et étiquette"
+    },
+    {
+      "id": "m3",
+      "title": "Incendie, H2S et premiers secours",
+      "theme": "Incendie",
+      "minutes": 10,
+      "body": "Le **triangle du feu** montre que trois éléments sont nécessaires : un **combustible**, un **comburant** (en général l'oxygène de l'air) et une **énergie d'activation** (chaleur, étincelle, friction). Supprimer l'un des trois éteint le feu : refroidir (eau), étouffer (CO2, poudre, couverture) ou isoler le combustible (fermer une vanne).\n\nLes classes de feu : **A** solides (bois, papier, carton), **B** liquides inflammables (hydrocarbures, solvants), **C** gaz, **D** métaux, **F** huiles et graisses de cuisson. Les extincteurs courants : eau pulvérisée (classe A), poudre ABC (polyvalente), **CO2** (classe B et feux d'origine électrique, sans résidu). On n'utilise jamais d'eau sur une installation électrique sous tension. Technique : retirer la goupille, viser la **base des flammes**, balayer, dos au vent. En cas d'alarme : donner l'alerte, évacuer sans courir ni utiliser l'ascenseur, rejoindre le point de rassemblement et se laisser compter. Une fuite de gaz enflammée ne s'éteint qu'après avoir coupé l'alimentation, sinon un nuage explosif peut se former.\n\nLe **sulfure d'hydrogène (H2S)** est un gaz toxique présent dans certains effluents pétroliers. Il sent l'œuf pourri à faible concentration, mais **paralyse l'odorat** à concentration élevée : l'odeur n'est donc pas un moyen de détection. Il est plus lourd que l'air et s'accumule en points bas. Il est inflammable. Protection : détecteurs fixes et portatifs, manche à air, appareils respiratoires autonomes accessibles, formation. À l'alarme : retenir son souffle si nécessaire, évacuer en se plaçant à contre-vent par rapport à la source, rejoindre le point de rassemblement.\n\n**Premiers secours** : la séquence **PAS** = Protéger, Alerter, Secourir. Hémorragie : compression directe de la plaie. Victime inconsciente qui respire : position latérale de sécurité. Arrêt cardiaque : alerter, démarrer les compressions thoraciques (30 compressions pour 2 insufflations, environ 100 à 120 par minute) et utiliser un défibrillateur (DAE) dès qu'il est disponible. Brûlure thermique : refroidir à l'eau tempérée au moins 10 minutes, ne pas percer les cloques.\n\n**Sur le terrain**\n- Le premier réflexe n'est pas d'éteindre mais d'alerter et, si c'est sans risque, de couper l'alimentation en combustible ou en énergie.\n- À chaque tournée, contrôle les extincteurs : plombage, pression, accès dégagé, date de vérification.\n- En cas de H2S ou d'espace confiné, on n'entre jamais pour secourir : alerte, et les sauveteurs équipés interviennent.",
+      "keyPoints": [
+        "Triangle du feu : combustible, comburant, énergie d'activation.",
+        "CO2 pour feux électriques et de liquides ; jamais d'eau sur tension.",
+        "H2S : plus lourd que l'air, paralyse l'odorat, ne jamais se fier à l'odeur.",
+        "PAS : Protéger, Alerter, Secourir ; RCP 30 compressions pour 2 insufflations."
+      ],
+      "img": "svg/fire-triangle.svg",
+      "imgAlt": "Triangle du feu : combustible, comburant, énergie d'activation"
+    },
+    {
+      "id": "m4",
+      "title": "Causeries sécurité et observation des tâches",
+      "theme": "Causeries & observation",
+      "minutes": 7,
+      "body": "L'agent ou animateur HSE est d'abord un **relais de terrain** : il transforme les règles en gestes compris et appliqués. Deux outils majeurs : la causerie sécurité et l'observation des tâches.\n\nLa **causerie sécurité** (ou « quart d'heure sécurité ») est un échange bref, de 10 à 15 minutes, en début de poste, sur **un seul thème** lié au travail du jour : un incident récent, un risque nouveau, un rappel de procédure. Pour être efficace, elle doit être préparée, participative (questions ouvertes, démonstration, exemple vécu), parler la langue du groupe, se conclure par un engagement concret et être tracée (feuille de présence, thème, actions). Un monologue de lecture de consignes n'apporte presque rien.\n\nL'**observation des tâches** consiste à observer un travailleur en situation réelle, de façon planifiée, pour repérer les comportements sûrs et à risque et les écarts avec la procédure. Méthode : préparer (connaître la tâche et ses risques), observer sans interrompre sauf danger immédiat, **dialoguer** avec la personne (pourquoi a-t-elle procédé ainsi ?), **féliciter** ce qui est bien fait, convenir d'une amélioration et enregistrer l'observation. L'objectif est d'apprendre, pas de punir : si l'observation devient un contrôle sanctionnant, les travailleurs cachent leurs pratiques. Les causes d'un écart sont souvent organisationnelles : procédure inadaptée, outil manquant, pression de délai.\n\nLa **pyramide de Bird** (1 accident grave, 10 blessures légères, 30 dommages matériels, 600 incidents sans dommage) rappelle qu'on prévient les accidents graves en traitant les signaux faibles : presqu'accidents, situations dangereuses, écarts. Un **presqu'accident** est un événement sans blessure ni dégât qui aurait pu en causer. Chaque travailleur dispose du **droit d'arrêt de travail** (Stop Work) : suspendre une tâche qu'il juge dangereuse, sans crainte de sanction, jusqu'à clarification. Remonter les presqu'accidents doit être encouragé et valorisé.\n\n**Sur le terrain**\n- Face à un danger imminent, interviens tout de suite et dialogue ensuite ; pour un écart sans urgence, observe, puis échange en tête-à-tête.\n- Le reproche en public referme la discussion ; la question « qu'est-ce qui t'a gêné pour suivre la procédure ? » fait remonter les vraies causes.\n- Ce sont les presque-accidents déclarés qui font baisser les accidents graves : remercie celui qui déclare, ne le punis jamais.",
+      "keyPoints": [
+        "Causerie : 10-15 minutes, un thème, participative, tracée.",
+        "Observation : dialoguer, féliciter, comprendre les causes, ne pas sanctionner.",
+        "Pyramide de Bird : agir sur les 600 signaux faibles pour éviter l'accident grave.",
+        "Tout travailleur peut arrêter une tâche dangereuse (Stop Work)."
+      ],
+      "img": "svg/bird-pyramid.svg",
+      "imgAlt": "Pyramide de Bird : 1, 10, 30, 600"
+    }
+  ],
+  "questions": [
+    {
+      "id": "hse-agent-001",
+      "theme": "EPI & signalisation",
+      "level": 1,
+      "q": "Tu fais ta ronde au dépôt de gazole. Sur la porte du local pompes, un panneau rond à fond bleu montre un casque antibruit en blanc (même code que le cercle bleu de la planche). Que fais-tu avant d'entrer ?",
+      "img": "svg/iso-safety-signs.svg",
+      "imgAlt": "Planche de panneaux ISO 7010 : le cercle bleu à symbole blanc est un panneau d'obligation.",
+      "choices": [
+        "Je note le danger et j'entre sans équipement : le panneau ne fait qu'avertir",
+        "Je n'entre pas : c'est une interdiction d'accès",
+        "Je cherche l'issue de secours la plus proche : c'est un panneau de sauvetage",
+        "Je mets ma protection auditive : c'est une obligation dans ce local"
+      ],
+      "answer": 3,
+      "explain": "Sur la planche, le cercle bleu à symbole blanc impose un comportement ou un équipement (obligation). Un avertissement serait un triangle jaune, une interdiction un cercle rouge barré, un sauvetage un carré vert.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-002",
+      "theme": "EPI & signalisation",
+      "level": 1,
+      "q": "Un intérimaire arrive pour décharger des fûts sur une zone où circulent chariots élévateurs et camions. Parmi les EPI de la planche, lequel sert surtout à ce que les conducteurs d'engins le repèrent ?",
+      "img": "svg/ppe-icons.svg",
+      "imgAlt": "Planche d'EPI : casque, lunettes, gants, chaussures, casque antibruit, gilet haute visibilité.",
+      "choices": [
+        "Les lunettes de protection",
+        "Le gilet haute visibilité",
+        "Les gants de protection",
+        "Le casque antibruit"
+      ],
+      "answer": 1,
+      "explain": "Le gilet haute visibilité est l'EPI qui permet d'être vu du personnel d'engins. Les autres protègent les yeux, les mains ou l'ouïe mais ne rendent pas visible.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-003",
+      "theme": "EPI & signalisation",
+      "level": 1,
+      "q": "En arrivant sur la plateforme, tu vois à l'entrée du poste de transformation un triangle jaune à bord noir avec un éclair. Comment lis-tu ce panneau, d'après la planche ?",
+      "img": "svg/iso-safety-signs.svg",
+      "imgAlt": "Panneaux ISO 7010 : triangle jaune à bord noir = avertissement (exemple : danger électrique).",
+      "choices": [
+        "Obligation de porter un EPI électrique pour tous les visiteurs",
+        "Interdiction de toucher les installations, même habilité",
+        "Avertissement : danger électrique dans la zone",
+        "Indication d'un point de secours électrique"
+      ],
+      "answer": 2,
+      "explain": "Un triangle jaune à bord noir signale un danger (ici électrique). Il avertit : il n'impose pas à lui seul un équipement (cercle bleu) et n'interdit pas une action (cercle rouge barré).",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-004",
+      "theme": "EPI & signalisation",
+      "level": 1,
+      "q": "Près du stockage de solvants, un panneau rond rouge barré montre une cigarette. Tu vois un sous-traitant allumer la sienne « à l'air libre, donc ça va ». Que fais-tu ?",
+      "img": "svg/iso-safety-signs.svg",
+      "imgAlt": "Panneaux ISO 7010 : cercle rouge barré = interdiction (exemple : défense de fumer).",
+      "choices": [
+        "Je lui demande d'éteindre tout de suite et de s'éloigner : l'interdiction vaut pour toute la zone signalée",
+        "Je le laisse finir : l'interdiction ne concerne que l'intérieur d'un bâtiment",
+        "Je lui demande de souffler la fumée loin du stockage",
+        "J'attends la fin de la pause pour lui en parler"
+      ],
+      "answer": 0,
+      "explain": "Le cercle rouge barré interdit l'action dans toute la zone concernée, bâtiment ou non : des vapeurs de solvant peuvent s'enflammer à distance. On intervient immédiatement.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-005",
+      "theme": "EPI & signalisation",
+      "level": 2,
+      "q": "Un compresseur dépasse nettement le niveau de bruit admissible. Le chef d'atelier propose de distribuer des bouchons d'oreille à tous et de « considérer le sujet réglé ». Que réponds-tu ?",
+      "choices": [
+        "Les bouchons restent un dernier recours : il faut aussi chercher à réduire le bruit à la source (capot, maintenance, éloignement)",
+        "C'est la bonne solution : l'EPI est la mesure la plus efficace",
+        "Les bouchons suffisent seulement si les opérateurs les portent plus de deux heures par jour",
+        "Il faut d'abord attendre une plainte médicale avant d'agir"
+      ],
+      "answer": 0,
+      "explain": "Dans la hiérarchie des mesures, on agit d'abord sur le danger (supprimer, réduire à la source, protéger collectivement) et on n'utilise les EPI qu'en complément ou en dernier recours.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-006",
+      "theme": "EPI & signalisation",
+      "level": 2,
+      "q": "Près d'un broyeur, le sonomètre affiche 92 dB(A) de façon continue et les opérateurs y passent tout leur poste. Quelle est l'action la plus adaptée ?",
+      "choices": [
+        "Ne rien faire : l'oreille s'habitue au bruit",
+        "Laisser chacun juger selon son ressenti s'il met ou non ses protections",
+        "Faire passer les opérateurs sur ce poste par tranches de cinq minutes, sans autre mesure",
+        "Délimiter et signaler la zone, imposer la protection auditive adaptée et lancer une réduction du bruit à la source"
+      ],
+      "answer": 3,
+      "explain": "Une exposition prolongée à un tel niveau abîme l'audition de façon irréversible : signalisation, EPI adaptés, suivi médical et action sur la source sont nécessaires. L'habituation est un piège, pas une protection.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-007",
+      "theme": "EPI & signalisation",
+      "level": 2,
+      "q": "Un magasinier doit circuler plusieurs jours sur un chantier où traînent des clous et des chutes de tôle. Quelle chaussure de sécurité (voir la planche) lui fournis-tu ?",
+      "img": "svg/ppe-icons.svg",
+      "imgAlt": "Planche d'EPI avec une chaussure de sécurité (protection des pieds).",
+      "choices": [
+        "Une S1 : l'embout suffit à protéger contre tout objet pointu",
+        "Une chaussure de ville à talon renforcé",
+        "Une S3 : embout de protection et semelle résistant à la perforation",
+        "Des sandales fermées à semelle épaisse"
+      ],
+      "answer": 2,
+      "explain": "Les clous exigent une semelle anti-perforation : c'est ce qu'apporte la classe S3. Un embout protège de l'écrasement, pas de la perforation par le dessous.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-008",
+      "theme": "EPI & signalisation",
+      "level": 3,
+      "q": "Sur la photo, un soudeur travaille à l'arc sur une canalisation. Tu constates qu'il n'a, comme protection oculaire, que des lunettes de sécurité incolores. Quelle protection exiges-tu pour les yeux et le visage ?",
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Soudeur à l'arc sur une canalisation en extérieur, étincelles et arc très lumineux.",
+      "choices": [
+        "Des lunettes de soleil teintées",
+        "Une cagoule ou un écran de soudeur avec filtre de teinte adaptée",
+        "Les lunettes incolores suffisent si l'arc est bref",
+        "Un écran facial transparent de meulage"
+      ],
+      "answer": 1,
+      "explain": "L'arc émet un rayonnement intense (UV et lumière) qui brûle la rétine et la cornée : seul un filtre de soudage de teinte adaptée protège. Lunettes de soleil et visière transparente ne filtrent pas assez.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-009",
+      "theme": "Permis & travaux à risque",
+      "level": 1,
+      "q": "Un chef d'équipe te dit : « inutile de demander un permis pour meuler la tuyauterie près du bac de gazole, on le fait tous les mois ». Que réponds-tu ?",
+      "choices": [
+        "Il a raison : une tâche routinière n'a plus besoin de permis",
+        "Le permis n'est nécessaire que pour la soudure, pas pour le meulage",
+        "Un permis verbal donné par le chef suffit pour une tâche courte",
+        "Le meulage produit des étincelles : c'est un travail par points chauds qui exige permis de feu et contrôle d'atmosphère, même répétitif"
+      ],
+      "answer": 3,
+      "explain": "Le meulage projette des étincelles capables d'enflammer des vapeurs d'hydrocarbures. Le caractère répétitif n'exonère pas : le permis formalise l'analyse des risques du jour et les mesures de prévention.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-010",
+      "theme": "Permis & travaux à risque",
+      "level": 2,
+      "q": "Un opérateur non habilité électriquement propose de consigner lui-même le départ moteur d'une pompe « pour gagner du temps ». Que réponds-tu en t'appuyant sur le schéma de consignation ?",
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Schéma de consignation en 5 étapes, avec la mention « Seul le personnel habilité peut consigner et déconsigner ».",
+      "choices": [
+        "Oui, s'il pose bien un cadenas et une étiquette",
+        "Oui, à condition que le chef d'équipe soit présent",
+        "Non : seul le personnel habilité consigne et déconsigne ; on fait venir la personne habilitée",
+        "Oui, si la pompe est de petite puissance"
+      ],
+      "answer": 2,
+      "explain": "La consignation électrique relève du personnel habilité, qui suit les étapes (séparer, condamner, identifier, vérifier l'absence de tension, mettre à la terre si besoin). Un cadenas posé par quelqu'un qui n'en a pas la compétence ne sécurise rien.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-011",
+      "theme": "Permis & travaux à risque",
+      "level": 2,
+      "q": "Un technicien a ouvert le sectionneur d'un moteur, posé son cadenas et son étiquette, et s'apprête à démonter le moteur. Quelle étape du schéma ne doit surtout pas être omise ?",
+      "img": "svg/lockout-tagout.svg",
+      "imgAlt": "Schéma de consignation : 1 séparer, 2 condamner, 3 identifier, 4 vérifier l'absence de tension (VAT), 5 mise à la terre si nécessaire.",
+      "choices": [
+        "Remettre brièvement sous tension pour vérifier que le moteur est bien arrêté",
+        "La vérification de l'absence de tension avec un VAT, en amont et en aval du point de travail",
+        "Retirer l'étiquette pour qu'elle ne gêne pas le démontage",
+        "Prévenir seulement l'équipe de nuit"
+      ],
+      "answer": 1,
+      "explain": "Un sectionneur ouvert et cadenassé ne prouve pas l'absence de tension : le contrôle par un VAT, en amont et en aval du point de travail, est l'étape qui valide la consignation avant d'intervenir.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-012",
+      "theme": "Permis & travaux à risque",
+      "level": 3,
+      "q": "À 17 h, un des trois mécaniciens quitte le poste en laissant son cadenas sur la machine consignée. Le chef d'équipe veut le couper pour redémarrer. Quelle est la bonne conduite ?",
+      "choices": [
+        "Ne pas le couper : retrouver son propriétaire ; à défaut, appliquer la procédure d'exception validée par le responsable, après avoir vérifié que personne n'est exposé",
+        "Le couper tout de suite : le chef d'équipe décide",
+        "Le faire retirer en fin de poste par l'exploitation, sans autre contrôle",
+        "Redémarrer en laissant le cadenas en place"
+      ],
+      "answer": 0,
+      "explain": "Chaque intervenant pose et retire son propre cadenas. Un retrait exceptionnel suit une procédure écrite : tentative de joindre le propriétaire, vérification qu'il n'est pas dans la zone, validation par le responsable.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-013",
+      "theme": "Permis & travaux à risque",
+      "level": 2,
+      "q": "Une entreprise sous-traitante doit remplacer des tôles de couverture sur un hangar. Elle n'a prévu que des harnais. Que demandes-tu en priorité ?",
+      "choices": [
+        "Rien de plus : un harnais pour chacun suffit",
+        "Des protections collectives (garde-corps, filet, plateforme) avant tout recours au harnais, avec des ancrages vérifiés",
+        "Limiter chaque intervention à dix minutes",
+        "Désigner un seul volontaire expérimenté pour tout faire"
+      ],
+      "answer": 1,
+      "explain": "Pour le travail en hauteur, la protection collective passe avant la protection individuelle. Sur une couverture fragile, on prévoit aussi circulation sur plateformes ou filets, jamais de marche directe sur les tôles.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-014",
+      "theme": "Permis & travaux à risque",
+      "level": 2,
+      "q": "Le chef de poste a mesuré uniquement l'oxygène (20,9 %) avant de faire entrer un opérateur dans une cuve à brut vidangée : « l'air est respirable ». Que lui réponds-tu ?",
+      "choices": [
+        "Il a raison : si l'oxygène est normal, on peut entrer",
+        "Il suffit de mesurer la température de la cuve",
+        "Il suffit qu'un collègue sente l'air depuis l'ouverture",
+        "L'oxygène normal ne prouve pas l'absence de gaz inflammables ou toxiques (H2S, CO, vapeurs d'hydrocarbures) : il faut les mesurer aussi, et ventiler"
+      ],
+      "answer": 3,
+      "explain": "Avant une entrée en espace confiné, on mesure au minimum l'oxygène, les gaz inflammables (explosimètre) et les gaz toxiques. Un air de teneur normale en oxygène peut contenir des vapeurs explosives ou du H2S.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-015",
+      "theme": "Permis & travaux à risque",
+      "level": 3,
+      "q": "Vous êtes surveillant à l'entrée d'un bac. L'opérateur à l'intérieur ne répond plus. Quelle est la bonne conduite ?",
+      "choices": [
+        "Donner l'alerte et déclencher le plan de secours sans entrer, les sauveteurs équipés intervenant avec appareil respiratoire",
+        "Entrer immédiatement en retenant votre souffle",
+        "Attendre cinq minutes qu'il réponde",
+        "Entrer avec un masque à cartouche filtrante"
+      ],
+      "answer": 0,
+      "explain": "De nombreux décès concernent des sauveteurs improvisés. Le surveillant alerte et reste à l'extérieur ; seuls des sauveteurs équipés (appareil respiratoire isolant, moyens de retrait) interviennent. Un filtre n'apporte pas d'oxygène.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-016",
+      "theme": "Permis & travaux à risque",
+      "level": 3,
+      "q": "Un permis de feu autorise une soudure sur une canalisation près d'une zone de stockage. L'explosimètre affiche 15 % de la LIE au point de travail, alors que le permis impose l'arrêt dès 10 %. Que fais-tu ?",
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Soudage à l'arc sur une canalisation en extérieur.",
+      "choices": [
+        "Je démarre vite pour finir avant que le taux n'augmente",
+        "Je démarre en gardant un extincteur à côté",
+        "Je ne démarre pas : je suspends le permis, je cherche la source, je ventile et je refais le contrôle",
+        "Je mouille le sol et je démarre"
+      ],
+      "answer": 2,
+      "explain": "Une atmosphère au-dessus du seuil du permis interdit tout travail par points chauds. On supprime la cause, on ventile, on remesure et seul un contrôle conforme permet de reprendre ; un extincteur ne rend pas l'atmosphère sûre.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-017",
+      "theme": "Incendie",
+      "level": 1,
+      "q": "Un feu de gaz alimenté par une conduite se déclare sur une bride. L'opérateur ferme la vanne d'alimentation en amont. Sur le triangle du feu, quel côté vient-il de supprimer ?",
+      "img": "svg/fire-triangle.svg",
+      "imgAlt": "Triangle du feu : combustible, comburant, énergie d'activation ; on éteint en supprimant un côté.",
+      "choices": [
+        "Le comburant",
+        "L'énergie d'activation",
+        "Le combustible",
+        "Les trois à la fois"
+      ],
+      "answer": 2,
+      "explain": "Fermer la vanne coupe l'arrivée du gaz : on supprime le combustible. C'est le moyen le plus sûr d'éteindre un feu de gaz sous pression.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-018",
+      "theme": "Incendie",
+      "level": 1,
+      "q": "Une flaque de gazole s'enflamme au poste de dépotage. Quel moyen d'extinction choisis-tu ?",
+      "choices": [
+        "Un extincteur à eau sans additif, comme pour un feu de bois",
+        "Un extincteur à poudre polyvalente ou à mousse : c'est un feu de classe B (liquides inflammables)",
+        "Un seau d'eau jeté sur la flaque",
+        "Aucun : on attend que le gazole s'évapore"
+      ],
+      "answer": 1,
+      "explain": "Les feux de liquides inflammables sont de classe B : poudre, mousse ou CO2 conviennent. L'eau jetée sur un liquide en feu peut étaler le produit et aggraver l'incendie.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-019",
+      "theme": "Incendie",
+      "level": 1,
+      "q": "Un coffret de commande d'une pompe fume et des flammes en sortent ; il est sous tension. Quel est ton premier geste ?",
+      "img": "svg/fire-triangle.svg",
+      "imgAlt": "Triangle du feu avec la mention : ne jamais utiliser d'eau sur un feu d'origine électrique sous tension.",
+      "choices": [
+        "Donner l'alerte et couper l'alimentation électrique si c'est possible sans danger, puis attaquer au CO2",
+        "Jeter de l'eau pour refroidir rapidement",
+        "Ouvrir le coffret pour chercher l'origine",
+        "Utiliser un extincteur à mousse"
+      ],
+      "answer": 0,
+      "explain": "L'eau conduit le courant : jamais sur une installation sous tension. On alerte, on coupe l'énergie quand c'est possible sans danger, puis on utilise un extincteur adapté (CO2).",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-020",
+      "theme": "Incendie",
+      "level": 2,
+      "q": "Dans la cuisine de la base-vie, l'huile d'une friteuse prend feu. Quelle action est adaptée et sur quel côté du triangle agit-elle ?",
+      "img": "svg/fire-triangle.svg",
+      "imgAlt": "Triangle du feu : étouffer supprime le comburant ; refroidir supprime la chaleur.",
+      "choices": [
+        "Verser de l'eau : on supprime la chaleur",
+        "Pousser la friteuse dehors : on supprime le combustible",
+        "Souffler sur les flammes : on supprime l'énergie d'activation",
+        "Étouffer avec un couvercle ou une couverture anti-feu : on supprime le comburant, sans jamais verser d'eau"
+      ],
+      "answer": 3,
+      "explain": "Couvrir prive le feu d'oxygène. L'eau sur de l'huile en feu provoque des projections violentes qui propagent l'incendie.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-021",
+      "theme": "Incendie",
+      "level": 2,
+      "q": "Pendant un exercice, tu vois un collègue vider un extincteur à poudre depuis huit mètres, face au vent, en visant le haut des flammes. Que lui corriges-tu ?",
+      "choices": [
+        "S'approcher à bonne distance, dos au vent, viser la base des flammes en balayant",
+        "Rien : viser le haut est plus efficace",
+        "Tirer de plus loin encore pour être en sécurité",
+        "Viser la fumée qui monte"
+      ],
+      "answer": 0,
+      "explain": "On vise la base des flammes, là où se trouve le combustible, en balayant, avec le vent dans le dos pour ne pas recevoir la poudre ni la chaleur.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-022",
+      "theme": "Incendie",
+      "level": 2,
+      "q": "Derrière l'entrepôt, des palettes en bois et des cartons brûlent. Quelle classe de feu et quel agent principal ?",
+      "choices": [
+        "Classe B (liquides) : mousse uniquement",
+        "Classe D (métaux) : poudre spéciale",
+        "Classe A (solides) : l'eau est très efficace",
+        "Classe F (huiles de cuisson) : couverture uniquement"
+      ],
+      "answer": 2,
+      "explain": "Bois et cartons sont des combustibles solides : classe A. L'eau refroidit et éteint efficacement ce type de feu.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-023",
+      "theme": "Incendie",
+      "level": 2,
+      "q": "Lors d'un exercice d'évacuation, l'alarme retentit. Dans le couloir, tu cherches l'indication à suivre. Quel panneau de la planche te guide ?",
+      "img": "svg/iso-safety-signs.svg",
+      "imgAlt": "Panneaux ISO 7010 : carré vert à symbole blanc = sauvetage (sortie, secours).",
+      "choices": [
+        "Le triangle jaune à bord noir",
+        "Le carré vert à pictogramme blanc (sauvetage : sortie, point de rassemblement)",
+        "Le cercle bleu à symbole blanc",
+        "Le cercle rouge barré"
+      ],
+      "answer": 1,
+      "explain": "Le carré vert signale les issues de secours, les premiers secours et le sauvetage. Jaune = danger, bleu = obligation, rouge barré = interdiction.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-024",
+      "theme": "Incendie",
+      "level": 3,
+      "q": "Une fuite de gaz sous pression est enflammée au niveau d'une bride. Quelle est la conduite correcte ?",
+      "choices": [
+        "Éteindre la flamme avec un extincteur à poudre sans autre action",
+        "Éteindre à l'eau puis réparer immédiatement",
+        "S'approcher pour serrer la bride",
+        "Isoler l'alimentation en gaz (arrêt d'urgence) et refroidir les équipements voisins ; ne pas éteindre la flamme tant que la fuite n'est pas coupée"
+      ],
+      "answer": 3,
+      "explain": "Éteindre la flamme sans couper le gaz crée un nuage inflammable pouvant exploser à la réinflammation. On coupe d'abord l'alimentation et on protège les équipements voisins par refroidissement.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-025",
+      "theme": "H2S & premiers secours",
+      "level": 1,
+      "q": "Au poste de dépotage, un opérateur dit avoir senti une odeur d'œuf pourri puis plus rien au bout de quelques minutes : « le gaz est parti ». Que lui réponds-tu ?",
+      "choices": [
+        "Oui : s'il ne sent plus rien, il n'y a plus de gaz",
+        "Oui, mais il doit rester à proximité pour surveiller",
+        "Non : à forte concentration le H2S paralyse l'odorat ; seul le détecteur fait foi, on évacue et on alerte",
+        "Non, mais il peut continuer sa tâche en retenant sa respiration"
+      ],
+      "answer": 2,
+      "explain": "Le H2S anesthésie le nerf olfactif à concentration élevée : l'absence d'odeur ne prouve rien. Seuls les détecteurs fixes ou portables renseignent sur la présence du gaz.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-026",
+      "theme": "H2S & premiers secours",
+      "level": 1,
+      "q": "Un opérateur veut descendre dans la fosse de vidange pour récupérer un outil alors que son détecteur H2S portable vient de biper. Pourquoi est-ce particulièrement dangereux ?",
+      "choices": [
+        "Le H2S est plus lourd que l'air : il s'accumule dans les points bas comme une fosse",
+        "Le H2S monte en hauteur : en bas, l'air est donc sain",
+        "Le H2S est uniquement dangereux en plein air",
+        "Le détecteur bipe toujours un peu : ce n'est pas un signal"
+      ],
+      "answer": 0,
+      "explain": "Plus dense que l'air, le H2S stagne dans les fosses, caniveaux et bas de cuve. Une alarme de détecteur impose de ne pas s'approcher et d'alerter.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-027",
+      "theme": "H2S & premiers secours",
+      "level": 2,
+      "q": "L'alarme H2S retentit. Le point de rassemblement A est sous le vent de la fuite (le vent pousse le gaz vers lui) ; le point B est au vent de la fuite. Où te diriges-tu ?",
+      "choices": [
+        "Vers A, qui est le plus proche",
+        "Vers la fuite pour la couper",
+        "Je reste à mon poste en attendant les consignes",
+        "Vers B, au vent de la fuite, en marchant vite sans courir"
+      ],
+      "answer": 3,
+      "explain": "On s'éloigne de la source en se plaçant au vent (ou perpendiculairement) pour que le gaz soit emporté loin de soi. La manche à air donne la direction du vent. On ne s'approche jamais de la fuite.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-028",
+      "theme": "H2S & premiers secours",
+      "level": 2,
+      "q": "Un ouvrier s'effondre à côté d'un câble électrique tombé au sol. Quel est ton premier geste de secouriste (protéger, alerter, secourir) ?",
+      "choices": [
+        "Secourir : tirer la victime par les bras immédiatement",
+        "Protéger : sécuriser la zone et couper le courant, sans approcher tant que le danger persiste",
+        "Alerter seulement, sans couper l'énergie",
+        "Toucher le câble avec un outil métallique pour le déplacer"
+      ],
+      "answer": 1,
+      "explain": "Le secouriste ne doit pas devenir victime : on protège d'abord (couper le courant, baliser), puis on alerte, puis on secourt. Un outil métallique conduit l'électricité.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-029",
+      "theme": "H2S & premiers secours",
+      "level": 2,
+      "q": "Un ouvrier a une plaie profonde au bras qui saigne abondamment. Quel est le premier geste ?",
+      "choices": [
+        "Faire un garrot immédiatement sous l'épaule",
+        "Comprimer directement la plaie avec une main protégée ou un tampon",
+        "Rincer longuement à l'eau en attendant",
+        "Faire boire la victime"
+      ],
+      "answer": 1,
+      "explain": "La compression directe et continue arrête la plupart des hémorragies. Le garrot n'est envisagé qu'en dernier recours si la compression est impossible ou inefficace.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-030",
+      "theme": "H2S & premiers secours",
+      "level": 2,
+      "q": "Une collègue est inconsciente et ne respire pas. Tu es secouriste formé et les secours seront là dans douze minutes. Quel rythme de réanimation adulte appliques-tu ?",
+      "choices": [
+        "30 compressions thoraciques pour 2 insufflations, sans interruption jusqu'à l'arrivée des secours ou la reprise de la respiration",
+        "5 compressions pour 1 insufflation",
+        "2 compressions pour 30 insufflations",
+        "10 compressions pour 5 insufflations, puis attendre"
+      ],
+      "answer": 0,
+      "explain": "Pour l'adulte, le rapport de référence est 30 compressions pour 2 insufflations, avec un défibrillateur dès qu'il est disponible.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-031",
+      "theme": "H2S & premiers secours",
+      "level": 3,
+      "q": "Une victime est inconsciente mais respire normalement, sans blessure grave apparente de la colonne. Que faire en attendant les secours ?",
+      "choices": [
+        "La laisser sur le dos et la surveiller",
+        "La faire asseoir et lui donner de l'eau",
+        "La relever pour la faire marcher",
+        "La placer en position latérale de sécurité et surveiller sa respiration"
+      ],
+      "answer": 3,
+      "explain": "La PLS libère les voies aériennes et évite l'étouffement par la langue ou les vomissements. On ne donne rien à boire à une personne inconsciente.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-032",
+      "theme": "H2S & premiers secours",
+      "level": 3,
+      "q": "Un opérateur a le bras brûlé par de la vapeur (brûlure thermique). Que faire ?",
+      "choices": [
+        "Appliquer du beurre ou du dentifrice",
+        "Percer les cloques pour évacuer le liquide",
+        "Refroidir à l'eau tempérée pendant au moins 10 minutes, ne pas percer les cloques, demander un avis médical",
+        "Appliquer de la glace directement"
+      ],
+      "answer": 2,
+      "explain": "Le refroidissement prolongé à l'eau tempérée limite l'extension de la brûlure et soulage la douleur. Les corps gras retiennent la chaleur, la glace aggrave la lésion, percer une cloque favorise l'infection.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-033",
+      "theme": "Causeries & observation",
+      "level": 1,
+      "q": "Tu prépares la causerie de 6 h 45 avant la reprise de l'équipe de maintenance. Quel format retiens-tu ?",
+      "choices": [
+        "Une heure de cours théorique sur tous les risques du site",
+        "Lire une consigne à voix haute et la faire signer sans discussion",
+        "Une réunion mensuelle sur tous les thèmes",
+        "10 à 15 minutes, un seul thème tiré d'un événement réel de la semaine, avec échange"
+      ],
+      "answer": 3,
+      "explain": "Une causerie efficace est courte, centrée sur un thème concret du terrain et participative : l'équipe parle, démontre, s'engage.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-034",
+      "theme": "Causeries & observation",
+      "level": 1,
+      "q": "L'équipe doit démarrer une tâche en hauteur à 7 h, comme sur la photo. À quel moment places-tu la causerie ?",
+      "img": "photo/workers-ppe.jpg",
+      "imgAlt": "Opérateur travaillant en hauteur sur une plate-forme avec harnais et casque.",
+      "choices": [
+        "À la fin du poste, une fois les travaux terminés",
+        "Juste avant le démarrage, sur le lieu de travail, à partir de l'analyse de risques du jour",
+        "Seulement après un accident",
+        "Une fois par an, pendant la journée sécurité"
+      ],
+      "answer": 1,
+      "explain": "La causerie a le plus d'effet en début de poste, au plus près de la tâche, quand les consignes peuvent encore changer la façon de travailler.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-035",
+      "theme": "Causeries & observation",
+      "level": 1,
+      "q": "Un flexible hydraulique se détache et fouette l'air à côté d'un opérateur, sans le toucher. Comment qualifies-tu l'événement et que fais-tu ?",
+      "choices": [
+        "Un non-événement : personne n'est blessé, on n'écrit rien",
+        "Un accident bénin à déclarer à l'organisme de sécurité sociale",
+        "Un presque-accident : on le déclare et on analyse ses causes pour éviter qu'il se reproduise",
+        "Une faute de l'opérateur à sanctionner"
+      ],
+      "answer": 2,
+      "explain": "Un événement sans blessure ni dégât qui aurait pu en causer est un presque-accident. Le déclarer permet de traiter les causes (état du flexible, serrage, protection) avant qu'une blessure survienne.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-036",
+      "theme": "Causeries & observation",
+      "level": 2,
+      "q": "Ce mois, le site déclare 2 accidents avec soins légers mais un seul presque-accident. Le directeur se félicite de cette « rareté ». Que lui dis-tu en lisant la pyramide de Bird ?",
+      "img": "svg/bird-pyramid.svg",
+      "imgAlt": "Pyramide de Bird 1-10-30-600 : base de 600 presque-accidents, 30 accidents avec dégâts matériels, 10 avec lésions légères, 1 grave.",
+      "choices": [
+        "Une base aussi mince est suspecte : les presque-accidents sont probablement sous-déclarés, il faut encourager leur remontée",
+        "Félicitations : peu de presque-accidents signifient peu de risques",
+        "La pyramide ne s'applique pas aux sites de petite taille",
+        "Il faut cesser de compter les presque-accidents pour ne pas les multiplier"
+      ],
+      "answer": 0,
+      "explain": "Selon la pyramide, les presque-accidents sont bien plus nombreux que les accidents. Une base très faible face à des accidents légers montre souvent un défaut de déclaration, donc des causes non traitées.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-037",
+      "theme": "Causeries & observation",
+      "level": 2,
+      "q": "Lors d'une observation de tâche, un opérateur n'utilise pas la procédure. Quelle attitude de l'observateur est la plus efficace ?",
+      "choices": [
+        "Dialoguer pour comprendre pourquoi (procédure inadaptée, manque d'outil, délai…), féliciter ce qui est bien fait, convenir d'une amélioration",
+        "Noter discrètement et sanctionner en fin de poste",
+        "Ignorer l'écart pour préserver l'ambiance",
+        "Corriger publiquement devant l'équipe"
+      ],
+      "answer": 0,
+      "explain": "Comprendre la cause, souvent organisationnelle, permet une correction durable. La sanction systématique pousse les travailleurs à dissimuler leurs pratiques.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-038",
+      "theme": "Causeries & observation",
+      "level": 2,
+      "q": "Pendant une observation, vous voyez un technicien sur le point de toucher un conducteur nu sous tension. Que faites-vous ?",
+      "choices": [
+        "Laisser faire pour compléter votre grille d'observation",
+        "Attendre la fin de la tâche pour en parler",
+        "Prendre une photo pour le rapport",
+        "Intervenir immédiatement pour arrêter la tâche, puis échanger avec lui"
+      ],
+      "answer": 3,
+      "explain": "Le principe est d'observer sans interrompre, sauf danger immédiat. La sécurité des personnes prime sur la collecte de données.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-039",
+      "theme": "Causeries & observation",
+      "level": 3,
+      "q": "Votre causerie du lundi semble peu suivie. Quelle amélioration est la plus pertinente ?",
+      "choices": [
+        "La rallonger à 45 minutes",
+        "Lire plus vite la consigne affichée",
+        "Partir d'un cas réel du site, poser des questions ouvertes, faire démontrer le geste et conclure par un engagement noté",
+        "Supprimer la feuille de présence"
+      ],
+      "answer": 2,
+      "explain": "La participation, les exemples vécus et la démonstration augmentent la mémorisation. Allonger ou lire une consigne diminue l'attention ; la trace de présence et d'engagement reste utile.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-040",
+      "theme": "Causeries & observation",
+      "level": 3,
+      "q": "Un manœuvre estime qu'une tâche est dangereuse faute de garde-corps. Que prévoit le principe du droit d'arrêt de travail (Stop Work) ?",
+      "choices": [
+        "Il doit terminer d'abord, puis signaler",
+        "Il peut suspendre la tâche et alerter sa hiérarchie, sans sanction, jusqu'à clarification du risque",
+        "Il doit demander l'autorisation écrite de la direction",
+        "Il peut être sanctionné s'il se trompe"
+      ],
+      "answer": 1,
+      "explain": "Chaque travailleur peut arrêter une tâche qu'il juge dangereuse. Le principe fonctionne parce que la bonne foi est protégée : sinon, personne n'oserait l'utiliser.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-041",
+      "theme": "EPI & signalisation",
+      "level": 2,
+      "q": "Un opérateur remplit un bidon d'acide dilué pour la station de traitement d'eau. Il porte des gants en tissu de manutention. Que lui dis-tu ?",
+      "choices": [
+        "C'est suffisant, l'acide est dilué",
+        "Il peut doubler les gants en tissu pour plus de protection",
+        "Il peut travailler sans gants s'il se lave les mains ensuite",
+        "Ces gants ne protègent pas des produits chimiques : il faut des gants étanches adaptés au produit, choisis avec la FDS"
+      ],
+      "answer": 3,
+      "explain": "Un tissu absorbe et laisse passer le liquide. Le matériau du gant (nitrile, néoprène, PVC…) se choisit d'après la fiche de données de sécurité du produit manipulé.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-042",
+      "theme": "EPI & signalisation",
+      "level": 3,
+      "q": "Lors d'une inspection, tu trouves un harnais dont une sangle est effilochée. Le technicien dit qu'il « tient encore » et doit monter dans l'heure. Quelle est ta décision ?",
+      "choices": [
+        "Le laisser pour cette montée et le remplacer demain",
+        "Coudre la sangle sur place pour la renforcer",
+        "Retirer le harnais du service, l'étiqueter et le faire remplacer avant la tâche",
+        "Doubler le harnais par une seconde longe"
+      ],
+      "answer": 2,
+      "explain": "Un EPI antichute détérioré n'a plus la résistance garantie : il est mis hors service immédiatement. Une réparation de fortune ou un doublage ne rétablit pas la certification.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-043",
+      "theme": "Permis & travaux à risque",
+      "level": 2,
+      "q": "Sur la photo, l'opérateur est équipé d'un harnais relié par une longe. Quel contrôle est indispensable avant qu'il commence à travailler ?",
+      "img": "photo/workers-ppe.jpg",
+      "imgAlt": "Opérateur sur une plate-forme métallique avec casque, protection auditive et harnais relié par une longe à un point d'ancrage.",
+      "choices": [
+        "Uniquement que le casque est de la bonne couleur",
+        "L'état du harnais et de la longe, et le raccordement à un point d'ancrage résistant",
+        "Que la longe soit la plus longue possible pour bouger à l'aise",
+        "Rien : un harnais ne se contrôle qu'une fois par an"
+      ],
+      "answer": 1,
+      "explain": "Avant chaque utilisation, on contrôle visuellement l'équipement antichute et on s'assure que la longe est reliée à un ancrage capable de retenir une chute, en limitant la hauteur de chute libre.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-044",
+      "theme": "Permis & travaux à risque",
+      "level": 3,
+      "q": "Le permis de feu est valable pour la journée. À 11 h, une fuite de gazole apparaît à 10 mètres du poste de soudure. Le soudeur veut « finir son cordon ». Que fais-tu ?",
+      "choices": [
+        "J'arrête le travail à chaud, je suspends le permis, je fais traiter la fuite et je refais le contrôle d'atmosphère avant toute reprise",
+        "Je le laisse finir : le permis est encore valable",
+        "Je demande un extincteur supplémentaire et il continue",
+        "Je fais couvrir la flaque de sable et il continue"
+      ],
+      "answer": 0,
+      "explain": "Un permis ne vaut que pour les conditions décrites. Une fuite d'hydrocarbure à proximité change la situation : on arrête, on suspend le permis et on ne reprend qu'après nouvelle analyse et mesure.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-045",
+      "theme": "Incendie",
+      "level": 2,
+      "q": "Lors de ta tournée, un extincteur est posé au sol derrière des palettes, l'aiguille du manomètre est en zone rouge et le plombage manque, alors que le registre le déclare vérifié. Que fais-tu ?",
+      "choices": [
+        "Je le laisse : il est présent, donc la règle est respectée",
+        "Je le retire du service, je le remplace aussitôt par un extincteur conforme, et je fais corriger le registre et l'accès",
+        "Je le remets en place et j'attends la prochaine vérification",
+        "Je signe le registre pour ne pas compliquer le suivi"
+      ],
+      "answer": 1,
+      "explain": "Un extincteur non pressurisé ou sans plombage n'est pas fiable. On le remplace immédiatement, on dégage son accès, et on rectifie le suivi pour que le registre reflète la réalité.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-046",
+      "theme": "H2S & premiers secours",
+      "level": 2,
+      "q": "En purgeant une pompe, un opérateur reçoit une projection d'acide dilué dans l'œil. Quel est le geste immédiat ?",
+      "choices": [
+        "Frotter l'œil pour enlever le produit",
+        "Mettre un collyre quelconque et reprendre le travail",
+        "Neutraliser avec une base faible pour « annuler » l'acide",
+        "Rincer abondamment à l'eau claire (lave-œil) pendant au moins quinze minutes, paupières écartées, puis demander un avis médical"
+      ],
+      "answer": 3,
+      "explain": "Le rinçage immédiat et prolongé à l'eau est le seul geste recommandé. Frotter aggrave la lésion, et neutraliser avec un autre produit risque une réaction supplémentaire.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "hse-agent-047",
+      "theme": "Causeries & observation",
+      "level": 2,
+      "q": "Un intérimaire commence ce matin au dépôt. Le chef lui dit : « suis Marc, tu apprendras en regardant ». Que mets-tu en place avant qu'il travaille ?",
+      "choices": [
+        "Un accueil sécurité : risques du site, consignes d'urgence et point de rassemblement, EPI, zones interdites, binôme désigné, trace signée",
+        "Rien : l'expérience s'acquiert sur le tas",
+        "Une vidéo d'une heure en fin de journée",
+        "Une signature sur le règlement intérieur sans explication"
+      ],
+      "answer": 0,
+      "explain": "Un nouvel arrivant est exposé davantage : l'accueil sécurité explique les risques propres au site, l'alerte, les EPI et les interdits, et un référent l'accompagne. Il est tracé.",
+      "seconds": 75,
+      "status": "draft"
+    }
+  ]
+}

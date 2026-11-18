@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ti">
+<title id="ti">Coupe schématique d'une mine souterraine : puits avec chevalement, niveaux de galeries, rampe d'accès, cheminée d'aération, corps minéralisé, chantiers d'exploitation et puisard</title>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.t{font-size:20px;font-weight:700}.b{font-weight:700}.m{text-anchor:middle}.e{text-anchor:end}
+.s{stroke:#061F44;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+</style>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text class="t m" x="400" y="34">Schéma d'une mine souterraine (coupe verticale)</text>
+
+<!-- terrain -->
+<rect x="20" y="130" width="760" height="320" fill="#E8EAEE" stroke="#061F44" stroke-width="3"/>
+<!-- corps minéralisé -->
+<path d="M360,160 L410,160 L540,410 L490,410 Z" fill="#FFB766" stroke="#061F44" stroke-width="2"/>
+<!-- chantiers -->
+<path d="M395,228 L445,228 L479,292 L428,292 Z" fill="#F28C28" stroke="#061F44" stroke-width="2"/>
+<path d="M437,308 L487,308 L520,372 L470,372 Z" fill="#F28C28" stroke="#061F44" stroke-width="2"/>
+
+<!-- galeries de niveau -->
+<rect x="184" y="213" width="520" height="14" fill="#FCFBF8" stroke="#061F44" stroke-width="2"/>
+<rect x="184" y="293" width="487" height="14" fill="#FCFBF8" stroke="#061F44" stroke-width="2"/>
+<rect x="184" y="373" width="454" height="14" fill="#FCFBF8" stroke="#061F44" stroke-width="2"/>
+<!-- rampe -->
+<path d="M740,130 L620,430" stroke="#061F44" stroke-width="18" stroke-linecap="butt"/>
+<path d="M740,130 L620,430" stroke="#FCFBF8" stroke-width="13" stroke-linecap="butt"/>
+<!-- cheminée -->
+<rect x="584" y="130" width="12" height="257" fill="#FCFBF8" stroke="#061F44" stroke-width="2"/>
+<!-- puits -->
+<rect x="156" y="130" width="28" height="290" fill="#FCFBF8" stroke="#061F44" stroke-width="2.5"/>
+<rect x="150" y="420" width="40" height="24" fill="#DCE6F5" stroke="#061F44" stroke-width="2"/>
+<!-- chevalement -->
+<path class="s" d="M146,130 L170,88 L194,130"/><line class="s" x1="156" y1="112" x2="184" y2="112"/>
+<circle class="s" cx="170" cy="88" r="7" fill="#FCFBF8"/>
+
+<text class="b" x="30" y="120">Surface</text>
+<text x="205" y="112">Chevalement</text>
+<text class="m" x="590" y="118">Cheminée d'aération</text>
+<text x="690" y="118">Rampe d'accès</text>
+<text class="m b" x="385" y="150">Corps minéralisé</text>
+<text x="192" y="172">Puits d'extraction</text>
+<text x="198" y="437">Puisard</text>
+<text class="e" x="148" y="224">Niveau 1 (−100 m)</text>
+<text class="e" x="148" y="304">Niveau 2 (−200 m)</text>
+<text class="e" x="148" y="384">Niveau 3 (−300 m)</text>
+<text class="e" x="392" y="262">Chantier d'exploitation</text>
+<line x1="396" y1="258" x2="412" y2="258" stroke="#061F44" stroke-width="2"/>
+<text class="m" x="400" y="474">Les niveaux sont repérés par leur profondeur sous la surface.</text>
+</svg>

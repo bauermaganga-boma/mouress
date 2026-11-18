@@ -1,0 +1,59 @@
+/* MOURESS Académie — variables de design centralisées (charte SPEC §5).
+   Tout réglage visuel global se fait ici. */
+:root {
+  /* Marque */
+  --c-navy: #061F44;
+  --c-navy-2: #0D2E5F;
+  --c-navy-3: #1B4378;
+  --c-orange: #F28C28;
+  --c-orange-dark: #D9741A;
+  --c-orange-light: #FFB766;
+  --c-cream: #FCFBF8;
+  --c-white: #FFFFFF;
+
+  /* Texte et surfaces */
+  --c-ink: #0E1B2E;
+  --c-muted: #4C5B70;
+  --c-line: #E4E1DA;
+  --c-line-strong: #CFCABF;
+  --c-surface: #FFFFFF;
+  --c-surface-2: #F4F1EA;
+  --c-accent-text: #A8560C;        /* orange lisible sur fond clair (AA) */
+  --c-on-navy: #FCFBF8;
+  --c-on-navy-muted: #C4CEDD;
+
+  /* États */
+  --c-ok: #1E7A4B;   --c-ok-bg: #E5F4EC;
+  --c-ko: #B3261E;   --c-ko-bg: #FCE9E7;
+  --c-warn: #7A4B00; --c-warn-bg: #FFF1D6;
+  --c-info: #1B4378; --c-info-bg: #E6EEF9;
+
+  /* Typographie */
+  --font: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem);
+  --fs-3xl: clamp(2rem, 1.3rem + 3vw, 3.4rem);
+  --lh: 1.6;
+
+  /* Espacement */
+  --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
+  --sp-5: 1.5rem; --sp-6: 2rem; --sp-7: 3rem; --sp-8: 4.5rem; --sp-9: 6rem;
+
+  /* Formes */
+  --r-sm: 10px; --r-md: 16px; --r-lg: 24px; --r-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(6, 31, 68, .06), 0 1px 3px rgba(6, 31, 68, .06);
+  --shadow-md: 0 6px 20px rgba(6, 31, 68, .08);
+  --shadow-lg: 0 18px 50px rgba(6, 31, 68, .16);
+  --focus: 0 0 0 3px var(--c-cream), 0 0 0 5px var(--c-navy-3);
+
+  /* Mise en page */
+  --container: 1120px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --header-h: 68px;
+  --tabbar-h: 64px;
+  --tap: 48px;
+}

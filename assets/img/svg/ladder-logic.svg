@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ti">
+<title id="ti">Schéma à contacts (ladder) : marche-arrêt avec auto-maintien, contacts NO et NC, bobine KM1 et voyant</title>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.t{font-size:20px;font-weight:700}.b{font-weight:700}.m{text-anchor:middle}.e{text-anchor:end}
+.s{stroke:#061F44;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.r{stroke:#061F44;stroke-width:4;fill:none;stroke-linecap:round}
+</style>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text class="t m" x="400" y="34">Schéma à contacts (ladder) : marche - arrêt avec auto-maintien</text>
+
+<!-- rails -->
+<line class="r" x1="100" y1="100" x2="100" y2="440"/><line class="r" x1="700" y1="100" x2="700" y2="440"/>
+<text class="m b" x="100" y="86">L1 (+)</text><text class="m b" x="700" y="86">L2 (0 V)</text>
+
+<!-- réseau 1 -->
+<text class="e b" x="86" y="185">Réseau 1</text>
+<g class="s">
+<line x1="100" y1="180" x2="191" y2="180"/>
+<line x1="191" y1="166" x2="191" y2="194"/><line x1="209" y1="166" x2="209" y2="194"/><line x1="187" y1="196" x2="213" y2="164" stroke="#F28C28"/>
+<line x1="209" y1="180" x2="321" y2="180"/>
+<line x1="280" y1="180" x2="280" y2="260"/><line x1="400" y1="180" x2="400" y2="260"/>
+<line x1="321" y1="166" x2="321" y2="194"/><line x1="339" y1="166" x2="339" y2="194"/>
+<line x1="339" y1="180" x2="400" y2="180"/>
+<line x1="280" y1="260" x2="321" y2="260"/>
+<line x1="321" y1="246" x2="321" y2="274"/><line x1="339" y1="246" x2="339" y2="274"/>
+<line x1="339" y1="260" x2="400" y2="260"/>
+<line x1="400" y1="180" x2="471" y2="180"/>
+<line x1="471" y1="166" x2="471" y2="194"/><line x1="489" y1="166" x2="489" y2="194"/><line x1="467" y1="196" x2="493" y2="164" stroke="#F28C28"/>
+<line x1="489" y1="180" x2="598" y2="180"/>
+<path d="M606,164 Q594,180 606,196"/><path d="M634,164 Q646,180 634,196"/>
+<line x1="640" y1="180" x2="700" y2="180"/>
+</g>
+<text class="m b" x="200" y="148">S1</text><text class="m" x="200" y="222">Arrêt (NC)</text>
+<text class="m b" x="330" y="148">S2</text><text class="m" x="330" y="222">Marche (NO)</text>
+<text class="m b" x="330" y="300">KM1</text><text class="m" x="330" y="318">Maintien (NO)</text>
+<text class="m b" x="480" y="148">F1</text><text class="m" x="480" y="222">Thermique (NC)</text>
+<text class="m b" x="620" y="148">KM1</text><text class="m" x="620" y="222">Bobine</text>
+
+<!-- réseau 2 -->
+<text class="e b" x="86" y="385">Réseau 2</text>
+<g class="s">
+<line x1="100" y1="380" x2="291" y2="380"/>
+<line x1="291" y1="366" x2="291" y2="394"/><line x1="309" y1="366" x2="309" y2="394"/>
+<line x1="309" y1="380" x2="604" y2="380"/>
+<circle cx="620" cy="380" r="16" fill="#DCE6F5"/>
+<line x1="609" y1="369" x2="631" y2="391" stroke="#F28C28"/><line x1="631" y1="369" x2="609" y2="391" stroke="#F28C28"/>
+<line x1="636" y1="380" x2="700" y2="380"/>
+</g>
+<text class="m b" x="300" y="348">KM1</text><text class="m" x="300" y="416">Contact auxiliaire (NO)</text>
+<text class="m b" x="620" y="348">H1</text><text class="m" x="620" y="416">Voyant « marche »</text>
+
+<text x="100" y="468">-| |- contact NO (ouvert au repos) · -|/|- contact NC (fermé au repos) · -( )- bobine</text>
+<text x="100" y="488">S1 arrêt · S2 marche · F1 relais thermique · KM1 contacteur · H1 voyant</text>
+</svg>

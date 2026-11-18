@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ti">
+<title id="ti">Matrice de risque 5 par 5 : probabilité en abscisse, gravité en ordonnée, niveau de risque = probabilité × gravité, de faible (vert) à critique (rouge)</title>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.t{font-size:20px;font-weight:700}.b{font-weight:700}.m{text-anchor:middle}.e{text-anchor:end}
+.g{fill:#7CC47A;stroke:#061F44;stroke-width:2}.y{fill:#F6D04D;stroke:#061F44;stroke-width:2}.o{fill:#F28C28;stroke:#061F44;stroke-width:2}.r{fill:#D64545;stroke:#061F44;stroke-width:2}
+.c{text-anchor:middle;font-size:18px;font-weight:700}.w{fill:#FFFFFF}
+</style>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text class="t m" x="400" y="34">Matrice de risque 5 × 5 : criticité = probabilité × gravité</text>
+
+<!-- lignes : gravité 5 en haut ; colonnes x = 200 + 88*(p-1), lignes y = 60 + 64*(5-g) -->
+<rect class="y" x="200" y="60" width="88" height="64"/><rect class="o" x="288" y="60" width="88" height="64"/><rect class="r" x="376" y="60" width="88" height="64"/><rect class="r" x="464" y="60" width="88" height="64"/><rect class="r" x="552" y="60" width="88" height="64"/>
+<rect class="g" x="200" y="124" width="88" height="64"/><rect class="y" x="288" y="124" width="88" height="64"/><rect class="o" x="376" y="124" width="88" height="64"/><rect class="r" x="464" y="124" width="88" height="64"/><rect class="r" x="552" y="124" width="88" height="64"/>
+<rect class="g" x="200" y="188" width="88" height="64"/><rect class="y" x="288" y="188" width="88" height="64"/><rect class="y" x="376" y="188" width="88" height="64"/><rect class="o" x="464" y="188" width="88" height="64"/><rect class="r" x="552" y="188" width="88" height="64"/>
+<rect class="g" x="200" y="252" width="88" height="64"/><rect class="g" x="288" y="252" width="88" height="64"/><rect class="y" x="376" y="252" width="88" height="64"/><rect class="y" x="464" y="252" width="88" height="64"/><rect class="o" x="552" y="252" width="88" height="64"/>
+<rect class="g" x="200" y="316" width="88" height="64"/><rect class="g" x="288" y="316" width="88" height="64"/><rect class="g" x="376" y="316" width="88" height="64"/><rect class="g" x="464" y="316" width="88" height="64"/><rect class="y" x="552" y="316" width="88" height="64"/>
+
+<!-- valeurs -->
+<text class="c" x="244" y="98">5</text><text class="c" x="332" y="98">10</text><text class="c w" x="420" y="98">15</text><text class="c w" x="508" y="98">20</text><text class="c w" x="596" y="98">25</text>
+<text class="c" x="244" y="162">4</text><text class="c" x="332" y="162">8</text><text class="c" x="420" y="162">12</text><text class="c w" x="508" y="162">16</text><text class="c w" x="596" y="162">20</text>
+<text class="c" x="244" y="226">3</text><text class="c" x="332" y="226">6</text><text class="c" x="420" y="226">9</text><text class="c" x="508" y="226">12</text><text class="c w" x="596" y="226">15</text>
+<text class="c" x="244" y="290">2</text><text class="c" x="332" y="290">4</text><text class="c" x="420" y="290">6</text><text class="c" x="508" y="290">8</text><text class="c" x="596" y="290">10</text>
+<text class="c" x="244" y="354">1</text><text class="c" x="332" y="354">2</text><text class="c" x="420" y="354">3</text><text class="c" x="508" y="354">4</text><text class="c" x="596" y="354">5</text>
+
+<!-- axe gravité -->
+<text class="e" x="192" y="97"><tspan class="b">5</tspan> Catastrophique</text>
+<text class="e" x="192" y="161"><tspan class="b">4</tspan> Majeure</text>
+<text class="e" x="192" y="225"><tspan class="b">3</tspan> Grave</text>
+<text class="e" x="192" y="289"><tspan class="b">2</tspan> Significative</text>
+<text class="e" x="192" y="353"><tspan class="b">1</tspan> Mineure</text>
+<text class="b m" transform="translate(22,220) rotate(-90)">GRAVITÉ</text>
+
+<!-- axe probabilité -->
+<text class="m b" x="244" y="402">1</text><text class="m" x="244" y="420">Improbable</text>
+<text class="m b" x="332" y="402">2</text><text class="m" x="332" y="420">Rare</text>
+<text class="m b" x="420" y="402">3</text><text class="m" x="420" y="420">Possible</text>
+<text class="m b" x="508" y="402">4</text><text class="m" x="508" y="420">Probable</text>
+<text class="m b" x="596" y="402">5</text><text class="m" x="596" y="420">Fréquent</text>
+<text class="b m" x="420" y="456">PROBABILITÉ</text>
+
+<!-- légende -->
+<text class="b" x="660" y="80">Niveau</text>
+<rect class="g" x="660" y="94" width="20" height="20"/><text x="688" y="110">Faible 1-4</text>
+<rect class="y" x="660" y="126" width="20" height="20"/><text x="688" y="142">Moyen 5-9</text>
+<rect class="o" x="660" y="158" width="20" height="20"/><text x="688" y="174">Élevé 10-14</text>
+<rect class="r" x="660" y="190" width="20" height="20"/><text x="688" y="206">Critique 15+</text>
+</svg>

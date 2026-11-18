@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ti">
+<title id="ti">Poste de transformation HTA/BT : disjoncteur HTA, transformateurs de courant et de tension, transformateur Dyn11 (primaire triangle, secondaire étoile avec neutre), disjoncteur BT et jeu de barres</title>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.t{font-size:20px;font-weight:700}.b{font-weight:700}.m{text-anchor:middle}.e{text-anchor:end}
+.s{stroke:#061F44;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+</style>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text class="t m" x="400" y="34">Poste de transformation HTA / BT (transformateur Dyn11)</text>
+
+<text class="b" x="30" y="214">Réseau HTA</text><text class="b" x="30" y="232">20 kV</text>
+<!-- ligne principale y=250 -->
+<line class="s" x1="30" y1="250" x2="140" y2="250"/>
+<!-- Q1 disjoncteur HTA : contact en 140, pivot en 190 -->
+<line class="s" x1="135" y1="245" x2="145" y2="255"/><line class="s" x1="145" y1="245" x2="135" y2="255"/>
+<line class="s" x1="190" y1="250" x2="152" y2="228"/>
+<line class="s" x1="190" y1="250" x2="320" y2="250"/>
+<text class="m b" x="165" y="282">Q1</text><text class="m" x="165" y="300">Disjoncteur HTA</text>
+<!-- TC -->
+<circle class="s" cx="245" cy="250" r="11" fill="#FCFBF8"/>
+<text class="m b" x="245" y="224">TC</text>
+<!-- TP : dérivation vers le haut -->
+<line class="s" x1="290" y1="250" x2="290" y2="170"/>
+<circle class="s" cx="290" cy="156" r="14" fill="#DCE6F5"/>
+<circle class="s" cx="290" cy="132" r="14" fill="#DCE6F5"/>
+<text class="b" x="316" y="130">TP</text><text x="316" y="148">20 000 V / 100 V</text>
+<!-- transformateur -->
+<line class="s" x1="320" y1="250" x2="368" y2="250"/>
+<circle class="s" cx="400" cy="250" r="32" fill="#DCE6F5"/>
+<circle class="s" cx="446" cy="250" r="32" fill="#DCE6F5"/>
+<!-- triangle (primaire) -->
+<path class="s" d="M392,236 L378,262 L406,262 Z" stroke="#F28C28"/>
+<!-- étoile (secondaire) -->
+<g class="s" stroke="#F28C28">
+<line x1="454" y1="250" x2="454" y2="234"/><line x1="454" y1="250" x2="441" y2="262"/><line x1="454" y1="250" x2="467" y2="262"/>
+</g>
+<!-- neutre vers terre -->
+<line class="s" x1="478" y1="250" x2="560" y2="250"/>
+<!-- neutre -->
+<line class="s" x1="454" y1="250" x2="454" y2="330"/>
+<text class="m" x="454" y="374">Secondaire : étoile (yn)</text>
+<line class="s" x1="440" y1="330" x2="468" y2="330"/><line class="s" x1="445" y1="338" x2="463" y2="338"/><line class="s" x1="450" y1="346" x2="458" y2="346"/>
+<text x="478" y="334">Neutre mis à la terre</text>
+<text class="m b" x="423" y="206">T1</text>
+<text class="m" x="423" y="186">630 kVA - Dyn11</text>
+<text class="m" x="385" y="296">Primaire</text><text class="m" x="385" y="314">triangle (D)</text>
+<!-- Q2 -->
+<line class="s" x1="555" y1="245" x2="565" y2="255"/><line class="s" x1="565" y1="245" x2="555" y2="255"/>
+<line class="s" x1="610" y1="250" x2="572" y2="228"/>
+<line class="s" x1="610" y1="250" x2="690" y2="250"/>
+<text class="m b" x="585" y="282">Q2</text><text class="m" x="585" y="300">Disjoncteur BT</text>
+<!-- barres -->
+<line x1="690" y1="170" x2="690" y2="330" stroke="#061F44" stroke-width="7" stroke-linecap="round"/>
+<text class="m b" x="720" y="354">Jeu de barres</text><text class="m b" x="720" y="372">BT 400 V</text>
+<line class="s" x1="690" y1="200" x2="750" y2="200"/><polyline class="s" points="740,193 750,200 740,207"/>
+<line class="s" x1="690" y1="300" x2="750" y2="300"/><polyline class="s" points="740,293 750,300 740,307"/>
+<text class="m" x="738" y="186">Départs BT</text>
+
+<rect x="30" y="396" width="740" height="84" rx="8" fill="#E8EAEE"/>
+<text class="b" x="46" y="420">Lecture du couplage Dyn11</text>
+<text x="46" y="442">D : primaire en triangle · yn : secondaire en étoile avec neutre sorti</text>
+<text x="46" y="462">11 : indice horaire, tension secondaire en avance de 30° sur le primaire</text>
+</svg>

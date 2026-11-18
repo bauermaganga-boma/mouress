@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Courbe caractéristique d'une pompe centrifuge : hauteur manométrique H en mètres en fonction du débit Q en m³/h, courbe du réseau et point de fonctionnement à Q = 60 m³/h et H = 40 m</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.gd{stroke:#C9CED8;stroke-width:1;fill:none}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Courbe caractéristique d'une pompe centrifuge</text>
+
+<!-- grille -->
+<path class="gd" d="M110,70H730M110,120H730M110,170H730M110,220H730M110,270H730M110,320H730M110,370H730M234,70V420M358,70V420M482,70V420M606,70V420M730,70V420"/>
+<!-- axes -->
+<line x1="110" y1="420" x2="748" y2="420" class="s" marker-end="url(#ar)"/>
+<line x1="110" y1="420" x2="110" y2="56" class="s" marker-end="url(#ar)"/>
+<g class="c">
+<text x="110" y="441">0</text><text x="234" y="441">20</text><text x="358" y="441">40</text><text x="482" y="441">60</text><text x="606" y="441">80</text><text x="730" y="441">100</text>
+</g>
+<g class="e">
+<text x="100" y="425">0</text><text x="100" y="375">10</text><text x="100" y="325">20</text><text x="100" y="275">30</text><text x="100" y="225">40</text><text x="100" y="175">50</text><text x="100" y="125">60</text><text x="100" y="75">70</text>
+</g>
+<text x="420" y="474" class="c b">Débit Q (m³/h)</text>
+<text x="36" y="245" class="c b" transform="rotate(-90 36 245)">Hauteur manométrique totale H (m)</text>
+
+<!-- courbes -->
+<path d="M110,145Q420,145 730,353.3" fill="none" stroke="#061F44" stroke-width="3.5"/>
+<path d="M110,345Q373.5,345 637,94" fill="none" stroke="#F28C28" stroke-width="3.5"/>
+
+<!-- point de fonctionnement -->
+<path d="M482,220V420M110,220H482" fill="none" stroke="#F28C28" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="482" cy="220" r="8" fill="#F28C28" stroke="#061F44" stroke-width="2.5"/>
+<text x="190" y="232" class="b">Point de fonctionnement</text>
+<text x="190" y="250" class="o">Q = 60 m³/h ; H = 40 m</text>
+<path d="M378,238L472,224" class="ld"/>
+
+<!-- légendes des courbes -->
+<circle cx="110" cy="145" r="5" fill="#061F44"/>
+<text x="124" y="135">Débit nul : H = 55 m</text>
+<text x="725" y="258" class="e">Courbe de la pompe</text>
+<text x="600" y="100" class="e o">Courbe du réseau (système)</text>
+<text x="124" y="368">H statique = 15 m</text>
+</svg>

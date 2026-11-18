@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ti">
+<title id="ti">Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais S11-S12, réception S13 ; commande des équipements S3-S5 et formation S8-S11 avec une semaine de marge</title>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.t{font-size:20px;font-weight:700}.b{font-weight:700}.m{text-anchor:middle}.e{text-anchor:end}
+.g{stroke:#D5D9E0;stroke-width:1.2}
+.c{fill:#F28C28;stroke:#061F44;stroke-width:2}.n{fill:#DCE6F5;stroke:#061F44;stroke-width:2}.f{fill:none;stroke:#061F44;stroke-width:1.5;stroke-dasharray:4 3}
+.k{stroke:#061F44;stroke-width:2;fill:none}
+</style>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#061F44"/></marker>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text class="t m" x="400" y="34">Diagramme de Gantt et chemin critique</text>
+
+<!-- grille -->
+<g class="g">
+<line x1="250" y1="100" x2="250" y2="413"/><line x1="290" y1="100" x2="290" y2="413"/><line x1="330" y1="100" x2="330" y2="413"/><line x1="370" y1="100" x2="370" y2="413"/><line x1="410" y1="100" x2="410" y2="413"/><line x1="450" y1="100" x2="450" y2="413"/><line x1="490" y1="100" x2="490" y2="413"/><line x1="530" y1="100" x2="530" y2="413"/><line x1="570" y1="100" x2="570" y2="413"/><line x1="610" y1="100" x2="610" y2="413"/><line x1="650" y1="100" x2="650" y2="413"/><line x1="690" y1="100" x2="690" y2="413"/><line x1="730" y1="100" x2="730" y2="413"/><line x1="770" y1="100" x2="770" y2="413"/>
+<line x1="20" y1="105" x2="770" y2="105"/><line x1="20" y1="149" x2="770" y2="149"/><line x1="20" y1="193" x2="770" y2="193"/><line x1="20" y1="237" x2="770" y2="237"/><line x1="20" y1="281" x2="770" y2="281"/><line x1="20" y1="325" x2="770" y2="325"/><line x1="20" y1="369" x2="770" y2="369"/><line x1="20" y1="413" x2="770" y2="413"/>
+</g>
+<!-- semaines -->
+<text class="b" x="20" y="94">Tâches</text>
+<text class="m b" x="270" y="94">S1</text><text class="m b" x="310" y="94">S2</text><text class="m b" x="350" y="94">S3</text><text class="m b" x="390" y="94">S4</text><text class="m b" x="430" y="94">S5</text><text class="m b" x="470" y="94">S6</text><text class="m b" x="510" y="94">S7</text><text class="m b" x="550" y="94">S8</text><text class="m b" x="590" y="94">S9</text><text class="m b" x="630" y="94">S10</text><text class="m b" x="670" y="94">S11</text><text class="m b" x="710" y="94">S12</text><text class="m b" x="750" y="94">S13</text>
+
+<!-- libellés -->
+<text x="20" y="132">Étude et plans</text>
+<text x="20" y="176">Génie civil</text>
+<text x="20" y="220">Commande des équipements</text>
+<text x="20" y="264">Montage</text>
+<text x="20" y="308">Essais et mise en service</text>
+<text x="20" y="352">Formation des équipes</text>
+<text x="20" y="396">Réception</text>
+
+<!-- barres -->
+<rect class="c" x="250" y="115" width="80" height="24"/><text class="m b" x="290" y="132">2 sem</text>
+<rect class="c" x="330" y="159" width="160" height="24"/><text class="m b" x="410" y="176">4 sem</text>
+<rect class="n" x="330" y="203" width="120" height="24"/><text class="m b" x="390" y="220">3 sem</text>
+<rect class="f" x="450" y="203" width="40" height="24"/>
+<rect class="c" x="490" y="247" width="160" height="24"/><text class="m b" x="570" y="264">4 sem</text>
+<rect class="c" x="650" y="291" width="80" height="24"/><text class="m b" x="690" y="308">2 sem</text>
+<rect class="n" x="530" y="335" width="160" height="24"/><text class="m b" x="610" y="352">4 sem</text>
+<rect class="f" x="690" y="335" width="40" height="24"/>
+<rect class="c" x="730" y="379" width="40" height="24"/>
+<text class="e b" x="722" y="396">1 sem</text>
+<text class="e" x="322" y="220">marge : 1 sem</text>
+<text class="e" x="522" y="352">marge : 1 sem</text>
+
+<!-- dépendances -->
+<path class="k" d="M330,127 H338 V157" marker-end="url(#ar)"/>
+<path class="k" d="M490,171 H498 V245" marker-end="url(#ar)"/>
+<path class="k" d="M650,259 H658 V289" marker-end="url(#ar)"/>
+<path class="k" d="M730,303 H738 V377" marker-end="url(#ar)"/>
+
+<!-- légende -->
+<rect class="c" x="20" y="432" width="28" height="16"/><text x="56" y="445">Chemin critique (marge nulle)</text>
+<rect class="n" x="300" y="432" width="28" height="16"/><text x="336" y="445">Tâche avec marge</text>
+<rect class="f" x="480" y="432" width="28" height="16"/><text x="516" y="445">Marge disponible</text>
+<text x="20" y="480">Durée totale du projet : 13 semaines (S1 à S13).</text>
+</svg>

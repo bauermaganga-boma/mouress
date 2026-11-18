@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Types de joints soudés en coupe : bout à bout, en T, à recouvrement, d'angle, de bord, et anatomie d'un cordon d'angle (pied, racine, gorge), le métal d'apport étant en orange</title>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5;stroke-linejoin:round}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2;stroke-linejoin:round}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+.t{font-size:15px;font-weight:bold;text-anchor:middle}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Types de joints soudés (coupes)</text>
+
+<!-- bout à bout -->
+<text x="140" y="58" class="t">Joint bout à bout</text>
+<g transform="translate(140,150)">
+<path d="M-90,-12H-14L-2,6V12H-90Z" class="bl"/><path d="M90,-12H14L2,6V12H90Z" class="bl"/>
+<path d="M-16,-12Q0,-22 16,-12L2,6H-2Z" class="of"/><rect x="-2" y="6" width="4" height="6" fill="#F28C28"/>
+</g>
+<text x="140" y="232" class="c">chanfrein en V, pleine pénétration</text>
+
+<!-- en T -->
+<text x="400" y="58" class="t">Joint en T</text>
+<g transform="translate(400,150)">
+<rect x="-80" y="10" width="160" height="24" class="bl"/><rect x="-12" y="-50" width="24" height="60" class="bl"/>
+<path d="M-12,10L-34,10L-12,-12Z" class="of"/><path d="M12,10L34,10L12,-12Z" class="of"/>
+</g>
+<text x="400" y="232" class="c">2 cordons d'angle</text>
+
+<!-- à recouvrement -->
+<text x="660" y="58" class="t">Joint à recouvrement</text>
+<g transform="translate(660,150)">
+<rect x="-90" y="0" width="120" height="24" class="bl"/><rect x="-30" y="-24" width="120" height="24" class="bl"/>
+<path d="M-30,0L-48,0L-30,-18Z" class="of"/><path d="M30,0L48,0L30,18Z" class="of"/>
+</g>
+<text x="660" y="232" class="c">2 cordons d'angle</text>
+
+<!-- d'angle -->
+<text x="140" y="285" class="t">Joint d'angle</text>
+<g transform="translate(140,370)">
+<rect x="-70" y="0" width="118" height="24" class="bl"/><rect x="24" y="-70" width="24" height="70" class="bl"/>
+<path d="M24,0L2,0L24,-22Z" class="of"/>
+</g>
+<text x="140" y="440" class="c">cordon d'angle intérieur</text>
+
+<!-- de bord -->
+<text x="400" y="285" class="t">Joint de bord</text>
+<g transform="translate(400,370)">
+<rect x="-80" y="-20" width="140" height="18" class="bl"/><rect x="-80" y="-2" width="140" height="18" class="bl"/>
+<path d="M52,-20H66Q82,-2 66,16H52Z" class="of"/>
+</g>
+<text x="400" y="440" class="c">plaques jointes par la tranche</text>
+
+<!-- anatomie -->
+<text x="640" y="285" class="t">Cordon d'angle : anatomie</text>
+<g transform="translate(640,370)">
+<rect x="-90" y="20" width="180" height="18" class="bl"/><rect x="-14" y="-50" width="28" height="70" class="bl"/>
+<path d="M14,20L70,20L14,-36Z" class="of"/>
+<path d="M14,20L42,-8" stroke="#061F44" stroke-width="2" fill="none" stroke-dasharray="5 3"/>
+<circle cx="42" cy="-8" r="3.5" fill="#061F44"/>
+<path d="M44,-10L56,-20M70,22L96,50M14,22V50" class="ld"/>
+<text x="58" y="-22" class="b">Gorge (a)</text>
+<text x="112" y="66" class="c b">Pied (toe)</text>
+<text x="14" y="66" class="c b">Racine (root)</text>
+</g>
+
+<rect x="300" y="478" width="14" height="10" class="of"/>
+<text x="322" y="488">Métal d'apport (cordon de soudure)</text>
+</svg>

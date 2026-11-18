@@ -1,0 +1,918 @@
+{
+  "profile": "ing-facilities",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Conception process : séparation, compression, déshydratation",
+      "theme": "Conception process",
+      "minutes": 10,
+      "body": "La conception process transforme l'effluent des puits en produits conformes : huile stabilisée, gaz d'export ou de réinjection, eau rejetable. On part du bilan de matière et d'énergie, des cas de fonctionnement (démarrage, nominal, fin de vie à forte production d'eau, débit minimal), puis on établit les schémas PFD et P&ID.\n\n**Séparation.** Un train étagé (HP, MP, BP) abaisse la pression par paliers : on récupère davantage de liquide stable et on limite le dégazage brutal en aval. Les phases se séparent par gravité selon le temps de rétention ; un extracteur de brouillard retient les gouttelettes de gaz.\n\n**Stabilisation.** Elle réduit la tension de vapeur (TVP ou RVP) de l'huile en retirant les fractions légères (C1 à C4), pour permettre le stockage et le transport sans excès de dégazage.\n\n**Compression.** Le rapport de compression est r = P refoulement / P aspiration, en pressions absolues. Quand le rapport total est élevé, on étage en répartissant des rapports voisins : r étage = r total^(1/n), limité par la température de refoulement (matériaux, joints, huile de graissage). Le **refroidissement intermédiaire** ramène le gaz près de la température d'aspiration, ce qui diminue le travail du ou des étages suivants. Un compresseur centrifuge requiert une protection anti-pompage (recyclage du refoulement vers l'aspiration pour garder le débit au-dessus de la limite de pompage) ; un compresseur alternatif demande des amortisseurs de pulsations.\n\n**Déshydratation au TEG.** Le gaz humide monte dans le contacteur à contre-courant du TEG pauvre introduit en tête ; le TEG riche est régénéré dans un rebouilleur à environ 200 °C (limite d'environ 204 °C, car le TEG se décompose vers 206 °C), avec éventuellement un gaz de stripping pour atteindre une grande pureté. On déshydrate pour éviter hydrates et corrosion par eau libre en présence de CO2 ou de H2S.\n\n**Échangeurs à calandre et tubes.** Le fluide encrassant ou corrosif se place du côté des tubes : le nettoyage mécanique est plus aisé et seul l'alliage des tubes est coûteux. La puissance échangée vaut Q = U × A × LMTD × F ; en contre-courant, LMTD = (ΔT1 − ΔT2) / ln(ΔT1/ΔT2).",
+      "keyPoints": [
+        "Séparation étagée HP-MP-BP : plus de liquide stable, moins de dégazage brutal.",
+        "r = P refoulement / P aspiration (absolues) ; étagement r^(1/n) et refroidissement intermédiaire.",
+        "TEG : contre-courant, rebouilleur ≈ 200 °C, décomposition vers 206 °C.",
+        "Échangeur : fluide encrassant côté tubes ; LMTD en contre-courant."
+      ],
+      "img": "svg/separator-3phase.svg",
+      "imgAlt": "Séparateur triphasique avec entrée, sorties gaz, huile et eau"
+    },
+    {
+      "id": "m2",
+      "title": "Dimensionnement simple : vitesses, pertes de charge, capacité",
+      "theme": "Dimensionnement simple",
+      "minutes": 10,
+      "body": "Le dimensionnement préliminaire s'appuie sur des relations simples qu'on doit pouvoir refaire de tête.\n\n**Vitesse.** v = Q / A, avec A = π D² / 4. Les guides de projet limitent la vitesse pour contenir érosion, bruit et vibrations. Pour un mélange diphasique, la pratique de l'API RP 14E propose une vitesse érosionnelle Ve = C / √ρ (Ve en ft/s, ρ en lb/ft³), avec C de l'ordre de 100 en service continu ; cette valeur sert de première limite et se nuance selon le sable et la corrosion.\n\n**Perte de charge.** Darcy-Weisbach : ΔP = f × (L/D) × ρ v² / 2. En régime turbulent établi, la perte de charge varie comme le carré du débit : +50 % de débit donne environ ×2,25. À débit donné, passer d'un diamètre D à 1,25 D divise la perte de charge par environ 3 (en D⁻⁵).\n\n**Pompes et NPSH.** NPSH disponible = (P surface − P vapeur) / (ρ g) + hauteur statique − pertes de charge d'aspiration. Il doit dépasser le NPSH requis avec une marge, faute de quoi la pompe cavite.\n\n**Séparateurs.** Le temps de rétention est t = V liquide / Q liquide. La capacité en gaz se vérifie avec la vitesse de Souders-Brown, v max = K √((ρL − ρG)/ρG), avec un coefficient K de l'ordre de quelques centièmes à un dixième de m/s selon les internes.\n\n**Débit de gaz.** On convertit un débit standard en débit réel par Q réel = Q std × (P std / P) × (T / T std) × Z.\n\n**Vannes de régulation.** Une vanne surdimensionnée travaille à faible ouverture : régulation médiocre et usure du siège ; une vanne sous-dimensionnée ne passe pas le débit maximal.\n\n**Résistance.** Pour une tuyauterie ASME B31.3, l'épaisseur de pression est t = P D / (2 (S E + P Y)), à laquelle on ajoute la surépaisseur de corrosion et la tolérance de fabrication (12,5 % pour un tube sans soudure). L'essai hydraulique B31.3 se fait à au moins 1,5 fois la pression de conception (corrigée du rapport de contraintes) ; l'ASME VIII Div. 1 retient 1,3 fois la MAWP (également corrigée).",
+      "keyPoints": [
+        "v = Q/A ; API RP 14E : Ve = C/√ρ avec C ≈ 100 en service continu.",
+        "ΔP = f(L/D)ρv²/2 : proportionnelle à Q² en régime turbulent établi.",
+        "NPSHa = (P surface − P vapeur)/(ρg) + h statique − pertes ; NPSHa > NPSHr.",
+        "B31.3 : t = PD/[2(SE + PY)] + corrosion ; essai hydraulique ≥ 1,5 × pression de conception."
+      ],
+      "img": "svg/pid-flow-control.svg",
+      "imgAlt": "Boucle de régulation de débit avec transmetteur, régulateur et vanne"
+    },
+    {
+      "id": "m3",
+      "title": "Soupapes, relief et torche",
+      "theme": "Soupapes, torche et relief",
+      "minutes": 10,
+      "body": "Les dispositifs de décharge protègent récipients et tuyauteries contre la surpression. La **soupape de sûreté (PSV)** s'ouvre à sa pression de tarage, au plus égale à la MAWP, et se referme après soulagement. Selon l'ASME VIII Div. 1, la pression maximale atteinte (accumulation) ne dépasse pas 10 % au-dessus de la MAWP pour une soupape unique (cas hors feu), 16 % avec plusieurs soupapes, et 21 % pour le cas du feu externe.\n\n**Scénarios de relief** : sortie bloquée, feu externe, défaillance ouverte d'une vanne de régulation, perte de refroidissement ou de reflux, rupture de tube d'un échangeur, dilatation thermique d'un liquide piégé, panne d'utilités. La charge de dimensionnement est celle du scénario crédible le plus contraignant pour une même soupape, non la somme de scénarios indépendants. Pour une sortie bloquée, la charge est le débit maximal qui continue d'arriver, diminué de ce qui se condense ou se dépose.\n\n**Contre-pression.** Pour une soupape conventionnelle, la contre-pression superposée s'ajoute au ressort et augmente la pression d'ouverture ; la contre-pression induite par l'écoulement réduit la capacité. Une soupape à soufflet équilibré ou une soupape pilotée tolère une contre-pression plus élevée. Les vannes d'isolement amont et aval d'une PSV, quand elles existent, sont verrouillées ou plombées en position ouverte, avec procédure de gestion des clés.\n\n**Torche.** Les soupapes débouchent dans un collecteur de torche. Un **ballon de torche (KO drum)** retient les liquides, afin qu'ils ne retombent pas en gouttes enflammées. Le rayonnement thermique se calcule par K = τ × F × Q / (4 π D²), avec τ la transmissivité de l'atmosphère, F la fraction de chaleur rayonnée, Q la puissance de combustion et D la distance. L'API 521 retient 1,58 kW/m² comme niveau admissible pour une exposition continue du personnel ; des niveaux plus élevés sont acceptés pour des durées limitées avec abri ou évacuation possible.\n\n**HIPPS.** Un système instrumenté de protection contre les hautes pressions ferme l'alimentation avant que la pression ne dépasse la limite : il permet de dimensionner l'aval pour une pression inférieure et de réduire la charge de torche. Son niveau d'intégrité (souvent SIL 3) résulte d'une analyse de risque (LOPA).",
+      "keyPoints": [
+        "Accumulation ASME VIII : 10 % (une soupape, hors feu), 16 % (plusieurs), 21 % (feu).",
+        "Charge de relief : scénario unique le plus contraignant ; sortie bloquée = débit entrant maximal.",
+        "Contre-pression : élève le tarage d'une soupape conventionnelle ; soufflet ou pilote la tolèrent mieux.",
+        "Torche : KO drum ; K = τFQ/(4πD²) ; 1,58 kW/m² en exposition continue (API 521)."
+      ],
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Récipient sous pression équipé d'une soupape de sûreté"
+    },
+    {
+      "id": "m4",
+      "title": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "theme": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "minutes": 10,
+      "body": "Toute modification d'une installation en exploitation ou en construction peut créer un danger nouveau. La **gestion des modifications (MOC)** impose, avant la mise en œuvre, une demande formelle, une évaluation des risques, l'approbation par les bonnes fonctions, la mise à jour des documents (P&ID, procédures, formation) et un contrôle avant remise en service. Un remplacement à l'identique ne déclenche pas de MOC ; tout changement de conception, de consigne de sécurité ou de matériau en déclenche un.\n\nLe **HAZOP** est une revue structurée par nœuds du P&ID : on applique des mots-guides (NON, PLUS, MOINS, INVERSE, AUTRE QUE…) aux paramètres (débit, pression, température, niveau) pour identifier déviations, causes, conséquences, protections existantes et actions. Le mot-guide INVERSE appliqué au débit conduit, par exemple, à étudier un clapet anti-retour.\n\nPour décider si les protections suffisent, la **LOPA** compare la fréquence d'un scénario, après réduction par les couches de protection indépendantes (IPL), à un critère de risque tolérable. Une IPL est indépendante de l'initiateur et des autres couches, efficace et vérifiable. Exemple : initiateur 0,1 par an, une alarme avec action de l'opérateur de PFD 0,1, cible 5×10⁻⁵ par an : le PFD requis de la fonction instrumentée est 5×10⁻⁵ / (0,1 × 0,1) = 5×10⁻³.\n\nLa norme IEC 61508 définit quatre niveaux d'intégrité de sécurité (SIL). En faible sollicitation : SIL 1, PFDavg de 10⁻² à 10⁻¹ ; SIL 2, de 10⁻³ à 10⁻² ; SIL 3, de 10⁻⁴ à 10⁻³ ; SIL 4, de 10⁻⁵ à 10⁻⁴.\n\nEnfin, la **revue de pré-démarrage (PSSR)** vérifie, avant l'introduction d'hydrocarbures, que la construction est conforme à la conception, que les actions HAZOP et de sécurité sont soldées, que procédures, formation, essais et plans d'urgence sont en place. Les points de la liste de réserves (punch list) se classent par catégories : la catégorie A, liée à la sécurité ou à l'intégrité, est soldée avant démarrage ; les autres s'échelonnent après. Une dérogation à une action critique n'est possible que par une mesure compensatoire documentée et approuvée au niveau d'autorité adéquat.",
+      "keyPoints": [
+        "MOC : évaluation des risques avant exécution ; remplacement à l'identique exclu.",
+        "HAZOP : nœuds, mots-guides, déviations, causes, conséquences, protections.",
+        "LOPA : PFD requis = fréquence cible / (fréquence initiateur × PFD des IPL) ; SIL 3 = 10⁻⁴ à 10⁻³.",
+        "PSSR : actions critiques soldées avant l'introduction d'hydrocarbures ; punch list A avant démarrage."
+      ],
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risques avec zones verte, jaune et rouge"
+    },
+    {
+      "id": "m5",
+      "title": "Interfaces, corrosion, matériaux et topside offshore",
+      "theme": "Interfaces, matériaux et topside offshore",
+      "minutes": 10,
+      "body": "Une installation réussit ou échoue aux **interfaces** entre disciplines. Côté électricité : le moteur d'une pompe se dimensionne depuis la puissance hydraulique P = Q × ΔP, divisée par le rendement de la pompe, puis majorée d'une marge (par exemple 10 %) avant arrondi à la puissance normalisée supérieure ; un démarrage direct appelle un courant de l'ordre de 5 à 8 fois le courant nominal, d'où le choix éventuel d'un démarreur progressif ou d'un variateur. Côté instrumentation : une boucle 4-20 mA donne 4 mA pour 0 % et 20 mA pour 100 % de l'étendue de mesure ; un courant nettement hors de la plage signale un défaut (rupture de câble, par exemple). Côté zones dangereuses : la zone 1 est celle où une atmosphère explosive gazeuse peut se former occasionnellement en fonctionnement normal ; le matériel doit être certifié pour la zone et le groupe de gaz.\n\n**Corrosion.** Le CO2 en présence d'eau produit un acide carbonique qui corrode l'acier au carbone ; on gère par un inhibiteur, une surépaisseur de corrosion et un suivi (coupons, sondes), ou par un alliage. Le H2S impose un matériau conforme à l'ISO 15156 (NACE MR0175) dès que la pression partielle dépasse un seuil faible (de l'ordre de 0,3 kPa pour les aciers au carbone). La pression partielle est le produit de la fraction molaire par la pression absolue. L'eau de mer se véhicule dans des alliages adaptés (CuNi 90/10, super duplex, titane) ou dans des composites GRE ; l'inox 316L se rencontre mais est sensible à la corrosion caverneuse en eau de mer chaude.\n\n**Topside offshore.** Les contraintes sont le poids et le centre de gravité (suivis par un contrôle de poids), l'espace, les distances de sécurité et les vents dominants. On place les quartiers de vie et l'hélistation au vent des zones process, la torche et les évents sous le vent et loin de ces zones, et on isole les zones à risque par des murs coupe-feu. Les salles électriques et de contrôle sont maintenues en légère surpression par rapport à la zone dangereuse pour interdire l'entrée de gaz inflammable.\n\nL'ingénieur installations coordonne ces interfaces par des revues de conception, des matrices de responsabilités et un strict contrôle de la documentation.",
+      "keyPoints": [
+        "Puissance moteur = Q·ΔP / η pompe, avec marge, puis valeur normalisée.",
+        "Boucle 4-20 mA : 4 mA = 0 %, 20 mA = 100 %.",
+        "H2S : pression partielle = fraction molaire × pression absolue ; ISO 15156 au-delà du seuil.",
+        "Offshore : quartiers de vie au vent, torche sous le vent, salles électriques en surpression."
+      ],
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Plateforme pétrolière en mer avec modules process et torche"
+    }
+  ],
+  "questions": [
+    {
+      "id": "ing-facilities-001",
+      "theme": "Conception process",
+      "level": 2,
+      "q": "Pourquoi organise-t-on la séparation en plusieurs étages de pression (HP, MP, BP) ?",
+      "img": "svg/separator-3phase.svg",
+      "imgAlt": "Séparateur triphasique avec entrée, sortie gaz, sortie huile et sortie eau",
+      "choices": [
+        "Pour augmenter la teneur en eau de l'huile exportée",
+        "Parce qu'un seul étage ne peut jamais séparer l'eau",
+        "Pour récupérer davantage de liquide stable et limiter le dégazage brutal en aval",
+        "Pour supprimer toute stabilisation de l'huile"
+      ],
+      "answer": 2,
+      "explain": "Une détente par paliers permet de capter le gaz progressivement et de conserver plus de fractions intermédiaires dans le liquide, qui arrive plus stable au stockage.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-002",
+      "theme": "Conception process",
+      "level": 1,
+      "q": "Pourquoi déshydrate-t-on le gaz avant son transport ?",
+      "choices": [
+        "Pour éviter la formation d'hydrates et la corrosion par eau libre (avec CO2 ou H2S)",
+        "Pour augmenter son pouvoir calorifique de moitié",
+        "Pour réduire sa teneur en méthane",
+        "Pour supprimer toute compression"
+      ],
+      "answer": 0,
+      "explain": "L'eau libre dans une conduite provoque des bouchons d'hydrates à basse température et, avec CO2 ou H2S, une corrosion rapide.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-003",
+      "theme": "Conception process",
+      "level": 2,
+      "q": "Dans un contacteur TEG, où le TEG pauvre est-il introduit ?",
+      "choices": [
+        "En bas, avec le gaz, à co-courant",
+        "Au milieu de la colonne, en parallèle du gaz",
+        "Directement dans la ligne d'export du gaz sec",
+        "En tête, à contre-courant du gaz qui entre par le bas"
+      ],
+      "answer": 3,
+      "explain": "Le contre-courant maximise le transfert de l'eau vers le glycol : le gaz le plus sec rencontre le glycol le plus pauvre en tête.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-004",
+      "theme": "Conception process",
+      "level": 2,
+      "q": "Pourquoi limite-t-on la température du rebouilleur d'un régénérateur TEG à environ 200-204 °C ?",
+      "choices": [
+        "L'eau ne bout qu'à partir de 220 °C",
+        "Le TEG se décompose thermiquement vers 206 °C",
+        "Le TEG gèle au-dessus de 200 °C",
+        "La corrosion du contacteur augmente brutalement"
+      ],
+      "answer": 1,
+      "explain": "Au-delà d'environ 206 °C, le TEG se dégrade (produits acides, perte de glycol). On régénère donc jusqu'à la limite, et on gagne en pureté par un gaz de stripping.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-005",
+      "theme": "Conception process",
+      "level": 2,
+      "q": "Quel est l'objectif de la stabilisation de l'huile brute ?",
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Bacs de stockage d'huile stabilisée",
+      "choices": [
+        "Augmenter sa teneur en sel",
+        "Réduire sa tension de vapeur (TVP ou RVP) en retirant les fractions légères, pour le stockage et le transport",
+        "Séparer l'eau libre uniquement",
+        "Refroidir l'huile jusqu'à sa congélation"
+      ],
+      "answer": 1,
+      "explain": "Une huile non stabilisée dégaze dans les cuves et les navettes ; la stabilisation extrait les légers (C1-C4) jusqu'à une TVP conforme.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-006",
+      "theme": "Conception process",
+      "level": 2,
+      "q": "Pourquoi refroidit-on le gaz entre deux étages de compression ?",
+      "choices": [
+        "Pour augmenter la pression d'aspiration de l'étage suivant",
+        "Pour condenser tout le méthane",
+        "Pour éviter les hydrates en chauffant le gaz",
+        "Pour limiter la température de refoulement et réduire le travail de compression de l'étage suivant"
+      ],
+      "answer": 3,
+      "explain": "Un gaz plus froid occupe un volume plus faible à même pression, donc demande moins de travail ; on protège aussi joints, huile et matériaux.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-007",
+      "theme": "Conception process",
+      "level": 3,
+      "q": "Cas pratique : étagement d'un compresseur.\nAspiration à 4 bar(g), refoulement à 64 bar(g) ; pression atmosphérique 1 bar. Le rapport de compression par étage ne doit pas dépasser 4 ; les étages ont des rapports égaux.\nCombien d'étages au minimum, et quel rapport par étage ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Compresseur de gaz sur une installation",
+      "choices": [
+        "2 étages, rapport d'environ 3,6",
+        "1 étage, rapport 13",
+        "3 étages, rapport d'environ 2,35",
+        "2 étages, rapport d'environ 6,5"
+      ],
+      "answer": 0,
+      "explain": "Rapport total = 65 / 5 = 13 (pressions absolues). Un étage dépasse 4 ; deux étages donnent √13 = 3,6 < 4. Trois étages (13^(1/3) = 2,35) ne sont pas minimum. 6,5 est 13 divisé par 2, pas la racine carrée.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-008",
+      "theme": "Conception process",
+      "level": 2,
+      "q": "Dans un échangeur à calandre et tubes, où place-t-on généralement le fluide le plus encrassant ou corrosif ?",
+      "img": "svg/heat-exchanger-shell-tube.svg",
+      "imgAlt": "Échangeur à calandre et tubes : fluide chaud côté calandre, fluide froid côté tubes",
+      "choices": [
+        "Côté calandre, pour qu'il se refroidisse plus vite",
+        "Côté calandre, car l'accès y est toujours plus facile",
+        "Côté tubes, plus faciles à nettoyer mécaniquement et où seul l'alliage des tubes est coûteux",
+        "Peu importe : les deux côtés sont équivalents"
+      ],
+      "answer": 2,
+      "explain": "Les tubes se nettoient mécaniquement ou à haute pression ; en placant le fluide corrosif dedans, on limite l'alliage coûteux aux tubes.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-009",
+      "theme": "Conception process",
+      "level": 3,
+      "q": "Cas pratique : surface d'échange.\nÉchangeur à contre-courant. Fluide chaud : 150 °C vers 90 °C. Fluide froid : 30 °C vers 70 °C. Puissance 1,2 MW ; U = 500 W/m²·K ; facteur de correction F = 1.\nQuelle surface d'échange (A = Q / (U × LMTD)) ?",
+      "img": "svg/heat-exchanger-shell-tube.svg",
+      "imgAlt": "Échangeur à calandre et tubes avec températures d'entrée et de sortie des deux fluides",
+      "choices": [
+        "Environ 20 m²",
+        "Environ 43 m²",
+        "Environ 60 m²",
+        "Environ 34,5 m²"
+      ],
+      "answer": 3,
+      "explain": "ΔT1 = 150 − 70 = 80 °C ; ΔT2 = 90 − 30 = 60 °C ; LMTD = 20 / ln(80/60) = 69,5 °C. A = 1,2×10⁶ / (500 × 69,5) = 34,5 m². Le co-courant donnerait un LMTD de 55,8 °C et 43 m² : il faut la surface de la configuration réelle.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-010",
+      "theme": "Conception process",
+      "level": 3,
+      "q": "Quel est le rôle de la vanne anti-pompage (anti-surge) d'un compresseur centrifuge ?",
+      "choices": [
+        "Augmenter la pression de refoulement au-dessus de la limite de la machine",
+        "Évacuer le gaz à la torche en permanence en fonctionnement normal",
+        "Recycler du gaz du refoulement vers l'aspiration pour maintenir un débit supérieur à la limite de pompage",
+        "Protéger l'huile de graissage de la surchauffe"
+      ],
+      "answer": 2,
+      "explain": "Quand le débit tombe près de la limite de pompage, l'écoulement s'inverse par à-coups et détruit la machine. Le recyclage rétablit un débit suffisant dans le compresseur.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-011",
+      "theme": "Dimensionnement simple",
+      "level": 3,
+      "q": "Cas pratique : vitesse érosionnelle (API RP 14E).\nMélange diphasique de masse volumique ρ = 40 lb/ft³ ; constante C = 100 (service continu) ; Ve (ft/s) = C / √ρ.\nQuelle est la vitesse limite ?",
+      "choices": [
+        "Environ 4 ft/s",
+        "Environ 15,8 ft/s (près de 4,8 m/s)",
+        "Environ 100 ft/s",
+        "Environ 2,5 ft/s"
+      ],
+      "answer": 1,
+      "explain": "√40 = 6,32 ; 100 / 6,32 = 15,8 ft/s, soit 4,8 m/s. Une vitesse supérieure expose la ligne à l'érosion-corrosion. C se nuance selon le sable et la corrosion.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-012",
+      "theme": "Dimensionnement simple",
+      "level": 2,
+      "q": "En régime turbulent établi (facteur de friction supposé constant), le débit dans une ligne augmente de 50 %. Comment varie approximativement la perte de charge ?",
+      "choices": [
+        "Elle est multipliée par environ 2,25",
+        "Elle est multipliée par 1,5",
+        "Elle est multipliée par 3",
+        "Elle ne change pas"
+      ],
+      "answer": 0,
+      "explain": "ΔP varie comme le carré du débit : 1,5² = 2,25.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-013",
+      "theme": "Dimensionnement simple",
+      "level": 2,
+      "q": "Cas pratique : vitesse dans une ligne.\nDébit liquide 600 m³/h dans une conduite de diamètre intérieur 254,5 mm.\nQuelle est la vitesse approximative ?",
+      "choices": [
+        "Environ 3,3 m/s",
+        "Environ 0,8 m/s",
+        "Environ 5,2 m/s",
+        "Environ 6,6 m/s"
+      ],
+      "answer": 0,
+      "explain": "Q = 600/3 600 = 0,1667 m³/s ; A = π/4 × 0,2545² = 0,0509 m² ; v = 0,1667 / 0,0509 = 3,3 m/s. 5,2 m/s correspond à un diamètre intérieur de 202,7 mm ; 0,8 m/s à une section calculée avec le rayon au lieu du diamètre.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-014",
+      "theme": "Dimensionnement simple",
+      "level": 2,
+      "q": "Cas pratique : temps de rétention.\nUn séparateur a un volume liquide utile de 18 m³ et reçoit 1 500 m³/j de liquide.\nQuel est le temps de rétention ?",
+      "img": "svg/separator-3phase.svg",
+      "imgAlt": "Séparateur horizontal avec volume liquide utile de 18 mètres cubes",
+      "choices": [
+        "Environ 1,7 minute",
+        "Environ 17 minutes",
+        "Environ 29 minutes",
+        "Environ 173 minutes"
+      ],
+      "answer": 1,
+      "explain": "1 500 m³/j = 62,5 m³/h ; t = 18 / 62,5 = 0,288 h = 17,3 min.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-015",
+      "theme": "Dimensionnement simple",
+      "level": 3,
+      "q": "Cas pratique : essai hydraulique d'une tuyauterie ASME B31.3.\nLa pression de conception est de 40 bar(g), à température ambiante (rapport de contraintes égal à 1). Quelle pression d'essai hydraulique minimale ?",
+      "choices": [
+        "52 bar(g)",
+        "40 bar(g)",
+        "80 bar(g)",
+        "60 bar(g)"
+      ],
+      "answer": 3,
+      "explain": "B31.3 impose un essai à au moins 1,5 fois la pression de conception (corrigé par le rapport des contraintes). 52 bar correspond à 1,3 × 40, coefficient des récipients ASME VIII Div. 1 (appliqué à la MAWP).",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-016",
+      "theme": "Dimensionnement simple",
+      "level": 3,
+      "q": "Cas pratique : perte de charge en ligne.\nLigne de 200 m, diamètre intérieur 254,5 mm, huile de masse volumique 850 kg/m³, vitesse 3,28 m/s, facteur de friction de Darcy f = 0,018. ΔP = f × (L/D) × ρ v²/2.\nQuelle perte de charge ?",
+      "choices": [
+        "Environ 6,5 bar",
+        "Environ 0,065 bar",
+        "Environ 0,65 bar",
+        "Environ 1,3 bar"
+      ],
+      "answer": 2,
+      "explain": "L/D = 785,8 ; ρ v²/2 = 850 × 10,76 / 2 = 4 572 Pa ; ΔP = 0,018 × 785,8 × 4 572 ≈ 64 700 Pa = 0,65 bar. 1,3 bar oublie le facteur 1/2.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-017",
+      "theme": "Dimensionnement simple",
+      "level": 3,
+      "q": "Cas pratique : NPSH disponible.\nBallon d'aspiration à 1,5 bar abs, pression de vapeur du liquide 0,9 bar abs, masse volumique 800 kg/m³ ; niveau du liquide à 3 m au-dessus de l'axe de la pompe ; pertes de charge d'aspiration 0,4 m. g = 9,81 m/s².\nQuel est le NPSH disponible ?",
+      "choices": [
+        "Environ 10,6 m",
+        "Environ 21,7 m",
+        "Environ 10,2 m",
+        "Environ 7,6 m"
+      ],
+      "answer": 2,
+      "explain": "(1,5 − 0,9) × 10⁵ / (800 × 9,81) = 7,65 m ; + 3 m − 0,4 m = 10,2 m. 10,6 oublie les pertes d'aspiration ; 21,7 oublie la pression de vapeur ; 7,6 oublie la hauteur statique et les pertes.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-018",
+      "theme": "Dimensionnement simple",
+      "level": 1,
+      "q": "Sur la boucle de régulation de débit (transmetteur FT, régulateur FIC, vanne FV), que fait le régulateur FIC ?",
+      "img": "svg/pid-flow-control.svg",
+      "imgAlt": "Boucle de régulation de débit : transmetteur FT, régulateur FIC et vanne FV sur la ligne",
+      "choices": [
+        "Il compare la pression amont à la pression aval pour ouvrir la soupape",
+        "Il compare le niveau du séparateur à la température d'entrée",
+        "Il compare le débit à celui de la pompe de secours",
+        "Il compare la mesure de débit du transmetteur à la consigne et commande la vanne de régulation"
+      ],
+      "answer": 3,
+      "explain": "Le régulateur calcule l'écart entre mesure et consigne et agit sur la vanne pour le réduire : c'est le principe de la régulation en boucle fermée.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-019",
+      "theme": "Dimensionnement simple",
+      "level": 2,
+      "q": "Quelle est la conséquence d'une vanne de régulation fortement surdimensionnée ?",
+      "choices": [
+        "Elle travaille à faible ouverture : mauvaise régulation et usure rapide du siège",
+        "Elle régule mieux car sa capacité est plus grande",
+        "Elle réduit toujours la perte de charge du procédé à zéro",
+        "Elle ne pose aucun problème tant que le positionneur est neuf"
+      ],
+      "answer": 0,
+      "explain": "À faible ouverture, une petite variation de course change fortement le débit ; le siège s'érode.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-020",
+      "theme": "Dimensionnement simple",
+      "level": 3,
+      "q": "Cas pratique : débit de gaz réel.\nDébit standard 1 MMSm³/j (conditions standard : 15 °C, 1,01325 bar abs). Gaz à 60 bar abs, 40 °C, Z = 0,9.\nQuel est le débit réel au refoulement ?",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Compresseur de gaz sur une installation",
+      "choices": [
+        "Environ 765 m³/h",
+        "Environ 690 m³/h",
+        "Environ 633 m³/h",
+        "Environ 41 700 m³/h"
+      ],
+      "answer": 1,
+      "explain": "Q réel = 10⁶ × (1,01325/60) × (313,15/288,15) × 0,9 = 16 500 m³/j ≈ 690 m³/h. 765 oublie Z ; 633 oublie la correction de température ; 41 700 est le débit standard horaire.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-021",
+      "theme": "Soupapes, torche et relief",
+      "level": 2,
+      "q": "Pour une PSV unique protégeant un récipient (cas hors feu), quelle surpression maximale au-dessus de la MAWP l'ASME VIII Div. 1 autorise-t-il ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Récipient sous pression avec soupape de sûreté tarée à la MAWP",
+      "choices": [
+        "21 %",
+        "10 %",
+        "3 %",
+        "50 %"
+      ],
+      "answer": 1,
+      "explain": "Pour une soupape unique, l'accumulation est de 10 % de la MAWP ; 16 % avec plusieurs soupapes ; 21 % pour le feu externe.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-022",
+      "theme": "Soupapes, torche et relief",
+      "level": 3,
+      "q": "Pour le cas du feu externe, quelle accumulation maximale l'ASME VIII Div. 1 permet-il au-dessus de la MAWP ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Récipient exposé au feu avec soupape de sûreté",
+      "choices": [
+        "21 %",
+        "10 %",
+        "16 %",
+        "35 %"
+      ],
+      "answer": 0,
+      "explain": "Le feu est un scénario rare et à risque élevé de rupture, pour lequel la norme tolère 21 % ; 10 % est le cas général d'une soupape unique, 16 % celui de plusieurs soupapes.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-023",
+      "theme": "Soupapes, torche et relief",
+      "level": 1,
+      "q": "Lequel de ces cas n'est PAS un scénario de relief typique pour un récipient ?",
+      "choices": [
+        "La sortie bloquée du récipient",
+        "Le feu externe",
+        "Le démarrage normal d'une pompe de service",
+        "La perte de refroidissement d'une colonne"
+      ],
+      "answer": 2,
+      "explain": "Les scénarios de relief sont des pertes de contrôle ou des événements anormaux ; un démarrage normal n'en est pas un.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-024",
+      "theme": "Soupapes, torche et relief",
+      "level": 3,
+      "q": "Une soupape conventionnelle (à ressort) est soumise à une contre-pression superposée constante. Quel est l'effet sur sa pression d'ouverture ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Soupape de sûreté à ressort débouchant dans un collecteur sous contre-pression",
+      "choices": [
+        "La pression d'ouverture diminue d'autant",
+        "La pression d'ouverture n'est pas modifiée",
+        "La soupape ne s'ouvre qu'à la pression d'essai",
+        "La pression d'ouverture augmente d'autant que la contre-pression superposée"
+      ],
+      "answer": 3,
+      "explain": "La contre-pression s'ajoute à la force du ressort : il faut une pression plus élevée en amont pour ouvrir. Une soupape à soufflet équilibré compense cet effet.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-025",
+      "theme": "Soupapes, torche et relief",
+      "level": 2,
+      "q": "Quel est le rôle du ballon de torche (flare KO drum) ?",
+      "img": "photo/flare-stack.jpg",
+      "imgAlt": "Torche en fonctionnement",
+      "choices": [
+        "Augmenter la pression dans le réseau de torche",
+        "Brûler le gaz acide avant la torche",
+        "Stocker le gaz pour le réinjecter",
+        "Retenir les liquides entraînés pour éviter qu'ils ne retombent en gouttes enflammées"
+      ],
+      "answer": 3,
+      "explain": "Des gouttes de liquide brûlant tombant au sol seraient très dangereuses. Le ballon sépare les liquides du gaz envoyé à la torche.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-026",
+      "theme": "Soupapes, torche et relief",
+      "level": 2,
+      "q": "Quel est le niveau de rayonnement thermique admissible par l'API 521 pour une exposition continue du personnel ?",
+      "choices": [
+        "1,58 kW/m²",
+        "0,16 kW/m²",
+        "15,8 kW/m²",
+        "37,5 kW/m²"
+      ],
+      "answer": 0,
+      "explain": "1,58 kW/m² est le niveau retenu pour une exposition continue du personnel ; des niveaux supérieurs sont admis seulement pour des durées limitées. 37,5 kW/m² est un niveau de dommage pour les équipements.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-027",
+      "theme": "Soupapes, torche et relief",
+      "level": 3,
+      "q": "Cas pratique : distance de sécurité à une torche.\nPuissance de combustion Q = 50 MW ; fraction rayonnée F = 0,2 ; transmissivité τ = 1. K = τ F Q / (4 π D²). On vise 1,58 kW/m² au sol.\nQuelle distance minimale D ?",
+      "img": "photo/flare-stack.jpg",
+      "imgAlt": "Torche de production et zone d'exclusion au sol",
+      "choices": [
+        "Environ 8 m",
+        "Environ 22 m",
+        "Environ 50 m",
+        "Environ 112 m"
+      ],
+      "answer": 1,
+      "explain": "D² = 0,2 × 50 000 kW / (4π × 1,58) = 10 000 / 19,86 = 503 m² ; D ≈ 22,4 m. 50 m s'obtient en oubliant la fraction rayonnée F.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-028",
+      "theme": "Soupapes, torche et relief",
+      "level": 3,
+      "q": "Quel est le principe d'un système HIPPS (high integrity pressure protection system) ?",
+      "choices": [
+        "Ouvrir une soupape de grande taille vers l'atmosphère",
+        "Réguler la pression de l'alimentation en continu pendant le fonctionnement normal",
+        "Fermer rapidement l'alimentation par des vannes instrumentées avant que la pression n'atteigne la limite, ce qui permet de réduire la charge de torche et la pression de conception de l'aval",
+        "Remplacer l'obligation de tester les vannes"
+      ],
+      "answer": 2,
+      "explain": "Le HIPPS est une fonction instrumentée de sécurité (souvent SIL 3) : il isole la source de pression au lieu de décharger.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-029",
+      "theme": "Soupapes, torche et relief",
+      "level": 2,
+      "q": "Quelle est la règle usuelle pour les vannes d'isolement installées en amont et en aval d'une PSV ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Soupape de sûreté avec vannes d'isolement amont et aval",
+      "choices": [
+        "Elles sont verrouillées ou plombées en position ouverte, avec procédure de gestion des clés",
+        "Elles restent fermées pour éviter les fuites",
+        "Elles sont laissées sans verrou car la soupape est suffisante",
+        "Elles sont ouvertes seulement pendant les démarrages"
+      ],
+      "answer": 0,
+      "explain": "Une vanne d'isolement fermée par erreur rend la soupape inopérante : on la verrouille ouverte et on contrôle la gestion des clés.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-030",
+      "theme": "Soupapes, torche et relief",
+      "level": 2,
+      "q": "Cas pratique : charge de relief.\nUn séparateur reçoit au maximum 30 000 kg/h de gaz, toutes les sorties étant bloquées. Il n'y a pas de condensation.\nQuelle charge de relief retenir pour la sortie bloquée ?",
+      "choices": [
+        "15 000 kg/h",
+        "60 000 kg/h, soit le double du débit entrant",
+        "30 000 kg/h, le débit entrant maximal qui ne peut plus sortir",
+        "0 kg/h, car le niveau compense"
+      ],
+      "answer": 2,
+      "explain": "Quand toutes les sorties sont bloquées, tout le débit entrant doit être évacué par la soupape. Aucune compensation par le niveau n'existe pour un gaz.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-031",
+      "theme": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "level": 2,
+      "q": "Lequel de ces changements doit normalement déclencher une procédure de MOC ?",
+      "choices": [
+        "Remplacer une pompe par un modèle strictement identique",
+        "Repeindre une ligne selon la même spécification",
+        "Remplacer un joint par un joint de même référence",
+        "Relever le seuil de l'alarme de niveau très haut d'un séparateur"
+      ],
+      "answer": 3,
+      "explain": "Modifier un réglage de sécurité change l'analyse de risque. Un remplacement à l'identique n'en change pas les hypothèses.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-032",
+      "theme": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "level": 1,
+      "q": "Qu'est-ce qu'un HAZOP ?",
+      "choices": [
+        "Un calcul de dimensionnement des soupapes",
+        "Une revue structurée par nœuds qui applique des mots-guides aux paramètres pour identifier déviations, causes et conséquences",
+        "Un essai en usine d'un équipement",
+        "Un audit financier du projet"
+      ],
+      "answer": 1,
+      "explain": "Le HAZOP examine systématiquement les déviations (plus, moins, inverse...) sur chaque nœud du P&ID, avec leurs causes, conséquences et protections.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-033",
+      "theme": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "level": 2,
+      "q": "En HAZOP, que conduit à étudier le mot-guide INVERSE appliqué au paramètre débit ?",
+      "choices": [
+        "Un débit trop faible",
+        "Un débit trop élevé",
+        "Un écoulement en sens inverse (clapet anti-retour, risque de retour de produit)",
+        "Un débit pulsé"
+      ],
+      "answer": 2,
+      "explain": "INVERSE correspond à l'opposé de l'intention de conception : ici un retour de produit, qui oriente vers un clapet anti-retour ou une protection équivalente.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-034",
+      "theme": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "level": 2,
+      "q": "Quelle caractéristique est requise pour qu'une couche de protection soit retenue comme IPL dans une LOPA ?",
+      "choices": [
+        "Être indépendante de l'événement initiateur et des autres couches, efficace et vérifiable",
+        "Être toujours fondée sur une action de l'opérateur",
+        "Être toujours une alarme",
+        "Être construite par l'exploitant"
+      ],
+      "answer": 0,
+      "explain": "Une IPL doit rester efficace même si l'initiateur ou une autre couche a échoué, et pouvoir être vérifiée par essai ou audit.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-035",
+      "theme": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "level": 3,
+      "q": "Cas pratique : LOPA.\nInitiateur : défaillance d'une boucle de régulation, 0,1 par an. IPL existante : alarme et action de l'opérateur, PFD = 0,1. Fréquence tolérable de la conséquence : 5×10⁻⁵ par an.\nQuel SIL faut-il pour la fonction instrumentée à ajouter ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risques utilisée pour fixer le critère de risque tolérable",
+      "choices": [
+        "SIL 1",
+        "SIL 3",
+        "Pas de fonction instrumentée requise",
+        "SIL 2"
+      ],
+      "answer": 3,
+      "explain": "Fréquence mitigée = 0,1 × 0,1 = 10⁻² par an. PFD requis = 5×10⁻⁵ / 10⁻² = 5×10⁻³, compris entre 10⁻³ et 10⁻² : SIL 2.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-036",
+      "theme": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "level": 2,
+      "q": "Quelle plage de PFDavg correspond au SIL 3 en mode de faible sollicitation (IEC 61508) ?",
+      "choices": [
+        "10⁻² à 10⁻¹",
+        "10⁻⁴ à 10⁻³",
+        "10⁻³ à 10⁻²",
+        "10⁻⁵ à 10⁻⁴"
+      ],
+      "answer": 1,
+      "explain": "SIL 1 : 10⁻² à 10⁻¹ ; SIL 2 : 10⁻³ à 10⁻² ; SIL 3 : 10⁻⁴ à 10⁻³ ; SIL 4 : 10⁻⁵ à 10⁻⁴.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-037",
+      "theme": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "level": 2,
+      "q": "Quel est l'objectif de la revue de pré-démarrage (PSSR) ?",
+      "choices": [
+        "Réaliser les essais de performance garantis du fournisseur après le démarrage",
+        "Vérifier, avant l'introduction d'hydrocarbures, que construction, procédures, formation et actions de sécurité sont conformes et achevées",
+        "Établir le calendrier de maintenance de l'année suivante",
+        "Remplacer le HAZOP du projet"
+      ],
+      "answer": 1,
+      "explain": "La PSSR est la dernière barrière avant l'introduction des fluides dangereux : elle confirme que l'installation construite est celle qui a été étudiée.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-038",
+      "theme": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "level": 2,
+      "q": "Un point de la liste de réserves (punch list) est classé catégorie A. Que cela signifie-t-il ?",
+      "choices": [
+        "Il peut être soldé dans l'année suivante",
+        "Il ne concerne que la peinture",
+        "Il n'est suivi que par le fournisseur",
+        "Il doit être soldé avant le démarrage, car lié à la sécurité ou à l'intégrité"
+      ],
+      "answer": 3,
+      "explain": "La catégorie A regroupe les réserves bloquantes pour le démarrage ; les autres catégories s'échelonnent après.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-039",
+      "theme": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "level": 3,
+      "q": "Cas pratique : à la PSSR, on constate que l'alarme de niveau très haut indépendante (LAHH), recommandée par le HAZOP, n'est pas installée. L'équipe de projet propose de « la poser au prochain arrêt » et de démarrer maintenant. Quelle décision est cohérente ?",
+      "choices": [
+        "Ne pas démarrer, sauf mesure compensatoire documentée et approuvée au niveau d'autorité requis",
+        "Démarrer, car l'action est une simple recommandation",
+        "Démarrer, en informant les opérateurs à la fin du démarrage",
+        "Supprimer la recommandation du rapport pour clore la revue"
+      ],
+      "answer": 0,
+      "explain": "Une action de sécurité critique issue du HAZOP doit être soldée avant l'introduction d'hydrocarbures. Un report suppose une dérogation formelle avec mesure compensatoire.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-040",
+      "theme": "MOC, HAZOP, LOPA, SIL et pré-démarrage",
+      "level": 3,
+      "q": "Pendant la construction, une modification de dernière minute change le diamètre d'une ligne de décharge de PSV. Quelle étape est indispensable avant mise en œuvre ?",
+      "choices": [
+        "Informer l'opérateur à la fin du chantier",
+        "Mettre à jour le P&ID seulement après le démarrage",
+        "Une évaluation des risques et un nouveau calcul de perte de charge de décharge et de capacité de la soupape, avec approbation MOC",
+        "Rien, si le diamètre est augmenté"
+      ],
+      "answer": 2,
+      "explain": "Le diamètre influence la contre-pression et la capacité de la soupape ; même un agrandissement exige calcul, approbation et mise à jour documentaire avant exécution.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-041",
+      "theme": "Interfaces, matériaux et topside offshore",
+      "level": 2,
+      "q": "Qu'appelle-t-on zone 1 dans la classification des zones à atmosphère explosive gazeuse ?",
+      "choices": [
+        "Une zone où elle est présente en permanence ou pendant de longues périodes",
+        "Une zone où elle est improbable et, si elle apparaît, de courte durée",
+        "Une zone sans aucun risque d'explosion",
+        "Une zone où une atmosphère explosive peut se former occasionnellement en fonctionnement normal"
+      ],
+      "answer": 3,
+      "explain": "Zone 0 : présence permanente ou de longue durée ; zone 1 : présence occasionnelle en fonctionnement normal ; zone 2 : improbable en fonctionnement normal et de courte durée.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-042",
+      "theme": "Interfaces, matériaux et topside offshore",
+      "level": 2,
+      "q": "Cas pratique : boucle 4-20 mA.\nUn transmetteur de pression a une étendue de 0 à 10 bar. L'automate lit 12 mA.\nQuelle est la pression mesurée ?",
+      "img": "svg/loop-4-20ma.svg",
+      "imgAlt": "Boucle 4-20 mA avec alimentation, transmetteur et entrée automate",
+      "choices": [
+        "6 bar",
+        "1,2 bar",
+        "5 bar",
+        "10 bar"
+      ],
+      "answer": 2,
+      "explain": "(12 − 4) / (20 − 4) = 0,5, soit 5 bar. 6 bar vient de 12/20 : la plage commence à 4 mA, pas à 0.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-043",
+      "theme": "Interfaces, matériaux et topside offshore",
+      "level": 2,
+      "q": "Quel est l'ordre de grandeur du courant de démarrage d'un moteur asynchrone en démarrage direct ?",
+      "img": "svg/motor-starter-dol.svg",
+      "imgAlt": "Schéma d'un démarreur direct de moteur avec contacteur et relais thermique",
+      "choices": [
+        "1 à 1,5 fois le courant nominal",
+        "5 à 8 fois le courant nominal",
+        "Égal au courant nominal",
+        "20 à 30 fois le courant nominal"
+      ],
+      "answer": 1,
+      "explain": "Au démarrage direct, le rotor à l'arrêt se comporte comme un secondaire en court-circuit. Le démarreur progressif ou le variateur limite ce courant.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-044",
+      "theme": "Interfaces, matériaux et topside offshore",
+      "level": 3,
+      "q": "Cas pratique : choix d'un moteur de pompe.\nDébit 250 m³/h ; ΔP = 12 bar ; rendement de la pompe 70 %. Marge de 10 % sur la puissance à l'arbre. Puissances normalisées : 90, 110, 132, 160, 200 kW.\nQuelles puissance à l'arbre et moteur ?",
+      "choices": [
+        "Environ 119 kW à l'arbre, moteur de 132 kW",
+        "Environ 83 kW à l'arbre, moteur de 90 kW",
+        "Environ 119 kW à l'arbre, moteur de 110 kW",
+        "Environ 170 kW à l'arbre, moteur de 200 kW"
+      ],
+      "answer": 0,
+      "explain": "Puissance hydraulique = 0,0694 m³/s × 1,2×10⁶ Pa = 83,3 kW ; à l'arbre : 83,3 / 0,70 = 119 kW ; avec 10 % : 131 kW, donc 132 kW. 83 kW oublie le rendement ; 110 kW est insuffisant ; 170 kW divise deux fois par 0,7.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-045",
+      "theme": "Interfaces, matériaux et topside offshore",
+      "level": 2,
+      "q": "Quelle est la parade usuelle contre la corrosion par le CO2 d'une ligne en acier au carbone en présence d'eau ?",
+      "choices": [
+        "Un inhibiteur de corrosion, une surépaisseur de corrosion et un suivi par coupons ou sondes",
+        "Une isolation thermique seule",
+        "L'augmentation de la teneur en eau",
+        "Une peinture extérieure uniquement"
+      ],
+      "answer": 0,
+      "explain": "Le CO2 corrode l'intérieur de la ligne : on combine inhibiteur, marge d'épaisseur et suivi, ou on choisit un alliage.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-046",
+      "theme": "Interfaces, matériaux et topside offshore",
+      "level": 3,
+      "q": "Cas pratique : service acide.\nGaz à 40 bar abs contenant 2 % mol de H2S. Le seuil de pression partielle de H2S qui déclenche le service acide pour les aciers au carbone est d'environ 0,3 kPa (ISO 15156).\nQuelle conclusion ?",
+      "choices": [
+        "pH2S = 0,8 bar : sans conséquence, car inférieure au seuil",
+        "pH2S = 0,8 bar, très au-dessus du seuil : service acide, matériaux conformes à l'ISO 15156",
+        "pH2S = 8 bar : acier au carbone ordinaire suffisant",
+        "pH2S = 0,02 bar : acier au carbone ordinaire suffisant"
+      ],
+      "answer": 1,
+      "explain": "pH2S = 0,02 × 40 = 0,8 bar = 80 kPa, bien au-dessus de 0,3 kPa : il faut des matériaux conformes (dureté limitée, etc.). Même 0,02 bar (2 kPa) dépasserait le seuil.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-047",
+      "theme": "Interfaces, matériaux et topside offshore",
+      "level": 2,
+      "q": "Quels matériaux sont couramment retenus pour la tuyauterie d'eau de mer sur une plateforme ?",
+      "choices": [
+        "Acier au carbone nu sans revêtement",
+        "Fonte grise sans protection",
+        "Acier inoxydable 304 non protégé",
+        "CuNi 90/10, super duplex ou composite GRE"
+      ],
+      "answer": 3,
+      "explain": "Ces matériaux résistent à l'eau de mer. L'acier au carbone nu ou l'inox 304 se dégradent rapidement.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-048",
+      "theme": "Interfaces, matériaux et topside offshore",
+      "level": 2,
+      "q": "Quel est le principe d'implantation des principaux ensembles sur une plateforme offshore ?",
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Plateforme pétrolière avec torche, modules process et quartiers de vie",
+      "choices": [
+        "Quartiers de vie sous la torche pour limiter les câbles",
+        "Torche au-dessus des quartiers de vie pour économiser du poids",
+        "Quartiers de vie et hélistation au vent des zones process ; torche et évents sous le vent, le plus loin possible",
+        "Zones process au vent des quartiers de vie"
+      ],
+      "answer": 2,
+      "explain": "Les gaz éventuellement rejetés ou fuyant doivent être entraînés loin des personnes ; on place le process sous le vent du bloc de vie.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-049",
+      "theme": "Interfaces, matériaux et topside offshore",
+      "level": 2,
+      "q": "Pourquoi maintient-on une salle électrique offshore en légère surpression par rapport à la zone dangereuse ?",
+      "choices": [
+        "Pour aspirer les gaz de la zone vers la salle",
+        "Pour éviter la corrosion en remplissant la salle d'oxygène",
+        "Pour empêcher l'entrée de gaz inflammable dans la salle",
+        "Pour permettre de laisser les portes ouvertes en permanence"
+      ],
+      "answer": 2,
+      "explain": "La surpression, assurée par de l'air propre, protège contre l'infiltration de gaz ; les portes sont asservies et les alarmes surveillent la pression.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-facilities-050",
+      "theme": "Interfaces, matériaux et topside offshore",
+      "level": 3,
+      "q": "Cas pratique : épaisseur d'une tuyauterie B31.3.\nTuyau de 8 pouces, diamètre extérieur D = 219,1 mm ; P = 100 bar (10 MPa) ; S = 138 MPa ; E = 1 ; Y = 0,4 ; surépaisseur de corrosion 3 mm. t = P D / (2 (S E + P Y)).\nQuelle épaisseur requise, surépaisseur incluse, avant tolérance de fabrication ?",
+      "choices": [
+        "Environ 7,7 mm",
+        "Environ 15,4 mm",
+        "Environ 3,9 mm",
+        "Environ 10,7 mm"
+      ],
+      "answer": 3,
+      "explain": "t = 10 × 219,1 / (2 × (138 + 4)) = 7,7 mm ; plus 3 mm de corrosion : 10,7 mm. Avec 12,5 % de tolérance, l'épaisseur nominale doit être d'au moins 12,2 mm, soit la série 80 (12,7 mm). 7,7 oublie la corrosion ; 15,4 oublie le facteur 2.",
+      "seconds": 100,
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crédits photos — MOURESS Académie</title>
+<style>
+  :root{--marine:#061F44;--orange:#F28C28;--bg:#FCFBF8}
+  body{margin:0;background:var(--bg);color:var(--marine);font:16px/1.5 Montserrat,Arial,sans-serif}
+  main{max-width:960px;margin:0 auto;padding:24px 16px 48px}
+  a{color:var(--marine)} h1{font-size:1.6rem}
+  ul{list-style:none;padding:0;display:grid;gap:12px}
+  li{display:grid;grid-template-columns:96px 1fr;gap:12px;background:#fff;border:1px solid #e6e2d9;border-radius:12px;padding:10px;align-items:center}
+  img{width:96px;height:64px;object-fit:cover;border-radius:8px}
+  small{display:block;opacity:.8}
+</style>
+</head>
+<body>
+<main>
+  <p><a href="./">← Retour à MOURESS Académie</a></p>
+  <h1>Crédits photos</h1>
+  <p>Les photographies d'illustration proviennent de Wikimedia Commons, sous licences libres. Merci à leurs auteurs.</p>
+  <ul id="list"><li>Chargement…</li></ul>
+</main>
+<script>
+fetch('assets/img/photo/CREDITS.json').then(r=>r.json()).then(d=>{
+  const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  document.getElementById('list').innerHTML=Object.entries(d).map(([id,c])=>
+    `<li><img src="assets/img/photo/${esc(c.file||id+'.jpg')}" alt="" loading="lazy"><div><strong>${esc(c.title)}</strong><small>${esc(c.author)} · ${esc(c.license)} · <a href="${esc(c.source)}" rel="noopener">source</a></small></div></li>`).join('');
+}).catch(()=>{document.getElementById('list').innerHTML='<li>Crédits indisponibles.</li>'});
+</script>
+</body>
+</html>

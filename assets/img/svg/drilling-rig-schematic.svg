@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Appareil de forage terrestre : mât avec moufle fixe, moufle mobile, top drive, treuil, plancher, BOP, train de tiges, masses-tiges et trépan, et circuit de boue (pompe, colonne montante, flexible, retour par annulaire, flowline, tamis vibrant, bac à boue)</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Appareil de forage terrestre (schéma de principe)</text>
+
+<!-- sous-sol -->
+<rect x="0" y="340" width="800" height="160" fill="#E8EAEE"/>
+<line x1="0" y1="340" x2="800" y2="340" class="s"/>
+
+<!-- sous-structure et plancher -->
+<path d="M165,267V340M295,267V340M165,270L295,338M295,270L165,338" fill="none" stroke="#061F44" stroke-width="2"/>
+<line x1="110" y1="267" x2="320" y2="267" stroke="#061F44" stroke-width="6"/>
+
+<!-- mât -->
+<path d="M209.3,110H250.7M196.6,150H263.4M183.8,190H276.2M171.1,230H288.9M209.3,110L263.4,150M250.7,110L196.6,150M196.6,150L276.2,190M263.4,150L183.8,190M183.8,190L288.9,230M276.2,190L171.1,230" class="ld"/>
+<path d="M222,70L160,265M238,70L300,265" fill="none" stroke="#061F44" stroke-width="3.5"/>
+
+<!-- moufles, câbles, top drive -->
+<rect x="210" y="62" width="40" height="16" class="gr"/>
+<path d="M218,78V110M230,78V110M242,78V110" class="ld"/>
+<rect x="212" y="110" width="36" height="30" class="gr"/>
+<line x1="230" y1="140" x2="230" y2="150" class="s"/>
+<rect x="214" y="150" width="32" height="32" class="bl"/>
+<path d="M210,70H125V232" fill="none" stroke="#061F44" stroke-width="2"/>
+<rect x="100" y="232" width="50" height="33" class="gr"/>
+<rect x="214" y="255" width="32" height="12" class="gr"/>
+
+<!-- trou et cuvelage -->
+<rect x="214" y="340" width="32" height="140" fill="#FCFBF8"/>
+<path d="M212,340V410M248,340V410" stroke="#061F44" stroke-width="4" fill="none"/>
+<path d="M214,410V480M246,410V480" class="ld"/>
+<!-- BOP -->
+<rect x="210" y="290" width="40" height="15" class="gr"/>
+<rect x="206" y="306" width="48" height="16" class="gr"/>
+<rect x="214" y="322" width="32" height="18" class="gr"/>
+
+<!-- train de tiges, masses-tiges, trépan -->
+<line x1="230" y1="182" x2="230" y2="470" stroke="#061F44" stroke-width="6"/>
+<line x1="230" y1="425" x2="230" y2="468" stroke="#061F44" stroke-width="11"/>
+<path d="M221,468H239L235,486H225Z" class="of"/>
+
+<!-- retour de boue dans l'annulaire -->
+<line x1="220" y1="462" x2="220" y2="350" class="or" marker-end="url(#ao)"/>
+<line x1="240" y1="462" x2="240" y2="350" class="or" marker-end="url(#ao)"/>
+
+<!-- circuit de surface : flowline, tamis, bac, pompe -->
+<path d="M254,298H400V268H418" class="or" marker-end="url(#ao)"/>
+<rect x="420" y="250" width="80" height="36" class="gr"/>
+<path d="M428,262L492,274M428,274L492,280" class="ld"/>
+<path d="M500,268H570V298" class="or" marker-end="url(#ao)"/>
+<rect x="540" y="300" width="160" height="40" class="gr"/>
+<line x1="700" y1="326" x2="720" y2="326" class="nv"/>
+<rect x="720" y="300" width="60" height="40" class="bl"/>
+<circle cx="750" cy="320" r="12" class="wh"/>
+
+<!-- boue vers le puits : refoulement, colonne montante, flexible -->
+<path d="M750,300V215H335V140C335,158 290,150 247,160" class="nv" marker-end="url(#ar)"/>
+
+<!-- libellés droite haut -->
+<g class="ld"><path d="M466,70H252M466,121H250M466,142H339M466,192H337"/></g>
+<text x="470" y="75">Moufle fixe (crown block)</text>
+<text x="470" y="126">Moufle mobile + crochet</text>
+<text x="470" y="147">Flexible de forage (rotary hose)</text>
+<text x="470" y="197">Colonne montante (standpipe)</text>
+<text x="690" y="235" class="c">Refoulement</text>
+<text x="460" y="244" class="c">Tamis vibrant</text>
+
+<!-- libellés gauche haut -->
+<text x="190" y="171" class="e">Top drive</text>
+<path d="M192,166H213" class="ld"/>
+<text x="115" y="150" class="e">Câble de forage</text>
+<text x="95" y="253" class="e">Treuil</text>
+<text x="20" y="288">Plancher</text>
+<text x="20" y="306">de forage</text>
+<text x="262" y="316">Flowline (ligne de retour)</text>
+<text x="620" y="325" class="c b">Bac à boue</text>
+<text x="750" y="362" class="c">Pompe à boue</text>
+
+<!-- libellés sous-sol -->
+<text x="200" y="358" class="e">Obturateurs (BOP)</text>
+<path d="M206,353L218,324" class="ld"/>
+<text x="200" y="390" class="e">Cuvelage de surface</text>
+<path d="M204,386H212" class="ld"/>
+<text x="200" y="418" class="e">Tiges de forage</text>
+<path d="M204,414H226" class="ld"/>
+<text x="200" y="453" class="e">Masses-tiges</text>
+<path d="M204,449H224" class="ld"/>
+<text x="200" y="490" class="e">Trépan</text>
+<path d="M204,486H222" class="ld"/>
+<text x="262" y="396">Boue descendante (dans les tiges)</text>
+<path d="M236,392H258" class="ld"/>
+<text x="262" y="430">Retour de boue (annulaire)</text>
+<path d="M244,426H258" class="ld"/>
+</svg>

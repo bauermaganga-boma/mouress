@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ti">
+<title id="ti">Coupe d'un gradin de mine à ciel ouvert : hauteur de gradin, angle de talus, crête, pied, berme, merlon de sécurité et piste de roulage</title>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.t{font-size:20px;font-weight:700}.b{font-weight:700}.m{text-anchor:middle}.e{text-anchor:end}
+.d{stroke:#061F44;stroke-width:2;fill:none}
+</style>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 Z" fill="#061F44"/></marker>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text class="t m" x="400" y="34">Géométrie d'un gradin (mine à ciel ouvert)</text>
+
+<!-- terrain -->
+<path d="M40,110 L200,110 L240,220 L405,220 L445,330 L760,330 L760,440 L40,440 Z" fill="#E8EAEE" stroke="#061F44" stroke-width="3" stroke-linejoin="round"/>
+<!-- piste -->
+<rect x="480" y="325" width="260" height="5" fill="#F28C28"/>
+<!-- merlon -->
+<path d="M378,220 L390,200 L402,220 Z" fill="#8C93A3" stroke="#061F44" stroke-width="2" stroke-linejoin="round"/>
+
+<text x="40" y="98" class="b">Plateforme supérieure</text>
+<text x="208" y="100" class="b">Crête</text>
+
+<!-- angle de talus -->
+<line x1="150" y1="220" x2="240" y2="220" stroke="#061F44" stroke-width="2" stroke-dasharray="5 4"/>
+<path d="M206,220 A34,34 0 0 1 228.4,188" class="d" stroke="#F28C28" stroke-width="3"/>
+<text class="e b" x="196" y="176">Angle de talus</text>
+<text class="e b" x="196" y="196" style="fill:#D9741A">α = 70°</text>
+<text x="246" y="246">Pied</text>
+
+<!-- berme -->
+<line x1="240" y1="192" x2="405" y2="192" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<line x1="240" y1="192" x2="240" y2="220" stroke="#061F44" stroke-width="1.5" stroke-dasharray="3 3"/>
+<line x1="405" y1="192" x2="405" y2="220" stroke="#061F44" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text class="m b" x="322" y="164">Berme (banquette)</text>
+<text class="m" x="322" y="182">largeur 15 m</text>
+
+<!-- merlon -->
+<text x="420" y="204">Merlon de sécurité</text>
+<line x1="404" y1="212" x2="416" y2="206" stroke="#061F44" stroke-width="1.5"/>
+
+<!-- hauteur -->
+<line x1="405" y1="220" x2="500" y2="220" stroke="#061F44" stroke-width="1.5" stroke-dasharray="3 3"/>
+<line x1="490" y1="220" x2="490" y2="330" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text class="b" x="502" y="268">H = 10 m</text>
+<text x="502" y="286">hauteur de gradin</text>
+<text class="e" x="745" y="314">Plateforme inférieure (carreau)</text>
+
+<!-- piste -->
+<line x1="480" y1="350" x2="740" y2="350" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text class="m b" x="610" y="374">Piste de roulage</text>
+<text class="m" x="610" y="392">largeur 24 m</text>
+
+<text class="m" x="400" y="474">Plus le talus est raide et la berme étroite, plus le risque d'éboulement augmente.</text>
+</svg>

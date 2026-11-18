@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Cellule de flottation mécanique : alimentation en pulpe avec réactifs, arbre creux avec arrivée d'air, rotor et stator, bulles chargées de particules hydrophobes, zone de mousse minéralisée qui déborde dans la goulotte (concentré), gangue hydrophile et rejets en fond de cellule</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.bb{fill:#FCFBF8;stroke:#061F44;stroke-width:1.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Cellule de flottation mécanique</text>
+
+<!-- pulpe et mousse -->
+<rect x="201" y="230" width="358" height="209" fill="#DCE6F5"/>
+<rect x="201" y="200" width="358" height="30" fill="#FFEFD8"/>
+<path d="M200,230H560" fill="none" stroke="#061F44" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+<!-- cuve et goulotte -->
+<path d="M200,170V440H560V440M560,205V420" fill="none" stroke="#061F44" stroke-width="3.5"/>
+<path d="M560,205V245H620V205" class="gr"/>
+<path d="M560,420H620M560,440H620" class="s"/>
+
+<!-- moteur, arbre creux, rotor, stator -->
+<rect x="345" y="60" width="70" height="50" class="bl"/>
+<text x="380" y="90" class="c b">Moteur</text>
+<rect x="376" y="110" width="8" height="275" class="wh" style="stroke-width:2"/>
+<rect x="352" y="378" width="56" height="14" class="gr"/>
+<path d="M330,370H346V402H330ZM414,370H430V402H414Z" class="gr"/>
+
+<!-- bulles de la mousse -->
+<g class="bb">
+<circle cx="225" cy="215" r="8"/><circle cx="250" cy="220" r="8"/><circle cx="275" cy="212" r="8"/><circle cx="300" cy="218" r="8"/><circle cx="325" cy="213" r="8"/><circle cx="350" cy="220" r="8"/><circle cx="425" cy="212" r="8"/><circle cx="450" cy="218" r="8"/><circle cx="475" cy="213" r="8"/><circle cx="500" cy="219" r="8"/><circle cx="525" cy="213" r="8"/><circle cx="548" cy="217" r="8"/><circle cx="405" cy="219" r="8"/>
+</g>
+<g fill="#F28C28">
+<circle cx="222" cy="212" r="3"/><circle cx="272" cy="209" r="3"/><circle cx="322" cy="210" r="3"/><circle cx="422" cy="209" r="3"/><circle cx="472" cy="210" r="3"/><circle cx="522" cy="210" r="3"/><circle cx="547" cy="214" r="3"/><circle cx="402" cy="216" r="3"/>
+</g>
+<!-- bulles dans la pulpe -->
+<g class="bb">
+<circle cx="330" cy="350" r="6"/><circle cx="345" cy="318" r="6"/><circle cx="318" cy="296" r="6"/><circle cx="338" cy="268" r="6"/><circle cx="312" cy="250" r="6"/><circle cx="430" cy="352" r="6"/><circle cx="447" cy="322" r="6"/><circle cx="425" cy="294" r="6"/><circle cx="452" cy="268" r="6"/><circle cx="472" cy="300" r="6"/><circle cx="492" cy="330" r="6"/><circle cx="470" cy="362" r="6"/>
+</g>
+<g fill="#F28C28">
+<circle cx="328" cy="348" r="2.5"/><circle cx="343" cy="316" r="2.5"/><circle cx="336" cy="266" r="2.5"/><circle cx="428" cy="350" r="2.5"/><circle cx="445" cy="320" r="2.5"/><circle cx="450" cy="266" r="2.5"/><circle cx="490" cy="328" r="2.5"/><circle cx="468" cy="360" r="2.5"/>
+</g>
+<!-- gangue -->
+<g fill="#7C8598">
+<circle cx="230" cy="420" r="3.5"/><circle cx="260" cy="432" r="3.5"/><circle cx="290" cy="425" r="3.5"/><circle cx="250" cy="405" r="3.5"/><circle cx="215" cy="432" r="3.5"/><circle cx="470" cy="428" r="3.5"/><circle cx="500" cy="418" r="3.5"/><circle cx="520" cy="432" r="3.5"/><circle cx="540" cy="424" r="3.5"/><circle cx="485" cy="404" r="3.5"/>
+</g>
+
+<!-- flux -->
+<line x1="215" y1="194" x2="552" y2="194" class="or" style="stroke-width:3" marker-end="url(#ao)"/>
+<line x1="620" y1="235" x2="705" y2="235" class="or" marker-end="url(#ao)"/>
+<path d="M240,135H372" class="nv" marker-end="url(#ar)"/>
+<line x1="20" y1="300" x2="196" y2="300" class="nv" marker-end="url(#ar)"/>
+<line x1="178" y1="252" x2="178" y2="294" stroke="#061F44" stroke-width="2.5" marker-end="url(#ar)"/>
+<line x1="575" y1="430" x2="705" y2="430" class="nv" marker-end="url(#ar)"/>
+
+<!-- libellés -->
+<text x="20" y="288">Alimentation (pulpe)</text>
+<text x="20" y="266">Réactifs</text>
+<text x="192" y="234" class="e">Niveau de pulpe</text>
+<text x="240" y="124">Air comprimé</text>
+<text x="395" y="154">Arbre creux (arrivée d'air)</text>
+<text x="300" y="172" class="c b">Mousse minéralisée</text>
+<path d="M300,177V205" class="ld"/>
+<text x="630" y="200">Goulotte</text>
+<text x="630" y="222" class="b">Concentré</text>
+<text x="215" y="362" class="b">Pulpe</text>
+<text x="380" y="426" class="c">Rotor + stator</text>
+<text x="575" y="326">Bulles chargées de</text>
+<text x="575" y="344">particules de minerai</text>
+<path d="M572,336L499,331" class="ld"/>
+<text x="575" y="391">Gangue hydrophile</text>
+<text x="575" y="409">(reste dans la pulpe)</text>
+<path d="M572,396L545,422" class="ld"/>
+<text x="640" y="456" class="c b">Rejets (stériles)</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Diagraphie de puits entre 2 400 et 2 500 m : piste gamma ray (GR, 0 à 150 API) et piste de résistivité en échelle logarithmique (0,2 à 2 000 ohm.m), avec argile, grès à huile, contact huile/eau à 2 450 m, grès aquifère et argile</title>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.gd{stroke:#C9CED8;stroke-width:1;fill:none}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Diagraphie : GR et résistivité (zones réservoir)</text>
+
+<!-- grilles -->
+<path class="gd" d="M110,172H560M110,244H560M110,316H560M110,388H560M146,100V460M182,100V460M218,100V460M254,100V460M372.5,100V460M435,100V460M497.5,100V460"/>
+
+<!-- cadres -->
+<rect x="110" y="100" width="180" height="360" class="s"/>
+<rect x="310" y="100" width="250" height="360" class="s"/>
+
+<!-- échelle de profondeur -->
+<path d="M102,100H110M102,172H110M102,244H110M102,316H110M102,388H110M102,460H110" class="s"/>
+<g class="e">
+<text x="98" y="105">2400</text><text x="98" y="177">2420</text><text x="98" y="249">2440</text><text x="98" y="321">2460</text><text x="98" y="393">2480</text><text x="98" y="465">2500</text>
+</g>
+<text x="60" y="66" class="c b">Prof. (m)</text>
+
+<!-- en-têtes de pistes -->
+<text x="200" y="66" class="c b">GR (API)</text>
+<text x="110" y="92">0</text>
+<text x="290" y="92" class="e">150</text>
+<text x="435" y="66" class="c b">Résistivité (Ω·m), échelle log.</text>
+<text x="310" y="92">0,2</text>
+<text x="372.5" y="92" class="c">2</text>
+<text x="435" y="92" class="c">20</text>
+<text x="497.5" y="92" class="c">200</text>
+<text x="560" y="92" class="e">2000</text>
+
+<!-- zones -->
+<rect x="585" y="100" width="40" height="72" fill="#E8EAEE" stroke="#061F44" stroke-width="2.5"/>
+<rect x="585" y="172" width="40" height="108" fill="#FFE2BD" stroke="#061F44" stroke-width="2.5"/>
+<rect x="585" y="280" width="40" height="108" fill="#C5D6EE" stroke="#061F44" stroke-width="2.5"/>
+<rect x="585" y="388" width="40" height="72" fill="#E8EAEE" stroke="#061F44" stroke-width="2.5"/>
+<text x="635" y="141">Argile</text>
+<text x="635" y="222" class="b">Grès à huile</text>
+<text x="635" y="240">(réservoir)</text>
+<text x="635" y="343">Grès aquifère</text>
+<text x="635" y="429">Argile</text>
+
+<!-- courbes -->
+<polyline points="240,100 247,115 239,130 245,145 241,160 242,170 200,176 152,180 149,195 155,210 147,225 153,240 148,255 154,270 150,282 146,300 154,315 148,330 153,345 147,360 152,375 156,384 225,392 246,398 240,415 247,430 241,445 244,460" fill="none" stroke="#061F44" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="378,100 380,130 377,170 395,174 424,178 457,182 462,200 468,220 460,240 466,260 462,276 440,280 380,284 360,288 358,305 360,330 357,355 359,380 362,387 375,393 379,400 377,430 379,460" fill="none" stroke="#061F44" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="376,100 378,130 376,170 390,174 410,178 424,182 428,200 432,220 426,240 430,260 428,276 418,280 366,284 363,288 364,305 361,330 363,355 365,380 365,387 376,393 378,400 376,430 378,460" fill="none" stroke="#F28C28" stroke-width="2.5" stroke-linejoin="round"/>
+
+<!-- contact huile/eau -->
+<line x1="110" y1="280" x2="625" y2="280" stroke="#F28C28" stroke-width="3" stroke-dasharray="10 5"/>
+<text x="635" y="268" class="o">Contact huile/eau</text>
+<text x="635" y="300" class="o">OWC : 2 450 m</text>
+
+<!-- légende -->
+<line x1="310" y1="482" x2="335" y2="482" stroke="#061F44" stroke-width="3"/>
+<text x="341" y="487">Résistivité profonde</text>
+<line x1="500" y1="482" x2="525" y2="482" stroke="#F28C28" stroke-width="3"/>
+<text x="531" y="487">Résistivité peu profonde</text>
+</svg>

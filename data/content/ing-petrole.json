@@ -1,0 +1,932 @@
+{
+  "profile": "ing-petrole",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Cycle de vie d'un champ et réserves (PRMS)",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "minutes": 9,
+      "body": "La vie d'un champ pétrolier se déroule en cinq phases : **exploration** (sismique, puits d'exploration pour tester un piège), **appréciation** (puits et tests pour délimiter la découverte et mesurer contacts, épaisseurs, propriétés), **développement** (choix du concept, forage des puits de production, construction des installations), **production** (montée en puissance, plateau, déclin) et **abandon** (bouchage des puits, démantèlement, remise en état). Les décisions se prennent à des « portes » successives : chacune réduit l'incertitude, mais engage davantage d'argent.\n\nLe volume d'huile en place se calcule par la méthode volumétrique : STOIIP = 7 758 × A × h × φ × (1 − Sw) / Bo, avec A en acres, h en pieds, φ la porosité, Sw la saturation en eau et Bo le facteur volumétrique de formation (la constante 7 758 convertit des acres-pieds en barils). Le volume récupérable s'obtient en multipliant par le facteur de récupération.\n\nLes **réserves** ne sont pas le volume en place. Dans le système PRMS (SPE, WPC, AAPG, SPEE), on distingue les ressources prospectives (non découvertes), les ressources contingentes (découvertes, mais dont le projet n'est pas encore commercialement viable ou engagé) et les **réserves** : quantités commercialement récupérables, à partir d'accumulations connues, par un projet de développement défini, à une date donnée et dans des conditions définies.\n\nLes réserves sont classées selon la confiance que l'on a dans l'estimation :\n- **1P** (prouvées) : au moins 90 % de probabilité que les quantités récupérées égalent ou dépassent l'estimation (P90) ;\n- **2P** (prouvées + probables) : meilleure estimation, 50 % de probabilité (P50) ;\n- **3P** (prouvées + probables + possibles) : au moins 10 % de probabilité (P10).\n\nLes réserves dépendent de l'économie : si le prix baisse ou si les coûts montent, la **limite économique** (moment où le flux net annuel devient nul) arrive plus tôt, et des volumes peuvent être reclassés en ressources contingentes. Elles dépendent aussi de l'engagement : sans autorisation interne, contrat de vente ou infrastructure d'évacuation, le projet reste contingent.\n\nL'ingénieur pétrolier distingue donc toujours volume en place, volume récupérable, réserves et production cumulée, et il indique l'incertitude associée à chaque nombre.",
+      "keyPoints": [
+        "Cinq phases : exploration, appréciation, développement, production, abandon.",
+        "STOIIP = 7 758 × A(acres) × h(ft) × φ × (1 − Sw) / Bo.",
+        "Réserves PRMS : projet défini et commercialement viable ; 1P = P90, 2P = P50, 3P = P10.",
+        "Un projet non économique ou non engagé relève des ressources contingentes."
+      ],
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique avec horizons et failles délimitant un piège"
+    },
+    {
+      "id": "m2",
+      "title": "Bilan matière et courbes de déclin",
+      "theme": "Déclin, bilan matière et récupération",
+      "minutes": 9,
+      "body": "Le **bilan matière** applique la conservation de la masse au réservoir vu comme un seul réservoir (modèle « tank », sans dimension d'espace) : le volume de fluides produits, mesuré en conditions de gisement, est égal à l'expansion du système. Pour un gisement de gaz volumétrique, sans aquifère actif, la relation est linéaire : p/Z = (pi/Zi) × (1 − Gp/G). En portant p/Z en fonction de la production cumulée Gp, l'extrapolation vers p/Z = 0 donne le gaz en place G ; une courbe qui s'infléchit au-dessus de la droite signale un apport d'eau.\n\nPour l'huile, l'équation de Havlena-Odeh s'écrit F = N × (Eo + m·Eg + Efw) + We. F est le vide de production, N l'huile en place initiale, Eo l'expansion de l'huile et de son gaz dissous, m le rapport chapeau de gaz sur huile, Eg l'expansion du chapeau de gaz, Efw celle de l'eau connée et de la roche, We l'apport de l'aquifère. La méthode exige un historique de pression et de production fiable ; elle ne remplace pas la simulation, mais fournit une vérification indépendante des volumes.\n\nLes **courbes de déclin** (Arps) extrapolent le débit quand le régime d'exploitation est établi :\n- exponentiel (b = 0) : q = qi × exp(−D·t), avec un taux de déclin D constant ; la production cumulée jusqu'au débit limite vaut Np = (qi − qlim) / D ;\n- hyperbolique (0 < b < 1) : le taux de déclin diminue au cours du temps ;\n- harmonique (b = 1) : cas limite de l'hyperbolique.\n\nCes modèles supposent des conditions stables (pression de fond, nombre de puits, contraintes de surface). Une nouvelle duse, la pose d'une ESP, un forage intercalaire ou un arrêt prolongé rompent l'hypothèse et faussent l'extrapolation. Le débit limite économique, fixé par les coûts opératoires, détermine la durée de vie et donc l'EUR (production cumulée finale = cumul actuel + réserves restantes).\n\nEn pratique, on combine volumétrie (statique), bilan matière (dynamique globale) et courbes de déclin (puits ou champ). Si les résultats divergent, l'écart révèle une hypothèse fausse : volume en place mal estimé, aquifère ignoré, compartimentage ou connectivité partielle.",
+      "keyPoints": [
+        "Gaz volumétrique : p/Z est linéaire en Gp, l'extrapolation à p/Z = 0 donne G.",
+        "Havlena-Odeh : F = N(Eo + m·Eg + Efw) + We.",
+        "Arps : b = 0 exponentiel, 0 < b < 1 hyperbolique, b = 1 harmonique.",
+        "Exponentiel : Np = (qi − qlim)/D ; le déclin suppose des conditions d'exploitation stables."
+      ],
+      "img": "svg/ipr-curve.svg",
+      "imgAlt": "Courbe IPR montrant la relation entre pression de fond et débit"
+    },
+    {
+      "id": "m3",
+      "title": "Récupération primaire, secondaire et EOR",
+      "theme": "Déclin, bilan matière et récupération",
+      "minutes": 9,
+      "body": "Le **facteur de récupération** se décompose en trois efficacités : RF = ED × EA × EV, où ED est l'efficacité de déplacement microscopique (liée à la saturation en huile résiduelle), EA l'efficacité de balayage en surface et EV l'efficacité de balayage vertical. Un balayage excellent n'efface pas une forte saturation résiduelle, et inversement.\n\n**Récupération primaire** : le réservoir produit grâce à son énergie naturelle. Les mécanismes sont l'expansion de l'huile, de l'eau connée et de la roche au-dessus de la pression de bulle, le gaz dissous qui se libère en dessous, le chapeau de gaz, l'aquifère actif, le drainage gravitaire et parfois la compaction. Le gaz dissous est le moins efficace (de l'ordre de 5 à 30 % de l'huile en place), l'aquifère fort le plus efficace.\n\n**Récupération secondaire** : on injecte de l'eau (waterflood) ou du gaz non miscible pour maintenir la pression et déplacer l'huile. Le **rapport de mobilité** M = (krw/μw) / (kro/μo) pilote le balayage : M > 1 est défavorable (digitation, percée précoce). On suit le taux de remplacement des vides et la qualité de l'eau injectée (solides, oxygène, bactéries, compatibilité) pour éviter le colmatage des injecteurs et la corrosion.\n\n**EOR** (récupération améliorée) : on modifie les propriétés des fluides ou de la roche pour réduire la saturation résiduelle ou améliorer la mobilité :\n- injection de CO2 ou de gaz miscible ;\n- méthodes thermiques (vapeur, combustion) pour les huiles lourdes ;\n- méthodes chimiques : polymères (amélioration du rapport de mobilité), surfactants, alcali.\n\nL'EOR demande des pilotes, un criblage (screening) selon la viscosité, la perméabilité, la profondeur et la température, et surtout une économie solide : coût de l'injectant, traitement des fluides produits, corrosion, recyclage du CO2. Il se prépare tôt, car l'intérêt décroît quand le champ vieillit et que les infrastructures sont démantelées.\n\nSur un champ mature, le choix entre balayage à l'eau, forages intercalaires (infill) et EOR se tranche par le coût du baril incrémental et par la valeur de l'option d'attendre.",
+      "keyPoints": [
+        "RF = ED × EA × EV (déplacement, balayage en surface, balayage vertical).",
+        "Primaire : expansion, gaz dissous, chapeau de gaz, aquifère, gravité ; le gaz dissous récupère le moins.",
+        "Secondaire : injection d'eau ou de gaz pour maintenir la pression ; M > 1 est défavorable.",
+        "EOR : CO2/gaz miscible, thermique, polymères, surfactants ; criblage et pilote indispensables."
+      ],
+      "img": "photo/pumpjack.jpg",
+      "imgAlt": "Unité de pompage sur un champ terrestre en production"
+    },
+    {
+      "id": "m4",
+      "title": "Économie de projet et contrats pétroliers",
+      "theme": "Économie de projet",
+      "minutes": 10,
+      "body": "L'évaluation économique repose sur les **flux de trésorerie** annuels : recettes (production × prix), moins redevances, OPEX, CAPEX et impôts. Le temps compte : un dollar futur vaut moins qu'un dollar aujourd'hui. La **VAN** (valeur actuelle nette) est la somme des flux actualisés : VAN = Σ Ft / (1 + r)^t. Une VAN positive crée de la valeur au taux retenu. Le **TRI** est le taux qui annule la VAN ; on le compare au rendement exigé. Le **délai de récupération** (payback) est l'instant où le flux cumulé redevient nul ; il ignore ce qui suit et ne mesure pas la valeur.\n\nAvec un budget limité, on classe les projets par indice de profitabilité (VAN / CAPEX). Sans contrainte de capital, pour des projets mutuellement exclusifs, on retient la VAN la plus élevée et non le TRI le plus élevé.\n\nLe **coût unitaire technique** vaut (CAPEX + OPEX sur la vie du projet) / réserves ; le **prix d'équilibre** est le prix pour lequel la VAN est nulle. Les coûts irrécupérables (sunk costs) sont exclus des décisions : seul l'incrémental compte. L'amortissement comptable n'est pas une sortie d'argent, mais il réduit le bénéfice imposable : l'impôt baisse, le flux net augmente. Les provisions d'abandon (ABEX) font partie de l'économie ; les omettre surestime la valeur des champs matures.\n\nCôté **contrats pétroliers**, deux grandes familles :\n- la **concession** (ou licence) : le titulaire est propriétaire du pétrole produit et paie une redevance (royalty), calculée sur la production ou les recettes brutes sans déduction de coûts, ainsi que des impôts ;\n- le **contrat de partage de production** (PSC) : l'État reste propriétaire ; une part de la production, souvent plafonnée en pourcentage, rembourse les coûts du contractant (**cost oil**), et le solde (**profit oil**) est partagé entre l'État et le contractant selon une clef de répartition, avec d'éventuels impôts.\n\nLes termes précis varient selon les pays et les époques ; l'ingénieur doit maîtriser le mécanisme et laisser la rédaction aux juristes et aux commerciaux. Un accord d'association (JOA) règle les relations entre partenaires et désigne l'opérateur ; un accord d'unitisation répartit les intérêts quand un gisement chevauche plusieurs permis.",
+      "keyPoints": [
+        "VAN = Σ Ft/(1+r)^t ; le TRI annule la VAN ; le payback ne mesure pas la valeur.",
+        "Projets exclusifs sans contrainte de capital : VAN maximale ; capital limité : VAN/CAPEX.",
+        "Les coûts irrécupérables sont ignorés ; l'ABEX doit être intégré.",
+        "Concession : redevance + impôt ; PSC : cost oil puis partage du profit oil."
+      ],
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Diagramme en barres de flux de trésorerie annuels"
+    },
+    {
+      "id": "m5",
+      "title": "Développement offshore et onshore, incertitude",
+      "theme": "Développement et contrats",
+      "minutes": 10,
+      "body": "Le développement d'un champ résulte d'un arbitrage entre volumes, profil de production, coûts et risques. Onshore, les puits sont peu coûteux, nombreux et rapides à forer, la logistique est simple et les installations sont modulaires : la valeur vient de la densité de puits et de l'optimisation continue. Offshore, chaque puits coûte beaucoup plus cher et mobilise une unité de forage onéreuse : on fore moins de puits, plus productifs, et la fiabilité des installations est cruciale car toute intervention est lourde.\n\nLes concepts offshore classiques sont la plateforme fixe sur jacket (eau peu profonde à moyenne), la plateforme flottante (TLP, spar), le **FPSO** (unité flottante de production, stockage et déchargement) quand il n'y a pas de pipeline d'export et que le champ est éloigné, et le **tie-back sous-marin** vers une installation existante pour les petites découvertes proches, au prix d'enjeux d'assurance d'écoulement (hydrates, paraffines, longs flowlines). Le choix dépend de la profondeur d'eau, de la distance à la côte, des volumes, de la météo-océanographie, de la chaîne d'approvisionnement et du calendrier. Le chemin critique va de l'ingénierie à la construction puis à l'installation et au raccordement ; le forage se mène en parallèle.\n\nL'**incertitude** se traite par des plages plutôt que par des valeurs uniques : scénarios déterministes (bas, médian, haut) ou simulation de Monte Carlo, qui tire les paramètres (surface, épaisseur, porosité, saturation, facteur de récupération) dans des distributions. Le produit de variables indépendantes tend vers une loi lognormale ; ignorer les corrélations réduit artificiellement la dispersion. La surconfiance (plages P90-P10 trop étroites) est le biais le plus répandu.\n\nLa **valeur monétaire espérée** (EMV) pondère les issues par leurs probabilités. La **valeur de l'information** compare la décision avec et sans l'information supplémentaire (puits d'appréciation, test de production) : une information n'a de valeur que si elle peut changer la décision. La probabilité de succès géologique est le produit des probabilités (roche mère, réservoir, piège, étanchéité) ; on la distingue du succès commercial.\n\nLa décision finale s'appuie sur la VAN, la VAN/CAPEX, la robustesse au scénario bas, l'exposition financière maximale et la cohérence avec le portefeuille.",
+      "keyPoints": [
+        "Offshore : peu de puits, très productifs ; onshore : nombreux puits peu chers.",
+        "FPSO pour champ éloigné sans export ; tie-back pour petite découverte proche (assurance d'écoulement).",
+        "Monte Carlo : le produit de variables donne une loi lognormale ; les corrélations ignorées sous-estiment la dispersion.",
+        "EMV et valeur de l'information : une information vaut si elle peut changer la décision."
+      ],
+      "img": "photo/fpso.jpg",
+      "imgAlt": "Unité flottante de production, stockage et déchargement (FPSO) en mer"
+    }
+  ],
+  "questions": [
+    {
+      "id": "ing-petrole-001",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "level": 1,
+      "q": "Quel est l'enchaînement correct des grandes phases de la vie d'un champ pétrolier ?",
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Photographie d'une plateforme pétrolière en mer",
+      "choices": [
+        "Développement, exploration, production, appréciation, abandon",
+        "Exploration, développement, appréciation, abandon, production",
+        "Exploration, appréciation, développement, production, abandon",
+        "Appréciation, exploration, production, développement, abandon"
+      ],
+      "answer": 2,
+      "explain": "On explore pour trouver, on apprécie pour délimiter la découverte, on développe, on produit, puis on abandonne les puits et on démantèle les installations.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-002",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "level": 1,
+      "q": "Sur une section sismique, que cherche-t-on avant tout à identifier en phase d'exploration ?",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique en profondeur avec horizons réflecteurs et une faille délimitant une structure en dôme",
+      "choices": [
+        "Des structures ou pièges (horizons, failles, fermetures) susceptibles de contenir des hydrocarbures",
+        "La teneur exacte en huile et en eau de chaque couche",
+        "Le débit que fournira chaque futur puits",
+        "La corrosivité des fluides de gisement"
+      ],
+      "answer": 0,
+      "explain": "La sismique image la géométrie du sous-sol et permet de repérer des pièges. Teneur en fluides, débit et corrosivité ne se lisent qu'avec les puits, les diagraphies et les essais.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-003",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "level": 1,
+      "q": "Quel est l'objectif principal d'un puits d'appréciation foré après une découverte ?",
+      "img": "svg/drilling-rig-schematic.svg",
+      "imgAlt": "Schéma d'une installation de forage avec mât, treuil, table de rotation et colonne de forage",
+      "choices": [
+        "Mettre le champ en production dès que possible",
+        "Remplacer un puits de production défaillant",
+        "Injecter de l'eau pour maintenir la pression",
+        "Délimiter l'extension du gisement et mesurer ses propriétés (contacts, épaisseurs, perméabilité) pour décider du développement"
+      ],
+      "answer": 3,
+      "explain": "L'appréciation réduit l'incertitude sur volumes et productivité avant l'investissement lourd du développement.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-004",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "level": 2,
+      "q": "Dans le système PRMS, que signifie « réserves 1P » ?",
+      "choices": [
+        "Réserves probables : quantités équivalentes à la valeur moyenne de toutes les estimations",
+        "Réserves prouvées : au moins 90 % de probabilité que les quantités récupérées égalent ou dépassent l'estimation (P90)",
+        "Quantités qui ont 10 % de probabilité d'être atteintes ou dépassées (P10)",
+        "Réserves déjà produites depuis le début de l'exploitation"
+      ],
+      "answer": 1,
+      "explain": "1P correspond à l'estimation prudente, P90. P50 est la meilleure estimation (2P) et P10 l'estimation haute (3P).",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-005",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "level": 2,
+      "q": "Dans la classification PRMS, qu'est-ce qui distingue une réserve d'une ressource contingente ?",
+      "choices": [
+        "La réserve a été découverte, la ressource contingente non",
+        "La réserve relève d'un projet de développement défini, commercialement viable et engagé ; la ressource contingente non",
+        "La réserve est toujours de l'huile, la ressource contingente est du gaz",
+        "La réserve se mesure en barils stock-tank, la ressource contingente en barils de réservoir"
+      ],
+      "answer": 1,
+      "explain": "Les deux concernent des accumulations découvertes ; ce qui fait la réserve, c'est l'existence d'un projet défini, économique et engagé selon les critères PRMS.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-006",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "level": 2,
+      "q": "Pour un champ, les simulations donnent : P90 = 40 MMstb, P50 = 65 MMstb, P10 = 110 MMstb (volumes récupérables). Quelle valeur retenir pour les réserves 2P ?",
+      "choices": [
+        "40 MMstb",
+        "110 MMstb",
+        "71,7 MMstb (moyenne arithmétique de 40, 65 et 110)",
+        "65 MMstb"
+      ],
+      "answer": 3,
+      "explain": "En approche probabiliste, 2P correspond à la meilleure estimation P50. La moyenne arithmétique des trois valeurs n'a pas de signification statistique ici.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-007",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "level": 3,
+      "q": "Cas pratique : volume d'huile en place d'un réservoir.\nSurface A = 1 000 acres ; épaisseur utile h = 50 ft ; porosité φ = 0,20 ; saturation en eau Sw = 0,30 ; Bo = 1,25 rb/STB.\nSTOIIP = 7 758 × A × h × φ × (1 − Sw) / Bo.\nQuel est le STOIIP ?",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie d'un puits avec un intervalle réservoir de 50 pieds d'épaisseur utile",
+      "choices": [
+        "Environ 43,4 millions de STB",
+        "Environ 54,3 millions de STB",
+        "Environ 18,6 millions de STB",
+        "Environ 67,9 millions de STB"
+      ],
+      "answer": 0,
+      "explain": "7 758 × 1 000 × 50 × 0,20 × 0,70 = 54,3 millions de rb ; divisé par Bo = 1,25, on obtient 43,4 millions de STB. 54,3 oublie Bo ; 67,9 multiplie par Bo au lieu de diviser ; 18,6 utilise Sw au lieu de (1 − Sw).",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-008",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "level": 2,
+      "q": "Sur une diagraphie, un intervalle poreux montre un rayon gamma bas, une porosité neutron-densité élevée et une résistivité très supérieure à celle de l'aquifère voisin (environ 1 ohm.m). Quelle interprétation est la plus probable ?",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie avec colonnes rayon gamma, résistivité et porosité sur un intervalle réservoir",
+      "choices": [
+        "Une argile de couverture peu perméable",
+        "Un réservoir aquifère à salinité élevée",
+        "Un réservoir (grès ou carbonate propre) saturé en hydrocarbures",
+        "Un intervalle cimenté derrière le casing"
+      ],
+      "answer": 2,
+      "explain": "Gamma bas = roche propre, porosité élevée = réservoir, résistivité nettement supérieure à celle de l'eau = hydrocarbures (l'huile et le gaz sont résistants). Une argile aurait un gamma élevé.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-009",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "level": 3,
+      "q": "Un opérateur additionne les P90 de cinq champs indépendants pour annoncer les réserves 1P du portefeuille. Que peut-on dire ?",
+      "choices": [
+        "Elle est plus optimiste que le P90 du portefeuille",
+        "Elle est exactement égale au P90 du portefeuille",
+        "Elle est égale au P50 du portefeuille",
+        "La somme arithmétique des P90 est plus prudente (plus basse) que le P90 de la somme, car les incertitudes indépendantes se compensent en partie"
+      ],
+      "answer": 3,
+      "explain": "Pour des variables indépendantes, la dispersion de la somme est inférieure à la somme des dispersions : le P90 du total dépasse la somme des P90. La sommation arithmétique est la convention du PRMS pour les réserves, et reste prudente.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-010",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "level": 3,
+      "q": "Un champ découvert a un projet de développement dont la VAN, au prix du brut retenu, est négative (−15 M$). Aucune décision d'investissement n'est prise. Comment classer ses volumes ?",
+      "choices": [
+        "Réserves prouvées, tant que le gisement est découvert",
+        "Réserves probables, car le projet n'est pas encore engagé",
+        "Ressources contingentes (projet non encore commercial), non des réserves",
+        "Ressources prospectives, car le champ n'est pas encore produit"
+      ],
+      "answer": 2,
+      "explain": "Sans projet commercialement viable et engagé, les volumes ne sont pas des réserves. Découverts, ils sont contingents ; les ressources prospectives concernent des accumulations non encore découvertes.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-011",
+      "theme": "Cycle de vie et réserves (PRMS)",
+      "level": 3,
+      "q": "Cas pratique : contacts de fluides.\nPuits A : pression de la phase huile = 4 095 psi à 7 500 ft TVDSS, gradient d'huile 0,35 psi/ft.\nPuits B (zone aquifère) : pression d'eau = 4 335 psi à 8 100 ft TVDSS, gradient d'eau 0,45 psi/ft.\nOù se situe le contact huile-eau libre (intersection des deux droites de pression) ?",
+      "img": "svg/pressure-gradient-chart.svg",
+      "imgAlt": "Diagramme pression en fonction de la profondeur avec une droite d'huile à 0,35 psi/ft et une droite d'eau à 0,45 psi/ft qui se coupent au contact",
+      "choices": [
+        "7 650 ft TVDSS",
+        "7 800 ft TVDSS",
+        "7 950 ft TVDSS",
+        "8 100 ft TVDSS"
+      ],
+      "answer": 1,
+      "explain": "Huile : P = 4 095 + 0,35 (z − 7 500) ; eau : P = 4 335 + 0,45 (z − 8 100). L'égalité donne z = 7 800 ft, pression 4 200 psi. Les autres valeurs ne vérifient pas l'égalité des deux pressions.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-012",
+      "theme": "Déclin, bilan matière et récupération",
+      "level": 1,
+      "q": "Lequel de ces mécanismes n'est PAS un mécanisme de drive naturel (récupération primaire) ?",
+      "img": "photo/pumpjack.jpg",
+      "imgAlt": "Photographie d'une unité de pompage sur un champ terrestre",
+      "choices": [
+        "L'injection d'eau depuis la surface",
+        "L'expansion du gaz dissous",
+        "L'aquifère actif",
+        "Le chapeau de gaz"
+      ],
+      "answer": 0,
+      "explain": "L'injection d'eau est une intervention de récupération secondaire. Les trois autres sont des sources d'énergie naturelle du gisement.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-013",
+      "theme": "Déclin, bilan matière et récupération",
+      "level": 1,
+      "q": "À quoi sert principalement la récupération secondaire par injection d'eau ?",
+      "img": "photo/wellhead-onshore.jpg",
+      "imgAlt": "Tête de puits terrestre sur un champ en cours d'exploitation",
+      "choices": [
+        "À maintenir la pression du réservoir et à déplacer l'huile vers les producteurs",
+        "À augmenter la viscosité de l'huile",
+        "À réduire la saturation en eau connée",
+        "À remplacer le gas lift"
+      ],
+      "answer": 0,
+      "explain": "L'injection d'eau compense les vides créés par la production et pousse l'huile vers les puits. Elle ne modifie pas la viscosité de l'huile.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-014",
+      "theme": "Déclin, bilan matière et récupération",
+      "level": 2,
+      "q": "Laquelle de ces méthodes relève de l'EOR (récupération améliorée) ?",
+      "choices": [
+        "La fracturation hydraulique d'un puits de production",
+        "L'injection de CO2 en conditions miscibles",
+        "Le remplacement d'une pompe ESP",
+        "La réduction de la duse de production"
+      ],
+      "answer": 1,
+      "explain": "L'EOR modifie les propriétés des fluides ou de la roche (miscibilité, viscosité, tension interfaciale). Fracturation, ESP et duse sont des actions de puits.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-015",
+      "theme": "Déclin, bilan matière et récupération",
+      "level": 2,
+      "q": "Parmi ces mécanismes de drive, lequel donne en général le plus faible facteur de récupération final ?",
+      "choices": [
+        "L'aquifère fort",
+        "Le drainage gravitaire dans un gisement très incliné",
+        "L'injection d'eau bien balayée",
+        "Le gaz dissous (solution gas drive)"
+      ],
+      "answer": 3,
+      "explain": "Avec le gaz dissous, la pression chute vite et le gaz libéré s'échappe sans déplacer l'huile : des facteurs de récupération faibles, de l'ordre de 5 à 30 %.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-016",
+      "theme": "Déclin, bilan matière et récupération",
+      "level": 3,
+      "q": "Cas pratique : réserves par courbe de déclin.\nUn puits suit un déclin exponentiel. Débit actuel qi = 1 000 bbl/j ; débit limite économique qlim = 100 bbl/j ; taux de déclin nominal D = 0,30 an⁻¹.\nQuelle production cumulée restante, jusqu'au débit limite (Np = (qi − qlim)/D, 365 j/an) ?",
+      "choices": [
+        "Environ 0,33 million de barils",
+        "Environ 3,00 millions de barils",
+        "Environ 1,10 million de barils",
+        "Environ 1,22 million de barils"
+      ],
+      "answer": 2,
+      "explain": "(1 000 − 100) bbl/j / 0,30 an⁻¹ = 3 000 bbl/j·an ; multipliés par 365, cela donne 1,095 MMbbl. 3,00 oublie la conversion jours-années ; 1,22 utilise qi/D au lieu de (qi − qlim)/D.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-017",
+      "theme": "Déclin, bilan matière et récupération",
+      "level": 3,
+      "q": "Cas pratique : durée de vie d'un puits.\nDéclin exponentiel : qi = 800 bbl/j, qlim = 50 bbl/j, D = 0,25 an⁻¹.\nAu bout de combien de temps le débit atteint-il qlim (t = ln(qi/qlim)/D) ?",
+      "choices": [
+        "Environ 3 ans",
+        "Environ 6 ans",
+        "Environ 11 ans",
+        "Environ 64 ans"
+      ],
+      "answer": 2,
+      "explain": "ln(800/50) = ln 16 = 2,77 ; divisé par 0,25 an⁻¹, cela donne 11,1 ans. 64 est le rapport 16 divisé par 0,25 sans logarithme.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-018",
+      "theme": "Déclin, bilan matière et récupération",
+      "level": 2,
+      "q": "Dans la loi d'Arps, que représente l'exposant de déclin b = 1 ?",
+      "choices": [
+        "Un déclin exponentiel à taux constant",
+        "Un déclin linéaire en fonction du temps",
+        "Un déclin nul (plateau)",
+        "Un déclin harmonique, où le taux de déclin diminue proportionnellement au débit"
+      ],
+      "answer": 3,
+      "explain": "b = 0 donne l'exponentiel, 0 < b < 1 l'hyperbolique et b = 1 l'harmonique.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-019",
+      "theme": "Déclin, bilan matière et récupération",
+      "level": 3,
+      "q": "Cas pratique : bilan matière d'un gisement de gaz volumétrique.\np/Z initial = 4 000 psi. Après une production cumulée Gp = 10 Bscf, p/Z = 3 000 psi. Aucun apport d'eau.\nQuel est le gaz en place G ?",
+      "choices": [
+        "40 Bscf",
+        "30 Bscf",
+        "50 Bscf",
+        "33 Bscf"
+      ],
+      "answer": 0,
+      "explain": "p/Z = 4 000 × (1 − Gp/G). Avec 3 000 psi : 0,75 = 1 − 10/G, d'où G = 40 Bscf. La droite p/Z contre Gp coupe l'axe p/Z = 0 à Gp = 40 Bscf.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-020",
+      "theme": "Déclin, bilan matière et récupération",
+      "level": 2,
+      "q": "Un réservoir d'huile sous-saturé, sans aquifère ni chapeau de gaz, produit au-dessus de sa pression de bulle. Quelle est la source principale d'énergie de la production ?",
+      "choices": [
+        "Le gaz libre du chapeau de gaz",
+        "L'expansion de l'huile, de l'eau connée et de la roche, avec une chute de pression rapide",
+        "L'apport d'un aquifère de fond",
+        "Le drainage gravitaire seul"
+      ],
+      "answer": 1,
+      "explain": "Sans apport extérieur et sans gaz libre, seule la faible compressibilité des fluides et de la roche fournit l'énergie ; la pression chute vite avec la production.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-021",
+      "theme": "Déclin, bilan matière et récupération",
+      "level": 3,
+      "q": "Cas pratique : décomposition du facteur de récupération.\nPour un waterflood : efficacité de déplacement ED = 0,60 ; efficacité de balayage en surface EA = 0,70 ; efficacité de balayage vertical EV = 0,80.\nQuel facteur de récupération en attendre (RF = ED × EA × EV) ?",
+      "choices": [
+        "Environ 60 %",
+        "Environ 34 %",
+        "Environ 21 %",
+        "Environ 70 %"
+      ],
+      "answer": 1,
+      "explain": "0,60 × 0,70 × 0,80 = 0,336. On ne peut pas retenir le meilleur facteur isolé (60 %) : les trois efficacités se multiplient.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-022",
+      "theme": "Économie de projet",
+      "level": 1,
+      "q": "Que mesure la VAN (valeur actuelle nette) d'un projet ?",
+      "choices": [
+        "La somme des flux de trésorerie nets actualisés au taux retenu, investissements inclus",
+        "Le total des recettes non actualisées",
+        "Le délai nécessaire pour rembourser le CAPEX",
+        "Le taux d'actualisation qui annule la valeur du projet"
+      ],
+      "answer": 0,
+      "explain": "La VAN additionne les flux actualisés, en comptant CAPEX et OPEX. Le taux qui annule la VAN est le TRI ; le temps de remboursement est le payback.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-023",
+      "theme": "Économie de projet",
+      "level": 1,
+      "q": "Le TRI (taux de rentabilité interne) d'un projet est :",
+      "choices": [
+        "Le taux d'intérêt de la dette du projet",
+        "Le rapport entre la VAN et le CAPEX",
+        "Le taux d'actualisation pour lequel la VAN est nulle",
+        "Le rendement moyen annuel sur les cinq premières années"
+      ],
+      "answer": 2,
+      "explain": "Le TRI se compare au taux de rentabilité exigé ; le rapport VAN/CAPEX est l'indice de profitabilité.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-024",
+      "theme": "Économie de projet",
+      "level": 3,
+      "q": "Cas pratique : calcul de VAN.\nUn projet demande 100 M$ à l'année 0, puis génère un flux net de 60 M$ à la fin de l'année 1 et 60 M$ à la fin de l'année 2.\nTaux d'actualisation : 10 %.\nQuelle est la VAN ?",
+      "choices": [
+        "Environ +20,0 M$",
+        "Environ −4,1 M$",
+        "Environ +9,5 M$",
+        "Environ +4,1 M$"
+      ],
+      "answer": 3,
+      "explain": "60/1,10 + 60/1,21 = 54,5 + 49,6 = 104,1 M$ ; moins 100 M$ de CAPEX, la VAN est de +4,1 M$. 20 M$ est la somme non actualisée (120 − 100).",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-025",
+      "theme": "Économie de projet",
+      "level": 2,
+      "q": "Cas pratique : délai de récupération.\nCAPEX de 120 M$ à l'année 0. Flux nets annuels : année 1 = 30 M$, année 2 = 40 M$, année 3 = 50 M$, année 4 = 50 M$ (diagramme en barres).\nQuel est le délai de récupération non actualisé ?",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Diagramme en barres : investissement de 120 M$ à l'année 0 puis flux de 30, 40, 50 et 50 M$ aux années 1 à 4",
+      "choices": [
+        "2 ans",
+        "4 ans",
+        "2,4 ans",
+        "3 ans"
+      ],
+      "answer": 3,
+      "explain": "Flux cumulés : 30, 70, 120 M$ : le CAPEX est remboursé exactement à la fin de la 3e année. Le payback ne dit rien de la valeur créée ensuite.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-026",
+      "theme": "Économie de projet",
+      "level": 2,
+      "q": "Cas pratique : coût unitaire technique.\nCAPEX = 450 M$ ; OPEX cumulé sur la vie du champ = 750 M$ ; réserves 2P = 60 MMbbl.\nQuel est le coût unitaire technique (UTC), hors fiscalité et sans actualisation ?",
+      "choices": [
+        "20 $/bbl",
+        "7,5 $/bbl",
+        "12,5 $/bbl",
+        "28 $/bbl"
+      ],
+      "answer": 0,
+      "explain": "UTC = (450 + 750) / 60 = 20 $/bbl. 7,5 est le CAPEX seul par baril ; 12,5 l'OPEX seul.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-027",
+      "theme": "Économie de projet",
+      "level": 3,
+      "q": "Cas pratique : prix d'équilibre avec redevance.\nLe coût unitaire technique est de 20 $/bbl. Une redevance de 10 % s'applique sur la production brute (prix de vente × volumes), sans impôt sur les bénéfices, sans actualisation.\nQuel prix de vente minimal couvre le coût ?",
+      "choices": [
+        "22,0 $/bbl",
+        "Environ 22,2 $/bbl",
+        "18,0 $/bbl",
+        "30,0 $/bbl"
+      ],
+      "answer": 1,
+      "explain": "Le contractant conserve 90 % du prix : 0,90 × P = 20, donc P = 22,2 $/bbl. 22,0 ajoute 10 % au coût au lieu de diviser par 0,90.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-028",
+      "theme": "Économie de projet",
+      "level": 1,
+      "q": "Toutes choses égales par ailleurs, que fait la VAN d'un projet à CAPEX initial puis flux positifs lorsque le taux d'actualisation augmente ?",
+      "choices": [
+        "Elle augmente",
+        "Elle reste inchangée",
+        "Elle diminue",
+        "Elle devient toujours négative"
+      ],
+      "answer": 2,
+      "explain": "Une hausse du taux réduit la valeur actuelle des flux futurs. La VAN décroît ; elle ne devient négative que si le taux dépasse le TRI.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-029",
+      "theme": "Économie de projet",
+      "level": 2,
+      "q": "Un champ a déjà coûté 800 M$ de développement. On étudie 50 M$ de forages intercalaires. Quelles données retenir pour la décision ?",
+      "choices": [
+        "Uniquement les flux futurs incrémentaux liés aux forages intercalaires",
+        "Le coût total du champ, les 800 M$ inclus, pour être prudent",
+        "Les 800 M$ déjà dépensés comme coût à recouvrer par ces forages",
+        "Les seules recettes, sans coûts, car les installations existent"
+      ],
+      "answer": 0,
+      "explain": "Les coûts irrécupérables (sunk costs) sont ignorés : la décision compare coûts et bénéfices à venir qui dépendent du choix.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-030",
+      "theme": "Économie de projet",
+      "level": 3,
+      "q": "Cas pratique : deux projets mutuellement exclusifs, sans contrainte de capital.\nProjet A : CAPEX 100 M$, VAN 50 M$, TRI 25 %.\nProjet B : CAPEX 300 M$, VAN 80 M$, TRI 18 %.\nLe taux d'actualisation de référence est de 10 %. Lequel choisir ?",
+      "choices": [
+        "Le projet A, car son TRI est le plus élevé",
+        "Le projet A, car il demande moins de capital",
+        "Le projet B, car sa VAN est la plus élevée et le capital n'est pas limité",
+        "Aucun des deux, car le TRI de B est inférieur à celui de A"
+      ],
+      "answer": 2,
+      "explain": "Sans contrainte de capital, on maximise la VAN, qui mesure la valeur créée. Le TRI est un taux, pas un montant ; l'indice VAN/CAPEX ne primerait que si le capital était rationné.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-031",
+      "theme": "Économie de projet",
+      "level": 3,
+      "q": "Dans le calcul des flux de trésorerie après impôt d'un projet pétrolier, l'amortissement fiscal (DD&A) :",
+      "choices": [
+        "Est une sortie d'argent à déduire des flux",
+        "N'a aucun effet sur les flux après impôt",
+        "Augmente le flux de trésorerie car il s'ajoute aux recettes",
+        "N'est pas une sortie d'argent, mais réduit le bénéfice imposable, donc l'impôt"
+      ],
+      "answer": 3,
+      "explain": "L'amortissement est une charge comptable sans décaissement : en réduisant l'assiette imposable, il diminue l'impôt payé et améliore donc le flux net.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-032",
+      "theme": "Développement et contrats",
+      "level": 1,
+      "q": "Que désigne l'acronyme FPSO ?",
+      "img": "photo/fpso.jpg",
+      "imgAlt": "Photographie d'un FPSO, navire de production et de stockage en mer",
+      "choices": [
+        "Une plateforme fixe de production sur jacket",
+        "Une unité flottante de production, de stockage et de déchargement du pétrole",
+        "Un navire de pose de conduites sous-marines",
+        "Un système de forage en grande profondeur"
+      ],
+      "answer": 1,
+      "explain": "Le FPSO produit, stocke l'huile dans ses cuves et la transfère vers des navettes. Il évite un pipeline d'export long.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-033",
+      "theme": "Développement et contrats",
+      "level": 2,
+      "q": "Pour un champ éloigné de la côte, en eau profonde et sans pipeline d'export, quel avantage décisif présente un FPSO par rapport à une plateforme fixe ?",
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Plateforme pétrolière en mer",
+      "choices": [
+        "Il supprime tout besoin de forer des puits",
+        "Il élimine les risques de météo-océanographie",
+        "Il intègre le stockage et peut être redéployé sur un autre champ après épuisement",
+        "Il coûte toujours moins cher en CAPEX"
+      ],
+      "answer": 2,
+      "explain": "Stockage intégré et réutilisation sont les atouts du FPSO. Il faut quand même des puits ; les risques sont gérés, pas supprimés ; le CAPEX dépend du cas.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-034",
+      "theme": "Développement et contrats",
+      "level": 2,
+      "q": "Une petite découverte est située à 15 km d'une installation offshore existante qui a de la capacité de traitement disponible. Quelle option de développement est la plus naturelle ?",
+      "choices": [
+        "Un tie-back sous-marin vers l'installation existante",
+        "Un nouveau FPSO dédié",
+        "Une nouvelle plateforme fixe avec ses propres installations de traitement",
+        "L'abandon, car aucune option n'est économique à cette distance"
+      ],
+      "answer": 0,
+      "explain": "Le tie-back réutilise le traitement, l'évacuation et les services, ce qui réduit fortement le CAPEX. Il faut vérifier l'assurance d'écoulement (hydrates, paraffines).",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-035",
+      "theme": "Développement et contrats",
+      "level": 2,
+      "q": "Par rapport à un développement onshore, quelle est une caractéristique structurelle du développement offshore ?",
+      "img": "photo/wellhead-onshore.jpg",
+      "imgAlt": "Tête de puits terrestre",
+      "choices": [
+        "Des puits moins chers car il n'y a pas de route à construire",
+        "Des installations plus faciles à modifier après la mise en production",
+        "Un nombre de puits supérieur car l'espace est illimité",
+        "Des puits beaucoup plus chers et donc moins nombreux et plus productifs, avec des interventions plus lourdes"
+      ],
+      "answer": 3,
+      "explain": "Le coût du rig, la logistique et les contraintes d'accès font de chaque puits offshore un investissement lourd ; on optimise donc le nombre de puits et leur productivité.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-036",
+      "theme": "Développement et contrats",
+      "level": 3,
+      "q": "Cas pratique : chemin critique jusqu'au premier pétrole (diagramme de Gantt).\nA : ingénierie, 8 mois. B : construction du topside, 20 mois, après A. C : forage de 6 puits, 14 mois, démarrage au mois 6 (indépendant de B). D : installation et raccordement, 6 mois, après B.\nQuel est le délai théorique jusqu'au premier pétrole, sachant qu'il faut aussi que C soit terminé ?",
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt : ingénierie, construction, forage en parallèle puis installation",
+      "choices": [
+        "28 mois",
+        "34 mois",
+        "48 mois",
+        "40 mois"
+      ],
+      "answer": 1,
+      "explain": "Chemin critique A, B, D : 8 + 20 + 6 = 34 mois. C se termine au mois 20, bien avant, et dispose donc de marge. 48 additionnerait toutes les durées en série.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-037",
+      "theme": "Développement et contrats",
+      "level": 1,
+      "q": "Dans un contrat de partage de production (PSC), qui est propriétaire des hydrocarbures dans le sous-sol ?",
+      "choices": [
+        "Le contractant pétrolier, comme dans une concession",
+        "L'État, le contractant ne recevant que sa part de la production",
+        "Le propriétaire du terrain en surface",
+        "Le prestataire qui a foré les puits"
+      ],
+      "answer": 1,
+      "explain": "Le PSC laisse la propriété des ressources à l'État. Le contractant récupère ses coûts (cost oil) et une part du profit oil.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-038",
+      "theme": "Développement et contrats",
+      "level": 3,
+      "q": "Cas pratique : partage de production.\nProduction annuelle 10 MMbbl, prix 70 $/bbl, soit 700 M$. Aucune redevance. Coûts à récupérer cette année : 400 M$ ; le cost oil est plafonné à 50 % de la production. Le profit oil se partage 60 % État, 40 % contractant, sans impôt.\nQuelle est la part du contractant (cost oil + sa part du profit oil) ?",
+      "choices": [
+        "400 M$",
+        "420 M$",
+        "560 M$",
+        "490 M$"
+      ],
+      "answer": 3,
+      "explain": "Cost oil = min(400 ; 350) = 350 M$ (50 M$ reportés). Profit oil = 700 − 350 = 350 M$ ; contractant : 40 % = 140 M$. Total contractant = 350 + 140 = 490 M$ ; État = 210 M$.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-039",
+      "theme": "Développement et contrats",
+      "level": 2,
+      "q": "Dans un régime de concession, la redevance (royalty) est le plus souvent :",
+      "choices": [
+        "Un prélèvement sur la production ou les recettes brutes, sans déduction des coûts",
+        "Un impôt sur le bénéfice après amortissement",
+        "Un remboursement des coûts d'exploration",
+        "Une participation de l'État aux dépenses d'investissement"
+      ],
+      "answer": 0,
+      "explain": "La redevance est due même si le projet n'est pas encore rentable, car elle ne dépend pas des coûts. L'impôt sur le bénéfice est distinct.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-040",
+      "theme": "Développement et contrats",
+      "level": 2,
+      "q": "Un gisement chevauche deux permis détenus par des sociétés différentes. Quel mécanisme est classique pour l'exploiter de façon cohérente ?",
+      "choices": [
+        "Le forage compétitif de chaque côté de la limite",
+        "L'abandon du permis le moins prometteur",
+        "Un accord d'unitisation fixant les parts de chacun et un opérateur unique",
+        "La fusion obligatoire des deux sociétés"
+      ],
+      "answer": 2,
+      "explain": "L'unitisation évite le forage concurrentiel et gaspilleur, et répartit les intérêts selon la quantité d'hydrocarbures de chaque permis.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-041",
+      "theme": "Développement et contrats",
+      "level": 3,
+      "q": "Cas pratique : un modèle économique d'un champ offshore mature omet les coûts d'abandon (démantèlement des puits et de la plateforme), estimés à 200 M$ en fin de vie.\nQuelle conséquence ?",
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Plateforme pétrolière offshore ancienne en fin de vie",
+      "choices": [
+        "Il sous-estime la VAN car l'abandon a lieu à la fin",
+        "Il n'a aucun effet puisque ces coûts sont après la dernière production",
+        "Il surestime uniquement l'OPEX annuel",
+        "Il surestime la VAN et la valeur des réserves"
+      ],
+      "answer": 3,
+      "explain": "L'abandon est un décaissement réel qui réduit la valeur du champ et avance la limite économique. Omettre l'ABEX gonfle la VAN, même actualisée.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-042",
+      "theme": "Incertitude et décision",
+      "level": 1,
+      "q": "Quelle est la différence entre une approche déterministe et une approche probabiliste de l'incertitude ?",
+      "choices": [
+        "Le déterministe donne toujours un résultat plus précis",
+        "Le probabiliste n'exige aucune hypothèse de départ",
+        "Le déterministe utilise des valeurs ponctuelles (bas, médian, haut) ; le probabiliste emploie des distributions et ses résultats sont des probabilités",
+        "Le déterministe ne s'applique qu'aux réserves, le probabiliste qu'à l'économie"
+      ],
+      "answer": 2,
+      "explain": "Les deux méthodes dépendent de leurs hypothèses ; la simulation de Monte Carlo propage les distributions pour obtenir une distribution de résultats.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-043",
+      "theme": "Incertitude et décision",
+      "level": 2,
+      "q": "On calcule le STOIIP en multipliant des paramètres indépendants (surface, épaisseur, porosité, saturation, 1/Bo). Vers quelle forme tend la distribution du résultat ?",
+      "choices": [
+        "Une loi normale parfaitement symétrique",
+        "Une loi lognormale, asymétrique avec une longue queue côté valeurs fortes",
+        "Une loi uniforme",
+        "Une loi sans variance, de type Cauchy"
+      ],
+      "answer": 1,
+      "explain": "Le logarithme d'un produit est une somme ; par le théorème central limite, cette somme est proche de la normale, donc le produit est lognormal.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-044",
+      "theme": "Incertitude et décision",
+      "level": 3,
+      "q": "Cas pratique : espérance monétaire d'un puits d'exploration.\nCoût du puits : 40 M$ (dépensé dans tous les cas). Probabilité de découverte commerciale : 25 %. En cas de succès, VAN du développement (hors coût du puits) : 150 M$. En cas d'échec : aucune autre valeur.\nQuelle est l'EMV du puits, et que conclure ?",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique avec un prospect structural cible d'un puits d'exploration",
+      "choices": [
+        "EMV = −2,5 M$ : légèrement négative, le puits est marginal",
+        "EMV = +37,5 M$ : le puits est rentable",
+        "EMV = +110 M$ : le puits est très rentable",
+        "EMV = −40 M$ : le puits est certain de perdre de l'argent"
+      ],
+      "answer": 0,
+      "explain": "EMV = 0,25 × 150 − 40 = −2,5 M$. Oublier le coût du puits donne +37,5 M$ ; le puits ne perd pas 40 M$ à coup sûr, il a 25 % de chances de découverte.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-045",
+      "theme": "Incertitude et décision",
+      "level": 2,
+      "q": "Probabilités géologiques d'un prospect : roche mère 0,9 ; réservoir 0,7 ; piège 0,8 ; étanchéité 0,5, supposées indépendantes. Quelle est la probabilité de succès géologique ?",
+      "choices": [
+        "Environ 25 %",
+        "Environ 73 %",
+        "Environ 50 %",
+        "Environ 90 %"
+      ],
+      "answer": 0,
+      "explain": "0,9 × 0,7 × 0,8 × 0,5 = 0,252. Il faut que tous les éléments soient présents ; la moyenne (0,725) est une erreur courante.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-046",
+      "theme": "Incertitude et décision",
+      "level": 3,
+      "q": "La valeur de l'information d'un puits d'appréciation supplémentaire est positive lorsque :",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie d'un puits d'appréciation",
+      "choices": [
+        "Le puits coûte moins que le CAPEX du développement",
+        "Les résultats possibles peuvent modifier la décision de développement",
+        "Le puits est foré avec un équipement déjà disponible",
+        "Le résultat est connu à l'avance mais doit être documenté"
+      ],
+      "answer": 1,
+      "explain": "Une information n'a de valeur que si elle peut changer la décision (renoncer à un projet perdant, ajuster le concept). Si la décision reste la même quel que soit le résultat, la valeur est nulle.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-047",
+      "theme": "Incertitude et décision",
+      "level": 2,
+      "q": "Quelle incertitude de sous-sol affecte le plus directement le profil de production, plus que le volume en place ?",
+      "choices": [
+        "L'épaisseur moyenne de la couverture",
+        "La date exacte de l'arrivée de la plateforme",
+        "Le prix du brut",
+        "La connectivité entre compartiments et la transmissibilité des failles, ainsi que les perméabilités relatives"
+      ],
+      "answer": 3,
+      "explain": "Volume en place et profil sont deux choses : la connectivité et les propriétés dynamiques gouvernent la vitesse de drainage et le balayage.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-048",
+      "theme": "Incertitude et décision",
+      "level": 2,
+      "q": "Les plages P90-P10 annoncées par une équipe sont systématiquement plus étroites que les écarts observés après forage. Quel biais cela traduit-il ?",
+      "choices": [
+        "Un excès de prudence",
+        "Un biais de calcul purement informatique",
+        "La surconfiance : sous-estimation de l'incertitude réelle",
+        "Une application correcte de la méthode probabiliste"
+      ],
+      "answer": 2,
+      "explain": "Si les résultats tombent régulièrement hors de la plage annoncée, c'est que l'incertitude a été sous-estimée. L'étalonnage par rétrospective permet de corriger ce biais.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-049",
+      "theme": "Incertitude et décision",
+      "level": 3,
+      "q": "Cas pratique : arbre de décision.\nOption 1, développer maintenant : 50 % de chances de VAN +120 M$ (cas haut), 50 % de VAN −20 M$ (cas bas).\nOption 2, forer d'abord un puits d'appréciation à 15 M$ : s'il révèle le cas bas, on abandonne sans développer (VAN 0) ; s'il révèle le cas haut, on développe (VAN +120 M$).\nQuelle option maximise l'espérance monétaire ?",
+      "choices": [
+        "L'option 2 (EMV = 60 M$ avant coût, donc plus élevée)",
+        "L'option 2 (EMV = 45 M$ contre 40 M$)",
+        "L'option 1 (EMV = 50 M$ contre 45 M$)",
+        "Les deux options sont équivalentes"
+      ],
+      "answer": 2,
+      "explain": "Option 1 : 0,5 × 120 + 0,5 × (−20) = 50 M$. Option 2 : 0,5 × 120 + 0,5 × 0 − 15 = 45 M$. La valeur de l'information (60 − 50 = 10 M$) est inférieure à son coût (15 M$).",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-050",
+      "theme": "Incertitude et décision",
+      "level": 1,
+      "q": "Sur une matrice de risques 5 × 5, un risque projet est classé probabilité 4/5 et gravité 4/5. La zone rouge correspond à un score probabilité × gravité ≥ 15. Dans quelle zone se situe ce risque ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risques 5 par 5 avec zones verte, jaune et rouge, la zone rouge commençant à un score de 15",
+      "choices": [
+        "En zone verte : acceptable sans action",
+        "En zone jaune : à surveiller seulement",
+        "Hors matrice, car les deux axes dépassent 3",
+        "En zone rouge (score 16) : mesures de réduction obligatoires"
+      ],
+      "answer": 3,
+      "explain": "4 × 4 = 16, au-dessus du seuil de 15 : zone rouge. Le risque doit être réduit ou, au minimum, faire l'objet d'une décision explicite à un niveau approprié.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "ing-petrole-051",
+      "theme": "Incertitude et décision",
+      "level": 3,
+      "q": "Dans une simulation de Monte Carlo du STOIIP, on ignore la corrélation positive entre épaisseur et porosité (les deux varient ensemble). Quel effet sur la plage P90-P10 ?",
+      "choices": [
+        "Elle est sous-estimée : l'indépendance suppose que les extrêmes se compensent en partie",
+        "Elle est surestimée, car les extrêmes sont plus fréquents",
+        "Elle n'est pas modifiée, seule la moyenne l'est",
+        "La simulation devient impossible"
+      ],
+      "answer": 0,
+      "explain": "Quand deux paramètres varient dans le même sens, leurs extrêmes se cumulent : la dispersion du produit est plus grande. Ignorer la corrélation rend la plage trop étroite.",
+      "seconds": 60,
+      "status": "draft"
+    }
+  ]
+}

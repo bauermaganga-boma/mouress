@@ -1,0 +1,425 @@
+{
+  "profile": "ing-minerals",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Concassage, criblage et libération",
+      "theme": "Concassage & broyage",
+      "minutes": 8,
+      "body": "Le traitement du minerai vise à séparer les minéraux utiles de la gangue. Presque tous les circuits commencent par la **réduction de taille** : on ne cherche pas à casser pour casser, mais à atteindre la **taille de libération**, c'est-à-dire la finesse à laquelle les grains de minéral utile sont séparés des grains de gangue. Broyer trop fin est un gaspillage d'énergie et produit des fines (slimes) nuisibles à la flottation et à la filtration.\n\nLe **concassage** traite les gros blocs, venus du front de taille, jusqu'à quelques centimètres. Le concasseur **primaire** est le plus souvent à mâchoires ou giratoire ; le secondaire et le tertiaire sont généralement à cône. Chaque étage est caractérisé par son **ratio de réduction** R = F80/P80, où F80 et P80 sont les tailles de maille laissant passer 80 % de l'alimentation et du produit. Pour une alimentation de 150 mm et un produit de 15 mm, R = 10. Un concasseur seul tient rarement plus d'un rapport de 6 à 8 ; on enchaîne donc plusieurs étages.\n\nLe **criblage** sépare les particules par la taille grâce à des surfaces perforées ou à mailles calibrées. Le refus (trop gros) retourne au concasseur : c'est un **circuit fermé**, qui garantit une granulométrie maximale du produit. L'efficacité du crible traduit la qualité de la séparation, et le colmatage ou l'humidité du minerai la dégradent.\n\nL'énergie de réduction dépend du minerai. L'**indice de Bond (Wi)** mesure la résistance au broyage : plus il est élevé, plus la roche est dure et plus l'énergie spécifique est grande. La relation de Bond est W = 10 × Wi × (1/√P80 − 1/√F80), avec P80 et F80 en micromètres et W en kWh/t. Pour Wi = 12, F80 = 10 000 µm et P80 = 100 µm : W = 12 × 10 × (0,1 − 0,01) = 10,8 kWh/t.\n\nLa capacité d'un atelier se calcule à partir du débit horaire et de la disponibilité : une installation de 100 t/h disponible à 90 % traite 100 × 8 760 × 0,9, soit 788 400 t par an. L'**échantillonnage** représentatif, avec réduction de taille avant division, conditionne la fiabilité de tous les bilans qui suivent.",
+      "keyPoints": [
+        "Objectif : atteindre la taille de libération sans sur-broyer.",
+        "Ratio de réduction = F80/P80 ; circuit fermé avec crible.",
+        "Bond : W = 10·Wi·(1/√P80 − 1/√F80) ; Wi élevé = roche plus dure."
+      ],
+      "img": "svg/mineral-processing-flow.svg",
+      "imgAlt": "Schéma d'un circuit de traitement du minerai avec concassage, criblage, broyage et flottation"
+    },
+    {
+      "id": "m2",
+      "title": "Broyage et classification",
+      "theme": "Concassage & broyage",
+      "minutes": 8,
+      "body": "Le **broyage** réduit le minerai de quelques centimètres à quelques dizaines ou centaines de micromètres. Il s'effectue dans des tambours tournants : **broyeurs à boulets** (corps broyants en acier), **broyeurs à barres**, et **broyeurs semi-autogènes (SAG)** qui utilisent le minerai lui-même comme corps broyant, complété par une faible charge de boulets. Le broyeur SAG, de grand diamètre, reçoit un minerai grossier et remplace souvent plusieurs étages de concassage.\n\nLa **vitesse critique** est celle à laquelle la charge plaquée par la force centrifuge ne retombe plus : Nc ≈ 42,3/√D, avec D le diamètre utile en mètres et Nc en tr/min. Pour D = 4 m, Nc ≈ 21 tr/min. On exploite typiquement 65 à 80 % de la vitesse critique : trop bas, le broyage est peu efficace ; trop haut, la charge se centrifuge et on perd tout effet de broyage.\n\nLe broyeur travaille en général en **circuit fermé** avec un classificateur, le plus souvent un **hydrocyclone**. La pulpe est injectée tangentiellement : les particules fines sortent par le trop-plein (overflow) vers l'étape suivante, les grosses par la sous-verse (underflow) qui retourne au broyeur. La **charge circulante** est le rapport entre le débit retourné et l'alimentation fraîche : si l'on alimente 100 t/h de minerai frais et que 250 t/h retournent, la charge circulante est de 250 %. Une charge circulante élevée limite le sur-broyage et améliore la distribution de tailles.\n\nLa **densité de pulpe** (pourcentage de solides) influence tout le circuit : trop dense, la viscosité empêche la classification ; trop diluée, l'eau et l'énergie sont gaspillées. Le **sur-broyage** crée des fines difficiles à flotter ou à épaissir et gaspille l'énergie : l'objectif du circuit est une granulométrie de produit (P80) constante et adaptée à la libération.\n\nLes revêtements de broyeur et les boulets sont des consommables critiques : leur usure se suit en g/kWh ou en kg par tonne traitée. La maintenance préventive, notamment le changement de revêtements, détermine la disponibilité de l'usine.",
+      "keyPoints": [
+        "SAG : minerai comme corps broyant ; boulets : broyage fin.",
+        "Nc ≈ 42,3/√D ; fonctionnement à 65-80 % de la vitesse critique.",
+        "Hydrocyclone : fins en overflow, gros en underflow retourné au broyeur."
+      ],
+      "img": "svg/mineral-processing-flow.svg",
+      "imgAlt": "Circuit de broyage en circuit fermé avec hydrocyclone"
+    },
+    {
+      "id": "m3",
+      "title": "Flottation par mousse",
+      "theme": "Flottation",
+      "minutes": 10,
+      "body": "La **flottation** sépare des minéraux fins selon leurs propriétés de surface. Dans une pulpe aérée et agitée, les particules rendues **hydrophobes** s'attachent aux bulles d'air, montent à la surface et forment une mousse que l'on recueille : c'est le **concentré**. Les particules hydrophiles restent dans la pulpe et sortent en **rejets** (stériles ou tailings). La granulométrie visée est typiquement de quelques dizaines de micromètres : trop gros, la particule se détache de la bulle ; trop fin, elle est entraînée par l'eau et consomme des réactifs.\n\nLes réactifs sont déterminants. Le **collecteur** s'adsorbe sélectivement sur le minéral à flotter et le rend hydrophobe : les **xanthates** sont les collecteurs classiques des sulfures. Le **moussant** (par exemple le MIBC) stabilise les bulles et donne une mousse manipulable. Les **déprimants** empêchent la flottation d'un minéral indésirable (chaux pour la pyrite, amidon pour certaines gangues). Les **activateurs** (sulfate de cuivre pour la blende) rendent un minéral flottable, et les **régulateurs de pH** (chaux, soude, acide) ajustent la sélectivité. En **flottation inverse**, on fait flotter la gangue : c'est le cas des minerais de fer de type itabirite, où l'on fait flotter la silice avec des amines et où le fer reste dans la pulpe.\n\nUne cellule de flottation comprend un agitateur-aérateur, la zone de pulpe, la zone de mousse avec sa lèvre de débordement, et la sortie de pulpe vers la cellule suivante. On enchaîne **ébauchage** (rougher), **épuisement** (scavenger) et **nettoyage** (cleaner) pour équilibrer teneur et récupération.\n\nLes bilans reposent sur trois grandeurs. Avec une alimentation de 100 t à 2 % de cuivre (2 t de Cu) et un concentré de 6 t à 30 % (1,8 t de Cu) : **récupération** R = 1,8/2 = 90 % ; **rapport d'enrichissement** = 30/2 = 15 ; rejets de 94 t contenant 0,2 t, soit une teneur de 0,21 %. La formule à teneurs R = c(f − t)/(f(c − t)) donne, pour f = 2, c = 25 et t = 0,2, environ 90,7 %.\n\nIl existe un compromis entre **teneur** et **récupération** : viser un concentré plus pur conduit généralement à perdre une partie du métal. Les fines (slimes) provoquent un recouvrement des surfaces, une consommation accrue de réactifs et une perte de sélectivité.",
+      "keyPoints": [
+        "Hydrophobes : bulles et concentré ; hydrophiles : rejets.",
+        "Collecteur (xanthate), moussant (MIBC), déprimant, activateur, pH.",
+        "R = masse métal au concentré / masse métal à l'alimentation ; compromis teneur-récupération."
+      ],
+      "img": "svg/flotation-cell.svg",
+      "imgAlt": "Cellule de flottation avec agitateur, bulles, mousse et sortie des rejets"
+    },
+    {
+      "id": "m4",
+      "title": "Lixiviation, gravimétrie et séparation magnétique",
+      "theme": "Lixiviation & hydrométallurgie",
+      "minutes": 10,
+      "body": "La **lixiviation** dissout sélectivement le métal d'intérêt dans une solution. Pour l'or, la **cyanuration** utilise une solution alcaline de cyanure : 4 Au + 8 NaCN + O₂ + 2 H₂O → 4 Na[Au(CN)₂] + 4 NaOH. L'oxygène est un **oxydant indispensable**, et le pH est maintenu autour de 10 à 11 pour éviter le dégagement de HCN, gaz extrêmement toxique. Plus le broyage est fin et le temps de séjour long, plus la dissolution progresse.\n\nL'or dissous est capté par du **charbon actif** : en **CIP** (carbon in pulp), le charbon est mis en contact avec la pulpe après lixiviation ; en **CIL** (carbon in leach), le charbon est introduit dans les cuves de lixiviation elles-mêmes. Le charbon chargé est élué, et l'or déposé par électrolyse puis fondu en lingots. Les **minerais réfractaires**, où l'or est enfermé dans la pyrite ou l'arsénopyrite, exigent un prétraitement (grillage, oxydation sous pression, bio-oxydation) avant cyanuration. Avant rejet, on détruit le cyanure résiduel (procédé SO₂/air ou peroxyde d'hydrogène) ; on n'acidifie jamais une solution cyanurée, au risque de dégager HCN.\n\nLa **lixiviation en tas** convient aux minerais pauvres : le minerai concassé est empilé et irrigué ; les coûts sont faibles mais la cinétique est lente. Pour le cuivre oxydé, on lixivie à l'acide sulfurique, puis on purifie par **extraction par solvant** et on dépose le métal par **électrolyse** (SX-EW).\n\nLa **gravimétrie** exploite la différence de densité (jigs, tables, spirales, concentrateurs centrifuges). Le critère de concentration CC = (ρ lourd − ρ fluide)/(ρ léger − ρ fluide) renseigne sur la facilité : pour l'or (19,3) et le quartz (2,65) dans l'eau, CC = 18,3/1,65 ≈ 11, la séparation est très aisée ; au-delà de 2,5, elle est jugée facile. On place souvent un concentrateur gravimétrique sur la décharge du broyeur pour récupérer tôt l'or libre grossier. L'amalgamation au mercure, pratiquée dans l'orpaillage artisanal, est dangereuse pour la santé et l'environnement.\n\nLa **séparation magnétique** traite le fer : la magnétite, fortement magnétique, se concentre avec des tambours à faible intensité, tandis que l'hématite demande une forte intensité, de la gravimétrie ou de la flottation.",
+      "keyPoints": [
+        "Cyanuration : pH 10-11, oxygène indispensable ; CIP/CIL pour capter l'or.",
+        "Minerai réfractaire : prétraitement ; cuivre oxydé : H₂SO₄ puis SX-EW.",
+        "Gravimétrie : CC supérieur à 2,5 = facile ; magnétite : faible intensité."
+      ],
+      "img": "svg/mineral-processing-flow.svg",
+      "imgAlt": "Circuit de traitement du minerai incluant gravimétrie et lixiviation"
+    },
+    {
+      "id": "m5",
+      "title": "Bilans métallurgiques, résidus et contexte gabonais",
+      "theme": "Bilans & contexte",
+      "minutes": 8,
+      "body": "Un **circuit de traitement** enchaîne en général : concassage, criblage, broyage et classification, concentration (flottation, gravimétrie, magnétique), éventuellement lixiviation, puis épaississement, filtration et gestion des résidus. L'ingénieur traitement bâtit des **bilans métallurgiques** : à partir des débits massiques et des teneurs de l'alimentation, du concentré et des rejets, il calcule récupération, rapport d'enrichissement et métal contenu produit. Exemple : une usine qui traite 1 000 t/h à 2 g/t d'or contient 2 000 g/h d'or ; avec une récupération de 90 %, elle produit 1,8 kg d'or par heure.\n\nL'**épaississeur** densifie la pulpe par sédimentation, souvent avec un floculant : la sous-verse dense part à la filtration ou aux rejets, et la surverse d'eau claire est **recyclée** vers le procédé. La **filtration** produit un gâteau transportable. Les **résidus** sont stockés dans un parc dont la digue exige une conception rigoureuse, une surveillance (piézomètres, déformations) et une gestion de l'eau pour maîtriser la nappe interne : c'est le principal levier contre le risque de rupture.\n\nL'**analyse** de l'or s'appuie sur l'**essai au feu** (fire assay), méthode de référence : fusion avec un fondant au plomb puis coupellation. Les teneurs des autres métaux se mesurent par absorption atomique ou ICP. La qualité de l'échantillonnage (représentativité, réduction de taille avant division) conditionne tous les bilans.\n\nLe **Gabon** est un producteur majeur de **manganèse** (région de Moanda, plateau de Bangombé), dont la valorisation passe surtout par des opérations physiques de concassage, de lavage et de criblage, avant expédition ou transformation. Le pays compte aussi de l'**or**, exploité surtout de façon artisanale et alluvionnaire, et possède, dans le nord-est, le gisement de **fer** de Belinga, de type itabirite, dont la concentration relèverait de la séparation magnétique, gravimétrique ou de la flottation inverse. Les contraintes locales (eau abondante, pluviométrie, infrastructures de transport, santé et environnement) pèsent sur le choix des procédés.",
+      "keyPoints": [
+        "Bilan : métal contenu = débit × teneur ; récupération = métal produit / métal contenu.",
+        "Épaississeur : eau recyclée ; parc à résidus : stabilité et gestion de l'eau.",
+        "Gabon : manganèse (Moanda), or artisanal, fer de Belinga (itabirite)."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ing-minerals-001", "theme": "Concassage & broyage", "level": 1,
+      "q": "Dans le circuit représenté, quel équipement est couramment utilisé comme concasseur primaire ?",
+      "img": "svg/mineral-processing-flow.svg", "imgAlt": "Circuit de traitement du minerai avec concasseur primaire en tête",
+      "choices": ["Un hydrocyclone", "Un broyeur à boulets", "Un concasseur à mâchoires ou giratoire", "Une cellule de flottation"],
+      "answer": 2,
+      "explain": "Le primaire est un concasseur à mâchoires ou giratoire, capable d'avaler les gros blocs. Hydrocyclone et flottation interviennent bien plus loin dans le circuit.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-002", "theme": "Concassage & broyage", "level": 1,
+      "q": "Un concasseur reçoit une alimentation de F80 = 150 mm et fournit un produit de P80 = 15 mm. Quel est son ratio de réduction ?",
+      "img": "svg/mineral-processing-flow.svg", "imgAlt": "Étage de concassage dans un circuit de traitement",
+      "choices": ["10", "1,5", "135", "0,1"],
+      "answer": 0,
+      "explain": "Ratio de réduction = F80/P80 = 150/15 = 10. Une différence (135) est une erreur classique.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-003", "theme": "Concassage & broyage", "level": 2,
+      "q": "Selon Bond avec Wi = 12 kWh/t, F80 = 10 000 µm et P80 = 100 µm, quelle énergie spécifique faut-il (W = 10·Wi·(1/√P80 − 1/√F80)) ?",
+      "choices": ["1,2 kWh/t", "5,4 kWh/t", "21,6 kWh/t", "10,8 kWh/t"],
+      "answer": 3,
+      "explain": "W = 12 × 10 × (0,1 − 0,01) = 10,8 kWh/t. 21,6 viendrait d'un facteur 2 erroné.",
+      "seconds": 80, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-004", "theme": "Concassage & broyage", "level": 1,
+      "q": "Que signifie un indice de Bond (Wi) élevé pour un minerai ?",
+      "choices": ["Il est très tendre et se broie facilement", "Il est plus dur à broyer et demande plus d'énergie", "Il est automatiquement riche en métal", "Il ne peut pas être concassé"],
+      "answer": 1,
+      "explain": "Le Wi mesure la résistance au broyage : plus il est grand, plus l'énergie spécifique augmente. Il ne renseigne pas sur la teneur.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-005", "theme": "Concassage & broyage", "level": 2,
+      "q": "La vitesse critique d'un broyeur est Nc = 42,3/√D (D en mètres, Nc en tr/min). Quelle est-elle pour D = 4 m ?",
+      "choices": ["Environ 11 tr/min", "Environ 42 tr/min", "Environ 21 tr/min", "Environ 85 tr/min"],
+      "answer": 2,
+      "explain": "Nc = 42,3/√4 = 42,3/2 ≈ 21 tr/min. 42 tr/min oublie la racine carrée.",
+      "seconds": 60, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-006", "theme": "Concassage & broyage", "level": 2,
+      "q": "Dans le circuit de broyage en boucle fermée avec hydrocyclone, que devient la sous-verse (fraction grossière) ?",
+      "img": "svg/mineral-processing-flow.svg", "imgAlt": "Broyeur en circuit fermé avec hydrocyclone dont la sous-verse retourne au broyeur",
+      "choices": ["Elle retourne au broyeur pour être rebroyée", "Elle part directement à la flottation", "Elle est envoyée au parc à résidus", "Elle alimente le concasseur primaire"],
+      "answer": 0,
+      "explain": "La sous-verse grossière est renvoyée au broyeur, tandis que le trop-plein fin va à l'étape suivante.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-007", "theme": "Concassage & broyage", "level": 2,
+      "q": "Un broyeur est alimenté par 100 t/h de minerai frais et 250 t/h retournent depuis la sous-verse de l'hydrocyclone. Quelle est la charge circulante ?",
+      "img": "svg/mineral-processing-flow.svg", "imgAlt": "Boucle de broyage avec retour de sous-verse",
+      "choices": ["25 %", "40 %", "150 %", "250 %"],
+      "answer": 3,
+      "explain": "Charge circulante = retour/alimentation fraîche = 250/100 = 250 %. 150 % serait une confusion avec le surplus d'alimentation totale.",
+      "seconds": 50, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-008", "theme": "Concassage & broyage", "level": 2,
+      "q": "Pourquoi évite-t-on de broyer au-delà de la taille de libération ?",
+      "img": "svg/mineral-processing-flow.svg", "imgAlt": "Circuit de broyage et de flottation en aval",
+      "choices": ["Parce que les grains deviennent plus durs", "Parce que cela consomme de l'énergie pour rien et produit des fines nuisibles à la flottation", "Parce que le minerai perd sa teneur", "Parce que le concasseur s'arrêterait"],
+      "answer": 1,
+      "explain": "Le sur-broyage gaspille l'énergie et crée des slimes qui dégradent flottation, épaississement et filtration. La teneur du minerai ne change pas.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-009", "theme": "Concassage & broyage", "level": 1,
+      "q": "Sur quel critère un crible sépare-t-il les particules ?",
+      "choices": ["Leur taille, grâce à des ouvertures calibrées", "Leur densité", "Leurs propriétés de surface", "Leur couleur"],
+      "answer": 0,
+      "explain": "Le criblage trie par taille à l'aide de mailles ou de perforations. La densité relève de la gravimétrie et les propriétés de surface de la flottation.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-010", "theme": "Concassage & broyage", "level": 3,
+      "q": "Que caractérise un broyeur semi-autogène (SAG) ?",
+      "img": "svg/mineral-processing-flow.svg", "imgAlt": "Étape de broyage dans le schéma d'un circuit de traitement",
+      "choices": ["Il fonctionne sans aucune charge broyante", "Il utilise uniquement des barres d'acier", "Il utilise le minerai lui-même comme corps broyant, avec une faible charge de boulets", "Il est un classificateur à haute vitesse"],
+      "answer": 2,
+      "explain": "Dans un SAG, le minerai grossier broie en partie lui-même, complété par une charge de boulets modérée. Ce n'est ni un classificateur ni un broyeur à barres.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-011", "theme": "Concassage & broyage", "level": 3,
+      "q": "Une usine de 100 t/h est disponible 90 % du temps sur 8 760 heures par an. Quel tonnage annuel traite-t-elle ?",
+      "choices": ["876 000 t", "788 400 t", "720 000 t", "900 000 t"],
+      "answer": 1,
+      "explain": "100 × 8 760 × 0,9 = 788 400 t. 876 000 t ignore la disponibilité.",
+      "seconds": 60, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-012", "theme": "Flottation", "level": 1,
+      "q": "Dans la cellule de flottation représentée, quelles particules montent avec les bulles dans la mousse ?",
+      "img": "svg/flotation-cell.svg", "imgAlt": "Cellule de flottation avec bulles d'air et couche de mousse",
+      "choices": ["Les particules lourdes et hydrophiles", "Les particules de toute nature, sans distinction", "Les particules magnétiques", "Les particules hydrophobes"],
+      "answer": 3,
+      "explain": "Seules les particules hydrophobes s'attachent aux bulles et sont entraînées en mousse. Les hydrophiles restent dans la pulpe.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-013", "theme": "Flottation", "level": 1,
+      "q": "Quel est le rôle d'un collecteur comme le xanthate ?",
+      "img": "svg/flotation-cell.svg", "imgAlt": "Cellule de flottation avec ajout de réactifs",
+      "choices": ["Stabiliser la mousse", "Rendre sélectivement hydrophobe la surface du minéral à flotter", "Baisser le pH à 2", "Épaissir la pulpe"],
+      "answer": 1,
+      "explain": "Le collecteur s'adsorbe sur le minéral cible et le rend hydrophobe ; les xanthates sont les collecteurs classiques des sulfures. Le moussant stabilise la mousse.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-014", "theme": "Flottation", "level": 1,
+      "q": "À quoi sert un moussant tel que le MIBC ?",
+      "choices": ["À stabiliser les bulles et former une mousse manipulable", "À dissoudre le minerai", "À augmenter la densité de pulpe", "À précipiter l'or"],
+      "answer": 0,
+      "explain": "Le moussant diminue la tension superficielle et stabilise les bulles. Il ne dissout ni ne précipite de métal.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-015", "theme": "Flottation", "level": 2,
+      "q": "Dans la cellule représentée, par où sort le concentré et par où sortent les rejets ?",
+      "img": "svg/flotation-cell.svg", "imgAlt": "Cellule de flottation avec lèvre de débordement de la mousse et sortie de pulpe en bas",
+      "choices": ["Concentré par le fond, rejets par la mousse", "Concentré et rejets par le fond", "Concentré par débordement de la mousse, rejets par la sortie de pulpe", "Concentré par l'arbre, rejets par l'air"],
+      "answer": 2,
+      "explain": "La mousse chargée déborde par la lèvre et forme le concentré ; la pulpe appauvrie sort vers la cellule suivante ou vers les rejets.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-016", "theme": "Flottation", "level": 2,
+      "q": "Une alimentation de 100 t à 2 % de cuivre produit 6 t de concentré à 30 %. Quelle est la récupération en cuivre ?",
+      "choices": ["60 %", "75 %", "30 %", "90 %"],
+      "answer": 3,
+      "explain": "Cu au concentré : 6 × 0,30 = 1,8 t ; Cu à l'alimentation : 2 t ; récupération = 1,8/2 = 90 %. 30 % est la teneur, non la récupération.",
+      "seconds": 70, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-017", "theme": "Flottation", "level": 2,
+      "q": "Dans le bilan précédent (100 t alimentées, 6 t de concentré), les 94 t de rejets contiennent 0,2 t de cuivre. Quelle est la teneur des rejets ?",
+      "choices": ["0,02 %", "Environ 0,21 %", "2,0 %", "0,94 %"],
+      "answer": 1,
+      "explain": "0,2/94 ≈ 0,0021 soit 0,21 %. 0,02 % est une erreur d'ordre de grandeur.",
+      "seconds": 60, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-018", "theme": "Flottation", "level": 2,
+      "q": "L'alimentation est à 2 % de Cu et le concentré à 30 %. Quel est le rapport d'enrichissement (teneur du concentré / teneur de l'alimentation) ?",
+      "choices": ["6", "94", "15", "1,8"],
+      "answer": 2,
+      "explain": "30/2 = 15. Le chiffre 6 est la masse de concentré, non le rapport de teneurs.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-019", "theme": "Flottation", "level": 3,
+      "q": "Avec la formule R = c(f − t)/(f(c − t)), pour f = 2 %, c = 25 % et t = 0,2 %, quelle récupération approximative obtient-on ?",
+      "choices": ["Environ 91 %", "Environ 80 %", "Environ 99 %", "Environ 62 %"],
+      "answer": 0,
+      "explain": "R = 25 × 1,8/(2 × 24,8) = 45/49,6 ≈ 0,907, soit environ 91 %.",
+      "seconds": 80, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-020", "theme": "Flottation", "level": 2,
+      "q": "Que fait un déprimant en flottation ?",
+      "choices": ["Il rend tous les minéraux hydrophobes", "Il produit les bulles d'air", "Il colore la mousse", "Il empêche sélectivement la flottation d'un minéral indésirable, par exemple la chaux sur la pyrite"],
+      "answer": 3,
+      "explain": "Un déprimant maintient un minéral hydrophile pour qu'il reste dans la pulpe. Les bulles viennent de l'aération, non d'un réactif déprimant.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-021", "theme": "Flottation", "level": 3,
+      "q": "Quel est l'effet typique d'un excès de fines (slimes) en flottation ?",
+      "choices": ["Une amélioration automatique de la sélectivité", "Une consommation accrue de réactifs, un recouvrement des surfaces et une perte de sélectivité", "Une disparition de la mousse sans conséquence", "Un gain de récupération sans coût"],
+      "answer": 1,
+      "explain": "Les slimes recouvrent les particules, adsorbent beaucoup de réactifs et dégradent la sélectivité. Ils n'améliorent pas la flottation.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-022", "theme": "Flottation", "level": 3,
+      "q": "Dans la flottation inverse d'un minerai de fer de type itabirite, quel constituant flotte ?",
+      "img": "svg/flotation-cell.svg", "imgAlt": "Cellule de flottation où la mousse emporte la gangue siliceuse",
+      "choices": ["La silice (quartz), le fer restant dans la pulpe", "L'hématite, la silice restant dans la pulpe", "Les deux flottent ensemble", "Aucun des deux ne peut flotter"],
+      "answer": 0,
+      "explain": "En flottation inverse cationique, on fait flotter la silice avec des amines tandis que les oxydes de fer, déprimés à l'amidon, restent dans la pulpe.",
+      "seconds": 50, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-023", "theme": "Lixiviation & hydrométallurgie", "level": 1,
+      "q": "Dans quelle plage de pH maintient-on la cyanuration de l'or, afin d'éviter le dégagement de HCN ?",
+      "choices": ["pH 2 à 3", "pH 10 à 11", "pH 5 à 6", "pH 13,5 à 14"],
+      "answer": 1,
+      "explain": "À pH 10-11, le cyanure reste sous forme CN⁻ et non HCN gazeux et très toxique. En milieu acide, il y aurait dégagement de HCN.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-024", "theme": "Lixiviation & hydrométallurgie", "level": 2,
+      "q": "Quel est le rôle de l'oxygène dans la cyanuration de l'or ?",
+      "choices": ["Il est inutile", "Il précipite l'or", "Il neutralise le cyanure", "Il est l'oxydant indispensable à la dissolution de l'or"],
+      "answer": 3,
+      "explain": "L'équation d'Elsner montre que l'or n'est oxydé et dissous qu'en présence d'oxygène dissous.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-025", "theme": "Lixiviation & hydrométallurgie", "level": 1,
+      "q": "À quoi sert le charbon actif dans les procédés CIP et CIL ?",
+      "choices": ["À servir de combustible", "À filtrer le cyanure libre pour le recycler", "À adsorber le complexe or-cyanure dissous", "À neutraliser la soude"],
+      "answer": 2,
+      "explain": "Le charbon actif adsorbe sélectivement le complexe aurocyanure, ensuite élué puis électrolysé. Il ne sert pas de combustible.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-026", "theme": "Lixiviation & hydrométallurgie", "level": 2,
+      "q": "Quelle est la différence entre CIL et CIP ?",
+      "choices": ["En CIL, le charbon est ajouté dans les cuves de lixiviation ; en CIP, il agit après la lixiviation", "En CIP, le charbon est ajouté avant le broyage", "CIL utilise de l'acide et CIP de la soude", "Il n'y a aucune différence"],
+      "answer": 0,
+      "explain": "CIL : lixiviation et adsorption simultanées. CIP : adsorption dans des cuves séparées, après lixiviation.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-027", "theme": "Lixiviation & hydrométallurgie", "level": 2,
+      "q": "Pour quel type de minerai la lixiviation en tas est-elle surtout adaptée ?",
+      "choices": ["Aux minerais très riches à traiter rapidement", "Aux minerais pauvres, avec des coûts faibles mais une cinétique lente", "Aux minerais purement magnétiques", "Aux minerais sans aucun métal"],
+      "answer": 1,
+      "explain": "La lixiviation en tas, peu coûteuse, convient aux minerais pauvres car le temps de contact est long. Elle n'est pas adaptée aux minerais riches à traiter vite.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-028", "theme": "Lixiviation & hydrométallurgie", "level": 2,
+      "q": "Quelle filière traite classiquement un minerai de cuivre oxydé ?",
+      "choices": ["Cyanuration puis fusion directe", "Gravimétrie seule", "Flottation inverse à l'amine", "Lixiviation à l'acide sulfurique, extraction par solvant puis électrolyse (SX-EW)"],
+      "answer": 3,
+      "explain": "Le cuivre oxydé se dissout dans l'acide sulfurique ; la solution est purifiée par extraction par solvant, puis le cuivre cathodique est déposé par électrolyse.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-029", "theme": "Lixiviation & hydrométallurgie", "level": 3,
+      "q": "Pourquoi un minerai d'or réfractaire exige-t-il un prétraitement avant cyanuration ?",
+      "choices": ["Parce que l'or y est enfermé dans des sulfures comme la pyrite ou l'arsénopyrite", "Parce qu'il ne contient pas d'or", "Parce qu'il est trop riche en silice pure", "Parce qu'il est trop grossier pour être concassé"],
+      "answer": 0,
+      "explain": "L'or inclus dans les sulfures n'est pas accessible au cyanure. Grillage, oxydation sous pression ou bio-oxydation libèrent l'or avant lixiviation.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-030", "theme": "Lixiviation & hydrométallurgie", "level": 2,
+      "q": "Dans un circuit à or, pourquoi place-t-on souvent un concentrateur gravimétrique sur la décharge du broyeur ?",
+      "img": "svg/mineral-processing-flow.svg", "imgAlt": "Circuit de broyage avec concentrateur gravimétrique sur la décharge du broyeur",
+      "choices": ["Pour dissoudre l'or avec du cyanure", "Pour augmenter la charge circulante", "Pour récupérer tôt l'or libre grossier et limiter son retour dans la boucle", "Pour éliminer l'eau du circuit"],
+      "answer": 2,
+      "explain": "L'or libre grossier, très dense, s'accumule dans la boucle de broyage ; le capter par gravimétrie évite des pertes et réduit la charge sur la cyanuration.",
+      "seconds": 50, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-031", "theme": "Lixiviation & hydrométallurgie", "level": 3,
+      "q": "Quel est le critère de concentration gravimétrique de l'or (19,3) contre le quartz (2,65) dans l'eau (1,0), et que signifie-t-il ?",
+      "choices": ["Environ 0,1 : séparation impossible", "Environ 1,0 : séparation impossible", "Environ 2,5 : limite de séparabilité", "Environ 11 : séparation gravimétrique très aisée"],
+      "answer": 3,
+      "explain": "CC = (19,3 − 1)/(2,65 − 1) = 18,3/1,65 ≈ 11, nettement au-dessus de 2,5, donc l'or se sépare facilement du quartz par densité.",
+      "seconds": 70, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-032", "theme": "Lixiviation & hydrométallurgie", "level": 3,
+      "q": "Comment détruit-on le cyanure résiduel d'une solution avant rejet ?",
+      "choices": ["Par le procédé SO₂/air (type INCO) ou le peroxyde d'hydrogène", "En ajoutant un acide fort pour abaisser le pH à 2", "En diluant simplement dans le cours d'eau voisin", "En chauffant la solution à sec"],
+      "answer": 0,
+      "explain": "Le SO₂/air et le peroxyde d'hydrogène oxydent le cyanure. Acidifier dégagerait du HCN toxique, et la dilution simple n'est pas acceptable.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-033", "theme": "Bilans & contexte", "level": 1,
+      "q": "Quel minerai est l'un des grands produits miniers du Gabon, extrait dans la région de Moanda ?",
+      "choices": ["La bauxite", "L'étain", "Le manganèse", "Le nickel latéritique"],
+      "answer": 2,
+      "explain": "Le manganèse de la région de Moanda est un produit majeur de l'industrie minière gabonaise. Les autres minerais ne sont pas exploités à cette échelle.",
+      "seconds": 35, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-034", "theme": "Bilans & contexte", "level": 2,
+      "q": "Dans le schéma de circuit représenté, quel est l'ordre de base des opérations ?",
+      "img": "svg/mineral-processing-flow.svg", "imgAlt": "Chaîne concassage, criblage, broyage, classification puis concentration",
+      "choices": ["Concassage, criblage, broyage, classification, concentration", "Flottation, concassage, broyage, criblage", "Broyage, concassage, flottation, criblage", "Lixiviation, concassage, broyage, flottation"],
+      "answer": 0,
+      "explain": "On réduit d'abord la taille (concassage, criblage, broyage), on classe, puis on concentre. La flottation, voire la lixiviation, interviennent après la réduction de taille.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-035", "theme": "Bilans & contexte", "level": 2,
+      "q": "Que se passe-t-il généralement lorsqu'on cherche à augmenter la teneur du concentré de flottation ?",
+      "img": "svg/flotation-cell.svg", "imgAlt": "Cellule de flottation de nettoyage avec mousse sélective",
+      "choices": ["La récupération augmente toujours", "La récupération tend à baisser : c'est le compromis teneur-récupération", "Les rejets deviennent plus riches sans lien avec la teneur", "Il n'y a aucun lien entre teneur et récupération"],
+      "answer": 1,
+      "explain": "Un concentré plus pur exige de rejeter des particules mixtes, donc de perdre du métal : teneur et récupération varient en sens inverse.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-036", "theme": "Bilans & contexte", "level": 2,
+      "q": "Une usine traite 1 000 t/h de minerai à 2 g/t d'or, avec une récupération globale de 90 %. Quelle masse d'or produit-elle par heure ?",
+      "choices": ["0,2 kg/h", "2,0 kg/h", "18 kg/h", "1,8 kg/h"],
+      "answer": 3,
+      "explain": "Or contenu : 1 000 × 2 = 2 000 g/h ; produit = 2 000 × 0,9 = 1 800 g/h = 1,8 kg/h. 2,0 kg/h ignorerait la récupération.",
+      "seconds": 60, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-037", "theme": "Bilans & contexte", "level": 2,
+      "q": "Quel est le rôle d'un épaississeur dans le circuit ?",
+      "img": "svg/mineral-processing-flow.svg", "imgAlt": "Épaississeur en fin de circuit avec recyclage de l'eau",
+      "choices": ["Densifier la pulpe par sédimentation et récupérer une eau claire recyclable", "Broyer le minerai fin", "Générer les bulles pour la flottation", "Dissoudre l'or dans une solution alcaline"],
+      "answer": 0,
+      "explain": "L'épaississeur, souvent avec floculant, sépare une sous-verse dense d'une surverse d'eau claire réutilisée. Il ne broie ni ne dissout.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-038", "theme": "Bilans & contexte", "level": 1,
+      "q": "Qu'exige un échantillon représentatif d'un minerai ?",
+      "choices": ["Qu'il soit prélevé uniquement sur les plus gros blocs", "Qu'il soit prélevé au hasard sans aucune méthode", "Une réduction de taille avant division et un prélèvement conforme à une règle d'échantillonnage", "Qu'il soit toujours de moins de 1 g"],
+      "answer": 2,
+      "explain": "L'erreur d'échantillonnage dépend de la taille des grains et de la masse prélevée : on réduit la taille avant de diviser, selon une procédure établie.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-039", "theme": "Bilans & contexte", "level": 3,
+      "q": "Quelle est la méthode de référence pour doser l'or dans un échantillon de minerai ?",
+      "choices": ["La pesée à l'œil nu", "La mesure du pH", "La mesure de la couleur de la pulpe", "L'essai au feu (fusion au plomb et coupellation)"],
+      "answer": 3,
+      "explain": "L'essai au feu est la méthode classique de référence pour l'or ; l'absorption atomique et l'ICP servent ensuite à d'autres dosages.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-040", "theme": "Bilans & contexte", "level": 3,
+      "q": "Quelle mesure réduit principalement le risque de rupture de digue d'un parc à résidus ?",
+      "choices": ["Augmenter le niveau d'eau du bassin au maximum", "Une conception rigoureuse, une surveillance (piézomètres, déformations) et une bonne gestion de l'eau", "Retirer toute instrumentation pour éviter les alarmes", "Stocker uniquement des résidus très humides sans drainage"],
+      "answer": 1,
+      "explain": "La stabilité dépend de la conception, du suivi de la nappe interne et de la gestion de l'eau. Un niveau d'eau élevé et un manque de drainage aggravent le risque.",
+      "seconds": 45, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-041", "theme": "Bilans & contexte", "level": 2,
+      "q": "Quel est le principal danger de l'amalgamation au mercure pratiquée dans l'orpaillage artisanal ?",
+      "choices": ["La toxicité du mercure, par vapeurs lors du chauffage et par contamination des eaux", "Le risque d'explosion du minerai", "La perte de poids de l'or", "L'excès de pH"],
+      "answer": 0,
+      "explain": "Le mercure est un toxique neurologique : les vapeurs lors du brûlage de l'amalgame et les rejets contaminent l'air, les sols et les cours d'eau.",
+      "seconds": 40, "status": "draft"
+    },
+    {
+      "id": "ing-minerals-042", "theme": "Bilans & contexte", "level": 3,
+      "q": "Quel équipement est adapté à la concentration de la magnétite, fortement magnétique ?",
+      "choices": ["Un séparateur magnétique à forte intensité uniquement", "Une table à secousses à l'amine", "Un tambour magnétique à faible intensité", "Un concentrateur d'amalgamation"],
+      "answer": 2,
+      "explain": "La magnétite est fortement magnétique : un tambour à faible intensité suffit. La forte intensité sert plutôt pour l'hématite faiblement magnétique.",
+      "seconds": 45, "status": "draft"
+    }
+  ]
+}

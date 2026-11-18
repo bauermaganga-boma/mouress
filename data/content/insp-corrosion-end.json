@@ -1,0 +1,820 @@
+{
+  "profile": "insp-corrosion-end",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Mécanismes de corrosion et protection cathodique",
+      "theme": "Corrosion et protection cathodique",
+      "minutes": 9,
+      "body": "La **corrosion** est la dégradation d'un métal par réaction avec son milieu. Pour l'acier au carbone, elle exige une **anode**, une **cathode**, un **électrolyte** (de l'eau) et un contact électrique : on la combat en supprimant l'un de ces éléments. En amont pétrolier, trois mécanismes dominent.\n\nLa corrosion **douce** (sweet) est due au CO2 dissous dans l'eau de production, qui forme de l'acide carbonique : elle produit des pertes d'épaisseur générales ou localisées, surtout aux points bas où l'eau se dépose et dans les zones turbulentes. La corrosion **acide** (sour) est liée au H2S, qui cause des pertes mais surtout des fissurations : **SSC** (fissuration sous contrainte par sulfures sur les aciers durs), **HIC** (cloques et fissures internes dues à l'hydrogène, sans contrainte appliquée) et **SOHIC**. Le choix des matériaux en milieu H2S relève de la norme **NACE MR0175 / ISO 15156**. La corrosion **sous isolation (CUI)** frappe l'acier calorifugé lorsque l'eau s'infiltre ; elle est la plus sévère à température intermédiaire (de l'ordre de 50 à 120 °C pour l'acier au carbone) et se cache sous le calorifuge, d'où des inspections ciblées aux points bas, aux pénétrations et aux joints de calorifuge abîmés.\n\nD'autres formes sont à connaître : la **corrosion par piqûres** (perforations localisées, difficiles à mesurer), la **corrosion galvanique** (le métal le moins noble, devenu anode, se corrode au contact d'un métal plus noble en présence d'électrolyte), l'**érosion-corrosion** (sable, vitesses élevées, coudes), la **corrosion bactérienne** (MIC) sous dépôts et dans les eaux stagnantes.\n\nLa **protection cathodique** impose à une structure enterrée ou immergée un potentiel plus négatif, pour qu'elle devienne cathode. Deux techniques existent. Les **anodes sacrificielles** (zinc ou alliages d'aluminium en mer, magnésium dans les sols) se consomment à la place de l'acier, sans source d'énergie. Le **courant imposé** (redresseur et anodes inertes) convient aux grandes structures ou aux sols résistifs. Elle complète le revêtement, qui limite le courant nécessaire ; sur un revêtement abîmé, l'acier nu doit être protégé. Elle ne protège **pas l'intérieur** d'un tube, ni les zones écrantées par un revêtement décollé. Les potentiels se mesurent avec une électrode de référence (Cu/CuSO4 au sol, Ag/AgCl en eau de mer) ; une surprotection peut décoller le revêtement et provoquer une fragilisation par l'hydrogène.\n\nLes **inhibiteurs**, les revêtements internes, les matériaux résistants (inox, duplex) et le contrôle de l'eau (séchage, désoxygénation) sont les autres lignes de défense.",
+      "keyPoints": [
+        "Corrosion = anode + cathode + électrolyte + contact électrique.",
+        "CO2 : corrosion douce ; H2S : fissuration (SSC, HIC) ; CUI : eau sous calorifuge.",
+        "Galvanique : le métal le moins noble se corrode.",
+        "Protection cathodique : anodes sacrificielles ou courant imposé ; elle ne protège pas l'intérieur des tubes."
+      ],
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Photo d'un chantier de soudage de pipeline"
+    },
+    {
+      "id": "m2",
+      "title": "Contrôles non destructifs : choisir la bonne méthode",
+      "theme": "Contrôles non destructifs",
+      "minutes": 10,
+      "body": "Les **contrôles non destructifs** (CND ou END) évaluent l'état d'une pièce sans la détériorer. Le choix de la méthode dépend du défaut recherché (de surface ou interne, plan ou volumique) et du matériau.\n\nLe **contrôle visuel** (VT) reste la première méthode : rapide et économique, il révèle corrosion, déformations, fuites et défauts de soudure apparents. Il exige un bon éclairage, une distance et un angle de vue raisonnables, parfois une loupe, un endoscope ou une jauge de soudure.\n\nLe **ressuage** (PT) détecte les défauts **débouchants** sur des surfaces non poreuses : nettoyage, application du pénétrant, temps de pénétration, élimination de l'excès, application du révélateur, examen. La **magnétoscopie** (MT) détecte les défauts de surface et proches de la surface sur des matériaux **ferromagnétiques** : un champ magnétique est créé, le défaut produit une fuite de flux qui retient la poudre. Elle est plus rapide et plus sensible que le ressuage sur l'acier au carbone. Les inox austénitiques, non magnétiques, se contrôlent par ressuage.\n\nLes **ultrasons** (UT) envoient des impulsions dans le matériau à l'aide d'un palpeur couplé par un gel : l'écho du fond ou d'un défaut revient et le temps de parcours donne la distance (épaisseur = vitesse × temps aller-retour ÷ 2, avec environ 5 900 m/s dans l'acier). Ils servent à la **mesure d'épaisseur** et à la détection de défauts internes grâce à des palpeurs d'angle, au **TOFD** ou aux **multi-éléments** (phased array). L'étalonnage sur un bloc de référence est indispensable, à une température proche de celle de la mesure ; les surfaces chaudes exigent un couplant adapté.\n\nLa **radiographie** (RT) utilise des rayons X ou gamma (Ir-192, Se-75) qui impressionnent un film ou un détecteur numérique : elle révèle surtout les défauts volumiques (porosités, inclusions), moins bien les fissures plates mal orientées. Elle impose une **zone de sécurité** balisée, un opérateur habilité et le respect de la radioprotection. Les **courants de Foucault** (ET) servent à contrôler les tubes d'échangeurs.\n\nPour la corrosion généralisée, on réalise des **cartographies** d'épaisseur. Le personnel est certifié (**ISO 9712** ou équivalent, niveaux 1, 2, 3) : seul un niveau 2 ou 3 interprète et rédige le rapport ; le niveau 1 exécute sous supervision.",
+      "keyPoints": [
+        "VT d'abord ; PT pour défauts débouchants ; MT pour l'acier ferromagnétique.",
+        "UT : épaisseur = vitesse × temps aller-retour ÷ 2 (≈ 5 900 m/s dans l'acier).",
+        "RT : défauts volumiques, zone de sécurité obligatoire.",
+        "ISO 9712 : niveau 1 sous supervision, niveau 2 interprète et rapporte."
+      ],
+      "img": "svg/weld-joint-types.svg",
+      "imgAlt": "Schéma des types de joints soudés"
+    },
+    {
+      "id": "m3",
+      "title": "Vitesse de corrosion et épaisseur minimale",
+      "theme": "Vitesse de corrosion et épaisseur minimale",
+      "minutes": 10,
+      "body": "L'inspecteur suit l'**épaisseur** de parois en des points fixes, les **points de mesure** (TML ou CML, condition monitoring locations), repérés sur l'isométrique ou le plan d'inspection. On mesure toujours au même point, avec la même méthode, pour pouvoir comparer.\n\nLa **vitesse de corrosion** est la perte d'épaisseur divisée par le temps : **CR = (épaisseur précédente − épaisseur actuelle) ÷ années**. La **vitesse à long terme** compare la première et la dernière mesure ; la **vitesse à court terme** compare les deux dernières. On retient en général la plus pénalisante pour évaluer la durée de vie.\n\nL'**épaisseur minimale requise** (t_min) est l'épaisseur en dessous de laquelle la paroi n'est plus conforme au code pour la pression et la température de calcul. Pour une tuyauterie selon ASME B31.3, la formule de pression est **t = P × D ÷ [2 × (S × E + P × Y)]**, avec P la pression de calcul, D le diamètre extérieur, S la contrainte admissible, E le coefficient de qualité de soudure et Y un coefficient (0,4 pour les aciers ferritiques en dessous de 482 °C). Ce calcul ne comprend pas la surépaisseur de corrosion, qui se consomme à vitesse connue.\n\nLa **durée de vie résiduelle** vaut **(épaisseur actuelle − t_min) ÷ CR**. Les codes d'inspection en service (API 570 pour les tuyauteries, API 510 pour les appareils à pression) demandent que l'intervalle avant la prochaine inspection ne dépasse pas **la moitié de la durée de vie résiduelle**, dans la limite d'un maximum fixé par le code ou la classe de la ligne. Quand cette durée est courte, on rapproche les inspections ou on décide d'une réparation, d'une évaluation d'aptitude à l'emploi (API 579) ou d'un remplacement.\n\nIl faut **lire les mesures avec esprit critique**. Une valeur plus faible que ses voisines peut traduire un défaut local (piqûre, délamination) ou une erreur : on recommence autour du point. Une épaisseur qui semble augmenter entre deux campagnes révèle une incertitude de mesure, pas un gain de métal. La température, l'état de surface, l'étalonnage et l'opérateur influencent le résultat.\n\nEnfin, une perte de **40 %** de l'épaisseur nominale n'est jamais anodine : selon la surépaisseur de corrosion initiale (souvent de l'ordre de 1,5 à 3 mm), elle peut déjà dépasser la marge prévue. Elle demande un calcul de t_min, une cartographie de la zone et l'information immédiate de l'ingénieur d'intégrité.",
+      "keyPoints": [
+        "CR = perte d'épaisseur ÷ années ; durée de vie résiduelle = (e actuelle − t_min) ÷ CR.",
+        "Intervalle d'inspection ≤ moitié de la durée de vie résiduelle (dans la limite du maximum du code).",
+        "Une épaisseur qui augmente = incertitude de mesure, pas de la matière.",
+        "Perte de 40 % : calculer t_min, cartographier, alerter l'ingénieur d'intégrité."
+      ],
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Photo d'un chantier de soudage de pipeline"
+    },
+    {
+      "id": "m4",
+      "title": "Inspection basée sur le risque (RBI)",
+      "theme": "Inspection basée sur le risque",
+      "minutes": 9,
+      "body": "L'**inspection basée sur le risque** (RBI) hiérarchise l'effort d'inspection selon le **risque**, c'est-à-dire la **probabilité de défaillance** multipliée par la **conséquence** (sécurité, environnement, production, coût). Les références sont **API 580** (principes) et **API 581** (méthode quantitative). Un équipement à fort risque est inspecté plus tôt, plus souvent et avec des méthodes plus efficaces ; un équipement à faible risque peut l'être moins, sans jamais être oublié.\n\nL'analyse commence par identifier les **mécanismes d'endommagement** plausibles pour chaque équipement (corrosion générale, CUI, fissuration, fatigue, érosion) en croisant matériau, fluide, température et pression. On regroupe les lignes homogènes en **boucles de corrosion** (corrosion loops), qui partagent le même fluide, le même matériau et les mêmes conditions : un constat fait sur l'une s'applique en principe à toute la boucle.\n\nLa probabilité dépend de la **vitesse de corrosion**, de l'âge, de la marge restante et de l'**efficacité des inspections passées**. La conséquence dépend de l'inventaire, de la toxicité ou de l'inflammabilité du fluide, de la présence de personnes et de l'environnement. La **matrice de risque** (par exemple 5 × 5) place la probabilité en ordonnée et la conséquence en abscisse ; la zone haute exige une action, la zone basse un suivi.\n\nLes **points sensibles** à cibler sont : les points bas où l'eau stagne, les **bras morts** (dead legs) sans circulation, les **zones d'injection** de produits chimiques, les coudes et réductions (érosion), les zones de mélange de fluides, les supports et interfaces sol-air des tuyauteries, le calorifuge endommagé (CUI).\n\nLe plan d'inspection définit pour chaque point la **méthode** (visuelle, UT, RT, CND de soudure), la **fréquence** et les critères d'acceptation. Il est vivant : chaque résultat met à jour la vitesse de corrosion, donc le risque, donc le plan. Les **changements** (de fluide, de température, de débit, d'injection d'inhibiteur) doivent être signalés, car ils modifient les mécanismes et rendent les hypothèses caduques. Le RBI ne remplace pas les inspections réglementaires : les exigences légales et celles des organismes agréés restent applicables, selon les procédures du site.",
+      "keyPoints": [
+        "Risque = probabilité × conséquence (API 580 / 581).",
+        "Boucle de corrosion : même fluide, matériau et conditions.",
+        "Cibler points bas, bras morts, injections, coudes, calorifuge abîmé.",
+        "Un changement de procédé impose de réviser le plan ; le RBI ne supprime pas les inspections réglementaires."
+      ],
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 × 5"
+    },
+    {
+      "id": "m5",
+      "title": "Lecture de rapports et pratique d'inspection",
+      "theme": "Lecture de rapports et pratique d'inspection",
+      "minutes": 9,
+      "body": "Un **rapport d'inspection** est une pièce technique et juridique. Il doit permettre à un tiers de refaire le contrôle et d'aboutir au même constat. Il identifie l'**équipement** (repère, ligne, localisation), la **date**, l'**inspecteur** et sa **certification**, la **méthode** et la **procédure** utilisées, l'**appareillage** (numéro de série, date d'étalonnage, palpeur, bloc de référence), les **conditions** (température de surface, accessibilité), les **résultats** (valeurs mesurées par point), la **comparaison** avec t_min et avec la campagne précédente, la **conclusion** et les **recommandations** assorties d'une échéance.\n\nLes écarts sont classés (par exemple conforme, à surveiller, à réparer) selon les critères du plan d'inspection. Toute valeur proche de l'épaisseur minimale ou en dessous déclenche une **alerte immédiate** à l'ingénieur d'intégrité, avant même l'émission du rapport formel. Les données brutes ne sont jamais « arrangées » : une valeur douteuse se remesure, se commente et se consigne.\n\nSur le terrain, la **préparation** détermine la qualité : plan d'inspection, historique du point, accès sécurisé (échafaudage, permis de travail), nettoyage de la surface, étalonnage de l'appareil avant et après la série de mesures. En espace confiné, en travail en hauteur, en zone ATEX ou à proximité d'une radiographie, les **permis** et protections correspondants sont exigés.\n\nLes **indications visuelles** de corrosion se décrivent par type (générale, localisée, piqûres), étendue et profondeur approximative, avec une photographie repérée. Sur un **réservoir de stockage**, le fond est une zone critique (corrosion côté sol, eau stagnante), tout comme la jonction fond-virole. Sur une **bride**, on regarde la face, les boulons (corrosion, longueur) et les traces de fuite. Sur un **appareil à pression**, on contrôle les viroles, les fonds, les piquages et les supports.\n\nUne inspection ne remplace jamais la vigilance de l'équipe : un suintement, une odeur, une tache d'oxyde se signalent. Le dialogue avec les opérateurs et la maintenance permet de relier les observations aux conditions réelles de service.\n\nL'inspecteur reste indépendant : il rapporte ce qu'il constate, pas ce qui arrange le planning. Cette indépendance protège l'entreprise comme les équipes.",
+      "keyPoints": [
+        "Rapport reproductible : équipement, méthode, appareillage étalonné, résultats, conclusion.",
+        "Valeur proche de t_min : alerte immédiate à l'ingénieur d'intégrité.",
+        "Ne jamais arranger une valeur : on remesure, on commente.",
+        "Fond de réservoir et jonction fond-virole : zones critiques."
+      ],
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Photo de réservoirs de stockage"
+    }
+  ],
+  "questions": [
+    {
+      "id": "insp-corrosion-end-001",
+      "theme": "Corrosion et protection cathodique",
+      "level": 1,
+      "q": "Quels éléments doivent être réunis pour qu'une corrosion électrochimique de l'acier se produise ?",
+      "choices": [
+        "Un acide fort, un solvant organique, de la chaleur et un catalyseur",
+        "De l'oxygène et de la chaleur sèche, sans aucune humidité",
+        "Une anode, une cathode, un électrolyte et un contact électrique",
+        "Un champ magnétique et un courant alternatif extérieur"
+      ],
+      "answer": 2,
+      "explain": "La corrosion est une pile : anode, cathode, électrolyte et contact électrique. En supprimant un seul de ces éléments (revêtement, protection cathodique, séchage), on arrête le processus.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-002",
+      "theme": "Corrosion et protection cathodique",
+      "level": 1,
+      "q": "Un tube en acier au carbone est relié à un tube en inox en eau de mer. Quel métal se corrode préférentiellement ?",
+      "choices": [
+        "L'acier au carbone, moins noble, qui joue le rôle d'anode",
+        "L'inox, qui est le plus noble des deux et donc le plus attaqué",
+        "Les deux de la même manière, à vitesse égale",
+        "Aucun des deux : l'eau de mer est un milieu neutre"
+      ],
+      "answer": 0,
+      "explain": "Dans un couple galvanique, le métal le moins noble devient anode et se dissout. Plus la surface de la cathode (inox) est grande par rapport à l'anode, plus l'attaque est rapide.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-003",
+      "theme": "Corrosion et protection cathodique",
+      "level": 1,
+      "q": "Sur un réservoir de stockage reposant sur le sol, que protège la protection cathodique ?",
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Photo de réservoirs de stockage posés sur le sol",
+      "choices": [
+        "L'intérieur du fond en contact avec le produit stocké",
+        "La virole au-dessus du niveau du produit, sans contact avec l'eau",
+        "La peinture extérieure du réservoir contre les UV",
+        "La face extérieure du fond en contact avec le sol, rendue cathode"
+      ],
+      "answer": 3,
+      "explain": "La protection cathodique agit sur l'acier en contact avec un électrolyte (sol, eau). Elle ne protège ni les surfaces aériennes sèches, ni l'intérieur sans électrolyte conducteur de courant.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-004",
+      "theme": "Corrosion et protection cathodique",
+      "level": 2,
+      "q": "Quel est un avantage des anodes sacrificielles par rapport au courant imposé ?",
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Photo d'un chantier de pipeline avec zone de tubes revêtus",
+      "choices": [
+        "Elles ne se consomment jamais, même après des années",
+        "Elles fonctionnent sans source d'alimentation électrique",
+        "Elles conviennent surtout aux sols extrêmement résistifs",
+        "Elles protègent aussi l'intérieur du tube transportant le fluide"
+      ],
+      "answer": 1,
+      "explain": "Les anodes sacrificielles (zinc, aluminium, magnésium) se consomment à la place de l'acier sans énergie extérieure. Elles s'usent et doivent être remplacées, et ne protègent que l'extérieur en contact avec l'électrolyte.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-005",
+      "theme": "Corrosion et protection cathodique",
+      "level": 2,
+      "q": "Sur un pipeline enterré protégé par anodes, une zone de revêtement est abîmée. Quelle est la conséquence ?",
+      "choices": [
+        "Le courant nécessaire augmente et les anodes s'usent plus vite",
+        "L'acier devient automatiquement passif sur toute la zone abîmée",
+        "Le courant diminue car la zone abîmée est isolée électriquement du sol",
+        "La corrosion s'arrête car le revêtement abîmé absorbe tout le courant"
+      ],
+      "answer": 0,
+      "explain": "Une zone d'acier nu exige du courant de protection : la demande augmente et les anodes s'épuisent plus rapidement. Le revêtement et la protection cathodique se complètent.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-006",
+      "theme": "Corrosion et protection cathodique",
+      "level": 2,
+      "q": "Dans une ligne horizontale de brut contenant de l'eau libre à faible vitesse, où la corrosion douce (CO2) localisée est-elle la plus probable ?",
+      "img": "svg/flange-types.svg",
+      "imgAlt": "Schéma de types de brides sur une ligne horizontale",
+      "choices": [
+        "Uniquement sur la génératrice supérieure de la ligne",
+        "Uniquement aux brides de raccord, jamais en ligne droite",
+        "Uniquement près des soudures des supports de tuyauterie",
+        "En partie basse (6 heures) et aux points bas où l'eau se dépose"
+      ],
+      "answer": 3,
+      "explain": "À faible vitesse, l'eau se sépare de l'huile et mouille la partie basse. C'est là que se concentrent les pertes d'épaisseur : les inspections ciblent le fond de tube et les points bas.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-007",
+      "theme": "Corrosion et protection cathodique",
+      "level": 2,
+      "q": "Parmi ces conditions, laquelle expose le plus un acier au carbone calorifugé à la corrosion sous isolation ?",
+      "choices": [
+        "Paroi à 250 °C en service continu, calorifuge sec et intact",
+        "Paroi vers 100 °C, calorifuge mouillé et pare-vapeur abîmé",
+        "Paroi à 300 °C avec calorifuge neuf et étanche",
+        "Paroi à 20 °C sans calorifuge, simplement peinte"
+      ],
+      "answer": 1,
+      "explain": "La CUI exige de l'eau piégée sous l'isolant et une paroi à température intermédiaire qui permet à l'eau de rester liquide ou de cycler. Un calorifuge sec et chaud en continu est bien moins exposé.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-008",
+      "theme": "Corrosion et protection cathodique",
+      "level": 3,
+      "q": "Quels signes évoquent une corrosion bactérienne (MIC) ?",
+      "choices": [
+        "Une perte d'épaisseur uniforme sur toute une ligne à fort débit",
+        "Des fissures ramifiées sous contrainte dans un inox en service chaud",
+        "Des piqûres sous dépôts, avec des produits de corrosion noirs",
+        "Des cloques d'hydrogène dans un acier en milieu H2S humide"
+      ],
+      "answer": 2,
+      "explain": "La MIC se développe sous dépôts et dans les eaux stagnantes, avec des piqûres profondes et des dépôts noirs de sulfures. Les autres tableaux évoquent érosion, SCC aux chlorures et HIC.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-009",
+      "theme": "Corrosion et protection cathodique",
+      "level": 3,
+      "q": "Quel est le risque d'une surprotection cathodique, avec un potentiel trop négatif ?",
+      "choices": [
+        "Corrosion accélérée et uniforme de tout l'acier de la structure",
+        "Disparition immédiate de l'ensemble des anodes du système",
+        "Aucun : plus le potentiel est négatif, mieux l'acier est protégé",
+        "Décollement du revêtement et fragilisation par l'hydrogène"
+      ],
+      "answer": 3,
+      "explain": "Un potentiel trop négatif produit de l'hydrogène à la surface de l'acier : il décolle le revêtement et peut fragiliser les aciers durs. Il existe donc une plage de potentiel à respecter.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-010",
+      "theme": "Contrôles non destructifs",
+      "level": 1,
+      "q": "Quelle est la première méthode de contrôle à mettre en œuvre sur une soudure, rapide et économique ?",
+      "choices": [
+        "La radiographie gamma",
+        "Le contrôle visuel",
+        "Les ultrasons multi-éléments",
+        "Les courants de Foucault"
+      ],
+      "answer": 1,
+      "explain": "Le contrôle visuel révèle déjà corrosion, déformations, fuites et défauts de soudure apparents. Il précède les autres méthodes, plus coûteuses.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-011",
+      "theme": "Contrôles non destructifs",
+      "level": 2,
+      "q": "Sur le schéma des joints soudés (bout à bout, en T avec cordon d'angle, à recouvrement), comment se dimensionne une soudure d'angle ?",
+      "img": "svg/weld-joint-types.svg",
+      "imgAlt": "Schéma des joints soudés : bout à bout, en T avec cordon d'angle, à recouvrement",
+      "choices": [
+        "Par son diamètre, comme un boulon",
+        "Uniquement par la hauteur du renforcement",
+        "Par la longueur de sa jambe et sa gorge",
+        "Par la largeur du cordon sur la face seule"
+      ],
+      "answer": 2,
+      "explain": "Une soudure d'angle se mesure par la longueur de ses jambes et la hauteur de sa gorge, avec une jauge adaptée. Le contrôle visuel vérifie ces dimensions.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-012",
+      "theme": "Contrôles non destructifs",
+      "level": 2,
+      "q": "Sur un support en acier au carbone, quelle méthode de surface est en général plus rapide et plus sensible que le ressuage ?",
+      "img": "svg/weld-joint-types.svg",
+      "imgAlt": "Schéma des joints soudés d'un support en acier au carbone",
+      "choices": [
+        "La magnétoscopie",
+        "L'émission acoustique",
+        "Les ultrasons de mesure d'épaisseur",
+        "Le contrôle d'étanchéité à la bulle"
+      ],
+      "answer": 0,
+      "explain": "L'acier au carbone est ferromagnétique : la magnétoscopie détecte les défauts de surface et proches de la surface avec une grande sensibilité. Elle ne s'applique pas aux inox austénitiques.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-013",
+      "theme": "Contrôles non destructifs",
+      "level": 2,
+      "q": "Un palpeur à ultrasons mesure un temps aller-retour de 6,8 µs dans de l'acier (vitesse du son 5 900 m/s). Quelle est l'épaisseur ?",
+      "choices": [
+        "Environ 40 mm",
+        "Environ 20 mm",
+        "Environ 10 mm",
+        "Environ 2 mm"
+      ],
+      "answer": 1,
+      "explain": "Épaisseur = vitesse × temps ÷ 2 = 5 900 × 6,8·10⁻⁶ ÷ 2 ≈ 0,020 m, soit 20 mm. Oublier la division par deux donne 40 mm.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-014",
+      "theme": "Contrôles non destructifs",
+      "level": 1,
+      "q": "Pourquoi utilise-t-on un gel (couplant) entre le palpeur à ultrasons et la pièce ?",
+      "choices": [
+        "Pour refroidir le palpeur pendant les mesures",
+        "Pour nettoyer la corrosion avant la lecture",
+        "Pour chasser l'air, qui bloquerait la transmission des ultrasons",
+        "Pour augmenter la vitesse du son dans l'acier"
+      ],
+      "answer": 2,
+      "explain": "L'air entre palpeur et pièce réfléchit presque tout. Le couplant assure la transmission des ultrasons dans la pièce.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-015",
+      "theme": "Contrôles non destructifs",
+      "level": 2,
+      "q": "Vous mesurez l'épaisseur d'une ligne à 150 °C à l'ultrason. Quelle précaution est nécessaire ?",
+      "choices": [
+        "Utiliser un couplant haute température et étalonner dans ces conditions",
+        "Pas de précaution : la température n'influence jamais la mesure ultrasonore",
+        "Refroidir brutalement la ligne en la mouillant avant la mesure",
+        "Mesurer à sec, sans couplant, pour éviter son évaporation sur la paroi"
+      ],
+      "answer": 0,
+      "explain": "La température change la vitesse du son et abîme les couplants classiques. On utilise un matériel haute température et l'on tient compte de la température dans l'étalonnage. Refroidir brutalement est dangereux.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-016",
+      "theme": "Contrôles non destructifs",
+      "level": 3,
+      "q": "Lors d'un contrôle UT d'une tôle, on observe un écho intermédiaire stable à un tiers de l'épaisseur et la perte de l'écho de fond. Quelle interprétation est la plus probable ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Appareil à pression avec zone de tôle contrôlée aux ultrasons",
+      "choices": [
+        "Une corrosion uniforme de la face extérieure",
+        "Une tôle saine d'épaisseur normale",
+        "Une couche de peinture épaisse en surface",
+        "Une délamination (défaut plan parallèle à la surface)"
+      ],
+      "answer": 3,
+      "explain": "Un écho intermédiaire avec perte d'écho de fond indique un défaut plan parallèle à la surface (lamination) qui réfléchit l'énergie avant le fond. La peinture ne produit pas ce signal.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-017",
+      "theme": "Contrôles non destructifs",
+      "level": 3,
+      "q": "Quelle approche permet d'évaluer la perte d'épaisseur d'une ligne sous calorifuge sans déposer l'isolant ?",
+      "choices": [
+        "Le ressuage appliqué sur le revêtement du calorifuge",
+        "La magnétoscopie réalisée à travers le calorifuge posé",
+        "La radiographie en profil, à travers l'isolant",
+        "Le contrôle visuel depuis le sol, sans accès à la ligne"
+      ],
+      "answer": 2,
+      "explain": "La radiographie en profil traverse l'isolant et montre la paroi par la tranche. Le ressuage et la magnétoscopie exigent un accès à la surface métallique nue.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-018",
+      "theme": "Contrôles non destructifs",
+      "level": 1,
+      "q": "Sur un joint bout à bout du schéma des soudures, quelle méthode est la plus adaptée pour rechercher des porosités internes ?",
+      "img": "svg/weld-joint-types.svg",
+      "imgAlt": "Schéma des joints soudés dont un joint bout à bout",
+      "choices": [
+        "La radiographie",
+        "Le ressuage",
+        "La magnétoscopie",
+        "Le contrôle visuel direct"
+      ],
+      "answer": 0,
+      "explain": "Les porosités internes sont des défauts volumiques. La radiographie (ou les UT) les révèle ; le ressuage et la magnétoscopie ne voient que la surface.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-019",
+      "theme": "Vitesse de corrosion et épaisseur minimale",
+      "level": 1,
+      "q": "Comment calcule-t-on la vitesse de corrosion d'un point de mesure ?",
+      "choices": [
+        "Épaisseur actuelle divisée par l'épaisseur nominale",
+        "Pression de service divisée par l'épaisseur mesurée",
+        "Temps écoulé divisé par la perte d'épaisseur",
+        "Perte d'épaisseur divisée par le temps écoulé"
+      ],
+      "answer": 3,
+      "explain": "CR = (épaisseur précédente − épaisseur actuelle) ÷ années. Elle s'exprime en mm/an.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-020",
+      "theme": "Vitesse de corrosion et épaisseur minimale",
+      "level": 1,
+      "q": "Que représente l'épaisseur minimale requise (t_min) d'une tuyauterie ?",
+      "choices": [
+        "L'épaisseur moyenne relevée lors de la dernière campagne",
+        "L'épaisseur minimale exigée par le code pour les conditions de calcul",
+        "L'épaisseur commandée à l'achat du tube par le service achats",
+        "La surépaisseur de corrosion prévue à l'origine du projet par le bureau d'études"
+      ],
+      "answer": 1,
+      "explain": "Sous t_min, la paroi ne satisfait plus au calcul du code : il faut réparer, déclasser ou remplacer.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-021",
+      "theme": "Vitesse de corrosion et épaisseur minimale",
+      "level": 2,
+      "q": "Un point mesurait 10,0 mm à la mise en service et 7,6 mm six ans plus tard. Quelle est la vitesse de corrosion moyenne ?",
+      "choices": [
+        "0,4 mm/an",
+        "0,76 mm/an",
+        "1,27 mm/an",
+        "2,4 mm/an"
+      ],
+      "answer": 0,
+      "explain": "(10,0 − 7,6) ÷ 6 = 0,4 mm/an. 1,27 vient d'une division de l'épaisseur restante par six.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-022",
+      "theme": "Vitesse de corrosion et épaisseur minimale",
+      "level": 2,
+      "q": "Épaisseur actuelle 9,7 mm, t_min 7,2 mm, vitesse de corrosion 0,6 mm/an. Quelle est la durée de vie résiduelle ?",
+      "choices": [
+        "Environ 12 ans",
+        "Environ 16 ans",
+        "Environ 1,2 an",
+        "Environ 4,2 ans"
+      ],
+      "answer": 3,
+      "explain": "Durée = (9,7 − 7,2) ÷ 0,6 ≈ 4,2 ans. Utiliser t_min seul (7,2 ÷ 0,6 = 12 ans) est une erreur : on utilise la marge, pas l'épaisseur totale.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-023",
+      "theme": "Vitesse de corrosion et épaisseur minimale",
+      "level": 2,
+      "q": "Selon la règle usuelle d'API 570 / 510, quel est l'intervalle maximal avant la prochaine inspection pour une durée de vie résiduelle de 6 ans (hors limite maximale du code) ?",
+      "choices": [
+        "6 ans, soit la durée de vie résiduelle",
+        "3 ans, soit la moitié de la durée de vie résiduelle",
+        "10 ans, quel que soit le calcul",
+        "1 an, quelle que soit la durée de vie résiduelle"
+      ],
+      "answer": 1,
+      "explain": "L'intervalle ne dépasse pas la moitié de la durée de vie résiduelle, dans la limite du maximum fixé par le code. Ici 3 ans.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-024",
+      "theme": "Vitesse de corrosion et épaisseur minimale",
+      "level": 3,
+      "q": "Une ligne de 10,0 mm nominal, en service depuis 8 ans, mesure 6,0 mm en un point (perte de 40 %). Son t_min est de 5,0 mm. Quelle est la vitesse de corrosion à long terme et la durée de vie résiduelle ?",
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Photo d'un chantier de pipeline : ligne dont l'épaisseur a été mesurée",
+      "choices": [
+        "0,5 mm/an et 12 ans",
+        "0,75 mm/an et 8 ans",
+        "0,5 mm/an et 2 ans",
+        "0,4 mm/an et 2,5 ans"
+      ],
+      "answer": 2,
+      "explain": "CR = (10,0 − 6,0) ÷ 8 = 0,5 mm/an ; durée = (6,0 − 5,0) ÷ 0,5 = 2 ans. 12 ans vient de l'épaisseur totale divisée par la vitesse.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-025",
+      "theme": "Vitesse de corrosion et épaisseur minimale",
+      "level": 3,
+      "q": "Dans ce cas (0,5 mm/an, durée de vie résiduelle de 2 ans), quelle décision est la plus appropriée ?",
+      "img": "photo/pipeline-welding.jpg",
+      "imgAlt": "Photo d'un chantier de pipeline : ligne dont l'épaisseur a été mesurée",
+      "choices": [
+        "Poursuivre sans changement : la ligne dépasse encore 5 mm et reste conforme",
+        "Attendre la prochaine campagne prévue dans quatre ans au titre du plan en cours",
+        "Repeindre la zone corrodée et classer le point sans suite particulière",
+        "Alerter l'ingénieur d'intégrité, inspecter sous 1 an, cartographier la zone et évaluer la ligne"
+      ],
+      "answer": 3,
+      "explain": "Avec 2 ans de vie résiduelle, l'intervalle maximal est de 1 an. Il faut cartographier, calculer, informer et prévoir réparation ou évaluation d'aptitude à l'emploi. Repeindre ne traite pas la perte d'épaisseur.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-026",
+      "theme": "Vitesse de corrosion et épaisseur minimale",
+      "level": 3,
+      "q": "Avec t = P × D ÷ [2 × (S × E + P × Y)], P = 10 MPa, D = 219,1 mm, S = 138 MPa, E = 1,0 et Y = 0,4, quelle est l'épaisseur minimale de pression ?",
+      "choices": [
+        "Environ 7,9 mm",
+        "Environ 7,7 mm",
+        "Environ 15,9 mm",
+        "Environ 3,9 mm"
+      ],
+      "answer": 1,
+      "explain": "t = 10 × 219,1 ÷ [2 × (138 + 4)] = 2 191 ÷ 284 ≈ 7,7 mm. 7,9 mm oublie le terme P × Y ; 15,9 oublie le facteur 2.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-027",
+      "theme": "Vitesse de corrosion et épaisseur minimale",
+      "level": 2,
+      "q": "Deux mesures successives sur le même point d'une ligne donnent 12,4 mm puis 12,6 mm deux ans plus tard. Comment les interpréter ?",
+      "choices": [
+        "Le métal s'est reconstitué dans l'intervalle grâce à la protection en place",
+        "Un dépôt de calcaire a ajouté de l'épaisseur d'acier à la paroi du tube",
+        "Une incertitude de mesure : la paroi ne peut pas gagner de métal",
+        "Le tube a été remplacé entre-temps sans qu'on en ait été informé"
+      ],
+      "answer": 2,
+      "explain": "Une paroi ne peut pas gagner de métal : l'écart de 0,2 mm est dans l'incertitude de mesure (état de surface, température, appareil). Il faut mesurer avec la même méthode au même point.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-028",
+      "theme": "Inspection basée sur le risque",
+      "level": 1,
+      "q": "Pourquoi les points bas d'une tuyauterie sont-ils des points d'inspection prioritaires ?",
+      "img": "svg/flange-types.svg",
+      "imgAlt": "Schéma de tuyauterie avec bride et point bas",
+      "choices": [
+        "L'eau et les dépôts s'y accumulent, ce qui favorise la corrosion",
+        "La pression y est toujours la plus faible de la ligne",
+        "La température y est toujours la plus élevée de la ligne",
+        "L'épaisseur y est plus faible dès la fabrication"
+      ],
+      "answer": 0,
+      "explain": "L'eau et les dépôts se déposent aux points bas et créent un milieu corrosif. Ces points sont donc ciblés dans les plans d'inspection.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-029",
+      "theme": "Inspection basée sur le risque",
+      "level": 1,
+      "q": "Sur la matrice de risque 5 × 5, une ligne est placée en probabilité 4 et conséquence D, en zone haute. Que faut-il faire ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 × 5 avec la ligne placée en probabilité 4, conséquence D, zone haute",
+      "choices": [
+        "La déprioriser car le risque est déjà connu des équipes",
+        "Relever sa priorité : inspection plus efficace et intervalle plus court",
+        "L'ignorer : la matrice ne sert qu'aux équipements neufs",
+        "Attendre l'arrêt programmé sans modifier le plan d'inspection"
+      ],
+      "answer": 1,
+      "explain": "Une cellule haute appelle une action : inspecter plus tôt et plus efficacement ou réduire le risque. Un risque connu mais non traité reste un risque.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-030",
+      "theme": "Inspection basée sur le risque",
+      "level": 1,
+      "q": "Quel document API fixe les principes généraux de l'inspection basée sur le risque ?",
+      "choices": [
+        "API 650",
+        "API 5L",
+        "API 580",
+        "API 526"
+      ],
+      "answer": 2,
+      "explain": "API 580 définit les principes du RBI et API 581 en donne la méthode quantitative. API 650 concerne les réservoirs, 5L les tubes de ligne et 526 les soupapes.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-031",
+      "theme": "Inspection basée sur le risque",
+      "level": 2,
+      "q": "Qu'est-ce qu'une boucle de corrosion (corrosion loop) ?",
+      "choices": [
+        "Un groupe de lignes aux fluide, matériau et conditions identiques",
+        "Une boucle de tuyauterie fermée où le fluide recircule en continu",
+        "Un circuit électrique de protection cathodique par courant imposé",
+        "Le trajet d'un produit anticorrosion injecté dans le réseau"
+      ],
+      "answer": 0,
+      "explain": "Regrouper les lignes homogènes permet d'appliquer un même diagnostic et de partager les résultats d'inspection d'un point à l'ensemble de la boucle.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-032",
+      "theme": "Inspection basée sur le risque",
+      "level": 2,
+      "q": "L'injection d'inhibiteur d'une ligne est arrêtée pendant trois mois. Quel est l'effet sur le plan RBI ?",
+      "choices": [
+        "Aucun effet : le plan est figé pour dix ans une fois validé",
+        "Le risque baisse et l'inspection peut être espacée",
+        "Seul le coût du programme d'inspection change légèrement",
+        "La vitesse de corrosion peut augmenter : réviser le plan"
+      ],
+      "answer": 3,
+      "explain": "Une modification des conditions d'exploitation modifie les mécanismes et la vitesse de corrosion. Le RBI exige de réviser le plan.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-033",
+      "theme": "Inspection basée sur le risque",
+      "level": 2,
+      "q": "Quelle zone doit être surveillée en priorité en aval du point d'injection d'un produit chimique ?",
+      "choices": [
+        "L'extrémité amont de la ligne, avant l'injection",
+        "Le bout de ligne sans écoulement, au plus loin",
+        "La zone de mélange et les premiers coudes en aval de l'injection",
+        "Les supports de la ligne côté salle de contrôle"
+      ],
+      "answer": 2,
+      "explain": "Le produit injecté se mélange mal au début : concentration locale et turbulence accélèrent la corrosion et l'érosion dans les premiers coudes. Ce sont des points classiques à contrôler.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-034",
+      "theme": "Inspection basée sur le risque",
+      "level": 2,
+      "q": "Dans l'équation du risque (probabilité × conséquence), que représente la conséquence ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque avec l'axe des conséquences de A à E",
+      "choices": [
+        "L'effet d'une fuite sur la sécurité, l'environnement et la production",
+        "La probabilité qu'une fuite se produise",
+        "Le coût de l'inspection programmée",
+        "Le temps écoulé depuis la dernière mesure"
+      ],
+      "answer": 0,
+      "explain": "La conséquence évalue la gravité de la défaillance : inventaire, toxicité ou inflammabilité, exposition des personnes, environnement. La probabilité est l'autre terme.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-035",
+      "theme": "Inspection basée sur le risque",
+      "level": 3,
+      "q": "Ligne 1 : gaz acide, voisine d'une zone habitée, probabilité moyenne (3), conséquence très élevée (E). Ligne 2 : liquide non inflammable, zone isolée, probabilité élevée (4), conséquence B. Laquelle inspecter en premier ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 × 5 avec deux lignes positionnées : (3, E) et (4, B)",
+      "choices": [
+        "La ligne 2, car sa probabilité est plus élevée",
+        "Ni l'une ni l'autre avant de réévaluer toutes les lignes de la matrice",
+        "Les deux ensemble, sans aucune hiérarchie",
+        "La ligne 1, car la conséquence très élevée domine le risque"
+      ],
+      "answer": 3,
+      "explain": "Le risque combine les deux axes. 3 × E (très élevée) dépasse 4 × B : la ligne de gaz acide est prioritaire.",
+      "seconds": 65,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-036",
+      "theme": "Inspection basée sur le risque",
+      "level": 3,
+      "q": "Un équipement est classé à faible risque par le RBI. Qu'est-ce que cela signifie pour l'inspection ?",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 × 5 avec un équipement en zone basse",
+      "choices": [
+        "Plus aucune inspection n'est nécessaire",
+        "Une inspection allégée mais maintenue, avec respect des exigences réglementaires",
+        "Il n'est inspecté qu'après une première fuite",
+        "Il est exclu du plan d'inspection définitivement"
+      ],
+      "answer": 1,
+      "explain": "Faible risque veut dire effort réduit, pas absence d'inspection. Les exigences légales et les vérifications périodiques restent applicables.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-037",
+      "theme": "Lecture de rapports et pratique d'inspection",
+      "level": 1,
+      "q": "Quel contenu ne doit pas manquer dans un rapport d'inspection ?",
+      "choices": [
+        "Repère de l'équipement, date, méthode, résultats, conclusion et recommandations",
+        "Seulement la signature du chef de service",
+        "Seulement la date et le lieu de l'intervention",
+        "Seulement des photos de l'équipement"
+      ],
+      "answer": 0,
+      "explain": "Un rapport doit permettre à un tiers de refaire le contrôle et d'aboutir au même constat : tous ces éléments sont nécessaires.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-038",
+      "theme": "Lecture de rapports et pratique d'inspection",
+      "level": 2,
+      "q": "Que permet un certificat ISO 9712 de niveau 2 en END ?",
+      "choices": [
+        "Exécuter uniquement des mesures sous supervision, sans interpréter",
+        "Qualifier les procédures et le personnel de l'entreprise",
+        "Modifier les critères d'acceptation du code",
+        "Réaliser, interpréter et consigner les contrôles selon des procédures écrites"
+      ],
+      "answer": 3,
+      "explain": "Le niveau 2 réalise et interprète selon des procédures. Le niveau 1 exécute sous supervision ; le niveau 3 rédige et valide les procédures et qualifie le personnel.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-039",
+      "theme": "Lecture de rapports et pratique d'inspection",
+      "level": 2,
+      "q": "Vous relevez 5,4 mm sur un point dont t_min vaut 5,5 mm. Que faites-vous ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Appareil à pression avec points de mesure d'épaisseur repérés",
+      "choices": [
+        "L'inscrire dans le rapport mensuel sans en parler à personne avant",
+        "Confirmer la mesure puis alerter sans attendre l'ingénieur d'intégrité",
+        "Remesurer jusqu'à obtenir une valeur supérieure à 5,5 mm",
+        "Recalibrer l'appareil et ignorer la valeur trouvée si elle semble basse"
+      ],
+      "answer": 1,
+      "explain": "Une valeur sous t_min est urgente. On confirme vite la mesure, puis on alerte l'ingénieur d'intégrité sans attendre le rapport formel.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-040",
+      "theme": "Lecture de rapports et pratique d'inspection",
+      "level": 2,
+      "q": "Pourquoi note-t-on la température de surface dans un rapport de mesure d'épaisseur par ultrasons ?",
+      "choices": [
+        "Pour vérifier le confort thermique de l'inspecteur",
+        "Parce qu'elle détermine la couleur du revêtement",
+        "Parce qu'elle influence la vitesse du son et donc la mesure",
+        "Parce que la loi l'impose pour les photographies"
+      ],
+      "answer": 2,
+      "explain": "La vitesse du son dépend de la température : la mesure doit être corrigée ou étalonnée dans des conditions comparables pour être comparable à la campagne précédente.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-041",
+      "theme": "Lecture de rapports et pratique d'inspection",
+      "level": 2,
+      "q": "Sur un réservoir de stockage posé sur le sol, quelle zone est particulièrement critique à contrôler ?",
+      "img": "photo/storage-tanks.jpg",
+      "imgAlt": "Photo de réservoirs de stockage cylindriques",
+      "choices": [
+        "Le toit uniquement",
+        "La main courante de l'escalier d'accès",
+        "Les marches de l'escalier extérieur seulement",
+        "Le fond et la jonction fond-virole (eau stagnante, côté sol)"
+      ],
+      "answer": 3,
+      "explain": "Le fond subit la corrosion côté sol et côté produit, avec eau stagnante. La jonction fond-virole concentre les contraintes. Ces zones sont critiques à l'inspection.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-042",
+      "theme": "Lecture de rapports et pratique d'inspection",
+      "level": 3,
+      "q": "Trois mesures voisines donnent 8,1 mm, 7,4 mm puis 8,0 mm. Que faire ?",
+      "img": "svg/pressure-vessel-psv.svg",
+      "imgAlt": "Appareil à pression avec grille de points de mesure d'épaisseur",
+      "choices": [
+        "Conserver 8,0 mm comme valeur de référence de la campagne",
+        "Chercher une perte locale : cartographier autour du point bas avant de conclure",
+        "Calculer la moyenne de 7,8 mm et la consigner au rapport",
+        "Supprimer la valeur de 7,4 mm comme valeur aberrante"
+      ],
+      "answer": 1,
+      "explain": "Une valeur plus faible entre deux valeurs plus fortes peut traduire une piqûre ou une perte locale. On cartographie avant de conclure, et on ne retire jamais une valeur sans justification.",
+      "seconds": 65,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-043",
+      "theme": "Lecture de rapports et pratique d'inspection",
+      "level": 1,
+      "q": "Un échafaudage d'accès au point à inspecter n'est pas homologué. Que fait l'inspecteur ?",
+      "choices": [
+        "Il monte prudemment avec un harnais",
+        "Il fait le travail depuis le sol à l'estimation",
+        "Il ne monte pas et demande la mise en conformité avant l'inspection",
+        "Il inspecte très rapidement pour limiter le risque"
+      ],
+      "answer": 2,
+      "explain": "L'accès sécurisé est un préalable. Monter sur un échafaudage non homologué expose à une chute, même avec harnais si l'ancrage n'est pas prévu.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "insp-corrosion-end-044",
+      "theme": "Lecture de rapports et pratique d'inspection",
+      "level": 3,
+      "q": "Le planning d'arrêt est serré : on vous demande de réduire le nombre de points de mesure sur une ligne à fort risque. Que faites-vous ?",
+      "choices": [
+        "Maintenir le plan et signaler le risque : toute réduction exige une réévaluation validée",
+        "Réduire comme demandé pour tenir le planning de l'arrêt",
+        "Mesurer seulement les points faciles d'accès et noter le reste",
+        "Reporter les points restants sans en informer personne"
+      ],
+      "answer": 0,
+      "explain": "Le plan d'inspection d'une ligne à fort risque ne se réduit pas sous la pression du planning. Toute modification se réévalue et se valide par l'ingénieur d'intégrité.",
+      "seconds": 55,
+      "status": "draft"
+    }
+  ]
+}

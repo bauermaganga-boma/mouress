@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ti">
+<title id="ti">Démarrage direct d'un moteur triphasé : circuit de puissance (sectionneur, fusibles, contacteur KM1, relais thermique F1) et circuit de commande (arrêt, marche, auto-maintien)</title>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.t{font-size:20px;font-weight:700}.b{font-weight:700}.m{text-anchor:middle}.e{text-anchor:end}
+.s{stroke:#061F44;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+</style>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text class="t m" x="400" y="34">Démarrage direct d'un moteur asynchrone triphasé</text>
+<text class="b" x="30" y="56">Circuit de puissance</text>
+<text class="b" x="500" y="56">Circuit de commande (230 V)</text>
+<line x1="395" y1="64" x2="395" y2="470" stroke="#E8EAEE" stroke-width="3" stroke-dasharray="6 6"/>
+
+<!-- puissance : phases x=130,160,190 -->
+<text class="m b" x="130" y="82">L1</text><text class="m b" x="160" y="82">L2</text><text class="m b" x="190" y="82">L3</text>
+<!-- fils -->
+<g class="s">
+<line x1="130" y1="90" x2="130" y2="100"/><line x1="160" y1="90" x2="160" y2="100"/><line x1="190" y1="90" x2="190" y2="100"/>
+<!-- sectionneur Q1 : blades -->
+<line x1="130" y1="125" x2="139" y2="103"/><line x1="160" y1="125" x2="169" y2="103"/><line x1="190" y1="125" x2="199" y2="103"/>
+<line x1="130" y1="125" x2="130" y2="140"/><line x1="160" y1="125" x2="160" y2="140"/><line x1="190" y1="125" x2="190" y2="140"/>
+<line x1="135" y1="114" x2="195" y2="114" stroke="#F28C28" stroke-dasharray="4 3"/>
+<!-- fusibles -->
+<rect x="124" y="140" width="12" height="28" fill="#DCE6F5"/><rect x="154" y="140" width="12" height="28" fill="#DCE6F5"/><rect x="184" y="140" width="12" height="28" fill="#DCE6F5"/>
+<line x1="130" y1="168" x2="130" y2="200"/><line x1="160" y1="168" x2="160" y2="200"/><line x1="190" y1="168" x2="190" y2="200"/>
+<!-- contacteur KM1 -->
+<line x1="130" y1="226" x2="139" y2="203"/><line x1="160" y1="226" x2="169" y2="203"/><line x1="190" y1="226" x2="199" y2="203"/>
+<line x1="135" y1="215" x2="195" y2="215" stroke="#F28C28" stroke-dasharray="4 3"/>
+<line x1="130" y1="226" x2="130" y2="258"/><line x1="160" y1="226" x2="160" y2="258"/><line x1="190" y1="226" x2="190" y2="258"/>
+<!-- relais thermique F1 -->
+<rect x="123" y="258" width="14" height="30" fill="#DCE6F5"/><rect x="153" y="258" width="14" height="30" fill="#DCE6F5"/><rect x="183" y="258" width="14" height="30" fill="#DCE6F5"/>
+<line x1="130" y1="288" x2="130" y2="358"/><line x1="160" y1="288" x2="160" y2="346"/><line x1="190" y1="288" x2="190" y2="358"/>
+<!-- moteur -->
+<circle cx="160" cy="388" r="42" fill="#DCE6F5"/>
+</g>
+<text class="m b" x="160" y="386" style="font-size:22px">M</text>
+<text class="m" x="160" y="408">3 ~</text>
+<text class="m" x="160" y="450">Moteur asynchrone triphasé</text>
+
+<text class="b" x="225" y="108">Q1</text><text x="255" y="108">Sectionneur</text>
+<text class="b" x="225" y="152">F3</text><text x="255" y="152">Fusibles</text><text x="255" y="170">(court-circuit)</text>
+<text class="b" x="225" y="212">KM1</text><text x="262" y="212">Contacteur</text><text x="262" y="230">(pôles de puissance)</text>
+<text class="b" x="225" y="278">F1</text><text x="255" y="272">Relais thermique</text><text x="255" y="290">(protection surcharge)</text>
+
+<!-- commande -->
+<text class="b" x="470" y="72">L1</text>
+<g class="s">
+<line x1="560" y1="80" x2="560" y2="94"/>
+<line x1="470" y1="80" x2="600" y2="80"/>
+<!-- F2 fusible -->
+<rect x="552" y="94" width="16" height="30" fill="#DCE6F5"/>
+<line x1="560" y1="124" x2="560" y2="140"/>
+<!-- F1 contact NC 95-96 -->
+<line x1="560" y1="140" x2="560" y2="150"/><line x1="560" y1="178" x2="568" y2="153"/><line x1="553" y1="153" x2="564" y2="153"/><line x1="560" y1="178" x2="560" y2="198"/>
+<!-- S1 arrêt NC -->
+<line x1="560" y1="198" x2="560" y2="208"/><line x1="560" y1="236" x2="568" y2="211"/><line x1="553" y1="211" x2="564" y2="211"/><line x1="560" y1="236" x2="560" y2="252"/>
+<!-- branche parallèle -->
+<line x1="560" y1="252" x2="660" y2="252"/>
+<line x1="560" y1="252" x2="560" y2="262"/><line x1="560" y1="290" x2="568" y2="265"/><line x1="560" y1="290" x2="560" y2="308"/>
+<line x1="660" y1="252" x2="660" y2="262"/><line x1="660" y1="290" x2="668" y2="265"/><line x1="660" y1="290" x2="660" y2="308"/>
+<line x1="560" y1="308" x2="660" y2="308"/>
+<line x1="560" y1="308" x2="560" y2="322"/>
+<!-- bobine -->
+<rect x="546" y="322" width="28" height="38" fill="#DCE6F5"/>
+<line x1="560" y1="360" x2="560" y2="386"/>
+<line x1="470" y1="386" x2="600" y2="386"/>
+</g>
+<text class="b" x="470" y="404">N</text>
+<!-- poussoirs : barre d'actionnement -->
+<line x1="540" y1="276" x2="552" y2="276" stroke="#061F44" stroke-width="2"/>
+<text class="e b" x="534" y="274">S2</text><text class="e" x="534" y="291">Marche (NO)</text>
+<text class="b" x="685" y="276">KM1</text><text x="685" y="293">13-14 (NO)</text><text x="685" y="310">auto-maintien</text>
+<text class="b" x="585" y="115">F2</text><text x="610" y="115">Fusible</text>
+<text class="b" x="585" y="170">F1</text><text x="610" y="164">Contact 95-96</text><text x="610" y="182">du relais thermique</text>
+<text class="b" x="585" y="228">S1</text><text x="610" y="228">Arrêt (NC)</text>
+<text class="b" x="585" y="336">KM1</text><text x="620" y="336">Bobine</text><text x="620" y="354">A1 - A2</text>
+
+<text x="30" y="470">NO : ouvert au repos · NC : fermé au repos</text>
+<text x="30" y="490">Appui sur S2 : la bobine KM1 s'enclenche et se maintient par son contact 13-14.</text>
+</svg>

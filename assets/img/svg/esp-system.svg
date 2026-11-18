@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Système ESP : électropompe immergée avec équipements de surface (transformateur, variateur, boîte de jonction) et de fond (pompe, admission, protecteur, moteur, capteur)</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Système ESP – électropompe immergée</text>
+
+<rect x="0" y="120" width="800" height="380" fill="#E8EAEE"/>
+<line x1="0" y1="120" x2="800" y2="120" class="s"/>
+<text x="20" y="146">Sous-sol</text>
+
+<!-- équipements de surface -->
+<text x="70" y="54" class="c">Transformateur</text>
+<rect x="30" y="62" width="80" height="58" class="bl"/>
+<text x="70" y="96" class="c">Transfo.</text>
+<rect x="150" y="62" width="100" height="58" class="bl"/>
+<text x="200" y="88" class="c b">Variateur</text>
+<text x="200" y="106" class="c">(VSD)</text>
+<text x="320" y="74" class="c">Boîte de jonction</text>
+<rect x="290" y="82" width="60" height="38" class="gr"/>
+<path d="M110,100H150M250,100H290M350,100H430" class="or"/>
+
+<!-- tête de puits -->
+<rect x="440" y="96" width="60" height="24" class="gr"/>
+<text x="470" y="88" class="c">Tête de puits</text>
+<line x1="500" y1="108" x2="640" y2="108" class="or" marker-end="url(#ao)"/>
+<text x="570" y="98" class="c">Fluide produit</text>
+<text x="650" y="113">Vers séparateur</text>
+
+<!-- cuvelage -->
+<rect x="395" y="120" width="150" height="370" fill="#FCFBF8"/>
+<path d="M395,120V358M395,396V490M545,120V490" fill="none" stroke="#061F44" stroke-width="3.5"/>
+<path d="M383,368H395M383,386H395" class="or"/>
+<text x="250" y="354">Fluide du réservoir</text>
+<line x1="250" y1="368" x2="380" y2="368" class="or" marker-end="url(#ao)"/>
+<line x1="250" y1="386" x2="380" y2="386" class="or" marker-end="url(#ao)"/>
+
+<!-- câble de puissance et tubing -->
+<path d="M430,100V425H445" class="or"/>
+<rect x="455" y="100" width="30" height="190" class="bl"/>
+<line x1="470" y1="285" x2="470" y2="128" class="or" marker-end="url(#ao)"/>
+<text x="385" y="230" class="e">Câble de</text>
+<text x="385" y="248" class="e">puissance</text>
+<line x1="390" y1="236" x2="426" y2="236" class="ld"/>
+
+<!-- équipements de fond -->
+<rect x="445" y="290" width="50" height="70" class="bl"/>
+<path d="M445,305H495M445,320H495M445,335H495M445,350H495" class="ld"/>
+<rect x="450" y="360" width="40" height="30" class="gr"/>
+<path d="M460,366V384M470,366V384M480,366V384" class="ld"/>
+<rect x="450" y="390" width="40" height="30" class="gr"/>
+<rect x="445" y="420" width="50" height="50" class="bl"/>
+<path d="M445,435H495M445,450H495" class="ld"/>
+<rect x="455" y="470" width="30" height="16" class="gr"/>
+
+<!-- libellés à droite -->
+<g class="ld"><path d="M485,200H560M545,160H560M495,325H560M490,375H560M490,405H560M495,445H560M485,478H560"/></g>
+<text x="565" y="165">Cuvelage (casing)</text>
+<text x="565" y="205">Colonne de production (tubing)</text>
+<text x="565" y="330" class="b">Pompe centrifuge multi-étages</text>
+<text x="565" y="380">Admission / séparateur de gaz</text>
+<text x="565" y="410">Protecteur (étanchéité)</text>
+<text x="565" y="450">Moteur électrique triphasé</text>
+<text x="565" y="483">Capteur de fond (P, T)</text>
+</svg>

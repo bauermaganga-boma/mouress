@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Bloc d'obturation de puits (BOP stack) : bell nipple, obturateur annulaire, mâchoires aveugles cisaillantes, mâchoires à tiges supérieures, spool avec ligne de duse et ligne de pompage, mâchoires à tiges inférieures, tête de tubage</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+<g id="vh"><rect x="-22" y="-18" width="44" height="36" class="gr"/><path d="M-17,-13V13L0,0ZM17,-13V13L0,0Z" class="wh"/></g>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Bloc d'obturation de puits (BOP stack)</text>
+
+<!-- lignes latérales -->
+<path d="M40,288H250M350,288H700" fill="none" stroke="#061F44" stroke-width="12"/>
+<path d="M40,288H250M350,288H700" fill="none" stroke="#E8EAEE" stroke-width="7"/>
+<path d="M44,288H246" class="or" style="stroke-width:3" marker-end="url(#ao)"/>
+<path d="M356,288H704" class="or" style="stroke-width:3" marker-end="url(#ao)"/>
+<use href="#vh" x="170" y="288"/>
+<use href="#vh" x="460" y="288"/>
+<use href="#vh" x="520" y="288"/>
+
+<!-- colonne -->
+<rect x="250" y="100" width="100" height="310" class="gr"/>
+<rect x="265" y="70" width="70" height="30" class="gr"/>
+<!-- annulaire -->
+<rect x="235" y="100" width="130" height="55" rx="16" class="bl"/>
+<!-- BSR -->
+<rect x="225" y="160" width="150" height="45" class="gr"/>
+<rect x="195" y="170" width="30" height="25" class="bl"/><rect x="375" y="170" width="30" height="25" class="bl"/>
+<!-- pipe rams supérieures -->
+<rect x="225" y="210" width="150" height="45" class="gr"/>
+<rect x="195" y="220" width="30" height="25" class="bl"/><rect x="375" y="220" width="30" height="25" class="bl"/>
+<!-- spool -->
+<rect x="250" y="260" width="100" height="55" class="gr"/>
+<!-- pipe rams inférieures -->
+<rect x="225" y="320" width="150" height="45" class="gr"/>
+<rect x="195" y="330" width="30" height="25" class="bl"/><rect x="375" y="330" width="30" height="25" class="bl"/>
+<!-- tête de tubage -->
+<rect x="250" y="370" width="100" height="40" class="gr"/>
+<!-- alésage -->
+<rect x="285" y="100" width="30" height="310" fill="#FCFBF8"/>
+<path d="M285,100V410M315,100V410" class="ld"/>
+<!-- éléments de fermeture -->
+<polygon points="270,112 330,112 322,143 278,143" class="of"/>
+<rect x="262" y="172" width="36" height="22" class="of"/><rect x="302" y="172" width="36" height="22" class="of"/>
+<rect x="262" y="222" width="24" height="22" class="of"/><rect x="314" y="222" width="24" height="22" class="of"/>
+<rect x="262" y="332" width="24" height="22" class="of"/><rect x="314" y="332" width="24" height="22" class="of"/>
+<!-- cuvelage et pression du puits -->
+<path d="M270,410V490M330,410V490" stroke="#061F44" stroke-width="3.5" fill="none"/>
+<line x1="300" y1="486" x2="300" y2="418" class="or" marker-end="url(#ao)"/>
+<text x="345" y="480">Pression du puits</text>
+
+<!-- libellés droite -->
+<g class="ld"><path d="M368,128H411M405,183H411M405,233H411M350,390H411"/></g>
+<text x="345" y="90">Bell nipple</text>
+<text x="415" y="133" class="b">Obturateur annulaire</text>
+<text x="415" y="178">Mâchoires aveugles</text>
+<text x="415" y="194">cisaillantes (BSR)</text>
+<text x="415" y="228">Mâchoires à tiges</text>
+<text x="415" y="244">supérieures (pipe rams)</text>
+<text x="420" y="264">Ligne de duse (choke line)</text>
+<text x="490" y="324" class="c">Vannes HCR</text>
+<text x="560" y="324">Vers manifold de duses</text>
+<text x="415" y="342">Mâchoires à tiges</text>
+<text x="415" y="358">inférieures (pipe rams)</text>
+<text x="415" y="386">Tête de tubage</text>
+<text x="415" y="402">(casing head)</text>
+
+<!-- libellés gauche -->
+<text x="20" y="252">Ligne de pompage</text>
+<text x="20" y="268">(kill line)</text>
+<text x="20" y="316">Depuis la pompe</text>
+<text x="170" y="324" class="c">Vanne HCR</text>
+</svg>

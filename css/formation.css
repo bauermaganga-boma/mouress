@@ -1,0 +1,55 @@
+/* Catalogue, fiche profil, cours */
+.h1-md { font-size: var(--fs-2xl); }
+.filters { display: grid; gap: var(--sp-2); margin-bottom: var(--sp-4); }
+.filters .field { margin-bottom: var(--sp-2); }
+.filter-group { display: grid; gap: .4rem; margin-bottom: var(--sp-2); }
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.chip { font: inherit; font-size: var(--fs-sm); font-weight: 600; min-height: 40px; padding: .3rem 1rem; border-radius: var(--r-pill); border: 1.5px solid var(--c-line-strong); background: #fff; color: var(--c-navy); cursor: pointer; }
+.chip:hover { border-color: var(--c-navy); }
+.chip[aria-pressed="true"] { background: var(--c-navy); color: #fff; border-color: var(--c-navy); }
+.pcard { display: flex; flex-direction: column; gap: var(--sp-2); height: 100%; }
+.pcard h3 { font-size: var(--fs-lg); margin: 0; }
+.pcard p { margin: 0; flex: 1; }
+.pcard-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-1); }
+.pcard-foot { display: flex; justify-content: space-between; gap: .5rem; align-items: center; flex-wrap: wrap; margin-top: var(--sp-2); }
+.pcard-ico { width: 42px; height: 42px; border-radius: 12px; background: var(--c-surface-2); color: var(--c-orange-dark); display: grid; place-items: center; flex: none; }
+.pcard-ico.big { width: 64px; height: 64px; border-radius: 18px; background: var(--c-navy); color: var(--c-orange-light); }
+
+.profile-head { display: flex; gap: var(--sp-4); align-items: flex-start; margin-bottom: var(--sp-5); }
+.profile-head h1 { margin-top: var(--sp-2); }
+.stats { margin-bottom: var(--sp-6); }
+.stat { display: grid; gap: .2rem; padding: var(--sp-4) var(--sp-5); }
+.stat-n { font-size: 2rem; font-weight: 800; color: var(--c-navy); line-height: 1.1; }
+.block { margin-top: var(--sp-7); }
+.mod-list { list-style: none; margin: var(--sp-4) 0 0; padding: 0; display: grid; gap: var(--sp-3); }
+.mod { display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-3) var(--sp-4); border-radius: var(--r-md); }
+.mod-n { width: 40px; height: 40px; border-radius: 50%; background: var(--c-surface-2); color: var(--c-navy); display: grid; place-items: center; font-weight: 800; flex: none; }
+.mod-n.done { background: var(--c-ok); color: #fff; }
+.mod-t { display: grid; flex: 1; }
+.theme { display: grid; gap: .4rem; }
+.theme h4 { margin: 0; }
+.exam-card { display: flex; gap: var(--sp-5); align-items: center; justify-content: space-between; flex-wrap: wrap; background: var(--c-surface-2); }
+.exam-card > div { flex: 1 1 380px; } .exam-card p { margin: 0; }
+.coming-soon { text-align: center; padding: var(--sp-7) var(--sp-5); }
+.coming-soon .btn-row { justify-content: center; }
+.coming-ico { width: 64px; height: 64px; border-radius: 50%; background: var(--c-warn-bg); color: var(--c-warn); display: grid; place-items: center; margin: 0 auto var(--sp-3); }
+
+/* Lecteur de cours */
+.lesson-wrap { max-width: 820px; }
+.lesson-progress { margin-bottom: var(--sp-4); }
+.lesson { padding: clamp(1.25rem, 4vw, 2.5rem); }
+.prose { font-size: var(--fs-lg); line-height: 1.75; }
+.prose p { margin-bottom: 1.1em; }
+.prose ul { padding-left: 1.3rem; margin: 0 0 1.1em; display: grid; gap: .35rem; }
+.prose strong { color: var(--c-navy); }
+.keypoints { margin-top: var(--sp-6); padding: var(--sp-5); background: var(--c-warn-bg); border-radius: var(--r-md); border-left: 6px solid var(--c-orange); }
+.kp-title { display: flex; gap: .5rem; align-items: center; font-size: var(--fs-lg); margin-bottom: var(--sp-3); color: var(--c-navy); }
+.keypoints ul { margin: 0; padding-left: 1.2rem; display: grid; gap: .4rem; }
+.lesson-nav { display: flex; justify-content: space-between; align-items: center; gap: var(--sp-3); margin-top: var(--sp-5); flex-wrap: wrap; }
+
+/* Figures (cours, questions) */
+.qfig { margin: 0 0 var(--sp-4); }
+.qfig.missing { display: none; }
+.qfig-btn { position: relative; display: block; width: 100%; padding: 0; border: 1px solid var(--c-line); border-radius: var(--r-md); background: #FCFBF8; cursor: zoom-in; overflow: hidden; }
+.qfig-btn img { display: block; width: 100%; height: auto; max-height: 360px; object-fit: contain; }
+.qfig-zoom { position: absolute; right: .6rem; bottom: .6rem; display: inline-flex; align-items: center; gap: .3rem; background: rgba(6, 31, 68, .88); color: #fff; font-size: var(--fs-xs); font-weight: 600; padding: .25rem .7rem; border-radius: 99px; }
