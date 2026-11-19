@@ -10,7 +10,7 @@ const SERVICES = [
   { ico: 'users', t: 'Placement de personnel', d: 'Ouvriers, techniciens, superviseurs, ingénieurs, management : qualifiés ou non, évalués avant d’être placés.' },
   { ico: 'flag', t: 'Supervision de travaux', d: 'Préparation (planning, méthodes, coordination), suivi journalier, reporting, contrôle qualité et gestion des effectifs.' },
   { ico: 'shield', t: 'HSE', d: 'Personnel formé aux normes HSE, supervision de chantier, analyses de risques, permis de travail, audits et inspections.' },
-  { ico: 'chart', t: 'Engineering et études', d: 'PID, plans iso, 3D, notes de calcul, plans de génie civil : coordination des études et support engineering.' },
+  { ico: 'chart', t: 'Engineering et études', d: 'PID, plans iso, 3D, notes de calcul, plans : coordination des études et support engineering.' },
   { ico: 'check', t: 'Mise en service (commissioning)', d: 'Profils expérimentés, procédures de test, SAT, tests électriques, cause & effet, PV et suivi documentaire.' },
   { ico: 'wrench', t: 'Assistance technique et exploitation', d: 'Mise à disposition de personnel pour l’exploitation continue ; réglage, dépannage et maintenance ponctuels.' },
 ];
@@ -29,7 +29,7 @@ const SECTEURS = [
   { t: 'Mines', d: 'Exploitation, traitement du minerai, engins.', img: 'open-pit-mine.jpg', alt: 'Mine à ciel ouvert' },
   { t: 'Énergie', d: 'Centrales thermiques, valorisation d’énergie, postes électriques.', img: 'electrical-substation.jpg', alt: 'Poste électrique' },
   { t: 'Logistique & Port', d: 'Manutention portuaire, transit et douane, entreposage, supply chain.', img: 'container-port.jpg', alt: 'Terminal à conteneurs' },
-  { t: 'Infrastructures', d: 'Génie civil, structures métalliques, levage.', img: 'crane-lifting.jpg', alt: 'Grue de levage' },
+  { t: 'Infrastructures', d: 'Structures métalliques, levage, montage.', img: 'crane-lifting.jpg', alt: 'Grue de levage' },
 ];
 
 const PHASES = [
@@ -40,7 +40,6 @@ const PHASES = [
 
 const COMPETENCES = [
   ['Études & ingénierie', 'PID, plans iso, 3D, notes de calcul, plans, AutoCAD'],
-  ['Génie civil', 'Fondations, terrassement, béton armé, plateformes, micropieux, longrines'],
   ['Mécanique / piping', 'Soudure, tests de pression, CND, montage de structures métalliques'],
   ['Électricité', 'BT/HT, armoires, tirage de câbles, essais, normes'],
   ['Instrumentation', 'Capteurs, calibration, tests de boucle, 4-20 mA'],
