@@ -59,6 +59,14 @@
     {
       "id": "mgr",
       "name": "Chef de site / Management"
+    },
+    {
+      "id": "cadre",
+      "name": "Cadre (Bac +5)"
+    },
+    {
+      "id": "assist",
+      "name": "Agent / Assistant"
     }
   ],
   "profiles": [
@@ -516,7 +524,7 @@
     {
       "id": "rh",
       "sector": "support",
-      "level": "ing",
+      "level": "cadre",
       "name": "Gestionnaire RH & paie",
       "desc": "Droit du travail, recrutement, paie, cotisations sociales, formation, relations sociales.",
       "domains": [
@@ -532,7 +540,7 @@
     {
       "id": "compta",
       "sector": "support",
-      "level": "ing",
+      "level": "cadre",
       "name": "Comptable / Contrôleur de gestion",
       "desc": "SYSCOHADA, écritures, clôture, trésorerie, budget, analyse des coûts.",
       "domains": [
@@ -548,7 +556,7 @@
     {
       "id": "fiscalite",
       "sector": "support",
-      "level": "ing",
+      "level": "cadre",
       "name": "Fiscaliste / Comptable fiscaliste",
       "desc": "TVA, impôt sur les sociétés, retenues à la source, déclarations, contrôle et contentieux fiscal, fiscalité des entreprises pétrolières et minières.",
       "domains": [
@@ -564,7 +572,7 @@
     {
       "id": "logistique",
       "sector": "support",
-      "level": "ing",
+      "level": "cadre",
       "name": "Logisticien / Acheteur / Supply chain",
       "desc": "Achats, Incoterms, stocks, transport, douane, magasin, appels d'offres.",
       "domains": [
@@ -580,7 +588,7 @@
     {
       "id": "juriste",
       "sector": "support",
-      "level": "ing",
+      "level": "cadre",
       "name": "Juriste d'entreprise",
       "desc": "Droit OHADA, contrats, sociétés, droit du travail, conformité, contrats pétroliers et miniers.",
       "domains": [
@@ -684,7 +692,7 @@
     {
       "id": "fiscaliste-auditeur",
       "sector": "support",
-      "level": "ing",
+      "level": "cadre",
       "name": "Fiscaliste / Auditeur (fiscalité et audit)",
       "desc": "IS, TVA, TPS/CSS, retenues, déclarations, contrôle fiscal, revue des comptes, procédures d’audit et rapport.",
       "domains": [
@@ -700,7 +708,7 @@
     {
       "id": "auditeur-interne",
       "sector": "support",
-      "level": "ing",
+      "level": "cadre",
       "name": "Auditeur interne / contrôle interne",
       "desc": "Cartographie des risques, contrôle interne, plan d’audit, tests, constats, recommandations, suivi.",
       "domains": [
@@ -716,7 +724,7 @@
     {
       "id": "paie-sage",
       "sector": "support",
-      "level": "tech",
+      "level": "assist",
       "name": "Gestionnaire de paie et administration du personnel",
       "desc": "Bulletin de paie, cotisations, DAS, contrats de travail, période d’essai, congés, préavis, logiciel de paie.",
       "domains": [
@@ -732,7 +740,7 @@
     {
       "id": "tresorier-financement",
       "sector": "support",
-      "level": "ing",
+      "level": "cadre",
       "name": "Trésorier / Chargé de financement",
       "desc": "Trésorerie, plan de trésorerie, modes de financement, crédit bancaire, relations banques, risques de change.",
       "domains": [
@@ -748,9 +756,89 @@
     {
       "id": "gestionnaire-stocks",
       "sector": "support",
-      "level": "tech",
+      "level": "assist",
       "name": "Gestionnaire de stocks et inventaire",
       "desc": "Gestion des stocks, inventaire, valorisation, rotation, écarts, magasin, approvisionnement.",
+      "domains": [
+        "petrole-gaz-amont",
+        "petrole-gaz-aval",
+        "mines",
+        "energie",
+        "industrie",
+        "logistique-port"
+      ],
+      "branch": "support"
+    },
+    {
+      "id": "juriste-contrats",
+      "sector": "support",
+      "level": "cadre",
+      "name": "Juriste contrats et achats",
+      "desc": "Rédaction et négociation des contrats, clauses clés, responsabilité, marchés et sous-traitance, gestion du contentieux contractuel.",
+      "domains": [
+        "petrole-gaz-amont",
+        "petrole-gaz-aval",
+        "mines",
+        "energie",
+        "industrie",
+        "logistique-port"
+      ],
+      "branch": "support"
+    },
+    {
+      "id": "juriste-social",
+      "sector": "support",
+      "level": "cadre",
+      "name": "Juriste droit social",
+      "desc": "Relations individuelles et collectives de travail, procédures disciplinaires, ruptures, contrôle de l’inspection du travail, contentieux prud’homal.",
+      "domains": [
+        "petrole-gaz-amont",
+        "petrole-gaz-aval",
+        "mines",
+        "energie",
+        "industrie",
+        "logistique-port"
+      ],
+      "branch": "support"
+    },
+    {
+      "id": "juriste-conformite",
+      "sector": "support",
+      "level": "cadre",
+      "name": "Juriste conformité et éthique",
+      "desc": "Conformité, anticorruption, sanctions, protection des données, devoir de vigilance, programme de conformité, enquêtes internes.",
+      "domains": [
+        "petrole-gaz-amont",
+        "petrole-gaz-aval",
+        "mines",
+        "energie",
+        "industrie",
+        "logistique-port"
+      ],
+      "branch": "support"
+    },
+    {
+      "id": "juriste-petrole-mines",
+      "sector": "support",
+      "level": "cadre",
+      "name": "Juriste droit pétrolier, minier et énergie",
+      "desc": "Titres et permis, conventions d’établissement, contrats de partage et d’association, contenu local, fiscalité sectorielle, environnement.",
+      "domains": [
+        "petrole-gaz-amont",
+        "petrole-gaz-aval",
+        "mines",
+        "energie",
+        "industrie",
+        "logistique-port"
+      ],
+      "branch": "support"
+    },
+    {
+      "id": "assistant-juridique",
+      "sector": "support",
+      "level": "assist",
+      "name": "Assistant juridique / gestionnaire de contrats",
+      "desc": "Suivi des contrats et échéances, archivage, formalités, registres, courriers, veille juridique, appui au juriste.",
       "domains": [
         "petrole-gaz-amont",
         "petrole-gaz-aval",

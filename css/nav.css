@@ -56,3 +56,8 @@
 
 @media (max-width: 1399px) { .user-chip { display: none !important; } }
 @media (max-width: 1399px) { .btn-logout .lbl { display: none; } .btn-logout { padding-inline: .7rem; } }
+/* En-tête plus large que le contenu : le menu ne se chevauche jamais, quelle que soit la largeur d'écran */
+.site-header .container { max-width: 1360px; }
+.user-chip { white-space: nowrap; }
+@media (max-width: 1599px) { .user-chip { display: none !important; } }
+.nav-main a { flex: none; }
