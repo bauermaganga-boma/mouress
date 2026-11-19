@@ -32,7 +32,7 @@ export default async function render(ctx, root) {
     <div class="lesson-progress"><div class="split"><span class="small muted">Module ${i + 1} sur ${content.modules.length}</span><span class="small muted" id="done-count">${done()} terminé(s)</span></div>
       <div id="pbar">${bar(pct(done(), content.modules.length), 'ok')}</div></div>
     <article class="lesson card">
-      <p class="eyebrow dark">${esc(m.theme || 'Cours')} · ${esc(m.minutes || 8)} min de lecture</p>
+      <p class="theme-banner"><span class="theme-chip">Thème</span><strong>${esc(m.theme || 'Cours')}</strong><span class="xs muted">${esc(m.minutes || 8)} min de lecture</span></p>
       <h1 class="h1-md">${esc(m.title)}</h1>
       ${m.img ? figure(m.img, m.imgAlt, 'lesson-fig') : ''}
       <div class="prose">${mdLite(m.body)}</div>

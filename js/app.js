@@ -101,7 +101,7 @@ function renderShell() {
   document.getElementById('site-header').innerHTML = `<div class="container bar-inner">
     <a class="brand" href="${corp ? '#/' : '#/training'}" aria-label="${corp ? 'MOURESS — accueil' : 'MOURESS Training — accueil'}">${logo('clair')}</a>
     <nav class="nav-main" aria-label="Navigation principale">${NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${n.label}</a>`).join('')}</nav>
-    <div class="header-actions">${langSwitchHTML()}${corp ? `<a class="btn btn-primary btn-sm" href="#/training">${icon('award', 16)} MOURESS Training</a>` : `<a class="btn btn-light btn-sm back-site" href="#/">${icon('arrow', 16, 'flip')} <span>Site MOURESS</span></a>`}${corp ? '' : state.user
+    <div class="header-actions">${langSwitchHTML()}${corp ? `<a class="btn btn-primary btn-sm" href="#/training">${icon('award', 16)} MOURESS Training</a>` : `<a class="back-site back-ico" href="#/" aria-label="Retour" title="Retour">${icon('arrow', 18, 'flip')}</a>`}${corp ? '' : state.user
       ? `<span class="user-chip">${esc(state.user.name)}</span><button type="button" class="btn btn-light btn-sm btn-logout" data-logout aria-label="Déconnexion">${icon('login', 16)}<span class="lbl">Déconnexion</span></button>`
       : `<a class="btn btn-primary btn-sm btn-login" href="#/connexion">${icon('login', 16)} Connexion<span class="lbl-long">&nbsp;entreprise</span></a>`}</div></div>`;
   document.getElementById('tabbar').innerHTML = NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${icon(n.icon)}<span>${n.short || n.label}</span></a>`).join('');

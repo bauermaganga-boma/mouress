@@ -3,6 +3,15 @@
 // PATTERNS : [expression régulière ancrée sur le texte entier, remplacement avec $1 $2…] pour les textes à nombres, noms ou dates.
 // Les patterns les plus spécifiques sont placés avant les plus génériques ; les dates françaises (« 19 novembre 2026 ») sont converties en fin de liste.
 export const EXACT = {
+  "Retour": "Back",
+  "Thèmes": "Topics",
+  "S’entraîner sur ce thème": "Practise this topic",
+  "À commencer": "Not started",
+  "En cours": "In progress",
+  "Terminé": "Done",
+  "Thème": "Topic",
+  "cours": "lessons",
+  "questions": "questions",
   "Nom et prénom (facultatif)": "Full name (optional)",
   "Vous pouvez passer le test sans nom ni e-mail : l’attestation portera alors la mention « Candidat anonyme ».": "You can take the test without a name or e-mail: the certificate will then read “Anonymous candidate”.",
   "Saisissez votre nom complet (ou laissez vide).": "Enter your full name (or leave it blank).",
@@ -122,7 +131,7 @@ export const EXACT = {
   "thèmes, tirées au hasard, dans un ordre mélangé.": "themes, drawn at random, in a shuffled order.",
   "Chaque question est": "Each question is",
   "chronométrée": "timed",
-  "(1 min 30 par question, avec une pause de 5 secondes entre deux questions). Temps écoulé = question perdue.": "(1 min 30 per question, with a 5-second break between questions). Time elapsed = question lost.",
+  "(1 min 30 par question, avec une pause de 4 secondes entre deux questions). Temps écoulé = question perdue.": "(1 min 30 per question, with a 4-second break between questions). Time elapsed = question lost.",
   "Pas de retour arrière": "No going back",
   ": une réponse validée est définitive. Choisissez puis cliquez sur « Valider ».": ": a submitted answer is final. Choose, then click “Submit”.",
   "Si la page se recharge, l’examen reprend là où il était.": "If the page reloads, the exam resumes where it left off.",

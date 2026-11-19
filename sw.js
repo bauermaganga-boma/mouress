@@ -3,13 +3,13 @@
 // - JSON de contenu (data/*.json) et images (assets/img) : cache-first, remplis à la demande.
 // - Mise à jour propre : nouvelle version = nouveau nom de cache ; l'ancienne est supprimée à l'activation ;
 //   la nouvelle version attend (waiting) jusqu'à ce que l'utilisateur clique « Actualiser » (message SKIP_WAITING).
-const VERSION = 'mrs-v20';
+const VERSION = 'mrs-v21';
 const SHELL = `${VERSION}-shell`;
 const CONTENT = `${VERSION}-content`;
 
 const SHELL_FILES = [
   './', 'index.html', 'manifest.webmanifest', 'config.js',
-  'css/tokens.css', 'css/base.css', 'css/layout.css', 'css/landing.css', 'css/formation.css', 'css/funnel.css', 'css/team.css', 'css/quiz.css', 'css/rh.css', 'css/certificate.css', 'css/mobile.css', 'css/corporate.css', 'css/nav.css', 'css/lang.css', 'css/formations.css',
+  'css/tokens.css', 'css/base.css', 'css/layout.css', 'css/landing.css', 'css/formation.css', 'css/funnel.css', 'css/team.css', 'css/quiz.css', 'css/rh.css', 'css/certificate.css', 'css/mobile.css', 'css/corporate.css', 'css/nav.css', 'css/lang.css', 'css/compact.css', 'css/formations.css',
   'js/app.js', 'js/util.js', 'js/i18n.js', 'js/i18n-dict.js', 'js/ui.js', 'js/data.js', 'js/store.js', 'js/seed.js', 'js/quiz.js', 'js/qview.js', 'js/examrunner.js', 'js/payments.js', 'js/certificate.js', 'js/skills.js', 'js/pass.js',
   'js/views/landing.js', 'js/views/training.js', 'js/views/formation.js', 'js/views/profil.js', 'js/views/cours.js', 'js/views/entrainement.js', 'js/views/examen.js', 'js/views/resultat.js',
   'js/views/attestation.js', 'js/views/verifier.js', 'js/views/candidat.js', 'js/views/auth.js', 'js/views/rh.js', 'js/views/rh-invite.js', 'js/views/rh-recruit.js', 'js/views/rh-teams.js', 'js/views/rh-formations.js', 'js/formations-store.js', 'js/views/rh-dash.js', 'js/views/espace.js', 'js/views/notfound.js',

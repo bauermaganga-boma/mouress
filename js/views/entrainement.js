@@ -23,6 +23,7 @@ export default async function render(ctx, root) {
     root.innerHTML = `<div class="container-narrow page">
       <nav class="crumbs" aria-label="Fil d’Ariane">${pass ? `<a href="${esc(home)}">Mon Pass</a>` : `<a href="#/formation">Formation</a><span>›</span><a href="${esc(home)}">${esc(profile.name)}</a>`}<span>›</span><span>Entraînement</span></nav>
       <h1 class="h1-md">Entraînement</h1>
+      ${wanted ? `<p class="theme-banner"><span class="theme-chip">Thème</span><strong>${esc(wanted)}</strong></p>` : ''}
       <p class="muted">Réponse corrigée et expliquée immédiatement. Rien n’est noté : c’est l’endroit pour progresser.</p>
       <form class="card" id="setup" novalidate>
         <div class="field"><label for="s-theme">Thème</label><select id="s-theme">

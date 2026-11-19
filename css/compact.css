@@ -1,0 +1,78 @@
+/* Design resserré : boutons et cartes plus petits, thèmes lisibles. Chargé en dernier. */
+.btn { min-height: 42px; padding: .5rem 1.1rem; font-size: .9rem; }
+.btn-lg { min-height: 46px; padding: .6rem 1.4rem; font-size: .95rem; }
+.btn-md { min-height: 40px; padding: .45rem .95rem; font-size: .85rem; gap: .4rem; }
+.btn-sm { min-height: 36px; padding: .25rem .8rem; font-size: .8rem; }
+.btn svg { width: 16px; height: 16px; }
+.btn-lg svg { width: 18px; height: 18px; }
+.page-title { font-size: clamp(1.35rem, 1.1rem + 1vw, 1.9rem); }
+.pcard-ico.big { width: 48px; height: 48px; border-radius: 14px; }
+.profile-head { gap: var(--sp-3); margin-bottom: var(--sp-4); }
+.profile-head .muted { font-size: .9rem; margin: .25rem 0 0; }
+.card { padding: var(--sp-4); }
+
+/* Picto retour de l'en-tête */
+.back-ico { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--c-line-strong); background: #fff; color: var(--c-navy); flex: none; }
+.back-ico:hover { border-color: var(--c-navy); background: var(--c-surface-2); }
+
+/* Actions de la fiche profil */
+.actions-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: var(--sp-4); }
+.actions-row .btn { flex: 1 1 auto; }
+.actions-row .btn-primary { flex: 1 1 100%; }
+@media (min-width: 700px) { .actions-row .btn, .actions-row .btn-primary { flex: 0 0 auto; } }
+
+/* Bandeau de chiffres compact */
+.kpis { list-style: none; margin: 0 0 var(--sp-5); padding: .6rem .4rem; display: grid; grid-template-columns: repeat(4, 1fr); background: #fff; border: 1px solid var(--c-line); border-radius: var(--r-md); }
+.kpis li { display: grid; gap: .1rem; padding: .2rem .6rem; text-align: center; border-left: 1px solid var(--c-line); }
+.kpis li:first-child { border-left: 0; }
+.kpis strong { font-size: 1.15rem; line-height: 1.1; color: var(--c-navy); }
+.kpis span { font-size: .7rem; color: var(--c-muted); line-height: 1.2; }
+@media (max-width: 480px) { .kpis { grid-template-columns: repeat(2, 1fr); row-gap: .4rem; } .kpis li:nth-child(3) { border-left: 0; } }
+
+/* Thèmes : un bloc par thème, état visible (barre de couleur à gauche) */
+.theme-list { display: grid; gap: var(--sp-3); margin-top: var(--sp-3); }
+.theme-block { position: relative; background: #fff; border: 1px solid var(--c-line); border-left: 5px solid var(--c-line-strong); border-radius: var(--r-md); padding: .8rem .9rem; display: grid; gap: .55rem; }
+.theme-block.theme-going { border-left-color: var(--c-orange); }
+.theme-block.theme-done { border-left-color: var(--c-ok); background: #FBFEFC; }
+.theme-head { display: flex; align-items: center; gap: .65rem; }
+.theme-num { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--c-surface-2); color: var(--c-navy); font-weight: 800; font-size: .8rem; }
+.theme-going .theme-num { background: var(--c-orange); color: var(--c-navy); }
+.theme-done .theme-num { background: var(--c-ok); color: #fff; }
+.theme-title { min-width: 0; flex: 1; display: grid; }
+.theme-title h3 { margin: 0; font-size: .98rem; line-height: 1.25; overflow-wrap: anywhere; }
+.theme-state { flex: none; font-size: .68rem; font-weight: 700; padding: .15rem .55rem; border-radius: 999px; background: var(--c-surface-2); color: var(--c-muted); }
+.theme-going .theme-state { background: #FFE9C7; color: #7A4B00; }
+.theme-done .theme-state { background: var(--c-ok-bg); color: var(--c-ok); }
+.theme-lessons { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; }
+.theme-lessons a { display: flex; align-items: center; gap: .55rem; padding: .45rem .3rem; border-radius: 8px; text-decoration: none; color: var(--c-ink); font-size: .88rem; }
+.theme-lessons a:hover { background: var(--c-surface-2); }
+.les-dot { flex: none; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--c-line-strong); display: grid; place-items: center; color: #fff; }
+.les-dot.done { background: var(--c-ok); border-color: var(--c-ok); }
+.les-t { flex: 1; min-width: 0; }
+.theme-foot { display: flex; align-items: center; justify-content: space-between; gap: .6rem; flex-wrap: wrap; }
+.theme-block .bar { height: 6px; }
+
+/* Bandeau « Thème » dans les cours et l'entraînement */
+.theme-banner { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; margin: 0 0 .6rem; padding: .45rem .7rem; background: var(--c-info-bg); border-left: 4px solid var(--c-navy); border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+.theme-chip { font-size: .65rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: .12rem .5rem; border-radius: 999px; background: var(--c-navy); color: #fff; }
+.theme-banner strong { font-size: .95rem; color: var(--c-navy); }
+
+@media (max-width: 599px) {
+  .btn { min-height: 40px; font-size: .88rem; }
+  .btn-lg { min-height: 44px; }
+  .btn-row > .btn:not(.btn-sm):not(.btn-ghost) { flex: 0 1 auto; width: auto; }
+  .btn-row > .btn-lg:only-child, .exam-card > .btn { width: 100%; }
+  .card { padding: .85rem; }
+  .page { padding-block: var(--sp-3) var(--sp-6); }
+  h2 { font-size: 1.1rem; }
+  .block { margin-top: var(--sp-5); }
+  .lesson { padding: .9rem; }
+  .prose { font-size: 1rem; line-height: 1.65; }
+}
+@media (max-width: 599px) {
+  .profile-head { flex-direction: row; align-items: flex-start; gap: .65rem; }
+  .pcard-ico.big { width: 40px; height: 40px; border-radius: 12px; }
+  .profile-head .badge { font-size: .7rem; padding: .15rem .55rem; }
+  .profile-head .btn-row { gap: .3rem; }
+  .back-link { min-height: 38px; padding: .3rem .85rem .3rem .7rem; font-size: .85rem; }
+}
