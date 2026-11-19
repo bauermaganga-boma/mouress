@@ -56,3 +56,6 @@
 .cert-sample .certificate { box-shadow: var(--shadow-md); }
 .cert-sample .certificate::after { content: 'EXEMPLE'; position: absolute; inset: 0; display: grid; place-items: center; font-size: 11cqw; font-weight: 800; letter-spacing: .08em; color: rgba(6, 31, 68, .07); transform: rotate(-16deg); pointer-events: none; }
 @media print { .cert-sample { display: none; } }
+
+.cert-company { margin: .3cqw 0 0; font-size: 1.5cqw; color: var(--c-navy); }
+.cert-company strong { font-weight: 800; }

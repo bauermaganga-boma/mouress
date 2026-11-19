@@ -341,15 +341,24 @@ class LocalStore {
     const cert = {
       code, attemptId: attempt.id, name: attempt.candidate?.name || 'Candidat', email: attempt.candidate?.email || '',
       profileId: attempt.profileId, profileName: attempt.profileName || '', percent: attempt.percent, passMark: attempt.passMark,
-      date: attempt.finishedAt || Date.now(),
+      date: attempt.finishedAt || Date.now(), company: this._companyOfAttempt(attempt),
     };
     this.db.certificates.push(cert);
     this._save();
     return { ...cert };
   }
+  /** Entreprise pour le compte de laquelle le test a été passé (session RH), sinon ''. */
+  _companyOfAttempt(a) {
+    const s = a && a.sessionId ? this.db.sessions.find((x) => x.id === a.sessionId) : null;
+    const co = s ? this.db.companies.find((x) => x.id === s.companyId) : null;
+    return co ? co.name : '';
+  }
   async getCertificate(code) {
     const c = this.db.certificates.find((x) => x.code === String(code).trim().toUpperCase());
-    return c ? { ...c } : null;
+    if (!c) return null;
+    const out = { ...c };
+    if (out.company === undefined) { const a = this.db.attempts.find((x) => x.id === c.attemptId); out.company = this._companyOfAttempt(a); }
+    return out;
   }
   async listCertificatesByDevice() {
     const ids = new Set(this.db.attempts.filter((a) => a.deviceId === local.deviceId()).map((a) => a.id));

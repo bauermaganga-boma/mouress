@@ -33,6 +33,7 @@ export function certificateHTML(cert, profileName, sectorName = '', val = null) 
       <p class="cert-text">a réussi le test d’aptitude</p>
       <p class="cert-profile">${esc(profileName)}</p>
       ${sectorName ? `<p class="cert-sector">${esc(sectorName)}</p>` : ''}
+      ${cert.company ? `<p class="cert-company">pour le compte de l’entreprise <strong>${esc(cert.company)}</strong></p>` : ''}
       <div class="cert-meta">
         <div><span>Score obtenu</span><strong>${esc(cert.percent)} %</strong><small>seuil de réussite ${esc(cert.passMark)} %</small></div>
         <div><span>Délivrée le</span><strong>${esc(fmtDate(cert.date))}</strong><small>${val ? `Valable jusqu’au ${esc(fmtDate(val.until))}` : 'Libreville, Gabon'}</small></div>
@@ -49,7 +50,7 @@ export function certificateHTML(cert, profileName, sectorName = '', val = null) 
 
 /** Exemple d'attestation (aperçu repliable, filigrane « EXEMPLE ») : montre au candidat ce qu'il obtient en cas de réussite. */
 export function sampleCertificateHTML(profileName, sectorName = '', passMark = 70) {
-  const cert = { name: 'Prénom NOM', percent: 85, passMark, date: Date.now(), code: 'MRS-2026-EXEMPL' };
+  const cert = { name: 'Prénom NOM', percent: 85, passMark, date: Date.now(), code: 'MRS-2026-EXEMPL', company: 'XXX' };
   return `<details class="cert-sample"><summary class="btn btn-light btn-sm">Voir un exemple d’attestation</summary>
     <p class="xs muted" style="margin:.6rem 0 0">Exemple fictif : l’attestation réelle porte votre nom, votre score, une date et un code vérifiable (QR code).</p>
     <div class="cert-stage">${certificateHTML(cert, profileName, sectorName, null)}</div></details>`;
