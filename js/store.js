@@ -22,6 +22,7 @@
 
 import { CONFIG } from '../config.js';
 import { uid, makeToken, certCode, sha256 } from './util.js';
+import { formationMethods } from './formations-store.js';
 import { buildSeed } from './seed.js';
 
 const KEY = 'mrs.db.v1';
@@ -366,6 +367,7 @@ export async function initStore() {
   } else {
     store = new LocalStore();
   }
+  Object.assign(store, formationMethods);
   await store.init();
   return store;
 }

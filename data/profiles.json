@@ -34,6 +34,13 @@
       "short": "Support",
       "icon": "briefcase",
       "desc": "RH, comptabilité, logistique, juridique."
+    },
+    {
+      "id": "port",
+      "name": "Logistique & Port",
+      "short": "Port",
+      "icon": "ship",
+      "desc": "Manutention portuaire, transit, entreposage, supply chain."
     }
   ],
   "levels": [
@@ -517,7 +524,8 @@
         "petrole-gaz-aval",
         "mines",
         "energie",
-        "industrie"
+        "industrie",
+        "logistique-port"
       ],
       "branch": "support"
     },
@@ -532,7 +540,8 @@
         "petrole-gaz-aval",
         "mines",
         "energie",
-        "industrie"
+        "industrie",
+        "logistique-port"
       ],
       "branch": "support"
     },
@@ -547,7 +556,8 @@
         "petrole-gaz-aval",
         "mines",
         "energie",
-        "industrie"
+        "industrie",
+        "logistique-port"
       ],
       "branch": "support"
     },
@@ -562,7 +572,8 @@
         "petrole-gaz-aval",
         "mines",
         "energie",
-        "industrie"
+        "industrie",
+        "logistique-port"
       ],
       "branch": "support"
     },
@@ -577,9 +588,98 @@
         "petrole-gaz-aval",
         "mines",
         "energie",
-        "industrie"
+        "industrie",
+        "logistique-port"
       ],
       "branch": "support"
+    },
+    {
+      "id": "port-conducteur-engins",
+      "sector": "port",
+      "level": "tech",
+      "name": "Conducteur de portique, grue et cariste portuaire",
+      "desc": "Manutention des conteneurs et du général cargo : portiques, RTG, chariots, élingage, signaux, sécurité des quais.",
+      "domains": [
+        "logistique-port"
+      ],
+      "branch": "technique"
+    },
+    {
+      "id": "port-agent-transit",
+      "sector": "port",
+      "level": "tech",
+      "name": "Agent de transit / déclarant en douane",
+      "desc": "Dédouanement, déclaration, régimes douaniers, documents d’import-export, suivi des dossiers.",
+      "domains": [
+        "logistique-port"
+      ],
+      "branch": "technique"
+    },
+    {
+      "id": "port-agent-operations",
+      "sector": "port",
+      "level": "tech",
+      "name": "Agent d’opérations portuaires (plan de parc, pointage)",
+      "desc": "Planification du parc à conteneurs, pointage, escales, plan d’arrimage, relations avec les lignes maritimes.",
+      "domains": [
+        "logistique-port"
+      ],
+      "branch": "technique"
+    },
+    {
+      "id": "port-hse",
+      "sector": "port",
+      "level": "tech",
+      "name": "Agent HSE portuaire et marchandises dangereuses",
+      "desc": "Sécurité des quais, code IMDG, ISPS, produits dangereux, plans d’urgence, protection de l’environnement.",
+      "domains": [
+        "logistique-port"
+      ],
+      "branch": "technique"
+    },
+    {
+      "id": "port-superviseur-terminal",
+      "sector": "port",
+      "level": "sup",
+      "name": "Superviseur de terminal / de parc",
+      "desc": "Encadrement des équipes de quai, organisation des postes, productivité, sécurité et qualité de service.",
+      "domains": [
+        "logistique-port"
+      ],
+      "branch": "technique"
+    },
+    {
+      "id": "port-resp-logistique",
+      "sector": "port",
+      "level": "ing",
+      "name": "Responsable logistique et supply chain portuaire",
+      "desc": "Chaîne logistique de bout en bout : transport, entreposage, stocks, prévisions, coûts, indicateurs.",
+      "domains": [
+        "logistique-port"
+      ],
+      "branch": "technique"
+    },
+    {
+      "id": "port-ingenieur-exploitation",
+      "sector": "port",
+      "level": "ing",
+      "name": "Ingénieur exploitation portuaire / terminal",
+      "desc": "Dimensionnement des moyens, productivité des quais, maintenance des équipements, amélioration continue.",
+      "domains": [
+        "logistique-port"
+      ],
+      "branch": "technique"
+    },
+    {
+      "id": "port-chef-terminal",
+      "sector": "port",
+      "level": "mgr",
+      "name": "Chef de terminal / directeur d’exploitation portuaire",
+      "desc": "Pilotage du terminal : budget, concession, sécurité, clients, performance et conformité.",
+      "domains": [
+        "logistique-port"
+      ],
+      "branch": "technique"
     }
   ],
   "domains": [
@@ -614,6 +714,12 @@
       "name": "Industrie",
       "icon": "factory",
       "desc": "Sites industriels : maintenance, procédés, utilités."
+    },
+    {
+      "id": "logistique-port",
+      "name": "Logistique & Port",
+      "icon": "ship",
+      "desc": "Terminaux à conteneurs, manutention, transit et douane, entreposage, transport, marchandises dangereuses."
     }
   ],
   "branches": [

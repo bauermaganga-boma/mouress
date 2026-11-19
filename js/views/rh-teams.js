@@ -5,6 +5,7 @@ import { esc, fmtDate, fmtDateInput, fmtMoney, absUrl, downloadFile, toCsv, isEm
 import { icon, badge, bar, pageHead, crumbs, whatsappLink, avatar } from '../ui.js';
 import { COMPLIANCE, habilitations, compliance, passPrice, validity } from '../pass.js';
 import { band, BAND_LABEL, collabStats, matrixThemes, gaps, recommend } from '../skills.js';
+import { employeeFormations } from './rh-formations.js';
 
 const DAY = 86400000;
 const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -240,6 +241,8 @@ export async function employee(ctx, root) {
             <div class="field-error" id="pl-err" role="alert"></div><button class="btn btn-primary" type="submit">Ajouter au plan</button></form></details>
         <p class="xs muted" style="margin-top:var(--sp-3)">Une formation planifiée devient active quand vous achetez le Pass correspondant (prix selon le niveau du poste) : le collaborateur reçoit alors son lien.</p></section>
 
+      ${await employeeFormations(ctx, company, emp)}
+
       <section class="block"><h2>Historique des examens et compétences</h2>
         ${histo.length ? histo.map((h) => {
           const themes = matrixThemes([{ attempts: h.list }]);
@@ -273,6 +276,11 @@ export async function employee(ctx, root) {
 
   root.addEventListener('submit', async (e) => {
     const { emp } = root._ctxData;
+    if (e.target.id === 'emp-rec-form') {
+      e.preventDefault();
+      await ctx.store.saveFormationRecord({ companyId: company.id, formationId: root.querySelector('#er-f').value, employeeId: emp.id, status: 'planned', date: Date.now() });
+      ctx.toast('Inscrit à la formation.'); await draw(); return;
+    }
     if (e.target.id === 'emp-edit') {
       e.preventDefault();
       const name = root.querySelector('#x-name').value.trim(); const email = root.querySelector('#x-email').value.trim();
@@ -291,6 +299,8 @@ export async function employee(ctx, root) {
   });
   root.addEventListener('click', async (e) => {
     const { emp, plans, pById: pb } = root._ctxData;
+    const recDel = e.target.closest('[data-emp-rec-del]');
+    if (recDel) { await ctx.store.deleteFormationRecord(recDel.dataset.empRecDel); ctx.toast('Formation retirée de la fiche.'); await draw(); return; }
     const copy = e.target.closest('[data-copy]');
     if (copy) { const { copyText } = await import('../util.js'); ctx.toast((await copyText(copy.dataset.copy)) ? 'Lien copié.' : 'Copie impossible.'); return; }
     const renew = e.target.closest('[data-renew]');

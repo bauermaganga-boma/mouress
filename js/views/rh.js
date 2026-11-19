@@ -53,6 +53,7 @@ const sessionStats = (s) => {
 /* ------------------------------------------------------------------ Tableau de bord, recrutements, équipes */
 export { dashboard } from './rh-dash.js';
 export { employee } from './rh-teams.js';
+export { formation } from './rh-formations.js';
 export const teamHome = (ctx) => ctx.go('/rh?vue=equipes');
 
 /* ------------------------------------------------------------------ Achat de Pass */
@@ -75,6 +76,7 @@ export async function session(ctx, root) {
 
 function sessionHead({ s, profile, data }) {
   return `<div class="crumbs"><a href="#/rh">Tableau de bord</a><span>›</span><span>Session</span></div>
+    <a class="back-link" href="#/rh">${icon('arrow', 16, 'flip')} Retour au tableau de bord</a>
     <div class="page-head split"><div><div class="btn-row" style="gap:.4rem">${badge(TYPE[s.type].label, TYPE[s.type].tone)}${badge(profile?.name || s.profileId)}${badge(levelOf(data, profile?.level)?.name || '')}</div>
     <h1 class="h1-md" style="margin-top:.5rem">${esc(s.title)}</h1>
     <p class="muted small">${s.questionCount} questions · seuil ${s.passMark} % · ${s.type === 'training' ? 'échéance' : 'date limite'} ${fmtDate(s.deadline)}</p></div></div>`;
@@ -162,7 +164,7 @@ async function trainingView(env) {
     const mine = assignments.filter((a) => a.invitationId === inv.id);
     root.innerHTML = `<div class="container page">
       <div class="crumbs"><a href="#/rh">Tableau de bord</a><span>›</span><a href="${base}">${esc(s.title)}</a><span>›</span><span>${esc(inv.name)}</span></div>
-      <div class="page-head split"><div><h1 class="h1-md">${esc(inv.name)}</h1><p class="muted small">${esc(inv.email)} · ${st.count} test(s) passé(s)</p></div><a class="btn btn-light" href="${base}?tab=matrix">← Équipe</a></div>
+      <div class="page-head split"><div><h1 class="h1-md">${esc(inv.name)}</h1><p class="muted small">${esc(inv.email)} · ${st.count} test(s) passé(s)</p></div><a class="back-link" href="${base}?tab=matrix">${icon('arrow', 16, 'flip')} Retour à l’équipe</a></div>
       ${st.count ? `<div class="grid grid-3 stats"><div class="card stat"><span class="stat-n">${st.overallFirst} %</span><span class="muted small">1er test</span></div>
         <div class="card stat"><span class="stat-n">${st.overallLast} %</span><span class="muted small">dernier test</span></div>
         <div class="card stat"><span class="stat-n">${st.overallDelta == null ? '—' : sign(st.overallDelta) + ' pts'}</span><span class="muted small">évolution</span></div></div>
@@ -277,7 +279,7 @@ export async function receipt(ctx, root) {
   const company = o && (await ctx.store.getCompany(ctx.user.companyId));
   if (!o || o.companyId !== ctx.user.companyId) { (await import('./notfound.js')).default(ctx, root); return; }
   ctx.setTitle(`Reçu ${o.number}`);
-  root.innerHTML = `<div class="container-narrow page"><div class="no-print btn-row" style="margin-bottom:var(--sp-4)"><a class="btn btn-light" href="#/rh/facturation">← Facturation</a><button type="button" class="btn btn-primary" id="print">${icon('print', 18)} Imprimer / PDF</button></div>
+  root.innerHTML = `<div class="container-narrow page"><div class="no-print btn-row" style="margin-bottom:var(--sp-4)"><a class="back-link" href="#/rh/facturation">${icon('arrow', 16, 'flip')} Retour à la facturation</a><button type="button" class="btn btn-primary" id="print">${icon('print', 18)} Imprimer / PDF</button></div>
     <article class="card receipt"><header class="split"><img src="assets/logo/mouress-logo-horizontal-couleur-pour-fond-clair.svg" alt="MOURESS" height="32" style="height:32px"><div class="right"><strong>Reçu n° ${esc(o.number)}</strong><br><span class="small muted">${fmtDate(o.date, true)}</span></div></header>
       ${o.demo ? '<p class="demo-banner"><strong>Reçu de démonstration</strong> — paiement simulé, aucune somme n’a été débitée.</p>' : ''}
       <p><span class="muted small">Client</span><br><strong>${esc(company.name)}</strong></p>

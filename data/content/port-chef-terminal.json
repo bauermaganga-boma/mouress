@@ -1,0 +1,719 @@
+{
+  "profile": "port-chef-terminal",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Budget et pilotage financier du terminal",
+      "theme": "Budget et performance financière",
+      "minutes": 10,
+      "body": "Le chef de terminal pilote une activité à **forte intensité de capital** : équipements coûteux, charges fixes importantes, revenus liés au trafic. Quelques notions sont indispensables.\n\n- **CAPEX** : dépenses d'investissement (portique, engins, extension de parc, systèmes informatiques), amorties sur plusieurs années.\n- **OPEX** : charges d'exploitation courantes (main-d'œuvre, carburant, énergie, maintenance courante, sous-traitance).\n- **Coût par mouvement** = coûts d'exploitation / nombre de mouvements. Avec 90 000 000 FCFA de coûts pour 30 000 mouvements, le coût est de 3 000 FCFA par mouvement.\n- **Marge et point mort** : le point mort est le volume pour lequel la marge couvre les charges fixes. Avec 120 000 000 FCFA de charges fixes par mois et 6 000 FCFA de marge par mouvement, il faut 20 000 mouvements.\n\nLe **budget** repose sur des hypothèses, dont la plus structurante est la **prévision de trafic** (volumes en EVP, nombre d'escales, services des lignes). Chaque mois, on analyse les **écarts** entre budget et réel : budget carburant de 40 M, réel de 46 M, soit un écart défavorable de 6 M (15 %). On cherche s'il vient du volume, du prix ou du rendement.\n\nLes charges fixes élevées créent un **effet de levier** : une baisse de trafic, par exemple après le départ d'une ligne maritime, dégrade fortement le résultat. La réponse passe par l'analyse de la structure de coûts, l'adaptation des charges flexibles et l'effort commercial, **jamais par le report de la maintenance critique ou des dépenses de sécurité**, dont le coût différé est supérieur.\n\nLa **trésorerie** demande un suivi serré des créances : les lignes et transitaires paient souvent à plusieurs semaines, alors que salaires et fournisseurs courent. Une demande d'investissement s'évalue sur les volumes additionnels, le coût total, le délai de retour, le financement et l'effet sur la capacité.\n\n**Sur le terrain**\n- Relis le budget avec les responsables opérationnels avant de le figer.\n- Commente chaque écart important par une cause et une action.\n- Relance les impayés tôt, avant qu'ils ne pèsent sur la trésorerie.",
+      "keyPoints": [
+        "CAPEX = investissements ; OPEX = charges courantes ; coût par mouvement = coûts d'exploitation / mouvements",
+        "Le budget repose d'abord sur la prévision de trafic ; les écarts se commentent chaque mois avec une cause et une action",
+        "Face à une baisse de trafic, adapter les charges flexibles et vendre, sans sacrifier maintenance critique ni sécurité"
+      ],
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Terminal à conteneurs avec ses portiques de quai, actifs à fort coût d'investissement"
+    },
+    {
+      "id": "m2",
+      "title": "Concession et performance contractuelle",
+      "theme": "Concession et performance",
+      "minutes": 10,
+      "body": "Un terminal est souvent exploité dans le cadre d'une **concession** : l'autorité portuaire, qui gère le domaine, confie l'exploitation à un opérateur pour une durée donnée, en échange d'une **redevance** et d'**obligations**. Le contrat précise généralement le périmètre, la durée, les redevances (une part **fixe** indépendante du trafic et une part **variable** liée au volume), les **investissements** à réaliser, les niveaux de **performance** attendus, les pénalités, la **réversibilité** et les cas de force majeure.\n\nLa **réversibilité** signifie qu'en fin de contrat, les biens prévus reviennent à l'autorité dans des conditions fixées, notamment leur état. Maintenir les actifs en bon état pendant toute la durée n'est donc pas une option.\n\nLes **indicateurs de performance (KPI)** contractuels mesurent le service rendu : temps d'attente et de séjour des navires, productivité, temps de passage des camions, disponibilité des équipements. Il faut s'accorder sur leur **définition** et sur la **source des données**, sinon chaque partie calcule son propre chiffre. Le chef de terminal suit les KPI chaque mois avec des données traçables, anticipe les dérives et prépare les explications avant la revue.\n\nToute modification d'un engagement (calendrier d'investissement, périmètre, niveau de service) passe par un **avenant écrit** signé par les parties, pas par un accord oral. En cas d'événement exceptionnel, on **documente les faits**, on notifie l'autorité dans les formes prévues et on fait analyser par le juridique l'applicabilité d'une clause de force majeure.\n\nUn **comité de pilotage** régulier avec l'autorité et les principaux clients (ordre du jour : KPI, incidents, investissements, plan d'action) évite les surprises. Pour justifier une extension, on s'appuie sur des données : taux de saturation, trajectoires de trafic, plan phasé. Dans un port d'Afrique centrale, où les ports voisins se font concurrence, cette transparence renforce la confiance de l'autorité comme des lignes maritimes.\n\n**Sur le terrain**\n- Garde à portée de main les clauses de performance et de pénalités.\n- Archive les données de KPI et leurs sources.\n- Aucune promesse orale qui change le contrat : un avenant écrit.",
+      "keyPoints": [
+        "Concession : exploitation confiée contre redevance (fixe et variable), investissements, KPI et réversibilité des biens",
+        "KPI définis et mesurés de façon traçable ; suivi mensuel pour anticiper pénalités et dérives",
+        "Toute modification passe par un avenant écrit ; en cas d'événement exceptionnel, documenter, notifier, faire analyser"
+      ],
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Vue de nuit d'un terminal à conteneurs exploité en concession"
+    },
+    {
+      "id": "m3",
+      "title": "Sécurité, sûreté et environnement du terminal",
+      "theme": "Sécurité et sûreté",
+      "minutes": 10,
+      "body": "Un terminal cumule des risques : engins en mouvement, levage, circulation de camions, produits dangereux, travail de nuit, chaleur. Le chef de terminal porte la **culture de sécurité**.\n\nIl faut distinguer :\n- la **sécurité** (safety) : prévenir les accidents et incidents ;\n- la **sûreté** (security) : se protéger contre les actes malveillants (intrusion, vol, trafic, terrorisme). Le **Code ISPS** est le cadre international de sûreté des navires et des installations portuaires : contrôle d'accès, clôtures, badges, plan de sûreté, niveaux de sûreté.\n\nLes **marchandises dangereuses** sont régies pour le transport maritime par le **code IMDG** : classification, étiquetage, déclaration, séparation entre produits incompatibles. Le terminal vérifie les documents et les emplacements.\n\nLe **taux de fréquence** (TF) = nombre d'accidents avec arrêt × 1 000 000 / heures travaillées. Avec 3 accidents et 1 500 000 heures, TF = 2. Il se suit avec des indicateurs de prévention : **presque-accidents** déclarés, causeries, inspections, formations.\n\nLes **permis de travail** encadrent les opérations à risque (travail en hauteur, travaux par point chaud, espaces confinés) et coordonnent les intervenants. Le **plan d'urgence** (incendie, déversement, accident grave, chute d'un conteneur) doit être connu et testé par des **exercices** réguliers, suivis d'un retour d'expérience.\n\nEn cas d'accident grave : secourir et sécuriser, alerter selon la procédure, **préserver les lieux**, informer la hiérarchie et les autorités compétentes, puis mener une enquête de causes. Un déversement d'hydrocarbures se traite en arrêtant la fuite si c'est sans danger, en contenant avec des absorbants, en empêchant l'écoulement vers l'eau et en gérant les déchets.\n\n**Sur le terrain**\n- Ne jamais déroger à une règle de sécurité pour rattraper un retard d'escale.\n- Encourage la déclaration des presque-accidents sans sanction.\n- Rends la sûreté vivante : badges contrôlés, visiteurs accompagnés.",
+      "keyPoints": [
+        "Sécurité (safety) = prévenir les accidents ; sûreté (security, Code ISPS) = se protéger des actes malveillants",
+        "Marchandises dangereuses : code IMDG, documents, étiquetage et séparation des produits incompatibles",
+        "Pas de dérogation de sécurité pour la productivité ; déclarer les presque-accidents, exercer le plan d'urgence"
+      ],
+      "img": "photo/workers-ppe.jpg",
+      "imgAlt": "Équipe de travailleurs portant casques et équipements de protection individuelle"
+    },
+    {
+      "id": "m4",
+      "title": "Relation clients et conformité",
+      "theme": "Clients et conformité",
+      "minutes": 10,
+      "body": "Les clients du terminal sont d'abord les **lignes maritimes**, qui choisissent d'escaler ou non, mais aussi les chargeurs, transitaires, transporteurs routiers et l'administration. Leur satisfaction repose sur la **fiabilité** : respect des fenêtres d'escale, productivité, fluidité aux portes, information claire.\n\nUn **SLA** (accord de niveau de service) formalise des engagements mesurables : délais de traitement, disponibilité, procédure de réclamation. Un suivi régulier, des revues commerciales et des enquêtes de satisfaction complètent le dispositif.\n\nEn cas de **réclamation** (conteneur endommagé par exemple), on applique une procédure : constat contradictoire, photos, rapport d'incident, analyse des causes, réponse écrite dans les délais annoncés. En cas de retard d'escale dû à une panne, on **informe tôt**, avec un calendrier révisé et des mises à jour régulières : le silence détruit la confiance plus que la panne elle-même.\n\nLa **conformité** protège le terminal et ses dirigeants. Elle comprend :\n- un **code de conduite** et une politique sur les cadeaux et invitations (refuser ou déclarer selon la règle) ;\n- la lutte contre la **corruption** : refus de tout paiement informel pour accélérer un service, canal d'alerte, vérification des tiers (sous-traitants, intermédiaires) ;\n- le respect des **règles douanières** : un conteneur sous douane ne sort pas sans autorisation de mainlevée, quelle que soit la pression du client ;\n- la **protection des données** : accès limité aux documents et manifestes selon le besoin d'en connaître ;\n- les **normes** de management, par exemple ISO 9001 (qualité), ISO 14001 (environnement) et ISO 45001 (santé et sécurité au travail), et les audits internes et externes.\n\nAu Gabon comme ailleurs, la réputation d'un terminal sur ces points pèse sur le choix des lignes et sur la confiance des autorités.\n\n**Sur le terrain**\n- Traite toutes les lignes avec des règles identiques et publiées.\n- Réponds à chaque réclamation par écrit, avec les faits.\n- Donne l'exemple : un chef qui contourne les règles les voit contournées par tous.",
+      "keyPoints": [
+        "SLA, revues régulières et réclamations traitées par constat contradictoire, analyse des causes et réponse écrite",
+        "Informer tôt et régulièrement en cas de retard d'escale",
+        "Conformité : code de conduite, refus des paiements informels, mainlevée douanière respectée, accès aux données limité"
+      ],
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Terminal à conteneurs et ses portiques de quai, face aux clients que sont les lignes maritimes"
+    }
+  ],
+  "questions": [
+    {
+      "id": "port-chef-terminal-001",
+      "theme": "Budget et performance financière",
+      "level": 1,
+      "q": "Que désigne le CAPEX dans le budget d'un terminal ?",
+      "choices": [
+        "Les charges courantes de personnel",
+        "Les dépenses d'investissement, par exemple l'achat d'un portique ou l'extension du parc",
+        "Les taxes payées à l'autorité portuaire sur chaque escale",
+        "Le capital social de la société d'exploitation"
+      ],
+      "answer": 1,
+      "explain": "Le CAPEX regroupe les dépenses d'investissement durables (équipements, extension), amorties sur plusieurs années. Les charges courantes forment l'OPEX.",
+      "seconds": 30,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-002",
+      "theme": "Budget et performance financière",
+      "level": 1,
+      "q": "Lequel de ces éléments est une charge d'exploitation (OPEX) ?",
+      "choices": [
+        "L'achat d'un nouveau portique de quai",
+        "La construction d'une extension de parc",
+        "L'acquisition d'un portique de parc",
+        "Le carburant des engins de manutention"
+      ],
+      "answer": 3,
+      "explain": "Le carburant est une charge courante d'exploitation. L'achat d'un portique ou d'une extension de parc est un investissement (CAPEX).",
+      "seconds": 30,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-003",
+      "theme": "Budget et performance financière",
+      "level": 2,
+      "q": "Un terminal supporte 90 000 000 FCFA de coûts d'exploitation pour 30 000 mouvements. Quel est le coût par mouvement ?",
+      "choices": [
+        "3 000 FCFA",
+        "300 FCFA",
+        "30 000 FCFA",
+        "2 700 000 FCFA"
+      ],
+      "answer": 0,
+      "explain": "Coût par mouvement = coûts d'exploitation / nombre de mouvements = 90 000 000 / 30 000 = 3 000 FCFA.",
+      "seconds": 60,
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Terminal à conteneurs avec portiques de quai, dont l'activité se mesure en mouvements",
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-004",
+      "theme": "Budget et performance financière",
+      "level": 2,
+      "q": "Le budget carburant était de 40 millions de FCFA et le réel de 46 millions. Quel est l'écart ?",
+      "choices": [
+        "Favorable de 6 millions",
+        "Défavorable de 6 millions, soit 6 %",
+        "Défavorable de 6 millions, soit 15 %",
+        "Favorable de 15 millions"
+      ],
+      "answer": 2,
+      "explain": "Le réel dépasse le budget de 6 millions : écart défavorable. Rapporté au budget, 6 / 40 = 15 %.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-005",
+      "theme": "Budget et performance financière",
+      "level": 2,
+      "q": "Avec 120 000 000 FCFA de charges fixes par mois et une marge de 6 000 FCFA par mouvement, quel volume mensuel atteint le point mort ?",
+      "choices": [
+        "12 000 mouvements",
+        "20 000 mouvements",
+        "7 200 mouvements",
+        "126 000 mouvements"
+      ],
+      "answer": 1,
+      "explain": "Point mort = charges fixes / marge unitaire = 120 000 000 / 6 000 = 20 000 mouvements par mois.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-006",
+      "theme": "Budget et performance financière",
+      "level": 3,
+      "q": "Une ligne maritime quitte le terminal et le trafic baisse de 10 %. Les charges fixes sont élevées. Quelle réponse est la plus cohérente ?",
+      "choices": [
+        "Reporter la maintenance des portiques et les dépenses de sécurité pour compenser",
+        "Attendre que le trafic revienne sans rien changer",
+        "Réduire les effectifs de sécurité en priorité",
+        "Analyser la structure de coûts, adapter les charges flexibles et renforcer l'effort commercial, en préservant la maintenance critique et la sécurité"
+      ],
+      "answer": 3,
+      "explain": "Avec des charges fixes élevées, une baisse de trafic pèse sur le résultat. On agit sur les coûts flexibles et sur les ventes, sans sacrifier maintenance critique ni sécurité.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-007",
+      "theme": "Budget et performance financière",
+      "level": 2,
+      "q": "Pour tenir le budget, on propose de reporter la maintenance préventive de portiques critiques. Quel est le risque principal ?",
+      "choices": [
+        "Une économie apparente qui expose à des pannes plus coûteuses et à des retards de navires",
+        "Une hausse certaine de l'amortissement comptable",
+        "Une baisse immédiate du temps de séjour des navires",
+        "Aucun risque, la maintenance préventive est facultative"
+      ],
+      "answer": 0,
+      "explain": "Reporter la maintenance critique transforme une économie à court terme en risque de panne, avec immobilisation de navires, pénalités et coûts de réparation plus élevés.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-008",
+      "theme": "Budget et performance financière",
+      "level": 2,
+      "q": "Les lignes maritimes paient à plusieurs semaines alors que salaires et fournisseurs sont réglés plus tôt. Que faut-il faire ?",
+      "choices": [
+        "Ignorer le décalage",
+        "Facturer uniquement en fin d'année",
+        "Suivre les créances et la trésorerie prévisionnelle, relancer tôt et anticiper les besoins de financement",
+        "Réduire les salaires le temps que les clients paient"
+      ],
+      "answer": 2,
+      "explain": "Le décalage entre encaissements et décaissements pèse sur la trésorerie. Un suivi des créances, des relances précoces et des prévisions permettent d'anticiper.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-009",
+      "theme": "Budget et performance financière",
+      "level": 3,
+      "q": "Une demande d'achat d'un nouveau portique est présentée. Quels éléments faut-il examiner pour la décision ?",
+      "choices": [
+        "Uniquement l'âge des portiques actuels",
+        "Les volumes additionnels, le coût total (achat, exploitation, maintenance), le délai de retour, le financement et l'effet sur la capacité",
+        "Uniquement l'avis du fournisseur de l'équipement",
+        "Seulement le prix affiché au catalogue"
+      ],
+      "answer": 1,
+      "explain": "Un investissement se juge sur ses bénéfices attendus (volumes, capacité), son coût total, son délai de retour et son financement, pas sur le seul prix d'achat.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-010",
+      "theme": "Budget et performance financière",
+      "level": 1,
+      "q": "Quelle hypothèse est la plus structurante pour le budget d'un terminal ?",
+      "choices": [
+        "Le nombre de réunions prévues dans l'année",
+        "Le nombre de véhicules de service",
+        "Le prix des fournitures de bureau",
+        "La prévision de trafic (volumes en EVP et escales)"
+      ],
+      "answer": 3,
+      "explain": "Les revenus et une grande partie des charges variables dépendent du trafic. La prévision de volumes est donc l'hypothèse qui structure tout le budget.",
+      "seconds": 30,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-011",
+      "theme": "Concession et performance",
+      "level": 1,
+      "q": "Qu'est-ce qu'une concession portuaire ?",
+      "choices": [
+        "La vente définitive du terminal à un opérateur privé",
+        "Une autorisation d'accoster délivrée à un navire",
+        "Un contrat par lequel l'autorité confie l'exploitation d'un terminal à un opérateur pour une durée, contre redevance et obligations",
+        "Un contrat de transport entre une ligne maritime et un chargeur"
+      ],
+      "answer": 2,
+      "explain": "Dans une concession, l'autorité reste gestionnaire du domaine et confie l'exploitation à un opérateur pour une durée donnée, avec redevance et obligations.",
+      "seconds": 30,
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Vue de nuit d'un terminal à conteneurs et de ses portiques de quai",
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-012",
+      "theme": "Concession et performance",
+      "level": 1,
+      "q": "Quelle est la différence entre la part fixe et la part variable d'une redevance de concession ?",
+      "choices": [
+        "La part fixe ne dépend pas du trafic, la part variable évolue avec le volume traité",
+        "La part fixe dépend du trafic, la part variable est identique chaque année",
+        "La part fixe est payée par les clients, la part variable par l'État",
+        "Il n'existe aucune différence, ce sont deux noms du même paiement"
+      ],
+      "answer": 0,
+      "explain": "La part fixe est due quel que soit le trafic ; la part variable suit le volume. Cela répartit le risque de trafic entre l'autorité et l'opérateur.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-013",
+      "theme": "Concession et performance",
+      "level": 2,
+      "q": "Que signifie la réversibilité dans un contrat de concession ?",
+      "choices": [
+        "Le droit de l'opérateur de revendre les actifs à un tiers à tout moment",
+        "La possibilité de revenir sur les tarifs facturés aux clients",
+        "L'obligation pour l'autorité de racheter tous les équipements",
+        "En fin de contrat, les biens prévus reviennent à l'autorité selon des conditions fixées, notamment leur état"
+      ],
+      "answer": 3,
+      "explain": "La réversibilité organise le retour des biens à l'autorité en fin de contrat, dans les conditions prévues. Il faut donc maintenir les actifs en état pendant toute la durée.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-014",
+      "theme": "Concession et performance",
+      "level": 2,
+      "q": "Le contrat fixe un niveau minimal de productivité, avec pénalité en cas de non-respect. Que doit faire le chef de terminal ?",
+      "choices": [
+        "Attendre la notification d'une pénalité avant de s'en occuper",
+        "Suivre le KPI chaque mois avec des données traçables et anticiper les dérives",
+        "Négocier oralement un assouplissement avec un interlocuteur de l'autorité",
+        "Modifier la définition du KPI sans en informer l'autorité"
+      ],
+      "answer": 1,
+      "explain": "Un suivi mensuel fondé sur des données traçables permet de corriger avant le franchissement du seuil et de justifier les chiffres lors de la revue.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-015",
+      "theme": "Concession et performance",
+      "level": 3,
+      "q": "Un événement externe exceptionnel interrompt l'exploitation plusieurs jours. Quelle démarche est la plus prudente ?",
+      "choices": [
+        "Ne rien déclarer pour éviter un conflit",
+        "Invoquer la force majeure sans preuve ni notification",
+        "Documenter les faits, notifier l'autorité dans les formes prévues et faire analyser l'applicabilité de la clause par le juridique",
+        "Suspendre le paiement de la redevance de sa propre initiative"
+      ],
+      "answer": 2,
+      "explain": "La prudence consiste à établir les faits, à respecter les formes de notification du contrat et à faire valider l'interprétation de la clause par le service juridique.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-016",
+      "theme": "Concession et performance",
+      "level": 2,
+      "q": "L'opérateur souhaite décaler un engagement d'investissement prévu au contrat. Comment procéder ?",
+      "choices": [
+        "Par un avenant écrit signé par les parties",
+        "Par un simple accord verbal en comité de pilotage",
+        "En décalant discrètement l'investissement et en attendant la réaction",
+        "En modifiant uniquement le budget interne"
+      ],
+      "answer": 0,
+      "explain": "Une modification d'un engagement contractuel exige un avenant écrit et signé. Un accord verbal ou un décalage unilatéral exposerait l'opérateur à des pénalités.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-017",
+      "theme": "Concession et performance",
+      "level": 2,
+      "q": "Quel indicateur mesure directement le service rendu aux navires ?",
+      "choices": [
+        "Le chiffre d'affaires par employé",
+        "Le nombre de réunions de sécurité",
+        "Le coût du carburant par engin",
+        "Le temps d'attente et de séjour des navires"
+      ],
+      "answer": 3,
+      "explain": "Les temps d'attente et de séjour reflètent ce que vit la ligne maritime. Les autres indicateurs mesurent des moyens ou des coûts internes.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-018",
+      "theme": "Concession et performance",
+      "level": 3,
+      "q": "Le terminal approche de la saturation. Comment argumenter une demande d'extension auprès de l'autorité ?",
+      "choices": [
+        "Par des affirmations générales sur la croissance du pays",
+        "Par des données : taux d'occupation du parc, trajectoires de trafic, impact sur les KPI et plan d'investissement phasé",
+        "En menaçant de réduire le niveau de service",
+        "En attendant que les lignes maritimes se plaignent"
+      ],
+      "answer": 1,
+      "explain": "Une demande d'extension crédible s'appuie sur des faits chiffrés : saturation, prévisions de trafic, effet sur les indicateurs et calendrier d'investissement progressif.",
+      "seconds": 75,
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Terminal à conteneurs en bord de mer dont la capacité de stockage approche de ses limites",
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-019",
+      "theme": "Concession et performance",
+      "level": 2,
+      "q": "L'autorité annonce un audit du terminal. Quelle préparation est la plus pertinente ?",
+      "choices": [
+        "Attendre l'arrivée des auditeurs",
+        "Retirer les documents sensibles des dossiers",
+        "Tenir à jour les registres et preuves, désigner un interlocuteur et fournir des données exactes",
+        "Laisser chaque service répondre comme il l'entend"
+      ],
+      "answer": 2,
+      "explain": "Un audit se prépare : documents à jour, un interlocuteur unique et des données exactes. Retirer des pièces serait une faute grave.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-020",
+      "theme": "Concession et performance",
+      "level": 2,
+      "q": "Quel est l'intérêt d'un comité de pilotage régulier avec l'autorité et les principales lignes maritimes ?",
+      "choices": [
+        "Partager les KPI, les incidents et les actions pour éviter les surprises et les litiges",
+        "Remplacer les rapports écrits par des échanges informels",
+        "Choisir à la place du terminal ses fournisseurs",
+        "Décider des salaires du personnel"
+      ],
+      "answer": 0,
+      "explain": "Le comité de pilotage crée un espace régulier de transparence : indicateurs, incidents, plans d'action. Il prévient les malentendus avant qu'ils ne deviennent des litiges.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-021",
+      "theme": "Sécurité et sûreté",
+      "level": 1,
+      "q": "Que couvre le Code ISPS ?",
+      "choices": [
+        "Le transport des marchandises dangereuses à bord",
+        "La sûreté des navires et des installations portuaires face aux actes malveillants",
+        "La tarification des escales",
+        "La mesure de la productivité des grues"
+      ],
+      "answer": 1,
+      "explain": "Le Code ISPS est le cadre international de sûreté des navires et des installations portuaires : accès contrôlés, plan de sûreté, niveaux de sûreté.",
+      "seconds": 30,
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Terminal à conteneurs et ses installations portuaires dont l'accès doit être protégé",
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-022",
+      "theme": "Sécurité et sûreté",
+      "level": 1,
+      "q": "Le contrôle des badges et des visiteurs à l'entrée du terminal relève surtout de quoi ?",
+      "choices": [
+        "La sécurité au travail, c'est-à-dire la prévention des accidents",
+        "La maintenance des équipements",
+        "La gestion des stocks",
+        "La sûreté, c'est-à-dire la protection contre les actes malveillants"
+      ],
+      "answer": 3,
+      "explain": "Le contrôle d'accès protège le site contre l'intrusion et les actes malveillants : c'est de la sûreté (security), à distinguer de la sécurité au travail (safety).",
+      "seconds": 30,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-023",
+      "theme": "Sécurité et sûreté",
+      "level": 2,
+      "q": "Un conteneur de marchandises dangereuses arrive au terminal. Que faut-il vérifier ?",
+      "choices": [
+        "La déclaration de marchandises dangereuses, les étiquettes et plaques, et les règles de séparation avec les produits incompatibles",
+        "Uniquement le poids du conteneur",
+        "Uniquement la couleur du conteneur",
+        "Rien, la ligne maritime est seule responsable"
+      ],
+      "answer": 0,
+      "explain": "Le code IMDG impose déclaration, étiquetage et séparation entre produits incompatibles. Le terminal contrôle les documents et choisit l'emplacement en conséquence.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-024",
+      "theme": "Sécurité et sûreté",
+      "level": 2,
+      "q": "Un terminal enregistre 3 accidents avec arrêt sur 1 500 000 heures travaillées. Quel est le taux de fréquence ?",
+      "choices": [
+        "0,5",
+        "1",
+        "2",
+        "4,5"
+      ],
+      "answer": 2,
+      "explain": "Taux de fréquence = nombre d'accidents avec arrêt × 1 000 000 / heures travaillées = 3 × 1 000 000 / 1 500 000 = 2.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-025",
+      "theme": "Sécurité et sûreté",
+      "level": 2,
+      "q": "Un accident grave survient sur le quai. Quel enchaînement est le plus approprié ?",
+      "choices": [
+        "Reprendre le travail immédiatement pour ne pas retarder le navire",
+        "Nettoyer la zone avant que des photos ne soient prises",
+        "Attendre le lendemain pour alerter",
+        "Secourir et sécuriser la zone, alerter selon la procédure, préserver les lieux, puis informer et enquêter sur les causes"
+      ],
+      "answer": 3,
+      "explain": "La priorité est la protection des personnes. On préserve ensuite les lieux pour l'enquête, on alerte et on informe les autorités et la hiérarchie selon la procédure.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-026",
+      "theme": "Sécurité et sûreté",
+      "level": 3,
+      "q": "Un navire est en retard et le client presse. On propose de supprimer le contrôle de sécurité avant levage pour gagner du temps. Que décide le chef de terminal ?",
+      "choices": [
+        "Refuser la dérogation et chercher un autre levier, par exemple des renforts ou une meilleure organisation",
+        "Accepter une seule fois, en l'enregistrant",
+        "Laisser le chef d'équipe décider seul",
+        "Accepter si le client signe une décharge"
+      ],
+      "answer": 0,
+      "explain": "Une règle de sécurité ne se négocie pas pour rattraper un retard. Une décharge du client ne protège pas les personnes. On cherche d'autres leviers d'organisation.",
+      "seconds": 75,
+      "img": "photo/workers-ppe.jpg",
+      "imgAlt": "Travailleurs portant casques et équipements de protection individuelle sur un site d'exploitation",
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-027",
+      "theme": "Sécurité et sûreté",
+      "level": 2,
+      "q": "À quoi sert un permis de travail ?",
+      "choices": [
+        "À autoriser un salarié à entrer dans le terminal",
+        "À remplacer les équipements de protection individuelle",
+        "À encadrer les travaux à risque (hauteur, point chaud, espace confiné) et à coordonner les intervenants",
+        "À valider les factures des sous-traitants"
+      ],
+      "answer": 2,
+      "explain": "Le permis de travail formalise l'analyse des risques et les précautions avant un travail dangereux, et coordonne les différentes équipes présentes.",
+      "seconds": 45,
+      "img": "photo/workers-ppe.jpg",
+      "imgAlt": "Équipe équipée de casques et de protections individuelles avant une intervention",
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-028",
+      "theme": "Sécurité et sûreté",
+      "level": 2,
+      "q": "Pourquoi organiser des exercices réguliers du plan d'urgence ?",
+      "choices": [
+        "Pour remplacer les formations obligatoires",
+        "Pour vérifier que le plan est connu et fonctionne, puis corriger les faiblesses grâce à un retour d'expérience",
+        "Pour réduire le nombre d'inspections",
+        "Pour informer la presse"
+      ],
+      "answer": 1,
+      "explain": "Un plan non testé reste théorique. Les exercices révèlent les lacunes (alerte, moyens, rôles) que le retour d'expérience permet de corriger.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-029",
+      "theme": "Sécurité et sûreté",
+      "level": 3,
+      "q": "Les presque-accidents sont très peu déclarés par les équipes. Que faire ?",
+      "choices": [
+        "Sanctionner ceux qui n'ont pas déclaré",
+        "Cesser de les suivre, ils n'ont pas de conséquence",
+        "Les compter uniquement en fin d'année",
+        "Encourager la déclaration sans sanction, traiter chaque cas et donner un retour aux équipes"
+      ],
+      "answer": 3,
+      "explain": "Les presque-accidents sont des signaux précoces. Ils ne remontent que si les équipes se sentent en confiance et voient que leurs déclarations aboutissent à des actions.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-030",
+      "theme": "Sécurité et sûreté",
+      "level": 2,
+      "q": "Une fuite d'huile hydraulique d'un engin atteint le quai près du bassin. Quelles sont les premières actions ?",
+      "choices": [
+        "Laver le quai à grande eau vers le bassin",
+        "Ne rien faire et attendre la fin du poste",
+        "Arrêter la fuite si c'est sans danger, contenir avec des absorbants, empêcher l'écoulement vers l'eau, alerter et gérer les déchets",
+        "Disperser le produit avec des détergents"
+      ],
+      "answer": 2,
+      "explain": "Il faut stopper la source, contenir le produit, protéger le milieu aquatique, alerter et éliminer les déchets souillés. Laver ou disperser aggrave la pollution.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-031",
+      "theme": "Clients et conformité",
+      "level": 1,
+      "q": "Qu'est-ce qu'un SLA entre un terminal et une ligne maritime ?",
+      "choices": [
+        "Un accord de niveau de service avec des engagements mesurables",
+        "Un équipement de levage",
+        "Une redevance versée à l'autorité portuaire",
+        "Un document douanier"
+      ],
+      "answer": 0,
+      "explain": "Un SLA fixe des engagements de service chiffrés, comme des délais ou une disponibilité, ainsi que la façon de les mesurer et de traiter les écarts.",
+      "seconds": 30,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-032",
+      "theme": "Clients et conformité",
+      "level": 2,
+      "q": "Une ligne maritime déclare un conteneur endommagé au terminal. Quelle démarche est la plus appropriée ?",
+      "choices": [
+        "Rejeter oralement la réclamation",
+        "Réparer sans rien documenter",
+        "Attendre que la ligne relance plusieurs fois",
+        "Faire un constat contradictoire avec photos, ouvrir un rapport d'incident, analyser les causes et répondre par écrit"
+      ],
+      "answer": 3,
+      "explain": "Un constat contradictoire avec preuves permet d'établir les responsabilités. La réponse écrite et l'analyse des causes évitent que l'incident se reproduise.",
+      "seconds": 60,
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Terminal à conteneurs où sont manutentionnés les conteneurs des lignes maritimes",
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-033",
+      "theme": "Clients et conformité",
+      "level": 2,
+      "q": "Un transitaire propose un cadeau de valeur pendant une période de négociation d'espace de parc. Que faire ?",
+      "choices": [
+        "Accepter discrètement",
+        "Appliquer la politique cadeaux de l'entreprise : refuser, ou déclarer selon la règle",
+        "Accepter si personne ne le sait",
+        "Demander un cadeau équivalent à un autre client"
+      ],
+      "answer": 1,
+      "explain": "Un cadeau en pleine négociation crée un conflit d'intérêts. La politique de l'entreprise impose de refuser ou de déclarer, en toute transparence.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-034",
+      "theme": "Clients et conformité",
+      "level": 3,
+      "q": "Un client propose un paiement informel à un agent pour passer devant la file aux portes. Que faut-il faire ?",
+      "choices": [
+        "Accepter si le montant reste modeste",
+        "Partager la somme avec l'équipe",
+        "Refuser, appliquer les règles publiées pour tous et signaler selon la procédure de l'entreprise",
+        "Ignorer pour ne pas perdre le client"
+      ],
+      "answer": 2,
+      "explain": "Un paiement informel pour accélérer un service est de la corruption, quel que soit le montant. Le refus, l'égalité de traitement et le signalement protègent l'entreprise.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-035",
+      "theme": "Clients et conformité",
+      "level": 2,
+      "q": "Quels éléments composent un dispositif de conformité anti-corruption ?",
+      "choices": [
+        "Un code de conduite, des formations, un canal d'alerte et la vérification des tiers",
+        "Un seul règlement affiché, sans formation",
+        "La confiance dans les équipes, sans contrôle",
+        "L'interdiction de tout contact avec les clients"
+      ],
+      "answer": 0,
+      "explain": "Un dispositif efficace combine règles écrites, formation, possibilité de signaler et vérification des intermédiaires et sous-traitants. Un affichage seul ne suffit pas.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-036",
+      "theme": "Clients et conformité",
+      "level": 2,
+      "q": "Un portique tombe en panne et retarde l'escale d'une ligne. Quelle communication est la plus adaptée ?",
+      "choices": [
+        "Attendre la fin de la réparation pour prévenir",
+        "Minimiser la panne sans donner d'échéance",
+        "Ne répondre qu'aux clients qui appellent",
+        "Informer tôt, donner un calendrier révisé et actualiser régulièrement"
+      ],
+      "answer": 3,
+      "explain": "Informer tôt permet à la ligne de s'organiser. Un calendrier révisé et des mises à jour régulières préservent la confiance, même lorsque la panne est subie.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-037",
+      "theme": "Clients et conformité",
+      "level": 2,
+      "q": "Comment protéger les manifestes et les données des clients ?",
+      "choices": [
+        "Les mettre à disposition de tous les services",
+        "Limiter l'accès selon le besoin d'en connaître et tracer les consultations",
+        "Les envoyer sur des messageries personnelles",
+        "Les supprimer systématiquement après chaque escale"
+      ],
+      "answer": 1,
+      "explain": "L'accès aux documents clients doit être réservé à ceux qui en ont besoin pour leur travail, avec une traçabilité. Les diffuser largement ou hors du circuit officiel est un risque.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-038",
+      "theme": "Clients et conformité",
+      "level": 3,
+      "q": "Un client presse pour sortir un conteneur alors que la douane n'a pas donné sa mainlevée. Que fait le terminal ?",
+      "choices": [
+        "Le laisser sortir en échange d'une promesse de régularisation",
+        "Le laisser sortir de nuit",
+        "Refuser la sortie tant que l'autorisation douanière n'est pas obtenue, et expliquer la procédure au client",
+        "Demander au chauffeur de signer une décharge"
+      ],
+      "answer": 2,
+      "explain": "Une marchandise sous douane ne quitte pas le terminal sans mainlevée. Le terminal doit refuser et expliquer la procédure, sous peine d'engager sa responsabilité.",
+      "seconds": 60,
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Terminal à conteneurs où les marchandises restent sous contrôle douanier avant leur sortie",
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-039",
+      "theme": "Clients et conformité",
+      "level": 2,
+      "q": "Quelle norme ISO concerne le management de la santé et de la sécurité au travail ?",
+      "choices": [
+        "ISO 45001",
+        "ISO 9001",
+        "ISO 14001",
+        "ISO 22000"
+      ],
+      "answer": 0,
+      "explain": "ISO 45001 traite de la santé et de la sécurité au travail, ISO 9001 de la qualité, ISO 14001 de l'environnement et ISO 22000 de la sécurité des denrées alimentaires.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-chef-terminal-040",
+      "theme": "Clients et conformité",
+      "level": 1,
+      "q": "Quel est le meilleur moyen de connaître l'avis des lignes maritimes sur le terminal ?",
+      "choices": [
+        "Attendre qu'elles changent de port",
+        "Se fier à l'intuition des équipes",
+        "Ne consulter que les réclamations les plus anciennes",
+        "Des revues régulières avec indicateurs, des enquêtes de satisfaction et le traitement suivi des réclamations"
+      ],
+      "answer": 3,
+      "explain": "Un dialogue régulier, appuyé par des données et un suivi des réclamations, permet de détecter les irritants avant que la ligne ne choisisse un autre port.",
+      "seconds": 30,
+      "status": "draft"
+    }
+  ]
+}

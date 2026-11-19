@@ -31,7 +31,7 @@ export default async function render(ctx, root) {
         <div class="field"><label for="s-n">Nombre de questions</label><select id="s-n"><option value="10">10</option><option value="20">20</option><option value="999">Toutes</option></select></div>
         <label class="check"><input type="checkbox" id="s-timer"> Activer le chronomètre (temps indicatif de chaque question)</label>
         <div class="btn-row" style="margin-top:var(--sp-4)"><button class="btn btn-primary btn-lg" type="submit">${icon('target', 20)} Commencer</button>
-        <a class="btn btn-ghost" href="${esc(home)}">Retour</a></div></form></div>`;
+        <a class="btn btn-light" href="${esc(home)}">← Retour</a></div></form></div>`;
     root.querySelector('#setup').addEventListener('submit', (e) => {
       e.preventDefault();
       run({ theme: root.querySelector('#s-theme').value, n: Number(root.querySelector('#s-n').value), timer: root.querySelector('#s-timer').checked });
@@ -62,7 +62,7 @@ export default async function render(ctx, root) {
         ${opts.timer ? `<div class="timer" aria-hidden="true"><div class="timer-bar"><span id="tbar"></span></div><span id="tsec" class="timer-sec">${fmtClock(secs)}</span></div>` : ''}</div>
         <div class="card q-card">${questionBodyHTML(q)}<div id="choices">${choicesHTML(q, order)}</div>
         <div id="feedback" aria-live="polite"></div></div>
-        <div class="btn-row quiz-actions"><a class="btn btn-ghost btn-sm" href="${esc(home)}">Quitter</a></div></div>`;
+        <div class="btn-row quiz-actions"><a class="btn btn-light btn-sm" href="${esc(home)}">Quitter</a></div></div>`;
       const fb = root.querySelector('#feedback');
 
       const reveal = (picked, timedOut) => {

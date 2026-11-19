@@ -93,7 +93,7 @@ export default async function render(ctx, root) {
       <div class="section-head"><p class="eyebrow">Qui est MOURESS</p><h2>Une entreprise technique qui évalue comme elle recrute</h2>
         <p class="lead-light">MOURESS accompagne les opérateurs de l’industrie gabonaise et sous-régionale. Nos tests viennent du terrain : ce sont les questions que nous poserions à un technicien avant de l’envoyer sur site.</p></div>
       <div class="grid grid-3">${MOURESS.map((m) => `<article class="card card-dark"><div class="step-ico dark">${icon(m.ico, 26)}</div><h3>${m.t}</h3><p>${m.d}</p></article>`).join('')}</div>
-      <p class="sectors-line"><strong>Secteurs :</strong> pétrole &amp; gaz · mines · industrie · BTP · énergie</p>
+      <p class="sectors-line"><strong>Secteurs :</strong> pétrole &amp; gaz · mines · logistique &amp; port · industrie · énergie</p>
     </div>
   </section>
 

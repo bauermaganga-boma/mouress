@@ -36,7 +36,7 @@ export function showIntro(root, o) {
             <div class="field"><label for="c-email">E-mail${o.emailRequired ? '' : ' (facultatif)'}</label><input id="c-email" type="email" autocomplete="email" ${o.emailRequired ? 'required' : ''} value="${esc(o.email ?? me.email)}"><span class="field-error" id="e-email" role="alert"></span></div>
           </div>
           ${o.certificate ? '<p class="hint xs muted">Le nom saisi figurera sur l’attestation.</p>' : ''}
-          <div class="btn-row"><button class="btn btn-primary btn-lg" type="submit">Commencer l’examen ${icon('arrow', 18)}</button>${o.backHref ? `<a class="btn btn-ghost" href="${esc(o.backHref)}">Retour</a>` : ''}</div>
+          <div class="btn-row"><button class="btn btn-primary btn-lg" type="submit">Commencer l’examen ${icon('arrow', 18)}</button>${o.backHref ? `<a class="btn btn-light" href="${esc(o.backHref)}">← Retour</a>` : ''}</div>
         </form></div></div>`;
     root.querySelector('#idform').addEventListener('submit', (e) => {
       e.preventDefault();

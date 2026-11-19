@@ -39,7 +39,7 @@ export default async function render(ctx, root) {
       ${m.keyPoints?.length ? `<aside class="keypoints" aria-label="Points clés"><h2 class="kp-title">${icon('flag', 20)} À retenir</h2><ul>${m.keyPoints.map((k) => `<li>${esc(k)}</li>`).join('')}</ul></aside>` : ''}
     </article>
     <div class="lesson-nav">
-      ${prev ? `<a class="btn btn-light" href="#/cours/${esc(id)}/${esc(prev.id)}${q}">← Précédent</a>` : '<span></span>'}
+      ${prev ? `<a class="btn btn-light" href="#/cours/${esc(id)}/${esc(prev.id)}${q}">← Module précédent</a>` : '<span></span>'}
       <button type="button" class="btn btn-primary" id="finish">${next ? 'Terminer et passer au suivant' : 'Terminer le cours'}</button>
     </div>
     <p class="center small muted" style="margin-top:var(--sp-5)"><a href="#/entrainement/${esc(id)}${pass ? `?pass=${encodeURIComponent(pass)}&theme=` : '?theme='}${m.theme ? encodeURIComponent(m.theme) : ''}">S’entraîner sur ce thème</a> · <a href="${esc(home)}">${pass ? 'Retour à mon Pass' : 'Retour au profil'}</a></p>

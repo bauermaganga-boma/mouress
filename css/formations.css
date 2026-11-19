@@ -1,0 +1,14 @@
+/* Espace entreprise : catalogue de formations internes */
+.seg { grid-template-columns: repeat(3, 1fr); }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: var(--sp-4); }
+.chip { min-height: 40px; padding: .3rem .85rem; border: 1.5px solid var(--c-line-strong); border-radius: var(--r-pill); background: #fff; color: var(--c-navy); font: inherit; font-size: var(--fs-xs); font-weight: 600; cursor: pointer; }
+.chip:hover { border-color: var(--c-navy); background: var(--c-surface-2); }
+.formation-card { display: grid; gap: .4rem; align-content: start; }
+.formation-card h3 { margin: 0; }
+.pick-list { padding: 0; margin-bottom: var(--sp-3); display: grid; gap: .4rem; max-height: 280px; overflow: auto; }
+.pick { display: flex; align-items: center; gap: .7rem; padding: .4rem .6rem; border: 1px solid var(--c-line); border-radius: var(--r-md); background: #fff; min-height: 48px; cursor: pointer; }
+.pick:has(input:checked) { border-color: var(--c-navy); background: var(--c-info-bg); }
+.pick input { width: 20px; height: 20px; accent-color: var(--c-navy); flex: none; }
+.emp-inline { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; }
+.sel-sm { min-height: 40px; padding: .3rem .5rem; font: inherit; font-size: var(--fs-sm); border: 1px solid var(--c-line-strong); border-radius: var(--r-sm); background: #fff; width: auto; }
+@media (max-width: 599px) { .seg { gap: var(--sp-1); padding: 4px; } .seg-tab { padding: .4rem .2rem; } .seg-tab strong { font-size: var(--fs-xs); } }

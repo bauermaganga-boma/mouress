@@ -1,0 +1,58 @@
+/* Navigation : en-tête, menu principal, onglets mobiles, boutons retour (chargé en dernier). */
+.site-header { background: rgba(255, 255, 255, .97); border-bottom: 1px solid var(--c-line-strong); box-shadow: 0 1px 0 rgba(6, 31, 68, .04); }
+.site-header .bar-inner { min-height: 64px; gap: var(--sp-3); }
+.brand { flex: none; }
+.brand img { height: 34px; }
+.mode-tag { display: none; }
+
+/* Menu principal (ordinateur) : liens texte soulignés, bien séparés du logo */
+.nav-main { margin-left: var(--sp-4); padding-left: var(--sp-4); border-left: 1px solid var(--c-line-strong); gap: .15rem; flex: 1 1 auto; }
+.nav-main a { position: relative; border-radius: 0; background: none !important; color: var(--c-ink); font-weight: 600; padding: 1.35rem .8rem 1.2rem; border-bottom: 3px solid transparent; }
+.nav-main a:hover { color: var(--c-navy); border-bottom-color: var(--c-line-strong); }
+.nav-main a[aria-current="page"] { color: var(--c-navy); border-bottom-color: var(--c-orange); font-weight: 700; }
+.header-actions { flex: none; gap: var(--sp-2); }
+.header-actions .btn { min-height: 44px; }
+.back-site { font-size: var(--fs-xs); gap: .35rem; }
+.back-site svg { flex: none; }
+.btn-logout .lbl { display: inline; }
+
+/* Onglets du bas (mobile) : repère net sur l'onglet actif */
+.tabbar { background: #fff; border-top: 1px solid var(--c-line-strong); }
+.tabbar a { position: relative; color: var(--c-muted); font-size: .72rem; padding-top: 9px; }
+.tabbar a[aria-current="page"] { color: var(--c-navy); font-weight: 700; }
+.tabbar a[aria-current="page"]::before { content: ""; position: absolute; top: 0; left: 22%; right: 22%; height: 3px; border-radius: 0 0 3px 3px; background: var(--c-orange); }
+
+/* Boutons retour : même aspect partout */
+.back-link { display: inline-flex; align-items: center; gap: .45rem; min-height: 44px; padding: .45rem 1rem .45rem .8rem; background: #fff; border: 1.5px solid var(--c-line-strong); border-radius: var(--r-pill); color: var(--c-navy); font-weight: 700; font-size: var(--fs-sm); text-decoration: none; width: fit-content; }
+.back-link:hover { text-decoration: none; border-color: var(--c-navy); background: var(--c-surface-2); }
+.back-link:focus-visible { outline: 3px solid var(--c-navy-3); outline-offset: 2px; }
+.crumbs { margin-bottom: var(--sp-2); }
+
+.corp-sectors { grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); }
+
+@media (max-width: 899px) {
+  .site-header .bar-inner { min-height: 58px; }
+  .brand img { height: 30px; }
+  .header-actions .btn { padding-inline: .8rem; font-size: var(--fs-xs); }
+}
+@media (max-width: 599px) {
+  .header-actions .btn-login { display: none; }          /* « Espace entreprise » est dans les onglets du bas */
+  .btn-logout .lbl { display: none; }
+  .btn-logout { padding-inline: .7rem; }
+}
+@media (max-width: 380px) { .back-site { padding-inline: .6rem; } .brand img { height: 26px; } }
+
+@media (max-width: 1199px) { .lbl-long { display: none; } .nav-main { margin-left: var(--sp-3); padding-left: var(--sp-3); } .nav-main a { padding-inline: .6rem; } }
+.nav-main { min-width: 0; }
+/* Tablettes et petits ordinateurs : on garde les onglets du bas plutôt que de serrer le menu du haut */
+@media (min-width: 900px) and (max-width: 1139px) {
+  .tabbar { display: grid; }
+  .nav-main { display: none; }
+  main { padding-bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom)); }
+  .site-footer { padding-bottom: calc(var(--sp-6) + var(--tabbar-h)); }
+  .site-header .bar-inner > .header-actions { margin-left: auto; }
+  .toast { bottom: calc(var(--tabbar-h) + 1rem); }
+}
+
+@media (max-width: 1399px) { .user-chip { display: none !important; } }
+@media (max-width: 1399px) { .btn-logout .lbl { display: none; } .btn-logout { padding-inline: .7rem; } }

@@ -1,0 +1,715 @@
+{
+  "profile": "port-agent-transit",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Les documents d'un dossier d'import-export",
+      "theme": "Documents de transit",
+      "minutes": 9,
+      "body": "Un dossier de transit solide commence par des **documents complets et cohérents**. Le transitaire ou déclarant en douane ne dédouane pas « une marchandise » mais un **ensemble de pièces** qui doivent se recouper.\n\nLes pièces courantes d'un import par mer au port d'Owendo :\n- la **facture commerciale** : prix, Incoterm, parties, description de la marchandise ;\n- la **liste de colisage** : contenu, nombre de colis, poids et dimensions ;\n- le **connaissement maritime** (bill of lading) : reçu de la marchandise, preuve du contrat de transport et, lorsqu'il est négociable, titre représentatif de la marchandise ;\n- la **police ou le certificat d'assurance**, si elle est exigée ;\n- le **certificat d'origine** ou d'autres certificats (sanitaire, phytosanitaire, de conformité) selon la nature du produit ;\n- les **autorisations ou licences** pour les produits soumis à contrôle.\n\nPar avion, le document de transport est la **lettre de transport aérien** (LTA). Elle prouve le contrat de transport mais n'est **pas un titre de propriété** négociable. Par route, on utilise la **lettre de voiture**.\n\nPour retirer la marchandise, il faut aussi un **ordre de livraison** (bon à délivrer) émis par la compagnie maritime ou son agent, après présentation du connaissement original ou de la mainlevée prévue, et règlement des frais dus à la ligne.\n\nLe **manifeste** est la liste des marchandises transportées par le navire, déposée par le transporteur auprès des autorités ; la déclaration en douane doit pouvoir être rapprochée de lui.\n\nLa cohérence compte : mêmes références, mêmes quantités, mêmes poids et même description sur la facture, la liste de colisage et le connaissement. Une divergence est une cause fréquente de blocage ou de contrôle renforcé.\n\n**Sur le terrain**\n- À réception des documents préalables (« pre-alert »), compare facture, colisage et connaissement avant l'arrivée du navire.\n- Demande immédiatement au client tout document manquant ou illisible.\n- Conserve chaque pièce dans le dossier, avec les dates de réception.",
+      "keyPoints": [
+        "Facture, liste de colisage et connaissement doivent être cohérents entre eux",
+        "Le connaissement est reçu, preuve du contrat et titre ; la LTA aérienne n'est pas un titre de propriété",
+        "L'ordre de livraison de la compagnie maritime est nécessaire pour retirer la marchandise"
+      ],
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Terminal à conteneurs où arrivent les marchandises à dédouaner"
+    },
+    {
+      "id": "m2",
+      "title": "Déclaration en détail, classement et valeur en douane",
+      "theme": "Déclaration et valeur",
+      "minutes": 10,
+      "body": "La **déclaration en détail** est l'acte par lequel le déclarant indique à la douane le régime demandé, la marchandise et sa valeur. Elle est déposée par voie électronique, dans le système informatisé de la douane, par un **déclarant ou commissionnaire en douane agréé** ou par l'importateur lui-même lorsque cela est permis.\n\nLes trois piliers du calcul des droits et taxes :\n1. Le **classement tarifaire** : la marchandise est classée dans la nomenclature du **Système harmonisé** (six premiers chiffres communs aux pays). Les pays de la zone CEMAC, dont le Gabon, appliquent un tarif extérieur commun, qui détermine le taux de droit selon la position tarifaire.\n2. L'**origine** : le pays d'origine peut ouvrir droit à un traitement tarifaire particulier lorsqu'un accord le prévoit et que la preuve est apportée.\n3. La **valeur en douane** : en principe, la **valeur transactionnelle**, c'est-à-dire le prix réellement payé ou à payer, à laquelle on ajoute notamment le **fret** et l'**assurance** jusqu'au point d'entrée (valeur CAF). Exemple : marchandise de 8 000 000 FCFA, fret de 1 000 000 et assurance de 200 000 donnent 9 200 000 FCFA. Si le droit indiqué est de 10 %, il vaut 920 000 FCFA.\n\nAprès dépôt, la douane attribue la déclaration à un **circuit de contrôle** (par exemple un contrôle documentaire ou une visite physique de la marchandise). Le déclarant doit répondre aux demandes et être présent ou représenté lors de la visite. Les droits et taxes sont ensuite **liquidés** et payés, puis la douane délivre la mainlevée.\n\nLe déclarant est **responsable de l'exactitude** de sa déclaration. Un classement erroné, une origine non justifiée ou une sous-évaluation peuvent entraîner un redressement, des pénalités et la mise en cause du déclarant.\n\n**Sur le terrain**\n- Décris la marchandise avec précision (nature, matière, usage) : une description vague conduit à un mauvais classement.\n- Calcule la valeur CAF avec facture, fret et assurance justifiés par des documents.\n- Garde toute la correspondance avec la douane dans le dossier.",
+      "keyPoints": [
+        "Droits et taxes dépendent du classement tarifaire (Système harmonisé), de l'origine et de la valeur",
+        "Valeur en douane = valeur transactionnelle + fret et assurance jusqu'au point d'entrée (CAF)",
+        "Le déclarant répond de l'exactitude de la déclaration ; un circuit de contrôle peut exiger une visite physique"
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Les régimes douaniers",
+      "theme": "Régimes douaniers",
+      "minutes": 9,
+      "body": "Le **régime douanier** est le statut que l'on donne à la marchandise : il détermine les droits et taxes, les formalités et le sort final des produits. Choisir le bon régime dès le départ est l'une des décisions les plus importantes du déclarant.\n\nLes principaux régimes :\n- la **mise à la consommation** (ou importation définitive) : la marchandise entre durablement sur le territoire, droits et taxes acquittés ;\n- l'**admission temporaire** : du matériel est importé pour une durée limitée, par exemple un engin de chantier, un équipement de forage ou un matériel d'exposition, avec suspension totale ou partielle des droits, à condition de le **réexporter** dans le délai accordé en l'état ;\n- le **transit** : la marchandise circule sous contrôle douanier, d'un point à un autre (d'un port vers un bureau intérieur ou vers un pays voisin), droits suspendus, sous un **engagement** et souvent une **caution** ;\n- l'**entrepôt** : stockage de marchandises sous contrôle douanier, avec suspension des droits jusqu'à leur destination finale ;\n- l'**exportation** : sortie définitive du territoire, avec ses formalités propres ;\n- la **réexportation** : sortie de marchandises importées temporairement ou en suspension.\n\nUn **régime suspensif** exige un **suivi rigoureux** : dates d'échéance, preuves de réexportation ou d'arrivée, apurement du dossier. Si le délai est dépassé sans apurement, la douane peut réclamer les droits et taxes et appliquer des sanctions.\n\nLes **marchandises prohibées ou soumises à restriction** (licence, autorisation sanitaire ou autre) demandent un contrôle supplémentaire. Le déclarant vérifie avant l'arrivée si une autorisation est requise.\n\nAu Gabon, le secteur pétrolier et minier recourt souvent à l'admission temporaire, car beaucoup d'équipements spécialisés repartent à la fin d'un contrat.\n\n**Sur le terrain**\n- Demande au client si le matériel doit rester ou repartir avant de choisir le régime.\n- Pour tout régime suspensif, inscris l'échéance dans ton planning et alerte le client à l'avance.\n- Vérifie les autorisations préalables avant l'arrivée du navire, pas après.",
+      "keyPoints": [
+        "Le régime détermine droits, formalités et sort de la marchandise : le choisir dès le départ",
+        "Admission temporaire : suspension des droits à condition de réexporter dans le délai accordé",
+        "Un régime suspensif impose suivi d'échéance et apurement ; sinon droits et sanctions possibles"
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Suivi du dossier, frais portuaires et conformité",
+      "theme": "Suivi, frais et conformité",
+      "minutes": 9,
+      "body": "Le métier de transitaire ne s'arrête pas au dépôt de la déclaration. Il faut **suivre le dossier de bout en bout** : arrivée du navire, déclaration, contrôle, paiement, enlèvement et livraison, en tenant compte des délais.\n\nLes principaux **frais** à surveiller :\n- le **fret et les frais de la ligne maritime** (frais de manutention, surcharges, frais de documents), à régler pour obtenir l'ordre de livraison ;\n- les **frais de manutention et de stockage au terminal** (magasinage) lorsque le conteneur reste au parc au-delà de la période gratuite ;\n- les **surestaries** (demurrage) lorsque le conteneur n'est pas restitué à la compagnie maritime dans le délai de franchise ;\n- les **droits et taxes** de douane ;\n- les **honoraires** du transitaire et les frais de transport routier.\n\nLa **franchise** est le nombre de jours gratuits accordés ; au-delà, les frais courent chaque jour. Le meilleur moyen d'éviter ces coûts est d'avoir les documents complets **avant l'arrivée du navire**.\n\nLa **conformité et l'éthique** sont centrales. Le déclarant :\n- déclare la valeur, la nature et l'origine réelles, sans arrangement avec la facture ;\n- **refuse tout paiement irrégulier** et toute proposition de contourner une règle ;\n- ne couvre pas un client qui cache des marchandises ou falsifie des documents ;\n- **conserve les documents** pendant la durée prévue par la règle applicable, car la douane peut effectuer des **contrôles a posteriori**.\n\nUn bon suivi s'appuie sur un **tableau de bord** : numéro de dossier, navire, date d'arrivée, documents reçus, circuit de contrôle, échéance de franchise, date de livraison. Le client est informé à chaque étape importante.\n\n**Sur le terrain**\n- Note pour chaque conteneur la fin de franchise et préviens le client avant l'échéance.\n- Documente par écrit toute demande inhabituelle (paiement, changement de valeur).\n- Transmets au client le détail des frais avec justificatifs : la transparence protège ton agrément.",
+      "keyPoints": [
+        "Surestaries (ligne maritime) et magasinage (terminal) courent chaque jour après la franchise",
+        "Documents complets avant l'arrivée du navire = moins de frais et de blocages",
+        "Conformité : valeurs et origine réelles, refus de tout paiement irrégulier, archivage des pièces"
+      ],
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec marchandises stockées en attente d'enlèvement"
+    }
+  ],
+  "questions": [
+    {
+      "id": "port-agent-transit-001",
+      "theme": "Documents de transit",
+      "level": 1,
+      "q": "Quel document est à la fois reçu de la marchandise, preuve du contrat de transport et, s'il est négociable, titre représentatif de la marchandise ?",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Photographie d'un terminal à conteneurs avec piles de conteneurs et grues de quai",
+      "choices": [
+        "La facture commerciale",
+        "La liste de colisage",
+        "Le connaissement maritime",
+        "Le manifeste du navire"
+      ],
+      "answer": 2,
+      "explain": "Le connaissement (bill of lading) cumule ces trois rôles. La facture sert au prix et la liste de colisage au contenu.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-002",
+      "theme": "Documents de transit",
+      "level": 1,
+      "q": "Quelle information trouve-t-on principalement sur la liste de colisage ?",
+      "choices": [
+        "Le prix payé par l'acheteur",
+        "Le taux de droit de douane applicable",
+        "Le nom du transporteur routier local",
+        "Le contenu, le nombre, le poids et les dimensions des colis"
+      ],
+      "answer": 3,
+      "explain": "La liste de colisage détaille la composition physique de l'envoi. Le prix figure sur la facture commerciale.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-003",
+      "theme": "Documents de transit",
+      "level": 1,
+      "q": "Par avion, quel document de transport est utilisé ?",
+      "choices": [
+        "La lettre de transport aérien (LTA)",
+        "Le connaissement maritime à ordre",
+        "La lettre de voiture routière",
+        "Le manifeste du navire"
+      ],
+      "answer": 0,
+      "explain": "La LTA est le document du transport aérien. Elle prouve le contrat mais n'est pas un titre de propriété négociable.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-004",
+      "theme": "Documents de transit",
+      "level": 2,
+      "q": "Tu compares facture, liste de colisage et connaissement avant l'arrivée du navire et tu trouves un poids différent entre la facture et le connaissement. Que fais-tu ?",
+      "choices": [
+        "Je choisis le chiffre le plus bas pour réduire les droits",
+        "Je dépose la déclaration en espérant que la douane ne verra pas",
+        "Je demande au client ou au fournisseur de clarifier et corriger avant la déclaration",
+        "Je modifie moi-même le poids sur la facture"
+      ],
+      "answer": 2,
+      "explain": "Une incohérence est une cause de contrôle renforcé. On la fait clarifier par les documents rectifiés, jamais par arrangement.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-005",
+      "theme": "Documents de transit",
+      "level": 2,
+      "q": "Pour retirer un conteneur au terminal, quel document faut-il en plus de l'autorisation douanière ?",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Photographie d'un terminal à conteneurs avec piles de conteneurs et grues de quai",
+      "choices": [
+        "Le certificat de naissance de l'importateur",
+        "L'ordre de livraison délivré par la compagnie maritime ou son agent",
+        "La facture du transport routier",
+        "La liste du personnel du navire"
+      ],
+      "answer": 1,
+      "explain": "L'ordre de livraison atteste que la ligne autorise la remise de la marchandise, après règlement des frais dus.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-006",
+      "theme": "Documents de transit",
+      "level": 2,
+      "q": "Un client affirme que sa LTA aérienne lui donne le droit de revendre la marchandise en transférant le document. Quelle réponse est correcte ?",
+      "choices": [
+        "La LTA est un titre négociable comme le connaissement à ordre",
+        "La LTA remplace la facture commerciale",
+        "La LTA n'est pas un titre négociable ; elle prouve le contrat de transport",
+        "La LTA remplace la déclaration en douane"
+      ],
+      "answer": 2,
+      "explain": "À la différence du connaissement à ordre, la lettre de transport aérien n'est pas un titre représentatif de la marchandise.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-007",
+      "theme": "Documents de transit",
+      "level": 3,
+      "q": "Un client importe un produit alimentaire. Quel réflexe documentaire convient avant l'arrivée ?",
+      "choices": [
+        "Vérifier si un certificat sanitaire ou une autorisation est exigé pour ce produit",
+        "Ne s'occuper que du certificat d'origine",
+        "Attendre le contrôle physique pour voir si un document manque",
+        "Remplacer le certificat par la facture"
+      ],
+      "answer": 0,
+      "explain": "Selon la nature du produit, des certificats ou autorisations sont requis. Les anticiper évite blocage et frais d'attente.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-008",
+      "theme": "Documents de transit",
+      "level": 2,
+      "q": "Quel document décrit globalement toutes les marchandises transportées par le navire ?",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Photographie d'un terminal à conteneurs avec piles de conteneurs et grues de quai",
+      "choices": [
+        "La facture proforma du client",
+        "Le manifeste",
+        "La liste de colisage d'un seul chargeur",
+        "Le certificat d'assurance"
+      ],
+      "answer": 1,
+      "explain": "Le manifeste est établi par le transporteur pour l'ensemble du chargement. La déclaration doit pouvoir être rapprochée de lui.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-009",
+      "theme": "Documents de transit",
+      "level": 3,
+      "q": "Le fournisseur envoie la facture commerciale sans mention de l'Incoterm. Pourquoi est-ce gênant pour le dossier ?",
+      "choices": [
+        "Il n'est jamais utile pour la douane",
+        "Il sert uniquement à choisir la couleur du conteneur",
+        "Il remplace le connaissement",
+        "L'Incoterm aide à établir la part de fret et d'assurance à intégrer à la valeur en douane"
+      ],
+      "answer": 3,
+      "explain": "L'Incoterm indique qui paie fret et assurance, donc ce qu'il faut ajouter au prix pour établir la valeur CAF.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-010",
+      "theme": "Documents de transit",
+      "level": 1,
+      "q": "Que doit faire un transitaire qui constate qu'une pièce du dossier est illisible ?",
+      "choices": [
+        "Demander immédiatement une copie lisible au client",
+        "Deviner le contenu à partir d'un autre dossier",
+        "Déposer la déclaration telle quelle",
+        "Supprimer la pièce du dossier"
+      ],
+      "answer": 0,
+      "explain": "Une pièce illisible peut bloquer le dossier. La demander tout de suite protège les délais.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-011",
+      "theme": "Déclaration et valeur",
+      "level": 1,
+      "q": "La nomenclature internationale utilisée pour classer les marchandises en douane s'appelle :",
+      "choices": [
+        "Le plan d'arrimage",
+        "Le manifeste du navire",
+        "Le Système harmonisé",
+        "La nomenclature des Incoterms"
+      ],
+      "answer": 2,
+      "explain": "Le Système harmonisé donne une codification commune des marchandises, dont les six premiers chiffres sont partagés.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-012",
+      "theme": "Déclaration et valeur",
+      "level": 1,
+      "q": "À l'importation, la valeur en douane CAF comprend principalement :",
+      "choices": [
+        "Le prix de la marchandise seul, sans frais",
+        "Les honoraires du transitaire uniquement",
+        "Le coût du transport routier après la douane uniquement",
+        "Le prix de la marchandise, le fret et l'assurance jusqu'au point d'entrée"
+      ],
+      "answer": 3,
+      "explain": "La valeur CAF additionne prix, fret et assurance jusqu'au point d'entrée sur le territoire douanier.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-013",
+      "theme": "Déclaration et valeur",
+      "level": 2,
+      "q": "Une marchandise est facturée 5 000 000 FCFA, avec un fret de 600 000 FCFA et une assurance de 150 000 FCFA. Quelle est la valeur CAF ?",
+      "choices": [
+        "5 750 000 FCFA",
+        "5 000 000 FCFA",
+        "5 600 000 FCFA",
+        "5 150 000 FCFA"
+      ],
+      "answer": 0,
+      "explain": "On additionne : 5 000 000 + 600 000 + 150 000 = 5 750 000 FCFA, base de calcul des droits.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-014",
+      "theme": "Déclaration et valeur",
+      "level": 2,
+      "q": "Avec une valeur CAF de 9 200 000 FCFA et un droit de 10 % (taux donné par l'énoncé), quel est le montant du droit ?",
+      "choices": [
+        "92 000 FCFA",
+        "9 200 FCFA",
+        "920 000 FCFA",
+        "1 840 000 FCFA"
+      ],
+      "answer": 2,
+      "explain": "10 % de 9 200 000 donnent 920 000 FCFA. Le taux réel dépend du classement tarifaire.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-015",
+      "theme": "Déclaration et valeur",
+      "level": 2,
+      "q": "Après dépôt de la déclaration, la douane attribue un circuit comprenant une visite physique. Quelle est ta conduite ?",
+      "choices": [
+        "Je disparais jusqu'à la fin du contrôle",
+        "Je prépare la marchandise, je me rends disponible ou me fais représenter et je réponds aux demandes",
+        "J'ouvre les colis moi-même avant l'arrivée de l'agent",
+        "Je refuse la visite car la déclaration est déjà déposée"
+      ],
+      "answer": 1,
+      "explain": "La visite physique est un contrôle normal. Le déclarant coopère et répond aux demandes de la douane.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-016",
+      "theme": "Déclaration et valeur",
+      "level": 3,
+      "q": "Un client propose de déclarer une valeur inférieure à la facture réelle pour réduire les droits. Que fais-tu ?",
+      "choices": [
+        "J'accepte si le montant de l'écart est faible",
+        "J'accepte contre une commission",
+        "Je refuse et déclare la valeur réelle justifiée par les documents",
+        "J'accepte en changeant la facture seulement pour la douane"
+      ],
+      "answer": 2,
+      "explain": "Une sous-évaluation est une infraction qui expose le client et le déclarant à des redressements et à des sanctions.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-017",
+      "theme": "Déclaration et valeur",
+      "level": 2,
+      "q": "Pourquoi la description exacte de la marchandise est-elle importante dans la déclaration ?",
+      "choices": [
+        "Elle permet un classement tarifaire correct et évite un redressement",
+        "Elle ne sert qu'à embellir le document",
+        "Elle remplace l'ordre de livraison",
+        "Elle sert à calculer les frais de magasinage"
+      ],
+      "answer": 0,
+      "explain": "Le classement tarifaire dépend de la nature, de la matière et de l'usage de la marchandise. Une description vague conduit à des erreurs.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-018",
+      "theme": "Déclaration et valeur",
+      "level": 3,
+      "q": "La douane remet en cause le classement tarifaire de ta déclaration et propose une position à droit plus élevé. Quelle est la bonne démarche ?",
+      "choices": [
+        "Ignorer la remarque, car la déclaration est déposée",
+        "Examiner les arguments, répondre par écrit avec documents techniques si je conteste, sinon rectifier",
+        "Menacer l'agent",
+        "Changer la description sans rien dire"
+      ],
+      "answer": 1,
+      "explain": "Le déclarant échange de façon documentée avec la douane et utilise les voies de recours prévues.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-019",
+      "theme": "Déclaration et valeur",
+      "level": 1,
+      "q": "Qui est responsable de l'exactitude des informations de la déclaration en détail ?",
+      "choices": [
+        "Le seul capitaine du navire",
+        "Le gardien du terminal",
+        "Le chauffeur du camion",
+        "Le déclarant, qui signe et dépose la déclaration"
+      ],
+      "answer": 3,
+      "explain": "Le déclarant répond de l'exactitude de sa déclaration, même s'il s'appuie sur les documents du client.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-020",
+      "theme": "Déclaration et valeur",
+      "level": 2,
+      "q": "Pourquoi l'origine de la marchandise est-elle déclarée ?",
+      "choices": [
+        "Elle peut permettre un traitement tarifaire particulier si un accord le prévoit et si la preuve est apportée",
+        "Elle fixe la longueur du quai utilisé",
+        "Elle détermine le numéro du conteneur",
+        "Elle sert uniquement à choisir le transporteur routier"
+      ],
+      "answer": 0,
+      "explain": "L'origine sert aux statistiques, aux règles commerciales et aux préférences tarifaires, sous réserve de justificatifs.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-021",
+      "theme": "Régimes douaniers",
+      "level": 1,
+      "q": "Quel régime douanier correspond à l'importation définitive de marchandises avec paiement des droits et taxes ?",
+      "choices": [
+        "L'admission temporaire",
+        "Le transit",
+        "La mise à la consommation",
+        "La réexportation"
+      ],
+      "answer": 2,
+      "explain": "La mise à la consommation fait entrer la marchandise durablement sur le territoire, droits et taxes acquittés.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-022",
+      "theme": "Régimes douaniers",
+      "level": 1,
+      "q": "Un engin de chantier est importé pour un contrat de dix mois puis doit repartir. Quel régime est adapté en principe ?",
+      "choices": [
+        "La mise à la consommation sans suivi",
+        "L'exportation définitive dès l'arrivée",
+        "Le transit vers le prochain chantier uniquement",
+        "L'admission temporaire"
+      ],
+      "answer": 3,
+      "explain": "L'admission temporaire suspend les droits pour du matériel destiné à repartir. Elle exige la réexportation dans le délai.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-023",
+      "theme": "Régimes douaniers",
+      "level": 2,
+      "q": "Qu'est-ce que le régime du transit douanier ?",
+      "choices": [
+        "La circulation de marchandises sous contrôle douanier, droits suspendus, d'un point à un autre",
+        "Le stockage définitif chez le client",
+        "Le paiement des droits à l'arrivée seulement",
+        "La vente de la marchandise sur le quai"
+      ],
+      "answer": 0,
+      "explain": "En transit, la marchandise circule sous engagement et souvent caution, jusqu'au bureau de destination, avec suspension des droits.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-024",
+      "theme": "Régimes douaniers",
+      "level": 2,
+      "q": "Que doit surveiller le déclarant dans un régime suspensif comme l'admission temporaire ?",
+      "choices": [
+        "Rien, car les droits sont suspendus",
+        "Uniquement la couleur de la marchandise",
+        "L'échéance et la preuve de réexportation, pour apurer le dossier",
+        "La date de naissance de l'importateur"
+      ],
+      "answer": 2,
+      "explain": "Sans apurement dans les délais, la douane peut réclamer les droits et appliquer des sanctions.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-025",
+      "theme": "Régimes douaniers",
+      "level": 3,
+      "q": "Le délai d'admission temporaire d'un matériel arrive à échéance dans deux semaines et le client veut le garder une partie du contrat en plus. Que fais-tu ?",
+      "choices": [
+        "Je laisse passer le délai et on verra",
+        "Je préviens le client et je demande à temps la prolongation ou régularise selon la règle",
+        "Je déclare que le matériel est parti sans preuve",
+        "Je change la plaque du matériel"
+      ],
+      "answer": 1,
+      "explain": "Un régime suspensif se gère avant l'échéance. Prolongation ou régularisation se demandent en temps utile.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-026",
+      "theme": "Régimes douaniers",
+      "level": 2,
+      "q": "Quel est le principe du régime d'entrepôt douanier ?",
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Photographie d'un entrepôt avec marchandises stockées sur des rayonnages",
+      "choices": [
+        "Vendre la marchandise sans formalité",
+        "Éviter toute déclaration à la douane",
+        "Stocker des marchandises sous contrôle douanier avec suspension des droits jusqu'à leur destination",
+        "Transformer la marchandise sans aucun contrôle"
+      ],
+      "answer": 2,
+      "explain": "L'entrepôt permet de différer le paiement des droits jusqu'à la mise à la consommation ou la sortie du territoire.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-027",
+      "theme": "Régimes douaniers",
+      "level": 3,
+      "q": "Un client veut choisir « le régime le moins cher » sans dire si le matériel repartira. Comment procèdes-tu ?",
+      "choices": [
+        "Je pose d'abord la question du devenir du matériel pour choisir le régime adapté",
+        "Je choisis au hasard et on verra",
+        "Je choisis l'exportation sans le dire",
+        "Je dépose sans régime"
+      ],
+      "answer": 0,
+      "explain": "Le choix du régime dépend de la destination finale. Se tromper peut coûter des droits, pénalités et temps.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-028",
+      "theme": "Régimes douaniers",
+      "level": 2,
+      "q": "Que signifie la réexportation d'un matériel entré en admission temporaire ?",
+      "choices": [
+        "Le matériel est vendu sur place",
+        "Le matériel quitte le territoire, ce qui permet d'apurer le régime",
+        "Le matériel reste indéfiniment au port",
+        "Le matériel change de numéro"
+      ],
+      "answer": 1,
+      "explain": "La réexportation en l'état est la condition de l'admission temporaire. Les preuves de sortie permettent d'apurer le dossier.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-029",
+      "theme": "Régimes douaniers",
+      "level": 1,
+      "q": "Avant l'arrivée d'un produit soumis à restriction, que vérifies-tu en priorité ?",
+      "choices": [
+        "La couleur du conteneur",
+        "Le nombre de grues du port",
+        "La météo de la semaine",
+        "Si une autorisation ou licence préalable est exigée"
+      ],
+      "answer": 3,
+      "explain": "Un produit réglementé nécessite une autorisation avant l'importation. L'absence de pièce peut bloquer la marchandise.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-030",
+      "theme": "Régimes douaniers",
+      "level": 3,
+      "q": "Une marchandise doit être expédiée vers un pays voisin sous transit. Quel élément est généralement demandé ?",
+      "choices": [
+        "Un engagement et, selon la règle, une caution pour garantir l'arrivée à destination",
+        "Pas de garantie, car la marchandise voyage",
+        "Un simple appel téléphonique au bureau de départ",
+        "Un nouveau connaissement au nom du chauffeur"
+      ],
+      "answer": 0,
+      "explain": "Le transit suspend les droits ; la garantie couvre le risque que la marchandise n'arrive pas à destination.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-031",
+      "theme": "Suivi, frais et conformité",
+      "level": 1,
+      "q": "Que sont les surestaries ?",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Photographie d'un terminal à conteneurs avec piles de conteneurs et grues de quai",
+      "choices": [
+        "Des frais de douane fixés par le Système harmonisé",
+        "Des honoraires du transitaire",
+        "Des frais facturés par la compagnie maritime si le conteneur n'est pas restitué dans la franchise",
+        "Une taxe sur l'assurance"
+      ],
+      "answer": 2,
+      "explain": "Les surestaries (demurrage) sanctionnent le dépassement de la période gratuite de restitution du conteneur à la ligne.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-032",
+      "theme": "Suivi, frais et conformité",
+      "level": 1,
+      "q": "Qui facture généralement le magasinage ?",
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Photographie d'un entrepôt avec marchandises stockées sur des rayonnages",
+      "choices": [
+        "La compagnie d'assurance",
+        "Le fournisseur étranger",
+        "La banque de l'importateur",
+        "Le terminal ou le port, pour le stockage prolongé de la marchandise"
+      ],
+      "answer": 3,
+      "explain": "Le magasinage rémunère le stockage au-delà de la période gratuite du terminal. Il se distingue des surestaries.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-033",
+      "theme": "Suivi, frais et conformité",
+      "level": 2,
+      "q": "Quel est le meilleur moyen d'éviter surestaries et magasinage ?",
+      "choices": [
+        "Avoir les documents complets avant l'arrivée du navire et suivre la fin de franchise",
+        "Attendre l'arrivée du conteneur pour demander les documents",
+        "Ne pas informer le client",
+        "Laisser le conteneur au parc sans suivi"
+      ],
+      "answer": 0,
+      "explain": "L'anticipation documentaire permet de dédouaner et d'enlever dans la période gratuite.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-034",
+      "theme": "Suivi, frais et conformité",
+      "level": 2,
+      "q": "Un agent te laisse entendre qu'un paiement en liquide accélérerait ton dossier. Quelle est la bonne réaction ?",
+      "choices": [
+        "J'accepte si le montant est raisonnable",
+        "J'accepte et je facture au client",
+        "Je refuse, je documente et j'informe ma hiérarchie",
+        "J'accepte une seule fois en secret"
+      ],
+      "answer": 2,
+      "explain": "Tout paiement irrégulier est interdit. La conformité protège le déclarant, son agrément et son client.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-035",
+      "theme": "Suivi, frais et conformité",
+      "level": 3,
+      "q": "Un dossier est bloqué car un document manque. Le client te demande d'en fabriquer un « pour gagner du temps ». Que fais-tu ?",
+      "choices": [
+        "J'accepte si le document est à peu près semblable",
+        "Je refuse la falsification et l'aide à obtenir le vrai document",
+        "J'accepte si le client signe un papier",
+        "J'accepte si le navire est déjà arrivé"
+      ],
+      "answer": 1,
+      "explain": "Un faux document engage la responsabilité pénale du déclarant. La seule voie est d'obtenir la pièce authentique.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-036",
+      "theme": "Suivi, frais et conformité",
+      "level": 2,
+      "q": "Pourquoi conserver les documents d'un dossier même après la livraison ?",
+      "choices": [
+        "Pour remplir le coffre du bureau",
+        "Parce que le port l'exige tous les jours",
+        "La douane peut effectuer des contrôles a posteriori",
+        "Pour calculer la franchise de l'an prochain"
+      ],
+      "answer": 2,
+      "explain": "Les documents prouvent l'exactitude de la déclaration en cas de contrôle ultérieur, pendant la durée prévue par la règle.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-037",
+      "theme": "Suivi, frais et conformité",
+      "level": 1,
+      "q": "Quel élément est utile dans un tableau de suivi des dossiers ?",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Photographie d'un terminal à conteneurs avec piles de conteneurs et grues de quai",
+      "choices": [
+        "La date de fin de franchise de chaque conteneur",
+        "Le nom du capitaine du navire uniquement",
+        "La couleur du camion",
+        "Le menu de la cantine"
+      ],
+      "answer": 0,
+      "explain": "La fin de franchise déclenche surestaries et magasinage. La noter permet d'agir avant les frais.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-038",
+      "theme": "Suivi, frais et conformité",
+      "level": 3,
+      "q": "Le client conteste une facture de frais et te demande des justificatifs. Quelle est la bonne pratique ?",
+      "choices": [
+        "Refuser de répondre",
+        "Fournir le détail des frais avec les justificatifs correspondants",
+        "Donner un montant global sans détail",
+        "Réduire la facture sans explication"
+      ],
+      "answer": 1,
+      "explain": "La transparence sur les frais préserve la confiance du client et la réputation du transitaire.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-039",
+      "theme": "Suivi, frais et conformité",
+      "level": 2,
+      "q": "Quel est l'effet d'un dépassement de franchise sur les coûts ?",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Photographie d'un terminal à conteneurs avec piles de conteneurs et grues de quai",
+      "choices": [
+        "Les frais s'effacent automatiquement",
+        "Les droits de douane diminuent",
+        "Le fret est remboursé",
+        "Les frais s'ajoutent chaque jour supplémentaire"
+      ],
+      "answer": 3,
+      "explain": "Passé la franchise, chaque jour de retard génère des frais. Le suivi est donc une obligation de gestion.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-transit-040",
+      "theme": "Suivi, frais et conformité",
+      "level": 3,
+      "q": "Un nouveau client te demande d'oublier les règles pour « arranger » une marchandise restreinte. Quelle posture adoptes-tu ?",
+      "choices": [
+        "Je rappelle les règles, je propose la voie régulière et je décline s'il insiste",
+        "J'accepte pour conserver le client",
+        "Je lui demande de payer double",
+        "Je fais semblant de ne pas comprendre"
+      ],
+      "answer": 0,
+      "explain": "La réputation et l'agrément du déclarant valent plus qu'un client. On travaille uniquement dans le cadre des règles.",
+      "seconds": 55,
+      "status": "draft"
+    }
+  ]
+}

@@ -28,7 +28,8 @@ const SECTEURS = [
   { t: 'Pétrole & gaz', d: 'Amont, aval, raffinerie, terminaux.', img: 'oil-rig-offshore.jpg', alt: 'Plateforme pétrolière offshore' },
   { t: 'Mines', d: 'Exploitation, traitement du minerai, engins.', img: 'open-pit-mine.jpg', alt: 'Mine à ciel ouvert' },
   { t: 'Énergie', d: 'Centrales thermiques, valorisation d’énergie, postes électriques.', img: 'electrical-substation.jpg', alt: 'Poste électrique' },
-  { t: 'Infrastructures', d: 'Génie civil, structures métalliques, levage, logistique portuaire.', img: 'crane-lifting.jpg', alt: 'Grue de levage' },
+  { t: 'Logistique & Port', d: 'Manutention portuaire, transit et douane, entreposage, supply chain.', img: 'container-port.jpg', alt: 'Terminal à conteneurs' },
+  { t: 'Infrastructures', d: 'Génie civil, structures métalliques, levage.', img: 'crane-lifting.jpg', alt: 'Grue de levage' },
 ];
 
 const PHASES = [
@@ -67,7 +68,7 @@ export default async function render(ctx, root) {
         <a class="btn btn-lg hero-btn-2" href="#/training">${icon('award', 18)} MOURESS Training</a>
       </div>
       <ul class="corp-facts">
-        <li><strong>4</strong> secteurs servis</li><li><strong>6</strong> métiers techniques</li><li><strong>3</strong> phases de projet couvertes</li>
+        <li><strong>5</strong> secteurs servis</li><li><strong>6</strong> métiers techniques</li><li><strong>3</strong> phases de projet couvertes</li>
       </ul>
     </div>
   </section>

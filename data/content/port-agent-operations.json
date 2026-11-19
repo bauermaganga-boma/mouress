@@ -1,0 +1,717 @@
+{
+  "profile": "port-agent-operations",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Le plan de parc à conteneurs",
+      "theme": "Plan de parc",
+      "minutes": 9,
+      "body": "Le **parc à conteneurs** est l'espace de stockage tampon entre le navire et l'extérieur du terminal (camions, trains, clients). Le **plan de parc** (yard plan) décrit où se trouve chaque conteneur et où placer les suivants. Un bon plan fait gagner du temps à tous les engins ; un mauvais plan crée des **remanutentions**, c'est-à-dire des déplacements inutiles de conteneurs pour atteindre celui que l'on cherche.\n\nUn emplacement se repère par des **coordonnées** : **bloc**, **travée** (bay), **rangée** (row) et **niveau** (tier). L'enregistrement dans le système d'exploitation du terminal (TOS) doit toujours correspondre à la réalité physique.\n\nLes règles générales de planification :\n- **séparer par catégorie** : import, export, transbordement, vides, pleins ;\n- **regrouper par taille** (20 et 40 pieds) et par type ;\n- les conteneurs **frigorifiques** (reefers) vont dans une zone équipée de **prises électriques**, avec contrôle régulier de la température ;\n- les **marchandises dangereuses** sont placées dans une zone dédiée, selon les règles de **ségrégation** du code IMDG et les consignes de sécurité du terminal ;\n- les **hors gabarit** et les colis spéciaux ont des emplacements prévus ;\n- à l'export, on regroupe les conteneurs par **navire, port de destination et poids**, pour faciliter le chargement dans le bon ordre.\n\nLa **hauteur de pile** est limitée par la capacité des engins et par les consignes de sécurité. Un conteneur sorti en premier ne doit pas être sous ceux qui sortent plus tard. À l'import, on tient compte des **dates de sortie prévues**, des conteneurs prioritaires et des conteneurs bloqués par la douane ou par un impayé.\n\nLa **densité du parc** influe : à forte occupation, les remanutentions augmentent et la productivité baisse. L'agent d'opérations alerte tôt lorsque le parc approche de ses limites.\n\n**Sur le terrain**\n- Chaque conteneur déplacé est enregistré sur le moment, pas à la fin du poste.\n- Aucun conteneur frigorifique ne reste sans prise ni contrôle de température.\n- Vérifie les blocages (douane, ligne) avant d'empiler au-dessus d'un conteneur.",
+      "keyPoints": [
+        "Un conteneur se localise par bloc, travée, rangée et niveau ; le TOS doit refléter la réalité",
+        "Séparer import, export, vides, pleins ; zones dédiées pour reefers et marchandises dangereuses",
+        "Un bon plan limite les remanutentions, qui coûtent du temps et de la productivité"
+      ],
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Parc à conteneurs avec piles de conteneurs organisées en blocs"
+    },
+    {
+      "id": "m2",
+      "title": "Escales, planning de quai et relations avec les lignes",
+      "theme": "Escales et planning de quai",
+      "minutes": 9,
+      "body": "Une **escale** est le séjour d'un navire au port, depuis son arrivée jusqu'à son départ. L'agent d'opérations travaille avec l'**agent maritime** (qui représente l'armateur), la **ligne maritime**, la capitainerie et les équipes du terminal.\n\nLes repères de temps :\n- **ETA** : heure estimée d'arrivée au port ;\n- **ETB** : heure estimée d'accostage au poste ;\n- **ETD** : heure estimée de départ.\nCes heures sont mises à jour tant que le navire n'est pas accosté ; le planning de quai les suit de près.\n\nLe **planning de quai** attribue un **poste d'accostage** et une **fenêtre de temps** à chaque navire, en tenant compte du tirant d'eau, de la longueur du navire, des portiques disponibles, des équipes et de la marée et du pilotage selon le port. Un navire qui arrive en retard ou en avance oblige à réorganiser le planning.\n\nAvant l'escale, la ligne transmet des informations : liste des conteneurs à décharger (**COPRAR**), plan de chargement et de décharge, état des conteneurs réfrigérés et dangereux. Le terminal prépare les équipes, les engins et la place au parc.\n\nPour l'export, la **date limite de réception** (cut-off) fixe le dernier moment où un conteneur peut entrer au terminal pour être chargé. Un conteneur qui arrive après cette date risque de rater le navire, sauf accord de la ligne.\n\nAprès l'escale, on établit le **rapport de fin d'opérations** : heures réelles, nombre de mouvements, interruptions et leurs causes (météo, panne, attente de documents). Il sert à la facturation et à l'amélioration du planning.\n\nLe **dialogue permanent avec la ligne** est essentiel : changements de rotation, retard, conteneurs prioritaires, avaries. Toute modification est confirmée par écrit.\n\n**Sur le terrain**\n- Mets à jour ETA et ETB dès qu'une information fiable arrive, et préviens les équipes concernées.\n- Consigne chaque interruption avec son heure et sa cause.\n- Un accord oral sur un changement de rotation se confirme par message écrit.",
+      "keyPoints": [
+        "ETA = arrivée estimée, ETB = accostage estimé, ETD = départ estimé ; mises à jour continues",
+        "Le planning de quai attribue poste et fenêtre selon taille du navire, portiques et équipes",
+        "Le cut-off fixe la dernière réception des conteneurs export ; toute modification est confirmée par écrit"
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Pointage, contrôle des conteneurs et documents de remise",
+      "theme": "Pointage et contrôle",
+      "minutes": 10,
+      "body": "Le **pointage** (tally) consiste à enregistrer et vérifier chaque mouvement de conteneur ou de colis : entrée, sortie, chargement, déchargement. Il prouve **ce qui est passé, quand et dans quel état**.\n\nÀ l'**entrée ou à la sortie du terminal** (porte, gate), l'agent contrôle :\n- le **numéro du conteneur** (code ISO : quatre lettres, six chiffres et une clé de contrôle) ;\n- la **correspondance** avec le document de réservation ou l'ordre de livraison ;\n- l'**état extérieur** du conteneur (déformations, trous, portes, joints) ;\n- le **scellé** : présence, intégrité et **numéro** conforme au document ;\n- le **chauffeur et le camion** selon les règles d'accès du terminal.\n\nCes constats sont consignés dans un **bon d'échange** (EIR, equipment interchange receipt), signé de façon contradictoire par les deux parties. Un dommage doit être **noté au moment du constat**, avant que le conteneur ne quitte les lieux, sinon la responsabilité devient difficile à établir.\n\nUn **scellé rompu ou différent** de celui indiqué sur le document est un incident : on arrête, on photographie, on prévient le superviseur et la ligne, et on rédige un constat. On ne remplace jamais un scellé sans consigne.\n\nPour les **mouvements navire**, le pointage établit la liste réellement chargée ou déchargée, avec les écarts : conteneur manquant, en trop, abîmé, dont le numéro diffère. Le rapport est comparé aux listes de la ligne (COARRI, CODECO pour les mouvements de porte).\n\n**Sur le terrain**\n- Lis le numéro du conteneur lettre par lettre, puis contrôle la clé.\n- Écris tout dommage visible sur le bon avant le départ du camion.\n- Toute différence de scellé est signalée, photographiée et tracée.",
+      "keyPoints": [
+        "Le pointage prouve quel conteneur est passé, quand et dans quel état",
+        "À la porte : numéro, document, état extérieur et scellé ; EIR signé de façon contradictoire",
+        "Dommage ou scellé différent : on arrête, on photographie, on prévient et on rédige un constat"
+      ],
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt et zone de marchandises où l'on pointe et contrôle les colis"
+    },
+    {
+      "id": "m4",
+      "title": "Plan d'arrimage, sécurité de chargement et indicateurs",
+      "theme": "Plan d'arrimage et indicateurs",
+      "minutes": 10,
+      "body": "Le **plan d'arrimage** (bay plan ou stowage plan) indique la **position de chaque conteneur à bord** du navire. Une position est notée par trois numéros : **travée** (bay), **rangée** (row) et **niveau** (tier). Les travées impaires sont généralement celles des 20 pieds ; les travées paires servent aux 40 pieds.\n\nLe message **BAPLIE** décrit l'occupation du navire, avec les conteneurs pleins et vides et leurs positions. Le plan est établi par la ligne ou son planificateur, puis vérifié par le terminal, qui l'adapte à ses engins.\n\nLes principes de la planification du chargement :\n- **ordre des ports** : on place les conteneurs destinés au premier port d'escale de façon à y accéder sans remanutention ;\n- **stabilité** : on répartit les poids de façon équilibrée, et on place les conteneurs lourds en bas ;\n- **conteneurs frigorifiques** : à proximité des prises du navire ;\n- **marchandises dangereuses** : positions et distances imposées par le code **IMDG** ;\n- **masse brute vérifiée** : le poids vérifié (VGM) du conteneur plein doit être communiqué avant le chargement, conformément aux règles de la sécurité maritime. Un conteneur sans VGM n'est pas chargé.\n\nSi un conteneur n'est pas prêt, ou si une information manque, le planificateur propose une alternative avec la ligne : remplacement, report sur le navire suivant (« roll over »), changement de position.\n\n**Indicateurs de performance** utilisés pour piloter le terminal :\n- **mouvements par heure et par grue** (productivité de quai) ;\n- **temps de séjour** (dwell time) des conteneurs au parc ;\n- **taux d'occupation** du parc ;\n- **temps de passage à la porte** des camions ;\n- **taux de remanutention**, **ponctualité** des navires, nombre d'incidents.\nUn indicateur sert à comprendre un problème, pas à punir : on cherche la cause avant de corriger.\n\n**Sur le terrain**\n- Contrôle VGM, scellé et statut douanier avant d'envoyer un conteneur au quai.\n- Signale tôt toute position impossible : une correction sur le plan évite un déchargement sur le quai.\n- Suis le temps de séjour : un parc qui se remplit alerte avant le blocage.",
+      "keyPoints": [
+        "Position à bord = travée, rangée, niveau ; BAPLIE décrit l'occupation du navire",
+        "Chargement : ordre des ports, stabilité, poids lourds en bas, IMDG, reefers près des prises, VGM avant chargement",
+        "Indicateurs : mouvements par heure et par grue, temps de séjour, occupation du parc, passage à la porte"
+      ],
+      "img": "photo/crane-lifting.jpg",
+      "imgAlt": "Grue levant une charge lors d'une opération de chargement"
+    }
+  ],
+  "questions": [
+    {
+      "id": "port-agent-operations-001",
+      "theme": "Plan de parc",
+      "level": 1,
+      "q": "Que désigne une remanutention dans un parc à conteneurs ?",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Photographie d'un terminal à conteneurs avec piles de conteneurs et grues de quai",
+      "choices": [
+        "Un contrôle sanitaire des conteneurs",
+        "Une inspection du scellé en porte",
+        "Un déplacement de conteneur sans valeur ajoutée pour accéder à un autre",
+        "Le chargement d'un conteneur à bord du navire"
+      ],
+      "answer": 2,
+      "explain": "La remanutention déplace des conteneurs qui gênent l'accès à celui recherché. Elle coûte du temps et réduit la productivité.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-002",
+      "theme": "Plan de parc",
+      "level": 1,
+      "q": "Quelles coordonnées permettent de repérer un conteneur dans le parc ?",
+      "choices": [
+        "Nom du navire, date et chauffeur",
+        "Bloc, travée, rangée et niveau",
+        "Numéro de scellé et couleur",
+        "Port de départ et monnaie de facturation"
+      ],
+      "answer": 1,
+      "explain": "Bloc, travée, rangée et niveau forment l'adresse du conteneur. Le système doit toujours la refléter fidèlement.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-003",
+      "theme": "Plan de parc",
+      "level": 1,
+      "q": "Pourquoi place-t-on les conteneurs frigorifiques dans une zone spécifique ?",
+      "choices": [
+        "Pour les protéger de la pluie uniquement",
+        "Pour qu'ils soient plus faciles à peindre",
+        "Pour les brancher à des prises électriques et surveiller leur température",
+        "Parce qu'ils sont toujours vides"
+      ],
+      "answer": 2,
+      "explain": "Un reefer a besoin d'alimentation continue. Une coupure ou un défaut de température peut détruire la marchandise.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-004",
+      "theme": "Plan de parc",
+      "level": 2,
+      "q": "Au moment d'empiler un conteneur import, tu constates qu'il est bloqué par la douane. Comment procèdes-tu ?",
+      "choices": [
+        "Je le place dans une zone accessible ou pas sous d'autres piles, en tenant compte du blocage",
+        "Je l'empile sous toute une pile, c'est plus simple",
+        "Je l'enregistre sous un faux numéro",
+        "Je l'ignore et le laisse sur le quai"
+      ],
+      "answer": 0,
+      "explain": "Un conteneur bloqué reste longtemps ; on évite qu'il immobilise d'autres conteneurs prêts à sortir.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-005",
+      "theme": "Plan de parc",
+      "level": 2,
+      "q": "Le parc atteint un niveau d'occupation très élevé. Quelle conséquence est probable ?",
+      "choices": [
+        "Moins de remanutentions",
+        "Plus de remanutentions et une baisse de productivité",
+        "Un temps de séjour plus court automatiquement",
+        "Une baisse du risque de congestion"
+      ],
+      "answer": 1,
+      "explain": "Quand l'espace manque, les piles montent et les engins déplacent davantage. Le risque de congestion augmente.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-006",
+      "theme": "Plan de parc",
+      "level": 2,
+      "q": "Pour l'export, comment est-il préférable de regrouper les conteneurs au parc ?",
+      "choices": [
+        "Par couleur de conteneur",
+        "Par heure d'arrivée du camion",
+        "Au hasard",
+        "Par navire, port de destination et poids"
+      ],
+      "answer": 3,
+      "explain": "Un regroupement logique facilite le chargement dans le bon ordre et limite les remanutentions au quai.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-007",
+      "theme": "Plan de parc",
+      "level": 3,
+      "q": "Tu constates que le TOS indique un conteneur en travée 12 alors qu'il est physiquement en travée 18. Quelle est la bonne conduite ?",
+      "choices": [
+        "Je corrige le système selon la réalité vérifiée et j'analyse l'origine de l'écart",
+        "Je laisse l'écart, le conteneur finira par être trouvé",
+        "Je déplace le conteneur sans informer",
+        "Je supprime l'enregistrement"
+      ],
+      "answer": 0,
+      "explain": "L'écart entre système et terrain génère des recherches coûteuses. On corrige, on trace et on cherche la cause.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-008",
+      "theme": "Plan de parc",
+      "level": 3,
+      "q": "Un conteneur de marchandises dangereuses arrive au parc. Quelle règle s'applique à son emplacement ?",
+      "choices": [
+        "Il peut aller n'importe où au parc",
+        "Il est posé contre les reefers pour économiser de la place",
+        "Il va dans une zone dédiée avec la ségrégation prévue par l'IMDG et les consignes du terminal",
+        "Il est placé sous un autre conteneur sans distinction"
+      ],
+      "answer": 2,
+      "explain": "Les marchandises dangereuses sont stockées selon des règles de ségrégation pour limiter les risques en cas d'incident.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-009",
+      "theme": "Plan de parc",
+      "level": 1,
+      "q": "À quel moment un mouvement de conteneur doit-il être enregistré dans le système ?",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Photographie d'un terminal à conteneurs avec piles de conteneurs et grues de quai",
+      "choices": [
+        "À la fin du mois",
+        "Quand quelqu'un le demande",
+        "Jamais, si le conteneur est vide",
+        "Au moment où il a lieu"
+      ],
+      "answer": 3,
+      "explain": "Un enregistrement en temps réel garantit un plan de parc fiable pour tous les engins et équipes.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-010",
+      "theme": "Plan de parc",
+      "level": 2,
+      "q": "Pourquoi tient-on compte des dates de sortie prévues à l'import pour placer les conteneurs ?",
+      "choices": [
+        "Pour éviter qu'un conteneur à sortir tôt soit sous un conteneur à sortir plus tard",
+        "Pour choisir la couleur de la pile",
+        "Pour réduire le nombre de portiques",
+        "Pour changer le numéro du conteneur"
+      ],
+      "answer": 0,
+      "explain": "Les conteneurs qui sortent les premiers doivent rester accessibles : c'est le principe pour limiter les remanutentions.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-011",
+      "theme": "Escales et planning de quai",
+      "level": 1,
+      "q": "Que signifie ETA dans le vocabulaire des escales ?",
+      "choices": [
+        "L'heure d'embarquement des marchandises",
+        "L'heure de départ réelle du navire",
+        "L'heure estimée d'arrivée du navire",
+        "L'état technique de l'armateur"
+      ],
+      "answer": 2,
+      "explain": "ETA est l'heure estimée d'arrivée. ETB désigne l'accostage et ETD le départ.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-012",
+      "theme": "Escales et planning de quai",
+      "level": 1,
+      "q": "Qu'est-ce que le cut-off export ?",
+      "choices": [
+        "La date de départ du chauffeur",
+        "La date et l'heure limites pour recevoir les conteneurs destinés à un navire",
+        "Le tarif du fret maritime",
+        "Le numéro du poste d'accostage"
+      ],
+      "answer": 1,
+      "explain": "Au-delà du cut-off, un conteneur risque de ne pas être chargé, sauf accord de la ligne.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-013",
+      "theme": "Escales et planning de quai",
+      "level": 2,
+      "q": "Un navire annonce un retard de plusieurs heures sur son ETA. Quelle est la bonne action ?",
+      "choices": [
+        "Garder le planning initial sans rien changer",
+        "Annuler tous les navires de la semaine",
+        "Mettre à jour le planning, prévenir les équipes et ajuster les postes",
+        "Mettre à jour uniquement après l'accostage"
+      ],
+      "answer": 2,
+      "explain": "Un retard modifie l'occupation du poste et la planification des équipes. Il faut informer et réorganiser sans attendre.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-014",
+      "theme": "Escales et planning de quai",
+      "level": 2,
+      "q": "Un représentant de la ligne demande oralement de modifier la rotation d'un navire. Que fais-tu ?",
+      "choices": [
+        "Je demande une confirmation écrite avant de modifier le planning",
+        "Je modifie tout sans trace",
+        "J'ignore sa demande",
+        "Je déplace le navire sans en avertir le superviseur"
+      ],
+      "answer": 0,
+      "explain": "Un changement de rotation a des conséquences opérationnelles et financières. La trace écrite protège toutes les parties.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-015",
+      "theme": "Escales et planning de quai",
+      "level": 3,
+      "q": "Deux navires demandent le même poste d'accostage sur des fenêtres qui se chevauchent. Comment arbitrer ?",
+      "choices": [
+        "Choisir celui qui appelle le plus fort",
+        "Appliquer les règles de priorité du terminal, en échangeant avec les lignes et la capitainerie",
+        "Laisser les deux accoster en même temps au même endroit",
+        "Retarder le plus petit sans le prévenir"
+      ],
+      "answer": 1,
+      "explain": "L'arbitrage repose sur des règles connues, la communication avec les parties et la sécurité nautique.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-016",
+      "theme": "Escales et planning de quai",
+      "level": 1,
+      "q": "Quel rapport établit-on après l'escale ?",
+      "choices": [
+        "Un plan de vacances des dockers",
+        "Un menu de cantine",
+        "Une carte du parc à conteneurs vide",
+        "Un rapport de fin d'opérations avec heures, mouvements et interruptions"
+      ],
+      "answer": 3,
+      "explain": "Le rapport de fin d'opérations sert à la facturation, au suivi de performance et à l'amélioration du planning.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-017",
+      "theme": "Escales et planning de quai",
+      "level": 2,
+      "q": "Un conteneur export arrive après le cut-off. Que fais-tu ?",
+      "choices": [
+        "Je préviens la ligne et propose les options : accord exceptionnel ou prochain navire",
+        "Je le charge sans rien dire",
+        "Je le retourne au chauffeur sans explication",
+        "Je modifie l'heure d'arrivée dans le système"
+      ],
+      "answer": 0,
+      "explain": "La décision appartient à la ligne selon ses règles. Falsifier l'heure d'arrivée est une faute grave.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-018",
+      "theme": "Escales et planning de quai",
+      "level": 3,
+      "q": "Une interruption de manutention de deux heures est due à un défaut de documents de la ligne. Que consignes-tu ?",
+      "choices": [
+        "Rien, car l'arrêt est normal",
+        "Une cause inventée pour éviter les litiges",
+        "L'heure de début et de fin, la cause précise et la partie concernée",
+        "La seule mention « autre »"
+      ],
+      "answer": 2,
+      "explain": "Une interruption précisément documentée peut justifier une facturation ou une réclamation. Elle aide à améliorer le service.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-019",
+      "theme": "Escales et planning de quai",
+      "level": 2,
+      "q": "Quel message préparatoire la ligne envoie-t-elle pour indiquer les conteneurs à décharger ou charger ?",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Photographie d'un terminal à conteneurs avec piles de conteneurs et grues de quai",
+      "choices": [
+        "Le BAPLIE vide",
+        "Le certificat d'origine",
+        "La facture proforma",
+        "Le COPRAR"
+      ],
+      "answer": 3,
+      "explain": "COPRAR est l'ordre de déchargement et de chargement. Le terminal prépare ses équipes à partir de cette liste.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-020",
+      "theme": "Escales et planning de quai",
+      "level": 1,
+      "q": "Qui représente l'armateur auprès du port et des autorités locales ?",
+      "choices": [
+        "L'agent maritime",
+        "Le chauffeur de camion",
+        "Le transitaire du client",
+        "Le gardien du terminal"
+      ],
+      "answer": 0,
+      "explain": "L'agent maritime gère l'escale pour le compte de l'armateur : formalités, relations avec le port et informations à la ligne.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-021",
+      "theme": "Pointage et contrôle",
+      "level": 1,
+      "q": "À quoi sert le pointage (tally) des conteneurs ?",
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Photographie d'un entrepôt avec marchandises stockées sur des rayonnages",
+      "choices": [
+        "À peindre les conteneurs",
+        "À déterminer le tarif du fret",
+        "À enregistrer et prouver quel conteneur est passé, quand et dans quel état",
+        "À choisir le poste du navire"
+      ],
+      "answer": 2,
+      "explain": "Le pointage établit une preuve contradictoire des mouvements. Il protège le terminal, la ligne et le client.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-022",
+      "theme": "Pointage et contrôle",
+      "level": 1,
+      "q": "Quel document est signé de façon contradictoire à la porte pour constater l'état du conteneur ?",
+      "choices": [
+        "La facture commerciale",
+        "Le bon d'échange (EIR)",
+        "Le plan d'arrimage",
+        "Le certificat d'assurance"
+      ],
+      "answer": 1,
+      "explain": "L'EIR consigne l'état extérieur et le scellé du conteneur lors de la remise ou de la restitution.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-023",
+      "theme": "Pointage et contrôle",
+      "level": 1,
+      "q": "Un conteneur présente un trou visible dans sa paroi à son arrivée à la porte. Quand notes-tu ce dommage ?",
+      "choices": [
+        "Après quelques jours, si quelqu'un se plaint",
+        "Jamais, ce n'est pas mon rôle",
+        "Immédiatement, sur le bon, avant que le conteneur ne quitte la porte",
+        "À la fin du mois"
+      ],
+      "answer": 2,
+      "explain": "Un dommage non noté sur le moment est très difficile à rattacher à un responsable. On constate sur place.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-024",
+      "theme": "Pointage et contrôle",
+      "level": 2,
+      "q": "Le numéro de scellé d'un conteneur est différent de celui du document. Que fais-tu ?",
+      "choices": [
+        "Je m'arrête, photographie, préviens le superviseur et la ligne et rédige un constat",
+        "Je remplace le scellé par un autre",
+        "Je laisse passer le camion",
+        "Je corrige le document sans rien dire"
+      ],
+      "answer": 0,
+      "explain": "Un scellé différent est un incident de sûreté. On trace, on avertit et on laisse la décision à la hiérarchie.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-025",
+      "theme": "Pointage et contrôle",
+      "level": 2,
+      "q": "Quelle structure possède un numéro de conteneur normalisé ?",
+      "choices": [
+        "Deux lettres et trois chiffres",
+        "Quatre lettres, six chiffres et une clé de contrôle",
+        "Dix lettres uniquement",
+        "Un nombre à huit chiffres seulement"
+      ],
+      "answer": 1,
+      "explain": "Le code ISO permet de vérifier la lecture grâce à la clé de contrôle. On lit toujours lettre par lettre.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-026",
+      "theme": "Pointage et contrôle",
+      "level": 2,
+      "q": "Tu lis un numéro de conteneur et la clé de contrôle ne correspond pas. Que fais-tu ?",
+      "choices": [
+        "J'enregistre le numéro tel quel",
+        "J'invente la clé pour que le système accepte",
+        "Je laisse le conteneur sans numéro",
+        "Je relis le numéro avec attention et je signale l'écart si le doute persiste"
+      ],
+      "answer": 3,
+      "explain": "Une clé incohérente révèle souvent une erreur de lecture. On vérifie avant d'enregistrer pour garder des données fiables.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-027",
+      "theme": "Pointage et contrôle",
+      "level": 3,
+      "q": "Pendant le déchargement, un conteneur de la liste manque et un conteneur non prévu est présent. Quelle est la bonne démarche ?",
+      "choices": [
+        "Consigner les écarts, vérifier les numéros et informer le superviseur et la ligne",
+        "Faire correspondre les numéros pour que la liste soit juste",
+        "Ne rien dire car la liste sera corrigée plus tard",
+        "Décharger sans enregistrer"
+      ],
+      "answer": 0,
+      "explain": "Les écarts doivent être tracés et partagés pour être traités avant que le conteneur ne reparte ou ne soit livré.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-028",
+      "theme": "Pointage et contrôle",
+      "level": 3,
+      "q": "Un chauffeur demande de ne pas noter un petit dommage car il est « sans importance » et il est pressé. Que fais-tu ?",
+      "choices": [
+        "Je note seulement si le dommage est grand",
+        "Je note après son départ",
+        "Je note le dommage, car le constat se fait pour tous, quelle que soit la pression",
+        "Je n'écris rien pour gagner du temps"
+      ],
+      "answer": 2,
+      "explain": "Le constat contradictoire protège toutes les parties. La pression du temps ne justifie pas de l'omettre.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-029",
+      "theme": "Pointage et contrôle",
+      "level": 1,
+      "q": "À la porte du terminal, que contrôle-t-on sur un conteneur en plus du numéro ?",
+      "choices": [
+        "La couleur du chauffeur",
+        "La météo du jour",
+        "La marque du camion uniquement",
+        "L'état extérieur et le scellé"
+      ],
+      "answer": 3,
+      "explain": "Le numéro, l'état extérieur et le scellé forment les contrôles de base d'un pointage à la porte.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-030",
+      "theme": "Pointage et contrôle",
+      "level": 2,
+      "q": "Pourquoi photographie-t-on un dommage ou un scellé anormal ?",
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Photographie d'un entrepôt avec marchandises stockées sur des rayonnages",
+      "choices": [
+        "Pour disposer d'une preuve datée en cas de réclamation",
+        "Pour décorer le rapport",
+        "Pour remplacer le bon d'échange",
+        "Pour économiser du papier"
+      ],
+      "answer": 0,
+      "explain": "Une photo datée appuie le constat écrit. Elle ne le remplace pas.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-031",
+      "theme": "Plan d'arrimage et indicateurs",
+      "level": 1,
+      "q": "Quelles trois notions composent la position d'un conteneur à bord du navire ?",
+      "choices": [
+        "Port, date et fret",
+        "Poids, couleur et scellé",
+        "Travée, rangée et niveau",
+        "Navire, chauffeur et camion"
+      ],
+      "answer": 2,
+      "explain": "Le bay plan indique la travée (bay), la rangée (row) et le niveau (tier) de chaque conteneur.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-032",
+      "theme": "Plan d'arrimage et indicateurs",
+      "level": 1,
+      "q": "Que décrit le message BAPLIE ?",
+      "img": "photo/crane-lifting.jpg",
+      "imgAlt": "Photographie d'une grue en train de lever une charge",
+      "choices": [
+        "La facture de la ligne",
+        "L'occupation du navire avec les conteneurs et leurs positions",
+        "Le planning des camions",
+        "Le règlement du port"
+      ],
+      "answer": 1,
+      "explain": "Le BAPLIE donne l'état de chargement du navire, position par position, pleins et vides inclus.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-033",
+      "theme": "Plan d'arrimage et indicateurs",
+      "level": 2,
+      "q": "Pourquoi place-t-on les conteneurs lourds en bas dans le navire ?",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Photographie d'un terminal à conteneurs avec piles de conteneurs et grues de quai",
+      "choices": [
+        "Pour qu'ils soient plus visibles",
+        "Pour réduire la longueur de l'escale",
+        "Pour la stabilité et un centre de gravité bas",
+        "Pour économiser des prises électriques"
+      ],
+      "answer": 2,
+      "explain": "Un centre de gravité bas augmente la stabilité du navire. La répartition des poids est une exigence de sécurité.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-034",
+      "theme": "Plan d'arrimage et indicateurs",
+      "level": 2,
+      "q": "Que signifie VGM ?",
+      "choices": [
+        "La masse brute vérifiée du conteneur plein, requise avant le chargement",
+        "Le volume global moyen du navire",
+        "La valeur générale de la marchandise",
+        "Le visa de la grue mobile"
+      ],
+      "answer": 0,
+      "explain": "Le VGM est une exigence de sécurité maritime. Sans lui, le conteneur plein n'est pas chargé.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-035",
+      "theme": "Plan d'arrimage et indicateurs",
+      "level": 2,
+      "q": "Quel indicateur mesure la productivité de quai ?",
+      "choices": [
+        "Le nombre d'étages du bureau",
+        "Les mouvements par heure et par grue",
+        "La température du parc",
+        "Le tarif du magasinage"
+      ],
+      "answer": 1,
+      "explain": "Les mouvements par heure et par grue mesurent la cadence de manutention. Ils guident la planification des équipes.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-036",
+      "theme": "Plan d'arrimage et indicateurs",
+      "level": 3,
+      "q": "Un conteneur plein est prêt à être envoyé au quai mais n'a pas de VGM enregistré. Que fais-tu ?",
+      "choices": [
+        "Je l'envoie et espère que la ligne l'acceptera",
+        "J'invente un poids moyen",
+        "Je l'envoie au dernier moment sans prévenir",
+        "Je le retiens et demande la communication du VGM avant toute mise à bord"
+      ],
+      "answer": 3,
+      "explain": "Charger un conteneur sans VGM est contraire aux règles de sécurité maritime. On résout avant d'envoyer au quai.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-037",
+      "theme": "Plan d'arrimage et indicateurs",
+      "level": 2,
+      "q": "Que mesure le temps de séjour (dwell time) d'un conteneur ?",
+      "choices": [
+        "La durée pendant laquelle il reste dans le terminal",
+        "Le temps d'amarrage du navire",
+        "La durée du trajet du camion",
+        "La durée de vie de la grue"
+      ],
+      "answer": 0,
+      "explain": "Un temps de séjour élevé indique un risque de saturation. Il aide à relancer clients et lignes.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-038",
+      "theme": "Plan d'arrimage et indicateurs",
+      "level": 3,
+      "q": "Le plan de chargement place un conteneur de marchandises dangereuses trop près d'un autre produit incompatible. Que fais-tu ?",
+      "choices": [
+        "Je charge selon le plan sans réagir",
+        "Je décale seulement pour gagner de la place",
+        "Je signale l'anomalie à la ligne et au superviseur pour obtenir une position conforme à l'IMDG",
+        "Je supprime l'étiquette de danger"
+      ],
+      "answer": 2,
+      "explain": "La ségrégation protège le navire et l'équipage. Une non-conformité du plan doit être corrigée avant le chargement.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-039",
+      "theme": "Plan d'arrimage et indicateurs",
+      "level": 1,
+      "q": "Quels conteneurs vont de préférence près des prises d'alimentation à bord ?",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Photographie d'un terminal à conteneurs avec piles de conteneurs et grues de quai",
+      "choices": [
+        "Les conteneurs vides",
+        "Les conteneurs de ciment seulement",
+        "Les conteneurs de moins de 20 pieds",
+        "Les conteneurs frigorifiques"
+      ],
+      "answer": 3,
+      "explain": "Les reefers doivent être alimentés en continu pendant le transport, d'où leur placement près des prises.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "port-agent-operations-040",
+      "theme": "Plan d'arrimage et indicateurs",
+      "level": 3,
+      "q": "Le taux de remanutention augmente depuis plusieurs semaines. Quelle est la meilleure approche ?",
+      "choices": [
+        "Chercher les causes (plan de parc, retards, sorties) avant d'agir",
+        "Punir l'équipe de nuit",
+        "Ignorer l'indicateur",
+        "Supprimer le suivi pour éviter les tensions"
+      ],
+      "answer": 0,
+      "explain": "Un indicateur sert à comprendre. On identifie les causes organisationnelles pour corriger durablement.",
+      "seconds": 55,
+      "status": "draft"
+    }
+  ]
+}

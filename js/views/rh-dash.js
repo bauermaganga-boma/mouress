@@ -6,6 +6,7 @@ import { assignmentTitle } from '../skills.js';
 import { dueState } from '../skills.js';
 import { recruitListHTML, recruitCounts } from './rh-recruit.js';
 import { renderTeamTab } from './rh-teams.js';
+import { renderFormationsTab } from './rh-formations.js';
 
 export async function dashboard(ctx, root) {
   ctx.setTitle('Tableau de bord entreprise');
@@ -14,7 +15,8 @@ export async function dashboard(ctx, root) {
   const sessions = await ctx.store.listSessions(company.id);
   const employees = await ctx.store.listEmployees(company.id);
   if (!ctx.alive()) return;
-  const vue = ctx.query.get('vue') === 'equipes' ? 'equipes' : 'recrutements';
+  const vue = ['equipes', 'formations'].includes(ctx.query.get('vue')) ? ctx.query.get('vue') : 'recrutements';
+  const nbFormations = (await ctx.store.listFormations(company.id)).length;
   const recruits = sessions.filter((s) => s.type === 'recruitment');
   const trainings = sessions.filter((s) => s.type === 'training');
   const openCount = recruits.filter((s) => s.status !== 'closed').length;
@@ -23,11 +25,12 @@ export async function dashboard(ctx, root) {
 
   root.innerHTML = `<div class="container page">
     <div class="page-head split"><div><p class="eyebrow dark">Espace entreprise</p><h1 class="page-title">${esc(company.name)}</h1></div>
-      <div class="btn-row"><a class="btn btn-primary" href="#/rh/inviter${vue === 'equipes' ? '?type=training' : '?type=recruitment'}">${icon('plus', 18)} ${vue === 'equipes' ? 'Inviter un collaborateur' : 'Nouveau recrutement'}</a><a class="btn btn-outline" href="#/rh/facturation">${icon('card', 18)} Facturation / Mes Pass</a></div></div>
+      <div class="btn-row">${vue === 'formations' ? `<a class="btn btn-primary" href="#/rh?vue=formations&nouvelle=1">${icon('plus', 18)} Nouvelle formation</a>` : `<a class="btn btn-primary" href="#/rh/inviter${vue === 'equipes' ? '?type=training' : '?type=recruitment'}">${icon('plus', 18)} ${vue === 'equipes' ? 'Inviter un collaborateur' : 'Nouveau recrutement'}</a>`}<a class="btn btn-outline" href="#/rh/facturation">${icon('card', 18)} Facturation / Mes Pass</a></div></div>
     ${company.demo ? '<div class="alert alert-warn"><strong>Entreprise Démo</strong> — données fictives, stockées dans ce navigateur.</div>' : ''}
     <div class="seg" role="tablist" aria-label="Type de suivi">
       <a role="tab" class="seg-tab" href="#/rh?vue=recrutements" aria-selected="${vue === 'recrutements'}">${icon('users', 20)}<span><strong>Recrutements</strong><span class="xs">${openCount} ouvert${openCount > 1 ? 's' : ''}</span></span></a>
-      <a role="tab" class="seg-tab" href="#/rh?vue=equipes" aria-selected="${vue === 'equipes'}">${icon('building', 20)}<span><strong>Mes équipes</strong><span class="xs">${employees.length} collaborateur${employees.length > 1 ? 's' : ''}</span></span></a></div>
+      <a role="tab" class="seg-tab" href="#/rh?vue=equipes" aria-selected="${vue === 'equipes'}">${icon('building', 20)}<span><strong>Mes équipes</strong><span class="xs">${employees.length} collaborateur${employees.length > 1 ? 's' : ''}</span></span></a>
+      <a role="tab" class="seg-tab" href="#/rh?vue=formations" aria-selected="${vue === 'formations'}">${icon('book', 20)}<span><strong>Mes formations</strong><span class="xs">${nbFormations} au catalogue</span></span></a></div>
     <div id="tab-body" role="tabpanel"></div></div>`;
   const host = root.querySelector('#tab-body');
 
@@ -38,6 +41,12 @@ export async function dashboard(ctx, root) {
         <div class="card stat"><span class="stat-n">${sum('done')}</span><span class="muted small">examens passés · ${sum('passed')} réussi(s)</span></div>
         <div class="card stat"><span class="stat-n">${sum('hired')}</span><span class="muted small">retenu(s)</span></div></div>
       <section class="block"><div class="split"><h2>Postes qui recrutent</h2></div>${recruitListHTML(sessions, data)}</section>`;
+    return;
+  }
+
+  if (vue === 'formations') {
+    await renderFormationsTab(ctx, host, company, () => dashboard(ctx, root));
+    if (ctx.query.get('nouvelle')) { const d = host.querySelector('#new-formation'); if (d) { d.open = true; d.scrollIntoView({ block: 'start' }); } }
     return;
   }
 

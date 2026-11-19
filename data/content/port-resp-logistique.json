@@ -1,0 +1,719 @@
+{
+  "profile": "port-resp-logistique",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "La chaîne de bout en bout : du fournisseur au client via Owendo",
+      "theme": "Chaîne de bout en bout et transport",
+      "minutes": 10,
+      "body": "Le responsable logistique pilote un **flux de bout en bout** : commande au fournisseur, production, transport maritime, **passage portuaire** (déchargement, parc à conteneurs, dédouanement), transport terrestre, entreposage et livraison au client. Pour un importateur gabonais, l'essentiel des marchandises conteneurisées passe par le port d'Owendo, près de Libreville ; Port-Gentil joue un rôle important pour l'activité pétrolière. Chaque maillon ajoute du **délai**, du **coût** et un **risque**.\n\nLe **délai total** (lead time) est la somme des délais de chaque étape. Exemple : 10 jours de production, 28 de transport maritime, 6 de passage portuaire et douane, 2 de route, 1 de réception donnent 47 jours. Le maillon le plus long n'est pas toujours celui qu'on peut améliorer : le passage portuaire est souvent le plus compressible grâce à l'anticipation.\n\nQuelques repères :\n- le **conteneur** de 20 pieds vaut 1 **EVP** et celui de 40 pieds vaut 2 EVP ;\n- **FCL** : conteneur complet pour un seul chargeur ; **LCL** : groupage de plusieurs chargeurs, utile pour de petits volumes mais plus lent à cause du dégroupage ;\n- le **connaissement** est le reçu, la preuve du contrat de transport et le titre représentatif de la marchandise ;\n- les **surestaries** sont facturées par la compagnie maritime quand le conteneur n'est pas restitué dans la franchise ;\n- le **transitaire** agréé prépare la déclaration en douane et coordonne les opérations.\n\nLe choix du **mode** dépend de l'urgence, du poids et de la valeur : mode économique pour les gros volumes planifiés, express pour une pièce critique.\n\n**Sur le terrain**\n- Transmets les documents au transitaire avant l'arrivée du navire.\n- Suis chaque conteneur avec sa date de fin de franchise.\n- Cartographie la chaîne complète avant de chercher à optimiser un seul maillon.",
+      "keyPoints": [
+        "Le délai total de bout en bout est la somme des délais de tous les maillons, du fournisseur à la livraison",
+        "Anticiper documents et déclaration réduit le passage portuaire et évite les surestaries",
+        "Le choix du mode de transport arbitre urgence, volume, valeur et coût d'un arrêt"
+      ],
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Terminal à conteneurs d'un port"
+    },
+    {
+      "id": "m2",
+      "title": "Entreposage et gestion des stocks",
+      "theme": "Entreposage et stocks",
+      "minutes": 10,
+      "body": "Un **stock** protège contre les aléas d'approvisionnement et de demande, mais il immobilise du capital et génère des coûts (loyer, assurance, manutention, obsolescence). L'objectif est d'équilibrer **taux de service** et **coût de possession**.\n\n**Classification ABC** : la classe **A** regroupe peu de références pour l'essentiel de la valeur (suivi serré, prévisions fines, inventaires fréquents) ; la classe **C** regroupe beaucoup de références de faible valeur (gestion simplifiée). Classe aussi les articles par **criticité** : une pièce peu coûteuse peut arrêter une exploitation.\n\nFormules de base :\n- **stock de sécurité** simple = consommation journalière x retard maximal acceptable ;\n- **point de commande** = consommation pendant le délai d'approvisionnement + stock de sécurité ;\n- **quantité économique de Wilson** : Q = racine de (2 x D x Cl / Cp), avec D la demande annuelle, Cl le coût de lancement et Cp le coût annuel de possession d'une unité ;\n- **rotation** = consommation annuelle / stock moyen ; **couverture** = 360 / rotation, en jours.\n\nDans l'**entrepôt**, la règle **FIFO** sort d'abord le plus ancien ; **FEFO** sort d'abord ce qui expire en premier. À la **réception**, on contrôle quantité, état et références, et on écrit des **réserves précises** avant de signer le bon de livraison.\n\nL'**inventaire tournant** compte chaque semaine une fraction des références, plus souvent la classe A, sans arrêter l'activité. En cas d'**écart**, on recompte, on cherche la cause, on documente, puis on ajuste après validation d'un responsable.\n\n**Sur le terrain**\n- Recalcule point de commande et stock de sécurité quand le délai fournisseur change.\n- Ne signe jamais une réception sans avoir noté les anomalies visibles.\n- Un écart se comprend avant de s'ajuster.",
+      "keyPoints": [
+        "Stock de sécurité et point de commande se recalculent quand le délai ou la consommation changent",
+        "Rotation = consommation annuelle / stock moyen ; couverture = 360 / rotation",
+        "Réception avec réserves précises, FIFO ou FEFO, inventaire tournant et traitement documenté des écarts"
+      ],
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec rayonnages"
+    },
+    {
+      "id": "m3",
+      "title": "Prévisions de la demande et planification",
+      "theme": "Prévisions et planification",
+      "minutes": 9,
+      "body": "Une **prévision** est une estimation de la demande future ; elle n'est jamais exacte. Son rôle est de réduire l'incertitude pour dimensionner stocks, transports et capacités d'entreposage. Une bonne prévision s'accompagne d'une **mesure de l'erreur**, sinon on ne sait pas si elle s'améliore.\n\nMéthodes simples :\n- **moyenne mobile** : moyenne des n dernières périodes. Avec 90, 110 et 100 sur trois mois, la prévision du mois suivant est 100 ;\n- **lissage exponentiel** : prévision suivante = a x réel + (1 - a) x prévision précédente, où a est un coefficient entre 0 et 1 ;\n- prise en compte de la **tendance** et de la **saisonnalité** : une moyenne annuelle masque les pics et les creux.\n\nL'**erreur de prévision** se mesure par l'écart entre prévu et réel. Un **biais** apparaît quand l'erreur va toujours dans le même sens : prévoir trop haut crée des surstocks, prévoir trop bas crée des ruptures.\n\nPour des articles **importés**, le long délai oblige à prévoir plus loin. Si le délai augmente, il faut revoir l'horizon, le point de commande et le stock de sécurité.\n\nLe **besoin net** = besoin brut - stock disponible - commandes en cours + stock de sécurité souhaité.\n\nLa démarche **S&OP** (planification commerciale et opérationnelle) réunit commerciaux, achats, logistique et finance pour aligner la demande prévue, les capacités et les approvisionnements dans un plan unique, révisé régulièrement. Pour des projets ou chantiers, le **planning du projet** et les besoins confirmés valent mieux que l'historique seul.\n\n**Sur le terrain**\n- Mesure l'erreur de tes prévisions chaque mois.\n- Croise l'historique avec l'information des équipes terrain.\n- Révise stocks et commandes dès qu'un délai change.",
+      "keyPoints": [
+        "Une prévision est toujours incertaine : on mesure son erreur et on corrige les biais",
+        "Moyenne mobile, lissage exponentiel, tendance et saisonnalité sont des outils de base",
+        "Le S&OP aligne demande, capacités et approvisionnements ; le planning projet complète l'historique"
+      ],
+      "img": "photo/office-meeting.jpg",
+      "imgAlt": "Réunion de travail autour d'une table"
+    },
+    {
+      "id": "m4",
+      "title": "Coûts logistiques et indicateurs de performance",
+      "theme": "Coûts et indicateurs",
+      "minutes": 10,
+      "body": "Le **coût logistique** regroupe le transport, l'entreposage, la manutention, le coût de possession des stocks (capital immobilisé, assurance, obsolescence) et les frais administratifs. Le piège classique est de n'optimiser qu'un poste : réduire le transport en commandant en gros volumes augmente le stock, donc le coût de possession.\n\nExemples de calcul :\n- **coût de possession** = stock moyen x taux annuel de possession : 50 000 000 FCFA x 20 % = 10 000 000 FCFA ;\n- **coût par EVP** = coûts de transport et de manutention / nombre d'EVP : 12 000 000 FCFA pour 400 EVP donnent 30 000 FCFA par EVP ;\n- **surestaries** = jours hors franchise x nombre de conteneurs x tarif journalier (hypothèse d'école).\n\nL'arbitrage se fait en **coût total** : un transport rapide plus cher peut être le meilleur choix si le coût d'un arrêt de production dépasse l'économie du mode lent.\n\nLes **indicateurs** (KPI) doivent être peu nombreux, définis, mesurables et suivis dans le temps :\n- **taux de service** : lignes livrées complètes et à l'heure / lignes commandées ;\n- **OTIF** (on time, in full) : livraisons à l'heure et complètes ;\n- **rotation** et **couverture** des stocks ;\n- **exactitude d'inventaire** ;\n- **délai de passage** au port et **coût par unité transportée**.\n\nUn indicateur de coût seul peut pousser à des économies qui dégradent le service ; un tableau de bord équilibré croise **service, délais, stocks et coûts**. Chaque indicateur a un **responsable**, une **fréquence** et une action associée en cas de dérive.\n\n**Sur le terrain**\n- Définis chaque indicateur par écrit avant de le suivre.\n- Compare toujours coût et niveau de service.\n- Rattache chaque dérive à une action et à une personne.",
+      "keyPoints": [
+        "Le coût logistique se raisonne en coût total : transport, stockage, manutention, possession, administration",
+        "Taux de service, OTIF, rotation, exactitude d'inventaire et coût par EVP forment un socle d'indicateurs",
+        "Un indicateur de coût seul peut masquer une dégradation du service ; le tableau de bord doit être équilibré"
+      ],
+      "img": "photo/crane-lifting.jpg",
+      "imgAlt": "Grue effectuant une opération de levage"
+    }
+  ],
+  "questions": [
+    {
+      "id": "port-resp-logistique-001",
+      "theme": "Chaîne de bout en bout et transport",
+      "level": 1,
+      "q": "Quel enchaînement décrit correctement une chaîne d'importation par conteneur jusqu'au client ?",
+      "choices": [
+        "Livraison au client, entrepôt, douane, navire",
+        "Commande fournisseur, transport maritime, passage au port et dédouanement, transport terrestre, entrepôt, livraison",
+        "Douane, commande, entrepôt, navire",
+        "Entrepôt, navire, commande, livraison au client"
+      ],
+      "answer": 1,
+      "explain": "La chaîne de bout en bout suit le sens du flux : commande, transport maritime, passage portuaire et douane, transport terrestre, entreposage puis livraison.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-002",
+      "theme": "Chaîne de bout en bout et transport",
+      "level": 1,
+      "q": "Un navire décharge à Owendo 150 conteneurs de 40 pieds et 100 conteneurs de 20 pieds. Combien cela représente-t-il d'EVP ?",
+      "choices": [
+        "250 EVP",
+        "300 EVP",
+        "400 EVP",
+        "500 EVP"
+      ],
+      "answer": 2,
+      "explain": "Un 40 pieds vaut 2 EVP et un 20 pieds vaut 1 EVP : 150 x 2 + 100 x 1 = 400 EVP.",
+      "seconds": 60,
+      "status": "draft",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Conteneurs empilés dans un terminal portuaire"
+    },
+    {
+      "id": "port-resp-logistique-003",
+      "theme": "Chaîne de bout en bout et transport",
+      "level": 1,
+      "q": "Un conteneur plein n'est pas restitué dans le délai de franchise convenu. Que facture alors la compagnie maritime ?",
+      "choices": [
+        "Des surestaries (demurrage)",
+        "Des droits de douane supplémentaires",
+        "Une prime d'assurance cargaison",
+        "Une taxe d'origine"
+      ],
+      "answer": 0,
+      "explain": "Les surestaries sont facturées par la compagnie maritime pour chaque jour de retard hors franchise. Les droits de douane relèvent de l'administration douanière.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-004",
+      "theme": "Chaîne de bout en bout et transport",
+      "level": 2,
+      "q": "Des camions attendent plusieurs heures à l'entrée du port car les documents d'importation arrivent tard. Quelle action traite le problème à la source ?",
+      "choices": [
+        "Acheter davantage de camions",
+        "Louer un second entrepôt",
+        "Négocier un tarif de transport plus bas",
+        "Transmettre les documents au transitaire avant l'arrivée du navire pour préparer la déclaration"
+      ],
+      "answer": 3,
+      "explain": "Le retard vient de l'information : anticiper les documents permet de préparer le dédouanement avant l'arrivée. Plus de camions ou d'entrepôts ne corrigent pas la cause.",
+      "seconds": 60,
+      "status": "draft",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Terminal à conteneurs d'un port, zone de stockage des conteneurs"
+    },
+    {
+      "id": "port-resp-logistique-005",
+      "theme": "Chaîne de bout en bout et transport",
+      "level": 2,
+      "q": "Tu dois acheminer 18 tonnes de produits non urgents vers un site intérieur, et une pièce de 3 kg dont dépend une production à l'arrêt. Quel choix est cohérent ?",
+      "choices": [
+        "Aérien pour les 18 tonnes, route pour la pièce",
+        "Mode économique pour les 18 tonnes, express pour la pièce critique",
+        "Express pour les deux sans exception",
+        "Attendre le prochain navire pour les deux"
+      ],
+      "answer": 1,
+      "explain": "Le mode se choisit selon urgence, poids et coût d'un arrêt : économique pour le gros volume planifié, express pour la pièce critique et légère.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-006",
+      "theme": "Chaîne de bout en bout et transport",
+      "level": 2,
+      "q": "Pourquoi le connaissement original est-il un document central pour retirer une marchandise transportée par mer ?",
+      "choices": [
+        "Il est le titre représentatif de la marchandise, en plus d'être un reçu et la preuve du contrat de transport",
+        "Il remplace la facture commerciale",
+        "Il fixe le montant des droits de douane",
+        "Il sert uniquement de bon de livraison interne au magasin"
+      ],
+      "answer": 0,
+      "explain": "Le connaissement cumule trois rôles : reçu de marchandises, preuve du contrat de transport et titre représentatif de la marchandise.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-007",
+      "theme": "Chaîne de bout en bout et transport",
+      "level": 2,
+      "q": "Quel est le rôle principal d'un transitaire ou commissionnaire en douane agréé pour un importateur ?",
+      "choices": [
+        "Fixer les taux de droits de douane",
+        "Exploiter les grues du terminal",
+        "Organiser le passage de la marchandise et établir la déclaration en douane pour le compte de l'importateur",
+        "Assurer la sécurité de la navigation du navire"
+      ],
+      "answer": 2,
+      "explain": "Le transitaire agit pour le compte de l'importateur : il prépare la déclaration en détail et coordonne les opérations de passage. Les taux relèvent de la réglementation, pas de lui.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-008",
+      "theme": "Chaîne de bout en bout et transport",
+      "level": 3,
+      "q": "Production 10 jours, transport maritime 28 jours, passage portuaire et douane 6 jours, transport routier 2 jours, réception en entrepôt 1 jour. Quel est le délai total de bout en bout ?",
+      "choices": [
+        "37 jours",
+        "41 jours",
+        "45 jours",
+        "47 jours"
+      ],
+      "answer": 3,
+      "explain": "Le délai total est la somme de tous les maillons : 10 + 28 + 6 + 2 + 1 = 47 jours. Oublier la production donnerait 37 jours.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-009",
+      "theme": "Chaîne de bout en bout et transport",
+      "level": 3,
+      "q": "Un importateur reçoit seulement 6 m3 de marchandises, un conteneur de 20 pieds resterait presque vide. Quelle option est généralement la plus économique ?",
+      "choices": [
+        "Un 40 pieds complet pour plus de tranquillité",
+        "Le groupage LCL avec d'autres chargeurs, en acceptant un délai de dégroupage",
+        "Le fret aérien systématique",
+        "Deux conteneurs de 20 pieds"
+      ],
+      "answer": 1,
+      "explain": "Pour de petits volumes, le LCL évite de payer un conteneur presque vide, au prix d'un délai de dégroupage plus long. À vérifier avec un devis comparatif.",
+      "seconds": 75,
+      "status": "draft",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Conteneurs de différentes tailles dans un port"
+    },
+    {
+      "id": "port-resp-logistique-010",
+      "theme": "Chaîne de bout en bout et transport",
+      "level": 3,
+      "q": "Quelle pratique limite le plus efficacement les surestaries sur un flux régulier de conteneurs ?",
+      "choices": [
+        "Suivre chaque conteneur avec sa date de fin de franchise et déclencher une alerte avant l'échéance",
+        "Attendre la facture de la compagnie maritime pour réagir",
+        "Laisser les conteneurs au port le plus longtemps possible",
+        "Retarder l'envoi des documents au transitaire"
+      ],
+      "answer": 0,
+      "explain": "Les surestaries courent chaque jour hors franchise : un suivi avec alerte permet d'agir avant le dépassement, au lieu de le constater sur la facture.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-011",
+      "theme": "Entreposage et stocks",
+      "level": 1,
+      "q": "La consommation est de 30 unités par jour et le fournisseur peut avoir jusqu'à 4 jours de retard. Quel est le stock de sécurité simple ?",
+      "choices": [
+        "90 unités",
+        "100 unités",
+        "120 unités",
+        "150 unités"
+      ],
+      "answer": 2,
+      "explain": "Stock de sécurité simple = consommation journalière x retard maximal acceptable = 30 x 4 = 120 unités.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-012",
+      "theme": "Entreposage et stocks",
+      "level": 1,
+      "q": "Quelle règle de gestion consiste à sortir en premier les articles entrés en premier dans le magasin ?",
+      "choices": [
+        "ABC",
+        "LIFO",
+        "Wilson",
+        "FIFO"
+      ],
+      "answer": 3,
+      "explain": "FIFO (first in, first out) sort d'abord les articles entrés les premiers. ABC est une classification, Wilson une formule de quantité de commande.",
+      "seconds": 30,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-013",
+      "theme": "Entreposage et stocks",
+      "level": 2,
+      "q": "Consommation de 25 unités par jour, délai d'approvisionnement de 12 jours, stock de sécurité de 80 unités. À partir de quel niveau de stock lance-t-on la commande ?",
+      "choices": [
+        "300 unités",
+        "380 unités",
+        "420 unités",
+        "480 unités"
+      ],
+      "answer": 1,
+      "explain": "Point de commande = consommation pendant le délai + stock de sécurité = 25 x 12 + 80 = 380 unités. 300 oublie le stock de sécurité.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-014",
+      "theme": "Entreposage et stocks",
+      "level": 2,
+      "q": "Une consommation annuelle de 3 600 000 FCFA pour un stock moyen de 600 000 FCFA. Quelle est la couverture du stock, sur une base de 360 jours ?",
+      "choices": [
+        "60 jours",
+        "30 jours",
+        "90 jours",
+        "120 jours"
+      ],
+      "answer": 0,
+      "explain": "Rotation = 3 600 000 / 600 000 = 6 par an ; couverture = 360 / 6 = 60 jours.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-015",
+      "theme": "Entreposage et stocks",
+      "level": 2,
+      "q": "Dans une analyse ABC, comment traite-t-on en général les articles de classe A ?",
+      "choices": [
+        "Gestion simplifiée avec une commande annuelle",
+        "Aucun suivi particulier",
+        "Suivi serré, prévisions fines et inventaires fréquents",
+        "Suppression du catalogue"
+      ],
+      "answer": 2,
+      "explain": "La classe A concentre l'essentiel de la valeur avec peu de références : elle justifie le suivi le plus attentif. La gestion simplifiée convient plutôt à la classe C.",
+      "seconds": 45,
+      "status": "draft",
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Rayonnages d'un entrepôt de stockage"
+    },
+    {
+      "id": "port-resp-logistique-016",
+      "theme": "Entreposage et stocks",
+      "level": 2,
+      "q": "Quel est l'avantage principal de l'inventaire tournant par rapport à un unique inventaire annuel ?",
+      "choices": [
+        "Il supprime tout besoin de comptage",
+        "Il détecte les écarts plus tôt sans arrêter l'activité du magasin",
+        "Il permet de ne jamais compter les articles de classe A",
+        "Il remplace l'enregistrement des entrées et des sorties"
+      ],
+      "answer": 1,
+      "explain": "L'inventaire tournant compte chaque semaine une fraction des références : les écarts sont repérés plus vite et le magasin continue de fonctionner.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-017",
+      "theme": "Entreposage et stocks",
+      "level": 3,
+      "q": "Demande annuelle de 7 200 unités, coût de lancement de 100 FCFA par commande, coût annuel de possession de 4 FCFA par unité. Quelle est la quantité économique de Wilson ?",
+      "choices": [
+        "300 unités",
+        "450 unités",
+        "540 unités",
+        "600 unités"
+      ],
+      "answer": 3,
+      "explain": "Q = racine de (2 x 7 200 x 100 / 4) = racine de 360 000 = 600 unités.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-018",
+      "theme": "Entreposage et stocks",
+      "level": 3,
+      "q": "L'inventaire donne 228 unités en physique pour 240 en stock théorique. Quelle démarche est correcte ?",
+      "choices": [
+        "Recompter, rechercher la cause, documenter, puis ajuster après validation d'un responsable",
+        "Ajuster immédiatement le stock théorique pour qu'il égale le physique",
+        "Ignorer l'écart car il paraît faible",
+        "Augmenter automatiquement le stock de sécurité"
+      ],
+      "answer": 0,
+      "explain": "Un écart se recompte et s'explique avant tout ajustement ; l'ajustement est documenté et validé pour éviter de masquer erreurs ou pertes.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-019",
+      "theme": "Entreposage et stocks",
+      "level": 2,
+      "q": "Sur 200 emplacements comptés, 188 sont conformes au stock enregistré. Quelle est l'exactitude d'inventaire ?",
+      "choices": [
+        "88 %",
+        "92 %",
+        "94 %",
+        "96 %"
+      ],
+      "answer": 2,
+      "explain": "Exactitude = emplacements conformes / emplacements comptés = 188 / 200 = 94 %.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-020",
+      "theme": "Entreposage et stocks",
+      "level": 3,
+      "q": "À la réception, 3 palettes sur 20 arrivent mouillées, mais le bon de livraison est signé sans aucune mention. Quel est le risque principal ?",
+      "choices": [
+        "Aucun : le transporteur remboursera automatiquement",
+        "Une amende de la douane",
+        "Un blocage du navire au port",
+        "Une réclamation affaiblie faute de réserves précises écrites avant la signature"
+      ],
+      "answer": 3,
+      "explain": "Les réserves précises doivent figurer sur le bon avant signature. Sans elles, il devient difficile de prouver que le dommage est survenu pendant le transport.",
+      "seconds": 60,
+      "status": "draft",
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Palettes entreposées dans un magasin"
+    },
+    {
+      "id": "port-resp-logistique-021",
+      "theme": "Prévisions et planification",
+      "level": 1,
+      "q": "Pourquoi une prévision de la demande doit-elle toujours être accompagnée d'une mesure de son erreur ?",
+      "choices": [
+        "Parce que la demande future est incertaine et qu'une prévision n'est jamais parfaitement exacte",
+        "Parce que les logiciels de gestion sont tous défaillants",
+        "Parce que la douane l'exige",
+        "Parce que les stocks sont gratuits"
+      ],
+      "answer": 0,
+      "explain": "Mesurer l'erreur permet de savoir si la méthode s'améliore et de dimensionner les marges de sécurité face à l'incertitude.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-022",
+      "theme": "Prévisions et planification",
+      "level": 1,
+      "q": "Les ventes des trois derniers mois sont 90, 110 et 100 unités. Quelle est la prévision du mois suivant par moyenne mobile sur 3 mois ?",
+      "choices": [
+        "90 unités",
+        "100 unités",
+        "110 unités",
+        "120 unités"
+      ],
+      "answer": 1,
+      "explain": "Moyenne mobile = (90 + 110 + 100) / 3 = 100 unités.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-023",
+      "theme": "Prévisions et planification",
+      "level": 2,
+      "q": "Tu avais prévu 400 unités et la demande réelle a été de 500. Quel est l'écart absolu exprimé en pourcentage de la demande réelle ?",
+      "choices": [
+        "10 %",
+        "15 %",
+        "25 %",
+        "20 %"
+      ],
+      "answer": 3,
+      "explain": "Écart absolu = 100 ; rapporté à la demande réelle de 500, cela donne 20 %. Le diviser par 400 donnerait 25 %, ce qui change la base de comparaison.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-024",
+      "theme": "Prévisions et planification",
+      "level": 2,
+      "q": "Quel phénomène une simple moyenne annuelle de la demande risque-t-elle de masquer ?",
+      "choices": [
+        "Le taux de change",
+        "La qualité du fournisseur",
+        "Les variations saisonnières, avec leurs pics et leurs creux",
+        "Le poids des conteneurs"
+      ],
+      "answer": 2,
+      "explain": "Une moyenne lisse l'année entière : elle cache les périodes de forte et de faible demande, qui doivent être anticipées pour les stocks et les transports.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-025",
+      "theme": "Prévisions et planification",
+      "level": 3,
+      "q": "Par lissage exponentiel avec a = 0,2, la prévision précédente est de 100 et la demande réelle de 120. Quelle est la nouvelle prévision ?",
+      "choices": [
+        "104",
+        "106",
+        "110",
+        "116"
+      ],
+      "answer": 0,
+      "explain": "Nouvelle prévision = 0,2 x 120 + 0,8 x 100 = 24 + 80 = 104.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-026",
+      "theme": "Prévisions et planification",
+      "level": 2,
+      "q": "Quel est l'objectif d'une réunion de planification commerciale et opérationnelle (S&OP) ?",
+      "choices": [
+        "Négocier les salaires du personnel",
+        "Choisir la couleur des conteneurs",
+        "Contrôler les déclarations en douane",
+        "Aligner la demande prévue, les capacités et les approvisionnements dans un plan commun"
+      ],
+      "answer": 3,
+      "explain": "Le S&OP réunit commerciaux, achats, logistique et finance pour bâtir un plan unique et le réviser régulièrement.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-027",
+      "theme": "Prévisions et planification",
+      "level": 3,
+      "q": "Tes prévisions sont systématiquement supérieures à la demande réelle depuis plusieurs mois. Quelle conséquence est la plus probable ?",
+      "choices": [
+        "Des ruptures répétées",
+        "Des surstocks et un coût de possession accru",
+        "Une baisse des surestaries",
+        "Un meilleur taux de service sans aucun coût supplémentaire"
+      ],
+      "answer": 1,
+      "explain": "Un biais à la hausse conduit à commander trop : le stock gonfle, le capital immobilisé et les coûts de possession augmentent.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-028",
+      "theme": "Prévisions et planification",
+      "level": 2,
+      "q": "Le délai d'un article importé passe de 30 à 50 jours. Que faut-il revoir en priorité ?",
+      "choices": [
+        "Rien, la prévision reste valable telle quelle",
+        "Uniquement le prix de vente",
+        "L'horizon de prévision, le point de commande et le stock de sécurité",
+        "Le nombre de grues du port"
+      ],
+      "answer": 2,
+      "explain": "Un délai plus long oblige à prévoir plus loin et à relever le point de commande et le stock de sécurité pour garder le même niveau de service.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-029",
+      "theme": "Prévisions et planification",
+      "level": 3,
+      "q": "Besoin brut de 800 unités sur 4 semaines, stock disponible de 300, commandes en cours de 100, stock de sécurité souhaité de 100. Quel est le besoin net ?",
+      "choices": [
+        "500 unités",
+        "600 unités",
+        "700 unités",
+        "800 unités"
+      ],
+      "answer": 0,
+      "explain": "Besoin net = 800 - 300 - 100 + 100 = 500 unités.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-030",
+      "theme": "Prévisions et planification",
+      "level": 2,
+      "q": "Pour des pièces destinées à un chantier de levage, quelle source améliore le plus la prévision ?",
+      "choices": [
+        "La moyenne historique seule",
+        "Le planning du projet et les besoins confirmés par les équipes terrain",
+        "Le prix du jour d'une matière première",
+        "Le nombre d'employés du port"
+      ],
+      "answer": 1,
+      "explain": "Pour une demande liée à un projet, le planning et les besoins confirmés sont plus fiables que l'historique, souvent irrégulier.",
+      "seconds": 60,
+      "status": "draft",
+      "img": "photo/crane-lifting.jpg",
+      "imgAlt": "Grue effectuant une opération de levage sur un chantier"
+    },
+    {
+      "id": "port-resp-logistique-031",
+      "theme": "Coûts et indicateurs",
+      "level": 1,
+      "q": "Quels postes composent le coût logistique d'une entreprise importatrice ?",
+      "choices": [
+        "Uniquement le carburant des camions",
+        "Uniquement le loyer de l'entrepôt",
+        "Uniquement les salaires administratifs",
+        "Transport, entreposage, manutention, possession des stocks et frais administratifs"
+      ],
+      "answer": 3,
+      "explain": "Le coût logistique est un coût total : l'optimiser sur un seul poste peut augmenter les autres.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-032",
+      "theme": "Coûts et indicateurs",
+      "level": 1,
+      "q": "Sur 200 lignes de commande, 190 sont livrées complètes et à l'heure. Quel est le taux de service ?",
+      "choices": [
+        "95 %",
+        "90 %",
+        "92 %",
+        "98 %"
+      ],
+      "answer": 0,
+      "explain": "Taux de service = lignes livrées complètes et à l'heure / lignes commandées = 190 / 200 = 95 %.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-033",
+      "theme": "Coûts et indicateurs",
+      "level": 2,
+      "q": "Le stock moyen vaut 50 000 000 FCFA et le taux annuel de possession est estimé à 20 %. Quel est le coût de possession annuel ?",
+      "choices": [
+        "2 500 000 FCFA",
+        "5 000 000 FCFA",
+        "10 000 000 FCFA",
+        "20 000 000 FCFA"
+      ],
+      "answer": 2,
+      "explain": "Coût de possession = stock moyen x taux annuel = 50 000 000 x 0,20 = 10 000 000 FCFA.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-034",
+      "theme": "Coûts et indicateurs",
+      "level": 2,
+      "q": "Les coûts de transport et de manutention d'un trimestre s'élèvent à 12 000 000 FCFA pour 400 EVP. Quel est le coût par EVP ?",
+      "choices": [
+        "24 000 FCFA",
+        "30 000 FCFA",
+        "36 000 FCFA",
+        "48 000 FCFA"
+      ],
+      "answer": 1,
+      "explain": "Coût par EVP = 12 000 000 / 400 = 30 000 FCFA.",
+      "seconds": 60,
+      "status": "draft",
+      "img": "photo/container-port.jpg",
+      "imgAlt": "Conteneurs en attente dans un terminal portuaire"
+    },
+    {
+      "id": "port-resp-logistique-035",
+      "theme": "Coûts et indicateurs",
+      "level": 2,
+      "q": "Que mesure l'indicateur OTIF (on time, in full) ?",
+      "choices": [
+        "La rotation du stock",
+        "Le coût par conteneur",
+        "Le taux d'accidents du magasin",
+        "Le pourcentage de livraisons effectuées à l'heure et complètes"
+      ],
+      "answer": 3,
+      "explain": "OTIF combine deux critères : la livraison arrive dans les délais convenus et avec toutes les quantités commandées.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-036",
+      "theme": "Coûts et indicateurs",
+      "level": 2,
+      "q": "Le fret aérien coûte plus cher que le maritime. Dans quel cas peut-il rester le meilleur choix global ?",
+      "choices": [
+        "Jamais, le maritime est toujours moins cher au total",
+        "Quand la marchandise est lourde et peu urgente",
+        "Quand le coût d'un arrêt de production dépasse l'économie permise par le mode lent",
+        "Quand le conteneur est déjà plein"
+      ],
+      "answer": 2,
+      "explain": "L'arbitrage se fait en coût total : un surcoût de transport rapide peut être inférieur à la perte liée à un arrêt d'exploitation.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-037",
+      "theme": "Coûts et indicateurs",
+      "level": 3,
+      "q": "Commander moins souvent, mais de plus grandes quantités, a quel effet probable sur les coûts ?",
+      "choices": [
+        "Baisse des coûts de lancement et hausse du coût de possession",
+        "Baisse des deux coûts",
+        "Hausse des deux coûts",
+        "Suppression du risque de rupture"
+      ],
+      "answer": 0,
+      "explain": "Moins de commandes réduisent les coûts de lancement, mais un stock moyen plus élevé augmente le coût de possession. La formule de Wilson cherche le compromis.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-038",
+      "theme": "Coûts et indicateurs",
+      "level": 3,
+      "q": "Quel ensemble d'indicateurs donne la vue la plus équilibrée de la performance logistique ?",
+      "choices": [
+        "Uniquement le coût unitaire de transport",
+        "Service (OTIF), délais, stocks (rotation, exactitude) et coûts",
+        "Uniquement le nombre de camions utilisés",
+        "Uniquement le chiffre d'affaires"
+      ],
+      "answer": 1,
+      "explain": "Un tableau de bord équilibré croise service, délais, stocks et coûts pour éviter d'améliorer un critère au détriment d'un autre.",
+      "seconds": 60,
+      "status": "draft",
+      "img": "photo/office-meeting.jpg",
+      "imgAlt": "Équipe réunie pour examiner un tableau de bord"
+    },
+    {
+      "id": "port-resp-logistique-039",
+      "theme": "Coûts et indicateurs",
+      "level": 3,
+      "q": "Exemple théorique : franchise de 7 jours, tarif de 50 000 FCFA par jour et par conteneur, 4 conteneurs restitués au bout de 10 jours. Quel est le montant des surestaries ?",
+      "choices": [
+        "200 000 FCFA",
+        "350 000 FCFA",
+        "500 000 FCFA",
+        "600 000 FCFA"
+      ],
+      "answer": 3,
+      "explain": "Jours hors franchise : 10 - 7 = 3. Montant = 3 x 4 x 50 000 = 600 000 FCFA. Les tarifs réels dépendent du contrat avec la compagnie maritime.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "port-resp-logistique-040",
+      "theme": "Coûts et indicateurs",
+      "level": 2,
+      "q": "Quel est le piège d'un indicateur de coût analysé seul ?",
+      "choices": [
+        "Il est toujours parfaitement exact",
+        "Il remplace la mesure de la qualité de service",
+        "Il peut encourager des économies qui dégradent le service, par des ruptures ou des retards",
+        "Il est interdit par les normes de qualité"
+      ],
+      "answer": 2,
+      "explain": "Sans indicateur de service associé, une baisse de coût peut cacher des retards ou des ruptures. D'où l'intérêt d'un tableau de bord équilibré.",
+      "seconds": 60,
+      "status": "draft"
+    }
+  ]
+}

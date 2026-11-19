@@ -6,6 +6,9 @@ const P = {
   rig: '<path d="M12 3 6 21M12 3l6 18M8.5 14h7M10 9h4M4 21h16M12 3v3"/>',
   refinery: '<path d="M4 21V9l4-3v15M8 21V12h5v9M13 21V7h3v14M16 21v-9h4v9M3 21h18M14.5 7V3"/>',
   mine: '<path d="M3 20l5-9 3 5 3-7 7 11H3zM9 20l2-4"/>',
+  ship: '<path d="M3 15l2 5h14l2-5-9-3-9 3zM12 12V4h5v3h-5M7 10h3M5 20c2 1.5 4 1.5 7 0 3 1.5 5 1.5 7 0"/>',
+  trash: '<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v6M14 11v6"/>',
+  edit: '<path d="M4 20h4L19 9l-4-4L4 16v4zM13 7l4 4"/>',
   shield: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3zM8.5 12l2.5 2.5 5-5"/>',
   briefcase: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/>',
   book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 19a2 2 0 0 0 2 2h13"/>',
@@ -116,10 +119,13 @@ export function crumbs(items) {
 /** En-tête de page homogène : fil d'Ariane, bouton retour, titre, texte. */
 export function pageHead({ crumbs: c = [], back, title, text = '', actions = '', eyebrow = '' }) {
   return `<header class="page-head2">${c.length ? crumbs(c) : ''}
-    ${back ? `<a class="back-link" href="${esc(back)}">${icon('arrow', 16, 'flip')} Retour</a>` : ''}
+    ${back ? backLink(back) : ''}
     ${eyebrow ? `<p class="eyebrow dark">${esc(eyebrow)}</p>` : ''}
     <h1 class="page-title">${esc(title)}</h1>${text ? `<p class="page-sub">${esc(text)}</p>` : ''}${actions}</header>`;
 }
+
+/** Bouton retour homogène (même aspect partout). */
+export const backLink = (href, label = 'Retour') => `<a class="back-link" href="${esc(href)}">${icon('arrow', 16, 'flip')} ${esc(label)}</a>`;
 
 export function whatsappLink(text) { return `https://wa.me/?text=${encodeURIComponent(text)}`; }
 

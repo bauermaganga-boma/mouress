@@ -25,6 +25,7 @@ const ROUTES = [
   { p: 'rh/equipe/:id', view: 'rh', fn: 'employee', auth: true },
   { p: 'rh/nouvelle-session', view: 'rh', fn: 'invite', auth: true },
   { p: 'rh/session/:id', view: 'rh', fn: 'session', auth: true },
+  { p: 'rh/formation/:id', view: 'rh', fn: 'formation', auth: true },
   { p: 'rh/facturation', view: 'rh', fn: 'billing', auth: true },
   { p: 'rh/credits', view: 'rh', fn: 'billing', auth: true },
   { p: 'rh/recu/:id', view: 'rh', fn: 'receipt', auth: true },
@@ -78,8 +79,8 @@ const NAV_CORP = [
 const NAV_TRAINING = [
   { key: 'training', label: 'Training', href: '#/training', icon: 'home' },
   { key: 'formation', label: 'Formation', href: '#/formation', icon: 'book', also: ['profil', 'cours', 'entrainement', 'examen', 'resultat'] },
-  { key: 'rh', label: 'Espace entreprise', href: '#/rh', icon: 'building', also: ['connexion', 'inscription', 't'] },
-  { key: 'mon-espace', label: 'Mon espace', href: '#/mon-espace', icon: 'user', also: ['attestation'] },
+  { key: 'rh', label: 'Espace entreprise', short: 'Entreprise', href: '#/rh', icon: 'building', also: ['connexion', 'inscription', 't'] },
+  { key: 'mon-espace', label: 'Mon espace', short: 'Mon espace', href: '#/mon-espace', icon: 'user', also: ['attestation'] },
   { key: 'verifier', label: 'Vérifier', href: '#/verifier', icon: 'award' },
 ];
 const isCorp = () => parseHash().segs.length === 0;
@@ -97,12 +98,12 @@ function renderShell() {
   const key = activeKey();
   const cur = (k) => (k === key ? ' aria-current="page"' : '');
   document.getElementById('site-header').innerHTML = `<div class="container bar-inner">
-    <a class="brand" href="${corp ? '#/' : '#/training'}" aria-label="${corp ? 'MOURESS — accueil' : 'MOURESS Training — accueil'}">${logo('clair')}<span class="brand-sub">${corp ? '' : 'Training'}</span></a>
+    <a class="brand" href="${corp ? '#/' : '#/training'}" aria-label="${corp ? 'MOURESS — accueil' : 'MOURESS Training — accueil'}">${logo('clair')}</a>
     <nav class="nav-main" aria-label="Navigation principale">${NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${n.label}</a>`).join('')}</nav>
-    <div class="header-actions">${corp ? `<a class="btn btn-primary btn-sm" href="#/training">${icon('award', 16)} MOURESS Training</a>` : `<a class="back-site" href="#/">← Site MOURESS</a>`}${corp ? '' : state.user
-      ? `<span class="user-chip">${esc(state.user.name)}</span><button type="button" class="btn btn-light btn-sm" data-logout>Déconnexion</button>`
-      : `<a class="btn btn-primary btn-sm" href="#/connexion">${icon('login', 16)} Connexion entreprise</a>`}</div></div>`;
-  document.getElementById('tabbar').innerHTML = NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${icon(n.icon)}<span>${n.label}</span></a>`).join('');
+    <div class="header-actions">${corp ? `<a class="btn btn-primary btn-sm" href="#/training">${icon('award', 16)} MOURESS Training</a>` : `<a class="btn btn-light btn-sm back-site" href="#/">${icon('arrow', 16, 'flip')} <span>Site MOURESS</span></a>`}${corp ? '' : state.user
+      ? `<span class="user-chip">${esc(state.user.name)}</span><button type="button" class="btn btn-light btn-sm btn-logout" data-logout aria-label="Déconnexion">${icon('login', 16)}<span class="lbl">Déconnexion</span></button>`
+      : `<a class="btn btn-primary btn-sm btn-login" href="#/connexion">${icon('login', 16)} Connexion<span class="lbl-long">&nbsp;entreprise</span></a>`}</div></div>`;
+  document.getElementById('tabbar').innerHTML = NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${icon(n.icon)}<span>${n.short || n.label}</span></a>`).join('');
   document.getElementById('site-footer').innerHTML = corp ? `<div class="container"><div class="footer-grid">
     <div>${logo('sombre')}<p>Prestataire de services industriels : placement de personnel, supervision, engineering, mise en service, assistance technique.</p></div>
     <div><h4>MOURESS</h4><ul><li><a href="#/?s=services">Services</a></li><li><a href="#/?s=secteurs">Secteurs</a></li><li><a href="#/training">MOURESS Training</a></li><li><a href="#/?s=contact">Contact</a></li></ul></div>
