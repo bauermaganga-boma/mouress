@@ -6,12 +6,12 @@
       "title": "Séparation et traitement des effluents",
       "theme": "Séparation et traitement des effluents",
       "minutes": 9,
-      "body": "L'effluent d'un puits est un mélange triphasique huile, eau et gaz, souvent accompagné de sable, de sels dissous et de contaminants (H2S, CO2). Le premier rôle de l'ingénieur production est de le séparer en trois flux conformes aux spécifications d'export et de rejet.\n\nLe **séparateur** exploite la gravité : les phases ont des masses volumiques différentes (gaz très inférieur à huile, huile inférieure à eau) et se stratifient si le temps de rétention est suffisant. Dans un séparateur horizontal triphasique, un déflecteur d'entrée casse la quantité de mouvement, la section de décantation laisse les gouttes se séparer, un déversoir ou un régulateur d'interface maintient l'interface eau/huile, et un extracteur de brouillard (demister) retient les gouttelettes avant la sortie gaz.\n\nLa vitesse de décantation d'une goutte suit la **loi de Stokes** : elle est proportionnelle au carré du diamètre de la goutte et à l'écart de masse volumique, et inversement proportionnelle à la viscosité du fluide continu. Conséquences pratiques : une huile froide ou lourde se sépare lentement ; une émulsion à gouttes très fines est difficile à casser.\n\nPour traiter une émulsion, on combine quatre leviers :\n- le **désémulsifiant** chimique ;\n- la **chaleur**, qui réduit la viscosité ;\n- le **temps de rétention** ;\n- en déshydratation poussée, la coalescence électrostatique.\n\nUn cisaillement excessif en amont (duse très fermée) produit des gouttes plus fines et aggrave le problème.\n\nDéfauts classiques : le **carry-over** (liquide entraîné dans le gaz), le **carry-under** (gaz entraîné dans le liquide), la **mousse** qui réduit le volume utile, et les arrivées de bouchons (slugs) qui saturent les niveaux. Une séparation étagée (HP, MP, BP) limite le dégazage brutal et stabilise l'huile avant stockage.\n\nLes spécifications d'export portent sur la teneur en eau et sédiments (BS&W), la tension de vapeur et le sel pour l'huile, sur le point de rosée pour le gaz, et sur la teneur en huile dans l'eau pour le rejet.\n\n**Sur le terrain**\n- Un ΔP d'extracteur de brouillard qui monte est un signal à traiter avant que le liquide n'atteigne la torche.\n- Quand le BS&W dérive, regardez d'abord température, cisaillement (duse) et dose de désémulsifiant, pas seulement la mesure.\n- Ne laissez jamais un régulateur de niveau en manuel sans avoir fixé qui surveille et quand on remet en auto.",
+      "body": "L'effluent d'un puits est un mélange triphasique huile, eau et gaz, souvent accompagné de sable, de sels dissous et de contaminants (H2S, CO2). Le premier rôle de l'ingénieur production est de le séparer en trois flux conformes aux spécifications d'export et de rejet.\n\nLe **séparateur** exploite la gravité : les phases ont des masses volumiques différentes (gaz très inférieur à huile, huile inférieure à eau) et se stratifient si le temps de rétention est suffisant. Dans un séparateur horizontal triphasique, un déflecteur d'entrée casse la quantité de mouvement, la section de décantation laisse les gouttes se séparer, un déversoir ou un régulateur d'interface maintient l'interface eau/huile, et un extracteur de brouillard (demister) retient les gouttelettes avant la sortie gaz.\n\nLa vitesse de décantation d'une goutte suit la **loi de Stokes** : elle est proportionnelle au carré du diamètre de la goutte et à l'écart de masse volumique, et inversement proportionnelle à la viscosité du fluide continu. Conséquences pratiques : une huile froide ou lourde se sépare lentement ; une émulsion à gouttes très fines est difficile à casser.\n\nPour traiter une émulsion, on combine quatre leviers :\n- le **désémulsifiant** chimique ;\n- la **chaleur**, qui réduit la viscosité ;\n- le **temps de rétention** ;\n- en déshydratation poussée, la coalescence électrostatique.\n\nUn cisaillement excessif en amont (duse très fermée) produit des gouttes plus fines et aggrave le problème.\n\nDéfauts classiques : le **carry-over** (liquide entraîné dans le gaz), le **carry-under** (gaz entraîné dans le liquide), la **mousse** qui réduit le volume utile, et les arrivées de bouchons (slugs) qui saturent les niveaux. Une séparation étagée (HP, MP, BP) limite le dégazage brutal et stabilise l'huile avant stockage.\n\nLes spécifications d'export portent sur la teneur en eau et sédiments (BS&W), la tension de vapeur et le sel pour l'huile, sur le point de rosée pour le gaz, et sur la teneur en huile dans l'eau pour le rejet.\n\n**Exemple chiffré.** Un CPF reçoit 25 000 BLPD (3 975 m³/j) à 40 % de water cut : 15 000 BOPD (2 385 m³/j) d'huile et 10 000 BWPD (1 590 m³/j) d'eau. Un séparateur de 120 m³ de liquide offre 43 min de rétention ; si un puits en slug pousse l'arrivée à 32 000 BLPD (5 088 m³/j), la rétention tombe à 34 min et le BS&W export dérive. Un export à 0,5 % de BS&W sur 15 000 BOPD tolère au plus 75 bbl/j d'eau (11,9 m³/j).\n\n**Sur site**\n- Un ΔP de demister qui monte (de 0,05 à 0,4 bar, soit 5,8 psi) se traite avant que le liquide n'arrive au KO drum de torche.\n- Quand le BS&W dérive, regardez d'abord température, cisaillement au choke (64èmes de pouce) et dosage de désémulsifiant, pas seulement le compteur.\n- Un régulateur de niveau mis en manuel : fixez qui surveille, jusqu'à quelle heure, et notez-le sur le rapport de quart.\n\n**Vocabulaire FR / EN**\n- Séparateur de test = test separator\n- Séparateur d'eau libre = FWKO (free water knock-out)\n- Entraînement de liquide dans le gaz = carry-over\n- Extracteur de brouillard = demister / mist extractor\n- Bouchon de liquide = slug\n- Désémulsifiant = demulsifier\n- Ballon de torche = flare KO drum\n- Temps de rétention = residence time",
       "keyPoints": [
-        "La séparation repose sur la différence de masse volumique et le temps de rétention.",
-        "Loi de Stokes : la vitesse de décantation varie avec le carré du diamètre des gouttes et à l'inverse de la viscosité.",
-        "Émulsion : désémulsifiant, chaleur, temps de rétention ; éviter le cisaillement excessif.",
-        "Carry-over = liquide dans le gaz ; carry-under = gaz dans le liquide."
+        "La séparation repose sur la différence de masse volumique et le temps de rétention : 120 m³ pour 3 975 m³/j donnent environ 43 min.",
+        "Loi de Stokes : la vitesse de décantation varie avec le carré du diamètre des gouttes et à l'inverse de la viscosité (huile froide = BS&W qui monte).",
+        "Émulsion : désémulsifiant, chaleur, temps de rétention ; éviter le cisaillement excessif au choke.",
+        "Carry-over = liquide dans le gaz (torche, compresseur) ; carry-under = gaz dans le liquide."
       ],
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Schéma d'un séparateur triphasique horizontal avec entrée, sorties gaz, huile et eau"
@@ -21,11 +21,11 @@
       "title": "Mesure, tests de puits et allocation",
       "theme": "Mesure, tests et allocation",
       "minutes": 9,
-      "body": "Sur un champ, la production fiscale est mesurée en un seul point (export), alors que des dizaines de puits y contribuent. L'ingénieur production doit donc **allouer** la production mesurée aux puits et aux réservoirs, ce qui exige des tests de puits fiables.\n\nUn **test de puits** consiste à dériver un puits vers un séparateur de test et à mesurer ses débits d'huile, d'eau et de gaz une fois le régime stabilisé. On en déduit :\n- le **water cut** = débit d'eau / (débit d'huile + débit d'eau) ;\n- le **WOR** (water-oil ratio) = débit d'eau / débit d'huile ; un water cut de 90 % correspond à un WOR de 9 ;\n- le **GOR** (gas-oil ratio) = débit de gaz / débit d'huile, en scf/STB (ou m³/m³).\n\nUn test est une photographie ponctuelle. Entre deux tests le puits peut dériver (instabilité, montée d'eau, gaz libre). D'où l'importance de la fréquence des tests, de leur durée suffisante et de la stabilisation préalable.\n\nL'**allocation** applique un facteur de correction : facteur d'allocation = production fiscale mesurée / somme des productions théoriques des puits. Exemple : théorique 10 000 bbl/j, fiscal 9 500 bbl/j, facteur 0,95 ; chaque puits est multiplié par 0,95. L'écart vient des erreurs de test, du retrait (shrinkage) entre séparateur et stockage, et des variations réelles entre deux tests.\n\nLe **retrait** (shrinkage) correspond à la perte de volume liquide due au dégazage entre les conditions du séparateur et celles du stock tank. Il doit être pris en compte pour comparer des volumes mesurés à des conditions différentes.\n\nDe bons réflexes : étalonner régulièrement les débitmètres, vérifier les conditions de référence (pression, température), documenter les incertitudes, et croiser tests, pression de tête et bilans de champ pour détecter un test aberrant.\n\n**Sur le terrain**\n- Attendez la stabilisation avant de compter la durée d'un test : pression, température et débits doivent être stables.\n- Comparez toujours la somme des tests à la mesure fiscale : un facteur d'allocation qui s'éloigne de 1 signale un test faux ou un compteur à vérifier.\n- Fermez la vanne latérale pour la duse, pas la maîtresse, sauf procédure d'urgence ; vérifiez la dépressurisation avant d'ouvrir.",
+      "body": "Sur un champ, la production fiscale est mesurée en un seul point (export), alors que des dizaines de puits y contribuent. L'ingénieur production doit donc **allouer** la production mesurée aux puits et aux réservoirs, ce qui exige des tests de puits fiables.\n\nUn **test de puits** consiste à dériver un puits vers un séparateur de test et à mesurer ses débits d'huile, d'eau et de gaz une fois le régime stabilisé. On en déduit :\n- le **water cut** = débit d'eau / (débit d'huile + débit d'eau) ;\n- le **WOR** (water-oil ratio) = débit d'eau / débit d'huile ; un water cut de 90 % correspond à un WOR de 9 ;\n- le **GOR** (gas-oil ratio) = débit de gaz / débit d'huile, en scf/STB (ou Sm³/Sm³ ; 1 scf/STB = 0,178 Sm³/Sm³).\n\nUn test est une photographie ponctuelle. Entre deux tests le puits peut dériver (instabilité, montée d'eau, gaz libre). D'où l'importance de la fréquence des tests, de leur durée suffisante et de la stabilisation préalable.\n\nL'**allocation** applique un facteur de correction : facteur d'allocation = production fiscale mesurée / somme des productions théoriques des puits. Exemple : somme des tests 10 000 BOPD (1 590 m³/j), fiscal 9 500 BOPD (1 510,5 m³/j), facteur 0,95 ; chaque puits est multiplié par 0,95. Un puits testé à 1 200 BOPD (190,8 m³/j) est alloué à 1 140 BOPD (181,3 m³/j). L'écart vient des erreurs de test, du retrait (shrinkage) entre séparateur et stockage, et des variations réelles entre deux tests.\n\nLe **retrait** (shrinkage) correspond à la perte de volume liquide due au dégazage entre les conditions du séparateur et celles du stock tank. Il doit être pris en compte pour comparer des volumes mesurés à des conditions différentes.\n\nDe bons réflexes : étalonner régulièrement les débitmètres, vérifier les conditions de référence (pression, température), documenter les incertitudes, et croiser tests, pression de tête et bilans de champ pour détecter un test aberrant.\n\n**Exemple chiffré.** Test du puits P-31 : 800 BOPD (127,2 m³/j), 1 600 BWPD (254,4 m³/j) et 640 Mscf/d de gaz (18 123 Sm³/j). Water cut = 1 600 / 2 400 = 66,7 %, WOR = 2, GOR = 800 scf/STB (142 Sm³/Sm³). Même si le test dure 24 h, il ne vaut que s'il est stabilisé : 4 h de FTHP qui dérive faussent le résultat.\n\n**Sur site**\n- Comptez la durée de test à partir de la stabilisation de la FTHP, de la température et des débits, pas du moment où l'opérateur ouvre la vanne.\n- Comparez chaque jour la somme des tests à la mesure fiscale : un facteur d'allocation qui s'éloigne de 1 signale un test faux, un puits qui dérive ou un compteur à vérifier.\n- Un test isolé sur un puits qui slugge ne suffit pas : retest avant de changer l'allocation du mois.\n\n**Vocabulaire FR / EN**\n- Test de puits = well test\n- Facteur d'allocation / back-allocation = allocation factor / back-allocation\n- Retrait (shrinkage) = shrinkage\n- Pression en tête en production = FTHP (flowing tubing head pressure)\n- Mesure fiscale = fiscal / custody metering\n- Taux d'eau = water cut\n- Rapport gaz/huile = GOR\n- Rapport eau/huile = WOR",
       "keyPoints": [
-        "Le test de puits mesure huile, eau et gaz d'un puits en régime stabilisé.",
-        "Water cut = qw/(qo+qw) ; WOR = qw/qo ; GOR = qg/qo.",
-        "Facteur d'allocation = production fiscale / somme des productions théoriques.",
+        "Le test de puits mesure huile, eau et gaz d'un puits en régime stabilisé (BOPD, BWPD, Mscf/d).",
+        "Water cut = qw/(qo+qw) ; WOR = qw/qo ; GOR = qg/qo en scf/STB ou Sm³/Sm³.",
+        "Facteur d'allocation = production fiscale / somme des productions testées (9 500 / 10 000 = 0,95).",
         "Le retrait (shrinkage) explique une partie des écarts de volume entre séparateur et stockage."
       ],
       "img": "svg/wellhead-xmas-tree.svg",
@@ -36,12 +36,12 @@
       "title": "Optimisation de la production : de l'IPR à la duse",
       "theme": "Optimisation et analyse nodale",
       "minutes": 9,
-      "body": "Le débit d'un puits résulte de l'équilibre entre ce que le réservoir peut fournir (**inflow**, courbe IPR) et ce que la complétion et les installations de surface peuvent évacuer (**outflow**, courbe VLP). Leur intersection donne le point de fonctionnement : c'est le principe de l'analyse nodale.\n\nL'IPR relie le débit à la pression de fond dynamique Pwf. Dans le cas simple, l'indice de productivité est PI = q / (Pr − Pwf). Exemple : 500 STB/j avec Pr = 3 000 psi et Pwf = 2 000 psi donnent PI = 0,5 STB/j/psi. Sous la pression de bulle, du gaz libre apparaît dans le réservoir et la courbe se courbe (relation de Vogel).\n\nLa pression hydrostatique d'une colonne s'écrit P (psi) = 0,052 × ρ (ppg) × TVD (ft). Le gradient de l'eau douce est de 0,433 psi/ft. Dans le tubing, la chute de pression combine poids de la colonne, frottements et accélération ; en puits vertical, le poids domine généralement.\n\nLa **duse** (choke) contrôle le débit en surface. La fermer augmente la contre-pression, fait monter Pwf et réduit le débit ; l'ouvrir fait l'inverse, jusqu'aux limites de la sécurité réservoir (venue de sable, percée d'eau ou de gaz). En régime critique, le débit dépend de la pression amont et non de l'aval.\n\nLes leviers d'optimisation sont :\n- réduire la contre-pression en surface (goulots, pression de séparateur) ;\n- alléger la colonne (gas lift) ou ajouter de l'énergie (ESP) ;\n- stimuler ou nettoyer la zone proche du puits (skin) ;\n- rééquilibrer l'allocation du gaz de lift sur les puits les plus rentables.\n\nLe déclin d'un puits est souvent modélisé par une exponentielle : q = qi × e^(−D×t). Avec qi = 1 000 bbl/j et D = 0,2 an⁻¹, le débit après 2 ans vaut environ 670 bbl/j.\n\n**Sur le terrain**\n- Contrôlez un PI avant de l'utiliser : vérifiez que Pwf et Pr sont à la même date et au même niveau de référence.\n- Une duse plus ouverte n'est pas toujours un gain : surveillez le sable, le gaz et la stabilité avant de laisser en l'état.\n- En gas lift, cherchez l'optimum économique (gaz, compression), pas le maximum du débit d'huile.",
+      "body": "Le débit d'un puits résulte de l'équilibre entre ce que le réservoir peut fournir (**inflow**, courbe IPR) et ce que la complétion et les installations de surface peuvent évacuer (**outflow**, courbe VLP). Leur intersection donne le point de fonctionnement : c'est le principe de l'analyse nodale.\n\nL'IPR relie le débit à la pression de fond dynamique Pwf. Dans le cas simple, l'indice de productivité est PI = q / (Pr − Pwf). Exemple : 500 BOPD (79,5 m³/j) avec Pr = 3 000 psi (206,8 bar) et Pwf = 2 000 psi (137,9 bar) donnent PI = 0,5 bpd/psi, soit 1,15 m³/j/bar. Sous la pression de bulle, du gaz libre apparaît dans le réservoir et la courbe se courbe (relation de Vogel).\n\nLa pression hydrostatique d'une colonne s'écrit P (psi) = 0,052 × ρ (ppg) × TVD (ft). Le gradient de l'eau douce est de 0,433 psi/ft. Dans le tubing, la chute de pression combine poids de la colonne, frottements et accélération ; en puits vertical, le poids domine généralement.\n\nLa **duse** (choke) contrôle le débit en surface. La fermer augmente la contre-pression, fait monter Pwf et réduit le débit ; l'ouvrir fait l'inverse, jusqu'aux limites de la sécurité réservoir (venue de sable, percée d'eau ou de gaz). En régime critique, le débit dépend de la pression amont et non de l'aval.\n\nLes leviers d'optimisation sont :\n- réduire la contre-pression en surface (goulots, pression de séparateur) ;\n- alléger la colonne (gas lift) ou ajouter de l'énergie (ESP) ;\n- stimuler ou nettoyer la zone proche du puits (skin) ;\n- rééquilibrer l'allocation du gaz de lift sur les puits les plus rentables.\n\nLe déclin d'un puits est souvent modélisé par une exponentielle : q = qi × e^(−D×t). Avec qi = 1 000 BOPD (159 m³/j) et D = 0,2 an⁻¹ (20 %/an nominal), le débit après 2 ans vaut environ 670 BOPD (106,6 m³/j).\n\n**Exemple chiffré.** Un puits éruptif donne 1 500 BOPD (238,5 m³/j) avec une FTHP de 40 bar (580 psi). En ouvrant le choke de 24/64 à 32/64, la FTHP tombe à 32 bar et l'huile passe à 1 620 BOPD (+120 BOPD, 19,1 m³/j). En gas lift, passer de 2 à 3 MMscfd (56 634 à 84 951 Sm³/j) peut ne rien rapporter si la courbe est déjà plate : on arbitre le gaz entre puits.\n\n**Sur site**\n- Contrôlez un PI avant de l'utiliser : Pwf et Pr doivent être pris à la même date et au même niveau de référence.\n- Un choke plus ouvert n'est pas toujours un gain : surveillez sable, gaz et stabilité avant de laisser en l'état.\n- En gas lift, cherchez l'optimum économique (gaz, compression), pas le maximum de BOPD ; le gaz de lift se répartit entre les puits.\n\n**Vocabulaire FR / EN**\n- Courbe de débit entrant = IPR (inflow performance relationship)\n- Analyse nodale = nodal analysis\n- Indice de productivité = PI (productivity index)\n- Pression de fond dynamique = Pwf (flowing bottomhole pressure)\n- Duse = choke (taille en 64èmes de pouce)\n- Drawdown = drawdown\n- Pression de bulle = bubble point pressure\n- Déclin = decline (en %/an)",
       "keyPoints": [
         "Le point de fonctionnement est l'intersection de l'IPR (inflow) et de la VLP (outflow).",
-        "PI = q/(Pr − Pwf) ; pression hydrostatique = 0,052 × ρ(ppg) × TVD(ft).",
-        "Fermer la duse augmente Pwf et réduit le débit.",
-        "Déclin exponentiel : q = qi × e^(−D×t)."
+        "PI = q/(Pr − Pwf) en bpd/psi (ou m³/j/bar) ; pression hydrostatique = 0,052 × ρ(ppg) × TVD(ft).",
+        "Fermer le choke augmente Pwf et réduit le débit ; l'ouvrir fait l'inverse, sous réserve de sable et gaz.",
+        "Déclin exponentiel : q = qi × e^(−D×t), par exemple 1 000 BOPD à D = 20 %/an donnent 670 BOPD à 2 ans."
       ],
       "img": "svg/ipr-curve.svg",
       "imgAlt": "Courbe IPR : pression de fond dynamique en fonction du débit"
@@ -51,11 +51,11 @@
       "title": "Gestion des anomalies et sécurité procédé",
       "theme": "Diagnostic et sécurité procédé",
       "minutes": 10,
-      "body": "Un ingénieur production est jugé sur sa capacité à diagnostiquer vite et à rester dans l'enveloppe de sécurité. Le diagnostic suit une logique : observer les symptômes, croiser plusieurs paramètres, classer les hypothèses, vérifier la plus probable à moindre coût.\n\n**Cas ESP** : baisse du courant moteur, baisse du débit et refroidissement de la température de surface. Un moteur peu chargé et une production qui chute évoquent d'abord du gaz libre ou un niveau trop bas (la pompe cavite, risque de gas lock), puis un arbre ou un accouplement cassé, puis une fuite de tubing. À l'inverse, un courant en hausse évoque sable, dépôts, émulsion visqueuse ou défaut électrique.\n\n**Cas gas lift instable** : oscillations cycliques de pression et de débit (heading). Vérifier le débit et la pression d'injection, l'orifice d'opération, la présence d'une vanne de décharge fuyarde, et stabiliser l'injection.\n\n**Cas water cut qui monte** : percée d'eau d'injection, coning ou chenalisation, fuite de casing. On compare tests de puits, WOR et sa dérivée, et on contrôle l'intégrité avant toute décision.\n\n**Hydrates** : l'eau libre, le gaz, une basse température et une haute pression les favorisent. On les prévient par injection de MEG ou de méthanol et par l'isolation des lignes.\n\n**Sécurité procédé** : la soupape de sécurité (PSV) protège un récipient ; sa pression de tarage doit être inférieure ou égale à la pression maximale admissible (MAWP). Le H2S est toxique et plus dense que l'air ; à forte concentration il paralyse l'odorat. Face à une fuite de gaz importante, on déclenche l'alarme, on protège les personnes et on met l'installation en sécurité (ESD) avant toute tentative d'intervention.\n\nToujours documenter l'événement, analyser la cause racine et mettre à jour les procédures.\n\n**Sur le terrain**\n- Une PSV ne se règle pas sur le terrain pour « gagner de la marge » : tarage et pression de service sont dans le dossier du site.\n- Ne vous fiez jamais à l'odeur de l'H₂S : détecteur, vent, point de rassemblement.\n- Diagnostiquez par faisceau : courant, débit, température et pression de tête ensemble ; une seule mesure peut tromper.",
+      "body": "Un ingénieur production est jugé sur sa capacité à diagnostiquer vite et à rester dans l'enveloppe de sécurité. Le diagnostic suit une logique : observer les symptômes, croiser plusieurs paramètres, classer les hypothèses, vérifier la plus probable à moindre coût.\n\n**Cas ESP** : baisse du courant moteur, baisse du débit et refroidissement de la température de surface. Un moteur peu chargé et une production qui chute évoquent d'abord du gaz libre ou un niveau trop bas (la pompe cavite, risque de gas lock), puis un arbre ou un accouplement cassé, puis une fuite de tubing. À l'inverse, un courant en hausse évoque sable, dépôts, émulsion visqueuse ou défaut électrique.\n\n**Cas gas lift instable** : oscillations cycliques de pression et de débit (heading). Vérifier le débit et la pression d'injection, l'orifice d'opération, la présence d'une vanne de décharge fuyarde, et stabiliser l'injection.\n\n**Cas water cut qui monte** : percée d'eau d'injection, coning ou chenalisation, fuite de casing. On compare tests de puits, WOR et sa dérivée, et on contrôle l'intégrité avant toute décision.\n\n**Hydrates** : l'eau libre, le gaz, une basse température et une haute pression les favorisent. On les prévient par injection de MEG ou de méthanol et par l'isolation des lignes.\n\n**Sécurité procédé** : la soupape de sécurité (PSV) protège un récipient ; sa pression de tarage doit être inférieure ou égale à la pression maximale admissible (MAWP). Le H2S est toxique et plus dense que l'air ; à forte concentration il paralyse l'odorat. Face à une fuite de gaz importante, on déclenche l'alarme, on protège les personnes et on met l'installation en sécurité (ESD) avant toute tentative d'intervention.\n\nToujours documenter l'événement, analyser la cause racine et mettre à jour les procédures.\n\n**Exemple chiffré.** Un puits gas lift à 1,2 MMscfd (33 980 Sm³/j) voit sa FTHP cycler de 12 à 20 bar (174 à 290 psi) toutes les 25 min : heading, on stabilise le gaz. Une flowline de 8 km redémarrée après 3 jours d'arrêt monte de 60 à 110 bar (870 à 1 595 psi) avec 4 °C (39 °F) à l'arrivée : soupçon d'hydrates, pas de forçage en pression. Sur un ballon à MAWP 10 barg (145 psig), la PSV est tarée à 10 barg au plus ; à 9,5 barg de service (95 %), elle risque de fuir.\n\n**Sur site**\n- Une PSV ne se règle pas sur le terrain pour « gagner de la marge » : tarage et pression de service sont dans le dossier du site.\n- Ne vous fiez jamais à l'odeur de l'H₂S : détecteur, vent, point de rassemblement.\n- Diagnostiquez par faisceau : courant, débit en BLPD, température et FTHP ensemble ; une seule mesure peut tromper. Informez la salle de contrôle avant d'agir.\n\n**Vocabulaire FR / EN**\n- Arrêt d'urgence = ESD (emergency shutdown)\n- Soupape de sécurité = PSV (pressure safety valve)\n- Pression maximale admissible = MAWP\n- Instabilité du gas lift = heading\n- Bouchon d'hydrates = hydrate plug\n- Pompe qui décroche / niveau bas = pump-off\n- Percée d'eau = water breakthrough\n- Cause racine = root cause",
       "keyPoints": [
         "Diagnostiquer : croiser les paramètres, classer les hypothèses, vérifier la plus probable.",
-        "ESP : courant en baisse + débit en baisse + surface plus froide = gaz/pump-off d'abord.",
-        "Hydrates : eau, gaz, froid, pression ; prévention MEG ou méthanol.",
+        "ESP : courant en baisse + BLPD en baisse + surface plus froide = gaz ou pump-off d'abord.",
+        "Hydrates : eau, gaz, froid, pression ; prévention MEG ou méthanol, redémarrage sur procédure.",
         "PSV : tarage inférieur ou égal à la MAWP ; en cas de fuite de gaz, personnes d'abord."
       ],
       "img": "svg/pressure-vessel-psv.svg",
@@ -66,12 +66,12 @@
       "title": "Puits et technologies de production",
       "theme": "Puits et technologies de production",
       "minutes": 8,
-      "body": "Un puits producteur est isolé du terrain par des barrières. Du réservoir vers la surface : perforations ou complétion de sable, **packer** qui isole l'annulaire A (entre tubing et casing), **tubing** qui conduit les effluents, **DHSV/SSSV** (vanne de sécurité de subsurface commandée par une ligne hydraulique, qui se ferme si la pression de commande est perdue) et **tête de puits** avec son arbre de Noël : vannes maîtresses, vanne latérale de production, duse, vanne de pistonnage pour l'accès au câble.\n\nLes annulaires sont les premiers capteurs de l'intégrité. La pression de l'annulaire A varie avec la température ou l'injection de gaz de lift, mais une pression qui remonte après chaque purge, ou qui suit la pression de tête, signale la perte d'une barrière (tubing, joint, packer). Chaque annulaire a une pression maximale admissible (MAASP) ; seuils d'alarme et délais d'action relèvent des procédures du site.\n\nLe **sable** vient d'un drawdown trop élevé, de l'arrivée d'eau ou de la déplétion. Il érode duses et coudes, remplit le fond (fill) et bouche les perforations. On le maîtrise par la complétion (crépines, gravel pack), un débit sous le seuil d'apparition (détecteur acoustique) et le suivi du fill au câble.\n\nLes **dépôts** dégradent la productivité. Les paraffines cristallisent sous le point de trouble, donc dans le haut froid du tubing : grattage, circulation chaude, inhibiteur. Calcaire et sulfate de baryum viennent de mélanges d'eaux incompatibles ; le sulfate de baryum ne se dissout pas à l'acide chlorhydrique. Les hydrates se forment avec gaz et eau à basse température et haute pression : méthanol ou MEG.\n\nLa **corrosion** vient surtout du CO2 (corrosion douce) et du H2S (fissuration sous contrainte). Repère empirique : pCO2 = fraction molaire × pression totale ; au-delà d'environ 2 bar, le risque est significatif. Remèdes : inhibiteur, aciers alliés, coupons, caliper multi-doigts.\n\nLa **flow assurance en puits** garde température et pression hors des enveloppes de dépôt : isolation, inhibiteurs, procédures d'arrêt et de redémarrage.\n\n**Sur le terrain**\n- Une pression annulaire qui remonte après purge n'est jamais un simple suintement : diagnostic selon la procédure du site, puis escalade.\n- Avant de rouvrir une DHSV fermée, égalisez les pressions de part et d'autre du clapet.\n- Après un arrêt long, vérifiez le risque hydrate ou paraffine avant de redémarrer.",
+      "body": "Un puits producteur est isolé du terrain par des barrières. Du réservoir vers la surface : perforations ou complétion de sable, **packer** qui isole l'annulaire A (entre tubing et casing), **tubing** qui conduit les effluents, **DHSV/SSSV** (vanne de sécurité de subsurface commandée par une ligne hydraulique, qui se ferme si la pression de commande est perdue) et **tête de puits** avec son arbre de Noël : vannes maîtresses, vanne latérale de production, duse, vanne de pistonnage pour l'accès au câble.\n\nLes annulaires sont les premiers capteurs de l'intégrité. La pression de l'annulaire A varie avec la température ou l'injection de gaz de lift, mais une pression qui remonte après chaque purge, ou qui suit la pression de tête, signale la perte d'une barrière (tubing, joint, packer). Chaque annulaire a une pression maximale admissible (MAASP) ; seuils d'alarme et délais d'action relèvent des procédures du site.\n\nLe **sable** vient d'un drawdown trop élevé, de l'arrivée d'eau ou de la déplétion. Il érode duses et coudes, remplit le fond (fill) et bouche les perforations. On le maîtrise par la complétion (crépines, gravel pack), un débit sous le seuil d'apparition (détecteur acoustique) et le suivi du fill au câble.\n\nLes **dépôts** dégradent la productivité. Les paraffines cristallisent sous le point de trouble, donc dans le haut froid du tubing : grattage, circulation chaude, inhibiteur. Calcaire et sulfate de baryum viennent de mélanges d'eaux incompatibles ; le sulfate de baryum ne se dissout pas à l'acide chlorhydrique. Les hydrates se forment avec gaz et eau à basse température et haute pression : méthanol ou MEG.\n\nLa **corrosion** vient surtout du CO2 (corrosion douce) et du H2S (fissuration sous contrainte). Repère empirique : pCO2 = fraction molaire × pression totale ; au-delà d'environ 2 bar, le risque est significatif. Remèdes : inhibiteur, aciers alliés, coupons, caliper multi-doigts.\n\nLa **flow assurance en puits** garde température et pression hors des enveloppes de dépôt : isolation, inhibiteurs, procédures d'arrêt et de redémarrage.\n\n**Exemple chiffré.** Annulaire A d'un puits à 40 bar en tête : de 12 à 45 bar (174 à 653 psi) en 10 jours, purge à 5 bar, retour à 30 bar en 2 jours pour une MAASP de 60 bar (870 psi) : pression soutenue, barrière à instruire. Un détecteur de sable qui « sonne » à 1 500 m³/j (9 435 BLPD) alors que le bruit de fond va jusqu'à 1 200 m³/j (7 548 BLPD) fixe le plafond de production. Gaz à 120 bar avec 5 % de CO₂ : pCO₂ = 6 bar (87 psi), soit le triple du repère de 2 bar.\n\n**Sur site**\n- Une pression annulaire qui remonte après purge n'est jamais un simple suintement : test selon la procédure du site, puis escalade.\n- Avant de rouvrir une DHSV fermée, égalisez les pressions de part et d'autre du clapet.\n- Après un arrêt long, vérifiez le risque hydrate ou paraffine avant de redémarrer, et gardez le plafond sable en tête.\n\n**Vocabulaire FR / EN**\n- Arbre de Noël = Christmas tree (xmas tree)\n- Vanne latérale de production = wing valve\n- Vanne de pistonnage = swab valve\n- Vanne de sécurité de fond = DHSV / SSSV\n- Annulaire A = A-annulus\n- Dépôt (scale), paraffine = scale, wax\n- Curage de fond = fill clean-out\n- Intervention sur puits = workover / well intervention",
       "keyPoints": [
-        "Packer, tubing, DHSV et arbre de Noël forment la chaîne de barrières du puits producteur",
-        "Une pression annulaire A qui remonte après purge ou suit la tête signale une barrière défaillante",
-        "Sable, paraffines, sulfate de baryum, hydrates et corrosion CO2 appellent chacun un traitement différent",
-        "Pression partielle CO2 = fraction molaire × pression totale (repère : environ 2 bar)"
+        "Packer, tubing, DHSV et arbre de Noël forment la chaîne de barrières du puits producteur.",
+        "Une pression annulaire A qui remonte après purge ou suit la FTHP signale une barrière défaillante.",
+        "Sable (plafond en m³/j), paraffines, BaSO4, hydrates et corrosion CO2 appellent chacun un traitement différent.",
+        "Pression partielle CO2 = fraction molaire × pression totale (repère : environ 2 bar, soit 29 psi)."
       ],
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël d'un puits de production : têtes de tubage et de tubing, vannes maîtresses, croix, vanne latérale de production, duse, vannes de curage et de pistonnage."
@@ -81,12 +81,12 @@
       "title": "Techniques d'activation (artificial lift)",
       "theme": "Techniques d'activation",
       "minutes": 8,
-      "body": "Quand la pression du réservoir ne suffit plus à amener les effluents au séparateur, on ajoute de l'énergie : c'est l'**activation** (artificial lift). Le choix dépend du débit, de la profondeur, du GOR, de la teneur en eau (WC), du sable, de la déviation, de la viscosité et des utilités (gaz haute pression, électricité).\n\nLe **gas lift** injecte du gaz dans le tubing par des vannes sur mandrins latéraux, ce qui allège la colonne. En continu, l'injection est permanente et la plus profonde possible ; en intermittent, elle pousse des bouchons de liquide (faible débit, faible pression de fond). Sans pièce mobile au fond, il tolère sable, gaz et déviation, mais exige un réseau de gaz et peut devenir instable (heading).\n\nL'**ESP** (pompe multi-étages, séparateur de gaz, protecteur, moteur, câble, variateur) convient aux forts débits et aux WC élevés. Elle supporte mal le gaz libre, le sable, la chaleur et les fluides très visqueux. Surveillance : courant, pression d'aspiration, température moteur, isolement du câble.\n\nLa **pompe à tiges** (balancier) est robuste et économique pour les faibles débits et profondeurs modérées, mais sensible à la déviation, au sable et au gaz. Diagnostic : carte dynamométrique, échométrie, taux de remplissage. La **PCP** (pompe à cavités progressives) tolère huiles visqueuses et sable, mais craint le gaz libre, le fonctionnement à sec et les aromatiques qui gonflent l'élastomère.\n\nLes **pompes hydrauliques** utilisent un fluide moteur : la pompe jet n'a aucune pièce mobile et accepte sable, gaz et déviation, au prix d'un faible rendement ; la pompe à piston est plus efficace mais plus sensible aux abrasifs. Le **plunger lift** emploie l'énergie du gaz du puits pour remonter un piston libre et le liquide ; il convient aux puits à fort GLR et faible débit de liquide (repère empirique : de l'ordre de 300 scf/bbl par 1 000 ft de profondeur).\n\nQuelle que soit la méthode, la surveillance compare débit mesuré et débit attendu et suit les paramètres propres (courant, couple, cartes, pression d'injection).\n\n**Sur le terrain**\n- Ne relevez pas un seuil de surcharge ou de sous-charge pour « faire tenir » une ESP : cherchez d'abord la cause (gaz, sable, dépôts).\n- Un gas lift qui oscille se traite par le débit de gaz, l'orifice et la profondeur d'injection, pas en étranglant la production.\n- Avant de choisir, listez GOR, WC, sable, déviation, profondeur, débit et utilités disponibles.",
+      "body": "Quand la pression du réservoir ne suffit plus à amener les effluents au séparateur, on ajoute de l'énergie : c'est l'**activation** (artificial lift). Le choix dépend du débit, de la profondeur, du GOR, de la teneur en eau (WC), du sable, de la déviation, de la viscosité et des utilités (gaz haute pression, électricité).\n\nLe **gas lift** injecte du gaz dans le tubing par des vannes sur mandrins latéraux, ce qui allège la colonne. En continu, l'injection est permanente et la plus profonde possible ; en intermittent, elle pousse des bouchons de liquide (faible débit, faible pression de fond). Sans pièce mobile au fond, il tolère sable, gaz et déviation, mais exige un réseau de gaz et peut devenir instable (heading).\n\nL'**ESP** (pompe multi-étages, séparateur de gaz, protecteur, moteur, câble, variateur) convient aux forts débits et aux WC élevés. Elle supporte mal le gaz libre, le sable, la chaleur et les fluides très visqueux. Surveillance : courant, pression d'aspiration, température moteur, isolement du câble.\n\nLa **pompe à tiges** (balancier) est robuste et économique pour les faibles débits et profondeurs modérées, mais sensible à la déviation, au sable et au gaz. Diagnostic : carte dynamométrique, échométrie, taux de remplissage. La **PCP** (pompe à cavités progressives) tolère huiles visqueuses et sable, mais craint le gaz libre, le fonctionnement à sec et les aromatiques qui gonflent l'élastomère.\n\nLes **pompes hydrauliques** utilisent un fluide moteur : la pompe jet n'a aucune pièce mobile et accepte sable, gaz et déviation, au prix d'un faible rendement ; la pompe à piston est plus efficace mais plus sensible aux abrasifs. Le **plunger lift** emploie l'énergie du gaz du puits pour remonter un piston libre et le liquide ; il convient aux puits à fort GLR et faible débit de liquide (repère empirique : de l'ordre de 300 scf/bbl par 1 000 ft de profondeur).\n\nQuelle que soit la méthode, la surveillance compare débit mesuré et débit attendu et suit les paramètres propres (courant, couple, cartes, pression d'injection).\n\n**Exemple chiffré.** Un puits à 4 000 BLPD (636 m³/j), 85 % de water cut (600 BOPD, 95 m³/j), GOR 80 scf/STB et électricité disponible : ESP. Un puits à 12 m³/j (75 BLPD) à 1 200 m, vertical, sans gaz : pompe à tiges. Un puits de 20 BLPD (3,2 m³/j) à 6 000 ft avec GLR 150 scf/bbl : le plunger en demande 1 800, il faut du gaz d'appoint ou une autre méthode.\n\n**Sur site**\n- Ne relevez pas un seuil de surcharge ou de sous-charge pour « faire tenir » une ESP : cherchez d'abord la cause (gaz, sable, dépôts) et gardez la fréquence en Hz dans la plage constructeur.\n- Un gas lift qui oscille se traite par le débit de gaz (MMscfd), l'orifice et la profondeur d'injection, pas en étranglant la production.\n- Avant de choisir, listez GOR, WC, sable, déviation, profondeur, BLPD et utilités disponibles.\n\n**Vocabulaire FR / EN**\n- Activation = artificial lift\n- Pompe électrique immergée = ESP\n- Gaz de lift = lift gas / gas lift\n- Pompe à tiges / unité à balancier = rod pump / pumping unit\n- Pompe à cavités progressives = PCP\n- Pompe jet = jet pump\n- Pression d'aspiration = pump intake pressure\n- Carte dynamométrique = dynamometer card",
       "keyPoints": [
-        "Le choix de la méthode dépend de GOR, WC, sable, déviation, profondeur, débit et utilités",
-        "Le gas lift tolère sable et gaz mais exige un réseau de gaz ; l'ESP convient aux forts débits",
-        "Pompe à tiges et PCP : diagnostic par carte dynamométrique, couple et niveau de liquide",
-        "Plunger lift : fort GLR et faible débit de liquide ; pompe jet : tolérante mais faible rendement"
+        "Le choix de la méthode dépend de GOR, WC, sable, déviation, profondeur, BLPD et utilités.",
+        "Le gas lift tolère sable et gaz mais exige un réseau de gaz (MMscfd) ; l'ESP convient aux forts débits (plusieurs milliers de BLPD).",
+        "Pompe à tiges et PCP : diagnostic par carte dynamométrique, couple et niveau de liquide.",
+        "Plunger lift : fort GLR et faible débit de liquide ; pompe jet : tolérante mais faible rendement."
       ],
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Puits gas lift : gaz injecté dans l'annulaire, vannes de décharge et vanne opérante sur mandrins latéraux, détail d'une vanne à dôme chargé en azote."
@@ -97,17 +97,17 @@
       "id": "ing-prod-001",
       "theme": "Séparation et traitement des effluents",
       "level": 1,
-      "q": "Ronde sur le séparateur triphasique horizontal de la figure. Un opérateur débutant vous demande où part l'huile. Quelle réponse correspond au schéma ?",
+      "q": "Ronde de nuit sur le séparateur de test triphasique du CPF (voir schéma). Le puits en test débite 4 000 BOPD (636 m³/j) ; un opérateur junior vous demande par où sort l'huile. Que lui montrez-vous ?",
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique horizontal : entrée avec déflecteur, extracteur de brouillard en tête, sortie gaz en haut, déversoir, sortie huile au milieu, sortie eau en partie basse, interface huile/eau",
       "choices": [
-        "Par la sortie gaz, avec l'extracteur de brouillard en tête du séparateur",
-        "Par la sortie eau, en partie basse du séparateur, sous l'interface huile/eau",
-        "Par la sortie huile, après le déversoir, au-dessus de l'interface huile/eau",
-        "Par l'entrée, en repassant par le déflecteur d'entrée du séparateur horizontal"
+        "La sortie gaz, en tête, derrière l'extracteur de brouillard (demister)",
+        "La sortie huile, au milieu, après le déversoir et au-dessus de l'interface huile/eau",
+        "La sortie eau, en partie basse, sous l'interface huile/eau",
+        "L'entrée du séparateur, en repassant par le déflecteur avant retour au manifold"
       ],
-      "answer": 2,
-      "explain": "L'eau, plus dense, se place en bas et part par la sortie basse ; l'huile passe par-dessus le déversoir et sort au milieu ; le gaz part en tête.",
+      "answer": 1,
+      "explain": "L'eau, plus dense, se place au fond et part par la sortie basse ; l'huile passe par-dessus le déversoir et sort à mi-hauteur ; le gaz part en tête. Ici : 4 000 BOPD × 0,159 = 636 m³/j d'huile vers le stockage.",
       "seconds": 60,
       "status": "draft"
     },
@@ -115,17 +115,17 @@
       "id": "ing-prod-002",
       "theme": "Séparation et traitement des effluents",
       "level": 2,
-      "q": "Le ΔP de l'extracteur de brouillard d'un séparateur passe de 0,05 à 0,4 bar sur une semaine, et du liquide apparaît dans le ballon de torche. Quelle est votre hypothèse et que faites-vous ?",
+      "q": "Le ΔP du demister du séparateur HP passe de 0,05 à 0,4 bar (0,7 à 5,8 psi) en une semaine, pour 18 MMscfd de gaz (509 706 Sm³/j). Du liquide apparaît dans le KO drum de torche. Hypothèse et première action ?",
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique horizontal : entrée avec déflecteur, extracteur de brouillard en tête, sortie gaz en haut, déversoir, sortie huile au milieu, sortie eau en partie basse, interface huile/eau",
       "choices": [
-        "Extracteur colmaté (paraffine, sable) ou débit de gaz trop élevé : carry-over ; réduire le débit et nettoyer",
-        "Interface eau/huile trop basse : l'huile devient trop sèche, donc il faut remonter nettement la consigne d'interface du séparateur",
-        "Déflecteur d'entrée arraché : le ΔP de l'extracteur devrait alors baisser, ce qui contredit la mesure",
-        "Pression du séparateur trop élevée : moins de gaz en volume, donc moins de liquide entraîné vers la torche"
+        "Interface eau/huile trop basse : remonter nettement la consigne d'interface pour assécher l'huile",
+        "Déflecteur d'entrée arraché : le ΔP du demister aurait dû baisser, ce qui contredit la mesure",
+        "Pression du séparateur trop haute : moins de gaz en volume, donc moins de liquide entraîné vers la torche",
+        "Demister colmaté (paraffine, sable) ou gaz trop chargé : carry-over ; baisser la charge aux chokes et planifier le nettoyage"
       ],
-      "answer": 0,
-      "explain": "Un extracteur de brouillard encrassé se traduit par un ΔP en hausse et un entraînement de liquide dans le gaz. On réduit la charge et on traite la cause.",
+      "answer": 3,
+      "explain": "ΔP multiplié par 8 (0,4 / 0,05) avec du liquide dans le gaz : le demister est encrassé et laisse passer le liquide (carry-over). On réduit la charge pour protéger torche et compresseurs, puis on traite la cause. Conversion : 0,4 bar = 5,8 psi ; 18 MMscfd × 28 317 = 509 706 Sm³/j.",
       "seconds": 90,
       "status": "draft"
     },
@@ -133,15 +133,15 @@
       "id": "ing-prod-003",
       "theme": "Séparation et traitement des effluents",
       "level": 2,
-      "q": "Après injection d'un désémulsifiant, le diamètre moyen des gouttes d'eau dans l'huile passe de 100 à 200 µm. D'après la loi de Stokes, par combien est multipliée leur vitesse de décantation ?",
+      "q": "Au FWKO (20 000 BLPD, soit 3 180 m³/j), l'injection de désémulsifiant fait passer le diamètre moyen des gouttes d'eau de 100 à 200 µm. Selon Stokes, de combien augmente leur vitesse de décantation, et que devient un temps de décantation de 20 min sur la même hauteur ?",
       "choices": [
-        "2 : la vitesse de décantation est proportionnelle au diamètre",
-        "8 : la vitesse est proportionnelle au cube du diamètre",
-        "1,4 : la vitesse est proportionnelle à la racine du diamètre",
-        "4 : la vitesse est proportionnelle au carré du diamètre"
+        "Vitesse multipliée par 2 : le temps tombe à 10 min",
+        "Vitesse multipliée par 8 : le temps tombe à 2,5 min",
+        "Vitesse multipliée par 4 : le temps tombe à 5 min",
+        "Vitesse multipliée par 1,4 : le temps tombe à 14 min"
       ],
-      "answer": 3,
-      "explain": "Stokes : v proportionnelle à d². Doubler d multiplie v par 4, d'où l'intérêt de faire coalescer les gouttes.",
+      "answer": 2,
+      "explain": "Stokes : v proportionnelle à d². (200 / 100)² = 4, donc 20 min / 4 = 5 min. Le désémulsifiant fait coalescer les gouttes : c'est l'intérêt du dosage correct. Débit traité : 20 000 BLPD × 0,159 = 3 180 m³/j.",
       "seconds": 70,
       "status": "draft"
     },
@@ -149,15 +149,15 @@
       "id": "ing-prod-004",
       "theme": "Séparation et traitement des effluents",
       "level": 2,
-      "q": "En saison fraîche, l'huile entre au séparateur à 25 °C au lieu de 45 °C et le BS&W de l'huile exportée passe de 0,3 % à 1,5 %, sans autre changement. Cause la plus probable et levier ?",
+      "q": "Saison fraîche : l'huile arrive au séparateur à 25 °C (77 °F) au lieu de 45 °C (113 °F) et le BS&W export passe de 0,3 % à 1,5 % sur 12 000 BOPD (1 908 m³/j), sans autre changement. Cause la plus probable et levier ?",
       "choices": [
-        "La masse volumique de l'eau a augmenté, donc elle monte dans l'huile ; il faut réduire la température d'entrée",
-        "Viscosité plus élevée : l'eau décante plus lentement ; chauffer ou augmenter désémulsifiant ou temps de rétention",
-        "Le gaz libre a diminué : il faut ouvrir le déversoir de l'huile et baisser la pression du séparateur de 2 bar",
-        "L'interface est trop haute : il faut fermer la vanne de sortie d'eau pour la faire redescendre vers l'huile"
+        "Densité de l'eau en hausse : elle remonte dans l'huile ; il faut refroidir encore l'entrée du séparateur",
+        "Moins de gaz libre : ouvrir le déversoir huile et baisser la pression du séparateur de 2 bar (29 psi)",
+        "Interface trop haute : fermer la vanne de sortie d'eau pour la faire redescendre vers l'huile",
+        "Viscosité plus forte : l'eau décante plus lentement ; réchauffer l'entrée ou augmenter désémulsifiant et temps de rétention"
       ],
-      "answer": 1,
-      "explain": "L'huile froide est plus visqueuse, la vitesse de décantation baisse et l'eau reste entraînée. Chaleur, chimie et temps de rétention sont les leviers.",
+      "answer": 3,
+      "explain": "L'huile froide est plus visqueuse : la vitesse de décantation (Stokes) baisse et l'eau reste entraînée. À 1,5 %, l'export contient 12 000 × 0,015 = 180 bbl/j d'eau (28,6 m³/j) contre 36 bbl/j (5,7 m³/j) à 0,3 %. Leviers : chaleur, chimie, rétention.",
       "seconds": 100,
       "status": "draft"
     },
@@ -165,17 +165,17 @@
       "id": "ing-prod-005",
       "theme": "Séparation et traitement des effluents",
       "level": 2,
-      "q": "Le régulateur de niveau d'interface du séparateur est bloqué, vanne de sortie d'eau fermée, depuis 2 heures. Que va-t-il se passer et que faites-vous ?",
+      "q": "Le régulateur d'interface du FWKO est bloqué, vanne de sortie d'eau fermée depuis 2 h, alors que l'eau arrive à 6 000 BWPD (954 m³/j). La section eau ne fait que 60 m³. Que se passe-t-il, et que faites-vous ?",
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique horizontal : entrée avec déflecteur, extracteur de brouillard en tête, sortie gaz en haut, déversoir, sortie huile au milieu, sortie eau en partie basse, interface huile/eau",
       "choices": [
-        "Le niveau de gaz monte et la pression chute fortement : on baisse la consigne de pression et on suit le niveau",
-        "L'interface monte et l'eau part vers la sortie huile (BS&W en hausse) ; passer en manuel et ouvrir la sortie d'eau",
-        "L'huile exportée devient plus sèche et le BS&W baisse : il n'y a rien à faire, la qualité s'améliore pour l'export",
-        "La pression du séparateur tombe à zéro par la sortie d'eau : on arrête l'alimentation et on isole le puits"
+        "Le niveau de gaz monte et la pression chute fortement ; baisser la consigne de pression et suivre le niveau",
+        "L'huile exportée devient plus sèche et le BS&W baisse : rien à faire, la qualité s'améliore ; on le consigne au rapport de quart pour l'équipe suivante",
+        "L'interface monte et l'eau passe côté huile (BS&W export hors spec) ; passer en manuel, ouvrir la sortie d'eau, prévenir la salle de contrôle",
+        "La pression du séparateur tombe à zéro par la sortie d'eau ; arrêter l'alimentation et isoler le puits"
       ],
-      "answer": 1,
-      "explain": "Sans évacuation d'eau, l'interface monte, l'eau passe le déversoir côté huile et l'huile exportée sort hors spécification.",
+      "answer": 2,
+      "explain": "Eau accumulée : 6 000 / 24 × 2 h = 500 bbl = 79,5 m³, supérieur aux 60 m³ de la section eau. L'interface atteint le déversoir et l'eau part dans l'huile. On passe en manuel, on ouvre la sortie d'eau, puis on cherche la cause du blocage.",
       "seconds": 100,
       "status": "draft"
     },
@@ -183,15 +183,15 @@
       "id": "ing-prod-006",
       "theme": "Séparation et traitement des effluents",
       "level": 2,
-      "q": "Vous fermez la duse du puits P-14 de 60 % à 30 % pour limiter le débit de gaz. Une heure plus tard, le BS&W de l'huile sortie séparateur passe de 0,5 % à 4 %. Hypothèse la plus probable ?",
+      "q": "Pour limiter le gaz du puits P-14 (3,5 MMscfd, 99 110 Sm³/j), vous fermez le choke de 32/64 à 16/64 po. Une heure plus tard, le BS&W huile en sortie séparateur passe de 0,5 % à 4 %. Hypothèse la plus probable ?",
       "choices": [
-        "Panne du compteur d'eau en sortie du séparateur : la mesure de BS&W est faussée, il faut le remplacer en premier lieu avant tout autre test",
-        "Le puits produit moins de gaz, donc relativement plus d'eau dans l'effluent total arrivant au séparateur d'essai",
-        "Dérive du transmetteur de niveau de gaz : l'interface est mal régulée et laisse passer de l'eau dans l'huile",
-        "Émulsion plus fine et stable : le cisaillement à la duse divise les gouttes ; ajuster la duse et le désémulsifiant"
+        "Panne du compteur d'eau en sortie séparateur : remplacer le compteur avant tout autre test",
+        "Émulsion plus fine et stable : le cisaillement au choke fragmente les gouttes ; rouvrir partiellement et ajuster le désémulsifiant",
+        "Moins de gaz produit donc, en proportion, plus d'eau dans l'effluent arrivant au séparateur de test ; on laisse le choke tel quel et on recompte",
+        "Dérive du transmetteur de niveau : l'interface est mal régulée et laisse passer l'eau dans l'huile"
       ],
-      "answer": 3,
-      "explain": "Un fort cisaillement en amont fragmente les gouttes et stabilise l'émulsion, ce qui dégrade la séparation.",
+      "answer": 1,
+      "explain": "Un choke très fermé crée une forte chute de pression et du cisaillement : les gouttes d'eau se divisent et l'émulsion devient stable (vitesse de Stokes en d²), donc le BS&W grimpe. Réduire le gaz ne change pas la quantité d'eau produite. 16/64 po = 6,35 mm.",
       "seconds": 100,
       "status": "draft"
     },
@@ -199,15 +199,15 @@
       "id": "ing-prod-007",
       "theme": "Séparation et traitement des effluents",
       "level": 3,
-      "q": "Pendant un slug, le niveau du séparateur atteint 85 % (alarme LAH) et du liquide est détecté dans le ballon de torche. Quel est le phénomène et quelle action immédiate ?",
+      "q": "Arrivée d'un slug sur le séparateur HP (30 000 BLPD, 4 770 m³/j) : niveau à 85 % (alarme LAH) et du liquide détecté dans le KO drum de torche. Quel phénomène, et quelle action immédiate ?",
       "choices": [
-        "Carry-over : réduire vite le débit entrant (duses) et contrôler niveau et cause (slug, mousse, vanne bloquée)",
-        "Carry-under : ouvrir la sortie d'eau, augmenter la pression du séparateur et surveiller le niveau de gaz",
-        "Shrinkage : réduire la température d'entrée pour limiter le retrait de l'huile et protéger le torchage",
-        "Flash : ouvrir la vanne de gaz au maximum pour évacuer le gaz libéré et faire baisser le niveau rapidement"
+        "Carry-under : ouvrir la sortie d'eau, monter la pression du séparateur et surveiller le niveau gaz",
+        "Shrinkage : refroidir l'entrée pour limiter le retrait de l'huile et protéger la torche",
+        "Carry-over : réduire vite le débit entrant aux chokes, contrôler la LCV et la cause (slug, mousse, vanne bloquée), informer la salle de contrôle",
+        "Flash : ouvrir la vanne de gaz au maximum pour évacuer le gaz libéré et faire baisser le niveau ; puis remonter la pression du séparateur pour compenser"
       ],
-      "answer": 0,
-      "explain": "Du liquide dans le gaz sortant est un carry-over. On réduit l'alimentation avant que la torche ou le compresseur ne reçoive du liquide.",
+      "answer": 2,
+      "explain": "Du liquide dans le gaz sortant est un carry-over. On coupe la source (chokes du puits qui slugge) avant que la torche ou le compresseur ne reçoive du liquide. Un slug de 150 bbl (23,9 m³) arrivant d'un coup sur un séparateur déjà à 85 % suffit à le saturer.",
       "seconds": 90,
       "status": "draft"
     },
@@ -215,15 +215,15 @@
       "id": "ing-prod-008",
       "theme": "Séparation et traitement des effluents",
       "level": 3,
-      "q": "Le niveau du séparateur oscille fortement, l'huile est mousseuse à la vitre de contrôle et le ΔP du gaz fluctue. Quelle est la conséquence directe et la première action ?",
+      "q": "Sur le séparateur de production (22 000 BLPD, 3 498 m³/j), le niveau oscille de ±20 %, l'huile est mousseuse au voyant et le ΔP gaz fluctue. Conséquence directe et première action ?",
       "choices": [
-        "La mousse améliore la séparation en augmentant la surface de contact : on augmente le débit d'alimentation",
-        "La pression baisse sans effet sur les liquides : on ne fait rien et on continue de surveiller le niveau de la vitre",
-        "La mousse réduit le volume utile et peut entraîner du liquide : injecter un antimousse et réduire le débit",
-        "La densité de l'eau augmente avec la mousse : on baisse la consigne d'interface pour la compenser rapidement"
+        "La mousse mange le volume utile et peut passer dans le gaz : injecter de l'antimousse et réduire un peu la charge",
+        "La mousse augmente la surface de contact et améliore la séparation : monter le débit d'alimentation",
+        "Sans effet sur les liquides : ne rien faire et continuer à surveiller le niveau au voyant ; l'alarme de niveau haut reste simplement acquittée",
+        "La densité de l'eau augmente avec la mousse : baisser la consigne d'interface pour compenser"
       ],
-      "answer": 2,
-      "explain": "La mousse occupe le volume de séparation et peut passer dans le gaz (carry-over). On traite avec un antimousse et on baisse la charge.",
+      "answer": 0,
+      "explain": "La mousse occupe le volume de séparation et peut passer dans le gaz (carry-over). On dose l'antimousse et on baisse la charge (par exemple de 10 % : 22 000 → 19 800 BLPD, soit 3 498 → 3 148 m³/j) le temps de stabiliser.",
       "seconds": 90,
       "status": "draft"
     },
@@ -231,15 +231,15 @@
       "id": "ing-prod-009",
       "theme": "Séparation et traitement des effluents",
       "level": 3,
-      "q": "Pour réduire la contre-pression d'un puits, on abaisse la pression du séparateur de 20 à 10 barg à alimentation constante. Quel effet attendez-vous ?",
+      "q": "Pour réduire la contre-pression d'un puits à 10 000 BOPD stock tank (1 590 m³/j), vous baissez la pression du séparateur de 20 à 10 barg (290 à 145 psig), alimentation constante. Quel effet attendez-vous aux compteurs ?",
       "choices": [
-        "Moins de gaz libéré et un volume de liquide plus important en sortie du séparateur, à vérifier sur les compteurs",
-        "Aucun changement de volume de gaz ni de liquide, seule la température du fluide varie dans le séparateur",
-        "Une hausse du volume de liquide et du GOR en sortie de puits, à vérifier sur les compteurs de test",
-        "Davantage de gaz libéré (flash) et un volume de liquide plus faible (retrait) ; à vérifier sur les compteurs"
+        "Moins de gaz libéré et un volume de liquide plus important en sortie séparateur",
+        "Aucun changement de volume de gaz ni de liquide, seule la température du fluide varie",
+        "Plus de gaz libéré (flash) et un peu moins de liquide en sortie séparateur (retrait) ; à vérifier aux compteurs",
+        "Hausse du volume de liquide et du GOR en sortie de puits aux compteurs de test ; le choke de test devra être rouvert pour compenser"
       ],
-      "answer": 3,
-      "explain": "Moins de pression libère plus de gaz dissous : le volume de liquide diminue et celui de gaz augmente.",
+      "answer": 2,
+      "explain": "Moins de pression libère plus de gaz dissous : le volume de gaz augmente et celui de liquide diminue (shrinkage). Pour comparer les volumes d'une pression à l'autre, on raisonne toujours en conditions stock tank.",
       "seconds": 90,
       "status": "draft"
     },
@@ -247,15 +247,15 @@
       "id": "ing-prod-010",
       "theme": "Séparation et traitement des effluents",
       "level": 2,
-      "q": "Un séparateur contient 12 m³ de liquide et traite 1 500 m³/j de liquide. Quel est le temps de rétention moyen ?",
+      "q": "The test separator holds 12 m³ of liquid and receives 1 500 m³/d of liquid (9 435 BLPD). What is the average residence time?",
       "choices": [
-        "Environ 1,2 minute (12 m³ / 1 500 m³/j × 144)",
-        "Environ 11,5 minutes (12 m³ / 1 500 m³/j × 1 440 min)",
-        "Environ 115 minutes (12 m³ / 1 500 m³/j × 14 400)",
-        "Environ 3 heures (12 m³ / 100 m³/j × 24 h)"
+        "About 11,5 min (12 / 1 500 × 1 440)",
+        "About 1,2 min (12 / 1 500 × 144)",
+        "About 115 min (12 / 1 500 × 14 400)",
+        "About 3 h (12 / 100 × 24 h)"
       ],
-      "answer": 1,
-      "explain": "Temps de rétention = volume / débit = 12 / 1 500 = 0,008 j, soit 11,5 minutes. Un temps trop court nuit à la décantation de l'eau.",
+      "answer": 0,
+      "explain": "Residence time = volume / rate = 12 / 1 500 = 0,008 d, i.e. 11,5 min (1 500 m³/d = 1,04 m³/min). Too short to settle the water: reduce the rate or increase the liquid hold-up.",
       "seconds": 90,
       "status": "draft"
     },
@@ -263,17 +263,17 @@
       "id": "ing-prod-011",
       "theme": "Séparation et traitement des effluents",
       "level": 1,
-      "q": "Un bac de stockage de brut (photo d'un parc de stockage) présente de l'eau libre au fond. Où soutire-t-on l'eau ?",
+      "q": "Bac de stockage de brut de 20 000 bbl (3 180 m³) avant export à 8 000 BOPD (1 272 m³/j) : le jaugeage montre 0,6 m d'eau libre au fond. Où soutire-t-on l'eau, et avec quelle précaution ?",
       "img": "photo/storage-tanks.jpg",
       "imgAlt": "Parc de bacs de stockage de brut au bord d'un quai, avec escaliers et passerelles",
       "choices": [
         "Au toit du bac, par l'évent de respiration prévu pour les vapeurs",
+        "Au point bas du bac, par la purge d'eau (water draw-off), en surveillant la fin d'eau et le H₂S",
         "À mi-hauteur de la robe, par la vanne d'échantillonnage du bac",
-        "Au point bas du bac, par la purge d'eau prévue à cet effet",
-        "Par la sortie d'huile, en ouvrant davantage la vanne de soutirage"
+        "Par la ligne de soutirage d'huile, en ouvrant davantage la vanne jusqu'à vider l'eau"
       ],
-      "answer": 2,
-      "explain": "L'eau, plus dense, s'accumule au fond ; on la purge au point bas avec les précautions du site (contrôle visuel, risque H₂S).",
+      "answer": 1,
+      "explain": "L'eau, plus dense, s'accumule au fond : on la purge au point bas, à débit contrôlé, en surveillant la fin d'eau (BS&W) et le risque H₂S ou inflammable. Capacité du bac : 20 000 bbl × 0,159 = 3 180 m³.",
       "seconds": 60,
       "status": "draft"
     },
@@ -281,15 +281,15 @@
       "id": "ing-prod-012",
       "theme": "Mesure, tests et allocation",
       "level": 1,
-      "q": "Test du puits P-07 : 400 STB/j d'huile et 1 600 STB/j d'eau. Quel est son water cut ?",
+      "q": "Test du puits P-07 : 400 BOPD (63,6 m³/j) d'huile et 1 600 BWPD (254,4 m³/j) d'eau. Quel est son water cut ?",
       "choices": [
-        "80 % (1 600 / (400 + 1 600))",
         "20 % (400 / (400 + 1 600))",
         "25 % (400 / 1 600, rapport huile/eau)",
-        "75 % (3 × 400 / 1 600)"
+        "4 (1 600 / 400, c'est le WOR et non le water cut)",
+        "80 % (1 600 / (400 + 1 600))"
       ],
-      "answer": 0,
-      "explain": "Water cut = eau / (eau + huile) = 1 600 / 2 000 = 80 %.",
+      "answer": 3,
+      "explain": "Water cut = eau / (eau + huile) = 1 600 / 2 000 = 80 %. Débit liquide : 2 000 BLPD = 318 m³/j. Le WOR vaut 4.",
       "seconds": 70,
       "status": "draft"
     },
@@ -297,15 +297,15 @@
       "id": "ing-prod-013",
       "theme": "Mesure, tests et allocation",
       "level": 1,
-      "q": "Le puits P-22 est passé à un water cut de 90 %. Quel est son WOR (water-oil ratio) ?",
+      "q": "Le puits P-22 produit 3 000 BLPD (477 m³/j) à 90 % de water cut. Quels sont son débit d'huile et son WOR ?",
       "choices": [
-        "9 (90 % d'eau / 10 % d'huile)",
-        "0,9 (90 % d'eau / 100 %)",
-        "1,1 (100 % / 90 % d'eau)",
-        "0,1 (10 % d'huile / 100 %)"
+        "300 BOPD (47,7 m³/j) et WOR = 9",
+        "2 700 BOPD (429,3 m³/j) et WOR = 0,11",
+        "300 BOPD (47,7 m³/j) et WOR = 0,11",
+        "300 BOPD (47,7 m³/j) et WOR = 0,9"
       ],
       "answer": 0,
-      "explain": "WOR = eau / huile = 90 / 10 = 9.",
+      "explain": "Huile = 3 000 × (1 − 0,90) = 300 BOPD ; eau = 2 700 BWPD (429,3 m³/j) ; WOR = 2 700 / 300 = 9.",
       "seconds": 60,
       "status": "draft"
     },
@@ -313,15 +313,15 @@
       "id": "ing-prod-014",
       "theme": "Mesure, tests et allocation",
       "level": 1,
-      "q": "Le séparateur de test donne, pour le puits P-31, 800 STB/j d'huile et 640 000 scf/j de gaz. Quel est le GOR ?",
+      "q": "Séparateur de test, puits P-31 : 800 BOPD (127,2 m³/j) et 640 Mscf/d de gaz (18 123 Sm³/j). Quel est le GOR ?",
       "choices": [
-        "0,8 scf/STB (640 / 800)",
-        "80 scf/STB (64 000 / 800)",
-        "800 scf/STB (640 000 / 800)",
-        "8 000 scf/STB (6 400 000 / 800)"
+        "80 scf/STB (environ 14 Sm³/Sm³)",
+        "0,8 scf/STB (environ 0,14 Sm³/Sm³)",
+        "800 scf/STB (environ 142 Sm³/Sm³)",
+        "8 000 scf/STB (environ 1 425 Sm³/Sm³)"
       ],
       "answer": 2,
-      "explain": "GOR = gaz / huile = 640 000 / 800 = 800 scf/STB.",
+      "explain": "GOR = gaz / huile = 640 000 / 800 = 800 scf/STB. En métrique : 18 123 Sm³/j / 127,2 m³/j = 142,5 Sm³/Sm³ (1 scf/STB = 0,178 Sm³/Sm³).",
       "seconds": 70,
       "status": "draft"
     },
@@ -329,15 +329,15 @@
       "id": "ing-prod-015",
       "theme": "Mesure, tests et allocation",
       "level": 3,
-      "q": "La somme des débits d'huile des derniers tests est de 10 000 bbl/j ; la mesure fiscale à l'export donne 9 500 bbl/j. Le puits P-07 a testé à 1 200 bbl/j. Quelle production lui alloue-t-on ?",
+      "q": "Daily balance: sum of the latest well tests = 10 000 BOPD (1 590 m³/d), fiscal metering at export = 9 500 BOPD (1 510,5 m³/d). Well P-07 tested at 1 200 BOPD. What production do you back-allocate to it?",
       "choices": [
-        "1 260 bbl/j : facteur d'allocation de 1,05 × 1 200",
-        "1 140 bbl/j : facteur d'allocation 0,95 × 1 200",
-        "1 200 bbl/j : le test fait foi, sans correction",
-        "700 bbl/j : on retire 500 bbl/j au puits testé"
+        "1 260 BOPD (200,3 m³/d): allocation factor 1.05",
+        "1 200 BOPD (190,8 m³/d): the test is the reference, no correction",
+        "1 140 BOPD (181,3 m³/d): allocation factor 0.95",
+        "700 BOPD (111,3 m³/d): remove the 500 BOPD gap from the tested well"
       ],
-      "answer": 1,
-      "explain": "Facteur d'allocation = mesure fiscale / somme des tests = 0,95. On l'applique à chaque puits : 1 200 × 0,95 = 1 140 bbl/j.",
+      "answer": 2,
+      "explain": "Allocation factor = fiscal / sum of tests = 9 500 / 10 000 = 0.95. P-07: 1 200 × 0.95 = 1 140 BOPD, i.e. 181,3 m³/d. The 500 BOPD gap (79,5 m³/d) is spread over all wells, not charged to a single one.",
       "seconds": 100,
       "status": "draft"
     },
@@ -345,15 +345,15 @@
       "id": "ing-prod-016",
       "theme": "Mesure, tests et allocation",
       "level": 2,
-      "q": "Vous voyez la pression de tête et le débit de gaz du puits P-14 encore en dérive, 30 minutes après un changement de duse, quand l'opérateur démarre la mesure du test. Que faites-vous ?",
+      "q": "30 min après un changement de choke (28/64 à 36/64), la FTHP de P-14 dérive encore (42 à 38 bar, soit 609 à 551 psi) quand l'opérateur lance la période de test. Que faites-vous ?",
       "choices": [
-        "Laisser démarrer : plus le test est long, meilleure est la moyenne obtenue, même avec une dérive initiale",
-        "Passer en test rapide d'une minute pour gagner du temps sur le programme de tests de la journée",
-        "Mesurer uniquement le gaz, moins sensible aux variations de pression de tête, et estimer l'huile après",
-        "Arrêter, attendre la stabilisation des pressions, températures et débits, puis lancer officiellement la période de test"
+        "Laisser démarrer : plus le test est long, meilleure est la moyenne, même si la FTHP continue de dériver pendant l'heure suivante",
+        "Passer en test rapide de 1 minute pour tenir le programme de tests de la journée",
+        "Mesurer seulement le gaz et estimer l'huile avec le GOR du dernier test",
+        "Arrêter, attendre la stabilisation (FTHP, température, débits), puis relancer officiellement la durée de test"
       ],
       "answer": 3,
-      "explain": "Un test pris en régime non permanent ne représente pas le puits : on attend la stabilisation avant de compter la durée de test.",
+      "explain": "Un test en régime non permanent ne représente pas le puits : on attend la stabilisation avant de compter la durée de test. Une FTHP qui varie de 4 bar (58 psi) en dérive signale que le puits n'a pas atteint son régime.",
       "seconds": 90,
       "status": "draft"
     },
@@ -361,15 +361,15 @@
       "id": "ing-prod-017",
       "theme": "Mesure, tests et allocation",
       "level": 2,
-      "q": "Le dernier test de P-31 donne 600 bbl/j contre 900 bbl/j trois mois plus tôt. Le puits est connu pour des slugs. L'allocation mensuelle repose sur ce test. Que faites-vous ?",
+      "q": "Le dernier test de P-31 donne 600 BOPD (95,4 m³/j) contre 900 BOPD (143,1 m³/j) il y a trois mois. Le puits est connu pour ses slugs et l'allocation mensuelle repose sur ce test. Que faites-vous ?",
       "choices": [
-        "Allouer 600 bbl/j sans autre vérification, car le test le plus récent fait référence pour tout le mois d'allocation",
-        "Allouer la moyenne des deux tests (750 bbl/j) sans analyse des conditions de stabilité de chaque test",
-        "Refaire un test plus long ou un second test avant d'allouer : un test ponctuel peut ne pas être représentatif",
-        "Ignorer le dernier test et reprendre 900 bbl/j, valeur du test précédent, jusqu'à la fin de l'année"
+        "Allouer 600 BOPD sans autre vérification : le dernier test fait foi pour tout le mois d'allocation, quitte à corriger le mois suivant",
+        "Programmer un retest plus long avant d'allouer : un test ponctuel sur puits instable peut ne pas être représentatif",
+        "Allouer la moyenne (750 BOPD) sans analyser la stabilité de chaque test",
+        "Ignorer le dernier test et garder 900 BOPD jusqu'à la fin de l'année"
       ],
-      "answer": 2,
-      "explain": "Un test est un instantané : sur un puits instable il peut s'écarter du réel, d'où des retests et le contrôle de cohérence avec la mesure fiscale.",
+      "answer": 1,
+      "explain": "Chute apparente de 300 BOPD (47,7 m³/j), soit 33,3 % en 3 mois : trop forte pour un déclin normal sur un puits qui slugge. Un test est un instantané : retest plus long et contrôle de cohérence avec la mesure fiscale avant d'allouer.",
       "seconds": 90,
       "status": "draft"
     },
@@ -377,17 +377,17 @@
       "id": "ing-prod-018",
       "theme": "Mesure, tests et allocation",
       "level": 2,
-      "q": "Sur l'arbre de Noël de la figure, vous devez remplacer la duse. Quelle vanne fermez-vous pour couper la production sans toucher à la vanne maîtresse ?",
+      "q": "Remplacement du bean de choke du puits P-09 (2 000 BOPD, 318 m³/j). Sur l'arbre de Noël de la figure, quelle vanne fermez-vous pour couper la production sans toucher à la maîtresse ?",
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël : vannes maîtresses inférieure et supérieure, vanne de pistonnage, vannes latérales de production et de curage, duse, manomètre",
       "choices": [
-        "La vanne latérale de production (wing valve), en amont de la duse",
-        "La vanne de pistonnage (swab), située tout en haut de l'arbre de Noël",
-        "La vanne latérale de curage (kill), sur la ligne de kill de l'arbre",
+        "La wing valve (vanne latérale de production), en amont du choke",
+        "La swab valve (vanne de pistonnage), tout en haut de l'arbre",
+        "La kill valve, sur la ligne de kill de l'arbre",
         "La vanne maîtresse inférieure, au-dessus de la tête de puits"
       ],
       "answer": 0,
-      "explain": "La vanne latérale de production isole la branche vers la duse ; la vanne maîtresse reste l'isolement principal du puits. La vanne de curage sert à tuer le puits, la vanne de pistonnage à l'accès câble ou coiled tubing.",
+      "explain": "La wing valve isole la branche vers le choke ; la maîtresse reste l'isolement principal du puits. La kill sert à tuer le puits, la swab à l'accès câble ou coiled tubing. Avant d'ouvrir le corps du choke : purger et vérifier 0 bar.",
       "seconds": 80,
       "status": "draft"
     },
@@ -395,15 +395,15 @@
       "id": "ing-prod-019",
       "theme": "Mesure, tests et allocation",
       "level": 1,
-      "q": "À l'export, 9 600 bbl d'huile stabilisée sont mesurés pour 10 000 bbl de liquide entrés au séparateur. Quel est le facteur de retrait ?",
+      "q": "At export, 9 600 bbl (1 526,4 m³) of stabilized oil are metered for 10 000 bbl (1 590 m³) of liquid entering the HP separator. What is the shrinkage factor?",
       "choices": [
-        "1,04 (10 000 / 9 600 bbl)",
-        "0,90 (9 000 / 10 000)",
-        "1,25 (12 000 / 9 600)",
-        "0,96 (9 600 / 10 000)"
+        "1.04 (10 000 / 9 600)",
+        "0.96 (9 600 / 10 000)",
+        "0.90 (9 000 / 10 000)",
+        "1.25 (12 000 / 9 600)"
       ],
-      "answer": 3,
-      "explain": "Facteur de retrait = volume d'huile au stock tank / volume de liquide au séparateur = 9 600 / 10 000 = 0,96.",
+      "answer": 1,
+      "explain": "Shrinkage factor = stock tank volume / separator volume = 9 600 / 10 000 = 0.96. That is a 4 % loss (400 bbl, 63,6 m³) flashed off as gas between separator and storage.",
       "seconds": 70,
       "status": "draft"
     },
@@ -411,15 +411,15 @@
       "id": "ing-prod-020",
       "theme": "Mesure, tests et allocation",
       "level": 1,
-      "q": "Un puits produit 2 500 STB/j de liquide avec un water cut de 70 %. Quel est son débit d'huile ?",
+      "q": "Un puits produit 2 500 BLPD (397,5 m³/j) à 70 % de water cut. Quels sont ses débits d'huile et d'eau ?",
       "choices": [
-        "1 750 STB/j (2 500 × 0,70)",
-        "750 STB/j (2 500 × 0,30)",
-        "3 571 STB/j (2 500 / 0,70)",
-        "175 STB/j (2 500 × 0,07)"
+        "1 750 BOPD (278,3 m³/j) d'huile et 750 BWPD (119,3 m³/j) d'eau",
+        "3 571 BOPD (567,8 m³/j) d'huile et 1 071 BWPD (170,3 m³/j) d'eau",
+        "175 BOPD (27,8 m³/j) d'huile et 2 325 BWPD (369,7 m³/j) d'eau",
+        "750 BOPD (119,3 m³/j) d'huile et 1 750 BWPD (278,3 m³/j) d'eau"
       ],
-      "answer": 1,
-      "explain": "Huile = liquide × (1 − WC) = 2 500 × 0,30 = 750 STB/j.",
+      "answer": 3,
+      "explain": "Huile = liquide × (1 − WC) = 2 500 × 0,30 = 750 BOPD (119,3 m³/j) ; eau = 2 500 × 0,70 = 1 750 BWPD (278,3 m³/j). Contrôle : 750 + 1 750 = 2 500.",
       "seconds": 70,
       "status": "draft"
     },
@@ -427,15 +427,15 @@
       "id": "ing-prod-021",
       "theme": "Mesure, tests et allocation",
       "level": 3,
-      "q": "Un puits produit 1 500 STB/j d'huile avec un GOR de 600 scf/STB. Quel est son débit de gaz ?",
+      "q": "Un puits produit 1 500 BOPD (238,5 m³/j) avec un GOR de 600 scf/STB. Quel est son débit de gaz, en MMscfd et en Sm³/j ?",
       "choices": [
-        "90 000 scf/j (1 500 × 60)",
-        "900 000 scf/j (1 500 × 600)",
-        "2,5 scf/j (1 500 / 600)",
-        "9 000 000 scf/j (1 500 × 6 000)"
+        "0,09 MMscfd (2 549 Sm³/j)",
+        "0,9 MMscfd (25 485 Sm³/j)",
+        "9 MMscfd (254 853 Sm³/j)",
+        "2,5 Mscf/d (71 Sm³/j)"
       ],
       "answer": 1,
-      "explain": "Gaz = huile × GOR = 1 500 × 600 = 900 000 scf/j.",
+      "explain": "Gaz = huile × GOR = 1 500 × 600 = 900 000 scf/j = 0,9 MMscfd, soit 0,9 × 28 317 = 25 485 Sm³/j. Le chiffre de 2,5 vient d'une division 1 500 / 600, fausse.",
       "seconds": 80,
       "status": "draft"
     },
@@ -443,17 +443,17 @@
       "id": "ing-prod-022",
       "theme": "Optimisation et analyse nodale",
       "level": 1,
-      "q": "Sur la figure IPR, quel est l'AOF du puits et quel est le point d'essai mesuré ?",
+      "q": "Au bureau, vous lisez la courbe IPR du puits P-12 issue du dernier test (figure ; Pr = 3 000 psi, soit 206,8 bar). Quel est l'AOF, et quel est le point de test mesuré ?",
       "img": "svg/ipr-curve.svg",
       "imgAlt": "Courbe IPR de Vogel : Pws 3 000 psi, point d'essai 700 stb/j à Pwf 1 500 psi, débit maximal (AOF) 1 000 stb/j",
       "choices": [
-        "AOF de 700 stb/j ; point d'essai mesuré de 1 000 stb/j à Pwf = 1 500 psi",
-        "AOF de 3 000 stb/j ; point d'essai de 700 stb/j à Pwf = 0 psi",
-        "AOF de 1 500 stb/j ; point d'essai de 700 stb/j à Pwf = 3 000 psi",
-        "AOF de 1 000 stb/j ; point d'essai mesuré de 700 stb/j à Pwf = 1 500 psi"
+        "AOF de 700 bpd (111,3 m³/j) ; test de 1 000 bpd (159 m³/j) à Pwf = 1 500 psi (103,4 bar)",
+        "AOF de 1 000 bpd (159 m³/j) ; test de 700 bpd (111,3 m³/j) à Pwf = 1 500 psi (103,4 bar)",
+        "AOF de 3 000 bpd (477 m³/j) ; test de 700 bpd à Pwf = 0 psi",
+        "AOF de 1 500 bpd (238,5 m³/j) ; test de 700 bpd à Pwf = 3 000 psi (206,8 bar)"
       ],
-      "answer": 3,
-      "explain": "L'AOF est le débit à Pwf = 0 (1 000 stb/j). Le point d'essai est mesuré sur la courbe : 700 stb/j à 1 500 psi, la pression statique valant 3 000 psi.",
+      "answer": 1,
+      "explain": "L'AOF est le débit à Pwf = 0 : 1 000 bpd = 159 m³/j. Le point de test (700 bpd à 1 500 psi = 103,4 bar) est sur la courbe. Contrôle Vogel : 1 − 0,2 × 0,5 − 0,8 × 0,5² = 0,7 soit 700 bpd.",
       "seconds": 70,
       "status": "draft"
     },
@@ -461,15 +461,15 @@
       "id": "ing-prod-023",
       "theme": "Optimisation et analyse nodale",
       "level": 1,
-      "q": "Test du puits P-05 : 500 STB/j avec Pr = 3 000 psi et Pwf = 2 000 psi. Quel est son PI (IPR supposée linéaire) ?",
+      "q": "Well test on P-05: 500 BOPD (79,5 m³/d) at Pwf = 2 000 psi (137,9 bar), reservoir pressure 3 000 psi (206,8 bar). What is its PI, assuming a linear IPR?",
       "choices": [
-        "0,5 STB/j/psi (500 / (3 000 − 2 000))",
-        "0,17 STB/j/psi (500 / (3 000 − 0))",
-        "2 STB/j/psi (1 000 / (3 000 − 2 500 psi))",
-        "5 STB/j/psi (500 / (3 000 − 2 900))"
+        "0.17 bpd/psi (500 / 3 000)",
+        "0.5 bpd/psi (about 1,15 m³/d/bar)",
+        "2 bpd/psi (1 000 / (3 000 − 2 500))",
+        "5 bpd/psi (500 / (3 000 − 2 900))"
       ],
-      "answer": 0,
-      "explain": "PI = q / (Pr − Pwf) = 500 / 1 000 = 0,5 STB/j/psi.",
+      "answer": 1,
+      "explain": "Drawdown = 3 000 − 2 000 = 1 000 psi (68,9 bar). PI = 500 / 1 000 = 0.5 bpd/psi. In metric units: 79,5 m³/d / 68,9 bar ≈ 1,15 m³/d/bar.",
       "seconds": 70,
       "status": "draft"
     },
@@ -477,17 +477,17 @@
       "id": "ing-prod-024",
       "theme": "Optimisation et analyse nodale",
       "level": 2,
-      "q": "Pour le même puits (PI = 0,5 STB/j/psi, Pr = 3 000 psi), quelle Pwf faut-il pour viser 800 STB/j, IPR linéaire ?",
+      "q": "Pour ce même puits (PI = 0,5 bpd/psi, Pr = 3 000 psi), quelle Pwf faut-il pour viser 800 BOPD (127,2 m³/j), IPR linéaire ?",
       "img": "svg/ipr-curve.svg",
       "imgAlt": "Courbe IPR de Vogel : Pws 3 000 psi, point d'essai 700 stb/j à Pwf 1 500 psi, débit maximal (AOF) 1 000 stb/j",
       "choices": [
-        "1 600 psi : 800 / 0,5 (drawdown seul)",
-        "2 200 psi : 3 000 − 800 (sans le PI)",
-        "1 400 psi : 3 000 − (800 / 0,5 STB/j/psi)",
-        "800 psi : Pwf égale au débit visé"
+        "1 600 psi (110,3 bar) : 800 / 0,5, le drawdown seul",
+        "1 400 psi (96,5 bar) : 3 000 − 800 / 0,5",
+        "2 200 psi (151,7 bar) : 3 000 − 800 sans le PI",
+        "800 psi (55,2 bar) : Pwf égale au débit visé"
       ],
-      "answer": 2,
-      "explain": "Drawdown = q / PI = 1 600 psi ; Pwf = 3 000 − 1 600 = 1 400 psi.",
+      "answer": 1,
+      "explain": "Drawdown = q / PI = 800 / 0,5 = 1 600 psi (110,3 bar) ; Pwf = 3 000 − 1 600 = 1 400 psi (96,5 bar). Contrôle : l'AOF linéaire vaut 0,5 × 3 000 = 1 500 BOPD, donc 800 BOPD est atteignable.",
       "seconds": 90,
       "status": "draft"
     },
@@ -495,17 +495,17 @@
       "id": "ing-prod-025",
       "theme": "Optimisation et analyse nodale",
       "level": 1,
-      "q": "Vous ouvrez la duse de 30 % à 40 % sur un puits éruptif : la pression de tête passe de 40 à 32 bar et le débit d'huile augmente de 8 %, avec un water cut inchangé. Comment l'expliquez-vous ?",
+      "q": "Vous ouvrez le choke du puits éruptif P-03 de 24/64 à 32/64 : la FTHP passe de 40 à 32 bar (580 à 464 psi) et l'huile de 1 500 à 1 620 BOPD (238,5 à 257,6 m³/j, +8 %), water cut inchangé. Comment l'expliquez-vous ?",
       "img": "svg/ipr-curve.svg",
       "imgAlt": "Courbe IPR de Vogel : Pws 3 000 psi, point d'essai 700 stb/j à Pwf 1 500 psi, débit maximal (AOF) 1 000 stb/j",
       "choices": [
-        "La pression du réservoir a augmenté de 8 %, ce qui explique à elle seule la hausse du débit",
-        "La duse a fait diminuer le GOR du puits, donc le débit d'huile augmente mécaniquement",
-        "Le séparateur a baissé son niveau d'interface, ce qui libère de la capacité et du débit",
-        "La contre-pression baisse, donc la Pwf baisse, le drawdown augmente et le débit monte"
+        "La contre-pression baisse donc la Pwf baisse : drawdown plus grand et débit en hausse le long de l'IPR",
+        "La pression de réservoir a gagné 8 %, ce qui explique à elle seule la hausse ; il faudrait refaire le calage de l'IPR",
+        "Le choke fait baisser le GOR du puits, donc le débit d'huile augmente mécaniquement",
+        "Le séparateur a baissé son niveau d'interface, ce qui libère de la capacité et du débit"
       ],
-      "answer": 3,
-      "explain": "Ouvrir la duse diminue la perte de charge et la Pwf ; le débit augmente le long de l'IPR jusqu'à la nouvelle intersection avec la courbe d'outflow.",
+      "answer": 0,
+      "explain": "Ouvrir le choke réduit la perte de charge et la Pwf ; le débit monte jusqu'à la nouvelle intersection IPR / VLP. Gain : 1 620 − 1 500 = 120 BOPD (19,1 m³/j), soit 8 %. À surveiller : sable, gaz, stabilité.",
       "seconds": 80,
       "status": "draft"
     },
@@ -513,17 +513,17 @@
       "id": "ing-prod-026",
       "theme": "Optimisation et analyse nodale",
       "level": 2,
-      "q": "Le puits P-18 produit du sable et le coude après la duse s'érode. Vous fermez la duse de 40 % à 25 %. Quel effet attendez-vous ?",
+      "q": "Le puits P-18 (3 000 BLPD, 477 m³/j) produit du sable et le coude après le choke s'érode. Vous fermez le choke de 40/64 à 25/64. Quel effet attendez-vous ?",
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël : vannes maîtresses inférieure et supérieure, vanne de pistonnage, vannes latérales de production et de curage, duse, manomètre",
       "choices": [
-        "La Pwf baisse et le débit augmente, ce qui accroît la vitesse et l'érosion dans le coude",
-        "La Pwf monte, le drawdown et le débit baissent, la vitesse et donc l'érosion diminuent",
-        "Aucun effet sur la Pwf : seule la pression de tête varie, sans changer le débit ni l'érosion",
-        "Le water cut diminue à coup sûr car une duse plus fermée filtre mieux l'eau produite"
+        "Pwf en baisse et débit en hausse : plus de vitesse, donc plus d'érosion dans le coude ; il faut au contraire ouvrir encore pour souffler le sable vers le séparateur",
+        "Pwf en hausse, drawdown et débit en baisse : la vitesse dans le coude et la production de sable diminuent, au prix d'un manque à gagner",
+        "Aucun effet sur Pwf : seule la FTHP varie, sans changer le débit ni l'érosion",
+        "Water cut qui baisse à coup sûr : un choke plus fermé filtre mieux l'eau produite"
       ],
       "answer": 1,
-      "explain": "Fermer la duse augmente la contre-pression, réduit le drawdown et le débit, ce qui limite la production de sable et l'érosion, au prix d'un manque à gagner.",
+      "explain": "Fermer le choke augmente la contre-pression, réduit le drawdown et le débit, donc la vitesse et l'érosion. Le manque à gagner est réel : à −20 %, 3 000 → 2 400 BLPD, soit 477 → 381,6 m³/j.",
       "seconds": 90,
       "status": "draft"
     },
@@ -531,15 +531,15 @@
       "id": "ing-prod-027",
       "theme": "Optimisation et analyse nodale",
       "level": 3,
-      "q": "Un puits suit un déclin exponentiel : qi = 1 000 bbl/j, D = 0,2 an⁻¹. Quel est son débit après 2 ans ?",
+      "q": "Un puits suit un déclin exponentiel : qi = 1 000 BOPD (159 m³/j), D = 20 %/an nominal (0,2 an⁻¹). Quel est son débit après 2 ans ?",
       "choices": [
-        "Environ 818 bbl/j : 1 000 × e^(−0,2)",
-        "Environ 600 bbl/j : 1 000 × (1 − 0,2 × 2)",
-        "Environ 670 bbl/j : 1 000 × e^(−0,4)",
-        "Environ 450 bbl/j : 1 000 × e^(−0,8)"
+        "Environ 819 BOPD (130,2 m³/j) : 1 000 × e^(−0,2)",
+        "Environ 600 BOPD (95,4 m³/j) : 1 000 × (1 − 0,2 × 2)",
+        "Environ 449 BOPD (71,4 m³/j) : 1 000 × e^(−0,8)",
+        "Environ 670 BOPD (106,6 m³/j) : 1 000 × e^(−0,4)"
       ],
-      "answer": 2,
-      "explain": "q = qi × e^(−D·t) = 1 000 × e^(−0,4) ≈ 670 bbl/j. 818 correspond à une seule année.",
+      "answer": 3,
+      "explain": "q = qi × e^(−D·t) = 1 000 × e^(−0,4) = 670,3 BOPD, soit 106,6 m³/j. Le déclin effectif annuel vaut 1 − e^(−0,2) = 18,1 %/an ; 819 BOPD correspond à une seule année.",
       "seconds": 100,
       "status": "draft"
     },
@@ -547,17 +547,17 @@
       "id": "ing-prod-028",
       "theme": "Optimisation et analyse nodale",
       "level": 3,
-      "q": "Essais gas lift sur un puits : à 1, 2 et 3 MMscf/j de gaz injecté, la production d'huile est respectivement de 800, 950 et 940 bbl/j. Où fixez-vous le débit d'injection ?",
+      "q": "Gas lift test on P-21: at 1, 2 and 3 MMscfd injected (28 317, 56 634 and 84 951 Sm³/d), oil rate is 800, 950 and 940 BOPD (127,2, 151,1 and 149,5 m³/d). Where do you set the injection rate?",
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Vanne de gas lift : injection de gaz de l'annulaire vers le tubing",
       "choices": [
-        "Autour de 2 MMscf/j : au-delà, le gain est nul et le gaz coûte (frottements, compression)",
-        "À 3 MMscf/j, le point le plus élevé : la production d'huile y est maximale d'après les essais",
-        "À 1 MMscf/j, pour économiser le gaz de lift : la perte d'huile reste négligeable selon les essais",
-        "Plus haut encore, vers 4 MMscf/j : la courbe est croissante donc l'injection peut augmenter"
+        "Around 2 MMscfd: beyond that there is no gain and gas costs money (compression, friction)",
+        "At 3 MMscfd: more injected gas always means more oil, et la compression est déjà payée par le contrat de gaz du champ",
+        "At 1 MMscfd, to save lift gas",
+        "Towards 4 MMscfd: the curve is rising, so we can still inject more"
       ],
       "answer": 0,
-      "explain": "La courbe de performance passe par un maximum : au-delà, les frottements annulent l'allègement. Le débit économique est proche du pic.",
+      "explain": "From 1 to 2 MMscfd, +150 BOPD (23,9 m³/d); from 2 to 3 MMscfd, −10 BOPD. The peak is at 2 MMscfd, with an injection GLR of 2 000 000 / 950 = 2 105 scf/bbl. Beyond it, friction cancels the lightening effect: the economic optimum sits close to the peak.",
       "seconds": 100,
       "status": "draft"
     },
@@ -565,17 +565,17 @@
       "id": "ing-prod-029",
       "theme": "Optimisation et analyse nodale",
       "level": 3,
-      "q": "Un puits produit 1 000 STB/j avec Pwf = 1 800 psi, sous la pression de bulle de 2 200 psi. Un collègue extrapole en droite avec le PI mesuré à Pwf plus haute et annonce 1 500 STB/j à 1 000 psi. Que lui répondez-vous ?",
+      "q": "P-30 produit 1 000 BOPD (159 m³/j) à Pwf = 1 800 psi (124,1 bar), sous la pression de bulle de 2 200 psi (151,7 bar). Un collègue extrapole en droite et annonce 1 500 BOPD à 1 000 psi (68,9 bar). Que lui répondez-vous ?",
       "img": "svg/ipr-curve.svg",
       "imgAlt": "Courbe IPR de Vogel : Pws 3 000 psi, point d'essai 700 stb/j à Pwf 1 500 psi, débit maximal (AOF) 1 000 stb/j",
       "choices": [
-        "Surestimation probable : sous la pression de bulle, l'IPR se courbe ; utiliser Vogel ou un test à Pwf basse",
-        "Il a raison : l'IPR reste linéaire sous la pression de bulle, donc le PI mesuré à Pwf plus haute s'applique",
-        "L'IPR devient horizontale sous la pression de bulle : le débit n'augmente plus quand la Pwf continue de baisser",
-        "L'IPR disparaît sous la pression de bulle : on ne peut plus rien calculer sans reprendre un essai de pression"
+        "Il a raison : l'IPR reste linéaire sous la pression de bulle",
+        "L'IPR devient horizontale sous la bulle : le débit n'augmente plus quand Pwf baisse, ce qui plafonne le puits à 1 000 BOPD à toute pression de fond",
+        "L'IPR n'existe plus sous la bulle : aucun calcul possible sans nouvel essai de pression",
+        "Surestimation probable : sous la pression de bulle l'IPR se courbe ; utiliser Vogel ou refaire un test à Pwf plus basse"
       ],
-      "answer": 0,
-      "explain": "Sous la pression de bulle, du gaz se libère dans le réservoir et le débit n'est plus proportionnel au drawdown ; la courbe de Vogel convient mieux.",
+      "answer": 3,
+      "explain": "Sous la pression de bulle, du gaz se libère dans le réservoir et le débit n'est plus proportionnel au drawdown : la droite surestime. Vogel (ou un test à Pwf basse) donne un débit plus réaliste que les 1 500 BOPD (238,5 m³/j) annoncés.",
       "seconds": 100,
       "status": "draft"
     },
@@ -583,17 +583,17 @@
       "id": "ing-prod-030",
       "theme": "Optimisation et analyse nodale",
       "level": 1,
-      "q": "Un puits de 10 000 ft est entièrement rempli d'eau douce. Quelle est la pression hydrostatique au fond, d'après la figure ?",
+      "q": "Kill du puits à l'eau douce avant workover : colonne de 10 000 ft (3 048 m) pleine d'eau douce à 0,433 psi/ft (figure). Quelle pression hydrostatique au fond ?",
       "img": "svg/pressure-gradient-chart.svg",
       "imgAlt": "Gradients de pression : eau douce 0,433 psi/ft (4 330 psi à 10 000 ft), huile 0,35 psi/ft (3 500 psi), gaz 0,10 psi/ft (1 000 psi)",
       "choices": [
-        "3 500 psi : 0,35 × 10 000 (huile)",
-        "1 000 psi : 0,10 × 10 000 (gaz)",
-        "4 330 psi : 0,433 × 10 000 (eau douce)",
-        "433 psi : 0,433 × 1 000 (1 000 ft)"
+        "4 330 psi (298,5 bar)",
+        "3 500 psi (241,3 bar), gradient huile",
+        "1 000 psi (68,9 bar), gradient gaz",
+        "433 psi (29,9 bar), colonne de 1 000 ft seulement"
       ],
-      "answer": 2,
-      "explain": "P = gradient × profondeur = 0,433 × 10 000 = 4 330 psi.",
+      "answer": 0,
+      "explain": "P = gradient × profondeur = 0,433 × 10 000 = 4 330 psi, soit 298,5 bar (÷ 14,5038).",
       "seconds": 60,
       "status": "draft"
     },
@@ -601,17 +601,17 @@
       "id": "ing-prod-031",
       "theme": "Optimisation et analyse nodale",
       "level": 2,
-      "q": "Le puits P-09 est fermé, rempli d'huile jusqu'en surface, avec une pression de réservoir de 4 000 psi à 10 000 ft. D'après la figure, quelle pression lit-on en tête ?",
+      "q": "Le puits P-09 est fermé (shut-in), plein d'huile jusqu'en surface (0,35 psi/ft, figure). Pression de réservoir 4 000 psi (275,8 bar) à 10 000 ft (3 048 m). Quelle SIWHP lit-on en tête ?",
       "img": "svg/pressure-gradient-chart.svg",
       "imgAlt": "Gradients de pression : eau douce 0,433 psi/ft (4 330 psi à 10 000 ft), huile 0,35 psi/ft (3 500 psi), gaz 0,10 psi/ft (1 000 psi)",
       "choices": [
-        "3 000 psi : 4 000 − 0,10 × 10 000",
-        "500 psi : 4 000 − 0,35 × 10 000",
-        "4 000 psi : 4 000 − 0 × 10 000",
-        "1 000 psi : 4 000 − 0,3 × 10 000"
+        "500 psi (34,5 bar)",
+        "3 000 psi (206,8 bar), colonne de gaz à 0,10 psi/ft",
+        "4 000 psi (275,8 bar), comme au fond",
+        "1 000 psi (68,9 bar)"
       ],
-      "answer": 1,
-      "explain": "La pression en tête fermé est la pression de fond moins le poids de la colonne : 4 000 − 3 500 = 500 psi. Avec une colonne de gaz (0,10 psi/ft), on lirait 3 000 psi.",
+      "answer": 0,
+      "explain": "SIWHP = pression de fond − poids de la colonne = 4 000 − 0,35 × 10 000 = 500 psi (34,5 bar). Avec une colonne de gaz (0,10 psi/ft), on lirait 3 000 psi (206,8 bar).",
       "seconds": 90,
       "status": "draft"
     },
@@ -619,15 +619,15 @@
       "id": "ing-prod-032",
       "theme": "Optimisation et analyse nodale",
       "level": 2,
-      "q": "Le PI du puits P-12 est passé de 0,8 à 0,5 STB/j/psi en un an, à pression de réservoir constante. Quelle est l'hypothèse la plus probable et quelle suite donnez-vous ?",
+      "q": "À drawdown constant de 1 000 psi (68,9 bar), le puits P-12 est passé de 800 à 500 BOPD (127,2 à 79,5 m³/j) en un an : son PI tombe de 0,8 à 0,5 bpd/psi, à pression de réservoir constante. Hypothèse et suite ?",
       "choices": [
-        "Hausse de la pression de réservoir, qui expliquerait la baisse du PI : on ferme le puits pour le préserver",
-        "Hausse du GOR du puits, qui ferait baisser le PI : on installe une duse plus petite et on suit le gaz",
-        "Baisse du water cut, qui ferait baisser le PI : aucune action nécessaire, on poursuit seulement le suivi mensuel",
-        "Endommagement près du puits (skin en hausse : scale, fines) ; essai de pression puis acidification ou nettoyage"
+        "Pression de réservoir en hausse : fermer le puits pour le préserver et attendre que le drawdown se rééquilibre sur plusieurs mois",
+        "GOR en hausse : poser un choke plus petit et suivre le gaz",
+        "Skin en hausse près du puits (scale, fines) : essai de pression (build-up) puis acidification ou nettoyage",
+        "Water cut en baisse : aucune action, suivi mensuel"
       ],
-      "answer": 3,
-      "explain": "À pression constante, une baisse du PI indique une perte de productivité locale. Le skin se confirme par un essai de pression.",
+      "answer": 2,
+      "explain": "Perte de 37,5 % du PI (300 BOPD, 47,7 m³/j) à pression constante : productivité locale dégradée. Le skin se confirme par un essai de pression avant de décider d'un traitement.",
       "seconds": 90,
       "status": "draft"
     },
@@ -635,17 +635,17 @@
       "id": "ing-prod-033",
       "theme": "Diagnostic et sécurité procédé",
       "level": 1,
-      "q": "Sur la figure du ballon V-201, la pression monte lentement : 8 barg (service normal), 9 barg (alarme PAH), puis 10,5 barg. Que doit-il se passer à 10 barg ?",
+      "q": "Vessel V-201 on the CPF (figure): normal service 8 barg (116 psig), PAH alarm at 9 barg (131 psig), MAWP 10 barg (145 psig). Pressure keeps rising to 10.5 barg. What should happen at 10 barg?",
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Ballon V-201, MAWP 10 barg, PSV 201 tarée à 10 barg, alarme PAH à 9 barg, service normal 0 à 8 barg, décharge vers la torche",
       "choices": [
-        "Rien : la PSV s'ouvre seulement à 11 barg, soit 110 % de la MAWP, donc on attend la montée",
-        "L'alarme PAH ferme automatiquement l'alimentation du ballon et isole la sortie gaz",
-        "La PSV 201, tarée à 10 barg (égale à la MAWP), s'ouvre et décharge vers la torche",
-        "La PSV ferme la sortie liquide du ballon pour stopper la montée de pression en amont"
+        "Nothing: the PSV only opens at 11 barg, i.e. 110 % of the MAWP, a build-up level accepted by the code",
+        "The PAH alarm automatically closes the inlet and isolates the gas outlet",
+        "PSV-201, set at 10 barg (equal to the MAWP), opens and relieves to the flare",
+        "The PSV closes the liquid outlet of the vessel to stop the pressure rise"
       ],
       "answer": 2,
-      "explain": "La soupape s'ouvre à sa pression de tarage et protège le récipient. La surpression admissible pendant la décharge est un autre sujet (de l'ordre de 10 %), jamais un point d'ouverture voulu.",
+      "explain": "The valve opens at its set pressure (10 barg = 145 psig) and protects the vessel. The 10 % overpressure (11 barg) is tolerated during relief, never as an intended opening point.",
       "seconds": 80,
       "status": "draft"
     },
@@ -653,15 +653,15 @@
       "id": "ing-prod-034",
       "theme": "Diagnostic et sécurité procédé",
       "level": 1,
-      "q": "Un opérateur sent une odeur d'œuf pourri près du séparateur, puis ne la sent plus quelques secondes après, alors que le détecteur H₂S sonne. Comment l'interprétez-vous ?",
+      "q": "Ronde près du séparateur : l'opérateur sent l'odeur d'œuf pourri, puis plus rien quelques secondes après, alors que le détecteur H₂S sonne (alarme haute à 20 ppm). Comment l'interprétez-vous ?",
       "choices": [
-        "Paralysie olfactive : le danger demeure ou augmente ; évacuer, alerter, ne pas se fier à l'odorat",
-        "La fuite a disparu : l'odeur n'est plus perçue, donc l'atmosphère est redevenue saine et on peut reprendre",
-        "Le détecteur est en défaut puisque l'odeur a disparu : on le coupe et on le fait recalibrer plus tard",
-        "L'H₂S est plus léger que l'air et s'est dispersé vers le haut : on peut reprendre la ronde normalement"
+        "Paralysie olfactive : le danger demeure ou augmente ; évacuer vers le point de rassemblement, alerter, ne pas se fier à l'odorat",
+        "La fuite a cessé : l'odeur a disparu, on peut reprendre la ronde après avoir acquitté l'alarme du détecteur H₂S à la salle de contrôle",
+        "Détecteur en défaut puisque l'odeur a disparu : l'inhiber et le recalibrer plus tard",
+        "L'H₂S, plus léger que l'air, s'est dispersé vers le haut : reprise normale de la ronde"
       ],
       "answer": 0,
-      "explain": "À forte concentration, l'H₂S paralyse le sens de l'odorat : l'absence d'odeur ne prouve rien. On se fie au détecteur et on évacue selon le plan d'urgence.",
+      "explain": "À forte concentration, l'H₂S paralyse l'odorat ; il est plus lourd que l'air (densité 1,19) et reste en points bas. Seul le détecteur fait foi : on évacue selon le plan d'urgence, face au vent.",
       "seconds": 70,
       "status": "draft"
     },
@@ -669,15 +669,15 @@
       "id": "ing-prod-035",
       "theme": "Diagnostic et sécurité procédé",
       "level": 1,
-      "q": "Vous détectez une importante fuite de gaz sur une bride du manifold pendant la ronde. Quelle est votre première priorité ?",
+      "q": "During your round you find a major gas leak on a flange of the production manifold (25 MMscfd total throughput, i.e. 707 925 Sm³/d). What is your first priority?",
       "choices": [
-        "Essayer de resserrer la bride sous pression avec une clé standard avant de prévenir la salle de contrôle",
-        "Terminer la mesure en cours puis signaler la fuite au chef de poste à la fin de la ronde de nuit",
-        "Augmenter la production des autres puits pour compenser la perte de gaz de la fuite et rattraper l'export",
-        "Donner l'alarme, protéger les personnes et mettre l'installation en sécurité (ESD, évacuation de la zone)"
+        "Tighten the flange under pressure with a standard wrench before informing the control room",
+        "Finish the measurement in progress and report the leak at the end of the round",
+        "Increase the other wells to make up for the lost gas and hold the export rate",
+        "Raise the alarm, protect people and make the facility safe (ESD, clear the area)"
       ],
       "answer": 3,
-      "explain": "La sécurité des personnes passe avant la production et la réparation : alarme, mise en sécurité, accès contrôlé.",
+      "explain": "Personnel safety comes before production and repair: alarm, ESD, controlled access. The 707 925 Sm³/d at stake never justify working on a live leak.",
       "seconds": 70,
       "status": "draft"
     },
@@ -685,17 +685,17 @@
       "id": "ing-prod-036",
       "theme": "Diagnostic et sécurité procédé",
       "level": 2,
-      "q": "Puits à ESP : le courant moteur baisse, le débit baisse, la température de surface baisse, la pression de tête baisse et fluctue. Quelle est l'hypothèse n°1 ?",
+      "q": "Puits à ESP (figure) à 50 Hz : courant moteur de 48 à 35 A, débit de 3 500 à 2 100 BLPD (556,5 à 333,9 m³/j), température de surface et FTHP en baisse et fluctuantes. Hypothèse n°1 ?",
       "img": "svg/esp-system.svg",
       "imgAlt": "Système ESP : transformateur, variateur, câble, pompe multi-étages, séparateur de gaz, protecteur, moteur et capteur de fond",
       "choices": [
-        "Colmatage de la duse en surface, qui ferait monter la pression de tête et le courant du moteur",
+        "Choke de surface colmaté : la FTHP et le courant moteur monteraient, et le variateur déclencherait rapidement sur surcharge à 60 A",
         "Gaz libre à l'aspiration ou niveau bas (pump-off) : la pompe refoule moins de liquide et le moteur est peu chargé",
-        "Court-circuit du moteur, qui ferait déclencher le variateur et monter le courant avant son arrêt complet",
-        "Excès de liquide dans la pompe, qui ferait monter le courant, la température et la pression de tête"
+        "Court-circuit du moteur : le variateur déclencherait avec un courant en hausse",
+        "Excès de liquide dans la pompe : courant, température et FTHP monteraient"
       ],
       "answer": 1,
-      "explain": "Courant, débit et température en baisse avec une pression de tête qui baisse : la pompe ne refoule plus que du gaz ou peu de liquide. Une duse colmatée ferait monter la pression de tête.",
+      "explain": "Courant (−27 %), débit (−40 %) et température en baisse avec une FTHP qui baisse : la pompe ne refoule plus que peu de liquide ou du gaz. Un choke colmaté ferait monter la FTHP.",
       "seconds": 100,
       "status": "draft"
     },
@@ -703,15 +703,15 @@
       "id": "ing-prod-037",
       "theme": "Diagnostic et sécurité procédé",
       "level": 1,
-      "q": "Le water cut d'un puits passe de 20 % à 60 % en six mois, le débit de liquide total et le GOR étant stables. Quelle hypothèse vérifiez-vous en priorité ?",
+      "q": "Le water cut de P-27 passe de 20 % à 60 % en six mois, pour un débit liquide stable de 5 000 BLPD (795 m³/j) et un GOR stable : l'huile tombe de 4 000 à 2 000 BOPD (636 à 318 m³/j). Quelle hypothèse vérifiez-vous en priorité ?",
       "choices": [
-        "Une panne du compteur de gaz : le GOR affiché est faussé et le water cut en est affecté à tort",
-        "Une arrivée d'eau (percée d'injection, coning) : tests, diagnostic de Chan et suivi des injecteurs",
-        "Une hausse du GOR qui fait baisser le PI et monter artificiellement le water cut mesuré en surface",
-        "Un colmatage de la torche : la contre-pression augmente et gonfle le water cut mesuré au séparateur"
+        "Panne du compteur de gaz : le GOR affiché est faussé et fausse le water cut",
+        "Arrivée d'eau (percée d'injection, coning) : tests, diagnostic de Chan, suivi des injecteurs",
+        "Hausse du GOR qui fait baisser le PI et monter le water cut mesuré",
+        "Torche colmatée : la contre-pression gonfle le water cut mesuré au séparateur ; il faudrait inspecter le réseau de torche"
       ],
       "answer": 1,
-      "explain": "Une hausse du water cut à débit total constant évoque une arrivée d'eau ; le diagnostic distingue coning et chenalisation avant toute action.",
+      "explain": "Water cut à débit liquide constant : huile = 5 000 × (1 − 0,20) = 4 000 puis 5 000 × (1 − 0,60) = 2 000 BOPD. Une telle montée évoque une arrivée d'eau ; le diagnostic distingue coning et chenalisation avant toute action.",
       "seconds": 80,
       "status": "draft"
     },
@@ -719,17 +719,17 @@
       "id": "ing-prod-038",
       "theme": "Diagnostic et sécurité procédé",
       "level": 2,
-      "q": "Un puits gas lift présente des variations cycliques de pression de tête (12 à 20 bar toutes les 25 minutes) avec un débit d'injection de surface constant. Quelle est la cause fréquente et l'action ?",
+      "q": "Gas lift well P-21 (constant injection of 1.2 MMscfd, 33 980 Sm³/d): FTHP cycles between 12 and 20 bar (174 and 290 psi) every 25 min. Frequent cause and action?",
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Vanne de gas lift : gaz de l'annulaire vers le tubing par la vanne opérante",
       "choices": [
-        "Pression statique du réservoir trop élevée, qui crée des cycles : fermer le puits et attendre la stabilisation",
-        "Excès de désémulsifiant dans l'effluent, qui provoque les cycles : arrêter l'injection chimique et rincer la ligne",
-        "Séparateur surdimensionné, qui crée une contre-pression variable : réduire son niveau pour accélérer la décharge",
-        "Instabilité de la colonne (heading) : orifice surdimensionné ou injection insuffisante ; réguler le débit de gaz"
+        "Heading (column instability): oversized orifice or too little injection; stabilize the gas rate",
+        "Reservoir static pressure too high: shut the well in and wait plusieurs jours que le régime se stabilise",
+        "Too much demulsifier: stop the chemical injection and flush the line",
+        "Oversized separator: lower its level to speed up discharge"
       ],
-      "answer": 3,
-      "explain": "Le heading est un cycle d'accumulation et de décharge de liquide lié à un débit d'injection trop faible ou à un orifice inadapté.",
+      "answer": 0,
+      "explain": "Heading is a cycle of liquid build-up and discharge, linked to too low an injection rate or an unsuitable orifice. Swing here: 8 bar (116 psi). Regulate the gas before touching the choke.",
       "seconds": 100,
       "status": "draft"
     },
@@ -737,15 +737,15 @@
       "id": "ing-prod-039",
       "theme": "Diagnostic et sécurité procédé",
       "level": 3,
-      "q": "Au redémarrage d'une ligne sous-marine de 8 km après 3 jours d'arrêt, la pression amont monte, le débit s'effondre et la température d'arrivée est très basse. Quelle hypothèse et quelle conduite ?",
+      "q": "Redémarrage d'une flowline de 8 km après 3 jours d'arrêt : la pression amont passe de 60 à 110 bar (870 à 1 595 psi), le débit s'effondre et la température d'arrivée est de 4 °C (39 °F). Hypothèse et conduite ?",
       "choices": [
-        "Bouchon d'hydrates : ne pas forcer en pression, mettre en sécurité, procédure hydrates (dépressurisation contrôlée)",
-        "Dépôt de paraffine dans la ligne : augmenter fortement la pression de pompage pour chasser le bouchon en aval",
-        "Colmatage de la duse du séparateur, qui expliquerait la hausse de pression : démonter la duse pour la nettoyer",
-        "Sous-pression du réservoir, qui expliquerait la chute de débit : ouvrir la duse en grand pour relancer le puits"
+        "Paraffine : augmenter fortement la pression de pompage pour chasser le bouchon vers le séparateur, tant que la flowline n'est pas dépressurisée",
+        "Choke du séparateur colmaté : le démonter pour le nettoyer",
+        "Bouchon d'hydrates : ne pas forcer en pression, mettre en sécurité, appliquer la procédure hydrates (dépressurisation contrôlée)",
+        "Sous-pression du réservoir : ouvrir le choke en grand pour relancer le puits"
       ],
-      "answer": 0,
-      "explain": "Eau, gaz, basse température et pression : conditions des hydrates. Pousser à haute pression peut propulser le bouchon : on suit la procédure du site.",
+      "answer": 2,
+      "explain": "Eau, gaz, basse température et pression : conditions des hydrates. Pousser à haute pression peut propulser le bouchon (danger) : on suit la procédure du site, avec dépressurisation contrôlée par les deux côtés.",
       "seconds": 100,
       "status": "draft"
     },
@@ -753,17 +753,17 @@
       "id": "ing-prod-040",
       "theme": "Diagnostic et sécurité procédé",
       "level": 3,
-      "q": "Le ballon V-201 (figure, service normal 0 à 8 barg) travaille depuis une semaine à 9,5 barg après un réglage de régulateur, et la ligne de décharge de la PSV 201 est tiède. Que concluez-vous ?",
+      "q": "Le ballon V-201 (figure : service normal 0 à 8 barg, PSV-201 tarée à 10 barg) tourne depuis une semaine à 9,5 barg (138 psig) après un réglage de régulateur, et la ligne de décharge de la PSV est tiède. Que concluez-vous ?",
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Ballon V-201, MAWP 10 barg, PSV 201 tarée à 10 barg, alarme PAH à 9 barg, service normal 0 à 8 barg, décharge vers la torche",
       "choices": [
-        "Situation normale : une PSV chauffe quand la pression de service reste proche du tarage, sans aucune conséquence",
-        "La PSV est trop petite : il faut la remplacer par un modèle de tarage supérieur à 10 barg et plus grand diamètre",
-        "La soupape fuit (simmering) : service trop proche du tarage de 10 barg ; revenir en plage normale, contrôler la PSV",
-        "L'alarme PAH est déréglée : il faut la relever à 11 barg pour éviter les alarmes pendant le réglage du régulateur"
+        "Situation normale : une PSV chauffe quand la pression reste proche du tarage, sans conséquence",
+        "La soupape fuit (simmering) : service à 95 % du tarage ; revenir en plage normale et faire contrôler la PSV",
+        "PSV trop petite : la remplacer par un modèle tarée au-dessus de 10 barg",
+        "Alarme PAH déréglée : la relever à 11 barg pour éviter les alarmes pendant le réglage"
       ],
-      "answer": 2,
-      "explain": "Une soupape sollicitée à plus de 90 % de son tarage peut fuir. Le tarage ne doit jamais dépasser la MAWP : on corrige la pression de service.",
+      "answer": 1,
+      "explain": "9,5 / 10 = 95 % du tarage : une soupape sollicitée au-delà d'environ 90 % peut fuir. Le tarage ne doit jamais dépasser la MAWP : on corrige la pression de service et on fait contrôler la PSV.",
       "seconds": 90,
       "status": "draft"
     },
@@ -771,17 +771,17 @@
       "id": "ing-prod-041",
       "theme": "Diagnostic et sécurité procédé",
       "level": 3,
-      "q": "Le ballon V-201 de la figure a une MAWP de 10 barg. Le magasin vous livre la soupape de rechange tarée à 11 barg. Que faites-vous ?",
+      "q": "Le magasin livre pour V-201 (MAWP 10 barg, 145 psig) une PSV de rechange tarée à 11 barg (160 psig). Que faites-vous ?",
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Ballon V-201, MAWP 10 barg, PSV 201 tarée à 10 barg, alarme PAH à 9 barg, service normal 0 à 8 barg, décharge vers la torche",
       "choices": [
-        "Vous l'acceptez : 11 barg reste dans la marge de 10 % de surpression admise par le code pour une soupape",
-        "Vous l'acceptez après avoir relevé l'alarme PAH et la consigne du régulateur au-dessus de 9 barg",
-        "Vous l'acceptez à condition de réduire la pression d'épreuve du ballon lors du prochain arrêt",
-        "Vous la refusez : le tarage d'une soupape unique doit être inférieur ou égal à la MAWP (10 barg)"
+        "L'accepter : 11 barg reste dans la marge de 10 % de surpression admise par le code",
+        "L'accepter après avoir relevé l'alarme PAH et la consigne du régulateur au-dessus de 9 barg",
+        "La refuser : le tarage d'une soupape unique doit être inférieur ou égal à la MAWP (10 barg)",
+        "L'accepter en réduisant la pression d'épreuve du ballon au prochain arrêt et en informant l'inspecteur du site"
       ],
-      "answer": 3,
-      "explain": "La surpression de 10 % est tolérée pendant la décharge, pas comme pression de tarage. Une soupape tarée au-dessus de la MAWP n'offre plus de protection.",
+      "answer": 2,
+      "explain": "La surpression de 10 % est tolérée pendant la décharge, pas comme pression de tarage. Une soupape tarée à 11 barg (160 psig) n'offre plus de protection avant la MAWP : refus et retour magasin.",
       "seconds": 90,
       "status": "draft"
     },
@@ -789,15 +789,15 @@
       "id": "ing-prod-042",
       "theme": "Diagnostic et sécurité procédé",
       "level": 3,
-      "q": "Avant une intervention, un puits à 8 000 ft TVD est rempli d'une saumure de 8,5 ppg. Quelle est la pression hydrostatique au fond (P = 0,052 × ρ × TVD) ?",
+      "q": "Préparation d'un workover : puits à 8 000 ft TVD (2 438 m) tué à la saumure de 8,5 ppg (1,02 sg), pression de réservoir 3 300 psi (227,5 bar). Quelle est la pression hydrostatique au fond (P = 0,052 × ρ × TVD) et la surpression sur le réservoir ?",
       "choices": [
-        "Environ 680 psi (8,5 × 8 000 / 100)",
-        "Environ 3 536 psi (0,052 × 8,5 × 8 000)",
-        "Environ 35 360 psi (0,52 × 8,5 × 8 000)",
-        "Environ 1 768 psi (0,052 × 8,5 × 4 000 ft)"
+        "680 psi (46,9 bar) ; puits sous-équilibré",
+        "35 360 psi (2 438 bar) ; erreur de facteur 10 sur le coefficient",
+        "1 768 psi (121,9 bar) ; puits en venue",
+        "3 536 psi (243,8 bar) ; surpression de 236 psi (16,3 bar)"
       ],
-      "answer": 1,
-      "explain": "P = 0,052 × 8,5 × 8 000 ≈ 3 536 psi.",
+      "answer": 3,
+      "explain": "P = 0,052 × 8,5 × 8 000 = 3 536 psi = 243,8 bar. Surpression = 3 536 − 3 300 = 236 psi (16,3 bar) : le puits est tué avec une marge. 35 360 psi vient d'un 0,52 au lieu de 0,052.",
       "seconds": 90,
       "status": "draft"
     },
@@ -805,17 +805,17 @@
       "id": "ing-prod-043",
       "theme": "Diagnostic et sécurité procédé",
       "level": 2,
-      "q": "Sur le puits onshore de la photo, la pression de tête passe de 60 à 45 bar en trois semaines, le débit d'huile baisse de 15 %, avec une duse inchangée et un water cut stable. Quelle hypothèse privilégiez-vous ?",
+      "q": "Puits onshore (photo) : la FTHP passe de 60 à 45 bar (870 à 653 psi) en trois semaines, l'huile de 1 200 à 1 020 BOPD (190,8 à 162,2 m³/j, −15 %), choke inchangé, water cut stable. Quelle hypothèse privilégiez-vous ?",
       "img": "photo/wellhead-onshore.jpg",
       "imgAlt": "Tête de puits onshore avec arbre de Noël, vannes, ligne de production et clôture",
       "choices": [
-        "Colmatage de la duse en surface, qui ferait monter la pression de tête et non la baisser, avec un débit plus faible",
-        "Panne du compteur de gaz, qui n'a aucun lien avec la pression de tête ni avec le débit d'huile mesuré",
-        "Baisse de la pression de réservoir (déplétion) ou endommagement : essai de pression et recalage de l'IPR",
-        "Hausse du water cut, qui expliquerait la baisse de débit mais qui est resté stable sur la période"
+        "Choke colmaté : la FTHP monterait au lieu de baisser",
+        "Panne du compteur de gaz, sans lien avec la FTHP ni le débit d'huile",
+        "Hausse du water cut : elle expliquerait la baisse de débit, mais il est resté stable ; il faudrait quand même recalibrer le compteur d'eau",
+        "Baisse de pression de réservoir (déplétion) ou endommagement : essai de pression et recalage de l'IPR"
       ],
-      "answer": 2,
-      "explain": "Une pression de tête et un débit en baisse à duse constante signalent moins d'énergie ou de productivité côté réservoir ; une duse colmatée ferait monter la pression amont.",
+      "answer": 3,
+      "explain": "FTHP −25 % et huile −15 % à choke constant : moins d'énergie ou de productivité côté réservoir. Un choke colmaté ferait monter la pression amont.",
       "seconds": 100,
       "status": "draft"
     },
@@ -823,17 +823,17 @@
       "id": "ing-prod-101",
       "theme": "Puits et technologies de production",
       "level": 1,
-      "q": "Sur l'arbre de Noël de la figure (vannes maîtresses inférieure et supérieure, vanne latérale de production, vanne de curage, vanne de pistonnage au sommet), vous préparez une descente de câble lisse dans le tubing. Quelle séquence est cohérente ?",
+      "q": "Intervention slickline sur P-09 (2 000 BOPD, 318 m³/j) : vous devez descendre un câble lisse dans le tubing par l'arbre de la figure (maîtresses inférieure et supérieure, wing valve, kill, swab au sommet). Quelle séquence est cohérente ?",
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël : vannes maîtresses inférieure et supérieure, croix, vanne latérale de production, duse, vanne de curage, vanne de pistonnage au sommet.",
       "choices": [
-        "Ouvrir la vanne de curage vers la ligne de production, puis monter le sas câble sur la vanne latérale de production",
-        "Fermer les deux vannes maîtresses, puis monter le sas câble sur la tête de tubing et ouvrir la duse en grand",
-        "Fermer la vanne latérale de production, monter le sas câble sur la vanne de pistonnage, puis ouvrir celle-ci et les vannes maîtresses",
-        "Laisser la vanne latérale de production ouverte pour évacuer le gaz, puis ouvrir la vanne de pistonnage sans sas câble"
+        "Ouvrir la kill vers la ligne de production, puis monter le sas câble sur la wing valve",
+        "Fermer les deux maîtresses, monter le sas sur la tête de tubing et ouvrir le choke en grand",
+        "Fermer la wing valve, monter le lubricator (sas câble) sur la swab, puis ouvrir la swab et les maîtresses",
+        "Laisser la wing valve ouverte pour évacuer le gaz et ouvrir la swab sans sas câble"
       ],
       "answer": 2,
-      "explain": "Le câble entre par le sommet : la production est isolée (vanne latérale fermée), le sas est monté sur la vanne de pistonnage, puis on ouvre celle-ci et les maîtresses pour accéder au tubing. Ouvrir sans sas ou fermer les maîtresses interdit l'accès ou crée une fuite.",
+      "explain": "Le câble entre par le sommet : la production est isolée (wing valve fermée), le sas est monté sur la swab, puis on ouvre la swab et les maîtresses pour accéder au tubing. Sans sas ou avec les maîtresses fermées, l'accès est impossible ou la fuite certaine.",
       "seconds": 100,
       "status": "draft"
     },
@@ -841,15 +841,15 @@
       "id": "ing-prod-102",
       "theme": "Puits et technologies de production",
       "level": 2,
-      "q": "Une DHSV hydraulique s'est fermée sur un arrêt d'urgence. Pression de tête 20 bar, pression sous le clapet estimée à 180 bar. Le technicien veut pressuriser la ligne de contrôle pour la rouvrir. Que faites-vous ?",
+      "q": "Une DHSV hydraulique s'est fermée sur ESD. FTHP 20 bar (290 psi), pression sous le clapet estimée à 180 bar (2 611 psi), soit 160 bar (2 321 psi) de différentiel. Le technicien veut pressuriser la ligne de contrôle pour la rouvrir. Que faites-vous ?",
       "choices": [
-        "Égaliser d'abord la pression de part et d'autre du clapet par la tête, puis pressuriser la ligne de contrôle pour l'ouvrir",
-        "Pressuriser tout de suite la ligne de contrôle à sa pression maximale : la force hydraulique suffit à vaincre le différentiel de 160 bar",
-        "Ouvrir la vanne maîtresse inférieure en grand pour que la pression du réservoir pousse le clapet vers le haut",
-        "Mettre la ligne de contrôle à 0 bar pour que le ressort rouvre le clapet malgré le différentiel de 160 bar"
+        "Pressuriser tout de suite la ligne de contrôle à sa pression maximale : la force hydraulique vaincra les 160 bar, puis vérifier la remontée de pression en tête pendant l'essai de fermeture mensuel",
+        "Égaliser d'abord la pression de part et d'autre du clapet par la tête (pompage ou montée en pression selon la procédure), puis pressuriser la ligne de contrôle",
+        "Ouvrir la maîtresse inférieure en grand pour que le réservoir pousse le clapet vers le haut",
+        "Mettre la ligne de contrôle à 0 bar : le ressort rouvrira le clapet malgré le différentiel"
       ],
-      "answer": 0,
-      "explain": "Un clapet de DHSV ne doit pas être ouvert sous un fort différentiel : on égalise d'abord (pompage ou montée en pression en tête, selon la procédure du site), puis on applique la pression de commande. Le ressort ferme la vanne, il ne l'ouvre pas.",
+      "answer": 1,
+      "explain": "Un clapet de DHSV ne s'ouvre pas sous un fort différentiel (160 bar = 2 321 psi) : on égalise d'abord, puis on applique la pression de commande. Le ressort ferme la vanne, il ne l'ouvre pas.",
       "seconds": 110,
       "status": "draft"
     },
@@ -857,17 +857,17 @@
       "id": "ing-prod-103",
       "theme": "Puits et technologies de production",
       "level": 3,
-      "q": "Puits fermé, packer à 10 000 ft TVD (figure : eau douce 0,433 psi/ft soit 4 330 psi, huile 0,35 psi/ft soit 3 500 psi à cette profondeur). Le tubing est plein d'huile, pression de tête 500 psi ; l'annulaire A est plein d'eau douce, pression de surface nulle. Quelle pression différentielle s'applique sur le tubing au niveau du packer, et dans quel sens ?",
+      "q": "Puits shut-in, packer à 10 000 ft TVD (3 048 m). Tubing plein d'huile à 0,35 psi/ft (3 500 psi à cette profondeur), FTHP 500 psi (34,5 bar) ; annulaire A plein d'eau douce à 0,433 psi/ft (4 330 psi), pression de surface nulle. Quelle pression différentielle sur le tubing au niveau du packer, et dans quel sens ?",
       "img": "svg/pressure-gradient-chart.svg",
       "imgAlt": "Gradients de pression : eau douce 0,433 psi/ft (4 330 psi à 10 000 ft), huile 0,35 psi/ft (3 500 psi), gaz 0,10 psi/ft (1 000 psi).",
       "choices": [
-        "330 psi, de l'intérieur vers l'extérieur (risque d'éclatement du tubing)",
-        "830 psi, de l'extérieur vers l'intérieur (risque d'écrasement du tubing)",
-        "30 psi, de l'extérieur vers l'intérieur (risque d'écrasement du tubing)",
-        "330 psi, de l'extérieur vers l'intérieur (risque d'écrasement du tubing)"
+        "330 psi (22,8 bar), de l'intérieur vers l'extérieur (risque de burst), si l'on ne compte que la pression de l'huile",
+        "830 psi (57,2 bar), de l'extérieur vers l'intérieur (risque de collapse)",
+        "330 psi (22,8 bar), de l'extérieur vers l'intérieur (risque de collapse)",
+        "30 psi (2,1 bar), de l'extérieur vers l'intérieur (risque de collapse)"
       ],
-      "answer": 3,
-      "explain": "Tubing : 500 + 3 500 = 4 000 psi. Annulaire : 0 + 4 330 = 4 330 psi. La pression externe dépasse l'interne de 330 psi : sollicitation en écrasement. 830 psi oublie la pression de tête ; 30 psi est une erreur de calcul.",
+      "answer": 2,
+      "explain": "Tubing : 500 + 3 500 = 4 000 psi. Annulaire : 0 + 4 330 = 4 330 psi. La pression externe dépasse l'interne de 330 psi (22,8 bar) : sollicitation en collapse. 830 psi oublie la pression de tête ; 30 psi est une erreur de calcul.",
       "seconds": 140,
       "status": "draft"
     },
@@ -875,15 +875,15 @@
       "id": "ing-prod-104",
       "theme": "Puits et technologies de production",
       "level": 2,
-      "q": "Puits éruptif à 40 bar en tête. La pression de l'annulaire A est passée de 12 à 45 bar en 10 jours à température stable ; purgée à 5 bar (retour de gaz), elle remonte à 30 bar en 2 jours. La MAASP de l'annulaire A est de 60 bar. Quelle est votre première action ?",
+      "q": "Puits éruptif à 40 bar en tête. La pression de l'annulaire A passe de 12 à 45 bar (174 à 653 psi) en 10 jours à température stable ; purgée à 5 bar avec retour de gaz, elle remonte à 30 bar en 2 jours. MAASP de l'annulaire A : 60 bar (870 psi). Première action ?",
       "choices": [
-        "Purger en continu vers la torche pour garder l'annulaire à 5 bar, la MAASP n'étant pas atteinte, et surveiller ensuite",
         "Appliquer le test de diagnostic de la procédure du site (purge, remontée, nature du fluide), consigner et escalader à l'intégrité",
-        "Relever le seuil d'alarme à 55 bar, la remontée étant jugée thermique puisque la MAASP n'est pas dépassée",
-        "Injecter de l'inhibiteur de corrosion dans l'annulaire A et reprendre la surveillance mensuelle habituelle du puits"
+        "Purger en continu vers la torche pour garder l'annulaire à 5 bar, la MAASP n'étant pas atteinte, et reprendre la mesure toutes les semaines",
+        "Relever le seuil d'alarme à 55 bar : la remontée serait thermique puisque la MAASP n'est pas dépassée",
+        "Injecter de l'inhibiteur de corrosion dans l'annulaire A et reprendre la surveillance mensuelle"
       ],
-      "answer": 1,
-      "explain": "Une pression qui remonte après purge avec retour de gaz est une pression soutenue : perte d'une barrière probable. On suit la procédure du site (test de purge/remontée, échantillon), on documente et on escalade. Masquer par purge continue ou relever l'alarme ne traite pas le risque.",
+      "answer": 0,
+      "explain": "Une pression qui remonte après purge avec retour de gaz est une pression soutenue : perte d'une barrière probable. 5 → 30 bar en 2 jours ne s'explique pas par la température. On suit la procédure du site, on documente et on escalade ; masquer par purge continue ou relever l'alarme ne traite pas le risque.",
       "seconds": 120,
       "status": "draft"
     },
@@ -891,15 +891,15 @@
       "id": "ing-prod-105",
       "theme": "Puits et technologies de production",
       "level": 1,
-      "q": "Un détecteur acoustique de sable montre un bruit de fond à 1 200 m³/j et un signal de sable net à 1 500 m³/j, avec érosion du coude après la duse. Que retenez-vous pour l'exploitation courante ?",
+      "q": "Acoustic sand detector on well P-33: background noise up to 1 200 m³/d (7 548 BLPD), clear sand signal at 1 500 m³/d (9 435 BLPD), and the elbow downstream of the choke is eroding. What do you retain for day-to-day operation?",
       "choices": [
-        "Garder 1 500 m³/j et remplacer plus souvent le coude, l'érosion étant une simple usure de consommable",
-        "Passer à 1 800 m³/j : un débit plus fort entraîne le sable jusqu'au séparateur au lieu de le laisser se déposer au fond",
-        "Plafonner le débit juste sous le seuil d'apparition du sable (1 200 à 1 300 m³/j), avec suivi acoustique",
-        "Réduire le débit au quart de la valeur actuelle et le garder ainsi définitivement, sans autre suivi du puits"
+        "Cap the rate just below the sand onset (1 200 to 1 300 m³/d), with acoustic monitoring and elbow thickness checks",
+        "Keep 1 500 m³/d and change the elbow more often: erosion is just a consumable wear item",
+        "Go to 1 800 m³/d: a higher rate carries the sand to the separator instead of letting it settle downhole",
+        "Cut the rate to a quarter of the current value and keep it there permanently, with no further monitoring"
       ],
-      "answer": 2,
-      "explain": "On cherche l'enveloppe de production sans sable : le débit est limité juste sous le seuil, avec suivi acoustique et mesure d'épaisseur du coude. Augmenter le débit aggrave l'érosion ; réduire excessivement sacrifie la production sans raison.",
+      "answer": 0,
+      "explain": "We look for the sand-free operating envelope: limit the rate just below the onset, with acoustic and thickness monitoring. 1 200 m³/d = 7 548 BLPD and 1 300 m³/d = 8 177 BLPD; the cost versus 1 500 m³/d is about 200 to 300 m³/d (1 258 to 1 887 BLPD). Raising the rate worsens erosion; over-restricting wastes production.",
       "seconds": 100,
       "status": "draft"
     },
@@ -907,15 +907,15 @@
       "id": "ing-prod-106",
       "theme": "Puits et technologies de production",
       "level": 1,
-      "q": "Le bas des perforations est à 3 050 m. Un tag au câble donne 2 990 m (tag précédent : 3 040 m, il y a six mois) et l'indice de productivité a baissé de 30 %. Quelle interprétation et quelle suite ?",
+      "q": "Bas des perforations à 3 050 m (10 007 ft). Tag slickline à 2 990 m (9 810 ft) ; précédent tag à 3 040 m il y a six mois ; le PI a chuté de 30 % (800 à 560 BOPD pour le même drawdown, soit 127,2 à 89,0 m³/j). Interprétation et suite ?",
       "choices": [
-        "Fill de sable de 60 m sur les perforations : curage (coiled tubing ou autre), puis revue du contrôle de sable et du débit",
-        "Dépôt de paraffine en fond de puits : raclage au câble puis circulation d'huile chaude, sans autre analyse",
-        "Câble mal étalonné : le tag de 2 990 m est faux et le PI doit être recalculé sans aucune intervention",
-        "Effondrement du casing au-dessus des perforations : fraisage puis remplacement immédiat du casing de production"
+        "Dépôt de paraffine en fond de puits : grattage puis circulation d'huile chaude, sans autre analyse du contrôle de sable ou du PI",
+        "Câble mal étalonné : le tag à 2 990 m est faux, recalculer le PI sans intervention",
+        "Casing effondré au-dessus des perforations : fraisage puis remplacement immédiat du casing",
+        "Fill de sable de 60 m (197 ft) sur les perforations : curage au coiled tubing, puis revue du contrôle de sable et du débit"
       ],
-      "answer": 0,
-      "explain": "Le fond remonte de 3 040 à 2 990 m : 60 m de remplissage recouvrent une partie des perforations, d'où la perte de PI. On cure, puis on traite la cause (contrôle de sable, débit). Une paraffine à 3 000 m de profondeur est peu probable et rien n'indique un casing effondré.",
+      "answer": 3,
+      "explain": "Le fond passe de 3 040 à 2 990 m : 60 m de fill recouvrent une partie des perforations, d'où la perte de PI (−30 % : 800 → 560 BOPD). On cure, puis on traite la cause. Une paraffine à 3 000 m est peu probable et rien n'indique un casing effondré.",
       "seconds": 110,
       "status": "draft"
     },
@@ -923,15 +923,15 @@
       "id": "ing-prod-107",
       "theme": "Puits et technologies de production",
       "level": 2,
-      "q": "Puits onshore dont l'huile a un point de trouble (WAT) de 38 °C. La température du fluide vaut 38 °C à 450 m et 31 °C en tête. Le grattoir au câble se bloque à 450 m et le débit baisse progressivement. Quelle est la cause la plus probable ?",
+      "q": "Puits onshore à 1 200 BOPD (190,8 m³/j), huile de point de trouble (WAT) 38 °C (100 °F). Température du fluide : 38 °C à 450 m (1 476 ft) et 31 °C en tête. Le grattoir slickline se bloque à 450 m et le débit baisse progressivement. Cause la plus probable ?",
       "choices": [
-        "Dépôt de sulfate de baryum dû au mélange d'eaux : dissolution à l'acide chlorhydrique puis inhibiteur de dépôts",
-        "Bouchon d'hydrates de gaz : injection de méthanol, car eau libre et gaz forment des hydrates dès 31 °C en tête de puits",
-        "Fill de sable à 450 m : curage au coiled tubing, la température du fluide n'intervenant pas dans ce dépôt",
-        "Dépôt de paraffine dans le haut du tubing, sous le point de trouble : grattage, circulation chaude ou inhibiteur"
+        "Dépôt de BaSO₄ dû au mélange d'eaux : dissolution à l'HCl puis inhibiteur de dépôts",
+        "Bouchon d'hydrates : méthanol, car eau libre et gaz forment des hydrates dès 31 °C en tête",
+        "Fill de sable à 450 m : curage au coiled tubing, la température n'intervenant pas ; contrôle du fond au slickline ensuite",
+        "Dépôt de paraffine dans le haut du tubing, sous le WAT : grattage (scraper), circulation chaude ou inhibiteur"
       ],
       "answer": 3,
-      "explain": "La paraffine cristallise sous le WAT : le dépôt commence là où la température passe sous 38 °C, soit vers 450 m. Le sulfate de baryum ne se dissout pas à l'HCl, les hydrates exigent de basses températures, et un fill de sable se trouve au fond, pas à 450 m.",
+      "explain": "La paraffine cristallise sous le WAT : le dépôt commence là où le fluide passe sous 38 °C, soit vers 450 m. Le sulfate de baryum ne se dissout pas à l'HCl, les hydrates exigent de basses températures, et un fill de sable se trouve au fond, pas à 450 m.",
       "seconds": 110,
       "status": "draft"
     },
@@ -939,15 +939,15 @@
       "id": "ing-prod-108",
       "theme": "Puits et technologies de production",
       "level": 3,
-      "q": "Un puits voit son WC passer de 5 à 40 % après percée de l'eau de mer injectée. L'eau de formation contient du baryum, l'eau de mer des sulfates. Le PI chute de 35 % et le câble heurte une réduction du diamètre intérieur à 2 100 m. Quelle hypothèse et quelle réponse sont adaptées ?",
+      "q": "P-17 passe de 5 à 40 % de water cut après la percée de l'eau de mer injectée (4 000 BLPD stables : huile de 3 800 à 2 400 BOPD, soit 604 à 382 m³/j). L'eau de formation contient du baryum, l'eau de mer des sulfates. Le PI chute de 35 % et le slickline bute sur une réduction de diamètre à 2 100 m (6 890 ft). Hypothèse et réponse adaptée ?",
       "choices": [
-        "Dépôt de carbonate de calcium : l'acide chlorhydrique le dissout, le baryum n'ayant aucun rôle dans ce cas",
-        "Dépôt de BaSO4 : l'HCl est inefficace, d'où dissolvant chélatant ou curage mécanique, puis inhibiteur en squeeze",
-        "Dépôt de paraffine : la percée d'eau refroidit le puits, d'où un grattage et une circulation d'huile chaude",
-        "Dépôt d'asphaltènes : l'eau les précipite, d'où un lavage au xylène seul, sans inhibiteur de dépôts ni suivi ultérieur"
+        "Dépôt de carbonate de calcium : l'HCl le dissout, le baryum n'ayant aucun rôle",
+        "Dépôt de paraffine : la percée d'eau refroidit le puits ; grattage et circulation d'huile chaude",
+        "Dépôt de BaSO₄ : l'HCl est inefficace ; dissolvant chélatant ou curage mécanique, puis inhibiteur en squeeze",
+        "Dépôt d'asphaltènes : l'eau les précipite ; lavage au xylène seul, sans inhibiteur ni suivi"
       ],
-      "answer": 1,
-      "explain": "Baryum de formation + sulfates de l'eau de mer donnent du sulfate de baryum, très peu soluble et insensible à l'HCl. On le traite par dissolvant chélatant ou moyens mécaniques, puis on prévient par inhibiteur (squeeze).",
+      "answer": 2,
+      "explain": "Baryum de formation + sulfates de l'eau de mer donnent du BaSO₄, très peu soluble et insensible à l'HCl. Huile : 4 000 × 0,95 = 3 800 puis 4 000 × 0,60 = 2 400 BOPD. On traite par chélatant ou moyens mécaniques, puis on prévient par inhibiteur (squeeze).",
       "seconds": 140,
       "status": "draft"
     },
@@ -955,15 +955,15 @@
       "id": "ing-prod-109",
       "theme": "Puits et technologies de production",
       "level": 1,
-      "q": "Le gaz d'un puits à 120 bar en tête contient 5 % mol de CO2, avec de l'eau produite. Quelle est la pression partielle de CO2 et que concluez-vous (repère empirique : risque significatif au-delà d'environ 2 bar) ?",
+      "q": "Gaz en tête d'un puits à 120 bar (1 740 psi) avec 5 % mol de CO₂ et de l'eau produite (water cut 30 %). Quelle pression partielle de CO₂, et que concluez-vous (repère : risque significatif au-delà de ~2 bar) ?",
       "choices": [
-        "0,6 bar : sous le repère, donc aucun suivi de corrosion n'est requis tant que le puits reste sous 200 bar",
-        "60 bar : très au-dessus du repère, donc la corrosion est certaine et seul un tubing en alliage de nickel peut convenir",
-        "6 bar : au-dessus du repère, donc corrosion douce probable ; prévoir inhibiteur et coupons de suivi",
-        "6 bar : au-dessus du repère, mais le CO2 n'attaque l'acier qu'en absence d'eau, donc rien n'est à prévoir"
+        "6 bar (87 psi) : au-dessus du repère, corrosion douce probable ; prévoir inhibiteur et coupons de suivi",
+        "0,6 bar : sous le repère, aucun suivi corrosion nécessaire tant que le puits reste sous 200 bar",
+        "60 bar : très au-dessus du repère, corrosion certaine, seul un tubing en alliage de nickel convient",
+        "6 bar : au-dessus du repère, mais le CO₂ n'attaque l'acier qu'en absence d'eau, rien à prévoir"
       ],
-      "answer": 2,
-      "explain": "pCO2 = 0,05 × 120 = 6 bar. C'est environ le triple du repère de 2 bar, et de l'eau est produite : le CO2 dissous forme un acide faible qui corrode l'acier. On prévoit inhibiteur, coupons et choix de métallurgie.",
+      "answer": 0,
+      "explain": "pCO₂ = 0,05 × 120 = 6 bar (87 psi), soit le triple du repère de 2 bar, avec de l'eau produite : le CO₂ dissous forme un acide faible qui corrode l'acier. On prévoit inhibiteur, coupons et choix de métallurgie.",
       "seconds": 120,
       "status": "draft"
     },
@@ -971,14 +971,14 @@
       "id": "ing-prod-110",
       "theme": "Puits et technologies de production",
       "level": 2,
-      "q": "Fuite de tubing confirmée : la pression de l'annulaire A est égale à la pression de tête de 40 bar et suit ses variations. Quelle conséquence sur les barrières du puits ?",
+      "q": "Fuite de tubing confirmée sur P-08 : la pression de l'annulaire A est égale à la FTHP de 40 bar (580 psi) et suit ses variations. Quelle conséquence sur les barrières du puits ?",
       "choices": [
-        "Le tubing ne joue plus son rôle de barrière : le casing est exposé à la pression de tête et au fluide, d'où évaluation de risque et réparation",
-        "Pas de conséquence : l'annulaire A est déjà une barrière, donc la pression de tête de 40 bar ne change rien tant que la DHSV est ouverte",
-        "Le packer est sain par définition, car une fuite du tubing ne peut jamais exposer le casing à la pression produite",
-        "La barrière secondaire est renforcée, l'annulaire pressurisé ajoutant une protection supplémentaire contre le réservoir"
+        "Pas de conséquence : l'annulaire A est déjà une barrière, la FTHP de 40 bar ne change rien tant que la DHSV est ouverte",
+        "Le tubing ne joue plus son rôle de barrière : le casing est exposé à la pression et au fluide produits, d'où évaluation de risque et réparation (workover)",
+        "Le packer est sain par définition : une fuite de tubing ne peut jamais exposer le casing ; la surveillance de l'annulaire A peut donc être espacée",
+        "La barrière secondaire est renforcée : l'annulaire pressurisé protège davantage contre le réservoir"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Quand l'annulaire A suit la tête, le tubing fuit : le casing de production, barrière secondaire, voit la pression et le fluide produits. Il faut évaluer le risque (MAASP, état du casing) et réparer selon les procédures du site.",
       "seconds": 120,
       "status": "draft"
@@ -987,17 +987,17 @@
       "id": "ing-prod-111",
       "theme": "Puits et technologies de production",
       "level": 1,
-      "q": "Sur la tête de puits de la figure (tête de tubage, tête de tubing, vannes maîtresses, croix, vanne de pistonnage, duse), vous devez raccorder un manomètre à l'annulaire A. Sur quel élément se trouve classiquement la sortie latérale vers cet annulaire ?",
+      "q": "Sur la tête de puits de la figure (tête de tubage, tête de tubing, maîtresses, croix, swab, choke), vous devez raccorder un manomètre à l'annulaire A pour le suivi hebdomadaire. Sur quel élément se trouve classiquement la sortie latérale vers cet annulaire ?",
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Arbre de Noël : tête de tubage (casing head), tête de tubing, vannes maîtresses, croix, vanne de pistonnage, duse.",
       "choices": [
-        "La vanne maîtresse supérieure, située au-dessus de la croix, qui isole le tubing de la ligne de production en cas d'urgence",
-        "La croix, dont la vanne de pistonnage donne un accès direct à l'annulaire A depuis le sommet de l'arbre",
-        "La duse, placée après la vanne latérale de production, qui mesure aussi la pression de l'annulaire",
-        "La tête de tubing, qui porte le suspenseur de tubing et offre des sorties latérales vers l'annulaire A"
+        "La maîtresse supérieure, au-dessus de la croix, qui isole le tubing de la ligne de production",
+        "La croix, dont la swab valve donne un accès direct à l'annulaire A depuis le sommet",
+        "La tête de tubing, qui porte le suspenseur de tubing et offre des sorties latérales vers l'annulaire A",
+        "Le choke, placé après la wing valve, qui mesure aussi la pression de l'annulaire"
       ],
-      "answer": 3,
-      "explain": "Le tubing hanger repose dans la tête de tubing, dont les sorties latérales communiquent avec l'annulaire A. Les vannes maîtresses, la croix et la duse concernent le fluide du tubing, pas l'annulaire.",
+      "answer": 2,
+      "explain": "Le tubing hanger repose dans la tête de tubing, dont les sorties latérales communiquent avec l'annulaire A. Maîtresses, croix et choke concernent le fluide du tubing, pas l'annulaire.",
       "seconds": 90,
       "status": "draft"
     },
@@ -1005,15 +1005,15 @@
       "id": "ing-prod-112",
       "theme": "Puits et technologies de production",
       "level": 2,
-      "q": "Puits offshore en eau profonde, arrêté 3 jours. Au redémarrage, le fluide en tête a refroidi à 6 °C pour 120 bar ; la température de formation d'hydrates à 120 bar est de 18 °C (donnée fournie). Que faites-vous avant d'ouvrir ?",
+      "q": "Deepwater well shut in for 3 days. At restart, the fluid at the tree has cooled to 6 °C (43 °F) at 120 bar (1 740 psi); the hydrate formation temperature at 120 bar is 18 °C (64 °F). What do you do before opening the well?",
       "choices": [
-        "Ouvrir la duse en grand pour réchauffer vite la ligne par le débit, l'inhibiteur n'étant utile qu'en régime établi",
-        "Injecter l'inhibiteur (MEG ou méthanol) au point prévu, puis monter en débit progressivement selon la procédure de redémarrage",
-        "Attendre que la température remonte à 18 °C avant tout redémarrage, l'inhibiteur étant inutile au-dessus de cette valeur seuil",
-        "Monter la pression à 200 bar par la tête pour dissoudre les hydrates éventuels avant l'ouverture de la duse"
+        "Inject the inhibitor (MEG or methanol) at the designated point, then ramp up the rate gradually per the restart procedure",
+        "Open the choke wide to warm the line quickly with flow: inhibitor is only needed at steady state",
+        "Wait until the temperature recovers to 18 °C before any restart, as inhibitor is pointless above that value, even if this takes several days of shut-in",
+        "Raise the pressure to 200 bar from the wellhead to dissolve any hydrates before opening the choke"
       ],
-      "answer": 1,
-      "explain": "À 6 °C, sous les 18 °C d'équilibre, la zone d'hydrates est atteinte : on injecte l'inhibiteur avant et pendant la montée en débit. Une pression plus haute favorise les hydrates, et attendre sans débit ne réchauffe pas la tête.",
+      "answer": 0,
+      "explain": "At 6 °C, well below the 18 °C equilibrium temperature (a 12 °C margin), the hydrate zone is reached: inhibitor goes in before and during the ramp-up. Higher pressure favors hydrates, and waiting without flow will not warm the tree.",
       "seconds": 120,
       "status": "draft"
     },
@@ -1021,15 +1021,15 @@
       "id": "ing-prod-113",
       "theme": "Puits et technologies de production",
       "level": 2,
-      "q": "Un caliper multi-doigts montre une perte de paroi de 35 % sur 20 joints de tubing, entre 1 200 et 1 400 m, dans un puits corrosif. Que faites-vous ?",
+      "q": "Caliper multi-doigts sur P-12 (puits corrosif, 1 500 BOPD, 238,5 m³/j) : 35 % de perte de paroi sur 20 joints de tubing entre 1 200 et 1 400 m (3 937 à 4 593 ft). Que faites-vous ?",
       "choices": [
-        "Poursuivre sans changement, la corrosion étant uniforme et le tubing conservant sa pression nominale d'éclatement ; simple suivi annuel",
-        "Augmenter la pression annulaire pour compenser la paroi amincie et réduire les contraintes d'éclatement dans le tubing",
-        "Recalculer la résistance résiduelle (éclatement, écrasement, traction), réviser les limites de pression et planifier le remplacement",
-        "Injecter davantage d'inhibiteur et cesser les mesures, la perte de paroi étant jugée stabilisée par l'inhibiteur à ce stade"
+        "Recalculer la résistance résiduelle (burst, collapse, traction), réviser les limites de pression et planifier le remplacement (workover)",
+        "Continuer sans changement : corrosion uniforme, simple suivi annuel du caliper et des coupons de corrosion, la pression nominale étant conservée",
+        "Monter la pression annulaire pour compenser la paroi amincie",
+        "Injecter plus d'inhibiteur et arrêter les mesures : la perte de paroi serait stabilisée"
       ],
-      "answer": 2,
-      "explain": "Une paroi amincie réduit éclatement, écrasement et traction admissibles : on recalcule avec l'épaisseur résiduelle, on révise les limites opératoires et on planifie le remplacement. L'inhibiteur ralentit la corrosion mais ne restaure pas la paroi ; et un tubing aminci souffre en écrasement quand la pression annulaire monte.",
+      "answer": 0,
+      "explain": "Une paroi amincie de 35 % réduit burst, collapse et traction admissibles : on recalcule avec l'épaisseur résiduelle, on révise les limites opératoires et on planifie le remplacement. L'inhibiteur ralentit la corrosion mais ne restaure pas la paroi ; monter la pression annulaire aggrave le collapse.",
       "seconds": 120,
       "status": "draft"
     },
@@ -1037,14 +1037,14 @@
       "id": "ing-prod-114",
       "theme": "Techniques d'activation",
       "level": 2,
-      "q": "Puits onshore dévié à 50°, 1 800 m, huile de 18 °API très visqueuse, sable à 3 %, GOR de 20 sm³/m³, 80 m³/j, WC 40 %. Électricité de réseau disponible, pas de gaz haute pression. Quelle méthode d'activation privilégier ?",
+      "q": "Puits onshore dévié à 50°, 1 800 m (5 906 ft), huile 18 °API très visqueuse, sable 3 %, GOR 20 Sm³/Sm³ (112 scf/STB), 80 m³/j (503 BLPD), water cut 40 %. Réseau électrique disponible, pas de gaz haute pression. Quelle méthode d'activation privilégier ?",
       "choices": [
-        "La PCP : elle tolère l'huile visqueuse, le sable et le faible GOR, sans gaz de lift, et reste utilisable en déviation modérée",
-        "Le gas lift continu : il n'a aucune pièce mobile au fond, ce qui convient au sable et aux huiles visqueuses",
-        "L'ESP : les 80 m³/j et la viscosité ne posent pas de problème, et le sable de 3 % n'use pas les étages",
-        "Le plunger lift : le faible GOR de 20 sm³/m³ fournit l'énergie nécessaire pour remonter le piston"
+        "Gas lift continu : sans pièce mobile au fond, il convient au sable et aux huiles visqueuses",
+        "PCP : elle tolère l'huile visqueuse, le sable et le faible GOR, sans gaz de lift, et passe en déviation modérée",
+        "ESP : les 80 m³/j et la viscosité ne posent pas de problème, et 3 % de sable n'usent pas les étages",
+        "Plunger lift : le faible GOR de 20 Sm³/Sm³ fournit l'énergie pour remonter le piston"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Huile visqueuse, sable et faible GOR désignent la PCP. Le gas lift manque de gaz disponible et se heurte à la viscosité ; l'ESP est pénalisée par le sable et la viscosité ; le plunger lift exige un fort GLR.",
       "seconds": 120,
       "status": "draft"
@@ -1053,15 +1053,15 @@
       "id": "ing-prod-115",
       "theme": "Techniques d'activation",
       "level": 3,
-      "q": "Puits de 6 000 ft, 20 bbl/j de liquide, GLR de 150 scf/bbl. On envisage un plunger lift. Repère empirique : environ 300 scf/bbl par 1 000 ft de profondeur. Quelle conclusion ?",
+      "q": "Puits de 6 000 ft (1 829 m), 20 BLPD (3,2 m³/j), GLR 150 scf/bbl (26,7 Sm³/m³). On envisage un plunger lift ; repère empirique : environ 300 scf/bbl par 1 000 ft de profondeur. Quelle conclusion ?",
       "choices": [
-        "GLR acceptable : le besoin est d'environ 300 scf/bbl au total, quelle que soit la profondeur, et la durée de fermeture le compense",
-        "Plunger inadapté parce que 20 bbl/j est un débit trop faible : ce type d'activation exige plusieurs centaines de bbl/j",
-        "GLR insuffisant, mais le défaut se corrige en descendant le plunger plus profond, ce qui réduit le gaz requis par baril",
-        "GLR très inférieur aux 1 800 scf/bbl environ requis : plunger seul peu fiable, apport de gaz externe ou autre méthode à envisager"
+        "GLR acceptable : le besoin est d'environ 300 scf/bbl au total, quelle que soit la profondeur, la durée de fermeture compensant le reste du gaz nécessaire",
+        "Plunger inadapté : 20 BLPD est un débit trop faible, il en faut plusieurs centaines",
+        "GLR très inférieur aux 1 800 scf/bbl requis (321 Sm³/m³) : plunger seul peu fiable, prévoir un apport de gaz ou une autre méthode",
+        "GLR insuffisant, mais descendre le plunger plus profond réduit le gaz requis par baril"
       ],
-      "answer": 3,
-      "explain": "Besoin = 300 × 6 = 1 800 scf/bbl, soit douze fois le GLR disponible : le gaz du puits ne suffit pas. Un faible débit de liquide, au contraire, convient au plunger. On envisage un apport de gaz (plunger assisté) ou une pompe.",
+      "answer": 2,
+      "explain": "Besoin = 300 × 6 = 1 800 scf/bbl, soit 12 fois le GLR disponible de 150 : le gaz du puits ne suffit pas. Un faible débit de liquide convient au contraire au plunger. On envisage un plunger assisté (gaz externe) ou une pompe.",
       "seconds": 140,
       "status": "draft"
     },
@@ -1069,17 +1069,17 @@
       "id": "ing-prod-116",
       "theme": "Techniques d'activation",
       "level": 2,
-      "q": "Sur l'unité de la figure, la pompe de fond (piston + clapets) est au bas des tiges. Sa carte dynamométrique montre une prise de charge lente et arrondie en début de montée, une décharge progressive en début de descente, sans aucun choc. Le GOR est élevé et la pression d'aspiration est proche de la pression de bulle. Quelle est l'hypothèse ?",
+      "q": "Unité de pompage de la figure à 6 SPM, 150 BLPD (23,9 m³/j), water cut 50 %. La carte dynamométrique montre une prise de charge lente et arrondie en début de montée, sans choc. GOR élevé, pression d'aspiration proche de la pression de bulle. Quelle hypothèse ?",
       "img": "svg/pump-jack-beam.svg",
       "imgAlt": "Unité de pompage à balancier : tête de cheval, bielle, manivelle et contrepoids, tige lisse, tiges de pompage, pompe de fond (piston + clapets).",
       "choices": [
+        "Interférence de gaz : le gaz comprimable remplit la chambre ; poser une ancre à gaz et descendre la pompe sous les perforations",
         "Fluid pound : la chambre se remplit mal, d'où le choc en descente ; réduire la vitesse de pompage ou la longueur de course",
-        "Interférence de gaz : le gaz comprimable remplit la chambre ; installer une ancre à gaz et placer la pompe sous les perforations",
-        "Fuite du clapet fixe : usure de la bille et du siège ; remplacer la pompe sans autre analyse du fluide en aspiration",
-        "Rupture de tiges : la charge reste au poids des tiges en flottaison ; remonter les tiges et remplacer la pompe"
+        "Fuite du clapet fixe : bille et siège usés ; remplacer la pompe sans analyser le fluide en aspiration",
+        "Rupture de tiges : la charge reste au poids des tiges flottées ; remonter les tiges et remplacer la pompe"
       ],
-      "answer": 1,
-      "explain": "Le gaz compressible fait monter la charge progressivement (il faut le comprimer avant d'ouvrir le clapet mobile) : carte arrondie, sans choc. Le fluid pound donne un choc net ; un clapet usé ou une tige rompue produisent d'autres signatures. Remède : ancre à gaz, immersion accrue.",
+      "answer": 0,
+      "explain": "Le gaz compressible fait monter la charge progressivement (il faut le comprimer avant d'ouvrir le clapet mobile) : carte arrondie, sans choc. Le fluid pound donne un choc net ; clapet usé et tige rompue ont d'autres signatures.",
       "seconds": 130,
       "status": "draft"
     },
@@ -1087,17 +1087,17 @@
       "id": "ing-prod-117",
       "theme": "Techniques d'activation",
       "level": 1,
-      "q": "Sur l'unité de la figure, vous arrêtez le balancier en milieu de montée : le clapet mobile est fermé et la charge de fluide est portée par les tiges. La charge à la tige polie baisse de 8 500 à 6 700 lbf en 2 minutes, avec un niveau de liquide élevé. Quelle est l'hypothèse ?",
+      "q": "Sur l'unité de pompage de la figure, vous arrêtez le balancier en milieu de montée : clapet mobile fermé, colonne de fluide portée par les tiges. La charge à la polished rod baisse de 8 500 à 6 700 lbf (37,8 à 29,8 kN) en 2 min, niveau de liquide élevé. Hypothèse ?",
       "img": "svg/pump-jack-beam.svg",
       "imgAlt": "Unité de pompage à balancier avec tiges de pompage et pompe de fond (piston + clapets).",
       "choices": [
-        "Fuite du clapet mobile ou du piston (glissement) : pompe usée, à remplacer lors d'une intervention sur le puits",
-        "Interférence de gaz : le gaz comprimé soutient la colonne et la charge s'écroule progressivement ; ancre à gaz à poser",
-        "Fuite du clapet fixe : le fluide retombe dans le puits pendant la montée ; changer le clapet fixe en intervention",
-        "Rupture des tiges : la charge tombe au poids des tiges libres ; remontée des tiges en urgence"
+        "Interférence de gaz : le gaz comprimé soutient la colonne et la charge s'écroule progressivement ; poser une ancre à gaz",
+        "Fuite du clapet fixe : le fluide retombe dans le puits pendant la montée ; changer le clapet fixe",
+        "Fuite du clapet mobile ou du piston (slippage) : pompe usée, à remplacer en intervention",
+        "Rupture de tiges : la charge tombe au poids des tiges libres ; remonter les tiges en urgence"
       ],
-      "answer": 0,
-      "explain": "À l'arrêt en montée, le clapet mobile ferme et supporte la colonne de fluide : si la charge décroît, le fluide fuit par le clapet mobile ou le piston. Une fuite du clapet fixe ne fait pas baisser cette charge ; une tige rompue donnerait une charge basse immédiate.",
+      "answer": 2,
+      "explain": "À l'arrêt en montée, le clapet mobile est fermé et supporte la colonne : si la charge décroît (−1 800 lbf), le fluide fuit par le clapet mobile ou le piston. Une fuite du clapet fixe ne fait pas baisser cette charge ; une tige rompue donnerait une charge basse immédiate.",
       "seconds": 120,
       "status": "draft"
     },
@@ -1105,16 +1105,16 @@
       "id": "ing-prod-118",
       "theme": "Techniques d'activation",
       "level": 3,
-      "q": "ESP de la figure (pompe, admission / séparateur de gaz, protecteur, moteur, capteur de fond). Courant normal 48 A, seuil de surcharge 60 A, seuil de sous-charge 30 A. Le variateur déclenche sur surcharge à 62 A, puis après redémarrage sur sous-charge à 27 A. Le capteur de fond montre une pression d'aspiration oscillant de 35 à 12 bar, pression de bulle 60 bar. Quelle hypothèse et quelle action ?",
+      "q": "ESP de la figure à 50 Hz, courant normal 48 A, seuils surcharge 60 A et sous-charge 30 A. Le variateur déclenche sur surcharge à 62 A, puis après redémarrage sur sous-charge à 27 A. Le capteur de fond montre une pression d'aspiration oscillant de 35 à 12 bar (508 à 174 psi), pression de bulle 60 bar (870 psi). Hypothèse et action ?",
       "img": "svg/esp-system.svg",
       "imgAlt": "Système ESP : transformateur, variateur, boîte de jonction, câble de puissance, pompe multi-étages, admission / séparateur de gaz, protecteur, moteur, capteur de fond.",
       "choices": [
-        "Pompe bloquée par du sable ; relever le seuil de surcharge à 70 A pour la débloquer par à-coups, puis reprendre l'exploitation à pleine fréquence",
-        "Défaut d'isolement du câble ; relever le seuil de sous-charge à 20 A afin d'éviter les arrêts répétés et garder la production",
-        "Gaz libre à l'aspiration : bouchons liquide/gaz faisant osciller le courant ; baisser la fréquence pour relever l'aspiration",
-        "Court-circuit du moteur ; augmenter la fréquence pour accroître le débit et mieux refroidir le moteur par la circulation"
+        "Pompe bloquée par du sable ; relever le seuil de surcharge à 70 A pour la débloquer par à-coups, puis redémarrer à pleine fréquence sans contrôler l'aspiration",
+        "Défaut d'isolement du câble ; relever le seuil de sous-charge à 20 A pour éviter les arrêts répétés",
+        "Court-circuit du moteur ; monter la fréquence pour augmenter le débit et mieux refroidir le moteur",
+        "Gaz libre à l'aspiration : bouchons liquide/gaz qui font osciller le courant ; baisser la fréquence pour relever l'aspiration et vérifier la séparation de gaz"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Une aspiration à 12-35 bar, sous la pression de bulle de 60 bar, libère du gaz : liquide lourd (courant haut) puis gaz (courant bas). On relève l'aspiration (fréquence plus basse, immersion) et on vérifie la séparation de gaz. Modifier les seuils masque la cause et risque de détruire le moteur.",
       "seconds": 150,
       "status": "draft"
@@ -1123,17 +1123,17 @@
       "id": "ing-prod-119",
       "theme": "Techniques d'activation",
       "level": 3,
-      "q": "La pompe multi-étages de la figure doit relever un fluide de densité 0,9 depuis un niveau dynamique à 900 m de la surface. Pression de tête 10 bar (soit 113 m de colonne de ce fluide), pertes en tubing 40 m. Chaque étage donne 6 m. Combien d'étages minimum (arrondi à l'entier supérieur) ?",
+      "q": "Une ESP (figure) doit relever un fluide de densité 0,9 depuis un niveau dynamique à 900 m (2 953 ft) de la surface. FTHP 10 bar (145 psi, soit 113 m de colonne de ce fluide), pertes en tubing 40 m. Chaque étage donne 6 m. Combien d'étages minimum (entier supérieur) ?",
       "img": "svg/esp-system.svg",
       "imgAlt": "Système ESP avec pompe centrifuge multi-étages au-dessus du protecteur et du moteur, dans le cuvelage, sous la colonne de production.",
       "choices": [
         "150 étages",
         "169 étages",
-        "176 étages",
-        "326 étages"
+        "326 étages (profondeur de pompe 1 800 m)",
+        "176 étages"
       ],
-      "answer": 2,
-      "explain": "Hauteur totale = 900 + 113 + 40 = 1 053 m ; 1 053 / 6 = 175,5, soit 176 étages. 150 oublie pression de tête et pertes ; 169 oublie les pertes ; 326 prend la profondeur de pompe (1 800 m) au lieu du niveau dynamique.",
+      "answer": 3,
+      "explain": "Hauteur totale = 900 + 113 + 40 = 1 053 m ; 1 053 / 6 = 175,5, soit 176 étages. 150 oublie FTHP et pertes (900 / 6) ; 169 oublie les pertes ((900 + 113) / 6 = 168,8) ; 326 prend la profondeur de pompe de 1 800 m : (1 800 + 113 + 40) / 6 = 325,5.",
       "seconds": 150,
       "status": "draft"
     },
@@ -1141,17 +1141,17 @@
       "id": "ing-prod-120",
       "theme": "Techniques d'activation",
       "level": 3,
-      "q": "Gas lift de la figure (vannes de décharge sur mandrins latéraux). Pression du gaz en surface 100 bar ; gradient du gaz dans l'annulaire 0,025 bar/m ; tubing plein de liquide à 0,09 bar/m ; pression de tête 10 bar ; il faut 5 bar de marge en faveur de l'annulaire. Quelle est la profondeur maximale de la première vanne de décharge ?",
+      "q": "Gas lift (figure) : pression du gaz en surface 100 bar (1 450 psi), gradient du gaz dans l'annulaire 0,025 bar/m, tubing plein de liquide à 0,09 bar/m, FTHP 10 bar, marge de 5 bar en faveur de l'annulaire. Quelle est la profondeur maximale de la première vanne de décharge ?",
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Puits gas lift : annulaire de gaz injecté, vannes de décharge sur mandrins latéraux, vanne opérante, packer, tubing.",
       "choices": [
         "Environ 944 m",
-        "Environ 1 308 m",
         "Environ 1 385 m",
-        "Environ 1 461 m"
+        "Environ 1 462 m",
+        "Environ 1 308 m (4 290 ft)"
       ],
-      "answer": 1,
-      "explain": "Équilibre : 100 + 0,025 Z - 5 = 10 + 0,09 Z, donc 85 = 0,065 Z et Z = 1 308 m. 944 m néglige le gradient du gaz ; 1 385 m oublie la marge de 5 bar ; 1 461 m oublie la marge et la pression de tête.",
+      "answer": 3,
+      "explain": "Équilibre : 100 + 0,025 Z − 5 = 10 + 0,09 Z, donc 85 = 0,065 Z et Z = 1 308 m (4 290 ft). 944 m néglige le gradient du gaz ; 1 385 m oublie la marge de 5 bar ; 1 462 m oublie la FTHP de 10 bar.",
       "seconds": 150,
       "status": "draft"
     },
@@ -1159,14 +1159,14 @@
       "id": "ing-prod-121",
       "theme": "Techniques d'activation",
       "level": 2,
-      "q": "Gas lift continu : injection de 1,2 MMscf/j, pression de ligne d'injection stable à 85 bar, orifice de 24/64 po. La pression d'annulaire oscille de 70 à 82 bar en 20 minutes, et la pression de tête de 11 à 19 bar. Quelle action traite la cause plutôt que de masquer le symptôme ?",
+      "q": "Gas lift continu sur P-21 : injection de 1,2 MMscfd (33 980 Sm³/j), ligne d'injection stable à 85 bar (1 233 psi), orifice 24/64 po. La pression d'annulaire oscille de 70 à 82 bar et la FTHP de 11 à 19 bar en 20 min. Quelle action traite la cause plutôt que le symptôme ?",
       "choices": [
-        "Fermer la duse de production à 30 % de l'ouverture actuelle en gardant le gaz inchangé, quitte à perdre du débit d'huile",
-        "Réduire le gaz injecté à 0,8 MMscf/j pour que la vanne ferme moins souvent et que la pression d'annulaire se stabilise",
-        "Remonter la pression du séparateur de 8 à 20 bar pour écraser les variations de pression de tête de puits",
-        "Augmenter progressivement le gaz injecté (1,2 puis 1,5 MMscf/j) en suivant les cycles ; sinon réduire l'orifice ou injecter plus profond"
+        "Fermer le choke de production à 30 % de l'ouverture actuelle, gaz inchangé, quitte à perdre de l'huile, et attendre que les cycles s'amortissent d'eux-mêmes",
+        "Augmenter progressivement le gaz injecté (1,2 puis 1,5 MMscfd, soit 42 476 Sm³/j) en suivant les cycles ; sinon réduire l'orifice ou injecter plus profond",
+        "Réduire le gaz à 0,8 MMscfd (22 654 Sm³/j) pour que la vanne ferme moins souvent",
+        "Remonter la pression du séparateur de 8 à 20 bar pour écraser les variations de FTHP"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "Ces cycles d'annulaire (casing heading) viennent d'une injection trop faible pour l'orifice : la vanne s'ouvre et se ferme. On augmente le gaz, on réduit l'orifice ou on injecte plus profond. Étrangler la production masque le symptôme ; moins de gaz aggrave l'instabilité.",
       "seconds": 130,
       "status": "draft"
@@ -1175,17 +1175,17 @@
       "id": "ing-prod-122",
       "theme": "Techniques d'activation",
       "level": 1,
-      "q": "Sur la figure, la vanne à pression de casing s'ouvre quand la pression du gaz dépasse celle du dôme chargé en azote. Le dôme est à 70 bar dans les conditions de fond ; la pression du gaz d'annulaire à la vanne passe de 60 à 75 bar. Que se passe-t-il ?",
+      "q": "Sur la vanne gas lift de la figure (vanne à pression de casing), le dôme chargé en azote est à 70 bar (1 015 psi) aux conditions de fond ; la pression du gaz d'annulaire à la vanne passe de 60 à 75 bar (870 à 1 088 psi). Que se passe-t-il ?",
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Détail d'une vanne de gas-lift : dôme chargé en azote, soufflet, tige-bille-siège, clapet anti-retour ; ouverture quand la pression du gaz dépasse celle du dôme.",
       "choices": [
-        "La vanne reste fermée, car l'annulaire doit dépasser la pression du tubing de plus de 70 bar pour l'ouvrir en grand",
-        "La vanne s'ouvre dès que la pression du gaz dépasse 70 bar et le gaz passe de l'annulaire vers le tubing",
-        "La vanne se ferme au-delà de 70 bar, le soufflet comprimé pressant alors la bille contre son siège",
-        "La vanne s'ouvre, mais le clapet anti-retour laisse alors le fluide du tubing remonter vers l'annulaire"
+        "La vanne reste fermée : l'annulaire doit dépasser la pression du tubing de plus de 70 bar pour l'ouvrir en grand",
+        "La vanne se ferme au-delà de 70 bar, le soufflet comprimé pressant la bille contre son siège",
+        "La vanne s'ouvre, mais le clapet anti-retour laisse le fluide du tubing remonter vers l'annulaire",
+        "La vanne s'ouvre dès que la pression du gaz dépasse 70 bar et le gaz passe de l'annulaire vers le tubing"
       ],
-      "answer": 1,
-      "explain": "Pour une vanne à pression de casing, l'ouverture se produit quand la pression du gaz dépasse celle du dôme : à 75 bar contre 70 bar, la vanne s'ouvre et le gaz passe dans le tubing. Le clapet anti-retour empêche l'écoulement inverse.",
+      "answer": 3,
+      "explain": "Pour une vanne à pression de casing, l'ouverture se produit quand la pression du gaz dépasse celle du dôme : 75 bar contre 70 bar, la vanne s'ouvre et le gaz passe dans le tubing. Le clapet anti-retour empêche l'écoulement inverse.",
       "seconds": 100,
       "status": "draft"
     },
@@ -1193,15 +1193,15 @@
       "id": "ing-prod-123",
       "theme": "Techniques d'activation",
       "level": 1,
-      "q": "Puits de 2 400 m, 4 000 bbl/j de liquide, WC 85 %, GOR de 80 scf/STB, sable négligeable. Pas de gaz de lift disponible, électricité disponible. Quelle méthode d'activation retenir ?",
+      "q": "Well at 2 400 m (7 874 ft), 4 000 BLPD (636 m³/d), water cut 85 % (600 BOPD oil, 95,4 m³/d), GOR 80 scf/STB (14,2 Sm³/Sm³), negligible sand. No lift gas available, grid power available. Which artificial lift method do you select?",
       "choices": [
-        "L'ESP : forts débits liquides, WC élevé, peu de gaz libre et alimentation électrique disponible",
-        "La pompe à tiges : elle gère aisément 4 000 bbl/j à 2 400 m avec une unité à balancier de grande taille",
-        "Le plunger lift : le fort débit de liquide fournit l'énergie nécessaire à la remontée du piston libre",
-        "Le gas lift continu : l'injection de gaz fonctionne sans réseau, en recyclant le gaz du puits à GOR de 80"
+        "Rod pump: it easily handles 4 000 BLPD at 2 400 m with a large beam unit",
+        "Plunger lift: the high liquid rate provides the energy to lift the free piston",
+        "Continuous gas lift: injected gas works without a gas network by recycling the well gas at GOR 80",
+        "ESP: high liquid rate, high water cut, low free gas and electrical power available"
       ],
-      "answer": 0,
-      "explain": "Fort débit, WC élevé, GOR faible et électricité : cas typique de l'ESP. La pompe à tiges est limitée en débit à cette profondeur, le plunger lift convient aux faibles débits de liquide, et le gas lift manque de gaz de lift.",
+      "answer": 3,
+      "explain": "High rate, high water cut, low GOR and electricity make a textbook ESP case. Rod pumps are rate-limited at this depth, plunger lift suits low liquid rates, and gas lift lacks lift gas. Water rate: 3 400 BWPD (540,6 m³/d).",
       "seconds": 100,
       "status": "draft"
     },
@@ -1209,17 +1209,17 @@
       "id": "ing-prod-124",
       "theme": "Techniques d'activation",
       "level": 1,
-      "q": "Puits onshore vertical de 1 200 m : 12 m³/j de liquide, WC 70 %, GOR de 15 sm³/m³, sable à 0,1 %. Pas de gaz de lift, réseau électrique disponible. Le puits peut recevoir une unité comme celle de la figure (moteur, tiges, pompe de fond). Quelle méthode est cohérente ?",
+      "q": "Puits onshore vertical de 1 200 m (3 937 ft) : 12 m³/j de liquide (75 BLPD), water cut 70 % (3,6 m³/j d'huile, 22,6 BOPD), GOR 15 Sm³/Sm³ (84 scf/STB), sable 0,1 %. Pas de gaz de lift, réseau électrique disponible. L'unité de la figure (moteur, tiges, pompe de fond) peut être installée. Quelle méthode est cohérente ?",
       "img": "svg/pump-jack-beam.svg",
       "imgAlt": "Unité de pompage à balancier avec moteur, réducteur, tiges de pompage dans le tubing et pompe de fond.",
       "choices": [
-        "L'ESP : un débit de 12 m³/j correspond au meilleur rendement d'une pompe de fond multi-étages",
-        "Le gas lift intermittent : il fournit sans réseau de gaz le volume de gaz nécessaire aux cycles",
-        "La pompe jet : son rendement supérieur à 60 % la rend la plus économique pour un faible débit",
-        "La pompe à tiges : faible débit, profondeur modérée, puits vertical, peu de gaz et de sable"
+        "L'ESP : 12 m³/j correspond au meilleur rendement d'une pompe multi-étages",
+        "Le gas lift intermittent : il fournit sans réseau de gaz le volume nécessaire aux cycles",
+        "La pompe à tiges : faible débit, profondeur modérée, puits vertical, peu de gaz et de sable",
+        "La pompe jet : son rendement supérieur à 60 % la rend la plus économique à faible débit"
       ],
-      "answer": 3,
-      "explain": "Faible débit, 1 200 m, vertical, peu de gaz et de sable : la pompe à tiges est la solution robuste et économique. Une ESP est mal adaptée aux très faibles débits, le gas lift intermittent exige du gaz, et la pompe jet a un rendement faible (de l'ordre de 20 à 30 %).",
+      "answer": 2,
+      "explain": "Faible débit (75 BLPD), 1 200 m, vertical, peu de gaz et de sable : la pompe à tiges est la solution robuste et économique. Une ESP est mal adaptée aux très faibles débits, le gas lift intermittent exige du gaz, et la pompe jet a un rendement de l'ordre de 20 à 30 %.",
       "seconds": 100,
       "status": "draft"
     },
@@ -1227,15 +1227,15 @@
       "id": "ing-prod-125",
       "theme": "Techniques d'activation",
       "level": 2,
-      "q": "PCP à 200 tr/min : le débit chute de 60 à 35 m³/j, le niveau de liquide reste haut au-dessus de la pompe et le couple moteur a baissé. Quelle est l'hypothèse et la suite ?",
+      "q": "PCP à 200 tr/min : le débit chute de 60 à 35 m³/j (377 à 220 BLPD), le niveau de liquide reste haut au-dessus de la pompe et le couple moteur a baissé. Quelle est l'hypothèse et la suite ?",
       "choices": [
-        "Gonflement de l'élastomère par les aromatiques : réduire la vitesse de rotation pour limiter l'interférence entre rotor et stator",
-        "Pump-off : le niveau bas provoque un fonctionnement à sec ; arrêter le puits et réduire la vitesse de rotation ensuite",
-        "Usure du stator et du rotor (glissement) ; compenser un temps par la vitesse et planifier le remplacement de la pompe",
-        "Rupture de la ligne de tiges : remonter l'ensemble tiges et stator pour une inspection complète au jour"
+        "Usure du stator et du rotor (slippage) ; compenser un temps par la vitesse et planifier le remplacement de la pompe",
+        "Gonflement de l'élastomère par les aromatiques : réduire la vitesse de rotation pour limiter l'interférence",
+        "Pump-off : le niveau bas provoque un fonctionnement à sec ; arrêter le puits puis réduire la vitesse",
+        "Rupture de la ligne de tiges : remonter l'ensemble tiges et rotor pour inspection"
       ],
-      "answer": 2,
-      "explain": "Débit en baisse avec niveau haut et couple en baisse : le fluide glisse à travers un stator et un rotor usés. Un gonflement de l'élastomère ferait monter le couple ; un pump-off exige un niveau bas ; une rupture de tiges annulerait le débit.",
+      "answer": 0,
+      "explain": "Débit en baisse (−42 %) avec niveau haut et couple en baisse : le fluide glisse à travers un stator et un rotor usés. Un gonflement de l'élastomère ferait monter le couple ; un pump-off exige un niveau bas ; une rupture de tiges annulerait le débit.",
       "seconds": 120,
       "status": "draft"
     },
@@ -1243,14 +1243,14 @@
       "id": "ing-prod-126",
       "theme": "Techniques d'activation",
       "level": 2,
-      "q": "Un puits dévié à 65° produit 150 m³/j avec du sable fin ; pas d'électricité sur le site, mais une unité de pompage de fluide moteur est disponible. On retient une pompe jet. Quel compromis annoncer ?",
+      "q": "Puits dévié à 65° produisant 150 m³/j (943 BLPD) avec du sable fin ; pas d'électricité sur le site, mais une unité de pompage de fluide moteur est disponible. On retient une pompe jet. Quel compromis annoncer à l'OIM ?",
       "choices": [
-        "Rendement élevé (supérieur à 60 %) et faible puissance en surface, mais elle ne tolère ni le sable ni la déviation du puits, d'où son rejet",
         "Pas de pièce mobile au fond, donc tolérance au sable et à la déviation, mais rendement faible (20 à 30 %) et forte puissance de surface",
+        "Rendement élevé (supérieur à 60 %) et faible puissance en surface, mais aucune tolérance au sable ni à la déviation ; à écarter pour ce puits à 65°",
         "Pas de pièce mobile au fond, mais un débit limité à 10 m³/j et aucune tolérance au moindre gaz libre",
-        "Pas de fluide moteur nécessaire car le jet utilise le gaz du puits, mais une usure rapide des clapets de fond"
+        "Pas de fluide moteur nécessaire car le jet utilise le gaz du puits, mais usure rapide des clapets de fond"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "La pompe jet fonctionne avec un fluide moteur sous pression : pas de pièce mobile, donc bonne tolérance au sable, au gaz et à la déviation, au prix d'un faible rendement et d'une puissance de surface élevée.",
       "seconds": 130,
       "status": "draft"

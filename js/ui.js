@@ -124,6 +124,13 @@ export function pageHead({ crumbs: c = [], back, title, text = '', actions = '',
     <h1 class="page-title">${esc(title)}</h1>${text ? `<p class="page-sub">${esc(text)}</p>` : ''}${actions}</header>`;
 }
 
+/** Sources juridiques d'une question : q.refs = [{ doc, art, url, note? }] (texte de loi, article, lien). */
+export function refsHTML(q) {
+  const refs = (q && Array.isArray(q.refs) ? q.refs : []).filter((r) => r && r.doc && /^https:\/\//i.test(r.url || ''));
+  if (!refs.length) return '';
+  return `<div class="legal-ref"><strong>Texte de référence</strong><ul>${refs.map((r) => `<li><span class="legal-doc" data-notr>${esc(r.doc)}</span>${r.art ? ` — <span class="legal-art" data-notr>${esc(r.art)}</span>` : ''}${r.note ? `<span class="legal-note" data-notr> (${esc(r.note)})</span>` : ''} <a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">Consulter le texte ${icon('link', 14)}</a></li>`).join('')}</ul></div>`;
+}
+
 /** Bouton retour homogène (même aspect partout). */
 export const backLink = (href, label = 'Retour') => `<a class="back-link" href="${esc(href)}">${icon('arrow', 16, 'flip')} ${esc(label)}</a>`;
 

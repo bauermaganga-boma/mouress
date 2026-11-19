@@ -92,7 +92,7 @@ export default async function render(ctx, root) {
   if (!b) {
     ctx.setTitle(dm.name);
     const cards = (data.branches || []).map((br) => ({ br, n: postes(data, { domain: d, branch: br.id }).length })).filter((x) => x.n)
-      .map(({ br, n }) => bigCard({ href: `#/formation/${d}/${br.id}`, ico: br.id === 'support' ? 'briefcase' : 'wrench', title: br.name, desc: br.desc, count: n })).join('');
+      .map(({ br, n }) => bigCard({ href: `#/formation/${d}/${br.id}`, ico: br.id === 'support' ? 'briefcase' : br.id === 'reglementation' ? 'book' : 'wrench', title: br.name, desc: br.desc, count: n })).join('');
     root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...home2, { label: dm.name }], back: back1, eyebrow: 'Type de métier', title: dm.name, text: 'Quel type de métier ?' })}
       <div class="grid grid-2 funnel-grid">${cards}</div></div>`;
     return;

@@ -67,6 +67,10 @@
     {
       "id": "assist",
       "name": "Agent / Assistant"
+    },
+    {
+      "id": "tous",
+      "name": "Tous niveaux"
     }
   ],
   "profiles": [
@@ -567,7 +571,8 @@
         "industrie",
         "logistique-port"
       ],
-      "branch": "support"
+      "branch": "support",
+      "legal": true
     },
     {
       "id": "logistique",
@@ -589,6 +594,7 @@
       "id": "juriste",
       "sector": "support",
       "level": "cadre",
+      "legal": true,
       "name": "Juriste d'entreprise",
       "desc": "Droit OHADA, contrats, sociétés, droit du travail, conformité, contrats pétroliers et miniers.",
       "domains": [
@@ -703,7 +709,8 @@
         "industrie",
         "logistique-port"
       ],
-      "branch": "support"
+      "branch": "support",
+      "legal": true
     },
     {
       "id": "auditeur-interne",
@@ -719,7 +726,8 @@
         "industrie",
         "logistique-port"
       ],
-      "branch": "support"
+      "branch": "support",
+      "legal": true
     },
     {
       "id": "paie-sage",
@@ -735,7 +743,8 @@
         "industrie",
         "logistique-port"
       ],
-      "branch": "support"
+      "branch": "support",
+      "legal": true
     },
     {
       "id": "tresorier-financement",
@@ -773,6 +782,7 @@
       "id": "juriste-contrats",
       "sector": "support",
       "level": "cadre",
+      "legal": true,
       "name": "Juriste contrats et achats",
       "desc": "Rédaction et négociation des contrats, clauses clés, responsabilité, marchés et sous-traitance, gestion du contentieux contractuel.",
       "domains": [
@@ -799,7 +809,8 @@
         "industrie",
         "logistique-port"
       ],
-      "branch": "support"
+      "branch": "support",
+      "legal": true
     },
     {
       "id": "juriste-conformite",
@@ -815,7 +826,8 @@
         "industrie",
         "logistique-port"
       ],
-      "branch": "support"
+      "branch": "support",
+      "legal": true
     },
     {
       "id": "juriste-petrole-mines",
@@ -831,7 +843,8 @@
         "industrie",
         "logistique-port"
       ],
-      "branch": "support"
+      "branch": "support",
+      "legal": true
     },
     {
       "id": "assistant-juridique",
@@ -847,7 +860,8 @@
         "industrie",
         "logistique-port"
       ],
-      "branch": "support"
+      "branch": "support",
+      "legal": true
     },
     {
       "id": "iwcf-niveau-4",
@@ -881,6 +895,19 @@
         "petrole-gaz-amont"
       ],
       "branch": "technique"
+    },
+    {
+      "id": "loi-hydrocarbures-gabon",
+      "sector": "amont",
+      "level": "tous",
+      "legal": true,
+      "name": "Comprendre le Code gabonais des hydrocarbures (Loi n° 002/2019)",
+      "desc": "Titres et contrats pétroliers, contenu local, fiscalité, aval, sécurité et environnement, sanctions : chaque réponse renvoie à l’article de la loi, avec un lien.",
+      "domains": [
+        "petrole-gaz-amont",
+        "petrole-gaz-aval"
+      ],
+      "branch": "reglementation"
     }
   ],
   "domains": [
@@ -933,6 +960,12 @@
       "id": "support",
       "name": "Fonctions support",
       "desc": "RH, comptabilité, fiscalité, logistique, juridique.",
+      "noLevel": true
+    },
+    {
+      "id": "reglementation",
+      "name": "Cadre légal et réglementation",
+      "desc": "Comprendre le Code gabonais des hydrocarbures (Loi n° 002/2019) : titres, contrats, contenu local, fiscalité, aval, sanctions.",
       "noLevel": true
     }
   ],

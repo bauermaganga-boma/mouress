@@ -6,12 +6,12 @@
       "title": "Lire un P&ID et comprendre les boucles de régulation",
       "theme": "Lecture de P&ID et boucles de régulation",
       "minutes": 9,
-      "body": "Le **P&ID** (schéma de tuyauterie et d'instrumentation) est la carte de l'installation : lignes, équipements, vannes, instruments et boucles de régulation. L'opérateur de salle de contrôle doit pouvoir y suivre un fluide de l'entrée à la sortie et repérer les isolements, les vannes de régulation, les soupapes et les protections.\n\nLes repères d'instruments suivent la norme **ISA 5.1** : la **première lettre** désigne la grandeur mesurée (P pression, T température, L niveau, F débit, A analyse), les lettres suivantes la fonction (I indicateur, C régulateur, T transmetteur, V vanne, S interrupteur, A alarme, H haut, L bas). Ainsi **LIC-101** est un régulateur-indicateur de niveau, **PT-205** un transmetteur de pression, **FV-310** une vanne de régulation de débit, **LSHH-101** un interrupteur de niveau très haut. Le numéro identifie la boucle.\n\nUne **boucle de régulation** comprend un capteur-transmetteur (signal 4-20 mA), un régulateur dans le DCS et un organe final, souvent une vanne pneumatique. Le régulateur compare la **mesure (PV)** à la **consigne (SP)** et calcule une **sortie (OP)** de 0 à 100 %. Les actions **P**, **I** et **D** corrigent respectivement l'écart présent, l'écart cumulé et sa vitesse de variation. Un gain trop élevé provoque des oscillations.\n\nLes trois modes de base sont **Manuel** (l'opérateur impose la sortie), **Automatique** (le régulateur suit la consigne) et **Cascade** (la consigne vient d'un autre régulateur). En cascade, un régulateur maître de niveau (LIC) fixe la consigne d'un régulateur esclave de débit (FIC) : le niveau reste stable même si la pression de la ligne varie. Un régulateur oublié en manuel est une cause classique d'incident : la sortie ne réagit plus aux dérives.\n\nLa **position de sécurité** de la vanne est essentielle. Une vanne « **air-ouvre** » se ferme à la perte d'air ou de signal (fail closed, FC) ; une vanne « **air-ferme** » s'ouvre (fail open, FO). Le choix dépend du risque : la vanne de sortie de gaz vers la torche d'un séparateur est souvent à ouverture de sécurité, alors que la vanne d'alimentation d'un four est à fermeture de sécurité.\n\nUne **soupape de sécurité** (PSV) est la dernière barrière mécanique contre la surpression : elle s'ouvre à sa pression de tarage, indépendamment du DCS, et décharge vers la torche. Un indicateur qui affiche une valeur irréaliste, figée ou hors plage doit faire soupçonner le capteur avant le procédé.",
+      "body": "En salle de contrôle, tu lis le **P&ID** comme un plan de route. La norme **ISA 5.1** donne le repère : première lettre = grandeur mesurée (**F** débit, **L** niveau, **P** pression, **T** température), lettres suivantes = fonction (**I** indicateur, **C** régulateur, **T** transmetteur, **V** vanne, **S** interrupteur, **A** alarme, **H/HH** haut / très haut). Ainsi **LIC-101** est le régulateur-indicateur de niveau du séparateur, **PT-205** le transmetteur de pression d'un header (lecture 100 bar, soit 1 450 psi), **FV-310** la vanne de régulation d'un débit d'export à 8 000 BOPD (≈ 1 272 m³/j).\n\nUne boucle de régulation lit la mesure (**PV**), la compare à la consigne (**SP**) et ajuste la sortie vers la vanne (**OP**). Modes : **Manuel** (la sortie est figée, le régulateur ne corrige plus), **Auto**, **Cascade** (ex. LIC-101 maître sur le niveau du FWKO, FIC-102 esclave sur le débit de sortie : l'esclave rattrape vite les perturbations de débit). Une vanne **air-ouvre** (fail closed) se ferme à la perte d'air d'instrument ; une vanne **air-ferme** s'ouvre.\n\nLes transmetteurs envoient du **4-20 mA** : 4 mA = 0 %, 20 mA = 100 %. Exemples : un transmetteur de pression 0-60 bar (0-870 psi) qui délivre 10 mA donne (10 − 4) ÷ 16 × 60 = 22,5 bar (326 psi) ; un radar de bac 0-5 m qui délivre 7,2 mA donne (7,2 − 4) ÷ 16 × 5 = 1,0 m, soit 100 cm × 12 bbl/cm = 1 200 bbl (≈ 191 m³). Piège classique : diviser 7,2 par 20 donne 1,8 m (2 160 bbl), faux. Un signal à 0 mA, ou sous 3,6 mA, est un défaut de boucle, pas une mesure basse.\n\nUne boucle de niveau qui oscille entre 20 et 80 % de sortie avec une période de 2 min indique souvent un gain trop élevé. Une vanne indiquée à 100 % qui ne fait pas baisser le niveau signale un blocage en aval (pompe, ligne, vanne grippée), à vérifier avec le terrain.\n\nLa **PSV** est la dernière barrière mécanique contre la surpression, indépendante du DCS. Exemple : PV-120 air-ouvre sur la sortie gaz d'un séparateur HP à 18 bar (261 psi) ; à la perte d'air, la vanne se ferme et la pression grimpe vers la PSV tarée à 25 barg (363 psig).\n\n**Sur site**\n- Début de quart : repère les boucles en manuel, les valeurs qui ne bougent plus, les écarts entre deux transmetteurs.\n- Une consigne de débit se lit en m³/h ET en bbl/h ; ex. 90 m³/h = 566 bbl/h.\n- Une régulation en manuel à une valeur « de sécurité » doit être notée au cahier et reprise.\n\n**Vocabulaire FR / EN**\n- régulateur indicateur de niveau = level indicating controller (LIC)\n- transmetteur = transmitter\n- consigne / mesure / sortie = setpoint / process variable / output\n- vanne air-ouvre = air-to-open (fail closed) valve\n- cascade = cascade control\n- soupape = PSV (pressure safety valve)\n- boucle ouverte = open loop\n- étendue de mesure = range / span",
       "keyPoints": [
-        "ISA 5.1 : 1re lettre = grandeur mesurée (P, T, L, F), lettres suivantes = fonction (I, C, T, V, S, A).",
-        "PV = mesure, SP = consigne, OP = sortie ; modes Manuel, Auto, Cascade.",
-        "Air-ouvre = ferme à la perte d'air ; air-ferme = ouvre à la perte d'air.",
-        "La PSV protège indépendamment du DCS ; un régulateur oublié en manuel ne réagit plus."
+        "ISA 5.1 : 1re lettre = grandeur (F, L, P, T), suivantes = fonction (I, C, T, V, S, A) ; LIC = régulateur-indicateur de niveau.",
+        "4-20 mA : 10 mA sur 0-60 bar = 22,5 bar (326 psi) ; 7,2 mA sur 0-5 m = 1,0 m = 1 200 bbl à 12 bbl/cm.",
+        "Air-ouvre = ferme à la perte d'air ; un régulateur en manuel ne corrige plus ; 0 mA = défaut de boucle.",
+        "La PSV protège indépendamment du DCS : sortie gaz fermée, la pression monte vers son tarage (25 barg)."
       ],
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "P&ID d'une boucle de régulation de débit"
@@ -21,12 +21,12 @@
       "title": "Gestion des alarmes et arrêts d'urgence",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "minutes": 10,
-      "body": "Une **alarme** doit signaler une situation anormale qui exige une action de l'opérateur dans un délai connu. Sinon, c'est du bruit. Les normes de gestion des alarmes (**ISA 18.2**, **EEMUA 191**) donnent des repères : en régime normal, un opérateur doit pouvoir traiter environ **une alarme toutes les dix minutes** en moyenne ; plus de **dix alarmes en dix minutes** constituent un **déluge d'alarmes** (alarm flood), où la qualité de la réponse chute. Les valeurs retenues par le site figurent dans ses procédures.\n\nLes alarmes sont classées par **priorité** (critique, haute, moyenne, basse) selon la gravité et le temps disponible. Un niveau possède plusieurs seuils : **LAL/LAH** (bas, haut) pour agir avant la dérive, **LALL/LAHH** (très bas, très haut) qui annonce un déclenchement proche. Les alarmes parasites sont les ennemies de l'opérateur : alarme **intermittente** (chattering), alarme **périmée** (toujours active), alarme répétée. On ne les ignore pas : on les signale pour correction. Le **shelving** (mise à l'écart temporaire) ou l'inhibition d'une alarme se fait avec autorisation, traçabilité et limite de durée.\n\nEn cas de cascade, l'alarme **apparue la première** (first-out) est le meilleur indice de la cause racine ; les suivantes en sont souvent les conséquences. L'opérateur lit la séquence horodatée, vérifie les valeurs et les positions de vannes, et ne se contente jamais d'**acquitter** : l'acquittement signifie « j'ai vu », pas « c'est réglé ».\n\nLe **système d'arrêt d'urgence** (ESD/PSD) est un système instrumenté de sécurité **indépendant du DCS**. Il met l'installation en état sûr selon une hiérarchie de niveaux (arrêt d'un équipement, d'une unité, de la production, voire de l'installation) dont le nombre et la définition varient selon le site. Il est déclenché par des **capteurs en vote** (2oo3 par exemple), par la détection gaz ou feu, ou par un bouton-poussoir manuel. Un déclenchement n'est jamais « réarmé » à la hâte : on **identifie la cause**, on vérifie l'état de l'installation avec le terrain, puis on suit la procédure de réarmement.\n\nLes **by-pass** et **inhibitions** d'une fonction de sécurité sont exceptionnels, autorisés par écrit, compensés par des mesures et consignés dans le registre. Jamais de by-pass sur simple demande orale.",
+      "body": "Une **alarme** sert à déclencher une action de l'opérateur. Un tableau d'alarmes propre ressemble à ça : LAH-101 à 70 % (niveau haut, on a du temps), LAHH-101 à 85 % (très haut, proche de l'arrêt), PAH-201 à 9 barg (≈ 130,5 psig, action avant la PSV à 10 barg), PSLL de pression d'huile du compresseur (arrêt). **Acquitter** signifie « j'ai vu » ; la cause reste à traiter, l'alarme se réarme tant que la condition persiste. On n'inhibe pas une alarme parce qu'elle revient.\n\nPlus de dix alarmes en dix minutes : c'est un **déluge d'alarmes** (alarm flood). On cherche la **first-out**, l'alarme apparue la première, qui oriente vers la cause racine. Exemple : à 02:10 LAH-101, à 02:12 LAHH-101 puis PAH-101 (pression de 16 à 19 bar, 232 → 276 psi), à 02:13 trip du compresseur K-201 sur niveau haut de son ballon d'aspiration. La cause est le niveau haut du séparateur (12 000 BLPD, ≈ 1 908 m³/j) avec du liquide entraîné dans la ligne gaz, pas une panne du compresseur.\n\nLe système **ESD** (arrêt d'urgence) est indépendant du DCS. Il a ses capteurs, ses logiques et ses boutons-poussoirs protégés par un capot. Un vote **2oo3** (deux sur trois) évite les faux déclenchements tout en restant sûr si un capteur tombe en panne : trois capteurs de pression PT-401 A/B/C sur un PAHH à 25 barg (363 psig), par exemple. Un ESD ne se réarme pas vite « pour limiter les pertes » : à 9 000 BOPD (≈ 1 431 m³/j), soit 375 bbl/h (≈ 59,6 m³/h) perdus, la tentation est forte, mais on réarme après analyse de la cause et vérification de l'installation avec le terrain.\n\nUn **by-pass** ou une **inhibition** d'une fonction de sécurité (par exemple le LSHH du test separator pour finir un well test) est exceptionnel : autorisation écrite, mesures compensatoires, inscription au registre. Jamais à la demande orale d'un technicien, même expérimenté ou « pour cinq minutes ».\n\nSur le séparateur, le chemin de la sécurité de niveau est : LAH, LAHH, puis ESD de l'unité. Les **PSV** et la **torche** sont en dernier recours. Une salle qui connaît ses seuils en bbl et en m³ réagit plus vite : 85 % d'un vase de 60 m³ représentent 51 m³, soit 321 bbl.\n\n**Sur site**\n- À chaque alarme : lire, comprendre, agir, tracer ; en flood, remonter à la first-out.\n- ESD : on ne réarme jamais sans cause identifiée, sans permissifs et sans visite du terrain.\n- By-pass : demande écrite, durée limitée, mesure compensatoire (opérateur dédié, suivi renforcé), ligne au registre.\n\n**Vocabulaire FR / EN**\n- alarme niveau haut / très haut = LAH / LAHH\n- déluge d'alarmes = alarm flood\n- première alarme = first-out alarm\n- arrêt d'urgence = ESD (emergency shutdown)\n- vote deux sur trois = 2oo3 voting\n- inhibition / by-pass = inhibit / bypass\n- réarmement = reset\n- acquittement = acknowledge",
       "keyPoints": [
-        "Une alarme = une action de l'opérateur ; plus de 10 alarmes en 10 min = déluge.",
-        "Cascade : l'alarme apparue la première oriente vers la cause racine.",
-        "Acquitter ne résout rien ; l'ESD est indépendant du DCS et se réarme après analyse.",
-        "By-pass de sécurité : autorisation écrite, mesures compensatoires, registre."
+        "Une alarme = une action ; plus de 10 alarmes en 10 min = alarm flood ; on remonte à la first-out.",
+        "Cascade : LAH (70 %), LAHH (85 %), ESD ; le niveau haut apparu en premier explique la pression haute et le trip du compresseur.",
+        "L'ESD est indépendant du DCS ; 2oo3 évite les faux trips ; on réarme après analyse (9 000 BOPD perdus = 1 431 m³/j ne justifient pas un reset hâtif).",
+        "By-pass de sécurité : autorisation écrite, mesures compensatoires, registre ; jamais sur demande orale."
       ],
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Schéma d'un séparateur triphasique avec ses instruments"
@@ -36,12 +36,12 @@
       "title": "Démarrage et arrêt d'une installation de procédé",
       "theme": "Démarrage et arrêt de procédé",
       "minutes": 9,
-      "body": "Un démarrage réussi se prépare : **état des lieux** (permis de travail clôturés, consignations levées, équipements remontés), **lignes alignées**, vannes manuelles dans la bonne position, **instruments en service**, protections vérifiées, essais d'**étanchéité** et **inertage** (purge à l'azote pour chasser l'air avant l'introduction d'hydrocarbures). L'opérateur de salle de contrôle lit la check-list et la confronte aux comptes rendus du terrain.\n\nLa montée en charge est **progressive**. On pressurise par paliers, on contrôle l'absence de fuite, on remplit un séparateur jusqu'au niveau normal avant de passer ses régulateurs de niveau en automatique, et on augmente le débit par paliers en surveillant pression, température et niveaux. Les régulateurs sont d'abord en manuel, puis passés en automatique **à partir d'un état stable**, sans à-coup.\n\nPour une **pompe**, les conditions de démarrage (permissifs) sont l'aspiration ouverte et la pompe amorcée, l'huile de lubrification en pression, un niveau d'aspiration suffisant, le refoulement presque fermé puis ouvert. Pour un **compresseur**, il faut un niveau bas au ballon d'aspiration, une pression d'huile suffisante, la vanne de recyclage antipompage ouverte et une vitesse minimale avant la charge. Le système de contrôle interdit le démarrage tant qu'un permissif manque ; on **n'outrepasse jamais** un permissif sans analyse et autorisation.\n\nPour un **arrêt**, on réduit le débit **par paliers**, on isole les entrées, on dépressurise vers la torche à vitesse contrôlée (pour éviter un refroidissement brutal et un givrage), on draine, puis on purge à l'azote avant intervention. On ne referme jamais toutes les sorties d'un équipement sous pression en comptant sur la soupape : elle est un dernier recours, pas un moyen de conduite.\n\nAprès un **déclenchement**, le redémarrage suit la même rigueur qu'un démarrage à froid, avec une analyse préalable de la cause. Les **permis de travail** en cours sont connus de la salle de contrôle : on ne démarre jamais un équipement consigné ou en travaux sans accord du superviseur et information du chef d'équipe terrain.",
+      "body": "Un **démarrage** se prépare : état des lieux, alignement des lignes, vérification des permis (aucun permis ouvert sur la machine), essais d'étanchéité, **inertage** à l'azote avant introduction d'hydrocarbures. Un ballon de 40 m³ (≈ 252 bbl) qui contenait de l'air est purgé à l'azote pour sortir du domaine d'explosivité. La **montée en pression** se fait par paliers : par exemple 1 bar toutes les 5 min, soit 0,2 bar/min. Une pression qui passe de 2 à 8 bar (29 → 116 psi) en 1 min monte 30 fois trop vite : on réduit l'alimentation et on reprend selon la procédure.\n\n**Remplissage** d'un séparateur de 60 m³ (≈ 377 bbl) : niveau normal à 50 %, soit 30 m³ (≈ 189 bbl). On n'ouvre la sortie liquide qu'une fois ce niveau atteint, régulateur d'abord en **manuel**. Le PIC (par exemple SP 8 bar ≈ 116 psi) passe en **automatique** quand le procédé est stable et que la sortie ne fait pas d'à-coup.\n\n**Permissifs.** Une pompe centrifuge (ex. booster 150 m³/h ≈ 943 bbl/h) démarre aspiration ouverte, corps amorcé, huile de graissage en pression, refoulement presque fermé. Un compresseur (ex. 4 MMscfd ≈ 113 268 Sm³/j) démarre ballon d'aspiration vide de liquide, anti-surge ouvert, huile en pression. On ne contourne pas un permissif sans analyse et autorisation. Un permis de travail encore ouvert sur la machine : pas de start tant que le permis n'est pas clos et la consignation levée, vérifiées au terrain.\n\n**Arrêt** d'un équipement avant intervention : réduire la charge, isoler, dépressuriser, drainer, purger à l'azote, puis consigner avec vérification d'absence d'énergie et de fluide. Dépressurisation vers la **torche** à vitesse contrôlée : de 25 bar (363 psi) à 1 bar/min, il faut environ 25 min. Un blowdown trop rapide refroidit fortement le gaz et les parois (givre, acier fragilisé) et surcharge le réseau de torche.\n\n**Production** à la remise en service d'un champ : on monte les puits par paliers (25, 50, 75, 100 % d'un objectif de 12 000 BOPD, soit 477, 954, 1 431 puis 1 908 m³/j), en observant séparateur, compresseur et torche à chaque palier.\n\n**Sur site**\n- Check-list de start-up signée, avec le terrain en boucle fermée à la radio.\n- Chaque palier de pression : on attend, on contrôle l'étanchéité, on valide, on continue.\n- Pas de start sans permissifs : si un permissif refuse, on cherche pourquoi, on ne le shunte pas.\n\n**Vocabulaire FR / EN**\n- démarrage / arrêt = start-up / shutdown\n- inertage à l'azote = nitrogen purging\n- permissif = permissive\n- montée en pression = pressurisation\n- dépressurisation (blowdown) = blowdown\n- remplissage = initial fill / line-up\n- mise hors service = isolation / hand-over to maintenance\n- étanchéité (essai) = leak test",
       "keyPoints": [
-        "Démarrage : état des lieux, alignement, inertage à l'azote, essais d'étanchéité.",
-        "Montée par paliers ; régulateurs passés en automatique depuis un état stable.",
-        "Permissifs pompe et compresseur : on ne les contourne pas sans analyse et autorisation.",
-        "Arrêt : réduire par paliers, isoler, dépressuriser vers la torche, drainer, purger à l'azote."
+        "Démarrage : état des lieux, alignement, inertage à l'azote (ex. ballon de 40 m³ = 252 bbl), essais d'étanchéité.",
+        "Montée par paliers (1 bar/5 min) ; 2 → 8 bar en 1 min est 30 fois trop rapide ; régulateurs en automatique depuis un état stable.",
+        "Séparateur de 60 m³ : sortie liquide ouverte seulement à 50 % (30 m³ = 189 bbl), LIC d'abord en manuel.",
+        "Arrêt : charge, isolation, dépressurisation (25 bar à 1 bar/min = 25 min), drainage, azote, consignation."
       ],
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Schéma d'un ballon sous pression avec sa soupape de sécurité"
@@ -51,12 +51,12 @@
       "title": "Supervision DCS/SCADA et conduite en situation dégradée",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "minutes": 9,
-      "body": "Le **DCS** (ou SCADA pour les installations dispersées, comme un champ de puits) est la fenêtre de l'opérateur : synoptiques, courbes de tendance, alarmes, faces avant de régulateurs. Une bonne supervision repose sur les **tendances** : une dérive lente de niveau ou de pression se voit sur une courbe avant de franchir un seuil d'alarme. On compare toujours **mesure, consigne et sortie** ; un écart persistant entre PV et SP avec une sortie à 100 % signale une vanne qui ne peut plus suivre.\n\nLa **qualité du signal** s'évalue. Un signal 4-20 mA est valide entre environ 3,8 et 20,5 mA (recommandation NAMUR NE43) ; en dessous de 3,6 mA ou au-dessus d'environ 21 mA, le DCS déclare un défaut (fil coupé, capteur hors service) et affiche une « mauvaise qualité ». Une valeur **figée** (ligne parfaitement plate, sans le bruit habituel) est suspecte. Quand deux transmetteurs redondants divergent, on se réfère à une troisième source : indicateur local, verre de niveau ou transmetteur de comparaison.\n\nEn **situation dégradée**, l'opérateur applique la procédure : perte d'une mesure (passer en manuel sur la dernière valeur sûre et demander un contrôle terrain), perte d'une vanne (isoler, passer sur by-pass avec consigne), perte du **DCS** ou des communications (aller sur le poste de secours, informer le chef d'équipe, amener l'installation en état sûr, voire déclencher l'arrêt si la visibilité est perdue). La règle d'or est de **stabiliser d'abord, diagnostiquer ensuite**.\n\nLa **cybersécurité** est aussi un enjeu : on n'insère jamais de clé USB personnelle dans un poste du DCS, on ne partage pas de mot de passe, on signale tout comportement inhabituel.\n\nLes **forçages** d'entrées ou de sorties sont des dérogations de sécurité : ils sont limités, autorisés, enregistrés et retirés dès la fin du besoin. Un forçage oublié est une cause d'accident bien connue.",
+      "body": "La salle de contrôle voit le procédé à travers des capteurs et des écrans : il faut savoir quand ils mentent. La face avant d'un régulateur montre **PV** (mesure), **SP** (consigne) et **OP** (sortie). Exemple : FIC-103, PV 85 m³/h (≈ 535 bbl/h), SP 90 m³/h (≈ 566 bbl/h), OP 62 % ; l'écart de 5 m³/h pousse le régulateur à ouvrir la vanne.\n\n**Valeur suspecte.** Deux transmetteurs d'un même FWKO affichent 60 % (LT-101) et 85 % (LT-102), le sight glass local lit 58 % : deux sources concordent, la troisième s'écarte, on soupçonne LT-102. L'écart de 25 % sur un vase de 40 m³ représente 10 m³ (≈ 63 bbl) : on ne fait pas la moyenne, on demande un contrôle terrain. Un niveau de bac figé à 62,3 % pendant 25 min alors que l'export tourne à 120 m³/h (50 m³ sortis, soit 314 bbl) est un signal gelé, pas un procédé stable.\n\n**Signaux 4-20 mA.** Un courant de 2,0 mA avec la qualité « mauvaise » est un défaut, pas une mesure à 0 % (la plage valide va de 3,8 à 20,5 mA environ ; défaut sous 3,6 mA). Si la mesure d'un régulateur en auto devient mauvaise : passer en manuel à la dernière valeur sûre (ex. 55 %) et appeler le terrain, sans mettre la sortie à 0 % ni à 100 %. Sortie à 100 % depuis dix minutes avec une mesure à 70 % de la consigne (par exemple 84 sur 120 m³/h) : la vanne est à sa limite, cause en amont ou organe sous-dimensionné.\n\nUn **forçage** (force) remplace un signal réel par une valeur imposée : dérogation limitée, autorisée, enregistrée et retirée dès la fin du besoin ; un forçage oublié a déjà fait des accidents. **Panne de DCS** (tous les écrans éteints, champ à 14 000 BOPD ≈ 2 226 m³/j) : poste de secours, appel du terrain, état sûr, arrêt si nécessaire ; on ne conduit pas de mémoire.\n\n**Cybersécurité** : pas de clé USB personnelle sur un poste DCS, pas de désactivation d'antivirus ; les échanges de données suivent les supports et procédures contrôlés du site.\n\n**Sur site**\n- Tendances ouvertes sur les paramètres clés : un trait plat ou un saut brutal est un indice, pas un détail.\n- Avant d'agir sur une mesure douteuse : recoupe avec une autre source (autre transmetteur, sight glass, débit).\n- Chaque forçage ou by-pass : durée, autorisation, nom, heure de retrait.\n\n**Vocabulaire FR / EN**\n- mesure / consigne / sortie = PV / SP / OP\n- qualité de signal = signal quality (good / bad)\n- valeur figée = frozen / stuck value\n- forçage = force / override\n- poste de secours = backup console\n- verre de niveau = sight glass\n- déviation = deviation\n- tendance = trend",
       "keyPoints": [
-        "Suivre les tendances ; comparer PV, SP et OP.",
-        "4-20 mA valide de ~3,8 à 20,5 mA ; hors plage = défaut, pas une mesure.",
-        "Valeur figée ou divergence de capteurs : croiser avec une autre source.",
-        "Situation dégradée : stabiliser d'abord, diagnostiquer ensuite ; forçages autorisés et retirés."
+        "PV = mesure, SP = consigne, OP = sortie ; FIC-103 : 85 sur 90 m³/h, OP 62 %.",
+        "Deux sources concordent contre une : on soupçonne la troisième ; valeur figée = capteur ou signal gelé, contrôle terrain.",
+        "2 mA = défaut de boucle (pas 0 %) ; mesure perdue : manuel à la dernière valeur sûre, appel du terrain.",
+        "Forçage = dérogation autorisée, enregistrée, retirée ; panne de DCS : poste de secours, terrain, état sûr."
       ],
       "img": "svg/loop-4-20ma.svg",
       "imgAlt": "Schéma d'une boucle 4-20 mA"
@@ -66,12 +66,12 @@
       "title": "Relève de poste et communication",
       "theme": "Relève de poste et communication",
       "minutes": 8,
-      "body": "La **relève de poste** est un moment à risque : une grande partie des informations utiles se perd si elle est bâclée. Une bonne relève se fait **face à face**, au poste, devant les écrans, avec le **cahier de quart** (log book) lu et signé par les deux parties. Elle couvre l'**état de l'installation** (unités en marche, à l'arrêt, en démarrage), les **anomalies et alarmes** en cours, les équipements **hors service ou en dérogation**, les **by-pass, inhibitions et forçages** actifs, les **permis de travail** et consignations en cours, les opérations prévues, les consignes du superviseur, les rondes effectuées et les informations **HSE** (incidents, exercices).\n\nL'opérateur sortant ne part pas tant que l'entrant n'a pas posé ses questions et ne se déclare pas prêt à prendre le poste. En cas de désaccord sur l'état de l'installation, on appelle le superviseur.\n\nLa communication radio ou téléphonique entre salle de contrôle et terrain suit une règle simple : **message court, clair, complet, avec répétition** (boucle fermée). L'émetteur nomme l'équipement par son repère (« pompe P-101A »), l'action et la condition ; le récepteur répète ; l'émetteur confirme. On évite les termes ambigus (« ouvrez un peu »). Un ordre de manœuvre est donné **au bon interlocuteur**, par une seule personne à la fois.\n\nLes **événements** sont consignés avec **heure, nature, action, personne informée** : alarmes critiques, déclenchements, rondes, appels. Les **rapports d'événement** (presque-accidents, déclenchements) alimentent le retour d'expérience.\n\nLa salle de contrôle est aussi le **centre de coordination en urgence** : elle reçoit l'alerte, déclenche les alarmes, informe l'équipe d'intervention et l'astreinte, et tient le **registre des présents**. Les numéros d'urgence et l'arbre d'appel sont affichés. En cas de doute sur un ordre reçu, on demande confirmation avant d'agir : mieux vaut une minute de précision qu'une erreur de manœuvre. Chaque ordre, chaque information reçue et chaque décision importante se note au cahier, afin que l'équipe suivante retrouve la trace complète de ce qui s'est passé pendant le quart.",
+      "body": "La **relève de poste** (shift handover) est une barrière de sécurité. Elle se fait **face à face**, au poste, devant les écrans, avec le **cahier de quart** (log book) lu et signé par les deux. Pas de mot laissé sur le bureau, pas de relève par téléphone, pas de « RAS » à la porte de la salle.\n\nCe qu'il faut transmettre, sans exception : les **permis de travail** actifs, les **by-pass, forçages et inhibitions** en cours (ex. LSHH du test separator inhibé pour un well test de 12 h), les équipements hors service ou en standby, les anomalies non résolues avec ce qui a été tenté, et les chiffres du quart : production en **BOPD et en m³/j** (par exemple 9 500 BOPD ≈ 1 511 m³/j), eau, gaz, niveaux de bacs, torche, écarts avec la veille. Une alarme de niveau très haut active depuis une heure sans cause identifiée (88 % de niveau, 6 500 BOPD ≈ 1 034 m³/j en entrée) se signale à la relève, jamais acquittée en silence ni inhibée jusqu'au quart suivant.\n\nSi le cahier et l'écran divergent (pompe P-101B « en marche » au cahier, arrêtée à l'écran, 120 m³/h ≈ 755 bbl/h d'export en jeu), on **clarifie avec le sortant et le terrain avant la prise de poste**. On ne corrige pas le cahier en fin de journée, on ne démarre pas la pompe sans en parler.\n\n**Communication radio** : message court, repère exact, action, répétition par le récepteur, confirmation. Exemple : « XV-203, ouvrir à 50 %, répondez » plutôt que « ouvre un peu la vanne ». « Un peu » n'a pas de sens commun : un tour de choke manifold de plus peut faire passer un puits de 1 500 à 2 500 BOPD (239 → 398 m³/j). Un ordre à toutes les équipes à la fois ou un ordre sans répétition favorise l'erreur.\n\n**Urgence** : la salle de contrôle coordonne. Elle déclenche les alarmes, informe l'équipe d'intervention et l'astreinte, tient le registre des présents et ne quitte la salle que selon le plan d'urgence. Elle n'intervient pas seule au terrain et n'attend pas l'ordre d'une autorité extérieure pour agir.\n\n**Sur site**\n- Dernier quart d'heure : mise à jour du cahier, des chiffres du daily report, des permis et inhibitions.\n- Chaque ordre de manœuvre est noté avec l'heure, le repère, le nom du receveur, la confirmation de l'exécution.\n- Une anomalie transmise, c'est une anomalie à moitié traitée ; une anomalie cachée est un accident différé.\n\n**Vocabulaire FR / EN**\n- relève de poste = shift handover\n- cahier de quart = log book\n- rapport de production = daily production report\n- boucle fermée (radio) = closed-loop communication\n- registre des présents = muster list / POB record\n- astreinte = on-call\n- permis de travail actif = active PTW\n- anomalie non résolue = open issue",
       "keyPoints": [
-        "Relève face à face, cahier de quart lu et signé par les deux.",
-        "Transmettre by-pass, forçages, permis en cours, équipements hors service, anomalies.",
-        "Radio : repère d'équipement, action, répétition par le récepteur, confirmation.",
-        "En urgence : alarmes, équipe d'intervention, registre des présents."
+        "Relève face à face, au poste, cahier lu et signé par les deux ; jamais par téléphone ni par un mot.",
+        "À transmettre : permis, by-pass, forçages, inhibitions, équipements hors service, anomalies non résolues, chiffres en BOPD et m³/j.",
+        "Radio : repère, action, répétition, confirmation ; « ouvre un peu » est ambigu (1 500 → 2 500 BOPD = 239 → 398 m³/j pour un tour de plus).",
+        "Urgence : alarmes, équipe d'intervention, registre des présents ; écart cahier/écran à clarifier avant de prendre le poste."
       ],
       "img": "photo/control-room.jpg",
       "imgAlt": "Photo d'une salle de contrôle"
@@ -82,17 +82,17 @@
       "id": "op-salle-controle-001",
       "theme": "Lecture de P&ID et boucles de régulation",
       "level": 1,
-      "q": "Sur le P&ID d'un séparateur, un instrument porte le repère LIC-101. De quoi s'agit-il ?",
+      "q": "Sur le P&ID du séparateur HP (7 000 BOPD ≈ 1 113 m³/j), un instrument porte le repère LIC-101. De quoi s'agit-il ?",
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "P&ID simplifié d'une boucle de régulation avec transmetteur, régulateur et vanne de régulation",
       "choices": [
-        "Un indicateur local de pression",
-        "Une vanne de régulation de température",
-        "Un régulateur-indicateur de niveau",
-        "Un transmetteur de débit à diaphragme"
+        "Un indicateur local de pression monté sur le piquage du séparateur",
+        "Une vanne de régulation de température installée sur la ligne d'huile",
+        "Un transmetteur de débit à diaphragme monté sur la sortie du séparateur",
+        "Un régulateur-indicateur de niveau"
       ],
-      "answer": 2,
-      "explain": "L est la grandeur mesurée (niveau), I indique et C régule : LIC est un régulateur-indicateur de niveau. Pour une vanne on aurait LV, pour un transmetteur LT.",
+      "answer": 3,
+      "explain": "L est la grandeur mesurée (niveau), I indique, C régule : LIC est un régulateur-indicateur de niveau, ici celui du séparateur qui traite 7 000 BOPD (1 113 m³/j). Pour une vanne on aurait LV, pour un transmetteur LT.",
       "seconds": 40,
       "status": "draft"
     },
@@ -100,15 +100,15 @@
       "id": "op-salle-controle-002",
       "theme": "Lecture de P&ID et boucles de régulation",
       "level": 1,
-      "q": "Dans le repère PT-205, que signifient les lettres P et T selon la norme ISA 5.1 ?",
+      "q": "Sur le header de production, PT-205 lit 100 bar (≈ 1 450 psi). Dans le repère PT-205, que signifient les lettres P et T selon ISA 5.1 ?",
       "choices": [
+        "Puissance (P) et température (T) mesurées sur le même header",
+        "Pompe (P) et transfert de produit (T) de la ligne de production",
         "Pression (P) et transmetteur (T)",
-        "Puissance (P) et température (T)",
-        "Pompe (P) et transfert de produit (T)",
-        "Pression (P) et température (T)"
+        "Pression (P) et température (T) de la ligne d'export vers le bac"
       ],
-      "answer": 0,
-      "explain": "La première lettre donne la grandeur mesurée (pression), la suivante la fonction (transmetteur). Une température serait TT ou TI.",
+      "answer": 2,
+      "explain": "La première lettre donne la grandeur mesurée (pression), la suivante la fonction (transmetteur) : PT-205 envoie 100 bar (1 450 psi) au DCS. Une température serait TT ou TI.",
       "seconds": 40,
       "status": "draft"
     },
@@ -116,17 +116,17 @@
       "id": "op-salle-controle-003",
       "theme": "Lecture de P&ID et boucles de régulation",
       "level": 1,
-      "q": "La vanne de régulation FV-310 du P&ID est de type air-ouvre (fail closed). Que se passe-t-il à la perte de l'air d'instrument ?",
+      "q": "Export line FV-310 is an air-to-open (fail closed) control valve, with 8 000 BOPD (≈ 1 272 m³/d) flowing. What happens on loss of instrument air?",
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "P&ID d'une boucle de débit avec la vanne FV-310 repérée air-ouvre, position de sécurité fermée",
       "choices": [
-        "Elle reste dans sa dernière position",
-        "Elle s'ouvre complètement",
-        "Elle se place à 50 % d'ouverture",
-        "Elle se ferme"
+        "It stays in its last position until air pressure comes back to the actuator",
+        "It opens fully, because the spring pushes the plug off its seat",
+        "It moves to 50 % opening and holds the flow at half rate",
+        "It closes, because the spring drives it to its fail-safe position"
       ],
       "answer": 3,
-      "explain": "Une vanne air-ouvre n'est maintenue ouverte que par l'air : sans air, le ressort la ferme. C'est sa position de sécurité (fail closed).",
+      "explain": "An air-to-open valve is held open only by air: no air, the spring closes it (fail closed). The 8 000 BOPD (1 272 m³/d) export stops and the upstream level rises, so check the separator level right away.",
       "seconds": 45,
       "status": "draft"
     },
@@ -134,17 +134,17 @@
       "id": "op-salle-controle-004",
       "theme": "Lecture de P&ID et boucles de régulation",
       "level": 2,
-      "q": "Un régulateur de niveau maître LIC-101 envoie sa sortie en consigne au régulateur de débit esclave FIC-102 de la vanne de sortie. Quel est l'intérêt de cette cascade ?",
+      "q": "Régulation en cascade : le LIC-101 (maître, niveau du FWKO) envoie sa sortie en consigne au FIC-102 (esclave, débit de sortie liquide, 5 000 BLPD ≈ 795 m³/j). Quel est l'intérêt de cette cascade ?",
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "P&ID d'une régulation en cascade : LIC maître, FIC esclave, vanne de sortie",
       "choices": [
-        "Se passer du capteur de niveau en pilotant le séparateur au débit seul",
+        "Se passer du capteur de niveau en pilotant le séparateur au débit seul et sans mesure de niveau",
         "Corriger vite les perturbations de débit avant qu'elles n'atteignent le niveau",
         "Rendre le niveau indépendant de sa propre consigne de régulation",
         "Remplacer la fonction de sécurité de niveau très haut du séparateur"
       ],
       "answer": 1,
-      "explain": "L'esclave de débit réagit vite aux variations de pression de ligne, le maître de niveau ajuste la consigne de débit plus lentement. Le niveau reste stable.",
+      "explain": "L'esclave de débit (5 000 BLPD = 208,3 bbl/h) réagit vite aux variations de pression de ligne, le maître de niveau ajuste la consigne de débit plus lentement. Le niveau reste stable ; la cascade ne remplace aucune sécurité.",
       "seconds": 55,
       "status": "draft"
     },
@@ -152,15 +152,15 @@
       "id": "op-salle-controle-005",
       "theme": "Lecture de P&ID et boucles de régulation",
       "level": 2,
-      "q": "Un régulateur de pression est resté en mode manuel avec une sortie fixée à 30 %. La pression augmente. Pourquoi le régulateur ne corrige-t-il pas ?",
+      "q": "Le PIC du séparateur HP est resté en mode manuel avec une sortie fixée à 30 %. La pression passe de 18 à 24 bar (261 → 348 psi). Pourquoi le régulateur ne corrige-t-il pas ?",
       "choices": [
-        "En manuel, la sortie est figée et ne suit plus l'écart",
         "Le gain intégral du régulateur est réglé trop faible depuis la mise en service",
-        "La soupape de sécurité verrouille la sortie du régulateur au-dessus d'un seuil",
+        "En manuel, la sortie est figée et ne suit plus l'écart mesure/consigne",
+        "La PSV verrouille la sortie du régulateur au-dessus d'un seuil de pression",
         "Le transmetteur envoie depuis le départ un signal 4-20 mA inversé"
       ],
-      "answer": 0,
-      "explain": "En manuel, l'opérateur fixe la sortie : le régulateur ne calcule plus. Il faut le repasser en automatique après avoir vérifié que la mesure est cohérente.",
+      "answer": 1,
+      "explain": "En manuel, l'opérateur fixe la sortie (30 %) : le régulateur ne calcule plus, et +6 bar (87 psi) n'y change rien. On repasse en automatique après avoir vérifié que la mesure est cohérente.",
       "seconds": 50,
       "status": "draft"
     },
@@ -168,53 +168,53 @@
       "id": "op-salle-controle-006",
       "theme": "Lecture de P&ID et boucles de régulation",
       "level": 2,
-      "q": "Un transmetteur de niveau étalonné de 0 à 5 m délivre 7,2 mA. Quel niveau le DCS affiche-t-il ?",
+      "q": "Bac T-101 avec radar réglé 0-5 m en 4-20 mA ; facteur de bac 12 bbl/cm. Le DCS lit 7,2 mA. Quel volume contient le bac ?",
       "img": "svg/loop-4-20ma.svg",
       "imgAlt": "Boucle 4-20 mA : transmetteur étalonné 0 à 5 m, courant lu 7,2 mA, plage 4 à 20 mA",
       "choices": [
-        "1,8 m",
-        "1,44 m",
-        "3,2 m",
-        "1,0 m"
+        "2 160 bbl (≈ 343 m³) : 7,2 ÷ 20 × 5 m = 1,8 m, sans retrancher le zéro vivant",
+        "1 728 bbl (≈ 275 m³) : 7,2 ÷ 5 = 1,44 m, courant divisé par l'étendue en mètres",
+        "3 840 bbl (≈ 611 m³) : 7,2 − 4 = 3,2 m, sans mise à l'échelle",
+        "1 200 bbl (≈ 191 m³) : (7,2 − 4) ÷ 16 × 5 m = 1,0 m"
       ],
       "answer": 3,
-      "explain": "Niveau = (7,2 − 4) ÷ 16 × 5 = 1,0 m. Le zéro est à 4 mA, pas à 0 mA : diviser 7,2 par 20 donne 1,8 m, une erreur fréquente.",
-      "seconds": 60,
+      "explain": "Niveau = (7,2 − 4) ÷ 16 × 5 m = 1,0 m = 100 cm. Volume = 100 cm × 12 bbl/cm = 1 200 bbl, soit 1 200 × 0,159 = 191 m³. Piège classique : diviser 7,2 par 20 donne 1,8 m (2 160 bbl), faux car le zéro est à 4 mA.",
+      "seconds": 75,
       "status": "draft"
     },
     {
       "id": "op-salle-controle-007",
       "theme": "Lecture de P&ID et boucles de régulation",
       "level": 2,
-      "q": "Un transmetteur de pression étalonné de 0 à 60 bar délivre 10 mA. Quelle pression mesure-t-il ?",
+      "q": "Le transmetteur de FLP (pression flowline) est étalonné 0-60 bar (0-870 psi) en 4-20 mA et délivre 10 mA. Quelle pression mesure-t-il ?",
       "img": "svg/loop-4-20ma.svg",
       "imgAlt": "Boucle 4-20 mA : transmetteur étalonné 0 à 60 bar, courant lu 10 mA",
       "choices": [
-        "30,0 bar (10 ÷ 20 × 60)",
-        "22,5 bar (6 ÷ 16 × 60)",
-        "16,7 bar (10 ÷ 60 × 100)",
-        "10,0 bar (valeur du courant)"
+        "30,0 bar : 10 ÷ 20 × 60, avec une échelle qui part de 0 mA",
+        "16,7 bar : 10 ÷ 60 × 100, sans lien avec l'étendue de mesure",
+        "22,5 bar (≈ 326 psi) : (10 − 4) ÷ 16 × 60",
+        "10,0 bar : valeur du courant lue directement en bar"
       ],
-      "answer": 1,
-      "explain": "Pression = (10 − 4) ÷ 16 × 60 = 22,5 bar. 30 bar correspondrait à 12 mA ; 10 bar n'a aucun lien avec le courant.",
-      "seconds": 60,
+      "answer": 2,
+      "explain": "Pression = (10 − 4) ÷ 16 × 60 = 22,5 bar, soit 22,5 × 14,5038 = 326 psi. 30 bar (435 psi) correspondrait à 12 mA ; 10 bar n'a aucun lien avec le courant.",
+      "seconds": 75,
       "status": "draft"
     },
     {
       "id": "op-salle-controle-008",
       "theme": "Lecture de P&ID et boucles de régulation",
       "level": 3,
-      "q": "Le régulateur de niveau d'un séparateur fait osciller la vanne de 20 à 80 % avec une période régulière de 2 minutes, et l'amplitude augmente lentement. Quelle cause est la plus probable ?",
+      "q": "Le LIC d'un séparateur (6 000 BLPD ≈ 954 m³/j) fait osciller la vanne de 20 à 80 % avec une période régulière de 2 minutes, et l'amplitude augmente lentement. Quelle cause est la plus probable ?",
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique avec régulateur de niveau d'huile et vanne de sortie",
       "choices": [
-        "Une fuite de la soupape de sécurité du séparateur",
-        "Une densité du gaz trop faible en entrée",
         "Un gain proportionnel trop élevé du régulateur",
-        "Une perte du signal 4-20 mA du transmetteur"
+        "Une fuite de la soupape de sécurité du séparateur vers la torche",
+        "Une densité du gaz trop faible en entrée du séparateur de production",
+        "Une perte du signal 4-20 mA du transmetteur de niveau du séparateur"
       ],
-      "answer": 2,
-      "explain": "Des oscillations régulières et croissantes traduisent une boucle trop agressive. On réduit le gain ou on allonge le temps d'intégrale. Une perte de signal produirait un défaut, pas une oscillation.",
+      "answer": 0,
+      "explain": "Des oscillations régulières et croissantes (période 2 min, vanne 20-80 %) traduisent une boucle trop agressive : on réduit le gain ou on allonge le temps d'intégrale, en manuel d'abord si besoin. Une perte de signal produirait un défaut, pas une oscillation.",
       "seconds": 65,
       "status": "draft"
     },
@@ -222,17 +222,17 @@
       "id": "op-salle-controle-009",
       "theme": "Lecture de P&ID et boucles de régulation",
       "level": 3,
-      "q": "La vanne PV-120 de sortie de gaz d'un séparateur est de type air-ouvre (fail closed). L'air d'instrument est perdu alors que le débit d'entrée continue. Que se passe-t-il ?",
+      "q": "Gas outlet valve PV-120 of the HP separator (18 bar ≈ 261 psi, gas 5 MMscfd ≈ 141 585 Sm³/d) is air-to-open (fail closed). Instrument air is lost while the inlet flow continues. What happens?",
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Ballon sous pression avec vanne de sortie de gaz et soupape de sécurité PSV",
       "choices": [
-        "La vanne s'ouvre en grand et la pression chute jusqu'à la torche",
-        "La vanne garde sa position et la pression se stabilise à la consigne",
-        "La vanne se ferme mais la pression baisse par refroidissement",
-        "La vanne se ferme et la pression monte jusqu'au tarage de la PSV, qui peut s'ouvrir"
+        "The valve closes and pressure climbs to the PSV set point (25 barg, ≈ 363 psig), which may lift",
+        "The valve opens fully and pressure drops all the way down to the flare header",
+        "The valve keeps its position and pressure stabilises at the setpoint",
+        "The valve closes but pressure falls by cooling of the gas in the vessel"
       ],
-      "answer": 3,
-      "explain": "La perte d'air ferme la vanne : le gaz s'accumule et la pression monte jusqu'au tarage de la PSV, dernière barrière indépendante du DCS. Il faut agir vite sur l'alimentation.",
+      "answer": 0,
+      "explain": "Loss of air closes the valve: gas accumulates (5 MMscfd = 141 585 Sm³/d keeps coming) and pressure rises from 18 bar toward the PSV set point of 25 barg (363 psig), the last mechanical barrier independent from the DCS. Act fast on the inlet.",
       "seconds": 70,
       "status": "draft"
     },
@@ -240,15 +240,15 @@
       "id": "op-salle-controle-010",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "level": 1,
-      "q": "Quel est le principe d'une bonne alarme de procédé ?",
+      "q": "Tableau d'alarmes du séparateur : LAH-101 à 70 %, LAHH-101 à 85 %, PAH-201 à 9 barg (≈ 130,5 psig). Quel est le principe d'une bonne alarme de procédé ?",
       "choices": [
-        "Elle signale chaque changement d'état de chaque équipement",
+        "Elle signale chaque changement d'état de chaque équipement de l'unité",
         "Elle signale une situation anormale qui exige une action de l'opérateur",
-        "Elle remplace les rondes de l'opérateur terrain et les relevés",
+        "Elle remplace les rondes de l'opérateur terrain et les relevés manuels du quart",
         "Elle informe le chef de poste de chaque démarrage prévu au planning"
       ],
       "answer": 1,
-      "explain": "Une alarme sert à déclencher une action. Une alarme sans action associée est du bruit et noie les vraies urgences.",
+      "explain": "Une alarme sert à déclencher une action : LAH à 70 % laisse du temps, LAHH à 85 % est proche de l'arrêt, PAH à 9 barg (130,5 psig) demande une action avant la PSV. Une alarme sans action associée est du bruit qui noie les vraies urgences.",
       "seconds": 40,
       "status": "draft"
     },
@@ -256,15 +256,15 @@
       "id": "op-salle-controle-011",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "level": 1,
-      "q": "Que signifie acquitter une alarme ?",
+      "q": "Le LAHH-101 est acquitté mais le niveau reste à 92 % (production 6 500 BOPD ≈ 1 034 m³/j). Que signifie acquitter une alarme ?",
       "choices": [
-        "Corriger définitivement la cause de l'alarme",
-        "Supprimer l'alarme du système pour le reste du quart",
-        "Signaler qu'on l'a vue, sans corriger sa cause",
-        "Désactiver la protection associée à l'alarme"
+        "Corriger définitivement la cause de l'alarme sur le procédé",
+        "Supprimer l'alarme du système pour le reste du quart de travail",
+        "Désactiver la protection associée à l'alarme de niveau très haut",
+        "Signaler qu'on l'a vue, sans corriger sa cause"
       ],
-      "answer": 2,
-      "explain": "Acquitter signifie « j'ai vu ». La cause reste à traiter : l'alarme se réarme tant que la condition persiste.",
+      "answer": 3,
+      "explain": "Acquitter signifie « j'ai vu » : à 92 % de niveau et 6 500 BOPD (1 034 m³/j) qui continuent d'arriver, la cause reste à traiter et l'alarme se réarme tant que la condition persiste.",
       "seconds": 40,
       "status": "draft"
     },
@@ -272,15 +272,15 @@
       "id": "op-salle-controle-012",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "level": 1,
-      "q": "Quel dispositif permet à un opérateur de lancer volontairement un arrêt d'urgence depuis la salle de contrôle ?",
+      "q": "Fuite de gaz confirmée sur le module compresseur (6 MMscfd ≈ 169 902 Sm³/j). Quel dispositif permet à l'opérateur de lancer volontairement un arrêt d'urgence depuis la salle de contrôle ?",
       "choices": [
-        "Le bouton d'arrêt d'urgence protégé par un capot",
-        "Le bouton d'acquittement général de toutes les alarmes",
-        "La touche d'impression du journal de bord des alarmes",
-        "Le sélecteur de mode automatique d'un régulateur de débit"
+        "Le bouton d'arrêt d'urgence (ESD) protégé par un capot",
+        "Le bouton d'acquittement général de toutes les alarmes du DCS",
+        "La touche d'impression du journal de bord des alarmes de la salle",
+        "Le sélecteur de mode automatique d'un régulateur de débit de l'unité"
       ],
       "answer": 0,
-      "explain": "L'ESD possède des boutons-poussoirs d'arrêt d'urgence protégés contre l'action involontaire. Ils agissent via le système de sécurité, pas via le DCS.",
+      "explain": "L'ESD possède des boutons-poussoirs protégés contre l'action involontaire. Ils agissent via le système de sécurité, pas via le DCS, et mettent le procédé (6 MMscfd, 169 902 Sm³/j) en état sûr.",
       "seconds": 40,
       "status": "draft"
     },
@@ -288,15 +288,15 @@
       "id": "op-salle-controle-013",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "level": 2,
-      "q": "Douze alarmes apparaissent en dix minutes pendant un incident. Comment appelle-t-on cette situation ?",
+      "q": "Trip du compresseur K-201 : douze alarmes apparaissent en dix minutes alors que la torche monte à 6 MMscfd (≈ 169 902 Sm³/j). Comment appelle-t-on cette situation ?",
       "choices": [
-        "Une alarme intermittente (chattering)",
-        "Un déluge d'alarmes (alarm flood)",
-        "Une alarme périmée (stale)",
-        "Un forçage d'entrée"
+        "Une alarme intermittente (chattering) sur une même boucle",
+        "Une alarme périmée (stale) restée active depuis plusieurs jours",
+        "Un forçage d'entrée (force) sur le DCS",
+        "Un déluge d'alarmes (alarm flood)"
       ],
-      "answer": 1,
-      "explain": "Au-delà d'environ dix alarmes en dix minutes, l'opérateur ne peut plus traiter chaque alarme : c'est un déluge d'alarmes, à analyser lors du retour d'expérience.",
+      "answer": 3,
+      "explain": "Au-delà d'environ dix alarmes en dix minutes, l'opérateur ne peut plus traiter chaque alarme : c'est un déluge d'alarmes (alarm flood), à analyser en retour d'expérience. Pendant l'événement, on cherche la first-out et on stabilise l'unité.",
       "seconds": 45,
       "status": "draft"
     },
@@ -304,17 +304,17 @@
       "id": "op-salle-controle-014",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "level": 3,
-      "q": "À 02:10, LAH-101 (niveau haut du séparateur V-101) ; 02:12, LAHH-101 puis PAH-101 (pression haute) ; 02:13, déclenchement du compresseur K-201 sur niveau haut de son ballon d'aspiration. Quelle est la cause racine la plus probable ?",
+      "q": "V-101 reçoit 12 000 BLPD (≈ 1 908 m³/j). 02:10 LAH-101 ; 02:12 LAHH-101 puis PAH-101 (de 16 à 19 bar, 232 → 276 psi) ; 02:13 trip du compresseur K-201 sur niveau haut de son ballon d'aspiration. Quelle est la cause racine la plus probable ?",
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur V-101 avec ligne de gaz vers le ballon d'aspiration du compresseur K-201",
       "choices": [
         "Une panne du compresseur K-201, qui a fait monter le niveau du séparateur",
-        "Une dérive du capteur de pression PAH-101 qui a faussé la lecture de niveau",
+        "Une dérive du capteur PAH-101 qui a faussé la lecture de niveau du séparateur",
         "Le niveau haut du séparateur, apparu le premier, avec du liquide entraîné dans le gaz",
-        "Une erreur d'horodatage de la séquence des alarmes dans le DCS, sans lien avec le procédé"
+        "Une erreur d'horodatage de la séquence des alarmes sans lien avec le procédé"
       ],
       "answer": 2,
-      "explain": "La première alarme (first-out) oriente vers la cause : niveau trop haut au séparateur, puis liquide dans la ligne de gaz, pression haute et protection du compresseur. Les suivantes sont des conséquences.",
+      "explain": "La première alarme (first-out) oriente vers la cause : niveau trop haut à V-101 (12 000 BLPD, 1 908 m³/j), puis liquide dans la ligne de gaz, pression haute (+3 bar) et protection du compresseur. Les suivantes sont des conséquences.",
       "seconds": 75,
       "status": "draft"
     },
@@ -322,17 +322,17 @@
       "id": "op-salle-controle-015",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "level": 3,
-      "q": "Dans cette cascade, le régulateur LIC-101 est en automatique avec une sortie à 100 % depuis 02:08 et la vanne LV-101 est indiquée ouverte à 100 %, pourtant le niveau continue de monter. Quelle hypothèse faut-il vérifier au terrain ?",
+      "q": "Le LIC-101 est en auto avec une sortie à 100 % depuis 02:08, la LV-101 est indiquée à 100 %, pourtant le niveau monte : le FT-101 lit 2 400 BLPD (≈ 382 m³/j) alors que l'entrée est de 6 000 BLPD (≈ 954 m³/j). Quelle hypothèse faut-il vérifier au terrain ?",
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur V-101 avec vanne de sortie de liquide LV-101 et pompe aval",
       "choices": [
-        "Un débit de sortie insuffisant : pompe aval, ligne ou vanne grippée",
         "Le régulateur est trop lent : il faut attendre qu'il rattrape le niveau",
         "Le capteur de pression est en erreur et fausse la lecture du niveau",
-        "La consigne de niveau a été mise à 100 % au quart précédent"
+        "La consigne de niveau a été mise à 100 % au quart précédent",
+        "Un débit de sortie insuffisant : pompe aval, ligne ou vanne grippée"
       ],
-      "answer": 0,
-      "explain": "Une vanne indiquée à 100 % qui ne baisse pas le niveau signale un problème de ligne ou de matériel aval, ou une position affichée qui ne reflète pas la réalité. Le contrôle terrain est indispensable.",
+      "answer": 3,
+      "explain": "Écart de 3 600 BLPD (≈ 572 m³/j) qui s'accumule dans le séparateur : vanne à 100 % sans effet = problème de ligne ou de matériel aval, ou position affichée qui ne reflète pas la réalité. Le contrôle terrain est indispensable.",
       "seconds": 75,
       "status": "draft"
     },
@@ -340,15 +340,15 @@
       "id": "op-salle-controle-016",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "level": 2,
-      "q": "Pourquoi utilise-t-on un vote 2oo3 sur les capteurs d'une fonction d'arrêt d'urgence ?",
+      "q": "Les capteurs PT-401 A/B/C du séparateur HP déclenchent l'arrêt sur PAHH (25 barg ≈ 363 psig) par un vote 2oo3. Pourquoi utilise-t-on un vote 2oo3 sur une fonction d'arrêt d'urgence ?",
       "choices": [
-        "Pour doubler la vitesse de fermeture des vannes d'arrêt en cas de demande",
-        "Pour faire basculer automatiquement toute l'installation en mode manuel en cas de défaut",
-        "Pour compter et archiver le nombre de déclenchements du système de sécurité",
-        "Pour éviter les faux déclenchements tout en restant sûr en cas de panne d'un capteur"
+        "Doubler la vitesse de fermeture des vannes d'arrêt en cas de demande",
+        "Faire basculer automatiquement toute l'installation en mode manuel en cas de défaut",
+        "Éviter les faux déclenchements tout en restant sûr en cas de panne d'un capteur",
+        "Compter et archiver le nombre de déclenchements du système de sécurité"
       ],
-      "answer": 3,
-      "explain": "Dans un vote 2oo3 (deux sur trois), un capteur défaillant ne déclenche pas l'arrêt à lui seul, et un capteur bloqué ne masque pas une vraie demande.",
+      "answer": 2,
+      "explain": "Dans un vote 2oo3 (deux sur trois), un capteur défaillant ne déclenche pas l'arrêt à lui seul, et un capteur bloqué ne masque pas une vraie demande à 25 barg (363 psig).",
       "seconds": 50,
       "status": "draft"
     },
@@ -356,15 +356,15 @@
       "id": "op-salle-controle-017",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "level": 3,
-      "q": "Après un ESD, le superviseur vous demande de réarmer vite pour limiter les pertes de production. Que faites-vous ?",
+      "q": "After an ESD the supervisor asks you to reset quickly to limit losses: 9 000 BOPD (≈ 1 431 m³/d) are down, i.e. 375 bbl/h (≈ 59,6 m³/h). What do you do?",
       "choices": [
-        "Réarmer tout de suite, les alarmes étant acquittées au pupitre",
-        "Inhiber les capteurs concernés pour éviter un nouveau déclenchement",
-        "Identifier la cause et vérifier l'installation avec le terrain avant de réarmer",
-        "Redémarrer en manuel sans les permissifs pour gagner du temps"
+        "Reset at once, since the alarms are already acknowledged at the console",
+        "Inhibit the sensors involved to avoid a new trip right after the restart",
+        "Restart in manual without the permissives to gain time on the start-up",
+        "Identify the cause and check the plant with the field before resetting"
       ],
-      "answer": 2,
-      "explain": "Un réarmement précipité peut redonner l'énergie à une situation dangereuse. L'ESD se réarme après analyse de la cause et vérification de l'état de l'installation.",
+      "answer": 3,
+      "explain": "Losses are real (375 bbl/h = 59,6 m³/h) but a rushed reset can re-energise a dangerous situation. The ESD is reset after cause analysis and a field check of the plant state.",
       "seconds": 60,
       "status": "draft"
     },
@@ -372,15 +372,15 @@
       "id": "op-salle-controle-018",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "level": 2,
-      "q": "Un technicien demande oralement un by-pass d'un capteur de la fonction de sécurité pour terminer un essai. Quelle est la bonne réponse ?",
+      "q": "Un technicien demande oralement le by-pass du LSHH du test separator pour terminer son essai (well test en cours, puits à 1 900 BOPD ≈ 302 m³/j). Quelle est la bonne réponse ?",
       "choices": [
-        "Refuser sans autorisation écrite ni mesures compensatoires",
         "Accepter, car le technicien est expérimenté et connaît bien l'installation",
+        "Refuser sans autorisation écrite ni mesures compensatoires",
         "Accepter pour cinq minutes seulement, le temps de terminer l'essai",
         "Accepter et l'inscrire au cahier de quart en fin de poste"
       ],
-      "answer": 0,
-      "explain": "Un by-pass de sécurité exige une autorisation écrite, des mesures compensatoires et une inscription au registre. Une demande orale ne suffit jamais.",
+      "answer": 1,
+      "explain": "Un by-pass de sécurité exige une autorisation écrite, des mesures compensatoires et une inscription au registre. Une demande orale ne suffit jamais, même sur un test à 1 900 BOPD (302 m³/j).",
       "seconds": 50,
       "status": "draft"
     },
@@ -388,17 +388,17 @@
       "id": "op-salle-controle-019",
       "theme": "Démarrage et arrêt de procédé",
       "level": 1,
-      "q": "Avant d'introduire des hydrocarbures dans un ballon qui contenait de l'air, quelle opération est indispensable ?",
+      "q": "Le ballon V-205 (40 m³ ≈ 252 bbl) a été ouvert pour inspection et contient de l'air. Avant d'y introduire des hydrocarbures, quelle opération est indispensable ?",
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Ballon sous pression avec raccordement d'azote de purge et soupape de sécurité",
       "choices": [
-        "Un rinçage à l'eau chaude",
-        "Une mise en pression rapide à l'air comprimé",
-        "Un chauffage à la vapeur du ballon",
-        "L'inertage à l'azote pour chasser l'air"
+        "Un rinçage à l'eau chaude du ballon avant de le remettre en service",
+        "L'inertage à l'azote pour chasser l'air du ballon",
+        "Une mise en pression rapide à l'air comprimé pour tester l'étanchéité",
+        "Un chauffage à la vapeur du ballon pour assécher les parois internes"
       ],
-      "answer": 3,
-      "explain": "Mélange d'air et de gaz inflammable peut entrer dans le domaine d'explosivité : on purge à l'azote pour sortir de ce domaine avant l'introduction.",
+      "answer": 1,
+      "explain": "Un mélange d'air et de gaz inflammable peut entrer dans le domaine d'explosivité : on purge à l'azote le volume de 40 m³ (252 bbl) pour sortir de ce domaine avant l'introduction.",
       "seconds": 45,
       "status": "draft"
     },
@@ -406,15 +406,15 @@
       "id": "op-salle-controle-020",
       "theme": "Démarrage et arrêt de procédé",
       "level": 1,
-      "q": "Quand passe-t-on un régulateur en mode automatique lors d'un démarrage ?",
+      "q": "Démarrage du séparateur : le PIC (SP 8 bar ≈ 116 psi) est en manuel. Quand le passe-t-on en mode automatique ?",
       "choices": [
-        "Avant d'ouvrir l'alimentation, pour gagner du temps",
-        "Quand le procédé est stable et la sortie sans à-coup",
-        "Dès que l'alarme basse s'efface, même si la mesure oscille",
-        "Jamais avant la fin complète de la phase de démarrage"
+        "Quand le procédé est stable et que la sortie ne fait pas d'à-coup",
+        "Avant d'ouvrir l'alimentation, pour gagner du temps au démarrage",
+        "Dès que l'alarme basse s'efface, même si la mesure oscille encore de l'unité",
+        "Jamais avant la fin complète de la phase de démarrage de l'unité"
       ],
-      "answer": 1,
-      "explain": "On pilote d'abord en manuel pour stabiliser, puis on bascule en automatique quand mesure et consigne sont proches, afin d'éviter un à-coup sur la vanne.",
+      "answer": 0,
+      "explain": "On pilote d'abord en manuel pour stabiliser la pression autour de 8 bar (116 psi), puis on bascule en automatique quand mesure et consigne sont proches, afin d'éviter un à-coup sur la vanne.",
       "seconds": 40,
       "status": "draft"
     },
@@ -422,15 +422,15 @@
       "id": "op-salle-controle-021",
       "theme": "Démarrage et arrêt de procédé",
       "level": 2,
-      "q": "Pourquoi dépressurise-t-on vers la torche à vitesse contrôlée ?",
+      "q": "You depressurise the HP separator from 25 bar (363 psi) to the flare at the procedure rate of 1 bar/min (≈ 14,5 psi/min). Why at a controlled rate?",
       "choices": [
-        "Pour limiter le refroidissement brutal et la charge sur la torche",
-        "Pour augmenter la pression du réseau de torche et favoriser le tirage",
-        "Pour chauffer l'équipement grâce à la détente du gaz",
-        "Pour vider plus vite le ballon de torche vers les bacs"
+        "To raise the flare header pressure and improve the draught at the stack",
+        "To warm the equipment up through the expansion of the gas",
+        "To empty the flare KO drum faster towards the storage tanks",
+        "To limit the sudden cooling of the metal and the load on the flare system"
       ],
-      "answer": 0,
-      "explain": "Une détente rapide refroidit fortement le gaz et les parois, avec risque de givre et de fragilisation. Elle surcharge aussi le réseau de torche.",
+      "answer": 3,
+      "explain": "25 bar at 1 bar/min takes about 25 min. A fast blowdown cools gas and walls hard (ice risk, brittle steel) and overloads the flare network. Controlled depressurisation protects both.",
       "seconds": 50,
       "status": "draft"
     },
@@ -438,15 +438,15 @@
       "id": "op-salle-controle-022",
       "theme": "Démarrage et arrêt de procédé",
       "level": 1,
-      "q": "Quelle condition fait partie des permissifs de démarrage d'une pompe centrifuge ?",
+      "q": "Démarrage de la pompe booster P-102 (150 m³/h ≈ 943 bbl/h) depuis le DCS. Quelle condition fait partie des permissifs de démarrage d'une pompe centrifuge ?",
       "choices": [
-        "Aspiration fermée et refoulement ouvert en grand dès le démarrage",
+        "Aspiration fermée et refoulement ouvert en grand dès le démarrage de la pompe",
         "Corps de pompe vide pour réduire l'intensité au démarrage moteur",
-        "Refoulement fermé pendant dix minutes avant le démarrage",
-        "Aspiration ouverte, pompe amorcée et huile de graissage en pression"
+        "Aspiration ouverte, pompe amorcée et huile de graissage en pression",
+        "Refoulement fermé pendant dix minutes avant le démarrage"
       ],
-      "answer": 3,
-      "explain": "Une pompe démarre pleine de liquide, aspiration ouverte, graissage en service. Tourner à vide ou refoulement fermé longtemps détruit la garniture.",
+      "answer": 2,
+      "explain": "Une pompe démarre pleine de liquide, aspiration ouverte, graissage en service, avant de monter vers 150 m³/h (943 bbl/h). Tourner à vide ou refoulement fermé longtemps détruit le seal.",
       "seconds": 45,
       "status": "draft"
     },
@@ -454,15 +454,15 @@
       "id": "op-salle-controle-023",
       "theme": "Démarrage et arrêt de procédé",
       "level": 2,
-      "q": "Quel ensemble de conditions est cohérent avec un démarrage de compresseur ?",
+      "q": "Démarrage du compresseur K-201 (4 MMscfd ≈ 113 300 Sm³/j). Quel ensemble de conditions est cohérent ?",
       "choices": [
         "Niveau haut au ballon d'aspiration pour assurer la charge de la machine",
-        "Niveau bas au ballon d'aspiration et recyclage antipompage ouvert",
-        "Recyclage antipompage fermé pour maximiser le débit au démarrage",
+        "Recyclage anti-surge fermé pour maximiser le débit au démarrage",
+        "Niveau bas au ballon d'aspiration et recyclage anti-surge ouvert",
         "Pression d'huile nulle jusqu'à atteindre la vitesse nominale"
       ],
-      "answer": 1,
-      "explain": "Le ballon d'aspiration doit être vide de liquide, et le recyclage ouvert protège la machine du pompage au démarrage. L'huile doit être en pression avant la rotation.",
+      "answer": 2,
+      "explain": "Le ballon d'aspiration doit être vide de liquide, et le recyclage ouvert protège la machine du surge au démarrage à bas débit (4 MMscfd = 113 268 Sm³/j). L'huile doit être en pression avant la rotation.",
       "seconds": 55,
       "status": "draft"
     },
@@ -470,17 +470,17 @@
       "id": "op-salle-controle-024",
       "theme": "Démarrage et arrêt de procédé",
       "level": 2,
-      "q": "Pendant le remplissage initial d'un séparateur, quand ouvre-t-on la sortie de liquide vers l'aval ?",
+      "q": "Remplissage initial du séparateur de 60 m³ (≈ 377 bbl) : le niveau normal est à 50 %, soit 30 m³ (≈ 189 bbl). Quand ouvre-t-on la sortie de liquide vers l'aval ?",
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique avec niveau normal repéré et vanne de sortie de liquide",
       "choices": [
-        "Dès l'ouverture de l'alimentation, pour éviter l'accumulation",
-        "Avant tout remplissage, pour évacuer l'azote de purge vers l'aval",
+        "Dès l'ouverture de l'alimentation, pour éviter l'accumulation de liquide",
         "Une fois le niveau normal atteint, régulateur d'abord en manuel",
-        "Jamais : le liquide est évacué par la ligne de torche"
+        "Avant tout remplissage, pour évacuer l'azote de purge vers l'aval",
+        "Jamais : le liquide est évacué par la ligne de torche en continu"
       ],
-      "answer": 2,
-      "explain": "On remplit jusqu'au niveau normal avant d'ouvrir la sortie, puis on passe le régulateur en automatique depuis un état stable. Sortir trop tôt laisse passer du gaz dans la ligne liquide.",
+      "answer": 1,
+      "explain": "On remplit jusqu'à 50 % (30 m³ ≈ 189 bbl) avant d'ouvrir la sortie, puis on passe le LIC en automatique depuis un état stable. Sortir trop tôt laisse passer du gaz dans la ligne liquide.",
       "seconds": 55,
       "status": "draft"
     },
@@ -488,17 +488,17 @@
       "id": "op-salle-controle-025",
       "theme": "Démarrage et arrêt de procédé",
       "level": 3,
-      "q": "Au démarrage, la pression d'un séparateur monte de 2 à 8 bar en une minute alors que la procédure prévoit des paliers de 1 bar toutes les 5 minutes. Que faire ?",
+      "q": "Start-up : la pression d'un séparateur monte de 2 à 8 bar (29 → 116 psi) en 1 minute, alors que la procédure prévoit des paliers de 1 bar toutes les 5 minutes. Que fais-tu ?",
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Ballon sous pression avec manomètre et soupape de sécurité",
       "choices": [
-        "Poursuivre la montée : la soupape de sécurité protège le séparateur",
+        "Poursuivre la montée : la PSV protège le séparateur en cas de dépassement",
         "Couper les réchauffeurs du séparateur pour éviter le givre en tête",
-        "Augmenter l'alimentation pour atteindre le palier suivant plus vite",
-        "Réduire l'alimentation et reprendre par paliers selon la procédure"
+        "Réduire l'alimentation et reprendre la montée par paliers selon la procédure",
+        "Augmenter l'alimentation pour atteindre le palier suivant plus vite"
       ],
-      "answer": 3,
-      "explain": "Une pressurisation rapide sollicite les joints et brides (fuites) et dépasse la méthode prévue. On revient à la montée contrôlée prévue par la procédure.",
+      "answer": 2,
+      "explain": "Montée réelle : 6 bar/min (≈ 87 psi/min) contre 0,2 bar/min prévus (1 bar ÷ 5 min), soit 30 fois trop vite. Les joints et brides sont sollicités (fuites) : on revient à la montée contrôlée.",
       "seconds": 65,
       "status": "draft"
     },
@@ -506,15 +506,15 @@
       "id": "op-salle-controle-026",
       "theme": "Démarrage et arrêt de procédé",
       "level": 2,
-      "q": "Après un déclenchement de compresseur, un permis de travail est encore ouvert sur la machine. Que faites-vous ?",
+      "q": "Après le trip du compresseur K-201 (4 MMscfd), un permis de travail est encore ouvert sur la machine. Que fais-tu ?",
       "choices": [
-        "Démarrer à distance, la machine étant prête et l'alarme acquittée",
         "Ne pas démarrer avant clôture du permis et levée de la consignation, vérifiées au terrain",
-        "Démarrer en prévenant simplement l'intervenant par radio avant l'ordre",
+        "Démarrer à distance, la machine étant prête et l'alarme acquittée",
+        "Démarrer en prévenant simplement l'intervenant par radio avant l'ordre sans attendre la clôture du permis",
         "Annuler le permis de travail directement depuis le DCS de la salle"
       ],
-      "answer": 1,
-      "explain": "Démarrer une machine consignée ou en travaux peut tuer. La salle de contrôle connaît les permis en cours et exige leur clôture avant tout démarrage.",
+      "answer": 0,
+      "explain": "Démarrer une machine consignée ou en travaux peut tuer, même pour récupérer 4 MMscfd (113 268 Sm³/j). La salle connaît les permis en cours et exige leur clôture avant tout start.",
       "seconds": 50,
       "status": "draft"
     },
@@ -522,15 +522,15 @@
       "id": "op-salle-controle-027",
       "theme": "Démarrage et arrêt de procédé",
       "level": 2,
-      "q": "Quel ordre est cohérent pour mettre un équipement hors service avant intervention ?",
+      "q": "Mise hors service de la pompe d'export P-101 (120 m³/h ≈ 755 bbl/h) avant intervention. Quel ordre est cohérent ?",
       "choices": [
         "Fermer les sorties, couper l'alimentation, puis ouvrir directement à l'air",
+        "Réduire la charge, isoler, dépressuriser, drainer, purger à l'azote, puis consigner",
         "Dépressuriser sans isoler les entrées, purger, puis consigner",
-        "Réduire la charge, isoler les entrées, dépressuriser, drainer, purger à l'azote, puis consigner",
         "Consigner d'abord, puis dépressuriser, drainer et purger à l'azote"
       ],
-      "answer": 2,
-      "explain": "On réduit la charge, on isole, on dépressurise, on purge et on consigne en dernier avec vérification d'absence d'énergie et de fluide.",
+      "answer": 1,
+      "explain": "On réduit la charge (120 → 0 m³/h), on isole, on dépressurise, on draine, on purge à l'azote et on consigne en dernier avec vérification d'absence d'énergie et de fluide.",
       "seconds": 55,
       "status": "draft"
     },
@@ -538,17 +538,17 @@
       "id": "op-salle-controle-028",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "level": 1,
-      "q": "Sur la face avant d'un régulateur, que représentent PV, SP et OP ?",
+      "q": "Sur la face avant du FIC-103 : PV 85 m³/h (≈ 535 bbl/h), SP 90 m³/h (≈ 566 bbl/h), OP 62 %. Que représentent PV, SP et OP ?",
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "Boucle de régulation avec mesure PV, consigne SP et sortie OP vers la vanne",
       "choices": [
-        "Mesure, consigne et sortie vers la vanne",
-        "Pression, vitesse et position de la vanne",
-        "Puissance, vitesse et ouverture de la vanne",
-        "Production, sécurité et opérateur de salle"
+        "Pression, vitesse et position de la vanne de régulation",
+        "Puissance, vitesse et ouverture de la vanne de la pompe",
+        "Production, sécurité et opérateur de la salle de contrôle",
+        "Mesure, consigne et sortie vers la vanne"
       ],
-      "answer": 0,
-      "explain": "PV (process variable) est la mesure, SP (setpoint) la consigne, OP (output) la sortie vers la vanne en pourcentage.",
+      "answer": 3,
+      "explain": "PV (process variable) = mesure, 85 m³/h ; SP (setpoint) = consigne, 90 m³/h ; OP (output) = sortie vers la vanne, 62 %. L'écart de 5 m³/h (≈ 31 bbl/h) pousse le régulateur à ouvrir la vanne.",
       "seconds": 40,
       "status": "draft"
     },
@@ -556,17 +556,17 @@
       "id": "op-salle-controle-029",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "level": 2,
-      "q": "Un transmetteur 4-20 mA est lu à 2,0 mA par le DCS, avec la qualité « mauvaise ». Que signifie ce signal ?",
+      "q": "Le LT du FWKO (7 000 BLPD ≈ 1 113 m³/j en entrée) est lu à 2,0 mA par le DCS, avec la qualité « mauvaise ». Que signifie ce signal ?",
       "img": "svg/loop-4-20ma.svg",
       "imgAlt": "Boucle 4-20 mA avec courant lu à 2,0 mA, sous la plage valide de 4 à 20 mA",
       "choices": [
-        "Une mesure à 0 % parfaitement valide et stable",
         "Un défaut de signal, et non une mesure à 0 %",
+        "Une mesure à 0 % parfaitement valide et stable",
         "Une mesure à − 12,5 % de l'étendue de mesure",
         "Une surpression du procédé en amont du capteur"
       ],
-      "answer": 1,
-      "explain": "Un signal valide reste dans la plage 4-20 mA (alarme de défaut sous 3,6 mA environ). 2 mA signale une panne et non une mesure.",
+      "answer": 0,
+      "explain": "Un signal valide reste dans la plage 4-20 mA (défaut sous 3,6 mA environ). 2 mA = panne de boucle : on ne tire aucune conclusion sur le niveau du FWKO, on croise avec une autre source et on appelle le terrain.",
       "seconds": 50,
       "status": "draft"
     },
@@ -574,15 +574,15 @@
       "id": "op-salle-controle-030",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "level": 2,
-      "q": "Deux transmetteurs d'un même ballon indiquent 60 % (LT-101) et 85 % (LT-102). Le verre de niveau local indique 58 %. Quel transmetteur est probablement défaillant ?",
+      "q": "Two transmitters on the same FWKO (40 m³ ≈ 252 bbl) read 60 % (LT-101) and 85 % (LT-102). The local sight glass reads 58 %. Which transmitter is most likely faulty?",
       "choices": [
-        "LT-101, car sa valeur est la plus basse",
-        "Aucun : la moyenne de 72,5 % est la valeur réelle",
-        "LT-102, car les deux autres sources concordent",
-        "Le verre de niveau, car il est local"
+        "LT-101, because its value is the lowest of the three readings",
+        "LT-102, because the other two sources agree with each other",
+        "None: the average of 72.5 % is the true value of the level",
+        "The sight glass, because it is a local instrument"
       ],
-      "answer": 2,
-      "explain": "Deux sources indépendantes concordent (60 % et 58 %). La troisième s'en écarte : on suspecte LT-102 et on demande un contrôle terrain.",
+      "answer": 1,
+      "explain": "Two independent sources agree (60 % and 58 %); the third drifts away. The gap of 25 % is 10 m³ (≈ 63 bbl) of liquid: suspect LT-102 and ask for a field check. An average hides the fault.",
       "seconds": 55,
       "status": "draft"
     },
@@ -590,15 +590,15 @@
       "id": "op-salle-controle-031",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "level": 2,
-      "q": "Le niveau d'un ballon reste figé à 62,3 % depuis 25 minutes, sans aucune variation, alors que le débit d'entrée varie. Quelle est l'hypothèse prioritaire ?",
+      "q": "Le niveau du bac T-101 (12 bbl/cm) reste figé à 62,3 % depuis 25 minutes, alors que l'export tourne à 120 m³/h (≈ 755 bbl/h). Quelle est l'hypothèse prioritaire ?",
       "choices": [
-        "Capteur ou signal figé : faire contrôler le terrain",
         "Le procédé est parfaitement stable depuis le début du quart",
-        "Le filtrage du DCS réduit naturellement le bruit",
+        "Le filtrage du DCS réduit naturellement le bruit de la mesure",
+        "Capteur ou signal figé : faire contrôler le terrain",
         "Le régulateur est passé en mode cascade automatiquement"
       ],
-      "answer": 0,
-      "explain": "Une mesure sans le bruit habituel, alors que le procédé évolue, est suspecte. On croise avec une autre source et on demande un contrôle terrain.",
+      "answer": 2,
+      "explain": "120 m³/h × 25 min ÷ 60 = 50 m³ (≈ 314 bbl) sortis, soit ≈ 26 cm de niveau à 12 bbl/cm : un niveau sans la moindre variation est suspect. On croise avec une autre source et on demande un jaugeage terrain.",
       "seconds": 55,
       "status": "draft"
     },
@@ -606,15 +606,15 @@
       "id": "op-salle-controle-032",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "level": 2,
-      "q": "La mesure d'un régulateur de niveau en automatique est perdue (mauvaise qualité). Quelle est l'action immédiate ?",
+      "q": "The measurement of level controller LIC-101 (in auto, SP 50 %, output 55 %) goes bad. Production is 6 000 BLPD (≈ 954 m³/d). What is your immediate action?",
       "choices": [
-        "Laisser le régulateur en automatique et attendre le retour du signal",
-        "Mettre la sortie à 0 % par précaution et fermer la vanne",
-        "Mettre la sortie à 100 % par précaution et ouvrir la vanne",
-        "Passer en manuel à la dernière valeur sûre et appeler le terrain"
+        "Switch to manual at the last safe output value and call the field",
+        "Leave the controller in auto and wait for the signal to come back",
+        "Set the output to 0 % as a precaution and close the valve",
+        "Set the output to 100 % as a precaution and open the valve"
       ],
-      "answer": 3,
-      "explain": "Sans mesure fiable, on stabilise en manuel sur une valeur sûre et on fait contrôler le terrain. Fermer ou ouvrir complètement la vanne peut vider ou faire déborder la capacité.",
+      "answer": 0,
+      "explain": "Without a reliable measurement, stabilise in manual at the last safe value (about 55 %) and have the field check the level. Fully closing or opening the valve could empty the vessel or overfill it, with 6 000 BLPD (954 m³/d) going through.",
       "seconds": 55,
       "status": "draft"
     },
@@ -622,15 +622,15 @@
       "id": "op-salle-controle-033",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "level": 2,
-      "q": "Qu'est-ce qu'un forçage (force) d'une entrée du DCS ?",
+      "q": "Un technicien veut forcer l'entrée du PSLL-210 du DCS pour tester la pompe pendant 30 minutes. Qu'est-ce qu'un forçage (force) d'une entrée du DCS ?",
       "choices": [
-        "Une mise à jour planifiée du logiciel du système DCS",
-        "Un changement de couleur ou de priorité d'une alarme",
+        "Une mise à jour planifiée du logiciel du système DCS par le constructeur du DCS",
         "Une dérogation imposant une valeur au lieu du signal réel",
+        "Un changement de couleur ou de priorité d'une alarme",
         "Un test d'étalonnage automatique du capteur de terrain"
       ],
-      "answer": 2,
-      "explain": "Le forçage remplace temporairement le signal réel : il est dangereux s'il est oublié, donc limité, autorisé, enregistré et retiré dès la fin du besoin.",
+      "answer": 1,
+      "explain": "Le forçage remplace temporairement le signal réel : dangereux s'il est oublié, donc limité, autorisé, enregistré et retiré dès la fin du besoin (ici 30 min, à noter au cahier).",
       "seconds": 45,
       "status": "draft"
     },
@@ -638,7 +638,7 @@
       "id": "op-salle-controle-034",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "level": 3,
-      "q": "Tous les écrans de la salle de contrôle s'éteignent (panne du DCS). Quelle est la conduite correcte ?",
+      "q": "Tous les écrans de la salle de contrôle s'éteignent (panne du DCS) alors que le champ produit 14 000 BOPD (≈ 2 226 m³/j). Quelle est la conduite correcte ?",
       "img": "photo/control-room.jpg",
       "imgAlt": "Photo d'une salle de contrôle avec postes opérateurs",
       "choices": [
@@ -648,7 +648,7 @@
         "Éteindre et rallumer le DCS en urgence sans prévenir personne"
       ],
       "answer": 0,
-      "explain": "Sans visibilité, la priorité est l'état sûr : poste de secours, appel du terrain, arrêt si nécessaire. La règle est de stabiliser d'abord.",
+      "explain": "Sans visibilité sur 14 000 BOPD (2 226 m³/j), la priorité est l'état sûr : poste de secours, appel du terrain, arrêt si nécessaire. Stabiliser d'abord, comprendre ensuite.",
       "seconds": 70,
       "status": "draft"
     },
@@ -656,17 +656,17 @@
       "id": "op-salle-controle-035",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "level": 3,
-      "q": "Le régulateur de débit FIC-102 a sa sortie à 100 % depuis dix minutes et la mesure reste à 70 % de la consigne. Que cela indique-t-il ?",
+      "q": "Le FIC-102 a sa sortie à 100 % depuis dix minutes : SP 120 m³/h (≈ 755 bbl/h), PV 84 m³/h (≈ 528 bbl/h), soit 70 % de la consigne. Que cela indique-t-il ?",
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "Boucle de régulation de débit FIC-102 avec vanne de régulation à 100 %",
       "choices": [
         "Le régulateur fonctionne normalement : la mesure va rattraper la consigne",
         "Le transmetteur est en défaut de communication avec le DCS de la salle",
-        "La consigne a été supprimée par une erreur de configuration du DCS",
-        "Vanne à sa limite : débit limité en amont ou vanne sous-dimensionnée"
+        "Vanne à sa limite : débit limité en amont ou vanne sous-dimensionnée",
+        "La consigne a été supprimée par une erreur de configuration du DCS"
       ],
-      "answer": 3,
-      "explain": "Une sortie saturée sans atteindre la consigne montre que l'organe ne peut plus suivre. On cherche la cause en amont ou sur la ligne, avec le terrain.",
+      "answer": 2,
+      "explain": "Sortie saturée à 100 % sans atteindre la consigne (84 sur 120 m³/h, 528 sur 755 bbl/h) : l'organe ne peut plus suivre. On cherche la cause en amont ou sur la ligne, avec le terrain.",
       "seconds": 65,
       "status": "draft"
     },
@@ -674,15 +674,15 @@
       "id": "op-salle-controle-036",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "level": 1,
-      "q": "Un technicien veut brancher une clé USB personnelle sur un poste du DCS pour copier une courbe. Que faire ?",
+      "q": "Un technicien veut brancher sa clé USB personnelle sur un poste du DCS pour copier la tendance d'un well test (1 920 BOPD ≈ 305 m³/j). Que fais-tu ?",
       "choices": [
-        "Accepter si la clé est neuve et encore sous emballage",
+        "Accepter si la clé est neuve et encore sous emballage et provient du magasin",
         "Refuser et utiliser les procédures et supports contrôlés du site",
         "Accepter si le poste n'est pas en cours de conduite",
         "Accepter après avoir désactivé l'antivirus du poste"
       ],
       "answer": 1,
-      "explain": "Un support personnel peut introduire un logiciel malveillant dans un système critique. Les échanges de données suivent les procédures de cybersécurité du site.",
+      "explain": "Un support personnel peut introduire un logiciel malveillant dans un système critique. Les échanges de données (même une simple tendance de well test à 1 920 BOPD, 305 m³/j) suivent les procédures de cybersécurité du site.",
       "seconds": 40,
       "status": "draft"
     },
@@ -690,15 +690,15 @@
       "id": "op-salle-controle-037",
       "theme": "Relève de poste et communication",
       "level": 1,
-      "q": "Quel document conserve la mémoire des événements d'un quart en salle de contrôle ?",
+      "q": "Un événement s'est produit à 03:40 sur le séparateur HP (8 000 BOPD ≈ 1 272 m³/j). Quel document conserve la mémoire des événements du quart en salle de contrôle ?",
       "choices": [
-        "Le cahier de quart (log book)",
-        "Le P&ID de l'unité",
-        "Le rapport annuel de production",
-        "Le manuel d'utilisation du DCS"
+        "Le cahier de quart (log book), lu et signé à la relève",
+        "Le P&ID de l'unité, mis à jour à chaque modification du procédé",
+        "Le rapport annuel de production remis à la direction du site",
+        "Le manuel d'utilisation du DCS fourni par le constructeur"
       ],
       "answer": 0,
-      "explain": "Le cahier de quart consigne les événements, actions et instructions. Il est lu et signé à la relève.",
+      "explain": "Le log book consigne les événements, actions et instructions du quart (heure, valeurs, décision) ; il est lu et signé à la relève. Le P&ID décrit l'unité, il ne raconte pas le quart.",
       "seconds": 40,
       "status": "draft"
     },
@@ -706,17 +706,17 @@
       "id": "op-salle-controle-038",
       "theme": "Relève de poste et communication",
       "level": 1,
-      "q": "Quelle est la bonne pratique pour une relève de poste ?",
+      "q": "Relève de 06:00 : production 9 500 BOPD (≈ 1 511 m³/j). Quelle est la bonne pratique pour une relève de poste ?",
       "img": "photo/control-room.jpg",
       "imgAlt": "Photo d'une salle de contrôle avec postes opérateurs",
       "choices": [
-        "Un mot laissé sur le bureau, l'équipe suivante le lira",
+        "Un mot laissé sur le bureau, l'équipe suivante le lira à son arrivée",
         "Une relève par téléphone, à distance, avant l'arrivée de l'équipe",
-        "Une relève orale rapide à la porte de la salle, sans passer au poste",
-        "Une relève face à face, au poste, avec cahier de quart signé"
+        "Une relève face à face, au poste, avec cahier de quart signé",
+        "Une relève orale rapide à la porte de la salle, sans passer au poste"
       ],
-      "answer": 3,
-      "explain": "La relève se fait sur place, devant les écrans, en échangeant et en vérifiant. Les informations critiques ne se transmettent pas par un mot laissé sans échange.",
+      "answer": 2,
+      "explain": "La relève se fait sur place, devant les écrans, en échangeant et en vérifiant (production 9 500 BOPD = 1 511 m³/j, alarmes, permis). Les informations critiques ne se transmettent pas par un mot laissé sans échange.",
       "seconds": 40,
       "status": "draft"
     },
@@ -724,15 +724,15 @@
       "id": "op-salle-controle-039",
       "theme": "Relève de poste et communication",
       "level": 2,
-      "q": "Parmi ces éléments, lequel doit absolument être transmis à l'équipe entrante ?",
+      "q": "À la relève, un well test de 12 h est en cours sur P-04 (1 920 BOPD attendus ≈ 305 m³/j) avec le LSHH du test separator inhibé sur autorisation écrite. Parmi ces éléments, lequel doit absolument être transmis ?",
       "choices": [
+        "Les by-pass, forçages, inhibitions et permis de travail actifs",
         "Les alarmes déjà résolues la veille ou en début de semaine",
-        "Les by-pass, forçages et permis de travail actifs",
         "Les congés des collègues du quart suivant",
         "Le détail du prix des pièces de rechange"
       ],
-      "answer": 1,
-      "explain": "Ces éléments modifient l'état de sécurité de l'installation : l'équipe entrante doit les connaître pour ne pas démarrer un équipement en travaux ni croire une protection active.",
+      "answer": 0,
+      "explain": "Une inhibition de LSHH pendant un well test modifie l'état de sécurité : l'équipe entrante doit la connaître pour ne pas démarrer un équipement en travaux ni croire une protection active.",
       "seconds": 45,
       "status": "draft"
     },
@@ -740,15 +740,15 @@
       "id": "op-salle-controle-040",
       "theme": "Relève de poste et communication",
       "level": 2,
-      "q": "Quelle est la bonne forme d'un ordre de manœuvre radio vers le terrain ?",
+      "q": "Tu dois faire ouvrir la vanne XV-203 à 50 % au terrain pour aligner 100 m³/h (≈ 629 bbl/h) vers le test separator. Quelle est la bonne forme d'un ordre de manœuvre radio ?",
       "choices": [
         "Message long décrivant en détail tout le contexte du quart",
         "Ordre donné simultanément à toutes les équipes présentes sur site",
-        "Message court : repère, action, répétition, confirmation",
+        "Message court : repère, action, répétition par le récepteur, confirmation",
         "Ordre oral rapide, sans répétition, pour gagner du temps"
       ],
       "answer": 2,
-      "explain": "La boucle fermée (message, répétition, confirmation) évite les erreurs de compréhension, surtout avec le bruit. Le repère exact de l'équipement supprime l'ambiguïté.",
+      "explain": "La boucle fermée (message, répétition, confirmation) évite les erreurs de compréhension, surtout avec le bruit : « XV-203, ouvrir à 50 %, répondez ». Le repère exact supprime l'ambiguïté avant d'aligner 100 m³/h (629 bbl/h).",
       "seconds": 50,
       "status": "draft"
     },
@@ -756,15 +756,15 @@
       "id": "op-salle-controle-041",
       "theme": "Relève de poste et communication",
       "level": 2,
-      "q": "Vous demandez au terrain d'« ouvrir un peu » une vanne. Pourquoi est-ce une mauvaise consigne ?",
+      "q": "Tu demandes au terrain d'« ouvrir un peu » la vanne du by-pass du choke manifold. Pourquoi est-ce une mauvaise consigne ?",
       "choices": [
         "Elle est trop précise pour être comprise du terrain",
         "La vanne ne peut pas être ouverte à la main par le terrain",
         "Elle n'est pas autorisée par le DCS de la salle de contrôle",
-        "Elle est ambiguë : préciser le repère et l'ouverture"
+        "Elle est ambiguë : il faut préciser le repère et l'ouverture demandée"
       ],
       "answer": 3,
-      "explain": "« Un peu » n'a pas de sens commun. Une consigne précise (repère, nombre de tours ou pourcentage, effet attendu) évite les écarts de conduite.",
+      "explain": "« Un peu » n'a pas de sens commun : sur un choke manifold, un tour de plus peut faire passer un puits de 1 500 à 2 500 BOPD (239 → 398 m³/j). Une consigne précise (repère, tours ou pourcentage, effet attendu) évite les écarts de conduite.",
       "seconds": 45,
       "status": "draft"
     },
@@ -772,15 +772,15 @@
       "id": "op-salle-controle-042",
       "theme": "Relève de poste et communication",
       "level": 3,
-      "q": "À cinq minutes de la fin du quart, une alarme de niveau très haut est active depuis une heure sans cause identifiée. Que faites-vous ?",
+      "q": "À cinq minutes de la fin du quart, une alarme de niveau très haut est active depuis une heure sans cause identifiée (niveau 88 %, 6 500 BOPD ≈ 1 034 m³/j en entrée). Que fais-tu ?",
       "choices": [
         "L'acquitter puis ne rien dire à l'équipe entrante",
-        "La signaler à la relève avec les actions tentées",
         "L'inhiber jusqu'à la fin du quart suivant",
-        "La laisser : c'est l'affaire du prochain quart"
+        "La laisser : c'est l'affaire du prochain quart",
+        "La signaler à la relève avec les actions tentées"
       ],
-      "answer": 1,
-      "explain": "Une anomalie non résolue doit être transmise clairement, avec ce qui a été fait. L'inhiber ou la taire expose l'équipe suivante.",
+      "answer": 3,
+      "explain": "Une anomalie non résolue (88 % de niveau, 6 500 BOPD = 1 034 m³/j qui arrivent) doit être transmise clairement, avec ce qui a été fait. L'inhiber ou la taire expose l'équipe suivante.",
       "seconds": 60,
       "status": "draft"
     },
@@ -788,15 +788,15 @@
       "id": "op-salle-controle-043",
       "theme": "Relève de poste et communication",
       "level": 2,
-      "q": "En cas d'urgence, quel est le rôle de la salle de contrôle ?",
+      "q": "Emergency on the platform: gas confirmed on the compressor module, ESD tripped, production of 9 000 BOPD (≈ 1 431 m³/d) shut in. What is the role of the control room?",
       "choices": [
-        "Quitter immédiatement la salle pour gagner le point de rassemblement",
-        "Intervenir seul au terrain avec les extincteurs de la salle",
-        "Déclencher les alarmes, informer l'intervention, tenir le registre",
-        "Attendre l'ordre d'une autorité extérieure avant toute action"
+        "Raise the alarms, inform the response team and keep the muster record",
+        "Leave the room immediately to reach the muster point as fast as possible",
+        "Go out alone with the room fire extinguishers to tackle the source",
+        "Wait for the order of an outside authority before taking any action"
       ],
-      "answer": 2,
-      "explain": "La salle de contrôle coordonne : alarmes, appels, registre des présents. Elle ne quitte la salle que selon le plan d'urgence.",
+      "answer": 0,
+      "explain": "The control room coordinates: alarms, calls to the emergency team, record of persons on board. It only leaves the room according to the emergency plan. Restarting 9 000 BOPD (1 431 m³/d) is not a priority at all.",
       "seconds": 50,
       "status": "draft"
     },
@@ -804,15 +804,15 @@
       "id": "op-salle-controle-044",
       "theme": "Relève de poste et communication",
       "level": 3,
-      "q": "À la relève, l'opérateur entrant constate que la pompe P-101B est notée « en marche » au cahier alors qu'elle est arrêtée à l'écran. Que doit-il faire ?",
+      "q": "À la relève, le cahier de quart note la pompe d'export P-101B « en marche » (120 m³/h ≈ 755 bbl/h) alors qu'elle est arrêtée à l'écran. Que doit faire l'opérateur entrant ?",
       "choices": [
-        "Clarifier avec l'opérateur sortant et le terrain avant la prise de poste",
         "Prendre le poste et corriger le cahier de quart en fin de journée",
+        "Clarifier avec l'opérateur sortant et le terrain avant la prise de poste",
         "Considérer que l'écran se trompe et ignorer l'écart sans vérifier",
         "Démarrer la pompe sans en parler à l'opérateur sortant ni au terrain"
       ],
-      "answer": 0,
-      "explain": "Un écart entre le cahier et l'écran doit être clarifié avant de prendre en charge l'installation. Prendre le poste avec une information douteuse est un risque.",
+      "answer": 1,
+      "explain": "Un écart entre le cahier et l'écran doit être clarifié avant de prendre en charge l'installation : si P-101B est réellement arrêtée, 120 m³/h (755 bbl/h) d'export manquent peut-être. Prendre le poste avec une information douteuse est un risque.",
       "seconds": 55,
       "status": "draft"
     }

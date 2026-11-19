@@ -1,7 +1,7 @@
 import { getProfile, loadContent, themesOf } from '../data.js';
 import { local } from '../store.js';
 import { esc, pct, fmtClock } from '../util.js';
-import { icon, bar, comingSoon } from '../ui.js';
+import { icon, bar, comingSoon, refsHTML } from '../ui.js';
 import { buildPractice, themeBreakdown, qSeconds } from '../quiz.js';
 import { choicesHTML, questionBodyHTML, correctDisplayIndex } from '../qview.js';
 
@@ -72,7 +72,7 @@ export default async function render(ctx, root) {
         results.push({ theme: q.theme, ok });
         root.querySelector('#choices').innerHTML = choicesHTML(q, order, { picked, locked: true, correctDisplay: cd });
         fb.innerHTML = `<div class="feedback ${ok ? 'ok' : 'ko'}"><strong>${ok ? 'Bonne réponse.' : timedOut ? 'Temps écoulé.' : 'Réponse incorrecte.'}</strong>
-          <p>${esc(q.explain || '')}</p>
+          <p>${esc(q.explain || '')}</p>${refsHTML(q)}
           <button type="button" class="btn btn-primary" id="next">${i + 1 < list.length ? 'Question suivante' : 'Voir mon bilan'} ${icon('arrow', 16)}</button></div>`;
         const nb = fb.querySelector('#next');
         nb.focus();

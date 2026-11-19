@@ -12,3 +12,11 @@
 .emp-inline { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; }
 .sel-sm { min-height: 40px; padding: .3rem .5rem; font: inherit; font-size: var(--fs-sm); border: 1px solid var(--c-line-strong); border-radius: var(--r-sm); background: #fff; width: auto; }
 @media (max-width: 599px) { .seg { gap: var(--sp-1); padding: 4px; } .seg-tab { padding: .4rem .2rem; } .seg-tab strong { font-size: var(--fs-xs); } }
+
+/* Sources juridiques sous les corrections */
+.legal-ref { margin-top: var(--sp-3); padding: .7rem .9rem; border-left: 4px solid var(--c-navy); background: var(--c-info-bg); border-radius: 0 var(--r-sm) var(--r-sm) 0; font-size: var(--fs-sm); }
+.legal-ref ul { list-style: none; margin: .3rem 0 0; padding: 0; display: grid; gap: .35rem; }
+.legal-doc { font-weight: 600; }
+.legal-art { color: var(--c-navy); font-weight: 700; }
+.legal-note { color: var(--c-muted); }
+.legal-ref a { display: inline-flex; align-items: center; gap: .25rem; font-weight: 700; white-space: nowrap; }

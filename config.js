@@ -17,7 +17,7 @@ export const CONFIG = {
   // Pass : l'entreprise achète un Pass par personne et par poste. Prix PROVISOIRES (FCFA), à valider par la direction.
   // Un Pass = formation (cours) + entraînement illimité + examen + attestation si réussite + résultat transmis à l'entreprise.
   // Le niveau « sup » (superviseur) est facturé au tarif technicien pour l'instant.
-  PASS_PRICES: { tech: 50000, assist: 50000, sup: 50000, ing: 80000, cadre: 80000, mgr: 80000 },
+  PASS_PRICES: { tech: 50000, tous: 50000, assist: 50000, sup: 50000, ing: 80000, cadre: 80000, mgr: 80000 },
   ATTEMPTS_PER_PASS: 2,     // examen + 1 repassage
 
   // Durée de validité d'une attestation (habilitation), en mois. PROVISOIRE : à valider par la direction.

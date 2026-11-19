@@ -1,7 +1,7 @@
 import { CONFIG } from '../../config.js';
 import { getProfile, loadContent } from '../data.js';
 import { esc, fmtDate, fmtDuration, pct } from '../util.js';
-import { icon, badge, bar, scoreRing } from '../ui.js';
+import { icon, badge, bar, scoreRing, refsHTML } from '../ui.js';
 import { choicesHTML, questionBodyHTML, correctDisplayIndex } from '../qview.js';
 
 export default async function render(ctx, root) {
@@ -65,7 +65,7 @@ function correctionHTML(att, content) {
       <header class="corr-head"><span class="badge ${it.ok ? 'badge-ok' : 'badge-ko'}">${it.ok ? 'Correct' : it.picked == null ? 'Temps écoulé' : 'Incorrect'}</span><span class="xs muted">Question ${i + 1} · ${esc(q.theme)}</span></header>
       ${questionBodyHTML(q)}
       ${choicesHTML(q, it.order, { picked: it.picked, locked: true, correctDisplay: cd })}
-      <div class="feedback ${it.ok ? 'ok' : 'ko'}"><strong>Explication</strong><p>${esc(q.explain || '')}</p></div></article>`;
+      <div class="feedback ${it.ok ? 'ok' : 'ko'}"><strong>Explication</strong><p>${esc(q.explain || '')}</p>${refsHTML(q)}</div></article>`;
   }).join('');
   return `<section class="block"><h2>Correction détaillée</h2><div class="stack">${rows}</div></section>`;
 }

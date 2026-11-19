@@ -6,11 +6,11 @@
       "title": "Conduite quotidienne d'une unité de production",
       "theme": "Conduite quotidienne",
       "minutes": 9,
-      "body": "Le superviseur de production est le **pilote opérationnel** de l'installation sur son quart. Il fait respecter l'**enveloppe d'exploitation** : les limites d'exploitation (pression, température, niveaux, débits) sont plus étroites que les limites de conception et ne sont jamais des cibles à dépasser. Il s'assure que chaque opérateur sait ce qu'il doit surveiller, ce qu'il peut décider seul et quand il doit l'appeler.\n\nLa salle de contrôle donne la vue d'ensemble, mais elle ne remplace pas le terrain. Les **rondes** détectent ce que le système ne voit pas : une fuite naissante, un bruit anormal, une vibration, une odeur, une vanne mal positionnée, un garde-corps défaillant. Elles sont planifiées, tracées et suivies d'actions. Une odeur de gaz sans alarme se traite comme une fuite jusqu'à preuve du contraire : on s'éloigne, on alerte la salle de contrôle, on contrôle avec un détecteur portable et on n'approche aucune source d'ignition.\n\nFace à une **alarme**, la règle est : lire, comprendre, agir selon la procédure, tracer. Acquitter sans analyse ou inhiber pour « avoir la paix » est le début des accidents. En cas de cascade d'alarmes, on cherche l'**alarme initiale (first-out)** pour traiter la cause racine plutôt que chaque symptôme. Les **tendances** (trends) sur le système de conduite révèlent les dérives lentes avant l'alarme.\n\nUn **séparateur** illustre bien la logique : si le niveau liquide monte trop, du liquide peut être entraîné dans la ligne gaz vers le compresseur ; si le niveau descend trop, du gaz s'échappe vers le circuit liquide. La régulation de niveau, les alarmes haut et bas et les arrêts haut-haut et bas-bas forment des barrières successives. Le superviseur n'attend pas le trip : il **anticipe** en reprenant la main, en réduisant l'entrée et en faisant vérifier la vanne au terrain. Une boucle de régulation passée en **manuel** n'est plus corrigée automatiquement : elle se surveille, se trace et se remet en automatique dès que possible.\n\nLes consignes (permanentes et du jour), le journal de quart et la check-list de ronde forment la mémoire du quart. Les **instructions du siège** s'appliquent dans les limites de l'enveloppe d'exploitation : une demande d'augmenter la production au-delà des limites d'érosion ou de capacité se refuse par écrit, en proposant ce qui est possible (optimisation de duses, gas-lift) dans les limites autorisées.\n\nLe superviseur donne l'exemple : tenue, discipline de communication (répétition des ordres), respect des permis, sans exception.",
+      "body": "Le superviseur de production conduit l'unité par sa **tenue de quart** : il connaît ses chiffres, ses limites et ses équipes. Un quart typique commence par la lecture du **daily production report** de la veille. Exemple : 12 000 BOPD (≈ 1 908 m³/j) d'huile, 3 000 BWPD (≈ 477 m³/j) d'eau, soit un water cut de 20 %, et 6 MMscfd de gaz (≈ 169 902 Sm³/j). Le **GOR** vaut 500 scf/stb, soit ≈ 89,1 Sm³/Sm³. Un chiffre qui s'écarte de la veille sans cause connue est une question à poser en début de quart.\n\n**L'enveloppe d'exploitation** est la plage dans laquelle on conduit réellement l'équipement : elle est plus étroite que les limites de conception. Un séparateur de MAWP 10 barg (145 psig) a par exemple une pression normale de 6 à 8 barg (87 à 116 psig), une alarme PAH à 9 barg et une PSV tarée à 10 barg. On opère à l'intérieur, jamais sur les limites. On ne pousse pas un puits au-delà de son débit sans sable ni coning pour « faire le chiffre ».\n\n**Alarme** : on la lit, on la comprend, on agit selon la procédure, on la trace. On n'acquitte pas pour « nettoyer » l'écran, on n'inhibe pas parce qu'elle revient souvent. Un niveau qui monte lentement avec la LV bloquée à 100 % se traite **avant** le LAHH, pas après : on reprend la main, on réduit l'entrée au choke, on fait vérifier l'aval. Les **trends** révèlent les dérives lentes : une WHP qui perd 150 psi (≈ 10,3 bar) en 5 jours à choke inchangé raconte quelque chose sur le réservoir.\n\nLes **rondes** (rounds) restent indispensables : le DCS ne sent pas une odeur de gaz, n'entend pas un roulement qui chauffe, ne voit pas un suintement de bride. Une loop en manuel est suivie, tracée et remise en automatique. Le superviseur donne l'exemple : radio en boucle fermée (répétition des ordres), respect des PTW, zéro exception sur les protections.\n\n**Sur site**\n- Début de quart : DPR de la veille, alarmes actives, inhibitions, permis ouverts, équipements en standby, météo et marine (offshore).\n- Chaque écart supérieur à 5 % entre le test de puits et la production allouée est questionné.\n- Odeur de gaz sans alarme : on s'éloigne, on alerte, on mesure au détecteur portable.\n\n**Vocabulaire FR / EN**\n- rapport journalier de production = daily production report (DPR)\n- enveloppe d'exploitation = operating envelope\n- pression maximale admissible = MAWP\n- tournée = rounds\n- tendance = trend\n- passage en manuel = switch to manual\n- venue de sable = sand production\n- coning = coning (eau ou gaz)",
       "keyPoints": [
-        "L'enveloppe d'exploitation est une limite, jamais une cible ; les limites de conception sont plus larges.",
+        "L'enveloppe d'exploitation est une limite, jamais une cible ; les limites de conception sont plus larges (MAWP 10 barg = 145 psig).",
         "Alarme : lire, comprendre, agir selon la procédure, tracer ; chercher l'alarme initiale en cas de cascade.",
-        "On anticipe un trip en reprenant la main, pas en comptant sur l'arrêt automatique."
+        "Daily report : 12 000 BOPD (1 908 m³/j), GOR 500 scf/stb ; un écart inexpliqué se questionne tout de suite."
       ],
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique avec sorties gaz, huile et eau"
@@ -20,11 +20,11 @@
       "title": "Arbitrages et priorités",
       "theme": "Arbitrages et priorités",
       "minutes": 8,
-      "body": "Un superviseur arbitre tous les jours : produire ou intervenir, accepter une demande ou la refuser, redémarrer ou attendre. L'ordre de priorité est constant : **personnes, environnement, intégrité des installations, puis production**. Cet ordre n'est pas négociable, mais il se décline en décisions concrètes, argumentées et tracées.\n\nQuelques principes :\n- **Une urgence sécurité passe avant tout** : si deux demandes simultanées arrivent (permis à chaud et purge urgente), la plus liée à la sécurité immédiate est traitée en premier, l'autre est reportée explicitement.\n- **Un ordre verbal contraire à une procédure de sécurité** n'est pas un ordre : on le refuse, on explique, on propose l'alternative conforme et, si nécessaire, on escalade.\n- **Les alarmes se priorisent** : celles de haute priorité d'abord, sans négliger l'alarme initiale.\n- **Les opérations critiques se doublent** : alignement de lignes, ouverture d'organes sous pression, remise en service. Un second opérateur contrôle (double vérification).\n- **L'arbitrage production/maintenance** se fait sur le risque : si la maintenance demande l'isolement d'une ligne planifié pour un permis, on cherche une reprogrammation partagée avec la production plutôt que d'imposer l'un à l'autre ; en cas de désaccord, la décision est documentée et escaladée.\n- **La qualité produit** compte : un brut hors spécification (eau et sédiments) n'est pas expédié sans accord formel de la qualité et du client ; on recircule, on traite, on informe.\n\nUn arbitrage chiffré aide à décider. Exemple : la capacité de compression de gaz est limitée à 900 unités. Le puits A donne 800 barils par jour avec 800 unités de gaz, le puits B 500 barils avec 200 unités. En gardant B à plein et en étranglant A, on utilise 200 + 700 = 900 unités et on produit 500 + 700 = **1 200 barils par jour**, contre environ 925 en privilégiant A. On maximise l'huile par unité de gaz consommée lorsque le gaz est la contrainte.\n\nLe superviseur doit aussi arbitrer avec la **fatigue** : un opérateur épuisé ne remplace pas une consigne, il la rate. Il demande du renfort, réorganise ou reporte.\n\nToute décision d'arbitrage importante est inscrite dans le journal de quart avec sa justification. Elle sera relue par le quart suivant, par l'ingénierie ou, après un incident, par l'enquête.",
+      "body": "Un superviseur arbitre toute la journée. L'**ordre de priorité** est constant : **personnes, environnement, intégrité des installations, puis production**. Quand deux demandes arrivent en même temps, par exemple un permis de travail à chaud non urgent et la purge urgente d'une ligne gaz à 900 psi (≈ 62 bar), c'est l'urgence sécurité qui passe, le report de l'autre est explicite et tracé.\n\nQuand la **contrainte** est physique (capacité de compression, de traitement d'eau, de stockage), on maximise le gain par unité de contrainte. Exemple : compression limitée à 9 MMscfd (≈ 254 853 Sm³/j). Le puits A produit 8 000 BOPD avec 8 MMscfd de gaz (1 000 BOPD par MMscfd) ; le puits B 5 000 BOPD avec 2 MMscfd (2 500 BOPD par MMscfd). Garder B à plein (5 000 BOPD) et donner les 7 MMscfd restants à A donne 12 000 BOPD (≈ 1 908 m³/j) ; à l'inverse, A à plein et B étranglé donne 10 500 BOPD (≈ 1 670 m³/j). On gagne 1 500 BOPD (≈ 239 m³/j) en servant d'abord le puits le plus « rentable » en gaz, sans jamais dépasser la capacité (sinon trip du compresseur).\n\n**Maintenance contre production.** Une isolation planifiée qui coûte 4 000 BOPD pendant 8 h représente 1 333 bbl (≈ 212 m³) : c'est la valeur à mettre en face du risque, pas une raison d'annuler l'isolation ou d'intervenir sans elle. L'arbitrage est une décision de risque, partagée avec la maintenance et le chef de site, et documentée.\n\n**Quelqu'un te demande de contourner une procédure** « juste ce soir » ? On refuse, on explique, on propose l'alternative conforme et on escalade. Un bac au BS&W hors spécification avant un **offloading** ne part pas : on recircule ou on traite, on prévient le client, on ne dilue jamais en douce. Les opérations critiques (alignement de lignes, ouverture sous pression) se font en **double vérification**.\n\nPlusieurs alarmes en cascade : on cherche la première (first-out), on traite les priorités, on n'acquitte pas en bloc.\n\n**Sur site**\n- Les décisions importantes entrent dans le journal de quart avec leur justification : elles seront relues.\n- Un manque à produire se chiffre en BOPD ET en m³/j pour parler le même langage que le siège et le terrain.\n- Une exception orale à une règle de sécurité n'existe pas.\n\n**Vocabulaire FR / EN**\n- contrainte = constraint / bottleneck\n- manque à produire = deferred production\n- enlèvement / chargement navire = offloading / lifting\n- hors spécification = off-spec\n- première alarme = first-out alarm\n- double vérification = independent verification\n- escalader = to escalate\n- capacité de compression = compression capacity",
       "keyPoints": [
-        "Ordre de priorité constant : personnes, environnement, intégrité, production.",
-        "Un ordre verbal contraire à une procédure de sécurité se refuse et s'escalade.",
-        "Quand une contrainte limite, on maximise le gain par unité de contrainte (huile par unité de gaz)."
+        "Ordre constant : personnes, environnement, intégrité, production.",
+        "Sous contrainte de gaz (9 MMscfd) : B à plein puis A = 12 000 BOPD, contre 10 500 BOPD si l'on sert A d'abord.",
+        "Isolation planifiée : 4 000 BOPD × 8 h = 1 333 bbl (212 m³) à comparer au risque, jamais à annuler sans analyse."
       ],
       "img": "svg/risk-matrix.svg",
       "imgAlt": "Matrice de risque probabilité par gravité"
@@ -34,11 +34,11 @@
       "title": "Anomalies, trips et urgences procédé",
       "theme": "Anomalies, trips et urgences procédé",
       "minutes": 10,
-      "body": "Un **trip** est un arrêt automatique déclenché par un système de protection quand une variable dépasse un seuil. C'est un acte de sécurité, pas une panne à « remettre en route ». Le réflexe est : **stabiliser, comprendre, décider**. Redémarrer sans connaître la cause expose à un second événement, souvent plus grave.\n\nAprès le trip d'un compresseur, par exemple : on réduit l'alimentation (duses, charge), on surveille la montée en pression et le **torchage**, on diagnostique (première alarme, historique, retour terrain), on vérifie l'absence de fuite ou de dommage, on réinitialise selon la procédure et on redémarre avec les permissifs satisfaits et l'accord requis. Le **ballon de torche** protège la torche contre l'entraînement de liquide ; son niveau fait partie de la surveillance. Si une **soupape de sécurité** s'est ouverte, même si elle s'est refermée, on cherche la cause de la surpression, on la traite, on déclare l'événement et on fait vérifier la soupape.\n\nAutres situations :\n- **gaz confirmé** par plusieurs détecteurs dans un module : alarme, mise en sécurité des personnes, déclenchement des séquences d'arrêt et d'isolement prévues, aucun retour sans autorisation ; on n'envoie personne vérifier « pour voir » ;\n- **perte d'électricité** : on met en sécurité les procédés, on redémarre d'abord les utilités puis les charges de façon **séquentielle** selon la procédure, car un redémarrage simultané provoque des appels de courant qui peuvent causer un nouveau blackout ;\n- **vibrations croissantes** sur une machine tournante : on réduit la charge, on bascule sur le secours si disponible, on fait diagnostiquer ; on ne relève jamais un seuil d'alarme pour éviter un trip ;\n- **cascade d'alarmes** : chercher l'alarme initiale, hiérarchiser, agir sur la cause racine.\n\nUne **protection ne se contourne pas** parce que le trip « semble parasite ». Un capteur douteux se fait vérifier ; s'il faut une dérogation, on suit la procédure formelle d'override avec mesures compensatoires, durée limitée et approbation.\n\nLes **presque-accidents** (événements qui auraient pu provoquer un dommage) sont déclarés par tous, sans reproche. Le superviseur remercie celui qui déclare, analyse les causes avec l'équipe et partage l'enseignement. Chaque trip et chaque anomalie est consigné dans le journal pour que l'équipe suivante, et l'ingénierie, aient la mémoire des faits.",
+      "body": "Un **trip** est un arrêt automatique déclenché par une protection quand un seuil est dépassé (PSLL, LSHH, vibration, perte d'huile…). C'est un acte de protection : on ne le « remet pas en route » sans comprendre la cause. Séquence : **stabiliser, diagnostiquer, vérifier l'absence de fuite, réinitialiser selon la procédure**.\n\nExemple chiffré : le compresseur K-201 déclenche sur un site à 12 000 BOPD (≈ 1 908 m³/j) et 6 MMscfd (≈ 169 902 Sm³/j). Le gaz part à la torche, la pression HP monte de 18 à 22 bar (261 à 319 psi). Le manque à produire si l'on coupe des puits est de 500 bbl/h (≈ 79,5 m³/h). Un opérateur qui propose un reset immédiat « parce que c'est sûrement parasite » doit entendre : prouve-le d'abord.\n\nLe **ballon de torche** (KO drum) retient les liquides avant la torche. La surveillance de son niveau, de la couleur et de la hauteur de flamme fait partie de la gestion d'un trip. Une **PSV** qui a lifté puis s'est refermée est un événement : on cherche la cause de la surpression et on fait vérifier la soupape ; on ne change jamais le tarage ni on n'isole l'évent pour « éviter de recommencer ».\n\n**Gaz confirmé** par deux détecteurs : on déclenche l'alarme, on met le personnel en sécurité, personne ne va voir « pour confirmer ». Pour mémoire, 25 % de la LIE du méthane (5 % vol.) correspondent à 1,25 % vol.\n\n**Blackout** : on met le procédé en sécurité puis on redémarre les utilités et les charges **en séquence**, pas toutes ensemble, sous peine de refaire tomber le réseau. Une pompe qui vibre : on réduit la charge ou on bascule sur la standby, on ne relève pas le seuil de vibration.\n\nUn **near-miss** (presque-accident) est déclaré par tous, sans reproche : c'est ce qui permet d'éviter l'accident. Chaque trip et chaque anomalie va au journal avec l'heure, les valeurs (BOPD, pressions) et les actions.\n\n**Sur site**\n- Après un trip : relevé des pressions HP/MP/LP, du niveau du KO drum, du débit torche en MMscfd, des puits à fermer.\n- Un reset se fait avec la salle et le terrain, jamais à distance « pour voir ».\n- Un compresseur redémarré trop tôt peut perdre en une heure plus que ce qu'il a gagné.\n\n**Vocabulaire FR / EN**\n- arrêt automatique = trip\n- ballon de torche = flare KO drum\n- soupape de sécurité = PSV (relief valve)\n- détecteur de gaz = gas detector\n- coupure électrique totale = blackout\n- groupe électrogène = genset\n- presque-accident = near-miss\n- redémarrage = restart / start-up",
       "keyPoints": [
         "Trip : stabiliser, comprendre, décider ; pas de redémarrage sans cause identifiée.",
-        "Gaz confirmé : alarme, mise en sécurité, séquences d'arrêt, personne n'y va « pour voir ».",
-        "Une protection ne se contourne pas ; toute dérogation passe par la procédure formelle d'override."
+        "Compresseur K-201 en trip à 6 MMscfd (169 902 Sm³/j) : torche, pression HP en hausse, surveillance du KO drum.",
+        "Gaz confirmé : alarme, mise en sécurité, personne n'y va « pour voir » ; une PSV qui a lifté est un événement."
       ],
       "img": "photo/control-room.jpg",
       "imgAlt": "Salle de contrôle d'une installation de production"
@@ -48,11 +48,11 @@
       "title": "Démarrages, remises en service et interface maintenance/HSE",
       "theme": "Démarrages et remises en service",
       "minutes": 10,
-      "body": "Un **démarrage** est la phase la plus risquée de la vie d'une unité : équipements froids, états transitoires, présence humaine élevée. On le prépare : check-list, permissifs de sécurité vérifiés, consignations levées, permis clos, lignes alignées, détecteurs actifs, communication entre salle de contrôle et terrain. La check-list n'est pas une formalité : elle garantit que la séquence est complète et que rien n'a été oublié.\n\nQuelques repères techniques :\n- avant d'introduire des hydrocarbures dans un circuit qui a été ouvert, on **purge ou inerte** pour éliminer l'air ;\n- on monte en pression par **paliers**, avec contrôle d'étanchéité à chacun ; une fuite à une bride se traite en **dépressurisant et en isolant**, jamais en serrant à chaud sous pression sans procédure ;\n- une pompe centrifuge se démarre **amorcée**, aspiration ouverte, jamais à sec ; sur sa courbe, la hauteur manométrique diminue quand le débit augmente ;\n- un **permissif** (basse pression d'huile, par exemple) n'est pas shunté « pour démarrer » : on cherche la cause ; s'il faut une dérogation, elle suit la procédure formelle d'override.\n\nL'**interface avec la maintenance** repose sur des règles partagées :\n- l'**émetteur de permis** vérifie la zone, l'état des équipements et les isolations avant de signer, et se rend sur place ;\n- la **consignation** se fait avec cadenas personnels et vérification d'absence d'énergie ; si une vanne d'isolement « passe », on ne laisse pas intervenir : double isolement, purge ou bride pleine, ou report ;\n- **aucun travail ne commence** avant signature complète du permis et briefing, même entre collègues qui se connaissent ;\n- **travail non prévu** : analyse de risque, permis et coordination avant exécution ;\n- **zones à risque d'explosion** : seuls des équipements adaptés y entrent ; les appareils ordinaires (téléphone, par exemple) sont interdits ;\n- **travail à chaud à proximité d'une fuite de gaz** : arrêt immédiat, mise en sécurité, isolement de la fuite, mesures de gaz, information du superviseur ;\n- à la fin, la **remise en exploitation** se fait avec preuve des essais, retrait des consignations et contrôle conjoint.\n\nLa **revue de sécurité avant redémarrage (PSSR)** conclut le dispositif : travaux terminés, protections remises en service, documentation à jour. L'exploitation et la maintenance partagent le même objectif : un équipement fiable, remis dans un état sûr et connu.",
+      "body": "Un **démarrage** ou une **remise en service** est la phase la plus risquée de la vie d'une unité. On suit la **check-list** de démarrage : permissifs satisfaits, lignes alignées, protections actives, consignations levées, permis clos. On **purge ou inerte** à l'azote avant d'introduire des hydrocarbures dans un circuit ouvert, car l'air + le gaz peut entrer dans le domaine d'explosivité.\n\nLa montée en charge se fait **par paliers**. Pression : par exemple 5 bar (≈ 72,5 psi) toutes les 5 min, avec contrôle d'étanchéité à chaque palier. Production : si l'objectif est 12 000 BOPD (≈ 1 908 m³/j), on monte à 25 % (3 000 BOPD = 477 m³/j), 50 % (6 000 BOPD = 954 m³/j), 75 % (9 000 BOPD = 1 431 m³/j) puis 100 %, en observant séparateur, compresseur et torche à chaque étape. Une petite fuite de bride pendant la montée à 45 bar (653 psi) : on **dépressurise, on isole, on répare sous permis, on refait le test**. On ne resserre pas sous pression.\n\nUne **pompe centrifuge** démarre amorcée, aspiration ouverte, refoulement presque fermé. Un **permissif** (basse pression d'huile d'un compresseur à 1,2 bar contre 1,5 bar requis, par exemple) protège la machine : on ne le shunte pas « juste pour démarrer », on cherche la cause et, si une dérogation s'impose, elle suit la procédure formelle.\n\n**Interface maintenance / HSE.** Le **PTW** est émis par quelqu'un qui est allé sur place vérifier zone, équipements et isolations. La **consignation** (LOTO) se termine par la vérification d'absence d'énergie. Une vanne d'isolement qui passe (par exemple 150 BOPD ≈ 24 m³/j de fuite) n'isole pas : double isolement ou bride pleine avant toute intervention. Le travail à chaud ne cohabite pas avec une fuite de gaz. En zone classée, seuls des équipements certifiés pour la zone sont admis : pas de téléphone ordinaire.\n\nLa **remise en exploitation** est documentée : essais faits, consignations retirées, permis clos, contrôle conjoint, **PSSR** (revue avant redémarrage). Un travail non prévu reste soumis à analyse de risque, permis et coordination.\n\n**Sur site**\n- Aucune ligne n'est remise en service sans check-list signée et contrôle conjoint exploitation/maintenance.\n- Un « ça passe un peu » à une vanne d'isolement se traduit par : on n'intervient pas.\n- Pas de permis signé, pas de travaux : même pour un prestataire que « tout le monde connaît ».\n\n**Vocabulaire FR / EN**\n- check-list de démarrage = start-up checklist\n- permissif = permissive / interlock\n- consignation = LOTO (lock-out / tag-out)\n- vanne qui passe = leaking / passing valve\n- bride pleine = blind flange (spade)\n- revue avant redémarrage = PSSR\n- inertage = inerting / purging\n- remise en exploitation = hand-back to operations",
       "keyPoints": [
-        "Check-list et permissifs satisfaits avant tout démarrage ; on purge avant d'introduire des hydrocarbures.",
-        "On ne shunte pas un permissif ni on ne serre sous pression : on dépressurise, on isole, on cherche la cause.",
-        "Interface maintenance : permis signé et briefing avant tout travail, isolation fiable, remise en exploitation contrôlée."
+        "Check-list et permissifs satisfaits avant tout démarrage ; on purge ou inerte avant d'introduire des hydrocarbures.",
+        "Montée par paliers (25/50/75/100 % de 12 000 BOPD, soit 477 → 1 908 m³/j) avec contrôle d'étanchéité.",
+        "On ne shunte pas un permissif ni on ne serre sous pression : dépressuriser, isoler, réparer, retester."
       ],
       "img": "svg/lockout-tagout.svg",
       "imgAlt": "Consignation avec cadenas et étiquette, étapes jusqu'à la vérification d'absence d'énergie"
@@ -62,11 +62,11 @@
       "title": "Optimisation, allocation et passation de quart",
       "theme": "Optimisation, allocation et passation de quart",
       "minutes": 9,
-      "body": "Optimiser, c'est produire **le plus possible dans les limites sûres**. Les leviers du superviseur : ouverture des **duses**, injection de gaz de gas-lift, pression de séparation, répartition entre puits et entre trains. Un **test de puits** mesure la production individuelle (huile, gaz, eau) pour le suivi et l'allocation. Ouvrir une duse augmente le débit, mais peut augmenter le risque de venue de sable ou de coning d'eau ou de gaz ; l'optimisation se fait dans l'enveloppe fixée par l'ingénierie.\n\nEn **gas-lift**, la production d'huile augmente avec le débit de gaz injecté jusqu'à un optimum, puis diminue si l'on injecte trop : augmenter l'injection n'est donc pas toujours favorable, et le gaz mal alloué coûte cher quand la compression est limitante. Quand le **taux d'eau (water cut)** augmente, la conséquence la plus directe est une charge croissante sur le traitement de l'eau et sur la capacité de séparation et de levage : il faut anticiper les goulots.\n\nL'**allocation** répartit la production totale mesurée entre les puits, les champs ou les partenaires à partir des tests et des compteurs ; on réconcilie la somme des puits avec la mesure globale par des facteurs d'allocation. Le superviseur garantit la qualité des mesures : instruments étalonnés, tests réalisés, données saisies à temps.\n\nLa **passation de quart** est une barrière à part entière. Elle comprend :\n- l'état des équipements (en service, en secours, en maintenance), les anomalies et trips du quart ;\n- les **travaux en cours** : permis actifs, consignations, zones concernées ;\n- les **inhibitions** et dérogations en vigueur, avec leur justification ;\n- les consignes, les instructions reçues et les tâches à terminer ;\n- une **visite conjointe** de la salle de contrôle et, si besoin, du terrain, avec échange oral doublé d'une trace écrite.\n\nUn « RAS » (rien à signaler) ne vaut rien si le journal indique une inhibition ou un permis actif : le superviseur entrant retient le sortant jusqu'à la clarification complète, et vérifie sur le terrain ce qui doit l'être.\n\nLe superviseur suit des indicateurs simples sur son quart : production contre potentiel, trips et durées, alarmes par heure, travaux réalisés, presque-accidents déclarés. Il les partage avec l'équipe, car ce qui est visible s'améliore.",
+      "body": "L'**optimisation** se fait dans l'enveloppe : choke, gas-lift, répartition entre puits, jamais au prix de l'intégrité. Un **well test** (test de 12 h ou 24 h au test separator) donne la production individuelle : par exemple 960 bbl d'huile en 12 h = 1 920 BOPD (≈ 305 m³/j). Il sert au suivi du réservoir, à l'optimisation et à l'**allocation**.\n\nL'**allocation** répartit la production fiscale mesurée (LACT unit) entre les puits selon les tests réconciliés. Exemple : trois puits testent 4 200, 3 600 et 2 700 BOPD, soit 10 500 BOPD au total, alors que le comptage fiscal indique 10 000 BOPD (≈ 1 590 m³/j). Facteur d'allocation = 10 000 ÷ 10 500 = 0,9524. Le puits à 3 600 BOPD reçoit donc 3 429 BOPD (≈ 545 m³/j). On ne répartit ni à parts égales, ni selon l'ancienneté, ni selon les « demandes » de chaque puits. Le **shrinkage** (perte de volume au dégazage) explique une partie des écarts entre bacs et comptage.\n\nOuvrir le choke augmente le débit mais fait grimper le risque de **sable** et de **coning** d'eau ou de gaz : un puits poussé de 2 000 à 3 000 BOPD (≈ 318 → 477 m³/j) peut franchir son enveloppe. En **gas-lift**, il existe un débit de gaz optimal : au-delà, la production d'huile peut baisser (frottements, slugging) alors que le gaz coûte en compression. Exemple : 1 → 2 MMscfd injectés (28 317 → 56 634 Sm³/j) et l'huile qui passe de 1 500 à 1 350 BOPD (239 → 215 m³/j).\n\nQuand le **water cut** monte, par exemple de 40 à 70 % sur 10 000 BLPD (≈ 1 590 m³/j) : l'huile passe de 6 000 à 3 000 BOPD (954 → 477 m³/j) et l'eau de 4 000 à 7 000 BWPD (636 → 1 113 m³/j) : le goulot se déplace vers le traitement et le rejet ou la réinjection de l'eau.\n\nLa **passation de quart** est une barrière : écrit, oral et visite conjointe. Elle contient l'état des équipements, les permis en cours, les inhibitions et forçages, les consignes. Un « RAS » contredit par le journal (inhibition de niveau haut, permis à chaud actif) se clarifie avant le départ du sortant.\n\n**Sur site**\n- Un well test non représentatif (puits pas stabilisé, test de 3 h) ne sert pas à l'allocation.\n- L'allocation se rejoue chaque jour à partir du comptage fiscal ; les écarts > 5 % sont investigués.\n- À la relève, on se promène ensemble : inhibitions et permis se vérifient sur le terrain.\n\n**Vocabulaire FR / EN**\n- test de puits = well test\n- allocation de production = production allocation\n- comptage fiscal = fiscal metering (LACT unit)\n- taux d'eau = water cut\n- passation de quart = shift handover\n- rapport journalier = daily production report\n- venue d'eau / de gaz = water / gas coning\n- gas-lift = gas lift",
       "keyPoints": [
-        "Optimiser dans l'enveloppe : duses, gas-lift, répartition, jamais au prix de la sécurité ou de l'intégrité.",
-        "Gas-lift : au-delà de l'optimum, injecter plus de gaz réduit la production.",
-        "Passation : état, travaux en cours, inhibitions, consignes, visite conjointe ; un RAS contredit par le journal se clarifie avant le départ."
+        "Optimiser dans l'enveloppe : choke, gas-lift, répartition ; jamais au prix de la sécurité ou de l'intégrité.",
+        "Allocation : facteur 10 000 ÷ 10 500 = 0,9524 ; un puits testé à 3 600 BOPD reçoit 3 429 BOPD.",
+        "Gas-lift : au-delà de l'optimum, plus de gaz peut réduire l'huile ; water cut qui monte = goulot sur le traitement de l'eau."
       ],
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Vanne de gas-lift dans une colonne de production"
@@ -77,17 +77,17 @@
       "id": "sup-prod-001",
       "theme": "Conduite quotidienne",
       "level": 1,
-      "q": "Face à une alarme en salle de contrôle, quelle est la bonne attitude ?",
+      "q": "Salle de contrôle, 03:20 : alarme PAH du séparateur HP à 21 bar (305 psi) sur 6 800 BOPD (≈ 1 081 m³/j). L'opérateur propose de l'acquitter « pour libérer l'écran ». Quelle est la bonne attitude ?",
       "img": "photo/control-room.jpg",
       "imgAlt": "Salle de contrôle d'une installation de production",
       "choices": [
-        "La lire, la comprendre, agir selon la procédure et la tracer",
-        "L'acquitter aussitôt pour libérer l'écran, puis la traiter plus tard",
-        "L'inhiber temporairement si elle revient souvent sur la même boucle",
-        "Attendre qu'elle soit confirmée par un second opérateur de la salle"
+        "L'acquitter aussitôt pour libérer l'écran, puis la traiter plus tard dans le quart",
+        "L'inhiber le temps du quart si elle revient souvent sur la même boucle",
+        "Attendre qu'elle soit confirmée par un second opérateur avant toute action",
+        "La lire, la comprendre, agir selon la procédure et la tracer au journal"
       ],
-      "answer": 0,
-      "explain": "Une alarme est un message à traiter. Acquitter ou inhiber sans analyse est une dérive qui conduit à ignorer le signal qui comptait.",
+      "answer": 3,
+      "explain": "Une alarme est un message à traiter : PAH à 21 bar (305 psi) sur 6 800 BOPD (1 081 m³/j), on cherche pourquoi la pression monte (PCV, compresseur, entrée) avant le PSHH. Acquitter ou inhiber sans analyse conduit à ignorer le signal qui comptait.",
       "seconds": 45,
       "status": "draft"
     },
@@ -95,15 +95,15 @@
       "id": "sup-prod-002",
       "theme": "Conduite quotidienne",
       "level": 1,
-      "q": "Pourquoi maintient-on des rondes sur le terrain alors que le système de conduite surveille l'unité ?",
+      "q": "Le DCS affiche tout normal sur le manifold, pourtant l'opérateur de terrain signale un suintement de bride et un bruit anormal à la pompe booster P-102 (85 m³/h ≈ 535 bbl/h). Pourquoi maintient-on des rondes malgré un DCS performant ?",
       "choices": [
-        "Parce que le système de conduite est peu fiable dès qu'une vanne est en manuel",
-        "Pour détecter fuites naissantes, bruits, vibrations et odeurs",
-        "Pour occuper les opérateurs de nuit et maintenir la présence terrain",
-        "Pour remplacer les inspections réglementaires des équipements sous pression"
+        "Pour détecter fuites naissantes, bruits, vibrations et odeurs que les capteurs ne voient pas",
+        "Parce que le DCS devient peu fiable dès qu'une vanne est passée en manuel sur l'unité",
+        "Pour occuper les opérateurs de nuit et garder une présence terrain à bord et rassurer les équipes de jour",
+        "Pour remplacer les inspections réglementaires des équipements sous pression du site"
       ],
-      "answer": 1,
-      "explain": "Les sens humains complètent l'instrumentation. La ronde détecte souvent la première anomalie, avant l'alarme.",
+      "answer": 0,
+      "explain": "Les sens humains complètent l'instrumentation : bruit de roulement, odeur, suintement. La ronde détecte souvent la première anomalie, avant l'alarme, sur des équipements dont la perte coûte vite (booster 85 m³/h = 535 bbl/h).",
       "seconds": 45,
       "status": "draft"
     },
@@ -111,17 +111,17 @@
       "id": "sup-prod-003",
       "theme": "Conduite quotidienne",
       "level": 2,
-      "q": "Dans un séparateur, un niveau liquide trop haut peut provoquer :",
+      "q": "Sur un séparateur HP traitant 20 000 BLPD (≈ 3 180 m³/j), le niveau liquide passe de 40 % à 85 % et reste haut. Quelle conséquence redoutes-tu côté gaz ?",
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique avec sorties gaz, huile et eau",
       "choices": [
-        "Un manque de liquide à l'aspiration de la pompe d'huile en aval",
+        "Un manque de liquide à l'aspiration de la pompe d'export en aval du séparateur",
         "Une baisse de la pression d'huile du séparateur, sans autre conséquence",
         "L'entraînement de liquide dans la ligne gaz vers le compresseur",
         "Une meilleure séparation du gaz grâce au temps de séjour plus long"
       ],
       "answer": 2,
-      "explain": "Quand le niveau est trop haut, la zone gaz diminue et du liquide est emporté vers l'aval, ce qui peut endommager un compresseur. La régulation, les alarmes et les arrêts haut-haut sont les barrières.",
+      "explain": "Quand le niveau est trop haut, la zone gaz diminue et du liquide est emporté vers l'aval (carry-over), ce qui peut détruire un compresseur. Sur 20 000 BLPD (3 180 m³/j), la marge se consomme vite : régulation, LAH et LAHH sont les barrières.",
       "seconds": 60,
       "status": "draft"
     },
@@ -129,15 +129,15 @@
       "id": "sup-prod-004",
       "theme": "Conduite quotidienne",
       "level": 1,
-      "q": "Que représente l'enveloppe d'exploitation d'un équipement ?",
+      "q": "Fiche d'exploitation du séparateur : MAWP 10 barg (145 psig), pression normale 6 à 8 barg (87 à 116 psig), maximum opératoire 8,5 barg (123 psig). Que représente cette enveloppe d'exploitation ?",
       "choices": [
-        "Les limites de conception, atteignables en pointe de production",
-        "La plage de réglage des seules alarmes basses de l'équipement",
-        "Les limites fixées par le contrat de vente avec le client",
-        "Les limites de fonctionnement, plus étroites que celles de conception"
+        "Les limites de fonctionnement du quart, plus étroites que celles de conception",
+        "Les limites de conception, atteignables en pointe de production sans alarme ou en cas de pic de demande",
+        "La plage de réglage des seules alarmes basses de l'équipement en service",
+        "Les limites fixées par le contrat de vente avec le client de l'export"
       ],
-      "answer": 3,
-      "explain": "Les limites d'exploitation laissent une marge par rapport à la conception : on opère à l'intérieur, on ne les considère jamais comme des cibles.",
+      "answer": 0,
+      "explain": "L'enveloppe laisse une marge par rapport à la conception : normal 6 à 8 barg, max opératoire 8,5 barg (123 psig) pour une MAWP de 10 barg (145 psig). On opère à l'intérieur, on ne la considère jamais comme une cible.",
       "seconds": 45,
       "status": "draft"
     },
@@ -145,17 +145,17 @@
       "id": "sup-prod-005",
       "theme": "Conduite quotidienne",
       "level": 3,
-      "q": "Le niveau du séparateur HP monte lentement, la régulation est en automatique, la vanne de contrôle de niveau semble bloquée et l'alarme haut vient d'apparaître. Le haut-haut est proche. Que fait le superviseur ?",
+      "q": "HP separator, 9 000 BOPD (≈ 1 431 m³/d): the level rises slowly (LIC at 72 %, SP 50 %), the loop is in auto, the LV looks stuck at 100 %, LAH has just come in and LAHH (85 %) is close. What does the supervisor do?",
       "img": "svg/separator-3phase.svg",
       "imgAlt": "Séparateur triphasique avec sorties gaz, huile et eau",
       "choices": [
-        "Attendre le haut-haut : l'arrêt automatique est là pour traiter ce cas",
-        "Inhiber l'arrêt haut-haut pour éviter un trip pendant la correction",
-        "Reprendre la main, réduire l'entrée, faire vérifier la vanne",
-        "Augmenter la pression du séparateur pour compenser la montée du niveau"
+        "Wait for the LAHH: the automatic shutdown exists exactly for this case",
+        "Take control, reduce the inlet at the choke and have the LV checked in the field",
+        "Inhibit the LAHH to avoid a trip while the problem is being corrected",
+        "Raise the separator pressure to compensate for the rising level in the vessel"
       ],
-      "answer": 2,
-      "explain": "Le superviseur anticipe : on n'attend pas la dernière barrière. Inhiber l'arrêt supprime la protection ; augmenter la pression ne traite pas la cause.",
+      "answer": 1,
+      "explain": "The supervisor anticipates: you do not wait for the last barrier. With 9 000 BOPD (1 431 m³/d) going in and the LV at 100 %, the outlet is restricted: reduce the inlet, send an operator to the LV and the downstream line. Inhibiting the trip removes the protection; raising pressure does not fix the cause.",
       "seconds": 100,
       "status": "draft"
     },
@@ -163,15 +163,15 @@
       "id": "sup-prod-006",
       "theme": "Conduite quotidienne",
       "level": 3,
-      "q": "Pendant une ronde, vous sentez une odeur de gaz près d'un compresseur, sans aucune alarme. Que faites-vous ?",
+      "q": "Pendant une ronde, tu sens une odeur de gaz près du compresseur K-201 (3 MMscfd ≈ 85 000 Sm³/j), sans aucune alarme. Que fais-tu ?",
       "choices": [
-        "Chercher la fuite avec une flamme pour la localiser rapidement",
-        "Ignorer l'odeur, puisque les détecteurs fixes n'ont rien signalé",
-        "Vous approcher pour identifier la source avant d'alerter la salle",
-        "Vous éloigner, alerter la salle, contrôler au détecteur portable"
+        "Chercher la fuite avec une flamme pour la localiser rapidement et la traiter",
+        "Ignorer l'odeur, puisque les détecteurs fixes n'ont rien signalé du tout",
+        "T'approcher pour identifier la source avant d'alerter la salle de contrôle",
+        "Tu t'éloignes, tu alertes la salle et tu contrôles au détecteur portable"
       ],
       "answer": 3,
-      "explain": "L'absence d'alarme n'écarte pas une fuite locale. On s'éloigne, on alerte, on mesure, on traite. Une flamme est une source d'ignition.",
+      "explain": "L'absence d'alarme n'écarte pas une fuite locale (même 1 % vol. de méthane = 20 % de la LIE). On s'éloigne, on alerte, on mesure, on traite. Une flamme est une source d'ignition.",
       "seconds": 75,
       "status": "draft"
     },
@@ -179,15 +179,15 @@
       "id": "sup-prod-007",
       "theme": "Conduite quotidienne",
       "level": 3,
-      "q": "Le siège demande une hausse de 5 % de la production pour le week-end, en poussant les puits au-delà des limites de débit fixées pour éviter l'érosion et les venues de sable. Que fait le superviseur ?",
+      "q": "Le siège demande +5 % de production pour le week-end : de 12 000 à 12 600 BOPD (≈ 1 908 → 2 003 m³/j), en poussant des puits au-delà de leur limite de débit sans sable fixée à 2 000 BOPD (≈ 318 m³/j). Que fait le superviseur ?",
       "choices": [
-        "Refuser par écrit de sortir de l'enveloppe, proposer des optimisations autorisées",
-        "Pousser les puits : le siège connaît les enjeux et assume la décision du week-end entier",
+        "Pousser les puits : le siège connaît les enjeux et assume la décision du week-end et on régularise ensuite",
         "Pousser les puits la nuit seulement, quand le sable est plus facile à surveiller",
-        "Appliquer la demande, puis la signaler à l'ingénierie après le week-end"
+        "Appliquer la demande, puis la signaler à l'ingénierie après le week-end",
+        "Refuser par écrit de sortir de l'enveloppe et proposer des optimisations dans les limites"
       ],
-      "answer": 0,
-      "explain": "On ne sort pas de l'enveloppe pour tenir un chiffre. Le superviseur propose ce qui est possible dans les limites et justifie par écrit.",
+      "answer": 3,
+      "explain": "+5 % de 12 000 BOPD = 600 BOPD (≈ 95 m³/j) : l'objectif se cherche autrement (gas-lift optimisé, réduction du downtime, tests de puits) sans franchir la limite de 2 000 BOPD sans sable. On ne sort pas de l'enveloppe pour tenir un chiffre ; on justifie par écrit.",
       "seconds": 100,
       "status": "draft"
     },
@@ -195,17 +195,17 @@
       "id": "sup-prod-008",
       "theme": "Conduite quotidienne",
       "level": 2,
-      "q": "Une boucle de régulation de débit est passée en manuel. Quelle précaution s'impose ?",
+      "q": "La boucle FIC-103 de la pompe d'export (90 m³/h ≈ 566 bbl/h) est passée en manuel à 45 % de sortie. Quelle précaution s'impose ?",
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "Boucle de régulation de débit avec transmetteur, régulateur et vanne",
       "choices": [
         "Ne plus s'en occuper : le mode manuel est plus fiable que l'automatique",
-        "La surveiller, la tracer et la remettre en automatique ensuite",
-        "La laisser en manuel toute la journée, sans suivi particulier",
-        "L'indiquer seulement dans le journal du quart suivant"
+        "La surveiller, la tracer au journal et la remettre en automatique dès que possible",
+        "La laisser en manuel toute la journée, sans suivi particulier de la mesure",
+        "L'indiquer seulement dans le journal du quart suivant, à la relève du matin, si on y pense"
       ],
       "answer": 1,
-      "explain": "En manuel, plus rien ne corrige automatiquement les écarts : la variable peut dériver. On suit de près et on revient en automatique.",
+      "explain": "En manuel, plus rien ne corrige automatiquement les écarts : le débit (90 m³/h = 566 bbl/h) peut dériver si la pression de ligne change. On suit de près, on trace et on revient en automatique.",
       "seconds": 60,
       "status": "draft"
     },
@@ -213,15 +213,15 @@
       "id": "sup-prod-009",
       "theme": "Conduite quotidienne",
       "level": 1,
-      "q": "À quoi servent les tendances (trends) du système de conduite ?",
+      "q": "Le trend de la WHP du puits P-05 montre 2 200 → 2 050 psi (152 → 141 bar) en 5 jours, choke inchangé à 36/64\". À quoi servent les trends du DCS dans ce cas ?",
       "choices": [
-        "À remplacer les rondes terrain par une surveillance continue",
+        "À remplacer les rondes terrain par une surveillance continue des puits",
+        "À calculer les temps de présence des opérateurs en salle de contrôle",
         "À détecter les dérives lentes avant le déclenchement d'une alarme",
-        "À calculer les temps de présence des opérateurs en salle",
         "À régler les seuils d'alarme sans analyser l'historique des mesures"
       ],
-      "answer": 1,
-      "explain": "Les tendances montrent l'évolution dans le temps et révèlent les dérives avant l'alarme, ce qui permet d'anticiper.",
+      "answer": 2,
+      "explain": "Une perte de 150 psi (≈ 10,3 bar) en 5 jours à choke constant, sans aucune alarme, se voit sur la tendance : possible déplétion ou changement de water cut, à remonter à l'ingénierie. Les trends révèlent les dérives avant l'alarme.",
       "seconds": 45,
       "status": "draft"
     },
@@ -229,17 +229,17 @@
       "id": "sup-prod-010",
       "theme": "Arbitrages et priorités",
       "level": 1,
-      "q": "Quel est l'ordre de priorité constant du superviseur de production ?",
+      "q": "Le siège pousse pour tenir 15 000 BOPD (≈ 2 385 m³/j) ce mois-ci, alors qu'une anomalie de sécurité est ouverte sur le séparateur. Quel est l'ordre de priorité constant du superviseur ?",
       "img": "svg/risk-matrix.svg",
       "imgAlt": "Matrice de risque probabilité par gravité",
       "choices": [
-        "Personnes, environnement, intégrité, puis production",
         "Production, intégrité, environnement, puis sécurité des personnes",
         "Environnement, production, intégrité, puis sécurité des personnes",
-        "Intégrité, production, personnes, puis environnement"
+        "Intégrité, production, personnes, puis environnement de l'installation",
+        "Personnes, environnement, intégrité, puis production"
       ],
-      "answer": 0,
-      "explain": "La sécurité des personnes passe avant tout, suivie de l'environnement et de l'intégrité ; la production vient en dernier dans un conflit de priorités.",
+      "answer": 3,
+      "explain": "La sécurité des personnes passe avant tout, suivie de l'environnement et de l'intégrité ; la production (15 000 BOPD, 2 385 m³/j) vient en dernier dans un conflit de priorités.",
       "seconds": 45,
       "status": "draft"
     },
@@ -247,15 +247,15 @@
       "id": "sup-prod-011",
       "theme": "Arbitrages et priorités",
       "level": 3,
-      "q": "La production est en retard sur l'objectif. La maintenance demande l'isolement planifié d'une ligne pour un permis. L'exploitation voudrait maintenir la ligne en service pour un enlèvement de cargaison demain. Que fait le superviseur ?",
+      "q": "Un cargo de 300 000 bbl (≈ 47 700 m³) est attendu demain. La maintenance demande l'isolation planifiée de la ligne d'export B (4 000 BOPD concernés pendant 8 h). L'exploitation voudrait garder la ligne en service. Que fait le superviseur ?",
       "choices": [
-        "Annuler l'isolement planifié pour sécuriser la cargaison, sans informer la maintenance",
-        "Faire intervenir la maintenance sans isolement pour tenir le planning de production",
-        "Laisser maintenance et exploitation s'arranger entre elles sur la ligne concernée",
-        "Arbitrer sur le risque, honorer l'isolement si la sécurité le justifie, escalader"
+        "Annuler l'isolation planifiée pour sécuriser le cargo, sans informer la maintenance",
+        "Arbitrer sur le risque, honorer l'isolation si la sécurité le justifie, escalader et tracer",
+        "Faire intervenir la maintenance sans isolation pour tenir le planning de production, quitte à rattraper plus tard",
+        "Laisser maintenance et exploitation s'arranger entre elles sur la ligne concernée"
       ],
-      "answer": 3,
-      "explain": "L'arbitrage est une décision de risque, partagée et documentée. Intervenir sans isolement ou annuler sans dialogue crée un danger ou un conflit durable.",
+      "answer": 1,
+      "explain": "Le manque à produire est de 4 000 BOPD × 8 h ÷ 24 = 1 333 bbl (≈ 212 m³), à comparer au cargo de 300 000 bbl (47 700 m³) et au risque. L'arbitrage est une décision de risque, partagée et documentée : intervenir sans isolation ou annuler sans dialogue crée un danger ou un conflit durable.",
       "seconds": 110,
       "status": "draft"
     },
@@ -263,15 +263,15 @@
       "id": "sup-prod-012",
       "theme": "Arbitrages et priorités",
       "level": 2,
-      "q": "Deux demandes arrivent en même temps : un permis de travail à chaud non urgent et la purge urgente d'une ligne contenant du gaz sous pression. Que priorise le superviseur ?",
+      "q": "Deux demandes arrivent en même temps : un permis de travail à chaud non urgent et la purge urgente d'une ligne contenant du gaz sous 900 psi (≈ 62 bar). Que priorise le superviseur ?",
       "choices": [
+        "La purge urgente, liée à la sécurité immédiate, en reportant le permis à chaud",
         "Le permis à chaud, car il est planifié et que l'équipe est déjà mobilisée",
         "Les deux en parallèle, avec le même opérateur affecté aux deux tâches",
-        "La purge urgente, liée à la sécurité immédiate, en reportant le permis à chaud",
         "La première demande arrivée, quelle que soit sa nature ou son urgence"
       ],
-      "answer": 2,
-      "explain": "Une urgence sécurité passe avant une tâche planifiée. Les reports sont explicites et tracés ; faire les deux avec un seul opérateur crée une erreur.",
+      "answer": 0,
+      "explain": "Une urgence sécurité (gaz à 900 psi, 62 bar) passe avant une tâche planifiée ; le report du hot work est explicite et tracé. Faire les deux avec un seul opérateur crée une erreur, et un point chaud près d'une purge de gaz est exclu.",
       "seconds": 60,
       "status": "draft"
     },
@@ -279,17 +279,17 @@
       "id": "sup-prod-013",
       "theme": "Arbitrages et priorités",
       "level": 3,
-      "q": "La capacité de compression est limitée à 900 unités de gaz. Le puits A donne 800 barils/jour avec 800 unités de gaz ; le puits B 500 barils/jour avec 200 unités. Quelle stratégie maximise la production d'huile ?",
+      "q": "Compression capacity is limited to 9 MMscfd (≈ 254 853 Sm³/d). Well A makes 8 000 BOPD and needs 8 MMscfd of gas compressed; well B makes 5 000 BOPD and needs 2 MMscfd (assume oil proportional to the gas that can be compressed). Which strategy maximises oil?",
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
-        "Garder A à plein et étrangler B, soit environ 1 050 barils/jour",
-        "Fermer B pour dédier toute la compression à A, soit 800 barils/jour",
-        "Ouvrir les deux à plein, au risque d'un déclenchement du compresseur",
-        "Garder B à plein et étrangler A, soit environ 1 200 barils/jour"
+        "Keep B wide open and throttle A to 7 MMscfd: 12 000 BOPD (≈ 1 908 m³/d)",
+        "Keep A wide open and throttle B to 1 MMscfd: 10 500 BOPD (≈ 1 670 m³/d)",
+        "Shut in B and give all the compression to A: 8 000 BOPD (≈ 1 272 m³/d)",
+        "Open both wells fully for 13 000 BOPD, accepting the risk of a compressor trip"
       ],
-      "answer": 3,
-      "explain": "Garder B à plein utilise 200 unités et laisse 700 pour A : 500 + 700 = 1 200 barils/jour. Privilégier A donne 800 + environ 125. Dépasser la capacité cause un trip.",
+      "answer": 0,
+      "explain": "Oil per MMscfd of compression: A = 1 000 BOPD, B = 2 500 BOPD. B at full uses 2 MMscfd, leaving 7 for A: 5 000 + 7 000 = 12 000 BOPD (1 908 m³/d). A first: 8 000 + 2 500 = 10 500 BOPD (1 670 m³/d), so B-first gains 1 500 BOPD (239 m³/d). Both full needs 10 MMscfd > 9: compressor trip.",
       "seconds": 100,
       "status": "draft"
     },
@@ -297,15 +297,15 @@
       "id": "sup-prod-014",
       "theme": "Arbitrages et priorités",
       "level": 3,
-      "q": "Un chef de projet vous demande oralement de contourner une procédure de sécurité « juste ce soir » pour tenir un délai. Que faites-vous ?",
+      "q": "Un chef de projet te demande oralement de shunter le LSHH du test separator « juste ce soir » pour finir un well test de 24 h (il manque 6 h, production du puits 1 900 BOPD ≈ 302 m³/j). Que fais-tu ?",
       "choices": [
-        "Accepter si vous connaissez bien la personne et qu'elle assume le risque",
-        "Accepter si l'opération dure moins d'une heure et reste sous surveillance",
+        "Accepter si tu connais bien la personne et qu'elle assume le risque",
         "Refuser, expliquer, proposer l'alternative conforme et escalader",
+        "Accepter si l'opération dure moins d'une heure et reste sous surveillance",
         "Accepter en demandant une trace écrite après coup à son responsable"
       ],
-      "answer": 2,
-      "explain": "Un ordre contraire à une procédure de sécurité n'est pas recevable. L'exception orale, même brève ou régularisée plus tard, fragilise toutes les barrières.",
+      "answer": 1,
+      "explain": "Un ordre oral contraire à une procédure de sécurité n'est pas recevable. Il manque 6 h de test sur 1 900 BOPD (302 m³/j) : on reprogramme ou on prolonge le test, on n'enlève pas une barrière. L'exception brève ou régularisée plus tard fragilise toutes les barrières.",
       "seconds": 60,
       "status": "draft"
     },
@@ -313,17 +313,17 @@
       "id": "sup-prod-015",
       "theme": "Arbitrages et priorités",
       "level": 2,
-      "q": "Plusieurs alarmes se déclenchent en même temps. Quelle approche est la plus efficace ?",
+      "q": "04:12, plusieurs alarmes en quelques secondes : LAHH du séparateur HP, PAHH, puis trip du compresseur K-201. Production à 10 000 BOPD (≈ 1 590 m³/j). Quelle approche est la plus efficace ?",
       "img": "photo/control-room.jpg",
       "imgAlt": "Salle de contrôle d'une installation de production",
       "choices": [
         "Les acquitter toutes pour clarifier l'écran et repartir d'une page propre",
-        "Traiter les alarmes prioritaires et chercher l'alarme initiale pour agir sur la cause",
-        "Traiter la dernière arrivée, qui est la plus récente et donc la plus informative",
-        "Attendre que le système les regroupe seul avant d'intervenir sur le procédé"
+        "Traiter la dernière arrivée, qui est la plus récente et donc la plus informative pour gagner du temps",
+        "Attendre que le système les regroupe seul avant d'intervenir sur le procédé",
+        "Traiter les priorités et chercher l'alarme initiale (first-out) pour agir sur la cause"
       ],
-      "answer": 1,
-      "explain": "En cascade, les alarmes suivantes sont souvent des conséquences. L'alarme initiale et la priorité guident l'action.",
+      "answer": 3,
+      "explain": "En cascade, les alarmes suivantes sont souvent des conséquences : ici le LAHH apparu en premier explique le PAHH puis le trip. L'alarme initiale et la priorité guident l'action, surtout à 10 000 BOPD (1 590 m³/j) en jeu.",
       "seconds": 60,
       "status": "draft"
     },
@@ -331,25 +331,25 @@
       "id": "sup-prod-016",
       "theme": "Arbitrages et priorités",
       "level": 3,
-      "q": "Un navire attend un enlèvement de brut ; le stock est bas. Le brut du bac disponible dépasse la teneur en eau et sédiments (BS&W) de la spécification. Le planning est tendu. Que décide le superviseur ?",
+      "q": "A tanker is waiting; stock is low. Tank T-2 gauges 62 000 bbl (≈ 9 858 m³) with BS&W 1.2 % against a 0.5 % spec. The schedule is tight. What does the supervisor decide?",
       "img": "photo/storage-tanks.jpg",
       "imgAlt": "Parc de stockage de produits",
       "choices": [
-        "Ne pas expédier hors spécification sans accord qualité et client ; recirculer ou traiter",
-        "Expédier en l'état : le client mélangera ce brut avec d'autres produits à l'arrivée",
-        "Diluer en brut propre juste avant le chargement, sans le signaler au client",
-        "Charger puis déclarer l'écart de spécification après le départ du navire"
+        "Ship as is: the customer will blend this crude with other cargoes on arrival",
+        "Dilute with clean crude just before loading, without telling the customer",
+        "Do not ship off-spec without quality and customer approval: recirculate or treat the tank",
+        "Load first and declare the off-spec afterwards, once the ship has sailed"
       ],
-      "answer": 0,
-      "explain": "Expédier un produit hors spécification engage la responsabilité du site. On traite, on informe et on ne dilue jamais sans accord.",
-      "seconds": 110,
+      "answer": 2,
+      "explain": "Water in the tank: 62 000 × 1.2 % = 744 bbl (118 m³) against 310 bbl (49 m³) at 0.5 %: about 434 bbl (69 m³) too much. Shipping off-spec engages the site's responsibility: treat, inform, and never blend in secret.",
+      "seconds": 90,
       "status": "draft"
     },
     {
       "id": "sup-prod-017",
       "theme": "Arbitrages et priorités",
       "level": 2,
-      "q": "Pourquoi double-t-on la vérification d'une opération critique (alignement de lignes, ouverture sous pression) ?",
+      "q": "Tu vas ouvrir sous 1 200 psi (≈ 83 bar) le header de test vers le test separator, après changement d'alignement. Pourquoi double-t-on la vérification de cette opération critique ?",
       "choices": [
         "Détecter l'erreur humaine par un contrôle indépendant avant l'action",
         "Doubler les effectifs mobilisés sur chaque opération critique du quart",
@@ -357,7 +357,7 @@
         "Réaliser des économies d'énergie sur les lignes concernées par l'opération"
       ],
       "answer": 0,
-      "explain": "Une double vérification est une barrière contre l'erreur individuelle, notamment pour les opérations dont les conséquences sont graves.",
+      "explain": "Une double vérification indépendante est une barrière contre l'erreur individuelle, notamment quand les conséquences sont graves : ouverture à 1 200 psi (83 bar), alignement vers le mauvais header, fuite ou surpression.",
       "seconds": 60,
       "status": "draft"
     },
@@ -365,15 +365,15 @@
       "id": "sup-prod-018",
       "theme": "Anomalies, trips et urgences procédé",
       "level": 1,
-      "q": "Qu'est-ce qu'un trip ?",
+      "q": "Le compresseur K-201 s'arrête seul sur PSLL d'huile alors que le champ produit 12 000 BOPD (≈ 1 908 m³/j). Qu'est-ce qu'un trip ?",
       "choices": [
         "Un arrêt manuel décidé par le superviseur pour réaliser une maintenance planifiée",
         "Une alarme de basse priorité signalant une dérive lente sans action requise",
-        "Une panne de communication entre la salle de contrôle et le terrain",
-        "Un arrêt automatique déclenché par une protection quand un seuil est dépassé"
+        "Un arrêt automatique déclenché par une protection quand un seuil est dépassé",
+        "Une panne de communication entre la salle de contrôle et le terrain"
       ],
-      "answer": 3,
-      "explain": "Le trip est un acte de protection. On ne le « remet pas en route » sans comprendre ce qui l'a causé.",
+      "answer": 2,
+      "explain": "Le trip est un acte de protection (PSLL : pression d'huile très basse). On ne le « remet pas en route » sans comprendre ce qui l'a causé, d'autant que 12 000 BOPD (1 908 m³/j) dépendent de la gestion du gaz.",
       "seconds": 45,
       "status": "draft"
     },
@@ -381,15 +381,15 @@
       "id": "sup-prod-019",
       "theme": "Anomalies, trips et urgences procédé",
       "level": 3,
-      "q": "Après le trip d'un compresseur, quelle séquence est la plus juste ?",
+      "q": "Après le trip du compresseur K-201 (6 MMscfd ≈ 169 902 Sm³/j à la torche), quelle séquence est la plus juste ?",
       "choices": [
-        "Réinitialiser immédiatement et redémarrer, pour limiter les pertes de production",
-        "Stabiliser, diagnostiquer, vérifier l'absence de fuite, réinitialiser selon la procédure",
+        "Réinitialiser immédiatement et redémarrer, pour limiter les pertes de production du quart et du contrat",
         "Attendre la prochaine relève pour décider, en laissant le compresseur à l'arrêt",
-        "Contourner la protection qui a déclenché, le temps de redémarrer le compresseur"
+        "Contourner la protection qui a déclenché, le temps de redémarrer le compresseur",
+        "Stabiliser, diagnostiquer, vérifier l'absence de fuite, réinitialiser selon la procédure"
       ],
-      "answer": 1,
-      "explain": "On ne redémarre qu'après compréhension de la cause et vérification de l'état sûr. Réinitialiser à l'aveugle expose à répéter l'événement.",
+      "answer": 3,
+      "explain": "6 MMscfd (169 902 Sm³/j) à la torche : on stabilise d'abord (pressions, niveau du KO drum), on diagnostique, on vérifie l'absence de fuite et on réinitialise selon la procédure. Réinitialiser à l'aveugle expose à répéter l'événement.",
       "seconds": 60,
       "status": "draft"
     },
@@ -397,17 +397,17 @@
       "id": "sup-prod-020",
       "theme": "Anomalies, trips et urgences procédé",
       "level": 3,
-      "q": "Le compresseur de gaz principal se déclenche, la torche augmente, les pressions des séparateurs montent. Un opérateur propose un reset immédiat car le trip lui semble parasite. Que fait le superviseur ?",
+      "q": "Le compresseur de gaz principal déclenche, la torche monte à 6 MMscfd (≈ 169 902 Sm³/j), la pression HP passe de 18 à 22 bar (261 → 319 psi). Un opérateur propose un reset immédiat car le trip lui semble parasite. Que fait le superviseur ?",
       "img": "photo/flare-stack.jpg",
       "imgAlt": "Torche en fonctionnement sur une installation",
       "choices": [
         "Redémarrer tout de suite : si le trip est parasite, chercher la cause est inutile",
-        "Réduire l'ouverture de la torche pour limiter les rejets, le temps d'un redémarrage",
         "Stabiliser, surveiller torche et pressions, ne réinitialiser qu'après diagnostic",
+        "Réduire l'ouverture de la torche pour limiter les rejets, le temps d'un redémarrage",
         "Attendre l'arrivée du chef de site avant d'engager la moindre action sur le procédé"
       ],
-      "answer": 2,
-      "explain": "La stabilisation est prioritaire, puis la compréhension. Un trip « parasite » se prouve ; sinon on redémarre sur une cause réelle. La torche est un équipement de sécurité.",
+      "answer": 1,
+      "explain": "+4 bar (58 psi) en peu de temps : la stabilisation est prioritaire (réduire l'entrée, surveiller KO drum et torche), puis la compréhension. Un trip « parasite » se prouve ; sinon on redémarre sur une cause réelle. La torche est un équipement de sécurité : on ne la réduit pas.",
       "seconds": 100,
       "status": "draft"
     },
@@ -415,17 +415,17 @@
       "id": "sup-prod-021",
       "theme": "Anomalies, trips et urgences procédé",
       "level": 3,
-      "q": "Deux détecteurs confirment du gaz dans le module compresseur ; un opérateur de terrain est à quelques mètres. Quelle est la bonne conduite ?",
+      "q": "Deux détecteurs confirment du gaz dans le module compresseur (≈ 25 % LIE, soit 1,25 % vol. de méthane) ; un opérateur est à quelques mètres. Quelle est la bonne conduite ?",
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
         "Aller vérifier la source de la fuite sur place pour la confirmer visuellement",
         "Inhiber l'un des deux détecteurs pour voir si la lecture de l'autre persiste",
         "Déclencher l'alarme, mettre le personnel en sécurité, ne revenir qu'avec autorisation",
-        "Attendre la confirmation d'un troisième détecteur avant de déclencher l'alarme"
+        "Attendre la confirmation d'un troisième détecteur avant de déclencher l'alarme ou de la salle de contrôle"
       ],
       "answer": 2,
-      "explain": "Un gaz confirmé par plusieurs détecteurs est traité comme réel. Mettre en sécurité d'abord ; vérifier « pour voir » expose des personnes.",
+      "explain": "25 % de la LIE × 5 % = 1,25 % vol. : un gaz confirmé par deux détecteurs est traité comme réel. On met en sécurité d'abord, on déclenche l'alarme ; vérifier « pour voir » expose des personnes.",
       "seconds": 100,
       "status": "draft"
     },
@@ -433,17 +433,17 @@
       "id": "sup-prod-022",
       "theme": "Anomalies, trips et urgences procédé",
       "level": 2,
-      "q": "Quel équipement protège le réseau de torche contre l'entraînement de liquide ?",
+      "q": "Le ballon de torche de 20 m³ (≈ 126 bbl) est à 70 % de niveau alors que la torche brûle 6 MMscfd (≈ 169 902 Sm³/j). Quel équipement protège le réseau de torche contre l'entraînement de liquide ?",
       "img": "photo/flare-stack.jpg",
       "imgAlt": "Torche en fonctionnement sur une installation",
       "choices": [
-        "Le compresseur de gaz de torche",
-        "Le ballon de torche (KO drum)",
-        "La pompe de fond du ballon de purge",
-        "Le stockage de produits finis"
+        "Le ballon de torche (flare KO drum), qui retient les liquides",
+        "Le compresseur de gaz de torche situé sur la ligne de récupération",
+        "La pompe de fond du ballon de purge sur le réseau de drains",
+        "Le stockage de produits finis, qui sert de tampon pour la torche"
       ],
-      "answer": 1,
-      "explain": "Le ballon de torche sépare les liquides du gaz envoyé à la torche, pour éviter les retombées enflammées. Son niveau fait partie de la surveillance.",
+      "answer": 0,
+      "explain": "Le KO drum sépare les liquides du gaz envoyé à la torche, pour éviter les retombées enflammées. 20 m³ = 126 bbl ; à 70 %, il contient 14 m³ (≈ 88 bbl) : son niveau fait partie de la surveillance, avec une pompe de vidange en service.",
       "seconds": 60,
       "status": "draft"
     },
@@ -451,17 +451,17 @@
       "id": "sup-prod-023",
       "theme": "Anomalies, trips et urgences procédé",
       "level": 3,
-      "q": "Une soupape de sécurité s'est ouverte puis refermée correctement. Que fait le superviseur ?",
+      "q": "La PSV-301, tarée à 10 barg (145 psig), s'est ouverte à 10,2 barg (148 psig) puis s'est refermée correctement. Que fait le superviseur ?",
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Récipient sous pression protégé par une soupape de sécurité",
       "choices": [
-        "Ignorer l'événement : la soupape a fonctionné comme prévue et s'est refermée",
+        "Rechercher la cause de la surpression et faire vérifier la soupape",
+        "Ignorer l'événement : la soupape a fonctionné comme prévu et s'est refermée",
         "Augmenter le tarage pour éviter toute réouverture lors d'une prochaine montée",
-        "Isoler le circuit d'évacuation vers la torche pour protéger la soupape",
-        "Rechercher la cause de la surpression et faire vérifier la soupape"
+        "Isoler le circuit d'évacuation vers la torche pour protéger la soupape"
       ],
-      "answer": 3,
-      "explain": "Une ouverture de soupape est un événement : la cause de surpression doit être comprise et la soupape vérifiée. Modifier le tarage ou isoler l'évacuation supprime la protection.",
+      "answer": 0,
+      "explain": "Une ouverture de PSV est un événement : à 10,2 barg (148 psig), la cause de la surpression doit être comprise et la soupape vérifiée. Modifier le tarage ou isoler l'évacuation supprime la protection.",
       "seconds": 60,
       "status": "draft"
     },
@@ -469,15 +469,15 @@
       "id": "sup-prod-024",
       "theme": "Anomalies, trips et urgences procédé",
       "level": 3,
-      "q": "Une coupure électrique survient la nuit sur un site alimenté par des groupes. Les pompes s'arrêtent, les pressions évoluent. Que fait le superviseur ?",
+      "q": "A power cut hits a genset-fed site at night: pumps stop, pressures drift. The site was making 8 000 BOPD (≈ 1 272 m³/d), i.e. 333 bbl/h (≈ 53,0 m³/h). What does the supervisor do?",
       "choices": [
-        "Mettre le procédé en sécurité, puis redémarrer utilités et charges en séquence",
-        "Redémarrer toutes les charges simultanément pour retrouver la production plus vite",
-        "Attendre le matin pour redémarrer, en laissant le procédé en l'état",
-        "Forcer les protections de basse tension pour redémarrer les pompes plus vite"
+        "Restart all the loads at once to get the production back as fast as possible, network permitting",
+        "Wait until the morning to restart, leaving the process as it is",
+        "Put the process in a safe state, then restart utilities and loads in sequence",
+        "Force the low-voltage protections to restart the pumps faster"
       ],
-      "answer": 0,
-      "explain": "Un redémarrage simultané provoque des appels de courant qui peuvent faire retomber le réseau. On sécurise, puis on suit la séquence prévue.",
+      "answer": 2,
+      "explain": "Every hour lost costs 333 bbl (≈ 53,0 m³), but a simultaneous restart creates inrush currents that can trip the network again. Secure the process first (isolate wells, depressurise as per procedure), then restart in the planned sequence.",
       "seconds": 100,
       "status": "draft"
     },
@@ -485,15 +485,15 @@
       "id": "sup-prod-025",
       "theme": "Anomalies, trips et urgences procédé",
       "level": 2,
-      "q": "Plusieurs vibrations anormales sont détectées sur une pompe en service. Quelle conduite est correcte ?",
+      "q": "La pompe d'export P-101 (120 m³/h ≈ 755 bbl/h) passe de 2,8 à 6,5 mm/s de vibration (alarme à 4,5 mm/s). Quelle conduite est correcte ?",
       "choices": [
         "Relever le seuil d'alarme de vibration pour éviter le trip de la pompe",
-        "Réduire la charge ou basculer sur le secours et faire diagnostiquer",
+        "Réduire la charge ou basculer sur la standby, puis faire diagnostiquer la pompe",
         "Désactiver la protection de vibration le temps de finir le poste",
-        "Laisser tourner jusqu'à la panne pour savoir si c'est grave"
+        "Laisser tourner jusqu'à la panne pour savoir si c'est grave ou non"
       ],
       "answer": 1,
-      "explain": "Relever un seuil masque le symptôme. On réduit le risque, on utilise le secours et on diagnostique.",
+      "explain": "6,5 mm/s est bien au-dessus de l'alarme (4,5). Relever un seuil masque le symptôme. On réduit le risque, on passe sur la standby pour garder les 120 m³/h (755 bbl/h) à l'export, et on diagnostique.",
       "seconds": 60,
       "status": "draft"
     },
@@ -501,15 +501,15 @@
       "id": "sup-prod-026",
       "theme": "Anomalies, trips et urgences procédé",
       "level": 1,
-      "q": "Qu'est-ce qu'un presque-accident à déclarer ?",
+      "q": "À la tournée, un opérateur voit une vanne de drain du test separator s'ouvrir seule sous 200 psi (≈ 13,8 bar) ; il la referme, personne n'est blessé et rien n'a fui. Qu'est-ce qu'un presque-accident à déclarer ?",
       "choices": [
-        "Un accident ayant entraîné un arrêt de travail pour le blessé",
+        "Un accident ayant entraîné un arrêt de travail pour le blessé pendant le quart de nuit",
         "Un accident sans conséquence juridique ni dommage matériel",
-        "Un événement qui aurait pu blesser ou endommager, sans conséquence",
+        "Un événement qui aurait pu blesser ou endommager, mais sans conséquence",
         "Un événement déjà déclaré par un tiers présent sur site"
       ],
       "answer": 2,
-      "explain": "Les presque-accidents sont les signaux faibles qui permettent de prévenir l'accident. Tout le monde doit pouvoir les déclarer sans crainte.",
+      "explain": "Un near-miss est un événement qui aurait pu causer un dommage mais n'en a pas causé : à 200 psi (13,8 bar), un drain qui s'ouvre seul est un signal faible à déclarer, sans reproche, pour en tirer l'enseignement.",
       "seconds": 45,
       "status": "draft"
     },
@@ -517,15 +517,15 @@
       "id": "sup-prod-027",
       "theme": "Démarrages et remises en service",
       "level": 1,
-      "q": "Pourquoi utilise-t-on une check-list lors d'un démarrage ?",
+      "q": "Redémarrage du champ après shutdown : objectif 15 000 BOPD (≈ 2 385 m³/j) par paliers. Pourquoi utilise-t-on une check-list de démarrage ?",
       "choices": [
-        "Garantir une séquence complète et la vérification des permissifs",
         "Justifier l'ancienneté et l'expérience des opérateurs de quart",
         "Remplacer le permis de travail pendant les démarrages planifiés",
+        "Garantir une séquence complète et la vérification des permissifs",
         "Accélérer le démarrage en regroupant ou en sautant certaines étapes"
       ],
-      "answer": 0,
-      "explain": "La check-list évite les oublis dans une phase à risque. Elle ne dispense d'aucune étape de la procédure.",
+      "answer": 2,
+      "explain": "La check-list évite les oublis dans une phase à risque (permissifs, alignements, protections), de zéro jusqu'aux 15 000 BOPD (2 385 m³/j) visés. Elle ne dispense d'aucune étape de la procédure.",
       "seconds": 45,
       "status": "draft"
     },
@@ -533,15 +533,15 @@
       "id": "sup-prod-028",
       "theme": "Démarrages et remises en service",
       "level": 2,
-      "q": "Avant la remise en service d'une ligne après maintenance, quel ensemble de vérifications est le plus complet ?",
+      "q": "Avant la remise en service d'une ligne d'export après maintenance (test d'étanchéité à 8 barg ≈ 116 psig), quel ensemble de vérifications est le plus complet ?",
       "choices": [
         "Un contrôle visuel de l'extérieur de la ligne, des brides et des supports",
         "La confirmation orale du sous-traitant et la signature de l'exécutant",
         "L'ouverture progressive de la vanne amont avec surveillance de la pression",
-        "Consignations levées, permis clos, lignes alignées, essai d'étanchéité"
+        "Consignations levées, permis clos, lignes alignées, essai d'étanchéité fait"
       ],
       "answer": 3,
-      "explain": "La remise en service exige des preuves : état des isolations, permis, alignement, étanchéité, protections actives. L'oral ou le visuel seul ne suffisent pas.",
+      "explain": "La remise en service exige des preuves : isolations levées, permis clos, alignement, essai d'étanchéité à 8 barg (116 psig), protections actives. L'oral ou le visuel seuls ne suffisent pas.",
       "seconds": 60,
       "status": "draft"
     },
@@ -549,17 +549,17 @@
       "id": "sup-prod-029",
       "theme": "Démarrages et remises en service",
       "level": 3,
-      "q": "Pendant la montée en pression après arrêt, un test révèle une petite fuite à une bride. Le planning est serré et le chef d'équipe propose de resserrer la bride sous pression. Que décide le superviseur ?",
+      "q": "Montée en pression après shutdown : à 45 bar (653 psi), un test révèle une petite fuite à une bride. Le planning est serré et le chef d'équipe propose de resserrer sous pression. Que décide le superviseur ?",
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
         "Resserrer sous pression avec des gants et un détecteur portable à proximité",
         "Ignorer la fuite si elle est petite et surveiller régulièrement le manomètre",
-        "Poursuivre la montée en pression pour observer si la fuite s'aggrave ou non",
-        "Dépressuriser et isoler, réparer sous permis, refaire le test avant de remonter"
+        "Dépressuriser et isoler, réparer sous permis, refaire le test avant de remonter",
+        "Poursuivre la montée en pression pour observer si la fuite s'aggrave ou non"
       ],
-      "answer": 3,
-      "explain": "Intervenir sous pression sur une fuite d'hydrocarbures est un risque inutile. On dépressurise, on isole, on répare, on retest.",
+      "answer": 2,
+      "explain": "À 45 bar (653 psi), intervenir sur une fuite d'hydrocarbures est un risque inutile. On dépressurise, on isole, on répare sous permis, on retest, et on remonte par paliers.",
       "seconds": 110,
       "status": "draft"
     },
@@ -567,7 +567,7 @@
       "id": "sup-prod-030",
       "theme": "Démarrages et remises en service",
       "level": 2,
-      "q": "Quelle condition doit être remplie avant de démarrer une pompe centrifuge ?",
+      "q": "Avant de démarrer la pompe de transfert (120 m³/h ≈ 755 bbl/h), quelle condition doit être remplie ?",
       "choices": [
         "La pompe est amorcée, aspiration ouverte, pour ne pas tourner à sec",
         "Démarrer brièvement à sec pour chasser l'air de la ligne d'aspiration",
@@ -575,7 +575,7 @@
         "Ouvrir complètement le refoulement avant le démarrage dans tous les cas"
       ],
       "answer": 0,
-      "explain": "Une pompe à sec s'abîme très vite : les garnitures et paliers sont refroidis et lubrifiés par le liquide pompé.",
+      "explain": "Une pompe à sec s'abîme très vite : seal et paliers sont refroidis et lubrifiés par le liquide pompé. On démarre amorcée, aspiration ouverte, refoulement presque fermé, puis on monte vers 120 m³/h (755 bbl/h).",
       "seconds": 60,
       "status": "draft"
     },
@@ -583,17 +583,17 @@
       "id": "sup-prod-031",
       "theme": "Démarrages et remises en service",
       "level": 2,
-      "q": "Sur la courbe caractéristique hauteur-débit d'une pompe centrifuge, quand le débit augmente, la hauteur manométrique :",
+      "q": "Sur la courbe H-Q de la pompe d'export, le point actuel est à 60 m³/h (≈ 377 bbl/h) pour 40 m. Si tu ouvres le refoulement et que le débit passe à 90 m³/h (≈ 566 bbl/h), que fait la hauteur manométrique ?",
       "img": "svg/centrifugal-pump-curve.svg",
       "imgAlt": "Courbe hauteur-débit d'une pompe centrifuge",
       "choices": [
-        "Elle augmente proportionnellement au débit",
-        "Elle reste constante quel que soit le débit",
-        "Elle diminue quand le débit augmente",
-        "Elle devient nulle dès que le débit augmente"
+        "Elle augmente proportionnellement au débit de la pompe",
+        "Elle diminue quand le débit augmente, en suivant la courbe de la pompe",
+        "Elle reste constante quel que soit le débit demandé",
+        "Elle devient nulle dès que le débit dépasse le point nominal"
       ],
-      "answer": 2,
-      "explain": "La courbe H-Q d'une pompe centrifuge est décroissante : plus le débit est élevé, plus la hauteur développée est faible. Le point de fonctionnement est l'intersection avec la courbe du circuit.",
+      "answer": 1,
+      "explain": "La courbe H-Q d'une centrifuge est décroissante : de 60 à 90 m³/h (377 → 566 bbl/h, soit 1 440 → 2 160 m³/j), la hauteur développée baisse. Le point de fonctionnement est l'intersection avec la courbe du circuit.",
       "seconds": 75,
       "status": "draft"
     },
@@ -601,17 +601,17 @@
       "id": "sup-prod-032",
       "theme": "Démarrages et remises en service",
       "level": 2,
-      "q": "Avant d'introduire des hydrocarbures dans un circuit qui a été ouvert, que fait-on ?",
+      "q": "The 4-inch gas-lift line was opened for maintenance. Before putting it back in gas service at 1 500 psi (≈ 103 bar), what do you do?",
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
-        "Ouvrir lentement la vanne amont et observer la pression",
-        "Purger ou inerter le circuit pour éliminer l'air",
-        "Injecter directement le gaz sous pression dans le circuit",
-        "Attendre que l'air s'évacue seul par les évents ouverts"
+        "Open the upstream valve slowly and watch the pressure rise on the gauge, then start",
+        "Inject the pressurised gas directly into the line to push the air out",
+        "Wait for the air to leave by itself through the open vents on the line",
+        "Purge or inert the line to remove the air before introducing hydrocarbons"
       ],
-      "answer": 1,
-      "explain": "L'air dans un circuit d'hydrocarbures peut créer une atmosphère explosive. La purge ou l'inertage est un préalable.",
+      "answer": 3,
+      "explain": "Air inside a hydrocarbon circuit can create an explosive atmosphere. Purging or inerting is a prerequisite, then a leak test, then pressurisation by steps up to 1 500 psi (103 bar).",
       "seconds": 60,
       "status": "draft"
     },
@@ -619,15 +619,15 @@
       "id": "sup-prod-033",
       "theme": "Démarrages et remises en service",
       "level": 3,
-      "q": "Après un trip, le démarrage est urgent pour tenir un contrat. Un permissif de basse pression d'huile refuse le démarrage. Un opérateur propose de le shunter « juste pour démarrer ». Que fait le superviseur ?",
+      "q": "Après un trip, le redémarrage est urgent pour tenir une cargaison. Le permissif de pression d'huile du K-201 refuse le start (1,2 bar contre 1,5 bar requis). Un opérateur propose de le shunter « juste pour démarrer » ; l'arrêt coûte 500 bbl/h (≈ 79,5 m³/h). Que fait le superviseur ?",
       "choices": [
-        "Refuser le shunt, chercher la cause, passer par l'override formel",
         "Shunter : la machine sera surveillée de près par un opérateur sur place",
         "Shunter uniquement le temps du démarrage, puis rétablir le permissif",
-        "Remplacer le capteur par un autre sans contrôle préalable ni étalonnage"
+        "Remplacer le capteur par un autre sans contrôle préalable ni étalonnage",
+        "Refuser le shunt, chercher la cause et passer par l'override formel si besoin"
       ],
-      "answer": 0,
-      "explain": "Un permissif protège la machine et les personnes. Le shunter pour tenir un délai l'expose à la casse et à l'accident ; une dérogation éventuelle suit la procédure formelle.",
+      "answer": 3,
+      "explain": "1,2 bar contre 1,5 bar requis : l'huile ne lubrifie pas assez, le shunt expose le compresseur à la casse. Le manque à produire (500 bbl/h ≈ 79,5 m³/h pour 12 000 BOPD) est réel, mais une dérogation suit la procédure formelle, pas un shunt.",
       "seconds": 100,
       "status": "draft"
     },
@@ -635,15 +635,15 @@
       "id": "sup-prod-034",
       "theme": "Démarrages et remises en service",
       "level": 1,
-      "q": "Pourquoi monte-t-on en pression par paliers lors d'un démarrage ?",
+      "q": "Pendant le start-up, tu montes la pression du séparateur par paliers de 5 bar (≈ 72,5 psi) toutes les 5 minutes. Pourquoi monte-t-on en pression par paliers ?",
       "choices": [
         "Consommer moins d'énergie de compression pendant la mise en pression",
-        "Contrôler l'étanchéité à chaque palier avant la pleine pression",
+        "Contrôler l'étanchéité à chaque palier avant d'atteindre la pleine pression",
         "Prolonger la durée du démarrage pour la formation des équipes",
         "Compenser la lenteur de réponse des manomètres de la ligne de gaz"
       ],
       "answer": 1,
-      "explain": "Un palier permet de repérer une fuite à pression modérée et de la traiter avant la pleine charge.",
+      "explain": "Un palier de 5 bar (72,5 psi) permet de repérer une fuite à pression modérée et de la traiter avant la pleine charge, au lieu de la découvrir à 20 bar.",
       "seconds": 45,
       "status": "draft"
     },
@@ -651,17 +651,17 @@
       "id": "sup-prod-035",
       "theme": "Interface maintenance et HSE",
       "level": 1,
-      "q": "Dans une consignation, quelle étape vérifie que le circuit est effectivement hors énergie ?",
+      "q": "Consignation de la pompe booster P-102 (120 m³/h ≈ 755 bbl/h) : quelle étape vérifie que le circuit est effectivement hors énergie ?",
       "img": "svg/lockout-tagout.svg",
       "imgAlt": "Consignation avec cadenas, étiquette et vérification d'absence d'énergie",
       "choices": [
         "La pose de l'étiquette de condamnation sur le dispositif d'isolement",
-        "La signature du permis de travail par l'émetteur et l'exécutant",
         "La vérification d'absence d'énergie avant intervention",
+        "La signature du permis de travail par l'émetteur et l'exécutant",
         "La ronde de contrôle du lendemain sur tous les équipements consignés"
       ],
-      "answer": 2,
-      "explain": "L'étiquette et le cadenas empêchent la remise en énergie, mais seule la vérification démontre l'absence d'énergie à l'instant de l'intervention.",
+      "answer": 1,
+      "explain": "Le cadenas et l'étiquette empêchent la remise en énergie, mais seule la vérification démontre l'absence d'énergie (électrique, pression résiduelle, produit) à l'instant de l'intervention.",
       "seconds": 45,
       "status": "draft"
     },
@@ -669,15 +669,15 @@
       "id": "sup-prod-036",
       "theme": "Interface maintenance et HSE",
       "level": 2,
-      "q": "Quelle est la responsabilité de l'émetteur d'un permis de travail ?",
+      "q": "Permis à froid pour la pompe booster P-102. Quelle est la responsabilité de l'émetteur du PTW ?",
       "choices": [
+        "Vérifier sur place la zone, les équipements et les isolations avant de signer",
         "Signer à distance sur la base du dossier présenté par l'exécutant",
         "Déléguer la signature à l'exécutant pour gagner du temps sur le chantier",
-        "Signer après le début des travaux, une fois la zone sécurisée par l'équipe",
-        "Vérifier sur place la zone, les équipements et les isolations"
+        "Signer après le début des travaux, une fois la zone sécurisée par l'équipe"
       ],
-      "answer": 3,
-      "explain": "Un permis signé sans présence sur le terrain est une formalité. L'émetteur doit constater la réalité des conditions.",
+      "answer": 0,
+      "explain": "Un permis signé sans présence sur le terrain est une formalité. L'émetteur constate la réalité : zone balisée, isolations vérifiées, équipement identifié (P-102).",
       "seconds": 60,
       "status": "draft"
     },
@@ -685,17 +685,17 @@
       "id": "sup-prod-037",
       "theme": "Interface maintenance et HSE",
       "level": 3,
-      "q": "La maintenance veut intervenir sur une pompe. L'exploitation constate que la vanne d'isolement amont « passe » : un faible débit continue de traverser. Le chef d'équipe affirme que « c'est négligeable ». Que décide le superviseur ?",
+      "q": "La maintenance veut intervenir sur la pompe d'export. L'exploitation constate que la vanne d'isolement amont « passe » : environ 150 BOPD (≈ 24 m³/j) continuent de traverser. Le chef d'équipe affirme que « c'est négligeable ». Que décide le superviseur ?",
       "img": "photo/heavy-equipment-maintenance.jpg",
       "imgAlt": "Équipe de maintenance sur un équipement lourd",
       "choices": [
-        "Autoriser avec une surveillance renforcée du débit de fuite pendant l'intervention",
-        "Autoriser si les exécutants portent des protections respiratoires adaptées",
         "Refuser tant que l'isolement n'est pas fiable : double isolement ou bride pleine",
+        "Autoriser avec une surveillance renforcée du débit de fuite pendant l'intervention",
+        "Autoriser si les exécutants portent des protections respiratoires adaptées au brut",
         "Autoriser la nuit, quand moins de personnes sont exposées sur l'unité"
       ],
-      "answer": 2,
-      "explain": "Une vanne qui passe n'isole pas. On ne laisse pas intervenir sur un circuit potentiellement sous pression ou avec produit. L'EPI ne remplace pas un isolement fiable.",
+      "answer": 0,
+      "explain": "150 BOPD = 6,3 bbl/h (≈ 1,0 m³/h) de brut qui traversent : une vanne qui passe n'isole pas. On ne laisse pas intervenir sur un circuit potentiellement sous pression ou avec produit ; l'EPI ne remplace pas un isolement fiable.",
       "seconds": 110,
       "status": "draft"
     },
@@ -703,15 +703,15 @@
       "id": "sup-prod-038",
       "theme": "Interface maintenance et HSE",
       "level": 2,
-      "q": "À la fin d'une intervention, comment se fait la remise en exploitation d'un équipement ?",
+      "q": "La maintenance a fini l'intervention sur la pompe d'export (100 m³/h ≈ 629 bbl/h). Comment se fait la remise en exploitation de l'équipement ?",
       "choices": [
         "Par un simple appel téléphonique de la maintenance à la salle de contrôle",
         "Dès que l'équipement est visuellement propre et que la zone est rangée",
-        "Au retour du superviseur de jour, lors de la relève du matin",
-        "Avec preuve des essais, retrait des consignations et contrôle conjoint"
+        "Avec preuve des essais, retrait des consignations et contrôle conjoint",
+        "Au retour du superviseur de jour, lors de la relève du matin"
       ],
-      "answer": 3,
-      "explain": "La remise en exploitation est un acte documenté : essais, consignations retirées, contrôle partagé. Elle ferme la boucle de responsabilité.",
+      "answer": 2,
+      "explain": "La remise en exploitation est un acte documenté : essais faits, consignations retirées, permis clos, contrôle conjoint avant le start (100 m³/h = 629 bbl/h attendus). Elle ferme la boucle de responsabilité.",
       "seconds": 60,
       "status": "draft"
     },
@@ -719,7 +719,7 @@
       "id": "sup-prod-039",
       "theme": "Interface maintenance et HSE",
       "level": 2,
-      "q": "Un prestataire veut commencer avant la signature complète du permis car « tout le monde se connaît ». Que répondez-vous ?",
+      "q": "Un prestataire veut commencer une intervention sur le header de test avant la signature complète du PTW car « tout le monde se connaît ». Que réponds-tu ?",
       "choices": [
         "Les travaux ne commencent qu'après signature du permis et briefing",
         "C'est acceptable pour une tâche courte et bien connue de l'équipe",
@@ -727,7 +727,7 @@
         "C'est acceptable si un opérateur surveille le chantier pendant l'exécution"
       ],
       "answer": 0,
-      "explain": "Le permis est la condition de démarrage : sans signature complète et briefing, la tâche n'est pas autorisée.",
+      "explain": "Le permis est la condition de démarrage : sans signature complète et briefing, la tâche n'est pas autorisée, même sur une ligne en test à 150 psi (10,3 bar).",
       "seconds": 60,
       "status": "draft"
     },
@@ -735,17 +735,17 @@
       "id": "sup-prod-040",
       "theme": "Interface maintenance et HSE",
       "level": 3,
-      "q": "Pendant un travail à chaud à quinze mètres d'une ligne de gaz, un sous-traitant signale un début de fuite sur cette ligne. Que fait le superviseur ?",
+      "q": "Travail à chaud en cours à 15 m d'une ligne de gaz à 900 psi (≈ 62 bar) : un sous-traitant signale un début de fuite sur cette ligne. Que fait le superviseur ?",
       "img": "photo/gas-compressor.jpg",
       "imgAlt": "Compresseur de gaz sur une installation de production",
       "choices": [
         "Finir la soudure en cours avant de traiter la fuite signalée par le sous-traitant",
-        "Faire arrêter le travail à chaud, mettre en sécurité, isoler la fuite, informer",
         "Éloigner le poste de soudage de quelques mètres et continuer à souder",
-        "Demander au sous-traitant de colmater la fuite avec un produit adapté"
+        "Demander au sous-traitant de colmater la fuite avec un produit adapté",
+        "Faire arrêter le travail à chaud, mettre en sécurité, isoler la fuite, informer"
       ],
-      "answer": 1,
-      "explain": "Fuite de gaz et source d'ignition ne cohabitent pas. L'arrêt du travail à chaud est immédiat, puis on traite la fuite.",
+      "answer": 3,
+      "explain": "Une fuite de gaz à 900 psi (62 bar) et une source d'ignition ne cohabitent pas : arrêt immédiat du hot work, mise en sécurité, isolement de la fuite, information de la salle.",
       "seconds": 100,
       "status": "draft"
     },
@@ -753,7 +753,7 @@
       "id": "sup-prod-041",
       "theme": "Interface maintenance et HSE",
       "level": 2,
-      "q": "Dans une zone à risque d'explosion, quelle règle est la plus pertinente ?",
+      "q": "Un visiteur entre avec son téléphone ordinaire dans la zone du header de test (zone classée Ex). Quelle règle est la plus pertinente ?",
       "img": "svg/iso-safety-signs.svg",
       "imgAlt": "Panneaux ISO 7010 : interdiction, avertissement, obligation, sauvetage",
       "choices": [
@@ -763,7 +763,7 @@
         "Seuls les visiteurs et sous-traitants sont soumis à cette règle de zone"
       ],
       "answer": 1,
-      "explain": "Dans les zones classées, les sources d'ignition sont maîtrisées : équipements certifiés pour la zone, appareils ordinaires interdits.",
+      "explain": "Dans les zones classées, les sources d'ignition sont maîtrisées : équipements certifiés pour la zone, appareils ordinaires interdits, y compris pour le personnel du site.",
       "seconds": 60,
       "status": "draft"
     },
@@ -771,7 +771,7 @@
       "id": "sup-prod-042",
       "theme": "Interface maintenance et HSE",
       "level": 3,
-      "q": "Un travail non prévu au planning doit être exécuté d'urgence. Quelle exigence reste incontournable ?",
+      "q": "Un travail non prévu au planning doit être exécuté d'urgence sur la ligne d'export (5 000 BOPD ≈ 795 m³/j concernés). Quelle exigence reste incontournable ?",
       "choices": [
         "Analyse de risque, permis et coordination avec les autres activités",
         "Réaliser le travail sans permis, si l'urgence est reconnue par le superviseur",
@@ -779,7 +779,7 @@
         "Le faire pendant le changement de quart, quand la zone est calme"
       ],
       "answer": 0,
-      "explain": "L'urgence ne dispense pas des barrières ; elle impose de les appliquer rapidement. Le changement de quart est un moment où le risque de perte d'information est élevé.",
+      "explain": "L'urgence (5 000 BOPD, 795 m³/j en jeu) ne dispense pas des barrières : elle impose de les appliquer rapidement. Le changement de quart est un moment où le risque de perte d'information est élevé.",
       "seconds": 60,
       "status": "draft"
     },
@@ -787,15 +787,15 @@
       "id": "sup-prod-043",
       "theme": "Optimisation, allocation et passation de quart",
       "level": 1,
-      "q": "À quoi sert un test de puits ?",
+      "q": "Test de 12 h du puits P-04 au test separator : 960 bbl d'huile mesurés. Quelle production retiens-tu pour le puits, et à quoi sert ce well test ?",
       "choices": [
-        "Remplacer la maintenance préventive du puits par un suivi continu",
-        "Nettoyer les lignes de production en les purgeant à l'azote",
-        "Réduire la pression du réservoir pour augmenter le débit du puits",
-        "Mesurer la production individuelle d'un puits (huile, gaz, eau)"
+        "960 BOPD (≈ 153 m³/j) ; nettoyer les lignes de production à l'azote",
+        "11 520 BOPD (≈ 1 832 m³/j) ; réduire la pression du réservoir",
+        "1 920 BOPD (≈ 305 m³/j) ; mesurer la production individuelle d'un puits",
+        "80 BOPD (≈ 13 m³/j) ; remplacer la maintenance préventive du puits"
       ],
-      "answer": 3,
-      "explain": "Le test de puits individualise la production : suivi du réservoir, optimisation, allocation entre puits.",
+      "answer": 2,
+      "explain": "12 h → 24 h : 960 bbl × 2 = 1 920 BOPD, soit 1 920 × 0,159 = 305 m³/j. Le test de puits individualise la production (huile, gaz, eau) pour le suivi du réservoir, l'optimisation et l'allocation. Les autres propositions n'ont aucun rapport avec la mesure.",
       "seconds": 45,
       "status": "draft"
     },
@@ -803,17 +803,17 @@
       "id": "sup-prod-044",
       "theme": "Optimisation, allocation et passation de quart",
       "level": 2,
-      "q": "Ouvrir davantage la duse (choke) d'un puits augmente le débit. Quel risque faut-il surveiller ?",
+      "q": "Tu passes le choke d'un puits de 32/64\" à 40/64\" : le débit monte de 2 000 à 3 000 BOPD (≈ 318 → 477 m³/j). Quel risque faut-il surveiller ?",
       "img": "svg/wellhead-xmas-tree.svg",
       "imgAlt": "Tête de puits avec vannes et duse de production",
       "choices": [
-        "Une hausse de la pression de tête qui améliore toujours la stabilité",
+        "Une hausse de la WHP qui améliore toujours la stabilité de l'écoulement",
         "Une surcharge du réseau électrique de la salle de contrôle",
-        "La venue de sable ou le coning d'eau ou de gaz selon l'enveloppe",
-        "Une baisse du taux d'eau de la production qui réduit le débit utile"
+        "Une baisse du taux d'eau de la production qui réduit le débit utile",
+        "La venue de sable ou le coning d'eau ou de gaz selon l'enveloppe du puits"
       ],
-      "answer": 2,
-      "explain": "Un débit élevé peut déstabiliser le réservoir autour du puits ou entraîner du sable. L'optimisation reste dans les limites de l'ingénierie.",
+      "answer": 3,
+      "explain": "Section ∝ d² : (40/32)² = 1,56, soit +56 % de passage, et +1 000 BOPD (≈ 159 m³/j). Un débit élevé peut déstabiliser le réservoir autour du puits (coning) ou entraîner du sable : l'optimisation reste dans les limites de l'ingénierie.",
       "seconds": 60,
       "status": "draft"
     },
@@ -821,17 +821,17 @@
       "id": "sup-prod-045",
       "theme": "Optimisation, allocation et passation de quart",
       "level": 3,
-      "q": "En gas-lift, que se passe-t-il quand on augmente fortement le débit de gaz injecté au-delà de l'optimum ?",
+      "q": "Tu fais passer l'injection de gas-lift de 1 à 2 MMscfd (28 317 → 56 634 Sm³/j). Que peut-il se passer au-delà de l'optimum ?",
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Vanne de gas-lift dans une colonne de production",
       "choices": [
         "La production d'huile augmente toujours, proportionnellement au gaz injecté",
+        "La production d'huile peut diminuer, alors que le gaz coûte en compression",
         "La pression du réservoir augmente avec la quantité de gaz injecté",
-        "L'eau disparaît de la production dès que le débit de gaz augmente",
-        "La production d'huile peut diminuer au-delà de l'optimum"
+        "L'eau disparaît de la production dès que le débit de gaz augmente"
       ],
-      "answer": 3,
-      "explain": "La courbe de performance du gas-lift présente un optimum : trop de gaz injecté augmente les frottements et réduit la production. Le gaz coûte aussi en compression.",
+      "answer": 1,
+      "explain": "La courbe de performance du gas-lift a un optimum : au-delà, frottements et slugging réduisent l'huile, par exemple de 1 500 à 1 350 BOPD (239 → 215 m³/j), soit 150 BOPD (24 m³/j) perdus, pendant que le gaz supplémentaire (1 MMscfd) coûte en compression.",
       "seconds": 75,
       "status": "draft"
     },
@@ -839,33 +839,33 @@
       "id": "sup-prod-046",
       "theme": "Optimisation, allocation et passation de quart",
       "level": 2,
-      "q": "Comment réalise-t-on l'allocation de production entre plusieurs puits ?",
+      "q": "Fiscal metering (LACT) shows 10 000 BOPD. The latest well tests are P-1: 4 200, P-2: 3 600, P-3: 2 700 BOPD (total 10 500 BOPD). What is the allocated oil of P-2?",
       "choices": [
-        "Diviser la production totale en parts égales entre tous les puits",
-        "Répartir selon les demandes de débit formulées par chaque puits",
-        "Répartir la production mesurée selon les tests de puits et des facteurs réconciliés",
-        "Répartir selon l'ancienneté de mise en production de chaque puits"
+        "3 600 BOPD (≈ 572 m³/d): the raw well test value, without reconciliation",
+        "3 333 BOPD (≈ 530 m³/d): an equal split between the three wells",
+        "3 780 BOPD (≈ 601 m³/d): test value × the inverted factor",
+        "3 429 BOPD (≈ 545 m³/d): the test value × the allocation factor"
       ],
-      "answer": 2,
-      "explain": "L'allocation répartit une mesure globale selon les contributions estimées des puits, réconciliées avec la production totale.",
-      "seconds": 60,
+      "answer": 3,
+      "explain": "Allocation factor = 10 000 ÷ 10 500 = 0.9524. P-2 = 3 600 × 0.9524 = 3 429 BOPD = 3 429 × 0.159 = 545 m³/d. Check: 4 000 + 3 429 + 2 571 = 10 000 BOPD (rounded).",
+      "seconds": 90,
       "status": "draft"
     },
     {
       "id": "sup-prod-047",
       "theme": "Optimisation, allocation et passation de quart",
       "level": 1,
-      "q": "Quels éléments doit contenir une passation de quart complète ?",
+      "q": "Passation de quart de 06:00 : production 11 800 BOPD (≈ 1 876 m³/j). Quels éléments doit contenir une passation de quart complète ?",
       "img": "photo/control-room.jpg",
       "imgAlt": "Salle de contrôle d'une installation de production",
       "choices": [
-        "Uniquement l'état de la production et les volumes expédiés pendant le quart",
         "État des équipements, travaux en cours (permis), inhibitions et consignes",
+        "Uniquement l'état de la production et les volumes expédiés pendant le quart",
         "Uniquement les remarques du personnel et les demandes de congés",
         "Seulement les consignes générales transmises par le siège et la direction"
       ],
-      "answer": 1,
-      "explain": "La passation couvre l'état, les travaux en cours, les inhibitions et les consignes : tout ce qui peut créer un risque si on l'ignore.",
+      "answer": 0,
+      "explain": "La passation couvre l'état des équipements, les permis, les inhibitions et les consignes : tout ce qui peut créer un risque si on l'ignore. Les 11 800 BOPD (1 876 m³/j) ne sont qu'un chiffre parmi d'autres.",
       "seconds": 45,
       "status": "draft"
     },
@@ -873,15 +873,15 @@
       "id": "sup-prod-048",
       "theme": "Optimisation, allocation et passation de quart",
       "level": 3,
-      "q": "Le superviseur sortant dit « RAS » et se prépare à partir. Dans le journal, vous voyez une inhibition de niveau haut et un permis à chaud actif. Que faites-vous ?",
+      "q": "The outgoing supervisor says “nothing to report” and gets ready to leave. In the log you see an inhibited high-level alarm on the FWKO and an active hot work permit. The field makes 9 500 BOPD (≈ 1 511 m³/d). What do you do?",
       "choices": [
-        "Retenir le sortant et vérifier l'inhibition et le permis sur le terrain",
-        "Accepter le « RAS » : le sortant connaît bien son quart et son unité",
-        "Vérifier plus tard dans la nuit, seulement si un événement survient",
-        "Annuler le permis à chaud et l'inhibition sans en parler au sortant"
+        "Accept the “nothing to report”: he knows his shift and his unit well, as he did before",
+        "Keep him on site and verify the inhibition and the permit in the field",
+        "Check later during the night, only if an event occurs on the unit",
+        "Cancel the hot work permit and the inhibition without telling him"
       ],
-      "answer": 0,
-      "explain": "Un « RAS » contredit par le journal ne vaut rien. La passation est une barrière : on la complète, on vérifie sur le terrain, on répond du risque.",
+      "answer": 1,
+      "explain": "A “nothing to report” contradicted by the log is worth nothing. Handover is a barrier: complete it, verify in the field (hot work next to a FWKO with an inhibited level alarm, with 9 500 BOPD = 1 511 m³/d flowing) and answer for the risk.",
       "seconds": 100,
       "status": "draft"
     },
@@ -889,15 +889,15 @@
       "id": "sup-prod-049",
       "theme": "Optimisation, allocation et passation de quart",
       "level": 2,
-      "q": "Pourquoi doubler l'échange oral de passation par une trace écrite et une visite conjointe ?",
+      "q": "À la relève, pourquoi doubler l'échange oral par une trace écrite (DPR, log book) et une visite conjointe ?",
       "choices": [
-        "L'oral seul perd de l'information ; la visite confirme l'état réel",
         "Cela allonge la passation pour faire preuve de plus de rigueur",
         "Cela décharge l'équipe sortante de sa responsabilité après le départ",
+        "L'oral seul perd de l'information ; la visite confirme l'état réel",
         "Le système de conduite ne conserve pas les informations de quart"
       ],
-      "answer": 0,
-      "explain": "L'oral s'oublie, l'écrit se relit, la visite confirme. Le triptyque réduit la perte d'information au changement de quart.",
+      "answer": 2,
+      "explain": "L'oral s'oublie, l'écrit se relit, la visite confirme : par exemple un puits fermé à 1 800 BOPD (286 m³/j) oublié à l'oral reste fermé toute la nuit. Le triptyque réduit la perte d'information au changement de quart.",
       "seconds": 60,
       "status": "draft"
     },
@@ -905,15 +905,15 @@
       "id": "sup-prod-050",
       "theme": "Optimisation, allocation et passation de quart",
       "level": 2,
-      "q": "Quand le taux d'eau (water cut) d'un champ augmente, quelle conséquence est la plus directe sur l'installation ?",
+      "q": "Le water cut du champ passe de 40 % à 70 % sur 10 000 BLPD (≈ 1 590 m³/j) : l'huile tombe de 6 000 à 3 000 BOPD (954 → 477 m³/j) et l'eau monte de 4 000 à 7 000 BWPD (636 → 1 113 m³/j). Quelle conséquence est la plus directe sur l'installation ?",
       "choices": [
         "Une baisse des besoins en énergie de l'installation de séparation",
+        "Une charge accrue sur le traitement de l'eau et la séparation",
         "Une diminution du nombre de puits nécessaires pour tenir l'objectif",
-        "Une hausse de la pression de tête de puits et du débit d'huile",
-        "Une charge accrue sur le traitement de l'eau et la séparation"
+        "Une hausse de la WHP et du débit d'huile des puits concernés"
       ],
-      "answer": 3,
-      "explain": "Plus d'eau produite signifie plus de volume à séparer, traiter et rejeter ou réinjecter : le goulot se déplace vers le traitement de l'eau.",
+      "answer": 1,
+      "explain": "Plus d'eau produite (4 000 → 7 000 BWPD, soit +3 000 BWPD ≈ +477 m³/j) signifie plus de volume à séparer, traiter et rejeter ou réinjecter : le goulot se déplace vers le traitement de l'eau, alors que l'huile baisse.",
       "seconds": 60,
       "status": "draft"
     }

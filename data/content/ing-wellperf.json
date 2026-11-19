@@ -6,11 +6,11 @@
       "title": "IPR, VLP et analyse nodale",
       "theme": "IPR, VLP et analyse nodale",
       "minutes": 10,
-      "body": "L'analyse nodale décompose le système puits en deux courbes qui se croisent : l'**inflow** (ce que le réservoir livre pour une pression de fond Pwf donnée) et l'**outflow** (la pression de fond nécessaire pour remonter un débit donné jusqu'au séparateur). Leur intersection est le point de fonctionnement.\n\nL'**IPR** (Inflow Performance Relationship) relie le débit q à la pression de fond dynamique. En écoulement monophasique, la loi de Darcy radiale montre que le débit est proportionnel à la perméabilité k, à l'épaisseur h et à la chute de pression, et inversement proportionnel à la viscosité μ, au facteur volumétrique B et à ln(re/rw) + s. Doubler k double à peu près le débit ; doubler μ le divise par deux.\n\nLe **skin** s représente l'endommagement (s positif) ou la stimulation (s négatif) autour du puits. Il ajoute une chute de pression supplémentaire. Dans le cas linéaire, PI = q / (Pr − Pwf) et l'AOF vaut PI × Pr.\n\nSous la pression de bulle, le gaz libre gêne l'écoulement de l'huile et l'IPR se courbe. La relation de **Vogel** s'écrit : q/qmax = 1 − 0,2 (Pwf/Pr) − 0,8 (Pwf/Pr)². Avec Pr = 3 000 psi, qmax = 1 000 STB/j et Pwf = 1 500 psi, on obtient 1 − 0,1 − 0,2 = 0,7, soit 700 STB/j.\n\nLa **VLP** (ou TPR) intègre le poids de la colonne (P = 0,052 × ρ × TVD), les frottements et l'accélération. Les corrélations d'écoulement multiphasique usuelles sont Hagedorn et Brown (vertical), Beggs et Brill (toute inclinaison) et les modèles mécanistiques. Un tubing plus gros réduit les frottements à fort débit mais peut provoquer un chargement en liquide à bas débit.\n\nDans un puits de gaz, sous le **débit critique de Turner**, les gouttes de liquide ne sont plus entraînées : le liquide s'accumule au fond et ajoute de la contre-pression (liquid loading). Les remèdes sont un tubing plus petit, un compresseur, un gas lift ou des tensioactifs.\n\n**Sur le terrain**\n- Avant d'utiliser un PI ou une Vogel, vérifiez la date et les conditions du test : une IPR calée sur un vieux point peut tromper.\n- Une VLP qui ne coupe pas l'IPR signifie qu'il faut de l'énergie (ESP, gas lift), pas un meilleur réglage de duse.\n- Pour un puits de gaz, comparez le débit réel au débit critique de Turner avant d'attribuer une baisse à l'épuisement.",
+      "body": "L'analyse nodale décompose le système puits en deux courbes qui se croisent : l'**inflow** (ce que le réservoir livre pour une pression de fond Pwf donnée) et l'**outflow** (la pression de fond nécessaire pour remonter un débit donné jusqu'au séparateur). Leur intersection est le point de fonctionnement.\n\nL'**IPR** (Inflow Performance Relationship) relie le débit q à la pression de fond dynamique. En écoulement monophasique, la loi de Darcy radiale montre que le débit est proportionnel à la perméabilité k, à l'épaisseur h et à la chute de pression, et inversement proportionnel à la viscosité μ, au facteur volumétrique B et à ln(re/rw) + s. Doubler k double à peu près le débit ; doubler μ le divise par deux.\n\nLe **skin** s représente l'endommagement (s positif) ou la stimulation (s négatif) autour du puits. Il ajoute une chute de pression supplémentaire. Dans le cas linéaire, PI = q / (Pr − Pwf) et l'AOF vaut PI × Pr.\n\nSous la pression de bulle, le gaz libre gêne l'écoulement de l'huile et l'IPR se courbe. La relation de **Vogel** s'écrit : q/qmax = 1 − 0,2 (Pwf/Pr) − 0,8 (Pwf/Pr)². Avec Pr = 3 000 psi (206,8 bar), qmax = 1 000 BOPD (159 m³/j) et Pwf = 1 500 psi (103,4 bar), on obtient 1 − 0,1 − 0,2 = 0,7, soit 700 BOPD (111,3 m³/j).\n\nLa **VLP** (ou TPR) intègre le poids de la colonne (P = 0,052 × ρ × TVD), les frottements et l'accélération. Les corrélations d'écoulement multiphasique usuelles sont Hagedorn et Brown (vertical), Beggs et Brill (toute inclinaison) et les modèles mécanistiques. Un tubing plus gros réduit les frottements à fort débit mais peut provoquer un chargement en liquide à bas débit.\n\nDans un puits de gaz, sous le **débit critique de Turner**, les gouttes de liquide ne sont plus entraînées : le liquide s'accumule au fond et ajoute de la contre-pression (liquid loading). Les remèdes sont un tubing plus petit, un compresseur, un gas lift ou des tensioactifs.\n\n**Exemple chiffré.** Même puits, ESP descendue pour ramener Pwf à 500 psi (34,5 bar) : Vogel donne 1 000 × (1 − 0,033 − 0,022) = 944 BOPD (150,2 m³/j), pas les 1 167 BOPD d'une extrapolation linéaire, supérieurs à l'AOF. Un puits de gaz à 1,2 MMscfd (33 980 Sm³/j) sous un débit critique de Turner de 1,8 MMscfd (50 971 Sm³/j) se charge en liquide.\n\n**Sur site**\n- Avant de promettre un gain à la hiérarchie, tracez l'IPR de Vogel avec un test récent : une extrapolation linéaire en BOPD dépasse vite l'AOF.\n- Un puits qui ne coupe pas la VLP ne produira pas sans activation : chiffrez le gain en BOPD avant de lancer le workover.\n- Un puits de gaz sous Turner se « décroche » : surveillez la FTHP et le débit en MMscfd, pas seulement le débit instantané.\n\n**Vocabulaire FR / EN**\n- Courbe de débit entrant = IPR (inflow performance relationship)\n- Courbe de sortie = VLP / TPR (vertical lift performance)\n- Analyse nodale = nodal analysis\n- Débit maximal = AOF (absolute open flow)\n- Endommagement = skin (formation damage)\n- Chargement en liquide = liquid loading\n- Pression statique de réservoir = Pws / Pr\n- Indice de productivité = PI",
       "keyPoints": [
         "Point de fonctionnement = intersection IPR (inflow) / VLP (outflow).",
-        "PI linéaire = q/(Pr − Pwf) ; sous la pression de bulle, utiliser Vogel.",
-        "Skin positif = endommagement ; skin négatif = stimulation.",
+        "PI linéaire = q/(Pr − Pwf) ; sous la pression de bulle, utiliser Vogel (1 000 BOPD d'AOF, 944 BOPD à Pwf = 500 psi).",
+        "Skin positif = endommagement ; skin négatif = stimulation ; passer de s = 8 à 0 double environ le débit.",
         "Sous le débit critique de Turner, un puits de gaz se charge en liquide."
       ],
       "img": "svg/ipr-curve.svg",
@@ -21,12 +21,12 @@
       "title": "Pompage électrique immergé (ESP)",
       "theme": "ESP",
       "minutes": 10,
-      "body": "Une **ESP** (Electrical Submersible Pump) est une pompe centrifuge multi-étages entraînée par un moteur triphasique descendu au bout du tubing. L'ensemble de fond comprend de bas en haut : le moteur, le protecteur (seal section), l'aspiration ou séparateur de gaz, la pompe et le câble. En surface : transformateur, variateur de fréquence (VSD) et tête de puits avec passage étanche du câble.\n\nLe **protecteur** isole le moteur des fluides du puits, équilibre les pressions, accommode la dilatation de l'huile moteur et encaisse la poussée axiale. La pompe est caractérisée par une courbe de hauteur (head) en fonction du débit, par étage ; la hauteur totale est la hauteur par étage multipliée par le nombre d'étages. Le point de meilleur rendement (BEP) délimite une plage recommandée : trop à gauche, on s'expose au downthrust (usure des butées, surchauffe) ; trop à droite, à l'upthrust.\n\nLes **lois d'affinité** guident le réglage par variateur : débit proportionnel à la fréquence N, hauteur à N², puissance à N³. Passer de 50 à 60 Hz multiplie le débit par 1,2, la hauteur par 1,44 et la puissance par environ 1,73.\n\nLe **gaz libre** à l'aspiration est l'ennemi : il dégrade la hauteur, provoque cavitation, instabilité de courant et arrêts en sous-charge. Les remèdes sont un séparateur de gaz, une immersion accrue, un shroud ou un ajustement de fréquence.\n\n**Diagnostic par courant** : un courant en baisse avec débit en baisse évoque gaz ou pump-off ; un courant très bas avec débit nul évoque un arbre cassé ; un courant en hausse évoque sable, dépôts, viscosité élevée ou problème électrique. La température de surface qui chute signale une réduction du débit d'effluent chaud.\n\nSuivre aussi la température moteur, la pression d'aspiration, l'isolement du câble et les vibrations.\n\n**Sur le terrain**\n- Lisez ensemble courant, débit, température et pressions : un seul paramètre peut tromper, la combinaison oriente le diagnostic.\n- Ne relancez jamais une ESP en surcharge sans avoir lu les tendances et contrôlé l'isolement.\n- Avant de passer à 60 Hz, vérifiez la puissance disponible : elle varie comme le cube de la fréquence.",
+      "body": "Une **ESP** (Electrical Submersible Pump) est une pompe centrifuge multi-étages entraînée par un moteur triphasique descendu au bout du tubing. L'ensemble de fond comprend de bas en haut : le moteur, le protecteur (seal section), l'aspiration ou séparateur de gaz, la pompe et le câble. En surface : transformateur, variateur de fréquence (VSD) et tête de puits avec passage étanche du câble.\n\nLe **protecteur** isole le moteur des fluides du puits, équilibre les pressions, accommode la dilatation de l'huile moteur et encaisse la poussée axiale. La pompe est caractérisée par une courbe de hauteur (head) en fonction du débit, par étage ; la hauteur totale est la hauteur par étage multipliée par le nombre d'étages. Le point de meilleur rendement (BEP) délimite une plage recommandée : trop à gauche, on s'expose au downthrust (usure des butées, surchauffe) ; trop à droite, à l'upthrust.\n\nLes **lois d'affinité** guident le réglage par variateur : débit proportionnel à la fréquence N, hauteur à N², puissance à N³. Passer de 50 à 60 Hz multiplie le débit par 1,2, la hauteur par 1,44 et la puissance par environ 1,73.\n\nLe **gaz libre** à l'aspiration est l'ennemi : il dégrade la hauteur, provoque cavitation, instabilité de courant et arrêts en sous-charge. Les remèdes sont un séparateur de gaz, une immersion accrue, un shroud ou un ajustement de fréquence.\n\n**Diagnostic par courant** : un courant en baisse avec débit en baisse évoque gaz ou pump-off ; un courant très bas avec débit nul évoque un arbre cassé ; un courant en hausse évoque sable, dépôts, viscosité élevée ou problème électrique. La température de surface qui chute signale une réduction du débit d'effluent chaud.\n\nSuivre aussi la température moteur, la pression d'aspiration, l'isolement du câble et les vibrations.\n\n**Exemple chiffré.** Une ESP à 1 500 BLPD (238,5 m³/j) à 50 Hz passe à 60 Hz : débit 1 800 BLPD (286,2 m³/j), hauteur × 1,44, puissance × 1,73 ; un moteur chargé à 62 kW (83,1 hp) monte à 107 kW (143,7 hp) et dépasse son nominal de 100 kW (134,1 hp). Un courant qui passe de 42 à 28 A avec un débit de 2 000 à 1 100 BLPD (318 à 174,9 m³/j) évoque gaz ou pump-off.\n\n**Sur site**\n- Avant de monter la fréquence en Hz pour gagner des BLPD, vérifiez la puissance moteur : elle varie comme le cube de la fréquence.\n- Ne relancez jamais une ESP déclenchée trois fois « pour voir » : diagnostic, isolement au mégohmmètre, limites du constructeur.\n- Une duse de tête fermée pour « stabiliser » pousse la pompe vers le downthrust : suivez courant, débit et pression d'aspiration ensemble.\n\n**Vocabulaire FR / EN**\n- Pompe électrique immergée = ESP\n- Variateur de fréquence = VSD (variable speed drive)\n- Protecteur = seal section / protector\n- Séparateur de gaz = gas separator\n- Poussée vers le bas = downthrust\n- Sous-charge / surcharge = underload / overload\n- Pression d'aspiration = intake pressure\n- Pull job = intervention de remontée de la pompe",
       "keyPoints": [
         "ESP : moteur, protecteur, aspiration/séparateur de gaz, pompe multi-étages, câble, VSD.",
-        "Lois d'affinité : Q ∝ N, H ∝ N², P ∝ N³.",
+        "Lois d'affinité : Q ∝ N, H ∝ N², P ∝ N³ (50 à 60 Hz : 1 500 → 1 800 BLPD).",
         "Gaz libre : cavitation, gas lock, arrêts en sous-charge.",
-        "Courant en baisse + débit en baisse + surface plus froide : gaz ou pump-off en tête des hypothèses."
+        "Courant en baisse + BLPD en baisse + surface plus froide : gaz ou pump-off en tête des hypothèses."
       ],
       "img": "svg/esp-system.svg",
       "imgAlt": "Système ESP complet de fond et de surface"
@@ -36,10 +36,10 @@
       "title": "Gas lift continu et intermittent",
       "theme": "Gas lift",
       "minutes": 9,
-      "body": "Le **gas lift** consiste à injecter du gaz à haute pression dans l'annulaire puis dans le tubing, à travers une vanne montée sur mandrin, pour alléger la colonne de fluide. La densité moyenne de la colonne diminue, donc le gradient et la pression de fond Pwf diminuent : le puits peut produire davantage.\n\nOn distingue le gas lift **continu** (injection permanente, adapté aux puits à bon indice de productivité et pression suffisante) et **intermittent** (cycles d'injection, adapté aux faibles débits et aux pressions basses).\n\nLes **vannes de décharge** (unloading valves), placées de haut en bas, permettent de déplacer le liquide de l'annulaire jusqu'à atteindre la **vanne d'opération** la plus profonde. Les vannes à soufflets chargés à l'azote sont soit sensibles à la pression d'injection (IPO), soit à la pression de production (PPO).\n\nLa **courbe de performance gas lift** montre que le débit d'huile augmente avec le gaz injecté jusqu'à un optimum, puis diminue quand les frottements dominent. En présence de gaz limité, on optimise l'allocation entre puits : on égalise la production marginale par unité de gaz injecté.\n\nLe gaz d'injection doit être sec (déshydraté) pour éviter hydrates et corrosion. L'orifice d'opération doit être correctement dimensionné pour un débit stable.\n\n**Diagnostic** : des oscillations de pression de tête et de débit (heading) indiquent une injection instable ou un orifice inadapté. Une pression d'annulaire qui baisse avec un débit de surface constant évoque une vanne de décharge fuyarde ou un orifice érodé. Une pression d'annulaire qui monte évoque un orifice bouché. Un point d'injection trop haut allège une colonne trop courte et limite le gain.\n\nPar rapport aux autres méthodes, le gas lift tolère le gaz et le sable, a peu de pièces mobiles au fond et convient aux puits déviés, mais il nécessite une source de gaz et des compresseurs.\n\n**Sur le terrain**\n- Notez la pression d'annulaire et le débit de gaz à chaque ronde : leur couple dit si une vanne fuit ou si l'orifice se bouche.\n- Cherchez l'optimum économique du gaz injecté, pas le maximum de production.\n- Un gaz non déshydraté finit par bloquer une ligne en saison froide : contrôlez le point de rosée.",
+      "body": "Le **gas lift** consiste à injecter du gaz à haute pression dans l'annulaire puis dans le tubing, à travers une vanne montée sur mandrin, pour alléger la colonne de fluide. La densité moyenne de la colonne diminue, donc le gradient et la pression de fond Pwf diminuent : le puits peut produire davantage.\n\nOn distingue le gas lift **continu** (injection permanente, adapté aux puits à bon indice de productivité et pression suffisante) et **intermittent** (cycles d'injection, adapté aux faibles débits et aux pressions basses).\n\nLes **vannes de décharge** (unloading valves), placées de haut en bas, permettent de déplacer le liquide de l'annulaire jusqu'à atteindre la **vanne d'opération** la plus profonde. Les vannes à soufflets chargés à l'azote sont soit sensibles à la pression d'injection (IPO), soit à la pression de production (PPO).\n\nLa **courbe de performance gas lift** montre que le débit d'huile augmente avec le gaz injecté jusqu'à un optimum, puis diminue quand les frottements dominent. En présence de gaz limité, on optimise l'allocation entre puits : on égalise la production marginale par unité de gaz injecté.\n\nLe gaz d'injection doit être sec (déshydraté) pour éviter hydrates et corrosion. L'orifice d'opération doit être correctement dimensionné pour un débit stable.\n\n**Diagnostic** : des oscillations de pression de tête et de débit (heading) indiquent une injection instable ou un orifice inadapté. Une pression d'annulaire qui baisse avec un débit de surface constant évoque une vanne de décharge fuyarde ou un orifice érodé. Une pression d'annulaire qui monte évoque un orifice bouché. Un point d'injection trop haut allège une colonne trop courte et limite le gain.\n\nPar rapport aux autres méthodes, le gas lift tolère le gaz et le sable, a peu de pièces mobiles au fond et convient aux puits déviés, mais il nécessite une source de gaz et des compresseurs.\n\n**Exemple chiffré.** Un puits de 8 000 ft (2 438 m) dont le gradient moyen passe de 0,35 à 0,25 psi/ft gagne 800 psi (55,2 bar) de drawdown. À 1,5 MMscfd (42 476 Sm³/j), une pression d'annulaire qui tombe de 95 à 80 bar (1 378 à 1 160 psi) avec une production qui passe de 700 à 520 BOPD (111,3 à 82,7 m³/j) trahit une vanne de décharge qui fuit. Passer de 2,0 à 2,5 MMscfd pour +8 BOPD coûte 1 000 USD/j de gaz pour 560 USD/j d'huile : perte nette.\n\n**Sur site**\n- Le gaz de lift se répartit entre puits : égalisez la production marginale en BOPD par MMscfd injecté plutôt que de maximiser un seul puits.\n- Une pression d'annulaire qui dérive à débit de gaz constant signale une fuite (baisse) ou un passage qui se ferme (hausse) : agissez avant la perte de production.\n- Gaz humide et nuit froide : hydrates dans la ligne d'injection ; vérifiez la déshydratation avant d'accuser la vanne.\n\n**Vocabulaire FR / EN**\n- Vanne de décharge = unloading valve\n- Vanne d'opération = operating valve\n- Mandrin latéral = side-pocket mandrel\n- Instabilité d'injection = heading\n- Débit d'injection de gaz = gas injection rate (MMscfd)\n- Rapport gaz/liquide = GLR\n- Orifice = orifice / choke\n- Courbe de performance gas lift = gas lift performance curve",
       "keyPoints": [
-        "Le gaz injecté diminue la densité de la colonne et donc la Pwf.",
-        "Courbe de performance : il existe un débit d'injection optimal.",
+        "Le gaz injecté diminue la densité de la colonne et donc la Pwf (−0,10 psi/ft sur 8 000 ft = −800 psi).",
+        "Courbe de performance : il existe un débit d'injection optimal, souvent avant le maximum d'huile.",
         "Heading : instabilité d'injection ou orifice mal dimensionné.",
         "Gaz d'injection sec obligatoire (hydrates, corrosion)."
       ],
@@ -51,9 +51,9 @@
       "title": "Pompes à tiges et diagnostic de puits",
       "theme": "Pompes à tiges et diagnostic",
       "minutes": 10,
-      "body": "La **pompe à tiges** (balancier) transforme le mouvement alternatif de surface en pompage de fond. La tige polie traverse le presse-étoupe et est reliée au balancier ; la colonne de tiges transmet le mouvement au piston de la pompe, qui coulisse dans le barillet. Deux clapets font le travail : le clapet fixe (standing valve) au bas du barillet et le clapet mobile (traveling valve) sur le piston.\n\nLe **déplacement théorique** en bbl/j est : q = 0,1166 × d² × S × N, avec d le diamètre du piston en pouces, S la course en pouces et N le nombre de coups par minute. Exemple : d = 1,5 po, S = 100 po, N = 6 spm donnent environ 157 bbl/j. Avec une efficacité volumétrique de 70 %, le débit réel est d'environ 110 bbl/j.\n\nLa **carte dynamométrique** trace la charge à la tige polie en fonction de sa position. Elle permet de diagnostiquer : le coup de fluide (fluid pound, chute brutale de charge pendant la descente, pompe incomplètement remplie), l'interférence de gaz (carte arrondie), la fuite de clapet mobile ou fixe (perte d'efficacité), et le coincement ou les frottements. Un contrôleur de pump-off peut arrêter ou ralentir le puits quand la pompe est partiellement vide.\n\nL'**échométrie** mesure le niveau de liquide dans l'annulaire ; combinée à la densité des fluides, elle donne la pression de fond Pwf.\n\nPour un puits dont le water cut monte, on exploite le diagnostic de **Chan** : tracé log-log du WOR et de sa dérivée. Une montée rapide du WOR avec dérivée positive suggère une chenalisation ; un WOR qui monte puis se stabilise avec dérivée négative suggère un coning d'eau.\n\n**Choix du mode d'activation** : pompe à tiges pour débits modérés et profondeurs moyennes, ESP pour forts débits, gas lift pour puits gazeux, sableux ou déviés, PCP pour huiles lourdes avec sable.\n\n**Sur le terrain**\n- Faites une carte dynamométrique avant de décider : charge, position et forme valent mieux que des suppositions.\n- Comparez toujours déplacement théorique et débit réel : le rendement volumétrique guide le diagnostic.\n- En ronde, vérifiez protections, frein et fuites au presse-étoupe avant toute mesure.",
+      "body": "La **pompe à tiges** (balancier) transforme le mouvement alternatif de surface en pompage de fond. La tige polie traverse le presse-étoupe et est reliée au balancier ; la colonne de tiges transmet le mouvement au piston de la pompe, qui coulisse dans le barillet. Deux clapets font le travail : le clapet fixe (standing valve) au bas du barillet et le clapet mobile (traveling valve) sur le piston.\n\nLe **déplacement théorique** en bbl/j est : q = 0,1166 × d² × S × N, avec d le diamètre du piston en pouces, S la course en pouces et N le nombre de coups par minute. Exemple : d = 1,5 po, S = 100 po, N = 6 spm donnent environ 157 BLPD (25,0 m³/j). Avec une efficacité volumétrique de 70 %, le débit réel est d'environ 110 BLPD (17,5 m³/j). Un test à 95 BLPD (15,1 m³/j) donne 60 % : il manque 62 BLPD à expliquer.\n\nLa **carte dynamométrique** trace la charge à la tige polie en fonction de sa position. Elle permet de diagnostiquer : le coup de fluide (fluid pound, chute brutale de charge pendant la descente, pompe incomplètement remplie), l'interférence de gaz (carte arrondie), la fuite de clapet mobile ou fixe (perte d'efficacité), et le coincement ou les frottements. Un contrôleur de pump-off peut arrêter ou ralentir le puits quand la pompe est partiellement vide.\n\nL'**échométrie** mesure le niveau de liquide dans l'annulaire ; combinée à la densité des fluides, elle donne la pression de fond Pwf.\n\nPour un puits dont le water cut monte, on exploite le diagnostic de **Chan** : tracé log-log du WOR et de sa dérivée. Une montée rapide du WOR avec dérivée positive suggère une chenalisation ; un WOR qui monte puis se stabilise avec dérivée négative suggère un coning d'eau.\n\n**Choix du mode d'activation** : pompe à tiges pour débits modérés et profondeurs moyennes, ESP pour forts débits, gas lift pour puits gazeux, sableux ou déviés, PCP pour huiles lourdes avec sable.\n\n**Exemple chiffré.** Une pompe à tiges avec la pompe à 6 000 ft (1 829 m) et un niveau de liquide à 600 ft (183 m) a 5 400 ft (1 646 m) d'immersion : on peut pomper plus. Un puits à 2 000 BLPD (318 m³/j) dont le WOR passe de 0,5 à 5 voit l'huile tomber de 1 333 à 333 BOPD (212 à 53 m³/j) : tracez Chan avant de décider d'un conformance.\n\n**Sur site**\n- Contrôlez les protections des courroies, manivelle et contrepoids, le frein et l'étanchéité du presse-étoupe avant de toucher à l'unité.\n- Comparez toujours le déplacement théorique (BLPD) au test de production : le rendement volumétrique oriente le diagnostic.\n- Un pump-off répété use tiges et pompe : ajustez le cycle plutôt que de laisser tourner.\n\n**Vocabulaire FR / EN**\n- Unité à balancier = pumping unit / beam pump\n- Tige polie = polished rod\n- Carte dynamométrique = dynamometer card\n- Coup de fluide = fluid pound\n- Clapet mobile / fixe = traveling / standing valve\n- Échométrie = fluid level shot (echometer)\n- Immersion de la pompe = pump submergence\n- Contrôleur de pump-off = pump-off controller",
       "keyPoints": [
-        "Déplacement théorique : q = 0,1166 × d² × S × N (bbl/j, d et S en pouces).",
+        "Déplacement théorique : q = 0,1166 × d² × S × N (BLPD, d et S en pouces) ; 1,5 po, 100 po, 6 spm donnent 157 BLPD.",
         "Carte dynamométrique : charge de la tige polie en fonction de la position.",
         "Fluid pound : le barillet ne se remplit pas ; adapter le cycle ou la vitesse.",
         "Chan : WOR et dérivée ; chenalisation ou coning selon la forme."
@@ -67,17 +67,17 @@
       "id": "ing-wellperf-001",
       "theme": "IPR, VLP et analyse nodale",
       "level": 3,
-      "q": "Le puits de la figure donne 700 stb/j à Pwf = 1 500 psi (AOF 1 000 stb/j, Pws 3 000 psi). Vous prévoyez de ramener la Pwf à 500 psi avec une ESP. Un collègue extrapole avec le PI mesuré et annonce 1 167 stb/j. Quel débit donne la courbe de Vogel et que dites-vous ?",
+      "q": "Le puits de la figure donne 700 BOPD (111,3 m³/j) à Pwf = 1 500 psi (103,4 bar) ; AOF 1 000 BOPD, Pws 3 000 psi (206,8 bar). Vous prévoyez de ramener la Pwf à 500 psi (34,5 bar) avec une ESP. Un collègue extrapole avec le PI mesuré et annonce 1 167 BOPD (185,5 m³/j). Quel débit donne Vogel, et que lui dites-vous ?",
       "img": "svg/ipr-curve.svg",
       "imgAlt": "Courbe IPR de Vogel : Pws 3 000 psi, point d'essai 700 stb/j à Pwf 1 500 psi, débit maximal (AOF) 1 000 stb/j",
       "choices": [
-        "Environ 1 167 stb/j : l'IPR reste une droite sous la pression de bulle",
-        "Environ 833 stb/j : débit proportionnel à la chute de pression de fond",
-        "Environ 944 stb/j : l'extrapolation linéaire dépasse l'AOF, donc elle est irréaliste",
-        "Environ 1 000 stb/j : on atteint l'AOF dès que Pwf passe sous 1 000 psi"
+        "Environ 1 167 BOPD (185,5 m³/j) : l'IPR reste une droite sous la pression de bulle, il a raison",
+        "Environ 833 BOPD (132,5 m³/j) : débit simplement proportionnel à la chute de pression de fond, sans courbure de l'IPR sous la bulle",
+        "Environ 944 BOPD (150,2 m³/j) : son extrapolation linéaire dépasse l'AOF, donc elle est irréaliste",
+        "Environ 1 000 BOPD (159 m³/j) : on atteint l'AOF dès que la Pwf passe sous 1 000 psi"
       ],
       "answer": 2,
-      "explain": "Vogel : q/qmax = 1 − 0,2 (Pwf/Pr) − 0,8 (Pwf/Pr)², soit 0,944 à Pwf = 500 psi, donc 944 stb/j. Un débit supérieur à l'AOF est physiquement impossible.",
+      "explain": "Vogel : q/qmax = 1 − 0,2 × (500/3 000) − 0,8 × (500/3 000)² = 0,944, soit 944 BOPD (150,2 m³/j). Le PI linéaire donne 700 / 1 500 × 2 500 = 1 167 BOPD, au-delà de l'AOF de 1 000 BOPD : physiquement impossible.",
       "seconds": 100,
       "status": "draft"
     },
@@ -85,17 +85,17 @@
       "id": "ing-wellperf-002",
       "theme": "IPR, VLP et analyse nodale",
       "level": 2,
-      "q": "Même puits (Pr = 3 000 psi, AOF 1 000 stb/j, Vogel). Le puits est contraint à Pwf = 2 400 psi en raison d'un séparateur très pressurisé. Quel débit attendez-vous ?",
+      "q": "Même puits (Pr = 3 000 psi, AOF 1 000 BOPD, Vogel). Un séparateur très pressurisé contraint le puits à Pwf = 2 400 psi (165,5 bar). Quel débit attendez-vous en BOPD et en m³/j ?",
       "img": "svg/ipr-curve.svg",
       "imgAlt": "Courbe IPR de Vogel : Pws 3 000 psi, point d'essai 700 stb/j à Pwf 1 500 psi, débit maximal (AOF) 1 000 stb/j",
       "choices": [
-        "Environ 328 stb/j (Vogel, Pwf/Pr = 0,8)",
-        "Environ 200 stb/j (IPR linéaire, 1 000 × 0,2)",
-        "Environ 800 stb/j (Pwf/Pr appliqué au débit)",
-        "Environ 600 stb/j (Vogel avec Pwf/Pr = 0,6)"
+        "Environ 200 BOPD (31,8 m³/j) : IPR linéaire, 1 000 × 0,2",
+        "Environ 800 BOPD (127,2 m³/j) : Pwf/Pr appliqué directement au débit",
+        "Environ 328 BOPD (52,2 m³/j) : Vogel avec Pwf/Pr = 0,8",
+        "Environ 592 BOPD (94,1 m³/j) : Vogel avec Pwf/Pr = 0,6"
       ],
-      "answer": 0,
-      "explain": "Pwf/Pr = 0,8 : q/qmax = 1 − 0,16 − 0,512 = 0,328, soit 328 stb/j. Une forte contre-pression écrase la production.",
+      "answer": 2,
+      "explain": "Pwf/Pr = 2 400 / 3 000 = 0,8 : q/qmax = 1 − 0,2 × 0,8 − 0,8 × 0,64 = 0,328, soit 328 BOPD (52,2 m³/j). Une forte contre-pression de séparateur écrase la production.",
       "seconds": 100,
       "status": "draft"
     },
@@ -103,15 +103,15 @@
       "id": "ing-wellperf-003",
       "theme": "IPR, VLP et analyse nodale",
       "level": 1,
-      "q": "L'essai de pression d'un puits donne un skin de +8. Après une acidification, un nouvel essai donne un skin voisin de 0. Quel effet attendez-vous sur le puits à Pwf égale ?",
+      "q": "L'essai de pression (build-up) d'un puits à 400 BOPD (63,6 m³/j) donne un skin de +8. Après acidification, un nouvel essai donne un skin voisin de 0. Avec ln(re/rw) = 7 et à Pwf égale, quel débit attendez-vous ?",
       "choices": [
-        "Le débit baisse, car le skin positif réduisait les pertes de charge dans la roche",
-        "Aucun effet : le skin ne modifie que la pression statique et pas le débit",
-        "La pression statique du réservoir augmente avec la stimulation de la roche",
-        "La chute de pression additionnelle disparaît : le débit et le PI augmentent"
+        "Environ 600 BOPD (95,4 m³/j) : gain de 50 % seulement, le skin n'agissant que près du puits",
+        "Environ 200 BOPD (31,8 m³/j) : le skin positif réduisait les pertes de charge dans la roche",
+        "Environ 857 BOPD (136,3 m³/j) : le dénominateur passe de 7 + 8 = 15 à 7, soit un débit multiplié par 2,1",
+        "Environ 400 BOPD (63,6 m³/j) : le skin ne modifie que la pression statique et pas le débit"
       ],
-      "answer": 3,
-      "explain": "Un skin positif traduit un endommagement qui coûte une chute de pression ; le supprimer rend du drawdown utile et augmente le PI.",
+      "answer": 2,
+      "explain": "Darcy radial : q proportionnel à 1 / (ln(re/rw) + s). Avant : 1 / (7 + 8) ; après : 1 / 7. Rapport = 15 / 7 = 2,14, soit 400 × 2,14 ≈ 857 BOPD (136,3 m³/j). Un skin positif est un endommagement : le supprimer rend du drawdown utile et augmente le PI.",
       "seconds": 80,
       "status": "draft"
     },
@@ -119,17 +119,17 @@
       "id": "ing-wellperf-004",
       "theme": "IPR, VLP et analyse nodale",
       "level": 2,
-      "q": "Un puits d'huile à gaz dissous : Pr = 3 000 psi, pression de bulle 2 600 psi. Le test à Pwf = 1 500 psi donne 700 stb/j. Quel modèle d'IPR retenez-vous pour prévoir d'autres Pwf ?",
+      "q": "Puits d'huile à gaz dissous : Pr = 3 000 psi (206,8 bar), pression de bulle 2 600 psi (179,3 bar). Le test à Pwf = 1 500 psi (103,4 bar) donne 700 BOPD (111,3 m³/j). Quel modèle d'IPR retenez-vous pour prévoir d'autres Pwf ?",
       "img": "svg/ipr-curve.svg",
       "imgAlt": "Courbe IPR de Vogel : Pws 3 000 psi, point d'essai 700 stb/j à Pwf 1 500 psi, débit maximal (AOF) 1 000 stb/j",
       "choices": [
-        "Un PI constant : l'IPR reste une droite quelle que soit la Pwf mesurée",
         "Vogel : la Pwf est sous la pression de bulle, l'écoulement est diphasique",
-        "Le débit critique de Turner : il décrit l'écoulement diphasique du réservoir",
-        "Darcy monophasique : une droite, car la perméabilité reste constante"
+        "Un PI constant : l'IPR reste une droite quelle que soit la Pwf mesurée sur le test",
+        "Le débit critique de Turner : il décrit l'écoulement diphasique dans le réservoir",
+        "Darcy monophasique : une droite, car la perméabilité reste constante pendant la production"
       ],
-      "answer": 1,
-      "explain": "Sous la pression de bulle, du gaz libre réduit la perméabilité à l'huile ; Vogel représente la courbure de l'IPR.",
+      "answer": 0,
+      "explain": "Sous la pression de bulle, du gaz libre réduit la perméabilité relative à l'huile : l'IPR se courbe et Vogel la représente. Turner concerne le liquid loading des puits de gaz, pas l'IPR.",
       "seconds": 80,
       "status": "draft"
     },
@@ -137,17 +137,17 @@
       "id": "ing-wellperf-005",
       "theme": "IPR, VLP et analyse nodale",
       "level": 2,
-      "q": "Puits d'huile vertical de 10 000 ft : pression de tête en écoulement 200 psi, gradient moyen de l'huile 0,35 psi/ft (figure), pertes de charge par frottement 150 psi. Quelle est la pression de fond en écoulement ?",
+      "q": "Puits d'huile vertical de 10 000 ft (3 048 m) : FTHP 200 psi (13,8 bar), gradient moyen de l'huile 0,35 psi/ft (figure), pertes par frottement 150 psi (10,3 bar). Quelle est la pression de fond en écoulement ?",
       "img": "svg/pressure-gradient-chart.svg",
       "imgAlt": "Gradients de pression : eau douce 0,433 psi/ft, huile 0,35 psi/ft (3 500 psi à 10 000 ft), gaz 0,10 psi/ft",
       "choices": [
-        "Environ 3 550 psi : 200 + 3 500 − 150 (frottement soustrait)",
-        "Environ 3 850 psi : 200 + 3 500 + 150 de frottement",
-        "Environ 3 500 psi : la colonne hydrostatique seule",
-        "Environ 4 330 psi : gradient de l'eau douce, sans la tête"
+        "Environ 3 550 psi (244,8 bar) : 200 + 3 500 − 150, frottement soustrait",
+        "Environ 3 500 psi (241,3 bar) : la colonne hydrostatique seule",
+        "Environ 4 330 psi (298,5 bar) : gradient de l'eau douce, sans la tête",
+        "Environ 3 850 psi (265,4 bar) : 200 + 3 500 + 150 de frottement"
       ],
-      "answer": 1,
-      "explain": "La VLP est la somme de la pression de tête, de la colonne hydrostatique et des frottements : la colonne domine dans un puits vertical.",
+      "answer": 3,
+      "explain": "La VLP est la somme de la FTHP, de la colonne hydrostatique et des frottements : 200 + 0,35 × 10 000 + 150 = 3 850 psi, soit 265,4 bar. La colonne domine dans un puits vertical.",
       "seconds": 100,
       "status": "draft"
     },
@@ -155,15 +155,15 @@
       "id": "ing-wellperf-006",
       "theme": "IPR, VLP et analyse nodale",
       "level": 3,
-      "q": "Un puits fournit 3 500 bbl/j dans un tubing de 2 7/8 po : les pertes par frottement sont fortes. Vous envisagez un tubing de 3 1/2 po. Quel effet attendez-vous sur la VLP et le point de fonctionnement, et quelle réserve ?",
+      "q": "Un puits fournit 3 500 BLPD (556,5 m³/j) dans un tubing de 2 7/8 po : les frottements sont forts. Vous envisagez un tubing de 3 1/2 po. Quel effet attendez-vous sur la VLP et le point de fonctionnement, et quelle réserve ?",
       "choices": [
         "La VLP monte à fort débit car la section plus grande ajoute des frottements : le débit baisse",
-        "La VLP reste inchangée à tous les débits : seule la pression de tête varie, sans effet sur le débit",
-        "Le débit chute à tous les régimes, car une section plus grande réduit la vitesse et la pression de fond",
-        "La VLP baisse à fort débit : le débit augmente ; gain faible à bas débit, avec risque de liquid loading"
+        "La VLP reste inchangée à tous les débits : seule la FTHP varie, sans effet sur le débit",
+        "La VLP baisse à fort débit : le débit augmente ; gain faible à bas débit, avec risque de liquid loading",
+        "Le débit chute à tous les régimes, car une section plus grande réduit la vitesse et la pression de fond"
       ],
-      "answer": 3,
-      "explain": "Un plus grand diamètre réduit la friction, utile à fort débit ; à faible débit, la vitesse diminue et l'évacuation du liquide devient plus difficile.",
+      "answer": 2,
+      "explain": "Un plus grand diamètre réduit la friction, utile à fort débit (ici 3 500 BLPD) ; à faible débit, la vitesse diminue et l'évacuation du liquide devient plus difficile.",
       "seconds": 100,
       "status": "draft"
     },
@@ -171,15 +171,15 @@
       "id": "ing-wellperf-007",
       "theme": "IPR, VLP et analyse nodale",
       "level": 3,
-      "q": "Le puits de gaz G-04 produit 1,2 MMscf/j, le débit critique de Turner calculé étant de 1,8 MMscf/j. La pression de tête oscille et la production décline en marches d'escalier. Hypothèse et première action ?",
+      "q": "Le puits de gaz G-04 produit 1,2 MMscfd (33 980 Sm³/j), alors que le débit critique de Turner calculé est de 1,8 MMscfd (50 971 Sm³/j). La FTHP oscille et la production décline en marches d'escalier. Hypothèse et première action ?",
       "choices": [
-        "Liquid loading : le liquide s'accumule au fond ; réduire la pression de tête, moussant ou plunger lift",
-        "Hausse de l'AOF : le puits devient plus productif, donc réduire la duse et la vitesse du gaz",
-        "Formation d'hydrates dans le réservoir : injecter du méthanol par un tubing capillaire en fond",
+        "Hausse de l'AOF : le puits devient plus productif, donc réduire le choke et la vitesse du gaz",
+        "Liquid loading : le liquide s'accumule au fond ; réduire la pression de tête, mousser (tensioactif) ou installer un plunger lift",
+        "Hydrates dans le réservoir : injecter du méthanol par un capillaire jusqu'en fond de puits",
         "Baisse du skin : aucune action nécessaire, la production remontera d'elle-même avec le temps"
       ],
-      "answer": 0,
-      "explain": "Sous le débit critique, les gouttes retombent et la contre-pression augmente : c'est le signe type du liquid loading.",
+      "answer": 1,
+      "explain": "1,2 MMscfd est 67 % du débit critique : sous Turner, les gouttes retombent et la contre-pression augmente, signe type du liquid loading. Remèdes : baisser la pression de tête, tensioactif, plunger, tubing plus petit.",
       "seconds": 100,
       "status": "draft"
     },
@@ -187,15 +187,15 @@
       "id": "ing-wellperf-008",
       "theme": "IPR, VLP et analyse nodale",
       "level": 1,
-      "q": "Une IPR linéaire a PI = 2 STB/j/psi et Pr = 2 500 psi. Quel débit pour Pwf = 1 000 psi ?",
+      "q": "A linear IPR has a PI of 2 bpd/psi and Pr = 2 500 psi (172,4 bar). What rate do you get at Pwf = 1 000 psi (68,9 bar)?",
       "choices": [
-        "2 000 STB/j (2 × Pwf de 1 000 psi)",
-        "5 000 STB/j (2 × 2 500 psi)",
-        "3 000 STB/j (2 × 1 500 psi)",
-        "1 500 STB/j (2 × 750 psi)"
+        "2 000 BOPD (318,0 m³/d): 2 × a Pwf of 1 000 psi",
+        "3 000 BOPD (477,0 m³/d): 2 × 1 500",
+        "5 000 BOPD (795,0 m³/d): 2 × 2 500 psi",
+        "1 500 BOPD (238,5 m³/d): 2 × 750 psi"
       ],
-      "answer": 2,
-      "explain": "q = PI × (Pr − Pwf) = 2 × 1 500 = 3 000 STB/j.",
+      "answer": 1,
+      "explain": "q = PI × (Pr − Pwf) = 2 × (2 500 − 1 000) = 3 000 BOPD, i.e. 477,0 m³/d. Drawdown is 1 500 psi (103,4 bar).",
       "seconds": 70,
       "status": "draft"
     },
@@ -203,15 +203,15 @@
       "id": "ing-wellperf-009",
       "theme": "IPR, VLP et analyse nodale",
       "level": 1,
-      "q": "Deux puits voisins A (k = 50 mD) et B (k = 100 mD) ont la même épaisseur, le même drawdown et le même fluide. Dans la loi de Darcy radiale, quel est le rapport approximatif de débit B / A ?",
+      "q": "Deux puits voisins A (k = 50 mD) et B (k = 100 mD) ont même épaisseur, même drawdown et même fluide. A produit 800 BOPD (127,2 m³/j). Dans la loi de Darcy radiale, quel débit attendez-vous pour B ?",
       "choices": [
-        "Environ 1 (le débit ne dépend que du drawdown)",
-        "Environ 4 (débit proportionnel au carré de k)",
-        "Environ 0,5 (débit inversement proportionnel à k)",
-        "Environ 2 (rapport des perméabilités 100 / 50)"
+        "Environ 800 BOPD (127,2 m³/j) : le débit ne dépend que du drawdown",
+        "Environ 1 600 BOPD (254,4 m³/j) : le débit est proportionnel à k",
+        "Environ 3 200 BOPD (508,8 m³/j) : le débit est proportionnel au carré de k",
+        "Environ 400 BOPD (63,6 m³/j) : le débit est inversement proportionnel à k"
       ],
-      "answer": 3,
-      "explain": "En écoulement monophasique, le débit est proportionnel à k : doubler k double approximativement le débit.",
+      "answer": 1,
+      "explain": "En écoulement monophasique, q est proportionnel à k : doubler k double approximativement le débit, soit 2 × 800 = 1 600 BOPD (254,4 m³/j).",
       "seconds": 70,
       "status": "draft"
     },
@@ -219,17 +219,17 @@
       "id": "ing-wellperf-010",
       "theme": "IPR, VLP et analyse nodale",
       "level": 2,
-      "q": "Vous tracez l'IPR et la VLP d'un puits : les deux courbes ne se coupent pas, la VLP restant toujours au-dessus de l'IPR. Que concluez-vous ?",
+      "q": "Nodal analysis sur un puits arrêté (Pr = 2 200 psi, soit 151,7 bar) : la VLP reste au-dessus de l'IPR sur tout le domaine, les deux courbes ne se coupent pas. Que concluez-vous ?",
       "img": "svg/ipr-curve.svg",
       "imgAlt": "Courbe IPR de Vogel : Pws 3 000 psi, point d'essai 700 stb/j à Pwf 1 500 psi, débit maximal (AOF) 1 000 stb/j",
       "choices": [
-        "Le puits produit à son débit maximal, car la VLP borne le point de fonctionnement",
+        "Le puits produit à son débit maximal, car la VLP borne le point de fonctionnement et le test de production le confirme",
         "Pas d'éruptif possible : il faut une activation (ESP, gas lift) ou une VLP plus basse",
         "Le point de fonctionnement est à l'AOF, avec une Pwf nulle en fond de puits",
         "La pression du réservoir est infinie, donc l'IPR se situe au-dessus de toute VLP"
       ],
       "answer": 1,
-      "explain": "Le point de fonctionnement est l'intersection IPR/VLP. Sans intersection, le réservoir ne peut pas fournir l'énergie pour remonter les fluides.",
+      "explain": "Le point de fonctionnement est l'intersection IPR / VLP. Sans intersection, le réservoir ne fournit pas l'énergie pour remonter les fluides jusqu'au séparateur : le puits ne débite pas (0 BOPD) sans activation.",
       "seconds": 90,
       "status": "draft"
     },
@@ -237,14 +237,14 @@
       "id": "ing-wellperf-011",
       "theme": "ESP",
       "level": 1,
-      "q": "Sur la figure du système ESP, vous devez décrire l'ordre des composants de fond, de haut en bas. Quel est-il ?",
+      "q": "Vous préparez le programme de descente d'une ESP pour un puits à 3 000 BLPD (477 m³/j). Sur la figure du système ESP, quel est l'ordre des composants de fond, de haut en bas ?",
       "img": "svg/esp-system.svg",
       "imgAlt": "Système ESP : transformateur, variateur, câble, pompe multi-étages en haut, puis admission/séparateur de gaz, protecteur, moteur et capteur de fond",
       "choices": [
-        "Moteur, protecteur, admission ou séparateur, pompe, puis capteur de fond",
-        "Protecteur, pompe, moteur, admission ou séparateur de gaz, capteur",
-        "Pompe, admission ou séparateur de gaz, protecteur, moteur, capteur",
-        "Admission ou séparateur de gaz, moteur, pompe, protecteur, capteur"
+        "Moteur, protecteur, admission ou séparateur de gaz, pompe, puis capteur de fond",
+        "Protecteur, pompe, moteur, admission ou séparateur de gaz, puis capteur de fond",
+        "Pompe, admission ou séparateur de gaz, protecteur, moteur, puis capteur de fond",
+        "Admission ou séparateur de gaz, moteur, pompe, protecteur, puis capteur de fond"
       ],
       "answer": 2,
       "explain": "Le fluide entre par l'admission, sous la pompe ; le protecteur est entre l'admission et le moteur, et le capteur de fond est monté sous le moteur.",
@@ -255,15 +255,15 @@
       "id": "ing-wellperf-012",
       "theme": "ESP",
       "level": 1,
-      "q": "Une ESP débite 1 500 bbl/j à 50 Hz. Le variateur passe à 60 Hz. D'après les lois d'affinité, quel débit attendez-vous (même réseau idéalisé) ?",
+      "q": "An ESP delivers 1 500 BLPD (238,5 m³/d) at 50 Hz. The VSD is raised to 60 Hz. Using the affinity laws (idealized system), what rate do you expect?",
       "choices": [
-        "Environ 1 800 bbl/j (× 1,2)",
-        "Environ 1 500 bbl/j (inchangé)",
-        "Environ 2 160 bbl/j (× 1,44)",
-        "Environ 2 600 bbl/j (× 1,73)"
+        "About 1 800 BLPD (286,2 m³/d): × 1.2",
+        "About 1 500 BLPD (238,5 m³/d): unchanged",
+        "About 2 160 BLPD (343,4 m³/d): × 1.44",
+        "About 2 600 BLPD (412,6 m³/d): × 1.73"
       ],
       "answer": 0,
-      "explain": "Le débit varie comme la fréquence (×1,2), la hauteur comme son carré (×1,44) et la puissance comme son cube (×1,73).",
+      "explain": "Q varies with frequency: 60 / 50 = 1.2, i.e. 1 800 BLPD (286,2 m³/d). Head varies as N² (× 1.44) and power as N³ (× 1.73).",
       "seconds": 80,
       "status": "draft"
     },
@@ -271,15 +271,15 @@
       "id": "ing-wellperf-013",
       "theme": "ESP",
       "level": 3,
-      "q": "Un moteur ESP de 100 kW est chargé à 62 kW à 50 Hz. Le programme prévoit 60 Hz pour gagner du débit. Que prévoyez-vous ?",
+      "q": "Un moteur ESP de 100 kW (134,1 hp) est chargé à 62 kW (83,1 hp) à 50 Hz. Le programme prévoit 60 Hz pour gagner du débit. Que prévoyez-vous ?",
       "choices": [
-        "Environ 107 kW (62 × 1,73) : surcharge ; limiter la fréquence ou changer le moteur",
-        "Environ 74 kW (× 1,2) : le moteur reste confortable et la montée à 60 Hz est possible",
+        "Environ 74 kW (× 1,2) : le moteur reste confortable et la montée à 60 Hz est possible sans changer le câble",
         "Environ 89 kW (× 1,44) : sous les 100 kW nominaux, on peut même monter plus haut en fréquence",
+        "Environ 107 kW (143,7 hp), soit 62 × 1,73 : surcharge ; limiter la fréquence ou changer le moteur",
         "62 kW (× 1) : la puissance absorbée ne dépend pas de la fréquence, seulement du débit"
       ],
-      "answer": 0,
-      "explain": "La puissance absorbée varie comme le cube de la fréquence : 62 × 1,728 ≈ 107 kW, au-dessus de la capacité du moteur.",
+      "answer": 2,
+      "explain": "La puissance absorbée varie comme N³ : (60 / 50)³ = 1,728, donc 62 × 1,728 ≈ 107 kW (143,7 hp), au-dessus des 100 kW du moteur.",
       "seconds": 100,
       "status": "draft"
     },
@@ -287,17 +287,17 @@
       "id": "ing-wellperf-014",
       "theme": "ESP",
       "level": 2,
-      "q": "Pression d'aspiration d'une ESP à 180 psi, pression de bulle à 1 500 psi : le courant moteur fluctue de ± 15 % et le débit est irrégulier. Quelle est votre hypothèse et quelle action ?",
+      "q": "Pression d'aspiration d'une ESP à 180 psi (12,4 bar), pression de bulle à 1 500 psi (103,4 bar) : le courant moteur fluctue de ±15 % et le débit est irrégulier. Quelle est votre hypothèse et quelle action ?",
       "img": "svg/esp-system.svg",
       "imgAlt": "Système ESP : transformateur, variateur, câble, pompe multi-étages en haut, puis admission/séparateur de gaz, protecteur, moteur et capteur de fond",
       "choices": [
-        "Colmatage de la duse en surface : on la démonte, on la nettoie et on relance à pleine fréquence",
+        "Gaz libre à l'aspiration (interférence de gaz) : séparateur de gaz, plus d'immersion ou fréquence réduite",
+        "Choke de surface colmaté : on le démonte, on le nettoie et on relance à pleine fréquence, puis on surveille le courant",
         "Excès de liquide à l'aspiration : on augmente la fréquence pour évacuer plus de liquide du fond",
-        "Gaz libre à l'aspiration (interférence gaz) : séparateur de gaz, plus d'immersion ou fréquence réduite",
         "Rupture de l'arbre de pompe : on remplace le variateur de fréquence puis on redémarre le moteur"
       ],
-      "answer": 2,
-      "explain": "À pression d'aspiration très inférieure à la pression de bulle, le gaz libre dégrade la pompe : courant instable et pump-off ; séparation ou immersion plus grande.",
+      "answer": 0,
+      "explain": "À pression d'aspiration très inférieure à la pression de bulle (180 contre 1 500 psi), le gaz libre dégrade la pompe : courant instable et pump-off. Solutions : séparation de gaz, immersion plus grande, fréquence réduite.",
       "seconds": 100,
       "status": "draft"
     },
@@ -305,15 +305,15 @@
       "id": "ing-wellperf-015",
       "theme": "ESP",
       "level": 2,
-      "q": "Après fermeture partielle de la duse de tête pour « stabiliser » le puits, le courant ESP passe de 45 à 33 A et le débit de 1 800 à 900 bbl/j. Que risque-t-on ?",
+      "q": "Après fermeture partielle du choke de tête pour « stabiliser » le puits, le courant ESP passe de 45 à 33 A et le débit de 1 800 à 900 BLPD (286,2 à 143,1 m³/j). Que risque-t-on ?",
       "choices": [
         "Un upthrust : le débit baissé fait remonter les roues, avec usure des butées hautes",
-        "Un fonctionnement trop à gauche de la plage : downthrust et usure des butées ; rouvrir la duse",
-        "Un gain de rendement : la pompe fonctionne mieux à débit réduit, sans conséquence mécanique",
+        "Un gain de rendement : la pompe fonctionne mieux à débit réduit, sans conséquence mécanique sur les butées ni sur le moteur",
+        "Un fonctionnement trop à gauche de la plage : downthrust et usure des butées ; rouvrir le choke",
         "Une surcharge thermique du moteur par excès de courant et déclenchement du variateur"
       ],
-      "answer": 1,
-      "explain": "À faible débit, la pompe subit une poussée vers le bas qui use les butées. Ajuster la duse ou la fréquence pour revenir dans la plage.",
+      "answer": 2,
+      "explain": "Le débit est divisé par 2 (900 / 1 800) : à faible débit la pompe subit une poussée vers le bas qui use les butées. On ajuste le choke ou la fréquence pour revenir dans la plage recommandée autour du BEP.",
       "seconds": 100,
       "status": "draft"
     },
@@ -321,17 +321,17 @@
       "id": "ing-wellperf-016",
       "theme": "ESP",
       "level": 3,
-      "q": "ESP : le courant passe de 42 à 28 A, le débit de 2 000 à 1 100 bbl/j, la température de surface de 78 à 64 °C, la pression d'aspiration baisse et la pression de tête chute. Quelle est l'hypothèse n°1 et la première action ?",
+      "q": "ESP : le courant passe de 42 à 28 A, le débit de 2 000 à 1 100 BLPD (318 à 174,9 m³/j), la température de surface de 78 à 64 °C (172 à 147 °F), la pression d'aspiration et la FTHP chutent. Hypothèse n°1 et première action ?",
       "img": "svg/esp-system.svg",
       "imgAlt": "Système ESP : transformateur, variateur, câble, pompe multi-étages en haut, puis admission/séparateur de gaz, protecteur, moteur et capteur de fond",
       "choices": [
-        "Surcharge par du sable : le moteur force et la température monte ; on relance à fréquence réduite en surveillant le courant",
-        "Court-circuit de phase, qui ferait déclencher le variateur ; on remplace le câble de puissance",
-        "Obturation de la duse en surface, qui ferait monter la pression de tête ; on démonte la duse",
-        "Interférence de gaz ou pump-off : moteur peu chargé ; réduire la fréquence et vérifier l'immersion"
+        "Surcharge par du sable : le moteur force et la température monte ; relancer à fréquence réduite en surveillant le courant",
+        "Interférence de gaz ou pump-off : moteur peu chargé ; réduire la fréquence et vérifier l'immersion",
+        "Court-circuit de phase, qui ferait déclencher le variateur ; remplacer le câble de puissance",
+        "Obturation du choke en surface, qui ferait monter la FTHP ; démonter le choke"
       ],
-      "answer": 3,
-      "explain": "Courant, débit, température et pression de tête en baisse : la pompe débite peu de liquide. Une duse bouchée ferait monter la pression en tête et une surcharge sable le courant.",
+      "answer": 1,
+      "explain": "Courant, débit, température et FTHP en baisse : la pompe débite peu de liquide (−45 % de débit). Un choke bouché ferait monter la FTHP, et une surcharge sable ferait monter le courant.",
       "seconds": 110,
       "status": "draft"
     },
@@ -339,15 +339,15 @@
       "id": "ing-wellperf-017",
       "theme": "ESP",
       "level": 3,
-      "q": "Le courant ESP tombe à 8 A (normal : 40 A), le débit est nul alors que le niveau de fluide en annulaire est élevé ; le variateur affiche la fréquence normale. Hypothèse suivante ?",
+      "q": "ESP current drops to 8 A (normal: 40 A) and flow is zero while the annulus fluid level is high; the VSD shows 50 Hz. What is your next hypothesis?",
       "choices": [
-        "Surchauffe du transformateur de surface : le courant chute faute de tension",
-        "Duse fermée en surface : la pompe tourne alors contre une colonne bloquée",
-        "Arbre de pompe cassé ou accouplement rompu : le moteur tourne à vide",
-        "Excès d'inhibiteur de corrosion : le fluide devient trop visqueux pour la pompe"
+        "Surface transformer overheating: current drops for lack of voltage",
+        "Surface choke closed: the pump is running against a blocked column",
+        "Excess corrosion inhibitor: the fluid becomes too viscous for the pump",
+        "Broken pump shaft or failed coupling: the motor is spinning unloaded"
       ],
-      "answer": 2,
-      "explain": "Un courant très bas à fréquence normale avec un niveau haut indique un moteur sans charge, donc une rupture de transmission.",
+      "answer": 3,
+      "explain": "A very low current (8 A, i.e. 20 % of normal) at normal frequency with a high level means an unloaded motor: transmission failure. A closed choke would raise the FTHP, not drop the current.",
       "seconds": 100,
       "status": "draft"
     },
@@ -355,15 +355,15 @@
       "id": "ing-wellperf-018",
       "theme": "ESP",
       "level": 3,
-      "q": "Le courant d'une ESP monte de 40 à 55 A en trois semaines avec une baisse de débit de 20 % et une température du moteur en hausse. Quelle est l'hypothèse et quelle action prévoyez-vous ?",
+      "q": "Le courant d'une ESP monte de 40 à 55 A en trois semaines, le débit baisse de 20 % (2 500 à 2 000 BLPD, 397,5 à 318,0 m³/j) et la température du moteur monte. Hypothèse et action ?",
       "choices": [
-        "Charge accrue (sable, scale, émulsion visqueuse) : suivre les tendances et prévoir une intervention avant surcharge",
-        "Pompe proche du pump-off : on augmente la fréquence pour évacuer le liquide restant au fond",
-        "Gaz libre abondant : on réduit le niveau de fluide en annulaire pour dégazer la pompe plus vite et relancer aussitôt",
-        "Court-circuit franc de phase : on redémarre plusieurs fois pour dégager le défaut d'isolement et le redémarrage"
+        "Pompe proche du pump-off : on augmente la fréquence pour évacuer le liquide restant au fond et on relance aussitôt",
+        "Charge accrue (sable, scale, émulsion visqueuse) : suivre les tendances et prévoir une intervention avant la surcharge",
+        "Gaz libre abondant : on baisse le niveau en annulaire pour dégazer la pompe plus vite et relancer aussitôt",
+        "Court-circuit franc de phase : on redémarre plusieurs fois pour dégager le défaut d'isolement"
       ],
-      "answer": 0,
-      "explain": "Un courant qui monte lentement indique un couple plus élevé : dépôts, sable, émulsion ou usure. On agit avant le déclenchement en surcharge.",
+      "answer": 1,
+      "explain": "Un courant qui monte lentement (+37,5 %) avec perte de débit indique un couple plus élevé : dépôts, sable, émulsion ou usure. On agit avant le déclenchement en surcharge.",
       "seconds": 100,
       "status": "draft"
     },
@@ -371,15 +371,15 @@
       "id": "ing-wellperf-019",
       "theme": "ESP",
       "level": 2,
-      "q": "L'ESP a déclenché sur surcharge à midi. L'astreinte propose de la relancer trois fois « pour voir ». Quelle est la bonne pratique ?",
+      "q": "L'ESP du puits (2 200 BLPD, 349,8 m³/j) a déclenché sur surcharge à midi. L'astreinte propose de la relancer trois fois « pour voir ». Quelle est la bonne pratique ?",
       "choices": [
-        "Relancer jusqu'à ce que ça démarre : un moteur ESP supporte sans dommage plusieurs démarrages rapprochés sans refroidissement",
+        "Ne pas relancer sans diagnostic : tendances de courant, isolement au mégohmmètre, limites de redémarrage du constructeur",
+        "Relancer jusqu'à ce que ça démarre : un moteur ESP supporte sans dommage plusieurs démarrages rapprochés",
         "Augmenter le seuil de surcharge de 30 % pour éviter les déclenchements, puis relancer à 50 Hz",
-        "Relancer à 60 Hz pour dégager la pompe en forçant la rotation du moteur, puis revenir à 50 Hz",
-        "Ne pas relancer sans diagnostic : tendances de courant, isolement au mégohmmètre, limites de redémarrage"
+        "Relancer à 60 Hz pour dégager la pompe en forçant la rotation du moteur, puis revenir à 50 Hz"
       ],
-      "answer": 3,
-      "explain": "Des relances répétées sur un défaut non identifié détruisent le moteur et le câble. On diagnostique d'abord et on respecte les limites constructeur.",
+      "answer": 0,
+      "explain": "Des relances répétées sur un défaut non identifié détruisent le moteur et le câble, et chaque jour d'arrêt coûte 2 200 BLPD (349,8 m³/j) : on diagnostique d'abord et on respecte les limites constructeur.",
       "seconds": 90,
       "status": "draft"
     },
@@ -387,15 +387,15 @@
       "id": "ing-wellperf-020",
       "theme": "ESP",
       "level": 3,
-      "q": "La résistance d'isolement phase-terre d'une ESP était de 2 000 MΩ à l'installation. Elle est de 150 MΩ après 6 mois puis de 5 MΩ trois mois plus tard, sans autre symptôme. Quelle est votre conclusion ?",
+      "q": "La résistance d'isolement phase-terre d'une ESP était de 2 000 MΩ à l'installation. Elle est de 150 MΩ après 6 mois, puis de 5 MΩ trois mois plus tard, sans autre symptôme (le puits tient 1 800 BLPD, 286,2 m³/j). Quelle est votre conclusion ?",
       "choices": [
         "Normal : l'isolement d'une ESP baisse de cette façon, aucune action tant que la pompe tourne",
-        "Dégradation de l'isolation (eau, température, vieillissement) : préparer une intervention avant la panne",
-        "Défaut du mégohmmètre : le résultat n'est pas cohérent, il faut le recalibrer et refaire la mesure",
-        "Rien à faire : tant que la pompe tourne et que le débit reste stable, l'isolement importe peu"
+        "Défaut du mégohmmètre : résultat incohérent, à recalibrer puis refaire la mesure",
+        "Rien à faire : tant que la pompe tourne et que le débit reste stable, l'isolement importe peu pour la durée de vie du moteur",
+        "Dégradation de l'isolation (eau, température, vieillissement) : préparer une intervention avant la panne"
       ],
-      "answer": 1,
-      "explain": "Une chute rapide de l'isolement annonce un défaut ; la tendance sert à planifier l'intervention.",
+      "answer": 3,
+      "explain": "Une chute rapide de l'isolement (2 000, 150, puis 5 MΩ) annonce un défaut de câble ou de moteur ; la tendance sert à planifier le workover avant la panne et à sécuriser les 286,2 m³/j.",
       "seconds": 100,
       "status": "draft"
     },
@@ -403,16 +403,16 @@
       "id": "ing-wellperf-021",
       "theme": "ESP",
       "level": 1,
-      "q": "Un moteur ESP, démonté en atelier, contient de l'eau de formation dans son huile diélectrique. Quel composant n'a pas joué son rôle ?",
+      "q": "Au retour d'atelier après un pull job, le moteur d'une ESP (2 800 BLPD, 445,2 m³/j) contient de l'eau de formation dans son huile diélectrique. Quel composant n'a pas joué son rôle ?",
       "img": "svg/esp-system.svg",
       "imgAlt": "Système ESP : transformateur, variateur, câble, pompe multi-étages en haut, puis admission/séparateur de gaz, protecteur, moteur et capteur de fond",
       "choices": [
         "Le variateur de fréquence : il filtre la tension et protège l'huile du moteur contre les fluides",
-        "Le protecteur (seal section) : il isole le moteur des fluides du puits et équilibre les pressions",
-        "Le transformateur de surface : il isole galvaniquement le câble du moteur et du fluide de puits",
-        "La boîte de jonction de surface : elle évite que le gaz et l'eau de puits n'entrent dans le moteur"
+        "Le transformateur de surface : il isole le câble du moteur et du fluide de puits",
+        "La boîte de jonction de surface : elle empêche gaz et eau de puits d'entrer dans le moteur",
+        "Le protecteur (seal section) : il isole le moteur des fluides du puits et équilibre les pressions"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Le protecteur est la barrière entre le fluide du puits et l'huile du moteur ; une fuite d'eau signe la défaillance de ses garnitures.",
       "seconds": 80,
       "status": "draft"
@@ -421,7 +421,7 @@
       "id": "ing-wellperf-022",
       "theme": "ESP",
       "level": 1,
-      "q": "Sur la figure du système ESP, quel composant transforme l'énergie électrique du câble en rotation ?",
+      "q": "Sur la figure du système ESP, vous expliquez à un stagiaire le trajet de l'énergie : quel composant transforme l'énergie électrique du câble en rotation ?",
       "img": "svg/esp-system.svg",
       "imgAlt": "Système ESP : transformateur, variateur, câble, pompe multi-étages en haut, puis admission/séparateur de gaz, protecteur, moteur et capteur de fond",
       "choices": [
@@ -431,7 +431,7 @@
         "Le moteur électrique triphasé, situé sous le protecteur"
       ],
       "answer": 3,
-      "explain": "Le moteur de fond reçoit le courant par le câble de puissance et fait tourner l'arbre de la pompe.",
+      "explain": "Le moteur de fond reçoit le courant par le câble de puissance et fait tourner l'arbre de la pompe, qui le convertit en hauteur (head) et en BLPD.",
       "seconds": 60,
       "status": "draft"
     },
@@ -439,16 +439,16 @@
       "id": "ing-wellperf-023",
       "theme": "Gas lift",
       "level": 1,
-      "q": "Sur la figure du puits gas lift, par quel chemin le gaz arrive-t-il dans le tubing ?",
+      "q": "Sur la figure du puits gas lift (injection 1,2 MMscfd, 33 980 Sm³/j), par quel chemin le gaz arrive-t-il dans le tubing ?",
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Gas lift : gaz injecté dans l'annulaire, vanne de décharge et vanne opérante sur mandrins latéraux, packer ; détail d'une vanne à dôme azoté ouverte par la pression du gaz",
       "choices": [
-        "Il est injecté dans l'annulaire, puis passe par une vanne sur mandrin latéral vers le tubing",
         "Il est injecté directement dans la formation par le packer, pour alléger la colonne de réservoir",
+        "Il est injecté dans l'annulaire, puis passe par une vanne sur mandrin latéral vers le tubing",
         "Il est injecté dans le tubing depuis le séparateur de surface, via la ligne de production",
         "Il est envoyé vers le packer de production pour pressuriser le réservoir et augmenter son débit"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Le gaz descend dans l'annulaire et entre dans la colonne de production par la vanne opérante pour l'alléger.",
       "seconds": 70,
       "status": "draft"
@@ -457,15 +457,15 @@
       "id": "ing-wellperf-024",
       "theme": "Gas lift",
       "level": 1,
-      "q": "Sur un puits de 8 000 ft, l'injection de gaz fait passer le gradient moyen de la colonne de 0,35 à 0,25 psi/ft. De combien baisse la pression de fond à débit comparable ?",
+      "q": "On an 8 000 ft well (2 438 m), gas injection brings the average column gradient from 0.35 to 0.25 psi/ft. By how much does the bottomhole pressure drop at a comparable rate?",
       "choices": [
-        "Environ 80 psi : (0,35 − 0,25) × 800 ft de colonne",
-        "Environ 2 000 psi : 0,25 × 8 000 ft",
-        "Environ 800 psi : (0,35 − 0,25) × 8 000",
-        "Environ 2 800 psi : 0,35 × 8 000 ft"
+        "About 80 psi (5,5 bar): (0.35 − 0.25) × 800 ft of column",
+        "About 2 000 psi (137,9 bar): 0.25 × 8 000 ft",
+        "About 800 psi (55,2 bar): (0.35 − 0.25) × 8 000",
+        "About 2 800 psi (193,1 bar): 0.35 × 8 000 ft"
       ],
       "answer": 2,
-      "explain": "Le gas lift réduit la densité moyenne de la colonne : ΔPwf = Δgradient × profondeur = 0,10 × 8 000 = 800 psi, d'où un drawdown plus grand.",
+      "explain": "Gas lift lowers the average column density: ΔPwf = Δgradient × depth = 0.10 × 8 000 = 800 psi (55,2 bar), hence a larger drawdown and more BOPD.",
       "seconds": 80,
       "status": "draft"
     },
@@ -473,17 +473,17 @@
       "id": "ing-wellperf-025",
       "theme": "Gas lift",
       "level": 1,
-      "q": "Au redémarrage d'un puits gas lift mort et rempli de liquide, l'injection se fait par étapes de plus en plus profondes. Quel est le rôle des vannes de décharge ?",
+      "q": "Redémarrage d'un puits gas lift mort et rempli de liquide, pression d'injection disponible 100 bar (1 450 psi) : l'injection se fait par étapes de plus en plus profondes. Quel est le rôle des vannes de décharge ?",
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Gas lift : gaz injecté dans l'annulaire, vanne de décharge et vanne opérante sur mandrins latéraux, packer ; détail d'une vanne à dôme azoté ouverte par la pression du gaz",
       "choices": [
         "Mesurer le GOR du puits à chaque étape d'injection grâce à un orifice calibré en fond",
-        "Injecter les produits chimiques d'inhibition de corrosion et de paraffine à chaque étage",
+        "Injecter les produits d'inhibition de corrosion et de paraffine à chaque étage",
         "Augmenter la pression du réservoir au pied du puits par injection successive de gaz dans chaque vanne",
         "Décharger le liquide de l'annulaire vers le tubing, étape par étape, jusqu'à la vanne opérante"
       ],
       "answer": 3,
-      "explain": "Sans vannes de décharge, la pression d'injection nécessaire pour atteindre la vanne profonde serait irréalisable.",
+      "explain": "Sans vannes de décharge, la pression d'injection nécessaire pour atteindre la vanne profonde serait irréalisable avec 100 bar de gaz de lift.",
       "seconds": 80,
       "status": "draft"
     },
@@ -491,16 +491,16 @@
       "id": "ing-wellperf-026",
       "theme": "Gas lift",
       "level": 2,
-      "q": "Le détail de la figure montre une vanne à soufflets à dôme chargé en azote qui s'ouvre quand la pression du gaz dépasse celle du dôme. De quel type de vanne s'agit-il ?",
+      "q": "Le détail de la figure montre une vanne à soufflets à dôme chargé en azote (70 bar, soit 1 015 psi) qui s'ouvre quand la pression du gaz d'injection dépasse celle du dôme. De quel type de vanne s'agit-il ?",
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Gas lift : gaz injecté dans l'annulaire, vanne de décharge et vanne opérante sur mandrins latéraux, packer ; détail d'une vanne à dôme azoté ouverte par la pression du gaz",
       "choices": [
         "Une vanne sensible à la pression de production (PPO)",
-        "Une vanne sensible à la pression d'injection (IPO)",
         "Un clapet de sécurité de fond (SSSV) à commande hydraulique",
-        "Une vanne de décharge pilotée par variateur (VSD)"
+        "Une vanne de décharge pilotée par variateur (VSD)",
+        "Une vanne sensible à la pression d'injection (IPO)"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "Une vanne ouverte par la pression du gaz d'injection sur le soufflet est de type IPO ; une PPO réagit à la pression de production.",
       "seconds": 80,
       "status": "draft"
@@ -509,17 +509,17 @@
       "id": "ing-wellperf-027",
       "theme": "Gas lift",
       "level": 3,
-      "q": "Gas lift continu : le débit de gaz en surface est stable à 1,5 MMscf/j, mais la pression d'annulaire baisse de 95 à 80 bar en trois jours et la production passe de 700 à 520 bbl/j. Hypothèse la plus probable ?",
+      "q": "Gas lift continu : le débit de gaz en surface est stable à 1,5 MMscfd (42 476 Sm³/j), mais la pression d'annulaire baisse de 95 à 80 bar (1 378 à 1 160 psi) en trois jours et la production passe de 700 à 520 BOPD (111,3 à 82,7 m³/j). Hypothèse la plus probable ?",
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Gas lift : gaz injecté dans l'annulaire, vanne de décharge et vanne opérante sur mandrins latéraux, packer ; détail d'une vanne à dôme azoté ouverte par la pression du gaz",
       "choices": [
-        "Bouchage de l'orifice d'opération, qui ferait monter la pression d'annulaire et chuter le débit",
+        "Bouchage de l'orifice d'opération, qui ferait monter la pression d'annulaire et chuter le débit ; on le nettoie au câble",
         "Hausse de la pression du réservoir, qui aspire le gaz d'annulaire et réduit la pression en tête",
         "Vanne de décharge fuyarde ou orifice érodé : le gaz entre trop haut et l'injection profonde diminue",
-        "Fermeture complète de la duse de tête, qui ferait monter la pression d'annulaire et du tubing"
+        "Fermeture complète du choke de tête, qui ferait monter la pression d'annulaire et du tubing"
       ],
       "answer": 2,
-      "explain": "Une pression d'annulaire qui baisse à débit de gaz constant signale une fuite plus haut dans la colonne ; un bouchage ferait monter la pression.",
+      "explain": "Une pression d'annulaire qui baisse à débit de gaz constant signale une fuite plus haut dans la colonne ; un bouchage ferait monter la pression. Perte : 700 − 520 = 180 BOPD (28,6 m³/j), soit 26 %.",
       "seconds": 110,
       "status": "draft"
     },
@@ -527,15 +527,15 @@
       "id": "ing-wellperf-028",
       "theme": "Gas lift",
       "level": 2,
-      "q": "Pression d'annulaire de 90 à 110 bar, débit de gaz injecté de 1,5 à 0,8 MMscf/j, production d'huile en baisse. Quelle hypothèse et quelle première vérification ?",
+      "q": "Pression d'annulaire de 90 à 110 bar (1 305 à 1 595 psi), débit de gaz injecté de 1,5 à 0,8 MMscfd (42 476 à 22 654 Sm³/j), production d'huile en baisse. Quelle hypothèse et quelle première vérification ?",
       "choices": [
-        "Bouchage de l'orifice, de la vanne ou de la ligne d'injection (hydrates, dépôts) ; contrôler la duse et la température",
         "Fuite d'une vanne de décharge, qui ferait baisser la pression d'annulaire ; contrôler les vannes au câble",
-        "Excès de gaz de lift injecté : on réduit la duse du puits et on suit la contre-pression en tête",
-        "Hausse du niveau de l'interface huile/eau au séparateur : on ajuste la régulation du niveau de liquide"
+        "Excès de gaz de lift injecté : on réduit le choke du puits et on suit la contre-pression en tête",
+        "Hausse du niveau d'interface huile/eau au séparateur : on ajuste la régulation de niveau de liquide",
+        "Bouchage de l'orifice, de la vanne ou de la ligne d'injection (hydrates, dépôts) ; contrôler le choke d'injection et la température"
       ],
-      "answer": 0,
-      "explain": "Une pression d'annulaire qui monte alors que le débit de gaz baisse signale un passage qui se ferme.",
+      "answer": 3,
+      "explain": "Une pression d'annulaire qui monte alors que le débit de gaz baisse (−47 %) signale un passage qui se ferme.",
       "seconds": 100,
       "status": "draft"
     },
@@ -543,13 +543,13 @@
       "id": "ing-wellperf-029",
       "theme": "Gas lift",
       "level": 2,
-      "q": "Un puits gas lift présente des cycles de pression de tête de 12 à 20 bar toutes les 25 minutes malgré un débit de gaz de surface apparemment constant. Quelle action vise à le stabiliser ?",
+      "q": "Un puits gas lift présente des cycles de FTHP de 12 à 20 bar (174 à 290 psi) toutes les 25 min malgré un débit de gaz de surface apparemment constant à 1,5 MMscfd (42 476 Sm³/j). Quelle action vise à le stabiliser ?",
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Gas lift : gaz injecté dans l'annulaire, vanne de décharge et vanne opérante sur mandrins latéraux, packer ; détail d'une vanne à dôme azoté ouverte par la pression du gaz",
       "choices": [
         "Réguler le débit d'injection, vérifier l'orifice d'opération et injecter si possible plus profondément",
         "Agrandir l'orifice d'injection sans analyse préalable, pour augmenter le débit de gaz injecté",
-        "Fermer l'injection de gaz et ouvrir la duse de tête en grand pour dégager le liquide du tubing dans l'annulaire",
+        "Fermer l'injection de gaz et ouvrir le choke de tête en grand pour dégager le liquide du tubing dans l'annulaire",
         "Injecter du liquide dans l'annulaire pour équilibrer les pressions et amortir les cycles"
       ],
       "answer": 0,
@@ -561,15 +561,15 @@
       "id": "ing-wellperf-030",
       "theme": "Gas lift",
       "level": 3,
-      "q": "De 2,0 à 2,5 MMscf/j de gaz injecté, la production d'huile gagne 8 bbl/j. Le gaz d'injection coûte 2 000 USD par MMscf et l'huile vaut 70 USD/bbl. Quel est le bilan et que faites-vous ?",
+      "q": "De 2,0 à 2,5 MMscfd de gaz injecté (56 634 à 70 793 Sm³/j), la production d'huile gagne 8 BOPD (1,3 m³/j). Le gaz d'injection coûte 2 000 USD par MMscf et l'huile vaut 70 USD/bbl. Quel est le bilan et que faites-vous ?",
       "choices": [
-        "Gain net d'environ 440 USD/j (560 d'huile contre 120 de gaz) : on passe à 2,5 MMscf/j",
-        "Gain net d'environ 560 USD/j (8 bbl × 70 USD, gaz non compté) : on passe à 3,0 MMscf/j sans autre calcul",
-        "Perte nette d'environ 440 USD/j (560 d'huile contre 1 000 de gaz) : on reste à 2,0 MMscf/j",
+        "Gain net d'environ 440 USD/j (560 d'huile contre 120 de gaz) : on passe à 2,5 MMscfd",
+        "Perte nette d'environ 440 USD/j (560 d'huile contre 1 000 de gaz) : on reste à 2,0 MMscfd",
+        "Gain net d'environ 560 USD/j (8 bbl × 70 USD, gaz non compté) : on passe à 3,0 MMscfd sans autre calcul",
         "Bilan à peu près nul (560 USD d'huile pour 500 USD de gaz) : indifférent, on monte à 2,5"
       ],
-      "answer": 2,
-      "explain": "L'optimum économique est avant le maximum de production : +0,5 MMscf/j coûte 1 000 USD/j pour 560 USD/j d'huile.",
+      "answer": 1,
+      "explain": "Huile : 8 bbl × 70 USD = 560 USD/j. Gaz : 0,5 MMscfd × 2 000 USD/MMscf = 1 000 USD/j. Bilan = -440 USD/j : l'optimum économique est avant le maximum de production.",
       "seconds": 110,
       "status": "draft"
     },
@@ -577,15 +577,15 @@
       "id": "ing-wellperf-031",
       "theme": "Gas lift",
       "level": 2,
-      "q": "Chaque matin frais, la ligne d'injection du puits GL-07 se bouche et le débit de gaz tombe à zéro jusqu'à midi. Le gaz n'est pas déshydraté. Cause probable et action ?",
+      "q": "Every cool morning (18 °C, i.e. 64 °F), the injection line of well GL-07 plugs and gas flow drops to zero until noon. The injection gas is not dehydrated. Likely cause and action?",
       "choices": [
-        "Dépôt de paraffine dans la ligne d'injection : réchauffer le gaz et envoyer un solvant en tête",
-        "Hydrates dans la ligne (eau libre, basse température) ; déshydrater le gaz ou injecter du méthanol",
-        "Cavitation de la vanne de fond : réduire la pression d'injection et le débit de gaz de lift",
-        "Excès de sable dans le gaz : installer un filtre en tête de ligne et purger chaque matin"
+        "Wax deposit in the injection line: heat the gas and send a solvent slug at the wellhead",
+        "Hydrates in the line (free water, low temperature); dehydrate the gas or inject methanol",
+        "Downhole valve cavitation: reduce the injection pressure and the lift gas rate",
+        "Too much sand in the gas: install a filter at the head of the line and purge every morning"
       ],
       "answer": 1,
-      "explain": "Le gaz humide à basse température forme des hydrates qui bouchent la ligne ; la déshydratation du gaz d'injection est la solution durable.",
+      "explain": "Wet gas at low temperature forms hydrates that plug the line; dehydrating the injection gas is the lasting fix, methanol a stopgap.",
       "seconds": 90,
       "status": "draft"
     },
@@ -593,15 +593,15 @@
       "id": "ing-wellperf-032",
       "theme": "Gas lift",
       "level": 2,
-      "q": "Puits offshore : GOR naturel de 1 500 scf/STB, production de sable de 2 %, plateforme équipée d'un réseau de gaz de lift. Quelle méthode d'activation retenez-vous ?",
+      "q": "Puits offshore : GOR naturel de 1 500 scf/STB (267 Sm³/Sm³), 3 000 BLPD (477 m³/j), sable à 2 %, plateforme équipée d'un réseau de gaz de lift. Quelle méthode d'activation retenez-vous ?",
       "choices": [
         "Une pompe à tiges profonde : robuste, mais sensible au gaz et à la déviation du puits",
         "Une ESP sans séparateur de gaz : simple, compacte et bien adaptée aux fortes productions offshore",
         "Une PCP malgré le gaz libre : elle tolère bien le sable et offre un rendement élevé",
-        "Le gas lift : tolère gaz et sable (peu de pièces mobiles au fond), avec le gaz disponible"
+        "Le gas lift : il tolère gaz et sable (peu de pièces mobiles au fond), avec le gaz disponible"
       ],
       "answer": 3,
-      "explain": "Gaz libre et sable dégradent ESP, pompe à tiges et PCP ; le gas lift y est peu sensible.",
+      "explain": "Gaz libre et sable dégradent ESP, pompe à tiges et PCP ; le gas lift y est peu sensible, et le réseau de gaz est déjà sur la plateforme.",
       "seconds": 100,
       "status": "draft"
     },
@@ -609,17 +609,17 @@
       "id": "ing-wellperf-033",
       "theme": "Gas lift",
       "level": 3,
-      "q": "La vanne opérante d'un puits de 9 000 ft est à 4 500 ft et la production reste sous le potentiel prédit par l'analyse nodale. Que suspectez-vous ?",
+      "q": "La vanne opérante d'un puits de 9 000 ft (2 743 m) est à 4 500 ft (1 372 m) et la production reste à 600 BOPD (95,4 m³/j), sous le potentiel prédit par l'analyse nodale. Que suspectez-vous ?",
       "img": "svg/gas-lift-valve.svg",
       "imgAlt": "Gas lift : gaz injecté dans l'annulaire, vanne de décharge et vanne opérante sur mandrins latéraux, packer ; détail d'une vanne à dôme azoté ouverte par la pression du gaz",
       "choices": [
-        "Une pression de réservoir supérieure au modèle : il faut réduire le débit de gaz injecté et la duse",
-        "Un gaz injecté trop humide : il condense dans la colonne et allège moins ; le déshydrater en surface",
         "Un point d'injection trop haut : la colonne n'est allégée que sur une courte portion ; viser une vanne plus profonde",
+        "Une pression de réservoir supérieure au modèle : il faut réduire le débit de gaz injecté et le choke",
+        "Un gaz injecté trop humide : il condense dans la colonne et allège moins ; le déshydrater en surface",
         "Un excès de désémulsifiant dans la colonne : réduire le dosage à la pompe d'injection chimique"
       ],
-      "answer": 2,
-      "explain": "Plus le gaz est injecté profondément, plus la colonne allégée est longue et plus la Pwf baisse, dans la limite de la pression d'injection disponible.",
+      "answer": 0,
+      "explain": "Plus le gaz est injecté profondément, plus la colonne allégée est longue et plus la Pwf baisse, dans la limite de la pression d'injection disponible. Ici, injection à mi-profondeur seulement.",
       "seconds": 100,
       "status": "draft"
     },
@@ -627,16 +627,16 @@
       "id": "ing-wellperf-034",
       "theme": "Pompes à tiges et diagnostic",
       "level": 1,
-      "q": "Sur la figure de l'unité à balancier, quelle pièce relie la tête de cheval à la tige lisse ?",
+      "q": "Ronde sur l'unité à balancier d'un puits à 150 BLPD (23,9 m³/j) (figure) : quelle pièce relie la tête de cheval à la tige lisse ?",
       "img": "svg/pump-jack-beam.svg",
       "imgAlt": "Unité à balancier : tête de cheval, câble (bridle), tige lisse, balancier, chevalet, bielle, manivelle et contrepoids, réducteur, moteur, tiges et pompe de fond",
       "choices": [
-        "Le câble de suspension (bridle)",
         "La bielle (pitman) côté manivelle",
         "Le chevalet (Samson post) en acier",
+        "Le câble de suspension (bridle)",
         "Le réducteur de vitesse du moteur"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "Le câble de suspension relie la tête de cheval à la tige lisse, qui suit le mouvement du balancier.",
       "seconds": 60,
       "status": "draft"
@@ -645,16 +645,16 @@
       "id": "ing-wellperf-035",
       "theme": "Pompes à tiges et diagnostic",
       "level": 1,
-      "q": "Sur la même figure, quelle pièce transmet le mouvement de la manivelle au balancier ?",
+      "q": "Sur la même unité à balancier (figure), quelle pièce transmet le mouvement de la manivelle au balancier ?",
       "img": "svg/pump-jack-beam.svg",
       "imgAlt": "Unité à balancier : tête de cheval, câble (bridle), tige lisse, balancier, chevalet, bielle, manivelle et contrepoids, réducteur, moteur, tiges et pompe de fond",
       "choices": [
+        "La bielle (pitman), côté manivelle",
         "La tige lisse (polished rod) du puits",
         "Les courroies du moteur principal",
-        "Le chevalet central (Samson post)",
-        "La bielle (pitman), côté manivelle"
+        "Le chevalet central (Samson post)"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "La manivelle tourne ; la bielle transforme cette rotation en mouvement alternatif du balancier.",
       "seconds": 60,
       "status": "draft"
@@ -663,17 +663,17 @@
       "id": "ing-wellperf-036",
       "theme": "Pompes à tiges et diagnostic",
       "level": 1,
-      "q": "Déplacement théorique d'une pompe à tiges : q (bbl/j) = 0,1166 × d² × S × N. Piston de 1,5 po, course 100 po, 6 coups/min. Quel est q ?",
+      "q": "Theoretical rod pump displacement: q (bbl/d) = 0.1166 × d² × S × N. 1.5 in plunger, 100 in stroke, 6 strokes/min. What is q, in BLPD and m³/d?",
       "img": "svg/pump-jack-beam.svg",
       "imgAlt": "Unité à balancier : tête de cheval, câble (bridle), tige lisse, balancier, chevalet, bielle, manivelle et contrepoids, réducteur, moteur, tiges et pompe de fond",
       "choices": [
-        "Environ 105 bbl/j (0,1166 × 1,5 × 100 × 6)",
-        "Environ 157 bbl/j (0,1166 × 1,5² × 100 × 6)",
-        "Environ 79 bbl/j (0,1166 × 1,5² × 100 × 3)",
-        "Environ 315 bbl/j (0,1166 × 1,5² × 100 × 12)"
+        "About 157 BLPD (25,0 m³/d): 0.1166 × 1.5² × 100 × 6",
+        "About 105 BLPD (16,7 m³/d): 0.1166 × 1.5 × 100 × 6",
+        "About 79 BLPD (12,5 m³/d): 0.1166 × 1.5² × 100 × 3",
+        "About 315 BLPD (50,1 m³/d): 0.1166 × 1.5² × 100 × 12"
       ],
-      "answer": 1,
-      "explain": "q = 0,1166 × 2,25 × 100 × 6 ≈ 157 bbl/j.",
+      "answer": 0,
+      "explain": "q = 0.1166 × 2.25 × 100 × 6 = 157,4 BLPD, i.e. 25,0 m³/d. The diameter is squared: forgetting the square gives 105 BLPD.",
       "seconds": 90,
       "status": "draft"
     },
@@ -681,15 +681,15 @@
       "id": "ing-wellperf-037",
       "theme": "Pompes à tiges et diagnostic",
       "level": 2,
-      "q": "Le déplacement théorique est de 157 bbl/j, le test en surface donne 95 bbl/j. Quel est le rendement volumétrique et que cherche-t-on ?",
+      "q": "Le déplacement théorique est de 157 BLPD (25,0 m³/j), le test en surface donne 95 BLPD (15,1 m³/j). Quel est le rendement volumétrique et que cherche-t-on ?",
       "choices": [
         "Environ 165 % ; la pompe produit plus que le théorique, donc contrôler le compteur de test",
-        "Environ 60 % ; chercher les pertes (gaz dans la pompe, fuite de clapet ou de piston)",
         "Environ 40 % ; la pompe est trop usée, la remplacer sans autre investigation au fond",
-        "Environ 100 % ; la pompe est parfaite, aucune perte n'est à rechercher en surface"
+        "Environ 100 % ; la pompe est parfaite, aucune perte n'est à rechercher en surface",
+        "Environ 61 % ; chercher les pertes (gaz dans la pompe, fuite de clapet ou de piston)"
       ],
-      "answer": 1,
-      "explain": "Rendement = débit réel / débit théorique = 95 / 157 ≈ 0,60. Un rendement faible oriente le diagnostic vers le gaz, les clapets ou l'usure.",
+      "answer": 3,
+      "explain": "Rendement = débit réel / débit théorique = 95 / 157 ≈ 0,61, soit 61 %. Un rendement faible oriente le diagnostic vers le gaz, les clapets ou l'usure ; les 62 BLPD (9,9 m³/j) manquants sont à expliquer.",
       "seconds": 90,
       "status": "draft"
     },
@@ -697,16 +697,16 @@
       "id": "ing-wellperf-038",
       "theme": "Pompes à tiges et diagnostic",
       "level": 1,
-      "q": "La carte dynamométrique d'un puits montre une chute brutale de charge pendant la descente, avec un choc sur la tige. Que concluez-vous ?",
+      "q": "La carte dynamométrique d'un puits à 120 BLPD (19,1 m³/j) montre une chute brutale de charge pendant la descente, avec un choc sur la tige. Que concluez-vous ?",
       "img": "svg/pump-jack-beam.svg",
       "imgAlt": "Unité à balancier : tête de cheval, câble (bridle), tige lisse, balancier, chevalet, bielle, manivelle et contrepoids, réducteur, moteur, tiges et pompe de fond",
       "choices": [
-        "Un tubing bouché par des dépôts : il faut le curer puis relancer le pompage à vitesse accrue en tête",
-        "Un excès d'huile dans la colonne : il faut diluer l'effluent et accélérer la vitesse de pompage",
-        "La rupture du câble de suspension de la tête de cheval : arrêt immédiat de l'unité et consignation",
-        "Le barillet ne se remplit pas (fluid pound) : adapter la vitesse, la course ou le cycle de pompage"
+        "Le barillet ne se remplit pas (fluid pound) : adapter la vitesse, la course ou le cycle de pompage",
+        "Un tubing bouché par des dépôts : le curer puis relancer le pompage à vitesse accrue",
+        "Un excès d'huile dans la colonne : diluer l'effluent et accélérer la vitesse de pompage",
+        "La rupture du câble de suspension de la tête de cheval : arrêt immédiat de l'unité et consignation"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "Un remplissage partiel du barillet provoque un choc quand le piston rencontre le fluide ; on ajuste le cycle pour remplir la pompe.",
       "seconds": 90,
       "status": "draft"
@@ -715,17 +715,17 @@
       "id": "ing-wellperf-039",
       "theme": "Pompes à tiges et diagnostic",
       "level": 3,
-      "q": "Lors d'un test, la charge à la montée est inférieure à la charge de fluide attendue et le débit en surface a baissé de 40 %. Quelle est l'hypothèse et le test associé ?",
+      "q": "Lors d'un test, la charge à la montée est inférieure à la charge de fluide attendue et le débit en surface a baissé de 40 % (150 à 90 BLPD, 23,9 à 14,3 m³/j). Quelle est l'hypothèse et le test associé ?",
       "img": "svg/pump-jack-beam.svg",
       "imgAlt": "Unité à balancier : tête de cheval, câble (bridle), tige lisse, balancier, chevalet, bielle, manivelle et contrepoids, réducteur, moteur, tiges et pompe de fond",
       "choices": [
-        "Fuite du clapet mobile ou usure du piston : le fluide redescend ; test de clapets puis pompe à remplacer",
         "Excès d'huile visqueuse dans le tubing : réduire la vitesse de pompage, injecter un diluant en tête de puits",
         "Rupture de la tige polie, qui donnerait une charge quasi nulle ; remplacer la tige et relancer l'unité",
-        "Colmatage de la duse en surface, qui ferait monter la charge ; la démonter, la nettoyer et relancer"
+        "Colmatage du choke en surface, qui ferait monter la charge ; le démonter, le nettoyer et relancer",
+        "Fuite du clapet mobile ou usure du piston : le fluide redescend ; test de clapets puis pompe à remplacer"
       ],
-      "answer": 0,
-      "explain": "Si le clapet mobile fuit, la charge de fluide est mal reprise par les tiges : charge à la montée plus faible et perte de débit.",
+      "answer": 3,
+      "explain": "Si le clapet mobile fuit, la charge de fluide est mal reprise par les tiges : charge à la montée plus faible et perte de débit (−60 BLPD, soit 9,5 m³/j).",
       "seconds": 100,
       "status": "draft"
     },
@@ -733,15 +733,15 @@
       "id": "ing-wellperf-040",
       "theme": "Pompes à tiges et diagnostic",
       "level": 2,
-      "q": "L'échométrie donne un niveau de liquide à 600 ft de la surface, la pompe étant à 6 000 ft. Que concluez-vous sur l'immersion et quelle décision prenez-vous ?",
+      "q": "L'échométrie donne un niveau de liquide à 600 ft (183 m) de la surface, la pompe étant à 6 000 ft (1 829 m). Que concluez-vous sur l'immersion et quelle décision prenez-vous ?",
       "choices": [
-        "Immersion de 600 ft : la pompe est presque vide, il faut réduire nettement la vitesse et la course de pompage",
-        "Immersion nulle : la pompe n'a plus de liquide, il faut arrêter l'unité et déclencher une intervention",
-        "Immersion de 5 400 ft : la pompe est bien alimentée ; on peut accroître vitesse ou course si les tiges le permettent",
-        "L'échométrie ne donne aucune information utile sur l'immersion : seule une carte dynamométrique renseigne sur le niveau"
+        "Immersion de 600 ft : la pompe est presque vide, il faut réduire nettement la vitesse et la course",
+        "Immersion de 5 400 ft (1 646 m) : la pompe est bien alimentée ; on peut accroître vitesse ou course si les tiges le permettent",
+        "Immersion nulle : la pompe n'a plus de liquide, il faut arrêter l'unité et déclencher une intervention de workover immédiate",
+        "L'échométrie ne donne aucune information utile sur l'immersion : seule la carte dynamométrique renseigne sur le niveau"
       ],
-      "answer": 2,
-      "explain": "Immersion = profondeur de la pompe − niveau de liquide = 5 400 ft. Une forte immersion indique un influx supérieur au déplacement.",
+      "answer": 1,
+      "explain": "Immersion = profondeur de la pompe − niveau de liquide = 6 000 − 600 = 5 400 ft (1 646 m). Une forte immersion indique un influx supérieur au déplacement : on peut pomper plus.",
       "seconds": 90,
       "status": "draft"
     },
@@ -749,15 +749,15 @@
       "id": "ing-wellperf-041",
       "theme": "Pompes à tiges et diagnostic",
       "level": 3,
-      "q": "Un puits à pompe à tiges est en pump-off huit fois par jour. Quelle action est la plus pertinente ?",
+      "q": "A rod-pumped well (100 BLPD, 15,9 m³/d) goes into pump-off eight times a day. Which action is most relevant?",
       "choices": [
-        "Augmenter la vitesse de pompage au maximum pour vider plus vite le niveau du puits et gagner du débit",
-        "Baisser le niveau du séparateur pour diminuer la contre-pression sur la ligne de production",
-        "Fermer l'annulaire pour augmenter la pression au refoulement de la pompe et garder le niveau",
-        "Ajuster le cycle (contrôleur de pump-off ou variateur) et réduire vitesse ou course selon l'influx"
+        "Raise the pumping speed to the maximum to pull the level down faster and gain rate",
+        "Adjust the cycle (pump-off controller or VSD) and reduce speed or stroke to match the inflow",
+        "Lower the separator level to reduce back-pressure on the flowline",
+        "Close the annulus to raise the pump discharge pressure and keep the level"
       ],
-      "answer": 3,
-      "explain": "Un pump-off répété use les tiges et la pompe ; on ajuste le déplacement ou le temps de marche à l'influx réel.",
+      "answer": 1,
+      "explain": "Repeated pump-off wears rods and pump; adjust the displacement or run time to the real inflow.",
       "seconds": 100,
       "status": "draft"
     },
@@ -765,15 +765,15 @@
       "id": "ing-wellperf-042",
       "theme": "Pompes à tiges et diagnostic",
       "level": 3,
-      "q": "Sur un puits, le WOR passe de 0,5 à 5 en quatre mois et, sur le diagnostic de Chan (log-log), la dérivée du WOR est positive et croissante. Que suspectez-vous ?",
+      "q": "Sur un puits à 2 000 BLPD (318 m³/j), le WOR passe de 0,5 à 5 en quatre mois (huile de 1 333 à 333 BOPD). Sur le diagnostic de Chan (log-log), la dérivée du WOR est positive et croissante. Que suspectez-vous ?",
       "choices": [
         "Un coning d'eau, dont la dérivée est négative : traiter par réduction de débit",
-        "Une chenalisation de l'eau (channeling) : envisager un contrôle de conformance",
         "Une fuite du tubing : contrôler l'étanchéité par un test de pression annulaire",
+        "Une chenalisation de l'eau (channeling) : envisager un contrôle de conformance",
         "Une baisse de la pression de bulle : revoir le modèle PVT et le GOR du fluide"
       ],
-      "answer": 1,
-      "explain": "La chenalisation montre un WOR qui monte vite avec une dérivée positive ; le coning présente une dérivée qui décroît.",
+      "answer": 2,
+      "explain": "WC = WOR / (1 + WOR) : 0,5 donne 33,3 %, 5 donne 83,3 %. La chenalisation montre un WOR qui monte vite avec une dérivée positive ; le coning présente une dérivée qui décroît.",
       "seconds": 110,
       "status": "draft"
     },
@@ -781,16 +781,16 @@
       "id": "ing-wellperf-043",
       "theme": "Pompes à tiges et diagnostic",
       "level": 2,
-      "q": "La charge à la tige polie chute soudainement à une valeur très faible et reste constante, le débit en surface est nul, l'unité tourne normalement. Quelle est votre hypothèse ?",
+      "q": "La charge à la polished rod chute soudainement à une valeur très faible et reste constante, le débit en surface est nul (avant : 130 BLPD, 20,7 m³/j), l'unité tourne normalement. Quelle est votre hypothèse ?",
       "img": "svg/pump-jack-beam.svg",
       "imgAlt": "Unité à balancier : tête de cheval, câble (bridle), tige lisse, balancier, chevalet, bielle, manivelle et contrepoids, réducteur, moteur, tiges et pompe de fond",
       "choices": [
+        "Rupture de la colonne de tiges : la charge se réduit au poids de la partie suspendue",
         "Fluid pound : la charge est irrégulière à la descente, avec un choc brutal sur la tige",
         "Un tubing bouché : la charge à la montée augmente fortement et reste élevée, débit nul",
-        "Rupture de la colonne de tiges : la charge se réduit au poids de la partie suspendue",
         "Un excès d'huile dans la colonne : la charge baisse lentement sur plusieurs jours"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "Une charge soudainement faible et plate avec débit nul est typique d'une tige rompue ; un tubing bouché ferait monter la charge.",
       "seconds": 90,
       "status": "draft"
@@ -799,7 +799,7 @@
       "id": "ing-wellperf-044",
       "theme": "Pompes à tiges et diagnostic",
       "level": 1,
-      "q": "Ronde sur l'unité à balancier d'un puits clôturé (photo). Quels éléments de sécurité mécanique contrôlez-vous en premier ?",
+      "q": "Ronde sur l'unité à balancier d'un puits clôturé à 90 BLPD (14,3 m³/j) (photo). Quels éléments de sécurité mécanique contrôlez-vous en premier ?",
       "img": "photo/pumpjack.jpg",
       "imgAlt": "Unité de pompage à balancier dans un site clôturé en milieu herbeux",
       "choices": [
@@ -809,7 +809,7 @@
         "La vitesse de pompage affichée au variateur, avant toute vérification mécanique de l'unité"
       ],
       "answer": 0,
-      "explain": "Les pièces tournantes et en mouvement sont accessibles : protections, frein et étanchéité sont les premiers contrôles de ronde.",
+      "explain": "Les pièces tournantes et en mouvement sont accessibles : protections, frein et étanchéité du presse-étoupe sont les premiers contrôles de ronde.",
       "seconds": 60,
       "status": "draft"
     }
