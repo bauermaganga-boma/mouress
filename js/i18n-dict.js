@@ -3,6 +3,10 @@
 // PATTERNS : [expression régulière ancrée sur le texte entier, remplacement avec $1 $2…] pour les textes à nombres, noms ou dates.
 // Les patterns les plus spécifiques sont placés avant les plus génériques ; les dates françaises (« 19 novembre 2026 ») sont converties en fin de liste.
 export const EXACT = {
+  "Attestation": "Certificate",
+  "Voir un exemple d’attestation": "See a sample certificate",
+  "Exemple fictif : l’attestation réelle porte votre nom, votre score, une date et un code vérifiable (QR code).": "Fictional sample: the real certificate shows your name, your score, a date and a verifiable code (QR code).",
+  "Prénom NOM": "First name LAST NAME",
   "Amont et aval": "Upstream and downstream",
   "Vérifier une attestation": "Verify a certificate",
   "Saisissez le code MRS-… d’une attestation pour contrôler son authenticité.": "Enter the MRS-… code of a certificate to check that it is genuine.",

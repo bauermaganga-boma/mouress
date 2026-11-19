@@ -48,3 +48,11 @@
   .cert-stage { max-width: none; width: 297mm; margin: 0; overflow: visible; }
   .certificate { width: 297mm; height: 210mm; min-width: 0; aspect-ratio: auto; box-shadow: none; page-break-after: avoid; break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* Aperçu d'exemple */
+.cert-sample > summary { list-style: none; cursor: pointer; display: inline-flex; }
+.cert-sample > summary::-webkit-details-marker { display: none; }
+.cert-sample .cert-stage { margin-top: var(--sp-3); }
+.cert-sample .certificate { box-shadow: var(--shadow-md); }
+.cert-sample .certificate::after { content: 'EXEMPLE'; position: absolute; inset: 0; display: grid; place-items: center; font-size: 11cqw; font-weight: 800; letter-spacing: .08em; color: rgba(6, 31, 68, .07); transform: rotate(-16deg); pointer-events: none; }
+@media print { .cert-sample { display: none; } }

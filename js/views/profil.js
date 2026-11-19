@@ -4,6 +4,7 @@ import { local } from '../store.js';
 import { esc, fmtDate, pct } from '../util.js';
 import { icon, badge, bar, comingSoon, crumbs } from '../ui.js';
 import { examSize, qSeconds } from '../quiz.js';
+import { sampleCertificateHTML } from '../certificate.js';
 
 export default async function render(ctx, root) {
   const data = await getProfilesData();
@@ -81,6 +82,10 @@ export default async function render(ctx, root) {
     <section class="block"><div class="split"><h2>Thèmes</h2><span class="muted small">${doneMods} / ${content.modules.length} cours terminés</span></div>
       ${bar(pct(doneMods, content.modules.length), 'ok')}
       <div class="theme-list">${groups.map(themeBlock).join('')}</div></section>
+
+    <section class="block"><h2>Attestation</h2>
+      <p class="muted small">En cas de réussite (seuil ${CONFIG.PASS_MARK} %), vous recevez une attestation vérifiable en ligne.</p>
+      ${sampleCertificateHTML(profile.name, dom?.name || '', CONFIG.PASS_MARK)}</section>
 
     <section class="block"><h2>Examen</h2>
       <div class="card exam-card"><div><p><strong>${n} questions</strong> tirées de façon équilibrée entre les ${themes.length} thèmes, dans un ordre mélangé. Une question à la fois, <strong>chronométrée</strong>, sans retour arrière. Seuil de réussite : <strong>${CONFIG.PASS_MARK} %</strong>. Une attestation vérifiable est délivrée en cas de réussite.</p></div>
