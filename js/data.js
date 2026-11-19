@@ -1,5 +1,7 @@
 // Chargement des données de contenu (profils, cours, questions).
 
+import { isEn } from './i18n.js';
+
 let profilesPromise = null;
 const contentCache = new Map();
 
@@ -8,6 +10,13 @@ export function getProfilesData() {
     profilesPromise = fetch('data/profiles.json').then((r) => {
       if (!r.ok) throw new Error('profiles.json introuvable');
       return r.json();
+    }).then(async (d) => {
+      if (!isEn()) return d;
+      try { // intitulés anglais (facultatif : le français reste la source)
+        const en = await fetch('data/profiles.en.json').then((r) => (r.ok ? r.json() : null));
+        if (en) for (const k of ['sectors', 'levels', 'domains', 'branches', 'groups', 'profiles']) for (const it of d[k] || []) { const t = en[k] && en[k][it.id]; if (t) Object.assign(it, t); }
+      } catch { /* ignore */ }
+      return d;
     }).catch((e) => { profilesPromise = null; throw e; });
   }
   return profilesPromise;

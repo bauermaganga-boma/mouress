@@ -3,6 +3,7 @@ import { CONFIG } from '../config.js';
 import { initStore, store } from './store.js';
 import { esc } from './util.js';
 import { icon, logo } from './ui.js';
+import { startI18n, setLang, langSwitchHTML } from './i18n.js';
 
 const ROUTES = [
   { p: '', view: 'landing' },
@@ -100,7 +101,7 @@ function renderShell() {
   document.getElementById('site-header').innerHTML = `<div class="container bar-inner">
     <a class="brand" href="${corp ? '#/' : '#/training'}" aria-label="${corp ? 'MOURESS — accueil' : 'MOURESS Training — accueil'}">${logo('clair')}</a>
     <nav class="nav-main" aria-label="Navigation principale">${NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${n.label}</a>`).join('')}</nav>
-    <div class="header-actions">${corp ? `<a class="btn btn-primary btn-sm" href="#/training">${icon('award', 16)} MOURESS Training</a>` : `<a class="btn btn-light btn-sm back-site" href="#/">${icon('arrow', 16, 'flip')} <span>Site MOURESS</span></a>`}${corp ? '' : state.user
+    <div class="header-actions">${langSwitchHTML()}${corp ? `<a class="btn btn-primary btn-sm" href="#/training">${icon('award', 16)} MOURESS Training</a>` : `<a class="btn btn-light btn-sm back-site" href="#/">${icon('arrow', 16, 'flip')} <span>Site MOURESS</span></a>`}${corp ? '' : state.user
       ? `<span class="user-chip">${esc(state.user.name)}</span><button type="button" class="btn btn-light btn-sm btn-logout" data-logout aria-label="Déconnexion">${icon('login', 16)}<span class="lbl">Déconnexion</span></button>`
       : `<a class="btn btn-primary btn-sm btn-login" href="#/connexion">${icon('login', 16)} Connexion<span class="lbl-long">&nbsp;entreprise</span></a>`}</div></div>`;
   document.getElementById('tabbar').innerHTML = NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${icon(n.icon)}<span>${n.short || n.label}</span></a>`).join('');
@@ -165,6 +166,8 @@ async function render() {
 
 function setupGlobalHandlers() {
   document.addEventListener('click', async (e) => {
+    const lg = e.target.closest('[data-lang]');
+    if (lg) { setLang(lg.dataset.lang); return; }
     const logout = e.target.closest('[data-logout]');
     if (logout) { await store.signOut(); await refreshUser(); toast('Vous êtes déconnecté.'); go('/'); return; }
     const z = e.target.closest('[data-zoom]');
@@ -212,6 +215,7 @@ function registerSW() {
 async function boot() {
   setupGlobalHandlers();
   await initStore();
+  startI18n();
   window.addEventListener('hashchange', render);
   await render();
   registerSW();

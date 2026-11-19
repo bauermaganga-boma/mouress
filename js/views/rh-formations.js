@@ -3,7 +3,7 @@ import { esc, fmtDate, fmtDateInput, addMonths, pct } from '../util.js';
 import { icon, badge, bar, avatar, pageHead } from '../ui.js';
 import { CATEGORIES, MODES, REC_STATUS, SUGGESTIONS } from '../formations-store.js';
 
-const opts = (list, sel) => list.map((c) => `<option ${c === sel ? 'selected' : ''}>${esc(c)}</option>`).join('');
+const opts = (list, sel) => list.map((c) => `<option value="${esc(c)}" ${c === sel ? 'selected' : ''}>${esc(c)}</option>`).join('');
 const dayTs = (v) => (v ? new Date(v + 'T12:00:00').getTime() : null);
 
 function formFields(f = {}, idp = 'f') {

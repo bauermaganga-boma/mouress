@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Logigramme de fermeture du puits au forage : détecter l'indice, arrêter la rotation, lever pour dégager le joint, arrêter les pompes, observer le flux ; si le puits coule, fermer l'obturateur annulaire et la HCR selon une fermeture franche (hard shut-in, duse fermée) ou souple (soft shut-in, duse ouverte) ; puis lire et enregistrer SIDPP, SICP et gain, alerter le superviseur et lancer la procédure de contrôle</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+text.w{fill:#FCFBF8}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Fermeture du puits au forage</text>
+
+<!-- étapes 1 à 5 -->
+<g class="bl">
+<rect x="16" y="45" width="136" height="56"/><rect x="174" y="45" width="136" height="56"/><rect x="332" y="45" width="136" height="56"/><rect x="490" y="45" width="136" height="56"/>
+</g>
+<rect x="648" y="45" width="136" height="56" class="bl" style="stroke:#F28C28;stroke-width:4"/>
+<g class="c">
+<text x="84" y="70">1. Détecter</text><text x="84" y="88">l'indice de kick</text>
+<text x="242" y="70">2. Arrêter</text><text x="242" y="88">la rotation</text>
+<text x="400" y="70">3. Lever pour</text><text x="400" y="88">dégager le joint</text>
+<text x="558" y="70">4. Arrêter</text><text x="558" y="88">les pompes</text>
+<text x="716" y="70" class="b">5. Observer le flux</text><text x="716" y="88" class="b">Le puits coule ?</text>
+</g>
+<g class="s"><path d="M152,73H172" marker-end="url(#ar)"/><path d="M310,73H330" marker-end="url(#ar)"/><path d="M468,73H488" marker-end="url(#ar)"/><path d="M626,73H646" marker-end="url(#ar)"/></g>
+<path d="M716,101V130" class="or" marker-end="url(#ao)"/>
+<text x="726" y="122" class="o">Oui</text>
+<text x="700" y="122" class="e">Non : reprendre le forage en surveillant</text>
+
+<!-- étape 6 -->
+<rect x="16" y="132" width="768" height="26" fill="#061F44"/>
+<text x="400" y="150" class="c b w">6. Fermer l'obturateur annulaire (et la HCR) : hard ou soft shut-in</text>
+
+<!-- hard -->
+<rect x="16" y="168" width="380" height="132" class="bl"/>
+<rect x="16" y="168" width="380" height="24" fill="#061F44"/>
+<text x="26" y="185" class="b w">Hard shut-in (fermeture franche)</text>
+<text x="26" y="212">• Duse (choke) fermée, HCR fermée</text>
+<text x="26" y="232">• Fermer l'annulaire</text>
+<text x="26" y="252">• Ouvrir la HCR pour lire les pressions</text>
+<text x="26" y="272" class="b">+ Rapide, influx minimal</text>
+<text x="26" y="292" class="b">− Coup de bélier (water hammer)</text>
+
+<!-- soft -->
+<rect x="404" y="168" width="380" height="132" class="bl"/>
+<rect x="404" y="168" width="380" height="24" fill="#061F44"/>
+<text x="414" y="185" class="b w">Soft shut-in (fermeture souple)</text>
+<text x="414" y="212">• Duse ouverte, HCR ouverte</text>
+<text x="414" y="232">• Fermer l'annulaire</text>
+<text x="414" y="252">• Fermer la duse en surveillant la pression</text>
+<text x="414" y="272" class="b">+ Pas de coup de bélier</text>
+<text x="414" y="292" class="b">− Plus lent, influx plus important</text>
+
+<!-- étapes 7 et 8 -->
+<g class="s"><path d="M206,300V320" marker-end="url(#ar)"/><path d="M594,300V320" marker-end="url(#ar)"/><path d="M400,364V386" marker-end="url(#ar)"/></g>
+<rect x="16" y="322" width="768" height="42" class="gr"/>
+<text x="400" y="348" class="c b">7. Lire et enregistrer SIDPP, SICP et le gain au bac (après stabilisation)</text>
+<rect x="16" y="388" width="768" height="42" class="of"/>
+<text x="400" y="414" class="c b">8. Alerter le superviseur et lancer la procédure de contrôle</text>
+
+<text x="16" y="458">Chaque minute compte : enregistrer le gain au bac dès la détection.</text>
+<text x="16" y="478">Surveiller la pression de fermeture : elle ne doit pas dépasser la MAASP.</text>
+</svg>

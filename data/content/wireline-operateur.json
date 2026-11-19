@@ -1,0 +1,1076 @@
+{
+  "profile": "wireline-operateur",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Câbles, unité wireline et treuil",
+      "theme": "Câbles, unité et treuil",
+      "minutes": 9,
+      "body": "Le **wireline** (intervention au câble) permet de descendre des outils dans un puits sans appareil de forage. Trois familles de câble existent. Le **câble mono-brin** (slickline) a un diamètre de 0,092 à 0,125 in : il est mécanique, sans conducteur, et sert aux travaux de fond (calibrage, pose et dépose de bouchons, vannes). Le **câble tressé** (braided line) est multibrin, plus résistant, utilisé pour les charges lourdes et la pêche. Le **câble électrique** (electric line ou e-line) contient un ou plusieurs conducteurs : il alimente et transmet les données des outils de diagraphie (logging), de perforation ou de pose.\n\nL'**unité wireline** (wireline unit) se compose du **treuil** (winch / drum) avec frein, du **compteur de profondeur** (depth counter, ou counter head), de l'**indicateur de poids** (weight indicator) et d'un poste de commande. Le compteur est une roue de circonférence calibrée : profondeur = nombre de tours × circonférence. Il se remet à zéro sur un repère connu (tubing hanger ou table de rotation) avant chaque descente.\n\nLe câble passe du drum aux **poulies** (sheaves) : la poulie inférieure (hay pulley) fixée à la base, puis la poulie supérieure (upper sheave) au-dessus du lubricateur, qui oriente le câble vers le presse-étoupe.\n\n**Exemple résolu.** Un compteur de 2 ft de circonférence a fait 4 250 tours : profondeur = 4 250 × 2 = 8 500 ft. Un câble de 0,108 in pèse environ 0,0311 lb/ft : sur 8 000 ft, le poids du câble dans l'air vaut 0,0311 × 8 000 = 248,8 lb. À 120 ft/min, descendre 9 000 ft prend 9 000 / 120 = 75 min.\n\nAvant chaque job, inspectez le câble sur toute sa longueur (kinks, corrosion, usure), vérifiez le spooling (enroulement régulier) et le frein du drum. Ne vous placez jamais dans la boucle du câble (bight) ni dans l'axe d'un câble tendu.\n\n**Vocabulaire FR / EN**\n- Câble mono-brin : slickline\n- Câble tressé : braided line\n- Câble électrique : electric line (e-line)\n- Treuil : winch / drum\n- Compteur de profondeur : depth counter\n- Indicateur de poids : weight indicator\n- Poulie : sheave\n- Enroulement du câble : spooling",
+      "keyPoints": [
+        "Slickline = mono-brin mécanique ; braided line = multibrin ; e-line = conducteur électrique.",
+        "Profondeur = tours du compteur × circonférence de la roue ; remise à zéro sur un repère connu.",
+        "Poids du câble dans l'air = poids linéique × longueur (0,0311 lb/ft pour du 0,108 in).",
+        "Inspecter le câble et le frein avant le job ; ne jamais se placer dans la boucle du câble."
+      ],
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond"
+    },
+    {
+      "id": "m2",
+      "title": "Contrôle de pression en surface",
+      "theme": "Contrôle de pression en surface",
+      "minutes": 10,
+      "body": "Le contrôle du puits en wireline repose sur l'**ensemble de contrôle** (pressure control equipment) monté sur la tête de puits. De bas en haut : l'**arbre de Noël** (Christmas tree) avec sa vanne maîtresse (master valve) et sa vanne de curage (swab valve), le **BOP câble** (wireline BOP, mâchoires câble ou rams), le **lubricateur** (lubricator) en sections, puis le **presse-étoupe** (stuffing box) en slickline ou la **tête à graisse** (grease injection head) en braided line et e-line. Le câble passe ensuite sur la sheave.\n\nLe **lubricator** est un tube sous pression qui permet de faire entrer et sortir les outils sans arrêter le puits. Le **wireline BOP** ferme sur le câble pour isoler le puits et permettre une intervention au-dessus. Le **stuffing box** assure l'étanchéité autour du câble en mouvement grâce à ses garnitures (packing) serrées hydrauliquement. Avec un câble multibrin, le gaz passe entre les brins : la **grease head** injecte de la graisse à une pression supérieure à la pression de tête. Au sommet, un **tool catcher** retient l'outil s'il est remonté trop haut.\n\nSéquence type : monter le lubricator, faire un **test en pression** (low pressure puis high pressure) avant d'ouvrir le puits, puis égaliser (equalize) la pression du lubricator avec celle du puits avant d'ouvrir lentement la master valve. À la fin, fermer la master valve, purger (bleed off) et vérifier que la pression est nulle avant de démonter.\n\n**Exemples résolus.**\n- Volume d'un lubricator de 3 in de diamètre intérieur et 20 ft : π/4 × 3² × 240 in = 1 696 in³, soit 1 696 / 231 = 7,34 gal US.\n- Force qui pousse un outil de 1,5 in à 2 000 psi : surface 1,767 in², force = 2 000 × 1,767 = 3 534 lbf. Si le stem pèse moins, l'outil est éjecté.\n- Pression de test : MASP 4 000 psi × 1,1 = 4 400 psi.\n\n**Vocabulaire FR / EN**\n- Ensemble de contrôle : pressure control equipment\n- Lubricateur : lubricator\n- Presse-étoupe : stuffing box\n- Tête à graisse : grease injection head\n- BOP câble : wireline BOP\n- Vanne maîtresse : master valve\n- Purger : to bleed off\n- Égaliser : to equalize",
+      "keyPoints": [
+        "Ordre de bas en haut : tête de puits, BOP câble, lubricateur, presse-étoupe ou tête à graisse.",
+        "Presse-étoupe pour slickline ; tête à graisse pour câble tressé et e-line.",
+        "Tester en pression l'ensemble après montage, égaliser avant d'ouvrir la vanne maîtresse.",
+        "Force sur un outil = pression × surface : un stem trop léger laisse l'outil monter."
+      ],
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond"
+    },
+    {
+      "id": "m3",
+      "title": "Train d'outils et travaux courants",
+      "theme": "Train d'outils et travaux courants",
+      "minutes": 10,
+      "body": "Le **train d'outils** (tool string) se monte de haut en bas : le **rope socket** (raccord câble), la **tige lest** (stem, ou sinker bar) qui apporte le poids, l'**outil de battage** (jars) qui délivre des chocs, le **knuckle joint** (articulation) qui donne de la souplesse dans les puits déviés, puis l'outil de service (running tool, pulling tool, gauge cutter…). Les **mechanical jars** (spang jars) sont réglés par la course ; l'on bat vers le haut (up-jar) ou vers le bas (down-jar) selon l'obstacle.\n\nTravaux courants :\n- **Calibrage** (gauge cutter / drift run) : vérifier le passage libre du tubing avant de descendre des outils plus fragiles.\n- **Bouchons** (plugs) : poser ou retirer un bouchon dans un profil de nipple (lock mandrel + running tool / pulling tool) pour isoler le puits.\n- **Gas lift** : poser ou retirer une vanne dans un mandrin à poche latérale (side pocket mandrel) avec le **kickover tool**. La vanne opérante contient un dôme azote (N₂) et un soufflet (bellows) ; elle s'ouvre quand la pression du gaz dépasse celle du dôme, un clapet anti-retour (check valve) empêchant tout retour.\n- **Manchon coulissant** (sliding sleeve, SSD) : ouvert ou fermé avec un shifting tool.\n- **Mesures** : un memory gauge descendu avec des stops à des profondeurs programmées enregistre pression et température ; on trace le gradient.\n- **Repêchage** (fishing) : overshot, grab, wire finder pour reprendre un outil perdu ou un câble coupé.\n\n**Exemple résolu.** Pour une mesure de gradient avec arrêts à 2 000, 4 000 et 6 000 ft, à 150 ft/min sans compter les stops, le trajet aller de 6 000 ft dure 6 000 / 150 = 40 min. On ajoute 10 min par stop de stabilisation : 3 × 10 = 30 min.\n\nAvant le job, vérifiez le diamètre extérieur (OD) de chaque outil, les filetages, les goupilles de cisaillement (shear pins) et consignez l'ordre du train d'outils (tool string sketch).\n\n**Vocabulaire FR / EN**\n- Tige lest : stem / sinker bar\n- Outil de battage : jars\n- Articulation : knuckle joint\n- Calibrage : gauge cutter run\n- Manchon coulissant : sliding sleeve\n- Mandrin à poche latérale : side pocket mandrel\n- Repêchage : fishing\n- Goupille de cisaillement : shear pin",
+      "keyPoints": [
+        "Ordre de haut en bas : rope socket, stem, jars, knuckle joint, outil de service.",
+        "Gauge cutter pour vérifier le passage ; shifting tool pour les manchons coulissants.",
+        "Kickover tool pour poser et retirer les vannes de gas lift en mandrin à poche latérale.",
+        "Le fishing utilise grab, overshot et wire finder selon ce qui est resté au fond."
+      ],
+      "img": "svg/gas-lift-valve.svg",
+      "imgAlt": "Schéma de vanne de gas-lift : mandrins à poche latérale dans le tubing, vanne de décharge et vanne opérante, annulaire de gaz, packer, détail avec dôme azote, soufflet, tige-bille-siège et clapet anti-retour"
+    },
+    {
+      "id": "m4",
+      "title": "Tensions, signature de câble et incidents",
+      "theme": "Tensions, signature et incidents",
+      "minutes": 10,
+      "body": "L'**indicateur de poids** (weight indicator) affiche la tension du câble en surface. Sa lecture en fonction de la profondeur forme la **signature de câble** (wire signature, weight card) : elle permet d'interpréter ce qui se passe en fond. En descente (run in hole, RIH), la tension chute si l'outil se pose sur un obstacle ; en remontée (pull out of hole, POOH), elle monte si l'outil accroche (tight spot) ou si les jars sont armés.\n\nTension de surface en remontée ≈ poids de l'outil + poids du câble − flottabilité (buoyancy) + frottement. Le facteur de flottabilité vaut BF = 1 − ρ(fluide) / 65,4 ppg pour l'acier. Dans une saumure de 8,5 ppg : BF = 1 − 8,5 / 65,4 = 0,87 ; un outil de 100 lb pèse 87 lb dans le fluide.\n\n**Exemples résolus.**\n- Outil 85 lb, câble de 7 000 ft à 0,0311 lb/ft : 85 + 217,7 = 302,7 lbf (dans l'air).\n- Allongement du câble : ΔL = F × L / (E × A). Avec F = 500 lbf, L = 10 000 ft, E = 30 000 000 psi et A = 0,00916 in² (câble de 0,108 in), ΔL ≈ 18,2 ft. Le compteur ne l'inclut pas : tenez-en compte pour les profondeurs précises.\n- Limite de travail : charge de rupture 1 200 lbf, règle interne 50 % = 600 lbf ; avec 303 lbf déjà affichés, la marge est de 297 lbf.\n\n**Incidents.** Câble coincé (stuck wire) : arrêtez de tirer au-delà de la limite, informez le superviseur, appliquez le programme (jarring, puis coupe selon procédure). Outil éjecté (tool blown out) : remonter trop vite au sommet du lubricator sans ralentir ; ralentissez et arrêtez avant le tool catcher. Câble cassé (parted wire) : fishing avec wire finder ou grab. Fuite au stuffing box : serrez le packing, sinon fermez le BOP sur le câble. Présence de gaz : zone dégagée, détection, pas de source d'ignition.\n\n**Vocabulaire FR / EN**\n- Signature de câble : wire signature / weight card\n- Descendre : run in hole (RIH)\n- Remonter : pull out of hole (POOH)\n- Point dur : tight spot\n- Flottabilité : buoyancy\n- Câble coincé : stuck wire\n- Câble cassé : parted wire\n- Sur-traction : overpull",
+      "keyPoints": [
+        "La signature de câble relie tension et profondeur pour interpréter les événements du fond.",
+        "BF = 1 − ρ / 65,4 ppg : le poids dans le fluide est inférieur au poids dans l'air.",
+        "Ne jamais dépasser la limite de travail du câble (par ex. 50 % de la charge de rupture).",
+        "Câble coincé : stopper, informer, suivre le programme de jarring puis de fishing."
+      ],
+      "img": "svg/pressure-gradient-chart.svg",
+      "imgAlt": "Graphique pression en fonction de la profondeur verticale : eau douce 0,433 psi/ft (4 330 psi à 10 000 ft), huile 0,35 psi/ft (3 500 psi), gaz 0,10 psi/ft (1 000 psi)"
+    },
+    {
+      "id": "m5",
+      "title": "Sécurité, permis de travail et H2S",
+      "theme": "Sécurité, permis et H2S",
+      "minutes": 9,
+      "body": "Aucune intervention wireline ne démarre sans **permis de travail** (permit to work, PTW), analyse de risques du job (JSA / JHA) et **réunion de sécurité** avant travail (toolbox talk, pre-job meeting). On y revoit le programme, les rôles, les signaux manuels, la zone d'exclusion (exclusion zone) autour du lubricator et des lignes sous pression, le point de rassemblement (muster point) et les conditions d'arrêt du travail. Chacun a l'**autorité d'arrêt** (stop work authority).\n\n**EPI** (PPE) : casque, lunettes, gants, combinaison ignifugée (FR coverall) et chaussures de sécurité ; protection auditive près de l'unité. En offshore, vérifiez les activités simultanées (SIMOPS) avec le coordonnateur.\n\n**H2S** (sulfure d'hydrogène) : gaz toxique, inflammable, plus lourd que l'air ; l'odeur d'œuf pourri disparaît à forte concentration (paralysie olfactive), donc on ne se fie jamais à l'odorat. Bonnes pratiques : détecteurs fixes et portables, manche à air (windsock), appareil respiratoire autonome (SCBA) disponible, évacuation vers le point de rassemblement dans le sens contraire du vent, sans courir vers la source. Alarme usuelle de premier niveau vers 10 ppm ; suivez toujours les seuils du site.\n\n**Pression.** Ne jamais serrer ou démonter un raccord sous pression : purger (bleed off), isoler, vérifier zéro, puis intervenir. En cas de fuite au test, dépressurisez d'abord.\n\n**Exemples résolus.**\n- Conversion : 3 000 psi × 0,0689 = 206,7 bar.\n- Pression hydrostatique d'une saumure de 8,6 ppg à 6 000 ft TVD : 0,052 × 8,6 × 6 000 = 2 683 psi.\n- Pression de tête avec gradient de gaz 0,10 psi/ft : fond 3 000 psi à 8 000 ft → 3 000 − 0,10 × 8 000 = 2 200 psi.\n\nGardez la ligne de tir (line of fire) dégagée et rangez le câble : un câble sous tension qui casse fouette.\n\n**Vocabulaire FR / EN**\n- Permis de travail : permit to work (PTW)\n- Analyse de risques du job : job safety analysis (JSA)\n- Réunion avant travail : toolbox talk\n- Point de rassemblement : muster point\n- Autorité d'arrêt : stop work authority\n- Appareil respiratoire : SCBA\n- Ligne de tir : line of fire\n- Activités simultanées : SIMOPS",
+      "keyPoints": [
+        "PTW, JSA et toolbox talk avant tout job ; chacun peut arrêter le travail (stop work authority).",
+        "H2S : toxique, plus lourd que l'air ; on ne se fie pas à l'odeur ; SCBA et évacuation au vent.",
+        "Purger et isoler avant de toucher à un raccord ; jamais de serrage sous pression.",
+        "Rester hors de la ligne de tir et de la boucle du câble ; zone d'exclusion balisée."
+      ],
+      "img": "photo/workers-ppe.jpg",
+      "imgAlt": "Photographie de travailleurs équipés d'EPI : casque, lunettes, gants et combinaison"
+    }
+  ],
+  "questions": [
+    {
+      "id": "wireline-operateur-001",
+      "theme": "Câbles, unité et treuil",
+      "level": 1,
+      "q": "Quelle caractéristique distingue le slickline d'un câble électrique (e-line) ?",
+      "choices": [
+        "Câble multibrin contenant un conducteur pour transmettre des données en temps réel",
+        "Câble synthétique utilisé uniquement en surface pour lever les charges lourdes",
+        "Câble mono-brin sans conducteur, manœuvré mécaniquement avec des outils de fond",
+        "Tube flexible rigide poussé dans le puits par une tête d'injection"
+      ],
+      "answer": 2,
+      "explain": "Le slickline est un fil unique, sans conducteur : l'outil est actionné mécaniquement, alors que l'e-line transmet courant et données.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-002",
+      "theme": "Câbles, unité et treuil",
+      "level": 1,
+      "q": "Which wireline type carries electrical conductors, allowing real-time data from logging tools?",
+      "choices": [
+        "Electric line (e-line)",
+        "Single-strand slickline",
+        "Braided line without conductor",
+        "Coiled rod"
+      ],
+      "answer": 0,
+      "explain": "E-line contains insulated conductors that power tools and send data to surface; slickline and plain braided line do not.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-003",
+      "theme": "Câbles, unité et treuil",
+      "level": 1,
+      "q": "À quoi sert le compteur de profondeur (depth counter) ?",
+      "choices": [
+        "Mesurer la pression dans le lubricateur grâce à un capteur placé sur la ligne de purge",
+        "Mesurer la longueur de câble déroulée grâce à une roue de circonférence calibrée",
+        "Mesurer la vitesse de rotation du moteur diesel de l'unité wireline",
+        "Mesurer la tension du câble à la sortie du presse-étoupe en surface"
+      ],
+      "answer": 1,
+      "explain": "La roue du compteur a une circonférence connue : le nombre de tours multiplié par cette valeur donne la profondeur.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-004",
+      "theme": "Câbles, unité et treuil",
+      "level": 2,
+      "q": "Le compteur de profondeur a une roue de circonférence 2 ft et a fait 4 250 tours depuis le zéro. Quelle profondeur (en ft) indique-t-il ?",
+      "choices": [
+        "8 500 ft",
+        "2 125 ft",
+        "4 252 ft",
+        "17 000 ft"
+      ],
+      "answer": 0,
+      "explain": "Profondeur = tours × circonférence = 4 250 × 2 = 8 500 ft.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-005",
+      "theme": "Câbles, unité et treuil",
+      "level": 1,
+      "q": "Quel instrument de l'unité wireline indique la tension du câble en surface ?",
+      "choices": [
+        "Le compteur de profondeur (depth counter)",
+        "Le manomètre du lubricateur",
+        "L'indicateur de poids (weight indicator)",
+        "Le tachymètre du treuil (drum)"
+      ],
+      "answer": 2,
+      "explain": "Le weight indicator mesure la tension du câble ; sa lecture selon la profondeur donne la signature du câble.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-006",
+      "theme": "Câbles, unité et treuil",
+      "level": 2,
+      "q": "Un câble de 0,108 in pèse 0,0311 lb/ft. Quel est le poids de 8 000 ft de câble dans l'air (en lb) ?",
+      "choices": [
+        "24,9 lb",
+        "124,4 lb",
+        "2 488 lb",
+        "248,8 lb"
+      ],
+      "answer": 3,
+      "explain": "Poids = 0,0311 lb/ft × 8 000 ft = 248,8 lb ; les autres valeurs correspondent à une erreur de puissance de dix ou de moitié.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-007",
+      "theme": "Câbles, unité et treuil",
+      "level": 2,
+      "q": "Why must the depth counter be zeroed at a known reference point before running in hole?",
+      "choices": [
+        "So that the weight indicator reads zero when the tool is in the lubricator",
+        "So that recorded depths match the reference datum used in the well records",
+        "So that the winch brake holds the wire while the BOP is closed",
+        "So that the wire speed stays constant between the surface and the nipple"
+      ],
+      "answer": 1,
+      "explain": "Depths must tie to the well's reference datum (for example the tubing hanger or rotary table), otherwise tool positions cannot be trusted.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-008",
+      "theme": "Câbles, unité et treuil",
+      "level": 2,
+      "q": "Avant de descendre, que faut-il faire du câble ?",
+      "choices": [
+        "Le graisser abondamment et le lisser à la main sous tension avant la descente",
+        "Le couper de 3 ft à chaque fois sans autre examen",
+        "L'inspecter sur toute la longueur : kinks, corrosion, usure, marques",
+        "Le vérifier uniquement à l'endroit où il sort du tambour"
+      ],
+      "answer": 2,
+      "explain": "Un défaut de câble est une cause fréquente de rupture ; l'inspection porte sur toute la longueur, jamais à la main sous tension.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-009",
+      "theme": "Câbles, unité et treuil",
+      "level": 3,
+      "q": "Vous descendez 9 000 ft de câble à 120 ft/min régulier. Combien de minutes dure la descente ?",
+      "choices": [
+        "60 min",
+        "75 min",
+        "7,5 min",
+        "90 min"
+      ],
+      "answer": 1,
+      "explain": "Temps = 9 000 / 120 = 75 min ; 60 min correspondrait à 150 ft/min.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-010",
+      "theme": "Câbles, unité et treuil",
+      "level": 2,
+      "q": "Why does braided line need a grease injection head instead of a simple stuffing box?",
+      "choices": [
+        "The strands must be lubricated to avoid corrosion inside the tubing string",
+        "The grease reduces the weight of the line in the hole during RIH",
+        "A stuffing box cannot be installed on top of a lubricator",
+        "Gas can migrate between the strands, so grease is injected to seal around the line"
+      ],
+      "answer": 3,
+      "explain": "Multi-strand wire leaves gaps; grease injected above well pressure fills them and seals, unlike a packing around a smooth single wire.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-011",
+      "theme": "Câbles, unité et treuil",
+      "level": 1,
+      "q": "Un tambour contient 20 000 ft de câble ; 12 500 ft sont descendus dans le puits. Quelle longueur reste sur le tambour (en ft) ?",
+      "choices": [
+        "12 500 ft",
+        "32 500 ft",
+        "7 500 ft",
+        "750 ft"
+      ],
+      "answer": 2,
+      "explain": "Il reste 20 000 − 12 500 = 7 500 ft sur le drum.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-012",
+      "theme": "Câbles, unité et treuil",
+      "level": 2,
+      "q": "Sur le schéma, par quel organe passe le câble entre le treuil et le presse-étoupe ?",
+      "choices": [
+        "Le BOP câble situé juste au-dessus de la tête de puits",
+        "La tête de puits au niveau de la vanne maîtresse",
+        "Le train d'outils placé dans le lubricateur",
+        "La poulie (sheave) fixée au-dessus du lubricateur"
+      ],
+      "answer": 3,
+      "explain": "La sheave redirige le câble du drum vers l'axe vertical du lubricateur et du presse-étoupe.",
+      "seconds": 40,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-013",
+      "theme": "Contrôle de pression en surface",
+      "level": 1,
+      "q": "Sur le schéma de l'ensemble de contrôle, quel est l'ordre correct de bas en haut ?",
+      "choices": [
+        "BOP câble, tête de puits, presse-étoupe, lubricateur",
+        "Presse-étoupe, lubricateur, BOP câble, tête de puits",
+        "Lubricateur, tête de puits, presse-étoupe, BOP câble",
+        "Tête de puits, BOP câble, lubricateur, presse-étoupe"
+      ],
+      "answer": 3,
+      "explain": "Le BOP câble se monte directement sur la tête de puits ; le lubricateur le surmonte, avec le presse-étoupe au sommet.",
+      "seconds": 50,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-014",
+      "theme": "Contrôle de pression en surface",
+      "level": 1,
+      "q": "Sur le schéma, quel organe placé au sommet assure l'étanchéité autour du câble en mouvement ?",
+      "choices": [
+        "Le BOP câble (wireline BOP)",
+        "La vanne maîtresse (master valve)",
+        "Le presse-étoupe (stuffing box)",
+        "Le rope socket"
+      ],
+      "answer": 2,
+      "explain": "Le stuffing box serre une garniture hydraulique autour du câble et empêche la fuite de fluide au sommet du lubricateur.",
+      "seconds": 40,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-015",
+      "theme": "Contrôle de pression en surface",
+      "level": 2,
+      "q": "In the diagram, what is the purpose of the grease injected at the top of the stack?",
+      "choices": [
+        "To lubricate the wireline BOP rams so they close more quickly and seal on the wire at low pressure",
+        "To clean the wellhead before the lubricator is rigged down",
+        "To seal around braided or electric line, injected at a pressure above wellhead pressure",
+        "To lower the weight of the tool string while it is run in hole"
+      ],
+      "answer": 2,
+      "explain": "Grease pumped slightly above well pressure fills the gaps between strands and prevents well fluid or gas from escaping.",
+      "seconds": 55,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-016",
+      "theme": "Contrôle de pression en surface",
+      "level": 1,
+      "q": "Sur le schéma, quel organe situé au-dessus de la tête de puits permet de fermer sur le câble pour isoler le puits ?",
+      "choices": [
+        "La poulie (sheave)",
+        "Le graisseur du presse-étoupe",
+        "Le lubricateur",
+        "Le BOP câble (wireline BOP)"
+      ],
+      "answer": 3,
+      "explain": "Les mâchoires du wireline BOP se ferment sur le câble : le puits est isolé et on peut intervenir au-dessus.",
+      "seconds": 40,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-017",
+      "theme": "Contrôle de pression en surface",
+      "level": 2,
+      "q": "Sur le schéma, quel élément contient le train d'outils avant la descente et permet de l'introduire sous pression ?",
+      "choices": [
+        "Le BOP câble",
+        "La poulie",
+        "La tête de puits",
+        "Le lubricateur"
+      ],
+      "answer": 3,
+      "explain": "Le lubricator est une chambre sous pression dans laquelle on loge l'outil avant d'ouvrir la vanne maîtresse.",
+      "seconds": 40,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-018",
+      "theme": "Contrôle de pression en surface",
+      "level": 2,
+      "q": "Un lubricateur a un diamètre intérieur de 3 in et une longueur de 20 ft. Quel est son volume en gallons US (1 gal = 231 in³) ?",
+      "choices": [
+        "7,34 gal",
+        "29,4 gal",
+        "0,61 gal",
+        "1 696 gal"
+      ],
+      "answer": 0,
+      "explain": "V = π/4 × 3² × 240 in = 1 696 in³ ; divisé par 231 = 7,34 gal.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-019",
+      "theme": "Contrôle de pression en surface",
+      "level": 2,
+      "q": "Un outil de diamètre 1,5 in est soumis à 2 000 psi sous son extrémité. Quelle force verticale (en lbf) cette pression exerce-t-elle ?",
+      "choices": [
+        "1 767 lbf",
+        "3 000 lbf",
+        "14 137 lbf",
+        "3 534 lbf"
+      ],
+      "answer": 3,
+      "explain": "Surface = π/4 × 1,5² = 1,767 in² ; force = 2 000 × 1,767 = 3 534 lbf.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-020",
+      "theme": "Contrôle de pression en surface",
+      "level": 2,
+      "q": "Avant d'ouvrir la vanne maîtresse après avoir monté le lubricateur, que faut-il faire ?",
+      "choices": [
+        "Ouvrir la vanne d'un quart de tour pour entendre si le gaz passe par les raccords",
+        "Tester en pression le lubricateur, puis égaliser avec la pression de tête",
+        "Ouvrir la vanne à fond pour égaliser plus vite",
+        "Serrer les raccords une fois le puits ouvert pour compenser"
+      ],
+      "answer": 1,
+      "explain": "On teste d'abord l'ensemble hors puits, puis on égalise pour éviter un choc de pression à l'ouverture.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-021",
+      "theme": "Contrôle de pression en surface",
+      "level": 2,
+      "q": "Why is the lubricator pressure tested after rig-up and before opening the well?",
+      "choices": [
+        "To warm the seals so that the packing rubber stays flexible",
+        "To measure the volume of the lubricator for the daily report",
+        "To purge air from the line and check that the depth counter reads correctly before the first run",
+        "To confirm that connections and seals hold pressure before they see well pressure"
+      ],
+      "answer": 3,
+      "explain": "A leak found during the test is handled safely at low risk; finding it with the well open could cause a release.",
+      "seconds": 50,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-022",
+      "theme": "Contrôle de pression en surface",
+      "level": 3,
+      "q": "La pression maximale attendue en surface (MASP) est 4 000 psi. La procédure impose un test à 1,1 × MASP. Quelle est la pression de test (en psi) ?",
+      "choices": [
+        "4 000 psi",
+        "6 000 psi",
+        "4 400 psi",
+        "5 000 psi"
+      ],
+      "answer": 2,
+      "explain": "Test = 1,1 × 4 000 = 4 400 psi (valeur donnée par l'énoncé, à adapter à la procédure du site).",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-023",
+      "theme": "Contrôle de pression en surface",
+      "level": 2,
+      "q": "À quoi sert le tool catcher en haut du lubricateur ?",
+      "choices": [
+        "Filtrer le gaz avant son passage dans la ligne de purge",
+        "Mesurer la profondeur de l'outil quand il arrive en surface, avant la purge du lubricateur",
+        "Retenir l'outil s'il est remonté trop haut, avant qu'il n'atteigne le presse-étoupe",
+        "Bloquer le câble pendant le test en pression du lubricateur"
+      ],
+      "answer": 2,
+      "explain": "Si l'opérateur remonte trop vite, le tool catcher accroche l'outil et évite que le câble soit arraché du rope socket.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-024",
+      "theme": "Contrôle de pression en surface",
+      "level": 2,
+      "q": "Sur cette tête de puits terrestre, que vérifiez-vous avant de monter le lubricateur ?",
+      "choices": [
+        "Les manomètres et la position des vannes pour connaître la pression de tête",
+        "La couleur de la peinture des brides pour identifier le fabricant de la tête de puits",
+        "Le niveau d'huile du moteur de l'unité wireline seulement",
+        "Le nombre de tours du compteur de profondeur"
+      ],
+      "answer": 0,
+      "explain": "On lit la pression de tête et l'état des vannes avant de monter, afin de choisir l'équipement et les tests adaptés.",
+      "seconds": 50,
+      "img": "photo/wellhead-onshore.jpg",
+      "imgAlt": "Photographie d'une tête de puits terrestre : arbre de Noël avec vannes, brides et manomètres",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-025",
+      "theme": "Train d'outils et travaux courants",
+      "level": 1,
+      "q": "Quel est le rôle du rope socket dans un train d'outils ?",
+      "choices": [
+        "Frapper vers le haut pour libérer l'outil coincé",
+        "Relier le câble au train d'outils",
+        "Donner de la souplesse dans un puits dévié",
+        "Fermer le puits sur le câble"
+      ],
+      "answer": 1,
+      "explain": "Le rope socket est le raccord entre le câble et le haut du train d'outils.",
+      "seconds": 35,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-026",
+      "theme": "Train d'outils et travaux courants",
+      "level": 1,
+      "q": "What is the main function of the stem (sinker bar) in a tool string?",
+      "choices": [
+        "It opens the sliding sleeve by pulling against the lower sleeve of the completion before the run",
+        "It adds weight to overcome well pressure and friction and gives energy to the jars",
+        "It connects the wire to the rope socket in the lubricator",
+        "It records pressure and temperature during the downhole stops"
+      ],
+      "answer": 1,
+      "explain": "Stem bars supply weight so the string runs down against pressure and friction, and supply the mass behind the jar stroke.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-027",
+      "theme": "Train d'outils et travaux courants",
+      "level": 2,
+      "q": "Quel est l'ordre correct, de haut en bas, d'un train d'outils standard ?",
+      "choices": [
+        "Rope socket, stem, jars, knuckle joint, outil de service",
+        "Jars, rope socket, stem, outil de service, knuckle joint",
+        "Stem, rope socket, outil de service, jars, knuckle joint",
+        "Outil de service, knuckle joint, jars, stem, rope socket"
+      ],
+      "answer": 0,
+      "explain": "Le rope socket est en tête, suivi du stem, des jars, éventuellement du knuckle joint, puis de l'outil de service.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-028",
+      "theme": "Train d'outils et travaux courants",
+      "level": 2,
+      "q": "Pourquoi inclut-on un knuckle joint dans le train d'outils ?",
+      "choices": [
+        "Il augmente la masse frappante lors du jarring",
+        "Il scelle l'outil dans le profil du nipple",
+        "Il évite toute torsion du câble pendant la descente",
+        "Il donne de la souplesse pour passer les courbures d'un puits dévié"
+      ],
+      "answer": 3,
+      "explain": "Le knuckle joint articule le train d'outils et facilite l'engagement des profils dans les puits déviés.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-029",
+      "theme": "Train d'outils et travaux courants",
+      "level": 1,
+      "q": "Sur le schéma, où se trouve la vanne de gas lift opérante ?",
+      "choices": [
+        "Sous le packer, dans le réservoir",
+        "Dans un mandrin à poche latérale (side pocket mandrel) du tubing",
+        "En surface, sur la tête de puits",
+        "Dans le cuvelage, contre la formation, à hauteur du sabot de production du puits"
+      ],
+      "answer": 1,
+      "explain": "Les vannes de gas lift sont logées dans des mandrins à poche latérale montés dans la colonne de tubing.",
+      "seconds": 40,
+      "img": "svg/gas-lift-valve.svg",
+      "imgAlt": "Schéma de vanne de gas-lift : mandrins à poche latérale dans le tubing, vanne de décharge et vanne opérante, annulaire de gaz, packer, détail avec dôme azote, soufflet, tige-bille-siège et clapet anti-retour",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-030",
+      "theme": "Train d'outils et travaux courants",
+      "level": 2,
+      "q": "D'après le détail de la vanne, quand la vanne à pression de casing s'ouvre-t-elle ?",
+      "choices": [
+        "Quand la pression du gaz dans l'annulaire dépasse celle du dôme chargé en azote",
+        "Quand la pression du tubing est égale à zéro",
+        "Quand le clapet anti-retour est retiré du siège par la pression de refoulement du tubing",
+        "Quand le packer est désancré"
+      ],
+      "answer": 0,
+      "explain": "La pression du gaz agit sur le soufflet : si elle dépasse la pression du dôme azote, la bille quitte son siège.",
+      "seconds": 55,
+      "img": "svg/gas-lift-valve.svg",
+      "imgAlt": "Schéma de vanne de gas-lift : mandrins à poche latérale dans le tubing, vanne de décharge et vanne opérante, annulaire de gaz, packer, détail avec dôme azote, soufflet, tige-bille-siège et clapet anti-retour",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-031",
+      "theme": "Train d'outils et travaux courants",
+      "level": 2,
+      "q": "Quel outil permet de poser ou de retirer une vanne de gas lift dans un mandrin à poche latérale ?",
+      "choices": [
+        "Le kickover tool",
+        "Le gauge cutter",
+        "Le shifting tool",
+        "Le wire finder"
+      ],
+      "answer": 0,
+      "explain": "Le kickover tool dévie la vanne dans la poche latérale pour la poser ou l'extraire par câble.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-032",
+      "theme": "Train d'outils et travaux courants",
+      "level": 2,
+      "q": "In the sketch, what does the check valve do in the gas lift valve?",
+      "choices": [
+        "It charges the dome with nitrogen during installation according to crew habit",
+        "It limits the stroke of the mechanical jars",
+        "It lets the kickover tool latch onto the valve",
+        "It prevents tubing fluid from flowing back into the annulus"
+      ],
+      "answer": 3,
+      "explain": "The check valve (clapet anti-retour) lets gas flow into the tubing but stops reverse flow of production fluid into the annulus.",
+      "seconds": 50,
+      "img": "svg/gas-lift-valve.svg",
+      "imgAlt": "Schéma de vanne de gas-lift : mandrins à poche latérale dans le tubing, vanne de décharge et vanne opérante, annulaire de gaz, packer, détail avec dôme azote, soufflet, tige-bille-siège et clapet anti-retour",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-033",
+      "theme": "Train d'outils et travaux courants",
+      "level": 1,
+      "q": "Quel est le but principal d'un calibrage (gauge cutter run) ?",
+      "choices": [
+        "Vérifier le passage libre du tubing avant de descendre d'autres outils",
+        "Mesurer la pression de fond pendant une heure au niveau du sabot du dernier cuvelage",
+        "Ouvrir un manchon coulissant",
+        "Repêcher un bouchon resté dans un nipple"
+      ],
+      "answer": 0,
+      "explain": "Le gauge cutter confirme que le tubing est libre au diamètre voulu ; on évite de coincer un outil plus fragile.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-034",
+      "theme": "Train d'outils et travaux courants",
+      "level": 2,
+      "q": "Which tool is used to open or close a sliding sleeve?",
+      "choices": [
+        "A gauge cutter",
+        "An overshot",
+        "A lead impression block",
+        "A shifting tool"
+      ],
+      "answer": 3,
+      "explain": "A shifting tool engages the sleeve profile and moves it up or down; the other tools gauge, catch or take impressions.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-035",
+      "theme": "Train d'outils et travaux courants",
+      "level": 2,
+      "q": "Pourquoi programme-t-on des stops à des profondeurs précises pour un survey de gradient ?",
+      "choices": [
+        "Pour laisser le câble se détendre avant de remonter l'outil au stop suivant et éviter les kinks",
+        "Pour mesurer pression et température stabilisées à chaque profondeur et tracer le gradient",
+        "Pour permettre au presse-étoupe de refroidir",
+        "Pour remettre le compteur à zéro à chaque palier"
+      ],
+      "answer": 1,
+      "explain": "À chaque stop, le memory gauge enregistre des valeurs stables ; la pente donne le gradient et la nature du fluide.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-036",
+      "theme": "Train d'outils et travaux courants",
+      "level": 3,
+      "q": "A cut wire lies coiled above the tool string in the hole. Which tool is normally run to catch it?",
+      "choices": [
+        "A gauge cutter",
+        "A kickover tool",
+        "A wire grab (or wire finder)",
+        "A lock mandrel"
+      ],
+      "answer": 2,
+      "explain": "A wire grab with prongs entangles the loose wire so it can be pulled out; this is standard fishing for a parted wire.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-037",
+      "theme": "Tensions, signature et incidents",
+      "level": 1,
+      "q": "Qu'est-ce que la signature de câble (wire signature) ?",
+      "choices": [
+        "Le numéro de série gravé sur le câble par le fabricant",
+        "La lecture de la tension du câble selon la profondeur pour interpréter les événements au fond",
+        "La pression enregistrée par le memory gauge au fond",
+        "La liste des outils portée sur le rapport de fin de job"
+      ],
+      "answer": 1,
+      "explain": "La signature relie la tension et la profondeur et révèle accrochages, appuis et chocs de jars.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-038",
+      "theme": "Tensions, signature et incidents",
+      "level": 2,
+      "q": "En descente, la tension affichée chute brutalement alors que le compteur continue. Que cela indique-t-il le plus probablement ?",
+      "choices": [
+        "Le câble est neuf et se détend normalement sous le poids de l'outil",
+        "L'outil est posé sur un obstacle et le câble se détend",
+        "Le presse-étoupe est trop serré",
+        "Le gaz pousse l'outil vers le haut"
+      ],
+      "answer": 1,
+      "explain": "Une chute de tension en descente signale que l'outil n'est plus suspendu : appui sur un obstacle ou un bouchon.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-039",
+      "theme": "Tensions, signature et incidents",
+      "level": 2,
+      "q": "Un outil pèse 85 lb et 7 000 ft de câble pèsent 0,0311 lb/ft. Quelle est la tension de surface dans l'air, sans frottement ni flottabilité (en lbf) ?",
+      "choices": [
+        "217,7 lbf",
+        "302,7 lbf",
+        "85,0 lbf",
+        "605,4 lbf"
+      ],
+      "answer": 1,
+      "explain": "Tension = 85 + 0,0311 × 7 000 = 85 + 217,7 = 302,7 lbf.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-040",
+      "theme": "Tensions, signature et incidents",
+      "level": 2,
+      "q": "Un outil pèse 100 lb dans l'air. Il est plongé dans une saumure de 8,5 ppg ; l'acier fait 65,4 ppg. Quel est son poids dans le fluide (en lb) ?",
+      "choices": [
+        "13,0 lb",
+        "114,9 lb",
+        "91,5 lb",
+        "87,0 lb"
+      ],
+      "answer": 3,
+      "explain": "BF = 1 − 8,5 / 65,4 = 0,870 ; poids dans le fluide = 100 × 0,870 = 87,0 lb.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-041",
+      "theme": "Tensions, signature et incidents",
+      "level": 3,
+      "q": "Câble de 0,108 in (section 0,00916 in²), E = 30 000 000 psi, tension additionnelle moyenne 500 lbf sur 10 000 ft. Quel allongement (en ft) ?",
+      "choices": [
+        "1,8 ft",
+        "218,3 ft",
+        "18,2 ft",
+        "14,3 ft"
+      ],
+      "answer": 2,
+      "explain": "ΔL = F × L / (E × A) = 500 × 10 000 / (30 000 000 × 0,00916) = 18,2 ft.",
+      "seconds": 120,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-042",
+      "theme": "Tensions, signature et incidents",
+      "level": 2,
+      "q": "Charge de rupture 1 200 lbf ; règle interne : ne pas dépasser 50 % de cette charge ; la tension affichée est déjà 303 lbf. Quelle marge de sur-traction reste-t-il (en lbf) ?",
+      "choices": [
+        "297 lbf",
+        "600 lbf",
+        "897 lbf",
+        "150 lbf"
+      ],
+      "answer": 0,
+      "explain": "Limite = 0,5 × 1 200 = 600 lbf ; marge = 600 − 303 = 297 lbf.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-043",
+      "theme": "Tensions, signature et incidents",
+      "level": 2,
+      "q": "While pulling out of hole, the weight indicator climbs well above the expected value and the tool stops moving. What is the correct first action?",
+      "choices": [
+        "Pull faster to break the tool free before the wire gets tired",
+        "Stop pulling, hold the tension below the limit and inform the supervisor",
+        "Raise the pull toward the wire breaking load to release the tool",
+        "Cut the wire at surface and close the master valve"
+      ],
+      "answer": 1,
+      "explain": "Never exceed the operating limit: stop, hold, inform the supervisor and follow the jarring or fishing plan.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-044",
+      "theme": "Tensions, signature et incidents",
+      "level": 2,
+      "q": "Comment évite-t-on qu'un outil soit éjecté du lubricateur en fin de remontée ?",
+      "choices": [
+        "Remonter à pleine vitesse pour dégager vite la zone",
+        "Fermer le BOP câble pendant que l'outil monte",
+        "Retirer le presse-étoupe avant la fin de la remontée pour libérer le passage de l'outil vers le lubricateur",
+        "Ralentir et arrêter avant le sommet en surveillant compteur, tension et tool catcher"
+      ],
+      "answer": 3,
+      "explain": "Les remontées se terminent en douceur : un câble tiré dans le presse-étoupe peut être arraché et l'outil retombe ou est éjecté.",
+      "seconds": 55,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-045",
+      "theme": "Tensions, signature et incidents",
+      "level": 3,
+      "q": "Le câble est coincé près de la surface. Quelle est la bonne conduite ?",
+      "choices": [
+        "Cesser de tirer au-delà de la limite, informer le superviseur, suivre le jarring puis la coupe",
+        "Tirer au maximum de la capacité du treuil jusqu'à rupture",
+        "Vider le lubricateur pour faciliter le dégagement",
+        "Descendre l'outil le plus bas possible puis le remonter par à-coups successifs sur le câble en surface"
+      ],
+      "answer": 0,
+      "explain": "On reste dans la limite de travail et on applique la procédure convenue ; une rupture en surface fouette le câble.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-046",
+      "theme": "Tensions, signature et incidents",
+      "level": 1,
+      "q": "What does 'jarring up' mean?",
+      "choices": [
+        "Pulling the wire to the surface at maximum speed",
+        "Closing the wireline BOP while the tool is in the lubricator",
+        "Running a gauge cutter past the nipple profile",
+        "Using the jars to deliver an upward impact on the tool or fish"
+      ],
+      "answer": 3,
+      "explain": "Jarring up means pulling the string so the jars fire and strike upward to free a stuck tool.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-047",
+      "theme": "Tensions, signature et incidents",
+      "level": 2,
+      "q": "Sur le graphique des gradients à 10 000 ft, quel fluide donne la pression la plus faible ?",
+      "choices": [
+        "L'huile, avec 3 500 psi",
+        "L'eau douce, avec 4 330 psi",
+        "Le gaz, avec 1 000 psi",
+        "L'huile et le gaz donnent la même pression"
+      ],
+      "answer": 2,
+      "explain": "Plus le fluide est léger, plus la pression hydrostatique est faible : gaz 0,10 psi/ft × 10 000 ft = 1 000 psi.",
+      "seconds": 45,
+      "img": "svg/pressure-gradient-chart.svg",
+      "imgAlt": "Graphique pression en fonction de la profondeur verticale : eau douce 0,433 psi/ft (4 330 psi à 10 000 ft), huile 0,35 psi/ft (3 500 psi), gaz 0,10 psi/ft (1 000 psi)",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-048",
+      "theme": "Tensions, signature et incidents",
+      "level": 3,
+      "q": "Fond de puits à 8 000 ft sous 3 000 psi, colonne de gaz de gradient 0,10 psi/ft (voir graphique). Quelle est la pression en tête (en psi) ?",
+      "choices": [
+        "3 000 psi",
+        "2 200 psi",
+        "800 psi",
+        "3 800 psi"
+      ],
+      "answer": 1,
+      "explain": "Pression de tête = 3 000 − 0,10 × 8 000 = 2 200 psi.",
+      "seconds": 70,
+      "img": "svg/pressure-gradient-chart.svg",
+      "imgAlt": "Graphique pression en fonction de la profondeur verticale : eau douce 0,433 psi/ft (4 330 psi à 10 000 ft), huile 0,35 psi/ft (3 500 psi), gaz 0,10 psi/ft (1 000 psi)",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-049",
+      "theme": "Sécurité, permis et H2S",
+      "level": 1,
+      "q": "À quoi sert un permis de travail (PTW) ?",
+      "choices": [
+        "Enregistrer la production du puits sur 24 heures",
+        "Autoriser et encadrer une tâche à risque après analyse des dangers",
+        "Remplacer la réunion de sécurité avant travail",
+        "Commander le matériel auprès du magasin"
+      ],
+      "answer": 1,
+      "explain": "Le PTW formalise l'autorisation, les mesures de sécurité et les responsabilités avant l'intervention.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-050",
+      "theme": "Sécurité, permis et H2S",
+      "level": 1,
+      "q": "Which PPE is the minimum for a wireline crew working near pressurised equipment?",
+      "choices": [
+        "Hard hat and sandals with a reflective vest and a paper dust mask",
+        "Safety glasses and a cotton shirt only",
+        "Gloves and a face shield without boots",
+        "Hard hat, safety glasses, gloves, FR coverall and safety boots"
+      ],
+      "answer": 3,
+      "explain": "Head, eye, hand, body and foot protection are required around pressure equipment, with flame-resistant clothing.",
+      "seconds": 45,
+      "img": "photo/workers-ppe.jpg",
+      "imgAlt": "Photographie de travailleurs équipés d'EPI : casque, lunettes, gants et combinaison",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-051",
+      "theme": "Sécurité, permis et H2S",
+      "level": 2,
+      "q": "What is the first response when the H2S alarm sounds on location?",
+      "choices": [
+        "Walk toward the source to check the leak, then shut it off by hand before reporting",
+        "Open the master valve to release the gas",
+        "Put on the breathing apparatus if needed and go crosswind to the muster point",
+        "Wait for the smell to confirm the gas"
+      ],
+      "answer": 2,
+      "explain": "Move away, upwind or crosswind, to the muster point; never approach the source and never rely on smell.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-052",
+      "theme": "Sécurité, permis et H2S",
+      "level": 2,
+      "q": "Pourquoi ne faut-il pas se fier à l'odeur pour détecter le H2S ?",
+      "choices": [
+        "Il est inodore à toute concentration",
+        "À forte concentration, il paralyse l'odorat et l'odeur disparaît",
+        "Il ne se détecte que par la couleur",
+        "Il n'est dangereux qu'en dessous de 1 ppm"
+      ],
+      "answer": 1,
+      "explain": "Le H2S sent l'œuf pourri à faible dose mais paralyse le nerf olfactif à forte dose : seuls les détecteurs sont fiables.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-053",
+      "theme": "Sécurité, permis et H2S",
+      "level": 2,
+      "q": "Une pression de 3 000 psi doit être exprimée en bar (1 psi = 0,0689 bar). Quelle valeur ?",
+      "choices": [
+        "300,0 bar",
+        "20,7 bar",
+        "206,7 bar",
+        "43 511 bar"
+      ],
+      "answer": 2,
+      "explain": "3 000 × 0,0689 = 206,7 bar ; 300 bar viendrait de l'approximation 10 psi = 1 bar.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-054",
+      "theme": "Sécurité, permis et H2S",
+      "level": 2,
+      "q": "Quelle est la pression hydrostatique (en psi) d'une saumure de 8,6 ppg à 6 000 ft TVD ? Utilisez P = 0,052 × ρ × TVD.",
+      "choices": [
+        "2 683 psi",
+        "5 366 psi",
+        "2 598 psi",
+        "51 600 psi"
+      ],
+      "answer": 0,
+      "explain": "P = 0,052 × 8,6 × 6 000 = 2 683 psi ; 2 598 psi correspond à l'eau douce à 0,433 psi/ft.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-055",
+      "theme": "Sécurité, permis et H2S",
+      "level": 1,
+      "q": "Que signifie rester hors de la ligne de tir (line of fire) ?",
+      "choices": [
+        "Ne pas utiliser d'outil lourd",
+        "Rester derrière le treuil même pendant les tests",
+        "Ne pas se placer dans la boucle du câble ni dans l'axe d'une ligne sous pression",
+        "Se tenir à moins de 1 m du lubricateur"
+      ],
+      "answer": 2,
+      "explain": "Un câble ou une ligne sous pression qui casse peut fouetter ou projeter des objets dans son axe.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-056",
+      "theme": "Sécurité, permis et H2S",
+      "level": 2,
+      "q": "On an offshore platform like the one shown, what must be confirmed before wireline work starts near other activities?",
+      "choices": [
+        "That simultaneous operations (SIMOPS) are coordinated and covered by the permit",
+        "That the crane is parked over the wellhead",
+        "That the flare is shut off for the duration of the job and the gas is vented to the sea",
+        "That the muster point has been moved"
+      ],
+      "answer": 0,
+      "explain": "Offshore, nearby tasks such as crane lifts or hot work must be coordinated under the permit system to prevent conflicts.",
+      "seconds": 55,
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Photographie d'une plateforme pétrolière offshore avec ses modules, sa grue et sa torche",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-057",
+      "theme": "Sécurité, permis et H2S",
+      "level": 2,
+      "q": "Pourquoi délimite-t-on une zone d'exclusion autour du lubricateur pendant les tests ?",
+      "choices": [
+        "Limiter l'exposition du personnel en cas de fuite ou de projection",
+        "Faciliter le passage du camion de ravitaillement jusqu'à la tête de puits",
+        "Protéger le lubricateur de la pluie",
+        "Permettre le stockage du câble"
+      ],
+      "answer": 0,
+      "explain": "Une zone balisée garde les personnes non essentielles hors de portée d'une libération de pression.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-058",
+      "theme": "Sécurité, permis et H2S",
+      "level": 3,
+      "q": "Une fuite apparaît à un raccord pendant le test en pression. Que faites-vous ?",
+      "choices": [
+        "Dépressuriser (bleed off), isoler, puis reprendre le raccord",
+        "Serrer le raccord pendant que la pression est appliquée",
+        "Augmenter la pression pour étanchéifier le joint",
+        "Continuer le test en surveillant la fuite à distance"
+      ],
+      "answer": 0,
+      "explain": "On ne serre jamais sous pression : purger, vérifier la pression nulle, puis réparer et retester.",
+      "seconds": 50,
+      "img": "photo/wellhead-onshore.jpg",
+      "imgAlt": "Photographie d'une tête de puits terrestre : arbre de Noël avec vannes, brides et manomètres",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-059",
+      "theme": "Sécurité, permis et H2S",
+      "level": 2,
+      "q": "Who has the authority to stop a wireline job?",
+      "choices": [
+        "Anyone on location who sees an unsafe condition",
+        "Only the company representative",
+        "Only the winch operator",
+        "Only the HSE officer, after the job review and the incident report"
+      ],
+      "answer": 0,
+      "explain": "Stop work authority belongs to everyone on site; no job is more important than safety.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-operateur-060",
+      "theme": "Sécurité, permis et H2S",
+      "level": 1,
+      "q": "Quel est l'objectif de la réunion de sécurité avant travail (toolbox talk) ?",
+      "choices": [
+        "Faire signer les fiches de paie de l'équipe",
+        "Choisir le câble à utiliser pour le prochain puits du champ et commander les outils",
+        "Partager le programme, les dangers, les rôles et les signaux avant de commencer",
+        "Fixer le prix de l'intervention"
+      ],
+      "answer": 2,
+      "explain": "Tous doivent connaître le plan, les risques, les rôles et les consignes d'arrêt avant le début.",
+      "seconds": 40,
+      "status": "draft"
+    }
+  ]
+}

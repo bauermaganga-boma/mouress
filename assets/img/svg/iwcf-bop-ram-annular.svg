@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Coupes de trois obturateurs en positions ouverte et fermée : obturateur annulaire avec garniture élastomère qui se referme sur la tige, mâchoires à tiges (pipe ram) qui ferment sur un diamètre de tige, mâchoires aveugles et cisaillantes (blind/shear) qui coupent la garniture et ferment le puits</title>
+<defs>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+<g id="alv"><rect width="230" height="120" class="gr"/><rect x="85" width="60" height="120" fill="#FCFBF8"/><path d="M85,0V120M145,0V120" class="ld"/></g>
+<g id="rmv"><rect width="230" height="120" class="gr"/><rect x="85" width="60" height="120" fill="#FCFBF8"/><rect x="10" y="40" width="210" height="40" fill="#FCFBF8"/><path d="M85,0V40M85,80V120M145,0V40M145,80V120M10,40H85M145,40H220M10,80H85M145,80H220M10,40V80M220,40V80" class="ld"/></g>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Obturateurs : annulaire et mâchoires (rams)</text>
+
+<!-- en-têtes -->
+<text x="135" y="52" class="c b">Obturateur annulaire</text><text x="135" y="70" class="c">(annular)</text>
+<text x="400" y="52" class="c b">Mâchoires à tiges</text><text x="400" y="70" class="c">(pipe ram)</text>
+<text x="665" y="52" class="c b">Mâchoires aveugles</text><text x="665" y="70" class="c">cisaillantes (blind/shear)</text>
+
+<!-- ANNULAIRE ouvert -->
+<g transform="translate(20,90)">
+<use href="#alv"/>
+<path d="M85,22L63,30V62L85,70Z" class="of"/><path d="M145,22L167,30V62L145,70Z" class="of"/>
+<rect x="30" y="72" width="50" height="36" class="bl"/><rect x="150" y="72" width="50" height="36" class="bl"/>
+<rect x="105" y="-10" width="20" height="135" class="gr"/>
+</g>
+<text x="135" y="236" class="c o">OUVERT</text>
+<!-- ANNULAIRE fermé -->
+<g transform="translate(20,245)">
+<use href="#alv"/>
+<path d="M63,26L85,20L105,35V60L85,72L63,68Z" class="of"/><path d="M167,26L145,20L125,35V60L145,72L167,68Z" class="of"/>
+<rect x="30" y="52" width="50" height="36" class="bl"/><rect x="150" y="52" width="50" height="36" class="bl"/>
+<rect x="105" y="-10" width="20" height="135" class="gr"/>
+<path d="M55,112V94M175,112V94" class="or" style="stroke-width:3" marker-end="url(#ao)"/>
+</g>
+<text x="135" y="391" class="c o">FERMÉ</text>
+
+<!-- PIPE RAM ouvert -->
+<g transform="translate(285,90)">
+<use href="#rmv"/>
+<rect x="14" y="44" width="44" height="32" class="bl"/><rect x="52" y="44" width="6" height="32" class="of"/>
+<rect x="172" y="44" width="44" height="32" class="bl"/><rect x="172" y="44" width="6" height="32" class="of"/>
+<rect x="105" y="-10" width="20" height="135" class="gr"/>
+<path d="M75,100H35M155,100H195" class="or" style="stroke-width:3" marker-end="url(#ao)"/>
+</g>
+<text x="400" y="236" class="c o">OUVERT</text>
+<!-- PIPE RAM fermé -->
+<g transform="translate(285,245)">
+<use href="#rmv"/>
+<path d="M10,60H61M169,60H220" stroke="#061F44" stroke-width="3"/>
+<rect x="61" y="44" width="44" height="32" class="bl"/><rect x="99" y="44" width="6" height="32" class="of"/>
+<rect x="125" y="44" width="44" height="32" class="bl"/><rect x="125" y="44" width="6" height="32" class="of"/>
+<rect x="105" y="-10" width="20" height="135" class="gr"/>
+<path d="M35,100H75M195,100H155" class="or" style="stroke-width:3" marker-end="url(#ao)"/>
+</g>
+<text x="400" y="391" class="c o">FERMÉ</text>
+
+<!-- BLIND/SHEAR ouvert -->
+<g transform="translate(550,90)">
+<use href="#rmv"/>
+<polygon points="14,44 54,44 62,60 54,76 14,76" class="bl"/><path d="M54,44L62,60L54,76" class="or" style="stroke-width:3"/>
+<polygon points="216,44 176,44 168,60 176,76 216,76" class="bl"/><path d="M176,44L168,60L176,76" class="or" style="stroke-width:3"/>
+<rect x="105" y="-10" width="20" height="135" class="gr"/>
+<path d="M75,100H35M155,100H195" class="or" style="stroke-width:3" marker-end="url(#ao)"/>
+</g>
+<text x="665" y="236" class="c o">OUVERT</text>
+<!-- BLIND/SHEAR fermé -->
+<g transform="translate(550,245)">
+<use href="#rmv"/>
+<path d="M10,60H67M163,60H220" stroke="#061F44" stroke-width="3"/>
+<polygon points="67,44 107,44 115,60 107,76 67,76" class="bl"/><path d="M107,44L115,60L107,76" class="or" style="stroke-width:3"/>
+<polygon points="163,44 123,44 115,60 123,76 163,76" class="bl"/><path d="M123,44L115,60L123,76" class="or" style="stroke-width:3"/>
+<rect x="105" y="80" width="20" height="45" class="gr"/>
+<path d="M35,100H75M195,100H155" class="or" style="stroke-width:3" marker-end="url(#ao)"/>
+</g>
+<text x="665" y="391" class="c o">FERMÉ</text>
+
+<!-- légendes -->
+<g class="c">
+<text x="135" y="412">Ferme sur tout diamètre :</text><text x="135" y="430">tiges, joints, masse-tiges.</text><text x="135" y="448">Permet le stripping.</text>
+<text x="400" y="412">Ferme sur un seul diamètre</text><text x="400" y="430">de tige, pas sur un joint.</text><text x="400" y="448">Ne ferme pas sur puits vide.</text>
+<text x="665" y="412">Cisaillent la garniture</text><text x="665" y="430">puis ferment le puits.</text><text x="665" y="448">Aveugles : puits vide seulement.</text>
+</g>
+<rect x="20" y="468" width="14" height="14" class="of"/><text x="40" y="480">Élastomère / joint d'étanchéité</text>
+<rect x="300" y="468" width="14" height="14" class="bl"/><text x="320" y="480">Piston / bloc de mâchoire</text>
+<path d="M530,475H560" class="or" style="stroke-width:3" marker-end="url(#ao)"/><text x="570" y="480">Sens de mouvement</text>
+</svg>

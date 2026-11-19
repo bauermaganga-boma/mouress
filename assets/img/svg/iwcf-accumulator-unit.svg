@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Unité de fermeture (accumulateur) : bouteilles d'azote et d'huile (précharge 1 000 psi, pression de service 3 000 psi), pompe électrique et pompe pneumatique aspirant dans le réservoir de fluide, régulateur du manifold à 1 500 psi, régulateur de l'annulaire, vanne by-pass, vannes 4 voies, panneau de commande au plancher et lignes vers les obturateurs</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+<g id="gg"><circle r="20" class="wh"/><path d="M-12,8A14,14 0 1 1 12,8" class="ld"/><path d="M0,0L8,-9" stroke="#F28C28" stroke-width="3" fill="none"/><circle r="3" fill="#061F44"/></g>
+<g id="vm"><path d="M-17,-13V13L0,0ZM17,-13V13L0,0Z" class="wh"/><path d="M0,0V-20M-8,-20H8" class="ld"/></g>
+<g id="bt"><rect x="0" y="55" width="50" height="150" rx="22" fill="#DCE6F5"/><path d="M0,77A25,22 0 0 1 50,77V125H0Z" fill="#E8EAEE"/><path d="M0,125H50" class="ld" style="stroke-dasharray:5 4"/><rect x="0" y="55" width="50" height="150" rx="22" class="s"/><text x="25" y="100" class="c b">N2</text><text x="25" y="170" class="c">Huile</text></g>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Unité de fermeture (accumulateur)</text>
+
+<!-- bouteilles -->
+<use href="#bt" x="30"/><use href="#bt" x="90"/><use href="#bt" x="150"/>
+<text x="30" y="240" class="b">Bouteilles d'accumulateur</text>
+<text x="30" y="258">Précharge N2 : 1 000 psi</text>
+<text x="30" y="276">Pression de service : 3 000 psi</text>
+
+<!-- tuyauteries -->
+<g fill="none">
+<path d="M55,205V215M115,205V215M175,205V215M55,215H470M470,215V300H620V215M290,313V215M380,313V215M290,357V395M380,357V395M440,215H770M620,215V135H710M730,235V430H442" stroke="#061F44" stroke-width="10"/>
+<path d="M55,205V215M115,205V215M175,205V215M55,215H470M470,215V300H620V215M290,313V215M380,313V215M290,357V395M380,357V395M440,215H770M620,215V135H710M730,235V430H442" stroke="#E8EAEE" stroke-width="5"/>
+</g>
+
+<!-- flèches -->
+<g class="or" style="stroke-width:3">
+<path d="M195,215H245" marker-end="url(#ao)"/>
+<path d="M400,215H458" marker-end="url(#ao)"/>
+<path d="M290,300V240" marker-end="url(#ao)"/><path d="M380,300V240" marker-end="url(#ao)"/>
+<path d="M290,392V365" marker-end="url(#ao)"/><path d="M380,392V365" marker-end="url(#ao)"/>
+<path d="M575,215H600" marker-end="url(#ao)"/>
+<path d="M650,215H686" marker-end="url(#ao)"/>
+<path d="M772,215H787" marker-end="url(#ao)"/>
+<path d="M692,135H712" marker-end="url(#ao)"/>
+<path d="M600,430H570" marker-end="url(#ao)"/>
+</g>
+
+<!-- manomètre -->
+<path d="M260,185V215" class="s"/>
+<use href="#gg" x="260" y="165"/>
+<text x="285" y="170">Manomètre : 3 000 psi</text>
+
+<!-- panneau de commande -->
+<rect x="240" y="55" width="200" height="70" class="bl"/>
+<text x="340" y="78" class="c b">Panneau de commande</text>
+<text x="340" y="96" class="c">au plancher (sondeur)</text>
+<circle cx="310" cy="113" r="5" class="of"/><circle cx="340" cy="113" r="5" class="of"/><circle cx="370" cy="113" r="5" class="of"/>
+<path d="M440,75H750V195" class="or" style="stroke-dasharray:6 5;stroke-width:3" marker-end="url(#ao)"/>
+<text x="450" y="66">Commande à distance (pneumatique)</text>
+
+<!-- pompes -->
+<circle cx="290" cy="335" r="22" class="wh"/><text x="290" y="341" class="c b">M</text>
+<circle cx="380" cy="335" r="22" class="wh"/><text x="380" y="341" class="c b">Air</text>
+<text x="262" y="330" class="e">Pompe</text><text x="262" y="346" class="e">électrique</text>
+<text x="408" y="322">Pompe</text><text x="408" y="338">pneumatique</text><text x="408" y="354">(air du rig)</text>
+
+<!-- réservoir -->
+<rect x="240" y="395" width="200" height="70" class="bl"/>
+<text x="340" y="425" class="c">Réservoir de fluide</text>
+<text x="340" y="443" class="c">hydraulique (huile)</text>
+<text x="590" y="414" class="c">Retour de fluide</text>
+
+<!-- régulateur manifold -->
+<text x="535" y="165" class="c">Régulateur manifold</text>
+<text x="535" y="181" class="c b">1 500 psi</text>
+<rect x="510" y="197" width="50" height="36" class="gr"/>
+<path d="M515,215L523,205L531,225L539,205L547,225L555,215" class="s"/>
+
+<!-- by-pass -->
+<use href="#vm" x="535" y="300"/>
+<text x="570" y="335" class="c b">Vanne by-pass</text>
+<text x="570" y="353" class="c">(3 000 psi direct)</text>
+
+<!-- régulateur annulaire -->
+<text x="665" y="90" class="c b">Régulateur annulaire</text>
+<text x="665" y="106" class="c">(réglable)</text>
+<rect x="640" y="117" width="50" height="36" class="gr"/>
+<path d="M645,135L653,125L661,145L669,125L677,145L685,135" class="s"/>
+<text x="640" y="170">Vers annulaire</text>
+
+<!-- vanne 4 voies -->
+<rect x="690" y="195" width="80" height="40" class="bl"/>
+<text x="730" y="212" class="c">Vanne</text><text x="730" y="228" class="c">4 voies</text>
+<text x="625" y="252">Vers les rams</text>
+</svg>

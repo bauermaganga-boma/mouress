@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Profil des pressions en méthode du sondeur (Driller's) : première circulation avec boue d'origine, pression sur tiges constante égale à ICP et pression annulaire SICP qui monte puis chute à SIDPP quand le gaz est évacué par la duse ; seconde circulation avec boue lourde KMW, pression sur tiges qui décroît de ICP à FCP puis reste constante, SICP maintenue à SIDPP puis ramenée à zéro ; pression en psi en fonction des coups de pompe</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.gd{stroke:#C9CED8;stroke-width:1;fill:none}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Profil des pressions : méthode du sondeur (Driller's)</text>
+
+<!-- grille et axes -->
+<path class="gd" d="M70,293.3H780M70,186.7H780M70,80H780M600,80V400" />
+<path d="M430,76V400" stroke="#061F44" stroke-width="1.5" stroke-dasharray="6 5" fill="none"/>
+<line x1="70" y1="400" x2="792" y2="400" class="s" marker-end="url(#ar)"/>
+<line x1="70" y1="400" x2="70" y2="70" class="s" marker-end="url(#ar)"/>
+<g class="e"><text x="62" y="405">0</text><text x="62" y="298">500</text><text x="62" y="192">1 000</text><text x="62" y="85">1 500</text></g>
+<text x="22" y="240" class="c b" transform="rotate(-90 22 240)">Pression (psi)</text>
+<text x="242" y="62" class="c b">1re circulation (boue MW)</text>
+<text x="612" y="62" class="c b">2e circulation (boue lourde KMW)</text>
+<text x="70" y="420" class="c">0</text><text x="415" y="420" class="e">Coups annulaire</text>
+<text x="445" y="420" class="c">0</text><text x="600" y="420" class="c">Coups tiges → trépan</text><text x="785" y="420" class="e">Coups totaux</text>
+<text x="430" y="444" class="c b">Coups de pompe (strokes)</text>
+
+<!-- 1re circulation -->
+<path d="M70,122.7H415" fill="none" stroke="#061F44" stroke-width="3.5"/>
+<path d="M70,250.7C140,249 220,238 290,200S335,165 345,165L372,293.3H415" fill="none" stroke="#F28C28" stroke-width="3.5"/>
+<circle cx="345" cy="165" r="5" fill="#F28C28" stroke="#061F44" stroke-width="2"/>
+<text x="80" y="112" class="b">ICP = SIDPP + SCR = 1 300 psi</text>
+<text x="80" y="272" class="o">SICP (annulaire)</text>
+<text x="335" y="152" class="e">SICP max : gaz à la duse</text>
+<text x="415" y="312" class="e">= SIDPP (500 psi)</text>
+
+<!-- 2e circulation -->
+<path d="M445,122.7L600,212.3H780" fill="none" stroke="#061F44" stroke-width="3.5"/>
+<path d="M445,293.3H600L780,400" fill="none" stroke="#F28C28" stroke-width="3.5"/>
+<text x="455" y="108" class="b">Tiges : ICP → FCP</text>
+<text x="640" y="203" class="b">FCP = 880 psi</text>
+<text x="455" y="284" class="o">SICP = SIDPP constante</text>
+<text x="690" y="322" class="o">SICP → 0 psi</text>
+
+<!-- légende -->
+<path d="M70,466H110" fill="none" stroke="#061F44" stroke-width="3.5"/><text x="118" y="471">Pression sur tiges</text>
+<path d="M300,466H340" fill="none" stroke="#F28C28" stroke-width="3.5"/><text x="348" y="471">Pression annulaire (SICP)</text>
+<text x="70" y="492">Valeurs illustratives : SIDPP 500, SICP 700, SCR 800 psi ; MW 10 ppg, KMW ≈ 11 ppg.</text>
+</svg>

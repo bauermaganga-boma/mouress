@@ -1,0 +1,1076 @@
+{
+  "profile": "wireline-superviseur",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Programme d'intervention et analyse de risques",
+      "theme": "Programme d'intervention et analyse de risques",
+      "minutes": 10,
+      "body": "Le superviseur transforme une demande d'exploitation en **programme d'intervention** (job program) écrit, approuvé avant mobilisation. Il contient : objectif, données du puits (schéma de complétion, profils de nipples, ID minimal, déviation, pression et température, fluides, présence de H2S), historique des interventions wireline, séquence détaillée des opérations, train d'outils prévu, **pression maximale attendue en surface** (MASP), limites de tension (maximum overpull), **critères d'arrêt** (stop criteria), plan d'urgence et contacts.\n\nL'**analyse de risques** (JSA / risk assessment) identifie dangers et mesures selon la hiérarchie de maîtrise : éliminer, substituer, protéger (ingénierie), organiser (procédures), puis EPI en dernier. Elle est revue à chaque changement de conditions. Un changement de programme sur site passe par la **gestion du changement** (management of change, MoC) : on suspend, on évalue, on fait approuver, puis on informe l'équipe.\n\nLa **réunion de sécurité avant travail** (pre-job meeting) rassemble toute l'équipe, sous-traitants inclus : rôles, signaux, barrières, points d'arrêt, point de rassemblement (muster point).\n\n**Exemples résolus.**\n- MASP : réservoir à 5 200 psi à 10 000 ft, colonne de gaz de 0,10 psi/ft : pression en tête ≈ 5 200 − 0,10 × 10 000 = 4 200 psi.\n- Durée prévue : 12 000 ft à 150 ft/min = 80 min en descente, autant en remontée, plus 90 min de travail au fond : 80 + 80 + 90 = 250 min, soit 4,17 h. Prévoyez une marge pour les ralentissements.\n\nVérifiez la cohérence entre outils et complétion : le diamètre extérieur (OD) de chaque outil doit passer la plus petite restriction. Pour un job gas lift, précisez l'état de l'annulaire gaz avant de retirer une vanne.\n\n**Vocabulaire FR / EN**\n- Programme d'intervention : job program\n- Pression maximale en surface : MASP\n- Critère d'arrêt : stop criterion\n- Gestion du changement : management of change (MoC)\n- Réunion avant travail : pre-job meeting\n- Surtraction maximale : maximum overpull\n- Schéma de complétion : completion schematic\n- Restriction minimale : minimum ID",
+      "keyPoints": [
+        "Le programme fixe objectif, séquence, MASP, limites de tension et critères d'arrêt.",
+        "La hiérarchie de maîtrise privilégie éliminer et protéger avant EPI.",
+        "Tout changement de programme passe par une gestion du changement approuvée.",
+        "MASP ≈ pression de fond − gradient du gaz × profondeur."
+      ],
+      "img": "photo/wellhead-onshore.jpg",
+      "imgAlt": "Photographie d'une tête de puits terrestre : arbre de Noël avec vannes, brides et manomètres"
+    },
+    {
+      "id": "m2",
+      "title": "Barrières de puits, pressions et essais",
+      "theme": "Barrières de puits, pressions et tests",
+      "minutes": 10,
+      "body": "Une **barrière de puits** (well barrier) est un ensemble d'éléments qui empêche l'écoulement incontrôlé de fluides de formation. Les bonnes pratiques de l'industrie (API, IWCF) demandent au minimum **deux barrières indépendantes** : une barrière primaire (primary barrier) et une barrière secondaire (secondary barrier). En wireline sous pression, le **stuffing box** (ou la grease head en braided line et e-line) joue la barrière dynamique primaire autour du câble ; le **wireline BOP** est la barrière secondaire qui ferme sur le câble ; la vanne maîtresse (master valve) et la swab valve complètent la défense. Une barrière non testée n'est pas une barrière.\n\n**Essais** (pressure tests) : on teste par paliers, d'abord à **basse pression** pour déceler les petites fuites, puis à **haute pression** à une valeur définie par la procédure (souvent un multiple de la MASP). Le critère d'acceptation (acceptance criterion) fixe la durée de stabilité et la chute admise ; toute chute au-delà arrête le job.\n\n**Exemples résolus.**\n- Pression différentielle sur un bouchon : 3 500 psi dessous, 800 psi dessus : ΔP = 2 700 psi.\n- Force sur un outil de 2,5 in à 1 500 psi : surface 4,909 in², force = 7 363 lbf. Le stem doit vaincre cette force, sinon l'outil monte.\n- MASP 4 200 psi × 1,1 = 4 620 psi de test ; chute de 4 620 à 4 500 psi en 15 min : 8 psi/min, soit 2,6 % ; le critère se compare à la procédure.\n- Conversion : 345 bar × 14,504 = 5 004 psi.\n\nLe superviseur vérifie les certificats d'étalonnage des manomètres, enregistre un graphique ou un relevé de test, interdit toute intervention sous pression sur un raccord, et exige la purge (bleed off) à zéro pression avant démontage.\n\n**Vocabulaire FR / EN**\n- Barrière de puits : well barrier\n- Barrière primaire / secondaire : primary / secondary barrier\n- Essai en pression : pressure test\n- Pression différentielle : differential pressure\n- Critère d'acceptation : acceptance criterion\n- Purge : bleed off\n- Certificat d'étalonnage : calibration certificate\n- Enregistreur de pression : pressure recorder",
+      "keyPoints": [
+        "Deux barrières indépendantes et testées sont une pratique minimale ; presse-étoupe puis BOP câble.",
+        "Essai en deux temps : basse pression puis haute pression, avec critère d'acceptation écrit.",
+        "Force = pression × surface ; ΔP = pression dessous − pression dessus.",
+        "Manomètres étalonnés et résultats d'essai consignés avant toute ouverture du puits."
+      ],
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond"
+    },
+    {
+      "id": "m3",
+      "title": "Pressions, gradients et contrôle de puits en wireline",
+      "theme": "Contrôle de puits en wireline",
+      "minutes": 10,
+      "body": "En wireline, le puits n'est pas contrôlé par une colonne de boue qui remplit le trou ouvert mais par la **maîtrise de la pression en surface** : l'équipement et les barrières comptent plus que la densité. Le superviseur raisonne pourtant en gradients. La pression hydrostatique vaut P (psi) = 0,052 × ρ (ppg) × TVD (ft), et le **gradient** vaut 0,052 × ρ (psi/ft).\n\n**Exemples résolus.**\n- Gradient d'une saumure de 8,5 ppg : 0,052 × 8,5 = 0,442 psi/ft.\n- Pression hydrostatique d'une saumure de 10,2 ppg à 9 000 ft TVD : 0,052 × 10,2 × 9 000 = 4 774 psi. Face à un réservoir de 4 500 psi, la surpression (overbalance) est de 274 psi.\n- Pression de tête (SITP) : fond à 4 200 psi à 8 500 ft. Avec un gradient d'huile de 0,35 psi/ft : 4 200 − 0,35 × 8 500 = 1 225 psi. Avec du gaz à 0,10 psi/ft : 3 350 psi. Plus le fluide est léger, plus la pression de tête est haute.\n- Volume d'un lubricator de 4 in de diamètre intérieur et 25 ft : π/4 × 16 × 300 = 3 770 in³, soit 16,3 gal US.\n\n**Principes de contrôle.** Égalisez (equalize) la pression avant d'ouvrir la vanne maîtresse pour éviter un différentiel qui éjecterait l'outil ou le câble. La **purge** du lubricator se fait lentement vers un point sûr ; la détente d'un gaz refroidit et peut former des **hydrates** qui bouchent les lignes. En e-line, la grease head remplace le presse-étoupe. Pour un travail sur gas lift, l'ouverture d'une poche latérale met le tubing en communication avec l'annulaire : la pression d'annulaire doit être connue.\n\nSur le BOP de forage de la figure, seules les **mâchoires aveugles cisaillantes** (blind shear rams, BSR) coupent le train et ferment le puits en dernier recours ; elles ne sont pas typiques d'un job wireline mais illustrent la notion de barrière ultime.\n\n**Vocabulaire FR / EN**\n- Pression en tête : shut-in tubing pressure (SITP)\n- Surpression : overbalance\n- Gradient : gradient\n- Égaliser : to equalize\n- Hydrate : hydrate\n- Mâchoires cisaillantes : shear rams\n- Poche latérale : side pocket\n- Vanne maîtresse : master valve",
+      "keyPoints": [
+        "P (psi) = 0,052 × ρ (ppg) × TVD (ft) ; gradient = 0,052 × ρ.",
+        "Pression de tête = pression de fond − gradient × profondeur ; le gaz donne la plus haute.",
+        "Égaliser avant d'ouvrir ; purger lentement ; craindre les hydrates lors de la détente du gaz.",
+        "En gas lift, connaître la pression d'annulaire avant de retirer une vanne."
+      ],
+      "img": "svg/bop-stack.svg",
+      "imgAlt": "Bloc d'obturation de puits : obturateur annulaire, mâchoires aveugles cisaillantes (BSR), mâchoires à tiges supérieures et inférieures, lignes de duse et de pompage, tête de tubage"
+    },
+    {
+      "id": "m4",
+      "title": "Gestion des incidents wireline",
+      "theme": "Gestion des incidents",
+      "minutes": 10,
+      "body": "Les incidents types sont : **câble cassé** (parted wire), **outil éjecté** (tool blown out), **fuite au presse-étoupe** (stuffing box leak), **câble coincé** (stuck wire) et **gaz en surface**. Le superviseur applique d'abord un principe : mettre en sécurité les personnes, puis le puits, puis le matériel.\n\n- **Câble cassé en fond** : arrêter le treuil, noter la tension et la profondeur au moment de la casse, évaluer la longueur de fish (wire in hole) et lancer un repêchage (wire grab, wire finder) selon le programme.\n- **Outil éjecté** : cause fréquente, remontée trop rapide au sommet du lubricator. On prévient par ralentissement avant le tool catcher, comptage de profondeur et surveillance de tension.\n- **Fuite au stuffing box** : serrer le packing, puis, si la fuite persiste, fermer le wireline BOP sur le câble, purger au-dessus et remplacer la garniture.\n- **Câble coincé** : cesser de tirer au-delà de la limite de travail, informer, appliquer la séquence jarring puis coupe prévue au programme.\n- **Gaz en surface** : détection continue, source d'ignition éliminée, évacuation si seuil franchi, notification salle de contrôle.\n\n**Exemple résolu.** Charge de rupture 1 400 lbf, limite de travail 50 % = 700 lbf. Outil et câble déjà à 450 lbf : marge de sur-traction = 700 − 450 = 250 lbf.\n\nAprès tout incident : sécuriser, déclarer, enquêter, mettre à jour l'analyse de risques et obtenir l'approbation avant de reprendre. Les quasi-accidents (near misses) sont déclarés et analysés comme les accidents. Une perte de communication avec l'opérateur de treuil entraîne l'arrêt immédiat et le frein serré jusqu'au rétablissement.\n\n**Vocabulaire FR / EN**\n- Câble cassé : parted wire\n- Outil éjecté : tool blown out\n- Fuite au presse-étoupe : stuffing box leak\n- Câble coincé : stuck wire\n- Repêchage : fishing\n- Quasi-accident : near miss\n- Poisson, objet à repêcher : fish\n- Limite de travail : working limit",
+      "keyPoints": [
+        "Ordre de priorité : personnes, puis puits, puis matériel.",
+        "Câble coincé : respecter la limite de travail et la séquence jarring puis coupe.",
+        "Fuite au presse-étoupe persistante : fermer le BOP câble sur le câble puis purger.",
+        "Après incident : enquête, mise à jour du risque et approbation avant reprise."
+      ],
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond"
+    },
+    {
+      "id": "m5",
+      "title": "Coordination, documents et leadership",
+      "theme": "Coordination, documents et leadership",
+      "minutes": 9,
+      "body": "Le superviseur est le point de contact entre l'équipe wireline, l'**exploitation** (production), le **forage** ou le workover, la salle de contrôle et le client. Avant le job il confirme avec l'exploitation l'état de production, les isolations (isolation, lock-out), la fenêtre d'intervention et les contraintes. Avec le forage et les autres équipes, il établit un plan d'**activités simultanées** (SIMOPS) : priorités, zones, communication. En offshore, le début et la fin de toute ouverture du puits sont annoncés à la salle de contrôle par radio selon un protocole convenu.\n\n**Documents** : programme d'intervention, PTW, JSA, certificats d'équipements et d'étalonnage, relevés d'essais, fiche de vie du câble (wire log) avec historique d'utilisation et de coupes, croquis du train d'outils (tool string sketch), rapport journalier (daily report) et rapport final (end of job report) avec heures, profondeurs, pressions, incidents et leçons. À la relève (shift handover), on transmet l'état du puits, les pressions, les barrières, les points ouverts.\n\n**Communication.** Utilisez la **boucle fermée** (closed-loop communication) : l'émetteur donne l'ordre, le récepteur le répète, l'émetteur confirme. Les signaux manuels et radio sont définis à la réunion de sécurité.\n\n**Leadership.** Le superviseur donne l'exemple : respect des règles, écoute des doutes, autorité d'arrêt (stop work authority) affirmée. Un opérateur qui doute d'un point du programme est écouté et le travail est suspendu au besoin ; la sécurité prime sur la production. Il vérifie les compétences (certificats valides, formation H2S, qualification IWCF ou équivalent selon la politique du site), surveille la fatigue et organise les pauses.\n\n**Exemple résolu.** Pour un poste de 12 h avec 4,17 h d'intervention planifiées (250 min), le reste du temps couvre mobilisation, tests, rig-down et marge : on vérifie donc que la durée totale reste compatible avec la limite de poste.\n\n**Vocabulaire FR / EN**\n- Activités simultanées : simultaneous operations (SIMOPS)\n- Relève : shift handover\n- Fiche de vie du câble : wire log\n- Rapport journalier : daily report\n- Rapport de fin de job : end of job report\n- Boucle fermée : closed-loop communication\n- Autorité d'arrêt : stop work authority\n- Retour d'expérience : lessons learned / after action review",
+      "keyPoints": [
+        "Coordonner exploitation, forage et salle de contrôle ; planifier les SIMOPS.",
+        "Documents clés : programme, PTW, JSA, relevés d'essais, wire log, rapports.",
+        "Communication en boucle fermée : ordre, répétition, confirmation.",
+        "Leadership : écouter les doutes, afficher l'autorité d'arrêt, la sécurité prime."
+      ],
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Photographie d'une plateforme pétrolière offshore avec ses modules, sa grue et sa torche"
+    }
+  ],
+  "questions": [
+    {
+      "id": "wireline-superviseur-001",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 1,
+      "q": "Quel ensemble d'éléments un programme d'intervention wireline doit-il contenir ?",
+      "choices": [
+        "Seulement la liste des outils, le nom du client, la date de mobilisation et le lieu du job",
+        "Le prix du job, le calendrier de paie, le budget de transport et les repas de l'équipe",
+        "Objectif, données du puits, séquence, outils, MASP, critères d'arrêt, contacts",
+        "L'historique de production du champ et ses contrats d'exploitation, sans les données du puits"
+      ],
+      "answer": 2,
+      "explain": "Un programme complet fixe objectif, état du puits, séquence, limites et critères d'arrêt avant toute mobilisation.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-002",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 2,
+      "q": "What should the stop criteria in a job program define?",
+      "choices": [
+        "The names of the winch operators and the shift rotation planned for the whole wireline job",
+        "The invoice amount and the date of payment",
+        "Maximum overpull, maximum pressure and the conditions that require the job to be suspended",
+        "The colour code of the lubricator sections"
+      ],
+      "answer": 2,
+      "explain": "Stop criteria give objective limits, such as tension, pressure and abnormal conditions, so that the crew stops without debate.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-003",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 2,
+      "q": "Quand l'analyse de risques du job doit-elle être revue ?",
+      "choices": [
+        "Une seule fois, lors de la première intervention sur le champ, puis elle reste valable",
+        "À chaque changement de conditions : pression, météo, équipe, programme",
+        "Uniquement après un accident avec blessé",
+        "Seulement à la fin du job, pour le rapport"
+      ],
+      "answer": 1,
+      "explain": "Une analyse de risques est un document vivant : tout changement notable impose de la réviser avant de continuer.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-004",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 3,
+      "q": "Un job prévoit 12 000 ft de câble à 150 ft/min à l'aller comme au retour, plus 90 min de travail au fond. Quelle durée totale (en min) ?",
+      "choices": [
+        "250 min",
+        "170 min",
+        "160 min",
+        "500 min"
+      ],
+      "answer": 0,
+      "explain": "Descente 80 min + remontée 80 min + travail 90 min = 250 min.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-005",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 1,
+      "q": "Quelle donnée puits est essentielle pour choisir le diamètre des outils ?",
+      "choices": [
+        "La couleur de peinture du tubing indiquée par le fournisseur sur le schéma",
+        "Le nombre de jours écoulés depuis la dernière intervention sur le puits",
+        "Le nom du fabricant de la tête de puits",
+        "Le diamètre intérieur minimal du tubing (restriction la plus étroite)"
+      ],
+      "answer": 3,
+      "explain": "Les outils doivent passer la plus petite restriction ; le schéma de complétion la donne, avec les profils de nipples.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-006",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 2,
+      "q": "Dans la hiérarchie de maîtrise des risques, quelle mesure est la plus efficace ?",
+      "choices": [
+        "Faire porter un EPI renforcé",
+        "Éliminer le danger à la source",
+        "Afficher une consigne sur la zone",
+        "Former l'équipe à la prudence"
+      ],
+      "answer": 1,
+      "explain": "Éliminer ou substituer le danger est plus efficace que les mesures organisationnelles ou les EPI, dernière ligne de défense.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-007",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 2,
+      "q": "At the pre-job meeting, looking at the rig-up diagram, which item must be explained to the crew as a tested barrier before the well is opened?",
+      "choices": [
+        "The complete pressure control stack: BOP, lubricator and stuffing box",
+        "Only the winch drum and the wire spool, as the stack is the rig crew's concern",
+        "Only the power supply of the unit and the fuel level of the generator",
+        "The paint colour of the sheave and the layout of the control cabin"
+      ],
+      "answer": 0,
+      "explain": "The pressure control stack is what contains well pressure, so every connection must be understood and tested before opening.",
+      "seconds": 55,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-008",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 3,
+      "q": "Réservoir à 5 200 psi à 10 000 ft, colonne de gaz de gradient 0,10 psi/ft. Quelle est la pression en tête attendue (MASP, en psi) ?",
+      "choices": [
+        "4 200 psi",
+        "5 200 psi",
+        "6 200 psi",
+        "1 000 psi"
+      ],
+      "answer": 0,
+      "explain": "MASP ≈ 5 200 − 0,10 × 10 000 = 4 200 psi.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-009",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 2,
+      "q": "Who must attend the pre-job meeting before a wireline operation?",
+      "choices": [
+        "Everyone involved, including contractors and the company representative",
+        "Only the supervisor and the winch operator, who then brief the others later",
+        "Only the crew members who have already worked on this well before",
+        "Only the winch operator and the company representative"
+      ],
+      "answer": 0,
+      "explain": "Everyone at the job must hear the plan, roles and signals, so sub-contractors are included.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-010",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 3,
+      "q": "Sur site, l'équipe propose d'utiliser un outil différent de celui du programme, avec une pression de travail plus élevée. Que fait le superviseur ?",
+      "choices": [
+        "Suspendre, évaluer le risque, faire approuver le changement, informer l'équipe",
+        "Autoriser tout de suite l'outil pour gagner du temps sur le planning du job",
+        "Refuser sans l'examiner",
+        "Reporter la décision au retour de congé du chef de champ, puis informer l'équipe"
+      ],
+      "answer": 0,
+      "explain": "Tout écart au programme suit la gestion du changement : arrêt, évaluation, approbation formelle, puis briefing.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-011",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 2,
+      "q": "Sur la photo de la tête de puits, quelles informations doit-on relever avant de finaliser le programme ?",
+      "choices": [
+        "La couleur des brides et des vannes",
+        "Le nombre de boulons de la bride, sans leur dimension ni leur classe de pression",
+        "La marque de l'appareil photo",
+        "Les pressions de tête et d'annulaire et l'état des vannes"
+      ],
+      "answer": 3,
+      "explain": "La pression de tête et d'annulaire et la fonction des vannes fixent la MASP, l'équipement et les tests à prévoir.",
+      "seconds": 50,
+      "img": "photo/wellhead-onshore.jpg",
+      "imgAlt": "Photographie d'une tête de puits terrestre : arbre de Noël avec vannes, brides et manomètres",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-012",
+      "theme": "Programme d'intervention et analyse de risques",
+      "level": 2,
+      "q": "Avant de retirer une vanne de gas lift, quelle précaution figure au programme (voir schéma) ?",
+      "choices": [
+        "Pas de précaution : le clapet anti-retour reste en place dans la poche vide et isole l'annulaire",
+        "Connaître et gérer la pression de l'annulaire gaz, car la poche ouverte le relie au tubing",
+        "Ouvrir l'annulaire à l'atmosphère pour faciliter la remontée de la vanne",
+        "Remplacer le dôme azote de la vanne par du gaz d'injection avant de la retirer"
+      ],
+      "answer": 1,
+      "explain": "Une fois la vanne retirée, la poche latérale met le tubing en communication avec l'annulaire : il faut maîtriser cette pression.",
+      "seconds": 60,
+      "img": "svg/gas-lift-valve.svg",
+      "imgAlt": "Schéma de vanne de gas-lift : mandrins à poche latérale dans le tubing, vanne de décharge et vanne opérante, annulaire de gaz, packer, détail avec dôme azote, soufflet et clapet anti-retour",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-013",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 1,
+      "q": "Sur le schéma de l'ensemble wireline, quels éléments forment la barrière dynamique primaire autour du câble ?",
+      "choices": [
+        "La vanne maîtresse et la vanne de curage de la tête de puits, fermées",
+        "La poulie placée au-dessus du lubricateur, qui guide le câble vers le treuil",
+        "Le presse-étoupe ou la tête à graisse au sommet du lubricateur",
+        "Le train d'outils placé dans le lubricateur avant l'ouverture"
+      ],
+      "answer": 2,
+      "explain": "Le stuffing box (ou grease head) assure l'étanchéité autour du câble en mouvement : c'est la barrière dynamique primaire.",
+      "seconds": 50,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-014",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 2,
+      "q": "How many independent well barriers does good industry practice typically call for during wireline operations?",
+      "choices": [
+        "One barrier, provided it has been tested once at the start of the job",
+        "Three barriers in every case, whatever the pressure",
+        "None when the surface pressure is under 500 psi",
+        "Two independent barriers, a primary and a secondary"
+      ],
+      "answer": 3,
+      "explain": "API and IWCF-type practices ask for at least two independent, verified barriers; site rules can be stricter.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-015",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 2,
+      "q": "Sur le schéma, quel élément est la barrière secondaire quand le presse-étoupe fuit ?",
+      "choices": [
+        "Le lubricateur, par ses raccords vissés",
+        "La poulie, qui coupe le câble",
+        "Le treuil, par son frein",
+        "Le BOP câble, qui ferme sur le câble"
+      ],
+      "answer": 3,
+      "explain": "Les mâchoires du wireline BOP ferment sur le câble et isolent le puits pendant le remplacement du packing.",
+      "seconds": 50,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-016",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 2,
+      "q": "Un bouchon est soumis à 3 500 psi dessous et 800 psi dessus. Quelle est la pression différentielle (en psi) ?",
+      "choices": [
+        "4 300 psi",
+        "2 700 psi",
+        "3 500 psi",
+        "800 psi"
+      ],
+      "answer": 1,
+      "explain": "ΔP = 3 500 − 800 = 2 700 psi.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-017",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 2,
+      "q": "Un outil de diamètre 2,5 in reçoit 1 500 psi sous son extrémité. Quelle force verticale (en lbf) ?",
+      "choices": [
+        "3 682 lbf",
+        "3 750 lbf",
+        "7 363 lbf",
+        "29 452 lbf"
+      ],
+      "answer": 2,
+      "explain": "Surface = π/4 × 2,5² = 4,909 in² ; force = 1 500 × 4,909 = 7 363 lbf.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-018",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 3,
+      "q": "La procédure impose un test à 1,1 × MASP, avec MASP = 4 200 psi. Quelle pression de test (en psi) ?",
+      "choices": [
+        "4 620 psi",
+        "4 200 psi",
+        "6 300 psi",
+        "3 780 psi"
+      ],
+      "answer": 0,
+      "explain": "Test = 1,1 × 4 200 = 4 620 psi, valeur issue de l'énoncé et non d'un texte réglementaire.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-019",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 2,
+      "q": "Pourquoi teste-t-on d'abord à basse pression puis à haute pression ?",
+      "choices": [
+        "La haute pression doit être supérieure à la limite du matériel",
+        "La basse pression révèle les petites fuites qu'une haute pression pourrait masquer",
+        "La basse pression remplace le test haute pression quand le matériel est neuf et certifié",
+        "Les joints se mettent en place avec la pression minimale"
+      ],
+      "answer": 1,
+      "explain": "À basse pression, les joints élastomère n'ont pas encore été énergisés : une fuite faible y est visible.",
+      "seconds": 55,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-020",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 3,
+      "q": "Un test passe de 4 620 psi à 4 500 psi en 15 min. Quel est le taux de chute (en psi/min) ?",
+      "choices": [
+        "120 psi/min",
+        "8 psi/min",
+        "308,0 psi/min",
+        "2,7 psi/min"
+      ],
+      "answer": 1,
+      "explain": "(4 620 − 4 500) / 15 = 120 / 15 = 8 psi/min.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-021",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 3,
+      "q": "A pressure test falls from 4,620 psi to 4,500 psi in 15 minutes. What is the percentage drop?",
+      "choices": [
+        "About 26 %",
+        "About 2.6 %",
+        "About 0.26 %",
+        "About 12 %"
+      ],
+      "answer": 1,
+      "explain": "Drop = 120 / 4,620 = 0.026, i.e. 2.6 %; compare it with the acceptance criterion in the procedure.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-022",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 2,
+      "q": "Using the gradient chart, which fluid column gives the highest surface pressure for the same bottom hole pressure?",
+      "choices": [
+        "Fresh water, which has the highest gradient",
+        "Oil, which sits between the other two",
+        "Gas, which has the lowest gradient",
+        "All three give the same surface pressure"
+      ],
+      "answer": 2,
+      "explain": "Surface pressure = bottom pressure minus gradient × depth: the lightest fluid (gas, 0.10 psi/ft) removes the least pressure.",
+      "seconds": 60,
+      "img": "svg/pressure-gradient-chart.svg",
+      "imgAlt": "Graphique pression en fonction de la profondeur verticale : eau douce 0,433 psi/ft, huile 0,35 psi/ft, gaz 0,10 psi/ft (1 000 psi à 10 000 ft)",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-023",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 2,
+      "q": "Fond à 4 200 psi à 8 500 ft. Avec une colonne de gaz de gradient 0,10 psi/ft (voir graphique), quelle pression en tête (en psi) ?",
+      "choices": [
+        "1 225 psi",
+        "520 psi",
+        "3 350 psi",
+        "5 050 psi"
+      ],
+      "answer": 2,
+      "explain": "4 200 − 0,10 × 8 500 = 3 350 psi ; l'huile donnerait 1 225 psi.",
+      "seconds": 70,
+      "img": "svg/pressure-gradient-chart.svg",
+      "imgAlt": "Graphique pression en fonction de la profondeur verticale : eau douce 0,433 psi/ft, huile 0,35 psi/ft, gaz 0,10 psi/ft (1 000 psi à 10 000 ft)",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-024",
+      "theme": "Barrières de puits, pressions et tests",
+      "level": 2,
+      "q": "Une pression de 345 bar doit être exprimée en psi (1 bar = 14,504 psi). Quelle valeur ?",
+      "choices": [
+        "500 psi",
+        "24 psi",
+        "50 040 psi",
+        "5 004 psi"
+      ],
+      "answer": 3,
+      "explain": "345 × 14,504 = 5 003,9 psi.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-025",
+      "theme": "Contrôle de puits en wireline",
+      "level": 1,
+      "q": "Sur le schéma, de quoi dépend surtout le contrôle de puits en wireline sous pression ?",
+      "choices": [
+        "De la densité de la boue de forage dans le trou, comme en forage",
+        "De la vitesse du treuil pendant la descente dans le tubing",
+        "Du diamètre du câble choisi et de sa charge de rupture",
+        "Des équipements de pression en surface et de barrières testées"
+      ],
+      "answer": 3,
+      "explain": "En wireline, le puits est maîtrisé en surface par les barrières d'équipement : stuffing box, BOP câble, vannes.",
+      "seconds": 45,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-026",
+      "theme": "Contrôle de puits en wireline",
+      "level": 2,
+      "q": "Quel est le gradient (en psi/ft) d'une saumure de 8,5 ppg ? Utilisez gradient = 0,052 × ρ.",
+      "choices": [
+        "163,5 psi/ft",
+        "0,442 psi/ft",
+        "4,42 psi/ft",
+        "8,552 psi/ft"
+      ],
+      "answer": 1,
+      "explain": "Gradient = 0,052 × 8,5 = 0,442 psi/ft.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-027",
+      "theme": "Contrôle de puits en wireline",
+      "level": 2,
+      "q": "Quelle est la pression hydrostatique (en psi) d'une saumure de 10,2 ppg à 9 000 ft TVD ?",
+      "choices": [
+        "4 774 psi",
+        "2 387 psi",
+        "91 800 psi",
+        "3 897 psi"
+      ],
+      "answer": 0,
+      "explain": "P = 0,052 × 10,2 × 9 000 = 4 774 psi.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-028",
+      "theme": "Contrôle de puits en wireline",
+      "level": 3,
+      "q": "Réservoir à 4 500 psi ; colonne de saumure de 10,2 ppg à 9 000 ft TVD (4 774 psi). Quelle surpression (overbalance, en psi) ?",
+      "choices": [
+        "-274 psi",
+        "274 psi",
+        "4 774 psi",
+        "9 274 psi"
+      ],
+      "answer": 1,
+      "explain": "Overbalance = pression de colonne − pression de réservoir = 4 774 − 4 500 = 274 psi.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-029",
+      "theme": "Contrôle de puits en wireline",
+      "level": 2,
+      "q": "Fond à 4 200 psi à 8 500 ft, colonne d'huile de gradient 0,35 psi/ft. Quelle pression en tête (en psi) ?",
+      "choices": [
+        "3 350 psi",
+        "3 903 psi",
+        "4 200 psi",
+        "1 225 psi"
+      ],
+      "answer": 3,
+      "explain": "4 200 − 0,35 × 8 500 = 1 225 psi.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-030",
+      "theme": "Contrôle de puits en wireline",
+      "level": 2,
+      "q": "Why is pressure equalised across the master valve before it is opened?",
+      "choices": [
+        "To avoid a differential that could eject the tool or damage seals and wire",
+        "To warm the lubricator before the tool string is run throughout the whole job",
+        "To fill the lubricator with grease",
+        "To reset the depth counter to zero"
+      ],
+      "answer": 0,
+      "explain": "Opening against a large differential can shoot the tool and wire upward or damage the seals; equalising prevents that.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-031",
+      "theme": "Contrôle de puits en wireline",
+      "level": 2,
+      "q": "Sur ce BOP de forage, quelle mâchoire coupe le train et ferme le puits en dernier recours ?",
+      "choices": [
+        "Les mâchoires à tiges inférieures, qui se ferment sur le tubing",
+        "Les mâchoires aveugles cisaillantes (BSR)",
+        "L'obturateur annulaire, qui ferme sur n'importe quel diamètre",
+        "La vanne HCR de la ligne de duse, côté sortie de la duse"
+      ],
+      "answer": 1,
+      "explain": "Les BSR cisaillent le train et ferment : c'est la barrière ultime d'un BOP de forage.",
+      "seconds": 45,
+      "img": "svg/bop-stack.svg",
+      "imgAlt": "Bloc d'obturation de puits : obturateur annulaire, mâchoires aveugles cisaillantes (BSR), mâchoires à tiges supérieures et inférieures, lignes de duse et de pompage, tête de tubage",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-032",
+      "theme": "Contrôle de puits en wireline",
+      "level": 3,
+      "q": "Une fuite persiste au presse-étoupe sous 2 000 psi malgré le serrage du packing. Que fait-on ?",
+      "choices": [
+        "Augmenter la pression de graisse au maximum du matériel sans fermer le BOP câble",
+        "Retirer le presse-étoupe sous pression pour inspection",
+        "Fermer le BOP câble sur le câble, purger au-dessus et remplacer la garniture",
+        "Continuer à remonter plus vite pour finir le job"
+      ],
+      "answer": 2,
+      "explain": "Le wireline BOP isole le puits ; on purge puis on remplace le packing sans risque d'exposition.",
+      "seconds": 60,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-033",
+      "theme": "Contrôle de puits en wireline",
+      "level": 2,
+      "q": "Un lubricateur a un diamètre intérieur de 4 in et une longueur de 25 ft. Quel volume en gallons US (1 gal = 231 in³) ?",
+      "choices": [
+        "65,3 gal",
+        "16,3 gal",
+        "1,36 gal",
+        "3 770 gal"
+      ],
+      "answer": 1,
+      "explain": "V = π/4 × 4² × 300 in = 3 770 in³ ; ÷ 231 = 16,3 gal.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-034",
+      "theme": "Contrôle de puits en wireline",
+      "level": 2,
+      "q": "Why is hydrate formation a concern when gas is bled from the lubricator?",
+      "choices": [
+        "Hydrates make the grease thinner and cause a leak at the stuffing box",
+        "Gas expansion cools the line and hydrates can block it",
+        "Hydrates add weight to the wire and raise the tension on the winch",
+        "Hydrates dissolve the packing rubber and the o-rings"
+      ],
+      "answer": 1,
+      "explain": "Rapid gas expansion cools the system; with water present, hydrates can form and plug bleed lines, so bleed down slowly.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-035",
+      "theme": "Contrôle de puits en wireline",
+      "level": 2,
+      "q": "Pour un job en câble électrique, que change-t-on dans l'ensemble de contrôle du schéma ?",
+      "choices": [
+        "Le BOP câble est retiré",
+        "La poulie est remplacée par un second lubricateur",
+        "La tête à graisse remplace le presse-étoupe au sommet du lubricateur",
+        "Le presse-étoupe est serré à la main au lieu d'être hydraulique, pour gagner du temps"
+      ],
+      "answer": 2,
+      "explain": "Un câble multibrin laisse passer le gaz : on injecte de la graisse, donc grease head en lieu de stuffing box.",
+      "seconds": 50,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-036",
+      "theme": "Contrôle de puits en wireline",
+      "level": 2,
+      "q": "Comment purge-t-on le lubricateur à la fin du job ?",
+      "choices": [
+        "Rapidement vers l'air libre pour gagner du temps",
+        "Lentement vers un point sûr, puis on vérifie la pression nulle avant de démonter",
+        "Après avoir démonté un raccord pour accélérer",
+        "Pas du tout si le puits est fermé"
+      ],
+      "answer": 1,
+      "explain": "Une purge lente et dirigée évite les hydrates et les projections ; le zéro de pression est vérifié avant tout démontage.",
+      "seconds": 50,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-037",
+      "theme": "Gestion des incidents",
+      "level": 1,
+      "q": "Que fait-on en premier lors d'un câble cassé en fond ?",
+      "choices": [
+        "Tirer le câble restant au maximum de la tension pour dégager le bout cassé",
+        "Remonter l'outil à pleine vitesse pour limiter le mou de câble laissé au fond du puits",
+        "Arrêter le treuil, noter tension et profondeur, suivre le programme de repêchage",
+        "Fermer la vanne maîtresse sur le câble sans plan préalable"
+      ],
+      "answer": 2,
+      "explain": "Les données au moment de la casse aident à évaluer le fish ; le repêchage suit le plan, jamais une improvisation sous tension.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-038",
+      "theme": "Gestion des incidents",
+      "level": 2,
+      "q": "A tool is blown out of the well at the top of the lubricator. What is the most common cause and prevention?",
+      "choices": [
+        "Pulling up too fast at the top; slow down before the tool catcher, watch depth and tension",
+        "Excessive grease in the stuffing box; remove all grease from the packing before the next run",
+        "Using a heavier stem bar; always use a lighter one",
+        "Closing the BOP too early; keep it open always"
+      ],
+      "answer": 0,
+      "explain": "Most tool ejections come from overspeed at the end of the pull, so slow down and watch depth, tension and the tool catcher.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-039",
+      "theme": "Gestion des incidents",
+      "level": 2,
+      "q": "Que doit-on faire pour une fuite au presse-étoupe qui augmente ?",
+      "choices": [
+        "Ignorer la fuite si la pression est faible",
+        "Serrer le packing, puis fermer le BOP câble sur le câble si la fuite persiste",
+        "Remonter le câble en le tirant le plus vite possible",
+        "Retirer le presse-étoupe sous pression"
+      ],
+      "answer": 1,
+      "explain": "Séquence de maîtrise : serrage du packing, puis fermeture du BOP câble et remplacement de la garniture.",
+      "seconds": 50,
+      "img": "svg/iwcf-wireline-stack.svg",
+      "imgAlt": "Ensemble de contrôle wireline : tête de puits (wellhead), BOP câble, lubricateur, presse-étoupe avec graisseur (grease), poulie (sheave), câble et outil de fond",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-040",
+      "theme": "Gestion des incidents",
+      "level": 2,
+      "q": "Le câble est coincé. Quelle règle appliquez-vous ?",
+      "choices": [
+        "Tirer jusqu'à ce que le câble casse pour libérer le train d'outils",
+        "Utiliser le treuil au maximum de sa puissance pendant 10 minutes",
+        "Fermer le BOP câble pour couper immédiatement le câble au-dessus du lubricateur",
+        "Ne pas dépasser la limite de travail ; jarring puis coupe selon le programme"
+      ],
+      "answer": 3,
+      "explain": "Dépasser la limite met en danger l'équipe : on suit la séquence prévue au programme et on informe la hiérarchie.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-041",
+      "theme": "Gestion des incidents",
+      "level": 3,
+      "q": "Un détecteur de gaz signale une fuite au niveau de l'équipement de surface. Que fait-on ?",
+      "choices": [
+        "Poursuivre le job en surveillant les alarmes et en aérant la zone autour du puits de travail",
+        "Arrêter, couper les sources d'ignition, évacuer au seuil et alerter la salle de contrôle",
+        "Éteindre uniquement l'alarme sonore pour ne pas gêner la communication",
+        "Fermer le BOP câble et reprendre le job après quelques minutes d'attente"
+      ],
+      "answer": 1,
+      "explain": "Gaz inflammable : on supprime les sources d'ignition, on évacue selon le seuil et on prévient la salle de contrôle.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-042",
+      "theme": "Gestion des incidents",
+      "level": 2,
+      "q": "Charge de rupture du câble 1 400 lbf ; limite de travail 50 % ; tension déjà affichée 450 lbf. Quelle marge de sur-traction (en lbf) ?",
+      "choices": [
+        "250 lbf",
+        "950 lbf",
+        "700 lbf",
+        "475 lbf"
+      ],
+      "answer": 0,
+      "explain": "Limite = 700 lbf ; marge = 700 − 450 = 250 lbf.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-043",
+      "theme": "Gestion des incidents",
+      "level": 2,
+      "q": "After an incident, what must be done before restarting the job?",
+      "choices": [
+        "Make safe, investigate, update the risk assessment, obtain approval",
+        "Restart immediately if nobody was hurt and the equipment seems intact",
+        "Wait for the end of the week to write the report",
+        "Replace the winch operator only"
+      ],
+      "answer": 0,
+      "explain": "A restart needs a safe state, an understood cause and an approved updated plan.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-044",
+      "theme": "Gestion des incidents",
+      "level": 2,
+      "q": "Sur la photo de la tête de puits, une fuite apparaît à une bride. Quelle est la priorité ?",
+      "choices": [
+        "Mettre en sécurité : arrêter, isoler, éloigner les personnes, alerter",
+        "Serrer la bride sous pression immédiatement avec la clé adaptée",
+        "Prendre des photos pour le rapport avant d'intervenir sur la fuite",
+        "Poursuivre le job pour terminer avant la nuit et signaler la fuite ensuite"
+      ],
+      "answer": 0,
+      "explain": "Les personnes d'abord : arrêt, isolement sûr, évacuation de la zone, puis alerte.",
+      "seconds": 50,
+      "img": "photo/wellhead-onshore.jpg",
+      "imgAlt": "Photographie d'une tête de puits terrestre : arbre de Noël avec vannes, brides et manomètres",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-045",
+      "theme": "Gestion des incidents",
+      "level": 2,
+      "q": "Quelle est la bonne pratique pour un quasi-accident (near miss) ?",
+      "choices": [
+        "L'ignorer puisque personne n'est blessé",
+        "Le signaler seulement au chef d'équipe, oralement",
+        "Le déclarer et l'analyser comme un accident",
+        "L'enregistrer uniquement s'il se répète"
+      ],
+      "answer": 2,
+      "explain": "Un near miss révèle une faiblesse de barrière : on le déclare et on analyse pour éviter la prochaine fois.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-046",
+      "theme": "Gestion des incidents",
+      "level": 3,
+      "q": "La radio avec l'opérateur de treuil est coupée pendant la descente. Que fait-on ?",
+      "choices": [
+        "Continuer à vitesse réduite jusqu'au fond",
+        "Passer à des signaux manuels sans accord préalable",
+        "Arrêter le treuil, serrer le frein et rétablir la communication avant de reprendre",
+        "Remonter à vitesse maximale"
+      ],
+      "answer": 2,
+      "explain": "Sans communication, on stoppe : un ordre mal compris peut causer un incident sérieux.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-047",
+      "theme": "Gestion des incidents",
+      "level": 3,
+      "q": "Based on the photo, which additional equipment must rescuers have before entering an area where H2S is suspected?",
+      "choices": [
+        "A dust mask and sunglasses from the site store",
+        "Gloves only",
+        "Self-contained breathing apparatus (SCBA)",
+        "A higher-visibility vest"
+      ],
+      "answer": 2,
+      "explain": "Rescuers must have breathing apparatus before entering a suspected H2S area; otherwise they become casualties.",
+      "seconds": 45,
+      "img": "photo/workers-ppe.jpg",
+      "imgAlt": "Photographie de travailleurs équipés d'EPI : casque, lunettes, gants et combinaison",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-048",
+      "theme": "Gestion des incidents",
+      "level": 3,
+      "q": "Quel critère peut déclencher l'arrêt d'urgence du job ?",
+      "choices": [
+        "Une demande orale d'un visiteur du site ou d'un sous-traitant",
+        "Un retard de plus de 10 minutes sur le planning initial, signalé à l'exploitation",
+        "La fin du poste de nuit et l'arrivée de l'équipe de relève",
+        "Un seuil du programme franchi, pression ou tension au-delà de la limite"
+      ],
+      "answer": 3,
+      "explain": "Les critères d'arrêt écrits au programme sont objectifs : les dépasser entraîne l'arrêt et l'information.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-049",
+      "theme": "Coordination, documents et leadership",
+      "level": 1,
+      "q": "Que confirme le superviseur avec l'exploitation avant le job ?",
+      "choices": [
+        "Le prix du pétrole du jour et la prévision de production du trimestre",
+        "La couleur des EPI de l'équipe",
+        "Le nombre de camions à prévoir pour la mobilisation du matériel",
+        "L'état de production, les isolations et la fenêtre d'intervention"
+      ],
+      "answer": 3,
+      "explain": "L'exploitation doit confirmer l'état du puits et des isolations pour que l'intervention soit sûre.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-050",
+      "theme": "Coordination, documents et leadership",
+      "level": 2,
+      "q": "Pourquoi établit-on un plan SIMOPS ?",
+      "choices": [
+        "Pour choisir le câble",
+        "Pour fixer le prix du job",
+        "Pour changer la couleur des EPI selon la zone de travail",
+        "Pour coordonner priorités, zones et communication entre activités simultanées"
+      ],
+      "answer": 3,
+      "explain": "Des activités simultanées créent des risques croisés ; le plan SIMOPS les gère avant le début.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-051",
+      "theme": "Coordination, documents et leadership",
+      "level": 2,
+      "q": "At the offshore location shown, how should the wireline supervisor communicate with the control room?",
+      "choices": [
+        "Report the start and end of well opening by radio following an agreed protocol",
+        "Wait for the control room to ask for updates before reporting the well opening status",
+        "Use hand signals visible from the platform",
+        "Send a report once a week"
+      ],
+      "answer": 0,
+      "explain": "The control room must know when the well is opened or closed; an agreed radio protocol keeps everyone informed.",
+      "seconds": 50,
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Photographie d'une plateforme pétrolière offshore avec ses modules, sa grue et sa torche",
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-052",
+      "theme": "Coordination, documents et leadership",
+      "level": 1,
+      "q": "Quel est le contenu minimal d'un rapport journalier (daily report) ?",
+      "choices": [
+        "Seulement la météo du jour, l'état de la mer et le vent à la plateforme",
+        "Seulement le nom des participants, leurs horaires de poste, leurs rôles et leurs signatures",
+        "Opérations réalisées, heures, profondeurs, pressions, incidents, prochaine étape",
+        "Le plan marketing du client, son budget de communication et son logo"
+      ],
+      "answer": 2,
+      "explain": "Le rapport journalier trace ce qui a été fait, avec les données et incidents, pour assurer le suivi.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-053",
+      "theme": "Coordination, documents et leadership",
+      "level": 2,
+      "q": "Quel document conserve l'historique d'utilisation et de coupes d'un câble ?",
+      "choices": [
+        "Le permis de travail",
+        "Le rapport de livraison",
+        "Le plan de situation du puits",
+        "La fiche de vie du câble (wire log)"
+      ],
+      "answer": 3,
+      "explain": "Le wire log suit les heures, charges et coupes : il aide à décider de la mise au rebut du câble.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-054",
+      "theme": "Coordination, documents et leadership",
+      "level": 2,
+      "q": "What is the main purpose of a shift handover?",
+      "choices": [
+        "To change the safety rules",
+        "To decide who gets overtime on the next rotation",
+        "To pass on well status, pressures, barriers and open points",
+        "To rename the equipment"
+      ],
+      "answer": 2,
+      "explain": "The incoming crew must know the exact status of the well, barriers and unfinished actions to continue safely.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-055",
+      "theme": "Coordination, documents et leadership",
+      "level": 2,
+      "q": "Un opérateur exprime un doute sur un point du programme. Quelle est l'attitude du superviseur ?",
+      "choices": [
+        "L'ignorer pour tenir le planning prévu et ne pas retarder l'équipe",
+        "Le réprimander devant l'équipe pour préserver l'autorité",
+        "Reporter la discussion à la fin du job, après le débriefing",
+        "L'écouter, vérifier, suspendre si nécessaire"
+      ],
+      "answer": 3,
+      "explain": "Un doute exprimé est un signal précieux : on vérifie avant de continuer, sans pression sur l'opérateur.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-056",
+      "theme": "Coordination, documents et leadership",
+      "level": 3,
+      "q": "La production demande de reprendre vite le job alors que le test de pression échoue. Que fait le superviseur ?",
+      "choices": [
+        "Maintenir l'arrêt tant que l'essai n'est pas satisfaisant",
+        "Reprendre à pression réduite pour gagner du temps sur le planning",
+        "Demander à l'équipe de décider à la majorité des voix présentes",
+        "Poursuivre en notant l'écart dans le rapport journalier du job"
+      ],
+      "answer": 0,
+      "explain": "La sécurité prime : un test non satisfaisant empêche d'ouvrir le puits.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-057",
+      "theme": "Coordination, documents et leadership",
+      "level": 2,
+      "q": "Qu'est-ce que la communication en boucle fermée ?",
+      "choices": [
+        "L'émetteur donne l'ordre, le récepteur le répète, l'émetteur confirme",
+        "Une communication par écrit seulement",
+        "Un ordre donné une seule fois, sans répétition",
+        "Une radio dont le canal est verrouillé"
+      ],
+      "answer": 0,
+      "explain": "La répétition et la confirmation évitent les malentendus lors d'opérations sensibles.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-058",
+      "theme": "Coordination, documents et leadership",
+      "level": 2,
+      "q": "What is the purpose of a lessons-learned review after a job?",
+      "choices": [
+        "To assign blame for delays and incidents to the crew concerned",
+        "To close the permit to work and release the equipment",
+        "To replace the end-of-job report with a shorter summary",
+        "To capture what worked and failed so the next job improves"
+      ],
+      "answer": 3,
+      "explain": "A lessons-learned review turns experience into better programs and procedures.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-059",
+      "theme": "Coordination, documents et leadership",
+      "level": 2,
+      "q": "Comment le superviseur vérifie-t-il la compétence de l'équipe ?",
+      "choices": [
+        "En se fiant à l'ancienneté déclarée à l'oral par chacun",
+        "En demandant aux opérateurs de s'auto-évaluer par un questionnaire interne anonyme du site",
+        "En acceptant toute carte présentée même sans date de validité",
+        "En contrôlant les certificats valides, la formation H2S et les qualifications du site"
+      ],
+      "answer": 3,
+      "explain": "Les certificats valides et la formation requise sont vérifiés avant l'affectation de chacun.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "wireline-superviseur-060",
+      "theme": "Coordination, documents et leadership",
+      "level": 3,
+      "q": "Comment le superviseur gère-t-il la fatigue de l'équipe sur un job long ?",
+      "choices": [
+        "Demander aux plus fatigués de continuer car le job approche de la fin",
+        "Supprimer les pauses pour terminer plus tôt le job",
+        "Surveiller les signes, organiser des pauses et relèves, ajuster le planning",
+        "Ne rien faire, la fatigue est personnelle et relève de chacun en dehors du poste"
+      ],
+      "answer": 2,
+      "explain": "La fatigue augmente le risque d'erreur : le superviseur planifie pauses et relèves et peut arrêter le job.",
+      "seconds": 50,
+      "status": "draft"
+    }
+  ]
+}

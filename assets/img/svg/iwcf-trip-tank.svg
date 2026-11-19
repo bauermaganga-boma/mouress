@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Bac de manœuvre (trip tank) à la remontée : le puits doit rester plein, le volume de remplissage doit égaler le volume d'acier remonté ; courbe théorique comparée à deux courbes réelles, écart négatif (swab, puits en gain) et écart positif (pertes ou surge) ; tableau d'exemples pour 10 stands à 0,7 bbl par stand et conduite à tenir : flow check puis fermeture du puits si le puits coule</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+.gd{stroke:#C9CED8;stroke-width:1;fill:none}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Bac de manœuvre (trip tank)</text>
+
+<!-- schéma : bac et puits -->
+<text x="15" y="58" class="b">Remontée : le puits doit rester plein</text>
+<text x="60" y="87" class="c b">Trip tank</text>
+<rect x="20" y="95" width="80" height="120" class="wh"/>
+<rect x="21" y="140" width="78" height="74" fill="#DCE6F5"/>
+<path d="M20,140H100" class="ld"/>
+<path d="M20,125H30M20,155H30M20,185H30" class="ld"/>
+<text x="60" y="235" class="c">Niveau du bac</text>
+<text x="60" y="251" class="c">= volume de boue</text>
+<text x="60" y="267" class="c">ajoutée au puits</text>
+
+<!-- pompe et ligne de remplissage -->
+<path d="M100,205H149M181,205H210V118H250" fill="none" stroke="#061F44" stroke-width="8"/>
+<path d="M100,205H149M181,205H210V118H250" fill="none" stroke="#E8EAEE" stroke-width="4"/>
+<path d="M104,205H140" class="or" style="stroke-width:3" marker-end="url(#ao)"/>
+<path d="M210,190V130" class="or" style="stroke-width:3" marker-end="url(#ao)"/>
+<circle cx="165" cy="205" r="16" class="wh"/><path d="M155,205H175M165,195V215" class="ld"/>
+<text x="165" y="238" class="c">Pompe de</text><text x="165" y="254" class="c">remplissage</text>
+
+<!-- puits -->
+<rect x="240" y="85" width="80" height="15" class="gr"/>
+<rect x="250" y="100" width="60" height="190" fill="#DCE6F5"/>
+<path d="M250,100V290H310V100" class="s"/>
+<rect x="272" y="60" width="16" height="225" class="wh"/>
+<path d="M299,230V150" class="or" marker-end="url(#ao)"/>
+<text x="325" y="75" class="b">Garniture</text>
+<text x="15" y="320">Volume de boue ajoutée = volume d'acier remonté</text>
+
+<!-- graphique -->
+<path class="gd" d="M430,226.7H780M430,153.3H780M430,80H780M595,80V300M760,80V300"/>
+<line x1="430" y1="300" x2="788" y2="300" class="s" marker-end="url(#ar)"/>
+<line x1="430" y1="300" x2="430" y2="72" class="s" marker-end="url(#ar)"/>
+<g class="e"><text x="422" y="305">0</text><text x="422" y="232">4</text><text x="422" y="158">8</text><text x="422" y="85">12</text></g>
+<g class="c"><text x="430" y="318">0</text><text x="595" y="318">5</text><text x="760" y="318">10</text></g>
+<text x="605" y="335" class="c">Stands remontés (0,7 bbl d'acier par stand)</text>
+<text x="395" y="190" class="c b" transform="rotate(-90 395 190)">Volume cumulé (bbl)</text>
+<path d="M430,300L760,171.7" fill="none" stroke="#061F44" stroke-width="3.5"/>
+<path d="M430,300L760,208.3" fill="none" stroke="#F28C28" stroke-width="3.5"/>
+<path d="M430,300L760,135" fill="none" stroke="#061F44" stroke-width="3.5" stroke-dasharray="9 6"/>
+<path d="M440,96H470" fill="none" stroke="#061F44" stroke-width="3.5"/><text x="478" y="100">Théorique = volume d'acier</text>
+<path d="M440,114H470" fill="none" stroke="#F28C28" stroke-width="3.5"/><text x="478" y="118">Réel &lt; théorique : swab (kick)</text>
+<path d="M440,132H470" fill="none" stroke="#061F44" stroke-width="3.5" stroke-dasharray="9 6"/><text x="478" y="136">Réel &gt; théorique : pertes / surge</text>
+<text x="780" y="290" class="e">Écart = réel − théorique</text>
+
+<!-- tableau -->
+<g class="gr"><rect x="15" y="348" width="240" height="26"/><rect x="255" y="348" width="110" height="26"/><rect x="365" y="348" width="100" height="26"/><rect x="465" y="348" width="100" height="26"/><rect x="565" y="348" width="220" height="26"/></g>
+<g class="wh">
+<rect x="15" y="374" width="240" height="26"/><rect x="255" y="374" width="110" height="26"/><rect x="365" y="374" width="100" height="26"/><rect x="465" y="374" width="100" height="26"/><rect x="565" y="374" width="220" height="26"/>
+<rect x="15" y="400" width="240" height="26"/><rect x="255" y="400" width="110" height="26"/><rect x="365" y="400" width="100" height="26"/><rect x="465" y="400" width="100" height="26"/><rect x="565" y="400" width="220" height="26"/>
+<rect x="15" y="426" width="240" height="26"/><rect x="255" y="426" width="110" height="26"/><rect x="365" y="426" width="100" height="26"/><rect x="465" y="426" width="100" height="26"/><rect x="565" y="426" width="220" height="26"/>
+</g>
+<g class="b"><text x="23" y="366">Cas (10 stands)</text><text x="310" y="366" class="c">Théo. (bbl)</text><text x="415" y="366" class="c">Réel (bbl)</text><text x="515" y="366" class="c">Écart (bbl)</text><text x="575" y="366">Interprétation</text></g>
+<text x="23" y="392">Remplissage correct</text><text x="310" y="392" class="c">7,0</text><text x="415" y="392" class="c">7,0</text><text x="515" y="392" class="c">0</text><text x="575" y="392">Puits stable : continuer</text>
+<text x="23" y="418">Swab (pistonnage) : gain</text><text x="310" y="418" class="c">7,0</text><text x="415" y="418" class="c">5,0</text><text x="515" y="418" class="c o">−2,0</text><text x="575" y="418">Flow check ; fermer si coule</text>
+<text x="23" y="444">Pertes / surge</text><text x="310" y="444" class="c">7,0</text><text x="415" y="444" class="c">9,0</text><text x="515" y="444" class="c o">+2,0</text><text x="575" y="444">Vérifier niveau, compléter</text>
+
+<text x="15" y="474" class="o">Écart négatif : arrêter, faire un flow check ; si le puits coule, fermer le puits.</text>
+<text x="15" y="493">Écart positif : pertes (ou surge à la descente) : vérifier le niveau et compléter le puits.</text>
+</svg>

@@ -97,7 +97,7 @@ export async function renderTeamTab(ctx, host, company, data, trainingSessions, 
       <button type="button" class="btn btn-sm btn-light" id="csv-dir">${icon('download', 14)} Export CSV</button></div></div>
       <div class="card filters-card"><div class="form-grid">
         <div class="field"><label for="d-q">Recherche</label><input id="d-q" type="search" placeholder="Nom ou e-mail" autocomplete="off"></div>
-        <div class="field"><label for="d-t">Équipe / service</label><select id="d-t"><option value="">Toutes</option>${teams.map((t) => `<option>${esc(t)}</option>`).join('')}</select></div>
+        <div class="field"><label for="d-t">Équipe / service</label><select id="d-t"><option value="">Toutes</option>${teams.map((t) => `<option value="${esc(t)}">${esc(t)}</option>`).join('')}</select></div>
         <div class="field"><label for="d-p">Profil</label><select id="d-p"><option value="">Tous</option>${usedProfiles.map((id) => `<option value="${esc(id)}">${esc(pById.get(id)?.name || id)}</option>`).join('')}</select></div>
         <div class="field"><label for="d-s">Conformité</label><select id="d-s"><option value="">Toutes</option>${Object.entries(COMPLIANCE).map(([k, v]) => `<option value="${k}">${esc(v.label)}</option>`).join('')}</select></div></div></div>
       <p class="muted small" id="d-count" aria-live="polite"></p><div class="stack" id="dir"></div>

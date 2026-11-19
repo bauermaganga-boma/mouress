@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Migration du gaz puits fermé en trois étapes t0, t1 et t2 : la bulle de gaz monte sans pouvoir se détendre, la pression de fond BHP passe de 5 700 à 6 220 puis 6 740 psi, la SIDPP de 500 à 1 020 puis 1 540 psi et la SICP de 700 à 1 220 puis 1 740 psi ; risque de fracturer le sabot si on ne purge pas par la duse (méthode volumétrique)</title>
+<defs>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+<g id="gg"><circle r="20" class="wh"/><path d="M-12,8A14,14 0 1 1 12,8" class="ld"/><path d="M0,0L8,-9" stroke="#F28C28" stroke-width="3" fill="none"/><circle r="3" fill="#061F44"/></g>
+<!-- puits : coordonnées locales centrées sur x=0 -->
+<g id="wl">
+<rect x="-40" y="125" width="80" height="230" fill="#DCE6F5"/>
+<path d="M-40,125V230M40,125V230" stroke="#061F44" stroke-width="6"/>
+<path d="M-40,230V355H40V230" class="s"/>
+<rect x="-44" y="118" width="88" height="8" fill="#061F44"/>
+<path d="M-8,100H-65M40,135H65" class="s"/>
+<path d="M40,230H47" class="ld"/>
+<text x="50" y="234">Sabot</text>
+</g>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Migration du gaz, puits fermé</text>
+
+<!-- t0 -->
+<text x="130" y="48" class="c b">t0 : puits fermé</text><text x="130" y="66" class="c">gaz au fond</text>
+<use href="#wl" x="130"/>
+<rect x="90" y="315" width="80" height="30" fill="#F28C28"/>
+<text x="106" y="335" class="c b">Gaz</text>
+<rect x="122" y="88" width="16" height="262" class="wh"/>
+<path d="M78,350V310" class="or" marker-end="url(#ao)"/>
+<use href="#gg" x="45" y="100"/><use href="#gg" x="215" y="135"/>
+<text x="45" y="137" class="c b">SIDPP</text><text x="45" y="153" class="c">500 psi</text>
+<text x="215" y="172" class="c b">SICP</text><text x="215" y="188" class="c">700 psi</text>
+<text x="130" y="380" class="c b">BHP = 5 700 psi</text>
+
+<!-- t1 -->
+<text x="400" y="48" class="c b">t1 = t0 + 1 h</text><text x="400" y="66" class="c">gaz remonté de 1 000 ft</text>
+<use href="#wl" x="400"/>
+<rect x="360" y="247" width="80" height="30" fill="#F28C28"/>
+<text x="376" y="267" class="c b">Gaz</text>
+<rect x="392" y="88" width="16" height="262" class="wh"/>
+<path d="M348,282V242" class="or" marker-end="url(#ao)"/>
+<use href="#gg" x="315" y="100"/><use href="#gg" x="485" y="135"/>
+<text x="315" y="137" class="c b">SIDPP</text><text x="315" y="153" class="c">1 020 psi</text>
+<text x="485" y="172" class="c b">SICP</text><text x="485" y="188" class="c">1 220 psi</text>
+<text x="400" y="380" class="c b">BHP = 6 220 psi</text>
+
+<!-- t2 -->
+<text x="670" y="48" class="c b">t2 = t0 + 2 h</text><text x="670" y="66" class="c">gaz remonté de 2 000 ft</text>
+<use href="#wl" x="670"/>
+<rect x="630" y="175" width="80" height="30" fill="#F28C28"/>
+<text x="646" y="195" class="c b">Gaz</text>
+<rect x="662" y="88" width="16" height="262" class="wh"/>
+<path d="M618,210V170" class="or" marker-end="url(#ao)"/>
+<use href="#gg" x="585" y="100"/><use href="#gg" x="755" y="135"/>
+<text x="585" y="137" class="c b">SIDPP</text><text x="585" y="153" class="c">1 540 psi</text>
+<text x="755" y="172" class="c b">SICP</text><text x="755" y="188" class="c">1 740 psi</text>
+<text x="670" y="380" class="c b">BHP = 6 740 psi</text>
+
+<!-- message -->
+<rect x="15" y="398" width="770" height="96" class="wh"/>
+<text x="28" y="420" class="o">Le gaz migre à vitesse constante et ne peut pas se détendre : la pression en tête monte.</text>
+<text x="28" y="440">SIDPP, SICP et BHP augmentent de la même valeur : ΔP = 0,052 × MW × distance de migration</text>
+<text x="28" y="460">(ex. : MW 10 ppg, +520 psi par 1 000 ft). Risque : fracturer le sabot si on ne purge pas par la duse.</text>
+<text x="28" y="480" class="b">Remède : purger par la duse, par paliers de volume (méthode volumétrique). Schéma non à l'échelle.</text>
+</svg>

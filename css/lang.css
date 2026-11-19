@@ -1,0 +1,7 @@
+/* Sélecteur de langue FR | EN */
+.lang-switch { display: inline-flex; border: 1.5px solid var(--c-line-strong); border-radius: var(--r-pill); overflow: hidden; background: #fff; flex: none; }
+.lang-switch button { min-width: 44px; min-height: 40px; padding: 0 .7rem; border: 0; background: none; font: inherit; font-size: var(--fs-xs); font-weight: 700; color: var(--c-muted); cursor: pointer; }
+.lang-switch button:hover { color: var(--c-navy); background: var(--c-surface-2); }
+.lang-switch button[aria-pressed="true"] { background: var(--c-navy); color: #fff; }
+.lang-switch button:focus-visible { outline: 3px solid var(--c-navy-3); outline-offset: -3px; }
+@media (max-width: 599px) { .lang-switch button { min-width: 38px; padding: 0 .5rem; } }

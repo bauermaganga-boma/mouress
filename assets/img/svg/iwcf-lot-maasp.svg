@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Essai de leak-off (LOT) et MAASP : courbe de la pression en fonction du volume pompé avec droite d'élasticité, point de leak-off et pression maximale, schéma du puits avec le sabot du dernier tubage et la TVD du sabot, formules MAASP = (gradient de fracturation moins gradient de boue) × TVD sabot et densité équivalente au sabot EMW = MW + P leak-off / (0,052 × TVD sabot)</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Essai de leak-off (LOT) et MAASP</text>
+
+<!-- graphique -->
+<line x1="100" y1="290" x2="490" y2="290" class="s" marker-end="url(#ar)"/>
+<line x1="100" y1="290" x2="100" y2="62" class="s" marker-end="url(#ar)"/>
+<path d="M100,150H320M100,112H410M320,150V290" class="ld" style="stroke-dasharray:5 4"/>
+<path d="M100,290L320,150" fill="none" stroke="#061F44" stroke-width="3.5"/>
+<path d="M320,150C345,136 375,120 410,112" fill="none" stroke="#F28C28" stroke-width="3.5"/>
+<circle cx="320" cy="150" r="6" fill="#F28C28" stroke="#061F44" stroke-width="2"/>
+<circle cx="410" cy="112" r="6" fill="#061F44"/>
+<text x="92" y="155" class="e">P leak-off</text>
+<text x="92" y="117" class="e">P max</text>
+<text x="320" y="308" class="c">V leak-off</text>
+<text x="170" y="270">Droite d'élasticité</text>
+<text x="332" y="190" class="b">Point de leak-off</text>
+<text x="332" y="206">(début de fuite)</text>
+<text x="410" y="98" class="c b">Pression max</text>
+<text x="340" y="250">FIT : arrêt à la pression</text>
+<text x="340" y="266">d'essai, sans fuite</text>
+<text x="295" y="330" class="c">Volume de boue pompé (bbl)</text>
+<text x="16" y="180" class="c b" transform="rotate(-90 16 180)">Pression (psi)</text>
+
+<!-- schéma du puits -->
+<rect x="640" y="75" width="120" height="215" class="gr"/>
+<path d="M688,75H712V190H708V290H692V190H688Z" fill="#DCE6F5"/>
+<path d="M686,75V190M714,75V190" stroke="#061F44" stroke-width="6"/>
+<path d="M692,190V290H708V190" class="s"/>
+<rect x="678" y="186" width="10" height="8" class="of"/><rect x="712" y="186" width="10" height="8" class="of"/>
+<path d="M700,48V90" class="or" marker-end="url(#ao)"/>
+<text x="708" y="62">Pompage</text>
+<text x="635" y="135" class="e">Tubage (casing)</text><path d="M638,131H684" class="ld"/>
+<text x="635" y="195" class="e b">Sabot</text><path d="M638,191H676" class="ld"/>
+<text x="635" y="255" class="e">Trou ouvert</text><path d="M638,251H690" class="ld"/>
+<path d="M775,132V78M775,132V187" class="s" marker-end="url(#ar)"/>
+<path d="M775,132V78" class="s" marker-end="url(#ar)"/>
+<path d="M760,75H780M760,190H780" class="ld"/>
+<text x="791" y="132" class="c b" transform="rotate(-90 791 132)">TVD sabot</text>
+
+<!-- formules -->
+<rect x="15" y="352" width="770" height="142" class="wh"/>
+<text x="28" y="376" class="b">MAASP = (gradient de fracturation − gradient de boue) × TVD sabot  [psi]</text>
+<text x="28" y="396">ou MAASP = (EMW de fracturation − MW) × 0,052 × TVD sabot  (EMW et MW en ppg)</text>
+<text x="28" y="420" class="b">EMW au sabot = MW + P leak-off ÷ (0,052 × TVD sabot)  [ppg]</text>
+<text x="28" y="440">P leak-off = pression en surface au leak-off ; MW = boue dans le puits pendant l'essai.</text>
+<text x="28" y="464" class="o">Exemple : P leak-off 1 560 psi ; MW 10 ppg ; TVD sabot 6 000 ft</text>
+<text x="28" y="484">EMW = 10 + 1 560 ÷ (0,052 × 6 000) = 15 ppg ; MAASP = (15 − 10) × 0,052 × 6 000 = 1 560 psi</text>
+</svg>

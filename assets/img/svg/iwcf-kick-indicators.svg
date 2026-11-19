@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Signes d'un kick au forage et en manœuvre, distingués en signes positifs (débit de retour qui augmente, gain au bac, puits qui coule pompes arrêtées, trip tank inférieur au volume d'acier remonté) qui imposent de fermer le puits, et signes à vérifier par un flow check (drilling break, baisse de pression de pompe avec hausse des coups, boue coupée gaz, remplissage irrégulier)</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+text.w{fill:#FCFBF8}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Signes d'un kick</text>
+
+<!-- en-têtes de panneaux -->
+<rect x="15" y="42" width="380" height="28" fill="#061F44"/><text x="205" y="62" class="c b w">Au forage</text>
+<rect x="405" y="42" width="380" height="28" fill="#061F44"/><text x="595" y="62" class="c b w">En manœuvre</text>
+
+<!-- GAUCHE : positifs -->
+<rect x="15" y="76" width="380" height="24" fill="#F28C28"/><text x="25" y="93" class="b">Signes POSITIFS : kick confirmé</text>
+<g class="ld"><rect x="15" y="104" width="380" height="36"/><rect x="15" y="142" width="380" height="36"/><rect x="15" y="180" width="380" height="36"/></g>
+<g class="of"><circle cx="37" cy="122" r="11"/><circle cx="37" cy="160" r="11"/><circle cx="37" cy="198" r="11"/></g>
+<g class="c b"><text x="37" y="127">!</text><text x="37" y="165">!</text><text x="37" y="203">!</text></g>
+<text x="58" y="120" class="b">Débit de retour qui augmente</text><text x="58" y="135">(débit de pompe constant)</text>
+<text x="58" y="158" class="b">Gain au bac</text><text x="58" y="173">(niveau des bacs en hausse)</text>
+<text x="58" y="196" class="b">Puits qui coule pompes arrêtées</text><text x="58" y="211">(contrôle de débit, flow check)</text>
+
+<!-- GAUCHE : à vérifier -->
+<rect x="15" y="226" width="380" height="24" fill="#DCE6F5"/><text x="25" y="243" class="b">Signes À VÉRIFIER : flow check</text>
+<g class="ld"><rect x="15" y="254" width="380" height="36"/><rect x="15" y="292" width="380" height="36"/><rect x="15" y="330" width="380" height="36"/></g>
+<g class="bl"><circle cx="37" cy="272" r="11"/><circle cx="37" cy="310" r="11"/><circle cx="37" cy="348" r="11"/></g>
+<g class="c b"><text x="37" y="277">?</text><text x="37" y="315">?</text><text x="37" y="353">?</text></g>
+<text x="58" y="270" class="b">Vitesse d'avancement qui s'accélère</text><text x="58" y="285">(drilling break)</text>
+<text x="58" y="308" class="b">Pression de pompe en baisse,</text><text x="58" y="323">coups de pompe en hausse</text>
+<text x="58" y="346" class="b">Boue coupée par le gaz</text><text x="58" y="361">(densité en baisse au retour)</text>
+
+<!-- DROITE : positifs -->
+<rect x="405" y="76" width="380" height="24" fill="#F28C28"/><text x="415" y="93" class="b">Signes POSITIFS : kick confirmé</text>
+<g class="ld"><rect x="405" y="104" width="380" height="36"/><rect x="405" y="142" width="380" height="36"/><rect x="405" y="180" width="380" height="36"/></g>
+<g class="of"><circle cx="427" cy="122" r="11"/><circle cx="427" cy="160" r="11"/><circle cx="427" cy="198" r="11"/></g>
+<g class="c b"><text x="427" y="127">!</text><text x="427" y="165">!</text><text x="427" y="203">!</text></g>
+<text x="448" y="120" class="b">Trip tank : remplissage inférieur</text><text x="448" y="135">au volume d'acier remonté</text>
+<text x="448" y="158" class="b">Puits qui coule pompes arrêtées</text><text x="448" y="173">(flow check)</text>
+<text x="448" y="196" class="b">À la descente : volume expulsé</text><text x="448" y="211">supérieur au volume d'acier descendu</text>
+
+<!-- DROITE : à vérifier -->
+<rect x="405" y="226" width="380" height="24" fill="#DCE6F5"/><text x="415" y="243" class="b">Signes À VÉRIFIER : flow check</text>
+<g class="ld"><rect x="405" y="254" width="380" height="36"/><rect x="405" y="292" width="380" height="36"/><rect x="405" y="330" width="380" height="36"/></g>
+<g class="bl"><circle cx="427" cy="272" r="11"/><circle cx="427" cy="310" r="11"/><circle cx="427" cy="348" r="11"/></g>
+<g class="c b"><text x="427" y="277">?</text><text x="427" y="315">?</text><text x="427" y="353">?</text></g>
+<text x="448" y="270" class="b">Remplissage faible ou irrégulier</text><text x="448" y="285">(écart à surveiller stand par stand)</text>
+<text x="448" y="308" class="b">Tirage (overpull) à la remontée</text><text x="448" y="323">(risque de pistonnage, swab)</text>
+<text x="448" y="346" class="b">Gaz de manœuvre au retour</text><text x="448" y="361">(boue coupée en fond de puits)</text>
+
+<!-- conduites à tenir -->
+<rect x="15" y="382" width="770" height="44" class="wh" style="stroke:#F28C28;stroke-width:3.5"/>
+<text x="400" y="409" class="c b">POSITIF : kick confirmé → fermer le puits sans attendre</text>
+<rect x="15" y="434" width="770" height="44" class="bl"/>
+<text x="400" y="461" class="c b">À VÉRIFIER : indice possible → arrêter les pompes, observer ; si le puits coule : fermer</text>
+</svg>

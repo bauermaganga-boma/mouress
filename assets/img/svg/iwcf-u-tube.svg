@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Principe du tube en U : colonne de tiges et annulaire reliés au fond, remplis de boue de densité MW, manomètres SIDPP côté tiges et SICP côté annulaire, avec un influx dans l'annulaire ; à l'équilibre BHP égale pression hydrostatique plus pression de fermeture, donc SICP supérieure à SIDPP</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+<g id="gg"><circle r="20" class="wh"/><path d="M-12,8A14,14 0 1 1 12,8" class="ld"/><path d="M0,0L8,-9" stroke="#F28C28" stroke-width="3" fill="none"/><circle r="3" fill="#061F44"/></g>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Principe du tube en U (puits fermé)</text>
+
+<!-- tube en U -->
+<path d="M180,100H120V390H380V100H280V330H180Z" fill="#DCE6F5"/>
+<rect x="282" y="200" width="96" height="50" fill="#F28C28"/>
+<path d="M120,100V390H380V100M180,100V330H280V100" class="s"/>
+<path d="M116,100H184M276,100H384" stroke="#061F44" stroke-width="6"/>
+<text x="330" y="230" class="c b">Influx</text>
+
+<!-- manomètres -->
+<path d="M150,88V100M330,88V100" class="s"/>
+<use href="#gg" x="150" y="68"/>
+<use href="#gg" x="330" y="68"/>
+<text x="122" y="73" class="e b">SIDPP</text>
+<text x="358" y="73" class="b">SICP</text>
+
+<!-- libellés du tube -->
+<text x="150" y="125" class="c b">Tiges</text>
+<text x="150" y="190" class="c">boue</text>
+<text x="150" y="210" class="c">MW</text>
+<text x="330" y="125" class="c b">Annulaire</text>
+<text x="330" y="170" class="c">boue MW</text>
+<text x="330" y="300" class="c">boue MW</text>
+<text x="230" y="365" class="c b">BHP</text>
+
+<!-- TVD -->
+<path d="M85,245V102M85,245V388" class="s" marker-end="url(#ar)"/>
+<path d="M85,245V102" class="s" marker-end="url(#ar)"/>
+<text x="76" y="250" class="e">TVD</text>
+
+<!-- données -->
+<text x="20" y="430">Données : MW = 10 ppg ; TVD = 10 000 ft</text>
+<text x="20" y="450">P hydrostatique tiges = 0,052 × 10 × 10 000 = 5 200 psi</text>
+<text x="20" y="470">Schéma non à l'échelle</text>
+
+<!-- équations -->
+<rect x="440" y="85" width="350" height="100" class="bl"/>
+<text x="452" y="106" class="b">Côté tiges (boue MW)</text>
+<text x="452" y="128">BHP = P hydrostatique + SIDPP</text>
+<text x="452" y="148">= 0,052 × MW × TVD + SIDPP</text>
+<text x="452" y="170" class="o">Ex. : 5 200 + 500 = 5 700 psi</text>
+
+<rect x="440" y="200" width="350" height="120" class="bl"/>
+<text x="452" y="221" class="b">Côté annulaire (boue + influx)</text>
+<text x="452" y="243">BHP = P hydro boue + P hydro influx + SICP</text>
+<text x="452" y="265" class="o">Ex. : 4 940 + 60 + 700 = 5 700 psi</text>
+<text x="452" y="287">(9 500 ft de boue + 500 ft d'influx</text>
+<text x="452" y="305">à 0,12 psi/ft)</text>
+
+<rect x="440" y="335" width="350" height="95" class="wh" style="stroke:#F28C28;stroke-width:3.5"/>
+<text x="452" y="357" class="o">Conclusion</text>
+<text x="452" y="379">Influx plus léger que la boue :</text>
+<text x="452" y="399">hydrostatique annulaire plus faible,</text>
+<text x="452" y="419" class="b">donc SICP &gt; SIDPP (700 &gt; 500 psi)</text>
+</svg>

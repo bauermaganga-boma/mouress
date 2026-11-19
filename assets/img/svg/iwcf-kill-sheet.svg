@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Modèle de feuille de contrôle (kill sheet) à remplir : cases SIDPP, SICP, gain au bac, MW d'origine, TVD, SCR, sortie de pompe et régime lent ; formules KMW = MW + SIDPP / (0,052 × TVD), ICP = SIDPP + SCR, FCP = SCR × KMW / MW ; volumes des tiges et de l'annulaire en barils et en coups ; tableau de décompte de la pression ICP vers FCP</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.of{fill:#F28C28;stroke:#061F44;stroke-width:2}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+text.g{fill:#5B6B85}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Feuille de contrôle (kill sheet) : modèle à remplir</text>
+
+<!-- données -->
+<g class="wh">
+<rect x="15" y="45" width="185" height="50"/><rect x="210" y="45" width="185" height="50"/><rect x="405" y="45" width="185" height="50"/><rect x="600" y="45" width="185" height="50"/>
+<rect x="15" y="103" width="185" height="50"/><rect x="210" y="103" width="185" height="50"/><rect x="405" y="103" width="185" height="50"/><rect x="600" y="103" width="185" height="50"/>
+</g>
+<g class="b">
+<text x="23" y="64">SIDPP (psi)</text><text x="218" y="64">SICP (psi)</text><text x="413" y="64">Gain au bac (bbl)</text><text x="608" y="64">MW d'origine (ppg)</text>
+<text x="23" y="122">TVD (ft)</text><text x="218" y="122">SCR (psi)</text><text x="413" y="122">Pompe (bbl/coup)</text><text x="608" y="122">Régime lent (cp/min)</text>
+</g>
+
+<!-- calculs -->
+<text x="15" y="178" class="b">Calculs</text>
+<text x="15" y="208">KMW (ppg) = MW + SIDPP ÷ (0,052 × TVD)</text>
+<text x="15" y="243">ICP (psi) = SIDPP + SCR</text>
+<text x="15" y="278">FCP (psi) = SCR × KMW ÷ MW</text>
+<g class="wh"><rect x="300" y="189" width="95" height="26"/><rect x="300" y="224" width="95" height="26"/><rect x="300" y="259" width="95" height="26"/></g>
+<text x="15" y="308" class="o">Palier = (ICP − FCP) ÷ 5</text>
+
+<!-- volumes -->
+<text x="415" y="178" class="b">Volumes et coups de pompe</text>
+<rect x="415" y="187" width="145" height="26" class="gr"/><rect x="560" y="187" width="110" height="26" class="gr"/><rect x="670" y="187" width="115" height="26" class="gr"/>
+<text x="423" y="205" class="b">Section</text><text x="615" y="205" class="b c">Volume (bbl)</text><text x="727" y="205" class="b c">Coups</text>
+<g class="wh">
+<rect x="415" y="213" width="145" height="30"/><rect x="560" y="213" width="110" height="30"/><rect x="670" y="213" width="115" height="30"/>
+<rect x="415" y="243" width="145" height="30"/><rect x="560" y="243" width="110" height="30"/><rect x="670" y="243" width="115" height="30"/>
+<rect x="415" y="273" width="145" height="30"/><rect x="560" y="273" width="110" height="30"/><rect x="670" y="273" width="115" height="30"/>
+</g>
+<text x="423" y="233">Intérieur tiges</text><text x="423" y="263">Annulaire</text><text x="423" y="293" class="b">Total</text>
+<text x="415" y="324">Coups = volume (bbl) ÷ sortie de pompe (bbl/coup)</text>
+
+<!-- décompte -->
+<text x="15" y="348" class="b">Décompte : pression sur tiges de ICP à FCP (coups surface → trépan)</text>
+<rect x="15" y="358" width="200" height="28" class="gr"/><rect x="15" y="386" width="200" height="28" class="wh"/><rect x="15" y="414" width="200" height="28" class="wh"/>
+<g class="gr"><rect x="215" y="358" width="95" height="28"/><rect x="310" y="358" width="95" height="28"/><rect x="405" y="358" width="95" height="28"/><rect x="500" y="358" width="95" height="28"/><rect x="595" y="358" width="95" height="28"/><rect x="690" y="358" width="95" height="28"/></g>
+<g class="wh">
+<rect x="215" y="386" width="95" height="28"/><rect x="310" y="386" width="95" height="28"/><rect x="405" y="386" width="95" height="28"/><rect x="500" y="386" width="95" height="28"/><rect x="595" y="386" width="95" height="28"/><rect x="690" y="386" width="95" height="28"/>
+<rect x="215" y="414" width="95" height="28"/><rect x="310" y="414" width="95" height="28"/><rect x="405" y="414" width="95" height="28"/><rect x="500" y="414" width="95" height="28"/><rect x="595" y="414" width="95" height="28"/><rect x="690" y="414" width="95" height="28"/>
+</g>
+<text x="23" y="377" class="b">Fraction</text><text x="23" y="405" class="b">Coups cumulés</text><text x="23" y="433" class="b">Pression (psi)</text>
+<g class="c b"><text x="262" y="377">0</text><text x="357" y="377">1/5</text><text x="452" y="377">2/5</text><text x="547" y="377">3/5</text><text x="642" y="377">4/5</text><text x="737" y="377">5/5</text></g>
+<text x="262" y="433" class="c g">ICP</text><text x="737" y="433" class="c g">FCP</text>
+
+<text x="15" y="464">Coups surface → trépan = volume des tiges ÷ sortie de pompe ; pression lue en tête de tiges.</text>
+<text x="15" y="484">0,052 = facteur de conversion : gradient (psi/ft) = 0,052 × densité (ppg).</text>
+</svg>
