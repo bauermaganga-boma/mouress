@@ -1,0 +1,695 @@
+{
+  "profile": "fiscaliste-auditeur",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "IS : du résultat comptable au résultat fiscal",
+      "theme": "Impôt sur les sociétés",
+      "minutes": 10,
+      "body": "L'**impôt sur les sociétés** (IS) frappe, en principe, le **bénéfice** réalisé par l'entreprise, et non son chiffre d'affaires. Il ne se calcule pas directement sur le résultat comptable : on passe par le **résultat fiscal**, obtenu par des retraitements extra-comptables.\n\nLa démarche est toujours la même :\n- on part du **résultat comptable avant impôt** ;\n- on ajoute les **réintégrations** : charges comptabilisées mais non déductibles fiscalement (amendes et pénalités, dépenses sans justificatif valable, amortissements au-delà des taux admis, charges étrangères à l'exploitation) ;\n- on retranche les **déductions** : produits comptabilisés mais non imposables ou déjà taxés, et éléments que la loi autorise à déduire ;\n- on obtient le **résultat fiscal**, auquel on applique le taux d'IS prévu par la loi.\n\nExemple chiffré : résultat comptable de 10 000 000 FCFA, réintégrations de 1 500 000 et déductions de 500 000. Le résultat fiscal vaut 10 000 000 + 1 500 000 - 500 000 = 11 000 000 FCFA.\n\nSi le résultat fiscal est négatif, on parle de **déficit fiscal** : la loi organise en général son report sur les exercices suivants, dans des limites de durée qu'il faut vérifier chaque année.\n\nL'IS est payé par **acomptes** versés pendant l'exercice. À la clôture, on calcule l'impôt réellement dû, on **impute les acomptes déjà versés** et l'on paie le solde. Si les acomptes dépassent l'impôt dû, l'excédent crée un crédit imputable ou remboursable selon les règles.\n\n**Sur le terrain**\n- Tiens un tableau de passage du résultat comptable au résultat fiscal, ligne par ligne, avec la pièce justificative.\n- Une charge sans facture régulière au nom de l'entreprise est la première candidate à la réintégration.\n- Suis les acomptes dans un échéancier pour éviter pénalités et trésorerie bloquée.",
+      "keyPoints": [
+        "Résultat fiscal = résultat comptable + réintégrations - déductions",
+        "L'IS porte sur le bénéfice fiscal, pas sur le chiffre d'affaires",
+        "Les acomptes versés s'imputent sur l'IS dû ; le déficit fiscal se reporte selon les règles de la loi"
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "TVA : mécanisme, déductibilité et régimes",
+      "theme": "TVA et régimes de taxation",
+      "minutes": 10,
+      "body": "La **TVA** est un impôt sur la consommation : elle est supportée par le consommateur final, mais **collectée et reversée** par les entreprises assujetties. Pour l'entreprise elle ne doit être ni une charge ni un produit : c'est un compte de passage.\n\n**Mécanisme** : sur ses ventes, l'entreprise facture la **TVA collectée**. Sur ses achats et charges, elle supporte la **TVA déductible**. Chaque période, elle compare :\n- TVA collectée supérieure à la TVA déductible : elle **reverse la différence** (TVA à décaisser) ;\n- TVA déductible supérieure : elle détient un **crédit de TVA**, reporté ou remboursé selon les règles.\nExemple : collectée 3 000 000, déductible 1 800 000, donc 1 200 000 FCFA à reverser.\n\n**Conditions de déduction** (principes) : la dépense doit servir des opérations taxables de l'entreprise ; la facture doit être régulière, au nom de l'entreprise, avec les mentions obligatoires ; la TVA ne se déduit pas sur des dépenses personnelles ou exclues par la loi. Quand l'entreprise réalise à la fois des opérations taxables et exonérées, la déduction sur les dépenses communes se limite à un **prorata**.\n\n**Erreurs fréquentes** : déduire une TVA sur une facture non conforme ou établie au nom d'un tiers, oublier de collecter la TVA sur une prestation, confondre débours et refacturation. Lorsqu'on agit **pour compte de tiers**, on distingue les frais avancés au nom du client, sur justificatifs à son nom (débours), des prestations refacturées à son propre nom.\n\nLes **régimes TPS, TVA et CSS** dépendent du statut de l'opérateur et du type de facturation : le texte précise pour chacun qui facture quoi et ce qui est déductible.\n\n**Sur le terrain**\n- Contrôle chaque facture fournisseur avant de déduire.\n- Rapproche la TVA déclarée de la comptabilité chaque mois.\n- Vérifie le régime du fournisseur avant de traiter sa taxe comme déductible.",
+      "keyPoints": [
+        "TVA à décaisser = TVA collectée - TVA déductible ; l'excédent de déductible crée un crédit",
+        "Déduction soumise à une facture régulière et à un lien avec une activité taxable ; prorata en cas d'opérations mixtes",
+        "Pour compte de tiers : distinguer débours (au nom du client) et refacturation"
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Retenues à la source, DAS, loyers et contrôle fiscal",
+      "theme": "Retenues, déclarations et contrôle fiscal",
+      "minutes": 10,
+      "body": "La **retenue à la source** consiste, pour le payeur, à prélever une fraction de la somme due au bénéficiaire et à la **reverser au Trésor**. Le payeur devient responsable : s'il oublie, il peut devoir payer lui-même la retenue, avec pénalités.\n\n**Prestataires non-résidents** : quand une entreprise gabonaise rémunère un prestataire étranger sans établissement local (assistance technique, redevances, honoraires), la loi prévoit en général une retenue à un taux déterminé, sous réserve des **conventions fiscales** éventuelles. Exemple avec un taux de 20 % donné : facture de 10 000 000, retenue de 2 000 000, net versé de 8 000 000.\n\nLa **DAS** est une déclaration annuelle récapitulative des sommes versées à des tiers (rémunérations, honoraires, commissions...). Elle permet à l'administration de **recouper** ce que vous déclarez avec ce que les bénéficiaires déclarent. Son contenu et sa date limite sont fixés par les textes.\n\nLa **taxe sur loyers** s'applique aux loyers selon des règles précises de retenue ou de paiement ; avant de régler un bailleur, vérifie qui doit prélever et reverser, et sur quelle base.\n\n**Contrôle fiscal** : l'administration peut vérifier les déclarations sur pièces ou sur place. Le contribuable bénéficie de garanties : avis préalable, **procédure contradictoire** (notification des redressements, délai pour répondre), voies de recours. Les erreurs entraînent droits rappelés, **pénalités et intérêts**. Le meilleur moyen de bien traverser un contrôle est un **dossier fiscal permanent** et un calendrier des échéances respecté.\n\n**Sur le terrain**\n- Avant tout paiement à un non-résident, demande le contrat, la facture et le pays de résidence.\n- Tiens un calendrier fiscal : déclarations, retenues, DAS.\n- À réception d'un avis de vérification, note les dates, réunis les pièces et réponds dans les délais.",
+      "keyPoints": [
+        "Le payeur retient et reverse ; en cas d'oubli il en répond lui-même",
+        "La DAS permet le recoupement entre payeur et bénéficiaire ; paiements aux non-résidents : retenue selon le texte et les conventions",
+        "Contrôle fiscal : procédure contradictoire, délais de réponse, pénalités en cas d'erreur"
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Audit : démarche, seuil de signification et rapport",
+      "theme": "Audit : démarche et rapport",
+      "minutes": 10,
+      "body": "L'**audit des comptes** vise à exprimer une **opinion** sur la régularité, la sincérité et l'image fidèle des états financiers. Il suit des **normes professionnelles** (normes ISA, dans le cadre OHADA par les textes sur l'audit légal) et un état d'esprit : le **scepticisme professionnel**.\n\nLa démarche se déroule en phases :\n- **acceptation et planification** : connaissance de l'entité, indépendance, équipe, calendrier ;\n- **évaluation des risques** : risque inhérent, risque lié au contrôle interne, risque de non-détection ; plus le contrôle interne est faible, plus on étend les contrôles de substance ;\n- **seuil de signification** : montant au-delà duquel une erreur influencerait les décisions des utilisateurs des comptes. Il est souvent exprimé en pourcentage d'un agrégat (chiffre d'affaires, résultat) ; avec un seuil de 1 % donné sur un chiffre d'affaires de 100 000 000, il vaut 1 000 000 ;\n- **procédures** : tests de contrôle, contrôles de substance, procédures analytiques, confirmations de tiers, inventaire physique ;\n- **échantillonnage** : on teste une partie de la population et on extrapole. 100 factures contrôlées sur 2 000 avec 2 erreurs donnent 2 % d'erreurs, soit 40 sur la population ;\n- **éléments probants** : plus fiables lorsqu'ils sont externes et obtenus directement (confirmation bancaire) qu'internes ou simplement verbaux.\n\nLe **rapport** exprime l'opinion : sans réserve, avec réserve (anomalie significative mais circonscrite), défavorable ou impossibilité d'exprimer une opinion.\n\n**Sur le terrain**\n- Documente chaque conclusion dans un dossier de travail qu'un tiers peut relire.\n- Cumule les anomalies non corrigées et compare-les au seuil.\n- Ne conclus jamais sur la seule déclaration orale de la direction.\n\n**Important** : les taux, seuils et dates changent d'une année à l'autre. Vérifiez toujours les taux et seuils en vigueur dans la loi de finances de l'année.",
+      "keyPoints": [
+        "Planification, évaluation des risques, procédures, conclusion et rapport ; scepticisme professionnel",
+        "Seuil de signification = montant au-delà duquel une erreur influence les utilisateurs des comptes",
+        "Éléments probants externes plus fiables ; opinion sans réserve, avec réserve, défavorable ou refus"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "fiscaliste-auditeur-001",
+      "theme": "Impôt sur les sociétés",
+      "level": 1,
+      "q": "Sur quelle base l'impôt sur les sociétés est-il calculé en principe ?",
+      "choices": [
+        "Sur le résultat fiscal, obtenu à partir du résultat comptable retraité",
+        "Sur le chiffre d'affaires hors taxes",
+        "Sur le total du bilan",
+        "Sur le montant des salaires versés"
+      ],
+      "answer": 0,
+      "explain": "L'IS frappe le bénéfice imposable : on part du résultat comptable avant impôt puis on le retraite par des réintégrations et des déductions.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-002",
+      "theme": "Impôt sur les sociétés",
+      "level": 1,
+      "q": "L'entreprise a comptabilisé une amende pour infraction dans ses charges. Quel traitement fiscal retenir ?",
+      "choices": [
+        "La déduire deux fois",
+        "La réintégrer au résultat fiscal car elle n'est pas déductible",
+        "L'ignorer car elle est déjà en charge",
+        "La transformer en immobilisation"
+      ],
+      "answer": 1,
+      "explain": "Les amendes et pénalités sont des charges non déductibles : on les ajoute (réintégration) au résultat comptable pour obtenir le résultat fiscal.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-003",
+      "theme": "Impôt sur les sociétés",
+      "level": 2,
+      "q": "Résultat comptable avant impôt : 10 000 000 FCFA. Réintégrations : 1 500 000. Déductions : 500 000. Quel est le résultat fiscal ?",
+      "choices": [
+        "12 000 000 FCFA",
+        "9 000 000 FCFA",
+        "11 000 000 FCFA",
+        "10 500 000 FCFA"
+      ],
+      "answer": 2,
+      "explain": "10 000 000 + 1 500 000 - 500 000 = 11 000 000. Les réintégrations s'ajoutent, les déductions se retranchent.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-004",
+      "theme": "Impôt sur les sociétés",
+      "level": 2,
+      "q": "Une société dégage un résultat fiscal négatif. Quel est le traitement général prévu pour ce déficit ?",
+      "choices": [
+        "Un remboursement immédiat en espèces",
+        "Une suppression sans effet fiscal",
+        "Un paiement d'impôt majoré",
+        "Un report sur les exercices suivants, dans les limites fixées par la loi"
+      ],
+      "answer": 3,
+      "explain": "Le déficit fiscal est en principe reportable pour s'imputer sur les bénéfices futurs ; la durée du report se vérifie dans la loi de finances en vigueur.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-005",
+      "theme": "Impôt sur les sociétés",
+      "level": 2,
+      "q": "Que représentent les acomptes d'impôt sur les sociétés ?",
+      "choices": [
+        "Des avances versées en cours d'exercice, imputées sur l'impôt dû à la clôture",
+        "Une pénalité de retard",
+        "Un impôt distinct de l'IS",
+        "Une taxe sur les dividendes"
+      ],
+      "answer": 0,
+      "explain": "Les acomptes sont des paiements anticipés de l'IS. Au calcul définitif, on les déduit de l'impôt dû et on règle uniquement le solde.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-006",
+      "theme": "Impôt sur les sociétés",
+      "level": 3,
+      "q": "Avec un taux d'IS de 25 % donné, le résultat fiscal est de 8 000 000 FCFA et les acomptes versés sont de 1 500 000. Quel solde reste à payer ?",
+      "choices": [
+        "2 000 000 FCFA",
+        "500 000 FCFA",
+        "1 500 000 FCFA",
+        "3 500 000 FCFA"
+      ],
+      "answer": 1,
+      "explain": "IS dû = 8 000 000 x 25 % = 2 000 000. On retranche les acomptes de 1 500 000 : le solde est de 500 000 FCFA.",
+      "seconds": 120,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-007",
+      "theme": "Impôt sur les sociétés",
+      "level": 2,
+      "q": "Une immobilisation est amortie à un taux supérieur à celui admis fiscalement. Que faire pour le résultat fiscal ?",
+      "choices": [
+        "Déduire l'amortissement en totalité",
+        "Supprimer l'immobilisation",
+        "Réintégrer la part d'amortissement excédant le taux admis",
+        "Passer l'excédent en produit"
+      ],
+      "answer": 2,
+      "explain": "Seul l'amortissement dans la limite admise est déductible : l'excédent comptabilisé est réintégré dans le résultat fiscal.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-008",
+      "theme": "Impôt sur les sociétés",
+      "level": 1,
+      "q": "Une charge n'est étayée par aucune facture ni justificatif. Quel est le risque fiscal principal ?",
+      "choices": [
+        "Aucun, la comptabilité suffit",
+        "Une exonération automatique",
+        "Un crédit d'impôt",
+        "Son rejet en déduction et donc une réintégration par l'administration"
+      ],
+      "answer": 3,
+      "explain": "La déductibilité d'une charge suppose une pièce justificative valable. Sans elle, l'administration peut la réintégrer et rappeler l'impôt.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-009",
+      "theme": "Impôt sur les sociétés",
+      "level": 3,
+      "q": "Résultat comptable : 5 000 000. Plus-value exonérée comptabilisée : 600 000. Charge non déductible : 200 000. Quel est le résultat fiscal ?",
+      "choices": [
+        "4 600 000 FCFA",
+        "5 800 000 FCFA",
+        "4 200 000 FCFA",
+        "5 400 000 FCFA"
+      ],
+      "answer": 0,
+      "explain": "5 000 000 - 600 000 (produit non imposable, à déduire) + 200 000 (charge à réintégrer) = 4 600 000.",
+      "seconds": 120,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-010",
+      "theme": "Impôt sur les sociétés",
+      "level": 1,
+      "q": "Quel document sert de fil conducteur pour justifier le passage du résultat comptable au résultat fiscal ?",
+      "choices": [
+        "Le livre d'or de l'entreprise",
+        "Un tableau de retraitements avec pièces justificatives",
+        "Le planning des congés",
+        "Le catalogue des produits"
+      ],
+      "answer": 1,
+      "explain": "Le tableau ligne par ligne des réintégrations et déductions, avec ses pièces, permet de défendre le résultat fiscal lors d'un contrôle.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-011",
+      "theme": "TVA et régimes de taxation",
+      "level": 1,
+      "q": "Comment se calcule la TVA à décaisser sur une période ?",
+      "choices": [
+        "TVA collectée + TVA déductible",
+        "TVA déductible - IS payé",
+        "TVA collectée - TVA déductible",
+        "TVA collectée x 2"
+      ],
+      "answer": 2,
+      "explain": "La TVA déductible se compense avec la TVA collectée : la différence, si elle est positive, est à reverser au Trésor.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-012",
+      "theme": "TVA et régimes de taxation",
+      "level": 1,
+      "q": "TVA collectée : 3 000 000 FCFA. TVA déductible : 1 800 000 FCFA. Quel montant verser ?",
+      "choices": [
+        "4 800 000 FCFA",
+        "1 800 000 FCFA",
+        "3 000 000 FCFA",
+        "1 200 000 FCFA"
+      ],
+      "answer": 3,
+      "explain": "3 000 000 - 1 800 000 = 1 200 000 FCFA à reverser.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-013",
+      "theme": "TVA et régimes de taxation",
+      "level": 2,
+      "q": "TVA collectée : 1 500 000. TVA déductible : 2 000 000. Quelle est la situation ?",
+      "choices": [
+        "Un crédit de TVA de 500 000, reporté ou remboursé selon les règles",
+        "Une TVA à payer de 500 000",
+        "Une TVA à payer de 3 500 000",
+        "Aucun effet sur la déclaration"
+      ],
+      "answer": 0,
+      "explain": "Quand la TVA déductible excède la collectée, la différence (500 000) est un crédit de TVA, imputé sur les périodes suivantes ou remboursé selon la loi.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-014",
+      "theme": "TVA et régimes de taxation",
+      "level": 2,
+      "q": "Quelle condition est indispensable pour déduire la TVA d'une facture fournisseur ?",
+      "choices": [
+        "Que le fournisseur soit un ami du dirigeant",
+        "Une facture régulière, au nom de l'entreprise, pour une dépense liée à son activité taxable",
+        "Qu'elle soit payée en espèces",
+        "Qu'elle date de plus de dix ans"
+      ],
+      "answer": 1,
+      "explain": "La déduction exige une facture conforme (mentions obligatoires, au nom de l'entreprise) et un lien avec des opérations taxables.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-015",
+      "theme": "TVA et régimes de taxation",
+      "level": 2,
+      "q": "Le dirigeant fait payer par la société une dépense strictement personnelle. Que dire de la TVA sur cette dépense ?",
+      "choices": [
+        "Elle est déductible à 100 %",
+        "Elle est remboursée automatiquement",
+        "Elle n'est pas déductible car la dépense est étrangère à l'activité",
+        "Elle s'ajoute à la TVA collectée"
+      ],
+      "answer": 2,
+      "explain": "La TVA n'est déductible que sur les dépenses engagées pour les besoins de l'exploitation taxable. Une dépense personnelle est exclue.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-016",
+      "theme": "TVA et régimes de taxation",
+      "level": 3,
+      "q": "TVA sur des achats à usage commun : 1 000 000 FCFA. Le prorata de déduction donné est de 60 %. Quelle TVA déduire ?",
+      "choices": [
+        "1 000 000 FCFA",
+        "400 000 FCFA",
+        "1 600 000 FCFA",
+        "600 000 FCFA"
+      ],
+      "answer": 3,
+      "explain": "Avec des opérations taxables et exonérées, la TVA sur dépenses communes se déduit au prorata : 1 000 000 x 60 % = 600 000.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-017",
+      "theme": "TVA et régimes de taxation",
+      "level": 2,
+      "q": "Quelle erreur fréquente fait perdre le droit à déduction de la TVA ?",
+      "choices": [
+        "Déduire une TVA figurant sur une facture établie au nom d'un tiers",
+        "Archiver les factures par date",
+        "Rapprocher la TVA du grand livre",
+        "Déclarer dans les délais"
+      ],
+      "answer": 0,
+      "explain": "Une facture qui ne porte pas le nom de l'entreprise ne justifie pas la déduction : c'est un redressement classique en contrôle.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-018",
+      "theme": "TVA et régimes de taxation",
+      "level": 2,
+      "q": "Une agence avance, au nom et pour le compte de son client, des frais justifiés par des factures à son nom. Comment les traite-t-on en principe ?",
+      "choices": [
+        "En chiffre d'affaires de l'agence avec marge",
+        "En débours, refacturés à l'identique sans être intégrés à la base de TVA de l'agence",
+        "En charges déductibles de l'agence",
+        "En produits exceptionnels"
+      ],
+      "answer": 1,
+      "explain": "Dans les opérations pour compte de tiers, les débours (frais avancés au nom du client sur pièces à son nom) se distinguent d'une refacturation de prestations.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-019",
+      "theme": "TVA et régimes de taxation",
+      "level": 1,
+      "q": "Qui supporte économiquement la TVA dans le mécanisme normal ?",
+      "choices": [
+        "L'entreprise assujettie",
+        "Le Trésor public",
+        "Le consommateur final",
+        "La banque"
+      ],
+      "answer": 2,
+      "explain": "L'entreprise assujettie collecte et reverse la TVA mais la répercute dans ses prix : le poids économique repose sur le consommateur final.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-020",
+      "theme": "TVA et régimes de taxation",
+      "level": 3,
+      "q": "Un fournisseur facture sous un régime où la taxe affichée n'est pas de la TVA classique. Que doit faire le comptable avant de déduire ?",
+      "choices": [
+        "Déduire d'office au taux de la TVA",
+        "Ne jamais comptabiliser la facture",
+        "Demander un avoir",
+        "Vérifier dans la loi le régime et les règles de déductibilité applicables"
+      ],
+      "answer": 3,
+      "explain": "Les régimes TPS, TVA ou CSS ne se traitent pas de la même façon : on s'appuie sur le texte et le statut du fournisseur, jamais sur un réflexe.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-021",
+      "theme": "Retenues, déclarations et contrôle fiscal",
+      "level": 1,
+      "q": "En quoi consiste une retenue à la source ?",
+      "choices": [
+        "Le payeur prélève une fraction de la somme due et la reverse au Trésor",
+        "Le bénéficiaire paie directement l'impôt chaque année",
+        "La banque rembourse l'impôt",
+        "L'État avance les fonds au payeur"
+      ],
+      "answer": 0,
+      "explain": "Le payeur agit comme collecteur d'impôt pour le compte de l'administration, d'où sa responsabilité en cas d'omission.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-022",
+      "theme": "Retenues, déclarations et contrôle fiscal",
+      "level": 2,
+      "q": "Une société paie 10 000 000 FCFA à un prestataire non-résident. La retenue est de 20 % (taux donné). Quel net verse-t-elle ?",
+      "choices": [
+        "10 000 000 FCFA",
+        "8 000 000 FCFA",
+        "2 000 000 FCFA",
+        "12 000 000 FCFA"
+      ],
+      "answer": 1,
+      "explain": "Retenue = 10 000 000 x 20 % = 2 000 000, reversée à l'administration ; le prestataire reçoit 8 000 000.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-023",
+      "theme": "Retenues, déclarations et contrôle fiscal",
+      "level": 2,
+      "q": "Une société a oublié d'opérer une retenue obligatoire sur un prestataire non-résident. Quelle conséquence est probable ?",
+      "choices": [
+        "Rien, le prestataire paiera seul",
+        "La dette est annulée",
+        "Le payeur peut être tenu de payer la retenue lui-même, avec pénalités",
+        "L'État rembourse la société"
+      ],
+      "answer": 2,
+      "explain": "Le payeur est responsable du reversement de la retenue qu'il aurait dû opérer ; l'omission expose à rappels, pénalités et intérêts.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-024",
+      "theme": "Retenues, déclarations et contrôle fiscal",
+      "level": 1,
+      "q": "À quoi sert principalement la DAS, déclaration annuelle récapitulative des sommes versées à des tiers ?",
+      "choices": [
+        "À calculer l'IS à la place du bilan",
+        "À obtenir un remboursement de TVA",
+        "À fixer les prix de vente",
+        "À permettre à l'administration de recouper les déclarations des payeurs et des bénéficiaires"
+      ],
+      "answer": 3,
+      "explain": "La DAS fait ressortir ce qui a été versé à chaque tiers : l'administration peut vérifier que le bénéficiaire l'a bien déclaré.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-025",
+      "theme": "Retenues, déclarations et contrôle fiscal",
+      "level": 2,
+      "q": "Avant de payer le loyer d'un local loué, que doit vérifier l'entreprise locataire ?",
+      "choices": [
+        "Si la loi impose une retenue ou une taxe sur loyers à prélever et reverser",
+        "La couleur de la façade",
+        "Si le bailleur accepte les chèques",
+        "Rien, le loyer est libre de toute taxe"
+      ],
+      "answer": 0,
+      "explain": "La taxe sur loyers obéit à des règles de retenue ou de paiement précises ; le locataire peut être chargé de la prélever et de la reverser.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-026",
+      "theme": "Retenues, déclarations et contrôle fiscal",
+      "level": 3,
+      "q": "Loyer mensuel : 2 000 000 FCFA. Retenue de 10 % (taux donné). Quel montant net est versé au bailleur ?",
+      "choices": [
+        "200 000 FCFA",
+        "1 800 000 FCFA",
+        "2 200 000 FCFA",
+        "1 000 000 FCFA"
+      ],
+      "answer": 1,
+      "explain": "Retenue = 2 000 000 x 10 % = 200 000. Net = 2 000 000 - 200 000 = 1 800 000, la retenue étant reversée à l'administration.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-027",
+      "theme": "Retenues, déclarations et contrôle fiscal",
+      "level": 1,
+      "q": "Que signifie la procédure contradictoire lors d'un contrôle fiscal ?",
+      "choices": [
+        "Le contrôle se fait sans que l'entreprise le sache",
+        "L'entreprise choisit son vérificateur",
+        "Le contribuable reçoit les redressements envisagés et peut y répondre dans un délai",
+        "Les redressements sont automatiquement annulés"
+      ],
+      "answer": 2,
+      "explain": "Le contribuable est informé des redressements et dispose d'un délai pour présenter ses observations avant la mise en recouvrement.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-028",
+      "theme": "Retenues, déclarations et contrôle fiscal",
+      "level": 2,
+      "q": "L'entreprise reçoit un avis de vérification. Quelle réaction est la plus appropriée ?",
+      "choices": [
+        "Ignorer l'avis jusqu'à relance",
+        "Détruire les archives anciennes",
+        "Refuser l'accès aux locaux sans motif",
+        "Noter les délais, rassembler les pièces et désigner un interlocuteur"
+      ],
+      "answer": 3,
+      "explain": "On organise la réponse : dates, dossier fiscal permanent, pièces justificatives et interlocuteur unique, pour respecter les délais.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-029",
+      "theme": "Retenues, déclarations et contrôle fiscal",
+      "level": 2,
+      "q": "Pourquoi tenir un calendrier fiscal interne ?",
+      "choices": [
+        "Pour respecter les échéances de déclaration et éviter pénalités et majorations",
+        "Pour retarder les paiements",
+        "Pour éviter de tenir la comptabilité",
+        "Pour réduire automatiquement l'impôt"
+      ],
+      "answer": 0,
+      "explain": "Une déclaration tardive ou omise entraîne pénalités et intérêts : un échéancier partagé en réduit fortement le risque.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-030",
+      "theme": "Retenues, déclarations et contrôle fiscal",
+      "level": 3,
+      "q": "Base redressée : 4 000 000 FCFA. Taux d'IS de 25 % et pénalité de 10 % des droits, tous deux donnés. Quel total est réclamé ?",
+      "choices": [
+        "1 000 000 FCFA",
+        "1 100 000 FCFA",
+        "1 400 000 FCFA",
+        "4 400 000 FCFA"
+      ],
+      "answer": 1,
+      "explain": "Droits = 4 000 000 x 25 % = 1 000 000. Pénalité = 10 % x 1 000 000 = 100 000. Total = 1 100 000 FCFA.",
+      "seconds": 120,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-031",
+      "theme": "Audit : démarche et rapport",
+      "level": 1,
+      "q": "Quel est l'objectif d'un audit des comptes ?",
+      "choices": [
+        "Garantir que l'entreprise réalise un bénéfice",
+        "Préparer les déclarations fiscales",
+        "Exprimer une opinion sur la régularité, la sincérité et l'image fidèle des comptes",
+        "Rédiger la comptabilité à la place du comptable"
+      ],
+      "answer": 2,
+      "explain": "L'auditeur donne une assurance raisonnable, non absolue, sur les états financiers ; il ne tient pas la comptabilité.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-032",
+      "theme": "Audit : démarche et rapport",
+      "level": 1,
+      "q": "Dans quel ordre se déroule globalement une mission d'audit ?",
+      "choices": [
+        "Rapport, procédures, planification",
+        "Procédures, rapport, planification",
+        "Conclusion, risques, planification",
+        "Planification, évaluation des risques, procédures, conclusion et rapport"
+      ],
+      "answer": 3,
+      "explain": "On planifie, on identifie et évalue les risques, on met en œuvre les procédures adaptées, puis on conclut et on rédige le rapport.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-033",
+      "theme": "Audit : démarche et rapport",
+      "level": 2,
+      "q": "Chiffre d'affaires : 100 000 000 FCFA. Le seuil de signification est fixé à 1 % (taux donné). Quel est ce seuil ?",
+      "choices": [
+        "1 000 000 FCFA",
+        "100 000 FCFA",
+        "10 000 000 FCFA",
+        "1 000 FCFA"
+      ],
+      "answer": 0,
+      "explain": "100 000 000 x 1 % = 1 000 000 FCFA : au-dessus, une erreur est susceptible d'influencer les décisions des utilisateurs.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-034",
+      "theme": "Audit : démarche et rapport",
+      "level": 2,
+      "q": "Le contrôle interne d'un client est faible. Quelle conséquence pour l'auditeur ?",
+      "choices": [
+        "Réduire l'échantillon",
+        "Étendre les contrôles de substance",
+        "Se fier aux déclarations orales",
+        "Ignorer le cycle concerné"
+      ],
+      "answer": 1,
+      "explain": "Un contrôle interne peu fiable accroît le risque : l'auditeur compense par davantage de contrôles directs sur les soldes et opérations.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-035",
+      "theme": "Audit : démarche et rapport",
+      "level": 2,
+      "q": "Quel élément probant est en principe le plus fiable ?",
+      "choices": [
+        "Une explication orale du directeur",
+        "Un tableau Excel interne non daté",
+        "Une confirmation bancaire reçue directement par l'auditeur",
+        "Une note de service interne"
+      ],
+      "answer": 2,
+      "explain": "Les éléments externes, obtenus directement de tiers indépendants, sont plus fiables que les éléments internes ou verbaux.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-036",
+      "theme": "Audit : démarche et rapport",
+      "level": 3,
+      "q": "100 factures sont testées sur 2 000, avec 2 erreurs. En extrapolant simplement, combien d'erreurs sur la population ?",
+      "choices": [
+        "20 erreurs",
+        "200 erreurs",
+        "2 erreurs",
+        "40 erreurs"
+      ],
+      "answer": 3,
+      "explain": "Taux d'erreur = 2 / 100 = 2 %. Appliqué à 2 000 factures : 2 000 x 2 % = 40 erreurs estimées.",
+      "seconds": 120,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-037",
+      "theme": "Audit : démarche et rapport",
+      "level": 2,
+      "q": "Une anomalie significative est relevée, mais limitée à un poste. Quelle opinion est la plus adaptée ?",
+      "choices": [
+        "Une opinion avec réserve",
+        "Une opinion sans réserve",
+        "Un refus de rapport sans explication",
+        "Une opinion identique à celle de l'an passé"
+      ],
+      "answer": 0,
+      "explain": "Quand l'anomalie est significative mais circonscrite, l'auditeur émet une opinion avec réserve et en précise le motif.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-038",
+      "theme": "Audit : démarche et rapport",
+      "level": 1,
+      "q": "Que désigne le scepticisme professionnel ?",
+      "choices": [
+        "Une méfiance personnelle envers le client",
+        "Une attitude critique qui ne prend pas les assertions pour acquises sans preuve",
+        "Un refus systématique de conclure",
+        "La confiance totale dans la direction"
+      ],
+      "answer": 1,
+      "explain": "L'auditeur remet en question et recherche des éléments probants suffisants, sans présumer ni la malhonnêteté ni l'honnêteté.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-039",
+      "theme": "Audit : démarche et rapport",
+      "level": 2,
+      "q": "Quelle procédure permet de vérifier l'existence d'une créance client ?",
+      "choices": [
+        "La relecture du plan comptable",
+        "Le calcul de la TVA collectée",
+        "La confirmation directe du solde auprès du client",
+        "L'examen du règlement intérieur"
+      ],
+      "answer": 2,
+      "explain": "La circularisation obtient la confirmation d'un tiers sur le solde : c'est un élément probant externe adapté à l'existence des créances.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "fiscaliste-auditeur-040",
+      "theme": "Audit : démarche et rapport",
+      "level": 3,
+      "q": "Seuil de signification : 1 000 000 FCFA. Les anomalies non corrigées cumulent 1 200 000 FCFA. Que faire ?",
+      "choices": [
+        "Les ignorer car chacune est petite",
+        "Doubler le seuil",
+        "Supprimer les anomalies du dossier",
+        "Demander la correction et, à défaut, en évaluer l'impact sur l'opinion"
+      ],
+      "answer": 3,
+      "explain": "Les anomalies s'apprécient en cumul. Au-dessus du seuil, on demande la correction ; sinon l'opinion peut devoir être modulée.",
+      "seconds": 90,
+      "status": "draft"
+    }
+  ]
+}

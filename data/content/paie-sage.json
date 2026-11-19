@@ -1,0 +1,695 @@
+{
+  "profile": "paie-sage",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Le bulletin de paie : du brut au net",
+      "theme": "Bulletin de paie",
+      "minutes": 10,
+      "body": "Le **bulletin de paie** est le document qui retrace, pour une période donnée, la rémunération d'un salarié et toutes les retenues qui s'y appliquent. Il doit être clair, exact et remis au salarié à chaque paie.\n\nSa logique se lit en trois temps :\n- le **brut** : salaire de base, heures supplémentaires, primes, indemnités et **avantages en nature** (logement, véhicule, téléphone mis à disposition, etc.) ;\n- les **cotisations** : les cotisations **salariales** sont retenues sur le brut ; les cotisations **patronales** sont dues par l'employeur *en plus* du brut et n'apparaissent pas dans le net du salarié ;\n- le **net à payer** : brut moins cotisations salariales et autres retenues (impôt retenu à la source selon le barème en vigueur, acompte, avance), avec ajout éventuel des remboursements de frais non soumis.\n\nExemple chiffré, avec des taux donnés pour l'exercice : brut de 500 000 FCFA, cotisations salariales de 5 % soit 25 000, acompte de 50 000 déjà versé : net à payer = 500 000 - 25 000 - 50 000 = 425 000 FCFA. Si les cotisations patronales sont de 15 % du brut, soit 75 000, le **coût total employeur** est de 575 000 FCFA.\n\nL'**avantage en nature** n'est pas versé en espèces : il est évalué, **ajouté à l'assiette** de calcul des cotisations, puis **déduit** pour obtenir le net réellement versé. Certaines cotisations s'appliquent sur une assiette **plafonnée** : si le plafond donné est de 250 000 et le taux de 5 %, un brut de 300 000 génère 12 500 de cotisation, pas 15 000.\n\nLes **heures supplémentaires** se calculent avec le taux horaire majoré : 2 000 FCFA l'heure avec une majoration de 25 % donnée, soit 2 500 FCFA par heure supplémentaire.\n\n**Sur le terrain**\n- Relis toujours la chaîne brut, cotisations, net sur un bulletin avant de le valider.\n- Distingue ce qui est retenu au salarié de ce qui est payé en plus par l'employeur.\n- Un taux ou un plafond se lit dans les textes en vigueur, jamais de mémoire.",
+      "keyPoints": [
+        "Brut moins cotisations salariales et retenues = net à payer ; les cotisations patronales s'ajoutent au coût employeur",
+        "L'avantage en nature s'ajoute à l'assiette des cotisations puis se déduit pour obtenir le net versé",
+        "Une assiette plafonnée limite la base de calcul : on applique le taux au montant plafonné"
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Contrat de travail, essai, préavis et départ",
+      "theme": "Contrats et départ",
+      "minutes": 10,
+      "body": "Le **contrat de travail** fixe les droits et obligations de l'employeur et du salarié. Le **CDI** n'a pas de terme prévu. Le **CDD** est conclu pour une durée déterminée ou pour un objet précis, et le contrat doit en indiquer les éléments (motif, date de fin ou événement qui y met fin). Les conditions et limites de recours au CDD, ainsi que ses renouvellements, sont fixées par les textes : un CDD enchaîné sans respecter ces règles risque d'être requalifié en CDI.\n\nUn contrat écrit comporte au minimum l'**identité des parties**, la **fonction** et le lieu de travail, la **rémunération**, la **date de début**, la durée du travail et, selon le cas, la mention de la **période d'essai** et de la convention collective applicable.\n\nLa **période d'essai** permet à chacune des parties de vérifier que la collaboration convient. Sa durée maximale et ses conditions de renouvellement dépendent du Code du travail, de la convention collective et du contrat : elles se vérifient dans ces textes avant toute prolongation.\n\nEn cas de rupture, le **préavis** est un délai à respecter avant la fin effective du contrat. Si l'employeur dispense le salarié d'exécuter son préavis, il verse en principe l'**indemnité compensatrice** correspondant à la rémunération qui aurait été perçue. Exemple avec un préavis de 2 mois donné et un salaire mensuel de 350 000 FCFA : 2 x 350 000 = 700 000 FCFA.\n\nLe **solde de tout compte** récapitule les sommes dues au départ : dernier salaire, **indemnité de congés payés** acquis non pris, indemnité de préavis si elle est due, autres indemnités selon le cas. Exemple : 12 jours de congés non pris, valeur du jour = salaire mensuel de 300 000 / 30 (diviseur donné) = 10 000, soit 120 000 FCFA. Le salarié reçoit aussi son **certificat de travail**, qui atteste ses dates d'emploi et ses fonctions.\n\n**Sur le terrain**\n- Tiens un échéancier des fins d'essai et des fins de CDD pour agir avant l'échéance.\n- Ne calcule un solde de tout compte qu'avec tous les éléments : congés, préavis, primes proratisées.\n- Vérifie les durées et conditions dans les textes en vigueur avant de les appliquer.",
+      "keyPoints": [
+        "Le CDD a un terme ou un objet précis mentionné au contrat ; le non-respect des règles expose à une requalification en CDI",
+        "Préavis non exécuté à la demande de l'employeur : indemnité compensatrice équivalente à la rémunération correspondante",
+        "Solde de tout compte : dernier salaire, congés non pris, préavis et indemnités éventuelles ; certificat de travail remis au salarié"
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Congés, absences et temps de travail",
+      "theme": "Congés et absences",
+      "minutes": 9,
+      "body": "Le **congé payé** est un temps de repos pendant lequel le salarié reste rémunéré selon les règles applicables. Il s'acquiert au fil du travail effectif : on parle de **jours acquis**, puis de **jours pris**, et le **solde** vaut acquis moins pris. Exemple avec un rythme donné de 2,5 jours par mois : après 8 mois, 8 x 2,5 = 20 jours acquis ; si 18 jours ont été pris sur 25 acquis, le solde est de 7 jours.\n\nLe circuit d'une demande de congé est simple : le salarié **demande**, le responsable **valide**, le service paie **enregistre** dans le logiciel pour que le bulletin et le solde restent justes. Sans enregistrement, la paie et le solde divergent.\n\nLes **absences** ont des natures différentes, chacune avec son code dans le logiciel :\n- **maladie** : on conserve le justificatif (certificat médical) et on applique les règles de maintien ou de prise en charge prévues par les textes ;\n- **événement familial** autorisé : le traitement dépend des textes et de la convention (maintien ou non du salaire) ;\n- **absence non rémunérée** ou injustifiée : une retenue s'applique selon la décision de l'employeur.\n\nCalcul de retenue avec un salaire mensuel de 360 000 FCFA et un diviseur donné de 30 jours : valeur d'un jour = 12 000 ; trois jours d'absence non payée entraînent 36 000 FCFA de retenue. Pour un **temps partiel** à la moitié de la durée de référence, le salaire plein de 400 000 devient 200 000 par proportion.\n\nUne **absence injustifiée répétée** se trace, se signale à la hiérarchie et aux ressources humaines, qui conduisent la procédure ; la paie applique ensuite la retenue décidée. Le gestionnaire de paie ne prononce pas de sanction.\n\nEn cas de départ, les jours acquis non pris sont **valorisés** dans le solde de tout compte.\n\n**Sur le terrain**\n- Rapproche chaque mois le fichier des absences et celui de la paie.\n- Conserve les justificatifs, classés par salarié et par date.\n- Les durées et droits légaux se confirment dans le Code du travail avant application.",
+      "keyPoints": [
+        "Solde de congés = jours acquis moins jours pris ; la demande est validée par le responsable puis enregistrée par la paie",
+        "Chaque type d'absence a son code et son traitement ; le justificatif est conservé",
+        "Retenue pour absence = valeur du jour (salaire / diviseur donné) x nombre de jours non rémunérés"
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Logiciel de paie, DAS et confidentialité",
+      "theme": "Logiciel, DAS, confidentialité",
+      "minutes": 10,
+      "body": "Un logiciel de paie de type **Sage Paie & RH** automatise les calculs, mais il n'est exact que si son **paramétrage** l'est. On y définit les **rubriques** : chaque rubrique est une ligne du bulletin (gain, cotisation ou retenue) avec son mode de calcul, son assiette, son taux et son plafond éventuel. Chaque salarié est rattaché à un profil de paie qui lui applique les bonnes rubriques.\n\n**Bonnes pratiques de paramétrage**\n- Teste tout changement de taux, de plafond ou de rubrique sur un **dossier de test** avant la production.\n- Documente la **date d'effet** et conserve l'historique des modifications.\n- Si une rubrique est mal paramétrée, corrige-la, identifie **tous** les salariés touchés, recalcule et régularise.\n\n**Contrôles avant clôture** : variables du mois saisies (entrées, sorties, absences, heures, primes), bulletins cohérents avec le mois précédent, comparaison de la masse salariale. Exemple : un brut total passant de 20 000 000 à 22 000 000 FCFA représente +10 % ; l'écart doit s'expliquer par des embauches, primes ou heures, sinon on cherche l'erreur. On sauvegarde avant la clôture, avec une copie hors du poste de travail. La **séparation des tâches** s'applique : celui qui saisit n'est pas celui qui valide les virements.\n\nLa **DAS** (déclaration annuelle des salaires) récapitule sur l'année les rémunérations versées aux salariés et les éléments associés. Elle s'établit à partir des mêmes données que les bulletins : un écart entre bulletins et DAS révèle une erreur ou un oubli, à corriger avant dépôt dans les délais fixés par l'administration.\n\nLes données de paie sont **confidentielles** : accès limité aux personnes habilitées, mots de passe personnels, aucune diffusion informelle (messagerie instantanée, impression laissée sur un bureau). Un collègue qui demande le salaire d'un autre est renvoyé vers le canal autorisé.\n\nVérifiez toujours les taux, plafonds et durées dans le Code du travail et les textes en vigueur.\n\n**Sur le terrain**\n- Ne modifie jamais un paramètre en production sans trace ni test.\n- Rapproche DAS, bulletins et déclarations sociales avant chaque dépôt.\n- Tu es tenu à la discrétion, y compris envers tes collègues.",
+      "keyPoints": [
+        "Rubriques, assiettes, taux et plafonds sont paramétrés puis testés ; toute modification est datée et documentée",
+        "Contrôles avant clôture : variables, comparaison avec le mois précédent, sauvegarde et séparation des tâches",
+        "La DAS doit concorder avec les bulletins ; les données de paie sont strictement confidentielles"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "paie-sage-001",
+      "theme": "Bulletin de paie",
+      "level": 1,
+      "q": "Que comprend le salaire brut d'un salarié sur son bulletin de paie ?",
+      "choices": [
+        "Uniquement le net à payer",
+        "Le salaire de base et les éléments de rémunération soumis, comme les primes et les heures supplémentaires",
+        "Seulement les cotisations patronales",
+        "Le montant viré sur le compte bancaire du salarié"
+      ],
+      "answer": 1,
+      "explain": "Le brut regroupe le salaire de base, les heures supplémentaires, les primes, indemnités et avantages en nature. Le net à payer est ce qui reste après les retenues.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-002",
+      "theme": "Bulletin de paie",
+      "level": 1,
+      "q": "Un salarié a un brut de 400 000 FCFA. Ses cotisations salariales totales sont de 20 000 FCFA (donné), sans autre retenue. Quel est son net à payer ?",
+      "choices": [
+        "420 000 FCFA",
+        "400 000 FCFA",
+        "20 000 FCFA",
+        "380 000 FCFA"
+      ],
+      "answer": 3,
+      "explain": "Net à payer = brut - cotisations salariales = 400 000 - 20 000 = 380 000 FCFA. Les cotisations salariales sont retenues sur le brut, jamais ajoutées.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-003",
+      "theme": "Bulletin de paie",
+      "level": 1,
+      "q": "Qui supporte les cotisations patronales ?",
+      "choices": [
+        "L'employeur, en plus du salaire brut",
+        "Le salarié, déduites de son net",
+        "Les clients de l'entreprise",
+        "Le salarié et l'employeur à parts égales, par définition"
+      ],
+      "answer": 0,
+      "explain": "Les cotisations patronales sont une charge de l'employeur qui s'ajoute au brut. Elles ne réduisent pas le net du salarié mais augmentent le coût total employeur.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-004",
+      "theme": "Bulletin de paie",
+      "level": 2,
+      "q": "Un salarié a un brut de 600 000 FCFA. Les cotisations patronales sont de 10 % du brut (taux donné). Quel est le coût total pour l'employeur ?",
+      "choices": [
+        "600 000 FCFA",
+        "610 000 FCFA",
+        "660 000 FCFA",
+        "540 000 FCFA"
+      ],
+      "answer": 2,
+      "explain": "10 % de 600 000 = 60 000. Le coût employeur est le brut plus les cotisations patronales : 600 000 + 60 000 = 660 000 FCFA.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-005",
+      "theme": "Bulletin de paie",
+      "level": 2,
+      "q": "Un salarié perçoit 500 000 FCFA en espèces et bénéficie d'un logement de fonction évalué à 80 000 FCFA. L'avantage s'ajoute à l'assiette. Quelle est l'assiette de cotisations avant plafond ?",
+      "choices": [
+        "500 000 FCFA",
+        "420 000 FCFA",
+        "580 000 FCFA",
+        "80 000 FCFA"
+      ],
+      "answer": 2,
+      "explain": "L'avantage en nature est ajouté à la rémunération en espèces pour former l'assiette : 500 000 + 80 000 = 580 000 FCFA.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-006",
+      "theme": "Bulletin de paie",
+      "level": 2,
+      "q": "Brut de 500 000 FCFA, cotisations salariales de 30 000 FCFA (donné), acompte déjà versé de 50 000 FCFA. Quel est le net à payer ?",
+      "choices": [
+        "420 000 FCFA",
+        "470 000 FCFA",
+        "450 000 FCFA",
+        "380 000 FCFA"
+      ],
+      "answer": 0,
+      "explain": "On retire les cotisations puis l'acompte : 500 000 - 30 000 - 50 000 = 420 000 FCFA, la somme qui reste à verser au salarié.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-007",
+      "theme": "Bulletin de paie",
+      "level": 2,
+      "q": "Comment un avantage en nature, comme un véhicule mis à disposition, est-il traité pour obtenir le net à payer ?",
+      "choices": [
+        "Il est versé en espèces en plus du salaire",
+        "Il est ignoré de tout calcul",
+        "Il apparaît seulement dans le contrat, jamais sur le bulletin",
+        "Il est ajouté à l'assiette de cotisations, puis déduit car il n'est pas payé en espèces"
+      ],
+      "answer": 3,
+      "explain": "L'avantage est évalué et intégré à la base de calcul, puis retiré pour déterminer le net réellement versé, puisque le salarié l'a reçu en nature.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-008",
+      "theme": "Bulletin de paie",
+      "level": 3,
+      "q": "Un salarié payé 2 000 FCFA de l'heure effectue 10 heures supplémentaires avec une majoration de 25 % (taux donné). Quel montant brut correspond à ces heures ?",
+      "choices": [
+        "20 000 FCFA",
+        "25 000 FCFA",
+        "30 000 FCFA",
+        "22 500 FCFA"
+      ],
+      "answer": 1,
+      "explain": "Taux majoré = 2 000 x 1,25 = 2 500 FCFA par heure ; 10 heures donnent 25 000 FCFA. Le montant sans majoration serait de 20 000.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-009",
+      "theme": "Bulletin de paie",
+      "level": 3,
+      "q": "Une cotisation salariale de 5 % (taux donné) s'applique sur une assiette plafonnée à 250 000 FCFA (plafond donné). Le brut est de 300 000 FCFA. Quel est le montant de la cotisation ?",
+      "choices": [
+        "12 500 FCFA",
+        "15 000 FCFA",
+        "17 500 FCFA",
+        "10 000 FCFA"
+      ],
+      "answer": 0,
+      "explain": "On applique le taux à l'assiette plafonnée, pas au brut : 5 % de 250 000 = 12 500 FCFA. Appliquer 5 % à 300 000 donnerait à tort 15 000.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-010",
+      "theme": "Bulletin de paie",
+      "level": 1,
+      "q": "Un salarié signale que son bulletin comporte une erreur de taux sur une cotisation. Quelle est la bonne démarche ?",
+      "choices": [
+        "Attendre que l'erreur disparaisse seule",
+        "Supprimer le bulletin et ne rien dire",
+        "Vérifier le paramétrage, puis régulariser par une correction selon la procédure de l'entreprise",
+        "Demander au salarié de rembourser la différence en espèces"
+      ],
+      "answer": 2,
+      "explain": "On cherche la cause dans le paramétrage, on corrige à la source et on régularise par un bulletin rectificatif ou sur la paie suivante, avec trace de la correction.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-011",
+      "theme": "Contrats et départ",
+      "level": 1,
+      "q": "Qu'est-ce qui distingue un CDD d'un CDI ?",
+      "choices": [
+        "Le CDD n'a aucune durée ni objet",
+        "Le CDD a un terme fixé ou un objet précis, que le contrat doit mentionner",
+        "Le CDD interdit tout versement de salaire",
+        "Le CDD ne donne jamais droit à des congés"
+      ],
+      "answer": 1,
+      "explain": "Un CDD est conclu pour une durée déterminée ou pour une tâche précise ; le contrat doit en indiquer les éléments. Le CDI n'a pas de terme prévu.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-012",
+      "theme": "Contrats et départ",
+      "level": 1,
+      "q": "Quelle mention est normale dans un contrat de travail écrit ?",
+      "choices": [
+        "Le solde du compte bancaire du salarié",
+        "L'opinion politique du salarié",
+        "Les revenus du conjoint du salarié",
+        "La fonction, la rémunération et la date de début"
+      ],
+      "answer": 3,
+      "explain": "Un contrat précise l'identité des parties, la fonction, le lieu, la rémunération et la date de début. Les informations privées sans lien avec l'emploi n'ont pas leur place.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-013",
+      "theme": "Contrats et départ",
+      "level": 1,
+      "q": "À quoi sert la période d'essai ?",
+      "choices": [
+        "À calculer les congés payés du salarié",
+        "À fixer le montant du préavis",
+        "À sanctionner un salarié fautif",
+        "À permettre à chaque partie de vérifier si la collaboration convient"
+      ],
+      "answer": 3,
+      "explain": "L'essai permet à l'employeur d'évaluer les compétences et au salarié de vérifier que le poste lui convient, selon des conditions encadrées par les textes.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-014",
+      "theme": "Contrats et départ",
+      "level": 2,
+      "q": "Un manager te demande de prolonger la période d'essai d'un salarié. Où vérifier si c'est possible et pour quelle durée ?",
+      "choices": [
+        "Dans l'avis oral du manager",
+        "Dans le Code du travail, la convention collective et le contrat",
+        "Dans le logiciel de paie, qui fixe seul la durée",
+        "Dans les habitudes des anciens collègues"
+      ],
+      "answer": 1,
+      "explain": "Durée maximale et conditions de renouvellement sont fixées par les textes, la convention et le contrat. Ni le logiciel ni l'usage ne les remplacent.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-015",
+      "theme": "Contrats et départ",
+      "level": 2,
+      "q": "L'employeur dispense un salarié d'effectuer son préavis. Que perçoit en principe le salarié pour cette période ?",
+      "choices": [
+        "Rien, car il ne travaille pas",
+        "Une prime de bienvenue",
+        "Une indemnité compensatrice équivalente à la rémunération du préavis non exécuté",
+        "Uniquement le remboursement de ses frais"
+      ],
+      "answer": 2,
+      "explain": "Quand l'employeur choisit de ne pas faire exécuter le préavis, il verse en principe l'indemnité compensatrice correspondant à ce que le salarié aurait gagné.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-016",
+      "theme": "Contrats et départ",
+      "level": 2,
+      "q": "Préavis de 2 mois (donné), non exécuté à la demande de l'employeur, salaire mensuel de 350 000 FCFA. Quelle indemnité compensatrice ?",
+      "choices": [
+        "700 000 FCFA",
+        "350 000 FCFA",
+        "1 050 000 FCFA",
+        "175 000 FCFA"
+      ],
+      "answer": 0,
+      "explain": "Il suffit de multiplier la durée du préavis par le salaire mensuel : 2 x 350 000 = 700 000 FCFA, hors autres éléments éventuels.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-017",
+      "theme": "Contrats et départ",
+      "level": 2,
+      "q": "Que contient généralement un solde de tout compte ?",
+      "choices": [
+        "Uniquement le dernier salaire du mois",
+        "Le salaire dû, l'indemnité de congés non pris et, selon le cas, préavis et autres indemnités",
+        "Seulement les cotisations patronales",
+        "Seulement le certificat de travail"
+      ],
+      "answer": 1,
+      "explain": "Le solde de tout compte récapitule toutes les sommes dues au départ. Le certificat de travail est un document distinct, remis en plus.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-018",
+      "theme": "Contrats et départ",
+      "level": 3,
+      "q": "Un ancien salarié demande un document attestant ses dates d'emploi et les fonctions occupées. Lequel remets-tu ?",
+      "choices": [
+        "Le certificat de travail",
+        "Le bulletin de paie du dernier mois seulement",
+        "La fiche de poste d'un autre salarié",
+        "Un relevé bancaire de l'entreprise"
+      ],
+      "answer": 0,
+      "explain": "Le certificat de travail atteste la période d'emploi et les postes tenus. Il se remet à la fin du contrat, avec le solde de tout compte.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-019",
+      "theme": "Contrats et départ",
+      "level": 3,
+      "q": "À son départ, un salarié a 12 jours de congés acquis non pris. Son salaire mensuel est de 300 000 FCFA et la valeur d'un jour s'obtient en divisant par 30 (donné). Quelle indemnité de congés inscris-tu au solde de tout compte ?",
+      "choices": [
+        "90 000 FCFA",
+        "100 000 FCFA",
+        "360 000 FCFA",
+        "120 000 FCFA"
+      ],
+      "answer": 3,
+      "explain": "Valeur d'un jour = 300 000 / 30 = 10 000 FCFA. Pour 12 jours : 12 x 10 000 = 120 000 FCFA, à inscrire dans le solde de tout compte.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-020",
+      "theme": "Contrats et départ",
+      "level": 2,
+      "q": "Plusieurs salariés sont en CDD renouvelé. Que doit surveiller en priorité le gestionnaire de paie et RH ?",
+      "choices": [
+        "Le prix du carburant",
+        "L'adresse postale des salariés",
+        "Les dates de fin et les limites de renouvellement fixées par les textes, pour éviter une requalification",
+        "La couleur des badges d'accès"
+      ],
+      "answer": 2,
+      "explain": "Un suivi des échéances et des conditions de renouvellement évite qu'un enchaînement irrégulier de CDD soit requalifié en CDI avec ses conséquences.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-021",
+      "theme": "Congés et absences",
+      "level": 1,
+      "q": "Qu'est-ce qu'un congé payé ?",
+      "choices": [
+        "Une absence sans rémunération",
+        "Une prime versée chaque année",
+        "Une période de repos pendant laquelle le salarié reste rémunéré selon les règles applicables",
+        "Une sanction disciplinaire"
+      ],
+      "answer": 2,
+      "explain": "Le congé payé est un repos rémunéré acquis au fil du travail effectif. Il ne s'agit ni d'une prime ni d'une sanction.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-022",
+      "theme": "Congés et absences",
+      "level": 1,
+      "q": "Quel est le circuit normal d'une demande de congé ?",
+      "choices": [
+        "N'importe quel collègue valide la demande",
+        "Le gardien de l'entreprise valide la demande",
+        "Le client approuve le départ en congé",
+        "Le salarié demande, le responsable valide, la paie enregistre"
+      ],
+      "answer": 3,
+      "explain": "Le salarié demande, son responsable valide, et le service paie enregistre dans le logiciel pour que le solde et le bulletin restent exacts.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-023",
+      "theme": "Congés et absences",
+      "level": 1,
+      "q": "Un salarié est absent pour maladie. Que fait le gestionnaire de paie ?",
+      "choices": [
+        "Il conserve le justificatif et enregistre l'absence avec le bon code",
+        "Il ne demande aucun document",
+        "Il enregistre l'absence comme un congé payé sans le dire",
+        "Il supprime la ligne d'absence du dossier"
+      ],
+      "answer": 0,
+      "explain": "L'absence maladie s'enregistre avec son code propre et le justificatif (certificat médical) est conservé, car il conditionne le traitement en paie.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-024",
+      "theme": "Congés et absences",
+      "level": 2,
+      "q": "Avec un rythme d'acquisition de 2,5 jours par mois (donné), combien de jours de congés un salarié a-t-il acquis après 8 mois de travail effectif ?",
+      "choices": [
+        "16 jours",
+        "20 jours",
+        "25 jours",
+        "30 jours"
+      ],
+      "answer": 1,
+      "explain": "8 mois x 2,5 jours = 20 jours acquis. On le compare ensuite aux jours déjà pris pour obtenir le solde.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-025",
+      "theme": "Congés et absences",
+      "level": 2,
+      "q": "Salaire mensuel de 360 000 FCFA, diviseur de 30 jours (donné). Un salarié a 3 jours d'absence non rémunérée. Quelle retenue ?",
+      "choices": [
+        "12 000 FCFA",
+        "30 000 FCFA",
+        "108 000 FCFA",
+        "36 000 FCFA"
+      ],
+      "answer": 3,
+      "explain": "Valeur d'un jour = 360 000 / 30 = 12 000 FCFA. Pour 3 jours : 3 x 12 000 = 36 000 FCFA retenus sur le brut.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-026",
+      "theme": "Congés et absences",
+      "level": 2,
+      "q": "Un salarié a acquis 25 jours de congés et en a pris 18. Quel est son solde ?",
+      "choices": [
+        "43 jours",
+        "25 jours",
+        "7 jours",
+        "18 jours"
+      ],
+      "answer": 2,
+      "explain": "Solde = jours acquis - jours pris = 25 - 18 = 7 jours. C'est ce solde qui serait valorisé en cas de départ.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-027",
+      "theme": "Congés et absences",
+      "level": 2,
+      "q": "Un salarié s'absente pour un événement familial autorisé. Comment traiter l'absence en paie ?",
+      "choices": [
+        "Par une retenue automatique dans tous les cas",
+        "Avec le code d'absence adapté, selon les textes et la convention applicables",
+        "Comme une démission du salarié",
+        "On ne l'enregistre pas du tout"
+      ],
+      "answer": 1,
+      "explain": "Le maintien ou non du salaire dépend des textes et de la convention. Le bon code d'absence permet d'appliquer la règle correcte sans retenue arbitraire.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-028",
+      "theme": "Congés et absences",
+      "level": 3,
+      "q": "Un salarié quitte l'entreprise avec des congés acquis non pris. Que devient ce solde ?",
+      "choices": [
+        "Il est valorisé et inscrit dans le solde de tout compte",
+        "Il est perdu sans compensation",
+        "Il est transféré automatiquement chez son nouvel employeur",
+        "Il est transformé en préavis supplémentaire"
+      ],
+      "answer": 0,
+      "explain": "Les jours acquis non pris donnent lieu à une indemnité calculée à partir de la valeur du jour et versée dans le solde de tout compte.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-029",
+      "theme": "Congés et absences",
+      "level": 3,
+      "q": "Un salarié accumule des absences injustifiées. Quel est le rôle du gestionnaire de paie ?",
+      "choices": [
+        "Tracer les absences, informer la hiérarchie et les RH, puis appliquer la retenue décidée",
+        "Prononcer lui-même le licenciement",
+        "Effacer les absences pour éviter un conflit",
+        "Augmenter le salaire pour compenser"
+      ],
+      "answer": 0,
+      "explain": "La paie documente et signale. La sanction relève de l'employeur et des RH ; la paie applique ensuite la retenue correspondante à la décision prise.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-030",
+      "theme": "Congés et absences",
+      "level": 2,
+      "q": "Un salarié à temps partiel travaille la moitié de la durée de référence. Le salaire à temps plein est de 400 000 FCFA. Quel salaire de base proratisé ?",
+      "choices": [
+        "400 000 FCFA",
+        "200 000 FCFA",
+        "100 000 FCFA",
+        "800 000 FCFA"
+      ],
+      "answer": 1,
+      "explain": "On applique la proportion de temps travaillé : 400 000 x 1/2 = 200 000 FCFA. Un montant supérieur au plein temps serait absurde.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-031",
+      "theme": "Logiciel, DAS, confidentialité",
+      "level": 1,
+      "q": "Dans un logiciel de paie, qu'est-ce qu'une rubrique ?",
+      "choices": [
+        "Un type de contrat de travail",
+        "Un mot de passe d'accès au dossier",
+        "Une ligne du bulletin (gain, retenue ou cotisation) avec son mode de calcul",
+        "Un service de l'entreprise"
+      ],
+      "answer": 2,
+      "explain": "Chaque rubrique correspond à une ligne du bulletin et porte son mode de calcul, son assiette, son taux et son plafond éventuel.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-032",
+      "theme": "Logiciel, DAS, confidentialité",
+      "level": 1,
+      "q": "Quel est le premier contrôle à faire avant de clôturer la paie du mois ?",
+      "choices": [
+        "Imprimer les bulletins sans les relire",
+        "Envoyer les virements avant toute vérification",
+        "Fermer le dossier sans sauvegarde",
+        "Vérifier que les variables du mois sont saisies : entrées, sorties, absences, heures, primes"
+      ],
+      "answer": 3,
+      "explain": "Une paie correcte dépend d'abord de variables complètes et exactes. Sans cela, les bulletins seront faux même si le paramétrage est bon.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-033",
+      "theme": "Logiciel, DAS, confidentialité",
+      "level": 1,
+      "q": "Comment doit-on considérer les données de paie d'une entreprise ?",
+      "choices": [
+        "Comme des données publiques",
+        "Comme des données confidentielles à accès limité",
+        "Comme des informations à afficher en salle de pause",
+        "Comme des documents à partager librement sur les messageries"
+      ],
+      "answer": 1,
+      "explain": "La paie contient des informations personnelles et financières. Seules les personnes habilitées y accèdent, avec des mots de passe individuels.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-034",
+      "theme": "Logiciel, DAS, confidentialité",
+      "level": 2,
+      "q": "Le brut total du mois précédent est de 20 000 000 FCFA ; celui du mois courant est de 22 000 000 FCFA. De quel pourcentage la masse salariale a-t-elle augmenté ?",
+      "choices": [
+        "2 %",
+        "5 %",
+        "10 %",
+        "22 %"
+      ],
+      "answer": 2,
+      "explain": "L'écart est de 2 000 000, soit 2 000 000 / 20 000 000 = 10 %. Un tel écart doit s'expliquer (embauches, primes, heures), sinon on cherche l'erreur.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-035",
+      "theme": "Logiciel, DAS, confidentialité",
+      "level": 2,
+      "q": "À quoi sert la DAS, déclaration annuelle des salaires ?",
+      "choices": [
+        "À commander les fournitures de bureau",
+        "À fixer le prix de vente des produits",
+        "À planifier les congés de l'année suivante",
+        "À récapituler sur l'année les rémunérations versées aux salariés, à partir des paies"
+      ],
+      "answer": 3,
+      "explain": "La DAS reprend, pour l'année, les rémunérations versées et les éléments associés par salarié, à partir des données de paie, et se dépose dans les délais prévus.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-036",
+      "theme": "Logiciel, DAS, confidentialité",
+      "level": 2,
+      "q": "Pourquoi les montants de la DAS doivent-ils concorder avec les bulletins de paie ?",
+      "choices": [
+        "Parce qu'elle est établie à partir des mêmes données : un écart révèle une erreur ou un oubli",
+        "Parce que les bulletins sont toujours faux",
+        "Parce que la DAS remplace les bulletins",
+        "Parce que le logiciel l'interdit sinon"
+      ],
+      "answer": 0,
+      "explain": "Bulletins et DAS reposent sur les mêmes données. Un écart indique une saisie manquante, un bulletin non pris en compte ou une erreur à corriger avant dépôt.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-037",
+      "theme": "Logiciel, DAS, confidentialité",
+      "level": 2,
+      "q": "Un taux de cotisation change. Quelle est la bonne pratique de paramétrage ?",
+      "choices": [
+        "Modifier directement en production sans laisser de trace",
+        "Confier la modification à un stagiaire sans contrôle",
+        "Modifier après la clôture sans prévenir personne",
+        "Tester sur un dossier de test, documenter la date d'effet et conserver l'historique"
+      ],
+      "answer": 3,
+      "explain": "Tester évite d'impacter tous les bulletins, et la date d'effet documentée permet de justifier les montants et de corriger si besoin.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-038",
+      "theme": "Logiciel, DAS, confidentialité",
+      "level": 3,
+      "q": "Tu découvres qu'une rubrique de prime n'était pas soumise aux cotisations pour plusieurs salariés pendant trois mois. Que fais-tu ?",
+      "choices": [
+        "Corriger le paramétrage, identifier tous les salariés concernés, recalculer et régulariser",
+        "Corriger uniquement le dernier bulletin émis",
+        "Attendre qu'un salarié se plaigne",
+        "Supprimer la rubrique de la base de données"
+      ],
+      "answer": 0,
+      "explain": "Il faut corriger la cause, mesurer l'étendue de l'erreur sur tous les bulletins touchés puis régulariser, avec information de la hiérarchie et traçabilité.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-039",
+      "theme": "Logiciel, DAS, confidentialité",
+      "level": 3,
+      "q": "Quelle bonne pratique de sauvegarde s'applique avant la clôture mensuelle ?",
+      "choices": [
+        "La sauvegarde est superflue avec un logiciel moderne",
+        "Une sauvegarde par an suffit",
+        "Sauvegarder avant chaque clôture et conserver une copie hors du poste de travail",
+        "Garder une clé USB non protégée sur le bureau"
+      ],
+      "answer": 2,
+      "explain": "Une sauvegarde avant clôture permet de revenir en arrière en cas d'erreur, et une copie externe protège contre la panne ou la perte du poste.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "paie-sage-040",
+      "theme": "Logiciel, DAS, confidentialité",
+      "level": 3,
+      "q": "Pourquoi sépare-t-on la saisie des variables de paie et la validation des virements de salaires ?",
+      "choices": [
+        "Pour ralentir volontairement le travail",
+        "Pour réduire le risque d'erreur et de fraude grâce à un second contrôle",
+        "Pour augmenter les coûts de l'entreprise",
+        "Parce que tous les logiciels l'imposent de la même façon"
+      ],
+      "answer": 1,
+      "explain": "La séparation des tâches fait contrôler le travail de l'un par l'autre. Une seule personne maîtrisant tout le circuit pourrait commettre une erreur ou une fraude sans détection.",
+      "seconds": 70,
+      "status": "draft"
+    }
+  ]
+}

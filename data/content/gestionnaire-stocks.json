@@ -1,0 +1,717 @@
+{
+  "profile": "gestionnaire-stocks",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Nomenclature, codification et mouvements de stock",
+      "theme": "Codification et mouvements",
+      "minutes": 9,
+      "body": "Un magasin ne se gère bien que si **chaque article est identifié de façon unique**. La **nomenclature** est la liste structurée et classée des articles, avec leur désignation, leur unité et leur code. La **codification** attribue à chaque article un code stable et parlant, par exemple *famille - sous-famille - numéro d'ordre* (PRE-ROU-0012 pour un roulement). Règles de base : un article = un code, un code = un article, pas de doublon, pas de réutilisation d'un code ancien.\n\nUn même produit sous deux codes éclate le stock : on croit manquer d'un article alors qu'il dort sous l'autre code, et on commande en trop.\n\nL'**unité de stock** peut différer de l'**unité d'achat** : 5 cartons de 12 pièces reçus donnent 60 unités en stock. Cette conversion se définit une fois pour toutes dans la fiche article.\n\nTout mouvement s'appuie sur un document :\n- **entrée** : bon de réception, établi après contrôle de la livraison par rapport au bon de commande et au bon de livraison ;\n- **sortie** : bon de sortie (ou bon de demande), signé par le demandeur et autorisé par un responsable ;\n- **retour** : bon de retour d'un chantier ou d'un atelier, avec contrôle de l'état et réintégration sous le bon code ;\n- **transfert** entre magasins ou emplacements.\n\nLa **fiche de stock** suit la relation : stock final = stock initial + entrées - sorties. Exemple : 150 + 80 - 120 = 110 unités. Une sortie sans bon crée un **écart** entre stock théorique (celui des écritures) et stock physique (celui des rayons) : écart qu'il sera difficile d'expliquer.\n\nDans un logiciel de gestion de stock, les mouvements s'enregistrent le jour même, pour que le stock affiché reste fiable.\n\n**Sur le terrain**\n- Pas de bon, pas de mouvement : aucune sortie sans document signé.\n- Avant de créer un article, cherche s'il existe déjà sous un autre nom.\n- Saisis les mouvements le jour même, pas en fin de semaine.",
+      "keyPoints": [
+        "Un article = un code unique ; la nomenclature classe famille, sous-famille et numéro d'ordre",
+        "Chaque mouvement (entrée, sortie, retour, transfert) s'appuie sur un document signé",
+        "Stock final = stock initial + entrées - sorties ; une sortie sans bon crée un écart"
+      ],
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec rayonnages"
+    },
+    {
+      "id": "m2",
+      "title": "Valoriser le stock : CMUP et FIFO",
+      "theme": "Valorisation",
+      "minutes": 10,
+      "body": "Valoriser un stock, c'est lui donner une **valeur en argent** : quantité multipliée par un coût unitaire. Cette valeur sert au bilan, au calcul des coûts et au suivi de ce que l'entreprise immobilise. Comme les prix d'achat changent, il faut une **méthode** pour décider à quel coût on sort les articles.\n\n**CMUP** (coût moyen unitaire pondéré) : après chaque entrée, on recalcule un coût moyen. CMUP = (valeur du stock avant + valeur de l'entrée) / (quantité avant + quantité entrée). Exemple : 100 unités à 50 en stock, entrée de 100 unités à 70 : CMUP = (5 000 + 7 000) / 200 = 60. Une sortie de 40 unités est alors valorisée 40 x 60 = 2 400.\n\n**FIFO** (first in, first out) : on sort les articles en commençant par les plus anciens, donc on les valorise à leur **coût d'entrée**. Avec un lot de 100 à 50 et un lot de 100 à 70, une sortie de 150 unités vaut 100 x 50 + 50 x 70 = 8 500. Il reste 50 unités à 70, soit 3 500 en stock.\n\nComparaison : quand les prix **montent**, le FIFO valorise le stock final plus haut que le CMUP (les unités restantes sont les plus récentes), et le coût des sorties plus bas. Quand les prix baissent, c'est l'inverse. Le CMUP lisse les variations ; le FIFO suit l'ordre réel d'entrée, utile pour les produits datés.\n\nAutre exemple de CMUP : 200 unités à 10, entrée de 300 unités à 12 : (2 000 + 3 600) / 500 = 11,2 ; 80 unités restantes valent 80 x 11,2 = 896.\n\nLa méthode choisie s'applique de façon **permanente** : en changer en cours d'année rompt la comparabilité des chiffres, sauf justification et information.\n\n**Sur le terrain**\n- Recalcule le CMUP à chaque entrée, jamais seulement en fin de mois sans le dire.\n- Garde l'ordre des lots physiques cohérent avec le FIFO que tu valorises.\n- Écris la méthode retenue dans la procédure du magasin.",
+      "keyPoints": [
+        "CMUP = (valeur avant + valeur de l'entrée) / (quantité avant + quantité entrée)",
+        "FIFO : on sort et on valorise d'abord les lots les plus anciens, à leur coût d'entrée",
+        "Prix en hausse : stock final FIFO supérieur à celui du CMUP ; la méthode reste constante dans le temps"
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Stock de sécurité, point de commande et rotation",
+      "theme": "Approvisionnement et rotation",
+      "minutes": 10,
+      "body": "Le stock protège contre les aléas, mais il immobilise de l'argent, de la place et il peut vieillir. Le gestionnaire cherche l'équilibre entre le **service rendu** (pas de rupture) et le **coût de possession**.\n\nLe **stock de sécurité** absorbe les aléas de consommation ou de retard du fournisseur. Méthode simple : consommation journalière x retard maximal accepté. Avec 15 unités par jour et 4 jours de retard possible : 15 x 4 = 60 unités.\n\nLe **point de commande** est le niveau de stock qui déclenche une commande : consommation pendant le **délai d'approvisionnement** + stock de sécurité. Avec 30 unités par jour, un délai de 10 jours et 90 de stock de sécurité : 30 x 10 + 90 = 390 unités. Si le délai du fournisseur passe de 10 à 15 jours pour une consommation de 20 unités par jour, le point de commande monte de 20 x 5 = 100 unités : il se recalcule dès que le délai change.\n\nLa **classification ABC** range les articles selon la valeur consommée : les articles A (peu de références, grande part de la valeur) demandent un suivi serré et des inventaires fréquents ; les articles C, une gestion simple.\n\nLa **rotation** mesure la vitesse d'écoulement : rotation = consommation annuelle / stock moyen, avec stock moyen = (stock initial + stock final) / 2. Avec un stock de 120 000 au début et 180 000 à la fin, le stock moyen est de 150 000. Si la consommation annuelle valorisée est de 900 000, la rotation est de 900 000 / 150 000 = 6 fois par an. La **couverture** = 360 / rotation = 60 jours de consommation en stock.\n\nUne rotation très faible révèle surstock ou articles dormants ; une rotation très forte peut annoncer des ruptures.\n\n**Sur le terrain**\n- Une rupture d'un article peu cher mais critique peut arrêter une installation : classe aussi par criticité.\n- Recalcule seuil et sécurité quand la consommation ou le délai change.\n- Repère chaque trimestre les articles sans mouvement.",
+      "keyPoints": [
+        "Stock de sécurité = consommation journalière x retard maximal accepté",
+        "Point de commande = consommation pendant le délai + stock de sécurité",
+        "Rotation = consommation annuelle / stock moyen ; couverture = 360 / rotation"
+      ],
+      "img": "svg/abc-stock-curve.svg",
+      "imgAlt": "Courbe ABC : pourcentage cumulé de la valeur selon le pourcentage cumulé des articles"
+    },
+    {
+      "id": "m4",
+      "title": "Inventaire, écarts, magasin et pièces de rechange",
+      "theme": "Inventaire, écarts et pièces de rechange",
+      "minutes": 10,
+      "body": "L'**inventaire** compare le stock physique au stock théorique. L'**inventaire annuel** compte tout, souvent avec arrêt d'activité. L'**inventaire tournant** compte chaque semaine une partie des références, plus souvent pour les articles A, sans arrêter le magasin : tout est vérifié au cours de l'année.\n\nL'**exactitude d'inventaire** = emplacements conformes / emplacements comptés. Avec 285 conformes sur 300, elle est de 95 %.\n\n**Traiter un écart** : on **recompte**, on **cherche la cause** (erreur de saisie, sortie sans bon, mauvaise unité, casse, vol, mauvais emplacement), on documente, puis on **ajuste** seulement après **validation écrite d'un responsable**. On ne corrige jamais « pour faire joli ». Exemple : stock théorique 240, comptage 232 : écart de -8 ; avec un coût unitaire de 1 500, l'écart vaut 12 000. Si le même article est en écart à répétition, on cherche une cause systémique (unité, emplacement, procédure de saisie) et on corrige le processus.\n\n**Rangement** : chaque article a un **emplacement identifié** et étiqueté ; les articles lourds se rangent en bas, les articles très demandés près de la sortie, les allées restent dégagées, les produits dangereux se rangent à part avec leur fiche de sécurité.\n\n**Pièces de rechange industrielles** : on les classe en tenant compte de la **criticité** (effet d'une panne sur la production), du **délai d'obtention** et du coût. Une pièce chère, rarement utilisée mais dont l'absence immobilise une machine se garde en stock : le coût d'arrêt dépasse le coût de possession. Avec un arrêt de 2 000 000 par jour et 10 jours de délai, l'attente coûte 20 000 000, contre une pièce de 600 000 en rayon.\n\n**Sur le terrain**\n- Recompte avant d'ajuster, et fais valider chaque ajustement.\n- Identifie les pièces critiques avec la maintenance, pas seul.\n- Étiquette chaque emplacement et tiens-le à jour.",
+      "keyPoints": [
+        "Inventaire tournant : comptage régulier par fractions, classe A plus souvent, sans arrêt du magasin",
+        "Écart : recompter, chercher la cause, documenter, ajuster après validation écrite",
+        "Pièces de rechange : classées par criticité et délai ; une pièce critique se stocke malgré sa faible rotation"
+      ],
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec rayonnages de palettes et chariots élévateurs"
+    }
+  ],
+  "questions": [
+    {
+      "id": "gestionnaire-stocks-001",
+      "theme": "Codification et mouvements",
+      "level": 1,
+      "q": "Pourquoi codifie-t-on les articles d'un magasin ?",
+      "choices": [
+        "Pour augmenter les prix d'achat",
+        "Pour identifier chaque article de façon unique et éviter les doublons",
+        "Pour cacher les articles aux visiteurs",
+        "Pour réduire automatiquement le personnel"
+      ],
+      "answer": 1,
+      "explain": "Un code unique par article évite les doublons, facilite la recherche, l'enregistrement des mouvements et le suivi fiable des quantités.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-002",
+      "theme": "Codification et mouvements",
+      "level": 1,
+      "q": "Quel document autorise normalement la sortie d'articles du magasin ?",
+      "choices": [
+        "Le bon de livraison du fournisseur",
+        "La facture d'achat",
+        "Le bon de commande",
+        "Le bon de sortie (ou bon de demande) signé"
+      ],
+      "answer": 3,
+      "explain": "La sortie s'appuie sur un bon signé par le demandeur et autorisé par un responsable. Les autres documents concernent les achats et les entrées.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-003",
+      "theme": "Codification et mouvements",
+      "level": 1,
+      "q": "Sur quelle base enregistre-t-on l'entrée d'une livraison en stock ?",
+      "choices": [
+        "Le bon de réception établi après contrôle par rapport au bon de commande",
+        "Une estimation visuelle du chauffeur",
+        "Un appel téléphonique du fournisseur",
+        "Un bon de sortie du magasin voisin"
+      ],
+      "answer": 0,
+      "explain": "On contrôle quantité et état par rapport au bon de commande et au bon de livraison, puis on établit le bon de réception qui déclenche l'entrée.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-004",
+      "theme": "Codification et mouvements",
+      "level": 2,
+      "q": "Stock initial de 150 unités, entrées de 80 unités, sorties de 120 unités. Quel est le stock final théorique ?",
+      "choices": [
+        "350 unités",
+        "190 unités",
+        "110 unités",
+        "70 unités"
+      ],
+      "answer": 2,
+      "explain": "Stock final = stock initial + entrées - sorties = 150 + 80 - 120 = 110 unités.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-005",
+      "theme": "Codification et mouvements",
+      "level": 2,
+      "q": "Un code article de la forme PRE-ROU-0012 est construit selon une logique famille - sous-famille - numéro d'ordre. Quel avantage ?",
+      "choices": [
+        "Il indique directement le prix d'achat",
+        "Il donne la date de livraison",
+        "Il classe l'article dans sa famille et le rend identifiable de façon unique",
+        "Il remplace le bon de sortie"
+      ],
+      "answer": 2,
+      "explain": "Un code structuré situe l'article dans la nomenclature et garantit son unicité. Il ne contient ni prix ni date, qui relèvent d'autres champs.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-006",
+      "theme": "Codification et mouvements",
+      "level": 2,
+      "q": "Le même roulement existe sous deux codes différents. Quelle conséquence est probable ?",
+      "choices": [
+        "Un stock éclaté : rupture apparente d'un côté et surstock de l'autre",
+        "Rien ne change dans la gestion du stock",
+        "Une traçabilité renforcée",
+        "Une valorisation plus juste"
+      ],
+      "answer": 0,
+      "explain": "Le stock est réparti sur deux fiches : on peut commander un article déjà présent sous l'autre code, ce qui crée à la fois ruptures apparentes et surstock.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-007",
+      "theme": "Codification et mouvements",
+      "level": 2,
+      "q": "Un magasinier sert un technicien sans établir de bon de sortie. Quel risque principal ?",
+      "choices": [
+        "Un stock physique plus élevé que prévu, sans conséquence",
+        "Une baisse automatique du prix d'achat",
+        "Une meilleure rotation des stocks",
+        "Un écart entre stock théorique et stock physique, difficile à expliquer"
+      ],
+      "answer": 3,
+      "explain": "La sortie n'est pas enregistrée : le stock théorique reste trop haut par rapport au rayon, et l'origine de l'écart devient introuvable.",
+      "seconds": 70,
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec rayonnages, zone de préparation et de sortie des articles",
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-008",
+      "theme": "Codification et mouvements",
+      "level": 3,
+      "q": "Du matériel non consommé revient d'un chantier au magasin. Que fais-tu ?",
+      "choices": [
+        "Je le range sans rien enregistrer",
+        "J'établis un bon de retour, contrôle l'état et réintègre l'article sous son code",
+        "Je le jette pour libérer de la place",
+        "Je le rends au chantier sans trace"
+      ],
+      "answer": 1,
+      "explain": "Un retour est un mouvement à part entière : bon de retour, contrôle de l'état et réintégration sous le bon code pour que le stock reste juste.",
+      "seconds": 90,
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec rayonnages et zone de réception du matériel",
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-009",
+      "theme": "Codification et mouvements",
+      "level": 2,
+      "q": "Un article est acheté en cartons de 12 pièces et géré à la pièce. Tu reçois 5 cartons. Quelle quantité enregistres-tu en stock ?",
+      "choices": [
+        "60 pièces",
+        "17 pièces",
+        "5 pièces",
+        "12 pièces"
+      ],
+      "answer": 0,
+      "explain": "L'unité de stock est la pièce : 5 cartons x 12 pièces = 60 pièces. La conversion se paramètre dans la fiche article.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-010",
+      "theme": "Codification et mouvements",
+      "level": 1,
+      "q": "Que désigne la nomenclature des articles d'un magasin ?",
+      "choices": [
+        "Le planning des congés des magasiniers",
+        "Le budget annuel de l'entreprise",
+        "La liste structurée et classée des articles, avec codes et désignations",
+        "Le plan d'évacuation du bâtiment"
+      ],
+      "answer": 2,
+      "explain": "La nomenclature classe tous les articles par famille, avec leur code, désignation et unité. C'est la base de toute gestion de stock.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-011",
+      "theme": "Valorisation",
+      "level": 1,
+      "q": "Que signifie CMUP ?",
+      "choices": [
+        "Coût maximal unitaire prévu",
+        "Coût moyen unitaire pondéré",
+        "Contrôle mensuel des unités produites",
+        "Compte matière à usage permanent"
+      ],
+      "answer": 1,
+      "explain": "Le CMUP est le coût moyen unitaire pondéré : un coût moyen recalculé en tenant compte des quantités et des prix de chaque entrée.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-012",
+      "theme": "Valorisation",
+      "level": 1,
+      "q": "Quel est le principe de la méthode FIFO ?",
+      "choices": [
+        "Les derniers entrés sont sortis en premier",
+        "L'article le moins cher sort toujours en premier",
+        "Les articles sortent par tirage au sort",
+        "Les premiers entrés sortent en premier, valorisés à leur coût d'entrée"
+      ],
+      "answer": 3,
+      "explain": "FIFO signifie first in, first out : on consomme d'abord les lots les plus anciens, valorisés à leur propre coût d'entrée.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-013",
+      "theme": "Valorisation",
+      "level": 2,
+      "q": "Stock de 100 unités à 50 FCFA, puis entrée de 100 unités à 70 FCFA. Quel est le nouveau CMUP ?",
+      "choices": [
+        "50 FCFA",
+        "55 FCFA",
+        "70 FCFA",
+        "60 FCFA"
+      ],
+      "answer": 3,
+      "explain": "CMUP = (100 x 50 + 100 x 70) / 200 = 12 000 / 200 = 60 FCFA, moyenne pondérée par les quantités.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-014",
+      "theme": "Valorisation",
+      "level": 2,
+      "q": "Le CMUP est de 60 FCFA. On sort 40 unités. Quelle est la valeur de la sortie ?",
+      "choices": [
+        "2 000 FCFA",
+        "2 400 FCFA",
+        "2 800 FCFA",
+        "6 000 FCFA"
+      ],
+      "answer": 1,
+      "explain": "Valeur de la sortie = quantité x CMUP = 40 x 60 = 2 400 FCFA.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-015",
+      "theme": "Valorisation",
+      "level": 2,
+      "q": "Lots en stock : 100 unités à 50 FCFA (plus ancien) et 100 unités à 70 FCFA. En FIFO, quelle est la valeur d'une sortie de 150 unités ?",
+      "choices": [
+        "9 000 FCFA",
+        "7 500 FCFA",
+        "8 500 FCFA",
+        "10 500 FCFA"
+      ],
+      "answer": 2,
+      "explain": "On sort d'abord les 100 unités à 50 puis 50 unités à 70 : 5 000 + 3 500 = 8 500 FCFA.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-016",
+      "theme": "Valorisation",
+      "level": 2,
+      "q": "Après la sortie de 150 unités de la question précédente (FIFO), quelle est la valeur du stock restant ?",
+      "choices": [
+        "3 500 FCFA",
+        "5 000 FCFA",
+        "2 500 FCFA",
+        "7 000 FCFA"
+      ],
+      "answer": 0,
+      "explain": "Il reste 50 unités du lot le plus récent, à 70 FCFA : 50 x 70 = 3 500 FCFA.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-017",
+      "theme": "Valorisation",
+      "level": 2,
+      "q": "Quand les prix d'achat montent, comment la valeur du stock final en FIFO se compare-t-elle à celle en CMUP ?",
+      "choices": [
+        "Elle est inférieure",
+        "Elle est supérieure ou égale, car les unités restantes sont les plus récentes",
+        "Elle est toujours nulle",
+        "Elle ne dépend pas des prix"
+      ],
+      "answer": 1,
+      "explain": "En FIFO, les unités restantes sont celles achetées en dernier, donc les plus chères en période de hausse : le stock final est valorisé plus haut qu'au CMUP.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-018",
+      "theme": "Valorisation",
+      "level": 3,
+      "q": "Pourquoi déconseille-t-on de changer de méthode de valorisation en cours d'année ?",
+      "choices": [
+        "Cela rompt la comparabilité des chiffres : la méthode doit rester constante",
+        "Parce que c'est interdit dans tous les cas",
+        "Parce que cela augmente automatiquement les quantités",
+        "Parce que cela modifie les prix d'achat des fournisseurs"
+      ],
+      "answer": 0,
+      "explain": "Changer de méthode en cours de route fausse les comparaisons d'une période à l'autre. La méthode s'applique de façon permanente, sauf justification et information.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-019",
+      "theme": "Valorisation",
+      "level": 3,
+      "q": "Stock de 200 unités à 10 FCFA, puis entrée de 300 unités à 12 FCFA. Quel est le CMUP après entrée ?",
+      "choices": [
+        "11,0 FCFA",
+        "11,5 FCFA",
+        "12,0 FCFA",
+        "11,2 FCFA"
+      ],
+      "answer": 3,
+      "explain": "CMUP = (200 x 10 + 300 x 12) / 500 = (2 000 + 3 600) / 500 = 11,2 FCFA.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-020",
+      "theme": "Valorisation",
+      "level": 2,
+      "q": "Il reste 80 unités valorisées au CMUP de 11,2 FCFA. Quelle est la valeur du stock ?",
+      "choices": [
+        "800 FCFA",
+        "960 FCFA",
+        "896 FCFA",
+        "1 120 FCFA"
+      ],
+      "answer": 2,
+      "explain": "Valeur = quantité x CMUP = 80 x 11,2 = 896 FCFA.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-021",
+      "theme": "Approvisionnement et rotation",
+      "level": 1,
+      "q": "À quoi sert le stock de sécurité ?",
+      "choices": [
+        "À augmenter les ventes de l'entreprise",
+        "À réduire le délai de livraison du fournisseur",
+        "À absorber les aléas de consommation ou de retard sans rupture",
+        "À remplacer l'inventaire annuel"
+      ],
+      "answer": 2,
+      "explain": "Le stock de sécurité est une réserve qui évite la rupture quand la consommation dépasse la prévision ou quand le fournisseur est en retard.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-022",
+      "theme": "Approvisionnement et rotation",
+      "level": 1,
+      "q": "Qu'est-ce que le point de commande ?",
+      "choices": [
+        "Le stock maximal du magasin",
+        "L'endroit où l'on passe les commandes",
+        "Le prix d'achat négocié",
+        "Le niveau de stock qui déclenche une commande"
+      ],
+      "answer": 3,
+      "explain": "Quand le stock descend à ce niveau, on lance la commande pour que la livraison arrive avant la rupture.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-023",
+      "theme": "Approvisionnement et rotation",
+      "level": 2,
+      "q": "Consommation de 30 unités par jour, délai d'approvisionnement de 10 jours, stock de sécurité de 90 unités. Quel est le point de commande ?",
+      "choices": [
+        "390 unités",
+        "300 unités",
+        "330 unités",
+        "420 unités"
+      ],
+      "answer": 0,
+      "explain": "Point de commande = consommation pendant le délai + sécurité = 30 x 10 + 90 = 390 unités.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-024",
+      "theme": "Approvisionnement et rotation",
+      "level": 2,
+      "q": "Un article se consomme à 15 unités par jour. Le fournisseur peut avoir 4 jours de retard. Quel stock de sécurité retiens-tu ?",
+      "choices": [
+        "19 unités",
+        "60 unités",
+        "11 unités",
+        "75 unités"
+      ],
+      "answer": 1,
+      "explain": "Stock de sécurité = consommation journalière x retard maximal accepté = 15 x 4 = 60 unités.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-025",
+      "theme": "Approvisionnement et rotation",
+      "level": 2,
+      "q": "Consommation annuelle valorisée de 900 000 FCFA et stock moyen de 150 000 FCFA. Quelle est la rotation ?",
+      "choices": [
+        "0,17 fois par an",
+        "150 fois par an",
+        "15 fois par an",
+        "6 fois par an"
+      ],
+      "answer": 3,
+      "explain": "Rotation = consommation annuelle / stock moyen = 900 000 / 150 000 = 6 fois par an.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-026",
+      "theme": "Approvisionnement et rotation",
+      "level": 2,
+      "q": "La rotation est de 6 par an. Quelle est la couverture en jours, sur une base de 360 jours ?",
+      "choices": [
+        "6 jours",
+        "30 jours",
+        "60 jours",
+        "360 jours"
+      ],
+      "answer": 2,
+      "explain": "Couverture = 360 / rotation = 360 / 6 = 60 jours de consommation en stock.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-027",
+      "theme": "Approvisionnement et rotation",
+      "level": 2,
+      "q": "Un article a une rotation très faible depuis deux ans. Quelle interprétation est la plus probable ?",
+      "choices": [
+        "Le stock est parfaitement dimensionné",
+        "Surstock ou article dormant",
+        "Une rupture imminente",
+        "Un fournisseur très rapide"
+      ],
+      "answer": 1,
+      "explain": "Une faible rotation signale un stock qui s'écoule peu : surstock, article dormant ou obsolète, à examiner et à traiter.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-028",
+      "theme": "Approvisionnement et rotation",
+      "level": 3,
+      "q": "Pour un article consommé à 20 unités par jour, le délai du fournisseur passe de 10 à 15 jours. De combien le point de commande doit-il augmenter, à stock de sécurité inchangé ?",
+      "choices": [
+        "100 unités",
+        "5 unités",
+        "20 unités",
+        "300 unités"
+      ],
+      "answer": 0,
+      "explain": "Cinq jours de délai en plus à 20 unités par jour : 5 x 20 = 100 unités de plus à couvrir avant la livraison.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-029",
+      "theme": "Approvisionnement et rotation",
+      "level": 1,
+      "q": "Dans une classification ABC, comment traite-t-on les articles de classe A ?",
+      "choices": [
+        "Par un suivi rapproché et des inventaires fréquents",
+        "Sans aucun suivi particulier",
+        "En commandant une seule fois tous les cinq ans",
+        "En les ignorant"
+      ],
+      "answer": 0,
+      "explain": "La classe A représente une part élevée de la valeur avec peu de références : un suivi serré et des comptages fréquents sont justifiés.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-030",
+      "theme": "Approvisionnement et rotation",
+      "level": 3,
+      "q": "Un stock vaut 120 000 FCFA au début de l'année et 180 000 FCFA à la fin. Quel est le stock moyen ?",
+      "choices": [
+        "300 000 FCFA",
+        "150 000 FCFA",
+        "60 000 FCFA",
+        "180 000 FCFA"
+      ],
+      "answer": 1,
+      "explain": "Stock moyen = (stock initial + stock final) / 2 = (120 000 + 180 000) / 2 = 150 000 FCFA.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-031",
+      "theme": "Inventaire, écarts et pièces de rechange",
+      "level": 1,
+      "q": "En quoi consiste un inventaire tournant ?",
+      "choices": [
+        "Arrêter tout le magasin une fois par an",
+        "Ne compter que les articles de classe C",
+        "Compter régulièrement une partie des références, sans arrêter le magasin",
+        "Ne jamais compter les articles en stock"
+      ],
+      "answer": 2,
+      "explain": "L'inventaire tournant répartit les comptages dans l'année, avec plus de passages sur les articles A, et évite l'arrêt d'activité d'un inventaire annuel complet.",
+      "seconds": 45,
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec rayonnages de palettes où l'on compte les références par zone",
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-032",
+      "theme": "Inventaire, écarts et pièces de rechange",
+      "level": 1,
+      "q": "Tu constates un écart entre le comptage et le stock informatique. Quel est le premier réflexe ?",
+      "choices": [
+        "Ajuster immédiatement le stock informatique",
+        "Accuser le magasinier de service",
+        "Ignorer l'écart s'il est faible",
+        "Recompter, puis chercher la cause avant tout ajustement"
+      ],
+      "answer": 3,
+      "explain": "Un recomptage élimine les erreurs de comptage ; la recherche de la cause (saisie, sortie sans bon, unité) évite de masquer un vrai problème.",
+      "seconds": 50,
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec rayonnages où un écart d'inventaire doit être vérifié emplacement par emplacement",
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-033",
+      "theme": "Inventaire, écarts et pièces de rechange",
+      "level": 2,
+      "q": "Stock théorique de 240 pièces, comptage de 232 pièces. Le coût unitaire est de 1 500 FCFA. Quelle est la valeur de l'écart ?",
+      "choices": [
+        "8 000 FCFA",
+        "12 000 FCFA",
+        "18 000 FCFA",
+        "360 000 FCFA"
+      ],
+      "answer": 1,
+      "explain": "L'écart est de 240 - 232 = 8 pièces manquantes ; 8 x 1 500 = 12 000 FCFA.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-034",
+      "theme": "Inventaire, écarts et pièces de rechange",
+      "level": 2,
+      "q": "Lors d'un comptage, 285 emplacements sur 300 sont conformes. Quelle est l'exactitude d'inventaire ?",
+      "choices": [
+        "85 %",
+        "90 %",
+        "95 %",
+        "99 %"
+      ],
+      "answer": 2,
+      "explain": "Exactitude = emplacements conformes / emplacements comptés = 285 / 300 = 95 %.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-035",
+      "theme": "Inventaire, écarts et pièces de rechange",
+      "level": 2,
+      "q": "Pourquoi garder en stock une pièce de rechange coûteuse, rarement utilisée, mais critique pour une machine ?",
+      "choices": [
+        "Pour améliorer artificiellement la rotation",
+        "Parce qu'elle est très bon marché",
+        "Pour éviter qu'elle soit périmée",
+        "Son absence peut immobiliser la machine et le coût d'arrêt dépasse le coût de possession"
+      ],
+      "answer": 3,
+      "explain": "Pour une pièce critique, le coût d'une panne prolongée est bien supérieur à celui de la détenir. La rotation faible est alors acceptée.",
+      "seconds": 80,
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec rayonnages où sont rangées des pièces de rechange",
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-036",
+      "theme": "Inventaire, écarts et pièces de rechange",
+      "level": 2,
+      "q": "Au-delà de la valeur, quels critères utiliser pour classer les pièces de rechange industrielles ?",
+      "choices": [
+        "La criticité en cas de panne et le délai d'obtention",
+        "La couleur de l'emballage",
+        "Le poids du carton",
+        "L'ancienneté du fournisseur"
+      ],
+      "answer": 0,
+      "explain": "La criticité mesure l'effet d'une panne sur la production, et le délai d'obtention dit combien de temps on attendrait sans stock. Ces critères guident la décision de stocker.",
+      "seconds": 70,
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec rayonnages de pièces classées par famille",
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-037",
+      "theme": "Inventaire, écarts et pièces de rechange",
+      "level": 3,
+      "q": "Un arrêt de machine coûte 2 000 000 FCFA par jour. La pièce de rechange manque et son délai d'obtention est de 10 jours. Quel est le coût d'arrêt estimé ?",
+      "choices": [
+        "600 000 FCFA",
+        "2 000 000 FCFA",
+        "12 000 000 FCFA",
+        "20 000 000 FCFA"
+      ],
+      "answer": 3,
+      "explain": "Coût d'arrêt = coût par jour x durée = 2 000 000 x 10 = 20 000 000 FCFA. Ce montant justifie souvent de stocker la pièce.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-038",
+      "theme": "Inventaire, écarts et pièces de rechange",
+      "level": 3,
+      "q": "Dans quelles conditions ajuste-t-on le stock après un écart d'inventaire ?",
+      "choices": [
+        "Après validation écrite d'un responsable, avec justificatif",
+        "Par le seul magasinier, dès la fin du comptage",
+        "Sans laisser de trace",
+        "Jamais, même si l'écart est prouvé"
+      ],
+      "answer": 0,
+      "explain": "Un ajustement modifie la valeur du stock : il doit être validé par un responsable et justifié, pour rester traçable et éviter les abus.",
+      "seconds": 70,
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec rayonnages où un ajustement de stock est validé par un responsable",
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-039",
+      "theme": "Inventaire, écarts et pièces de rechange",
+      "level": 1,
+      "q": "Quelle règle de rangement est correcte dans un magasin ?",
+      "choices": [
+        "Les articles lourds se rangent en hauteur",
+        "Les articles très demandés se rangent au fond",
+        "Chaque article a un emplacement identifié ; les lourds en bas, les très demandés faciles d'accès",
+        "On range au hasard sans étiquette"
+      ],
+      "answer": 2,
+      "explain": "Un emplacement identifié permet de retrouver et de compter chaque article ; les charges lourdes en bas limitent les accidents ; les articles fréquents près de la sortie font gagner du temps.",
+      "seconds": 50,
+      "img": "photo/warehouse.jpg",
+      "imgAlt": "Entrepôt avec rayonnages de palettes, charges lourdes en bas et allées dégagées",
+      "status": "draft"
+    },
+    {
+      "id": "gestionnaire-stocks-040",
+      "theme": "Inventaire, écarts et pièces de rechange",
+      "level": 3,
+      "q": "Le même article présente un écart d'inventaire à chaque comptage. Que fais-tu ?",
+      "choices": [
+        "J'ajuste à chaque fois sans chercher plus loin",
+        "Je cherche une cause systémique (unité, emplacement, saisie) et corrige le processus",
+        "Je retire l'article de la nomenclature",
+        "J'arrête de compter cet article"
+      ],
+      "answer": 1,
+      "explain": "Des écarts répétés sur un article indiquent un problème de fond, comme une mauvaise unité ou un emplacement flou. Corriger la cause évite les écarts futurs.",
+      "seconds": 90,
+      "status": "draft"
+    }
+  ]
+}
