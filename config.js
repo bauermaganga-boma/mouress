@@ -27,9 +27,9 @@ export const CONFIG = {
 
   CONTACT: {
     address: 'Libreville, Nzeng-Ayong, Carrefour Fobert',
-    phone: '+241 07 46 19 132',
-    phoneHref: 'tel:+241074619132',
-    whatsapp: 'https://wa.me/241074619132',
+    phone: '+33 7 66 67 27 38',
+    phoneHref: 'tel:+33766672738',
+    whatsapp: 'https://wa.me/33766672738',
   },
   DEMO_ACCOUNT: { email: 'rh@demo.mouress.ga', password: 'Demo2026!' },
 };
