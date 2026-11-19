@@ -14,7 +14,7 @@ export default async function render(ctx, root) {
   const profile = await getProfile(att.profileId);
   const content = await loadContent(att.profileId);
   const name = profile?.name || att.profileName || att.profileId;
-  ctx.setTitle(`Résultat — ${name}`);
+  ctx.setTitle(`Résultat · ${name}`);
 
   let isOwnerRH = false;
   let training = false;

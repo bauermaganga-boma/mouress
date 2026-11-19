@@ -75,7 +75,8 @@ export default async function render(ctx, root) {
 
     <section class="block"><h2>Mes attestations</h2>
       ${certs.length ? `<div class="grid grid-2">${certs.map((c) => `<a class="card card-link" href="#/attestation/${esc(c.code)}"><div class="split">${badge('Attestation', 'ok')}<span class="xs muted">${fmtDate(c.date)}</span></div><h4 style="margin-top:.5rem">${esc(pname(c.profileId))}</h4><p class="small muted">Score ${c.percent} % · code ${esc(c.code)}</p></a>`).join('')}</div>`
-        : '<div class="card"><p class="muted">Réussissez un examen (seuil 70 %) pour obtenir une attestation vérifiable.</p></div>'}</section>
+        : '<div class="card"><p class="muted">Réussissez un examen (seuil 70 %) pour obtenir une attestation vérifiable.</p></div>'}
+      <a class="card card-link verify-card" href="#/verifier">${icon('award', 22)}<span><strong>Vérifier une attestation</strong><span class="xs muted">Saisissez le code MRS-… d’une attestation pour contrôler son authenticité.</span></span>${icon('arrow', 18)}</a></section>
 
     <section class="block"><h2>Ma progression</h2>${prog ? `<div class="grid grid-2">${prog}</div>` : '<div class="card"><p class="muted">Commencez un cours ou un entraînement : votre progression apparaîtra ici.</p></div>'}</section>
   </div>`;

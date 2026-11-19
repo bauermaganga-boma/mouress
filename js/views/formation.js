@@ -105,7 +105,7 @@ export default async function render(ctx, root) {
   /* Fonctions support : pas de niveau, on liste directement les fonctions */
   if (br.noLevel) {
     const fl = postes(data, { domain: d, branch: b });
-    ctx.setTitle(`${dm.name} — ${br.name}`);
+    ctx.setTitle(`${dm.name} · ${br.name}`);
     root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...c2, { label: br.name }], back: `#/formation/${d}`, eyebrow: 'Fonctions', title: `${dm.name} › ${br.name}`, text: `${plural(fl.length)}. Choisissez la fonction à travailler ou à tester.` })}<div class="grid grid-3">${fl.map((p) => posteCard(data, p, avail, d)).join('')}</div></div>`;
     remember(root);
     return;
@@ -113,7 +113,7 @@ export default async function render(ctx, root) {
 
   /* Étape 3 : niveau */
   if (!l) {
-    ctx.setTitle(`${dm.name} — ${br.name}`);
+    ctx.setTitle(`${dm.name} · ${br.name}`);
     const cards = (data.levels || []).map((lv) => ({ lv, n: postes(data, { domain: d, branch: b, level: lv.id }).length })).filter((x) => x.n)
       .map(({ lv, n }) => bigCard({ href: `#/formation/${d}/${b}/${lv.id}`, ico: 'users', title: lv.name, count: n })).join('');
     root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...c2, { label: br.name }], back: `#/formation/${d}`, eyebrow: 'Niveau', title: `${dm.name} › ${br.name}`, text: 'Choisissez le niveau du poste.' })}
@@ -125,7 +125,7 @@ export default async function render(ctx, root) {
   const lv = levelOf(data, l);
   if (!lv) return notFound();
   const list = postes(data, { domain: d, branch: b, level: l });
-  ctx.setTitle(`${dm.name} — ${lv.name}`);
+  ctx.setTitle(`${dm.name} · ${lv.name}`);
   root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...c2, { label: br.name, href: `#/formation/${d}/${b}` }, { label: lv.name }], back: `#/formation/${d}/${b}`, eyebrow: 'Postes', title: `${dm.name} › ${br.name} › ${lv.name}`, text: `${plural(list.length)}. Choisissez le profil à travailler ou à tester.` })}
     <div class="grid grid-3">${list.map((p) => posteCard(data, p, avail, d)).join('') || '<div class="card"><p class="muted">Aucun poste à ce niveau pour le moment.</p></div>'}</div></div>`;
   remember(root);

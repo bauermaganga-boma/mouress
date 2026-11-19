@@ -54,7 +54,11 @@ export default async function render(ctx, root) {
       <div class="grid grid-3">${STEPS.map((s) => `<article class="card step"><div class="step-n">${s.n}</div><div class="step-ico">${icon(s.ico, 26)}</div><h3>${s.t}</h3><p class="muted">${s.d}</p></article>`).join('')}</div>
       <div class="path">
         <p class="label">Côté candidat, un parcours comme pour le code de la route</p>
-        <ol class="path-list"><li>${icon('book', 18)} Cours</li><li>${icon('target', 18)} Entraînement</li><li>${icon('clock', 18)} Examen chronométré</li><li>${icon('award', 18)} Attestation</li></ol>
+        <ol class="path-list path-steps">
+          <li><span class="step-n">1</span>${icon('book', 22)}<strong>Cours</strong><span class="xs muted">Modules courts</span></li>
+          <li><span class="step-n">2</span>${icon('target', 22)}<strong>Entraînement</strong><span class="xs muted">Corrigé immédiat</span></li>
+          <li><span class="step-n">3</span>${icon('clock', 22)}<strong>Examen</strong><span class="xs muted">Chronométré</span></li>
+          <li><span class="step-n">4</span>${icon('award', 22)}<strong>Attestation</strong><span class="xs muted">Vérifiable en ligne</span></li></ol>
       </div>
     </div>
   </section>

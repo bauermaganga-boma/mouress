@@ -210,7 +210,7 @@ export async function employee(ctx, root) {
 
     root.innerHTML = `<div class="container page">
       ${pageHead({ crumbs: [{ label: 'Espace entreprise', href: '#/rh' }, { label: 'Mes équipes', href: back }, { label: emp.name }], back, eyebrow: emp.team || 'Collaborateur', title: emp.name,
-        text: `${poste ? poste.name + (levelOf(data, poste.level) ? ' — ' + levelOf(data, poste.level).name : '') : 'Poste non renseigné'}${emp.hireDate ? ` · embauché le ${fmtDate(emp.hireDate)}` : ''}` })}
+        text: `${poste ? poste.name + (levelOf(data, poste.level) ? ' · ' + levelOf(data, poste.level).name : '') : 'Poste non renseigné'}${emp.hireDate ? ` · embauché le ${fmtDate(emp.hireDate)}` : ''}` })}
       <div class="emp-id">${avatar(emp, 84)}<div class="btn-row emp-head-row" style="margin:0">${pill(st)}<span class="muted small">${esc(emp.email)}</span></div></div>
       <div class="btn-row" style="margin:var(--sp-3) 0 var(--sp-5)"><details class="inline-details"><summary class="btn btn-light btn-sm">Modifier la fiche</summary>
         <form id="emp-edit" class="card" novalidate style="margin-top:var(--sp-3)"><div class="form-grid">

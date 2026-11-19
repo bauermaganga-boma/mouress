@@ -88,7 +88,7 @@ export async function invite(ctx, root, helpers) {
     root.querySelectorAll('input[name=type]').forEach((r) => { r.checked = r.value === type; });
     if (!locked) {
       $('#l-title').textContent = type === 'training' ? 'Nom de l’équipe' : 'Intitulé du poste';
-      $('#n-title').placeholder = type === 'training' ? 'Ex. Équipe maintenance Port-Gentil' : 'Ex. Opérateur de production — Libreville';
+      $('#n-title').placeholder = type === 'training' ? 'Ex. Équipe maintenance Port-Gentil' : 'Ex. Opérateur de production, Libreville';
       $('#l-due').textContent = type === 'training' ? 'Échéance du parcours' : 'Date limite pour passer l’examen';
     }
     $('#l-people').textContent = type === 'training' ? 'Une personne par ligne : nom, e-mail (obligatoire)' : 'Une personne par ligne : nom, e-mail';
@@ -127,7 +127,7 @@ export async function invite(ctx, root, helpers) {
     if (!list.length) { err.textContent = 'Ajoutez au moins une personne.'; return; }
     let title; let due; let passMark;
     if (planItem) {
-      title = `${planEmp.name} — ${p.name}`;
+      title = `${planEmp.name} · ${p.name}`;
       due = planItem.due > Date.now() ? planItem.due : Date.now() + 30 * 86400000;
       passMark = CONFIG.PASS_MARK;
     } else if (!existing) {

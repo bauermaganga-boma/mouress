@@ -38,6 +38,8 @@ export function loadContent(id) {
         if (!j || !Array.isArray(j.questions)) return null;
         j.modules = Array.isArray(j.modules) ? j.modules : [];
         j.questions = j.questions.filter((q) => q && Array.isArray(q.choices) && q.choices.length >= 2 && Number.isInteger(q.answer));
+        // variante anglaise facultative : q.en = { q, choices, explain } (mêmes positions de réponse), affichée si l'interface est en anglais
+        if (isEn()) j.questions = j.questions.map((q) => (q.en && Array.isArray(q.en.choices) && q.en.choices.length === q.choices.length ? { ...q, q: q.en.q || q.q, choices: q.en.choices, explain: q.en.explain || q.explain } : q));
         return j;
       } catch { return null; }
     }).catch(() => null));

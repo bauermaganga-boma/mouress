@@ -81,8 +81,7 @@ const NAV_TRAINING = [
   { key: 'training', label: 'Training', href: '#/training', icon: 'home' },
   { key: 'formation', label: 'Formation', href: '#/formation', icon: 'book', also: ['profil', 'cours', 'entrainement', 'examen', 'resultat'] },
   { key: 'rh', label: 'Espace entreprise', short: 'Entreprise', href: '#/rh', icon: 'building', also: ['connexion', 'inscription', 't'] },
-  { key: 'mon-espace', label: 'Mon espace', short: 'Mon espace', href: '#/mon-espace', icon: 'user', also: ['attestation'] },
-  { key: 'verifier', label: 'Vérifier', href: '#/verifier', icon: 'award' },
+  { key: 'mon-espace', label: 'Mon espace', short: 'Mon espace', href: '#/mon-espace', icon: 'user', also: ['attestation', 'verifier'] },
 ];
 const isCorp = () => parseHash().segs.length === 0;
 
@@ -133,7 +132,7 @@ async function render() {
     path, query, params: m ? m.params : {}, store, user: state.user, root,
     alive: () => token === state.token,
     onLeave: (fn) => state.leave.push(fn),
-    setTitle: (t) => { document.title = t ? `${t} — MOURESS Training` : 'MOURESS — Services industriels et Training'; },
+    setTitle: (t) => { document.title = t ? `${t} · MOURESS Training` : 'MOURESS · Services industriels et Training'; },
     setChrome: (c) => { document.body.dataset.chrome = c; },
     toast, go, refreshUser,
   };

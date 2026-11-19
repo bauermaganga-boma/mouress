@@ -21,9 +21,9 @@
       "title": "Gestion des alarmes et arrêts d'urgence",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "minutes": 10,
-      "body": "Une **alarme** sert à déclencher une action de l'opérateur. Un tableau d'alarmes propre ressemble à ça : LAH-101 à 70 % (niveau haut, on a du temps), LAHH-101 à 85 % (très haut, proche de l'arrêt), PAH-201 à 9 barg (≈ 130,5 psig, action avant la PSV à 10 barg), PSLL de pression d'huile du compresseur (arrêt). **Acquitter** signifie « j'ai vu » ; la cause reste à traiter, l'alarme se réarme tant que la condition persiste. On n'inhibe pas une alarme parce qu'elle revient.\n\nPlus de dix alarmes en dix minutes : c'est un **déluge d'alarmes** (alarm flood). On cherche la **first-out**, l'alarme apparue la première, qui oriente vers la cause racine. Exemple : à 02:10 LAH-101, à 02:12 LAHH-101 puis PAH-101 (pression de 16 à 19 bar, 232 → 276 psi), à 02:13 trip du compresseur K-201 sur niveau haut de son ballon d'aspiration. La cause est le niveau haut du séparateur (12 000 BLPD, ≈ 1 908 m³/j) avec du liquide entraîné dans la ligne gaz, pas une panne du compresseur.\n\nLe système **ESD** (arrêt d'urgence) est indépendant du DCS. Il a ses capteurs, ses logiques et ses boutons-poussoirs protégés par un capot. Un vote **2oo3** (deux sur trois) évite les faux déclenchements tout en restant sûr si un capteur tombe en panne : trois capteurs de pression PT-401 A/B/C sur un PAHH à 25 barg (363 psig), par exemple. Un ESD ne se réarme pas vite « pour limiter les pertes » : à 9 000 BOPD (≈ 1 431 m³/j), soit 375 bbl/h (≈ 59,6 m³/h) perdus, la tentation est forte, mais on réarme après analyse de la cause et vérification de l'installation avec le terrain.\n\nUn **by-pass** ou une **inhibition** d'une fonction de sécurité (par exemple le LSHH du test separator pour finir un well test) est exceptionnel : autorisation écrite, mesures compensatoires, inscription au registre. Jamais à la demande orale d'un technicien, même expérimenté ou « pour cinq minutes ».\n\nSur le séparateur, le chemin de la sécurité de niveau est : LAH, LAHH, puis ESD de l'unité. Les **PSV** et la **torche** sont en dernier recours. Une salle qui connaît ses seuils en bbl et en m³ réagit plus vite : 85 % d'un vase de 60 m³ représentent 51 m³, soit 321 bbl.\n\n**Sur site**\n- À chaque alarme : lire, comprendre, agir, tracer ; en flood, remonter à la first-out.\n- ESD : on ne réarme jamais sans cause identifiée, sans permissifs et sans visite du terrain.\n- By-pass : demande écrite, durée limitée, mesure compensatoire (opérateur dédié, suivi renforcé), ligne au registre.\n\n**Vocabulaire FR / EN**\n- alarme niveau haut / très haut = LAH / LAHH\n- déluge d'alarmes = alarm flood\n- première alarme = first-out alarm\n- arrêt d'urgence = ESD (emergency shutdown)\n- vote deux sur trois = 2oo3 voting\n- inhibition / by-pass = inhibit / bypass\n- réarmement = reset\n- acquittement = acknowledge",
+      "body": "Une **alarme** sert à déclencher une action de l'opérateur. Un tableau d'alarmes propre ressemble à ça : LAH-101 à 70 % (niveau haut, on a du temps), LAHH-101 à 85 % (très haut, proche de l'arrêt), PAH-201 à 9 barg (≈ 130,5 psig, action avant la PSV à 10 barg), PSLL de pression d'huile du compresseur (arrêt). **Acquitter** signifie « j'ai vu » ; la cause reste à traiter, l'alarme se réarme tant que la condition persiste. On n'inhibe pas une alarme parce qu'elle revient.\n\nPlus de dix alarmes en dix minutes : c'est un **déluge d'alarmes**. On cherche la **première alarme** (first-out), apparue la plus tôt, qui oriente vers la cause racine. Exemple : à 02:10 LAH-101, à 02:12 LAHH-101 puis PAH-101 (pression de 16 à 19 bar, 232 → 276 psi), à 02:13 trip du compresseur K-201 sur niveau haut de son ballon d'aspiration. La cause est le niveau haut du séparateur (12 000 BLPD, ≈ 1 908 m³/j) avec du liquide entraîné dans la ligne gaz, pas une panne du compresseur.\n\nLe système **ESD** (arrêt d'urgence) est indépendant du DCS. Il a ses capteurs, ses logiques et ses boutons-poussoirs protégés par un capot. Un vote **2oo3** (deux sur trois) évite les faux déclenchements tout en restant sûr si un capteur tombe en panne : trois capteurs de pression PT-401 A/B/C sur un PAHH à 25 barg (363 psig), par exemple. Un ESD ne se réarme pas vite « pour limiter les pertes » : à 9 000 BOPD (≈ 1 431 m³/j), soit 375 bbl/h (≈ 59,6 m³/h) perdus, la tentation est forte, mais on réarme après analyse de la cause et vérification de l'installation avec le terrain.\n\nUn **by-pass** ou une **inhibition** d'une fonction de sécurité (par exemple le LSHH du test separator pour finir un well test) est exceptionnel : autorisation écrite, mesures compensatoires, inscription au registre. Jamais à la demande orale d'un technicien, même expérimenté ou « pour cinq minutes ».\n\nSur le séparateur, le chemin de la sécurité de niveau est : LAH, LAHH, puis ESD de l'unité. Les **PSV** et la **torche** sont en dernier recours. Une salle qui connaît ses seuils en bbl et en m³ réagit plus vite : 85 % d'un vase de 60 m³ représentent 51 m³, soit 321 bbl.\n\n**Sur site**\n- À chaque alarme : lire, comprendre, agir, tracer ; en déluge d'alarmes, remonter à la première alarme.\n- ESD : on ne réarme jamais sans cause identifiée, sans permissifs et sans visite du terrain.\n- By-pass : demande écrite, durée limitée, mesure compensatoire (opérateur dédié, suivi renforcé), ligne au registre.\n\n**Vocabulaire FR / EN**\n- alarme niveau haut / très haut = LAH / LAHH\n- déluge d'alarmes = alarm flood\n- première alarme = first-out alarm\n- arrêt d'urgence = ESD (emergency shutdown)\n- vote deux sur trois = 2oo3 voting\n- inhibition / by-pass = inhibit / bypass\n- réarmement = reset\n- acquittement = acknowledge",
       "keyPoints": [
-        "Une alarme = une action ; plus de 10 alarmes en 10 min = alarm flood ; on remonte à la first-out.",
+        "Une alarme = une action ; plus de 10 alarmes en 10 min = déluge d'alarmes ; on remonte à la première alarme.",
         "Cascade : LAH (70 %), LAHH (85 %), ESD ; le niveau haut apparu en premier explique la pression haute et le trip du compresseur.",
         "L'ESD est indépendant du DCS ; 2oo3 évite les faux trips ; on réarme après analyse (9 000 BOPD perdus = 1 431 m³/j ne justifient pas un reset hâtif).",
         "By-pass de sécurité : autorisation écrite, mesures compensatoires, registre ; jamais sur demande orale."
@@ -51,7 +51,7 @@
       "title": "Supervision DCS/SCADA et conduite en situation dégradée",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "minutes": 9,
-      "body": "La salle de contrôle voit le procédé à travers des capteurs et des écrans : il faut savoir quand ils mentent. La face avant d'un régulateur montre **PV** (mesure), **SP** (consigne) et **OP** (sortie). Exemple : FIC-103, PV 85 m³/h (≈ 535 bbl/h), SP 90 m³/h (≈ 566 bbl/h), OP 62 % ; l'écart de 5 m³/h pousse le régulateur à ouvrir la vanne.\n\n**Valeur suspecte.** Deux transmetteurs d'un même FWKO affichent 60 % (LT-101) et 85 % (LT-102), le sight glass local lit 58 % : deux sources concordent, la troisième s'écarte, on soupçonne LT-102. L'écart de 25 % sur un vase de 40 m³ représente 10 m³ (≈ 63 bbl) : on ne fait pas la moyenne, on demande un contrôle terrain. Un niveau de bac figé à 62,3 % pendant 25 min alors que l'export tourne à 120 m³/h (50 m³ sortis, soit 314 bbl) est un signal gelé, pas un procédé stable.\n\n**Signaux 4-20 mA.** Un courant de 2,0 mA avec la qualité « mauvaise » est un défaut, pas une mesure à 0 % (la plage valide va de 3,8 à 20,5 mA environ ; défaut sous 3,6 mA). Si la mesure d'un régulateur en auto devient mauvaise : passer en manuel à la dernière valeur sûre (ex. 55 %) et appeler le terrain, sans mettre la sortie à 0 % ni à 100 %. Sortie à 100 % depuis dix minutes avec une mesure à 70 % de la consigne (par exemple 84 sur 120 m³/h) : la vanne est à sa limite, cause en amont ou organe sous-dimensionné.\n\nUn **forçage** (force) remplace un signal réel par une valeur imposée : dérogation limitée, autorisée, enregistrée et retirée dès la fin du besoin ; un forçage oublié a déjà fait des accidents. **Panne de DCS** (tous les écrans éteints, champ à 14 000 BOPD ≈ 2 226 m³/j) : poste de secours, appel du terrain, état sûr, arrêt si nécessaire ; on ne conduit pas de mémoire.\n\n**Cybersécurité** : pas de clé USB personnelle sur un poste DCS, pas de désactivation d'antivirus ; les échanges de données suivent les supports et procédures contrôlés du site.\n\n**Sur site**\n- Tendances ouvertes sur les paramètres clés : un trait plat ou un saut brutal est un indice, pas un détail.\n- Avant d'agir sur une mesure douteuse : recoupe avec une autre source (autre transmetteur, sight glass, débit).\n- Chaque forçage ou by-pass : durée, autorisation, nom, heure de retrait.\n\n**Vocabulaire FR / EN**\n- mesure / consigne / sortie = PV / SP / OP\n- qualité de signal = signal quality (good / bad)\n- valeur figée = frozen / stuck value\n- forçage = force / override\n- poste de secours = backup console\n- verre de niveau = sight glass\n- déviation = deviation\n- tendance = trend",
+      "body": "La salle de contrôle voit le procédé à travers des capteurs et des écrans : il faut savoir quand ils mentent. La face avant d'un régulateur montre **PV** (mesure), **SP** (consigne) et **OP** (sortie). Exemple : FIC-103, PV 85 m³/h (≈ 535 bbl/h), SP 90 m³/h (≈ 566 bbl/h), OP 62 % ; l'écart de 5 m³/h pousse le régulateur à ouvrir la vanne.\n\n**Valeur suspecte.** Deux transmetteurs d'un même FWKO affichent 60 % (LT-101) et 85 % (LT-102), le regard de niveau local lit 58 % : deux sources concordent, la troisième s'écarte, on soupçonne LT-102. L'écart de 25 % sur un vase de 40 m³ représente 10 m³ (≈ 63 bbl) : on ne fait pas la moyenne, on demande un contrôle terrain. Un niveau de bac figé à 62,3 % pendant 25 min alors que l'export tourne à 120 m³/h (50 m³ sortis, soit 314 bbl) est un signal gelé, pas un procédé stable.\n\n**Signaux 4-20 mA.** Un courant de 2,0 mA avec la qualité « mauvaise » est un défaut, pas une mesure à 0 % (la plage valide va de 3,8 à 20,5 mA environ ; défaut sous 3,6 mA). Si la mesure d'un régulateur en auto devient mauvaise : passer en manuel à la dernière valeur sûre (ex. 55 %) et appeler le terrain, sans mettre la sortie à 0 % ni à 100 %. Sortie à 100 % depuis dix minutes avec une mesure à 70 % de la consigne (par exemple 84 sur 120 m³/h) : la vanne est à sa limite, cause en amont ou organe sous-dimensionné.\n\nUn **forçage** (force) remplace un signal réel par une valeur imposée : dérogation limitée, autorisée, enregistrée et retirée dès la fin du besoin ; un forçage oublié a déjà fait des accidents. **Panne de DCS** (tous les écrans éteints, champ à 14 000 BOPD ≈ 2 226 m³/j) : poste de secours, appel du terrain, état sûr, arrêt si nécessaire ; on ne conduit pas de mémoire.\n\n**Cybersécurité** : pas de clé USB personnelle sur un poste DCS, pas de désactivation d'antivirus ; les échanges de données suivent les supports et procédures contrôlés du site.\n\n**Sur site**\n- Tendances ouvertes sur les paramètres clés : un trait plat ou un saut brutal est un indice, pas un détail.\n- Avant d'agir sur une mesure douteuse : recoupe avec une autre source (autre transmetteur, regard de niveau, débit).\n- Chaque forçage ou by-pass : durée, autorisation, nom, heure de retrait.\n\n**Vocabulaire FR / EN**\n- mesure / consigne / sortie = PV / SP / OP\n- qualité de signal = signal quality (good / bad)\n- valeur figée = frozen / stuck value\n- forçage = force / override\n- poste de secours = backup console\n- regard de niveau = sight glass\n- déviation = deviation\n- tendance = trend",
       "keyPoints": [
         "PV = mesure, SP = consigne, OP = sortie ; FIC-103 : 85 sur 90 m³/h, OP 62 %.",
         "Deux sources concordent contre une : on soupçonne la troisième ; valeur figée = capteur ou signal gelé, contrôle terrain.",
@@ -66,7 +66,7 @@
       "title": "Relève de poste et communication",
       "theme": "Relève de poste et communication",
       "minutes": 8,
-      "body": "La **relève de poste** (shift handover) est une barrière de sécurité. Elle se fait **face à face**, au poste, devant les écrans, avec le **cahier de quart** (log book) lu et signé par les deux. Pas de mot laissé sur le bureau, pas de relève par téléphone, pas de « RAS » à la porte de la salle.\n\nCe qu'il faut transmettre, sans exception : les **permis de travail** actifs, les **by-pass, forçages et inhibitions** en cours (ex. LSHH du test separator inhibé pour un well test de 12 h), les équipements hors service ou en standby, les anomalies non résolues avec ce qui a été tenté, et les chiffres du quart : production en **BOPD et en m³/j** (par exemple 9 500 BOPD ≈ 1 511 m³/j), eau, gaz, niveaux de bacs, torche, écarts avec la veille. Une alarme de niveau très haut active depuis une heure sans cause identifiée (88 % de niveau, 6 500 BOPD ≈ 1 034 m³/j en entrée) se signale à la relève, jamais acquittée en silence ni inhibée jusqu'au quart suivant.\n\nSi le cahier et l'écran divergent (pompe P-101B « en marche » au cahier, arrêtée à l'écran, 120 m³/h ≈ 755 bbl/h d'export en jeu), on **clarifie avec le sortant et le terrain avant la prise de poste**. On ne corrige pas le cahier en fin de journée, on ne démarre pas la pompe sans en parler.\n\n**Communication radio** : message court, repère exact, action, répétition par le récepteur, confirmation. Exemple : « XV-203, ouvrir à 50 %, répondez » plutôt que « ouvre un peu la vanne ». « Un peu » n'a pas de sens commun : un tour de choke manifold de plus peut faire passer un puits de 1 500 à 2 500 BOPD (239 → 398 m³/j). Un ordre à toutes les équipes à la fois ou un ordre sans répétition favorise l'erreur.\n\n**Urgence** : la salle de contrôle coordonne. Elle déclenche les alarmes, informe l'équipe d'intervention et l'astreinte, tient le registre des présents et ne quitte la salle que selon le plan d'urgence. Elle n'intervient pas seule au terrain et n'attend pas l'ordre d'une autorité extérieure pour agir.\n\n**Sur site**\n- Dernier quart d'heure : mise à jour du cahier, des chiffres du daily report, des permis et inhibitions.\n- Chaque ordre de manœuvre est noté avec l'heure, le repère, le nom du receveur, la confirmation de l'exécution.\n- Une anomalie transmise, c'est une anomalie à moitié traitée ; une anomalie cachée est un accident différé.\n\n**Vocabulaire FR / EN**\n- relève de poste = shift handover\n- cahier de quart = log book\n- rapport de production = daily production report\n- boucle fermée (radio) = closed-loop communication\n- registre des présents = muster list / POB record\n- astreinte = on-call\n- permis de travail actif = active PTW\n- anomalie non résolue = open issue",
+      "body": "La **relève de poste** est une barrière de sécurité. Elle se fait **face à face**, au poste, devant les écrans, avec le **cahier de quart** lu et signé par les deux. Pas de mot laissé sur le bureau, pas de relève par téléphone, pas de « RAS » à la porte de la salle.\n\nCe qu'il faut transmettre, sans exception : les **permis de travail** actifs, les **by-pass, forçages et inhibitions** en cours (ex. LSHH du test separator inhibé pour un well test de 12 h), les équipements hors service ou en attente, les anomalies non résolues avec ce qui a été tenté, et les chiffres du quart : production en **BOPD et en m³/j** (par exemple 9 500 BOPD ≈ 1 511 m³/j), eau, gaz, niveaux de bacs, torche, écarts avec la veille. Une alarme de niveau très haut active depuis une heure sans cause identifiée (88 % de niveau, 6 500 BOPD ≈ 1 034 m³/j en entrée) se signale à la relève, jamais acquittée en silence ni inhibée jusqu'au quart suivant.\n\nSi le cahier et l'écran divergent (pompe P-101B « en marche » au cahier, arrêtée à l'écran, 120 m³/h ≈ 755 bbl/h d'export en jeu), on **clarifie avec le sortant et le terrain avant la prise de poste**. On ne corrige pas le cahier en fin de journée, on ne démarre pas la pompe sans en parler.\n\n**Communication radio** : message court, repère exact, action, répétition par le récepteur, confirmation. Exemple : « XV-203, ouvrir à 50 %, répondez » plutôt que « ouvre un peu la vanne ». « Un peu » n'a pas de sens commun : un tour de choke manifold de plus peut faire passer un puits de 1 500 à 2 500 BOPD (239 → 398 m³/j). Un ordre à toutes les équipes à la fois ou un ordre sans répétition favorise l'erreur.\n\n**Urgence** : la salle de contrôle coordonne. Elle déclenche les alarmes, informe l'équipe d'intervention et l'astreinte, tient le registre des présents et ne quitte la salle que selon le plan d'urgence. Elle n'intervient pas seule au terrain et n'attend pas l'ordre d'une autorité extérieure pour agir.\n\n**Sur site**\n- Dernier quart d'heure : mise à jour du cahier, des chiffres du rapport journalier, des permis et inhibitions.\n- Chaque ordre de manœuvre est noté avec l'heure, le repère, le nom du receveur, la confirmation de l'exécution.\n- Une anomalie transmise, c'est une anomalie à moitié traitée ; une anomalie cachée est un accident différé.\n\n**Vocabulaire FR / EN**\n- relève de poste = shift handover\n- cahier de quart = log book\n- rapport de production = daily production report\n- boucle fermée (radio) = closed-loop communication\n- registre des présents = muster list / POB record\n- astreinte = on-call\n- permis de travail actif = active PTW\n- anomalie non résolue = open issue",
       "keyPoints": [
         "Relève face à face, au poste, cahier lu et signé par les deux ; jamais par téléphone ni par un mot.",
         "À transmettre : permis, by-pass, forçages, inhibitions, équipements hors service, anomalies non résolues, chiffres en BOPD et m³/j.",
@@ -116,19 +116,29 @@
       "id": "op-salle-controle-003",
       "theme": "Lecture de P&ID et boucles de régulation",
       "level": 1,
-      "q": "Export line FV-310 is an air-to-open (fail closed) control valve, with 8 000 BOPD (≈ 1 272 m³/d) flowing. What happens on loss of instrument air?",
+      "q": "La vanne de régulation FV-310 de la ligne d'export est à air pour ouvrir (sécurité fermée), avec 8 000 BOPD (≈ 1 272 m³/j) en écoulement. Que se passe-t-il en cas de perte d'air instrument ?",
       "img": "svg/pid-flow-control.svg",
       "imgAlt": "P&ID d'une boucle de débit avec la vanne FV-310 repérée air-ouvre, position de sécurité fermée",
       "choices": [
-        "It stays in its last position until air pressure comes back to the actuator",
-        "It opens fully, because the spring pushes the plug off its seat",
-        "It moves to 50 % opening and holds the flow at half rate",
-        "It closes, because the spring drives it to its fail-safe position"
+        "Elle reste dans sa dernière position jusqu'au retour de la pression d'air sur l'actionneur",
+        "Elle s'ouvre en grand, car le ressort pousse le clapet hors de son siège",
+        "Elle passe à 50 % d'ouverture et maintient le débit à moitié",
+        "Elle se ferme, car le ressort l'entraîne vers sa position de sécurité"
       ],
       "answer": 3,
-      "explain": "An air-to-open valve is held open only by air: no air, the spring closes it (fail closed). The 8 000 BOPD (1 272 m³/d) export stops and the upstream level rises, so check the separator level right away.",
+      "explain": "Une vanne à air pour ouvrir n'est tenue ouverte que par l'air : sans air, le ressort la ferme (sécurité fermée). L'export de 8 000 BOPD (1 272 m³/j) s'arrête et le niveau monte en amont : vérifier tout de suite le niveau du séparateur.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "en": {
+        "q": "Export line FV-310 is an air-to-open (fail closed) control valve, with 8 000 BOPD (≈ 1 272 m³/d) flowing. What happens on loss of instrument air?",
+        "choices": [
+          "It stays in its last position until air pressure comes back to the actuator",
+          "It opens fully, because the spring pushes the plug off its seat",
+          "It moves to 50 % opening and holds the flow at half rate",
+          "It closes, because the spring drives it to its fail-safe position"
+        ],
+        "explain": "An air-to-open valve is held open only by air: no air, the spring closes it (fail closed). The 8 000 BOPD (1 272 m³/d) export stops and the upstream level rises, so check the separator level right away."
+      }
     },
     {
       "id": "op-salle-controle-004",
@@ -222,19 +232,29 @@
       "id": "op-salle-controle-009",
       "theme": "Lecture de P&ID et boucles de régulation",
       "level": 3,
-      "q": "Gas outlet valve PV-120 of the HP separator (18 bar ≈ 261 psi, gas 5 MMscfd ≈ 141 585 Sm³/d) is air-to-open (fail closed). Instrument air is lost while the inlet flow continues. What happens?",
+      "q": "La vanne de sortie gaz PV-120 du séparateur HP (18 bar ≈ 261 psi, gaz 5 MMscfd ≈ 141 585 Sm³/j) est à air pour ouvrir (sécurité fermée). L'air instrument est perdu alors que le débit d'entrée continue. Que se passe-t-il ?",
       "img": "svg/pressure-vessel-psv.svg",
       "imgAlt": "Ballon sous pression avec vanne de sortie de gaz et soupape de sécurité PSV",
       "choices": [
-        "The valve closes and pressure climbs to the PSV set point (25 barg, ≈ 363 psig), which may lift",
-        "The valve opens fully and pressure drops all the way down to the flare header",
-        "The valve keeps its position and pressure stabilises at the setpoint",
-        "The valve closes but pressure falls by cooling of the gas in the vessel"
+        "La vanne se ferme et la pression monte jusqu'au point de tarage de la PSV (25 barg, ≈ 363 psig), qui peut se soulever",
+        "La vanne s'ouvre en grand et la pression chute jusqu'au header de torche",
+        "La vanne garde sa position et la pression se stabilise à la consigne",
+        "La vanne se ferme mais la pression baisse par refroidissement du gaz dans le ballon"
       ],
       "answer": 0,
-      "explain": "Loss of air closes the valve: gas accumulates (5 MMscfd = 141 585 Sm³/d keeps coming) and pressure rises from 18 bar toward the PSV set point of 25 barg (363 psig), the last mechanical barrier independent from the DCS. Act fast on the inlet.",
+      "explain": "La perte d'air ferme la vanne : le gaz s'accumule (5 MMscfd = 141 585 Sm³/j continuent d'arriver) et la pression monte de 18 bar vers le point de tarage de la PSV de 25 barg (363 psig), dernière barrière mécanique indépendante du DCS. Agir vite sur l'arrivée.",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "en": {
+        "q": "Gas outlet valve PV-120 of the HP separator (18 bar ≈ 261 psi, gas 5 MMscfd ≈ 141 585 Sm³/d) is air-to-open (fail closed). Instrument air is lost while the inlet flow continues. What happens?",
+        "choices": [
+          "The valve closes and pressure climbs to the PSV set point (25 barg, ≈ 363 psig), which may lift",
+          "The valve opens fully and pressure drops all the way down to the flare header",
+          "The valve keeps its position and pressure stabilises at the setpoint",
+          "The valve closes but pressure falls by cooling of the gas in the vessel"
+        ],
+        "explain": "Loss of air closes the valve: gas accumulates (5 MMscfd = 141 585 Sm³/d keeps coming) and pressure rises from 18 bar toward the PSV set point of 25 barg (363 psig), the last mechanical barrier independent from the DCS. Act fast on the inlet."
+      }
     },
     {
       "id": "op-salle-controle-010",
@@ -296,7 +316,7 @@
         "Un déluge d'alarmes (alarm flood)"
       ],
       "answer": 3,
-      "explain": "Au-delà d'environ dix alarmes en dix minutes, l'opérateur ne peut plus traiter chaque alarme : c'est un déluge d'alarmes (alarm flood), à analyser en retour d'expérience. Pendant l'événement, on cherche la first-out et on stabilise l'unité.",
+      "explain": "Au-delà d'environ dix alarmes en dix minutes, l'opérateur ne peut plus traiter chaque alarme : c'est un déluge d'alarmes (alarm flood), à analyser en retour d'expérience. Pendant l'événement, on cherche la première alarme (first-out) et on stabilise l'unité.",
       "seconds": 45,
       "status": "draft"
     },
@@ -314,7 +334,7 @@
         "Une erreur d'horodatage de la séquence des alarmes sans lien avec le procédé"
       ],
       "answer": 2,
-      "explain": "La première alarme (first-out) oriente vers la cause : niveau trop haut à V-101 (12 000 BLPD, 1 908 m³/j), puis liquide dans la ligne de gaz, pression haute (+3 bar) et protection du compresseur. Les suivantes sont des conséquences.",
+      "explain": "La première alarme oriente vers la cause : niveau trop haut à V-101 (12 000 BLPD, 1 908 m³/j), puis liquide dans la ligne de gaz, pression haute (+3 bar) et protection du compresseur. Les suivantes sont des conséquences.",
       "seconds": 75,
       "status": "draft"
     },
@@ -356,17 +376,27 @@
       "id": "op-salle-controle-017",
       "theme": "Alarmes et arrêts d'urgence (ESD)",
       "level": 3,
-      "q": "After an ESD the supervisor asks you to reset quickly to limit losses: 9 000 BOPD (≈ 1 431 m³/d) are down, i.e. 375 bbl/h (≈ 59,6 m³/h). What do you do?",
+      "q": "Après un ESD, le superviseur te demande de réarmer vite pour limiter les pertes : 9 000 BOPD (≈ 1 431 m³/j) sont à l'arrêt, soit 375 bbl/h (≈ 59,6 m³/h). Que fais-tu ?",
       "choices": [
-        "Reset at once, since the alarms are already acknowledged at the console",
-        "Inhibit the sensors involved to avoid a new trip right after the restart",
-        "Restart in manual without the permissives to gain time on the start-up",
-        "Identify the cause and check the plant with the field before resetting"
+        "Réarmer tout de suite, puisque les alarmes sont déjà acquittées au pupitre",
+        "Inhiber les capteurs concernés pour éviter un nouvel arrêt juste après le redémarrage",
+        "Redémarrer en manuel sans les permissifs pour gagner du temps sur le start-up",
+        "Identifier la cause et vérifier l'installation avec le terrain avant de réarmer"
       ],
       "answer": 3,
-      "explain": "Losses are real (375 bbl/h = 59,6 m³/h) but a rushed reset can re-energise a dangerous situation. The ESD is reset after cause analysis and a field check of the plant state.",
+      "explain": "Les pertes sont réelles (375 bbl/h = 59,6 m³/h), mais un réarmement précipité peut remettre sous énergie une situation dangereuse. L'ESD se réarme après analyse de la cause et vérification de l'état de l'installation sur le terrain.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "en": {
+        "q": "After an ESD the supervisor asks you to reset quickly to limit losses: 9 000 BOPD (≈ 1 431 m³/d) are down, i.e. 375 bbl/h (≈ 59,6 m³/h). What do you do?",
+        "choices": [
+          "Reset at once, since the alarms are already acknowledged at the console",
+          "Inhibit the sensors involved to avoid a new trip right after the restart",
+          "Restart in manual without the permissives to gain time on the start-up",
+          "Identify the cause and check the plant with the field before resetting"
+        ],
+        "explain": "Losses are real (375 bbl/h = 59,6 m³/h) but a rushed reset can re-energise a dangerous situation. The ESD is reset after cause analysis and a field check of the plant state."
+      }
     },
     {
       "id": "op-salle-controle-018",
@@ -422,17 +452,27 @@
       "id": "op-salle-controle-021",
       "theme": "Démarrage et arrêt de procédé",
       "level": 2,
-      "q": "You depressurise the HP separator from 25 bar (363 psi) to the flare at the procedure rate of 1 bar/min (≈ 14,5 psi/min). Why at a controlled rate?",
+      "q": "Tu dépressurises le séparateur HP de 25 bar (363 psi) vers la torche à la vitesse de la procédure de 1 bar/min (≈ 14,5 psi/min). Pourquoi à vitesse contrôlée ?",
       "choices": [
-        "To raise the flare header pressure and improve the draught at the stack",
-        "To warm the equipment up through the expansion of the gas",
-        "To empty the flare KO drum faster towards the storage tanks",
-        "To limit the sudden cooling of the metal and the load on the flare system"
+        "Pour monter la pression du header de torche et améliorer le tirage à la cheminée",
+        "Pour réchauffer les équipements par la détente du gaz",
+        "Pour vider plus vite le ballon de torche vers les bacs de stockage",
+        "Pour limiter le refroidissement brutal du métal et la charge sur le réseau de torche"
       ],
       "answer": 3,
-      "explain": "25 bar at 1 bar/min takes about 25 min. A fast blowdown cools gas and walls hard (ice risk, brittle steel) and overloads the flare network. Controlled depressurisation protects both.",
+      "explain": "25 bar à 1 bar/min prennent environ 25 min. Une dépressurisation rapide refroidit fortement gaz et parois (risque de givre, acier fragilisé) et surcharge le réseau de torche. La dépressurisation contrôlée protège les deux.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "en": {
+        "q": "You depressurise the HP separator from 25 bar (363 psi) to the flare at the procedure rate of 1 bar/min (≈ 14,5 psi/min). Why at a controlled rate?",
+        "choices": [
+          "To raise the flare header pressure and improve the draught at the stack",
+          "To warm the equipment up through the expansion of the gas",
+          "To empty the flare KO drum faster towards the storage tanks",
+          "To limit the sudden cooling of the metal and the load on the flare system"
+        ],
+        "explain": "25 bar at 1 bar/min takes about 25 min. A fast blowdown cools gas and walls hard (ice risk, brittle steel) and overloads the flare network. Controlled depressurisation protects both."
+      }
     },
     {
       "id": "op-salle-controle-022",
@@ -446,7 +486,7 @@
         "Refoulement fermé pendant dix minutes avant le démarrage"
       ],
       "answer": 2,
-      "explain": "Une pompe démarre pleine de liquide, aspiration ouverte, graissage en service, avant de monter vers 150 m³/h (943 bbl/h). Tourner à vide ou refoulement fermé longtemps détruit le seal.",
+      "explain": "Une pompe démarre pleine de liquide, aspiration ouverte, graissage en service, avant de monter vers 150 m³/h (943 bbl/h). Tourner à vide ou refoulement fermé longtemps détruit la garniture.",
       "seconds": 45,
       "status": "draft"
     },
@@ -548,7 +588,7 @@
         "Mesure, consigne et sortie vers la vanne"
       ],
       "answer": 3,
-      "explain": "PV (process variable) = mesure, 85 m³/h ; SP (setpoint) = consigne, 90 m³/h ; OP (output) = sortie vers la vanne, 62 %. L'écart de 5 m³/h (≈ 31 bbl/h) pousse le régulateur à ouvrir la vanne.",
+      "explain": "PV (process variable) = mesure, 85 m³/h ; SP = consigne, 90 m³/h ; OP (output) = sortie vers la vanne, 62 %. L'écart de 5 m³/h (≈ 31 bbl/h) pousse le régulateur à ouvrir la vanne.",
       "seconds": 40,
       "status": "draft"
     },
@@ -574,17 +614,27 @@
       "id": "op-salle-controle-030",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "level": 2,
-      "q": "Two transmitters on the same FWKO (40 m³ ≈ 252 bbl) read 60 % (LT-101) and 85 % (LT-102). The local sight glass reads 58 %. Which transmitter is most likely faulty?",
+      "q": "Deux transmetteurs sur le même FWKO (40 m³ ≈ 252 bbl) indiquent 60 % (LT-101) et 85 % (LT-102). Le regard de niveau local indique 58 %. Quel transmetteur est le plus probablement défaillant ?",
       "choices": [
-        "LT-101, because its value is the lowest of the three readings",
-        "LT-102, because the other two sources agree with each other",
-        "None: the average of 72.5 % is the true value of the level",
-        "The sight glass, because it is a local instrument"
+        "LT-101, parce que sa valeur est la plus basse des trois lectures",
+        "LT-102, parce que les deux autres sources concordent entre elles",
+        "Aucun : la moyenne de 72,5 % est la vraie valeur du niveau",
+        "Le regard de niveau, parce que c'est un instrument local"
       ],
       "answer": 1,
-      "explain": "Two independent sources agree (60 % and 58 %); the third drifts away. The gap of 25 % is 10 m³ (≈ 63 bbl) of liquid: suspect LT-102 and ask for a field check. An average hides the fault.",
+      "explain": "Deux sources indépendantes concordent (60 % et 58 %) ; la troisième s'écarte. L'écart de 25 % représente 10 m³ (≈ 63 bbl) de liquide : suspecter LT-102 et demander un contrôle terrain. Une moyenne masque la panne.",
       "seconds": 55,
-      "status": "draft"
+      "status": "draft",
+      "en": {
+        "q": "Two transmitters on the same FWKO (40 m³ ≈ 252 bbl) read 60 % (LT-101) and 85 % (LT-102). The local sight glass reads 58 %. Which transmitter is most likely faulty?",
+        "choices": [
+          "LT-101, because its value is the lowest of the three readings",
+          "LT-102, because the other two sources agree with each other",
+          "None: the average of 72.5 % is the true value of the level",
+          "The sight glass, because it is a local instrument"
+        ],
+        "explain": "Two independent sources agree (60 % and 58 %); the third drifts away. The gap of 25 % is 10 m³ (≈ 63 bbl) of liquid: suspect LT-102 and ask for a field check. An average hides the fault."
+      }
     },
     {
       "id": "op-salle-controle-031",
@@ -606,17 +656,27 @@
       "id": "op-salle-controle-032",
       "theme": "Supervision DCS/SCADA et situation dégradée",
       "level": 2,
-      "q": "The measurement of level controller LIC-101 (in auto, SP 50 %, output 55 %) goes bad. Production is 6 000 BLPD (≈ 954 m³/d). What is your immediate action?",
+      "q": "La mesure du régulateur de niveau LIC-101 (en auto, SP 50 %, sortie 55 %) devient mauvaise. La production est de 6 000 BLPD (≈ 954 m³/j). Quelle est ton action immédiate ?",
       "choices": [
-        "Switch to manual at the last safe output value and call the field",
-        "Leave the controller in auto and wait for the signal to come back",
-        "Set the output to 0 % as a precaution and close the valve",
-        "Set the output to 100 % as a precaution and open the valve"
+        "Passer en manuel à la dernière valeur de sortie sûre et appeler le terrain",
+        "Laisser le régulateur en auto et attendre le retour du signal",
+        "Mettre la sortie à 0 % par précaution et fermer la vanne",
+        "Mettre la sortie à 100 % par précaution et ouvrir la vanne"
       ],
       "answer": 0,
-      "explain": "Without a reliable measurement, stabilise in manual at the last safe value (about 55 %) and have the field check the level. Fully closing or opening the valve could empty the vessel or overfill it, with 6 000 BLPD (954 m³/d) going through.",
+      "explain": "Sans mesure fiable, on stabilise en manuel à la dernière valeur sûre (environ 55 %) et on fait contrôler le niveau par le terrain. Fermer ou ouvrir complètement la vanne pourrait vider le ballon ou le faire déborder, avec 6 000 BLPD (954 m³/j) en transit.",
       "seconds": 55,
-      "status": "draft"
+      "status": "draft",
+      "en": {
+        "q": "The measurement of level controller LIC-101 (in auto, SP 50 %, output 55 %) goes bad. Production is 6 000 BLPD (≈ 954 m³/d). What is your immediate action?",
+        "choices": [
+          "Switch to manual at the last safe output value and call the field",
+          "Leave the controller in auto and wait for the signal to come back",
+          "Set the output to 0 % as a precaution and close the valve",
+          "Set the output to 100 % as a precaution and open the valve"
+        ],
+        "explain": "Without a reliable measurement, stabilise in manual at the last safe value (about 55 %) and have the field check the level. Fully closing or opening the valve could empty the vessel or overfill it, with 6 000 BLPD (954 m³/d) going through."
+      }
     },
     {
       "id": "op-salle-controle-033",
@@ -692,13 +752,13 @@
       "level": 1,
       "q": "Un événement s'est produit à 03:40 sur le séparateur HP (8 000 BOPD ≈ 1 272 m³/j). Quel document conserve la mémoire des événements du quart en salle de contrôle ?",
       "choices": [
-        "Le cahier de quart (log book), lu et signé à la relève",
+        "Le cahier de quart, lu et signé à la relève",
         "Le P&ID de l'unité, mis à jour à chaque modification du procédé",
         "Le rapport annuel de production remis à la direction du site",
         "Le manuel d'utilisation du DCS fourni par le constructeur"
       ],
       "answer": 0,
-      "explain": "Le log book consigne les événements, actions et instructions du quart (heure, valeurs, décision) ; il est lu et signé à la relève. Le P&ID décrit l'unité, il ne raconte pas le quart.",
+      "explain": "Le cahier de quart consigne les événements, actions et instructions du quart (heure, valeurs, décision) ; il est lu et signé à la relève. Le P&ID décrit l'unité, il ne raconte pas le quart.",
       "seconds": 40,
       "status": "draft"
     },
@@ -788,17 +848,27 @@
       "id": "op-salle-controle-043",
       "theme": "Relève de poste et communication",
       "level": 2,
-      "q": "Emergency on the platform: gas confirmed on the compressor module, ESD tripped, production of 9 000 BOPD (≈ 1 431 m³/d) shut in. What is the role of the control room?",
+      "q": "Urgence sur la plateforme : gaz confirmé sur le module compresseur, ESD déclenché, production de 9 000 BOPD (≈ 1 431 m³/j) en shut-in. Quel est le rôle de la salle de contrôle ?",
       "choices": [
-        "Raise the alarms, inform the response team and keep the muster record",
-        "Leave the room immediately to reach the muster point as fast as possible",
-        "Go out alone with the room fire extinguishers to tackle the source",
-        "Wait for the order of an outside authority before taking any action"
+        "Lancer les alarmes, informer l'équipe d'intervention et tenir le décompte des personnes au point de rassemblement",
+        "Quitter la salle immédiatement pour rejoindre le point de rassemblement au plus vite",
+        "Sortir seul avec les extincteurs de la salle pour attaquer la source",
+        "Attendre l'ordre d'une autorité extérieure avant toute action"
       ],
       "answer": 0,
-      "explain": "The control room coordinates: alarms, calls to the emergency team, record of persons on board. It only leaves the room according to the emergency plan. Restarting 9 000 BOPD (1 431 m³/d) is not a priority at all.",
+      "explain": "La salle de contrôle coordonne : alarmes, appels à l'équipe d'urgence, décompte des personnes à bord. Elle ne quitte la salle que selon le plan d'urgence. Relancer les 9 000 BOPD (1 431 m³/j) n'est absolument pas une priorité.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "en": {
+        "q": "Emergency on the platform: gas confirmed on the compressor module, ESD tripped, production of 9 000 BOPD (≈ 1 431 m³/d) shut in. What is the role of the control room?",
+        "choices": [
+          "Raise the alarms, inform the response team and keep the muster record",
+          "Leave the room immediately to reach the muster point as fast as possible",
+          "Go out alone with the room fire extinguishers to tackle the source",
+          "Wait for the order of an outside authority before taking any action"
+        ],
+        "explain": "The control room coordinates: alarms, calls to the emergency team, record of persons on board. It only leaves the room according to the emergency plan. Restarting 9 000 BOPD (1 431 m³/d) is not a priority at all."
+      }
     },
     {
       "id": "op-salle-controle-044",

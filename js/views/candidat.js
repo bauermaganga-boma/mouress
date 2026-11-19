@@ -35,7 +35,7 @@ export default async function render(ctx, root) {
   const start = async () => {
     const n = examSize(content, session.questionCount);
     const info = await showIntro(root, {
-      title: session.title, context: `${company.name} — ${profile.name}`, subtitle: `Examen de votre Pass. Tentative ${attemptsUsed(attempts) + 1} sur ${CONFIG.ATTEMPTS_PER_PASS}.`,
+      title: session.title, context: `${company.name} · ${profile.name}`, subtitle: `Examen de votre Pass. Tentative ${attemptsUsed(attempts) + 1} sur ${CONFIG.ATTEMPTS_PER_PASS}.`,
       total: n, themes: themesOf(content).length, passMark: session.passMark, certificate: true, emailRequired: true, name: inv.name || undefined, email: inv.email || undefined,
       backHref: `#/t/${token}`,
     });

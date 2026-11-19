@@ -8,7 +8,7 @@ import { choicesHTML, questionBodyHTML, correctDisplayIndex } from '../qview.js'
 export default async function render(ctx, root) {
   const profile = await getProfile(ctx.params.id);
   if (!profile) { (await import('./notfound.js')).default(ctx, root); return; }
-  ctx.setTitle(`Entraînement — ${profile.name}`);
+  ctx.setTitle(`Entraînement · ${profile.name}`);
   const content = await loadContent(profile.id);
   if (!ctx.alive()) return;
   if (!content || !content.questions.length) { root.innerHTML = `<div class="container page">${comingSoon(profile.name)}</div>`; return; }

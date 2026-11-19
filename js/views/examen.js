@@ -8,7 +8,7 @@ import { showIntro, runExam, resumeAttempt } from '../examrunner.js';
 export default async function render(ctx, root) {
   const profile = await getProfile(ctx.params.id);
   if (!profile) { (await import('./notfound.js')).default(ctx, root); return; }
-  ctx.setTitle(`Examen — ${profile.name}`);
+  ctx.setTitle(`Examen · ${profile.name}`);
   const content = await loadContent(profile.id);
   if (!ctx.alive()) return;
   if (!content || !content.questions.length) { root.innerHTML = `<div class="container page">${comingSoon(profile.name)}</div>`; return; }
