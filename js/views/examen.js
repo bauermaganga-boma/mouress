@@ -27,7 +27,7 @@ export default async function render(ctx, root) {
 
   const n = examSize(content);
   const info = await showIntro(root, {
-    title: profile.name, context: 'Examen d’aptitude', total: n, themes: themesOf(content).length, passMark: CONFIG.PASS_MARK, certificate: true,
+    title: profile.name, context: 'Examen d’aptitude', total: n, themes: themesOf(content).length, passMark: CONFIG.PASS_MARK, certificate: true, nameOptional: true,
     backHref: `#/profil/${profile.id}`,
     crumbs: `<div class="crumbs"><a href="#/formation">Formation</a><span>›</span><a href="#/profil/${esc(profile.id)}">${esc(profile.name)}</a><span>›</span><span>Examen</span></div>`,
   });

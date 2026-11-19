@@ -3,6 +3,10 @@
 // PATTERNS : [expression régulière ancrée sur le texte entier, remplacement avec $1 $2…] pour les textes à nombres, noms ou dates.
 // Les patterns les plus spécifiques sont placés avant les plus génériques ; les dates françaises (« 19 novembre 2026 ») sont converties en fin de liste.
 export const EXACT = {
+  "Nom et prénom (facultatif)": "Full name (optional)",
+  "Vous pouvez passer le test sans nom ni e-mail : l’attestation portera alors la mention « Candidat anonyme ».": "You can take the test without a name or e-mail: the certificate will then read “Anonymous candidate”.",
+  "Saisissez votre nom complet (ou laissez vide).": "Enter your full name (or leave it blank).",
+  "Candidat anonyme": "Anonymous candidate",
   "Texte de référence": "Reference text",
   "Consulter le texte": "Read the text",
   "Cadre légal et réglementation": "Legal and regulatory framework",

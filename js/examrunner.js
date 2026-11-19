@@ -32,20 +32,22 @@ export function showIntro(root, o) {
         </ul>
         <form id="idform" novalidate>
           <div class="form-grid">
-            <div class="field"><label for="c-name">Nom et prénom</label><input id="c-name" type="text" autocomplete="name" required value="${esc(o.name ?? me.name)}"><span class="field-error" id="e-name" role="alert"></span></div>
+            <div class="field"><label for="c-name">Nom et prénom${o.nameOptional ? ' (facultatif)' : ''}</label><input id="c-name" type="text" autocomplete="name" ${o.nameOptional ? '' : 'required'} value="${esc(o.name ?? me.name)}"><span class="field-error" id="e-name" role="alert"></span></div>
             <div class="field"><label for="c-email">E-mail${o.emailRequired ? '' : ' (facultatif)'}</label><input id="c-email" type="email" autocomplete="email" ${o.emailRequired ? 'required' : ''} value="${esc(o.email ?? me.email)}"><span class="field-error" id="e-email" role="alert"></span></div>
           </div>
-          ${o.certificate ? '<p class="hint xs muted">Le nom saisi figurera sur l’attestation.</p>' : ''}
+          ${o.certificate ? `<p class="hint xs muted">${o.nameOptional ? 'Vous pouvez passer le test sans nom ni e-mail : l’attestation portera alors la mention « Candidat anonyme ».' : 'Le nom saisi figurera sur l’attestation.'}</p>` : ''}
           <div class="btn-row"><button class="btn btn-primary btn-lg" type="submit">Commencer l’examen ${icon('arrow', 18)}</button>${o.backHref ? `<a class="btn btn-light" href="${esc(o.backHref)}">← Retour</a>` : ''}</div>
         </form></div></div>`;
     root.querySelector('#idform').addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = root.querySelector('#c-name').value.trim();
+      let name = root.querySelector('#c-name').value.trim();
       const email = root.querySelector('#c-email').value.trim();
-      root.querySelector('#e-name').textContent = name.length < 3 ? 'Saisissez votre nom complet.' : '';
+      const nameOk = o.nameOptional ? (name === '' || name.length >= 3) : name.length >= 3;
+      root.querySelector('#e-name').textContent = nameOk ? '' : 'Saisissez votre nom complet (ou laissez vide).';
       root.querySelector('#e-email').textContent = (o.emailRequired || email) && !isEmail(email) ? 'Saisissez une adresse e-mail valide.' : '';
-      if (name.length < 3 || ((o.emailRequired || email) && !isEmail(email))) return;
-      local.setMe({ name, email });
+      if (!nameOk || ((o.emailRequired || email) && !isEmail(email))) return;
+      if (!name && o.nameOptional) name = 'Candidat anonyme';
+      local.setMe({ name: name === 'Candidat anonyme' ? '' : name, email });
       resolve({ name, email });
     });
   });
