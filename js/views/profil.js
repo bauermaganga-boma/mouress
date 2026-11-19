@@ -13,15 +13,18 @@ export default async function render(ctx, root) {
   const dom = domainOf(data, funnelDomainFor(data, profile));
   const grp = (data.groups || []).find((g) => g.id === dom?.group);
   const noLvl = !!branchOf(data, profile.branch)?.noLevel;
-  const listHref = dom ? `#/formation/${dom.id}/${profile.branch}${noLvl ? '' : '/' + profile.level}` : '#/formation';
+  const sharedOnly = !!branchOf(data, profile.branch)?.sharedOnly;
+  const listHref = sharedOnly ? (grp ? `#/formation/${grp.id}` : '#/formation') : dom ? `#/formation/${dom.id}/${profile.branch}${noLvl ? '' : '/' + profile.level}` : '#/formation';
   const branch = branchOf(data, profile.branch);
   const lvl = levelOf(data, profile.level);
-  const bc = crumbs([{ label: 'Formation', href: '#/formation' }, ...(grp ? [{ label: grp.name, href: `#/formation/${grp.id}` }] : []), { label: dom?.name || 'Secteur', href: dom ? `#/formation/${dom.id}` : '#/formation' }, { label: branch?.name || 'Métiers', href: dom ? `#/formation/${dom.id}/${profile.branch}` : '#/formation' }, ...(noLvl ? [] : [{ label: lvl?.name || 'Niveau', href: listHref }])]);
+  const bc = sharedOnly
+    ? crumbs([{ label: 'Formation', href: '#/formation' }, ...(grp ? [{ label: grp.name, href: `#/formation/${grp.id}` }] : []), { label: profile.name }])
+    : crumbs([{ label: 'Formation', href: '#/formation' }, ...(grp ? [{ label: grp.name, href: `#/formation/${grp.id}` }] : []), { label: dom?.name || 'Secteur', href: dom ? `#/formation/${dom.id}` : '#/formation' }, { label: branch?.name || 'Métiers', href: dom ? `#/formation/${dom.id}/${profile.branch}` : '#/formation' }, ...(noLvl ? [] : [{ label: lvl?.name || 'Niveau', href: listHref }])]);
   const content = await loadContent(profile.id);
   if (!ctx.alive()) return;
 
   const head = `${bc}
-    <a class="back-link" href="${listHref}">${icon('arrow', 16, 'flip')} Retour à la liste des postes</a>
+    <a class="back-link" href="${listHref}">${icon('arrow', 16, 'flip')} ${sharedOnly ? 'Retour' : 'Retour à la liste des postes'}</a>
     <div class="profile-head"><span class="pcard-ico big">${icon(dom?.icon || 'briefcase', 30)}</span>
     <div><div class="btn-row" style="gap:.4rem">${badge(lvl?.name || '', 'info')}${badge(dom?.name || '')}</div>
     <h1 class="page-title">${esc(profile.name)}</h1><p class="muted">${esc(profile.desc)}</p></div></div>`;

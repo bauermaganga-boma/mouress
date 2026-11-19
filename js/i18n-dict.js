@@ -3,6 +3,7 @@
 // PATTERNS : [expression régulière ancrée sur le texte entier, remplacement avec $1 $2…] pour les textes à nombres, noms ou dates.
 // Les patterns les plus spécifiques sont placés avant les plus génériques ; les dates françaises (« 19 novembre 2026 ») sont converties en fin de liste.
 export const EXACT = {
+  "Amont et aval": "Upstream and downstream",
   "Vérifier une attestation": "Verify a certificate",
   "Saisissez le code MRS-… d’une attestation pour contrôler son authenticité.": "Enter the MRS-… code of a certificate to check that it is genuine.",
   "Modules courts": "Short modules",

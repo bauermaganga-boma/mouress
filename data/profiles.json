@@ -907,7 +907,9 @@
         "petrole-gaz-amont",
         "petrole-gaz-aval"
       ],
-      "branch": "reglementation"
+      "branch": "reglementation",
+      "cardTitle": "Code des hydrocarbures gabonais",
+      "cardDesc": "Loi n° 002/2019, valable pour l’amont et l’aval. Chaque réponse cite son article."
     }
   ],
   "domains": [
@@ -966,7 +968,8 @@
       "id": "reglementation",
       "name": "Cadre légal et réglementation",
       "desc": "Code gabonais des hydrocarbures (Loi n° 002/2019).",
-      "noLevel": true
+      "noLevel": true,
+      "sharedOnly": true
     }
   ],
   "groups": [
@@ -974,7 +977,10 @@
       "id": "petrole-gaz",
       "name": "Pétrole & gaz",
       "icon": "rig",
-      "desc": "Amont (exploration-production) ou aval (raffinerie, stockage, terminaux)."
+      "desc": "Amont (exploration-production) ou aval (raffinerie, stockage, terminaux).",
+      "shared": [
+        "loi-hydrocarbures-gabon"
+      ]
     }
   ]
 }

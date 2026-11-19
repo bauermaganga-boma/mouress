@@ -7,9 +7,9 @@ import { icon, badge, pageHead } from '../ui.js';
 const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 const plural = (n) => `${n} poste${n > 1 ? 's' : ''}`;
 
-const bigCard = ({ href, ico, title, desc, count }) => `<a class="card card-link funnel-card" href="${esc(href)}">
+const bigCard = ({ href, ico, title, desc, count, meta }) => `<a class="card card-link funnel-card" href="${esc(href)}">
   <span class="funnel-ico">${icon(ico || 'briefcase', 28)}</span>
-  <span class="funnel-body"><strong class="funnel-title">${esc(title)}</strong>${desc ? `<span class="muted small">${esc(desc)}</span>` : ''}<span class="funnel-meta">${badge(plural(count))}</span></span>
+  <span class="funnel-body"><strong class="funnel-title">${esc(title)}</strong>${desc ? `<span class="muted small">${esc(desc)}</span>` : ''}<span class="funnel-meta">${badge(meta || plural(count))}</span></span>
   <span class="funnel-go">${icon('arrow', 22)}</span></a>`;
 
 function posteCard(data, p, avail, domain) {
@@ -77,7 +77,8 @@ export default async function render(ctx, root) {
   const grp = (data.groups || []).find((g) => g.id === d);
   if (grp) {
     ctx.setTitle(grp.name);
-    const cards = (data.domains || []).filter((x) => x.group === grp.id).map((x) => bigCard({ href: `#/formation/${x.id}`, ico: x.icon, title: x.name.replace(grp.name + ' — ', ''), desc: x.desc, count: postes(data, { domain: x.id }).length })).join('');
+    const cards = (data.domains || []).filter((x) => x.group === grp.id).map((x) => bigCard({ href: `#/formation/${x.id}`, ico: x.icon, title: x.name.replace(grp.name + ' : ', ''), desc: x.desc, count: postes(data, { domain: x.id }).length })).join('')
+      + (grp.shared || []).map((id) => data.profiles.find((pp) => pp.id === id)).filter(Boolean).map((pp) => bigCard({ href: `#/profil/${pp.id}`, ico: 'book', title: pp.cardTitle || pp.name, desc: pp.cardDesc || pp.desc, meta: 'Amont et aval' })).join('');
     root.innerHTML = `<div class="container page">${pageHead({ crumbs: [home, { label: grp.name }], back: '#/formation', eyebrow: 'Étape 2', title: grp.name, text: 'Amont ou aval ?' })}<div class="grid grid-2 funnel-grid">${cards}</div></div>`;
     return;
   }
@@ -91,7 +92,7 @@ export default async function render(ctx, root) {
   /* Étape 2 : branche */
   if (!b) {
     ctx.setTitle(dm.name);
-    const cards = (data.branches || []).map((br) => ({ br, n: postes(data, { domain: d, branch: br.id }).length })).filter((x) => x.n)
+    const cards = (data.branches || []).filter((br) => !br.sharedOnly).map((br) => ({ br, n: postes(data, { domain: d, branch: br.id }).length })).filter((x) => x.n)
       .map(({ br, n }) => bigCard({ href: `#/formation/${d}/${br.id}`, ico: br.id === 'support' ? 'briefcase' : br.id === 'reglementation' ? 'book' : 'wrench', title: br.name, desc: br.desc, count: n })).join('');
     root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...home2, { label: dm.name }], back: back1, eyebrow: 'Type de métier', title: dm.name, text: 'Quel type de métier ?' })}
       <div class="grid grid-2 funnel-grid">${cards}</div></div>`;
