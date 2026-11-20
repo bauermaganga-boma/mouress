@@ -22,21 +22,6 @@ function posteCard(data, p, avail, domain) {
 }
 
 
-const MIN_INFO = {
-  missions: ['Élaborer et appliquer la politique pétrolière et gazière, et préparer les textes sur l’exploration, l’exploitation et la commercialisation des hydrocarbures.', 'Délivrer les licences et permis, et organiser les appels d’offres pour les blocs d’exploration.', 'Contrôler le respect des normes techniques, de sécurité et d’environnement.', 'Suivre la perception des taxes et redevances du secteur.', 'Promouvoir le secteur, le contenu local, la formation et la transition énergétique.'],
-  directions: [['Direction générale des Hydrocarbures (DGH)', 'Cadre et suivi de l’activité pétrolière et gazière.'], ['Direction générale des Études et Laboratoires (DGEL)', 'Études et analyses techniques.'], ['Direction de l’Amont pétrolier et gazier', 'Exploration et production.'], ['Direction de l’Aval pétrolier et gazier', 'Raffinage, stockage, distribution.'], ['Direction des Affaires économiques, juridiques et de la gestion des données', 'Économie, droit, fiscalité et données pétrolières.']],
-  tutelle: [['Gabon Oil Company (GOC)', 'Société nationale des hydrocarbures.'], ['Société gabonaise de raffinage (SOGARA)', 'Raffinerie de Port-Gentil.'], ['Société gabonaise d’entreposage des produits pétroliers (SGEPP)', 'Stockage des produits pétroliers.'], ['Pizolub', 'Lubrifiants.']],
-  textes: ['Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures (Code des hydrocarbures)', 'Décret sur les modalités du contenu local', 'Arrêté du 26 juillet 2023 sur l’attribution des autorisations d’exploration'],
-};
-const minInfoHTML = () => {
-  const li = (a) => a.map((x) => `<li>${esc(x)}</li>`).join('');
-  const dl = (a) => a.map(([t, d]) => `<li><strong>${esc(t)}</strong><br><span class="muted small">${esc(d)}</span></li>`).join('');
-  return `<section class="block min-info"><div class="card"><h2>Le ministère en bref</h2>
-    <div class="grid grid-2"><div><h3>Missions</h3><ul class="bullets">${li(MIN_INFO.missions)}</ul><h3>Textes de référence</h3><ul class="bullets">${li(MIN_INFO.textes)}</ul></div>
-    <div><h3>Directions</h3><ul class="bullets">${dl(MIN_INFO.directions)}</ul><h3>Sociétés et organismes sous tutelle</h3><ul class="bullets">${dl(MIN_INFO.tutelle)}</ul></div></div>
-    <p class="xs muted">Source : site officiel du ministère (minpetrole.ga), informations à vérifier et à compléter avec le ministère avant diffusion aux agents.</p></div></section>`;
-};
-
 export default async function render(ctx, root) {
   const data = await getProfilesData();
   if (!ctx.alive()) return;
