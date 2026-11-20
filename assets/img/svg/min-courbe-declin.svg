@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Courbe de production d'un champ : montée en production de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9 et 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j atteinte vers l'année 17,5, où intervient l'abandon</title>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+</style>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="28" class="h">Profil de production d'un champ</text>
+<path d="M90,410.0H740" stroke="#E8EAEE" stroke-width="1.5"/><text x="82" y="415.0" class="e">0</text>
+<path d="M90,356.7H740" stroke="#E8EAEE" stroke-width="1.5"/><text x="82" y="361.7" class="e">4 000</text>
+<path d="M90,303.3H740" stroke="#E8EAEE" stroke-width="1.5"/><text x="82" y="308.3" class="e">8 000</text>
+<path d="M90,250.0H740" stroke="#E8EAEE" stroke-width="1.5"/><text x="82" y="255.0" class="e">12 000</text>
+<path d="M90,196.7H740" stroke="#E8EAEE" stroke-width="1.5"/><text x="82" y="201.7" class="e">16 000</text>
+<path d="M90,143.3H740" stroke="#E8EAEE" stroke-width="1.5"/><text x="82" y="148.3" class="e">20 000</text>
+<path d="M90,90.0H740" stroke="#E8EAEE" stroke-width="1.5"/><text x="82" y="95.0" class="e">24 000</text>
+<text x="90.0" y="430" class="c">0</text>
+<text x="155.0" y="430" class="c">2</text>
+<text x="220.0" y="430" class="c">4</text>
+<text x="285.0" y="430" class="c">6</text>
+<text x="350.0" y="430" class="c">8</text>
+<text x="415.0" y="430" class="c">10</text>
+<text x="480.0" y="430" class="c">12</text>
+<text x="545.0" y="430" class="c">14</text>
+<text x="610.0" y="430" class="c">16</text>
+<text x="675.0" y="430" class="c">18</text>
+<text x="740.0" y="430" class="c">20</text>
+<path d="M90,410V90M90,410H740" stroke="#061F44" stroke-width="2.5" fill="none"/>
+<path d="M155.0,410V84M285.0,410V84" stroke="#061F44" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="122.5" y="76" class="c">Montée</text>
+<text x="220.0" y="76" class="c b">Plateau</text>
+<text x="531.9" y="76" class="c b">Déclin</text>
+<polyline points="90.0,410.0 155.0,143.3 285.0,143.3 285.0,143.3 301.3,168.7 317.5,191.7 333.8,212.4 350.0,231.2 366.3,248.3 382.5,263.7 398.8,277.6 415.0,290.2 431.3,301.6 447.5,311.9 463.8,321.2 480.0,329.7 496.3,337.3 512.5,344.2 528.8,350.5 545.0,356.2 561.3,361.3 577.5,365.9 593.8,370.1 610.0,373.9 626.3,377.3 642.5,380.5 658.8,383.3" fill="none" stroke="#061F44" stroke-width="4" stroke-linejoin="round"/>
+<path d="M90,383.3H740" stroke="#F28C28" stroke-width="3" stroke-dasharray="8 5"/>
+<text x="330" y="375.3" class="o">Limite économique : 2 000 b/j</text>
+<path d="M658.8,383.3V410" stroke="#B85C0A" stroke-width="2.5"/>
+<text x="666.8" y="336" class="o">Abandon</text><text x="666.8" y="352" class="o">(année ≈ 17,5)</text>
+<circle cx="285.0" cy="143.3" r="5" fill="#F28C28" stroke="#061F44" stroke-width="2"/><text x="275.0" y="131.3" class="b c">Année 6 : 20 000 b/j</text>
+<circle cx="382.5" cy="263.7" r="5" fill="#F28C28" stroke="#061F44" stroke-width="2"/><text x="392.5" y="253.7" class="b">Année 9 : ≈ 11 000 b/j</text>
+<circle cx="480.0" cy="329.7" r="5" fill="#F28C28" stroke="#061F44" stroke-width="2"/><text x="490.0" y="319.7" class="b">Année 12 : ≈ 6 000 b/j</text>
+<text x="415" y="452" class="c b">Temps depuis le début de la production (années)</text>
+<text transform="translate(24,250) rotate(-90)" class="c b">Débit d'huile (barils par jour, b/j)</text>
+<text x="400" y="482" class="c">Déclin exponentiel : q = 20 000 × e^(−0,2 × t), t compté depuis l'année 6 (valeurs d'illustration)</text>
+</svg>

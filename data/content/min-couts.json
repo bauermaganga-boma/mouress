@@ -13,7 +13,9 @@
         "Le plafond ne peut être modifié qu'à titre exceptionnel, sur avis des services compétents, si deux conditions sont réunies (art. 222).",
         "Exclus : RMP, amendes et pénalités, dépassements de budget non approuvés (art. 211, 262, 275).",
         "Le contrat de partage de production précise le report des coûts non récupérés."
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "m2",
@@ -97,7 +99,9 @@
         "Schémas types : surfacturation, double facturation, coûts étrangers au contrat, fractionnement, stocks excessifs.",
         "Détection par comparaison de prix, rapprochement des quantités, recherche de doublons.",
         "Chaque constat doit être étayé par des pièces écrites."
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "m8",
@@ -111,7 +115,9 @@
         "Tester la réalité, l'éligibilité, l'exactitude, l'exercice et le paiement de chaque transaction.",
         "Chiffrer chaque écart avec le motif et la référence au texte.",
         "Les calculs courants : plafond, report, quote-part, écart budgétaire, taux de rejet, surcoût unitaire."
-      ]
+      ],
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 par 5 : probabilité de 1 (improbable) à 5 (fréquent) en abscisse, gravité de 1 (mineure) à 5 (catastrophique) en ordonnée ; niveau = probabilité × gravité : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
     }
   ],
   "questions": [
@@ -119,15 +125,15 @@
       "id": "min-couts-001",
       "theme": "Coûts récupérables et plafonds",
       "level": 1,
-      "q": "Selon l'article 220 de la loi n° 002/2019, comment le contracteur récupère-t-il ses coûts pétroliers ?",
+      "q": "D'après la cascade, sur quelle production le contracteur prélève-t-il les 600 000 barils de coûts récupérés (article 220) ?",
       "choices": [
-        "Par un remboursement direct du Trésor public, inscrit chaque année au budget de l'État",
-        "Par prélèvement sur la production de la seule zone délimitée",
-        "Par imputation automatique sur l'impôt sur les sociétés dû pour l'ensemble de ses activités",
-        "Par prélèvement sur la production de tous les contrats que le contracteur détient au Gabon"
+        "Sur un remboursement direct du Trésor, inscrit chaque année au budget",
+        "Sur la production de la seule zone délimitée concernée",
+        "Sur une imputation automatique sur l'impôt sur les sociétés dû",
+        "Sur la production de tous les contrats du contracteur au Gabon"
       ],
       "answer": 1,
-      "explain": "Article 220 : le contracteur a droit à la récupération des coûts supportés et payés, par prélèvement d'une partie de la production provenant exclusivement de la zone délimitée, conformément au contrat. Il n'y a pas de remboursement budgétaire, ni d'imputation sur l'impôt, ni de mutualisation entre contrats.",
+      "explain": "Le contracteur récupère ses coûts par prélèvement d'une partie de la production provenant exclusivement de la zone délimitée où ils ont été supportés (article 220). Il n'y a ni remboursement du Trésor ni compensation entre contrats.",
       "seconds": 50,
       "status": "draft",
       "refs": [
@@ -136,13 +142,15 @@
           "art": "Art. 220",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "min-couts-002",
       "theme": "Coûts récupérables et plafonds",
       "level": 1,
-      "q": "Quel est le plafond annuel de récupération des coûts pour les hydrocarbures liquides en zone conventionnelle (article 221) ?",
+      "q": "Sur le schéma, quel plafond annuel de récupération des coûts est représenté, pour des liquides en zone conventionnelle (article 221) ?",
       "choices": [
         "75 %",
         "80 %",
@@ -150,7 +158,7 @@
         "70 %"
       ],
       "answer": 3,
-      "explain": "Article 221 : 70 % pour les liquides en zone conventionnelle, 75 % pour les liquides en offshore profond et très profond, 80 % et 90 % pour le gaz dans les mêmes zones. Chaque autre pourcentage correspond à une autre catégorie.",
+      "explain": "Le plafond est de 630 000 barils sur 900 000, soit 70 %, taux de l'article 221 pour les liquides en zone conventionnelle. 75 % vise l'offshore profond, 80 % le gaz en zone conventionnelle et 90 % le gaz en offshore profond.",
       "seconds": 40,
       "status": "draft",
       "refs": [
@@ -159,13 +167,15 @@
           "art": "Art. 221",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "min-couts-003",
       "theme": "Coûts récupérables et plafonds",
       "level": 1,
-      "q": "Quel plafond s'applique au gaz en offshore profond et très profond ?",
+      "q": "Le schéma illustre le plafond des liquides en zone conventionnelle. Quel plafond annuel s'applique au gaz en offshore profond et très profond ?",
       "choices": [
         "90 %",
         "70 %",
@@ -173,7 +183,7 @@
         "80 %"
       ],
       "answer": 0,
-      "explain": "Article 221 : 90 % pour le gaz en offshore profond et très profond. 70 % et 75 % concernent les liquides ; 80 % est le plafond du gaz en zone conventionnelle.",
+      "explain": "L'article 221 fixe 90 % pour le gaz en offshore profond et très profond, contre 70 % pour les liquides en zone conventionnelle (cas du schéma), 75 % pour les liquides en offshore profond et 80 % pour le gaz en zone conventionnelle.",
       "seconds": 40,
       "status": "draft",
       "refs": [
@@ -182,13 +192,15 @@
           "art": "Art. 221",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "min-couts-004",
       "theme": "Coûts récupérables et plafonds",
       "level": 1,
-      "q": "Lequel de ces éléments n'entre PAS dans les coûts pétroliers ?",
+      "q": "Sur le schéma, quel prélèvement est pris sur la production totale avant la récupération des coûts et n'entre pas dans les coûts pétroliers ?",
       "choices": [
         "Les primes d'assurance payées par le contracteur",
         "Les dotations annuelles au fonds de réhabilitation de sites",
@@ -196,7 +208,7 @@
         "Les frais d'indemnisation liés à la mise à disposition des surfaces"
       ],
       "answer": 2,
-      "explain": "Article 211 : la redevance minière proportionnelle ne rentre pas dans les coûts pétroliers. Les primes d'assurance (art. 181), les dotations au fonds de réhabilitation (art. 175) et les frais d'indemnisation de l'article 13 entrent dans les coûts pétroliers.",
+      "explain": "La redevance minière proportionnelle (100 000 barils sur la figure) est prélevée d'abord et n'entre pas dans les coûts pétroliers (article 211). Les primes d'assurance (article 181) et les dotations au fonds de réhabilitation (article 175) y entrent.",
       "seconds": 50,
       "status": "draft",
       "refs": [
@@ -215,7 +227,9 @@
           "art": "Art. 175",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "min-couts-005",
@@ -244,15 +258,15 @@
       "id": "min-couts-006",
       "theme": "Coûts récupérables et plafonds",
       "level": 2,
-      "q": "Chef de service, vous recevez l'état de récupération d'un champ de liquides en zone conventionnelle qui applique un taux de 85 %, sans décision exceptionnelle. Que faites-vous ?",
+      "q": "Un opérateur présente une cascade identique à celle du schéma, mais avec un plafond de 85 % au lieu de 70 %, pour des liquides en zone conventionnelle, sans décision exceptionnelle. Que faites-vous ?",
       "choices": [
         "Vous demandez la rectification : le taux ne peut pas dépasser 70 %",
         "Vous acceptez, car le contrat prime toujours sur la loi",
-        "Vous acceptez, car 85 % reste dans la fourchette des taux prévus pour le gaz",
+        "Vous acceptez, car 85 % reste dans la fourchette prévue pour le gaz",
         "Vous réduisez à 50 % par prudence, sans base légale précise"
       ],
       "answer": 0,
-      "explain": "L'article 221 fixe un maximum de 70 % pour cette catégorie ; seule la procédure exceptionnelle de l'article 222 permet de le modifier, par l'autorité compétente. Le contrat ne peut pas dépasser la limite légale. Un taux de 50 % n'a aucun fondement : on applique le taux de la loi ou celui du contrat s'il est inférieur.",
+      "explain": "Pour les liquides en zone conventionnelle, le plafond légal est de 70 % (article 221), sauf décision exceptionnelle de l'article 222. Un taux de 85 % est irrégulier : le contrat ne peut pas dépasser la limite légale.",
       "seconds": 70,
       "status": "draft",
       "refs": [
@@ -266,21 +280,23 @@
           "art": "Art. 222",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "min-couts-007",
       "theme": "Coûts récupérables et plafonds",
       "level": 2,
-      "q": "Un opérateur veut inscrire dans les coûts pétroliers une pénalité reçue pour retard de transmission de données. Quelle est la réponse correcte ?",
+      "q": "Le contracteur voudrait ajouter aux 600 000 barils de coûts du schéma une pénalité reçue pour retard de transmission de données. Quelle est la réponse correcte ?",
       "choices": [
         "Acceptation, si la pénalité est inférieure à 5 000 000 FCFA",
         "Acceptation, si l'opérateur prouve qu'il l'a effectivement payée",
-        "Acceptation partielle, à hauteur du plafond annuel de récupération des coûts",
+        "Acceptation partielle, à hauteur du plafond annuel de récupération",
         "Refus : les pénalités ne rentrent pas dans les coûts pétroliers"
       ],
       "answer": 3,
-      "explain": "Article 262 : les dépenses d'amendes, pénalités et intérêts de retard de toute nature ne rentrent pas dans les coûts pétroliers, quel que soit leur montant ou leur paiement effectif. Aucun seuil ni acceptation partielle n'est prévu.",
+      "explain": "Les amendes, pénalités et intérêts de retard sont exclus des coûts pétroliers (article 262), même payés et même sous le plafond de 630 000 barils de la figure.",
       "seconds": 60,
       "status": "draft",
       "refs": [
@@ -294,7 +310,9 @@
           "art": "Art. 267",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "min-couts-008",
@@ -328,15 +346,15 @@
       "id": "min-couts-009",
       "theme": "Coûts récupérables et plafonds",
       "level": 3,
-      "q": "Un contracteur détient deux zones délimitées distinctes, A (en production) et B (en développement). Il propose de récupérer sur la production de A les coûts de développement de B. Quelle est votre analyse ?",
+      "q": "La cascade du schéma porte sur la production de la zone A. Le contracteur voudrait y récupérer aussi les coûts de développement de sa zone B, distincte. Quelle est votre analyse ?",
       "choices": [
         "Contraire à l'article 220 : chaque zone récupère sur sa propre production",
-        "Elle est possible, si le contracteur en informe l'administration par écrit",
-        "Elle est possible, si les deux zones sont proches de moins de 50 kilomètres",
-        "Elle est possible, mais seulement pour les coûts d'investissement"
+        "Possible, si le contracteur en informe l'administration par écrit",
+        "Possible, si les deux zones sont distantes de moins de 50 kilomètres",
+        "Possible, mais seulement pour les coûts d'investissement"
       ],
       "answer": 0,
-      "explain": "L'article 220 prévoit un prélèvement sur la production provenant exclusivement de la zone délimitée où les coûts ont été supportés. Le cloisonnement évite que l'État finance indirectement un périmètre par un autre. Une simple information, la proximité ou la nature des coûts n'y changent rien, sauf stipulation contractuelle expresse à vérifier.",
+      "explain": "La récupération est cloisonnée par zone délimitée : les coûts se prélèvent exclusivement sur la production de la zone où ils ont été supportés (article 220). Aucune information écrite ni distance ne change cette règle.",
       "seconds": 90,
       "status": "draft",
       "refs": [
@@ -345,21 +363,23 @@
           "art": "Art. 220",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "min-couts-010",
       "theme": "Coûts récupérables et plafonds",
       "level": 3,
-      "q": "Après des découvertes marginales, un opérateur demande de relever le plafond de récupération. Il reconnaît qu'un autre forage reste possible avant la fin de la période d'exploration. Que répondre ?",
+      "q": "Après des découvertes marginales, un opérateur voudrait relever le plafond de 70 % du schéma. Il reconnaît qu'un autre forage reste possible avant la fin de la période d'exploration. Que répondre ?",
       "choices": [
         "Accepter, car des découvertes marginales suffisent à justifier la modification",
         "Accepter, car l'opérateur a le droit de choisir les taux applicables",
-        "Renvoyer la décision à l'opérateur national, seul compétent en la matière",
+        "Renvoyer la décision à l'opérateur national, seul compétent",
         "Refuser : les deux conditions de l'article 222 sont cumulatives, la seconde manque"
       ],
       "answer": 3,
-      "explain": "Article 222 : les taux ne peuvent être modifiés, à titre exceptionnel et sur avis des services compétents, que si cumulativement les découvertes restent marginales et si aucun autre forage n'est possible avant la fin de la période d'exploration. Ici, un forage reste possible. La décision revient à l'autorité compétente, non à l'opérateur ni à l'opérateur national.",
+      "explain": "L'article 222 exige cumulativement des découvertes marginales et l'impossibilité de tout autre forage avant la fin de l'exploration, sur avis des services compétents. Un autre forage restant possible, le plafond de 70 % demeure.",
       "seconds": 90,
       "status": "draft",
       "refs": [
@@ -368,7 +388,9 @@
           "art": "Art. 222",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "min-couts-011",
@@ -1585,15 +1607,15 @@
       "id": "min-couts-064",
       "theme": "Surfacturation et gonflement des coûts",
       "level": 1,
-      "q": "Quel est l'effet d'un coût gonflé et récupéré par le contracteur ?",
+      "q": "Sur le schéma, le contracteur inscrit 20 000 barils de coûts gonflés en plus des 600 000 ; le total reste sous le plafond et est récupéré. Quel est l'effet sur la production à partager ?",
       "choices": [
-        "Il réduit la production restante partagée avec l'État",
-        "Il augmente la redevance minière proportionnelle de l'année",
-        "Il n'a aucun effet sur le partage",
-        "Il diminue le plafond de récupération"
+        "Elle tombe à 280 000 barils, ce qui réduit la part de l'État",
+        "Elle monte à 320 000 barils, ce qui augmente la part de l'État",
+        "Elle reste à 300 000 barils : le partage ne dépend pas des coûts",
+        "Elle reste à 300 000 barils, mais la redevance minière augmente"
       ],
       "answer": 0,
-      "explain": "Plus les coûts récupérés sont élevés, moins il reste de production à partager. La RMP et le plafond ne varient pas avec les coûts.",
+      "explain": "Les coûts récupérés passent à 620 000 barils, sous le plafond de 630 000 : la production à partager tombe de 300 000 à 280 000 barils, et la part de l'État baisse d'autant dans la proportion du partage. Chaque coût gonflé est prélevé sur la production restante.",
       "seconds": 50,
       "status": "draft",
       "refs": [
@@ -1602,23 +1624,27 @@
           "art": "Art. 221",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "min-couts-065",
       "theme": "Surfacturation et gonflement des coûts",
       "level": 2,
-      "q": "Parmi ces indices, lequel est un signal d'alerte de gonflement des coûts ?",
+      "q": "Un auditeur place sur la matrice de risque le poste « factures juste sous le seuil d'autorisation » : probabilité 4 (probable), gravité 4 (majeure). Quel niveau en résulte ?",
       "choices": [
-        "Plusieurs factures de montants juste inférieurs au seuil d'autorisation",
-        "Un appel d'offres avec cinq candidats indépendants et documenté",
-        "Un rapport de mission daté de la période facturée",
-        "Un prix identique à celui du contrat précédent, justifié"
+        "Critique, valeur 16",
+        "Élevé, valeur 12",
+        "Moyen, valeur 8",
+        "Faible, valeur 4"
       ],
       "answer": 0,
-      "explain": "Des montants juste sous le seuil évoquent le fractionnement. Les autres situations montrent concurrence, preuve de réalisation et prix cohérent.",
+      "explain": "Le niveau est probabilité × gravité = 4 × 4 = 16, soit la zone critique (15 et plus) de la matrice. Ce poste, signal classique de fractionnement, est à examiner en priorité.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 par 5 : probabilité de 1 (improbable) à 5 (fréquent) en abscisse, gravité de 1 (mineure) à 5 (catastrophique) en ordonnée ; niveau = probabilité × gravité : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
     },
     {
       "id": "min-couts-066",
@@ -1799,31 +1825,33 @@
       "id": "min-couts-074",
       "theme": "Méthode d'audit et calculs simples",
       "level": 1,
-      "q": "Pourquoi échantillonner selon une règle écrite ?",
+      "q": "Pour cibler l'audit, un poste de frais de siège est classé sur la matrice de risque en probabilité 3 (possible) et gravité 5 (catastrophique). Quel est son niveau ?",
       "choices": [
-        "Pour éviter de contrôler les montants élevés du budget",
-        "Pour pouvoir justifier le choix des éléments",
-        "Pour contrôler seulement les fournisseurs de nationalité gabonaise",
-        "Pour réduire la durée du contradictoire"
+        "Élevé, valeur 12",
+        "Critique, valeur 15",
+        "Moyen, valeur 8",
+        "Faible, valeur 3"
       ],
       "answer": 1,
-      "explain": "Une règle écrite rend l'échantillon justifiable et reproductible. Les montants élevés sont au contraire à examiner en totalité.",
+      "explain": "3 × 5 = 15 : la matrice place ce poste en zone critique (15 et plus). Le ciblage par niveau de risque permet d'examiner d'abord les postes où l'erreur serait la plus coûteuse et la plus probable.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 par 5 : probabilité de 1 (improbable) à 5 (fréquent) en abscisse, gravité de 1 (mineure) à 5 (catastrophique) en ordonnée ; niveau = probabilité × gravité : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
     },
     {
       "id": "min-couts-075",
       "theme": "Méthode d'audit et calculs simples",
       "level": 2,
-      "q": "Plafond de 70 %, valeur de la production disponible de 400 millions de dollars, coûts éligibles de 310 millions (chiffres fictifs). Quel montant est reporté ?",
+      "q": "Chiffres fictifs. Dans le schéma, les coûts éligibles à récupérer valent 700 000 barils au lieu de 600 000. Quelle quantité reste à récupérer les années suivantes, selon les règles de report du contrat ?",
       "choices": [
-        "90 millions de dollars",
-        "30 millions de dollars",
-        "120 millions de dollars",
-        "0 million de dollars"
+        "100 000 barils",
+        "70 000 barils",
+        "130 000 barils",
+        "0 baril"
       ],
       "answer": 1,
-      "explain": "Récupération maximale : 0,7 × 400 = 280 millions. Reste : 310 − 280 = 30 millions, reporté selon le contrat.",
+      "explain": "Le plafond est de 630 000 barils (70 % de 900 000) : 630 000 sont récupérés et 700 000 − 630 000 = 70 000 barils sont reportés, si le contrat le prévoit.",
       "seconds": 70,
       "status": "draft",
       "refs": [
@@ -1832,7 +1860,9 @@
           "art": "Art. 221",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "min-couts-076",
@@ -1877,15 +1907,15 @@
       "id": "min-couts-078",
       "theme": "Méthode d'audit et calculs simples",
       "level": 2,
-      "q": "Un audit écarte 20 millions de coûts récupérés. L'État reçoit 50 % de la production restante (hypothèse d'école). Quel gain pour l'État en valeur ?",
+      "q": "Chiffres fictifs. Sur le schéma, un audit écarte 40 000 barils de coûts récupérés (600 000 deviennent 560 000), sous le plafond. L'État reçoit 50 % de la production à partager. Quel gain pour l'État ?",
       "choices": [
-        "10 millions de dollars",
-        "20 millions de dollars, soit la totalité de l'écart",
-        "40 millions de dollars",
-        "5 millions de dollars"
+        "20 000 barils",
+        "40 000 barils",
+        "80 000 barils",
+        "10 000 barils"
       ],
       "answer": 0,
-      "explain": "La production restante augmente de 20 millions ; l'État en reçoit 50 %, soit 10 millions. 20 oublie le partage ; 40 le double ; 5 est un quart.",
+      "explain": "La production à partager passe de 300 000 à 340 000 barils (+40 000) ; l'État en reçoit 50 %, soit un gain de 20 000 barils. La totalité de l'écart n'est pas gagnée : elle est partagée avec le contracteur.",
       "seconds": 70,
       "status": "draft",
       "refs": [
@@ -1894,21 +1924,23 @@
           "art": "Art. 255",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur."
     },
     {
       "id": "min-couts-079",
       "theme": "Méthode d'audit et calculs simples",
       "level": 3,
-      "q": "Chef de mission, vous écartez une dépense de 3 millions de dollars (chiffre fictif). Quelle formulation rend le constat le plus défendable ?",
+      "q": "Deux postes sont placés sur la matrice : A en probabilité 5 et gravité 2, B en probabilité 2 et gravité 4. Lequel examiner en premier, et pourquoi ?",
       "choices": [
-        "« La dépense nous semble excessive » avec le montant indiqué",
-        "Le nom du directeur et un avis oral sur le dossier",
-        "Un montant arrondi, sans aucune référence à un texte",
-        "Règle, fait constaté, montant, pièce probante, réponse de l'opérateur"
+        "B, car la gravité l'emporte toujours sur la probabilité",
+        "Aucun des deux : ils sont tous deux de niveau moyen",
+        "Les deux à égalité, leurs niveaux étant identiques",
+        "A, de valeur 10 (élevé), avant B, de valeur 8 (moyen)"
       ],
       "answer": 3,
-      "explain": "Un constat solide relie règle, fait, montant et preuve, après contradictoire. Les formulations vagues ou personnalisées ne résistent pas à un recours.",
+      "explain": "A vaut 5 × 2 = 10 (zone élevée) et B vaut 2 × 4 = 8 (zone moyenne) : A est examiné en premier. Le niveau combine probabilité et gravité sans que l'un l'emporte systématiquement sur l'autre.",
       "seconds": 80,
       "status": "draft",
       "refs": [
@@ -1917,7 +1949,9 @@
           "art": "Art. 255",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 par 5 : probabilité de 1 (improbable) à 5 (fréquent) en abscisse, gravité de 1 (mineure) à 5 (catastrophique) en ordonnée ; niveau = probabilité × gravité : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
     },
     {
       "id": "min-couts-080",

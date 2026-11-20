@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Architecture d'un puits : tube guide, tubage de surface, tubage intermédiaire et tubage de production emboîtés, de plus en plus étroits en profondeur, avec sabots, ciment dans l'espace annulaire, nappe d'eau douce protégée près de la surface, colonne de production avec garniture d'étanchéité et perforations en face du réservoir</title>
+<defs>
+<pattern id="cim" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#C9CDD6"/><path d="M0,6L6,0" stroke="#061F44" stroke-width="1"/></pattern>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#B85C0A"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.cs{fill:none;stroke:#061F44;stroke-width:4}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Architecture d'un puits (coupe schématique)</text>
+
+<!-- terrain -->
+<rect x="40" y="75" width="700" height="405" fill="#F1EDE3" stroke="#061F44" stroke-width="2"/>
+<text x="46" y="68" class="b">Surface du sol</text>
+<!-- nappe -->
+<rect x="41" y="88" width="150" height="38" fill="#B9CCE6"/>
+<text x="116" y="112" class="c b" style="font-size:13px">Nappe d'eau douce</text>
+<!-- reservoir -->
+<rect x="41" y="405" width="698" height="40" fill="#F28C28" opacity="0.55"/>
+<text x="625" y="428" class="b" style="font-size:13px">Réservoir (huile)</text>
+
+<!-- trou (blanc, par paliers) -->
+<path d="M180,75H420V130H395V210H370V320H348V460H252V320H230V210H205V130H180Z" fill="#FFFFFF"/>
+<!-- ciment (annulaire) -->
+<rect x="180" y="75" width="10" height="55" fill="url(#cim)"/><rect x="410" y="75" width="10" height="55" fill="url(#cim)"/>
+<rect x="205" y="75" width="10" height="135" fill="url(#cim)"/><rect x="385" y="75" width="10" height="135" fill="url(#cim)"/>
+<rect x="230" y="250" width="10" height="70" fill="url(#cim)"/><rect x="360" y="250" width="10" height="70" fill="url(#cim)"/>
+<rect x="252" y="300" width="10" height="160" fill="url(#cim)"/><rect x="338" y="300" width="10" height="160" fill="url(#cim)"/>
+
+<!-- tubages -->
+<path d="M190,75V130M410,75V130" class="cs"/>
+<path d="M215,75V210M385,75V210" class="cs"/>
+<path d="M240,75V320M360,75V320" class="cs"/>
+<path d="M262,75V460M338,75V460" class="cs"/>
+<!-- sabots -->
+<path d="M180,130H198M402,130H420M205,210H223M377,210H395M230,320H248M352,320H370M252,460H270M330,460H348" stroke="#061F44" stroke-width="7"/>
+<!-- tete de puits -->
+<rect x="268" y="58" width="64" height="17" fill="#DCE6F5" stroke="#061F44" stroke-width="2.5"/>
+<!-- tubing -->
+<path d="M286,75V452M314,75V452" class="cs" style="stroke-width:3"/>
+<!-- packer -->
+<rect x="266" y="385" width="72" height="12" fill="#F28C28" stroke="#061F44" stroke-width="2"/>
+<!-- perforations -->
+<path d="M252,412H238M252,422H238M252,432H238M338,412H352M338,422H352M338,432H352" stroke="#061F44" stroke-width="2.5"/>
+<!-- flux -->
+<path d="M300,445V300" fill="none" stroke="#F28C28" stroke-width="3.5" marker-end="url(#ao)"/>
+
+<!-- etiquettes gauche : sabots -->
+<text x="176" y="146" class="e" style="font-size:13px">Sabot ≈ 80 m</text>
+<text x="201" y="226" class="e" style="font-size:13px">Sabot ≈ 600 m</text>
+<text x="226" y="336" class="e" style="font-size:13px">Sabot ≈ 2 000 m</text>
+<text x="248" y="476" class="e" style="font-size:13px">Sabot ≈ 3 000 m</text>
+
+<!-- etiquettes droite -->
+<text x="440" y="62" class="b">Tête de puits (porte l'obturateur)</text>
+<path d="M436,58H334" class="ld"/>
+<text x="440" y="102">Tube guide (30 po)</text><path d="M436,98H418" class="ld"/>
+<text x="440" y="165">Tubage de surface (20 po)</text><path d="M436,161H388" class="ld"/>
+<text x="440" y="260">Tubage intermédiaire (13 3/8 po)</text><path d="M436,256H363" class="ld"/>
+<text x="440" y="350">Tubage de production (9 5/8 po)</text><path d="M436,346H341" class="ld"/>
+<text x="440" y="378">Colonne de production (tubing)</text><path d="M436,374H316" class="ld"/>
+<text x="440" y="394">Garniture d'étanchéité (packer)</text><path d="M436,390H340" class="ld"/>
+<text x="440" y="445">Perforations en face du réservoir</text><path d="M436,441H355" class="ld"/>
+<rect x="440" y="196" width="22" height="14" fill="url(#cim)" stroke="#061F44" stroke-width="1.5"/>
+<text x="470" y="209">Ciment dans l'annulaire</text>
+
+<text x="400" y="496" class="c" style="font-size:13px">Échelle non respectée ; profondeurs et diamètres : valeurs d'illustration</text>
+</svg>

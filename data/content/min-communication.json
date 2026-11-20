@@ -27,7 +27,9 @@
     "L'animateur recentre, répartit la parole, distingue informer, discuter et décider, et fait respecter l'horaire.",
     "Fin de réunion : décisions et actions (qui, quoi, pour quand) récapitulées à voix haute.",
     "Compte rendu rapide, centré sur les décisions et les actions, avec suivi à la réunion suivante."
-   ]
+   ],
+   "img": "photo/office-meeting.jpg",
+   "imgAlt": "Salle de réunion : une grande table entourée de chaises et un tableau papier, prêts pour une réunion de travail."
   },
   {
    "id": "m3",
@@ -55,7 +57,9 @@
     "Concéder de façon réfléchie, réciproque et jamais gratuite ; ce qui relève de la loi ne se négocie pas.",
     "Conclure en récapitulant l'accord puis en le formalisant par écrit, avec suivi et échéances.",
     "Aucun engagement hors mandat ; aucun avantage personnel accepté ; conflit d'intérêts déclaré immédiatement."
-   ]
+   ],
+   "img": "svg/min-mgt-negociation-zone.svg",
+   "imgAlt": "Schéma de préparation d'une négociation, exemple fictif sur un délai de remise de rapport en jours. Le ministère a pour position 30 jours et pour limite 60 jours ; l'opérateur a pour position 90 jours et pour limite 45 jours. La zone d'accord possible va de 45 à 60 jours. Solutions de repli : le ministère applique les mesures prévues par les textes, l'opérateur s'expose à ces mesures. Intérêts : valider la production avant la clôture, et disposer du temps de contrôle qualité. Tout accord est confirmé par écrit."
   },
   {
    "id": "m5",
@@ -83,7 +87,9 @@
     "Dire la vérité, ne pas spéculer ni annoncer de décision non prise ; il n'existe pas d'information vraiment « off ».",
     "En crise : réagir vite, informer sur ce qui est établi, porte-parole unique, points réguliers.",
     "Ne jamais divulguer de données d'opérateurs, de négociations ou de dossiers en cours d'instruction."
-   ]
+   ],
+   "img": "svg/min-mgt-appel-journaliste.svg",
+   "imgAlt": "Cinq étapes lorsqu'un journaliste appelle un agent qui n'est pas porte-parole : 1 rester courtois et noter le nom, le média, la question et l'échéance ; 2 ne pas engager le ministère ni donner de chiffre sans mandat ; 3 orienter vers le service de communication et informer la hiérarchie ; 4 préparer la réponse officielle avec des faits vérifiés, deux ou trois messages clés et un seul porte-parole ; 5 répondre dans le délai, et en cas d'erreur dans un article passer par les voies officielles (rectificatif ou droit de réponse)."
   },
   {
    "id": "m7",
@@ -646,18 +652,20 @@
    "id": "min-communication-032",
    "theme": "Négociation avec un opérateur",
    "level": 1,
-   "q": "Qu'appelle-t-on solution de repli en négociation ?",
+   "q": "Sur la figure, que représente la « solution de repli » du ministère ?",
    "choices": [
-    "La première offre que l'on formule en séance",
-    "Le délai maximal accordé à l'autre partie",
-    "Le compromis que l'on propose en fin de séance",
-    "Ce que l'on fera si la négociation n'aboutit pas"
+    "Ce que le ministère fera si la négociation échoue : appliquer les mesures prévues par les textes",
+    "La position de départ qu'il annonce à l'opérateur, ici 30 jours",
+    "La limite au-delà de laquelle il refuse tout accord, ici 60 jours",
+    "Le compromis final, situé au milieu de la zone d'accord"
    ],
-   "answer": 3,
-   "explain": "C'est l'alternative dont on dispose en cas d'échec. Elle détermine la force de sa position : plus elle est solide, moins on est contraint d'accepter un mauvais accord.",
+   "answer": 0,
+   "explain": "La solution de repli est l'option dont on dispose sans accord : ici, appliquer les mesures prévues par les textes. La position (30 jours) et la limite (60 jours) se lisent sur l'axe ; la zone d'accord se trouve entre les limites de chaque partie.",
    "seconds": 45,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-mgt-negociation-zone.svg",
+   "imgAlt": "Schéma de préparation d'une négociation, exemple fictif sur un délai de remise de rapport en jours. Le ministère a pour position 30 jours et pour limite 60 jours ; l'opérateur a pour position 90 jours et pour limite 45 jours. La zone d'accord possible va de 45 à 60 jours. Solutions de repli : le ministère applique les mesures prévues par les textes, l'opérateur s'expose à ces mesures. Intérêts : valider la production avant la clôture, et disposer du temps de contrôle qualité. Tout accord est confirmé par écrit."
   },
   {
    "id": "min-communication-033",
@@ -697,18 +705,20 @@
    "id": "min-communication-035",
    "theme": "Négociation avec un opérateur",
    "level": 2,
-   "q": "Un opérateur réclame 90 jours pour un rapport exigé sous 30 jours. Que faites-vous pour dépasser le blocage des positions ?",
+   "q": "Sur la figure, le ministère demande 30 jours et l'opérateur 90 jours pour remettre un rapport. Que faire pour dépasser ce blocage des positions ?",
    "choices": [
-    "Je réponds que le délai n'est pas négociable et je clos aussitôt la séance de travail",
-    "Je propose un délai de quinze jours seulement, pour me donner de la marge ensuite",
-    "J'accepte les quatre-vingt-dix jours demandés, pour ne pas créer de tension inutile",
-    "Je demande ce qui rend le délai difficile et je cherche une solution intermédiaire"
+    "Couper la différence et fixer 60 jours, sans chercher les raisons de la demande",
+    "Demander ce qui rend le délai difficile pour découvrir les intérêts, puis proposer par exemple une livraison échelonnée",
+    "Maintenir 30 jours en répétant la règle, jusqu'à ce que l'opérateur cède",
+    "Accepter 90 jours pour préserver la relation, puis régulariser plus tard"
    ],
-   "answer": 3,
-   "explain": "Poser des questions ouvertes révèle les intérêts de l'opérateur et permet des solutions intermédiaires (échelonnement), tout en respectant l'exigence du texte. Refuser net ou céder tout n'apporte rien.",
+   "answer": 1,
+   "explain": "Deux positions opposées (30 et 90 jours) cachent des intérêts parfois compatibles : valider la production avant la clôture d'un côté, disposer du temps de contrôle qualité de l'autre. En questionnant, on trouve des solutions comme la livraison échelonnée. Les autres réponses figent les positions ou sacrifient les intérêts de l'administration.",
    "seconds": 75,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-mgt-negociation-zone.svg",
+   "imgAlt": "Schéma de préparation d'une négociation, exemple fictif sur un délai de remise de rapport en jours. Le ministère a pour position 30 jours et pour limite 60 jours ; l'opérateur a pour position 90 jours et pour limite 45 jours. La zone d'accord possible va de 45 à 60 jours. Solutions de repli : le ministère applique les mesures prévues par les textes, l'opérateur s'expose à ces mesures. Intérêts : valider la production avant la clôture, et disposer du temps de contrôle qualité. Tout accord est confirmé par écrit."
   },
   {
    "id": "min-communication-036",
@@ -748,18 +758,20 @@
    "id": "min-communication-038",
    "theme": "Négociation avec un opérateur",
    "level": 2,
-   "q": "L'opérateur a obtenu deux concessions de votre part. Il en demande une troisième sans contrepartie. Que faites-vous ?",
+   "q": "Sur la figure, le ministère a déjà concédé de 30 à 45 jours, puis à 55 jours ; l'opérateur réclame maintenant 75 jours sans contrepartie. Quelle est la bonne réponse ?",
    "choices": [
-    "Je concède encore une fois, afin que la séance se termine en bons termes avec lui",
-    "Je promets une troisième concession pour la prochaine séance, sans rien demander en échange ce jour",
-    "Je quitte la séance sur-le-champ, sans donner d'explication à l'opérateur ni à mon équipe",
-    "Je rappelle l'équilibre des échanges et je lie toute nouvelle concession à une contrepartie"
+    "Accepter 75 jours, car le ministère a déjà concédé deux fois et l'opérateur a le dernier mot",
+    "Accepter 60 jours sans contrepartie, car c'est la limite et l'équilibre ne compte plus",
+    "Refuser 75 jours, qui dépassent la limite de 60 jours, et lier toute nouvelle concession (jusqu'à 60) à une contrepartie",
+    "Rompre aussitôt la négociation et appliquer la solution de repli sans informer la hiérarchie"
    ],
-   "answer": 3,
-   "explain": "Les concessions doivent rester réciproques. Rappeler l'équilibre sans rompre le dialogue permet de poursuivre en protégeant l'intérêt public.",
+   "answer": 2,
+   "explain": "75 jours dépassent la limite de 60 jours fixée au préalable : on ne la franchit pas. Les concessions se font de manière réfléchie, contre une contrepartie. Céder sans rien obtenir ou rompre sans informer la hiérarchie sont deux erreurs.",
    "seconds": 70,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-mgt-negociation-zone.svg",
+   "imgAlt": "Schéma de préparation d'une négociation, exemple fictif sur un délai de remise de rapport en jours. Le ministère a pour position 30 jours et pour limite 60 jours ; l'opérateur a pour position 90 jours et pour limite 45 jours. La zone d'accord possible va de 45 à 60 jours. Solutions de repli : le ministère applique les mesures prévues par les textes, l'opérateur s'expose à ces mesures. Intérêts : valider la production avant la clôture, et disposer du temps de contrôle qualité. Tout accord est confirmé par écrit."
   },
   {
    "id": "min-communication-039",
@@ -782,52 +794,58 @@
    "id": "min-communication-040",
    "theme": "Négociation avec un opérateur",
    "level": 3,
-   "q": "En pleine séance, l'opérateur sort un document et affirme que votre prédécesseur avait accordé une dispense verbale. Vous n'avez aucune trace. Quelle réponse est la plus prudente ?",
+   "q": "En pleine séance, l'opérateur affirme que votre prédécesseur lui a accordé une dispense verbale de remise de données. La figure rappelle que tout accord est confirmé par écrit. Que faites-vous ?",
    "choices": [
-    "Reconnaître la dispense, pour ne pas contredire publiquement un ancien collègue du service",
-    "Accuser l'opérateur de mentir, puisque je n'ai aucune trace de cette prétendue dispense",
-    "Dire que je vérifie dans les archives, suspendre le point et demander une confirmation écrite",
-    "Ignorer le document présenté et poursuivre la séance comme si de rien n'était, sans y revenir ensuite"
+    "Confirmer la dispense par politesse et la régulariser après la séance, sans en informer la hiérarchie ni consulter les archives du dossier",
+    "Contester sur-le-champ l'existence de toute dispense, sans rien vérifier",
+    "Accepter la dispense pour obtenir en échange une concession sur le délai",
+    "Dire que je vérifie dans les archives et auprès de la hiérarchie, et ne rien confirmer sans écrit de l'autorité compétente"
    ],
-   "answer": 2,
-   "explain": "Un engagement de l'administration s'établit par écrit et par l'autorité compétente. On vérifie sans admettre ni accuser, et on suspend le point en attendant les preuves.",
+   "answer": 3,
+   "explain": "Un accord ou une dispense ne se prouve que par un écrit émanant de l'autorité compétente : on s'engage à vérifier sans rien confirmer ni nier sur-le-champ. Confirmer ou échanger une dispense à l'oral engage l'administration au-delà du mandat.",
    "seconds": 100,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-mgt-negociation-zone.svg",
+   "imgAlt": "Schéma de préparation d'une négociation, exemple fictif sur un délai de remise de rapport en jours. Le ministère a pour position 30 jours et pour limite 60 jours ; l'opérateur a pour position 90 jours et pour limite 45 jours. La zone d'accord possible va de 45 à 60 jours. Solutions de repli : le ministère applique les mesures prévues par les textes, l'opérateur s'expose à ces mesures. Intérêts : valider la production avant la clôture, et disposer du temps de contrôle qualité. Tout accord est confirmé par écrit."
   },
   {
    "id": "min-communication-041",
    "theme": "Négociation avec un opérateur",
    "level": 3,
-   "q": "Votre chef vous demande de conclure vite avec l'opérateur avant la fin du mois. L'opérateur sent la pression et durcit ses demandes. Que faites-vous ?",
+   "q": "Votre chef vous demande de conclure vite avant la fin du mois ; l'opérateur le sent et durcit sa position. Sur la figure, la limite du ministère est de 60 jours. Que faire ?",
    "choices": [
-    "Accélérer en acceptant les conditions de l'opérateur afin de tenir l'échéance fixée",
-    "Rompre les négociations et refuser de les reprendre tant que la pression durera",
-    "Cacher l'échéance à l'opérateur et accepter sans discuter sa dernière offre en date",
-    "Exposer les risques à la hiérarchie, redéfinir avec elle un calendrier réaliste, puis poursuivre"
+    "Exposer les risques à la hiérarchie, ne pas dépasser la limite fixée et conserver la solution de repli plutôt que céder sous pression",
+    "Céder au-delà de 60 jours pour conclure avant la fin du mois",
+    "Annoncer à l'opérateur que le ministère est pressé, pour l'inciter à conclure, puis accepter la première contre-proposition raisonnable de sa part",
+    "Rompre immédiatement la négociation pour ne pas céder à la pression"
    ],
-   "answer": 3,
-   "explain": "Une pression de temps connue de l'autre partie affaiblit la position. On la traite avec la hiérarchie (calendrier, mandat) plutôt que de céder sur le fond ou de rompre.",
+   "answer": 0,
+   "explain": "La pression du temps affaiblit la position : on explique à la hiérarchie les risques d'un accord hâtif, on respecte la limite fixée d'avance et on garde la solution de repli. Franchir la limite ou rompre brutalement dessert l'intérêt public.",
    "seconds": 100,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-mgt-negociation-zone.svg",
+   "imgAlt": "Schéma de préparation d'une négociation, exemple fictif sur un délai de remise de rapport en jours. Le ministère a pour position 30 jours et pour limite 60 jours ; l'opérateur a pour position 90 jours et pour limite 45 jours. La zone d'accord possible va de 45 à 60 jours. Solutions de repli : le ministère applique les mesures prévues par les textes, l'opérateur s'expose à ces mesures. Intérêts : valider la production avant la clôture, et disposer du temps de contrôle qualité. Tout accord est confirmé par écrit."
   },
   {
    "id": "min-communication-042",
    "theme": "Négociation avec un opérateur",
    "level": 3,
-   "q": "Vous préparez une négociation sur la remise de données. Votre solution de repli est faible (aucune mesure à votre disposition), celle de l'opérateur est forte. Quelle priorité avez-vous ?",
+   "q": "Vous préparez une négociation sur la remise de données, mais votre solution de repli est faible : aucune mesure n'est à votre disposition si l'opérateur refuse. D'après la figure, que faire avant la séance ?",
    "choices": [
-    "Négocier le plus vite possible, avant que l'opérateur ne s'aperçoive de la faiblesse de ma position",
-    "Renforcer ma solution de repli (base juridique, appui hiérarchique) et, si possible, reporter la séance",
-    "Ne pas préparer de solution de repli, puisqu'elle ne servirait finalement à rien lors de la séance elle-même",
-    "Menacer l'opérateur de mesures que je n'ai en réalité aucun moyen d'appliquer"
+    "Fixer une limite très haute pour compenser, quitte à bloquer la négociation",
+    "Renforcer ma solution de repli, par exemple en identifiant les mesures prévues par les textes, avant de négocier",
+    "Ne rien préparer et improviser, puisque tout se jouera pendant la séance",
+    "Annoncer à l'opérateur que le ministère n'a aucune autre option, par transparence"
    ],
    "answer": 1,
-   "explain": "Une menace sans moyen de la mettre en œuvre détruit la crédibilité. Il faut d'abord consolider sa solution de repli ou obtenir le soutien nécessaire.",
+   "explain": "La force d'une négociation dépend de la solution de repli : plus elle est solide, moins on cède sous pression. On la renforce avant la séance. Se bloquer, improviser ou révéler sa faiblesse affaiblit la position.",
    "seconds": 100,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-mgt-negociation-zone.svg",
+   "imgAlt": "Schéma de préparation d'une négociation, exemple fictif sur un délai de remise de rapport en jours. Le ministère a pour position 30 jours et pour limite 60 jours ; l'opérateur a pour position 90 jours et pour limite 45 jours. La zone d'accord possible va de 45 à 60 jours. Solutions de repli : le ministère applique les mesures prévues par les textes, l'opérateur s'expose à ces mesures. Intérêts : valider la production avant la clôture, et disposer du temps de contrôle qualité. Tout accord est confirmé par écrit."
   },
   {
    "id": "min-communication-043",
@@ -1003,18 +1021,20 @@
    "id": "min-communication-053",
    "theme": "Relations avec la presse",
    "level": 1,
-   "q": "Un journaliste vous appelle directement pour avoir la position du ministère sur un dossier. Vous n'êtes pas porte-parole. Que faites-vous ?",
+   "q": "D'après la figure, un journaliste appelle directement un agent qui n'est pas porte-parole. Que fait-il d'abord ?",
    "choices": [
-    "Je prends sa question et ses coordonnées, puis je l'oriente vers le service de communication",
-    "Je réponds au nom du ministère, pour rendre service à ce journaliste qui m'appelle",
-    "Je donne mon avis personnel sur le dossier, en précisant que ce n'est qu'une opinion",
-    "Je raccroche sans rien dire, en espérant que le journaliste ne rappellera pas, et sans prévenir personne en interne"
+    "Il répond sur le fond en précisant que ce n'est qu'un avis personnel",
+    "Il refuse de parler et raccroche sans noter aucune information",
+    "Il reste courtois, note le nom, le média, la question et l'échéance, puis oriente vers le service de communication",
+    "Il donne les chiffres qu'il connaît, en demandant de ne pas les citer"
    ],
-   "answer": 0,
-   "explain": "Seules les personnes habilitées parlent au nom du ministère. Rester courtois et orienter vers le bon interlocuteur permet d'aider le journaliste sans engager l'administration.",
+   "answer": 2,
+   "explain": "L'agent accueille sans engager le ministère : il note les éléments de la demande et transmet au service de communication, en informant sa hiérarchie. Répondre à titre personnel, raccrocher ou parler « off » sont des erreurs : il n'existe pas d'information vraiment « off ».",
    "seconds": 45,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-mgt-appel-journaliste.svg",
+   "imgAlt": "Cinq étapes lorsqu'un journaliste appelle un agent qui n'est pas porte-parole : 1 rester courtois et noter le nom, le média, la question et l'échéance ; 2 ne pas engager le ministère ni donner de chiffre sans mandat ; 3 orienter vers le service de communication et informer la hiérarchie ; 4 préparer la réponse officielle avec des faits vérifiés, deux ou trois messages clés et un seul porte-parole ; 5 répondre dans le délai, et en cas d'erreur dans un article passer par les voies officielles (rectificatif ou droit de réponse)."
   },
   {
    "id": "min-communication-054",
@@ -1071,35 +1091,39 @@
    "id": "min-communication-057",
    "theme": "Relations avec la presse",
    "level": 2,
-   "q": "Un journaliste vous demande, lors d'un entretien préparé, le chiffre exact des pertes d'un accident. Vous ne l'avez pas encore. Que répondez-vous ?",
+   "q": "Lors d'un entretien préparé, un journaliste vous demande le chiffre exact des pertes d'un accident, que vous n'avez pas. D'après l'étape 4 de la figure, que répondez-vous ?",
    "choices": [
-    "J'annonce un chiffre estimé au hasard, pour ne pas rester muet devant les journalistes",
-    "Je réponds « sans commentaire » et je mets fin à l'entretien dans la foulée",
-    "Je dis que le bilan est en cours de vérification, je donne ce qui est établi et la date du prochain point",
-    "Je minimise l'accident, afin de rassurer le public sans attendre le bilan complet"
+    "J'avance une estimation prudente, en précisant que c'est approximatif, en indiquant que la marge d'erreur est de l'ordre de dix pour cent",
+    "Je réponds « sans commentaire » et je mets fin à l'entretien",
+    "Je cite le chiffre d'un collègue, qui me l'a donné oralement ce matin",
+    "Rien de non vérifié : je dis que le bilan est en cours de vérification et qu'il sera communiqué officiellement"
    ],
-   "answer": 2,
-   "explain": "Il faut être honnête sur ce qui est confirmé et sur ce qui ne l'est pas, tout en s'engageant sur un calendrier d'information. « Sans commentaire » ou la minimisation dégradent la confiance.",
+   "answer": 3,
+   "explain": "La réponse officielle repose sur des faits vérifiés : on ne donne ni estimation ni chiffre non confirmé. On dit que le bilan est en cours de vérification, sans dire « sans commentaire ». Citer un chiffre oral expose à une erreur publique.",
    "seconds": 70,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-mgt-appel-journaliste.svg",
+   "imgAlt": "Cinq étapes lorsqu'un journaliste appelle un agent qui n'est pas porte-parole : 1 rester courtois et noter le nom, le média, la question et l'échéance ; 2 ne pas engager le ministère ni donner de chiffre sans mandat ; 3 orienter vers le service de communication et informer la hiérarchie ; 4 préparer la réponse officielle avec des faits vérifiés, deux ou trois messages clés et un seul porte-parole ; 5 répondre dans le délai, et en cas d'erreur dans un article passer par les voies officielles (rectificatif ou droit de réponse)."
   },
   {
    "id": "min-communication-058",
    "theme": "Relations avec la presse",
    "level": 2,
-   "q": "Un article contient une erreur factuelle sur une décision du ministère. Quelle est la bonne démarche ?",
+   "q": "Un article contient une erreur factuelle sur une décision du ministère. D'après l'étape 5 de la figure, quelle est la bonne démarche ?",
    "choices": [
-    "Contacter la rédaction par les voies officielles, avec les faits exacts, pour demander une correction",
-    "Publier un message très agressif contre le journal sur les réseaux sociaux du service, pour obtenir réparation vite",
-    "Ignorer définitivement l'erreur, quelles qu'en soient les conséquences pour l'image du ministère",
-    "Demander à un collègue de commenter anonymement l'article en ligne pour le contredire"
+    "Contacter la rédaction par les voies officielles pour demander un rectificatif, sans polémique",
+    "Répondre publiquement sur les réseaux sociaux en dénonçant le journal",
+    "Ignorer l'erreur, car un rectificatif attire davantage l'attention",
+    "Demander à un collègue de contacter le journaliste à titre personnel"
    ],
    "answer": 0,
-   "explain": "Une correction demandée de façon factuelle et officielle préserve la relation et l'image de l'administration. Une attaque ou un commentaire anonyme aggrave la situation.",
+   "explain": "Pour une erreur factuelle, la réponse suit les voies officielles : demande de rectificatif ou droit de réponse, avec les faits. La polémique, le silence ou une démarche personnelle ne protègent pas l'institution.",
    "seconds": 60,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-mgt-appel-journaliste.svg",
+   "imgAlt": "Cinq étapes lorsqu'un journaliste appelle un agent qui n'est pas porte-parole : 1 rester courtois et noter le nom, le média, la question et l'échéance ; 2 ne pas engager le ministère ni donner de chiffre sans mandat ; 3 orienter vers le service de communication et informer la hiérarchie ; 4 préparer la réponse officielle avec des faits vérifiés, deux ou trois messages clés et un seul porte-parole ; 5 répondre dans le délai, et en cas d'erreur dans un article passer par les voies officielles (rectificatif ou droit de réponse)."
   },
   {
    "id": "min-communication-059",
@@ -1139,35 +1163,39 @@
    "id": "min-communication-061",
    "theme": "Relations avec la presse",
    "level": 3,
-   "q": "Une rumeur de pollution circule sur les réseaux et un journaliste vous demande votre confirmation en direct. Les vérifications ne sont pas terminées. Quelle posture est la meilleure ?",
+   "q": "Une rumeur de pollution circule et un journaliste vous demande de la confirmer en direct. Les vérifications ne sont pas terminées. Selon la figure, que répondez-vous ?",
    "choices": [
-    "Démentir fermement la rumeur, afin de l'éteindre au plus vite sur tous les réseaux",
-    "Dire que des vérifications sont en cours, indiquer ce qui est connu et annoncer un prochain point",
-    "Confirmer sans attendre la pollution, pour montrer la transparence de l'administration",
-    "Refuser tout contact avec la presse pendant plusieurs jours, le temps que la rumeur retombe d'elle-même, sans rien dire"
+    "Confirmer la pollution pour couper court à la rumeur",
+    "Que des vérifications sont en cours, sans confirmer ni démentir, et que le service de communication donnera les faits",
+    "Démentir la pollution, car l'absence de preuve vaut preuve du contraire",
+    "Refuser de parler et laisser la rumeur se répandre sans réponse"
    ],
    "answer": 1,
-   "explain": "Démentir ou confirmer sans vérification expose à se contredire. Une communication honnête sur l'état des vérifications, assortie d'un calendrier, préserve la crédibilité.",
+   "explain": "On ne confirme ni ne dément ce qui n'est pas vérifié : on indique que les vérifications sont en cours et que le service de communication communiquera les faits confirmés. Confirmer ou démentir trop tôt, ou se taire, alimente la rumeur.",
    "seconds": 100,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-mgt-appel-journaliste.svg",
+   "imgAlt": "Cinq étapes lorsqu'un journaliste appelle un agent qui n'est pas porte-parole : 1 rester courtois et noter le nom, le média, la question et l'échéance ; 2 ne pas engager le ministère ni donner de chiffre sans mandat ; 3 orienter vers le service de communication et informer la hiérarchie ; 4 préparer la réponse officielle avec des faits vérifiés, deux ou trois messages clés et un seul porte-parole ; 5 répondre dans le délai, et en cas d'erreur dans un article passer par les voies officielles (rectificatif ou droit de réponse)."
   },
   {
    "id": "min-communication-062",
    "theme": "Relations avec la presse",
    "level": 3,
-   "q": "Après un accident, deux directions envoient chacune un message différent à la presse, avec des chiffres divergents. Que faut-il faire ?",
+   "q": "Après un accident, deux directions envoient chacune un message à la presse, avec des chiffres divergents. Quelle règle de la figure aurait évité cela, et que faire maintenant ?",
    "choices": [
-    "Laisser chaque direction poursuivre sa propre communication : la presse fera la synthèse",
-    "Confier toute la communication à l'opérateur seul, puisque l'incident s'est produit chez lui",
-    "Retirer tous les communiqués déjà publiés et ne plus rien dire pendant toute la durée de la crise, par prudence",
-    "Désigner un porte-parole unique, consolider les faits validés et publier une version commune"
+    "Un communiqué par direction ; laisser les journalistes arbitrer entre les chiffres",
+    "Un message plus long ; ajouter les deux versions pour être complet, sans désigner de porte-parole ni rapprocher les chiffres",
+    "Un seul porte-parole et des faits vérifiés ; désigner ce porte-parole, aligner les chiffres et publier un message unique",
+    "Un silence prolongé ; attendre que les journalistes oublient les divergences"
    ],
-   "answer": 3,
-   "explain": "En crise, la cohérence est essentielle : un seul porte-parole et des chiffres validés. Se taire ou déléguer entièrement à l'opérateur laisse la place aux rumeurs et fait perdre la maîtrise du message.",
+   "answer": 2,
+   "explain": "L'étape 4 impose un seul porte-parole et des faits vérifiés. Après la divergence, on désigne le porte-parole, on rapproche les chiffres et on diffuse un message unique, avec rectificatif si nécessaire. Laisser coexister les versions ou se taire aggrave la défiance.",
    "seconds": 90,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-mgt-appel-journaliste.svg",
+   "imgAlt": "Cinq étapes lorsqu'un journaliste appelle un agent qui n'est pas porte-parole : 1 rester courtois et noter le nom, le média, la question et l'échéance ; 2 ne pas engager le ministère ni donner de chiffre sans mandat ; 3 orienter vers le service de communication et informer la hiérarchie ; 4 préparer la réponse officielle avec des faits vérifiés, deux ou trois messages clés et un seul porte-parole ; 5 répondre dans le délai, et en cas d'erreur dans un article passer par les voies officielles (rectificatif ou droit de réponse)."
   },
   {
    "id": "min-communication-063",

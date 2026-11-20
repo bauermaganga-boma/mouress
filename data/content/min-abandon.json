@@ -13,7 +13,9 @@
         "Droit de préférence à exercer au plus tard deux ans avant l'échéance ; en cas d'échec de la négociation, la zone est libérée (article 68).",
         "La limite économique est atteinte quand les recettes nettes ne couvrent plus les coûts d'exploitation.",
         "L'arrêt de production n'éteint aucune obligation : réhabilitation à toute cessation d'activités (article 173)."
-      ]
+      ],
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "m2",
@@ -55,7 +57,9 @@
         "Bonne pratique : deux barrières indépendantes, le plus souvent en ciment, dont l'étanchéité est démontrée par des essais.",
         "On exige enregistrements, essai de pression, éventuellement essai de charge, et rapport final avec schéma du puits.",
         "Fuite après abandon : information sans délai (article 241) et intervention aux frais du titulaire."
-      ]
+      ],
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d'appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     },
     {
       "id": "m5",
@@ -69,7 +73,9 @@
         "Options : enlèvement total, partiel, maintien en place, réutilisation ou récif artificiel (avec accord des autorités).",
         "Séquence : mise en sécurité et nettoyage, déconnexion, retrait, transport, tri des déchets, levé final.",
         "Le titulaire reste responsable des dommages même quand un sous-traitant réalise le chantier (article 179)."
-      ]
+      ],
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Photo d'une plateforme de forage semi-submersible rouge, avec son derrick et ses grues, amarrée près de la côte."
     },
     {
       "id": "m6",
@@ -188,7 +194,7 @@
       "id": "min-abandon-004",
       "theme": "Cycle de vie et fin d'exploitation d'un champ",
       "level": 1,
-      "q": "Qu'appelle-t-on « limite économique » d'un champ ?",
+      "q": "Sur la courbe de production, une ligne en pointillés orange est tracée à 2 000 b/j et le champ est abandonné lorsque la courbe la rejoint. Qu'appelle-t-on « limite économique » d'un champ ?",
       "choices": [
         "Le moment où le réservoir est entièrement vidé de ses hydrocarbures",
         "Le moment où les recettes nettes ne couvrent plus les coûts d'exploitation",
@@ -196,25 +202,29 @@
         "Le plafond de coûts récupérables fixé par le contrat de partage de production"
       ],
       "answer": 1,
-      "explain": "La limite économique est atteinte quand produire coûte plus que cela ne rapporte, bien avant l'épuisement physique du gisement. L'expiration du titre est une limite juridique et le plafond de récupération des coûts un mécanisme contractuel : aucun des deux ne décrit la rentabilité du champ.",
+      "explain": "Sur la courbe, l'abandon survient quand le débit tombe à la limite économique : produire coûte alors plus que cela ne rapporte, bien avant l'épuisement physique du gisement. L'expiration du titre est une limite juridique et le plafond de récupération des coûts un mécanisme contractuel : aucun des deux ne décrit la rentabilité du champ.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "min-abandon-005",
       "theme": "Cycle de vie et fin d'exploitation d'un champ",
       "level": 2,
-      "q": "Un champ produit 1 500 barils par jour. Le prix net est de 55 dollars le baril (exemple fictif) et les coûts d'exploitation sont de 95 000 dollars par jour. Quel débit minimal couvre ces coûts ?",
+      "q": "Sur la courbe de production, la limite économique est tracée à 2 000 b/j. Quel prix net minimal par baril cela suppose-t-il si les coûts d'exploitation sont de 110 000 dollars par jour (exemple fictif) ?",
       "choices": [
-        "Environ 1 250 barils par jour",
-        "Environ 2 100 barils par jour",
-        "Environ 1 730 barils par jour",
-        "Environ 1 500 barils par jour, le débit actuel"
+        "Environ 27 dollars le baril",
+        "Environ 110 dollars le baril",
+        "55 dollars le baril",
+        "Environ 18 dollars le baril"
       ],
       "answer": 2,
-      "explain": "Débit minimal = coûts / prix net = 95 000 / 55 ≈ 1 727 barils par jour. À 1 500 barils par jour, les recettes (82 500 dollars) sont inférieures aux coûts : le champ est sous sa limite économique. 1 250 et 2 100 ne résultent pas de ce calcul.",
+      "explain": "Prix net minimal = coûts / débit = 110 000 / 2 000 = 55 dollars le baril. Si le prix net passe sous ce seuil, la limite économique remonte et l'abandon survient plus tôt. 27 et 110 résultent d'une division ou d'une multiplication erronée ; 18 n'a pas de fondement.",
       "seconds": 90,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "min-abandon-006",
@@ -243,7 +253,7 @@
       "id": "min-abandon-007",
       "theme": "Cycle de vie et fin d'exploitation d'un champ",
       "level": 2,
-      "q": "Vous êtes chef de service. Un opérateur annonce qu'il arrêtera définitivement la production d'un champ en fin d'année. Quelle vérification s'impose en priorité ?",
+      "q": "Sur la frise des phases, un opérateur annonce que le jalon « fin d'exploitation du champ » sera atteint en fin d'année pour l'un de ses champs. Vous êtes chef de service : quelle vérification s'impose en priorité ?",
       "choices": [
         "Que l'opérateur national a déjà accepté par écrit de reprendre le champ après l'arrêt",
         "Que l'opérateur a demandé une prolongation automatique du titre pour la même durée",
@@ -251,7 +261,7 @@
         "Que le plan a été soumis et que le fonds est alimenté et domicilié au Gabon"
       ],
       "answer": 3,
-      "explain": "Les articles 173 à 176 imposent un plan avant toute opération, une réhabilitation à la cessation d'activités et un fonds domicilié au Gabon. Aucun texte n'oblige l'opérateur national à reprendre le champ, la prolongation n'est pas automatique, et le démantèlement exige une autorisation préalable (article 106) : l'entamer avant serait une irrégularité.",
+      "explain": "Sur la frise, l'abandon suit la fin d'exploitation. Les articles 173 à 176 imposent un plan avant toute opération, une réhabilitation à la cessation d'activités et un fonds domicilié au Gabon. Aucun texte n'oblige l'opérateur national à reprendre le champ, la prolongation n'est pas automatique, et le démantèlement exige une autorisation préalable (article 106) : l'entamer avant serait une irrégularité.",
       "seconds": 75,
       "status": "draft",
       "refs": [
@@ -265,7 +275,9 @@
           "art": "Article 106",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-phases-projet-amont.svg",
+      "imgAlt": "Frise de six phases (accès au domaine, exploration, évaluation, développement, production, abandon) avec cinq jalons : décret d'approbation et autorisation d'exploration, notification de la découverte, déclaration de commercialité et autorisation de développement et de production, premier pétrole, fin d'exploitation. En dessous, une courbe de risque géologique décroissante et une courbe de dépenses cumulées croissante."
     },
     {
       "id": "min-abandon-008",
@@ -317,17 +329,19 @@
       "id": "min-abandon-010",
       "theme": "Cycle de vie et fin d'exploitation d'un champ",
       "level": 3,
-      "q": "Le débit d'un champ est de 3 000 barils par jour et décline de 12 % par an (exemple fictif). La limite économique est de 1 200 barils par jour. Au bout de combien d'années environ y arrive-t-on ?",
+      "q": "Sur la courbe de production, le déclin suit la loi indiquée sous le graphique à partir de l'année 6. Si la limite économique passait de 2 000 à 4 000 b/j à cause de coûts d'exploitation plus élevés, vers quelle année l'abandon interviendrait-il ?",
       "choices": [
-        "Environ 7 ans",
-        "Environ 3 ans",
-        "Environ 5 ans",
-        "Environ 10 ans"
+        "Vers l'année 14",
+        "Vers l'année 8",
+        "Vers l'année 17,5, inchangée",
+        "Vers l'année 11"
       ],
       "answer": 0,
-      "explain": "Avec un déclin de 12 % par an, le débit est multiplié par 0,88 chaque année. Il faut que 0,88^n = 1 200 / 3 000 = 0,4, soit n = ln(0,4) / ln(0,88) ≈ 7,2 ans. À 3 ans le débit serait encore d'environ 2 040 ; à 5 ans, d'environ 1 580 ; à 10 ans, il serait déjà sous la limite depuis près de trois ans.",
+      "explain": "Avec q = 20 000 × e^(−0,2 × t), on cherche 4 000 : t = ln(20 000 / 4 000) / 0,2 = ln(5) / 0,2 ≈ 8 ans de déclin, soit l'année 6 + 8 = 14 environ. La réponse 8 oublie le plateau ; 17,5 est la date pour 2 000 b/j ; 11 ne correspond à aucun calcul cohérent.",
       "seconds": 120,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "min-abandon-011",
@@ -789,7 +803,7 @@
       "id": "min-abandon-031",
       "theme": "Bouchage et abandon des puits",
       "level": 1,
-      "q": "Quelle est la différence essentielle entre une suspension de puits et un abandon définitif ?",
+      "q": "Sur le schéma, le puits est bouché de façon permanente, avec des bouchons étagés, ses tubages coupés et sa tête retirée. Quelle est la différence essentielle entre une suspension de puits et un abandon définitif ?",
       "choices": [
         "La suspension est réversible et surveillée ; l'abandon définitif ne l'est pas",
         "La suspension concerne les puits en mer, l'abandon définitif ceux à terre",
@@ -797,15 +811,17 @@
         "Il n'y en a aucune : les deux termes sont synonymes dans la pratique de l'industrie"
       ],
       "answer": 0,
-      "explain": "Une suspension laisse la possibilité de reprendre le puits et suppose des barrières maintenues et une surveillance ; l'abandon définitif bouche le puits pour toujours et retire l'équipement de surface. La distinction ne dépend ni de la localisation, ni du caractère sec ou producteur du puits.",
+      "explain": "Une suspension laisse la possibilité de reprendre le puits et suppose des barrières maintenues et une surveillance ; l'abandon définitif, comme sur le schéma, bouche le puits pour toujours et retire l'équipement de surface. La distinction ne dépend ni de la localisation, ni du caractère sec ou producteur du puits.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d'appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     },
     {
       "id": "min-abandon-032",
       "theme": "Bouchage et abandon des puits",
       "level": 1,
-      "q": "À quoi sert un bouchon de ciment dans un puits abandonné ?",
+      "q": "Sur le schéma du puits bouché, les zones hachurées sont des bouchons posés dans le tubage. À quoi sert un bouchon de ciment dans un puits abandonné ?",
       "choices": [
         "À augmenter la pression du réservoir avant la fermeture",
         "À faciliter le retrait futur du tubage par l'opérateur, après la fin de la production",
@@ -815,13 +831,15 @@
       "answer": 3,
       "explain": "Le ciment constitue la barrière qui isole les formations ; elle doit être étanche et démontrée par des essais. Il ne sert ni à pressuriser le réservoir, ni à faciliter le retrait du tubage, ni à signaler le puits (le repérage se fait par des relevés).",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d'appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     },
     {
       "id": "min-abandon-033",
       "theme": "Bouchage et abandon des puits",
       "level": 1,
-      "q": "Pourquoi demande-t-on en général deux barrières indépendantes ?",
+      "q": "Sur le schéma, le puits est isolé par plusieurs bouchons étagés plutôt que par un seul. Pourquoi demande-t-on en général deux barrières indépendantes ?",
       "choices": [
         "Pour doubler la durée de vie du puits",
         "Pour qu'une défaillance de l'une soit compensée par l'autre : c'est la redondance",
@@ -829,15 +847,17 @@
         "Pour réduire le coût global de l'opération en partageant la pose entre deux campagnes"
       ],
       "answer": 1,
-      "explain": "La redondance limite le risque de fuite : si une barrière cède, l'autre assure l'isolement (bonne pratique reconnue, par exemple norme NORSOK D-010 citée à titre indicatif). La loi n'impose pas un nombre de bouchons et le doublement augmente le coût au lieu de le réduire.",
+      "explain": "La redondance limite le risque de fuite : si une barrière cède, l'autre assure l'isolement, comme avec les bouchons étagés du schéma (bonne pratique reconnue, par exemple norme NORSOK D-010 citée à titre indicatif). La loi n'impose pas un nombre de bouchons et le doublement augmente le coût au lieu de le réduire.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d'appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     },
     {
       "id": "min-abandon-034",
       "theme": "Bouchage et abandon des puits",
       "level": 1,
-      "q": "Que fait-on de la tête de puits d'un puits sous-marin bouché ?",
+      "q": "Sur le schéma du puits bouché, observez le haut du puits, au niveau de la ligne orange en pointillés. Que fait-on de la tête de puits d'un puits sous-marin bouché ?",
       "choices": [
         "On la laisse en place pour la signaler aux pêcheurs",
         "On la remplit de boue de forage et on la recouvre de sable, sans la retirer du fond",
@@ -854,13 +874,15 @@
           "art": "Article 106",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d'appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     },
     {
       "id": "min-abandon-035",
       "theme": "Bouchage et abandon des puits",
       "level": 2,
-      "q": "Un opérateur déclare avoir posé un bouchon de ciment dans un puits. Quelle preuve exigez-vous avant d'accepter le bouchage ?",
+      "q": "Sur le schéma du puits bouché, un encadré liste les contrôles et documents attachés à chaque bouchon. Un opérateur déclare avoir posé un bouchon de ciment dans un puits. Quelle preuve exigez-vous avant d'accepter le bouchage ?",
       "choices": [
         "Enregistrements de pose, essai de pression, essai de charge selon les cas, rapport final",
         "Une attestation sur l'honneur du directeur du site, certifiant que le bouchon est posé",
@@ -868,15 +890,17 @@
         "Une photographie de la tête de puits prise après les travaux, datée et signée du chef de chantier"
       ],
       "answer": 0,
-      "explain": "Un bouchon s'accepte sur preuves techniques : enregistrements de pose, essai de pression (étanchéité), essai de charge (résistance) et rapport final avec schéma du puits. Une attestation, une facture ou une photographie ne démontrent pas l'étanchéité.",
+      "explain": "Un bouchon s'accepte sur preuves techniques : enregistrements de pose, essai de pression (étanchéité), essai de charge ou de poids (résistance) et rapport final avec schéma du puits. Une attestation, une facture ou une photographie ne démontrent pas l'étanchéité.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d'appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     },
     {
       "id": "min-abandon-036",
       "theme": "Bouchage et abandon des puits",
       "level": 2,
-      "q": "Un puits d'exploration est sec. L'opérateur veut démobiliser l'appareil en laissant la tête de puits sans bouchon, « pour y revenir plus tard ». Quelle est votre position ?",
+      "q": "Sur le schéma du puits bouché, trois bouchons isolent le puits avant la démobilisation. Un puits d'exploration est sec. L'opérateur veut démobiliser l'appareil en laissant la tête de puits sans bouchon, « pour y revenir plus tard ». Quelle est votre position ?",
       "choices": [
         "Accepter, car un puits sec ne présente aucun risque",
         "Accepter si l'opérateur promet d'y revenir sous cinq ans",
@@ -884,7 +908,7 @@
         "Refuser : sans plan de suspension approuvé, il faut boucher définitivement avant la démobilisation, conformément au plan d'abandon"
       ],
       "answer": 3,
-      "explain": "Le plan d'abandon est soumis avant toute opération (article 173) et la suspension suppose barrières et surveillance. Un puits sec peut avoir traversé des formations sous pression ou des nappes ; un simple engagement ou un panneau n'isolent rien.",
+      "explain": "Le plan d'abandon est soumis avant toute opération (article 173) et la suspension suppose barrières et surveillance. Un puits sec peut avoir traversé des formations sous pression ou des nappes, que les bouchons du schéma isolent ; un simple engagement ou un panneau n'isolent rien.",
       "seconds": 75,
       "status": "draft",
       "refs": [
@@ -893,7 +917,9 @@
           "art": "Article 173",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d'appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     },
     {
       "id": "min-abandon-037",

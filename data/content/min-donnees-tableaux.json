@@ -1,1225 +1,1251 @@
 {
-  "profile": "min-donnees-tableaux",
-  "modules": [
-    {
-      "id": "m1",
-      "title": "Structurer et nettoyer ses données",
-      "theme": "Structurer et nettoyer les données",
-      "minutes": 10,
-      "body": "Toute analyse sérieuse commence par des données **bien structurées**. La règle de base du tableur ou de la base simple : **une ligne = une observation** (un dossier, une inspection, un mois de production), **une colonne = une variable** (région, date, volume, statut), **une seule information par cellule**. On évite les cellules fusionnées, les lignes de total au milieu des données, les titres répétés et les couleurs porteuses de sens (une couleur ne se filtre pas et ne se compte pas).\n\nChaque colonne a un **type** : nombre, date, texte, code. Un nombre stocké comme du texte (par exemple « 12,5 » avec une virgule non reconnue) ne s'additionne pas ; une date écrite de deux façons produit des tris faux. Il faut aussi fixer l'**unité** dans l'en-tête (« Production (milliers de barils) ») : mélanger barils et milliers de barils donne des écarts de 1 à 1 000.\n\n**Démarche de nettoyage en sept étapes** :\n\n- conserver l'original intact et travailler sur une copie ;\n- établir un petit dictionnaire de données (nom de la colonne, définition, unité, source) ;\n- uniformiser l'écriture (« Port-Gentil », « port gentil » et « PORT GENTIL » doivent devenir une seule valeur, de préférence via une liste de référence) ;\n- retirer les **doublons** (lignes identiques ou même identifiant) ;\n- traiter les **valeurs manquantes** : une cellule vide n'est pas un zéro ; on la signale, on la complète si la source le permet, sinon on l'exclut du calcul en le disant ;\n- repérer les valeurs aberrantes (un volume dix fois supérieur aux autres) et les vérifier à la source avant de corriger ;\n- contrôler : nombre de lignes avant et après, totaux de contrôle, échantillon relu à la main.\n\n**Exemple chiffré (données fictives)** : un fichier compte 1 200 lignes. Après suppression de 36 doublons, il en reste 1 164 ; 12 lignes n'ont pas de région et sont renvoyées au service pour correction. On note ces chiffres dans un journal de nettoyage, afin que n'importe quel collègue puisse refaire l'opération.\n\nPour les **dates**, le format international AAAA-MM-JJ (2026-04-03) évite la confusion entre jour et mois ; pour les **codes** (service, province), on utilise une colonne de code stable plutôt qu'un libellé qui change. Quand deux fichiers doivent être rassemblés, on vérifie que les colonnes ont les mêmes noms, les mêmes unités et que les lignes présentes dans les deux ne sont pas comptées deux fois.\n\nCôté **outils**, un tableur (filtres, tri, suppression des doublons, mise en forme en nombre ou en date) suffit pour quelques milliers de lignes. Au-delà, ou quand plusieurs personnes alimentent les mêmes données, une base simple (tables reliées par un code) est plus fiable. Les formats ouverts (CSV, ODS) permettent d'échanger sans dépendre d'un éditeur particulier. L'important est de pouvoir **reproduire** chaque étape.",
-      "keyPoints": [
-        "Une ligne = une observation, une colonne = une variable, une information par cellule.",
-        "Conserver l'original, travailler sur une copie et tenir un journal de nettoyage.",
-        "Une cellule vide n'est pas un zéro : signaler et traiter les valeurs manquantes.",
-        "Uniformiser les unités, les dates (AAAA-MM-JJ) et l'écriture des libellés.",
-        "Contrôler après chaque étape : nombre de lignes et totaux de contrôle."
-      ]
-    },
-    {
-      "id": "m2",
-      "title": "Somme, moyenne, médiane : lire une série de chiffres",
-      "theme": "Somme, moyenne, médiane et dispersion",
-      "minutes": 10,
-      "body": "Les calculs de base résument une série de valeurs, mais chacun répond à une question différente.\n\n- **Somme** : le total (production cumulée, nombre de dossiers).\n- **Moyenne** : somme divisée par le nombre de valeurs ; c'est la valeur « d'équilibre ».\n- **Médiane** : valeur qui partage la série ordonnée en deux moitiés égales. Pour un nombre impair de valeurs, c'est la valeur du milieu ; pour un nombre pair, c'est la moyenne des deux valeurs centrales.\n- **Mode** : la valeur la plus fréquente.\n- **Minimum, maximum et étendue** (maximum moins minimum) : les bornes de la série.\n\nLa **moyenne est sensible aux valeurs extrêmes**, la médiane beaucoup moins. Exemple fictif : les dépôts de cinq stations en une journée valent 10, 12, 11, 13 et 54 milliers de litres. La moyenne vaut (10 + 12 + 11 + 13 + 54) / 5 = 20, alors que quatre stations sur cinq sont proches de 12 ; la médiane (série ordonnée : 10, 11, 12, 13, 54) vaut 12 et décrit mieux la situation « typique ». Devant un écart important entre moyenne et médiane, il faut se demander s'il s'agit d'une vraie valeur élevée ou d'une erreur de saisie, puis le dire dans le rapport.\n\nLa **moyenne pondérée** s'impose quand les valeurs n'ont pas le même poids. Exemple fictif : 100 litres achetés à 600 FCFA et 300 litres à 650 FCFA donnent un prix moyen de (100 × 600 + 300 × 650) / 400 = 637,5 FCFA, et non (600 + 650) / 2 = 625. De même, la moyenne de deux moyennes n'est pas la moyenne globale si les effectifs diffèrent : on repart des totaux.\n\nPour décrire la **dispersion**, l'étendue donne un premier aperçu ; les **quartiles** (valeurs qui coupent la série en quatre parts) et l'**écart-type** précisent si les valeurs sont groupées ou éparses. Deux services peuvent avoir la même moyenne de délai (30 jours) et des réalités très différentes si l'un traite tout entre 28 et 32 jours, l'autre entre 5 et 90 jours.\n\n**Dans le tableur**, les fonctions usuelles sont SOMME, MOYENNE, MEDIANE, MIN, MAX, NB (compte les cellules numériques), NBVAL (compte les cellules non vides), NB.SI et SOMME.SI (comptage ou somme sous condition). Les noms peuvent varier légèrement selon le logiciel et la langue, mais la logique est la même.\n\nDeux précautions : n'arrondissez qu'**à la fin** (arrondir à chaque étape accumule des erreurs) et indiquez toujours l'**effectif** (« moyenne sur 42 dossiers »). Un chiffre sans effectif ni unité n'est pas interprétable.",
-      "keyPoints": [
-        "La médiane partage la série en deux moitiés égales ; elle résiste aux valeurs extrêmes.",
-        "La moyenne est sensible aux valeurs aberrantes : comparer moyenne et médiane.",
-        "Utiliser la moyenne pondérée quand les effectifs diffèrent ; ne pas moyenner des moyennes.",
-        "Mesurer aussi la dispersion (étendue, quartiles, écart-type), pas seulement le centre.",
-        "N'arrondir qu'à la fin et toujours indiquer l'effectif et l'unité."
-      ]
-    },
-    {
-      "id": "m3",
-      "title": "Pourcentages, évolutions et ratios",
-      "theme": "Pourcentages, évolutions et ratios",
-      "minutes": 10,
-      "body": "Les pourcentages sont partout dans les rapports, et ils sont souvent mal utilisés. Trois formules suffisent à la plupart des cas.\n\n- **Part** (ou proportion) = partie / total × 100. Si 45 inspections sur 60 prévues sont réalisées, le taux de réalisation est de 45 / 60 = 75 %.\n- **Taux de variation** = (valeur finale − valeur initiale) / valeur initiale × 100. Une production qui passe de 2 000 à 2 150 milliers de barils (chiffres fictifs) progresse de 150 / 2 000 = **7,5 %**.\n- **Ratio** = une grandeur rapportée à une autre (dossiers par agent, coût par inspection, production par jour). Il permet de comparer des entités de tailles différentes.\n\n**Point de pourcentage ou pourcentage ?** Si un taux passe de 20 % à 25 %, il augmente de **5 points de pourcentage** ; en relatif, il progresse de 25 %. Confondre les deux est une erreur classique de communication.\n\n**Les évolutions ne s'additionnent pas.** Une hausse de 20 % suivie d'une baisse de 20 % ne ramène pas à la valeur de départ : 100 devient 120, puis 120 × 0,8 = 96, soit −4 % au total. Il faut multiplier les coefficients (1,20 × 0,80 = 0,96). Pour retrouver une valeur de départ après une hausse de 25 %, on **divise** par 1,25 : 500 / 1,25 = 400, et non 500 − 25 % = 375.\n\nSur plusieurs années, on utilise le **taux de croissance annuel moyen** : (valeur finale / valeur initiale)^(1/n) − 1. Une valeur qui passe de 100 à 121 en deux ans croît de 10 % par an, car 1,10 × 1,10 = 1,21. Une autre méthode consiste à passer en **indice base 100** (la première année vaut 100) pour comparer plusieurs séries sur un même graphique.\n\n**Petits effectifs.** Une hausse de 50 % peut recouvrir le passage de 4 à 6 inspections. Pour ne pas induire en erreur, on donne les valeurs absolues à côté du pourcentage (« 6 contre 4, soit +50 % »).\n\n**Bonnes pratiques de présentation** : préciser le dénominateur (pourcentage de quoi ?), la période de référence, et ne pas additionner des pourcentages qui n'ont pas la même base. Vérifier que les parts d'un tout font bien 100 % (à l'arrondi près).\n\n**Exemple concret** : un chef de service constate que le budget de fonctionnement de son service est exécuté à 450 millions de FCFA sur 600 prévus (chiffres fictifs). Le taux d'exécution est de 75 % ; si l'année est écoulée aux trois quarts, l'exécution est conforme au rythme. Le même 75 % en fin d'année aurait un tout autre sens : le contexte et la période comptent autant que le chiffre.",
-      "keyPoints": [
-        "Part = partie / total ; variation = (final − initial) / initial ; ratio = grandeur rapportée à une autre.",
-        "Distinguer points de pourcentage et pourcentage relatif.",
-        "Les évolutions successives se multiplient (coefficients), elles ne s'additionnent pas.",
-        "Pour revenir à la valeur initiale après une hausse de t %, diviser par (1 + t).",
-        "Toujours préciser dénominateur, période et valeurs absolues, surtout sur de petits effectifs."
-      ]
-    },
-    {
-      "id": "m4",
-      "title": "Tableaux croisés et agrégation",
-      "theme": "Tableaux croisés et agrégation",
-      "minutes": 10,
-      "body": "Un **tableau croisé** (dit aussi tableau croisé dynamique) résume une longue liste de lignes en un tableau court : on choisit ce qui va en **lignes** (par exemple la région), ce qui va en **colonnes** (le trimestre), la **valeur** à agréger (le volume) et éventuellement un **filtre** (l'année). L'agrégation peut être une somme, un nombre de lignes, une moyenne, un minimum ou un maximum.\n\n**Condition préalable** : les données sources doivent être en liste propre (une ligne par observation, des en-têtes uniques, pas de ligne de total ni de cellule fusionnée). Sinon le tableau croisé produit des résultats faux ou refuse de se construire. C'est pourquoi le nettoyage précède toujours l'analyse.\n\n**Choisir la bonne agrégation.** Pour compter des dossiers, on utilise **Nombre** sur une colonne d'identifiants ; pour totaliser des volumes, **Somme**. Utiliser « Somme » sur une colonne de codes ou compter une colonne contenant des vides donne un résultat trompeur.\n\n**Exemple chiffré (données fictives)**.\n\n- Nord : 120 au premier trimestre, 140 au second, soit 260.\n- Sud : 80 puis 60, soit 140.\n\nLe total général est de 400. La part du Nord est de 260 / 400 = **65 %**. Un tableau croisé permet d'afficher directement ces **pourcentages du total général, de la ligne ou de la colonne** : le choix change la question posée (part de chaque région dans le total, ou poids de chaque trimestre dans la région).\n\n**Les moyennes dans un tableau croisé** exigent de la prudence : la moyenne globale n'est pas la moyenne des moyennes par région. Avec 10 dossiers pour 500 unités dans la région A (moyenne 50) et 40 dossiers pour 800 unités dans la région B (moyenne 20), la moyenne globale est (500 + 800) / 50 = 26, et non (50 + 20) / 2 = 35.\n\n**Regrouper des dates** : une colonne de dates quotidiennes peut être regroupée par mois, trimestre et année. Il faut regrouper par **année et mois**, sinon janvier 2025 et janvier 2026 se retrouvent dans la même ligne.\n\n**Fonctions voisines** : SOMME.SI et NB.SI donnent un total ou un comptage sous condition, sans tableau croisé. Pour rapprocher deux tables (une liste d'agents avec un code de service, une liste des services avec leurs libellés), on utilise une fonction de recherche (RECHERCHEV, RECHERCHEX ou équivalent) sur le **code commun**. Dans une base, la même opération s'appelle une jointure.\n\n**Actualisation et contrôle.** Un tableau croisé ne se met pas toujours à jour tout seul quand les données changent : il faut **l'actualiser**. Après chaque construction, comparez le total du tableau avec le total de la source : un écart révèle un filtre actif, des lignes à région vide ou des libellés mal écrits.",
-      "keyPoints": [
-        "Un tableau croisé agrège une liste propre : lignes, colonnes, valeurs, filtres.",
-        "Choisir l'agrégation adaptée : Nombre pour compter, Somme pour totaliser.",
-        "Comparer le total du tableau croisé au total de la source pour détecter une erreur.",
-        "La moyenne globale se recalcule à partir des totaux, pas en moyennant les moyennes.",
-        "Regrouper les dates par année et mois, et actualiser le tableau après chaque changement de données."
-      ]
-    },
-    {
-      "id": "m5",
-      "title": "Choisir le bon graphique",
-      "theme": "Choisir le bon graphique",
-      "minutes": 9,
-      "body": "Un graphique n'est pas une décoration : il sert à faire **comprendre un message en quelques secondes**. Le bon réflexe est de partir de la **question** que le lecteur se pose, puis de choisir la forme.\n\n**Correspondance question - graphique**\n\n- Comparer des catégories (provinces, services, opérateurs) : **barres** ; pour des libellés longs ou plus de sept catégories, barres horizontales triées.\n- Suivre une évolution dans le temps : **courbe** (ou barres verticales si peu de périodes).\n- Montrer la part de chaque élément dans un tout : **secteurs** seulement avec deux à cinq parts ; sinon barres, ou barres empilées pour comparer des structures.\n- Montrer la répartition d'une variable (par exemple les durées de traitement de 300 dossiers) : **histogramme**, qui regroupe les valeurs en classes.\n- Montrer le lien entre deux variables numériques : **nuage de points**.\n- Situer des valeurs sur le territoire : **carte**, si la localisation est le message.\n\n**Règles qui évitent de tromper**\n\n- Pour les barres, l'axe vertical doit **commencer à zéro**, car la hauteur représente la valeur. Exemple : avec deux barres de 98 et 100 et un axe qui commence à 96, les hauteurs visibles sont 2 et 4 : la seconde paraît **deux fois plus grande** alors que l'écart réel est de 2 %.\n- Pour une courbe, un axe tronqué est toléré s'il est signalé, mais il faut prendre garde à l'effet de dramatisation.\n- Éviter les effets de relief en 3D, qui déforment les surfaces.\n- Limiter les couleurs, garder la même couleur pour la même série dans tout le rapport, et vérifier que le graphique reste lisible en noir et blanc ou pour une personne daltonienne.\n- Éviter le **double axe** avec des échelles choisies librement : on peut faire croire à une corrélation. Mieux vaut deux graphiques alignés l'un sous l'autre.\n\n**Ce que tout graphique doit porter** : un titre qui énonce le **message** (« Le délai moyen passe de 41 à 34 jours en un an » vaut mieux que « Graphique 3 »), les unités, la période, la source, et, si besoin, l'effectif. Étiquetez directement les barres ou les courbes plutôt que d'imposer une légende éloignée.\n\n**Exemple de décision** : un chef de service doit montrer à son directeur le classement de dix directions provinciales selon leur taux d'exécution (chiffres fictifs). Des barres horizontales triées du plus haut au plus bas, avec une ligne de cible à 80 %, répondent immédiatement à la question « qui est en dessous de l'objectif ? ». Un graphique en secteurs à dix parts serait illisible.\n\nEnfin, **moins est souvent plus** : un graphique, un message. Si un graphique demande plus de trente secondes d'explication, il faut le simplifier ou le scinder en deux.",
-      "keyPoints": [
-        "Partir de la question : comparer, suivre l'évolution, montrer une part, une répartition ou un lien.",
-        "Barres pour comparer, courbe pour le temps, histogramme pour la répartition, nuage de points pour la relation.",
-        "L'axe des barres commence à zéro ; éviter la 3D et les doubles axes trompeurs.",
-        "Les secteurs ne conviennent qu'à peu de parts (deux à cinq).",
-        "Un titre qui énonce le message, avec unité, période et source."
-      ]
-    },
-    {
-      "id": "m6",
-      "title": "Construire et lire un tableau de bord",
-      "theme": "Construire et lire un tableau de bord",
-      "minutes": 10,
-      "body": "Un **tableau de bord** est une vue synthétique, sur une ou deux pages, d'un petit nombre d'**indicateurs** choisis pour **piloter** : repérer un écart, décider, corriger. Ce n'est ni un rapport complet ni un amas de graphiques.\n\n**Démarche de construction**\n\n- **Public et décisions** : pour qui, pour décider quoi, à quelle fréquence ? Un directeur général et un chef de service n'ont pas besoin des mêmes indicateurs.\n- **Choix de cinq à huit indicateurs** : au-delà, le lecteur ne retient plus rien. Mélangez indicateurs de **moyens** (budget consommé), d'**activité** (nombre d'inspections réalisées) et de **résultat** (délai moyen de traitement, taux de conformité) ; le pilotage s'appuie surtout sur les résultats.\n- **Fiche d'indicateur** : définition, formule de calcul, source des données, périodicité, responsable, unité. Sans fiche, deux services calculent le même indicateur de deux manières différentes.\n- **Cible et seuils** : un chiffre sans objectif n'est pas interprétable. On définit une cible (30 jours) et des seuils d'alerte (vert, orange, rouge) avec une règle écrite.\n- **Comparaison** : avec la période précédente, la même période de l'an passé, la cible.\n- **Mise en page** : chiffres clés en haut, tendances ensuite, détail en bas ; même présentation à chaque édition.\n\n**Exemple chiffré (fictif)** : délai de traitement des dossiers, cible 30 jours, réalisé 34 jours. L'écart est de +4 jours, soit 4 / 30 = 13,3 % au-dessus de la cible. Autre exemple : 45 inspections réalisées sur 60 programmées donnent un taux de réalisation de 75 % ; avec des seuils vert à partir de 80 %, orange de 60 % à 79 %, rouge en dessous de 60 %, l'indicateur est **orange**.\n\n**Piège de la moyenne** : un délai moyen de 28 jours (vert, cible 30) peut cacher que 20 % des dossiers attendent plus de 60 jours. On complète alors par la médiane, ou par la **part de dossiers hors délai**.\n\n**Lire un tableau de bord** : vérifier d'abord le titre, la période et l'unité ; comparer à la cible ; regarder la **tendance** (trois ou quatre périodes) plutôt qu'un seul point ; se demander si le chiffre s'explique par un effet de calendrier ou un changement de méthode ; remonter à la source en cas de doute.\n\n**Alimentation et fiabilité** : si trois services saisissent chaque mois leurs chiffres dans trois fichiers différents, le risque d'erreur est élevé. Il vaut mieux une **source unique** centralisée, des formules protégées, une date de dernière mise à jour affichée et un responsable de la qualité des chiffres. L'outil (tableur, base simple, logiciel de tableau de bord) importe moins que ces règles.",
-      "keyPoints": [
-        "Un tableau de bord sert à décider : choisir cinq à huit indicateurs selon le public.",
-        "Documenter chaque indicateur : formule, source, périodicité, responsable, unité.",
-        "Fixer des cibles et des seuils avec une règle écrite d'alerte.",
-        "Compléter la moyenne par une mesure de dispersion ou la part hors délai.",
-        "Source unique, date de mise à jour affichée et responsable de la qualité."
-      ]
-    },
-    {
-      "id": "m7",
-      "title": "Qualité des données, biais et présentation d'une décision",
-      "theme": "Qualité des données, biais et aide à la décision",
-      "minutes": 11,
-      "body": "Des chiffres propres et bien calculés peuvent encore conduire à une mauvaise décision si les données sont de mauvaise qualité ou mal interprétées.\n\n**Dimensions de la qualité** : l'**exactitude** (la valeur est juste), la **complétude** (les champs sont renseignés ; si 180 fiches sur 240 portent une date, la complétude est de 180 / 240 = 75 %), la **cohérence** (mêmes définitions, mêmes unités), l'**actualité**, l'**unicité** (pas de doublons) et la **traçabilité** (on sait d'où vient le chiffre).\n\n**Principaux biais**\n\n- **Biais de sélection** : on n'observe qu'une partie non représentative (enquête auprès des seuls répondants volontaires, inspections limitées aux sites faciles d'accès).\n- **Biais déclaratif** : les chiffres sont fournis par ceux qu'ils concernent, sans contrôle ; on recoupe avec une autre source (relevés, factures, visites).\n- **Biais de confirmation** : on retient les chiffres qui vont dans le sens de l'idée de départ.\n- **Corrélation et causalité** : deux séries qui évoluent ensemble ne prouvent pas que l'une cause l'autre ; une troisième variable ou le hasard peuvent expliquer le lien.\n\n**Valeurs aberrantes et petits effectifs** : une valeur étrange se **vérifie à la source** avant d'être corrigée ou écartée, et la décision est consignée. Un taux calculé sur 4 cas (3 sur 4 : 75 %) n'a pas la même fiabilité que le même taux sur 800 cas (600 sur 800) : on affiche toujours l'effectif.\n\n**Présenter une décision à partir des chiffres** : une note d'une page suit l'ordre **conclusion d'abord**.\n\n- Recommandation en une phrase.\n- Deux ou trois chiffres clés, avec comparaison.\n- Options étudiées, avec coût, avantages et risques.\n- Limites des données, dites honnêtement.\n- Prochaine étape.\n\n**Exemple chiffré (fictif)** : option A, coût de 120 millions de FCFA pour gagner 10 jours de délai, soit 12 millions par jour gagné ; option B, 80 millions pour gagner 6 jours, soit environ 13,3 millions par jour gagné. A est plus efficiente par jour gagné, mais le choix dépend aussi de l'enveloppe disponible et des risques : le ratio éclaire la décision, il ne la remplace pas.\n\n**Protection et sécurité** : un fichier qui contient des noms d'agents, des salaires ou des données d'entreprises ne se diffuse pas tel quel. On partage des données **agrégées ou anonymisées**, avec des droits d'accès limités, dans le respect des textes en vigueur sur les données à caractère personnel et des règles internes de confidentialité. Les sauvegardes et la conservation des versions font partie de la qualité.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
-      "keyPoints": [
-        "Qualité : exactitude, complétude, cohérence, actualité, unicité, traçabilité.",
-        "Repérer les biais : sélection, déclaratif, confirmation ; corrélation n'est pas causalité.",
-        "Vérifier à la source les valeurs aberrantes et toujours afficher l'effectif.",
-        "Note de décision : conclusion d'abord, chiffres clés, options, limites, prochaine étape.",
-        "Diffuser des données agrégées ou anonymisées et protéger les accès."
-      ]
-    }
-  ],
-  "questions": [
-    {
-      "id": "min-donnees-tableaux-001",
-      "theme": "Structurer et nettoyer les données",
-      "level": 1,
-      "q": "Vous préparez un fichier de suivi des inspections pour l'analyser dans un tableur. Quelle structure faut-il adopter ?",
-      "choices": [
-        "Une ligne par inspection, une colonne par variable (date, site, résultat), une seule information par cellule",
-        "Une ligne par site, avec toutes les inspections successives écrites dans la même cellule",
-        "Un tableau mis en forme comme un rapport, avec titres répétés et totaux intercalés entre les blocs",
-        "Une colonne par mois, avec les sites en lignes et les commentaires placés dans des cellules fusionnées"
-      ],
-      "answer": 0,
-      "explain": "La structure en liste (une observation par ligne, une variable par colonne) est celle que les filtres, les formules et les tableaux croisés savent exploiter. Les autres présentations sont lisibles pour l'œil mais inexploitables par calcul : informations multiples dans une cellule, totaux au milieu des données, cellules fusionnées.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-002",
-      "theme": "Structurer et nettoyer les données",
-      "level": 1,
-      "q": "Pourquoi faut-il éviter les cellules fusionnées dans un fichier de données destiné à être analysé ?",
-      "choices": [
-        "Elles augmentent la taille du fichier au point de ralentir tout calcul, même sur quelques lignes",
-        "Elles perturbent le tri, le filtrage et les tableaux croisés, car certaines lignes se retrouvent sans valeur",
-        "Elles sont interdites par les formats de fichier ouverts tels que le CSV et le format ODS du tableur",
-        "Elles modifient automatiquement les nombres en texte, ce qui fausse toutes les sommes de la colonne"
-      ],
-      "answer": 1,
-      "explain": "Une cellule fusionnée ne conserve la valeur que dans la première cellule : les lignes suivantes apparaissent vides pour un filtre ou un tableau croisé. Le problème n'est ni la taille du fichier ni une interdiction de format, et la fusion ne convertit pas les nombres en texte.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-003",
-      "theme": "Structurer et nettoyer les données",
-      "level": 1,
-      "q": "Un collègue vous transmet un fichier de production à nettoyer. Quelle est la toute première précaution ?",
-      "choices": [
-        "Supprimer immédiatement les lignes qui paraissent anormales pour partir d'une base propre dès le départ",
-        "Remplacer toutes les cellules vides par un zéro afin que les formules ne renvoient plus d'erreur",
-        "Enregistrer l'original intact et travailler sur une copie, en gardant la trace de chaque modification",
-        "Convertir le fichier dans un autre format puis supprimer l'ancien pour éviter les versions multiples"
-      ],
-      "answer": 2,
-      "explain": "Conserver l'original permet de revenir en arrière et de prouver ce qui a été modifié. Supprimer des lignes sans vérification, mettre des zéros à la place des vides ou détruire l'ancien fichier sont des gestes irréversibles qui ruinent la traçabilité.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-004",
-      "theme": "Structurer et nettoyer les données",
-      "level": 1,
-      "q": "Dans un fichier de volumes mensuels, plusieurs cellules sont vides. Quelle règle faut-il appliquer ?",
-      "choices": [
-        "Une cellule vide équivaut à un zéro, car aucune production n'a été déclarée pour la période concernée",
-        "On la remplace par la moyenne de la colonne, sans le mentionner, afin de ne pas alourdir le rapport",
-        "On supprime systématiquement toute la colonne concernée dès qu'elle contient un seul vide",
-        "Une cellule vide n'est pas un zéro : on la signale, on la complète à la source si possible, sinon on l'exclut en le précisant"
-      ],
-      "answer": 3,
-      "explain": "Un vide signifie « information absente », alors que zéro est une valeur mesurée : les confondre fausse moyennes et totaux. On cherche la valeur à la source, sinon on exclut la ligne du calcul en le disant. Une imputation silencieuse ou la suppression de la colonne entière dégradent l'analyse.",
-      "seconds": 55,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-005",
-      "theme": "Structurer et nettoyer les données",
-      "level": 2,
-      "q": "Un fichier compte 1 250 lignes. Vous retirez 50 doublons exacts et 30 lignes entièrement vides (chiffres fictifs). Combien de lignes reste-t-il, et que faut-il noter dans le journal de nettoyage ?",
-      "choices": [
-        "1 170 lignes ; on note dans le journal les 50 doublons et les 30 lignes vides retirés",
-        "1 200 lignes ; on ne note que les doublons, car les lignes vides ne comptent pas comme des données",
-        "1 220 lignes ; on note les doublons, les lignes vides étant retirées automatiquement à l'ouverture",
-        "1 280 lignes ; on ajoute les lignes retirées pour retrouver la taille du fichier d'origine"
-      ],
-      "answer": 0,
-      "explain": "1 250 − 50 − 30 = 1 170. Les deux opérations modifient le nombre de lignes et doivent figurer dans le journal : sans cela, un collègue ne pourrait pas retrouver l'écart entre le fichier d'origine et le fichier nettoyé.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-006",
-      "theme": "Structurer et nettoyer les données",
-      "level": 2,
-      "q": "La somme d'une colonne « Volume » affiche 0 alors que des valeurs comme 12,5 apparaissent dans les cellules, alignées à gauche. Que faire ?",
-      "choices": [
-        "Retaper toutes les valeurs une par une dans une nouvelle colonne, car la fonction SOMME est défectueuse",
-        "Convertir la colonne en nombres en vérifiant le séparateur décimal, puis recalculer la somme",
-        "Remplacer la fonction SOMME par la fonction NBVAL, qui additionne aussi les valeurs de type texte",
-        "Ignorer l'affichage : le zéro est exact tant que les cellules ne sont pas protégées"
-      ],
-      "answer": 1,
-      "explain": "Des valeurs alignées à gauche sont souvent du texte (virgule non reconnue, espace insécable, apostrophe). SOMME ignore le texte. Il faut convertir en nombre. NBVAL compte les cellules non vides, il n'additionne rien ; la fonction n'est pas défectueuse.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-007",
-      "theme": "Structurer et nettoyer les données",
-      "level": 2,
-      "q": "Dans une colonne « Ville », on trouve « Port-Gentil », « port gentil » et « PORT GENTIL ». Quelle conséquence, et quel remède ?",
-      "choices": [
-        "Rien : les tableurs ignorent toujours la casse et les tirets, les trois écritures seront regroupées",
-        "Le tableau croisé affichera une seule ville mais avec un total triplé, qu'il faudra donc diviser par trois",
-        "Un tableau croisé les traitera comme trois villes ; il faut uniformiser, idéalement via une liste de référence",
-        "Le fichier sera refusé à l'ouverture, il faut alors le reconstruire entièrement à partir de zéro"
-      ],
-      "answer": 2,
-      "explain": "Selon les logiciels, la casse peut être ignorée, mais les tirets et espaces restent des différences : des libellés voisins deviennent des catégories distinctes. La solution durable est une liste de référence (menu déroulant) ou un code stable. Il n'y a ni triplement ni refus à l'ouverture.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-008",
-      "theme": "Structurer et nettoyer les données",
-      "level": 2,
-      "q": "Le service A transmet ses volumes en barils (4 500), le service B en milliers de barils (4,5) pour une même période. Que faites-vous avant d'additionner ?",
-      "choices": [
-        "Additionner telles quelles les deux valeurs, puisque les nombres sont proches une fois arrondis",
-        "Supprimer le service dont les chiffres paraissent les plus faibles pour garder une seule série",
-        "Multiplier toutes les valeurs par mille, sans vérifier l'unité d'origine de chaque service",
-        "Convertir les volumes dans une unité commune et l'indiquer dans l'en-tête de la colonne"
-      ],
-      "answer": 3,
-      "explain": "4 500 barils et 4,5 milliers de barils sont la même quantité. Additionner sans conversion donnerait 4 504,5, un résultat absurde. On harmonise l'unité, on la mentionne et on vérifie à la source. Multiplier tout par mille fausserait la série déjà exprimée en barils.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-009",
-      "theme": "Structurer et nettoyer les données",
-      "level": 3,
-      "q": "Vous rassemblez deux fichiers trimestriels : 800 lignes et 600 lignes. Vous constatez que 40 dossiers figurent dans les deux (chiffres fictifs). Combien de dossiers distincts obtenez-vous, et que contrôlez-vous ?",
-      "choices": [
-        "1 400 dossiers ; le chevauchement est normal et n'a pas d'incidence sur les comptages ultérieurs",
-        "1 320 dossiers ; on retire les 40 dossiers communs des deux fichiers, car ils sont douteux",
-        "1 360 dossiers ; on contrôle avec l'identifiant unique que chaque dossier n'apparaît qu'une fois",
-        "1 440 dossiers ; chaque dossier commun doit être compté deux fois pour refléter sa présence"
-      ],
-      "answer": 2,
-      "explain": "800 + 600 − 40 = 1 360 dossiers distincts : les 40 dossiers communs ne doivent être conservés qu'une fois (et non retirés des deux fichiers). Le contrôle par identifiant unique garantit l'absence de doublon, sinon les comptages et les sommes sont gonflés.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-010",
-      "theme": "Structurer et nettoyer les données",
-      "level": 3,
-      "q": "Deux fichiers utilisent des dates écrites « 03/04/2026 ». L'un est au format jour/mois, l'autre mois/jour. Vous devez les fusionner. Quelle démarche est la plus sûre ?",
-      "choices": [
-        "Conserver le texte tel quel, car le tableur reconnaîtra automatiquement le bon ordre des jours et des mois",
-        "Identifier le format de chaque source, convertir en AAAA-MM-JJ et vérifier sur quelques lignes connues",
-        "Choisir le format le plus fréquent et l'appliquer aux deux fichiers sans vérifier les dates ambiguës",
-        "Ne garder que les lignes dont le jour dépasse 12, qui seules sont lisibles sans ambiguïté"
-      ],
-      "answer": 1,
-      "explain": "03/04/2026 est le 3 avril dans un cas et le 4 mars dans l'autre : aucune reconnaissance automatique ne lève l'ambiguïté. Il faut connaître le format de chaque source, convertir en AAAA-MM-JJ puis contrôler sur des dates connues. Éliminer les lignes ambiguës ferait perdre des données utiles.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-011",
-      "theme": "Somme, moyenne, médiane et dispersion",
-      "level": 1,
-      "q": "Que représente la médiane d'une série de valeurs ?",
-      "choices": [
-        "La valeur la plus fréquente de la série, quel que soit son rang dans l'ordre croissant",
-        "La somme de toutes les valeurs divisée par le nombre de valeurs observées dans la série",
-        "L'écart entre la plus grande et la plus petite valeur observées dans la série",
-        "La valeur centrale qui sépare la série ordonnée en deux moitiés d'effectifs égaux"
-      ],
-      "answer": 3,
-      "explain": "La médiane coupe la série ordonnée en deux moitiés égales. La valeur la plus fréquente est le mode, la somme divisée par l'effectif est la moyenne, et l'écart entre maximum et minimum est l'étendue.",
-      "seconds": 40,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-012",
-      "theme": "Somme, moyenne, médiane et dispersion",
-      "level": 1,
-      "q": "Les délais de traitement de vos dossiers comportent quelques cas exceptionnellement longs. Quel indicateur de tendance centrale est le plus robuste à ces cas ?",
-      "choices": [
-        "La moyenne, parce qu'elle tient compte de chaque valeur et donne donc l'image la plus fidèle",
-        "Le maximum, parce qu'il signale directement les délais que le service doit corriger en priorité",
-        "La médiane, parce qu'elle dépend du rang des valeurs et non de leur grandeur exacte",
-        "La somme, parce qu'elle ne change pas quand on retire ou ajoute des dossiers à la série"
-      ],
-      "answer": 2,
-      "explain": "Un délai extrême tire la moyenne vers le haut, alors que la médiane reste au milieu de la série. Le maximum est utile pour repérer les cas, mais ne décrit pas la situation typique ; la somme varie au contraire à chaque dossier ajouté.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-013",
-      "theme": "Somme, moyenne, médiane et dispersion",
-      "level": 1,
-      "q": "Dans un tableur, quelle fonction compte uniquement les cellules d'une plage qui contiennent un nombre ?",
-      "choices": [
-        "NBVAL, qui compte toutes les cellules non vides, y compris celles qui contiennent du texte",
-        "NB, fonction qui compte uniquement les cellules contenant des nombres dans la plage",
-        "SOMME, qui renvoie le total des valeurs numériques sans indiquer combien il y en a",
-        "MEDIANE, qui renvoie la valeur centrale de la plage sans compter les cellules"
-      ],
-      "answer": 1,
-      "explain": "NB ne compte que les nombres. NBVAL compte aussi le texte. SOMME additionne, MEDIANE donne la valeur du milieu. Savoir choisir entre NB et NBVAL évite des effectifs faux.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-014",
-      "theme": "Somme, moyenne, médiane et dispersion",
-      "level": 1,
-      "q": "Comment calcule-t-on l'étendue d'une série de valeurs ?",
-      "choices": [
-        "En retranchant la plus petite valeur de la plus grande valeur de la série",
-        "En divisant la somme des valeurs par le nombre total de valeurs de la série",
-        "En relevant la valeur qui apparaît le plus souvent dans l'ensemble de la série",
-        "En prenant la valeur située exactement au milieu de la série une fois ordonnée"
-      ],
-      "answer": 0,
-      "explain": "L'étendue = maximum − minimum : c'est la mesure de dispersion la plus simple. Les autres définitions correspondent à la moyenne, au mode et à la médiane.",
-      "seconds": 40,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-015",
-      "theme": "Somme, moyenne, médiane et dispersion",
-      "level": 2,
-      "q": "Cinq agents ont traité respectivement 8, 3, 20, 9 et 5 dossiers dans la semaine (chiffres fictifs). Quelle est la médiane ?",
-      "choices": [
-        "8 dossiers, valeur située au milieu de la série ordonnée",
-        "9 dossiers, qui correspond à la moyenne arrondie de la série",
-        "5 dossiers, qui correspond à la valeur la plus basse après le minimum",
-        "20 dossiers, qui correspond à la valeur la plus élevée de la série"
-      ],
-      "answer": 0,
-      "explain": "Série ordonnée : 3, 5, 8, 9, 20. La valeur centrale est 8. La moyenne est (8 + 3 + 20 + 9 + 5) / 5 = 9, qu'il ne faut pas confondre avec la médiane.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-016",
-      "theme": "Somme, moyenne, médiane et dispersion",
-      "level": 2,
-      "q": "Six dossiers ont mis 4, 7, 9, 12, 20 et 30 jours à être traités (chiffres fictifs). Quelle est la médiane ?",
-      "choices": [
-        "12 jours, c'est-à-dire la quatrième valeur de la série ordonnée",
-        "10,5 jours, moyenne des deux valeurs centrales",
-        "13,7 jours, c'est-à-dire la moyenne arrondie des six délais",
-        "9 jours, c'est-à-dire la troisième valeur de la série ordonnée"
-      ],
-      "answer": 1,
-      "explain": "Avec un nombre pair de valeurs, la médiane est la moyenne des deux valeurs centrales : (9 + 12) / 2 = 10,5. La moyenne est 82 / 6 ≈ 13,7. Retenir une seule des deux valeurs centrales est une erreur fréquente.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-017",
-      "theme": "Somme, moyenne, médiane et dispersion",
-      "level": 2,
-      "q": "Six dossiers ont été traités en 4, 6, 5, 9, 6 et 10 jours (chiffres fictifs). Quelle est la durée moyenne, arrondie à une décimale ?",
-      "choices": [
-        "6,0 jours, qui est à la fois la médiane et la valeur la plus fréquente",
-        "7,0 jours, qui est le milieu entre la plus petite et la plus grande valeur",
-        "6,7 jours, c'est-à-dire la somme de 40 jours divisée par les six dossiers",
-        "40,0 jours, qui est la somme des délais des six dossiers de la série"
-      ],
-      "answer": 2,
-      "explain": "Somme = 4 + 6 + 5 + 9 + 6 + 10 = 40 ; 40 / 6 = 6,67, soit 6,7. La médiane et le mode valent 6, le milieu de l'étendue (4 et 10) vaut 7, et 40 est la somme, pas la moyenne.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-018",
-      "theme": "Somme, moyenne, médiane et dispersion",
-      "level": 2,
-      "q": "Une direction a traité 200 dossiers en 5 jours en moyenne, une autre 800 dossiers en 10 jours en moyenne (chiffres fictifs). Quel est le délai moyen sur l'ensemble des 1 000 dossiers ?",
-      "choices": [
-        "7,5 jours, en faisant la moyenne simple des deux délais moyens",
-        "8 jours, en prenant le délai moyen de la direction la plus performante majoré de 3",
-        "10 jours, en retenant simplement le délai de la direction la plus chargée",
-        "9 jours, obtenus par moyenne pondérée selon le nombre de dossiers traités"
-      ],
-      "answer": 3,
-      "explain": "(200 × 5 + 800 × 10) / 1 000 = (1 000 + 8 000) / 1 000 = 9 jours. La moyenne simple (7,5) ignore le fait que la seconde direction traite quatre fois plus de dossiers.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-019",
-      "theme": "Somme, moyenne, médiane et dispersion",
-      "level": 3,
-      "q": "Les dépôts de cinq stations valent 10, 12, 11, 13 et 54 milliers de litres (chiffres fictifs). Votre directeur demande un chiffre « typique » pour sa note. Que proposez-vous ?",
-      "choices": [
-        "La moyenne (20), car elle intègre toutes les stations sans en écarter aucune",
-        "Le maximum (54), car il montre la capacité réelle que le réseau peut atteindre",
-        "La somme (100), car elle donne l'ordre de grandeur sans passer par une valeur centrale",
-        "La médiane (12), en signalant que la valeur 54 est à vérifier avant toute conclusion"
-      ],
-      "answer": 3,
-      "explain": "La moyenne (20) est tirée vers le haut par la valeur 54 : aucune station ne s'en approche, hormis celle-là. La médiane (série 10, 11, 12, 13, 54) vaut 12 et décrit la situation typique. On signale la valeur de 54 pour la contrôler à la source.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-020",
-      "theme": "Somme, moyenne, médiane et dispersion",
-      "level": 3,
-      "q": "Une direction A a formé 20 agents, avec 3 jours de formation en moyenne ; une direction B en a formé 80, avec 8 jours en moyenne (chiffres fictifs). Quel est le nombre moyen de jours par agent formé sur l'ensemble ?",
-      "choices": [
-        "7 jours, en divisant le total de jours par le total d'agents formés",
-        "5,5 jours, en faisant la moyenne simple des deux moyennes des directions",
-        "6 jours, en retenant la valeur médiane entre les deux moyennes et la plus petite",
-        "8 jours, en retenant la moyenne de la direction qui a formé le plus d'agents"
-      ],
-      "answer": 0,
-      "explain": "Total de jours = 20 × 3 + 80 × 8 = 60 + 640 = 700 ; total d'agents = 100 ; moyenne = 7 jours. La moyenne des moyennes (5,5) ne tient pas compte des effectifs : on repart toujours des totaux.",
-      "seconds": 90,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-021",
-      "theme": "Pourcentages, évolutions et ratios",
-      "level": 1,
-      "q": "Quelle formule donne le taux de variation entre une valeur initiale et une valeur finale ?",
-      "choices": [
-        "(valeur finale − valeur initiale) / valeur finale × 100",
-        "valeur finale / valeur initiale, sans autre opération sur le résultat",
-        "(valeur finale + valeur initiale) / 2, divisé par la valeur initiale",
-        "(valeur finale − valeur initiale) / valeur initiale × 100"
-      ],
-      "answer": 3,
-      "explain": "La variation relative se calcule toujours par rapport à la valeur de départ. Diviser par la valeur finale donnerait un taux différent. Le simple rapport final / initial est le coefficient multiplicateur, et la demi-somme est une moyenne.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-022",
-      "theme": "Pourcentages, évolutions et ratios",
-      "level": 1,
-      "q": "Un taux de conformité passe de 20 % à 25 %. Comment le décrit-on correctement ?",
-      "choices": [
-        "Une hausse de 5 points de pourcentage, soit 25 % en variation relative du taux",
-        "Une hausse de 5 %, ce qui revient à dire la même chose que les points de pourcentage",
-        "Une hausse de 20 %, car on rapporte l'écart à la valeur finale du taux",
-        "Une hausse de 125 %, car on rapporte la valeur finale à la valeur initiale"
-      ],
-      "answer": 0,
-      "explain": "Écart absolu : 5 points. Écart relatif : 5 / 20 = 25 %. Dire « 5 % » confond les deux notions. Diviser par la valeur finale (20 %) ou présenter le rapport 25 / 20 (125 %) comme une hausse sont des erreurs de méthode.",
-      "seconds": 55,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-023",
-      "theme": "Pourcentages, évolutions et ratios",
-      "level": 1,
-      "q": "Comment calcule-t-on la part d'un élément dans un total ?",
-      "choices": [
-        "Total divisé par la valeur de l'élément, multiplié par 100",
-        "Valeur de l'élément divisée par le total, multipliée par 100",
-        "Valeur de l'élément moins le total, divisée par le total",
-        "Valeur de l'élément multipliée par le nombre d'éléments, divisée par 100"
-      ],
-      "answer": 1,
-      "explain": "Part = partie / total × 100. Si l'on inverse (total / élément), on obtient un nombre supérieur à 100 qui n'est pas une part. Les autres formules ne correspondent à aucune notion de proportion.",
-      "seconds": 40,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-024",
-      "theme": "Pourcentages, évolutions et ratios",
-      "level": 1,
-      "q": "Pourquoi utilise-t-on un ratio (par exemple dossiers par agent) pour comparer des directions de tailles différentes ?",
-      "choices": [
-        "Il supprime la nécessité de vérifier les effectifs, puisque les écarts disparaissent d'eux-mêmes",
-        "Il donne toujours un nombre inférieur à 1, plus facile à lire que des valeurs brutes",
-        "Il rapporte les volumes à une base commune, ce qui rend la comparaison réellement équitable",
-        "Il permet d'additionner les résultats de plusieurs directions sans précaution supplémentaire"
-      ],
-      "answer": 2,
-      "explain": "Comparer des volumes bruts favorise les grandes structures. En rapportant à un effectif, une surface ou un budget, on compare des situations comparables. Un ratio n'est pas toujours inférieur à 1 et ne s'additionne pas sans réfléchir à sa base.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-025",
-      "theme": "Pourcentages, évolutions et ratios",
-      "level": 2,
-      "q": "La production passe de 2 000 à 2 150 milliers de barils (chiffres fictifs). Quelle est la variation en pourcentage ?",
-      "choices": [
-        "+7,5 %, soit 150 rapportés à la production initiale de 2 000",
-        "+7,0 %, obtenu en rapportant les 150 à la production finale",
-        "+15,0 %, obtenu en divisant l'écart par mille et en doublant le résultat",
-        "+5,0 %, obtenu en retenant l'écart brut converti directement en pourcentage"
-      ],
-      "answer": 0,
-      "explain": "(2 150 − 2 000) / 2 000 = 150 / 2 000 = 0,075, soit +7,5 %. Rapporter à la valeur finale donnerait environ 7,0 %, ce qui est une erreur de base de calcul.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-026",
-      "theme": "Pourcentages, évolutions et ratios",
-      "level": 2,
-      "q": "Le budget de fonctionnement d'un service est de 600 millions de FCFA et 450 millions sont consommés (chiffres fictifs). Quel est le taux d'exécution ?",
-      "choices": [
-        "25 %, qui correspond à la part restant à dépenser",
-        "75 %, soit les 450 millions rapportés au budget de 600 millions",
-        "66,7 %, obtenu en divisant le budget par la somme du budget et du réalisé",
-        "133 %, obtenu en divisant le budget par la dépense réalisée"
-      ],
-      "answer": 1,
-      "explain": "Taux d'exécution = 450 / 600 = 0,75, soit 75 %. Les 25 % sont le reliquat. Inverser le rapport donne 133 %, valeur supérieure à 100 qui indiquerait un dépassement, ce qui n'est pas le cas.",
-      "seconds": 55,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-027",
-      "theme": "Pourcentages, évolutions et ratios",
-      "level": 2,
-      "q": "Une valeur augmente de 20 %, puis diminue de 20 % l'année suivante. Quelle est l'évolution globale ?",
-      "choices": [
-        "0 %, car la hausse et la baisse s'annulent exactement",
-        "−2 %, car l'écart se répartit sur les deux années",
-        "−4 %, car les coefficients se multiplient : 1,20 × 0,80 = 0,96",
-        "+4 %, car la hausse s'applique sur une base plus petite que la baisse"
-      ],
-      "answer": 2,
-      "explain": "Les évolutions se composent par multiplication : 100 → 120 → 96, soit −4 %. La baisse de 20 % s'applique à une base plus grande (120), donc elle retire plus que la hausse n'a ajouté.",
-      "seconds": 65,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-028",
-      "theme": "Pourcentages, évolutions et ratios",
-      "level": 2,
-      "q": "Après une hausse de 25 %, un loyer de bureau vaut 500 (unités fictives). Quelle était sa valeur avant la hausse ?",
-      "choices": [
-        "375, en retirant 25 % à 500",
-        "475, en retirant simplement 25 unités à 500",
-        "625, en multipliant 500 par 1,25",
-        "400, en divisant 500 par 1,25"
-      ],
-      "answer": 3,
-      "explain": "Après hausse de 25 %, valeur = initiale × 1,25 ; donc initiale = 500 / 1,25 = 400. Retirer 25 % de 500 (375) applique le taux à la mauvaise base. Multiplier par 1,25 ferait encore augmenter la valeur.",
-      "seconds": 65,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-029",
-      "theme": "Pourcentages, évolutions et ratios",
-      "level": 3,
-      "q": "Une dépense passe de 100 à 121 en deux ans (chiffres fictifs). Quel est le taux de croissance annuel moyen ?",
-      "choices": [
-        "10 % par an, car les hausses se composent : 1,10 × 1,10 = 1,21",
-        "10,5 % par an, obtenu en divisant les 21 % de hausse totale par deux",
-        "21 % par an, car la hausse totale est répétée chaque année",
-        "12 % par an, obtenu en arrondissant au pas supérieur le taux annuel"
-      ],
-      "answer": 0,
-      "explain": "La croissance se compose : (121 / 100)^(1/2) − 1 = 10 %. Diviser 21 % par deux (10,5 %) ignore l'effet des intérêts composés ; la hausse n'est pas de 21 % chaque année.",
-      "seconds": 90,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-030",
-      "theme": "Pourcentages, évolutions et ratios",
-      "level": 3,
-      "q": "Un rapport annonce « inspections en hausse de 50 % » alors que l'on est passé de 4 à 6 inspections. Quelle présentation est la plus honnête devant la direction ?",
-      "choices": [
-        "Garder uniquement +50 %, plus parlant qu'une comparaison de deux petits nombres",
-        "Indiquer les valeurs absolues avec le pourcentage : 6 contre 4, soit +50 % sur un petit effectif",
-        "Supprimer toute mention de l'évolution, puisqu'un petit effectif ne permet aucune conclusion",
-        "Présenter la hausse en points de pourcentage, ce qui la rend plus modeste"
-      ],
-      "answer": 1,
-      "explain": "Le calcul (6 − 4) / 4 = 50 % est exact, mais il impressionne sur un très petit effectif. Donner les valeurs absolues permet au lecteur de juger. Les points de pourcentage ne s'appliquent pas ici (ce n'est pas un taux) et taire l'information serait aussi trompeur.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-031",
-      "theme": "Tableaux croisés et agrégation",
-      "level": 1,
-      "q": "Que faut-il vérifier en premier avant de construire un tableau croisé dynamique ?",
-      "choices": [
-        "Que le fichier est enregistré dans un format propriétaire pour garantir la compatibilité des formules",
-        "Que le tableau ne dépasse pas cent lignes, limite au-delà de laquelle il devient illisible",
-        "Que toutes les colonnes sont formatées en couleur afin de repérer rapidement les catégories",
-        "Que les données sont en liste propre : en-têtes uniques, une observation par ligne, sans total intercalé"
-      ],
-      "answer": 3,
-      "explain": "Un tableau croisé s'appuie sur une liste structurée. Des totaux intercalés ou des en-têtes absents faussent le résultat. Aucune limite de cent lignes n'existe, et les couleurs ou un format propriétaire ne jouent aucun rôle dans l'agrégation.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-032",
-      "theme": "Tableaux croisés et agrégation",
-      "level": 1,
-      "q": "Les données sources d'un tableau croisé ont été corrigées hier. Le tableau n'a pas changé. Que faire ?",
-      "choices": [
-        "Supprimer le tableau croisé et refaire entièrement l'analyse à partir d'une nouvelle feuille vierge",
-        "Modifier directement les chiffres affichés dans le tableau pour les aligner sur la source",
-        "Actualiser le tableau croisé afin qu'il relise les données sources modifiées hier",
-        "Attendre la fermeture du fichier : il se met à jour automatiquement à la réouverture"
-      ],
-      "answer": 2,
-      "explain": "Un tableau croisé garde en mémoire une copie des données ; la commande d'actualisation la relit. Retoucher à la main les chiffres affichés est à proscrire, et refaire tout le travail n'est pas nécessaire.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-033",
-      "theme": "Tableaux croisés et agrégation",
-      "level": 1,
-      "q": "À quoi sert la fonction SOMME.SI ?",
-      "choices": [
-        "À additionner toutes les valeurs d'une plage, qu'elles répondent ou non à un critère",
-        "À additionner les valeurs d'une plage qui répondent à une condition donnée",
-        "À compter le nombre de cellules d'une plage qui répondent à une condition donnée",
-        "À calculer la moyenne des valeurs d'une plage qui répondent à une condition donnée"
-      ],
-      "answer": 1,
-      "explain": "SOMME.SI additionne sous condition (par exemple le volume de la région Nord). NB.SI compte, MOYENNE.SI fait la moyenne sous condition, SOMME additionne sans condition.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-034",
-      "theme": "Tableaux croisés et agrégation",
-      "level": 1,
-      "q": "Dans un tableau croisé, quelle est la fonction de la zone « Valeurs » ?",
-      "choices": [
-        "Elle contient la mesure à agréger (somme, nombre, moyenne) pour chaque croisement",
-        "Elle sert à choisir les catégories affichées en lignes dans la marge gauche du tableau",
-        "Elle sert à limiter l'analyse à une période ou à une région grâce à un menu de sélection",
-        "Elle sert à choisir les couleurs et la police utilisées pour mettre en page le tableau"
-      ],
-      "answer": 0,
-      "explain": "Lignes et colonnes définissent les catégories, le filtre restreint le périmètre, et la zone Valeurs calcule la mesure (somme, nombre, moyenne). La mise en forme relève d'un autre menu.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-035",
-      "theme": "Tableaux croisés et agrégation",
-      "level": 2,
-      "q": "Dans un tableau croisé fictif, le Nord a 120 puis 140 au premier et second trimestres, le Sud 80 puis 60. Quelle est la part du Nord dans le total général ?",
-      "choices": [
-        "65 %, soit 260 pour le Nord rapportés au total général de 400",
-        "55 %, obtenue en rapportant le premier trimestre du Nord au total du trimestre",
-        "60 %, obtenue en comparant le Nord au seul second trimestre du Sud",
-        "70 %, obtenue en divisant 280 par 400, soit deux fois le premier trimestre"
-      ],
-      "answer": 0,
-      "explain": "Nord = 120 + 140 = 260 ; Sud = 80 + 60 = 140 ; total = 400. Part du Nord : 260 / 400 = 65 %. Dans le tableur, on l'obtient avec l'option « % du total général ».",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-036",
-      "theme": "Tableaux croisés et agrégation",
-      "level": 2,
-      "q": "Vous voulez connaître le nombre de dossiers par région à partir d'une liste où chaque ligne est un dossier. Quelle agrégation choisir ?",
-      "choices": [
-        "Somme, appliquée à la colonne des numéros de dossier",
-        "Moyenne, appliquée à la colonne des numéros de dossier",
-        "Maximum, appliqué à la colonne des numéros de dossier",
-        "Nombre, appliqué à une colonne qui identifie chaque dossier"
-      ],
-      "answer": 3,
-      "explain": "Pour compter, on utilise l'agrégation Nombre. Additionner des numéros de dossier n'a aucun sens, pas plus que leur moyenne ou leur maximum : le résultat serait un chiffre sans signification.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-037",
-      "theme": "Tableaux croisés et agrégation",
-      "level": 2,
-      "q": "Le tableau croisé affiche un total général de 940, alors que la colonne « Volume » de la source totalise 1 000 (chiffres fictifs). Quelle première vérification faites-vous ?",
-      "choices": [
-        "Réduire le nombre de décimales affichées, qui expliquent à elles seules l'écart de 60",
-        "Remplacer la fonction Somme par Moyenne, plus fiable lorsque les totaux diffèrent",
-        "Contrôler si un filtre est actif sur le tableau croisé ou si des lignes ont une catégorie vide",
-        "Considérer l'écart comme normal : un tableau croisé ne peut jamais retrouver le total de la source"
-      ],
-      "answer": 2,
-      "explain": "Un écart de 60 ne s'explique pas par des arrondis. Les causes habituelles sont un filtre qui masque des lignes ou des lignes dont la catégorie est vide ou mal écrite. Un tableau croisé correctement construit doit retrouver le total de la source.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-038",
-      "theme": "Tableaux croisés et agrégation",
-      "level": 2,
-      "q": "Vous disposez d'une liste d'agents avec un code de service et d'une liste de services avec code et libellé. Comment afficher le libellé du service dans la liste des agents ?",
-      "choices": [
-        "En recopiant à la main chaque libellé, ce qui évite d'avoir à gérer un code commun",
-        "Avec une fonction de recherche (RECHERCHEV ou RECHERCHEX) s'appuyant sur le code de service",
-        "En triant les deux listes dans le même ordre, puis en les collant l'une à côté de l'autre",
-        "En fusionnant les deux feuilles dans une cellule unique contenant tous les libellés"
-      ],
-      "answer": 1,
-      "explain": "La jointure par le code commun est fiable et reproductible. Le copier-coller manuel est source d'erreurs, et coller deux listes triées suppose qu'elles aient exactement les mêmes lignes, ce qui est rarement le cas.",
-      "seconds": 65,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-039",
-      "theme": "Tableaux croisés et agrégation",
-      "level": 3,
-      "q": "Région A : 10 dossiers pour un total de 500 unités ; région B : 40 dossiers pour un total de 800 unités (chiffres fictifs). Quelle est la moyenne par dossier sur l'ensemble ?",
-      "choices": [
-        "35 unités, soit la moyenne simple des moyennes de A (50) et B (20)",
-        "30 unités, soit la moyenne des totaux divisée par le nombre de régions",
-        "20 unités, soit la moyenne de la région qui a le plus de dossiers",
-        "26 unités, soit 1 300 unités au total divisées par les 50 dossiers"
-      ],
-      "answer": 3,
-      "explain": "Total = 500 + 800 = 1 300 ; dossiers = 50 ; moyenne = 26. Moyenner 50 et 20 donne 35, mais ignore que B pèse quatre fois plus que A. On repart toujours des totaux et des effectifs.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-040",
-      "theme": "Tableaux croisés et agrégation",
-      "level": 3,
-      "q": "Votre fichier contient des opérations quotidiennes sur deux ans. Le directeur demande une synthèse mensuelle. Que faites-vous dans le tableau croisé ?",
-      "choices": [
-        "Regrouper les dates par année et par mois, pour ne pas mélanger les mois de deux années",
-        "Regrouper les dates par mois uniquement, ce qui suffit puisque l'année figure dans le titre",
-        "Garder les dates au jour près et laisser le directeur additionner les lignes de chaque mois",
-        "Convertir les dates en texte, ce qui évite les erreurs de regroupement automatique"
-      ],
-      "answer": 0,
-      "explain": "Regrouper par mois seul additionnerait janvier de la première année avec janvier de la seconde. Il faut regrouper par années et mois. Convertir en texte empêcherait tout regroupement, et laisser le travail au lecteur contredit l'objectif de synthèse.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-041",
-      "theme": "Choisir le bon graphique",
-      "level": 1,
-      "q": "Vous devez montrer l'évolution mensuelle de la production sur deux ans. Quel graphique choisir ?",
-      "choices": [
-        "Une courbe, qui rend visible la tendance et les variations dans le temps",
-        "Un graphique en secteurs, qui rend visible la part de chaque mois dans le total",
-        "Un nuage de points, qui rend visible les relations entre deux variables",
-        "Une carte, qui rend visible la localisation des sites de production"
-      ],
-      "answer": 0,
-      "explain": "La courbe est la forme classique pour une série temporelle. Les secteurs montrent des parts d'un tout, le nuage de points un lien entre deux variables, la carte une localisation.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-042",
-      "theme": "Choisir le bon graphique",
-      "level": 1,
-      "q": "Vous comparez le nombre d'inspections de huit provinces. Quel graphique est le plus lisible ?",
-      "choices": [
-        "Un graphique en secteurs à huit parts de couleurs différentes",
-        "Des barres, de préférence triées, une barre par province",
-        "Une courbe reliant les provinces dans l'ordre alphabétique",
-        "Un histogramme regroupant les provinces en classes de valeurs"
-      ],
-      "answer": 1,
-      "explain": "Pour comparer des catégories, les barres sont la référence ; les trier facilite le classement. Une courbe suggère à tort une continuité entre provinces, un histogramme sert aux répartitions, et huit secteurs seraient difficiles à comparer.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-043",
-      "theme": "Choisir le bon graphique",
-      "level": 1,
-      "q": "Pour un graphique en barres, que doit-on respecter pour l'axe vertical ?",
-      "choices": [
-        "Il doit commencer à la plus petite valeur, pour mieux faire ressortir les différences entre barres",
-        "Il doit être masqué, afin que seul le titre porte le message du graphique",
-        "Il doit commencer à zéro, car la hauteur de chaque barre représente directement la valeur",
-        "Il doit changer d'échelle d'une barre à l'autre pour garder des barres de taille semblable"
-      ],
-      "answer": 2,
-      "explain": "La longueur d'une barre est proportionnelle à la valeur ; si l'axe est tronqué, les écarts sont exagérés. Masquer l'axe ou changer d'échelle prive le lecteur de repères fiables.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-044",
-      "theme": "Choisir le bon graphique",
-      "level": 1,
-      "q": "Dans quel cas un graphique en secteurs est-il approprié ?",
-      "choices": [
-        "Pour comparer douze catégories dont les valeurs sont très proches les unes des autres",
-        "Pour suivre une série mensuelle sur plusieurs années consécutives",
-        "Pour montrer le lien entre l'ancienneté et le nombre d'erreurs de chaque agent",
-        "Pour montrer la part de deux à cinq éléments dans un tout, pas davantage"
-      ],
-      "answer": 3,
-      "explain": "Les secteurs ne sont lisibles que pour peu de parts. Douze parts proches sont impossibles à comparer ; le suivi dans le temps demande une courbe, et la relation entre deux variables un nuage de points.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-045",
-      "theme": "Choisir le bon graphique",
-      "level": 2,
-      "q": "Vous disposez des durées de traitement de 300 dossiers et voulez voir comment elles se répartissent (beaucoup de courtes durées, quelques-unes très longues). Quel graphique ?",
-      "choices": [
-        "Un graphique en secteurs, avec un secteur par dossier traité sur la période",
-        "Une courbe, avec les dossiers placés dans l'ordre de leur numéro",
-        "Un histogramme, qui regroupe les durées en classes et montre la forme de la répartition",
-        "Un nuage de points, avec le numéro de dossier en abscisse et la région en ordonnée"
-      ],
-      "answer": 2,
-      "explain": "L'histogramme est conçu pour représenter la distribution d'une variable numérique. Les secteurs par dossier seraient illisibles (300 parts), et la courbe ou le nuage de points sur le numéro de dossier ne répondent pas à la question posée.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-046",
-      "theme": "Choisir le bon graphique",
-      "level": 2,
-      "q": "Vous voulez vérifier si les agents les plus anciens font moins d'erreurs de saisie. Quel graphique est adapté ?",
-      "choices": [
-        "Un graphique en secteurs avec une part pour chaque niveau d'ancienneté",
-        "Un nuage de points : l'ancienneté en abscisse, le nombre d'erreurs en ordonnée",
-        "Une carte coloriée selon le lieu d'affectation de chaque agent",
-        "Une courbe reliant les agents par ordre alphabétique de leur nom"
-      ],
-      "answer": 1,
-      "explain": "Le nuage de points montre le lien éventuel entre deux variables numériques. Les secteurs ne représentent que des parts, la carte ne traite que la localisation, et l'ordre alphabétique des noms n'a aucun sens pour une courbe.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-047",
-      "theme": "Choisir le bon graphique",
-      "level": 2,
-      "q": "Deux barres valent 98 et 100. L'axe vertical commence à 96. Que voit le lecteur ?",
-      "choices": [
-        "Une seconde barre deux fois plus haute que la première, alors que l'écart réel est de 2 %",
-        "Deux barres de hauteur presque identique, comme le montrent les valeurs réelles",
-        "Une seconde barre cinquante fois plus haute que la première",
-        "Une première barre plus haute que la seconde, puisque l'axe est décalé"
-      ],
-      "answer": 0,
-      "explain": "Hauteurs visibles : 98 − 96 = 2 et 100 − 96 = 4, donc 4 est deux fois 2. Un écart réel de 2 % apparaît comme un écart de 100 % : c'est l'effet trompeur d'un axe tronqué. Les autres lectures sont fausses.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-048",
-      "theme": "Choisir le bon graphique",
-      "level": 2,
-      "q": "Vous devez présenter un taux d'exécution pour douze directions provinciales. Quelle présentation retenir ?",
-      "choices": [
-        "Un graphique en secteurs à douze parts, une par direction provinciale",
-        "Un graphique en trois dimensions avec une barre en relief par direction",
-        "Un graphique à deux axes mêlant le taux et les effectifs sans repère de cible",
-        "Des barres horizontales triées, avec une ligne repérant la cible à atteindre"
-      ],
-      "answer": 3,
-      "explain": "Les barres horizontales triées permettent de lire noms et valeurs, de repérer les écarts à la cible et de classer. Douze secteurs seraient illisibles, la 3D déforme les hauteurs et le double axe brouille le message.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-049",
-      "theme": "Choisir le bon graphique",
-      "level": 3,
-      "q": "Vous voulez montrer ensemble la production (milliers de barils) et le prix (dollars) sur dix ans, dans un rapport destiné au directeur. Que recommandez-vous ?",
-      "choices": [
-        "Un seul graphique à deux axes aux échelles réglées librement pour que les courbes se croisent",
-        "Un graphique en secteurs avec une part pour la production et une part pour le prix",
-        "Un tableau de chiffres uniquement, car aucune représentation ne convient aux unités différentes",
-        "Deux graphiques alignés l'un sous l'autre, partageant le même axe du temps sur dix ans"
-      ],
-      "answer": 3,
-      "explain": "Deux séries d'unités différentes ne se superposent pas sans risque : des échelles libres peuvent suggérer une corrélation artificielle. Deux graphiques alignés sur le même temps permettent de comparer sans tromper. Les secteurs n'ont aucun sens ici.",
-      "seconds": 90,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-050",
-      "theme": "Choisir le bon graphique",
-      "level": 3,
-      "q": "Lors d'un comité, vous présentez l'évolution du taux d'exécution budgétaire (62 % puis 75 %, chiffres fictifs). Quel titre de graphique est le plus efficace ?",
-      "choices": [
-        "« Graphique 3 : taux d'exécution », sans commentaire, pour rester neutre",
-        "« Évolution remarquable du taux d'exécution grâce à l'action de la direction »",
-        "« Le taux d'exécution passe de 62 % à 75 % en un an, pour un objectif de 80 % »",
-        "« Taux d'exécution budgétaire des services du ministère de l'année précédente »"
-      ],
-      "answer": 2,
-      "explain": "Un bon titre énonce le message, avec les chiffres, la période et la cible. « Graphique 3 » n'informe pas, le titre élogieux porte un jugement non démontré, et le dernier décrit le sujet sans dire ce qu'il faut en retenir.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-051",
-      "theme": "Construire et lire un tableau de bord",
-      "level": 1,
-      "q": "Vous êtes chargé de créer le tableau de bord de votre direction. Quelle est la première question à vous poser ?",
-      "choices": [
-        "Quel logiciel de visualisation est le plus récent et offre le plus de types de graphiques",
-        "Combien d'indicateurs la direction peut afficher sur un écran de grande taille",
-        "Pour qui il est fait, quelles décisions il doit éclairer et à quelle fréquence",
-        "Quelles couleurs donneront l'aspect le plus attractif à la page principale"
-      ],
-      "answer": 2,
-      "explain": "Un tableau de bord est un outil de pilotage : public et décisions déterminent les indicateurs. L'outil, le nombre maximal d'éléments affichables et les couleurs viennent ensuite.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-052",
-      "theme": "Construire et lire un tableau de bord",
-      "level": 1,
-      "q": "Combien d'indicateurs un tableau de bord de pilotage doit-il contenir en général ?",
-      "choices": [
-        "Un seul, pour imposer un message unique à tous les niveaux",
-        "Cinq à huit, afin que le lecteur puisse retenir l'essentiel",
-        "Une vingtaine, afin de ne rien omettre de l'activité du service",
-        "Autant qu'il y a de lignes dans le fichier de suivi du service"
-      ],
-      "answer": 1,
-      "explain": "Au-delà de huit indicateurs, l'attention se disperse ; un seul indicateur ne couvre pas la diversité d'une activité. La règle pratique est de rester entre cinq et huit.",
-      "seconds": 40,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-053",
-      "theme": "Construire et lire un tableau de bord",
-      "level": 1,
-      "q": "Quelles informations une fiche d'indicateur doit-elle comporter ?",
-      "choices": [
-        "Définition, formule de calcul, source des données, périodicité, responsable et unité",
-        "Uniquement le nom de l'indicateur et la couleur choisie pour son affichage",
-        "Le nom, la valeur de l'année précédente et un commentaire libre du chef de service",
-        "La liste des agents ayant saisi les données et la date de dernière sauvegarde"
-      ],
-      "answer": 0,
-      "explain": "Sans définition et formule explicites, deux services peuvent calculer différemment le même indicateur. La source, la périodicité, le responsable et l'unité complètent la fiche et garantissent la comparabilité d'une édition à l'autre.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-054",
-      "theme": "Construire et lire un tableau de bord",
-      "level": 1,
-      "q": "Pourquoi associer une cible à chaque indicateur ?",
-      "choices": [
-        "Parce que la cible remplace la valeur mesurée lorsqu'elle est plus favorable",
-        "Parce que les logiciels de tableau de bord exigent une cible pour afficher un graphique",
-        "Parce que la cible évite de devoir comparer avec les périodes précédentes",
-        "Parce qu'un chiffre isolé ne permet pas de savoir s'il est bon ou mauvais"
-      ],
-      "answer": 3,
-      "explain": "Pour interpréter une valeur, il faut une référence : cible, période précédente, norme. La cible ne remplace pas la mesure, n'est pas imposée techniquement par les outils, et ne dispense pas de regarder la tendance.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-055",
-      "theme": "Construire et lire un tableau de bord",
-      "level": 2,
-      "q": "Le délai de traitement des dossiers a pour cible 30 jours et le réalisé est de 34 jours (chiffres fictifs). Quel est l'écart en pourcentage de la cible ?",
-      "choices": [
-        "+4 jours, soit environ 11,8 % au-dessus de la cible",
-        "+4 %, soit environ 1,2 jour au-dessus de la cible",
-        "−4 jours, soit environ 13,3 % en dessous de la cible",
-        "+4 jours, soit environ 13,3 % au-dessus de la cible"
-      ],
-      "answer": 3,
-      "explain": "L'écart est 34 − 30 = 4 jours ; rapporté à la cible : 4 / 30 = 13,3 %. Rapporter à la valeur réalisée (34) donnerait 11,8 %, mais l'écart à l'objectif se mesure par rapport à la cible. Le délai est supérieur, donc au-dessus.",
-      "seconds": 65,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-056",
-      "theme": "Construire et lire un tableau de bord",
-      "level": 2,
-      "q": "45 inspections ont été réalisées sur 60 programmées (chiffres fictifs). Seuils : vert à partir de 80 %, orange de 60 à 79 %, rouge en dessous de 60 %. Quelle couleur affiche l'indicateur ?",
-      "choices": [
-        "Orange, car le taux de réalisation est de 75 %",
-        "Vert, car plus des deux tiers des inspections sont réalisées",
-        "Rouge, car il manque quinze inspections par rapport au programme",
-        "Vert, car le taux de réalisation dépasse la moitié du programme"
-      ],
-      "answer": 0,
-      "explain": "45 / 60 = 75 %, soit dans la plage 60-79 % : orange. Les règles de seuil écrites évitent les appréciations au cas par cas, qui conduiraient ici à un vert ou à un rouge injustifiés.",
-      "seconds": 65,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-057",
-      "theme": "Construire et lire un tableau de bord",
-      "level": 2,
-      "q": "Parmi ces indicateurs, lequel est un indicateur de résultat plutôt que d'activité ?",
-      "choices": [
-        "Le nombre de réunions de coordination organisées dans le trimestre",
-        "Le délai moyen de traitement des demandes d'autorisation",
-        "Le nombre de courriers envoyés par le secrétariat de la direction",
-        "Le nombre de formations programmées dans le plan annuel du service"
-      ],
-      "answer": 1,
-      "explain": "Un résultat mesure l'effet obtenu pour les usagers (rapidité de traitement). Réunions, courriers et formations programmées décrivent ce que fait le service, pas ce que cela produit : ce sont des indicateurs d'activité.",
-      "seconds": 55,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-058",
-      "theme": "Construire et lire un tableau de bord",
-      "level": 2,
-      "q": "Un tableau de bord affiche seulement « 34 » pour un indicateur, sans autre précision. Que lui manque-t-il ?",
-      "choices": [
-        "Des couleurs plus vives, afin que le chiffre attire l'œil du lecteur",
-        "Un nombre supérieur de décimales, pour montrer la précision du calcul",
-        "L'unité, la période, la cible ou une comparaison, pour pouvoir interpréter le chiffre",
-        "Un graphique en trois dimensions, qui donne du poids à la valeur affichée"
-      ],
-      "answer": 2,
-      "explain": "Sans unité (jours ? dossiers ?), période et référence, un chiffre ne dit rien. La mise en forme, les décimales ou la 3D n'apportent aucune interprétation.",
-      "seconds": 55,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-059",
-      "theme": "Construire et lire un tableau de bord",
-      "level": 3,
-      "q": "Votre indicateur « délai moyen de traitement » est à 28 jours pour une cible de 30 (vert), mais des usagers se plaignent. L'analyse montre que 20 % des dossiers attendent plus de 60 jours (chiffres fictifs). Que proposez-vous ?",
-      "choices": [
-        "Ajouter la médiane et la part de dossiers hors délai, car la moyenne masque les cas extrêmes",
-        "Maintenir l'indicateur tel quel, car il est vert et respecte la cible fixée",
-        "Relever la cible à 40 jours pour que le délai moyen redevienne confortable",
-        "Retirer l'indicateur du tableau de bord, car il crée des désaccords"
-      ],
-      "answer": 0,
-      "explain": "Une moyenne peut rester satisfaisante alors qu'une part notable des usagers subit des délais très longs. Compléter par la médiane et par le pourcentage de dossiers dépassant un délai maximal donne une image fidèle. Changer la cible ou retirer l'indicateur ne règle pas le problème.",
-      "seconds": 90,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-060",
-      "theme": "Construire et lire un tableau de bord",
-      "level": 3,
-      "q": "Trois services remplissent chaque mois leur propre fichier, et un agent consolide à la main le tableau de bord. Des écarts apparaissent d'un mois à l'autre. Que recommandez-vous ?",
-      "choices": [
-        "Laisser chaque service garder sa méthode, en demandant à l'agent de corriger au cas par cas",
-        "Passer à un tableau de bord en couleur, pour que les écarts soient plus faciles à repérer",
-        "Demander aux services de transmettre leurs fichiers deux fois par mois au lieu d'une",
-        "Une source de données unique et centralisée, des formules protégées et un responsable de la qualité"
-      ],
-      "answer": 3,
-      "explain": "Les écarts viennent de saisies multiples et de consolidation manuelle. Centraliser la source, verrouiller les formules et nommer un responsable réduit les erreurs. Plus de couleur ou de fréquence ne les supprime pas.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-061",
-      "theme": "Qualité des données, biais et aide à la décision",
-      "level": 1,
-      "q": "Si 180 fiches sur 240 comportent une date, quelle dimension de la qualité mesure-t-on avec le rapport 180 / 240 ?",
-      "choices": [
-        "L'exactitude, soit la proportion de dates qui sont justes",
-        "L'unicité, soit la proportion de fiches qui ne sont pas des doublons",
-        "La complétude, soit la proportion de champs renseignés",
-        "L'actualité, soit la proportion de fiches mises à jour récemment"
-      ],
-      "answer": 2,
-      "explain": "Le rapport entre champs renseignés et champs attendus est la complétude. L'exactitude demande de comparer à la réalité, l'unicité de rechercher les doublons, l'actualité de regarder les dates de mise à jour.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-062",
-      "theme": "Qualité des données, biais et aide à la décision",
-      "level": 1,
-      "q": "Deux séries évoluent ensemble depuis cinq ans. Que peut-on en conclure ?",
-      "choices": [
-        "Que la première est la cause de la seconde, puisque les deux séries évoluent de concert",
-        "Qu'elles sont corrélées, sans que l'on puisse affirmer que l'une cause l'autre",
-        "Que la seconde est la cause de la première, puisqu'elle a été publiée plus tard",
-        "Qu'une des deux séries est erronée, car deux phénomènes distincts ne peuvent évoluer de même"
-      ],
-      "answer": 1,
-      "explain": "Une corrélation décrit une évolution commune ; elle peut venir d'une troisième variable, d'une tendance générale ou du hasard. Établir une causalité demande une analyse supplémentaire. Deux séries exactes peuvent parfaitement évoluer ensemble.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-063",
-      "theme": "Qualité des données, biais et aide à la décision",
-      "level": 1,
-      "q": "Une enquête de satisfaction n'est envoyée qu'aux usagers qui ont demandé un suivi par courriel. De quel risque s'agit-il ?",
-      "choices": [
-        "D'un biais de confirmation : le service retient seulement les réponses qui le valorisent",
-        "D'un biais d'arrondi : les pourcentages ont été calculés avec trop peu de décimales",
-        "D'un biais de calendrier : l'enquête a été envoyée à une période peu représentative",
-        "D'un biais de sélection : les répondants ne représentent pas tous les usagers"
-      ],
-      "answer": 3,
-      "explain": "Sélectionner les enquêtés selon un critère lié au sujet fausse la représentativité : c'est un biais de sélection. Les trois autres biais existent, mais ne décrivent pas ce mode d'échantillonnage.",
-      "seconds": 55,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-064",
-      "theme": "Qualité des données, biais et aide à la décision",
-      "level": 1,
-      "q": "Vous constatez une valeur dix fois supérieure à toutes les autres dans votre série. Quelle est la bonne pratique ?",
-      "choices": [
-        "La vérifier à la source avant de la corriger ou de l'écarter, et consigner la décision",
-        "La supprimer aussitôt, car une valeur aussi éloignée est forcément une erreur de saisie",
-        "La conserver sans y toucher, car toute intervention sur les données est interdite",
-        "La remplacer par la moyenne des autres valeurs afin de lisser la série"
-      ],
-      "answer": 0,
-      "explain": "Une valeur extrême peut être une erreur ou un fait réel important. On vérifie, on corrige si l'erreur est établie, et on note la décision. Supprimer ou lisser sans vérifier fausse l'analyse ; ne jamais intervenir laisse passer des erreurs.",
-      "seconds": 55,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-065",
-      "theme": "Qualité des données, biais et aide à la décision",
-      "level": 2,
-      "q": "Sur 240 fiches, 180 comportent la date de signature (chiffres fictifs). Quel est le taux de complétude du champ, et que faites-vous ?",
-      "choices": [
-        "25 % ; on relance la source pour compléter, ce taux étant celui des fiches renseignées",
-        "75 % ; on remplit les 60 dates manquantes avec la date du jour pour que le champ soit complet",
-        "75 % ; on relance la source pour obtenir les 60 dates manquantes et on le mentionne dans l'analyse",
-        "133 % ; on retire des fiches pour revenir à l'équilibre attendu entre champs et fiches"
-      ],
-      "answer": 2,
-      "explain": "180 / 240 = 75 % de complétude ; 25 % est la part manquante. Inventer les dates manquantes serait falsifier la donnée, et un taux de complétude ne peut pas dépasser 100 %. Il faut obtenir l'information à la source et signaler la limite.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-066",
-      "theme": "Qualité des données, biais et aide à la décision",
-      "level": 2,
-      "q": "Un service annonce un taux de non-conformité de 75 % sur 4 sites contrôlés. Un autre annonce le même taux sur 800 sites (chiffres fictifs). Comment comparer ?",
-      "choices": [
-        "Les deux taux ont exactement la même fiabilité, puisqu'ils sont égaux",
-        "Les deux taux sont identiques mais le premier est bien moins fiable, car calculé sur 4 cas seulement",
-        "Le premier taux est plus fiable, car un petit nombre de cas se vérifie plus facilement",
-        "Les deux taux ne peuvent pas être comparés, car ils sont exprimés en pourcentage"
-      ],
-      "answer": 1,
-      "explain": "Un taux sur 4 cas (3 sur 4) varie énormément avec un seul site de plus ou de moins ; sur 800 sites il est stable. L'égalité numérique cache une différence de fiabilité : on affiche toujours l'effectif. Les pourcentages peuvent évidemment être comparés.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-067",
-      "theme": "Qualité des données, biais et aide à la décision",
-      "level": 2,
-      "q": "Vous rédigez une note d'une page pour le directeur général à partir de vos analyses. Quel plan est le plus efficace ?",
-      "choices": [
-        "Le détail de la méthode d'abord, puis les calculs, puis la conclusion en dernière page",
-        "Un historique complet du dossier d'abord, puis la recommandation à la fin de la note",
-        "Un tableau de tous les chiffres collectés sur la période, laissé à l'interprétation du lecteur",
-        "La recommandation d'abord, puis les chiffres clés, les options, les limites des données et la suite"
-      ],
-      "answer": 3,
-      "explain": "Un décideur doit trouver la conclusion en premier, puis les éléments qui la fondent. Mettre la conclusion à la fin ou laisser interpréter des tableaux bruts retarde ou empêche la décision. Les limites des données doivent rester visibles.",
-      "seconds": 65,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-068",
-      "theme": "Qualité des données, biais et aide à la décision",
-      "level": 2,
-      "q": "On vous demande de transmettre à un partenaire le fichier complet de suivi, qui contient noms, salaires et coordonnées d'agents, pour qu'il produise un tableau de bord. Que faites-vous ?",
-      "choices": [
-        "Ne transmettre que des données agrégées ou anonymisées, selon les règles en vigueur et l'accord de la hiérarchie",
-        "Envoyer le fichier complet, car un partenaire est tenu à la confidentialité de fait",
-        "Envoyer le fichier complet en le protégeant par un mot de passe communiqué dans le même courriel",
-        "Retirer seulement la colonne des salaires et conserver noms et coordonnées pour faciliter le travail"
-      ],
-      "answer": 0,
-      "explain": "Le partenaire n'a pas besoin des données individuelles pour un tableau de bord : on minimise les données (agrégation, anonymisation). Un mot de passe dans le même courriel ne protège rien, et noms et coordonnées sont aussi des données personnelles. Les règles applicables sont à confirmer auprès des services compétents.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-069",
-      "theme": "Qualité des données, biais et aide à la décision",
-      "level": 3,
-      "q": "Les volumes d'une activité sont uniquement déclarés par les opérateurs concernés, sans contrôle indépendant. Un cadre propose de s'en servir directement pour fixer une décision. Quelle analyse faites-vous ?",
-      "choices": [
-        "Il y a un risque de biais déclaratif : on recoupe avec une autre source avant toute décision",
-        "Les chiffres sont fiables, car l'opérateur est le mieux placé pour connaître ses volumes",
-        "Il y a un risque de biais de sélection : on retire de l'échantillon les opérateurs les plus gros",
-        "Le risque porte seulement sur le format du fichier, qu'il suffit de convertir en tableur"
-      ],
-      "answer": 0,
-      "explain": "Quand les chiffres sont produits par ceux qu'ils concernent, il peut y avoir sous-déclaration ou erreur. On recoupe avec des relevés, des factures ou des contrôles. Retirer les gros opérateurs aggraverait le biais, et le format du fichier n'est pas en cause.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-donnees-tableaux-070",
-      "theme": "Qualité des données, biais et aide à la décision",
-      "level": 3,
-      "q": "Option A : 120 millions de FCFA pour gagner 10 jours de délai. Option B : 80 millions pour gagner 6 jours (chiffres fictifs). Quelle note de décision est la plus juste ?",
-      "choices": [
-        "B coûte moins cher au total, donc B est forcément l'option la plus efficiente",
-        "A coûte 12 millions par jour gagné, B environ 13,3 : A est plus efficiente, mais l'enveloppe et les risques entrent aussi en compte",
-        "A coûte 12 millions par jour gagné, B 14 ; le ratio suffit donc à décider seul",
-        "Les deux options sont équivalentes, car la différence de coût est proche de la différence de gain"
-      ],
-      "answer": 1,
-      "explain": "A : 120 / 10 = 12 ; B : 80 / 6 ≈ 13,3. A est plus efficiente par jour gagné, mais un ratio ne remplace pas l'analyse du budget disponible et des risques. Un coût total plus faible n'indique pas l'efficience, et 14 est un calcul faux.",
-      "seconds": 90,
-      "status": "draft"
-    }
-  ]
+ "profile": "min-donnees-tableaux",
+ "modules": [
+  {
+   "id": "m1",
+   "title": "Structurer et nettoyer ses données",
+   "theme": "Structurer et nettoyer les données",
+   "minutes": 10,
+   "body": "Toute analyse sérieuse commence par des données **bien structurées**. La règle de base du tableur ou de la base simple : **une ligne = une observation** (un dossier, une inspection, un mois de production), **une colonne = une variable** (région, date, volume, statut), **une seule information par cellule**. On évite les cellules fusionnées, les lignes de total au milieu des données, les titres répétés et les couleurs porteuses de sens (une couleur ne se filtre pas et ne se compte pas).\n\nChaque colonne a un **type** : nombre, date, texte, code. Un nombre stocké comme du texte (par exemple « 12,5 » avec une virgule non reconnue) ne s'additionne pas ; une date écrite de deux façons produit des tris faux. Il faut aussi fixer l'**unité** dans l'en-tête (« Production (milliers de barils) ») : mélanger barils et milliers de barils donne des écarts de 1 à 1 000.\n\n**Démarche de nettoyage en sept étapes** :\n\n- conserver l'original intact et travailler sur une copie ;\n- établir un petit dictionnaire de données (nom de la colonne, définition, unité, source) ;\n- uniformiser l'écriture (« Port-Gentil », « port gentil » et « PORT GENTIL » doivent devenir une seule valeur, de préférence via une liste de référence) ;\n- retirer les **doublons** (lignes identiques ou même identifiant) ;\n- traiter les **valeurs manquantes** : une cellule vide n'est pas un zéro ; on la signale, on la complète si la source le permet, sinon on l'exclut du calcul en le disant ;\n- repérer les valeurs aberrantes (un volume dix fois supérieur aux autres) et les vérifier à la source avant de corriger ;\n- contrôler : nombre de lignes avant et après, totaux de contrôle, échantillon relu à la main.\n\n**Exemple chiffré (données fictives)** : un fichier compte 1 200 lignes. Après suppression de 36 doublons, il en reste 1 164 ; 12 lignes n'ont pas de région et sont renvoyées au service pour correction. On note ces chiffres dans un journal de nettoyage, afin que n'importe quel collègue puisse refaire l'opération.\n\nPour les **dates**, le format international AAAA-MM-JJ (2026-04-03) évite la confusion entre jour et mois ; pour les **codes** (service, province), on utilise une colonne de code stable plutôt qu'un libellé qui change. Quand deux fichiers doivent être rassemblés, on vérifie que les colonnes ont les mêmes noms, les mêmes unités et que les lignes présentes dans les deux ne sont pas comptées deux fois.\n\nCôté **outils**, un tableur (filtres, tri, suppression des doublons, mise en forme en nombre ou en date) suffit pour quelques milliers de lignes. Au-delà, ou quand plusieurs personnes alimentent les mêmes données, une base simple (tables reliées par un code) est plus fiable. Les formats ouverts (CSV, ODS) permettent d'échanger sans dépendre d'un éditeur particulier. L'important est de pouvoir **reproduire** chaque étape.",
+   "keyPoints": [
+    "Une ligne = une observation, une colonne = une variable, une information par cellule.",
+    "Conserver l'original, travailler sur une copie et tenir un journal de nettoyage.",
+    "Une cellule vide n'est pas un zéro : signaler et traiter les valeurs manquantes.",
+    "Uniformiser les unités, les dates (AAAA-MM-JJ) et l'écriture des libellés.",
+    "Contrôler après chaque étape : nombre de lignes et totaux de contrôle."
+   ],
+   "img": "svg/min-tableau-donnees.svg",
+   "imgAlt": "Tableau de données fictif : colonnes Date (type date), Province, Site (texte), Volume en milliers de barils (nombre) et Conforme (oui ou non), avec quatre lignes d'observations (Provinces A et B, Sites 1 et 2, fins de janvier et de février 2026). Une ligne est une observation, une colonne une variable ; à éviter : cellules fusionnées, totaux intercalés."
+  },
+  {
+   "id": "m2",
+   "title": "Somme, moyenne, médiane : lire une série de chiffres",
+   "theme": "Somme, moyenne, médiane et dispersion",
+   "minutes": 10,
+   "body": "Les calculs de base résument une série de valeurs, mais chacun répond à une question différente.\n\n- **Somme** : le total (production cumulée, nombre de dossiers).\n- **Moyenne** : somme divisée par le nombre de valeurs ; c'est la valeur « d'équilibre ».\n- **Médiane** : valeur qui partage la série ordonnée en deux moitiés égales. Pour un nombre impair de valeurs, c'est la valeur du milieu ; pour un nombre pair, c'est la moyenne des deux valeurs centrales.\n- **Mode** : la valeur la plus fréquente.\n- **Minimum, maximum et étendue** (maximum moins minimum) : les bornes de la série.\n\nLa **moyenne est sensible aux valeurs extrêmes**, la médiane beaucoup moins. Exemple fictif : les dépôts de cinq stations en une journée valent 10, 12, 11, 13 et 54 milliers de litres. La moyenne vaut (10 + 12 + 11 + 13 + 54) / 5 = 20, alors que quatre stations sur cinq sont proches de 12 ; la médiane (série ordonnée : 10, 11, 12, 13, 54) vaut 12 et décrit mieux la situation « typique ». Devant un écart important entre moyenne et médiane, il faut se demander s'il s'agit d'une vraie valeur élevée ou d'une erreur de saisie, puis le dire dans le rapport.\n\nLa **moyenne pondérée** s'impose quand les valeurs n'ont pas le même poids. Exemple fictif : 100 litres achetés à 600 FCFA et 300 litres à 650 FCFA donnent un prix moyen de (100 × 600 + 300 × 650) / 400 = 637,5 FCFA, et non (600 + 650) / 2 = 625. De même, la moyenne de deux moyennes n'est pas la moyenne globale si les effectifs diffèrent : on repart des totaux.\n\nPour décrire la **dispersion**, l'étendue donne un premier aperçu ; les **quartiles** (valeurs qui coupent la série en quatre parts) et l'**écart-type** précisent si les valeurs sont groupées ou éparses. Deux services peuvent avoir la même moyenne de délai (30 jours) et des réalités très différentes si l'un traite tout entre 28 et 32 jours, l'autre entre 5 et 90 jours.\n\n**Dans le tableur**, les fonctions usuelles sont SOMME, MOYENNE, MEDIANE, MIN, MAX, NB (compte les cellules numériques), NBVAL (compte les cellules non vides), NB.SI et SOMME.SI (comptage ou somme sous condition). Les noms peuvent varier légèrement selon le logiciel et la langue, mais la logique est la même.\n\nDeux précautions : n'arrondissez qu'**à la fin** (arrondir à chaque étape accumule des erreurs) et indiquez toujours l'**effectif** (« moyenne sur 42 dossiers »). Un chiffre sans effectif ni unité n'est pas interprétable.",
+   "keyPoints": [
+    "La médiane partage la série en deux moitiés égales ; elle résiste aux valeurs extrêmes.",
+    "La moyenne est sensible aux valeurs aberrantes : comparer moyenne et médiane.",
+    "Utiliser la moyenne pondérée quand les effectifs diffèrent ; ne pas moyenner des moyennes.",
+    "Mesurer aussi la dispersion (étendue, quartiles, écart-type), pas seulement le centre.",
+    "N'arrondir qu'à la fin et toujours indiquer l'effectif et l'unité."
+   ]
+  },
+  {
+   "id": "m3",
+   "title": "Pourcentages, évolutions et ratios",
+   "theme": "Pourcentages, évolutions et ratios",
+   "minutes": 10,
+   "body": "Les pourcentages sont partout dans les rapports, et ils sont souvent mal utilisés. Trois formules suffisent à la plupart des cas.\n\n- **Part** (ou proportion) = partie / total × 100. Si 45 inspections sur 60 prévues sont réalisées, le taux de réalisation est de 45 / 60 = 75 %.\n- **Taux de variation** = (valeur finale − valeur initiale) / valeur initiale × 100. Une production qui passe de 2 000 à 2 150 milliers de barils (chiffres fictifs) progresse de 150 / 2 000 = **7,5 %**.\n- **Ratio** = une grandeur rapportée à une autre (dossiers par agent, coût par inspection, production par jour). Il permet de comparer des entités de tailles différentes.\n\n**Point de pourcentage ou pourcentage ?** Si un taux passe de 20 % à 25 %, il augmente de **5 points de pourcentage** ; en relatif, il progresse de 25 %. Confondre les deux est une erreur classique de communication.\n\n**Les évolutions ne s'additionnent pas.** Une hausse de 20 % suivie d'une baisse de 20 % ne ramène pas à la valeur de départ : 100 devient 120, puis 120 × 0,8 = 96, soit −4 % au total. Il faut multiplier les coefficients (1,20 × 0,80 = 0,96). Pour retrouver une valeur de départ après une hausse de 25 %, on **divise** par 1,25 : 500 / 1,25 = 400, et non 500 − 25 % = 375.\n\nSur plusieurs années, on utilise le **taux de croissance annuel moyen** : (valeur finale / valeur initiale)^(1/n) − 1. Une valeur qui passe de 100 à 121 en deux ans croît de 10 % par an, car 1,10 × 1,10 = 1,21. Une autre méthode consiste à passer en **indice base 100** (la première année vaut 100) pour comparer plusieurs séries sur un même graphique.\n\n**Petits effectifs.** Une hausse de 50 % peut recouvrir le passage de 4 à 6 inspections. Pour ne pas induire en erreur, on donne les valeurs absolues à côté du pourcentage (« 6 contre 4, soit +50 % »).\n\n**Bonnes pratiques de présentation** : préciser le dénominateur (pourcentage de quoi ?), la période de référence, et ne pas additionner des pourcentages qui n'ont pas la même base. Vérifier que les parts d'un tout font bien 100 % (à l'arrondi près).\n\n**Exemple concret** : un chef de service constate que le budget de fonctionnement de son service est exécuté à 450 millions de FCFA sur 600 prévus (chiffres fictifs). Le taux d'exécution est de 75 % ; si l'année est écoulée aux trois quarts, l'exécution est conforme au rythme. Le même 75 % en fin d'année aurait un tout autre sens : le contexte et la période comptent autant que le chiffre.",
+   "keyPoints": [
+    "Part = partie / total ; variation = (final − initial) / initial ; ratio = grandeur rapportée à une autre.",
+    "Distinguer points de pourcentage et pourcentage relatif.",
+    "Les évolutions successives se multiplient (coefficients), elles ne s'additionnent pas.",
+    "Pour revenir à la valeur initiale après une hausse de t %, diviser par (1 + t).",
+    "Toujours préciser dénominateur, période et valeurs absolues, surtout sur de petits effectifs."
+   ],
+   "img": "svg/finance-bar-chart.svg",
+   "imgAlt": "Histogramme en millions de FCFA de 2020 à 2024 (données illustratives). Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95."
+  },
+  {
+   "id": "m4",
+   "title": "Tableaux croisés et agrégation",
+   "theme": "Tableaux croisés et agrégation",
+   "minutes": 10,
+   "body": "Un **tableau croisé** (dit aussi tableau croisé dynamique) résume une longue liste de lignes en un tableau court : on choisit ce qui va en **lignes** (par exemple la région), ce qui va en **colonnes** (le trimestre), la **valeur** à agréger (le volume) et éventuellement un **filtre** (l'année). L'agrégation peut être une somme, un nombre de lignes, une moyenne, un minimum ou un maximum.\n\n**Condition préalable** : les données sources doivent être en liste propre (une ligne par observation, des en-têtes uniques, pas de ligne de total ni de cellule fusionnée). Sinon le tableau croisé produit des résultats faux ou refuse de se construire. C'est pourquoi le nettoyage précède toujours l'analyse.\n\n**Choisir la bonne agrégation.** Pour compter des dossiers, on utilise **Nombre** sur une colonne d'identifiants ; pour totaliser des volumes, **Somme**. Utiliser « Somme » sur une colonne de codes ou compter une colonne contenant des vides donne un résultat trompeur.\n\n**Exemple chiffré (données fictives)**.\n\n- Nord : 120 au premier trimestre, 140 au second, soit 260.\n- Sud : 80 puis 60, soit 140.\n\nLe total général est de 400. La part du Nord est de 260 / 400 = **65 %**. Un tableau croisé permet d'afficher directement ces **pourcentages du total général, de la ligne ou de la colonne** : le choix change la question posée (part de chaque région dans le total, ou poids de chaque trimestre dans la région).\n\n**Les moyennes dans un tableau croisé** exigent de la prudence : la moyenne globale n'est pas la moyenne des moyennes par région. Avec 10 dossiers pour 500 unités dans la région A (moyenne 50) et 40 dossiers pour 800 unités dans la région B (moyenne 20), la moyenne globale est (500 + 800) / 50 = 26, et non (50 + 20) / 2 = 35.\n\n**Regrouper des dates** : une colonne de dates quotidiennes peut être regroupée par mois, trimestre et année. Il faut regrouper par **année et mois**, sinon janvier 2025 et janvier 2026 se retrouvent dans la même ligne.\n\n**Fonctions voisines** : SOMME.SI et NB.SI donnent un total ou un comptage sous condition, sans tableau croisé. Pour rapprocher deux tables (une liste d'agents avec un code de service, une liste des services avec leurs libellés), on utilise une fonction de recherche (RECHERCHEV, RECHERCHEX ou équivalent) sur le **code commun**. Dans une base, la même opération s'appelle une jointure.\n\n**Actualisation et contrôle.** Un tableau croisé ne se met pas toujours à jour tout seul quand les données changent : il faut **l'actualiser**. Après chaque construction, comparez le total du tableau avec le total de la source : un écart révèle un filtre actif, des lignes à région vide ou des libellés mal écrits.",
+   "keyPoints": [
+    "Un tableau croisé agrège une liste propre : lignes, colonnes, valeurs, filtres.",
+    "Choisir l'agrégation adaptée : Nombre pour compter, Somme pour totaliser.",
+    "Comparer le total du tableau croisé au total de la source pour détecter une erreur.",
+    "La moyenne globale se recalcule à partir des totaux, pas en moyennant les moyennes.",
+    "Regrouper les dates par année et mois, et actualiser le tableau après chaque changement de données."
+   ]
+  },
+  {
+   "id": "m5",
+   "title": "Choisir le bon graphique",
+   "theme": "Choisir le bon graphique",
+   "minutes": 9,
+   "body": "Un graphique n'est pas une décoration : il sert à faire **comprendre un message en quelques secondes**. Le bon réflexe est de partir de la **question** que le lecteur se pose, puis de choisir la forme.\n\n**Correspondance question - graphique**\n\n- Comparer des catégories (provinces, services, opérateurs) : **barres** ; pour des libellés longs ou plus de sept catégories, barres horizontales triées.\n- Suivre une évolution dans le temps : **courbe** (ou barres verticales si peu de périodes).\n- Montrer la part de chaque élément dans un tout : **secteurs** seulement avec deux à cinq parts ; sinon barres, ou barres empilées pour comparer des structures.\n- Montrer la répartition d'une variable (par exemple les durées de traitement de 300 dossiers) : **histogramme**, qui regroupe les valeurs en classes.\n- Montrer le lien entre deux variables numériques : **nuage de points**.\n- Situer des valeurs sur le territoire : **carte**, si la localisation est le message.\n\n**Règles qui évitent de tromper**\n\n- Pour les barres, l'axe vertical doit **commencer à zéro**, car la hauteur représente la valeur. Exemple : avec deux barres de 98 et 100 et un axe qui commence à 96, les hauteurs visibles sont 2 et 4 : la seconde paraît **deux fois plus grande** alors que l'écart réel est de 2 %.\n- Pour une courbe, un axe tronqué est toléré s'il est signalé, mais il faut prendre garde à l'effet de dramatisation.\n- Éviter les effets de relief en 3D, qui déforment les surfaces.\n- Limiter les couleurs, garder la même couleur pour la même série dans tout le rapport, et vérifier que le graphique reste lisible en noir et blanc ou pour une personne daltonienne.\n- Éviter le **double axe** avec des échelles choisies librement : on peut faire croire à une corrélation. Mieux vaut deux graphiques alignés l'un sous l'autre.\n\n**Ce que tout graphique doit porter** : un titre qui énonce le **message** (« Le délai moyen passe de 41 à 34 jours en un an » vaut mieux que « Graphique 3 »), les unités, la période, la source, et, si besoin, l'effectif. Étiquetez directement les barres ou les courbes plutôt que d'imposer une légende éloignée.\n\n**Exemple de décision** : un chef de service doit montrer à son directeur le classement de dix directions provinciales selon leur taux d'exécution (chiffres fictifs). Des barres horizontales triées du plus haut au plus bas, avec une ligne de cible à 80 %, répondent immédiatement à la question « qui est en dessous de l'objectif ? ». Un graphique en secteurs à dix parts serait illisible.\n\nEnfin, **moins est souvent plus** : un graphique, un message. Si un graphique demande plus de trente secondes d'explication, il faut le simplifier ou le scinder en deux.",
+   "keyPoints": [
+    "Partir de la question : comparer, suivre l'évolution, montrer une part, une répartition ou un lien.",
+    "Barres pour comparer, courbe pour le temps, histogramme pour la répartition, nuage de points pour la relation.",
+    "L'axe des barres commence à zéro ; éviter la 3D et les doubles axes trompeurs.",
+    "Les secteurs ne conviennent qu'à peu de parts (deux à cinq).",
+    "Un titre qui énonce le message, avec unité, période et source."
+   ],
+   "img": "svg/min-choix-graphique.svg",
+   "imgAlt": "Tableau à cinq lignes associant une question à un graphique : évolution dans le temps, courbe ; comparaison de catégories, barres ; part de chaque élément dans un tout, secteurs (deux à cinq parts seulement) ; répartition des valeurs d'une série, histogramme ; lien entre deux variables, nuage de points."
+  },
+  {
+   "id": "m6",
+   "title": "Construire et lire un tableau de bord",
+   "theme": "Construire et lire un tableau de bord",
+   "minutes": 10,
+   "body": "Un **tableau de bord** est une vue synthétique, sur une ou deux pages, d'un petit nombre d'**indicateurs** choisis pour **piloter** : repérer un écart, décider, corriger. Ce n'est ni un rapport complet ni un amas de graphiques.\n\n**Démarche de construction**\n\n- **Public et décisions** : pour qui, pour décider quoi, à quelle fréquence ? Un directeur général et un chef de service n'ont pas besoin des mêmes indicateurs.\n- **Choix de cinq à huit indicateurs** : au-delà, le lecteur ne retient plus rien. Mélangez indicateurs de **moyens** (budget consommé), d'**activité** (nombre d'inspections réalisées) et de **résultat** (délai moyen de traitement, taux de conformité) ; le pilotage s'appuie surtout sur les résultats.\n- **Fiche d'indicateur** : définition, formule de calcul, source des données, périodicité, responsable, unité. Sans fiche, deux services calculent le même indicateur de deux manières différentes.\n- **Cible et seuils** : un chiffre sans objectif n'est pas interprétable. On définit une cible (30 jours) et des seuils d'alerte (vert, orange, rouge) avec une règle écrite.\n- **Comparaison** : avec la période précédente, la même période de l'an passé, la cible.\n- **Mise en page** : chiffres clés en haut, tendances ensuite, détail en bas ; même présentation à chaque édition.\n\n**Exemple chiffré (fictif)** : délai de traitement des dossiers, cible 30 jours, réalisé 34 jours. L'écart est de +4 jours, soit 4 / 30 = 13,3 % au-dessus de la cible. Autre exemple : 45 inspections réalisées sur 60 programmées donnent un taux de réalisation de 75 % ; avec des seuils vert à partir de 80 %, orange de 60 % à 79 %, rouge en dessous de 60 %, l'indicateur est **orange**.\n\n**Piège de la moyenne** : un délai moyen de 28 jours (vert, cible 30) peut cacher que 20 % des dossiers attendent plus de 60 jours. On complète alors par la médiane, ou par la **part de dossiers hors délai**.\n\n**Lire un tableau de bord** : vérifier d'abord le titre, la période et l'unité ; comparer à la cible ; regarder la **tendance** (trois ou quatre périodes) plutôt qu'un seul point ; se demander si le chiffre s'explique par un effet de calendrier ou un changement de méthode ; remonter à la source en cas de doute.\n\n**Alimentation et fiabilité** : si trois services saisissent chaque mois leurs chiffres dans trois fichiers différents, le risque d'erreur est élevé. Il vaut mieux une **source unique** centralisée, des formules protégées, une date de dernière mise à jour affichée et un responsable de la qualité des chiffres. L'outil (tableur, base simple, logiciel de tableau de bord) importe moins que ces règles.",
+   "keyPoints": [
+    "Un tableau de bord sert à décider : choisir cinq à huit indicateurs selon le public.",
+    "Documenter chaque indicateur : formule, source, périodicité, responsable, unité.",
+    "Fixer des cibles et des seuils avec une règle écrite d'alerte.",
+    "Compléter la moyenne par une mesure de dispersion ou la part hors délai.",
+    "Source unique, date de mise à jour affichée et responsable de la qualité."
+   ]
+  },
+  {
+   "id": "m7",
+   "title": "Qualité des données, biais et présentation d'une décision",
+   "theme": "Qualité des données, biais et aide à la décision",
+   "minutes": 11,
+   "body": "Des chiffres propres et bien calculés peuvent encore conduire à une mauvaise décision si les données sont de mauvaise qualité ou mal interprétées.\n\n**Dimensions de la qualité** : l'**exactitude** (la valeur est juste), la **complétude** (les champs sont renseignés ; si 180 fiches sur 240 portent une date, la complétude est de 180 / 240 = 75 %), la **cohérence** (mêmes définitions, mêmes unités), l'**actualité**, l'**unicité** (pas de doublons) et la **traçabilité** (on sait d'où vient le chiffre).\n\n**Principaux biais**\n\n- **Biais de sélection** : on n'observe qu'une partie non représentative (enquête auprès des seuls répondants volontaires, inspections limitées aux sites faciles d'accès).\n- **Biais déclaratif** : les chiffres sont fournis par ceux qu'ils concernent, sans contrôle ; on recoupe avec une autre source (relevés, factures, visites).\n- **Biais de confirmation** : on retient les chiffres qui vont dans le sens de l'idée de départ.\n- **Corrélation et causalité** : deux séries qui évoluent ensemble ne prouvent pas que l'une cause l'autre ; une troisième variable ou le hasard peuvent expliquer le lien.\n\n**Valeurs aberrantes et petits effectifs** : une valeur étrange se **vérifie à la source** avant d'être corrigée ou écartée, et la décision est consignée. Un taux calculé sur 4 cas (3 sur 4 : 75 %) n'a pas la même fiabilité que le même taux sur 800 cas (600 sur 800) : on affiche toujours l'effectif.\n\n**Présenter une décision à partir des chiffres** : une note d'une page suit l'ordre **conclusion d'abord**.\n\n- Recommandation en une phrase.\n- Deux ou trois chiffres clés, avec comparaison.\n- Options étudiées, avec coût, avantages et risques.\n- Limites des données, dites honnêtement.\n- Prochaine étape.\n\n**Exemple chiffré (fictif)** : option A, coût de 120 millions de FCFA pour gagner 10 jours de délai, soit 12 millions par jour gagné ; option B, 80 millions pour gagner 6 jours, soit environ 13,3 millions par jour gagné. A est plus efficiente par jour gagné, mais le choix dépend aussi de l'enveloppe disponible et des risques : le ratio éclaire la décision, il ne la remplace pas.\n\n**Protection et sécurité** : un fichier qui contient des noms d'agents, des salaires ou des données d'entreprises ne se diffuse pas tel quel. On partage des données **agrégées ou anonymisées**, avec des droits d'accès limités, dans le respect des textes en vigueur sur les données à caractère personnel et des règles internes de confidentialité. Les sauvegardes et la conservation des versions font partie de la qualité.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+   "keyPoints": [
+    "Qualité : exactitude, complétude, cohérence, actualité, unicité, traçabilité.",
+    "Repérer les biais : sélection, déclaratif, confirmation ; corrélation n'est pas causalité.",
+    "Vérifier à la source les valeurs aberrantes et toujours afficher l'effectif.",
+    "Note de décision : conclusion d'abord, chiffres clés, options, limites, prochaine étape.",
+    "Diffuser des données agrégées ou anonymisées et protéger les accès."
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "min-donnees-tableaux-001",
+   "theme": "Structurer et nettoyer les données",
+   "level": 1,
+   "q": "Le tableau de la figure est une liste bien structurée. Un agent veut y ajouter l'observation du Site 1 pour fin mars 2026. Que fait-il ?",
+   "choices": [
+    "Il ajoute une nouvelle colonne « Mars 2026 » à droite du tableau",
+    "Il ajoute une nouvelle ligne, avec une valeur dans chacune des cinq colonnes",
+    "Il écrit les trois dates de ce site dans une seule cellule de la colonne Date",
+    "Il insère entre les blocs une ligne de total pour chaque site"
+   ],
+   "answer": 1,
+   "explain": "Une ligne correspond à une observation (un site à une date) et une colonne à une variable. Une nouvelle observation s'ajoute donc en nouvelle ligne. Une colonne par mois, plusieurs informations dans une cellule ou des totaux intercalés rendent le fichier inexploitable par les filtres et les formules.",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/min-tableau-donnees.svg",
+   "imgAlt": "Tableau de données fictif : colonnes Date (type date), Province, Site (texte), Volume en milliers de barils (nombre) et Conforme (oui ou non), avec quatre lignes d'observations (Provinces A et B, Sites 1 et 2, fins de janvier et de février 2026). Une ligne est une observation, une colonne une variable ; à éviter : cellules fusionnées, totaux intercalés."
+  },
+  {
+   "id": "min-donnees-tableaux-002",
+   "theme": "Structurer et nettoyer les données",
+   "level": 1,
+   "q": "Dans le tableau de la figure, un agent fusionne les deux cellules « 2026-01-31 » des deux premières lignes pour alléger l'affichage. Pourquoi faut-il l'éviter ?",
+   "choices": [
+    "La date ne reste que sur la première ligne : pour un tri, un filtre ou un tableau croisé, la seconde ligne apparaît sans date",
+    "Cela augmente la taille du fichier au point de ralentir tout calcul, même sur quelques lignes",
+    "Les formats de fichier ouverts tels que le CSV interdisent les cellules fusionnées",
+    "Cela convertit automatiquement les dates en texte, ce qui fausse tous les tris"
+   ],
+   "answer": 0,
+   "explain": "Une cellule fusionnée ne conserve la valeur que dans la première cellule : la seconde ligne apparaît vide pour un filtre ou un tableau croisé, alors que la figure donne une date à chaque ligne. Le problème n'est ni la taille du fichier ni une interdiction de format.",
+   "seconds": 45,
+   "status": "draft",
+   "img": "svg/min-tableau-donnees.svg",
+   "imgAlt": "Tableau de données fictif : colonnes Date (type date), Province, Site (texte), Volume en milliers de barils (nombre) et Conforme (oui ou non), avec quatre lignes d'observations (Provinces A et B, Sites 1 et 2, fins de janvier et de février 2026). Une ligne est une observation, une colonne une variable ; à éviter : cellules fusionnées, totaux intercalés."
+  },
+  {
+   "id": "min-donnees-tableaux-003",
+   "theme": "Structurer et nettoyer les données",
+   "level": 1,
+   "q": "Un collègue vous transmet un fichier de production à nettoyer. Quelle est la toute première précaution ?",
+   "choices": [
+    "Supprimer immédiatement les lignes qui paraissent anormales pour partir d'une base propre dès le départ",
+    "Remplacer toutes les cellules vides par un zéro afin que les formules ne renvoient plus d'erreur",
+    "Enregistrer l'original intact et travailler sur une copie, en gardant la trace de chaque modification",
+    "Convertir le fichier dans un autre format puis supprimer l'ancien pour éviter les versions multiples"
+   ],
+   "answer": 2,
+   "explain": "Conserver l'original permet de revenir en arrière et de prouver ce qui a été modifié. Supprimer des lignes sans vérification, mettre des zéros à la place des vides ou détruire l'ancien fichier sont des gestes irréversibles qui ruinent la traçabilité.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-004",
+   "theme": "Structurer et nettoyer les données",
+   "level": 1,
+   "q": "Dans le tableau de la figure, le volume du Site 2 pour fin février 2026 n'a pas été déclaré. Que fait-on de la cellule correspondante de la colonne Volume ?",
+   "choices": [
+    "On y écrit 0, car aucune production n'a été déclarée pour la période",
+    "On y place la moyenne de la colonne, sans le mentionner",
+    "On la laisse vide et on le signale, on la complète à la source si possible, sinon on exclut la ligne du calcul en le précisant",
+    "On supprime la colonne Volume dès qu'elle contient un seul vide"
+   ],
+   "answer": 2,
+   "explain": "Un vide signifie « information absente », alors que zéro est une valeur mesurée : les confondre fausse moyennes et totaux. On cherche la valeur à la source, sinon on exclut la ligne du calcul en le disant. Une imputation silencieuse ou la suppression de la colonne dégradent l'analyse.",
+   "seconds": 55,
+   "status": "draft",
+   "img": "svg/min-tableau-donnees.svg",
+   "imgAlt": "Tableau de données fictif : colonnes Date (type date), Province, Site (texte), Volume en milliers de barils (nombre) et Conforme (oui ou non), avec quatre lignes d'observations (Provinces A et B, Sites 1 et 2, fins de janvier et de février 2026). Une ligne est une observation, une colonne une variable ; à éviter : cellules fusionnées, totaux intercalés."
+  },
+  {
+   "id": "min-donnees-tableaux-005",
+   "theme": "Structurer et nettoyer les données",
+   "level": 2,
+   "q": "Un fichier compte 1 250 lignes. Vous retirez 50 doublons exacts et 30 lignes entièrement vides (chiffres fictifs). Combien de lignes reste-t-il, et que faut-il noter dans le journal de nettoyage ?",
+   "choices": [
+    "1 170 lignes ; on note dans le journal les 50 doublons et les 30 lignes vides retirés",
+    "1 200 lignes ; on ne note que les doublons, car les lignes vides ne comptent pas comme des données",
+    "1 220 lignes ; on note les doublons, les lignes vides étant retirées automatiquement à l'ouverture",
+    "1 280 lignes ; on ajoute les lignes retirées pour retrouver la taille du fichier d'origine"
+   ],
+   "answer": 0,
+   "explain": "1 250 − 50 − 30 = 1 170. Les deux opérations modifient le nombre de lignes et doivent figurer dans le journal : sans cela, un collègue ne pourrait pas retrouver l'écart entre le fichier d'origine et le fichier nettoyé.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-006",
+   "theme": "Structurer et nettoyer les données",
+   "level": 2,
+   "q": "La somme d'une colonne « Volume » affiche 0 alors que des valeurs comme 12,5 apparaissent dans les cellules, alignées à gauche. Que faire ?",
+   "choices": [
+    "Retaper toutes les valeurs une par une dans une nouvelle colonne, car la fonction SOMME est défectueuse",
+    "Convertir la colonne en nombres en vérifiant le séparateur décimal, puis recalculer la somme",
+    "Remplacer la fonction SOMME par la fonction NBVAL, qui additionne aussi les valeurs de type texte",
+    "Ignorer l'affichage : le zéro est exact tant que les cellules ne sont pas protégées"
+   ],
+   "answer": 1,
+   "explain": "Des valeurs alignées à gauche sont souvent du texte (virgule non reconnue, espace insécable, apostrophe). SOMME ignore le texte. Il faut convertir en nombre. NBVAL compte les cellules non vides, il n'additionne rien ; la fonction n'est pas défectueuse.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-007",
+   "theme": "Structurer et nettoyer les données",
+   "level": 2,
+   "q": "Dans une colonne « Ville », on trouve « Port-Gentil », « port gentil » et « PORT GENTIL ». Quelle conséquence, et quel remède ?",
+   "choices": [
+    "Rien : les tableurs ignorent toujours la casse et les tirets, les trois écritures seront regroupées",
+    "Le tableau croisé affichera une seule ville mais avec un total triplé, qu'il faudra donc diviser par trois",
+    "Un tableau croisé les traitera comme trois villes ; il faut uniformiser, idéalement via une liste de référence",
+    "Le fichier sera refusé à l'ouverture, il faut alors le reconstruire entièrement à partir de zéro"
+   ],
+   "answer": 2,
+   "explain": "Selon les logiciels, la casse peut être ignorée, mais les tirets et espaces restent des différences : des libellés voisins deviennent des catégories distinctes. La solution durable est une liste de référence (menu déroulant) ou un code stable. Il n'y a ni triplement ni refus à l'ouverture.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-008",
+   "theme": "Structurer et nettoyer les données",
+   "level": 2,
+   "q": "Le service A transmet ses volumes en barils (4 500), le service B en milliers de barils (4,5) pour une même période. Que faites-vous avant d'additionner ?",
+   "choices": [
+    "Additionner telles quelles les deux valeurs, puisque les nombres sont proches une fois arrondis",
+    "Supprimer le service dont les chiffres paraissent les plus faibles pour garder une seule série",
+    "Multiplier toutes les valeurs par mille, sans vérifier l'unité d'origine de chaque service",
+    "Convertir les volumes dans une unité commune et l'indiquer dans l'en-tête de la colonne"
+   ],
+   "answer": 3,
+   "explain": "4 500 barils et 4,5 milliers de barils sont la même quantité. Additionner sans conversion donnerait 4 504,5, un résultat absurde. On harmonise l'unité, on la mentionne et on vérifie à la source. Multiplier tout par mille fausserait la série déjà exprimée en barils.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-009",
+   "theme": "Structurer et nettoyer les données",
+   "level": 3,
+   "q": "Vous rassemblez deux fichiers trimestriels : 800 lignes et 600 lignes. Vous constatez que 40 dossiers figurent dans les deux (chiffres fictifs). Combien de dossiers distincts obtenez-vous, et que contrôlez-vous ?",
+   "choices": [
+    "1 400 dossiers ; le chevauchement est normal et n'a pas d'incidence sur les comptages ultérieurs",
+    "1 320 dossiers ; on retire les 40 dossiers communs des deux fichiers, car ils sont douteux",
+    "1 360 dossiers ; on contrôle avec l'identifiant unique que chaque dossier n'apparaît qu'une fois",
+    "1 440 dossiers ; chaque dossier commun doit être compté deux fois pour refléter sa présence"
+   ],
+   "answer": 2,
+   "explain": "800 + 600 − 40 = 1 360 dossiers distincts : les 40 dossiers communs ne doivent être conservés qu'une fois (et non retirés des deux fichiers). Le contrôle par identifiant unique garantit l'absence de doublon, sinon les comptages et les sommes sont gonflés.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-010",
+   "theme": "Structurer et nettoyer les données",
+   "level": 3,
+   "q": "Deux fichiers utilisent des dates écrites « 03/04/2026 ». L'un est au format jour/mois, l'autre mois/jour. Vous devez les fusionner. Quelle démarche est la plus sûre ?",
+   "choices": [
+    "Conserver le texte tel quel, car le tableur reconnaîtra automatiquement le bon ordre des jours et des mois",
+    "Identifier le format de chaque source, convertir en AAAA-MM-JJ et vérifier sur quelques lignes connues",
+    "Choisir le format le plus fréquent et l'appliquer aux deux fichiers sans vérifier les dates ambiguës",
+    "Ne garder que les lignes dont le jour dépasse 12, qui seules sont lisibles sans ambiguïté"
+   ],
+   "answer": 1,
+   "explain": "03/04/2026 est le 3 avril dans un cas et le 4 mars dans l'autre : aucune reconnaissance automatique ne lève l'ambiguïté. Il faut connaître le format de chaque source, convertir en AAAA-MM-JJ puis contrôler sur des dates connues. Éliminer les lignes ambiguës ferait perdre des données utiles.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-011",
+   "theme": "Somme, moyenne, médiane et dispersion",
+   "level": 1,
+   "q": "Que représente la médiane d'une série de valeurs ?",
+   "choices": [
+    "La valeur la plus fréquente de la série, quel que soit son rang dans l'ordre croissant",
+    "La somme de toutes les valeurs divisée par le nombre de valeurs observées dans la série",
+    "L'écart entre la plus grande et la plus petite valeur observées dans la série",
+    "La valeur centrale qui sépare la série ordonnée en deux moitiés d'effectifs égaux"
+   ],
+   "answer": 3,
+   "explain": "La médiane coupe la série ordonnée en deux moitiés égales. La valeur la plus fréquente est le mode, la somme divisée par l'effectif est la moyenne, et l'écart entre maximum et minimum est l'étendue.",
+   "seconds": 40,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-012",
+   "theme": "Somme, moyenne, médiane et dispersion",
+   "level": 1,
+   "q": "Les délais de traitement de vos dossiers comportent quelques cas exceptionnellement longs. Quel indicateur de tendance centrale est le plus robuste à ces cas ?",
+   "choices": [
+    "La moyenne, parce qu'elle tient compte de chaque valeur et donne donc l'image la plus fidèle",
+    "Le maximum, parce qu'il signale directement les délais que le service doit corriger en priorité",
+    "La médiane, parce qu'elle dépend du rang des valeurs et non de leur grandeur exacte",
+    "La somme, parce qu'elle ne change pas quand on retire ou ajoute des dossiers à la série"
+   ],
+   "answer": 2,
+   "explain": "Un délai extrême tire la moyenne vers le haut, alors que la médiane reste au milieu de la série. Le maximum est utile pour repérer les cas, mais ne décrit pas la situation typique ; la somme varie au contraire à chaque dossier ajouté.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-013",
+   "theme": "Somme, moyenne, médiane et dispersion",
+   "level": 1,
+   "q": "Dans un tableur, quelle fonction compte uniquement les cellules d'une plage qui contiennent un nombre ?",
+   "choices": [
+    "NBVAL, qui compte toutes les cellules non vides, y compris celles qui contiennent du texte",
+    "NB, fonction qui compte uniquement les cellules contenant des nombres dans la plage",
+    "SOMME, qui renvoie le total des valeurs numériques sans indiquer combien il y en a",
+    "MEDIANE, qui renvoie la valeur centrale de la plage sans compter les cellules"
+   ],
+   "answer": 1,
+   "explain": "NB ne compte que les nombres. NBVAL compte aussi le texte. SOMME additionne, MEDIANE donne la valeur du milieu. Savoir choisir entre NB et NBVAL évite des effectifs faux.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-014",
+   "theme": "Somme, moyenne, médiane et dispersion",
+   "level": 1,
+   "q": "Comment calcule-t-on l'étendue d'une série de valeurs ?",
+   "choices": [
+    "En retranchant la plus petite valeur de la plus grande valeur de la série",
+    "En divisant la somme des valeurs par le nombre total de valeurs de la série",
+    "En relevant la valeur qui apparaît le plus souvent dans l'ensemble de la série",
+    "En prenant la valeur située exactement au milieu de la série une fois ordonnée"
+   ],
+   "answer": 0,
+   "explain": "L'étendue = maximum − minimum : c'est la mesure de dispersion la plus simple. Les autres définitions correspondent à la moyenne, au mode et à la médiane.",
+   "seconds": 40,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-015",
+   "theme": "Somme, moyenne, médiane et dispersion",
+   "level": 2,
+   "q": "Cinq agents ont traité respectivement 8, 3, 20, 9 et 5 dossiers dans la semaine (chiffres fictifs). Quelle est la médiane ?",
+   "choices": [
+    "8 dossiers, valeur située au milieu de la série ordonnée",
+    "9 dossiers, qui correspond à la moyenne arrondie de la série",
+    "5 dossiers, qui correspond à la valeur la plus basse après le minimum",
+    "20 dossiers, qui correspond à la valeur la plus élevée de la série"
+   ],
+   "answer": 0,
+   "explain": "Série ordonnée : 3, 5, 8, 9, 20. La valeur centrale est 8. La moyenne est (8 + 3 + 20 + 9 + 5) / 5 = 9, qu'il ne faut pas confondre avec la médiane.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-016",
+   "theme": "Somme, moyenne, médiane et dispersion",
+   "level": 2,
+   "q": "Six dossiers ont mis 4, 7, 9, 12, 20 et 30 jours à être traités (chiffres fictifs). Quelle est la médiane ?",
+   "choices": [
+    "12 jours, c'est-à-dire la quatrième valeur de la série ordonnée",
+    "10,5 jours, moyenne des deux valeurs centrales",
+    "13,7 jours, c'est-à-dire la moyenne arrondie des six délais",
+    "9 jours, c'est-à-dire la troisième valeur de la série ordonnée"
+   ],
+   "answer": 1,
+   "explain": "Avec un nombre pair de valeurs, la médiane est la moyenne des deux valeurs centrales : (9 + 12) / 2 = 10,5. La moyenne est 82 / 6 ≈ 13,7. Retenir une seule des deux valeurs centrales est une erreur fréquente.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-017",
+   "theme": "Somme, moyenne, médiane et dispersion",
+   "level": 2,
+   "q": "Six dossiers ont été traités en 4, 6, 5, 9, 6 et 10 jours (chiffres fictifs). Quelle est la durée moyenne, arrondie à une décimale ?",
+   "choices": [
+    "6,0 jours, qui est à la fois la médiane et la valeur la plus fréquente",
+    "7,0 jours, qui est le milieu entre la plus petite et la plus grande valeur",
+    "6,7 jours, c'est-à-dire la somme de 40 jours divisée par les six dossiers",
+    "40,0 jours, qui est la somme des délais des six dossiers de la série"
+   ],
+   "answer": 2,
+   "explain": "Somme = 4 + 6 + 5 + 9 + 6 + 10 = 40 ; 40 / 6 = 6,67, soit 6,7. La médiane et le mode valent 6, le milieu de l'étendue (4 et 10) vaut 7, et 40 est la somme, pas la moyenne.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-018",
+   "theme": "Somme, moyenne, médiane et dispersion",
+   "level": 2,
+   "q": "Une direction a traité 200 dossiers en 5 jours en moyenne, une autre 800 dossiers en 10 jours en moyenne (chiffres fictifs). Quel est le délai moyen sur l'ensemble des 1 000 dossiers ?",
+   "choices": [
+    "7,5 jours, en faisant la moyenne simple des deux délais moyens",
+    "8 jours, en prenant le délai moyen de la direction la plus performante majoré de 3",
+    "10 jours, en retenant simplement le délai de la direction la plus chargée",
+    "9 jours, obtenus par moyenne pondérée selon le nombre de dossiers traités"
+   ],
+   "answer": 3,
+   "explain": "(200 × 5 + 800 × 10) / 1 000 = (1 000 + 8 000) / 1 000 = 9 jours. La moyenne simple (7,5) ignore le fait que la seconde direction traite quatre fois plus de dossiers.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-019",
+   "theme": "Somme, moyenne, médiane et dispersion",
+   "level": 3,
+   "q": "Les dépôts de cinq stations valent 10, 12, 11, 13 et 54 milliers de litres (chiffres fictifs). Votre directeur demande un chiffre « typique » pour sa note. Que proposez-vous ?",
+   "choices": [
+    "La moyenne (20), car elle intègre toutes les stations sans en écarter aucune",
+    "Le maximum (54), car il montre la capacité réelle que le réseau peut atteindre",
+    "La somme (100), car elle donne l'ordre de grandeur sans passer par une valeur centrale",
+    "La médiane (12), en signalant que la valeur 54 est à vérifier avant toute conclusion"
+   ],
+   "answer": 3,
+   "explain": "La moyenne (20) est tirée vers le haut par la valeur 54 : aucune station ne s'en approche, hormis celle-là. La médiane (série 10, 11, 12, 13, 54) vaut 12 et décrit la situation typique. On signale la valeur de 54 pour la contrôler à la source.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-020",
+   "theme": "Somme, moyenne, médiane et dispersion",
+   "level": 3,
+   "q": "Une direction A a formé 20 agents, avec 3 jours de formation en moyenne ; une direction B en a formé 80, avec 8 jours en moyenne (chiffres fictifs). Quel est le nombre moyen de jours par agent formé sur l'ensemble ?",
+   "choices": [
+    "7 jours, en divisant le total de jours par le total d'agents formés",
+    "5,5 jours, en faisant la moyenne simple des deux moyennes des directions",
+    "6 jours, en retenant la valeur médiane entre les deux moyennes et la plus petite",
+    "8 jours, en retenant la moyenne de la direction qui a formé le plus d'agents"
+   ],
+   "answer": 0,
+   "explain": "Total de jours = 20 × 3 + 80 × 8 = 60 + 640 = 700 ; total d'agents = 100 ; moyenne = 7 jours. La moyenne des moyennes (5,5) ne tient pas compte des effectifs : on repart toujours des totaux.",
+   "seconds": 90,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-021",
+   "theme": "Pourcentages, évolutions et ratios",
+   "level": 1,
+   "q": "Quelle formule donne le taux de variation entre une valeur initiale et une valeur finale ?",
+   "choices": [
+    "(valeur finale − valeur initiale) / valeur finale × 100",
+    "valeur finale / valeur initiale, sans autre opération sur le résultat",
+    "(valeur finale + valeur initiale) / 2, divisé par la valeur initiale",
+    "(valeur finale − valeur initiale) / valeur initiale × 100"
+   ],
+   "answer": 3,
+   "explain": "La variation relative se calcule toujours par rapport à la valeur de départ. Diviser par la valeur finale donnerait un taux différent. Le simple rapport final / initial est le coefficient multiplicateur, et la demi-somme est une moyenne.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-022",
+   "theme": "Pourcentages, évolutions et ratios",
+   "level": 1,
+   "q": "Un taux de conformité passe de 20 % à 25 %. Comment le décrit-on correctement ?",
+   "choices": [
+    "Une hausse de 5 points de pourcentage, soit 25 % en variation relative du taux",
+    "Une hausse de 5 %, ce qui revient à dire la même chose que les points de pourcentage",
+    "Une hausse de 20 %, car on rapporte l'écart à la valeur finale du taux",
+    "Une hausse de 125 %, car on rapporte la valeur finale à la valeur initiale"
+   ],
+   "answer": 0,
+   "explain": "Écart absolu : 5 points. Écart relatif : 5 / 20 = 25 %. Dire « 5 % » confond les deux notions. Diviser par la valeur finale (20 %) ou présenter le rapport 25 / 20 (125 %) comme une hausse sont des erreurs de méthode.",
+   "seconds": 55,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-023",
+   "theme": "Pourcentages, évolutions et ratios",
+   "level": 1,
+   "q": "Comment calcule-t-on la part d'un élément dans un total ?",
+   "choices": [
+    "Total divisé par la valeur de l'élément, multiplié par 100",
+    "Valeur de l'élément divisée par le total, multipliée par 100",
+    "Valeur de l'élément moins le total, divisée par le total",
+    "Valeur de l'élément multipliée par le nombre d'éléments, divisée par 100"
+   ],
+   "answer": 1,
+   "explain": "Part = partie / total × 100. Si l'on inverse (total / élément), on obtient un nombre supérieur à 100 qui n'est pas une part. Les autres formules ne correspondent à aucune notion de proportion.",
+   "seconds": 40,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-024",
+   "theme": "Pourcentages, évolutions et ratios",
+   "level": 1,
+   "q": "Pourquoi utilise-t-on un ratio (par exemple dossiers par agent) pour comparer des directions de tailles différentes ?",
+   "choices": [
+    "Il supprime la nécessité de vérifier les effectifs, puisque les écarts disparaissent d'eux-mêmes",
+    "Il donne toujours un nombre inférieur à 1, plus facile à lire que des valeurs brutes",
+    "Il rapporte les volumes à une base commune, ce qui rend la comparaison réellement équitable",
+    "Il permet d'additionner les résultats de plusieurs directions sans précaution supplémentaire"
+   ],
+   "answer": 2,
+   "explain": "Comparer des volumes bruts favorise les grandes structures. En rapportant à un effectif, une surface ou un budget, on compare des situations comparables. Un ratio n'est pas toujours inférieur à 1 et ne s'additionne pas sans réfléchir à sa base.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-025",
+   "theme": "Pourcentages, évolutions et ratios",
+   "level": 2,
+   "q": "Sur l'histogramme, quelle est la variation du chiffre d'affaires entre 2021 et 2022 ?",
+   "choices": [
+    "−6,3 %, en rapportant l'écart à la valeur finale de 2022",
+    "+5,9 %, en ignorant le signe de l'écart",
+    "−30 %, en retenant l'écart brut comme un pourcentage",
+    "−5,9 %, soit un écart de −30 rapporté à la valeur de départ de 510"
+   ],
+   "answer": 3,
+   "explain": "(480 − 510) / 510 ≈ −0,059, soit −5,9 %. Rapporter l'écart à la valeur finale donne −6,3 % (erreur de base), ignorer le signe transforme une baisse en hausse, et −30 est un écart en millions de FCFA, pas un pourcentage.",
+   "seconds": 60,
+   "status": "draft",
+   "img": "svg/finance-bar-chart.svg",
+   "imgAlt": "Histogramme en millions de FCFA de 2020 à 2024 (données illustratives). Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95."
+  },
+  {
+   "id": "min-donnees-tableaux-026",
+   "theme": "Pourcentages, évolutions et ratios",
+   "level": 2,
+   "q": "Sur l'histogramme, quelle est la marge nette de 2022, c'est-à-dire le résultat net rapporté au chiffre d'affaires ?",
+   "choices": [
+    "8,5 %, soit 41 rapportés à 480",
+    "85,4 %, en décalant la virgule du rapport",
+    "11,7 %, obtenu en divisant le chiffre d'affaires par le résultat net",
+    "41 %, qui correspond à la valeur lue sur la barre orange"
+   ],
+   "answer": 0,
+   "explain": "Marge nette = 41 / 480 ≈ 0,085, soit 8,5 %. Inverser le rapport donne 11,7, qui n'a pas de sens ici ; 85,4 % vient d'un décalage de virgule, et 41 est un montant en millions de FCFA, pas un pourcentage.",
+   "seconds": 55,
+   "status": "draft",
+   "img": "svg/finance-bar-chart.svg",
+   "imgAlt": "Histogramme en millions de FCFA de 2020 à 2024 (données illustratives). Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95."
+  },
+  {
+   "id": "min-donnees-tableaux-027",
+   "theme": "Pourcentages, évolutions et ratios",
+   "level": 2,
+   "q": "Une valeur augmente de 20 %, puis diminue de 20 % l'année suivante. Quelle est l'évolution globale ?",
+   "choices": [
+    "0 %, car la hausse et la baisse s'annulent exactement",
+    "−2 %, car l'écart se répartit sur les deux années",
+    "−4 %, car les coefficients se multiplient : 1,20 × 0,80 = 0,96",
+    "+4 %, car la hausse s'applique sur une base plus petite que la baisse"
+   ],
+   "answer": 2,
+   "explain": "Les évolutions se composent par multiplication : 100 → 120 → 96, soit −4 %. La baisse de 20 % s'applique à une base plus grande (120), donc elle retire plus que la hausse n'a ajouté.",
+   "seconds": 65,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-028",
+   "theme": "Pourcentages, évolutions et ratios",
+   "level": 2,
+   "q": "Après une hausse de 25 %, un loyer de bureau vaut 500 (unités fictives). Quelle était sa valeur avant la hausse ?",
+   "choices": [
+    "375, en retirant 25 % à 500",
+    "475, en retirant simplement 25 unités à 500",
+    "625, en multipliant 500 par 1,25",
+    "400, en divisant 500 par 1,25"
+   ],
+   "answer": 3,
+   "explain": "Après hausse de 25 %, valeur = initiale × 1,25 ; donc initiale = 500 / 1,25 = 400. Retirer 25 % de 500 (375) applique le taux à la mauvaise base. Multiplier par 1,25 ferait encore augmenter la valeur.",
+   "seconds": 65,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-029",
+   "theme": "Pourcentages, évolutions et ratios",
+   "level": 3,
+   "q": "Sur l'histogramme, le chiffre d'affaires passe de 480 en 2022 à 720 en 2024. Quel est le taux de croissance annuel moyen sur ces deux ans ?",
+   "choices": [
+    "25 %, en divisant par deux la hausse totale de 50 %",
+    "50 % par an, car la hausse totale est répétée chaque année",
+    "22,5 % par an, car les hausses se composent : 1,225 × 1,225 ≈ 1,5",
+    "12,2 %, obtenu en divisant la hausse totale par quatre"
+   ],
+   "answer": 2,
+   "explain": "La croissance se compose : (720 / 480)^(1/2) − 1 = 1,5^0,5 − 1 ≈ 22,5 %. Diviser 50 % par deux (25 %) ignore la composition ; la hausse n'est pas de 50 % chaque année.",
+   "seconds": 90,
+   "status": "draft",
+   "img": "svg/finance-bar-chart.svg",
+   "imgAlt": "Histogramme en millions de FCFA de 2020 à 2024 (données illustratives). Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95."
+  },
+  {
+   "id": "min-donnees-tableaux-030",
+   "theme": "Pourcentages, évolutions et ratios",
+   "level": 3,
+   "q": "Un rapport annonce « inspections en hausse de 50 % » alors que l'on est passé de 4 à 6 inspections. Quelle présentation est la plus honnête devant la direction ?",
+   "choices": [
+    "Garder uniquement +50 %, plus parlant qu'une comparaison de deux petits nombres",
+    "Indiquer les valeurs absolues avec le pourcentage : 6 contre 4, soit +50 % sur un petit effectif",
+    "Supprimer toute mention de l'évolution, puisqu'un petit effectif ne permet aucune conclusion",
+    "Présenter la hausse en points de pourcentage, ce qui la rend plus modeste"
+   ],
+   "answer": 1,
+   "explain": "Le calcul (6 − 4) / 4 = 50 % est exact, mais il impressionne sur un très petit effectif. Donner les valeurs absolues permet au lecteur de juger. Les points de pourcentage ne s'appliquent pas ici (ce n'est pas un taux) et taire l'information serait aussi trompeur.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-031",
+   "theme": "Tableaux croisés et agrégation",
+   "level": 1,
+   "q": "Que faut-il vérifier en premier avant de construire un tableau croisé dynamique ?",
+   "choices": [
+    "Que le fichier est enregistré dans un format propriétaire pour garantir la compatibilité des formules",
+    "Que le tableau ne dépasse pas cent lignes, limite au-delà de laquelle il devient illisible",
+    "Que toutes les colonnes sont formatées en couleur afin de repérer rapidement les catégories",
+    "Que les données sont en liste propre : en-têtes uniques, une observation par ligne, sans total intercalé"
+   ],
+   "answer": 3,
+   "explain": "Un tableau croisé s'appuie sur une liste structurée. Des totaux intercalés ou des en-têtes absents faussent le résultat. Aucune limite de cent lignes n'existe, et les couleurs ou un format propriétaire ne jouent aucun rôle dans l'agrégation.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-032",
+   "theme": "Tableaux croisés et agrégation",
+   "level": 1,
+   "q": "Les données sources d'un tableau croisé ont été corrigées hier. Le tableau n'a pas changé. Que faire ?",
+   "choices": [
+    "Supprimer le tableau croisé et refaire entièrement l'analyse à partir d'une nouvelle feuille vierge",
+    "Modifier directement les chiffres affichés dans le tableau pour les aligner sur la source",
+    "Actualiser le tableau croisé afin qu'il relise les données sources modifiées hier",
+    "Attendre la fermeture du fichier : il se met à jour automatiquement à la réouverture"
+   ],
+   "answer": 2,
+   "explain": "Un tableau croisé garde en mémoire une copie des données ; la commande d'actualisation la relit. Retoucher à la main les chiffres affichés est à proscrire, et refaire tout le travail n'est pas nécessaire.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-033",
+   "theme": "Tableaux croisés et agrégation",
+   "level": 1,
+   "q": "À quoi sert la fonction SOMME.SI ?",
+   "choices": [
+    "À additionner toutes les valeurs d'une plage, qu'elles répondent ou non à un critère",
+    "À additionner les valeurs d'une plage qui répondent à une condition donnée",
+    "À compter le nombre de cellules d'une plage qui répondent à une condition donnée",
+    "À calculer la moyenne des valeurs d'une plage qui répondent à une condition donnée"
+   ],
+   "answer": 1,
+   "explain": "SOMME.SI additionne sous condition (par exemple le volume de la région Nord). NB.SI compte, MOYENNE.SI fait la moyenne sous condition, SOMME additionne sans condition.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-034",
+   "theme": "Tableaux croisés et agrégation",
+   "level": 1,
+   "q": "Dans un tableau croisé, quelle est la fonction de la zone « Valeurs » ?",
+   "choices": [
+    "Elle contient la mesure à agréger (somme, nombre, moyenne) pour chaque croisement",
+    "Elle sert à choisir les catégories affichées en lignes dans la marge gauche du tableau",
+    "Elle sert à limiter l'analyse à une période ou à une région grâce à un menu de sélection",
+    "Elle sert à choisir les couleurs et la police utilisées pour mettre en page le tableau"
+   ],
+   "answer": 0,
+   "explain": "Lignes et colonnes définissent les catégories, le filtre restreint le périmètre, et la zone Valeurs calcule la mesure (somme, nombre, moyenne). La mise en forme relève d'un autre menu.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-035",
+   "theme": "Tableaux croisés et agrégation",
+   "level": 2,
+   "q": "Dans un tableau croisé fictif, le Nord a 120 puis 140 au premier et second trimestres, le Sud 80 puis 60. Quelle est la part du Nord dans le total général ?",
+   "choices": [
+    "65 %, soit 260 pour le Nord rapportés au total général de 400",
+    "55 %, obtenue en rapportant le premier trimestre du Nord au total du trimestre",
+    "60 %, obtenue en comparant le Nord au seul second trimestre du Sud",
+    "70 %, obtenue en divisant 280 par 400, soit deux fois le premier trimestre"
+   ],
+   "answer": 0,
+   "explain": "Nord = 120 + 140 = 260 ; Sud = 80 + 60 = 140 ; total = 400. Part du Nord : 260 / 400 = 65 %. Dans le tableur, on l'obtient avec l'option « % du total général ».",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-036",
+   "theme": "Tableaux croisés et agrégation",
+   "level": 2,
+   "q": "Vous voulez connaître le nombre de dossiers par région à partir d'une liste où chaque ligne est un dossier. Quelle agrégation choisir ?",
+   "choices": [
+    "Somme, appliquée à la colonne des numéros de dossier",
+    "Moyenne, appliquée à la colonne des numéros de dossier",
+    "Maximum, appliqué à la colonne des numéros de dossier",
+    "Nombre, appliqué à une colonne qui identifie chaque dossier"
+   ],
+   "answer": 3,
+   "explain": "Pour compter, on utilise l'agrégation Nombre. Additionner des numéros de dossier n'a aucun sens, pas plus que leur moyenne ou leur maximum : le résultat serait un chiffre sans signification.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-037",
+   "theme": "Tableaux croisés et agrégation",
+   "level": 2,
+   "q": "Le tableau croisé affiche un total général de 940, alors que la colonne « Volume » de la source totalise 1 000 (chiffres fictifs). Quelle première vérification faites-vous ?",
+   "choices": [
+    "Réduire le nombre de décimales affichées, qui expliquent à elles seules l'écart de 60",
+    "Remplacer la fonction Somme par Moyenne, plus fiable lorsque les totaux diffèrent",
+    "Contrôler si un filtre est actif sur le tableau croisé ou si des lignes ont une catégorie vide",
+    "Considérer l'écart comme normal : un tableau croisé ne peut jamais retrouver le total de la source"
+   ],
+   "answer": 2,
+   "explain": "Un écart de 60 ne s'explique pas par des arrondis. Les causes habituelles sont un filtre qui masque des lignes ou des lignes dont la catégorie est vide ou mal écrite. Un tableau croisé correctement construit doit retrouver le total de la source.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-038",
+   "theme": "Tableaux croisés et agrégation",
+   "level": 2,
+   "q": "Vous disposez d'une liste d'agents avec un code de service et d'une liste de services avec code et libellé. Comment afficher le libellé du service dans la liste des agents ?",
+   "choices": [
+    "En recopiant à la main chaque libellé, ce qui évite d'avoir à gérer un code commun",
+    "Avec une fonction de recherche (RECHERCHEV ou RECHERCHEX) s'appuyant sur le code de service",
+    "En triant les deux listes dans le même ordre, puis en les collant l'une à côté de l'autre",
+    "En fusionnant les deux feuilles dans une cellule unique contenant tous les libellés"
+   ],
+   "answer": 1,
+   "explain": "La jointure par le code commun est fiable et reproductible. Le copier-coller manuel est source d'erreurs, et coller deux listes triées suppose qu'elles aient exactement les mêmes lignes, ce qui est rarement le cas.",
+   "seconds": 65,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-039",
+   "theme": "Tableaux croisés et agrégation",
+   "level": 3,
+   "q": "Région A : 10 dossiers pour un total de 500 unités ; région B : 40 dossiers pour un total de 800 unités (chiffres fictifs). Quelle est la moyenne par dossier sur l'ensemble ?",
+   "choices": [
+    "35 unités, soit la moyenne simple des moyennes de A (50) et B (20)",
+    "30 unités, soit la moyenne des totaux divisée par le nombre de régions",
+    "20 unités, soit la moyenne de la région qui a le plus de dossiers",
+    "26 unités, soit 1 300 unités au total divisées par les 50 dossiers"
+   ],
+   "answer": 3,
+   "explain": "Total = 500 + 800 = 1 300 ; dossiers = 50 ; moyenne = 26. Moyenner 50 et 20 donne 35, mais ignore que B pèse quatre fois plus que A. On repart toujours des totaux et des effectifs.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-040",
+   "theme": "Tableaux croisés et agrégation",
+   "level": 3,
+   "q": "Votre fichier contient des opérations quotidiennes sur deux ans. Le directeur demande une synthèse mensuelle. Que faites-vous dans le tableau croisé ?",
+   "choices": [
+    "Regrouper les dates par année et par mois, pour ne pas mélanger les mois de deux années",
+    "Regrouper les dates par mois uniquement, ce qui suffit puisque l'année figure dans le titre",
+    "Garder les dates au jour près et laisser le directeur additionner les lignes de chaque mois",
+    "Convertir les dates en texte, ce qui évite les erreurs de regroupement automatique"
+   ],
+   "answer": 0,
+   "explain": "Regrouper par mois seul additionnerait janvier de la première année avec janvier de la seconde. Il faut regrouper par années et mois. Convertir en texte empêcherait tout regroupement, et laisser le travail au lecteur contredit l'objectif de synthèse.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-041",
+   "theme": "Choisir le bon graphique",
+   "level": 1,
+   "q": "Vous devez montrer l'évolution mensuelle de la production sur deux ans. Quel graphique choisir ?",
+   "choices": [
+    "Une courbe, qui rend visible la tendance et les variations dans le temps",
+    "Un graphique en secteurs, qui rend visible la part de chaque mois dans le total",
+    "Un nuage de points, qui rend visible les relations entre deux variables",
+    "Une carte, qui rend visible la localisation des sites de production"
+   ],
+   "answer": 0,
+   "explain": "La courbe est la forme classique pour une série temporelle. Les secteurs montrent des parts d'un tout, le nuage de points un lien entre deux variables, la carte une localisation.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-042",
+   "theme": "Choisir le bon graphique",
+   "level": 1,
+   "q": "D'après la figure, quelle forme est recommandée pour comparer le nombre d'inspections de huit provinces ?",
+   "choices": [
+    "Un graphique en secteurs à huit parts de couleurs différentes",
+    "Une courbe reliant les provinces dans l'ordre alphabétique",
+    "Un histogramme regroupant les provinces en classes de valeurs",
+    "Des barres, de préférence triées, une barre par province"
+   ],
+   "answer": 3,
+   "explain": "Pour comparer des catégories, la figure recommande les barres ; les trier facilite le classement. Une courbe suggère à tort une continuité entre provinces, un histogramme sert aux répartitions, et huit secteurs seraient difficiles à comparer (limite de deux à cinq parts).",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/min-choix-graphique.svg",
+   "imgAlt": "Tableau à cinq lignes associant une question à un graphique : évolution dans le temps, courbe ; comparaison de catégories, barres ; part de chaque élément dans un tout, secteurs (deux à cinq parts seulement) ; répartition des valeurs d'une série, histogramme ; lien entre deux variables, nuage de points."
+  },
+  {
+   "id": "min-donnees-tableaux-043",
+   "theme": "Choisir le bon graphique",
+   "level": 1,
+   "q": "Pour un graphique en barres, que doit-on respecter pour l'axe vertical ?",
+   "choices": [
+    "Il doit commencer à la plus petite valeur, pour mieux faire ressortir les différences entre barres",
+    "Il doit être masqué, afin que seul le titre porte le message du graphique",
+    "Il doit commencer à zéro, car la hauteur de chaque barre représente directement la valeur",
+    "Il doit changer d'échelle d'une barre à l'autre pour garder des barres de taille semblable"
+   ],
+   "answer": 2,
+   "explain": "La longueur d'une barre est proportionnelle à la valeur ; si l'axe est tronqué, les écarts sont exagérés. Masquer l'axe ou changer d'échelle prive le lecteur de repères fiables.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-044",
+   "theme": "Choisir le bon graphique",
+   "level": 1,
+   "q": "Selon la figure, pour laquelle de ces situations un graphique en secteurs convient-il ?",
+   "choices": [
+    "Montrer la part de quatre directions dans le budget total",
+    "Comparer douze catégories dont les valeurs sont très proches",
+    "Suivre une série mensuelle sur plusieurs années consécutives",
+    "Montrer le lien entre l'ancienneté et le nombre d'erreurs de chaque agent"
+   ],
+   "answer": 0,
+   "explain": "Les secteurs montrent la part d'éléments dans un tout, avec deux à cinq parts seulement. Douze parts proches sont impossibles à comparer ; le suivi dans le temps demande une courbe, et la relation entre deux variables un nuage de points.",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/min-choix-graphique.svg",
+   "imgAlt": "Tableau à cinq lignes associant une question à un graphique : évolution dans le temps, courbe ; comparaison de catégories, barres ; part de chaque élément dans un tout, secteurs (deux à cinq parts seulement) ; répartition des valeurs d'une série, histogramme ; lien entre deux variables, nuage de points."
+  },
+  {
+   "id": "min-donnees-tableaux-045",
+   "theme": "Choisir le bon graphique",
+   "level": 2,
+   "q": "D'après la figure, on dispose des durées de traitement de 300 dossiers (beaucoup de courtes durées, quelques-unes très longues) et on veut voir comment elles se répartissent. Quel graphique choisir ?",
+   "choices": [
+    "Un graphique en secteurs, avec un secteur par dossier traité sur la période",
+    "Un histogramme, qui regroupe les durées en classes et montre la forme de la répartition",
+    "Une courbe, avec les dossiers placés dans l'ordre de leur numéro",
+    "Un nuage de points, avec le numéro de dossier en abscisse et la région en ordonnée"
+   ],
+   "answer": 1,
+   "explain": "La figure associe la répartition des valeurs d'une série à l'histogramme, qui regroupe les valeurs en classes. Des secteurs par dossier seraient illisibles (300 parts), et la courbe ou le nuage de points sur le numéro de dossier ne répondent pas à la question posée.",
+   "seconds": 60,
+   "status": "draft",
+   "img": "svg/min-choix-graphique.svg",
+   "imgAlt": "Tableau à cinq lignes associant une question à un graphique : évolution dans le temps, courbe ; comparaison de catégories, barres ; part de chaque élément dans un tout, secteurs (deux à cinq parts seulement) ; répartition des valeurs d'une série, histogramme ; lien entre deux variables, nuage de points."
+  },
+  {
+   "id": "min-donnees-tableaux-046",
+   "theme": "Choisir le bon graphique",
+   "level": 2,
+   "q": "D'après la figure, quel graphique est adapté pour vérifier si les agents les plus anciens font moins d'erreurs de saisie ?",
+   "choices": [
+    "Un graphique en secteurs avec une part pour chaque niveau d'ancienneté",
+    "Une carte coloriée selon le lieu d'affectation de chaque agent",
+    "Un nuage de points : l'ancienneté en abscisse, le nombre d'erreurs en ordonnée",
+    "Une courbe reliant les agents par ordre alphabétique de leur nom"
+   ],
+   "answer": 2,
+   "explain": "Le lien entre deux variables numériques se montre par un nuage de points, une variable sur chaque axe. Les secteurs ne représentent que des parts, la carte ne traite que la localisation, et l'ordre alphabétique des noms n'a aucun sens pour une courbe.",
+   "seconds": 60,
+   "status": "draft",
+   "img": "svg/min-choix-graphique.svg",
+   "imgAlt": "Tableau à cinq lignes associant une question à un graphique : évolution dans le temps, courbe ; comparaison de catégories, barres ; part de chaque élément dans un tout, secteurs (deux à cinq parts seulement) ; répartition des valeurs d'une série, histogramme ; lien entre deux variables, nuage de points."
+  },
+  {
+   "id": "min-donnees-tableaux-047",
+   "theme": "Choisir le bon graphique",
+   "level": 2,
+   "q": "Deux barres valent 98 et 100. L'axe vertical commence à 96. Que voit le lecteur ?",
+   "choices": [
+    "Une seconde barre deux fois plus haute que la première, alors que l'écart réel est de 2 %",
+    "Deux barres de hauteur presque identique, comme le montrent les valeurs réelles",
+    "Une seconde barre cinquante fois plus haute que la première",
+    "Une première barre plus haute que la seconde, puisque l'axe est décalé"
+   ],
+   "answer": 0,
+   "explain": "Hauteurs visibles : 98 − 96 = 2 et 100 − 96 = 4, donc 4 est deux fois 2. Un écart réel de 2 % apparaît comme un écart de 100 % : c'est l'effet trompeur d'un axe tronqué. Les autres lectures sont fausses.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-048",
+   "theme": "Choisir le bon graphique",
+   "level": 2,
+   "q": "Vous devez présenter un taux d'exécution pour douze directions provinciales. Quelle présentation retenir ?",
+   "choices": [
+    "Un graphique en secteurs à douze parts, une par direction provinciale",
+    "Un graphique en trois dimensions avec une barre en relief par direction",
+    "Un graphique à deux axes mêlant le taux et les effectifs sans repère de cible",
+    "Des barres horizontales triées, avec une ligne repérant la cible à atteindre"
+   ],
+   "answer": 3,
+   "explain": "Les barres horizontales triées permettent de lire noms et valeurs, de repérer les écarts à la cible et de classer. Douze secteurs seraient illisibles, la 3D déforme les hauteurs et le double axe brouille le message.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-049",
+   "theme": "Choisir le bon graphique",
+   "level": 3,
+   "q": "Vous voulez montrer ensemble la production (milliers de barils) et le prix (dollars) sur dix ans, dans un rapport destiné au directeur. Que recommandez-vous ?",
+   "choices": [
+    "Un seul graphique à deux axes aux échelles réglées librement pour que les courbes se croisent",
+    "Un graphique en secteurs avec une part pour la production et une part pour le prix",
+    "Un tableau de chiffres uniquement, car aucune représentation ne convient aux unités différentes",
+    "Deux graphiques alignés l'un sous l'autre, partageant le même axe du temps sur dix ans"
+   ],
+   "answer": 3,
+   "explain": "Deux séries d'unités différentes ne se superposent pas sans risque : des échelles libres peuvent suggérer une corrélation artificielle. Deux graphiques alignés sur le même temps permettent de comparer sans tromper. Les secteurs n'ont aucun sens ici.",
+   "seconds": 90,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-050",
+   "theme": "Choisir le bon graphique",
+   "level": 3,
+   "q": "Lors d'un comité, vous présentez l'évolution du taux d'exécution budgétaire (62 % puis 75 %, chiffres fictifs). Quel titre de graphique est le plus efficace ?",
+   "choices": [
+    "« Graphique 3 : taux d'exécution », sans commentaire, pour rester neutre",
+    "« Évolution remarquable du taux d'exécution grâce à l'action de la direction »",
+    "« Le taux d'exécution passe de 62 % à 75 % en un an, pour un objectif de 80 % »",
+    "« Taux d'exécution budgétaire des services du ministère de l'année précédente »"
+   ],
+   "answer": 2,
+   "explain": "Un bon titre énonce le message, avec les chiffres, la période et la cible. « Graphique 3 » n'informe pas, le titre élogieux porte un jugement non démontré, et le dernier décrit le sujet sans dire ce qu'il faut en retenir.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-051",
+   "theme": "Construire et lire un tableau de bord",
+   "level": 1,
+   "q": "Vous êtes chargé de créer le tableau de bord de votre direction. Quelle est la première question à vous poser ?",
+   "choices": [
+    "Quel logiciel de visualisation est le plus récent et offre le plus de types de graphiques",
+    "Combien d'indicateurs la direction peut afficher sur un écran de grande taille",
+    "Pour qui il est fait, quelles décisions il doit éclairer et à quelle fréquence",
+    "Quelles couleurs donneront l'aspect le plus attractif à la page principale"
+   ],
+   "answer": 2,
+   "explain": "Un tableau de bord est un outil de pilotage : public et décisions déterminent les indicateurs. L'outil, le nombre maximal d'éléments affichables et les couleurs viennent ensuite.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-052",
+   "theme": "Construire et lire un tableau de bord",
+   "level": 1,
+   "q": "Combien d'indicateurs un tableau de bord de pilotage doit-il contenir en général ?",
+   "choices": [
+    "Un seul, pour imposer un message unique à tous les niveaux",
+    "Cinq à huit, afin que le lecteur puisse retenir l'essentiel",
+    "Une vingtaine, afin de ne rien omettre de l'activité du service",
+    "Autant qu'il y a de lignes dans le fichier de suivi du service"
+   ],
+   "answer": 1,
+   "explain": "Au-delà de huit indicateurs, l'attention se disperse ; un seul indicateur ne couvre pas la diversité d'une activité. La règle pratique est de rester entre cinq et huit.",
+   "seconds": 40,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-053",
+   "theme": "Construire et lire un tableau de bord",
+   "level": 1,
+   "q": "Quelles informations une fiche d'indicateur doit-elle comporter ?",
+   "choices": [
+    "Définition, formule de calcul, source des données, périodicité, responsable et unité",
+    "Uniquement le nom de l'indicateur et la couleur choisie pour son affichage",
+    "Le nom, la valeur de l'année précédente et un commentaire libre du chef de service",
+    "La liste des agents ayant saisi les données et la date de dernière sauvegarde"
+   ],
+   "answer": 0,
+   "explain": "Sans définition et formule explicites, deux services peuvent calculer différemment le même indicateur. La source, la périodicité, le responsable et l'unité complètent la fiche et garantissent la comparabilité d'une édition à l'autre.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-054",
+   "theme": "Construire et lire un tableau de bord",
+   "level": 1,
+   "q": "Pourquoi associer une cible à chaque indicateur ?",
+   "choices": [
+    "Parce que la cible remplace la valeur mesurée lorsqu'elle est plus favorable",
+    "Parce que les logiciels de tableau de bord exigent une cible pour afficher un graphique",
+    "Parce que la cible évite de devoir comparer avec les périodes précédentes",
+    "Parce qu'un chiffre isolé ne permet pas de savoir s'il est bon ou mauvais"
+   ],
+   "answer": 3,
+   "explain": "Pour interpréter une valeur, il faut une référence : cible, période précédente, norme. La cible ne remplace pas la mesure, n'est pas imposée techniquement par les outils, et ne dispense pas de regarder la tendance.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-055",
+   "theme": "Construire et lire un tableau de bord",
+   "level": 2,
+   "q": "Le délai de traitement des dossiers a pour cible 30 jours et le réalisé est de 34 jours (chiffres fictifs). Quel est l'écart en pourcentage de la cible ?",
+   "choices": [
+    "+4 jours, soit environ 11,8 % au-dessus de la cible",
+    "+4 %, soit environ 1,2 jour au-dessus de la cible",
+    "−4 jours, soit environ 13,3 % en dessous de la cible",
+    "+4 jours, soit environ 13,3 % au-dessus de la cible"
+   ],
+   "answer": 3,
+   "explain": "L'écart est 34 − 30 = 4 jours ; rapporté à la cible : 4 / 30 = 13,3 %. Rapporter à la valeur réalisée (34) donnerait 11,8 %, mais l'écart à l'objectif se mesure par rapport à la cible. Le délai est supérieur, donc au-dessus.",
+   "seconds": 65,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-056",
+   "theme": "Construire et lire un tableau de bord",
+   "level": 2,
+   "q": "45 inspections ont été réalisées sur 60 programmées (chiffres fictifs). Seuils : vert à partir de 80 %, orange de 60 à 79 %, rouge en dessous de 60 %. Quelle couleur affiche l'indicateur ?",
+   "choices": [
+    "Orange, car le taux de réalisation est de 75 %",
+    "Vert, car plus des deux tiers des inspections sont réalisées",
+    "Rouge, car il manque quinze inspections par rapport au programme",
+    "Vert, car le taux de réalisation dépasse la moitié du programme"
+   ],
+   "answer": 0,
+   "explain": "45 / 60 = 75 %, soit dans la plage 60-79 % : orange. Les règles de seuil écrites évitent les appréciations au cas par cas, qui conduiraient ici à un vert ou à un rouge injustifiés.",
+   "seconds": 65,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-057",
+   "theme": "Construire et lire un tableau de bord",
+   "level": 2,
+   "q": "Parmi ces indicateurs, lequel est un indicateur de résultat plutôt que d'activité ?",
+   "choices": [
+    "Le nombre de réunions de coordination organisées dans le trimestre",
+    "Le délai moyen de traitement des demandes d'autorisation",
+    "Le nombre de courriers envoyés par le secrétariat de la direction",
+    "Le nombre de formations programmées dans le plan annuel du service"
+   ],
+   "answer": 1,
+   "explain": "Un résultat mesure l'effet obtenu pour les usagers (rapidité de traitement). Réunions, courriers et formations programmées décrivent ce que fait le service, pas ce que cela produit : ce sont des indicateurs d'activité.",
+   "seconds": 55,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-058",
+   "theme": "Construire et lire un tableau de bord",
+   "level": 2,
+   "q": "Un tableau de bord affiche seulement « 34 » pour un indicateur, sans autre précision. Que lui manque-t-il ?",
+   "choices": [
+    "Des couleurs plus vives, afin que le chiffre attire l'œil du lecteur",
+    "Un nombre supérieur de décimales, pour montrer la précision du calcul",
+    "L'unité, la période, la cible ou une comparaison, pour pouvoir interpréter le chiffre",
+    "Un graphique en trois dimensions, qui donne du poids à la valeur affichée"
+   ],
+   "answer": 2,
+   "explain": "Sans unité (jours ? dossiers ?), période et référence, un chiffre ne dit rien. La mise en forme, les décimales ou la 3D n'apportent aucune interprétation.",
+   "seconds": 55,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-059",
+   "theme": "Construire et lire un tableau de bord",
+   "level": 3,
+   "q": "Votre indicateur « délai moyen de traitement » est à 28 jours pour une cible de 30 (vert), mais des usagers se plaignent. L'analyse montre que 20 % des dossiers attendent plus de 60 jours (chiffres fictifs). Que proposez-vous ?",
+   "choices": [
+    "Ajouter la médiane et la part de dossiers hors délai, car la moyenne masque les cas extrêmes",
+    "Maintenir l'indicateur tel quel, car il est vert et respecte la cible fixée",
+    "Relever la cible à 40 jours pour que le délai moyen redevienne confortable",
+    "Retirer l'indicateur du tableau de bord, car il crée des désaccords"
+   ],
+   "answer": 0,
+   "explain": "Une moyenne peut rester satisfaisante alors qu'une part notable des usagers subit des délais très longs. Compléter par la médiane et par le pourcentage de dossiers dépassant un délai maximal donne une image fidèle. Changer la cible ou retirer l'indicateur ne règle pas le problème.",
+   "seconds": 90,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-060",
+   "theme": "Construire et lire un tableau de bord",
+   "level": 3,
+   "q": "Trois services remplissent chaque mois leur propre fichier, et un agent consolide à la main le tableau de bord. Des écarts apparaissent d'un mois à l'autre. Que recommandez-vous ?",
+   "choices": [
+    "Laisser chaque service garder sa méthode, en demandant à l'agent de corriger au cas par cas",
+    "Passer à un tableau de bord en couleur, pour que les écarts soient plus faciles à repérer",
+    "Demander aux services de transmettre leurs fichiers deux fois par mois au lieu d'une",
+    "Une source de données unique et centralisée, des formules protégées et un responsable de la qualité"
+   ],
+   "answer": 3,
+   "explain": "Les écarts viennent de saisies multiples et de consolidation manuelle. Centraliser la source, verrouiller les formules et nommer un responsable réduit les erreurs. Plus de couleur ou de fréquence ne les supprime pas.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-061",
+   "theme": "Qualité des données, biais et aide à la décision",
+   "level": 1,
+   "q": "Si 180 fiches sur 240 comportent une date, quelle dimension de la qualité mesure-t-on avec le rapport 180 / 240 ?",
+   "choices": [
+    "L'exactitude, soit la proportion de dates qui sont justes",
+    "L'unicité, soit la proportion de fiches qui ne sont pas des doublons",
+    "La complétude, soit la proportion de champs renseignés",
+    "L'actualité, soit la proportion de fiches mises à jour récemment"
+   ],
+   "answer": 2,
+   "explain": "Le rapport entre champs renseignés et champs attendus est la complétude. L'exactitude demande de comparer à la réalité, l'unicité de rechercher les doublons, l'actualité de regarder les dates de mise à jour.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-062",
+   "theme": "Qualité des données, biais et aide à la décision",
+   "level": 1,
+   "q": "Deux séries évoluent ensemble depuis cinq ans. Que peut-on en conclure ?",
+   "choices": [
+    "Que la première est la cause de la seconde, puisque les deux séries évoluent de concert",
+    "Qu'elles sont corrélées, sans que l'on puisse affirmer que l'une cause l'autre",
+    "Que la seconde est la cause de la première, puisqu'elle a été publiée plus tard",
+    "Qu'une des deux séries est erronée, car deux phénomènes distincts ne peuvent évoluer de même"
+   ],
+   "answer": 1,
+   "explain": "Une corrélation décrit une évolution commune ; elle peut venir d'une troisième variable, d'une tendance générale ou du hasard. Établir une causalité demande une analyse supplémentaire. Deux séries exactes peuvent parfaitement évoluer ensemble.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-063",
+   "theme": "Qualité des données, biais et aide à la décision",
+   "level": 1,
+   "q": "Une enquête de satisfaction n'est envoyée qu'aux usagers qui ont demandé un suivi par courriel. De quel risque s'agit-il ?",
+   "choices": [
+    "D'un biais de confirmation : le service retient seulement les réponses qui le valorisent",
+    "D'un biais d'arrondi : les pourcentages ont été calculés avec trop peu de décimales",
+    "D'un biais de calendrier : l'enquête a été envoyée à une période peu représentative",
+    "D'un biais de sélection : les répondants ne représentent pas tous les usagers"
+   ],
+   "answer": 3,
+   "explain": "Sélectionner les enquêtés selon un critère lié au sujet fausse la représentativité : c'est un biais de sélection. Les trois autres biais existent, mais ne décrivent pas ce mode d'échantillonnage.",
+   "seconds": 55,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-064",
+   "theme": "Qualité des données, biais et aide à la décision",
+   "level": 1,
+   "q": "Vous constatez une valeur dix fois supérieure à toutes les autres dans votre série. Quelle est la bonne pratique ?",
+   "choices": [
+    "La vérifier à la source avant de la corriger ou de l'écarter, et consigner la décision",
+    "La supprimer aussitôt, car une valeur aussi éloignée est forcément une erreur de saisie",
+    "La conserver sans y toucher, car toute intervention sur les données est interdite",
+    "La remplacer par la moyenne des autres valeurs afin de lisser la série"
+   ],
+   "answer": 0,
+   "explain": "Une valeur extrême peut être une erreur ou un fait réel important. On vérifie, on corrige si l'erreur est établie, et on note la décision. Supprimer ou lisser sans vérifier fausse l'analyse ; ne jamais intervenir laisse passer des erreurs.",
+   "seconds": 55,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-065",
+   "theme": "Qualité des données, biais et aide à la décision",
+   "level": 2,
+   "q": "Sur 240 fiches, 180 comportent la date de signature (chiffres fictifs). Quel est le taux de complétude du champ, et que faites-vous ?",
+   "choices": [
+    "25 % ; on relance la source pour compléter, ce taux étant celui des fiches renseignées",
+    "75 % ; on remplit les 60 dates manquantes avec la date du jour pour que le champ soit complet",
+    "75 % ; on relance la source pour obtenir les 60 dates manquantes et on le mentionne dans l'analyse",
+    "133 % ; on retire des fiches pour revenir à l'équilibre attendu entre champs et fiches"
+   ],
+   "answer": 2,
+   "explain": "180 / 240 = 75 % de complétude ; 25 % est la part manquante. Inventer les dates manquantes serait falsifier la donnée, et un taux de complétude ne peut pas dépasser 100 %. Il faut obtenir l'information à la source et signaler la limite.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-066",
+   "theme": "Qualité des données, biais et aide à la décision",
+   "level": 2,
+   "q": "Un service annonce un taux de non-conformité de 75 % sur 4 sites contrôlés. Un autre annonce le même taux sur 800 sites (chiffres fictifs). Comment comparer ?",
+   "choices": [
+    "Les deux taux ont exactement la même fiabilité, puisqu'ils sont égaux",
+    "Les deux taux sont identiques mais le premier est bien moins fiable, car calculé sur 4 cas seulement",
+    "Le premier taux est plus fiable, car un petit nombre de cas se vérifie plus facilement",
+    "Les deux taux ne peuvent pas être comparés, car ils sont exprimés en pourcentage"
+   ],
+   "answer": 1,
+   "explain": "Un taux sur 4 cas (3 sur 4) varie énormément avec un seul site de plus ou de moins ; sur 800 sites il est stable. L'égalité numérique cache une différence de fiabilité : on affiche toujours l'effectif. Les pourcentages peuvent évidemment être comparés.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-067",
+   "theme": "Qualité des données, biais et aide à la décision",
+   "level": 2,
+   "q": "Vous rédigez une note d'une page pour le directeur général à partir de vos analyses. Quel plan est le plus efficace ?",
+   "choices": [
+    "Le détail de la méthode d'abord, puis les calculs, puis la conclusion en dernière page",
+    "Un historique complet du dossier d'abord, puis la recommandation à la fin de la note",
+    "Un tableau de tous les chiffres collectés sur la période, laissé à l'interprétation du lecteur",
+    "La recommandation d'abord, puis les chiffres clés, les options, les limites des données et la suite"
+   ],
+   "answer": 3,
+   "explain": "Un décideur doit trouver la conclusion en premier, puis les éléments qui la fondent. Mettre la conclusion à la fin ou laisser interpréter des tableaux bruts retarde ou empêche la décision. Les limites des données doivent rester visibles.",
+   "seconds": 65,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-068",
+   "theme": "Qualité des données, biais et aide à la décision",
+   "level": 2,
+   "q": "On vous demande de transmettre à un partenaire le fichier complet de suivi, qui contient noms, salaires et coordonnées d'agents, pour qu'il produise un tableau de bord. Que faites-vous ?",
+   "choices": [
+    "Ne transmettre que des données agrégées ou anonymisées, selon les règles en vigueur et l'accord de la hiérarchie",
+    "Envoyer le fichier complet, car un partenaire est tenu à la confidentialité de fait",
+    "Envoyer le fichier complet en le protégeant par un mot de passe communiqué dans le même courriel",
+    "Retirer seulement la colonne des salaires et conserver noms et coordonnées pour faciliter le travail"
+   ],
+   "answer": 0,
+   "explain": "Le partenaire n'a pas besoin des données individuelles pour un tableau de bord : on minimise les données (agrégation, anonymisation). Un mot de passe dans le même courriel ne protège rien, et noms et coordonnées sont aussi des données personnelles. Les règles applicables sont à confirmer auprès des services compétents.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-069",
+   "theme": "Qualité des données, biais et aide à la décision",
+   "level": 3,
+   "q": "Les volumes d'une activité sont uniquement déclarés par les opérateurs concernés, sans contrôle indépendant. Un cadre propose de s'en servir directement pour fixer une décision. Quelle analyse faites-vous ?",
+   "choices": [
+    "Il y a un risque de biais déclaratif : on recoupe avec une autre source avant toute décision",
+    "Les chiffres sont fiables, car l'opérateur est le mieux placé pour connaître ses volumes",
+    "Il y a un risque de biais de sélection : on retire de l'échantillon les opérateurs les plus gros",
+    "Le risque porte seulement sur le format du fichier, qu'il suffit de convertir en tableur"
+   ],
+   "answer": 0,
+   "explain": "Quand les chiffres sont produits par ceux qu'ils concernent, il peut y avoir sous-déclaration ou erreur. On recoupe avec des relevés, des factures ou des contrôles. Retirer les gros opérateurs aggraverait le biais, et le format du fichier n'est pas en cause.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-donnees-tableaux-070",
+   "theme": "Qualité des données, biais et aide à la décision",
+   "level": 3,
+   "q": "Option A : 120 millions de FCFA pour gagner 10 jours de délai. Option B : 80 millions pour gagner 6 jours (chiffres fictifs). Quelle note de décision est la plus juste ?",
+   "choices": [
+    "B coûte moins cher au total, donc B est forcément l'option la plus efficiente",
+    "A coûte 12 millions par jour gagné, B environ 13,3 : A est plus efficiente, mais l'enveloppe et les risques entrent aussi en compte",
+    "A coûte 12 millions par jour gagné, B 14 ; le ratio suffit donc à décider seul",
+    "Les deux options sont équivalentes, car la différence de coût est proche de la différence de gain"
+   ],
+   "answer": 1,
+   "explain": "A : 120 / 10 = 12 ; B : 80 / 6 ≈ 13,3. A est plus efficiente par jour gagné, mais un ratio ne remplace pas l'analyse du budget disponible et des risques. Un coût total plus faible n'indique pas l'efficience, et 14 est un calcul faux.",
+   "seconds": 90,
+   "status": "draft"
+  }
+ ]
 }

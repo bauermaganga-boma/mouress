@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Point de comptage fiscal : séparateur, filtre, longueur droite avec redresseur d'écoulement, compteur, sondes de température et de pression, densimètre, préleveur automatique, boucle du prouveur, dérivation à vanne plombée, calculateur de débit, puis stockage et enlèvement</title>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker><marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker><style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}.w{fill:#FCFBF8;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.nvf{fill:#061F44;stroke:#061F44;stroke-width:2.5}
+.orf{fill:#F28C28;stroke:#061F44;stroke-width:2.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.da{fill:none;stroke:#B85C0A;stroke-width:2.5;stroke-dasharray:8 6}
+.dn{fill:none;stroke:#061F44;stroke-width:2.5;stroke-dasharray:8 6}
+.da{fill:none;stroke:#B85C0A;stroke-width:2.5;stroke-dasharray:8 6}.dn{fill:none;stroke:#061F44;stroke-width:2.5;stroke-dasharray:8 6}
+</style></defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Point de comptage fiscal (schéma de principe)</text>
+<rect x="140" y="112" width="570" height="330" rx="12" class="da"/>
+<text x="152" y="134" class="o">Ensemble de comptage</text>
+<rect x="25" y="205" width="95" height="90" rx="30" class="bl"/><text x="72" y="255" class="c b">Séparateur</text>
+<path d="M120,250H700" class="nv" marker-end="url(#ar)"/>
+<rect x="705" y="206" width="90" height="70" class="gr"/><text x="750" y="234" class="c b">Stockage</text><text x="750" y="254" class="c">et</text><text x="750" y="270" class="c">enlèvement</text>
+<rect x="165" y="232" width="42" height="36" class="gr"/><text x="186" y="292" class="c">Filtre</text>
+<rect x="235" y="240" width="115" height="20" class="bl"/><text x="292" y="292" class="c">Longueur droite</text><text x="292" y="310" class="c">et redresseur</text>
+<rect x="395" y="225" width="90" height="50" class="bl"/><text x="440" y="256" class="c b">Compteur</text>
+<path d="M365,250V205H510V250" class="dn"/>
+<rect x="415" y="195" width="16" height="20" class="orf"/><text x="505" y="182" class="e">Dérivation (vanne fermée, plombée)</text>
+<path d="M550,250V285" class="nv"/><circle cx="550" cy="297" r="12" class="bl"/><text x="550" y="302" class="c b">T</text>
+<path d="M585,250V285" class="nv"/><circle cx="585" cy="297" r="12" class="bl"/><text x="585" y="302" class="c b">P</text>
+<path d="M618,250V282" class="nv"/><rect x="606" y="282" width="24" height="26" class="bl"/><text x="618" y="332" class="c">Densimètre</text>
+<path d="M690,250V282" class="nv"/><rect x="676" y="282" width="28" height="26" class="orf"/><text x="700" y="332" class="c">Préleveur</text><text x="700" y="350" class="c">automatique</text>
+<path d="M330,250V385H375" class="nv"/><path d="M475,385H490V253" class="nv"/>
+<rect x="323" y="318" width="14" height="14" class="orf"/><rect x="483" y="318" width="14" height="14" class="orf"/>
+<rect x="375" y="365" width="100" height="40" rx="20" class="gr"/><text x="425" y="391" class="c b">Prouveur</text>
+<text x="425" y="428" class="c">boucle d'étalonnage</text>
+<rect x="340" y="55" width="230" height="40" class="gr"/><text x="455" y="80" class="c b">Calculateur de débit</text>
+<path d="M528,95V245" class="or" marker-end="url(#ao)" stroke-dasharray="8 6"/>
+<text x="400" y="468" class="c">T : sonde de température   P : sonde de pression</text>
+<text x="400" y="490" class="c" style="font-size:13px">Les carrés orange sont des vannes. Schéma simplifié, non à l'échelle.</text>
+</svg>

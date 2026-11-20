@@ -27,7 +27,9 @@
         "Résolution verticale ≈ λ/4 : avec 3 000 m/s et 30 Hz, environ 25 m (exemple).",
         "Traitement : déconvolution, analyse des vitesses, sommation, migration ; en profondeur avant sommation sous le sel.",
         "Exiger rapports d'acquisition et de traitement et données de terrain (article 12 de la loi n° 002/2019)."
-      ]
+      ],
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée : axe vertical en temps double (0 à 2 000 ms), axe horizontal de 0 à 5 km ; six horizons réflecteurs dont un, en orange, porte un point brillant (réservoir potentiel) ; anticlinal (piège structural) au centre et faille normale à droite qui décale les horizons vers le bas."
     },
     {
       "id": "m3",
@@ -55,7 +57,9 @@
         "Archie : avec les valeurs de l'exemple, Sw = 0,25, soit 75 % d'hydrocarbures.",
         "L'épaisseur utile dépend des seuils de coupure, qui doivent être précisés et justifiés.",
         "Données et études : propriété de l'État (article 10) ; sort des carottes : contrat et textes à vérifier."
-      ]
+      ],
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie entre 2 400 et 2 500 m : piste GR (0 à 150 API) et piste de résistivité en échelle logarithmique (0,2 à 2 000 Ω·m). Argile jusqu'à 2 420 m, grès à huile de 2 420 à 2 450 m (GR bas, résistivité élevée), contact huile/eau à 2 450 m, grès aquifère de 2 450 à 2 480 m (GR bas, résistivité faible), puis argile."
     },
     {
       "id": "m5",
@@ -69,7 +73,9 @@
         "Volume d'huile en place = surface × épaisseur utile × porosité × (1 − Sw) / Bo.",
         "P90 = estimation basse, P50 = médiane, P10 = estimation haute.",
         "Ressources prospectives ne sont pas des réserves ; commercialité déclarée selon l'article 64 de la loi n° 002/2019."
-      ]
+      ],
+      "img": "svg/min-systeme-petrolier.svg",
+      "imgAlt": "Coupe d'un système pétrolier : roche mère en bas, deux flèches de migration vers un réservoir en voûte (anticlinal) surmonté d'une couverture imperméable ; dans le réservoir, gaz au sommet, huile au milieu et eau en bas, séparés par des contacts en pointillés. Le puits P1 est foré au sommet de la structure, le puits P2 sur le flanc, dans la zone d'eau."
     },
     {
       "id": "m6",
@@ -354,7 +360,7 @@
       "id": "min-geologie-011",
       "theme": "Sismique 2D et 3D : acquisition et traitement",
       "level": 1,
-      "q": "Que mesure la sismique réflexion ?",
+      "q": "Sur la section sismique, l'axe vertical est gradué en temps double (ms). Que mesure la sismique réflexion pour construire une telle image ?",
       "choices": [
         "Le champ de gravité terrestre et ses variations locales à la surface du sol, mesurés par des gravimètres",
         "La radioactivité naturelle des roches traversées par un puits",
@@ -362,9 +368,11 @@
         "Le temps d'aller-retour d'ondes acoustiques réfléchies par les interfaces entre couches"
       ],
       "answer": 3,
-      "explain": "La sismique réflexion émet une onde et enregistre ses échos aux contrastes d'impédance acoustique. Gravimétrie, diagraphie gamma et mesures de conductivité sont d'autres méthodes.",
+      "explain": "La sismique réflexion émet une onde et enregistre ses échos aux contrastes d'impédance acoustique : l'image est donc en temps (aller-retour), d'où l'axe en millisecondes. Gravimétrie, diagraphie gamma et mesures de conductivité sont d'autres méthodes.",
       "seconds": 40,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée : axe vertical en temps double (0 à 2 000 ms), axe horizontal de 0 à 5 km ; six horizons réflecteurs dont un, en orange, porte un point brillant (réservoir potentiel) ; anticlinal (piège structural) au centre et faille normale à droite qui décale les horizons vers le bas."
     },
     {
       "id": "min-geologie-012",
@@ -553,55 +561,61 @@
       "id": "min-geologie-023",
       "theme": "Interprétation sismique et incertitudes",
       "level": 1,
-      "q": "Qu'appelle-t-on « pointé » d'un horizon ?",
+      "q": "Sur la section sismique interprétée, chaque horizon est tracé en suivant le même réflecteur d'une trace à l'autre, d'un bout à l'autre de la section. Quel terme désigne ce travail ?",
       "choices": [
         "La mesure de la température et de la pression en fond de puits avant la descente du tubage",
-        "Le suivi d'un réflecteur de trace en trace pour en tracer la surface",
+        "Le pointé des horizons, qui suit un réflecteur de trace en trace",
         "Le calcul du facteur volumétrique du pétrole",
         "L'inventaire des déblais de forage"
       ],
       "answer": 1,
       "explain": "Le pointé consiste à suivre un même réflecteur sur la sismique pour établir sa carte. Les autres propositions relèvent d'autres métiers.",
       "seconds": 40,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée : axe vertical en temps double (0 à 2 000 ms), axe horizontal de 0 à 5 km ; six horizons réflecteurs dont un, en orange, porte un point brillant (réservoir potentiel) ; anticlinal (piège structural) au centre et faille normale à droite qui décale les horizons vers le bas."
     },
     {
       "id": "min-geologie-024",
       "theme": "Interprétation sismique et incertitudes",
       "level": 1,
-      "q": "Qu'est-ce qu'une fermeture structurale ?",
+      "q": "Sur la section sismique, le réflecteur orange forme une voûte dont le sommet se situe vers 850 ms, à 2,5 km, et qui redescend de part et d'autre. Qu'appelle-t-on la fermeture structurale d'un tel piège ?",
       "choices": [
-        "Une faille bouchée par un ciment",
-        "La fin d'une campagne sismique",
-        "La clôture administrative d'un dossier de permis",
-        "Une surface entourée de courbes de niveau fermées jusqu'au point de fuite, qui peut retenir des hydrocarbures"
+        "Une faille dont les lèvres ont été bouchées par un ciment naturel",
+        "La fin d'une campagne d'acquisition sismique en mer",
+        "La clôture administrative d'un dossier de demande de permis",
+        "La hauteur entre le sommet de la voûte et son point de fuite, qui limite le volume piégé"
       ],
       "answer": 3,
-      "explain": "La fermeture est la hauteur entre le sommet du piège et son point de fuite. C'est une condition géométrique du piégeage, à comparer à l'incertitude de conversion.",
+      "explain": "La fermeture est la hauteur entre le sommet du piège et son point de fuite : tout ce qui est au-dessus peut retenir des hydrocarbures. C'est une condition géométrique du piégeage, à comparer à l'incertitude de conversion en profondeur.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée : axe vertical en temps double (0 à 2 000 ms), axe horizontal de 0 à 5 km ; six horizons réflecteurs dont un, en orange, porte un point brillant (réservoir potentiel) ; anticlinal (piège structural) au centre et faille normale à droite qui décale les horizons vers le bas."
     },
     {
       "id": "min-geologie-025",
       "theme": "Interprétation sismique et incertitudes",
       "level": 2,
-      "q": "Un réflecteur est à 2 000 ms (temps double) et la vitesse moyenne est de 2 500 m/s (valeurs d'exemple). Quelle est sa profondeur ?",
+      "q": "Sur la section sismique, le réflecteur orange atteint son sommet vers 850 ms en temps double (à 2,5 km). Avec une vitesse moyenne de 2 500 m/s (valeur d'exemple), quelle est la profondeur approximative de ce sommet ?",
       "choices": [
-        "5 000 m",
-        "2 500 m",
-        "1 250 m",
-        "Environ 4 000 m, après correction du niveau de référence"
+        "Environ 2 125 m",
+        "Environ 1 060 m",
+        "Environ 530 m",
+        "Environ 850 m"
       ],
       "answer": 1,
-      "explain": "Le temps lu est un aller-retour : profondeur = 2 500 × 2,0 / 2 = 2 500 m. 5 000 m correspond à l'oubli de la division par deux ; 1 250 m à une division en trop ; 4 000 m n'a pas de justification.",
+      "explain": "Le temps lu est un aller-retour : profondeur = 2 500 × 0,85 / 2 ≈ 1 060 m. 2 125 m correspond à l'oubli de la division par deux ; 530 m à une division en trop ; 850 m confond des millisecondes avec des mètres.",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée : axe vertical en temps double (0 à 2 000 ms), axe horizontal de 0 à 5 km ; six horizons réflecteurs dont un, en orange, porte un point brillant (réservoir potentiel) ; anticlinal (piège structural) au centre et faille normale à droite qui décale les horizons vers le bas."
     },
     {
       "id": "min-geologie-026",
       "theme": "Interprétation sismique et incertitudes",
       "level": 2,
-      "q": "Une forte anomalie d'amplitude est présentée comme preuve de gaz. Quelle est votre analyse ?",
+      "q": "Sur la section sismique, le réflecteur orange porte l'annotation « point brillant : réservoir potentiel ». Une telle anomalie d'amplitude est présentée comme preuve de gaz. Quelle est votre analyse ?",
       "choices": [
         "C'est une preuve définitive, car seul le gaz crée de fortes amplitudes",
         "C'est sans valeur, car les amplitudes ne sont jamais interprétables",
@@ -611,7 +625,9 @@
       "answer": 3,
       "explain": "Une amplitude forte peut venir d'un gaz, mais aussi d'un carbonate, d'un sel ou d'un banc dur. On la confirme avec des analyses complémentaires et des puits ; ni preuve absolue ni indice négligeable.",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée : axe vertical en temps double (0 à 2 000 ms), axe horizontal de 0 à 5 km ; six horizons réflecteurs dont un, en orange, porte un point brillant (réservoir potentiel) ; anticlinal (piège structural) au centre et faille normale à droite qui décale les horizons vers le bas."
     },
     {
       "id": "min-geologie-027",
@@ -688,7 +704,7 @@
       "id": "min-geologie-031",
       "theme": "Diagraphies et carottes",
       "level": 1,
-      "q": "Que mesure principalement la diagraphie de rayonnement gamma naturel ?",
+      "q": "Sur la piste de gauche (GR) de la diagraphie, la courbe se décale vers les valeurs fortes dans les argiles et vers les valeurs faibles dans les grès. Que mesure principalement cette diagraphie ?",
       "choices": [
         "La résistivité électrique de l'eau de formation et la vitesse du son dans la roche traversée",
         "La radioactivité naturelle de la roche, plus forte dans les argiles",
@@ -696,15 +712,17 @@
         "La température du fluide"
       ],
       "answer": 1,
-      "explain": "Le gamma naturel est élevé dans les schistes (potassium, uranium, thorium) et faible dans les grès et carbonates propres : c'est un indicateur de lithologie.",
+      "explain": "Le gamma naturel est élevé dans les schistes (potassium, uranium, thorium) et faible dans les grès et carbonates propres : c'est un indicateur de lithologie, ce que montre la piste GR.",
       "seconds": 40,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie entre 2 400 et 2 500 m : piste GR (0 à 150 API) et piste de résistivité en échelle logarithmique (0,2 à 2 000 Ω·m). Argile jusqu'à 2 420 m, grès à huile de 2 420 à 2 450 m (GR bas, résistivité élevée), contact huile/eau à 2 450 m, grès aquifère de 2 450 à 2 480 m (GR bas, résistivité faible), puis argile."
     },
     {
       "id": "min-geologie-032",
       "theme": "Diagraphies et carottes",
       "level": 1,
-      "q": "Pourquoi la résistivité est-elle utile pour reconnaître des hydrocarbures ?",
+      "q": "Sur la piste de résistivité de la diagraphie, le grès à huile se distingue nettement du grès aquifère situé juste en dessous. Pourquoi la résistivité permet-elle cette distinction ?",
       "choices": [
         "Parce que le pétrole conduit mieux l'électricité que l'eau salée",
         "Parce que la résistivité est identique pour tous les fluides",
@@ -712,9 +730,11 @@
         "Parce que les hydrocarbures résistent au courant alors que l'eau salée de formation le conduit"
       ],
       "answer": 3,
-      "explain": "Un réservoir poreux rempli d'hydrocarbures est plus résistant qu'un réservoir rempli d'eau salée. La résistivité ne donne pas la perméabilité, qui doit venir d'autres sources.",
+      "explain": "Un réservoir poreux rempli d'hydrocarbures est plus résistant qu'un réservoir rempli d'eau salée : sur la diagraphie, la résistivité est forte dans le grès à huile et faible sous le contact. La résistivité ne donne pas la perméabilité, qui doit venir d'autres sources.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie entre 2 400 et 2 500 m : piste GR (0 à 150 API) et piste de résistivité en échelle logarithmique (0,2 à 2 000 Ω·m). Argile jusqu'à 2 420 m, grès à huile de 2 420 à 2 450 m (GR bas, résistivité élevée), contact huile/eau à 2 450 m, grès aquifère de 2 450 à 2 480 m (GR bas, résistivité faible), puis argile."
     },
     {
       "id": "min-geologie-033",
@@ -800,17 +820,19 @@
       "id": "min-geologie-038",
       "theme": "Diagraphies et carottes",
       "level": 2,
-      "q": "Un rapport annonce 40 m d'épaisseur utile sans préciser les seuils de coupure. Quelle est votre demande ?",
+      "q": "Un rapport annonce 40 m d'épaisseur utile de grès à huile entre 2 420 et 2 480 m, sans préciser les seuils de coupure. En regardant la diagraphie, quelle est votre demande ?",
       "choices": [
         "Rien : 40 m est un chiffre suffisant, car il provient d'un opérateur qualifié et reconnu",
-        "Les seuils (porosité, argilosité, saturation) et leur justification",
-        "Une conversion de 40 m en pieds",
-        "L'ajout d'une couleur sur la diagraphie"
+        "Les seuils (porosité, argilosité, saturation) et leur justification, car la diagraphie ne montre que 30 m de grès à huile",
+        "Une conversion de 40 m en pieds, pour comparer avec les rapports étrangers",
+        "L'ajout d'une couleur sur la diagraphie pour la rendre plus lisible"
       ],
       "answer": 1,
-      "explain": "L'épaisseur utile est une construction qui dépend des seuils. Sans eux, le chiffre n'est ni reproductible ni comparable avec d'autres puits.",
+      "explain": "La diagraphie montre du grès à huile de 2 420 à 2 450 m, soit 30 m ; au-delà du contact huile/eau, le grès est aquifère. L'épaisseur utile est une construction qui dépend des seuils : sans eux, le chiffre n'est ni reproductible ni comparable avec d'autres puits.",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/well-log.svg",
+      "imgAlt": "Diagraphie entre 2 400 et 2 500 m : piste GR (0 à 150 API) et piste de résistivité en échelle logarithmique (0,2 à 2 000 Ω·m). Argile jusqu'à 2 420 m, grès à huile de 2 420 à 2 450 m (GR bas, résistivité élevée), contact huile/eau à 2 450 m, grès aquifère de 2 450 à 2 480 m (GR bas, résistivité faible), puis argile."
     },
     {
       "id": "min-geologie-039",
@@ -855,7 +877,7 @@
       "id": "min-geologie-041",
       "theme": "Évaluation du potentiel d'un bloc",
       "level": 1,
-      "q": "Quels éléments composent un système pétrolier ?",
+      "q": "Sur la coupe, on repère la roche mère, la migration, le réservoir, la couverture et le piège. Quels éléments composent un système pétrolier ?",
       "choices": [
         "Raffinerie, oléoduc, terminal pétrolier, navire et station-service, de l'amont à la distribution",
         "Foreuse, boue, tubage et tête de puits",
@@ -863,9 +885,11 @@
         "Permis, contrat, décret et arrêté"
       ],
       "answer": 2,
-      "explain": "Un système pétrolier est un ensemble d'éléments géologiques et de processus. Les autres listes décrivent l'aval, le forage ou le cadre juridique.",
+      "explain": "Un système pétrolier est un ensemble d'éléments géologiques et de processus, comme le montre la coupe. Les autres listes décrivent l'aval, le forage ou le cadre juridique.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-systeme-petrolier.svg",
+      "imgAlt": "Coupe d'un système pétrolier : roche mère en bas, deux flèches de migration vers un réservoir en voûte (anticlinal) surmonté d'une couverture imperméable ; dans le réservoir, gaz au sommet, huile au milieu et eau en bas, séparés par des contacts en pointillés. Le puits P1 est foré au sommet de la structure, le puits P2 sur le flanc, dans la zone d'eau."
     },
     {
       "id": "min-geologie-042",
@@ -903,7 +927,7 @@
       "id": "min-geologie-044",
       "theme": "Évaluation du potentiel d'un bloc",
       "level": 1,
-      "q": "Comment calcule-t-on la probabilité de succès géologique d'un prospect (Pg) ?",
+      "q": "Sur la coupe du système pétrolier, chaque élément (roche mère, migration, réservoir, couverture, piège) doit être présent pour qu'une accumulation existe. Comment calcule-t-on la probabilité de succès géologique d'un prospect (Pg) ?",
       "choices": [
         "En additionnant les probabilités des éléments puis en divisant par leur nombre",
         "En multipliant les probabilités des éléments du système",
@@ -911,9 +935,11 @@
         "En divisant le volume par la surface"
       ],
       "answer": 1,
-      "explain": "Le succès exige que tous les éléments soient réunis : on multiplie donc leurs probabilités. Une addition dépasserait 100 %, et le maximum ignore les maillons faibles.",
+      "explain": "Le succès exige que tous les éléments de la coupe soient réunis : on multiplie donc leurs probabilités. Une addition dépasserait 100 %, et le maximum ignore les maillons faibles.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-systeme-petrolier.svg",
+      "imgAlt": "Coupe d'un système pétrolier : roche mère en bas, deux flèches de migration vers un réservoir en voûte (anticlinal) surmonté d'une couverture imperméable ; dans le réservoir, gaz au sommet, huile au milieu et eau en bas, séparés par des contacts en pointillés. Le puits P1 est foré au sommet de la structure, le puits P2 sur le flanc, dans la zone d'eau."
     },
     {
       "id": "min-geologie-045",

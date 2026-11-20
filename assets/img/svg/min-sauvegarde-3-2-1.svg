@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Règle de sauvegarde 3-2-1 : trois copies des données, sur deux supports différents, dont une copie hors site. Poste de travail (copie 1), disque externe ou serveur (copie 2), site distant (copie 3).</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.o{fill:#B85C0A;font-weight:bold}.s13{font-size:13px}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:#FDEBD3;stroke:#F28C28;stroke-width:3}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Règle de sauvegarde 3-2-1</text>
+
+<rect x="30" y="62" width="520" height="190" rx="12" fill="none" stroke="#061F44" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="46" y="84" class="b">Site principal (bureau)</text>
+<rect x="50" y="110" width="200" height="110" rx="8" class="bl"/>
+<text x="150" y="140" class="c b">Poste de travail</text>
+<text x="150" y="164" class="c o">Copie 1 : l'original</text>
+<text x="150" y="190" class="c">Support n° 1</text>
+<path d="M252,165H326" class="nv" marker-end="url(#ar)"/>
+<text x="289" y="150" class="c s13">sauvegarde</text>
+<rect x="330" y="110" width="200" height="110" rx="8" class="gr"/>
+<text x="430" y="136" class="c b">Disque externe</text><text x="430" y="154" class="c b">ou serveur</text>
+<text x="430" y="178" class="c o">Copie 2 : sauvegarde</text>
+<text x="430" y="204" class="c">Support n° 2</text>
+
+<path d="M532,165H602" class="nv" marker-end="url(#ao)"/>
+<text x="570" y="150" class="c s13">envoi</text>
+<text x="689" y="84" class="c b">Site distant</text>
+<rect x="604" y="110" width="170" height="110" rx="8" class="or"/>
+<text x="689" y="140" class="c b">Autre lieu ou</text><text x="689" y="158" class="c b">espace sécurisé</text>
+<text x="689" y="182" class="c o">Copie 3 : hors site</text>
+<text x="689" y="206" class="c">Support n° 1 ou 2</text>
+
+<rect x="30" y="280" width="236" height="132" rx="10" class="wh"/>
+<text x="148" y="338" class="c" style="font-size:52px;font-weight:bold;fill:#F28C28">3</text>
+<text x="148" y="366" class="c b">copies des données</text>
+<text x="148" y="388" class="c s13">l'original + deux sauvegardes</text>
+<rect x="282" y="280" width="236" height="132" rx="10" class="wh"/>
+<text x="400" y="338" class="c" style="font-size:52px;font-weight:bold;fill:#F28C28">2</text>
+<text x="400" y="366" class="c b">types de supports</text>
+<text x="400" y="388" class="c s13">différents (disque, serveur, ...)</text>
+<rect x="534" y="280" width="236" height="132" rx="10" class="wh"/>
+<text x="652" y="338" class="c" style="font-size:52px;font-weight:bold;fill:#F28C28">1</text>
+<text x="652" y="366" class="c b">copie hors site</text>
+<text x="652" y="388" class="c s13">conservée dans un autre lieu</text>
+
+<text x="400" y="446" class="c b">Une copie jamais restaurée en test n'est pas une garantie : tester régulièrement.</text>
+<text x="400" y="470" class="c s13">Une copie déconnectée du réseau résiste mieux à un rançongiciel.</text>
+</svg>

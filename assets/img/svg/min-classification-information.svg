@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Niveaux de classification de l'information, du moins sensible au plus sensible : Public (diffusion libre), Interne (agents du ministère), Confidentiel (besoin d'en connaître), Secret ou très sensible (très peu de personnes). Appellations à confirmer dans la politique de sécurité du ministère.</title>
+<defs>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:13px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.l{font-size:17px;font-weight:bold;text-anchor:middle}
+.cell{fill:#FCFBF8;stroke:#061F44;stroke-width:1.5}
+.hd{font-size:14px;font-weight:bold;text-anchor:middle}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Niveaux de classification de l'information</text>
+<path d="M22,410V96" fill="none" stroke="#F28C28" stroke-width="3.5" marker-end="url(#ao)"/>
+<text transform="translate(14,256) rotate(-90)" class="c b" style="fill:#B85C0A">Sensibilité croissante</text>
+<text x="105" y="76" class="hd">Niveau</text><text x="267" y="76" class="hd">Qui peut lire</text><text x="467" y="76" class="hd">Exemples</text><text x="675" y="76" class="hd">Protection</text>
+<rect x="40" y="86" width="130" height="76" fill="#061F44" stroke="#061F44" stroke-width="1.5"/>
+<text x="105" y="120" class="l" style="fill:#FCFBF8">Secret</text><text x="105" y="140" class="c" style="fill:#DCE6F5">très sensible</text>
+<rect x="170" y="86" width="195" height="76" class="cell"/><rect x="365" y="86" width="205" height="76" class="cell"/><rect x="570" y="86" width="210" height="76" class="cell"/>
+<text x="180" y="119">Très peu de personnes,</text><text x="180" y="137">désignées nommément</text>
+<text x="375" y="119">Données géologiques</text><text x="375" y="137">stratégiques</text>
+<text x="580" y="119">Textes spécifiques,</text><text x="580" y="137">chiffrement</text>
+<rect x="40" y="168" width="130" height="76" fill="#B85C0A" stroke="#061F44" stroke-width="1.5"/>
+<text x="105" y="212" class="l" style="fill:#FCFBF8">Confidentiel</text>
+<rect x="170" y="168" width="195" height="76" class="cell"/><rect x="365" y="168" width="205" height="76" class="cell"/><rect x="570" y="168" width="210" height="76" class="cell"/>
+<text x="180" y="201">Seulement les personnes</text><text x="180" y="219">qui ont besoin d'en connaître</text>
+<text x="375" y="201">Contrat avec un opérateur,</text><text x="375" y="219">données de production</text>
+<text x="580" y="201">Accès restreint, marquage,</text><text x="580" y="219">chiffrement si transporté</text>
+<rect x="40" y="250" width="130" height="76" fill="#DCE6F5" stroke="#061F44" stroke-width="1.5"/>
+<text x="105" y="294" class="l" style="fill:#061F44">Interne</text>
+<rect x="170" y="250" width="195" height="76" class="cell"/><rect x="365" y="250" width="205" height="76" class="cell"/><rect x="570" y="250" width="210" height="76" class="cell"/>
+<text x="180" y="283">Les agents du ministère</text><text x="180" y="301">(pas de diffusion externe)</text>
+<text x="375" y="283">Notes de service,</text><text x="375" y="301">procédures internes</text>
+<text x="580" y="283">Serveurs du ministère,</text><text x="580" y="301">pas de service grand public</text>
+<rect x="40" y="332" width="130" height="76" fill="#E8EAEE" stroke="#061F44" stroke-width="1.5"/>
+<text x="105" y="376" class="l" style="fill:#061F44">Public</text>
+<rect x="170" y="332" width="195" height="76" class="cell"/><rect x="365" y="332" width="205" height="76" class="cell"/><rect x="570" y="332" width="210" height="76" class="cell"/>
+<text x="180" y="365">Toute personne</text><text x="180" y="383">(diffusion libre)</text>
+<text x="375" y="365">Communiqué de presse,</text><text x="375" y="383">texte publié</text>
+<text x="580" y="365">Aucune restriction</text><text x="580" y="383">particulière</text>
+<text x="400" y="444" class="c b" style="font-size:14px">Marquer le niveau sur le document, puis limiter la diffusion à ceux qui doivent le lire.</text>
+<text x="400" y="468" class="c">Schéma usuel à quatre niveaux : les appellations exactes sont à confirmer dans la politique de sécurité du ministère.</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Système pétrolier : roche mère au fond, migration vers un réservoir en forme de voûte (anticlinal) surmonté d'une couverture imperméable ; dans le réservoir, le gaz est au sommet, l'huile au milieu et l'eau en bas ; puits P1 au sommet de la structure et puits P2 sur le flanc, sous le contact huile/eau</title>
+<defs>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#B85C0A"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<clipPath id="res"><path d="M40,240Q310,100 580,240L580,300Q310,160 40,300Z"/></clipPath>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.w{fill:#FFFFFF;font-weight:bold;text-anchor:middle}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Le système pétrolier (coupe schématique)</text>
+
+<!-- sous-sol -->
+<rect x="40" y="75" width="540" height="375" fill="#F1EDE3" stroke="#061F44" stroke-width="2.5"/>
+<text x="55" y="100" class="b">Roches sus-jacentes</text>
+<text x="46" y="68" class="b">Surface du sol</text>
+
+<!-- couverture -->
+<path d="M40,195Q310,55 580,195L580,240Q310,100 40,240Z" fill="#E8EAEE" stroke="#061F44" stroke-width="2.5"/>
+
+<!-- reservoir : eau, gaz, huile -->
+<path d="M40,240Q310,100 580,240L580,300Q310,160 40,300Z" fill="#B9CCE6"/>
+<g clip-path="url(#res)">
+<rect x="40" y="100" width="540" height="115" fill="#F28C28"/>
+<rect x="40" y="100" width="540" height="90" fill="#FFF0CF"/>
+</g>
+<path d="M40,240Q310,100 580,240L580,300Q310,160 40,300Z" fill="none" stroke="#061F44" stroke-width="2.5"/>
+<path d="M166,190H454M94,215H526" fill="none" stroke="#061F44" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+<!-- roche mere -->
+<rect x="40" y="390" width="540" height="60" fill="#061F44"/>
+<text x="310" y="426" class="w" style="font-size:16px">Roche mère</text>
+
+<!-- migration -->
+<path d="M120,388C120,340 130,300 138,268" class="nv" style="stroke:#F28C28" marker-end="url(#ao)"/>
+<path d="M500,388C500,340 490,300 484,266" class="nv" style="stroke:#F28C28" marker-end="url(#ao)"/>
+<text x="150" y="345" class="o">Migration</text>
+<text x="388" y="345" class="o">Migration</text>
+
+<!-- fluides -->
+<text x="350" y="185" class="c b" style="font-size:13px">Gaz</text>
+<text x="200" y="209" class="c b" style="font-size:13px">Huile</text>
+<text x="470" y="244" class="c b" style="font-size:13px">Eau</text>
+
+<!-- puits -->
+<path d="M300,75V238" class="nv"/>
+<path d="M560,75V298" class="nv"/>
+<path d="M290,75L300,56L310,75Z" fill="#061F44"/>
+<path d="M550,75L560,56L570,75Z" fill="#061F44"/>
+<text x="326" y="68" class="b">P1</text>
+<text x="586" y="68" class="b" style="font-size:14px">P2</text>
+
+<!-- piege -->
+<path d="M366,111L336,125" class="ld" marker-end="url(#ar)"/>
+<text x="370" y="112" class="b">Piège : voûte (anticlinal)</text>
+
+<!-- etiquettes a droite -->
+<text x="600" y="150" class="b">Couverture</text>
+<text x="600" y="168">(roche imperméable)</text>
+<path d="M598,160H590L575,206" class="ld"/>
+<text x="600" y="262" class="b">Réservoir</text>
+<text x="600" y="280">(grès poreux</text>
+<text x="600" y="298">et perméable)</text>
+<path d="M598,272H590L575,270" class="ld"/>
+<text x="600" y="350" class="b">Contacts entre fluides</text>
+<text x="600" y="368">(lignes en pointillés)</text>
+
+<text x="400" y="480" class="c b">Synchronisme : le piège doit exister avant la migration</text>
+</svg>

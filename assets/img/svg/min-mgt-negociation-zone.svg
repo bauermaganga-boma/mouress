@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Préparer une négociation avec un opérateur, exemple illustratif sur un délai de remise de rapport. Ministère : position 30 jours, résultat acceptable jusqu'à 60 jours, limite 60 jours. Opérateur : position 90 jours, résultat acceptable à partir de 45 jours. Zone d'accord possible de 45 à 60 jours. Chaque partie a une solution de repli. Tout accord est confirmé par écrit par l'autorité compétente.</title>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.o{fill:#B85C0A;font-weight:bold}.s{font-size:13px}
+.ax{stroke:#061F44;stroke-width:3}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Négociation : positions, limites et zone d'accord (exemple)</text>
+<text x="400" y="54" class="c s">Délai de remise d'un rapport, en jours (chiffres fictifs)</text>
+
+<!-- axe : 0 à 100 jours, x = 80 + 6.4*j -->
+<line x1="80" y1="250" x2="720" y2="250" class="ax"/>
+<g stroke="#061F44" stroke-width="2"><path d="M80,244V256M208,244V256M336,244V256M464,244V256M592,244V256M720,244V256"/></g>
+<text x="80" y="276" class="c">0</text><text x="208" y="276" class="c">20</text><text x="336" y="276" class="c">40</text><text x="464" y="276" class="c">60</text><text x="592" y="276" class="c">80</text><text x="720" y="276" class="c">100</text>
+
+<!-- ministère : acceptable 30..60 -->
+<rect x="272" y="150" width="192" height="30" fill="#DCE6F5" stroke="#061F44" stroke-width="2.5"/>
+<text x="80" y="170" class="b">Ministère</text>
+<path d="M272,140V190" stroke="#061F44" stroke-width="4"/>
+<text x="272" y="132" class="c b">Position : 30 j</text>
+<path d="M464,140V190" stroke="#B85C0A" stroke-width="4"/>
+<text x="464" y="132" class="c o">Limite : 60 j</text>
+
+<!-- opérateur : acceptable 45..90 -->
+<rect x="368" y="310" width="208" height="30" fill="#E8EAEE" stroke="#061F44" stroke-width="2.5"/>
+<text x="80" y="330" class="b">Opérateur</text>
+<path d="M576,300V350" stroke="#061F44" stroke-width="4"/>
+<text x="576" y="372" class="c b">Position : 90 j</text>
+<path d="M368,300V350" stroke="#B85C0A" stroke-width="4"/>
+<text x="368" y="372" class="c o">Limite : 45 j</text>
+
+<!-- zone d'accord -->
+<rect x="368" y="196" width="96" height="100" fill="#F28C28" fill-opacity="0.35" stroke="#B85C0A" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="416" y="224" class="c b s">Zone d'accord</text>
+
+<!-- intérêts et repli -->
+<rect x="20" y="395" width="375" height="90" rx="8" fill="#FCFBF8" stroke="#061F44" stroke-width="2"/>
+<text x="32" y="418" class="b">Solutions de repli (si l'échec)</text>
+<text x="32" y="440" class="s">Ministère : appliquer les mesures prévues par les textes.</text>
+<text x="32" y="460" class="s">Opérateur : s'exposer à ces mesures.</text>
+<rect x="405" y="395" width="375" height="90" rx="8" fill="#FCFBF8" stroke="#F28C28" stroke-width="2.5"/>
+<text x="417" y="418" class="b">Intérêts derrière les positions</text>
+<text x="417" y="440" class="s">Ministère : valider la production avant la clôture.</text>
+<text x="417" y="460" class="s">Opérateur : disposer du temps de contrôle qualité.</text>
+<text x="417" y="478" class="s">Tout accord est confirmé par écrit.</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Choix du graphique selon la question : évolution dans le temps, courbe ; comparer des catégories, barres ; part de chaque élément dans un tout, secteurs (deux à cinq parts) ; répartition des valeurs d'une série, histogramme ; lien entre deux variables, nuage de points.</title>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.s13{font-size:13px}.nm{font-size:17px;font-weight:bold}
+.row{fill:#FCFBF8;stroke:#061F44;stroke-width:2}
+.ax{fill:none;stroke:#061F44;stroke-width:2}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Quel graphique pour quelle question ?</text>
+<text x="200" y="62" class="c b s13">Question à se poser</text><text x="455" y="62" class="c b s13">Forme</text><text x="650" y="62" class="c b s13">Graphique recommandé</text>
+
+<rect x="24" y="70" width="752" height="66" rx="8" class="row"/>
+<text x="40" y="98" class="b">Comment évolue une valeur</text><text x="40" y="118" class="b">dans le temps ?</text>
+<path d="M402,78V128H510" class="ax"/><polyline points="408,118 430,100 452,108 476,88 506,82" fill="none" stroke="#F28C28" stroke-width="3.5"/>
+<text x="540" y="98" class="nm">Courbe</text><text x="540" y="120" class="s13">évolution mensuelle ou annuelle</text>
+
+<rect x="24" y="146" width="752" height="66" rx="8" class="row"/>
+<text x="40" y="174" class="b">Comment comparer des</text><text x="40" y="194" class="b">catégories ?</text>
+<path d="M402,154V204H510" class="ax"/>
+<rect x="412" y="176" width="16" height="28" fill="#061F44"/><rect x="434" y="164" width="16" height="40" fill="#061F44"/><rect x="456" y="184" width="16" height="20" fill="#061F44"/><rect x="478" y="170" width="16" height="34" fill="#061F44"/>
+<text x="540" y="174" class="nm">Barres</text><text x="540" y="196" class="s13">provinces, services, opérateurs</text>
+
+<rect x="24" y="222" width="752" height="66" rx="8" class="row"/>
+<text x="40" y="250" class="b">Quelle part chaque élément</text><text x="40" y="270" class="b">pèse-t-il dans le tout ?</text>
+<path d="M455,255L455,231A24,24 0 0 1 469.1,274.4Z" fill="#061F44" stroke="#FCFBF8" stroke-width="2"/>
+<path d="M455,255L469.1,274.4A24,24 0 0 1 432.2,262.4Z" fill="#F28C28" stroke="#FCFBF8" stroke-width="2"/>
+<path d="M455,255L432.2,262.4A24,24 0 0 1 455,231Z" fill="#DCE6F5" stroke="#061F44" stroke-width="2"/>
+<text x="540" y="250" class="nm">Secteurs</text><text x="540" y="272" class="s13">deux à cinq parts seulement</text>
+
+<rect x="24" y="298" width="752" height="66" rx="8" class="row"/>
+<text x="40" y="326" class="b">Comment se répartissent les</text><text x="40" y="346" class="b">valeurs d'une série ?</text>
+<path d="M402,306V356H510" class="ax"/>
+<rect x="412" y="346" width="16" height="10" fill="#061F44"/><rect x="428" y="332" width="16" height="24" fill="#061F44"/><rect x="444" y="316" width="16" height="40" fill="#061F44"/><rect x="460" y="326" width="16" height="30" fill="#061F44"/><rect x="476" y="340" width="16" height="16" fill="#061F44"/>
+<text x="540" y="326" class="nm">Histogramme</text><text x="540" y="348" class="s13">valeurs regroupées en classes</text>
+
+<rect x="24" y="374" width="752" height="66" rx="8" class="row"/>
+<text x="40" y="402" class="b">Deux variables numériques</text><text x="40" y="422" class="b">sont-elles liées ?</text>
+<path d="M402,382V432H510" class="ax"/>
+<g fill="#F28C28" stroke="#061F44" stroke-width="1"><circle cx="418" cy="422" r="4"/><circle cx="430" cy="414" r="4"/><circle cx="442" cy="418" r="4"/><circle cx="454" cy="404" r="4"/><circle cx="466" cy="408" r="4"/><circle cx="478" cy="396" r="4"/><circle cx="490" cy="392" r="4"/><circle cx="500" cy="388" r="4"/></g>
+<text x="540" y="402" class="nm">Nuage de points</text><text x="540" y="424" class="s13">une variable sur chaque axe</text>
+
+<text x="400" y="466" class="c b">Partir de la question, puis choisir la forme : un graphique, un message.</text>
+<text x="400" y="488" class="c s13">Pour les barres, l'axe vertical commence à zéro.</text>
+</svg>

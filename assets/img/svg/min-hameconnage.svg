@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Courriel d'hameçonnage fictif avec six indices numérotés : adresse d'expéditeur étrangère à l'organisme, urgence et menace dans l'objet, formule générique, fautes, demande de mot de passe, lien dont l'adresse réelle diffère ; puis déroulé de l'attaque en quatre étapes</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.o{fill:#B85C0A;font-weight:bold}.s13{font-size:13px}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:#FDEBD3;stroke:#F28C28;stroke-width:3}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+.nb{fill:#061F44}.nt{fill:#FCFBF8;font-weight:bold;text-anchor:middle}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Hameçonnage : les indices à repérer (exemple fictif)</text>
+
+<rect x="20" y="48" width="450" height="288" rx="8" class="wh"/>
+<rect x="20" y="48" width="450" height="26" rx="8" class="gr"/>
+<text x="32" y="66" class="b s13">Courriel reçu (exemple fictif)</text>
+<text x="34" y="96" class="b">De : Service Informatique</text>
+<text x="34" y="114" class="s13">&lt;assistance@acces-messagerie.example&gt;</text>
+<text x="34" y="142" class="b">Objet : DERNIER AVIS - compte fermé dans 1 h</text>
+<path d="M34,154H456" class="ld"/>
+<text x="34" y="180">Cher utilisateur,</text>
+<text x="34" y="204">Votre boite mail est plein. Elle sera suspendue.</text>
+<text x="34" y="228">Saisissez votre mot de passe pour éviter la fermeture.</text>
+<text x="34" y="258" style="fill:#1F4E9A;text-decoration:underline">Cliquez ici pour confirmer votre compte</text>
+<text x="34" y="278" class="s13 o">Au survol : http://acces-messagerie.example/verif</text>
+<text x="34" y="312">L'équipe technique</text>
+<circle cx="440" cy="92" r="12" class="nb"/><text x="440" y="97" class="nt">1</text>
+<circle cx="440" cy="138" r="12" class="nb"/><text x="440" y="143" class="nt">2</text>
+<circle cx="440" cy="176" r="12" class="nb"/><text x="440" y="181" class="nt">3</text>
+<circle cx="440" cy="200" r="12" class="nb"/><text x="440" y="205" class="nt">4</text>
+<circle cx="440" cy="224" r="12" class="nb"/><text x="440" y="229" class="nt">5</text>
+<circle cx="440" cy="254" r="12" class="nb"/><text x="440" y="259" class="nt">6</text>
+
+<g class="s13">
+<circle cx="504" cy="66" r="12" fill="#F28C28"/><text x="504" y="71" class="nt">1</text>
+<text x="524" y="62" class="b">Adresse de l'expéditeur</text><text x="524" y="78">sans lien avec l'organisme annoncé</text>
+<circle cx="504" cy="112" r="12" fill="#F28C28"/><text x="504" y="117" class="nt">2</text>
+<text x="524" y="108" class="b">Urgence et menace dans l'objet</text><text x="524" y="124">délai très court, fermeture du compte</text>
+<circle cx="504" cy="158" r="12" fill="#F28C28"/><text x="504" y="163" class="nt">3</text>
+<text x="524" y="154" class="b">Formule générique</text><text x="524" y="170">pas de nom, pas de dossier réel cité</text>
+<circle cx="504" cy="204" r="12" fill="#F28C28"/><text x="504" y="209" class="nt">4</text>
+<text x="524" y="200" class="b">Fautes et ton inhabituel</text><text x="524" y="216">orthographe, accords, style maladroit</text>
+<circle cx="504" cy="250" r="12" fill="#F28C28"/><text x="504" y="255" class="nt">5</text>
+<text x="524" y="246" class="b">Demande de mot de passe</text><text x="524" y="262">jamais légitime par courriel</text>
+<circle cx="504" cy="296" r="12" fill="#F28C28"/><text x="504" y="301" class="nt">6</text>
+<text x="524" y="292" class="b">Lien trompeur</text><text x="524" y="308">adresse réelle différente du texte affiché</text>
+</g>
+
+<text x="18" y="362" class="b">Déroulé d'une attaque réussie</text>
+<g class="s13">
+<rect x="18" y="372" width="170" height="52" rx="8" class="bl"/><text x="103" y="394" class="c b">1. Réception</text><text x="103" y="412" class="c">du courriel piégé</text>
+<path d="M190,398H212" class="nv" marker-end="url(#ar)"/>
+<rect x="216" y="372" width="170" height="52" rx="8" class="bl"/><text x="301" y="394" class="c b">2. Clic sur le lien</text><text x="301" y="412" class="c">du courriel</text>
+<path d="M388,398H410" class="nv" marker-end="url(#ar)"/>
+<rect x="414" y="372" width="170" height="52" rx="8" class="bl"/><text x="499" y="394" class="c b">3. Fausse page</text><text x="499" y="412" class="c">de connexion</text>
+<path d="M586,398H608" class="nv" marker-end="url(#ao)"/>
+<rect x="612" y="372" width="170" height="52" rx="8" class="or"/><text x="697" y="394" class="c b">4. Mot de passe saisi</text><text x="697" y="412" class="c">compte compromis</text>
+</g>
+<text x="400" y="456" class="c b">Réflexe : ne pas cliquer, ne rien saisir, signaler à l'équipe informatique.</text>
+<text x="400" y="478" class="c s13">Exemple entièrement fictif (adresses de démonstration), conçu pour la formation.</text>
+</svg>

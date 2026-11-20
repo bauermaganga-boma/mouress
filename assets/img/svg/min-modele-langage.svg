@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Schéma de principe d'un modèle de langage : 1. entrée (invite et texte fourni), 2. traitement par le modèle, qui calcule mot après mot la suite la plus probable à partir de données d'entraînement arrêtées à une date, 3. sortie (texte plausible, pas forcément exact), 4. vérification humaine, puis décision et usage sous la responsabilité de l'agent. Une flèche de retour permet de corriger l'invite.</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.s13{font-size:13px}.o{fill:#B85C0A;font-weight:bold}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:#FDEBD3;stroke:#F28C28;stroke-width:3.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.ro{fill:none;stroke:#F28C28;stroke-width:3.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Principe d'un modèle de langage</text>
+
+<text x="400" y="56" class="c s13 o">Si doute ou erreur : corriger l'invite, vérifier, recommencer</text>
+<path d="M710,92V68H105V88" class="ro" marker-end="url(#ao)"/>
+
+<rect x="20" y="92" width="170" height="160" rx="10" class="bl"/>
+<text x="105" y="120" class="c b">1. Entrée</text>
+<text x="105" y="150" class="c">Invite (la consigne)</text><text x="105" y="170" class="c">+ texte fourni</text>
+<text x="105" y="200" class="c s13">sans donnée sensible</text><text x="105" y="218" class="c s13">dans un outil externe</text>
+<path d="M192,172H221" class="nv" marker-end="url(#ar)"/>
+
+<rect x="225" y="92" width="200" height="160" rx="10" class="gr"/>
+<text x="325" y="120" class="c b">2. Traitement</text>
+<text x="325" y="146" class="c b">Modèle de langage</text>
+<text x="325" y="172" class="c s13">calcule, mot après mot,</text><text x="325" y="190" class="c s13">la suite la plus probable</text>
+<text x="325" y="212" class="c s13">(avec une part de hasard)</text><text x="325" y="232" class="c s13">ne consulte pas de base de faits</text>
+<path d="M427,172H456" class="nv" marker-end="url(#ar)"/>
+
+<rect x="460" y="92" width="150" height="160" rx="10" class="bl"/>
+<text x="535" y="120" class="c b">3. Sortie</text>
+<text x="535" y="150" class="c">Texte généré :</text>
+<text x="535" y="176" class="c b">plausible,</text><text x="535" y="196" class="c b">pas forcément</text><text x="535" y="216" class="c b">exact</text>
+<path d="M612,172H638" class="nv" marker-end="url(#ar)"/>
+
+<rect x="642" y="92" width="140" height="160" rx="10" class="or"/>
+<text x="712" y="120" class="c b">4. Vérification</text><text x="712" y="138" class="c b">humaine</text>
+<text x="712" y="170" class="c s13">relire, comparer</text><text x="712" y="188" class="c s13">aux sources</text><text x="712" y="206" class="c s13">officielles</text>
+
+<rect x="235" y="320" width="180" height="76" rx="10" class="wh"/>
+<text x="325" y="346" class="c b">Données d'entraînement</text>
+<text x="325" y="368" class="c s13">textes arrêtés à une date</text><text x="325" y="384" class="c s13">(date de coupure)</text>
+<path d="M325,318V254" class="nv" marker-end="url(#ar)"/>
+
+<path d="M712,254V318" class="nv" marker-end="url(#ar)"/>
+<rect x="602" y="322" width="180" height="74" rx="10" class="wh"/>
+<text x="692" y="348" class="c b">Décision et usage</text>
+<text x="692" y="370" class="c s13">l'agent valide et reste</text><text x="692" y="386" class="c s13">responsable du contenu</text>
+
+<text x="400" y="440" class="c b">Le modèle produit du texte vraisemblable : le contrôle des faits se fait à l'étape 4.</text>
+<text x="400" y="464" class="c s13">Schéma simplifié, à but pédagogique.</text>
+</svg>

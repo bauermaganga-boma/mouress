@@ -13,7 +13,9 @@
         "L’essai d’absorption sous le sabot donne la pression maximale supportée par la formation.",
         "La pression hydrostatique se calcule sur la profondeur verticale vraie : 0,0981 × densité (kg/L) × profondeur (m).",
         "Tout écart entre le schéma de tubage approuvé et le schéma construit doit être justifié et signalé."
-      ]
+      ],
+      "img": "svg/min-architecture-puits.svg",
+      "imgAlt": "Coupe d’un puits : tube guide, tubage de surface, tubage intermédiaire et tubage de production emboîtés et de plus en plus étroits ; sabot de chaque colonne avec sa profondeur d’illustration (80, 600, 2 000 et 3 000 m), ciment gris dans l’espace annulaire, nappe d’eau douce près de la surface, colonne de production avec garniture d’étanchéité et perforations en face du réservoir."
     },
     {
       "id": "m2",
@@ -27,7 +29,9 @@
         "Les boues à base d’huile ou synthétiques exigent un traitement plus strict des déblais.",
         "Le rapport de boue consigne densité, viscosité, filtrat, pH et solides chaque jour.",
         "Le contrôle technique du ministère couvre la qualité des boues et des eaux (loi 002/2019, art. 242 et 244)."
-      ]
+      ],
+      "img": "svg/drilling-rig-schematic.svg",
+      "imgAlt": "Appareil de forage terrestre : mât avec moufles, top drive, treuil, plancher, BOP, tiges, masses-tiges et trépan ; circuit de boue : pompe à boue, colonne montante, flexible, descente dans les tiges, retour par l’annulaire, flowline, tamis vibrant et bac à boue."
     },
     {
       "id": "m3",
@@ -41,7 +45,9 @@
         "Signes de venue : gain aux bacs, débit de retour accru, puits qui coule pompes arrêtées ; réaction : fermer le puits.",
         "Une barrière défaillante impose l’arrêt et son rétablissement avant toute reprise.",
         "Les incidents sont à notifier sans délai à l’administration (loi 002/2019, art. 241 et 182)."
-      ]
+      ],
+      "img": "svg/bop-stack.svg",
+      "imgAlt": "Bloc d’obturation de puits empilé, de haut en bas : bell nipple, obturateur annulaire, mâchoires aveugles cisaillantes, mâchoires à tiges supérieures, spool avec ligne de duse (vers manifold) et ligne de pompage, mâchoires à tiges inférieures, tête de tubage ; la pression du puits agit par le bas."
     },
     {
       "id": "m4",
@@ -111,7 +117,9 @@
         "Plan d’abandon et de réhabilitation à soumettre avant toute opération (loi 002/2019, art. 173).",
         "Fonds de réhabilitation : dotations annuelles, compte au Gabon, insaisissable ; pénalité de 1/500e par jour de retard (art. 175 à 177).",
         "Responsabilité du titulaire : tous dommages, y compris hors périmètre, prescription trentenaire (art. 179)."
-      ]
+      ],
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d’appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     }
   ],
   "questions": [
@@ -119,7 +127,7 @@
       "id": "min-forage-001",
       "theme": "Architecture du puits : tubages et cimentation",
       "level": 1,
-      "q": "Quel est le rôle principal du tubage de surface d’un puits ?",
+      "q": "Sur la coupe du puits, repérez le tubage de surface (le deuxième en partant de l’extérieur). Quel est son rôle principal ?",
       "choices": [
         "Isoler le réservoir en production et acheminer les hydrocarbures jusqu’au séparateur de surface",
         "Transporter les hydrocarbures jusqu’au séparateur",
@@ -127,9 +135,11 @@
         "Remplacer le ciment entre le tubage et la roche"
       ],
       "answer": 2,
-      "explain": "Le tubage de surface protège les nappes d’eau douce et sert de support à la tête de puits et au bloc d’obturation. Le réservoir est traité par le tubage de production ; le transport des fluides est assuré par la colonne de production, pas par un tubage ; et le tubage n’a pas vocation à remplacer le ciment, qui est un élément distinct de l’isolement.",
+      "explain": "Sur la coupe, le tubage de surface traverse la nappe d’eau douce : il la protège et sert de support à la tête de puits et au bloc d’obturation. Le réservoir est traité par le tubage de production ; le transport des fluides est assuré par la colonne de production, pas par un tubage ; et le tubage n’a pas vocation à remplacer le ciment, qui est un élément distinct de l’isolement.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-architecture-puits.svg",
+      "imgAlt": "Coupe d’un puits : tube guide, tubage de surface, tubage intermédiaire et tubage de production emboîtés et de plus en plus étroits ; sabot de chaque colonne avec sa profondeur d’illustration (80, 600, 2 000 et 3 000 m), ciment gris dans l’espace annulaire, nappe d’eau douce près de la surface, colonne de production avec garniture d’étanchéité et perforations en face du réservoir."
     },
     {
       "id": "min-forage-002",
@@ -167,7 +177,7 @@
       "id": "min-forage-004",
       "theme": "Architecture du puits : tubages et cimentation",
       "level": 1,
-      "q": "Que signifie le terme « sabot » dans un puits tubé ?",
+      "q": "Sur la coupe du puits, quatre repères portent la mention « sabot » suivie d’une profondeur. Que signifie ce terme dans un puits tubé ?",
       "choices": [
         "La tête de puits située en surface",
         "L’extrémité inférieure d’une colonne de tubage",
@@ -175,15 +185,17 @@
         "La vanne de sécurité placée sous le bloc d’obturation"
       ],
       "answer": 1,
-      "explain": "Le sabot est le bas de la colonne ; c’est sous lui qu’on réalise l’essai d’absorption. La tête de puits est en surface, le bouchon de ciment est un autre élément, et la vanne de sécurité est un équipement de contrôle, non un repère du tubage.",
+      "explain": "Sur la coupe, chaque sabot se trouve au bas d’une colonne : c’est sous lui qu’on réalise l’essai d’absorption. La tête de puits est en surface, le bouchon de ciment est un autre élément, et la vanne de sécurité est un équipement de contrôle, non un repère du tubage.",
       "seconds": 40,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-architecture-puits.svg",
+      "imgAlt": "Coupe d’un puits : tube guide, tubage de surface, tubage intermédiaire et tubage de production emboîtés et de plus en plus étroits ; sabot de chaque colonne avec sa profondeur d’illustration (80, 600, 2 000 et 3 000 m), ciment gris dans l’espace annulaire, nappe d’eau douce près de la surface, colonne de production avec garniture d’étanchéité et perforations en face du réservoir."
     },
     {
       "id": "min-forage-005",
       "theme": "Architecture du puits : tubages et cimentation",
       "level": 2,
-      "q": "Une boue de 1,20 kg/L est utilisée à 3 000 m de profondeur verticale vraie. Quelle est la pression hydrostatique approximative au fond ?",
+      "q": "Sur la coupe du puits, la profondeur du sabot du tubage de production est donnée (valeur d’illustration). Avec une boue de 1,20 kg/L jusqu’à cette profondeur verticale, quelle est la pression hydrostatique approximative au fond ?",
       "choices": [
         "Environ 353 bar",
         "Environ 36 bar",
@@ -191,9 +203,11 @@
         "Environ 1 200 bar"
       ],
       "answer": 0,
-      "explain": "On calcule 0,0981 × 1,20 × 3 000 ≈ 353 bar. Les valeurs de 36 et de 3 530 sont des erreurs d’un facteur 10 sur la virgule, et 1 200 bar confond la densité en kg/m³ avec une pression.",
+      "explain": "Le sabot de production est à environ 3 000 m : 0,0981 × 1,20 × 3 000 ≈ 353 bar. Les valeurs de 36 et de 3 530 sont des erreurs d’un facteur 10 sur la virgule, et 1 200 bar confond la densité en kg/m³ avec une pression.",
       "seconds": 80,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-architecture-puits.svg",
+      "imgAlt": "Coupe d’un puits : tube guide, tubage de surface, tubage intermédiaire et tubage de production emboîtés et de plus en plus étroits ; sabot de chaque colonne avec sa profondeur d’illustration (80, 600, 2 000 et 3 000 m), ciment gris dans l’espace annulaire, nappe d’eau douce près de la surface, colonne de production avec garniture d’étanchéité et perforations en face du réservoir."
     },
     {
       "id": "min-forage-006",
@@ -300,7 +314,7 @@
       "id": "min-forage-011",
       "theme": "Fluides de forage",
       "level": 1,
-      "q": "Quelle fonction de la boue de forage est la plus directement liée à la sécurité du puits ?",
+      "q": "Sur le schéma de l’appareil de forage, la boue est pompée dans les tiges, ressort au trépan et remonte par l’annulaire jusqu’aux bacs. Quelle fonction de cette boue est la plus directement liée à la sécurité du puits ?",
       "choices": [
         "Refroidir l’outil de forage et évacuer la chaleur produite par la rotation vers les bacs de surface",
         "Lubrifier les tiges dans les parties déviées",
@@ -308,9 +322,11 @@
         "Exercer une pression hydrostatique supérieure à celle des fluides de la roche"
       ],
       "answer": 3,
-      "explain": "La barrière primaire d’un puits en forage est la colonne de boue : sa pression doit dépasser la pression de pores. Le refroidissement, la lubrification et la lecture des déblais sont des fonctions utiles, mais elles ne retiennent pas les fluides de la roche.",
+      "explain": "La barrière primaire d’un puits en forage est la colonne de boue qui remplit l’annulaire : sa pression doit dépasser la pression de pores. Le refroidissement, la lubrification et la lecture des déblais sont des fonctions utiles, mais elles ne retiennent pas les fluides de la roche.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/drilling-rig-schematic.svg",
+      "imgAlt": "Appareil de forage terrestre : mât avec moufles, top drive, treuil, plancher, BOP, tiges, masses-tiges et trépan ; circuit de boue : pompe à boue, colonne montante, flexible, descente dans les tiges, retour par l’annulaire, flowline, tamis vibrant et bac à boue."
     },
     {
       "id": "min-forage-012",
@@ -497,7 +513,7 @@
       "id": "min-forage-022",
       "theme": "Barrières de sécurité et contrôle des éruptions",
       "level": 1,
-      "q": "Quelle est la fonction du bloc d’obturation ?",
+      "q": "Sur le schéma, l’empilement posé sur la tête de tubage comprend un obturateur annulaire et plusieurs jeux de mâchoires. Quelle est la fonction de ce bloc d’obturation ?",
       "choices": [
         "Mesurer en continu la densité de la boue et régler automatiquement le débit des pompes de circulation",
         "Soutenir les parois du puits avant le tubage",
@@ -505,9 +521,11 @@
         "Préparer le laitier de ciment"
       ],
       "answer": 2,
-      "explain": "Le bloc d’obturation, installé sur la tête de puits, permet de fermer le puits et de contrôler les pressions. Il n’a aucun rôle de mesure de densité, de soutien des parois ni de préparation du ciment.",
+      "explain": "Le bloc d’obturation, installé sur la tête de puits, permet de fermer le puits (annulaire, mâchoires sur tiges, mâchoires aveugles cisaillantes) et de contrôler les pressions par la ligne de duse. Il n’a aucun rôle de mesure de densité, de soutien des parois ni de préparation du ciment.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/bop-stack.svg",
+      "imgAlt": "Bloc d’obturation de puits empilé, de haut en bas : bell nipple, obturateur annulaire, mâchoires aveugles cisaillantes, mâchoires à tiges supérieures, spool avec ligne de duse (vers manifold) et ligne de pompage, mâchoires à tiges inférieures, tête de tubage ; la pression du puits agit par le bas."
     },
     {
       "id": "min-forage-023",
@@ -616,7 +634,7 @@
       "id": "min-forage-029",
       "theme": "Barrières de sécurité et contrôle des éruptions",
       "level": 3,
-      "q": "Lors des essais de pression du bloc d’obturation, les mâchoires sur tiges fuient. L’opérateur demande de poursuivre le forage « jusqu’à la fin de la section ». Que décidez-vous ?",
+      "q": "Sur le schéma du bloc d’obturation, l’obturateur annulaire surmonte deux jeux de mâchoires sur tiges. Lors des essais de pression, les mâchoires à tiges supérieures fuient. L’opérateur demande de poursuivre le forage « jusqu’à la fin de la section ». Que décidez-vous ?",
       "choices": [
         "Autoriser la poursuite, puisque l’obturateur annulaire peut fermer sur les tiges, et reporter la réparation à la fin de la section",
         "Autoriser si un second essai la semaine suivante réussit",
@@ -624,9 +642,11 @@
         "Exiger l’arrêt, la réparation ou le remplacement de l’élément, puis un nouvel essai concluant avant de reprendre"
       ],
       "answer": 3,
-      "explain": "Un équipement de la barrière secondaire défaillant interdit de poursuivre : on répare et on reteste. S’appuyer sur un autre élément pour compenser, reporter l’essai d’une semaine ou alourdir légèrement la boue ne rétablit pas la redondance exigée.",
+      "explain": "Les éléments empilés sur le schéma assurent la redondance de la barrière secondaire : un jeu de mâchoires défaillant interdit de poursuivre, on répare et on reteste. S’appuyer sur un autre élément pour compenser, reporter l’essai d’une semaine ou alourdir légèrement la boue ne rétablit pas la redondance exigée.",
       "seconds": 100,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/bop-stack.svg",
+      "imgAlt": "Bloc d’obturation de puits empilé, de haut en bas : bell nipple, obturateur annulaire, mâchoires aveugles cisaillantes, mâchoires à tiges supérieures, spool avec ligne de duse (vers manifold) et ligne de pompage, mâchoires à tiges inférieures, tête de tubage ; la pression du puits agit par le bas."
     },
     {
       "id": "min-forage-030",
@@ -1449,7 +1469,7 @@
       "id": "min-forage-071",
       "theme": "Bouchage et abandon d’un puits",
       "level": 1,
-      "q": "Quel est l’objectif principal du bouchage définitif d’un puits ?",
+      "q": "Sur le schéma d’un puits bouché, des bouchons sont posés à trois niveaux entre le réservoir et la surface, avec du fluide dense entre eux. Quel est l’objectif principal du bouchage définitif ?",
       "choices": [
         "Augmenter le débit des puits voisins en rétablissant la pression du gisement dans la zone drainée",
         "Isoler durablement les formations entre elles et de la surface",
@@ -1457,15 +1477,17 @@
         "Faciliter l’accès au puits pour une visite touristique"
       ],
       "answer": 1,
-      "explain": "Le bouchage vise un isolement durable pour empêcher toute remontée de fluide, pollution de nappe ou fuite en mer. Les autres objectifs ne le concernent pas.",
+      "explain": "Le bouchage vise un isolement durable, comme le montrent les bouchons étagés du schéma : empêcher toute remontée de fluide, pollution de nappe ou fuite en mer. Les autres objectifs ne le concernent pas.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d’appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     },
     {
       "id": "min-forage-072",
       "theme": "Bouchage et abandon d’un puits",
       "level": 1,
-      "q": "Quel matériau est le plus utilisé pour réaliser un bouchon d’abandon ?",
+      "q": "Sur le schéma du puits bouché, les zones hachurées sont des bouchons posés dans le tubage. Quel matériau est le plus utilisé pour réaliser un bouchon d’abandon ?",
       "choices": [
         "Le sable sec",
         "La boue de forage seule",
@@ -1473,9 +1495,11 @@
         "Le ciment"
       ],
       "answer": 3,
-      "explain": "Le bouchon de ciment est la technique de référence pour créer une barrière permanente. Le sable sec et la boue ne tiennent pas dans le temps, et la mousse ne résiste pas aux pressions.",
+      "explain": "Le bouchon de ciment est la technique de référence pour créer une barrière permanente, comme sur le schéma. Le sable sec et la boue ne tiennent pas dans le temps, et la mousse ne résiste pas aux pressions.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d’appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     },
     {
       "id": "min-forage-073",
@@ -1550,7 +1574,7 @@
       "id": "min-forage-076",
       "theme": "Bouchage et abandon d’un puits",
       "level": 2,
-      "q": "Comment vérifie-t-on la position et la résistance d’un bouchon de ciment posé dans un puits ?",
+      "q": "Sur le schéma du puits bouché, un bouchon de ciment est invisible une fois posé dans le tubage. Comment vérifie-t-on sa position et sa résistance ?",
       "choices": [
         "Par une inspection visuelle depuis la surface, après remontée du train de tiges, suivie d’une signature",
         "Par un essai de poids (appui du train de tiges) et un essai de pression",
@@ -1558,9 +1582,11 @@
         "Par la signature du chef de chantier seule"
       ],
       "answer": 1,
-      "explain": "Le bouchon est invisible : on le sollicite avec le train de tiges et on le teste en pression pour s’assurer de sa position et de son étanchéité. Un contrôle visuel ou une signature ne prouvent rien.",
+      "explain": "Le bouchon est invisible : on le sollicite avec le train de tiges (essai de poids) et on le teste en pression pour s’assurer de sa position et de son étanchéité. Un contrôle visuel ou une signature ne prouvent rien.",
       "seconds": 65,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d’appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     },
     {
       "id": "min-forage-077",
@@ -1612,7 +1638,7 @@
       "id": "min-forage-079",
       "theme": "Bouchage et abandon d’un puits",
       "level": 3,
-      "q": "Pour abandonner un puits, l’opérateur propose un seul bouchon de 30 m face au réservoir, sans essai, et rien sur l’aquifère superficiel. Quelle est la réponse adaptée ?",
+      "q": "Le schéma montre un puits bouché avec un bouchon face au réservoir, un au sabot et un en surface. Pour abandonner un autre puits, l’opérateur propose un seul bouchon de 30 m face au réservoir, sans essai, et rien sur l’aquifère superficiel. Quelle est la réponse adaptée ?",
       "choices": [
         "Demander un programme avec barrières vérifiées sur chaque zone perméable, dont l’aquifère, et les résultats des essais",
         "Accepter, puisque le réservoir est isolé et que l’aquifère superficiel est protégé par le tubage de surface déjà en place",
@@ -1620,7 +1646,7 @@
         "Exiger de reboucher entièrement le puits sans analyse"
       ],
       "answer": 0,
-      "explain": "Il faut isoler chaque zone perméable, pas seulement le réservoir, et vérifier chaque barrière. Un engagement de contrôle ultérieur ne remplace pas les essais, mais reboucher entièrement sans analyse est disproportionné.",
+      "explain": "Comme sur le schéma, il faut isoler chaque zone perméable, pas seulement le réservoir, et vérifier chaque barrière. Un engagement de contrôle ultérieur ne remplace pas les essais, mais reboucher entièrement sans analyse est disproportionné.",
       "seconds": 100,
       "status": "draft",
       "refs": [
@@ -1629,7 +1655,9 @@
           "art": "Art. 173",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-bouchage-puits.svg",
+      "imgAlt": "Puits bouché définitivement : un bouchon de ciment face au réservoir posé sur un bouchon mécanique d’appui, un bouchon à cheval sur le sabot du tubage, un bouchon de surface, du fluide dense entre les bouchons, tubages coupés sous le sol et tête de puits retirée. Chaque bouchon est contrôlé par un essai de poids et un essai de pression."
     },
     {
       "id": "min-forage-080",

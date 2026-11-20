@@ -1,1253 +1,1279 @@
 {
-  "profile": "min-cyber",
-  "modules": [
+ "profile": "min-cyber",
+ "modules": [
+  {
+   "id": "m1",
+   "title": "Les menaces courantes : hameçonnage, rançongiciel, usurpation, clé USB piégée",
+   "theme": "Menaces courantes",
+   "minutes": 10,
+   "body": "Un agent du ministère manipule des informations de valeur : données de production, contrats, correspondances avec les opérateurs, informations sur les marchés. Ces informations intéressent des criminels (extorsion, fraude) comme des acteurs qui veulent connaître les positions de l’État. Dans la grande majorité des cas, l’attaque ne passe pas par une prouesse technique mais par **une personne qui clique, ouvre ou obéit**. Connaître les quatre menaces les plus courantes est donc la première défense.\n\n**L’hameçonnage** (« phishing ») est un message frauduleux, par courriel, SMS ou messagerie, qui imite un expéditeur de confiance (direction, banque, Trésor, fournisseur, service informatique) pour vous pousser à cliquer sur un lien, ouvrir une pièce jointe ou saisir un mot de passe sur une fausse page. Les signes qui doivent alerter : urgence artificielle (« votre compte sera fermé aujourd’hui »), adresse d’expéditeur légèrement différente de l’adresse officielle, fautes inhabituelles, lien dont l’adresse réelle (visible en survolant) ne correspond pas au site annoncé, demande de mot de passe ou de code. Une variante ciblée, le **harponnage**, vise une personne précise en utilisant des informations réelles sur elle (nom de son chef, dossier en cours).\n\n**Le rançongiciel** chiffre les fichiers d’un poste et des dossiers partagés, puis exige un paiement pour les rendre. Il arrive le plus souvent par une pièce jointe piégée, un lien malveillant ou un accès à distance mal protégé. Réflexes : débrancher immédiatement le câble réseau ou couper le Wi-Fi (sans éteindre brutalement si l’informatique demande d’attendre), prévenir sans délai le service informatique, ne jamais payer de sa propre initiative. Seules des **sauvegardes saines et hors ligne** permettent de repartir.\n\n**L’usurpation d’identité** prend plusieurs formes : faux ordre de virement émanant d’un prétendu directeur (« fraude au président »), faux technicien qui appelle pour obtenir votre mot de passe, faux fournisseur qui change ses coordonnées bancaires. La parade est la **vérification par un second canal** : rappeler la personne sur un numéro connu, jamais celui fourni dans le message suspect.\n\n**La clé USB piégée** est trouvée ou offerte (parking, salon, cadeau d’un inconnu) et infecte l’ordinateur dès qu’elle est branchée. Elle ne se branche jamais sur un poste du ministère. Les clés de provenance inconnue sont remises au service informatique.\n\nExemple (cas fictif) : un agent de la Direction des Affaires économiques reçoit un courriel « urgent » du prétendu directeur demandant de régler une facture à de nouvelles coordonnées bancaires. Le style est correct, mais l’adresse comporte une lettre en trop. L’agent appelle le directeur sur son numéro habituel : c’était une fraude. Ce simple appel a évité une perte financière.\n\nPrincipe à retenir : **s’arrêter, vérifier, signaler**. Aucune faute n’est reprochée à l’agent qui signale un message douteux, même s’il a déjà cliqué : c’est le silence qui aggrave les dégâts. Les règles détaillées dépendent de la politique de sécurité du ministère et des consignes du service informatique.",
+   "keyPoints": [
+    "L’hameçonnage joue sur l’urgence et la confiance : vérifier l’expéditeur réel et le lien avant de cliquer.",
+    "Face à un rançongiciel : isoler le poste du réseau, prévenir l’informatique, ne pas payer de sa propre initiative.",
+    "Toute demande inhabituelle (virement, mot de passe, changement de coordonnées) se vérifie par un second canal connu.",
+    "Une clé USB inconnue ne se branche jamais : elle est remise au service informatique.",
+    "Signaler vite un message douteux, même après un clic, limite les dégâts."
+   ],
+   "img": "svg/min-hameconnage.svg",
+   "imgAlt": "Courriel fictif d'hameçonnage avec six indices numérotés : adresse d'expéditeur sans lien avec l'organisme, objet menaçant (compte fermé dans 1 h), formule « Cher utilisateur », fautes de langue, demande de mot de passe, lien dont l'adresse réelle au survol diffère du texte. En dessous, quatre étapes : réception, clic, fausse page de connexion, mot de passe saisi."
+  },
+  {
+   "id": "m2",
+   "title": "Mots de passe et authentification à deux facteurs",
+   "theme": "Mots de passe et authentification",
+   "minutes": 9,
+   "body": "Le mot de passe reste la clé d’entrée de la plupart des systèmes : messagerie, dossiers partagés, applications de gestion. Un mot de passe faible, réutilisé ou communiqué ouvre la porte à toutes les informations auxquelles son titulaire a accès. Or les attaquants disposent d’outils qui testent des millions de combinaisons par seconde et de listes de mots de passe déjà volés sur d’autres sites.\n\n**Ce qui fait un bon mot de passe.** La **longueur** compte plus que la complexité apparente. Une **phrase de passe** d’au moins 12 à 16 caractères, composée de plusieurs mots sans lien évident, est plus sûre et plus facile à retenir que « P@ssw0rd1 ». À éviter : date de naissance, nom d’un proche, nom du ministère, « 123456 », séquences du clavier. Les consignes officielles du ministère ou de l’agence nationale compétente priment sur ces repères généraux.\n\n**Règles de base.**\n- Un mot de passe **unique** par service : si un site est piraté, les autres restent protégés. Ne jamais réutiliser le mot de passe professionnel pour un usage personnel.\n- **Ne jamais le communiquer**, ni à un collègue, ni à un supérieur, ni à une personne qui se prétend informaticien : le véritable service informatique n’a pas besoin de le connaître.\n- Ne pas l’écrire sur un papier collé à l’écran ou sous le clavier. Un **gestionnaire de mots de passe** approuvé par la structure est préférable.\n- Le changer immédiatement en cas de doute (message d’hameçonnage ouvert, perte d’un appareil, départ d’un collègue qui connaissait un compte partagé).\n\n**L’authentification à deux facteurs (A2F)** ajoute à ce que vous **savez** (le mot de passe) un second élément que vous **possédez** (téléphone, application génératrice de codes, clé physique) ou que vous **êtes** (empreinte). Même si le mot de passe est volé, l’attaquant est bloqué sans le second facteur. Les codes par application ou clé physique sont plus sûrs que les codes par SMS, qui peuvent être détournés (échange de carte SIM). Un code reçu sans que vous ayez tenté de vous connecter est un signal d’alerte : **ne le communiquez à personne** et changez votre mot de passe.\n\n**Fatigue des notifications.** Certains attaquants envoient des dizaines de demandes d’approbation jusqu’à ce que l’utilisateur accepte par lassitude. Une demande que vous n’avez pas déclenchée se refuse, puis se signale.\n\n**Comptes partagés.** Un compte utilisé par plusieurs agents empêche de savoir qui a fait quoi. On préférera des comptes nominatifs, avec droits limités au besoin (principe du **moindre privilège**).\n\nExemple (cas fictif) : un inspecteur utilise le même mot de passe pour sa messagerie professionnelle et un site de vente en ligne. Ce site est piraté ; les attaquants essaient l’adresse et le mot de passe sur la messagerie du ministère. Seule l’A2F active empêche l’accès.",
+   "keyPoints": [
+    "Une phrase de passe longue vaut mieux qu’un mot de passe court et « compliqué ».",
+    "Un mot de passe unique par service, jamais communiqué, y compris au prétendu informaticien.",
+    "L’A2F ajoute un second élément (application, clé physique) et bloque l’accès en cas de vol du mot de passe.",
+    "Une demande d’approbation ou un code que vous n’avez pas déclenché se refuse et se signale.",
+    "Les comptes nominatifs et le moindre privilège permettent de savoir qui a fait quoi."
+   ]
+  },
+  {
+   "id": "m3",
+   "title": "Sécurité de la messagerie et du téléphone",
+   "theme": "Messagerie et téléphone",
+   "minutes": 9,
+   "body": "La messagerie électronique et le téléphone portable sont les outils les plus utilisés par les agents, et donc les plus visés. Un courriel envoyé à la mauvaise personne ou un téléphone perdu suffisent à exposer des informations du ministère.\n\n**Messagerie professionnelle.**\n- **Utiliser l’adresse officielle** pour les échanges de service. L’envoi de documents du ministère vers une adresse personnelle (Gmail, Yahoo, etc.) fait sortir l’information du périmètre protégé et sans traces ; il est à éviter, sauf règle contraire.\n- **Vérifier les destinataires** avant l’envoi : la saisie automatique propose parfois un homonyme. Les envois groupés à des destinataires externes se font en **copie cachée** pour ne pas divulguer leurs adresses.\n- **Pièces jointes** : n’ouvrir que celles que vous attendez. Les extensions inhabituelles (.exe, .js, .scr) ou les macros demandées à l’activation sont des signaux d’alerte. Un fichier de bureautique « à débloquer » est suspect.\n- **Réponse automatique d’absence** : rester sobre (dates, contact de remplacement), sans détailler un déplacement ni des informations internes.\n- **Redirection automatique** vers une adresse externe : elle ne se configure pas sans autorisation. Les attaquants créent parfois une règle de redirection pour lire discrètement le courrier d’un agent ; si vous constatez une règle que vous n’avez pas créée, signalez-la.\n\n**Téléphone.**\n- Verrouillage par code ou empreinte, avec **verrouillage automatique** rapide ; chiffrement activé.\n- **Mises à jour** du système et des applications dès qu’elles sont proposées : elles corrigent des failles connues.\n- Applications installées uniquement depuis les magasins officiels ; méfiance envers les applications qui demandent des accès sans rapport avec leur usage (micro, contacts).\n- **Perte ou vol** : prévenir immédiatement le service informatique pour qu’il bloque l’accès (verrouillage ou effacement à distance), puis la déclaration auprès de l’opérateur.\n- **Messageries instantanées** (WhatsApp, etc.) : utiles, mais ne pas y échanger de documents classifiés ni de données personnelles sensibles sans que cet usage soit autorisé. Vérifier l’identité d’un interlocuteur qui change de numéro (« c’est mon nouveau numéro, peux-tu m’aider ? ») : c’est une fraude fréquente.\n- **Hameçonnage par SMS** (« smishing ») et par appel (« vishing ») : un appelant qui se dit de la banque ou du service informatique et demande un code est suspect ; raccrochez et rappelez le numéro officiel.\n\nExemple (cas fictif) : un chef de service envoie un tableau de volumes à ses collaborateurs, mais la saisie automatique sélectionne un homonyme d’une société extérieure. Le réflexe de relire les destinataires avant d’envoyer aurait évité une fuite de données.",
+   "keyPoints": [
+    "Les échanges de service passent par la messagerie officielle, pas par une adresse personnelle.",
+    "Relire les destinataires avant l’envoi et utiliser la copie cachée pour les envois groupés externes.",
+    "Une pièce jointe non attendue ou une demande d’activer des macros est un signal d’alerte.",
+    "Téléphone : verrouillage, mises à jour, applications officielles ; perte ou vol à signaler immédiatement.",
+    "Un interlocuteur qui change de numéro ou demande un code se vérifie par un second canal."
+   ]
+  },
+  {
+   "id": "m4",
+   "title": "Classification et protection des documents sensibles",
+   "theme": "Documents sensibles",
+   "minutes": 10,
+   "body": "Tous les documents du ministère n’ont pas la même valeur ni le même niveau de risque. Un communiqué de presse peut être diffusé à tous ; une étude sur les réserves, un projet de contrat de partage de production ou des données de production fiscales ne le peuvent pas. **Classifier** consiste à attribuer à chaque document un niveau de sensibilité qui détermine qui peut le lire, comment il est stocké, transmis et détruit.\n\n**Un schéma usuel à quatre niveaux** (les appellations exactes sont à confirmer dans la politique de sécurité du ministère) :\n- **Public** : diffusion libre (communiqués, textes publiés).\n- **Interne** : réservé aux agents (notes de service, procédures).\n- **Confidentiel** : accès limité aux personnes ayant besoin d’en connaître (contrats avec les opérateurs, données de production, éléments de négociation, dossiers de marchés en cours).\n- **Secret / très sensible** : fuite susceptible de causer un préjudice grave (données géologiques stratégiques, informations de sécurité). Le régime des informations classifiées relève de textes spécifiques.\n\n**Principe du besoin d’en connaître.** Avoir accès à un document ne dépend pas du grade, mais de la nécessité de s’en servir pour sa mission. La **diffusion** doit être limitée à cette liste.\n\n**Protection concrète.**\n- **Marquage** : mention du niveau sur le document (en-tête, pied de page, nom du fichier).\n- **Stockage** : dossiers à accès restreint sur les serveurs du ministère ; pas de stockage sur des services en ligne grand public non autorisés, ni sur une clé USB personnelle.\n- **Chiffrement** : fichiers ou disques chiffrés pour les documents confidentiels transportés sur ordinateur portable ou support amovible.\n- **Impression** : récupérer immédiatement les documents, ne pas laisser de papier confidentiel sur la table ou l’imprimante ; bureau propre en fin de journée.\n- **Destruction** : papier passé au broyeur, supports numériques effacés selon la procédure ; pas de corbeille ordinaire.\n- **Conversations** : éviter de parler d’un dossier sensible dans un lieu public (restaurant, taxi, aéroport) ou devant des visiteurs.\n\n**Données personnelles.** Les fichiers contenant des informations sur des personnes (agents, candidats, signataires) relèvent aussi du droit gabonais sur la protection des données à caractère personnel (voir module 6). Elles ne se collectent et se conservent que pour une finalité précise.\n\n**Cas des données pétrolières.** Les contrats, les volumes produits, les coûts pétroliers déclarés par les opérateurs et les données techniques de blocs sont couverts par la confidentialité due par l’administration et par les clauses des contrats. Leur diffusion hors cadre peut avantager un concurrent ou fausser une négociation.\n\nExemple (cas fictif) : un agent emporte sur sa clé USB personnelle un projet de contrat pour le terminer à la maison. La clé est perdue dans un taxi. Il aurait dû demander un accès à distance sécurisé ou travailler sur un poste du ministère.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+   "keyPoints": [
+    "Le niveau de classification détermine l’accès, le stockage, la transmission et la destruction.",
+    "Le besoin d’en connaître prime sur le grade : on n’accède qu’à ce que la mission exige.",
+    "Marquer, chiffrer et stocker sur les espaces autorisés ; pas de clé personnelle ni de service grand public.",
+    "Bureau propre, impressions récupérées, destruction par broyage ou effacement contrôlé.",
+    "Contrats, volumes et coûts pétroliers sont des données sensibles à protéger même dans les conversations."
+   ],
+   "img": "svg/min-classification-information.svg",
+   "imgAlt": "Tableau de quatre niveaux de classification, de Public (toute personne) à Secret ou très sensible (très peu de personnes désignées), avec pour chacun qui peut lire, des exemples et la protection. Interne : agents du ministère ; Confidentiel : besoin d'en connaître, par exemple un contrat avec un opérateur, accès restreint, marquage, chiffrement si transporté. Appellations à confirmer."
+  },
+  {
+   "id": "m5",
+   "title": "Travail à distance, déplacements et réseaux publics",
+   "theme": "Travail à distance",
+   "minutes": 9,
+   "body": "Missions de terrain, déplacements à l’étranger, télétravail occasionnel : les agents se connectent de plus en plus souvent hors des locaux du ministère. Ces situations échappent aux protections du réseau interne et exigent des réflexes complémentaires.\n\n**Réseaux Wi-Fi publics** (hôtel, aéroport, café). Un réseau public est ouvert à tous : une personne malveillante peut en créer un faux portant le même nom (« jumeau maléfique ») ou observer le trafic non protégé. Règles :\n- Éviter de traiter des documents sensibles sur un réseau public ; préférer le **partage de connexion** du téléphone professionnel.\n- Si le réseau public est inévitable, utiliser le **réseau privé virtuel (RPV)** fourni par le ministère, qui chiffre les échanges entre l’appareil et le réseau interne.\n- Ne pas se connecter à un site dont l’adresse n’affiche pas le cadenas (https) ; ne pas ignorer un message d’alerte sur un certificat.\n- Désactiver le partage de fichiers et la connexion automatique aux réseaux connus.\n\n**Matériel.**\n- Ordinateur portable avec **disque chiffré** et verrouillage de session rapide (touche Windows + L).\n- **Ne jamais laisser** un appareil sans surveillance (voiture, chambre, salle de réunion) ; en avion, le garder en cabine.\n- **Filtre de confidentialité** sur l’écran dans les transports et les lieux publics, pour éviter « l’espionnage par-dessus l’épaule ».\n- Ne pas prêter l’appareil à des proches, ni le brancher sur des bornes de recharge USB publiques (utiliser son propre chargeur ou un adaptateur bloquant les données).\n\n**Missions à l’étranger.** Certains pays contrôlent ou saisissent les appareils à la frontière. Pour une mission sensible, emporter le **minimum de données** (ou un appareil dédié), avec les accès fournis par le ministère et à changer au retour. Signaler toute demande inhabituelle d’un tiers (saisie de l’appareil, demande d’accès).\n\n**Télétravail.**\n- Utiliser les accès fournis par le ministère (RPV, bureau à distance) plutôt que de transférer les fichiers vers une messagerie personnelle.\n- Ne pas laisser un membre de la famille utiliser le poste de travail.\n- Mettre à jour l’appareil ; protéger le Wi-Fi domestique par un mot de passe robuste et ne pas conserver le mot de passe fourni par défaut sur la box.\n\n**Appareils personnels.** L’utilisation d’un téléphone ou d’un ordinateur personnel pour le travail n’est acceptable que si le ministère l’autorise et que des mesures de séparation sont en place.\n\nExemple (cas fictif) : un cadre en mission à Port-Gentil consulte un rapport confidentiel depuis le Wi-Fi gratuit de l’hôtel, sans RPV. Un autre client sur le même réseau intercepte des identifiants. Le partage de connexion du téléphone professionnel aurait évité l’exposition.",
+   "keyPoints": [
+    "Un Wi-Fi public n’est pas de confiance : partage de connexion du téléphone ou RPV du ministère.",
+    "Disque chiffré, verrouillage de session et appareil jamais laissé sans surveillance.",
+    "Filtre de confidentialité et conversation discrète dans les transports et les lieux publics.",
+    "Mission à l’étranger : emporter le minimum de données et changer les accès au retour.",
+    "En télétravail : accès fournis par le ministère, pas de transfert vers une messagerie personnelle."
+   ]
+  },
+  {
+   "id": "m6",
+   "title": "Signalement d’incident et cadre juridique gabonais",
+   "theme": "Signalement et cadre gabonais",
+   "minutes": 11,
+   "body": "Un **incident de sécurité** est un événement qui compromet, ou risque de compromettre, la confidentialité, l’intégrité ou la disponibilité de l’information : clic sur un lien frauduleux, perte d’un téléphone, poste qui se comporte bizarrement, fichiers chiffrés, courriel envoyé à la mauvaise personne, accès non autorisé constaté.\n\n**Pourquoi signaler vite.** Les premières heures déterminent l’ampleur des dégâts : un compte bloqué à temps, un poste isolé, un mot de passe changé peuvent empêcher la propagation. Beaucoup de structures n’apprennent l’attaque que parce qu’un agent hésitait à avouer une erreur. Le signalement n’est pas une dénonciation : c’est un acte de protection.\n\n**Que faire, dans l’ordre.**\n1. **Ne pas paniquer, ne pas effacer** les messages ou fichiers (ils servent à l’analyse).\n2. **Isoler** : débrancher le câble réseau ou couper le Wi-Fi du poste concerné.\n3. **Alerter** le service informatique ou le correspondant sécurité du ministère, et votre supérieur, par un canal sûr (téléphone, en personne), en précisant l’heure, ce qui s’est passé, les actions déjà faites.\n4. **Ne pas tenter de réparer seul**, ni de répondre à l’attaquant, ni de payer une rançon.\n5. **Noter les faits** : adresse de l’expéditeur, capture d’écran, nom du fichier.\n6. **Changer les mots de passe** concernés depuis un autre appareil sain, sur indication de l’informatique.\n\n**Cadre gabonais** (à confirmer par le ministère et les textes en vigueur). D’après les sources consultées : la **loi n° 027/2023 du 12 juillet 2023** relative à la cybersécurité et à la lutte contre la cybercriminalité ; la **loi n° 025/2023 du 12 juillet 2023**, qui modifie la **loi n° 001/2011 du 25 septembre 2011** relative à la protection des données à caractère personnel ; la loi n° 025/2021 sur les transactions électroniques est citée par l’ANINF. L’**Agence nationale des infrastructures numériques et des fréquences (ANINF)** est présentée comme le bras technique de l’État en matière de numérique, et intervient pour la sécurité des systèmes d’information de l’administration. Les données personnelles relèvent d’une autorité de protection (la Commission nationale pour la protection des données à caractère personnel est citée dans les documents officiels). L’organisation exacte de ces institutions et les procédures de notification évoluent : on s’en tient aux consignes de la hiérarchie et du service informatique du ministère.\n\n**Fuite de données personnelles.** Si des données de personnes sont exposées, la structure peut avoir une obligation d’en informer l’autorité et les personnes concernées. L’agent ne décide pas seul : il alerte immédiatement, et la décision revient au responsable désigné.\n\n**Sanctions.** Le droit gabonais réprime des infractions informatiques (accès frauduleux, atteinte aux données). L’agent qui divulgue sciemment des informations s’expose aussi à des sanctions disciplinaires et pénales.\n\nExemple (cas fictif) : un agent clique sur un lien, saisit son mot de passe, comprend son erreur trois minutes plus tard. Il appelle l’informatique, qui bloque le compte avant toute utilisation. Sans cet appel, le piratage aurait pu durer des semaines.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+   "keyPoints": [
+    "Un incident se signale sans délai : les premières heures conditionnent l’ampleur des dégâts.",
+    "Ordre des réflexes : isoler, alerter par un canal sûr, ne rien effacer, ne pas réparer seul.",
+    "Loi n° 027/2023 (cybersécurité) et loi n° 025/2023 modifiant la loi n° 001/2011 (données personnelles), à confirmer.",
+    "L’ANINF est l’agence technique de l’État pour le numérique ; l’autorité de protection des données est distincte.",
+    "Une fuite de données personnelles peut imposer une notification : la décision revient au responsable désigné."
+   ]
+  },
+  {
+   "id": "m7",
+   "title": "Sauvegardes et continuité d’activité",
+   "theme": "Sauvegardes et continuité",
+   "minutes": 9,
+   "body": "Même avec de bons réflexes, un incident finit par arriver : panne de disque, vol d’ordinateur, coupure électrique, inondation, rançongiciel. La question n’est pas seulement « comment l’éviter », mais aussi « comment reprendre l’activité rapidement ». Deux notions permettent d’y répondre : la **sauvegarde** et la **continuité d’activité**.\n\n**La sauvegarde** est une copie des données, conservée séparément, pour les restaurer après une perte. Une copie sur le même disque ou le même poste n’est pas une sauvegarde : si le poste tombe, tout tombe.\n\n**La règle « 3-2-1 »** est un repère simple :\n- **3** copies des données importantes (l’original et deux sauvegardes) ;\n- sur **2** supports différents (par exemple serveur et disque externe) ;\n- dont **1** copie conservée hors site ou **hors ligne** (autre bâtiment, support débranché).\n\nLa copie hors ligne est essentielle face au rançongiciel, qui chiffre aussi les sauvegardes accessibles par le réseau.\n\n**Tester la restauration.** Une sauvegarde jamais testée est une hypothèse. Il faut régulièrement restaurer un fichier ou un dossier pour vérifier qu’il est lisible et complet. Il faut aussi connaître la durée de la restauration.\n\n**Que sauvegarder, et où.** Les fichiers de travail doivent être enregistrés dans les **dossiers partagés ou espaces du ministère**, qui sont sauvegardés par le service informatique, plutôt que sur le bureau de l’ordinateur ou une clé USB. Les données sauvegardées par le service ne doivent pas être doublées en copies personnelles non contrôlées. Les sauvegardes de documents sensibles sont protégées au même niveau que les originaux (chiffrement, accès restreint).\n\n**Deux indicateurs de continuité** :\n- **RPO** (perte de données maximale acceptable) : si on sauvegarde chaque nuit, on peut perdre jusqu’à une journée de travail ;\n- **RTO** (délai maximal de reprise) : combien de temps le service peut rester arrêté. Ces valeurs sont choisies selon l’importance du service (les chiffres sont des exemples).\n\n**Plan de continuité d’activité (PCA)** et **plan de reprise** : document qui décrit, pour les activités essentielles (paie, suivi de la production, paiement des redevances, courrier), qui fait quoi, avec quels moyens de secours (accès alternatif, procédures papier, contacts des responsables, onduleurs et groupe électrogène). Un agent doit savoir où se trouve ce plan, qui joindre et quelle procédure manuelle appliquer pendant une panne.\n\n**Rôle de l’agent.**\n- Ranger ses fichiers dans les espaces sauvegardés ;\n- verrouiller et mettre à jour son poste ;\n- participer aux exercices de simulation ;\n- appliquer les consignes du plan pendant un incident et ne pas tenter de contourner un blocage.\n\nExemple (cas fictif) : un rançongiciel chiffre le serveur de fichiers d’une direction. Grâce à une sauvegarde hors ligne de la veille, les dossiers sont restaurés en une demi-journée, au prix d’un jour de saisie perdu. Sans copie hors ligne, la direction aurait perdu des mois de travail.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+   "keyPoints": [
+    "Une sauvegarde est une copie séparée de l’original : une copie sur le même poste n’en est pas une.",
+    "Règle 3-2-1 : trois copies, deux supports, dont une hors site ou hors ligne.",
+    "Une sauvegarde non testée n’offre aucune garantie : la restauration se vérifie régulièrement.",
+    "RPO (perte acceptable) et RTO (délai de reprise) cadrent le plan de continuité.",
+    "L’agent range ses fichiers dans les espaces sauvegardés et connaît les procédures de secours."
+   ],
+   "img": "svg/min-sauvegarde-3-2-1.svg",
+   "imgAlt": "Schéma de la règle 3-2-1 : l'original sur le poste de travail (copie 1, support n° 1), une sauvegarde sur un disque externe ou un serveur (copie 2, support n° 2) et une copie hors site dans un autre lieu (copie 3). Trois cartes résument : 3 copies, 2 types de supports, 1 copie hors site ; un rappel invite à tester la restauration."
+  }
+ ],
+ "questions": [
+  {
+   "id": "min-cyber-001",
+   "theme": "Menaces courantes",
+   "level": 1,
+   "q": "Sur le courriel fictif de la figure, quel indice numéroté joue sur l'urgence pour pousser à agir sans réfléchir, et de quelle menace s'agit-il ?",
+   "choices": [
+    "Le n° 3, la formule « Cher utilisateur » : un rançongiciel qui chiffre les fichiers",
+    "Le n° 2, l'objet qui menace de fermer le compte en 1 h : un hameçonnage visant vos identifiants",
+    "Le n° 4, les fautes de langue : une clé USB piégée",
+    "Le n° 1, l'adresse de l'expéditeur : un message de service normal"
+   ],
+   "answer": 1,
+   "explain": "L'objet « DERNIER AVIS - compte fermé dans 1 h » est l'indice n° 2 : l'urgence artificielle est la marque classique de l'hameçonnage, qui cherche à obtenir identifiants ou clics. La formule générique et les fautes sont d'autres indices du même message ; aucun ne désigne un rançongiciel ou une clé piégée.",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/min-hameconnage.svg",
+   "imgAlt": "Courriel fictif d'hameçonnage avec six indices numérotés : adresse d'expéditeur sans lien avec l'organisme, objet menaçant (compte fermé dans 1 h), formule « Cher utilisateur », fautes de langue, demande de mot de passe, lien dont l'adresse réelle au survol diffère du texte. En dessous, quatre étapes : réception, clic, fausse page de connexion, mot de passe saisi."
+  },
+  {
+   "id": "min-cyber-002",
+   "theme": "Menaces courantes",
+   "level": 1,
+   "q": "Que désigne un rançongiciel ?",
+   "choices": [
+    "Un programme qui efface seulement les courriels reçus depuis plus d’un an",
+    "Un logiciel malveillant qui chiffre des fichiers et réclame un paiement pour les restituer",
+    "Une application officielle qui sauvegarde les fichiers du poste à distance",
+    "Un message qui demande un don à tous les agents d’un même service"
+   ],
+   "answer": 1,
+   "explain": "Le rançongiciel bloque l’accès aux données par chiffrement et exige une rançon. Il ne s’agit ni d’un outil de sauvegarde ni d’un simple message de sollicitation : il paralyse l’activité, d’où l’importance des sauvegardes hors ligne.",
+   "seconds": 40,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-003",
+   "theme": "Menaces courantes",
+   "level": 1,
+   "q": "Un inconnu vous remet, lors d’un salon, une clé USB « contenant de la documentation sur les nouveaux équipements ». Que faites-vous ?",
+   "choices": [
+    "Vous la branchez sur un ordinateur isolé du réseau et vide de données pour examiner son contenu",
+    "Vous la branchez après avoir lancé une analyse rapide avec l’antivirus",
+    "Vous ne la branchez pas sur un poste du ministère et la remettez au service informatique",
+    "Vous la gardez pour un usage personnel sur votre ordinateur de la maison"
+   ],
+   "answer": 2,
+   "explain": "Une clé de provenance inconnue peut installer un logiciel malveillant dès le branchement, parfois avant toute analyse. La seule conduite sûre est de ne pas la brancher et de la confier à l’informatique. Un ordinateur « isolé » ou personnel peut aussi être infecté, puis contaminer d’autres supports.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-004",
+   "theme": "Menaces courantes",
+   "level": 1,
+   "q": "Le courriel de la figure s'adresse à « Cher utilisateur » et ne cite aucun dossier réel. Que montre ce trait par rapport au harponnage ?",
+   "choices": [
+    "Il s'agit d'un harponnage, car le message est adressé à un seul utilisateur",
+    "Il s'agit d'un rançongiciel, car aucun nom n'est cité",
+    "Il s'agit d'un courriel légitime, car l'expéditeur annonce un service informatique",
+    "Il s'agit d'un hameçonnage de masse ; un harponnage viserait une personne précise avec des informations réelles"
+   ],
+   "answer": 3,
+   "explain": "La formule générique et l'absence de détail réel indiquent un message envoyé à beaucoup de monde. Le harponnage, lui, est ciblé : il cite le nom du chef ou un dossier en cours. Un message sans nom n'est pas pour autant légitime, et ce n'est pas un rançongiciel.",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/min-hameconnage.svg",
+   "imgAlt": "Courriel fictif d'hameçonnage avec six indices numérotés : adresse d'expéditeur sans lien avec l'organisme, objet menaçant (compte fermé dans 1 h), formule « Cher utilisateur », fautes de langue, demande de mot de passe, lien dont l'adresse réelle au survol diffère du texte. En dessous, quatre étapes : réception, clic, fausse page de connexion, mot de passe saisi."
+  },
+  {
+   "id": "min-cyber-005",
+   "theme": "Menaces courantes",
+   "level": 2,
+   "q": "Un message qui semble venir de votre directeur vous demande de régler en urgence une facture sur un nouveau compte bancaire, en précisant « ne m’appelez pas, je suis en réunion ». Quelle est la bonne réaction ?",
+   "choices": [
+    "Régler la facture puis informer le directeur une fois la réunion terminée",
+    "Vérifier la demande en appelant le directeur sur son numéro habituel avant tout paiement",
+    "Répondre au message pour demander la confirmation des coordonnées bancaires",
+    "Transférer le message à un collègue pour qu’il effectue le paiement à votre place pendant votre absence"
+   ],
+   "answer": 1,
+   "explain": "C’est une fraude au président typique : urgence, secret, nouvelles coordonnées. Répondre au même message ou le transférer reste dans le canal contrôlé par l’escroc. Seule une vérification par un second canal connu (appel au numéro habituel) permet de trancher.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-006",
+   "theme": "Menaces courantes",
+   "level": 2,
+   "q": "Dans le courriel de la figure, le lien « Cliquez ici pour confirmer votre compte » affiche au survol de la souris une adresse réelle qui ne correspond pas au texte. Que concluez-vous ?",
+   "choices": [
+    "Le lien est sûr, car les liens affichent souvent une adresse technique différente",
+    "Le lien est sûr si le message porte le nom du service informatique",
+    "Le lien est suspect : vous ne cliquez pas et signalez le message à l'informatique",
+    "Le lien est sûr à condition de l'ouvrir sur le téléphone plutôt que sur l'ordinateur"
+   ],
+   "answer": 2,
+   "explain": "Un décalage entre le texte affiché et l'adresse réelle est l'indice n° 6 de la figure, un signe majeur d'hameçonnage. Un nom de service se copie facilement et le téléphone n'est pas immunisé contre les pages frauduleuses. Ne pas cliquer et signaler est la bonne conduite.",
+   "seconds": 60,
+   "status": "draft",
+   "img": "svg/min-hameconnage.svg",
+   "imgAlt": "Courriel fictif d'hameçonnage avec six indices numérotés : adresse d'expéditeur sans lien avec l'organisme, objet menaçant (compte fermé dans 1 h), formule « Cher utilisateur », fautes de langue, demande de mot de passe, lien dont l'adresse réelle au survol diffère du texte. En dessous, quatre étapes : réception, clic, fausse page de connexion, mot de passe saisi."
+  },
+  {
+   "id": "min-cyber-007",
+   "theme": "Menaces courantes",
+   "level": 2,
+   "q": "Un appelant se présentant comme technicien informatique du ministère vous demande votre mot de passe pour « résoudre un problème sur votre compte ». Quelle réponse est appropriée ?",
+   "choices": [
+    "Donner le mot de passe puisqu’il connaît votre nom et votre service",
+    "Donner seulement la moitié du mot de passe pour limiter le risque",
+    "Lui demander de prouver son identité en vous envoyant un courriel depuis son adresse professionnelle",
+    "Refuser, raccrocher et rappeler le service informatique sur son numéro officiel"
+   ],
+   "answer": 3,
+   "explain": "Un véritable service informatique n’a jamais besoin de votre mot de passe. Connaître votre nom ne prouve rien (informations souvent publiques). Un courriel peut être falsifié ; le contre-appel sur un numéro officiel est la seule vérification fiable.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-008",
+   "theme": "Menaces courantes",
+   "level": 2,
+   "q": "Le matin, des fichiers de votre poste portent une extension inconnue et un message réclame un paiement. Que faites-vous en premier ?",
+   "choices": [
+    "Vous déconnectez le poste du réseau et prévenez immédiatement le service informatique",
+    "Vous essayez de payer la somme demandée pour récupérer rapidement les fichiers",
+    "Vous éteignez et rallumez plusieurs fois le poste jusqu’à ce que le message disparaisse",
+    "Vous copiez les fichiers sur une clé USB pour les sauver avant qu’ils soient perdus"
+   ],
+   "answer": 0,
+   "explain": "Il faut couper la propagation (retrait du câble ou du Wi-Fi) et alerter. Payer n’offre aucune garantie et finance les criminels ; redémarrer ne règle rien ; copier sur une clé risque de propager le logiciel malveillant à d’autres machines.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-009",
+   "theme": "Menaces courantes",
+   "level": 3,
+   "q": "Un collègue vous dit avoir cliqué sur un lien douteux la veille et n’avoir « rien remarqué ». Il hésite à le signaler de peur d’être sanctionné. Vous êtes chef de service. Quelle attitude retenez-vous ?",
+   "choices": [
+    "Vous lui conseillez d’attendre quelques jours pour voir si un problème apparaît sur son poste",
+    "Vous surveillez vous-même son poste pour éviter de mettre en cause le service",
+    "Vous l’encouragez à signaler tout de suite et l’accompagnez auprès de l’informatique",
+    "Vous lui faites changer son mot de passe puis considérez l’affaire comme close"
+   ],
+   "answer": 2,
+   "explain": "L’absence de symptôme ne prouve pas l’absence d’infection : certains logiciels malveillants restent discrets. Attendre ou traiter l’affaire en interne fait perdre un temps précieux. Un signalement rapide, encouragé par l’encadrement, est le meilleur moyen de limiter les dégâts et de créer une culture de confiance.",
+   "seconds": 90,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-010",
+   "theme": "Menaces courantes",
+   "level": 3,
+   "q": "Dans votre direction, plusieurs agents reçoivent le même jour un courriel convaincant, cité à leur nom, évoquant un dossier réel d’attribution de licence et contenant une pièce jointe « à compléter ». Quelle analyse et quelle action sont les plus pertinentes ?",
+   "choices": [
+    "Le dossier est réel donc le message est forcément légitime et la pièce jointe peut être ouverte après un passage de l’antivirus",
+    "Il suffit que chaque agent supprime le message de sa boîte sans en parler à personne",
+    "Il faut répondre à l’expéditeur pour lui demander de confirmer l’origine du document",
+    "Ce peut être un harponnage : ne pas ouvrir la pièce jointe, prévenir l’informatique et les collègues"
+   ],
+   "answer": 3,
+   "explain": "La connaissance d’un dossier réel indique plutôt un attaquant bien renseigné. Le message touche plusieurs agents : il faut alerter l’informatique, qui pourra le retirer des autres boîtes et analyser la pièce jointe. Supprimer en silence laisse les collègues exposés ; répondre à l’expéditeur le renseigne.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-011",
+   "theme": "Mots de passe et authentification",
+   "level": 1,
+   "q": "Parmi ces propositions, laquelle constitue le meilleur mot de passe ?",
+   "choices": [
+    "Le prénom d’un enfant suivi de sa date de naissance, soit douze caractères",
+    "Une phrase de passe d’au moins 14 caractères composée de plusieurs mots sans lien évident",
+    "Le nom du ministère avec un « 1 » à la place du « i » et un point final",
+    "Un mot de passe de huit caractères avec une majuscule et un chiffre ajoutés"
+   ],
+   "answer": 1,
+   "explain": "La longueur est le facteur essentiel. Une phrase de passe longue résiste mieux aux essais automatiques et reste mémorisable. Les informations personnelles (prénom, date), les mots liés au ministère et les substitutions simples (i devient 1) sont les premières choses testées par les attaquants.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-012",
+   "theme": "Mots de passe et authentification",
+   "level": 1,
+   "q": "Que signifie l’authentification à deux facteurs ?",
+   "choices": [
+    "Utiliser deux mots de passe différents saisis l’un après l’autre sur le même écran de connexion",
+    "Se connecter depuis deux appareils différents au cours de la même journée",
+    "Prouver son identité avec deux éléments de nature différente, comme un mot de passe et un code",
+    "Faire valider chaque connexion par deux collègues du même service"
+   ],
+   "answer": 2,
+   "explain": "L’A2F associe deux catégories de preuve : ce que l’on sait (mot de passe) et ce que l’on possède (téléphone, clé) ou ce que l’on est (empreinte). Deux mots de passe restent un seul type de facteur ; elle ne dépend ni du nombre d’appareils ni de l’intervention de collègues.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-013",
+   "theme": "Mots de passe et authentification",
+   "level": 1,
+   "q": "À qui est-il acceptable de communiquer votre mot de passe professionnel ?",
+   "choices": [
+    "À personne : même le service informatique n’a pas besoin de le connaître",
+    "À votre supérieur direct, qui est responsable de votre travail",
+    "À un collègue de confiance qui doit finir un dossier pendant votre absence",
+    "À la personne qui vous appelle et se présente comme administrateur du réseau"
+   ],
+   "answer": 0,
+   "explain": "Le mot de passe est personnel. Si un collègue doit accéder à des fichiers, on lui donne des droits d’accès sur son propre compte. Le supérieur n’est pas une exception, et l’interlocuteur qui se dit administrateur est un scénario classique d’usurpation.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-014",
+   "theme": "Mots de passe et authentification",
+   "level": 1,
+   "q": "Pourquoi faut-il utiliser un mot de passe différent pour chaque service ?",
+   "choices": [
+    "Parce que les mots de passe expirent automatiquement après vingt-quatre heures",
+    "Pour que le piratage d’un site n’ouvre pas les autres comptes de la personne",
+    "Parce que les sites sont tenus par la loi de refuser les mots de passe identiques",
+    "Parce que les mots de passe se mélangent entre eux lorsqu’ils sont semblables"
+   ],
+   "answer": 1,
+   "explain": "Quand une base de mots de passe est volée, les attaquants testent les mêmes identifiants sur d’autres services (« bourrage d’identifiants »). Un mot de passe unique cloisonne le risque. Les autres justifications sont inexactes.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-015",
+   "theme": "Mots de passe et authentification",
+   "level": 2,
+   "q": "Vous recevez sur votre téléphone un code de connexion à votre messagerie alors que vous n’avez rien tenté. Que faites-vous ?",
+   "choices": [
+    "Vous ignorez le message, car ces codes sont envoyés au hasard par le système de sécurité du ministère",
+    "Vous donnez le code à l’appelant qui prétend annuler une erreur de connexion",
+    "Vous ne communiquez le code à personne, changez votre mot de passe et signalez l’événement",
+    "Vous saisissez le code pour clore la demande afin que les envois cessent"
+   ],
+   "answer": 2,
+   "explain": "Un code non sollicité indique que quelqu’un connaît probablement votre mot de passe. Il est la dernière protection de votre compte : jamais communiqué, jamais saisi. Il faut changer le mot de passe et signaler pour que l’informatique surveille le compte.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-016",
+   "theme": "Mots de passe et authentification",
+   "level": 2,
+   "q": "Votre téléphone affiche vingt demandes d’approbation de connexion en dix minutes alors que vous n’utilisez pas votre ordinateur. Quelle est la conduite adaptée ?",
+   "choices": [
+    "Accepter une demande pour que l’attaquant cesse de vous importuner",
+    "Désinstaller l’application d’authentification de votre téléphone pour ne plus être dérangé la nuit",
+    "Attendre la fin de la journée en espérant que les demandes s’arrêtent",
+    "Refuser toutes les demandes, changer le mot de passe et prévenir l’informatique"
+   ],
+   "answer": 3,
+   "explain": "C’est une attaque par « fatigue » des notifications : l’attaquant, qui détient déjà votre mot de passe, espère un clic par lassitude. Il faut tout refuser, changer le mot de passe et signaler. Accepter donne l’accès ; désinstaller l’application supprime votre protection.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-017",
+   "theme": "Mots de passe et authentification",
+   "level": 2,
+   "q": "Votre service utilise un compte partagé « stats-hydrocarbures » dont le mot de passe est connu de huit agents. Quel est le principal risque et quelle amélioration proposez-vous ?",
+   "choices": [
+    "Le compte se bloque plus vite ; il suffit de choisir un mot de passe plus court",
+    "On ne sait pas qui a fait quoi ; il faut passer à des comptes nominatifs aux droits limités",
+    "Le compte consomme trop d’espace ; il faut en supprimer la moitié des fichiers",
+    "Le compte est trop visible ; il faut en changer le nom chaque semaine"
+   ],
+   "answer": 1,
+   "explain": "Avec un compte partagé, aucune traçabilité n’est possible et le départ d’un agent oblige à changer le secret de tous. Les comptes nominatifs avec des droits limités (moindre privilège) permettent de retrouver l’auteur d’une action et de retirer un accès individuellement.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-018",
+   "theme": "Mots de passe et authentification",
+   "level": 2,
+   "q": "Pour recevoir ses codes d’A2F, un agent hésite entre le SMS, une application d’authentification et une clé physique. Quel classement est le plus conforme aux bonnes pratiques ?",
+   "choices": [
+    "SMS en priorité, car tout le monde sait l’utiliser sans rien installer",
+    "Application d’authentification en dernier, car elle consomme de la batterie",
+    "Clé physique ou application d’authentification en priorité, le SMS en dernier recours",
+    "Les trois méthodes sont rigoureusement équivalentes sur le plan de la sécurité, seule la commodité diffère"
+   ],
+   "answer": 2,
+   "explain": "Le SMS peut être intercepté ou détourné par échange de carte SIM, alors que les codes générés dans une application ou une clé physique restent sur l’appareil. Le SMS reste préférable à l’absence d’A2F, mais il est le moins robuste des trois.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-019",
+   "theme": "Mots de passe et authentification",
+   "level": 3,
+   "q": "Un attaquant a obtenu le mot de passe d’un inspecteur par hameçonnage et tente de se connecter à la messagerie. L’inspecteur a activé l’A2F par application. Quel est l’état de la situation ?",
+   "choices": [
+    "L’attaquant est bloqué, donc le mot de passe peut rester inchangé sans risque",
+    "L’attaquant a désormais accès à tout, l’A2F ne protégeant que contre la perte de téléphone",
+    "L’A2F se désactive automatiquement après un hameçonnage, le compte est donc ouvert",
+    "L’attaquant est bloqué sans le second facteur, mais il faut changer le mot de passe"
+   ],
+   "answer": 3,
+   "explain": "L’A2F empêche la connexion, mais le mot de passe est compromis : il peut être réutilisé ailleurs ou combiné à une attaque par fatigue de notifications. Il faut le changer, signaler l’incident et vérifier les connexions récentes. L’A2F ne se désactive pas d’elle-même.",
+   "seconds": 90,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-020",
+   "theme": "Mots de passe et authentification",
+   "level": 3,
+   "q": "Un agent est muté dans une autre direction ; il connaissait le mot de passe d’un compte partagé de son ancien service. Que doit faire le chef de service ?",
+   "choices": [
+    "Faire changer le mot de passe, retirer les droits de l’agent et passer à des comptes nominatifs",
+    "Ne rien faire, l’agent étant toujours employé par le ministère et de confiance",
+    "Lui demander d’oublier le mot de passe, sa parole suffisant à sécuriser le compte de son ancien service",
+    "Attendre le prochain changement trimestriel prévu pour modifier le mot de passe"
+   ],
+   "answer": 0,
+   "explain": "Un accès non retiré après une mutation reste un risque (erreur, compromission, abus). Le changement de secret et le retrait des droits au départ sont une règle de base, d’où l’intérêt de comptes nominatifs, que l’on désactive sans toucher aux autres.",
+   "seconds": 90,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-021",
+   "theme": "Messagerie et téléphone",
+   "level": 1,
+   "q": "Pour envoyer un document de travail du ministère, quelle adresse faut-il utiliser en principe ?",
+   "choices": [
+    "Une adresse personnelle gratuite, plus rapide pour envoyer le fichier même en dehors des heures de bureau",
+    "Une adresse de messagerie d’un proche, pour éviter de laisser des traces",
+    "Une adresse créée pour l’occasion sur un service anonyme non surveillé",
+    "L’adresse officielle professionnelle, dont l’usage est encadré par le ministère"
+   ],
+   "answer": 3,
+   "explain": "La messagerie officielle reste dans le périmètre de sécurité et de traçabilité du ministère. Une adresse personnelle ou anonyme fait sortir l’information sans contrôle ni possibilité de récupération en cas d’incident.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-022",
+   "theme": "Messagerie et téléphone",
+   "level": 1,
+   "q": "Quel signe doit vous faire douter d’une pièce jointe reçue par courriel ?",
+   "choices": [
+    "Une extension exécutable comme « .exe » ou une demande d’activer les macros",
+    "Un nom de fichier écrit en lettres majuscules et sans espaces",
+    "Un fichier de petite taille provenant d’un collègue de votre service",
+    "Un document au format PDF envoyé après un échange téléphonique prévu"
+   ],
+   "answer": 0,
+   "explain": "Les fichiers exécutables et les macros à activer sont des vecteurs classiques de logiciels malveillants. Le nom en majuscules ne prouve rien. Une pièce jointe attendue, issue d’un échange réel, est en principe moins suspecte.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-023",
+   "theme": "Messagerie et téléphone",
+   "level": 1,
+   "q": "Que faire en premier si votre téléphone professionnel est perdu ou volé ?",
+   "choices": [
+    "Attendre quelques jours en espérant que quelqu’un le rapporte au bureau",
+    "Prévenir immédiatement le service informatique pour bloquer ou effacer l’appareil à distance",
+    "Changer seulement le code PIN de la carte SIM auprès de l’opérateur",
+    "Racheter un téléphone identique, restaurer la copie des données et ne rien signaler au service informatique"
+   ],
+   "answer": 1,
+   "explain": "Chaque heure compte : l’appareil donne accès à la messagerie, aux documents et parfois à des accès au réseau interne. L’informatique peut verrouiller ou effacer le téléphone et révoquer les accès. Attendre ou agir seul laisse les données exposées.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-024",
+   "theme": "Messagerie et téléphone",
+   "level": 1,
+   "q": "Pourquoi faut-il installer rapidement les mises à jour du téléphone et de ses applications ?",
+   "choices": [
+    "Parce qu’elles ralentissent volontairement l’appareil pour économiser la batterie",
+    "Parce qu’elles sont obligatoires pour recevoir des appels de l’étranger",
+    "Parce qu’elles corrigent des failles de sécurité connues que les attaquants exploitent",
+    "Parce qu’elles effacent automatiquement les messages reçus depuis six mois"
+   ],
+   "answer": 2,
+   "explain": "Les mises à jour comblent des vulnérabilités connues, que des outils automatisés recherchent. Elles n’ont aucun rapport avec les appels internationaux ni avec l’effacement de messages.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-025",
+   "theme": "Messagerie et téléphone",
+   "level": 2,
+   "q": "Vous envoyez une invitation à vingt partenaires extérieurs. Comment placez-vous leurs adresses ?",
+   "choices": [
+    "En copie cachée, pour que les destinataires ne voient pas les adresses des autres",
+    "En copie visible, car cela montre la transparence de la démarche",
+    "Dans le corps du message, afin que chacun retrouve facilement les autres participants",
+    "En copie visible, car la copie cachée est interdite dans l’administration"
+   ],
+   "answer": 0,
+   "explain": "La copie cachée évite de divulguer les adresses de tiers à tous les destinataires (atteinte à la vie privée, risque de démarchage ou d’hameçonnage ciblé). Elle n’est pas interdite et est même recommandée pour les envois à des externes.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-026",
+   "theme": "Messagerie et téléphone",
+   "level": 2,
+   "q": "Vous constatez dans les paramètres de votre messagerie une règle de redirection automatique vers une adresse externe que vous n’avez pas créée. Que faites-vous ?",
+   "choices": [
+    "Vous la laissez en place, car elle est probablement utile à la messagerie",
+    "Vous ne l’effacez pas seul, signalez l’incident à l’informatique et changez le mot de passe",
+    "Vous la supprimez puis n’en parlez à personne, l’affaire étant réglée de votre côté, sans risque",
+    "Vous l’ignorez tant que vous ne remarquez pas de courriel manquant"
+   ],
+   "answer": 1,
+   "explain": "Une redirection inconnue signifie souvent que le compte est compromis : l’attaquant lit votre courrier en silence. Il faut signaler (pour mesurer la durée et l’étendue) et changer le mot de passe. Supprimer sans rien dire prive l’informatique d’indices.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-027",
+   "theme": "Messagerie et téléphone",
+   "level": 2,
+   "q": "Un message WhatsApp d’un numéro inconnu écrit : « C’est ton directeur, ceci est mon nouveau numéro, peux-tu m’acheter des cartes de recharge ? ». Quelle est la bonne réaction ?",
+   "choices": [
+    "Acheter les cartes puis demander le remboursement à la comptabilité",
+    "Répondre dans la conversation en posant des questions sur le dossier en cours",
+    "Vérifier en appelant le directeur sur son ancien numéro et ne rien acheter avant confirmation",
+    "Envoyer les codes des cartes en précisant que c’est exceptionnel"
+   ],
+   "answer": 2,
+   "explain": "C’est une fraude très courante par usurpation d’identité. Les réponses dans la conversation restent sous le contrôle de l’escroc (il peut se renseigner). La seule vérification fiable passe par un autre canal connu. Ne rien acheter avant confirmation.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-028",
+   "theme": "Messagerie et téléphone",
+   "level": 2,
+   "q": "Vous souhaitez envoyer à un collègue, via une messagerie instantanée personnelle, un contrat marqué « confidentiel » pour gagner du temps. Que faut-il faire ?",
+   "choices": [
+    "L’envoyer en demandant au collègue de supprimer le message après lecture",
+    "L’envoyer en photo, car les photos ne peuvent pas être copiées facilement",
+    "L’envoyer, car les messageries instantanées sont chiffrées donc toujours conformes",
+    "Utiliser le canal autorisé par le ministère pour ce niveau de classification"
+   ],
+   "answer": 3,
+   "explain": "Le chiffrement du transport ne règle pas la question de la conformité : le document sort du périmètre maîtrisé par le ministère, reste sur des appareils personnels et des sauvegardes externes. Une photo se copie aussi facilement. Le canal autorisé est la seule voie.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-029",
+   "theme": "Messagerie et téléphone",
+   "level": 3,
+   "q": "Un attaquant a deviné le mot de passe d’un chef de service et a créé une règle qui transfère en copie tous les courriels contenant le mot « contrat » vers une adresse externe. Quelles sont les premières mesures à prendre ?",
+   "choices": [
+    "Supprimer uniquement la règle, puis surveiller seul le compte pendant un mois",
+    "Signaler, bloquer le compte, supprimer la règle, changer les accès et analyser l’étendue de la fuite",
+    "Changer le mot de passe, sans toucher à la règle ni en parler à l’informatique, puis surveiller le compte",
+    "Supprimer les anciens courriels du compte pour limiter ce qui a été exposé"
+   ],
+   "answer": 1,
+   "explain": "Supprimer la règle sans changer les accès laisse l’attaquant entrer ; changer le mot de passe sans supprimer la règle laisse la fuite continuer. Il faut agir sur les deux, alerter l’informatique et mesurer ce qui a déjà été transmis (contrats, destinataires). Effacer les courriels détruit des preuves.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-030",
+   "theme": "Messagerie et téléphone",
+   "level": 3,
+   "q": "Lors d’un déplacement, un agent utilise le téléphone de service pour confirmer un paiement à la demande d’un SMS reçu de la « banque du ministère », avec un lien. Il a déjà saisi ses identifiants lorsqu’il comprend le piège. Quelle suite est la plus pertinente ?",
+   "choices": [
+    "Attendre de rentrer au bureau pour en parler, afin de ne pas perturber la mission",
+    "Rappeler le numéro qui figure dans le SMS pour demander l’annulation de l’opération et des identifiants",
+    "Prévenir sans délai l’informatique et la banque par un numéro officiel, puis changer les accès",
+    "Supprimer le SMS et l’historique du navigateur pour effacer toute trace de l’erreur"
+   ],
+   "answer": 2,
+   "explain": "Le temps joue contre l’agent : les identifiants peuvent être utilisés en quelques minutes. Rappeler le numéro du SMS revient à parler à l’escroc. Effacer l’historique supprime des éléments utiles à l’enquête. Alerter la banque et l’informatique via les canaux officiels est la seule bonne voie.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-031",
+   "theme": "Documents sensibles",
+   "level": 1,
+   "q": "D'après le tableau des niveaux, quelle différence sépare le niveau « Interne » du niveau « Confidentiel » ?",
+   "choices": [
+    "Interne : lisible par les agents du ministère ; Confidentiel : réservé aux personnes qui ont besoin d'en connaître",
+    "Interne : lisible par toute personne ; Confidentiel : lisible par tous les agents du ministère",
+    "Interne est plus sensible que Confidentiel, car il circule à l'intérieur du ministère",
+    "Pas de différence : les deux niveaux ont les mêmes règles d'accès et de protection"
+   ],
+   "answer": 0,
+   "explain": "La classification fixe qui peut lire un document et comment il est traité. Interne s'adresse aux agents du ministère, Confidentiel est limité à ceux qui ont besoin d'en connaître, avec une protection renforcée. Public est le niveau de diffusion libre.",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/min-classification-information.svg",
+   "imgAlt": "Tableau de quatre niveaux de classification, de Public (toute personne) à Secret ou très sensible (très peu de personnes désignées), avec pour chacun qui peut lire, des exemples et la protection. Interne : agents du ministère ; Confidentiel : besoin d'en connaître, par exemple un contrat avec un opérateur, accès restreint, marquage, chiffrement si transporté. Appellations à confirmer."
+  },
+  {
+   "id": "min-cyber-032",
+   "theme": "Documents sensibles",
+   "level": 1,
+   "q": "Que signifie le principe du « besoin d’en connaître » ?",
+   "choices": [
+    "Les agents de grade élevé accèdent à toutes les informations du ministère",
+    "On n’accède à une information que si sa mission l’exige, quel que soit son grade",
+    "Tout agent peut lire n’importe quel dossier s’il est curieux d’en connaître le sujet",
+    "Seul le directeur général a le droit de consulter les documents confidentiels"
+   ],
+   "answer": 1,
+   "explain": "L’accès dépend du besoin professionnel, pas du rang. Un cadre supérieur sans rapport avec le dossier n’y a pas accès ; un agent chargé de l’instruire, si. Les propositions fausses élargissent ou verrouillent l’accès sans lien avec la mission.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-033",
+   "theme": "Documents sensibles",
+   "level": 1,
+   "q": "Selon le tableau des niveaux, dans quelle ligne classez-vous un projet de contrat avec un opérateur pétrolier en cours de négociation ?",
+   "choices": [
+    "Public : diffusion libre",
+    "Interne : lisible par tous les agents du ministère",
+    "Confidentiel : accès limité aux personnes ayant besoin d'en connaître",
+    "Secret ou très sensible : liste nominative très courte"
+   ],
+   "answer": 2,
+   "explain": "Un projet de contrat en négociation contient des informations dont la divulgation pourrait fausser la négociation ou avantager des tiers : le tableau cite les contrats avec un opérateur au niveau Confidentiel. Public et Interne seraient trop ouverts ; le niveau Secret relève de régimes spécifiques.",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/min-classification-information.svg",
+   "imgAlt": "Tableau de quatre niveaux de classification, de Public (toute personne) à Secret ou très sensible (très peu de personnes désignées), avec pour chacun qui peut lire, des exemples et la protection. Interne : agents du ministère ; Confidentiel : besoin d'en connaître, par exemple un contrat avec un opérateur, accès restreint, marquage, chiffrement si transporté. Appellations à confirmer."
+  },
+  {
+   "id": "min-cyber-034",
+   "theme": "Documents sensibles",
+   "level": 1,
+   "q": "Comment faut-il détruire un document papier confidentiel devenu inutile ?",
+   "choices": [
+    "Au broyeur, selon la procédure du ministère, et non dans une corbeille ordinaire",
+    "En le déchirant en deux et en le jetant dans la corbeille du bureau",
+    "En le laissant sur une étagère jusqu’au prochain nettoyage des locaux",
+    "En le donnant à un collègue d’un autre service pour qu’il l’utilise comme papier de brouillon"
+   ],
+   "answer": 0,
+   "explain": "Une corbeille ordinaire ne protège pas : le contenu peut être récupéré et lu. Le broyage selon la procédure est la méthode attendue. Donner le document à un tiers ou le conserver sans contrôle ne le détruit pas.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-035",
+   "theme": "Documents sensibles",
+   "level": 2,
+   "q": "Vous devez emporter chez vous un dossier confidentiel pour le terminer pendant le week-end. Que faites-vous ?",
+   "choices": [
+    "Vous copiez le dossier sur votre clé USB personnelle, plus pratique à transporter pour le week-end",
+    "Vous demandez un accès à distance sécurisé fourni par le ministère plutôt qu’une copie personnelle",
+    "Vous l’envoyez sur votre messagerie personnelle, car vous y avez accès partout",
+    "Vous l’imprimez en plusieurs exemplaires que vous rangez dans votre voiture"
+   ],
+   "answer": 1,
+   "explain": "Une clé personnelle ou une messagerie privée échappent au contrôle du ministère et peuvent être perdues ou piratées. Des impressions laissées dans une voiture sont aussi à risque. L’accès à distance sécurisé garde les données dans l’espace protégé.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-036",
+   "theme": "Documents sensibles",
+   "level": 2,
+   "q": "Selon le tableau, un document « Confidentiel » est réservé à ceux qui ont besoin d'en connaître. Un collègue d'un autre service vous demande par courriel les volumes de production d'un bloc, classés à ce niveau, « pour sa culture personnelle ». Que répondez-vous ?",
+   "choices": [
+    "Vous les envoyez, puisqu'il travaille lui aussi pour le ministère et qu'il est tenu au secret professionnel comme vous",
+    "Vous les envoyez après lui avoir demandé de ne pas les transmettre",
+    "Vous les lui donnez oralement pour ne pas laisser de trace écrite",
+    "Vous refusez de les communiquer sans besoin professionnel établi et sans accord de la hiérarchie"
+   ],
+   "answer": 3,
+   "explain": "L'appartenance au ministère ne suffit pas : c'est le besoin d'en connaître qui compte. Une promesse de discrétion ou une communication orale ne remplacent pas la procédure d'autorisation, et l'absence de trace aggrave le contrôle.",
+   "seconds": 70,
+   "status": "draft",
+   "img": "svg/min-classification-information.svg",
+   "imgAlt": "Tableau de quatre niveaux de classification, de Public (toute personne) à Secret ou très sensible (très peu de personnes désignées), avec pour chacun qui peut lire, des exemples et la protection. Interne : agents du ministère ; Confidentiel : besoin d'en connaître, par exemple un contrat avec un opérateur, accès restreint, marquage, chiffrement si transporté. Appellations à confirmer."
+  },
+  {
+   "id": "min-cyber-037",
+   "theme": "Documents sensibles",
+   "level": 2,
+   "q": "En fin de journée, vous quittez votre bureau. Que devez-vous faire concernant les documents et l’écran ?",
+   "choices": [
+    "Ranger les documents sensibles sous clé et verrouiller la session de l’ordinateur",
+    "Laisser les dossiers sur la table, le personnel d’entretien étant de confiance",
+    "Laisser la session ouverte, car le poste est dans un bureau fermé la journée",
+    "Éteindre seulement l’écran, ce qui verrouille automatiquement tous les fichiers"
+   ],
+   "answer": 0,
+   "explain": "La règle du bureau propre et du verrouillage de session limite les risques d’accès par des visiteurs, du personnel d’entretien ou un intrus. Éteindre l’écran ne verrouille pas la session.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-038",
+   "theme": "Documents sensibles",
+   "level": 2,
+   "q": "Une imprimante partagée du couloir contient les pages d’un rapport confidentiel que vous avez lancé il y a une heure et oublié. Que doit-on retenir ?",
+   "choices": [
+    "Rien de grave : les documents oubliés à l’imprimante sont détruits chaque soir",
+    "Il fallait récupérer les pages immédiatement ou utiliser l’impression sécurisée par code",
+    "Il suffit d’informer les collègues du couloir de ne pas les lire s’ils les voient",
+    "Le rapport n’est plus confidentiel dès lors qu’il a été imprimé sur une machine du ministère"
+   ],
+   "answer": 1,
+   "explain": "Un document confidentiel laissé accessible peut être lu ou copié. La classification ne disparaît pas à l’impression. Il faut récupérer les pages sans délai ou utiliser l’impression avec code personnel, et signaler un oubli si le contenu est sensible.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-039",
+   "theme": "Documents sensibles",
+   "level": 3,
+   "q": "Vous êtes chef de service. Un stagiaire demande à consulter des données de coûts pétroliers déclarés par un opérateur pour rédiger son mémoire universitaire. Quelle décision est la plus appropriée ?",
+   "choices": [
+    "Lui donner les données après lui avoir fait signer une promesse orale de discrétion",
+    "Lui donner les données en les rendant anonymes par simple suppression du nom du fichier",
+    "Refuser l’accès aux données identifiables et proposer des données publiées ou agrégées",
+    "Lui donner les données car un mémoire universitaire est un usage non commercial"
+   ],
+   "answer": 2,
+   "explain": "Les données déclarées par les opérateurs sont couvertes par la confidentialité. L’usage académique ne la lève pas. Supprimer le nom du fichier n’anonymise rien ; une promesse orale n’est pas une garantie. Des données publiées ou agrégées, validées par la hiérarchie, répondent au besoin.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-040",
+   "theme": "Documents sensibles",
+   "level": 3,
+   "q": "Le tableau prévoit pour le niveau « Confidentiel » un accès restreint, un marquage et un chiffrement si le document est transporté. Un projet de contrat classé à ce niveau doit être relu à Libreville par un consultant externe. Quelle organisation concilie le mieux sécurité et efficacité ?",
+   "choices": [
+    "L'envoi du dossier complet par messagerie pour qu'il le conserve pendant toute la durée de son mandat",
+    "Un accord de confidentialité, un accès limité au document utile, tracé et retiré en fin de mission",
+    "La remise du dossier sur clé USB que le consultant rend quand il le souhaite",
+    "L'accès libre au serveur de la direction pour qu'il puisse retrouver les pièces utiles"
+   ],
+   "answer": 1,
+   "explain": "Le consultant n'a besoin que du document à relire, pour une durée limitée, sous engagement écrit, avec traçabilité. Donner tout le dossier, une clé non contrôlée ou l'accès au serveur dépasse le besoin d'en connaître.",
+   "seconds": 100,
+   "status": "draft",
+   "img": "svg/min-classification-information.svg",
+   "imgAlt": "Tableau de quatre niveaux de classification, de Public (toute personne) à Secret ou très sensible (très peu de personnes désignées), avec pour chacun qui peut lire, des exemples et la protection. Interne : agents du ministère ; Confidentiel : besoin d'en connaître, par exemple un contrat avec un opérateur, accès restreint, marquage, chiffrement si transporté. Appellations à confirmer."
+  },
+  {
+   "id": "min-cyber-041",
+   "theme": "Travail à distance",
+   "level": 1,
+   "q": "Quel est le principal risque d’un réseau Wi-Fi public (hôtel, aéroport, café) ?",
+   "choices": [
+    "Il consomme obligatoirement plus de batterie que tous les autres réseaux",
+    "Il bloque l’accès aux sites du ministère pour des raisons de fréquences",
+    "Un tiers peut observer le trafic ou créer un faux réseau du même nom pour capter des données",
+    "Il impose l’installation d’une application payante sur le téléphone"
+   ],
+   "answer": 2,
+   "explain": "Un réseau ouvert n’est pas maîtrisé : interception, faux point d’accès (« jumeau maléfique »). Les autres affirmations sont sans rapport avec la sécurité.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-042",
+   "theme": "Travail à distance",
+   "level": 1,
+   "q": "À quoi sert un réseau privé virtuel (RPV) fourni par le ministère ?",
+   "choices": [
+    "À augmenter la vitesse de connexion de tous les sites visités",
+    "À masquer vos actions professionnelles à votre hiérarchie et au service informatique du ministère",
+    "À remplacer le mot de passe de votre session de travail",
+    "À chiffrer les échanges entre votre appareil et le réseau interne, même sur réseau non sûr"
+   ],
+   "answer": 3,
+   "explain": "Le RPV crée un tunnel chiffré qui protège les données en transit. Il n’accélère pas la connexion, ne remplace pas l’authentification et n’est pas fait pour cacher des activités à l’employeur.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-043",
+   "theme": "Travail à distance",
+   "level": 1,
+   "q": "Pourquoi utiliser un filtre de confidentialité sur l’écran d’un ordinateur portable ?",
+   "choices": [
+    "Pour empêcher qu’une personne placée à côté ou derrière lise les informations affichées",
+    "Pour augmenter la luminosité de l’écran en plein soleil sur le terrain",
+    "Pour protéger l’ordinateur contre les logiciels malveillants téléchargés",
+    "Pour chiffrer les données enregistrées sur le disque de l’ordinateur"
+   ],
+   "answer": 0,
+   "explain": "Le filtre réduit l’angle de vision : il vise « l’espionnage par-dessus l’épaule » dans les transports ou les salles d’attente. Il ne protège ni du logiciel malveillant ni des données stockées, qui relèvent de l’antivirus et du chiffrement.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-044",
+   "theme": "Travail à distance",
+   "level": 1,
+   "q": "Que faire d’un ordinateur portable professionnel pendant une pause au restaurant lors d’une mission ?",
+   "choices": [
+    "Le laisser dans la voiture, fermée à clé, pour ne pas s’encombrer",
+    "Le garder avec soi ou le verrouiller et ne jamais le laisser sans surveillance",
+    "Le laisser dans la chambre d’hôtel, la porte étant fermée à clé",
+    "Le confier au serveur du restaurant qui peut le garder derrière le comptoir"
+   ],
+   "answer": 1,
+   "explain": "Voitures, chambres d’hôtel et comptoirs sont des lieux de vol fréquents. Un disque chiffré limite l’exposition, mais le matériel ne doit jamais rester sans surveillance.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-045",
+   "theme": "Travail à distance",
+   "level": 2,
+   "q": "Vous devez consulter urgemment un document interne depuis un aéroport. Seul un Wi-Fi gratuit est disponible. Quelle solution est la plus sûre ?",
+   "choices": [
+    "Utiliser le Wi-Fi gratuit en vérifiant seulement que son nom semble correct",
+    "Utiliser le Wi-Fi gratuit en désactivant temporairement l’antivirus pour aller plus vite",
+    "Utiliser un ordinateur en libre-service de l’aéroport pour ne pas exposer le vôtre",
+    "Utiliser le partage de connexion du téléphone professionnel, avec le RPV du ministère"
+   ],
+   "answer": 3,
+   "explain": "Le partage de connexion et le RPV forment une double barrière. Un nom de réseau se falsifie facilement ; désactiver l’antivirus aggrave le risque ; un ordinateur en libre-service peut enregistrer vos frappes et vos identifiants.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-046",
+   "theme": "Travail à distance",
+   "level": 2,
+   "q": "Vous télétravaillez ponctuellement et un proche vous demande de lui prêter l’ordinateur du ministère pour consulter ses courriels. Que répondez-vous ?",
+   "choices": [
+    "Non : l’appareil professionnel est réservé à votre usage et ne se prête à personne",
+    "Oui, à condition de rester à côté de lui pendant toute la durée de l’utilisation",
+    "Oui, s’il utilise un compte distinct avec son propre mot de passe sur la machine",
+    "Oui, mais seulement lorsque l’ordinateur est connecté au Wi-Fi domestique"
+   ],
+   "answer": 0,
+   "explain": "L’ordinateur contient des accès et des données du ministère. Un tiers, même sous surveillance, peut commettre une erreur ou introduire un logiciel malveillant. L’usage est strictement personnel, quelles que soient les modalités techniques proposées.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-047",
+   "theme": "Travail à distance",
+   "level": 2,
+   "q": "Dans un lieu public, la borne de recharge USB gratuite d’un salon vous tend les bras alors que votre téléphone professionnel est presque déchargé. Quelle est la meilleure option ?",
+   "choices": [
+    "Brancher le câble sur la borne, comme c’est un équipement installé par les organisateurs du salon",
+    "Utiliser votre propre chargeur sur une prise électrique ou une batterie externe personnelle",
+    "Brancher le téléphone sur la borne en désactivant le verrouillage de l’écran",
+    "Brancher le téléphone sur l’ordinateur d’un stand qui propose de le recharger"
+   ],
+   "answer": 1,
+   "explain": "Une borne USB publique peut être piégée (transfert de données, logiciel malveillant, « juice jacking »). Une prise secteur avec son propre chargeur, ou une batterie externe, évite la liaison de données.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-048",
+   "theme": "Travail à distance",
+   "level": 2,
+   "q": "Lors d’un voyage à l’étranger, vous devez emporter un ordinateur pour une mission sensible. Quelle précaution est la plus appropriée ?",
+   "choices": [
+    "Copier tous les dossiers du service au cas où une information serait demandée",
+    "Désactiver le chiffrement pour éviter des difficultés à la frontière",
+    "Emporter le minimum de données, sur un appareil chiffré, et changer les accès au retour",
+    "Utiliser votre ordinateur personnel pour éviter de mettre en cause celui du ministère"
+   ],
+   "answer": 2,
+   "explain": "Plus l’appareil contient de données, plus la perte ou la saisie est grave. Le chiffrement reste utile ; l’ordinateur personnel n’est pas géré par la sécurité du ministère. Après la mission, les mots de passe sont changés.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-049",
+   "theme": "Travail à distance",
+   "level": 3,
+   "q": "Un agent en télétravail découvre que son routeur Wi-Fi domestique utilise encore le mot de passe d’origine collé sous la box et que son ordinateur n’a pas été mis à jour depuis des mois. Quelles mesures sont prioritaires ?",
+   "choices": [
+    "Changer le mot de passe du Wi-Fi, mettre à jour l’appareil et passer par le RPV du ministère",
+    "Retirer les mises à jour car elles ralentissent le télétravail et conserver le Wi-Fi tel quel",
+    "Utiliser un voisin comme Wi-Fi de secours pour ne pas exposer le sien",
+    "Transférer les dossiers sur une messagerie personnelle plus rapide à synchroniser"
+   ],
+   "answer": 0,
+   "explain": "Le mot de passe par défaut et l’absence de mise à jour sont deux vulnérabilités courantes. Le RPV protège les échanges avec le ministère. Utiliser le Wi-Fi d’un tiers ou transférer vers une messagerie personnelle multiplie les risques.",
+   "seconds": 90,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-050",
+   "theme": "Travail à distance",
+   "level": 3,
+   "q": "En mission, un agent doit rédiger un rapport sensible et un collègue propose de le terminer dans un café avec Wi-Fi gratuit ; l’agent n’a pas de forfait de données. Quelle solution concilie sécurité et contrainte ?",
+   "choices": [
+    "Rédiger le rapport en ligne dans un service gratuit, puis l’effacer dès l’envoi",
+    "Rédiger hors ligne sur l’appareil chiffré, puis envoyer par le RPV depuis un réseau sûr",
+    "Envoyer le brouillon depuis le Wi-Fi du café par messagerie personnelle pour gagner du temps",
+    "Faire rédiger le rapport par le collègue sur son ordinateur personnel plus récent"
+   ],
+   "answer": 1,
+   "explain": "Travailler hors ligne évite l’exposition réseau ; l’envoi se fera depuis une connexion de confiance avec RPV. Un service en ligne gratuit conserve des copies hors contrôle ; la messagerie personnelle ou l’ordinateur d’un tiers sortent le document du périmètre protégé.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-051",
+   "theme": "Signalement et cadre gabonais",
+   "level": 1,
+   "q": "Parmi ces événements, lequel doit être signalé comme incident de sécurité ?",
+   "choices": [
+    "Une réunion annulée en raison de l’indisponibilité d’une salle",
+    "Le remplacement programmé d’un ordinateur par un modèle plus récent",
+    "Un retard de publication du bulletin interne sur le site du ministère",
+    "La perte d’un téléphone professionnel contenant la messagerie du service"
+   ],
+   "answer": 3,
+   "explain": "Un incident compromet la confidentialité, l’intégrité ou la disponibilité de l’information. La perte d’un téléphone qui donne accès à la messagerie en est un. Les autres événements sont organisationnels ou prévus.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-052",
+   "theme": "Signalement et cadre gabonais",
+   "level": 1,
+   "q": "Quelle loi gabonaise de 2023 est relative à la cybersécurité et à la lutte contre la cybercriminalité ?",
+   "choices": [
+    "La loi n° 027/2023 du 12 juillet 2023",
+    "La loi n° 002/2019 du 16 juillet 2019 sur le secteur des hydrocarbures",
+    "Le code des marchés publics, sans rapport avec le numérique",
+    "La loi n° 001/2011 du 25 septembre 2011 sur la cybersécurité"
+   ],
+   "answer": 0,
+   "explain": "La loi n° 027/2023 du 12 juillet 2023 est citée comme relative à la cybersécurité et à la lutte contre la cybercriminalité. La loi de 2019 concerne les hydrocarbures ; la loi n° 001/2011 porte sur les données personnelles. À confirmer par le ministère avant diffusion.",
+   "seconds": 50,
+   "status": "draft",
+   "refs": [
     {
-      "id": "m1",
-      "title": "Les menaces courantes : hameçonnage, rançongiciel, usurpation, clé USB piégée",
-      "theme": "Menaces courantes",
-      "minutes": 10,
-      "body": "Un agent du ministère manipule des informations de valeur : données de production, contrats, correspondances avec les opérateurs, informations sur les marchés. Ces informations intéressent des criminels (extorsion, fraude) comme des acteurs qui veulent connaître les positions de l’État. Dans la grande majorité des cas, l’attaque ne passe pas par une prouesse technique mais par **une personne qui clique, ouvre ou obéit**. Connaître les quatre menaces les plus courantes est donc la première défense.\n\n**L’hameçonnage** (« phishing ») est un message frauduleux, par courriel, SMS ou messagerie, qui imite un expéditeur de confiance (direction, banque, Trésor, fournisseur, service informatique) pour vous pousser à cliquer sur un lien, ouvrir une pièce jointe ou saisir un mot de passe sur une fausse page. Les signes qui doivent alerter : urgence artificielle (« votre compte sera fermé aujourd’hui »), adresse d’expéditeur légèrement différente de l’adresse officielle, fautes inhabituelles, lien dont l’adresse réelle (visible en survolant) ne correspond pas au site annoncé, demande de mot de passe ou de code. Une variante ciblée, le **harponnage**, vise une personne précise en utilisant des informations réelles sur elle (nom de son chef, dossier en cours).\n\n**Le rançongiciel** chiffre les fichiers d’un poste et des dossiers partagés, puis exige un paiement pour les rendre. Il arrive le plus souvent par une pièce jointe piégée, un lien malveillant ou un accès à distance mal protégé. Réflexes : débrancher immédiatement le câble réseau ou couper le Wi-Fi (sans éteindre brutalement si l’informatique demande d’attendre), prévenir sans délai le service informatique, ne jamais payer de sa propre initiative. Seules des **sauvegardes saines et hors ligne** permettent de repartir.\n\n**L’usurpation d’identité** prend plusieurs formes : faux ordre de virement émanant d’un prétendu directeur (« fraude au président »), faux technicien qui appelle pour obtenir votre mot de passe, faux fournisseur qui change ses coordonnées bancaires. La parade est la **vérification par un second canal** : rappeler la personne sur un numéro connu, jamais celui fourni dans le message suspect.\n\n**La clé USB piégée** est trouvée ou offerte (parking, salon, cadeau d’un inconnu) et infecte l’ordinateur dès qu’elle est branchée. Elle ne se branche jamais sur un poste du ministère. Les clés de provenance inconnue sont remises au service informatique.\n\nExemple (cas fictif) : un agent de la Direction des Affaires économiques reçoit un courriel « urgent » du prétendu directeur demandant de régler une facture à de nouvelles coordonnées bancaires. Le style est correct, mais l’adresse comporte une lettre en trop. L’agent appelle le directeur sur son numéro habituel : c’était une fraude. Ce simple appel a évité une perte financière.\n\nPrincipe à retenir : **s’arrêter, vérifier, signaler**. Aucune faute n’est reprochée à l’agent qui signale un message douteux, même s’il a déjà cliqué : c’est le silence qui aggrave les dégâts. Les règles détaillées dépendent de la politique de sécurité du ministère et des consignes du service informatique.",
-      "keyPoints": [
-        "L’hameçonnage joue sur l’urgence et la confiance : vérifier l’expéditeur réel et le lien avant de cliquer.",
-        "Face à un rançongiciel : isoler le poste du réseau, prévenir l’informatique, ne pas payer de sa propre initiative.",
-        "Toute demande inhabituelle (virement, mot de passe, changement de coordonnées) se vérifie par un second canal connu.",
-        "Une clé USB inconnue ne se branche jamais : elle est remise au service informatique.",
-        "Signaler vite un message douteux, même après un clic, limite les dégâts."
-      ]
-    },
-    {
-      "id": "m2",
-      "title": "Mots de passe et authentification à deux facteurs",
-      "theme": "Mots de passe et authentification",
-      "minutes": 9,
-      "body": "Le mot de passe reste la clé d’entrée de la plupart des systèmes : messagerie, dossiers partagés, applications de gestion. Un mot de passe faible, réutilisé ou communiqué ouvre la porte à toutes les informations auxquelles son titulaire a accès. Or les attaquants disposent d’outils qui testent des millions de combinaisons par seconde et de listes de mots de passe déjà volés sur d’autres sites.\n\n**Ce qui fait un bon mot de passe.** La **longueur** compte plus que la complexité apparente. Une **phrase de passe** d’au moins 12 à 16 caractères, composée de plusieurs mots sans lien évident, est plus sûre et plus facile à retenir que « P@ssw0rd1 ». À éviter : date de naissance, nom d’un proche, nom du ministère, « 123456 », séquences du clavier. Les consignes officielles du ministère ou de l’agence nationale compétente priment sur ces repères généraux.\n\n**Règles de base.**\n- Un mot de passe **unique** par service : si un site est piraté, les autres restent protégés. Ne jamais réutiliser le mot de passe professionnel pour un usage personnel.\n- **Ne jamais le communiquer**, ni à un collègue, ni à un supérieur, ni à une personne qui se prétend informaticien : le véritable service informatique n’a pas besoin de le connaître.\n- Ne pas l’écrire sur un papier collé à l’écran ou sous le clavier. Un **gestionnaire de mots de passe** approuvé par la structure est préférable.\n- Le changer immédiatement en cas de doute (message d’hameçonnage ouvert, perte d’un appareil, départ d’un collègue qui connaissait un compte partagé).\n\n**L’authentification à deux facteurs (A2F)** ajoute à ce que vous **savez** (le mot de passe) un second élément que vous **possédez** (téléphone, application génératrice de codes, clé physique) ou que vous **êtes** (empreinte). Même si le mot de passe est volé, l’attaquant est bloqué sans le second facteur. Les codes par application ou clé physique sont plus sûrs que les codes par SMS, qui peuvent être détournés (échange de carte SIM). Un code reçu sans que vous ayez tenté de vous connecter est un signal d’alerte : **ne le communiquez à personne** et changez votre mot de passe.\n\n**Fatigue des notifications.** Certains attaquants envoient des dizaines de demandes d’approbation jusqu’à ce que l’utilisateur accepte par lassitude. Une demande que vous n’avez pas déclenchée se refuse, puis se signale.\n\n**Comptes partagés.** Un compte utilisé par plusieurs agents empêche de savoir qui a fait quoi. On préférera des comptes nominatifs, avec droits limités au besoin (principe du **moindre privilège**).\n\nExemple (cas fictif) : un inspecteur utilise le même mot de passe pour sa messagerie professionnelle et un site de vente en ligne. Ce site est piraté ; les attaquants essaient l’adresse et le mot de passe sur la messagerie du ministère. Seule l’A2F active empêche l’accès.",
-      "keyPoints": [
-        "Une phrase de passe longue vaut mieux qu’un mot de passe court et « compliqué ».",
-        "Un mot de passe unique par service, jamais communiqué, y compris au prétendu informaticien.",
-        "L’A2F ajoute un second élément (application, clé physique) et bloque l’accès en cas de vol du mot de passe.",
-        "Une demande d’approbation ou un code que vous n’avez pas déclenché se refuse et se signale.",
-        "Les comptes nominatifs et le moindre privilège permettent de savoir qui a fait quoi."
-      ]
-    },
-    {
-      "id": "m3",
-      "title": "Sécurité de la messagerie et du téléphone",
-      "theme": "Messagerie et téléphone",
-      "minutes": 9,
-      "body": "La messagerie électronique et le téléphone portable sont les outils les plus utilisés par les agents, et donc les plus visés. Un courriel envoyé à la mauvaise personne ou un téléphone perdu suffisent à exposer des informations du ministère.\n\n**Messagerie professionnelle.**\n- **Utiliser l’adresse officielle** pour les échanges de service. L’envoi de documents du ministère vers une adresse personnelle (Gmail, Yahoo, etc.) fait sortir l’information du périmètre protégé et sans traces ; il est à éviter, sauf règle contraire.\n- **Vérifier les destinataires** avant l’envoi : la saisie automatique propose parfois un homonyme. Les envois groupés à des destinataires externes se font en **copie cachée** pour ne pas divulguer leurs adresses.\n- **Pièces jointes** : n’ouvrir que celles que vous attendez. Les extensions inhabituelles (.exe, .js, .scr) ou les macros demandées à l’activation sont des signaux d’alerte. Un fichier de bureautique « à débloquer » est suspect.\n- **Réponse automatique d’absence** : rester sobre (dates, contact de remplacement), sans détailler un déplacement ni des informations internes.\n- **Redirection automatique** vers une adresse externe : elle ne se configure pas sans autorisation. Les attaquants créent parfois une règle de redirection pour lire discrètement le courrier d’un agent ; si vous constatez une règle que vous n’avez pas créée, signalez-la.\n\n**Téléphone.**\n- Verrouillage par code ou empreinte, avec **verrouillage automatique** rapide ; chiffrement activé.\n- **Mises à jour** du système et des applications dès qu’elles sont proposées : elles corrigent des failles connues.\n- Applications installées uniquement depuis les magasins officiels ; méfiance envers les applications qui demandent des accès sans rapport avec leur usage (micro, contacts).\n- **Perte ou vol** : prévenir immédiatement le service informatique pour qu’il bloque l’accès (verrouillage ou effacement à distance), puis la déclaration auprès de l’opérateur.\n- **Messageries instantanées** (WhatsApp, etc.) : utiles, mais ne pas y échanger de documents classifiés ni de données personnelles sensibles sans que cet usage soit autorisé. Vérifier l’identité d’un interlocuteur qui change de numéro (« c’est mon nouveau numéro, peux-tu m’aider ? ») : c’est une fraude fréquente.\n- **Hameçonnage par SMS** (« smishing ») et par appel (« vishing ») : un appelant qui se dit de la banque ou du service informatique et demande un code est suspect ; raccrochez et rappelez le numéro officiel.\n\nExemple (cas fictif) : un chef de service envoie un tableau de volumes à ses collaborateurs, mais la saisie automatique sélectionne un homonyme d’une société extérieure. Le réflexe de relire les destinataires avant d’envoyer aurait évité une fuite de données.",
-      "keyPoints": [
-        "Les échanges de service passent par la messagerie officielle, pas par une adresse personnelle.",
-        "Relire les destinataires avant l’envoi et utiliser la copie cachée pour les envois groupés externes.",
-        "Une pièce jointe non attendue ou une demande d’activer des macros est un signal d’alerte.",
-        "Téléphone : verrouillage, mises à jour, applications officielles ; perte ou vol à signaler immédiatement.",
-        "Un interlocuteur qui change de numéro ou demande un code se vérifie par un second canal."
-      ]
-    },
-    {
-      "id": "m4",
-      "title": "Classification et protection des documents sensibles",
-      "theme": "Documents sensibles",
-      "minutes": 10,
-      "body": "Tous les documents du ministère n’ont pas la même valeur ni le même niveau de risque. Un communiqué de presse peut être diffusé à tous ; une étude sur les réserves, un projet de contrat de partage de production ou des données de production fiscales ne le peuvent pas. **Classifier** consiste à attribuer à chaque document un niveau de sensibilité qui détermine qui peut le lire, comment il est stocké, transmis et détruit.\n\n**Un schéma usuel à quatre niveaux** (les appellations exactes sont à confirmer dans la politique de sécurité du ministère) :\n- **Public** : diffusion libre (communiqués, textes publiés).\n- **Interne** : réservé aux agents (notes de service, procédures).\n- **Confidentiel** : accès limité aux personnes ayant besoin d’en connaître (contrats avec les opérateurs, données de production, éléments de négociation, dossiers de marchés en cours).\n- **Secret / très sensible** : fuite susceptible de causer un préjudice grave (données géologiques stratégiques, informations de sécurité). Le régime des informations classifiées relève de textes spécifiques.\n\n**Principe du besoin d’en connaître.** Avoir accès à un document ne dépend pas du grade, mais de la nécessité de s’en servir pour sa mission. La **diffusion** doit être limitée à cette liste.\n\n**Protection concrète.**\n- **Marquage** : mention du niveau sur le document (en-tête, pied de page, nom du fichier).\n- **Stockage** : dossiers à accès restreint sur les serveurs du ministère ; pas de stockage sur des services en ligne grand public non autorisés, ni sur une clé USB personnelle.\n- **Chiffrement** : fichiers ou disques chiffrés pour les documents confidentiels transportés sur ordinateur portable ou support amovible.\n- **Impression** : récupérer immédiatement les documents, ne pas laisser de papier confidentiel sur la table ou l’imprimante ; bureau propre en fin de journée.\n- **Destruction** : papier passé au broyeur, supports numériques effacés selon la procédure ; pas de corbeille ordinaire.\n- **Conversations** : éviter de parler d’un dossier sensible dans un lieu public (restaurant, taxi, aéroport) ou devant des visiteurs.\n\n**Données personnelles.** Les fichiers contenant des informations sur des personnes (agents, candidats, signataires) relèvent aussi du droit gabonais sur la protection des données à caractère personnel (voir module 6). Elles ne se collectent et se conservent que pour une finalité précise.\n\n**Cas des données pétrolières.** Les contrats, les volumes produits, les coûts pétroliers déclarés par les opérateurs et les données techniques de blocs sont couverts par la confidentialité due par l’administration et par les clauses des contrats. Leur diffusion hors cadre peut avantager un concurrent ou fausser une négociation.\n\nExemple (cas fictif) : un agent emporte sur sa clé USB personnelle un projet de contrat pour le terminer à la maison. La clé est perdue dans un taxi. Il aurait dû demander un accès à distance sécurisé ou travailler sur un poste du ministère.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
-      "keyPoints": [
-        "Le niveau de classification détermine l’accès, le stockage, la transmission et la destruction.",
-        "Le besoin d’en connaître prime sur le grade : on n’accède qu’à ce que la mission exige.",
-        "Marquer, chiffrer et stocker sur les espaces autorisés ; pas de clé personnelle ni de service grand public.",
-        "Bureau propre, impressions récupérées, destruction par broyage ou effacement contrôlé.",
-        "Contrats, volumes et coûts pétroliers sont des données sensibles à protéger même dans les conversations."
-      ]
-    },
-    {
-      "id": "m5",
-      "title": "Travail à distance, déplacements et réseaux publics",
-      "theme": "Travail à distance",
-      "minutes": 9,
-      "body": "Missions de terrain, déplacements à l’étranger, télétravail occasionnel : les agents se connectent de plus en plus souvent hors des locaux du ministère. Ces situations échappent aux protections du réseau interne et exigent des réflexes complémentaires.\n\n**Réseaux Wi-Fi publics** (hôtel, aéroport, café). Un réseau public est ouvert à tous : une personne malveillante peut en créer un faux portant le même nom (« jumeau maléfique ») ou observer le trafic non protégé. Règles :\n- Éviter de traiter des documents sensibles sur un réseau public ; préférer le **partage de connexion** du téléphone professionnel.\n- Si le réseau public est inévitable, utiliser le **réseau privé virtuel (RPV)** fourni par le ministère, qui chiffre les échanges entre l’appareil et le réseau interne.\n- Ne pas se connecter à un site dont l’adresse n’affiche pas le cadenas (https) ; ne pas ignorer un message d’alerte sur un certificat.\n- Désactiver le partage de fichiers et la connexion automatique aux réseaux connus.\n\n**Matériel.**\n- Ordinateur portable avec **disque chiffré** et verrouillage de session rapide (touche Windows + L).\n- **Ne jamais laisser** un appareil sans surveillance (voiture, chambre, salle de réunion) ; en avion, le garder en cabine.\n- **Filtre de confidentialité** sur l’écran dans les transports et les lieux publics, pour éviter « l’espionnage par-dessus l’épaule ».\n- Ne pas prêter l’appareil à des proches, ni le brancher sur des bornes de recharge USB publiques (utiliser son propre chargeur ou un adaptateur bloquant les données).\n\n**Missions à l’étranger.** Certains pays contrôlent ou saisissent les appareils à la frontière. Pour une mission sensible, emporter le **minimum de données** (ou un appareil dédié), avec les accès fournis par le ministère et à changer au retour. Signaler toute demande inhabituelle d’un tiers (saisie de l’appareil, demande d’accès).\n\n**Télétravail.**\n- Utiliser les accès fournis par le ministère (RPV, bureau à distance) plutôt que de transférer les fichiers vers une messagerie personnelle.\n- Ne pas laisser un membre de la famille utiliser le poste de travail.\n- Mettre à jour l’appareil ; protéger le Wi-Fi domestique par un mot de passe robuste et ne pas conserver le mot de passe fourni par défaut sur la box.\n\n**Appareils personnels.** L’utilisation d’un téléphone ou d’un ordinateur personnel pour le travail n’est acceptable que si le ministère l’autorise et que des mesures de séparation sont en place.\n\nExemple (cas fictif) : un cadre en mission à Port-Gentil consulte un rapport confidentiel depuis le Wi-Fi gratuit de l’hôtel, sans RPV. Un autre client sur le même réseau intercepte des identifiants. Le partage de connexion du téléphone professionnel aurait évité l’exposition.",
-      "keyPoints": [
-        "Un Wi-Fi public n’est pas de confiance : partage de connexion du téléphone ou RPV du ministère.",
-        "Disque chiffré, verrouillage de session et appareil jamais laissé sans surveillance.",
-        "Filtre de confidentialité et conversation discrète dans les transports et les lieux publics.",
-        "Mission à l’étranger : emporter le minimum de données et changer les accès au retour.",
-        "En télétravail : accès fournis par le ministère, pas de transfert vers une messagerie personnelle."
-      ]
-    },
-    {
-      "id": "m6",
-      "title": "Signalement d’incident et cadre juridique gabonais",
-      "theme": "Signalement et cadre gabonais",
-      "minutes": 11,
-      "body": "Un **incident de sécurité** est un événement qui compromet, ou risque de compromettre, la confidentialité, l’intégrité ou la disponibilité de l’information : clic sur un lien frauduleux, perte d’un téléphone, poste qui se comporte bizarrement, fichiers chiffrés, courriel envoyé à la mauvaise personne, accès non autorisé constaté.\n\n**Pourquoi signaler vite.** Les premières heures déterminent l’ampleur des dégâts : un compte bloqué à temps, un poste isolé, un mot de passe changé peuvent empêcher la propagation. Beaucoup de structures n’apprennent l’attaque que parce qu’un agent hésitait à avouer une erreur. Le signalement n’est pas une dénonciation : c’est un acte de protection.\n\n**Que faire, dans l’ordre.**\n1. **Ne pas paniquer, ne pas effacer** les messages ou fichiers (ils servent à l’analyse).\n2. **Isoler** : débrancher le câble réseau ou couper le Wi-Fi du poste concerné.\n3. **Alerter** le service informatique ou le correspondant sécurité du ministère, et votre supérieur, par un canal sûr (téléphone, en personne), en précisant l’heure, ce qui s’est passé, les actions déjà faites.\n4. **Ne pas tenter de réparer seul**, ni de répondre à l’attaquant, ni de payer une rançon.\n5. **Noter les faits** : adresse de l’expéditeur, capture d’écran, nom du fichier.\n6. **Changer les mots de passe** concernés depuis un autre appareil sain, sur indication de l’informatique.\n\n**Cadre gabonais** (à confirmer par le ministère et les textes en vigueur). D’après les sources consultées : la **loi n° 027/2023 du 12 juillet 2023** relative à la cybersécurité et à la lutte contre la cybercriminalité ; la **loi n° 025/2023 du 12 juillet 2023**, qui modifie la **loi n° 001/2011 du 25 septembre 2011** relative à la protection des données à caractère personnel ; la loi n° 025/2021 sur les transactions électroniques est citée par l’ANINF. L’**Agence nationale des infrastructures numériques et des fréquences (ANINF)** est présentée comme le bras technique de l’État en matière de numérique, et intervient pour la sécurité des systèmes d’information de l’administration. Les données personnelles relèvent d’une autorité de protection (la Commission nationale pour la protection des données à caractère personnel est citée dans les documents officiels). L’organisation exacte de ces institutions et les procédures de notification évoluent : on s’en tient aux consignes de la hiérarchie et du service informatique du ministère.\n\n**Fuite de données personnelles.** Si des données de personnes sont exposées, la structure peut avoir une obligation d’en informer l’autorité et les personnes concernées. L’agent ne décide pas seul : il alerte immédiatement, et la décision revient au responsable désigné.\n\n**Sanctions.** Le droit gabonais réprime des infractions informatiques (accès frauduleux, atteinte aux données). L’agent qui divulgue sciemment des informations s’expose aussi à des sanctions disciplinaires et pénales.\n\nExemple (cas fictif) : un agent clique sur un lien, saisit son mot de passe, comprend son erreur trois minutes plus tard. Il appelle l’informatique, qui bloque le compte avant toute utilisation. Sans cet appel, le piratage aurait pu durer des semaines.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
-      "keyPoints": [
-        "Un incident se signale sans délai : les premières heures conditionnent l’ampleur des dégâts.",
-        "Ordre des réflexes : isoler, alerter par un canal sûr, ne rien effacer, ne pas réparer seul.",
-        "Loi n° 027/2023 (cybersécurité) et loi n° 025/2023 modifiant la loi n° 001/2011 (données personnelles), à confirmer.",
-        "L’ANINF est l’agence technique de l’État pour le numérique ; l’autorité de protection des données est distincte.",
-        "Une fuite de données personnelles peut imposer une notification : la décision revient au responsable désigné."
-      ]
-    },
-    {
-      "id": "m7",
-      "title": "Sauvegardes et continuité d’activité",
-      "theme": "Sauvegardes et continuité",
-      "minutes": 9,
-      "body": "Même avec de bons réflexes, un incident finit par arriver : panne de disque, vol d’ordinateur, coupure électrique, inondation, rançongiciel. La question n’est pas seulement « comment l’éviter », mais aussi « comment reprendre l’activité rapidement ». Deux notions permettent d’y répondre : la **sauvegarde** et la **continuité d’activité**.\n\n**La sauvegarde** est une copie des données, conservée séparément, pour les restaurer après une perte. Une copie sur le même disque ou le même poste n’est pas une sauvegarde : si le poste tombe, tout tombe.\n\n**La règle « 3-2-1 »** est un repère simple :\n- **3** copies des données importantes (l’original et deux sauvegardes) ;\n- sur **2** supports différents (par exemple serveur et disque externe) ;\n- dont **1** copie conservée hors site ou **hors ligne** (autre bâtiment, support débranché).\n\nLa copie hors ligne est essentielle face au rançongiciel, qui chiffre aussi les sauvegardes accessibles par le réseau.\n\n**Tester la restauration.** Une sauvegarde jamais testée est une hypothèse. Il faut régulièrement restaurer un fichier ou un dossier pour vérifier qu’il est lisible et complet. Il faut aussi connaître la durée de la restauration.\n\n**Que sauvegarder, et où.** Les fichiers de travail doivent être enregistrés dans les **dossiers partagés ou espaces du ministère**, qui sont sauvegardés par le service informatique, plutôt que sur le bureau de l’ordinateur ou une clé USB. Les données sauvegardées par le service ne doivent pas être doublées en copies personnelles non contrôlées. Les sauvegardes de documents sensibles sont protégées au même niveau que les originaux (chiffrement, accès restreint).\n\n**Deux indicateurs de continuité** :\n- **RPO** (perte de données maximale acceptable) : si on sauvegarde chaque nuit, on peut perdre jusqu’à une journée de travail ;\n- **RTO** (délai maximal de reprise) : combien de temps le service peut rester arrêté. Ces valeurs sont choisies selon l’importance du service (les chiffres sont des exemples).\n\n**Plan de continuité d’activité (PCA)** et **plan de reprise** : document qui décrit, pour les activités essentielles (paie, suivi de la production, paiement des redevances, courrier), qui fait quoi, avec quels moyens de secours (accès alternatif, procédures papier, contacts des responsables, onduleurs et groupe électrogène). Un agent doit savoir où se trouve ce plan, qui joindre et quelle procédure manuelle appliquer pendant une panne.\n\n**Rôle de l’agent.**\n- Ranger ses fichiers dans les espaces sauvegardés ;\n- verrouiller et mettre à jour son poste ;\n- participer aux exercices de simulation ;\n- appliquer les consignes du plan pendant un incident et ne pas tenter de contourner un blocage.\n\nExemple (cas fictif) : un rançongiciel chiffre le serveur de fichiers d’une direction. Grâce à une sauvegarde hors ligne de la veille, les dossiers sont restaurés en une demi-journée, au prix d’un jour de saisie perdu. Sans copie hors ligne, la direction aurait perdu des mois de travail.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
-      "keyPoints": [
-        "Une sauvegarde est une copie séparée de l’original : une copie sur le même poste n’en est pas une.",
-        "Règle 3-2-1 : trois copies, deux supports, dont une hors site ou hors ligne.",
-        "Une sauvegarde non testée n’offre aucune garantie : la restauration se vérifie régulièrement.",
-        "RPO (perte acceptable) et RTO (délai de reprise) cadrent le plan de continuité.",
-        "L’agent range ses fichiers dans les espaces sauvegardés et connaît les procédures de secours."
-      ]
+     "doc": "Loi n° 027/2023 du 12 juillet 2023 relative à la cybersécurité et à la lutte contre la cybercriminalité (Gabon)",
+     "art": "Dispositions générales (numéro d’article à confirmer)",
+     "url": "https://www.labase-lextenso.fr/l-essentiel-droits-africains-des-affaires/2023-n8/gabon-une-loi-pour-organiser-la-cybersecurite-et-faire-face-a-la-cybercriminalite-DAA201t7"
     }
-  ],
-  "questions": [
-    {
-      "id": "min-cyber-001",
-      "theme": "Menaces courantes",
-      "level": 1,
-      "q": "Vous recevez un courriel qui annonce que votre compte de messagerie sera fermé dans une heure sauf si vous cliquez sur un lien pour le « valider ». De quel type de menace s’agit-il le plus probablement ?",
-      "choices": [
-        "D’une tentative d’hameçonnage qui joue sur l’urgence pour vous faire saisir vos identifiants",
-        "D’une opération de maintenance normale du service informatique, annoncée à l’avance par la direction",
-        "D’une mise à jour automatique de la messagerie sans danger pour le compte",
-        "D’un message de félicitations envoyé par erreur à un grand nombre d’agents"
-      ],
-      "answer": 0,
-      "explain": "L’urgence artificielle et la demande de « valider » un compte par un lien sont les marques classiques de l’hameçonnage. Une vraie maintenance ne menace pas de fermer un compte en une heure et ne demande pas de mot de passe par lien. Les autres propositions ne correspondent à aucun élément du message.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-002",
-      "theme": "Menaces courantes",
-      "level": 1,
-      "q": "Que désigne un rançongiciel ?",
-      "choices": [
-        "Un programme qui efface seulement les courriels reçus depuis plus d’un an",
-        "Un logiciel malveillant qui chiffre des fichiers et réclame un paiement pour les restituer",
-        "Une application officielle qui sauvegarde les fichiers du poste à distance",
-        "Un message qui demande un don à tous les agents d’un même service"
-      ],
-      "answer": 1,
-      "explain": "Le rançongiciel bloque l’accès aux données par chiffrement et exige une rançon. Il ne s’agit ni d’un outil de sauvegarde ni d’un simple message de sollicitation : il paralyse l’activité, d’où l’importance des sauvegardes hors ligne.",
-      "seconds": 40,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-003",
-      "theme": "Menaces courantes",
-      "level": 1,
-      "q": "Un inconnu vous remet, lors d’un salon, une clé USB « contenant de la documentation sur les nouveaux équipements ». Que faites-vous ?",
-      "choices": [
-        "Vous la branchez sur un ordinateur isolé du réseau et vide de données pour examiner son contenu",
-        "Vous la branchez après avoir lancé une analyse rapide avec l’antivirus",
-        "Vous ne la branchez pas sur un poste du ministère et la remettez au service informatique",
-        "Vous la gardez pour un usage personnel sur votre ordinateur de la maison"
-      ],
-      "answer": 2,
-      "explain": "Une clé de provenance inconnue peut installer un logiciel malveillant dès le branchement, parfois avant toute analyse. La seule conduite sûre est de ne pas la brancher et de la confier à l’informatique. Un ordinateur « isolé » ou personnel peut aussi être infecté, puis contaminer d’autres supports.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-004",
-      "theme": "Menaces courantes",
-      "level": 1,
-      "q": "Quelle caractéristique distingue le « harponnage » de l’hameçonnage de masse ?",
-      "choices": [
-        "Il s’envoie exclusivement par courrier postal à des responsables nommés",
-        "Il consiste à installer un appareil dans les bureaux du ministère, pendant la nuit, sans témoin",
-        "Il ne s’attaque jamais aux administrations mais uniquement aux particuliers",
-        "Il vise une personne précise avec des informations réelles pour paraître crédible"
-      ],
-      "answer": 3,
-      "explain": "Le harponnage est ciblé : il cite par exemple le nom de votre chef ou un dossier en cours. Il est donc plus convaincant qu’un message envoyé à des milliers de personnes, mais il se déroule aussi par voie numérique et vise très souvent des administrations.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-005",
-      "theme": "Menaces courantes",
-      "level": 2,
-      "q": "Un message qui semble venir de votre directeur vous demande de régler en urgence une facture sur un nouveau compte bancaire, en précisant « ne m’appelez pas, je suis en réunion ». Quelle est la bonne réaction ?",
-      "choices": [
-        "Régler la facture puis informer le directeur une fois la réunion terminée",
-        "Vérifier la demande en appelant le directeur sur son numéro habituel avant tout paiement",
-        "Répondre au message pour demander la confirmation des coordonnées bancaires",
-        "Transférer le message à un collègue pour qu’il effectue le paiement à votre place pendant votre absence"
-      ],
-      "answer": 1,
-      "explain": "C’est une fraude au président typique : urgence, secret, nouvelles coordonnées. Répondre au même message ou le transférer reste dans le canal contrôlé par l’escroc. Seule une vérification par un second canal connu (appel au numéro habituel) permet de trancher.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-006",
-      "theme": "Menaces courantes",
-      "level": 2,
-      "q": "En survolant avec la souris un lien reçu par courriel, vous voyez une adresse différente du site de l’organisme annoncé dans le texte. Que concluez-vous ?",
-      "choices": [
-        "Le lien est sûr car les liens affichent souvent une adresse technique différente",
-        "Le lien est sûr si le message contient le logo officiel de l’organisme",
-        "Le lien est suspect : vous ne cliquez pas et signalez le message à l’informatique",
-        "Le lien est sûr à condition de l’ouvrir sur le téléphone plutôt que sur l’ordinateur"
-      ],
-      "answer": 2,
-      "explain": "Un décalage entre le texte affiché et l’adresse réelle est un indice majeur d’hameçonnage. Un logo se copie facilement et le téléphone n’est pas immunisé contre les pages frauduleuses. Ne pas cliquer et signaler est la bonne conduite.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-007",
-      "theme": "Menaces courantes",
-      "level": 2,
-      "q": "Un appelant se présentant comme technicien informatique du ministère vous demande votre mot de passe pour « résoudre un problème sur votre compte ». Quelle réponse est appropriée ?",
-      "choices": [
-        "Donner le mot de passe puisqu’il connaît votre nom et votre service",
-        "Donner seulement la moitié du mot de passe pour limiter le risque",
-        "Lui demander de prouver son identité en vous envoyant un courriel depuis son adresse professionnelle",
-        "Refuser, raccrocher et rappeler le service informatique sur son numéro officiel"
-      ],
-      "answer": 3,
-      "explain": "Un véritable service informatique n’a jamais besoin de votre mot de passe. Connaître votre nom ne prouve rien (informations souvent publiques). Un courriel peut être falsifié ; le contre-appel sur un numéro officiel est la seule vérification fiable.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-008",
-      "theme": "Menaces courantes",
-      "level": 2,
-      "q": "Le matin, des fichiers de votre poste portent une extension inconnue et un message réclame un paiement. Que faites-vous en premier ?",
-      "choices": [
-        "Vous déconnectez le poste du réseau et prévenez immédiatement le service informatique",
-        "Vous essayez de payer la somme demandée pour récupérer rapidement les fichiers",
-        "Vous éteignez et rallumez plusieurs fois le poste jusqu’à ce que le message disparaisse",
-        "Vous copiez les fichiers sur une clé USB pour les sauver avant qu’ils soient perdus"
-      ],
-      "answer": 0,
-      "explain": "Il faut couper la propagation (retrait du câble ou du Wi-Fi) et alerter. Payer n’offre aucune garantie et finance les criminels ; redémarrer ne règle rien ; copier sur une clé risque de propager le logiciel malveillant à d’autres machines.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-009",
-      "theme": "Menaces courantes",
-      "level": 3,
-      "q": "Un collègue vous dit avoir cliqué sur un lien douteux la veille et n’avoir « rien remarqué ». Il hésite à le signaler de peur d’être sanctionné. Vous êtes chef de service. Quelle attitude retenez-vous ?",
-      "choices": [
-        "Vous lui conseillez d’attendre quelques jours pour voir si un problème apparaît sur son poste",
-        "Vous surveillez vous-même son poste pour éviter de mettre en cause le service",
-        "Vous l’encouragez à signaler tout de suite et l’accompagnez auprès de l’informatique",
-        "Vous lui faites changer son mot de passe puis considérez l’affaire comme close"
-      ],
-      "answer": 2,
-      "explain": "L’absence de symptôme ne prouve pas l’absence d’infection : certains logiciels malveillants restent discrets. Attendre ou traiter l’affaire en interne fait perdre un temps précieux. Un signalement rapide, encouragé par l’encadrement, est le meilleur moyen de limiter les dégâts et de créer une culture de confiance.",
-      "seconds": 90,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-010",
-      "theme": "Menaces courantes",
-      "level": 3,
-      "q": "Dans votre direction, plusieurs agents reçoivent le même jour un courriel convaincant, cité à leur nom, évoquant un dossier réel d’attribution de licence et contenant une pièce jointe « à compléter ». Quelle analyse et quelle action sont les plus pertinentes ?",
-      "choices": [
-        "Le dossier est réel donc le message est forcément légitime et la pièce jointe peut être ouverte après un passage de l’antivirus",
-        "Il suffit que chaque agent supprime le message de sa boîte sans en parler à personne",
-        "Il faut répondre à l’expéditeur pour lui demander de confirmer l’origine du document",
-        "Ce peut être un harponnage : ne pas ouvrir la pièce jointe, prévenir l’informatique et les collègues"
-      ],
-      "answer": 3,
-      "explain": "La connaissance d’un dossier réel indique plutôt un attaquant bien renseigné. Le message touche plusieurs agents : il faut alerter l’informatique, qui pourra le retirer des autres boîtes et analyser la pièce jointe. Supprimer en silence laisse les collègues exposés ; répondre à l’expéditeur le renseigne.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-011",
-      "theme": "Mots de passe et authentification",
-      "level": 1,
-      "q": "Parmi ces propositions, laquelle constitue le meilleur mot de passe ?",
-      "choices": [
-        "Le prénom d’un enfant suivi de sa date de naissance, soit douze caractères",
-        "Une phrase de passe d’au moins 14 caractères composée de plusieurs mots sans lien évident",
-        "Le nom du ministère avec un « 1 » à la place du « i » et un point final",
-        "Un mot de passe de huit caractères avec une majuscule et un chiffre ajoutés"
-      ],
-      "answer": 1,
-      "explain": "La longueur est le facteur essentiel. Une phrase de passe longue résiste mieux aux essais automatiques et reste mémorisable. Les informations personnelles (prénom, date), les mots liés au ministère et les substitutions simples (i devient 1) sont les premières choses testées par les attaquants.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-012",
-      "theme": "Mots de passe et authentification",
-      "level": 1,
-      "q": "Que signifie l’authentification à deux facteurs ?",
-      "choices": [
-        "Utiliser deux mots de passe différents saisis l’un après l’autre sur le même écran de connexion",
-        "Se connecter depuis deux appareils différents au cours de la même journée",
-        "Prouver son identité avec deux éléments de nature différente, comme un mot de passe et un code",
-        "Faire valider chaque connexion par deux collègues du même service"
-      ],
-      "answer": 2,
-      "explain": "L’A2F associe deux catégories de preuve : ce que l’on sait (mot de passe) et ce que l’on possède (téléphone, clé) ou ce que l’on est (empreinte). Deux mots de passe restent un seul type de facteur ; elle ne dépend ni du nombre d’appareils ni de l’intervention de collègues.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-013",
-      "theme": "Mots de passe et authentification",
-      "level": 1,
-      "q": "À qui est-il acceptable de communiquer votre mot de passe professionnel ?",
-      "choices": [
-        "À personne : même le service informatique n’a pas besoin de le connaître",
-        "À votre supérieur direct, qui est responsable de votre travail",
-        "À un collègue de confiance qui doit finir un dossier pendant votre absence",
-        "À la personne qui vous appelle et se présente comme administrateur du réseau"
-      ],
-      "answer": 0,
-      "explain": "Le mot de passe est personnel. Si un collègue doit accéder à des fichiers, on lui donne des droits d’accès sur son propre compte. Le supérieur n’est pas une exception, et l’interlocuteur qui se dit administrateur est un scénario classique d’usurpation.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-014",
-      "theme": "Mots de passe et authentification",
-      "level": 1,
-      "q": "Pourquoi faut-il utiliser un mot de passe différent pour chaque service ?",
-      "choices": [
-        "Parce que les mots de passe expirent automatiquement après vingt-quatre heures",
-        "Pour que le piratage d’un site n’ouvre pas les autres comptes de la personne",
-        "Parce que les sites sont tenus par la loi de refuser les mots de passe identiques",
-        "Parce que les mots de passe se mélangent entre eux lorsqu’ils sont semblables"
-      ],
-      "answer": 1,
-      "explain": "Quand une base de mots de passe est volée, les attaquants testent les mêmes identifiants sur d’autres services (« bourrage d’identifiants »). Un mot de passe unique cloisonne le risque. Les autres justifications sont inexactes.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-015",
-      "theme": "Mots de passe et authentification",
-      "level": 2,
-      "q": "Vous recevez sur votre téléphone un code de connexion à votre messagerie alors que vous n’avez rien tenté. Que faites-vous ?",
-      "choices": [
-        "Vous ignorez le message, car ces codes sont envoyés au hasard par le système de sécurité du ministère",
-        "Vous donnez le code à l’appelant qui prétend annuler une erreur de connexion",
-        "Vous ne communiquez le code à personne, changez votre mot de passe et signalez l’événement",
-        "Vous saisissez le code pour clore la demande afin que les envois cessent"
-      ],
-      "answer": 2,
-      "explain": "Un code non sollicité indique que quelqu’un connaît probablement votre mot de passe. Il est la dernière protection de votre compte : jamais communiqué, jamais saisi. Il faut changer le mot de passe et signaler pour que l’informatique surveille le compte.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-016",
-      "theme": "Mots de passe et authentification",
-      "level": 2,
-      "q": "Votre téléphone affiche vingt demandes d’approbation de connexion en dix minutes alors que vous n’utilisez pas votre ordinateur. Quelle est la conduite adaptée ?",
-      "choices": [
-        "Accepter une demande pour que l’attaquant cesse de vous importuner",
-        "Désinstaller l’application d’authentification de votre téléphone pour ne plus être dérangé la nuit",
-        "Attendre la fin de la journée en espérant que les demandes s’arrêtent",
-        "Refuser toutes les demandes, changer le mot de passe et prévenir l’informatique"
-      ],
-      "answer": 3,
-      "explain": "C’est une attaque par « fatigue » des notifications : l’attaquant, qui détient déjà votre mot de passe, espère un clic par lassitude. Il faut tout refuser, changer le mot de passe et signaler. Accepter donne l’accès ; désinstaller l’application supprime votre protection.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-017",
-      "theme": "Mots de passe et authentification",
-      "level": 2,
-      "q": "Votre service utilise un compte partagé « stats-hydrocarbures » dont le mot de passe est connu de huit agents. Quel est le principal risque et quelle amélioration proposez-vous ?",
-      "choices": [
-        "Le compte se bloque plus vite ; il suffit de choisir un mot de passe plus court",
-        "On ne sait pas qui a fait quoi ; il faut passer à des comptes nominatifs aux droits limités",
-        "Le compte consomme trop d’espace ; il faut en supprimer la moitié des fichiers",
-        "Le compte est trop visible ; il faut en changer le nom chaque semaine"
-      ],
-      "answer": 1,
-      "explain": "Avec un compte partagé, aucune traçabilité n’est possible et le départ d’un agent oblige à changer le secret de tous. Les comptes nominatifs avec des droits limités (moindre privilège) permettent de retrouver l’auteur d’une action et de retirer un accès individuellement.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-018",
-      "theme": "Mots de passe et authentification",
-      "level": 2,
-      "q": "Pour recevoir ses codes d’A2F, un agent hésite entre le SMS, une application d’authentification et une clé physique. Quel classement est le plus conforme aux bonnes pratiques ?",
-      "choices": [
-        "SMS en priorité, car tout le monde sait l’utiliser sans rien installer",
-        "Application d’authentification en dernier, car elle consomme de la batterie",
-        "Clé physique ou application d’authentification en priorité, le SMS en dernier recours",
-        "Les trois méthodes sont rigoureusement équivalentes sur le plan de la sécurité, seule la commodité diffère"
-      ],
-      "answer": 2,
-      "explain": "Le SMS peut être intercepté ou détourné par échange de carte SIM, alors que les codes générés dans une application ou une clé physique restent sur l’appareil. Le SMS reste préférable à l’absence d’A2F, mais il est le moins robuste des trois.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-019",
-      "theme": "Mots de passe et authentification",
-      "level": 3,
-      "q": "Un attaquant a obtenu le mot de passe d’un inspecteur par hameçonnage et tente de se connecter à la messagerie. L’inspecteur a activé l’A2F par application. Quel est l’état de la situation ?",
-      "choices": [
-        "L’attaquant est bloqué, donc le mot de passe peut rester inchangé sans risque",
-        "L’attaquant a désormais accès à tout, l’A2F ne protégeant que contre la perte de téléphone",
-        "L’A2F se désactive automatiquement après un hameçonnage, le compte est donc ouvert",
-        "L’attaquant est bloqué sans le second facteur, mais il faut changer le mot de passe"
-      ],
-      "answer": 3,
-      "explain": "L’A2F empêche la connexion, mais le mot de passe est compromis : il peut être réutilisé ailleurs ou combiné à une attaque par fatigue de notifications. Il faut le changer, signaler l’incident et vérifier les connexions récentes. L’A2F ne se désactive pas d’elle-même.",
-      "seconds": 90,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-020",
-      "theme": "Mots de passe et authentification",
-      "level": 3,
-      "q": "Un agent est muté dans une autre direction ; il connaissait le mot de passe d’un compte partagé de son ancien service. Que doit faire le chef de service ?",
-      "choices": [
-        "Faire changer le mot de passe, retirer les droits de l’agent et passer à des comptes nominatifs",
-        "Ne rien faire, l’agent étant toujours employé par le ministère et de confiance",
-        "Lui demander d’oublier le mot de passe, sa parole suffisant à sécuriser le compte de son ancien service",
-        "Attendre le prochain changement trimestriel prévu pour modifier le mot de passe"
-      ],
-      "answer": 0,
-      "explain": "Un accès non retiré après une mutation reste un risque (erreur, compromission, abus). Le changement de secret et le retrait des droits au départ sont une règle de base, d’où l’intérêt de comptes nominatifs, que l’on désactive sans toucher aux autres.",
-      "seconds": 90,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-021",
-      "theme": "Messagerie et téléphone",
-      "level": 1,
-      "q": "Pour envoyer un document de travail du ministère, quelle adresse faut-il utiliser en principe ?",
-      "choices": [
-        "Une adresse personnelle gratuite, plus rapide pour envoyer le fichier même en dehors des heures de bureau",
-        "Une adresse de messagerie d’un proche, pour éviter de laisser des traces",
-        "Une adresse créée pour l’occasion sur un service anonyme non surveillé",
-        "L’adresse officielle professionnelle, dont l’usage est encadré par le ministère"
-      ],
-      "answer": 3,
-      "explain": "La messagerie officielle reste dans le périmètre de sécurité et de traçabilité du ministère. Une adresse personnelle ou anonyme fait sortir l’information sans contrôle ni possibilité de récupération en cas d’incident.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-022",
-      "theme": "Messagerie et téléphone",
-      "level": 1,
-      "q": "Quel signe doit vous faire douter d’une pièce jointe reçue par courriel ?",
-      "choices": [
-        "Une extension exécutable comme « .exe » ou une demande d’activer les macros",
-        "Un nom de fichier écrit en lettres majuscules et sans espaces",
-        "Un fichier de petite taille provenant d’un collègue de votre service",
-        "Un document au format PDF envoyé après un échange téléphonique prévu"
-      ],
-      "answer": 0,
-      "explain": "Les fichiers exécutables et les macros à activer sont des vecteurs classiques de logiciels malveillants. Le nom en majuscules ne prouve rien. Une pièce jointe attendue, issue d’un échange réel, est en principe moins suspecte.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-023",
-      "theme": "Messagerie et téléphone",
-      "level": 1,
-      "q": "Que faire en premier si votre téléphone professionnel est perdu ou volé ?",
-      "choices": [
-        "Attendre quelques jours en espérant que quelqu’un le rapporte au bureau",
-        "Prévenir immédiatement le service informatique pour bloquer ou effacer l’appareil à distance",
-        "Changer seulement le code PIN de la carte SIM auprès de l’opérateur",
-        "Racheter un téléphone identique, restaurer la copie des données et ne rien signaler au service informatique"
-      ],
-      "answer": 1,
-      "explain": "Chaque heure compte : l’appareil donne accès à la messagerie, aux documents et parfois à des accès au réseau interne. L’informatique peut verrouiller ou effacer le téléphone et révoquer les accès. Attendre ou agir seul laisse les données exposées.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-024",
-      "theme": "Messagerie et téléphone",
-      "level": 1,
-      "q": "Pourquoi faut-il installer rapidement les mises à jour du téléphone et de ses applications ?",
-      "choices": [
-        "Parce qu’elles ralentissent volontairement l’appareil pour économiser la batterie",
-        "Parce qu’elles sont obligatoires pour recevoir des appels de l’étranger",
-        "Parce qu’elles corrigent des failles de sécurité connues que les attaquants exploitent",
-        "Parce qu’elles effacent automatiquement les messages reçus depuis six mois"
-      ],
-      "answer": 2,
-      "explain": "Les mises à jour comblent des vulnérabilités connues, que des outils automatisés recherchent. Elles n’ont aucun rapport avec les appels internationaux ni avec l’effacement de messages.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-025",
-      "theme": "Messagerie et téléphone",
-      "level": 2,
-      "q": "Vous envoyez une invitation à vingt partenaires extérieurs. Comment placez-vous leurs adresses ?",
-      "choices": [
-        "En copie cachée, pour que les destinataires ne voient pas les adresses des autres",
-        "En copie visible, car cela montre la transparence de la démarche",
-        "Dans le corps du message, afin que chacun retrouve facilement les autres participants",
-        "En copie visible, car la copie cachée est interdite dans l’administration"
-      ],
-      "answer": 0,
-      "explain": "La copie cachée évite de divulguer les adresses de tiers à tous les destinataires (atteinte à la vie privée, risque de démarchage ou d’hameçonnage ciblé). Elle n’est pas interdite et est même recommandée pour les envois à des externes.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-026",
-      "theme": "Messagerie et téléphone",
-      "level": 2,
-      "q": "Vous constatez dans les paramètres de votre messagerie une règle de redirection automatique vers une adresse externe que vous n’avez pas créée. Que faites-vous ?",
-      "choices": [
-        "Vous la laissez en place, car elle est probablement utile à la messagerie",
-        "Vous ne l’effacez pas seul, signalez l’incident à l’informatique et changez le mot de passe",
-        "Vous la supprimez puis n’en parlez à personne, l’affaire étant réglée de votre côté, sans risque",
-        "Vous l’ignorez tant que vous ne remarquez pas de courriel manquant"
-      ],
-      "answer": 1,
-      "explain": "Une redirection inconnue signifie souvent que le compte est compromis : l’attaquant lit votre courrier en silence. Il faut signaler (pour mesurer la durée et l’étendue) et changer le mot de passe. Supprimer sans rien dire prive l’informatique d’indices.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-027",
-      "theme": "Messagerie et téléphone",
-      "level": 2,
-      "q": "Un message WhatsApp d’un numéro inconnu écrit : « C’est ton directeur, ceci est mon nouveau numéro, peux-tu m’acheter des cartes de recharge ? ». Quelle est la bonne réaction ?",
-      "choices": [
-        "Acheter les cartes puis demander le remboursement à la comptabilité",
-        "Répondre dans la conversation en posant des questions sur le dossier en cours",
-        "Vérifier en appelant le directeur sur son ancien numéro et ne rien acheter avant confirmation",
-        "Envoyer les codes des cartes en précisant que c’est exceptionnel"
-      ],
-      "answer": 2,
-      "explain": "C’est une fraude très courante par usurpation d’identité. Les réponses dans la conversation restent sous le contrôle de l’escroc (il peut se renseigner). La seule vérification fiable passe par un autre canal connu. Ne rien acheter avant confirmation.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-028",
-      "theme": "Messagerie et téléphone",
-      "level": 2,
-      "q": "Vous souhaitez envoyer à un collègue, via une messagerie instantanée personnelle, un contrat marqué « confidentiel » pour gagner du temps. Que faut-il faire ?",
-      "choices": [
-        "L’envoyer en demandant au collègue de supprimer le message après lecture",
-        "L’envoyer en photo, car les photos ne peuvent pas être copiées facilement",
-        "L’envoyer, car les messageries instantanées sont chiffrées donc toujours conformes",
-        "Utiliser le canal autorisé par le ministère pour ce niveau de classification"
-      ],
-      "answer": 3,
-      "explain": "Le chiffrement du transport ne règle pas la question de la conformité : le document sort du périmètre maîtrisé par le ministère, reste sur des appareils personnels et des sauvegardes externes. Une photo se copie aussi facilement. Le canal autorisé est la seule voie.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-029",
-      "theme": "Messagerie et téléphone",
-      "level": 3,
-      "q": "Un attaquant a deviné le mot de passe d’un chef de service et a créé une règle qui transfère en copie tous les courriels contenant le mot « contrat » vers une adresse externe. Quelles sont les premières mesures à prendre ?",
-      "choices": [
-        "Supprimer uniquement la règle, puis surveiller seul le compte pendant un mois",
-        "Signaler, bloquer le compte, supprimer la règle, changer les accès et analyser l’étendue de la fuite",
-        "Changer le mot de passe, sans toucher à la règle ni en parler à l’informatique, puis surveiller le compte",
-        "Supprimer les anciens courriels du compte pour limiter ce qui a été exposé"
-      ],
-      "answer": 1,
-      "explain": "Supprimer la règle sans changer les accès laisse l’attaquant entrer ; changer le mot de passe sans supprimer la règle laisse la fuite continuer. Il faut agir sur les deux, alerter l’informatique et mesurer ce qui a déjà été transmis (contrats, destinataires). Effacer les courriels détruit des preuves.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-030",
-      "theme": "Messagerie et téléphone",
-      "level": 3,
-      "q": "Lors d’un déplacement, un agent utilise le téléphone de service pour confirmer un paiement à la demande d’un SMS reçu de la « banque du ministère », avec un lien. Il a déjà saisi ses identifiants lorsqu’il comprend le piège. Quelle suite est la plus pertinente ?",
-      "choices": [
-        "Attendre de rentrer au bureau pour en parler, afin de ne pas perturber la mission",
-        "Rappeler le numéro qui figure dans le SMS pour demander l’annulation de l’opération et des identifiants",
-        "Prévenir sans délai l’informatique et la banque par un numéro officiel, puis changer les accès",
-        "Supprimer le SMS et l’historique du navigateur pour effacer toute trace de l’erreur"
-      ],
-      "answer": 2,
-      "explain": "Le temps joue contre l’agent : les identifiants peuvent être utilisés en quelques minutes. Rappeler le numéro du SMS revient à parler à l’escroc. Effacer l’historique supprime des éléments utiles à l’enquête. Alerter la banque et l’informatique via les canaux officiels est la seule bonne voie.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-031",
-      "theme": "Documents sensibles",
-      "level": 1,
-      "q": "À quoi sert la classification d’un document ?",
-      "choices": [
-        "À fixer son niveau de sensibilité, donc qui peut le lire et comment il est traité",
-        "À décider uniquement de la couleur de la couverture des dossiers papier",
-        "À classer les documents par ordre alphabétique dans les armoires du service",
-        "À connaître le nombre de pages imprimables par agent et par mois"
-      ],
-      "answer": 0,
-      "explain": "La classification (public, interne, confidentiel, secret) détermine les règles d’accès, de stockage, de transmission et de destruction. Il ne s’agit pas de rangement ni de comptage d’impressions.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-032",
-      "theme": "Documents sensibles",
-      "level": 1,
-      "q": "Que signifie le principe du « besoin d’en connaître » ?",
-      "choices": [
-        "Les agents de grade élevé accèdent à toutes les informations du ministère",
-        "On n’accède à une information que si sa mission l’exige, quel que soit son grade",
-        "Tout agent peut lire n’importe quel dossier s’il est curieux d’en connaître le sujet",
-        "Seul le directeur général a le droit de consulter les documents confidentiels"
-      ],
-      "answer": 1,
-      "explain": "L’accès dépend du besoin professionnel, pas du rang. Un cadre supérieur sans rapport avec le dossier n’y a pas accès ; un agent chargé de l’instruire, si. Les propositions fausses élargissent ou verrouillent l’accès sans lien avec la mission.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-033",
-      "theme": "Documents sensibles",
-      "level": 1,
-      "q": "Parmi ces documents, lequel est le plus susceptible d’être classé « confidentiel » ?",
-      "choices": [
-        "Le communiqué de presse annonçant une cérémonie officielle publique",
-        "La liste des numéros de téléphone du standard publiés sur le site",
-        "Une loi publiée au Journal officiel et disponible pour tous les citoyens",
-        "Un projet de contrat avec un opérateur pétrolier en cours de négociation"
-      ],
-      "answer": 3,
-      "explain": "Un projet de contrat en négociation contient des informations dont la divulgation pourrait fausser la négociation ou avantager des tiers. Les textes publiés et les communiqués sont publics par nature.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-034",
-      "theme": "Documents sensibles",
-      "level": 1,
-      "q": "Comment faut-il détruire un document papier confidentiel devenu inutile ?",
-      "choices": [
-        "Au broyeur, selon la procédure du ministère, et non dans une corbeille ordinaire",
-        "En le déchirant en deux et en le jetant dans la corbeille du bureau",
-        "En le laissant sur une étagère jusqu’au prochain nettoyage des locaux",
-        "En le donnant à un collègue d’un autre service pour qu’il l’utilise comme papier de brouillon"
-      ],
-      "answer": 0,
-      "explain": "Une corbeille ordinaire ne protège pas : le contenu peut être récupéré et lu. Le broyage selon la procédure est la méthode attendue. Donner le document à un tiers ou le conserver sans contrôle ne le détruit pas.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-035",
-      "theme": "Documents sensibles",
-      "level": 2,
-      "q": "Vous devez emporter chez vous un dossier confidentiel pour le terminer pendant le week-end. Que faites-vous ?",
-      "choices": [
-        "Vous copiez le dossier sur votre clé USB personnelle, plus pratique à transporter pour le week-end",
-        "Vous demandez un accès à distance sécurisé fourni par le ministère plutôt qu’une copie personnelle",
-        "Vous l’envoyez sur votre messagerie personnelle, car vous y avez accès partout",
-        "Vous l’imprimez en plusieurs exemplaires que vous rangez dans votre voiture"
-      ],
-      "answer": 1,
-      "explain": "Une clé personnelle ou une messagerie privée échappent au contrôle du ministère et peuvent être perdues ou piratées. Des impressions laissées dans une voiture sont aussi à risque. L’accès à distance sécurisé garde les données dans l’espace protégé.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-036",
-      "theme": "Documents sensibles",
-      "level": 2,
-      "q": "Un collègue d’un autre service vous demande par courriel les volumes de production d’un bloc « pour sa culture personnelle ». Ces volumes sont classés confidentiels. Que répondez-vous ?",
-      "choices": [
-        "Vous les envoyez, puisqu’il travaille lui aussi pour le ministère et qu’il est tenu au secret professionnel comme vous",
-        "Vous les envoyez après lui avoir demandé de ne pas les transmettre",
-        "Vous refusez de les communiquer sans besoin professionnel établi et sans accord de la hiérarchie",
-        "Vous les lui donnez oralement pour ne pas laisser de trace écrite"
-      ],
-      "answer": 2,
-      "explain": "L’appartenance au ministère ne suffit pas : c’est le besoin d’en connaître qui compte. Une promesse de discrétion ou une communication orale ne remplacent pas la procédure d’autorisation, et l’absence de trace aggrave le contrôle.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-037",
-      "theme": "Documents sensibles",
-      "level": 2,
-      "q": "En fin de journée, vous quittez votre bureau. Que devez-vous faire concernant les documents et l’écran ?",
-      "choices": [
-        "Ranger les documents sensibles sous clé et verrouiller la session de l’ordinateur",
-        "Laisser les dossiers sur la table, le personnel d’entretien étant de confiance",
-        "Laisser la session ouverte, car le poste est dans un bureau fermé la journée",
-        "Éteindre seulement l’écran, ce qui verrouille automatiquement tous les fichiers"
-      ],
-      "answer": 0,
-      "explain": "La règle du bureau propre et du verrouillage de session limite les risques d’accès par des visiteurs, du personnel d’entretien ou un intrus. Éteindre l’écran ne verrouille pas la session.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-038",
-      "theme": "Documents sensibles",
-      "level": 2,
-      "q": "Une imprimante partagée du couloir contient les pages d’un rapport confidentiel que vous avez lancé il y a une heure et oublié. Que doit-on retenir ?",
-      "choices": [
-        "Rien de grave : les documents oubliés à l’imprimante sont détruits chaque soir",
-        "Il fallait récupérer les pages immédiatement ou utiliser l’impression sécurisée par code",
-        "Il suffit d’informer les collègues du couloir de ne pas les lire s’ils les voient",
-        "Le rapport n’est plus confidentiel dès lors qu’il a été imprimé sur une machine du ministère"
-      ],
-      "answer": 1,
-      "explain": "Un document confidentiel laissé accessible peut être lu ou copié. La classification ne disparaît pas à l’impression. Il faut récupérer les pages sans délai ou utiliser l’impression avec code personnel, et signaler un oubli si le contenu est sensible.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-039",
-      "theme": "Documents sensibles",
-      "level": 3,
-      "q": "Vous êtes chef de service. Un stagiaire demande à consulter des données de coûts pétroliers déclarés par un opérateur pour rédiger son mémoire universitaire. Quelle décision est la plus appropriée ?",
-      "choices": [
-        "Lui donner les données après lui avoir fait signer une promesse orale de discrétion",
-        "Lui donner les données en les rendant anonymes par simple suppression du nom du fichier",
-        "Refuser l’accès aux données identifiables et proposer des données publiées ou agrégées",
-        "Lui donner les données car un mémoire universitaire est un usage non commercial"
-      ],
-      "answer": 2,
-      "explain": "Les données déclarées par les opérateurs sont couvertes par la confidentialité. L’usage académique ne la lève pas. Supprimer le nom du fichier n’anonymise rien ; une promesse orale n’est pas une garantie. Des données publiées ou agrégées, validées par la hiérarchie, répondent au besoin.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-040",
-      "theme": "Documents sensibles",
-      "level": 3,
-      "q": "Un projet de contrat classé confidentiel doit être relu à Libreville par un consultant externe. Quelle organisation concilie le mieux sécurité et efficacité ?",
-      "choices": [
-        "L’envoi du dossier complet par messagerie pour qu’il le conserve pendant toute la durée de son mandat",
-        "La remise du dossier sur clé USB que le consultant rend quand il le souhaite",
-        "L’accès libre au serveur de la direction pour qu’il puisse retrouver les pièces utiles",
-        "Un accord de confidentialité, un accès limité au document utile, tracé et retiré en fin de mission"
-      ],
-      "answer": 3,
-      "explain": "Le consultant n’a besoin que du document à relire, pour une durée limitée, sous engagement écrit, avec traçabilité. Donner tout le dossier, une clé non contrôlée ou l’accès au serveur dépasse le besoin d’en connaître.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-041",
-      "theme": "Travail à distance",
-      "level": 1,
-      "q": "Quel est le principal risque d’un réseau Wi-Fi public (hôtel, aéroport, café) ?",
-      "choices": [
-        "Il consomme obligatoirement plus de batterie que tous les autres réseaux",
-        "Il bloque l’accès aux sites du ministère pour des raisons de fréquences",
-        "Un tiers peut observer le trafic ou créer un faux réseau du même nom pour capter des données",
-        "Il impose l’installation d’une application payante sur le téléphone"
-      ],
-      "answer": 2,
-      "explain": "Un réseau ouvert n’est pas maîtrisé : interception, faux point d’accès (« jumeau maléfique »). Les autres affirmations sont sans rapport avec la sécurité.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-042",
-      "theme": "Travail à distance",
-      "level": 1,
-      "q": "À quoi sert un réseau privé virtuel (RPV) fourni par le ministère ?",
-      "choices": [
-        "À augmenter la vitesse de connexion de tous les sites visités",
-        "À masquer vos actions professionnelles à votre hiérarchie et au service informatique du ministère",
-        "À remplacer le mot de passe de votre session de travail",
-        "À chiffrer les échanges entre votre appareil et le réseau interne, même sur réseau non sûr"
-      ],
-      "answer": 3,
-      "explain": "Le RPV crée un tunnel chiffré qui protège les données en transit. Il n’accélère pas la connexion, ne remplace pas l’authentification et n’est pas fait pour cacher des activités à l’employeur.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-043",
-      "theme": "Travail à distance",
-      "level": 1,
-      "q": "Pourquoi utiliser un filtre de confidentialité sur l’écran d’un ordinateur portable ?",
-      "choices": [
-        "Pour empêcher qu’une personne placée à côté ou derrière lise les informations affichées",
-        "Pour augmenter la luminosité de l’écran en plein soleil sur le terrain",
-        "Pour protéger l’ordinateur contre les logiciels malveillants téléchargés",
-        "Pour chiffrer les données enregistrées sur le disque de l’ordinateur"
-      ],
-      "answer": 0,
-      "explain": "Le filtre réduit l’angle de vision : il vise « l’espionnage par-dessus l’épaule » dans les transports ou les salles d’attente. Il ne protège ni du logiciel malveillant ni des données stockées, qui relèvent de l’antivirus et du chiffrement.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-044",
-      "theme": "Travail à distance",
-      "level": 1,
-      "q": "Que faire d’un ordinateur portable professionnel pendant une pause au restaurant lors d’une mission ?",
-      "choices": [
-        "Le laisser dans la voiture, fermée à clé, pour ne pas s’encombrer",
-        "Le garder avec soi ou le verrouiller et ne jamais le laisser sans surveillance",
-        "Le laisser dans la chambre d’hôtel, la porte étant fermée à clé",
-        "Le confier au serveur du restaurant qui peut le garder derrière le comptoir"
-      ],
-      "answer": 1,
-      "explain": "Voitures, chambres d’hôtel et comptoirs sont des lieux de vol fréquents. Un disque chiffré limite l’exposition, mais le matériel ne doit jamais rester sans surveillance.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-045",
-      "theme": "Travail à distance",
-      "level": 2,
-      "q": "Vous devez consulter urgemment un document interne depuis un aéroport. Seul un Wi-Fi gratuit est disponible. Quelle solution est la plus sûre ?",
-      "choices": [
-        "Utiliser le Wi-Fi gratuit en vérifiant seulement que son nom semble correct",
-        "Utiliser le Wi-Fi gratuit en désactivant temporairement l’antivirus pour aller plus vite",
-        "Utiliser un ordinateur en libre-service de l’aéroport pour ne pas exposer le vôtre",
-        "Utiliser le partage de connexion du téléphone professionnel, avec le RPV du ministère"
-      ],
-      "answer": 3,
-      "explain": "Le partage de connexion et le RPV forment une double barrière. Un nom de réseau se falsifie facilement ; désactiver l’antivirus aggrave le risque ; un ordinateur en libre-service peut enregistrer vos frappes et vos identifiants.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-046",
-      "theme": "Travail à distance",
-      "level": 2,
-      "q": "Vous télétravaillez ponctuellement et un proche vous demande de lui prêter l’ordinateur du ministère pour consulter ses courriels. Que répondez-vous ?",
-      "choices": [
-        "Non : l’appareil professionnel est réservé à votre usage et ne se prête à personne",
-        "Oui, à condition de rester à côté de lui pendant toute la durée de l’utilisation",
-        "Oui, s’il utilise un compte distinct avec son propre mot de passe sur la machine",
-        "Oui, mais seulement lorsque l’ordinateur est connecté au Wi-Fi domestique"
-      ],
-      "answer": 0,
-      "explain": "L’ordinateur contient des accès et des données du ministère. Un tiers, même sous surveillance, peut commettre une erreur ou introduire un logiciel malveillant. L’usage est strictement personnel, quelles que soient les modalités techniques proposées.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-047",
-      "theme": "Travail à distance",
-      "level": 2,
-      "q": "Dans un lieu public, la borne de recharge USB gratuite d’un salon vous tend les bras alors que votre téléphone professionnel est presque déchargé. Quelle est la meilleure option ?",
-      "choices": [
-        "Brancher le câble sur la borne, comme c’est un équipement installé par les organisateurs du salon",
-        "Utiliser votre propre chargeur sur une prise électrique ou une batterie externe personnelle",
-        "Brancher le téléphone sur la borne en désactivant le verrouillage de l’écran",
-        "Brancher le téléphone sur l’ordinateur d’un stand qui propose de le recharger"
-      ],
-      "answer": 1,
-      "explain": "Une borne USB publique peut être piégée (transfert de données, logiciel malveillant, « juice jacking »). Une prise secteur avec son propre chargeur, ou une batterie externe, évite la liaison de données.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-048",
-      "theme": "Travail à distance",
-      "level": 2,
-      "q": "Lors d’un voyage à l’étranger, vous devez emporter un ordinateur pour une mission sensible. Quelle précaution est la plus appropriée ?",
-      "choices": [
-        "Copier tous les dossiers du service au cas où une information serait demandée",
-        "Désactiver le chiffrement pour éviter des difficultés à la frontière",
-        "Emporter le minimum de données, sur un appareil chiffré, et changer les accès au retour",
-        "Utiliser votre ordinateur personnel pour éviter de mettre en cause celui du ministère"
-      ],
-      "answer": 2,
-      "explain": "Plus l’appareil contient de données, plus la perte ou la saisie est grave. Le chiffrement reste utile ; l’ordinateur personnel n’est pas géré par la sécurité du ministère. Après la mission, les mots de passe sont changés.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-049",
-      "theme": "Travail à distance",
-      "level": 3,
-      "q": "Un agent en télétravail découvre que son routeur Wi-Fi domestique utilise encore le mot de passe d’origine collé sous la box et que son ordinateur n’a pas été mis à jour depuis des mois. Quelles mesures sont prioritaires ?",
-      "choices": [
-        "Changer le mot de passe du Wi-Fi, mettre à jour l’appareil et passer par le RPV du ministère",
-        "Retirer les mises à jour car elles ralentissent le télétravail et conserver le Wi-Fi tel quel",
-        "Utiliser un voisin comme Wi-Fi de secours pour ne pas exposer le sien",
-        "Transférer les dossiers sur une messagerie personnelle plus rapide à synchroniser"
-      ],
-      "answer": 0,
-      "explain": "Le mot de passe par défaut et l’absence de mise à jour sont deux vulnérabilités courantes. Le RPV protège les échanges avec le ministère. Utiliser le Wi-Fi d’un tiers ou transférer vers une messagerie personnelle multiplie les risques.",
-      "seconds": 90,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-050",
-      "theme": "Travail à distance",
-      "level": 3,
-      "q": "En mission, un agent doit rédiger un rapport sensible et un collègue propose de le terminer dans un café avec Wi-Fi gratuit ; l’agent n’a pas de forfait de données. Quelle solution concilie sécurité et contrainte ?",
-      "choices": [
-        "Rédiger le rapport en ligne dans un service gratuit, puis l’effacer dès l’envoi",
-        "Rédiger hors ligne sur l’appareil chiffré, puis envoyer par le RPV depuis un réseau sûr",
-        "Envoyer le brouillon depuis le Wi-Fi du café par messagerie personnelle pour gagner du temps",
-        "Faire rédiger le rapport par le collègue sur son ordinateur personnel plus récent"
-      ],
-      "answer": 1,
-      "explain": "Travailler hors ligne évite l’exposition réseau ; l’envoi se fera depuis une connexion de confiance avec RPV. Un service en ligne gratuit conserve des copies hors contrôle ; la messagerie personnelle ou l’ordinateur d’un tiers sortent le document du périmètre protégé.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-051",
-      "theme": "Signalement et cadre gabonais",
-      "level": 1,
-      "q": "Parmi ces événements, lequel doit être signalé comme incident de sécurité ?",
-      "choices": [
-        "Une réunion annulée en raison de l’indisponibilité d’une salle",
-        "Le remplacement programmé d’un ordinateur par un modèle plus récent",
-        "Un retard de publication du bulletin interne sur le site du ministère",
-        "La perte d’un téléphone professionnel contenant la messagerie du service"
-      ],
-      "answer": 3,
-      "explain": "Un incident compromet la confidentialité, l’intégrité ou la disponibilité de l’information. La perte d’un téléphone qui donne accès à la messagerie en est un. Les autres événements sont organisationnels ou prévus.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-052",
-      "theme": "Signalement et cadre gabonais",
-      "level": 1,
-      "q": "Quelle loi gabonaise de 2023 est relative à la cybersécurité et à la lutte contre la cybercriminalité ?",
-      "choices": [
-        "La loi n° 027/2023 du 12 juillet 2023",
-        "La loi n° 002/2019 du 16 juillet 2019 sur le secteur des hydrocarbures",
-        "Le code des marchés publics, sans rapport avec le numérique",
-        "La loi n° 001/2011 du 25 septembre 2011 sur la cybersécurité"
-      ],
-      "answer": 0,
-      "explain": "La loi n° 027/2023 du 12 juillet 2023 est citée comme relative à la cybersécurité et à la lutte contre la cybercriminalité. La loi de 2019 concerne les hydrocarbures ; la loi n° 001/2011 porte sur les données personnelles. À confirmer par le ministère avant diffusion.",
-      "seconds": 50,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 027/2023 du 12 juillet 2023 relative à la cybersécurité et à la lutte contre la cybercriminalité (Gabon)",
-          "art": "Dispositions générales (numéro d’article à confirmer)",
-          "url": "https://www.labase-lextenso.fr/l-essentiel-droits-africains-des-affaires/2023-n8/gabon-une-loi-pour-organiser-la-cybersecurite-et-faire-face-a-la-cybercriminalite-DAA201t7"
-        }
-      ]
-    },
-    {
-      "id": "min-cyber-053",
-      "theme": "Signalement et cadre gabonais",
-      "level": 1,
-      "q": "Quel texte a été modifié par la loi n° 025/2023 du 12 juillet 2023 au Gabon ?",
-      "choices": [
-        "La loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-        "Le code du travail gabonais relatif aux conditions d’emploi des agents publics",
-        "La loi n° 001/2011 du 25 septembre 2011 relative à la protection des données à caractère personnel",
-        "La loi n° 027/2023 elle-même relative à la lutte contre la cybercriminalité"
-      ],
-      "answer": 2,
-      "explain": "La loi n° 025/2023 modifie la loi n° 001/2011 sur les données à caractère personnel. Elle ne touche pas à la loi de 2019 sur les hydrocarbures et ne modifie pas la loi n° 027/2023. À confirmer par le ministère.",
-      "seconds": 60,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 025/2023 du 12 juillet 2023 modifiant la loi n° 001/2011 du 25 septembre 2011 relative à la protection des données à caractère personnel (Gabon)",
-          "art": "Ensemble du texte (articles à confirmer)",
-          "url": "https://www.afapdp.org/wp-content/uploads/2023/12/Gabon-Loi-025-2023-du-12-juillet-2023-portant-modification-de-la-loi-001-2011-du-25-septembre-relative-a-la-protection-des-donnees-a-caractere-personnel.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-cyber-054",
-      "theme": "Signalement et cadre gabonais",
-      "level": 1,
-      "q": "Quel est, d’après les sources consultées, le rôle de l’ANINF ?",
-      "choices": [
-        "C’est la juridiction chargée de juger et de sanctionner les infractions informatiques commises au Gabon",
-        "C’est l’entreprise privée qui fournit la messagerie de tous les ministères",
-        "C’est l’organisme qui fixe les prix des produits pétroliers à la pompe",
-        "L’agence technique de l’État pour le numérique, qui intervient sur la sécurité des systèmes publics"
-      ],
-      "answer": 3,
-      "explain": "L’Agence nationale des infrastructures numériques et des fréquences est présentée comme le bras technique de l’État dans le numérique. Elle ne juge pas, n’est pas un prestataire privé et n’a pas de rôle de fixation des prix. Ses attributions précises sont à confirmer par le ministère.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-055",
-      "theme": "Signalement et cadre gabonais",
-      "level": 2,
-      "q": "Vous venez de cliquer sur un lien suspect et d’y saisir votre mot de passe. Quel est le bon enchaînement ?",
-      "choices": [
-        "Isoler le poste du réseau, alerter l’informatique par téléphone, puis changer le mot de passe",
-        "Effacer le courriel, changer le mot de passe seul et ne rien dire à personne pour éviter de s’exposer",
-        "Attendre le lendemain pour voir si un message d’alerte apparaît dans la messagerie",
-        "Éteindre l’ordinateur, partir et déclarer l’incident à la fin de la semaine"
-      ],
-      "answer": 0,
-      "explain": "La rapidité est essentielle : le mot de passe peut être utilisé en quelques minutes. Il faut limiter la propagation, informer par un canal sûr et suivre les consignes. Se taire, attendre ou différer favorise l’attaquant et l’effacement du message supprime une preuve.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-056",
-      "theme": "Signalement et cadre gabonais",
-      "level": 2,
-      "q": "Au moment de signaler un incident, quelles informations sont utiles à l’équipe informatique ?",
-      "choices": [
-        "Uniquement votre nom, car l’informatique retrouve le reste seule",
-        "L’heure, ce qui s’est passé, les fichiers concernés et les actions déjà effectuées",
-        "Une hypothèse sur l’identité de l’attaquant et sur la sanction qu’il mériterait selon vous",
-        "Le mot de passe de votre compte, pour que l’informatique puisse intervenir"
-      ],
-      "answer": 1,
-      "explain": "Un signalement factuel et précis accélère l’analyse. Il ne faut jamais communiquer son mot de passe ; les suppositions sur l’auteur et les sanctions ne servent pas à l’intervention immédiate.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-057",
-      "theme": "Signalement et cadre gabonais",
-      "level": 2,
-      "q": "Vous apprenez que le fichier de candidats d’un recrutement, contenant adresses et numéros de téléphone, a été envoyé par erreur à un destinataire externe. Que faites-vous ?",
-      "choices": [
-        "Vous demandez seulement au destinataire de supprimer le fichier et vous passez à autre chose",
-        "Vous prévenez directement les candidats par courriel, sans consulter personne",
-        "Vous attendez de voir si le destinataire réagit avant d’en parler à la hiérarchie",
-        "Vous alertez immédiatement le responsable désigné, qui décidera des notifications"
-      ],
-      "answer": 3,
-      "explain": "Une fuite de données personnelles peut entraîner une obligation d’information de l’autorité de protection et des personnes concernées : c’est au responsable désigné d’en décider, rapidement. Traiter l’affaire seul ou attendre fait perdre du temps et peut aggraver la situation. Les obligations précises sont à confirmer.",
-      "seconds": 80,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 025/2023 du 12 juillet 2023 modifiant la loi n° 001/2011 du 25 septembre 2011 relative à la protection des données à caractère personnel (Gabon)",
-          "art": "Ensemble du texte (articles à confirmer)",
-          "url": "https://www.afapdp.org/wp-content/uploads/2023/12/Gabon-Loi-025-2023-du-12-juillet-2023-portant-modification-de-la-loi-001-2011-du-25-septembre-relative-a-la-protection-des-donnees-a-caractere-personnel.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-cyber-058",
-      "theme": "Signalement et cadre gabonais",
-      "level": 2,
-      "q": "Un journaliste vous appelle et vous demande de confirmer que le ministère a subi une cyberattaque. Quelle attitude adoptez-vous ?",
-      "choices": [
-        "Vous ne confirmez rien, informez votre hiérarchie et renvoyez vers le porte-parole désigné",
-        "Vous confirmez l’information si elle est vraie, par souci de transparence envers la presse et le public",
-        "Vous démentez par précaution, afin de protéger l’image du ministère",
-        "Vous donnez les détails techniques que vous connaissez pour éviter les rumeurs"
-      ],
-      "answer": 0,
-      "explain": "La communication de crise relève du porte-parole ou du service désigné. Confirmer ou démentir de sa propre initiative risque de divulguer des informations sensibles ou de diffuser une fausse information. L’agent signale et oriente.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-059",
-      "theme": "Signalement et cadre gabonais",
-      "level": 3,
-      "q": "Un agent découvre que l’ordinateur d’un collègue absent affiche des fichiers qui changent de nom un à un. Il hésite entre éteindre brutalement la machine et alerter. Quelle décision est la plus judicieuse ?",
-      "choices": [
-        "Éteindre la machine brutalement en maintenant le bouton enfoncé jusqu’à son arrêt complet",
-        "Débrancher le câble réseau, ne rien éteindre sans avis et appeler l’informatique",
-        "Laisser le poste fonctionner et signaler le problème le lendemain matin",
-        "Lancer un nettoyage de disque pour supprimer les fichiers qui changent de nom"
-      ],
-      "answer": 1,
-      "explain": "Les symptômes évoquent un rançongiciel en cours de chiffrement. L’isoler du réseau limite la propagation ; l’extinction brutale peut effacer des traces utiles ; un nettoyage de disque détruit des éléments et ne résout rien. L’informatique décide de la suite.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-060",
-      "theme": "Signalement et cadre gabonais",
-      "level": 3,
-      "q": "Après un incident, la direction demande qui doit décider de la notification d’une fuite de données à l’autorité de protection. Quelle réponse est la plus conforme aux bonnes pratiques de gouvernance ?",
-      "choices": [
-        "Chaque agent concerné, au cas par cas, dès qu’il a connaissance de la fuite",
-        "Le prestataire informatique, qui n’a pas à consulter l’administration",
-        "Un responsable désigné, sur la base de l’analyse de l’informatique et du service juridique",
-        "Personne, la notification étant toujours facultative au Gabon quelle que soit la nature des données"
-      ],
-      "answer": 2,
-      "explain": "La notification engage l’institution : elle suppose une analyse (nature des données, risque) et une décision au bon niveau, avec l’appui juridique. L’agent ne décide pas seul. Il est inexact d’affirmer qu’elle serait toujours facultative ; les obligations précises sont à confirmer dans les textes en vigueur.",
-      "seconds": 100,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 025/2023 du 12 juillet 2023 modifiant la loi n° 001/2011 du 25 septembre 2011 relative à la protection des données à caractère personnel (Gabon)",
-          "art": "Ensemble du texte (articles à confirmer)",
-          "url": "https://www.afapdp.org/wp-content/uploads/2023/12/Gabon-Loi-025-2023-du-12-juillet-2023-portant-modification-de-la-loi-001-2011-du-25-septembre-relative-a-la-protection-des-donnees-a-caractere-personnel.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-cyber-061",
-      "theme": "Sauvegardes et continuité",
-      "level": 1,
-      "q": "Qu’est-ce qu’une vraie sauvegarde ?",
-      "choices": [
-        "Un second dossier sur le même disque dur que le dossier d’origine",
-        "Une copie des données conservée séparément, permettant de les restaurer après une perte",
-        "Un raccourci vers le fichier placé sur le bureau de l’ordinateur",
-        "Une impression papier unique du fichier, rangée dans le tiroir fermé à clé du bureau du service"
-      ],
-      "answer": 1,
-      "explain": "Une sauvegarde doit pouvoir survivre à la perte de l’original : copie séparée et restaurable. Une copie sur le même disque disparaît avec lui ; un raccourci ne contient pas les données ; une impression unique ne se restaure pas facilement.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-062",
-      "theme": "Sauvegardes et continuité",
-      "level": 1,
-      "q": "Que dit la règle « 3-2-1 » ?",
-      "choices": [
-        "Trois sauvegardes par jour, deux agents responsables et un seul poste",
-        "Trois mots de passe, deux facteurs d’authentification et un seul compte",
-        "Trois copies, sur deux supports différents, dont une conservée hors site ou hors ligne",
-        "Trois serveurs, deux salles informatiques et une seule sauvegarde annuelle"
-      ],
-      "answer": 2,
-      "explain": "La règle 3-2-1 est un repère simple pour réduire le risque de perte totale. La copie hors ligne protège notamment du rançongiciel. Les autres propositions détournent les chiffres sans lien avec la sauvegarde.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-063",
-      "theme": "Sauvegardes et continuité",
-      "level": 1,
-      "q": "Où un agent doit-il enregistrer ses fichiers de travail pour qu’ils soient sauvegardés ?",
-      "choices": [
-        "Sur le bureau de son ordinateur, qui est copié par défaut chaque nuit",
-        "Sur une clé USB personnelle emportée à la maison pour plus de sécurité",
-        "Sur un service en ligne gratuit choisi librement pour le partage",
-        "Dans les dossiers partagés ou espaces du ministère sauvegardés par le service informatique"
-      ],
-      "answer": 3,
-      "explain": "Les espaces du ministère font l’objet de sauvegardes organisées. Le bureau d’un poste ou une clé personnelle ne sont pas forcément sauvegardés ; un service en ligne non autorisé fait sortir les données du périmètre de contrôle.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-064",
-      "theme": "Sauvegardes et continuité",
-      "level": 1,
-      "q": "Que signifie RPO dans un plan de continuité ?",
-      "choices": [
-        "La perte de données maximale acceptable, exprimée en temps, avant l’incident",
-        "Le nombre de personnes mobilisées pour restaurer les données après une panne",
-        "Le coût total du matériel acheté pour le plan de continuité d’activité",
-        "Le délai maximal accordé aux agents pour signaler un incident à l’informatique"
-      ],
-      "answer": 0,
-      "explain": "Le RPO (objectif de point de reprise) mesure la quantité de données que l’on accepte de perdre : avec une sauvegarde nocturne, jusqu’à une journée. Le délai de reprise s’appelle RTO. Les autres propositions ne correspondent pas.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-065",
-      "theme": "Sauvegardes et continuité",
-      "level": 2,
-      "q": "Votre direction sauvegarde ses données chaque nuit sur un serveur connecté en permanence au réseau. Quel risque subsiste face à un rançongiciel ?",
-      "choices": [
-        "Aucun, car le serveur est protégé par le mot de passe de l’administrateur",
-        "Aucun, car un rançongiciel n’agit que sur les fichiers du poste infecté",
-        "Le logiciel peut chiffrer aussi la sauvegarde accessible par le réseau ; une copie hors ligne est nécessaire",
-        "Le risque se limite à une baisse de vitesse du réseau pendant la durée de la sauvegarde de la nuit"
-      ],
-      "answer": 2,
-      "explain": "Les rançongiciels recherchent et chiffrent les sauvegardes accessibles. Une copie déconnectée ou hors site (le « 1 » de 3-2-1) est la dernière protection. L’idée qu’ils ne toucheraient que le poste infecté est erronée.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-066",
-      "theme": "Sauvegardes et continuité",
-      "level": 2,
-      "q": "Un agent a sauvegardé ses fichiers depuis deux ans mais n’a jamais essayé de les restaurer. Que lui conseillez-vous ?",
-      "choices": [
-        "Rien de plus, une sauvegarde sans message d’erreur est forcément correcte",
-        "Supprimer les anciennes sauvegardes pour libérer de l’espace sur le disque",
-        "Refaire une nouvelle sauvegarde au même endroit chaque semaine, sans jamais en contrôler le contenu",
-        "Tester régulièrement la restauration d’un fichier pour vérifier qu’il est lisible et complet"
-      ],
-      "answer": 3,
-      "explain": "Une sauvegarde peut être incomplète, corrompue ou illisible sans qu’aucune alerte ne s’affiche. Seule la restauration d’essai prouve son utilité. Supprimer ou dupliquer au même endroit n’apporte aucune assurance.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-067",
-      "theme": "Sauvegardes et continuité",
-      "level": 2,
-      "q": "Une panne électrique de plusieurs heures bloque le système de suivi des déclarations de production. Quel document doit guider les agents ?",
-      "choices": [
-        "Le plan de continuité d’activité, qui prévoit les procédures de secours et les personnes à joindre",
-        "Le règlement des marchés publics, qui précise les délais de passation et les seuils de procédure",
-        "Le compte rendu de la réunion précédente du comité de direction",
-        "Le guide d’utilisation du logiciel, qui explique les menus des écrans"
-      ],
-      "answer": 0,
-      "explain": "Le plan de continuité d’activité décrit, pour les activités essentielles, les moyens de secours, les rôles et contacts. Un guide du logiciel ne sert pas lorsque le système est arrêté ; les autres documents sont sans lien.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-068",
-      "theme": "Sauvegardes et continuité",
-      "level": 2,
-      "q": "Un service est sauvegardé chaque soir à 20 h. Une panne survient à 16 h, la restauration prenant six heures. Que peut-on dire de la perte et du délai ?",
-      "choices": [
-        "Rien n’est perdu puisqu’une sauvegarde existe et la reprise peut être considérée comme immédiate",
-        "Jusqu’à vingt heures de travail peuvent être perdues et la reprise prendra six heures",
-        "La perte est de six heures et la reprise de vingt heures, selon l’usage",
-        "La perte est de quatre heures et le délai de reprise est de vingt-quatre heures"
-      ],
-      "answer": 1,
-      "explain": "La dernière copie date de 20 h la veille, donc la perte atteint environ vingt heures (de 20 h à 16 h) ; la restauration prend six heures. Chiffres donnés à titre d’exemple. Les inversions ou l’absence de perte ne découlent pas des données.",
-      "seconds": 90,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-069",
-      "theme": "Sauvegardes et continuité",
-      "level": 3,
-      "q": "Vous préparez le plan de continuité de votre direction. Le paiement des redevances doit reprendre en moins d’une journée et ne tolère que deux heures de perte de données. Quelle conséquence en tirez-vous ?",
-      "choices": [
-        "Une sauvegarde hebdomadaire suffit, car un jour d’arrêt est toléré",
-        "Une sauvegarde mensuelle suffit si les fichiers sont protégés par un mot de passe robuste",
-        "Pas d’organisation particulière : l’informatique se débrouillera en cas de panne",
-        "Sauvegardes toutes les deux heures au moins, reprise rapide et procédure de secours testée"
-      ],
-      "answer": 3,
-      "explain": "Un RPO de deux heures impose des sauvegardes au moins aussi fréquentes ; un RTO inférieur à une journée exige des moyens de reprise prêts et testés. Hebdomadaire ou mensuel ne respecte pas le RPO. Le mot de passe ne remplace pas la sauvegarde.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-cyber-070",
-      "theme": "Sauvegardes et continuité",
-      "level": 3,
-      "q": "Après une attaque, la direction restaure les données depuis la copie de la veille. Quelle étape ne faut-il pas oublier avant de remettre les postes en service ?",
-      "choices": [
-        "S’assurer que la cause est éliminée et changer les accès, sous peine de nouvelle attaque",
-        "Rien de particulier : une restauration réussie efface aussi l’accès de l’attaquant",
-        "Supprimer tous les journaux afin que les agents puissent repartir sur de bonnes bases",
-        "Informer les opérateurs pétroliers que les données sont garanties intactes à cent pour cent"
-      ],
-      "answer": 0,
-      "explain": "Restaurer sans éliminer la cause (accès, faille) expose à une nouvelle attaque. Les journaux sont précieux pour comprendre ce qui s’est passé. Une garantie d’intégrité absolue ne peut pas être affirmée sans vérification.",
-      "seconds": 100,
-      "status": "draft"
+   ]
+  },
+  {
+   "id": "min-cyber-053",
+   "theme": "Signalement et cadre gabonais",
+   "level": 1,
+   "q": "Quel texte a été modifié par la loi n° 025/2023 du 12 juillet 2023 au Gabon ?",
+   "choices": [
+    "La loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+    "Le code du travail gabonais relatif aux conditions d’emploi des agents publics",
+    "La loi n° 001/2011 du 25 septembre 2011 relative à la protection des données à caractère personnel",
+    "La loi n° 027/2023 elle-même relative à la lutte contre la cybercriminalité"
+   ],
+   "answer": 2,
+   "explain": "La loi n° 025/2023 modifie la loi n° 001/2011 sur les données à caractère personnel. Elle ne touche pas à la loi de 2019 sur les hydrocarbures et ne modifie pas la loi n° 027/2023. À confirmer par le ministère.",
+   "seconds": 60,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 025/2023 du 12 juillet 2023 modifiant la loi n° 001/2011 du 25 septembre 2011 relative à la protection des données à caractère personnel (Gabon)",
+     "art": "Ensemble du texte (articles à confirmer)",
+     "url": "https://www.afapdp.org/wp-content/uploads/2023/12/Gabon-Loi-025-2023-du-12-juillet-2023-portant-modification-de-la-loi-001-2011-du-25-septembre-relative-a-la-protection-des-donnees-a-caractere-personnel.pdf"
     }
-  ]
+   ]
+  },
+  {
+   "id": "min-cyber-054",
+   "theme": "Signalement et cadre gabonais",
+   "level": 1,
+   "q": "Quel est, d’après les sources consultées, le rôle de l’ANINF ?",
+   "choices": [
+    "C’est la juridiction chargée de juger et de sanctionner les infractions informatiques commises au Gabon",
+    "C’est l’entreprise privée qui fournit la messagerie de tous les ministères",
+    "C’est l’organisme qui fixe les prix des produits pétroliers à la pompe",
+    "L’agence technique de l’État pour le numérique, qui intervient sur la sécurité des systèmes publics"
+   ],
+   "answer": 3,
+   "explain": "L’Agence nationale des infrastructures numériques et des fréquences est présentée comme le bras technique de l’État dans le numérique. Elle ne juge pas, n’est pas un prestataire privé et n’a pas de rôle de fixation des prix. Ses attributions précises sont à confirmer par le ministère.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-055",
+   "theme": "Signalement et cadre gabonais",
+   "level": 2,
+   "q": "Vous venez de cliquer sur un lien suspect et d’y saisir votre mot de passe. Quel est le bon enchaînement ?",
+   "choices": [
+    "Isoler le poste du réseau, alerter l’informatique par téléphone, puis changer le mot de passe",
+    "Effacer le courriel, changer le mot de passe seul et ne rien dire à personne pour éviter de s’exposer",
+    "Attendre le lendemain pour voir si un message d’alerte apparaît dans la messagerie",
+    "Éteindre l’ordinateur, partir et déclarer l’incident à la fin de la semaine"
+   ],
+   "answer": 0,
+   "explain": "La rapidité est essentielle : le mot de passe peut être utilisé en quelques minutes. Il faut limiter la propagation, informer par un canal sûr et suivre les consignes. Se taire, attendre ou différer favorise l’attaquant et l’effacement du message supprime une preuve.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-056",
+   "theme": "Signalement et cadre gabonais",
+   "level": 2,
+   "q": "Au moment de signaler un incident, quelles informations sont utiles à l’équipe informatique ?",
+   "choices": [
+    "Uniquement votre nom, car l’informatique retrouve le reste seule",
+    "L’heure, ce qui s’est passé, les fichiers concernés et les actions déjà effectuées",
+    "Une hypothèse sur l’identité de l’attaquant et sur la sanction qu’il mériterait selon vous",
+    "Le mot de passe de votre compte, pour que l’informatique puisse intervenir"
+   ],
+   "answer": 1,
+   "explain": "Un signalement factuel et précis accélère l’analyse. Il ne faut jamais communiquer son mot de passe ; les suppositions sur l’auteur et les sanctions ne servent pas à l’intervention immédiate.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-057",
+   "theme": "Signalement et cadre gabonais",
+   "level": 2,
+   "q": "Vous apprenez que le fichier de candidats d’un recrutement, contenant adresses et numéros de téléphone, a été envoyé par erreur à un destinataire externe. Que faites-vous ?",
+   "choices": [
+    "Vous demandez seulement au destinataire de supprimer le fichier et vous passez à autre chose",
+    "Vous prévenez directement les candidats par courriel, sans consulter personne",
+    "Vous attendez de voir si le destinataire réagit avant d’en parler à la hiérarchie",
+    "Vous alertez immédiatement le responsable désigné, qui décidera des notifications"
+   ],
+   "answer": 3,
+   "explain": "Une fuite de données personnelles peut entraîner une obligation d’information de l’autorité de protection et des personnes concernées : c’est au responsable désigné d’en décider, rapidement. Traiter l’affaire seul ou attendre fait perdre du temps et peut aggraver la situation. Les obligations précises sont à confirmer.",
+   "seconds": 80,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 025/2023 du 12 juillet 2023 modifiant la loi n° 001/2011 du 25 septembre 2011 relative à la protection des données à caractère personnel (Gabon)",
+     "art": "Ensemble du texte (articles à confirmer)",
+     "url": "https://www.afapdp.org/wp-content/uploads/2023/12/Gabon-Loi-025-2023-du-12-juillet-2023-portant-modification-de-la-loi-001-2011-du-25-septembre-relative-a-la-protection-des-donnees-a-caractere-personnel.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-cyber-058",
+   "theme": "Signalement et cadre gabonais",
+   "level": 2,
+   "q": "Un journaliste vous appelle et vous demande de confirmer que le ministère a subi une cyberattaque. Quelle attitude adoptez-vous ?",
+   "choices": [
+    "Vous ne confirmez rien, informez votre hiérarchie et renvoyez vers le porte-parole désigné",
+    "Vous confirmez l’information si elle est vraie, par souci de transparence envers la presse et le public",
+    "Vous démentez par précaution, afin de protéger l’image du ministère",
+    "Vous donnez les détails techniques que vous connaissez pour éviter les rumeurs"
+   ],
+   "answer": 0,
+   "explain": "La communication de crise relève du porte-parole ou du service désigné. Confirmer ou démentir de sa propre initiative risque de divulguer des informations sensibles ou de diffuser une fausse information. L’agent signale et oriente.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-059",
+   "theme": "Signalement et cadre gabonais",
+   "level": 3,
+   "q": "Un agent découvre que l’ordinateur d’un collègue absent affiche des fichiers qui changent de nom un à un. Il hésite entre éteindre brutalement la machine et alerter. Quelle décision est la plus judicieuse ?",
+   "choices": [
+    "Éteindre la machine brutalement en maintenant le bouton enfoncé jusqu’à son arrêt complet",
+    "Débrancher le câble réseau, ne rien éteindre sans avis et appeler l’informatique",
+    "Laisser le poste fonctionner et signaler le problème le lendemain matin",
+    "Lancer un nettoyage de disque pour supprimer les fichiers qui changent de nom"
+   ],
+   "answer": 1,
+   "explain": "Les symptômes évoquent un rançongiciel en cours de chiffrement. L’isoler du réseau limite la propagation ; l’extinction brutale peut effacer des traces utiles ; un nettoyage de disque détruit des éléments et ne résout rien. L’informatique décide de la suite.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-060",
+   "theme": "Signalement et cadre gabonais",
+   "level": 3,
+   "q": "Après un incident, la direction demande qui doit décider de la notification d’une fuite de données à l’autorité de protection. Quelle réponse est la plus conforme aux bonnes pratiques de gouvernance ?",
+   "choices": [
+    "Chaque agent concerné, au cas par cas, dès qu’il a connaissance de la fuite",
+    "Le prestataire informatique, qui n’a pas à consulter l’administration",
+    "Un responsable désigné, sur la base de l’analyse de l’informatique et du service juridique",
+    "Personne, la notification étant toujours facultative au Gabon quelle que soit la nature des données"
+   ],
+   "answer": 2,
+   "explain": "La notification engage l’institution : elle suppose une analyse (nature des données, risque) et une décision au bon niveau, avec l’appui juridique. L’agent ne décide pas seul. Il est inexact d’affirmer qu’elle serait toujours facultative ; les obligations précises sont à confirmer dans les textes en vigueur.",
+   "seconds": 100,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 025/2023 du 12 juillet 2023 modifiant la loi n° 001/2011 du 25 septembre 2011 relative à la protection des données à caractère personnel (Gabon)",
+     "art": "Ensemble du texte (articles à confirmer)",
+     "url": "https://www.afapdp.org/wp-content/uploads/2023/12/Gabon-Loi-025-2023-du-12-juillet-2023-portant-modification-de-la-loi-001-2011-du-25-septembre-relative-a-la-protection-des-donnees-a-caractere-personnel.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-cyber-061",
+   "theme": "Sauvegardes et continuité",
+   "level": 1,
+   "q": "Qu’est-ce qu’une vraie sauvegarde ?",
+   "choices": [
+    "Un second dossier sur le même disque dur que le dossier d’origine",
+    "Une copie des données conservée séparément, permettant de les restaurer après une perte",
+    "Un raccourci vers le fichier placé sur le bureau de l’ordinateur",
+    "Une impression papier unique du fichier, rangée dans le tiroir fermé à clé du bureau du service"
+   ],
+   "answer": 1,
+   "explain": "Une sauvegarde doit pouvoir survivre à la perte de l’original : copie séparée et restaurable. Une copie sur le même disque disparaît avec lui ; un raccourci ne contient pas les données ; une impression unique ne se restaure pas facilement.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-062",
+   "theme": "Sauvegardes et continuité",
+   "level": 1,
+   "q": "Sur le schéma de la règle 3-2-1, quelle copie est conservée hors site, et pourquoi ?",
+   "choices": [
+    "La copie 3, dans un autre lieu : un sinistre ou une attaque sur le site principal ne l'atteint pas",
+    "La copie 1 : l'original doit être éloigné du bureau pour être protégé",
+    "La copie 2 : le disque externe est toujours rangé dans un autre bâtiment",
+    "Pas une seule : les trois copies restent sur le site principal pour être restaurées plus vite"
+   ],
+   "answer": 0,
+   "explain": "Le schéma place l'original (copie 1) et la sauvegarde sur disque (copie 2) sur le site principal, et la copie 3 sur un site distant. La copie hors site protège notamment d'un incendie, d'un vol ou d'un rançongiciel qui toucherait tout le bureau.",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/min-sauvegarde-3-2-1.svg",
+   "imgAlt": "Schéma de la règle 3-2-1 : l'original sur le poste de travail (copie 1, support n° 1), une sauvegarde sur un disque externe ou un serveur (copie 2, support n° 2) et une copie hors site dans un autre lieu (copie 3). Trois cartes résument : 3 copies, 2 types de supports, 1 copie hors site ; un rappel invite à tester la restauration."
+  },
+  {
+   "id": "min-cyber-063",
+   "theme": "Sauvegardes et continuité",
+   "level": 1,
+   "q": "Où un agent doit-il enregistrer ses fichiers de travail pour qu’ils soient sauvegardés ?",
+   "choices": [
+    "Sur le bureau de son ordinateur, qui est copié par défaut chaque nuit",
+    "Sur une clé USB personnelle emportée à la maison pour plus de sécurité",
+    "Sur un service en ligne gratuit choisi librement pour le partage",
+    "Dans les dossiers partagés ou espaces du ministère sauvegardés par le service informatique"
+   ],
+   "answer": 3,
+   "explain": "Les espaces du ministère font l’objet de sauvegardes organisées. Le bureau d’un poste ou une clé personnelle ne sont pas forcément sauvegardés ; un service en ligne non autorisé fait sortir les données du périmètre de contrôle.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-064",
+   "theme": "Sauvegardes et continuité",
+   "level": 1,
+   "q": "Que signifie RPO dans un plan de continuité ?",
+   "choices": [
+    "La perte de données maximale acceptable, exprimée en temps, avant l’incident",
+    "Le nombre de personnes mobilisées pour restaurer les données après une panne",
+    "Le coût total du matériel acheté pour le plan de continuité d’activité",
+    "Le délai maximal accordé aux agents pour signaler un incident à l’informatique"
+   ],
+   "answer": 0,
+   "explain": "Le RPO (objectif de point de reprise) mesure la quantité de données que l’on accepte de perdre : avec une sauvegarde nocturne, jusqu’à une journée. Le délai de reprise s’appelle RTO. Les autres propositions ne correspondent pas.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-065",
+   "theme": "Sauvegardes et continuité",
+   "level": 2,
+   "q": "Une direction sauvegarde chaque nuit sur un serveur connecté en permanence au réseau (la copie 2 du schéma), sans copie hors site. Quel risque subsiste face à un rançongiciel ?",
+   "choices": [
+    "Aucun, car le serveur est protégé par le mot de passe de l'administrateur",
+    "Le logiciel peut chiffrer aussi la sauvegarde accessible par le réseau ; une copie hors ligne est nécessaire",
+    "Aucun, car un rançongiciel n'agit que sur les fichiers du poste infecté",
+    "Le risque se limite à une baisse de vitesse du réseau pendant la durée de la sauvegarde de la nuit"
+   ],
+   "answer": 1,
+   "explain": "Les rançongiciels recherchent et chiffrent les sauvegardes accessibles. Une copie déconnectée ou hors site (le « 1 » de 3-2-1) est la dernière protection. L'idée qu'ils ne toucheraient que le poste infecté est erronée.",
+   "seconds": 70,
+   "status": "draft",
+   "img": "svg/min-sauvegarde-3-2-1.svg",
+   "imgAlt": "Schéma de la règle 3-2-1 : l'original sur le poste de travail (copie 1, support n° 1), une sauvegarde sur un disque externe ou un serveur (copie 2, support n° 2) et une copie hors site dans un autre lieu (copie 3). Trois cartes résument : 3 copies, 2 types de supports, 1 copie hors site ; un rappel invite à tester la restauration."
+  },
+  {
+   "id": "min-cyber-066",
+   "theme": "Sauvegardes et continuité",
+   "level": 2,
+   "q": "D'après la mention en bas du schéma, que conseillez-vous à un agent qui sauvegarde ses fichiers depuis deux ans sans avoir jamais essayé de les restaurer ?",
+   "choices": [
+    "Rien de plus : une sauvegarde sans message d'erreur est forcément correcte",
+    "Supprimer les anciennes sauvegardes pour libérer de l'espace sur le disque",
+    "Tester régulièrement la restauration d'un fichier pour vérifier qu'il est lisible et complet",
+    "Refaire une nouvelle sauvegarde au même endroit chaque semaine, sans jamais en contrôler le contenu"
+   ],
+   "answer": 2,
+   "explain": "Une sauvegarde peut être incomplète, corrompue ou illisible sans qu'aucune alerte ne s'affiche : le schéma rappelle qu'une copie jamais restaurée en test n'est pas une garantie. Supprimer ou dupliquer au même endroit n'apporte aucune assurance.",
+   "seconds": 70,
+   "status": "draft",
+   "img": "svg/min-sauvegarde-3-2-1.svg",
+   "imgAlt": "Schéma de la règle 3-2-1 : l'original sur le poste de travail (copie 1, support n° 1), une sauvegarde sur un disque externe ou un serveur (copie 2, support n° 2) et une copie hors site dans un autre lieu (copie 3). Trois cartes résument : 3 copies, 2 types de supports, 1 copie hors site ; un rappel invite à tester la restauration."
+  },
+  {
+   "id": "min-cyber-067",
+   "theme": "Sauvegardes et continuité",
+   "level": 2,
+   "q": "Une panne électrique de plusieurs heures bloque le système de suivi des déclarations de production. Quel document doit guider les agents ?",
+   "choices": [
+    "Le plan de continuité d’activité, qui prévoit les procédures de secours et les personnes à joindre",
+    "Le règlement des marchés publics, qui précise les délais de passation et les seuils de procédure",
+    "Le compte rendu de la réunion précédente du comité de direction",
+    "Le guide d’utilisation du logiciel, qui explique les menus des écrans"
+   ],
+   "answer": 0,
+   "explain": "Le plan de continuité d’activité décrit, pour les activités essentielles, les moyens de secours, les rôles et contacts. Un guide du logiciel ne sert pas lorsque le système est arrêté ; les autres documents sont sans lien.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-068",
+   "theme": "Sauvegardes et continuité",
+   "level": 2,
+   "q": "Un service est sauvegardé chaque soir à 20 h. Une panne survient à 16 h, la restauration prenant six heures. Que peut-on dire de la perte et du délai ?",
+   "choices": [
+    "Rien n’est perdu puisqu’une sauvegarde existe et la reprise peut être considérée comme immédiate",
+    "Jusqu’à vingt heures de travail peuvent être perdues et la reprise prendra six heures",
+    "La perte est de six heures et la reprise de vingt heures, selon l’usage",
+    "La perte est de quatre heures et le délai de reprise est de vingt-quatre heures"
+   ],
+   "answer": 1,
+   "explain": "La dernière copie date de 20 h la veille, donc la perte atteint environ vingt heures (de 20 h à 16 h) ; la restauration prend six heures. Chiffres donnés à titre d’exemple. Les inversions ou l’absence de perte ne découlent pas des données.",
+   "seconds": 90,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-069",
+   "theme": "Sauvegardes et continuité",
+   "level": 3,
+   "q": "Vous préparez le plan de continuité de votre direction. Le paiement des redevances doit reprendre en moins d’une journée et ne tolère que deux heures de perte de données. Quelle conséquence en tirez-vous ?",
+   "choices": [
+    "Une sauvegarde hebdomadaire suffit, car un jour d’arrêt est toléré",
+    "Une sauvegarde mensuelle suffit si les fichiers sont protégés par un mot de passe robuste",
+    "Pas d’organisation particulière : l’informatique se débrouillera en cas de panne",
+    "Sauvegardes toutes les deux heures au moins, reprise rapide et procédure de secours testée"
+   ],
+   "answer": 3,
+   "explain": "Un RPO de deux heures impose des sauvegardes au moins aussi fréquentes ; un RTO inférieur à une journée exige des moyens de reprise prêts et testés. Hebdomadaire ou mensuel ne respecte pas le RPO. Le mot de passe ne remplace pas la sauvegarde.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-cyber-070",
+   "theme": "Sauvegardes et continuité",
+   "level": 3,
+   "q": "Après une attaque, la direction restaure les données depuis la copie de la veille. Quelle étape ne faut-il pas oublier avant de remettre les postes en service ?",
+   "choices": [
+    "S’assurer que la cause est éliminée et changer les accès, sous peine de nouvelle attaque",
+    "Rien de particulier : une restauration réussie efface aussi l’accès de l’attaquant",
+    "Supprimer tous les journaux afin que les agents puissent repartir sur de bonnes bases",
+    "Informer les opérateurs pétroliers que les données sont garanties intactes à cent pour cent"
+   ],
+   "answer": 0,
+   "explain": "Restaurer sans éliminer la cause (accès, faille) expose à une nouvelle attaque. Les journaux sont précieux pour comprendre ce qui s’est passé. Une garantie d’intégrité absolue ne peut pas être affirmée sans vérification.",
+   "seconds": 100,
+   "status": "draft"
+  }
+ ]
 }

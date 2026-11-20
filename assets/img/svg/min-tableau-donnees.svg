@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Structure d'un tableau de données propre : une ligne par observation, une colonne par variable avec un seul type. Colonnes : Date (type date), Province (texte), Site (texte), Volume en milliers de barils (nombre), Conforme (oui ou non). Quatre lignes de valeurs fictives.</title>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.s13{font-size:13px}.o{fill:#B85C0A;font-weight:bold}
+.hd{fill:#061F44}.ht{fill:#FCFBF8;font-weight:bold;text-anchor:middle}
+.cell{fill:#FCFBF8;stroke:#061F44;stroke-width:1.5}
+.alt{fill:#DCE6F5;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Structure d'un tableau de données propre</text>
+
+<text x="105" y="84" class="c o s13">Type : date</text>
+<text x="245" y="84" class="c o s13">Type : texte</text>
+<text x="375" y="84" class="c o s13">Type : texte</text>
+<text x="530" y="84" class="c o s13">Type : nombre</text>
+<text x="695" y="84" class="c o s13">Type : texte (oui / non)</text>
+
+<rect x="40" y="94" width="130" height="40" class="hd"/><text x="105" y="119" class="ht">Date</text>
+<rect x="170" y="94" width="150" height="40" class="hd"/><text x="245" y="119" class="ht">Province</text>
+<rect x="320" y="94" width="110" height="40" class="hd"/><text x="375" y="119" class="ht">Site</text>
+<rect x="430" y="94" width="200" height="40" class="hd"/><text x="530" y="119" class="ht">Volume (milliers de barils)</text>
+<rect x="630" y="94" width="130" height="40" class="hd"/><text x="695" y="119" class="ht">Conforme</text>
+
+<rect x="40" y="134" width="130" height="38" class="cell"/><rect x="170" y="134" width="150" height="38" class="cell"/><rect x="320" y="134" width="110" height="38" class="cell"/><rect x="430" y="134" width="200" height="38" class="cell"/><rect x="630" y="134" width="130" height="38" class="cell"/>
+<rect x="40" y="172" width="130" height="38" class="alt"/><rect x="170" y="172" width="150" height="38" class="alt"/><rect x="320" y="172" width="110" height="38" class="alt"/><rect x="430" y="172" width="200" height="38" class="alt"/><rect x="630" y="172" width="130" height="38" class="alt"/>
+<rect x="40" y="210" width="130" height="38" class="cell"/><rect x="170" y="210" width="150" height="38" class="cell"/><rect x="320" y="210" width="110" height="38" class="cell"/><rect x="430" y="210" width="200" height="38" class="cell"/><rect x="630" y="210" width="130" height="38" class="cell"/>
+<rect x="40" y="248" width="130" height="38" class="alt"/><rect x="170" y="248" width="150" height="38" class="alt"/><rect x="320" y="248" width="110" height="38" class="alt"/><rect x="430" y="248" width="200" height="38" class="alt"/><rect x="630" y="248" width="130" height="38" class="alt"/>
+
+<g class="c">
+<text x="105" y="158">2026-01-31</text><text x="245" y="158">Province A</text><text x="375" y="158">Site 1</text><text x="530" y="158">125,5</text><text x="695" y="158">oui</text>
+<text x="105" y="196">2026-01-31</text><text x="245" y="196">Province B</text><text x="375" y="196">Site 2</text><text x="530" y="196">80,0</text><text x="695" y="196">non</text>
+<text x="105" y="234">2026-02-28</text><text x="245" y="234">Province A</text><text x="375" y="234">Site 1</text><text x="530" y="234">131,2</text><text x="695" y="234">oui</text>
+<text x="105" y="272">2026-02-28</text><text x="245" y="272">Province B</text><text x="375" y="272">Site 2</text><text x="530" y="272">78,4</text><text x="695" y="272">oui</text>
+</g>
+
+<rect x="38" y="172" width="724" height="40" fill="none" stroke="#F28C28" stroke-width="4" rx="3"/>
+<rect x="428" y="92" width="204" height="196" fill="none" stroke="#061F44" stroke-width="3" stroke-dasharray="9 5" rx="3"/>
+
+<rect x="40" y="318" width="236" height="84" rx="8" fill="#FDEBD3" stroke="#F28C28" stroke-width="3"/>
+<text x="158" y="344" class="c b">Une ligne = une observation</text>
+<text x="158" y="364" class="c s13">ici, un site pour un mois</text>
+<text x="158" y="382" class="c s13">(encadré orange)</text>
+<rect x="282" y="318" width="236" height="84" rx="8" class="cell" stroke-dasharray="9 5" style="stroke-width:3"/>
+<text x="400" y="344" class="c b">Une colonne = une variable</text>
+<text x="400" y="364" class="c s13">un seul type par colonne,</text>
+<text x="400" y="382" class="c s13">unité dans l'en-tête (pointillés)</text>
+<rect x="524" y="318" width="236" height="84" rx="8" class="cell"/>
+<text x="642" y="344" class="c b">Une seule information</text>
+<text x="642" y="362" class="c b">par cellule</text>
+<text x="642" y="384" class="c s13">une ligne d'en-têtes, au début</text>
+
+<text x="400" y="432" class="c b">À éviter : cellules fusionnées, totaux au milieu des données, couleurs porteuses de sens.</text>
+<text x="400" y="458" class="c s13">Exemple : valeurs fictives, conçues pour la formation.</text>
+</svg>

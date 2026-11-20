@@ -1,1386 +1,1410 @@
 {
-  "profile": "min-stockage",
-  "modules": [
+ "profile": "min-stockage",
+ "modules": [
+  {
+   "id": "m1",
+   "title": "Types de réservoirs et dépôts pétroliers",
+   "theme": "Réservoirs et dépôts",
+   "minutes": 10,
+   "body": "Un **dépôt pétrolier** regroupe des réservoirs (bacs), des pompes, des tuyauteries, des postes de chargement et de déchargement, des moyens de lutte contre l'incendie et une cuvette de rétention. Les règles d'implantation et d'exploitation des dépôts et entrepôts sont fixées par voie réglementaire (article 145 de la loi n° 002/2019).\n\n**Les grandes familles de réservoirs**\n- **Toit fixe** (souvent conique) : le plus simple et le moins coûteux. Au-dessus du liquide subsiste un ciel gazeux, qui « respire » avec les variations de niveau et de température. Il convient aux produits peu volatils comme le gazole ou le fioul ; une soupape de pression et de dépression protège la robe et le toit.\n- **Toit flottant externe** : le toit repose sur le liquide et suit son niveau, ce qui supprime presque le ciel gazeux. C'est la solution classique pour le brut et l'essence, car elle limite les pertes par évaporation et le risque d'atmosphère inflammable. Le joint périphérique du toit est un point sensible (feu d'anneau, pertes) et le drainage des eaux de pluie doit rester libre.\n- **Toit flottant interne** : un écran flottant sous un toit fixe, qui protège de la pluie et réduit encore les émissions.\n- **Sphères et cigares sous pression** : pour le propane et le butane (GPL) stockés liquéfiés à température ambiante ; les gaz réfrigérés (GNL) exigent des réservoirs cryogéniques.\n\n**Normes de référence.** La conception des bacs soudés à pression atmosphérique suit en pratique la norme API 650 ; leur inspection et leur réparation suivent l'API 653. Ces normes ne sont pas des textes gabonais : elles s'appliquent par l'arrêté d'autorisation, le cahier des charges ou l'exigence du ministère.\n\n**Rétention et distances.** La **cuvette de rétention** doit contenir le produit en cas de fuite ou de ruine d'un bac. Règle courante : une capacité au moins égale à celle du plus grand réservoir de la cuvette, avec des distances de sécurité entre bacs ; le texte applicable précise ces valeurs et doit être confirmé avant tout contrôle. Le sol de la cuvette est étanche, et le drainage des eaux pluviales est fermé par une vanne normalement fermée, ouverte seulement après contrôle de l'absence d'hydrocarbures.\n\n**Classement des produits par danger.** Le **point d'éclair** est la température minimale à laquelle les vapeurs s'enflamment au contact d'une flamme. L'essence a un point d'éclair très inférieur à 0 °C : sous le climat tropical, son ciel gazeux est inflammable en permanence. Le gazole (point d'éclair minimal usuel de 55 °C) et le kérosène Jet A-1 (38 °C minimum) sont moins dangereux au repos, mais des vapeurs apparaissent s'ils sont chauffés ou pulvérisés.\n\n**Corrosion et inspection.** Le fond des bacs est la zone la plus critique : l'eau libre qui s'accumule au fond provoque de la corrosion et dégrade la qualité du produit. D'où la **purge régulière de l'eau**, la protection cathodique ou les revêtements, et l'inspection interne périodique. *Exemple chiffré (hypothèse) :* épaisseur du fond 4 mm, minimale admissible 2,5 mm, corrosion 0,2 mm par an : il reste (4 − 2,5)/0,2 = 7,5 ans, et l'on inspecte bien avant.\n\n**Sur le terrain.** Un agent du ministère qui visite un dépôt contrôle : l'état de la cuvette (vannes de drainage, végétation, fissures), les purges d'eau, les registres d'inspection, la mise à la terre, les soupapes, la signalisation et la validité de l'autorisation. Toute extension (nouveau bac) exige une mise à jour de l'étude de dangers, qui n'est réalisée que par des cabinets agréés (article 172).",
+   "keyPoints": [
+    "Toit fixe pour les produits peu volatils ; toit flottant pour le brut et l'essence afin de limiter les pertes et le ciel gazeux inflammable.",
+    "GPL : sphères ou cigares sous pression ; GNL : stockage réfrigéré.",
+    "La cuvette de rétention doit contenir au moins le plus grand réservoir (règle usuelle, texte applicable à confirmer).",
+    "API 650 (conception) et API 653 (inspection) sont des normes de référence, rendues applicables par l'autorisation.",
+    "Purge de l'eau de fond et inspection du plancher : prévention de la corrosion, première cause de défaillance."
+   ],
+   "img": "svg/min-reservoir-toit-flottant.svg",
+   "imgAlt": "Deux bacs de stockage dans une cuvette de rétention délimitée par des murs. À gauche, un bac à toit fixe avec une soupape de pression et de dépression au sommet, un espace vapeur au-dessus du produit et une couche d'eau de fond. À droite, un bac à toit flottant posé sur le produit, avec un joint d'étanchéité. Entrée et sortie du produit sur le côté, robinet de purge d'eau en bas."
+  },
+  {
+   "id": "m2",
+   "title": "Pipelines : conception, surveillance et fuites",
+   "theme": "Pipelines : conception, surveillance et fuites",
+   "minutes": 10,
+   "body": "Un **pipeline** (canalisation de transport) relie un champ, un terminal, une raffinerie ou un dépôt. Pour les liquides (brut, produits raffinés), la conception suit en pratique la norme ASME B31.4, avec des tubes conformes à l'API 5L ; pour le gaz, l'ASME B31.8. L'exploitant d'infrastructures de transport garantit aux tiers la liberté d'accès, la transparence tarifaire, l'égalité de traitement et la non-discrimination (article 143 de la loi n° 002/2019).\n\n**Conception.** On définit la **pression maximale de service** (PMS) d'après le diamètre, l'épaisseur, la nuance d'acier et la classe d'emplacement. Avant la mise en service, une **épreuve hydrostatique** soumet la ligne remplie d'eau à une pression supérieure à la PMS (au moins 1,25 fois selon l'ASME B31.4) pendant une durée fixée, pour vérifier résistance et étanchéité. Des **vannes de sectionnement** découpent la ligne en tronçons isolables.\n\n**Corrosion et protection.** La paroi externe est protégée par un **revêtement** complété par une **protection cathodique** (courant imposé ou anodes sacrificielles). La corrosion interne est limitée par le contrôle de l'eau, des gaz acides et des bactéries, et par des inhibiteurs. Des **racleurs** passent régulièrement : les racleurs de nettoyage évacuent les dépôts, les racleurs instrumentés détectent amincissements, fissures et déformations de l'intérieur sans arrêter l'écoulement.\n\n**Surveillance.** Un système de supervision et d'acquisition de données (SCADA) suit pression, débit, température et état des vannes. La **détection de fuites** combine : bilan des volumes entre l'entrée et la sortie, analyse des ondes de pression négatives, suivi de la pression, patrouilles et surveillance aérienne. Une petite fuite (par exemple 0,3 % du débit) est difficile à distinguer de l'incertitude des compteurs et des variations de stock dans la ligne ; la surveillance repose donc sur plusieurs méthodes.\n\n**Coup de bélier.** La fermeture rapide d'une vanne ou l'arrêt brutal d'une pompe provoque une surpression transitoire qui peut rompre une canalisation. On fixe des temps de fermeture minimaux et des dispositifs de protection (soupapes de décharge).\n\n**Emprise et tiers.** La première cause d'accident est l'agression par des tiers : engins de terrassement, piquages frauduleux. La **servitude** (emprise) interdit constructions et travaux profonds, et le tracé est balisé et patrouillé.\n\n**Conduite à tenir en cas de fuite présumée.** Arrêter le pompage, isoler le tronçon par les vannes, déclencher le plan d'urgence, alerter les autorités (information sans délai, article 241) et contenir la pollution. *Exemple (hypothèse) :* une ligne perd 40 bars en quelques minutes alors que le débit de sortie est inférieur de 8 % à celui d'entrée : on stoppe et on isole d'abord, on cherche ensuite.\n\n**Intégrité.** Lorsqu'une inspection montre une perte de paroi importante, on réduit la pression de service le temps d'évaluer le défaut, puis on répare (manchon, remplacement de tronçon) selon les critères de la norme. Le ministère peut demander les rapports d'inspection, les registres de réparations et les essais d'épreuve.",
+   "keyPoints": [
+    "ASME B31.4 (liquides) et ASME B31.8 (gaz) encadrent la conception ; tubes selon API 5L.",
+    "Revêtement et protection cathodique contre la corrosion externe ; racleurs instrumentés pour l'état de la paroi.",
+    "Détecter une fuite : bilan des volumes, ondes de pression, SCADA, patrouilles : aucune méthode seule ne suffit.",
+    "Coup de bélier : fixer des temps minimaux de fermeture des vannes.",
+    "Article 143 : accès des tiers, transparence tarifaire et non-discrimination."
+   ],
+   "img": "photo/pipeline-welding.jpg",
+   "imgAlt": "Photographie de soudeurs assemblant des tronçons de canalisation sur un chantier de pipeline."
+  },
+  {
+   "id": "m3",
+   "title": "Transport maritime et cabotage",
+   "theme": "Transport maritime et cabotage",
+   "minutes": 10,
+   "body": "Au Gabon, l'essentiel du brut s'exporte par la mer, et les produits raffinés ou importés sont répartis le long de la côte. Le transport maritime d'hydrocarbures obéit à la fois au droit maritime, aux conventions internationales et à la loi n° 002/2019, qui range le transport parmi les activités aval soumises à autorisation (articles 130 et 135).\n\n**Vocabulaire.** Le **cabotage** est le transport entre deux ports d'un même pays. Le **connaissement** est le document de transport : reçu de la marchandise, preuve du contrat et titre représentatif de la cargaison. La **charte-partie** est le contrat d'affrètement. Le **temps de planche** est le délai accordé pour charger ou décharger ; au-delà, l'affréteur paie des **surestaries**. Les règles propres au cabotage national (pavillon, réservation) sont à confirmer dans les textes maritimes gabonais.\n\n**Les navires.** On distingue, par taille croissante : les caboteurs et petits pétroliers de produits (quelques milliers de m³), les pétroliers de produits de taille moyenne (MR), les Aframax, les Suezmax et les VLCC (très gros transporteurs de brut). Le choix du navire dépend du **tirant d'eau** des ports, de la taille des lots acceptés par les dépôts de destination et du coût du fret.\n\n**Sécurité et pollution.** La convention SOLAS traite de la sécurité de la navigation ; la convention **MARPOL, annexe I**, de la prévention de la pollution par les hydrocarbures : double coque pour les pétroliers neufs, séparation des ballasts, interdiction de rejet d'eaux huileuses au-delà de limites strictes. Les grands pétroliers disposent d'un système de gaz inerte qui maintient l'atmosphère des citernes à moins de 8 % d'oxygène, ce qui exclut l'explosion. La convention OPRC de 1990 impose des plans d'urgence, et la responsabilité civile du propriétaire est organisée par la convention CLC. Il faut vérifier lesquelles l'État gabonais a ratifiées.\n\n**Acceptation d'un navire.** Avant l'accostage, le terminal ou l'affréteur procède à une **inspection préalable du navire** (état, équipage, certificats, historique) selon des questionnaires du secteur.\n\n**Contrôle des quantités.** À l'arrivée, on compare la quantité du connaissement avec celle mesurée à terre, à 15 °C et nette d'eau. *Exemple (hypothèse) :* 11 950 m³ au connaissement, 11 880 m³ reçus : 70 m³ d'écart, soit environ 0,6 %. On ne règle pas l'écart en modifiant les stocks : on établit contradictoirement les mesures, on émet des réserves (lettre de protestation) et on compare avec le **facteur d'expérience du navire**, rapport des quantités mesurées à terre et à bord sur de nombreuses opérations.\n\n**Planification.** *Exemple (hypothèse) :* dépôt de 30 000 m³ utiles contenant 18 000 m³, consommation de 600 m³ par jour, cargaison de 15 000 m³ attendue dans 4 jours. Le stock sera de 18 000 − 2 400 = 15 600 m³ et la place libre de 14 400 m³, inférieure à la cargaison : débordement de 600 m³, il faut donc décaler, fractionner ou réorienter.\n\n**Pollution accidentelle.** Un rejet à proximité d'un terminal déclenche l'alerte, le plan d'urgence, le relevé de preuves (photos, échantillons) et l'application du principe pollueur-payeur. L'exploitant informe sans délai l'administration (article 241).",
+   "keyPoints": [
+    "Cabotage : transport entre ports d'un même pays ; règles propres à confirmer dans les textes maritimes.",
+    "Connaissement : reçu, preuve du contrat et titre de la cargaison ; surestaries après dépassement du temps de planche.",
+    "MARPOL annexe I : prévention de la pollution par hydrocarbures ; gaz inerte contre l'explosion des citernes.",
+    "Inspection préalable des navires avant accostage ; écarts de quantité réglés par mesures contradictoires.",
+    "Adapter la taille du lot au tirant d'eau des ports et à la place libre des dépôts."
+   ]
+  },
+  {
+   "id": "m4",
+   "title": "Terminaux et bouées de chargement",
+   "theme": "Terminaux et bouées de chargement",
+   "minutes": 10,
+   "body": "Un **terminal pétrolier** est le point où les hydrocarbures passent de la terre au navire (ou l'inverse). Il se compose de réservoirs, de pompes, d'un système de comptage, de lignes de transfert et d'un ou plusieurs postes d'accostage. Au Gabon, le terminal de Cap Lopez, près de Port-Gentil, est le principal terminal d'exportation de brut ; d'autres installations côtières et en mer complètent le dispositif.\n\n**Types de postes de chargement.**\n- **Poste à quai ou appontement** : le navire accoste et se raccorde par des **bras de chargement** articulés, équipés d'un système de déconnexion d'urgence.\n- **Bouée à ancrage unique** (SPM, ou CALM pour les bouées à chaînes) : le pétrolier s'amarre en mer et pivote autour de la bouée selon le vent et le courant ; le brut arrive par des flexibles sous-marins puis des flexibles flottants. Elle évite de construire un appontement en eau profonde.\n- **Unité flottante de stockage et de déchargement (FSO)** : navire ancré en permanence qui stocke le brut avant de le transférer aux pétroliers navettes.\n\n**Avant le transfert.** On remplit la **liste de contrôle de sécurité navire-terre**, signée des deux parties : communications, moyens de lutte contre l'incendie, arrêt d'urgence, plans de rejet, interdiction de fumer, état des amarres et des flexibles. Les conditions de **météo et de houle** sont comparées aux limites fixées.\n\n**Pendant le transfert.** Le chargement démarre à **débit réduit** pour vérifier l'étanchéité, limiter l'électricité statique et éviter les surpressions avant que les lignes soient remplies ; le débit monte ensuite jusqu'à la valeur nominale. Une surveillance continue compare le volume chargé côté terre et côté navire. Un **arrêt d'urgence** ferme les vannes avec un temps de fermeture calculé pour éviter le coup de bélier.\n\n**Cas de fuite ou de dégradation.** Une chute de pression avec écart de volume entre terre et navire signale une fuite possible de flexible : arrêt du chargement, alerte, plan d'urgence, localisation (plongeurs, véhicule sous-marin, surveillance aérienne). Si la houle dépasse les critères préétablis, on suspend le transfert et, si nécessaire, on se déconnecte.\n\n**Comptage et contrôle.** Le mesurage et le comptage de la production sont une prérogative exclusive de l'État, qui peut la déléguer (article 246 de la loi n° 002/2019) ; le comptage dynamique sert pour la production fiscale (article 252). Les agents du ministère s'intéressent donc à l'étalonnage des compteurs, aux scellés et aux procédures de rapprochement entre quantités à terre et à bord.\n\n**Sur le terrain.** *Exemple (hypothèse) :* le navire se présente sans que son inspection préalable soit complétée. L'exploitant invoque les surestaries. La réponse est claire : la sécurité prime sur le calendrier commercial, et le prescrit d'hygiène, de santé, de sécurité et d'environnement (article 171) s'applique ; l'accostage attend l'acceptation du navire.",
+   "keyPoints": [
+    "Trois grands postes : appontement avec bras de chargement, bouée à ancrage unique (SPM/CALM), FSO.",
+    "Liste de contrôle navire-terre signée avant tout transfert ; limites de météo et de houle préétablies.",
+    "Démarrer à débit réduit : étanchéité, électricité statique, surpressions.",
+    "Arrêt d'urgence avec temps de fermeture calculé contre le coup de bélier.",
+    "Article 246 : mesurage et comptage de la production, prérogative exclusive de l'État."
+   ]
+  },
+  {
+   "id": "m5",
+   "title": "SGEPP et stocks de sécurité",
+   "theme": "Stocks de sécurité et SGEPP",
+   "minutes": 9,
+   "body": "Un pays qui importe ou raffine des produits pétroliers doit se protéger d'une rupture d'approvisionnement : retard de navire, panne de raffinerie, tension sur le marché mondial. C'est le rôle des **stocks**, dont la loi n° 002/2019 organise deux niveaux.\n\n**Cadre légal.** L'article 147 permet à l'État de requérir la constitution d'un **stock stratégique ou de sécurité**. L'article 149 oblige le distributeur à détenir en permanence un **stock commercial minimum**, fixé par voie réglementaire. L'article 148 impose le respect des spécifications en vigueur.\n\n**La SGEPP.** La Société gabonaise d'entreposage des produits pétroliers (SGEPP) figure parmi les sociétés sous tutelle du ministère des Hydrocarbures. Elle est liée à l'entreposage et à la gestion des dépôts de produits pétroliers. Le détail de ses missions, de son statut et de ses dépôts est à confirmer auprès du ministère avant toute citation précise.\n\n**Trois notions à distinguer.**\n- Le **stock d'exploitation** (ou tampon) absorbe le rythme des réceptions et des livraisons.\n- Le **stock commercial minimum** est celui que le distributeur ne descend jamais en dessous.\n- Le **stock de sécurité** (stratégique) est une réserve mobilisable sur décision de l'autorité en cas de crise.\n\n**Couverture en jours.** Elle se calcule en divisant le **stock utilisable** par la consommation moyenne journalière. Le stock utilisable est inférieur au stock physique : il faut retrancher le **fond de bac** non pompable. *Exemple (hypothèse) :* 24 000 m³ de gazole en bac, fond non pompable de 2 000 m³, consommation de 800 m³ par jour : (24 000 − 2 000)/800 = 27,5 jours, et non 30. Des organisations internationales retiennent souvent 90 jours d'importations nettes comme repère ; l'objectif d'un pays dépend de ses textes.\n\n*Autre exemple (hypothèse) :* consommation de 2 000 m³ par jour, objectif de 30 jours de stock de sécurité en plus de 10 jours de stock commercial, capacité utile des dépôts de 45 000 m³. Il faut 40 × 2 000 = 80 000 m³ ; il manque 35 000 m³ de capacité.\n\n**Qualité et rotation.** Un stock dormant vieillit : l'essence s'oxyde (gommes) et perd ses fractions légères, le kérosène peut se charger en eau. On pratique donc une **rotation** : les produits les plus anciens sortent d'abord et sont remplacés, pour rester conformes (article 148).\n\n**Mobilisation en crise.** Face à un retard de cargaison, la décision de libérer une partie du stock de sécurité revient à l'autorité compétente, pour une durée limitée, avec un **plan de reconstitution**. Le stock de sécurité ne sert pas aux ventes courantes.\n\n**Contrôle.** Les agents assermentés (articles 19 et 20) dressent des procès-verbaux. Un **inventaire contradictoire** (jaugeages simultanés, bacs à l'arrêt, signatures des parties) fonde la constatation d'un manque. Un distributeur sous le minimum est mis en demeure, puis sanctionné selon les textes, jamais sans base écrite.",
+   "keyPoints": [
+    "Article 147 : stock stratégique ou de sécurité requis par l'État ; article 149 : stock commercial minimum du distributeur.",
+    "Couverture en jours = stock utilisable (hors fond de bac) / consommation journalière.",
+    "Stock d'exploitation, stock commercial et stock de sécurité sont trois notions distinctes.",
+    "Rotation des stocks pour garder les spécifications ; reconstitution après toute mobilisation.",
+    "SGEPP : société sous tutelle liée à l'entreposage ; missions précises à confirmer."
+   ],
+   "img": "photo/storage-tanks.jpg",
+   "imgAlt": "Photographie d'un parc de grands réservoirs cylindriques de stockage de produits pétroliers."
+  },
+  {
+   "id": "m6",
+   "title": "Mesure, jaugeage, pertes et écarts",
+   "theme": "Mesure, jaugeage, pertes et écarts",
+   "minutes": 10,
+   "body": "Dans le négoce des hydrocarbures, **quelques dixièmes de pour cent** de volume représentent des sommes considérables. La mesure rigoureuse est donc une affaire de finances publiques autant que de technique : le mesurage et le comptage de la production sont une prérogative de l'État (article 246 de la loi n° 002/2019), et le contrôle technique fait partie des contrôles de l'administration (article 243).\n\n**Jaugeage d'un bac.** On mesure la **hauteur** de liquide (ruban lesté ou sonde manuelle, ou jauge automatique à radar ou à servomoteur), puis on la convertit en volume grâce au **barème de jaugeage** (table de calibrage) du bac. On mesure aussi la **température** (thermomètre à plusieurs niveaux) et la **masse volumique** (densimètre). Pour un bac à toit flottant, on corrige le poids du toit. L'eau libre au fond se détecte avec une pâte indicatrice.\n\n**Du volume observé au volume net.**\n- **Volume brut observé** : lu au bac, à la température réelle.\n- **Volume brut standard** : corrigé à la température de référence de 15 °C par un coefficient de dilatation (tables normalisées de l'API MPMS).\n- **Volume net standard** : volume brut standard retranché de l'eau et des sédiments.\n*Exemple simplifié (hypothèse) :* 10 000 m³ de gazole à 35 °C, coefficient moyen de 0,0008 par °C : à 15 °C, le volume vaut 10 000 × (1 − 0,0008 × 20) = 9 840 m³. Un volume non corrigé surévalue la quantité.\n\n**Comptage en ligne.** On utilise des débitmètres (turbine, volumétrique, à effet Coriolis) qui doivent être **étalonnés** périodiquement avec un étalon (prouveur) ; les résultats se rapprochent du jaugeage des bacs.\n\n**Bilan et écarts.** Stock théorique = stock initial + réceptions − livraisons. *Exemple (hypothèse) :* 12 000 + 8 000 − 7 900 = 12 100 m³ ; si le stock final mesuré est de 12 050 m³, la perte apparente est de 50 m³ (environ 0,6 % des livraisons).\n\n**Origines des écarts.** On distingue :\n- les **pertes réelles** : évaporation (« respiration » des bacs à toit fixe, que l'on réduit par une peinture réfléchissante, un toit flottant et des soupapes en bon état), fuites, vols, ruissellements ;\n- les **erreurs de mesure** : barèmes erronés, instruments non étalonnés, température mal relevée, eau non déduite ;\n- les **erreurs de comptabilité** : mouvements non enregistrés, mauvaises unités.\n\n**Biais ou perte aléatoire ?** Un écart qui reste du même côté pendant des mois (par exemple 0,5 % de moins à terre qu'à bord, constamment) signale un **biais systématique** : étalonnage, barème ou méthode de température. Le **facteur d'expérience du navire** permet de le mettre en évidence. On corrige la cause avant de chercher un coupable.\n\n**Sur le terrain.** L'inspecteur ne signe jamais un bilan sans les relevés bruts (hauteurs, températures, densités) et exige les certificats d'étalonnage. Aucune intervention sur les compteurs fiscaux n'est possible sans le contrôle de l'administration.",
+   "keyPoints": [
+    "Jaugeage : hauteur, température, masse volumique, barème du bac, correction du toit flottant.",
+    "Volume brut observé, brut standard à 15 °C, net standard sans eau ni sédiments.",
+    "Bilan : stock initial + réceptions − livraisons = stock théorique ; comparer au stock mesuré.",
+    "Pertes réelles, erreurs de mesure, erreurs de comptabilité : trois origines à distinguer.",
+    "Un écart toujours du même côté révèle un biais systématique, pas un hasard."
+   ]
+  },
+  {
+   "id": "m7",
+   "title": "Sécurité, pollution, autorisation et contrôle des installations",
+   "theme": "Sécurité, pollution, autorisation et contrôle",
+   "minutes": 12,
+   "body": "**Autorisation.** Les activités aval, dont le transport, l'entreposage, le stockage, l'exportation et la distribution (liste de l'article 135), exigent une autorisation d'exploitation délivrée par l'autorité compétente ; la transformation (raffinage) exige un décret. Ces autorisations ne sont délivrées qu'à des personnes physiques ou morales de droit gabonais justifiant de compétences techniques et de capacités financières (article 131). L'autorisation est **incessible et non transmissible** (article 134) et une autorisation délivrée en violation de la loi est **nulle** (article 136). À la fin de l'exploitation, le titulaire remet le site en état (article 137).\n\n**Prescriptions et études de dangers.** Toute personne exerçant une activité d'hydrocarbures respecte les prescriptions d'hygiène, de santé, de sécurité, de sûreté et d'environnement fixées par voie réglementaire (article 171). Seuls des cabinets agréés réalisent les **études de dangers**, validées par les services compétents et révisées périodiquement (article 172). Le cadre général de l'environnement est la loi n° 007/2014 du 1er août 2014 relative à la protection de l'environnement.\n\n**Incendie.** Le feu d'hydrocarbure liquide est un feu de **classe B** : on l'éteint avec de la **mousse** (qui étouffe et empêche le retour des vapeurs) ou de la poudre ; l'eau en jet plein est inadaptée car elle étale le liquide enflammé. Scénarios usuels : feu de cuvette, feu d'anneau sur toit flottant, feu de bac. La tactique repose sur le **refroidissement des bacs voisins** et l'application de mousse sur la nappe. Les moyens à contrôler : réseau d'eau d'incendie, réserve d'eau, réserve d'émulseur, pompes de secours, détecteurs de gaz et de flamme, exercices périodiques, plan d'opération interne. Les zones où une atmosphère explosive peut apparaître sont classées (zones 0, 1 et 2) et le matériel électrique y est adapté.\n\n**Pollution.** Les moyens de lutte : barrages flottants, écrémeurs, absorbants, dispersants (utilisés seulement avec autorisation). Les plans d'urgence sont organisés en trois **niveaux** : le niveau 1 correspond à un déversement mineur traité par les moyens de l'exploitant ; les niveaux 2 et 3 mobilisent l'aide régionale ou nationale puis internationale. Le titulaire répond de tous les dommages causés par son activité (article 179), souscrit des assurances (article 180) et informe **sans délai** l'administration de toute perturbation, de tout incident ou accident (article 241), même si l'événement paraît mineur ou contenu en cuvette.\n\n**Contrôle et sanctions.** Les agents du ministère contrôlent (article 18) ; ceux qui ont prêté serment sont officiers de police judiciaire spéciaux et dressent des procès-verbaux (articles 19 et 20). Exercer une activité aval sans autorisation expose, après mise en demeure, à une pénalité de 1 000 000 à 30 000 000 FCFA (article 284). En cas de récidive, les pénalités sont doublées et l'autorisation peut être retirée (article 265).\n\n**Sur le terrain.** *Exemple (hypothèse) :* un inspecteur trouve un dépôt exploité sans autorisation : procès-verbal, mise en demeure, puis pénalité. Il ne ferme pas de sa seule initiative sans procédure.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+   "keyPoints": [
+    "Autorisation aval : droit gabonais, compétences et capacités financières (art. 131), incessible (art. 134), nulle si illégale (art. 136).",
+    "Études de dangers : cabinets agréés uniquement (art. 172) ; prescriptions HSSE (art. 171).",
+    "Feu d'hydrocarbure : classe B, mousse et refroidissement des bacs voisins.",
+    "Information sans délai de tout incident (art. 241) ; responsabilité de tous les dommages (art. 179).",
+    "Sans autorisation : procès-verbal, mise en demeure, puis 1 à 30 millions FCFA (art. 284) ; récidive : doublement (art. 265)."
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "min-stockage-001",
+   "theme": "Réservoirs et dépôts",
+   "level": 1,
+   "q": "Sur la figure, les deux bacs contiennent le même produit volatil. Lequel limite le mieux les pertes par évaporation, et pourquoi ?",
+   "choices": [
+    "Le bac à toit fixe, car son espace vapeur est ventilé à l'air libre",
+    "Le bac à toit fixe, car sa soupape supprime tout échange de vapeur",
+    "Aucun des deux, car ils sont dans la même cuvette de rétention",
+    "Le bac à toit flottant, car son toit repose sur le liquide et supprime presque l'espace vapeur"
+   ],
+   "answer": 3,
+   "explain": "Sur la figure, le toit flottant suit le niveau et ne laisse presque pas d'espace vapeur : l'évaporation et l'atmosphère inflammable sont réduites. Le toit fixe garde un espace vapeur qui respire à chaque variation de niveau ou de température ; la soupape protège la structure mais ne supprime pas les échanges ; la cuvette sert à la rétention, pas à l'évaporation.",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/min-reservoir-toit-flottant.svg",
+   "imgAlt": "Deux bacs de stockage dans une cuvette de rétention délimitée par des murs. À gauche, un bac à toit fixe avec une soupape de pression et de dépression au sommet, un espace vapeur au-dessus du produit et une couche d'eau de fond. À droite, un bac à toit flottant posé sur le produit, avec un joint d'étanchéité. Entrée et sortie du produit sur le côté, robinet de purge d'eau en bas."
+  },
+  {
+   "id": "min-stockage-002",
+   "theme": "Réservoirs et dépôts",
+   "level": 1,
+   "q": "Quel type de stockage convient au propane ou au butane (GPL) conservé liquéfié à température ambiante ?",
+   "choices": [
+    "Les sphères ou cigares sous pression",
+    "Les bacs à toit flottant externe à pression atmosphérique",
+    "Les bacs à toit fixe munis d'une soupape de dépression",
+    "Les cuvettes enterrées à fond ouvert et bétonnées"
+   ],
+   "answer": 0,
+   "explain": "Le GPL n'est liquide à température ambiante que sous pression : on le stocke dans des sphères ou des cigares sous pression. Les bacs atmosphériques, flottants ou fixes, ne tiennent pas la pression, et une cuvette ouverte laisserait le gaz s'échapper.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-003",
+   "theme": "Réservoirs et dépôts",
+   "level": 1,
+   "q": "Sur la figure, un mur entoure les deux bacs et délimite la cuvette de rétention. Quel est son rôle principal ?",
+   "choices": [
+    "Contenir le produit en cas de fuite d'un bac",
+    "Augmenter la capacité de stockage utile du dépôt",
+    "Réduire l'évaporation du produit dans les bacs voisins",
+    "Servir de réserve d'eau pour la lutte contre l'incendie"
+   ],
+   "answer": 0,
+   "explain": "La cuvette limite l'étalement du produit et protège les sols, les cours d'eau et les installations voisines. Elle n'accroît pas la capacité du dépôt, ne réduit pas l'évaporation des bacs et ne doit pas servir de réserve d'eau (le mélange eau et hydrocarbures est un danger).",
+   "seconds": 45,
+   "status": "draft",
+   "img": "svg/min-reservoir-toit-flottant.svg",
+   "imgAlt": "Deux bacs de stockage dans une cuvette de rétention délimitée par des murs. À gauche, un bac à toit fixe avec une soupape de pression et de dépression au sommet, un espace vapeur au-dessus du produit et une couche d'eau de fond. À droite, un bac à toit flottant posé sur le produit, avec un joint d'étanchéité. Entrée et sortie du produit sur le côté, robinet de purge d'eau en bas."
+  },
+  {
+   "id": "min-stockage-004",
+   "theme": "Réservoirs et dépôts",
+   "level": 1,
+   "q": "Quelle norme sert couramment de référence pour la conception des bacs soudés de stockage à pression atmosphérique ?",
+   "choices": [
+    "L'ASME B31.4, qui traite les canalisations de liquides",
+    "L'API 5L, qui définit les tubes en acier de ligne",
+    "L'API 650, dont l'inspection relève de l'API 653",
+    "La convention MARPOL, annexe I, pour les navires"
+   ],
+   "answer": 2,
+   "explain": "L'API 650 traite de la conception des réservoirs ; l'API 653 de leur inspection et de leur réparation. L'ASME B31.4 vise les pipelines, l'API 5L les tubes et MARPOL les navires.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-005",
+   "theme": "Réservoirs et dépôts",
+   "level": 2,
+   "q": "Sur la figure, une couche d'eau de fond se trouve sous le produit, avec un robinet de purge. Que risque-t-on si l'on ne purge jamais cette eau dans un bac de gazole ?",
+   "choices": [
+    "Une hausse de la pression de vapeur qui ferait sauter les soupapes de sécurité du bac",
+    "Un risque de gel du produit dans les lignes de livraison pendant la saison fraîche",
+    "Une corrosion du fond et une contamination du produit livré",
+    "Une dilatation du toit qui bloquerait l'échelle d'accès au sommet du bac"
+   ],
+   "answer": 2,
+   "explain": "L'eau libre qui s'accumule au fond corrode la tôle et se retrouve dans les produits livrés (contamination, bactéries) : d'où le robinet de purge de la figure. La pression de vapeur, le gel ou la dilatation du toit n'ont aucun lien avec l'eau de fond sous un climat équatorial.",
+   "seconds": 60,
+   "status": "draft",
+   "img": "svg/min-reservoir-toit-flottant.svg",
+   "imgAlt": "Deux bacs de stockage dans une cuvette de rétention délimitée par des murs. À gauche, un bac à toit fixe avec une soupape de pression et de dépression au sommet, un espace vapeur au-dessus du produit et une couche d'eau de fond. À droite, un bac à toit flottant posé sur le produit, avec un joint d'étanchéité. Entrée et sortie du produit sur le côté, robinet de purge d'eau en bas."
+  },
+  {
+   "id": "min-stockage-006",
+   "theme": "Réservoirs et dépôts",
+   "level": 2,
+   "q": "La cuvette de la figure abrite un bac de 10 000 m³ et un bac de 6 000 m³ (valeurs fictives). Selon la règle courante, quelle est la capacité minimale de rétention attendue ?",
+   "choices": [
+    "Environ 1 600 m³, soit 10 % du volume total des deux bacs",
+    "Au moins 10 000 m³, la capacité du plus grand réservoir",
+    "Environ 5 000 m³, la moitié du plus grand réservoir",
+    "Au moins 16 000 m³, la somme des deux bacs"
+   ],
+   "answer": 1,
+   "explain": "La règle usuelle est de retenir au moins le volume du plus grand réservoir de la cuvette : 10 000 m³ ici (le texte applicable précise le coefficient exact et doit être confirmé). 10 % du total ou la moitié d'un bac est insuffisant ; exiger la somme des bacs va au-delà de la règle usuelle, car un seul bac est supposé fuir à la fois.",
+   "seconds": 60,
+   "status": "draft",
+   "img": "svg/min-reservoir-toit-flottant.svg",
+   "imgAlt": "Deux bacs de stockage dans une cuvette de rétention délimitée par des murs. À gauche, un bac à toit fixe avec une soupape de pression et de dépression au sommet, un espace vapeur au-dessus du produit et une couche d'eau de fond. À droite, un bac à toit flottant posé sur le produit, avec un joint d'étanchéité. Entrée et sortie du produit sur le côté, robinet de purge d'eau en bas."
+  },
+  {
+   "id": "min-stockage-007",
+   "theme": "Réservoirs et dépôts",
+   "level": 2,
+   "q": "Sur la figure, le bac à toit fixe porte une soupape de pression et de dépression au sommet. Quel est son rôle pour un bac de gazole ?",
+   "choices": [
+    "Laisser le bac respirer sans déformer la robe ni le toit",
+    "Garder en permanence une surpression qui empêche l'entrée d'air dans l'espace vapeur",
+    "Accélérer l'évaporation et éviter la formation de dépôts au fond du bac",
+    "Remplacer la purge d'eau en cas de forte pluie sur le toit"
+   ],
+   "answer": 0,
+   "explain": "Lors du remplissage, de la vidange ou d'un changement de température, le volume de l'espace vapeur varie : la soupape protège la structure contre la surpression et l'écrasement par dépression. Une surpression permanente fatiguerait les soudures, l'évaporation est à limiter et la soupape ne remplace jamais la purge (robinet en bas de la figure).",
+   "seconds": 60,
+   "status": "draft",
+   "img": "svg/min-reservoir-toit-flottant.svg",
+   "imgAlt": "Deux bacs de stockage dans une cuvette de rétention délimitée par des murs. À gauche, un bac à toit fixe avec une soupape de pression et de dépression au sommet, un espace vapeur au-dessus du produit et une couche d'eau de fond. À droite, un bac à toit flottant posé sur le produit, avec un joint d'étanchéité. Entrée et sortie du produit sur le côté, robinet de purge d'eau en bas."
+  },
+  {
+   "id": "min-stockage-008",
+   "theme": "Réservoirs et dépôts",
+   "level": 2,
+   "q": "Sur le triangle du feu, les vapeurs jouent le rôle de combustible et une étincelle peut fournir l'énergie d'activation. Pourquoi les précautions contre l'inflammation sont-elles plus strictes pour l'essence que pour le gazole, sous un climat à 30 °C ?",
+   "choices": [
+    "Parce que l'essence est plus dense que l'eau et coule au fond des cuvettes de rétention",
+    "Parce que le gazole n'est jamais inflammable, quelle que soit sa température ni son état",
+    "Parce que le point d'éclair du gazole est inférieur à celui de l'essence utilisée",
+    "Parce que son point d'éclair très bas rend son espace vapeur inflammable en permanence"
+   ],
+   "answer": 3,
+   "explain": "L'essence a un point d'éclair très inférieur à 0 °C : à 30 °C, ses vapeurs forment toujours un mélange inflammable, il ne manque que l'énergie d'activation. Le gazole (point d'éclair minimal usuel de 55 °C) ne dégage pas de vapeurs inflammables à température ambiante, mais il brûle s'il est chauffé ou pulvérisé. L'essence est plus légère que l'eau.",
+   "seconds": 70,
+   "status": "draft",
+   "img": "svg/fire-triangle.svg",
+   "imgAlt": "Triangle du feu : énergie d'activation (chaleur, étincelle, flamme), combustible (bois, gaz, pétrole) et comburant (oxygène de l'air, 21 %). Le feu exige les trois éléments réunis. Pour éteindre, on supprime un côté : couper l'alimentation en combustible, étouffer pour supprimer le comburant, ou refroidir pour supprimer la chaleur."
+  },
+  {
+   "id": "min-stockage-009",
+   "theme": "Réservoirs et dépôts",
+   "level": 3,
+   "q": "Hypothèse : le fond d'un bac mesure 4 mm, l'épaisseur minimale admissible est de 2,5 mm et la corrosion est de 0,2 mm par an. Combien d'années de marge théorique reste-t-il, à vitesse constante ?",
+   "choices": [
+    "20 ans",
+    "7,5 ans",
+    "12,5 ans",
+    "32,5 ans"
+   ],
+   "answer": 1,
+   "explain": "Marge = (épaisseur actuelle − minimale)/vitesse = (4 − 2,5)/0,2 = 7,5 ans. Diviser 4 par 0,2 donne 20 ans (on oublie le minimum) ; 2,5/0,2 donne 12,5 ans (on utilise le minimum au lieu de la marge) ; (4 + 2,5)/0,2 donne 32,5 ans (erreur de signe). En pratique, on inspecte bien avant d'atteindre cette limite.",
+   "seconds": 90,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-010",
+   "theme": "Réservoirs et dépôts",
+   "level": 3,
+   "q": "Un exploitant veut ajouter deux bacs dans la cuvette existante d'un dépôt autorisé et propose de commencer les travaux immédiatement. Que doit exiger le chef de service ?",
+   "choices": [
+    "Une étude de dangers mise à jour et une autorisation modifiée avant les travaux",
+    "Un simple courrier d'information à l'administration, envoyé à la fin du chantier",
+    "Pas de formalité, la cuvette existante garantissant déjà la rétention nécessaire",
+    "Le refus de toute extension, quel que soit le contenu précis du dossier déposé"
+   ],
+   "answer": 0,
+   "explain": "L'ajout de bacs modifie les risques (rétention, distances, incendie) : l'étude de dangers, réalisée seulement par un cabinet agréé (art. 172), doit être mise à jour, et l'implantation des dépôts relève de la réglementation (art. 145). Informer après coup est trop tard ; supposer la rétention suffisante est faux avec plus de volume ; un refus systématique ne repose sur aucun texte.",
+   "seconds": 100,
+   "status": "draft",
+   "refs": [
     {
-      "id": "m1",
-      "title": "Types de réservoirs et dépôts pétroliers",
-      "theme": "Réservoirs et dépôts",
-      "minutes": 10,
-      "body": "Un **dépôt pétrolier** regroupe des réservoirs (bacs), des pompes, des tuyauteries, des postes de chargement et de déchargement, des moyens de lutte contre l'incendie et une cuvette de rétention. Les règles d'implantation et d'exploitation des dépôts et entrepôts sont fixées par voie réglementaire (article 145 de la loi n° 002/2019).\n\n**Les grandes familles de réservoirs**\n- **Toit fixe** (souvent conique) : le plus simple et le moins coûteux. Au-dessus du liquide subsiste un ciel gazeux, qui « respire » avec les variations de niveau et de température. Il convient aux produits peu volatils comme le gazole ou le fioul ; une soupape de pression et de dépression protège la robe et le toit.\n- **Toit flottant externe** : le toit repose sur le liquide et suit son niveau, ce qui supprime presque le ciel gazeux. C'est la solution classique pour le brut et l'essence, car elle limite les pertes par évaporation et le risque d'atmosphère inflammable. Le joint périphérique du toit est un point sensible (feu d'anneau, pertes) et le drainage des eaux de pluie doit rester libre.\n- **Toit flottant interne** : un écran flottant sous un toit fixe, qui protège de la pluie et réduit encore les émissions.\n- **Sphères et cigares sous pression** : pour le propane et le butane (GPL) stockés liquéfiés à température ambiante ; les gaz réfrigérés (GNL) exigent des réservoirs cryogéniques.\n\n**Normes de référence.** La conception des bacs soudés à pression atmosphérique suit en pratique la norme API 650 ; leur inspection et leur réparation suivent l'API 653. Ces normes ne sont pas des textes gabonais : elles s'appliquent par l'arrêté d'autorisation, le cahier des charges ou l'exigence du ministère.\n\n**Rétention et distances.** La **cuvette de rétention** doit contenir le produit en cas de fuite ou de ruine d'un bac. Règle courante : une capacité au moins égale à celle du plus grand réservoir de la cuvette, avec des distances de sécurité entre bacs ; le texte applicable précise ces valeurs et doit être confirmé avant tout contrôle. Le sol de la cuvette est étanche, et le drainage des eaux pluviales est fermé par une vanne normalement fermée, ouverte seulement après contrôle de l'absence d'hydrocarbures.\n\n**Classement des produits par danger.** Le **point d'éclair** est la température minimale à laquelle les vapeurs s'enflamment au contact d'une flamme. L'essence a un point d'éclair très inférieur à 0 °C : sous le climat tropical, son ciel gazeux est inflammable en permanence. Le gazole (point d'éclair minimal usuel de 55 °C) et le kérosène Jet A-1 (38 °C minimum) sont moins dangereux au repos, mais des vapeurs apparaissent s'ils sont chauffés ou pulvérisés.\n\n**Corrosion et inspection.** Le fond des bacs est la zone la plus critique : l'eau libre qui s'accumule au fond provoque de la corrosion et dégrade la qualité du produit. D'où la **purge régulière de l'eau**, la protection cathodique ou les revêtements, et l'inspection interne périodique. *Exemple chiffré (hypothèse) :* épaisseur du fond 4 mm, minimale admissible 2,5 mm, corrosion 0,2 mm par an : il reste (4 − 2,5)/0,2 = 7,5 ans, et l'on inspecte bien avant.\n\n**Sur le terrain.** Un agent du ministère qui visite un dépôt contrôle : l'état de la cuvette (vannes de drainage, végétation, fissures), les purges d'eau, les registres d'inspection, la mise à la terre, les soupapes, la signalisation et la validité de l'autorisation. Toute extension (nouveau bac) exige une mise à jour de l'étude de dangers, qui n'est réalisée que par des cabinets agréés (article 172).",
-      "keyPoints": [
-        "Toit fixe pour les produits peu volatils ; toit flottant pour le brut et l'essence afin de limiter les pertes et le ciel gazeux inflammable.",
-        "GPL : sphères ou cigares sous pression ; GNL : stockage réfrigéré.",
-        "La cuvette de rétention doit contenir au moins le plus grand réservoir (règle usuelle, texte applicable à confirmer).",
-        "API 650 (conception) et API 653 (inspection) sont des normes de référence, rendues applicables par l'autorisation.",
-        "Purge de l'eau de fond et inspection du plancher : prévention de la corrosion, première cause de défaillance."
-      ]
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 145",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     },
     {
-      "id": "m2",
-      "title": "Pipelines : conception, surveillance et fuites",
-      "theme": "Pipelines : conception, surveillance et fuites",
-      "minutes": 10,
-      "body": "Un **pipeline** (canalisation de transport) relie un champ, un terminal, une raffinerie ou un dépôt. Pour les liquides (brut, produits raffinés), la conception suit en pratique la norme ASME B31.4, avec des tubes conformes à l'API 5L ; pour le gaz, l'ASME B31.8. L'exploitant d'infrastructures de transport garantit aux tiers la liberté d'accès, la transparence tarifaire, l'égalité de traitement et la non-discrimination (article 143 de la loi n° 002/2019).\n\n**Conception.** On définit la **pression maximale de service** (PMS) d'après le diamètre, l'épaisseur, la nuance d'acier et la classe d'emplacement. Avant la mise en service, une **épreuve hydrostatique** soumet la ligne remplie d'eau à une pression supérieure à la PMS (au moins 1,25 fois selon l'ASME B31.4) pendant une durée fixée, pour vérifier résistance et étanchéité. Des **vannes de sectionnement** découpent la ligne en tronçons isolables.\n\n**Corrosion et protection.** La paroi externe est protégée par un **revêtement** complété par une **protection cathodique** (courant imposé ou anodes sacrificielles). La corrosion interne est limitée par le contrôle de l'eau, des gaz acides et des bactéries, et par des inhibiteurs. Des **racleurs** passent régulièrement : les racleurs de nettoyage évacuent les dépôts, les racleurs instrumentés détectent amincissements, fissures et déformations de l'intérieur sans arrêter l'écoulement.\n\n**Surveillance.** Un système de supervision et d'acquisition de données (SCADA) suit pression, débit, température et état des vannes. La **détection de fuites** combine : bilan des volumes entre l'entrée et la sortie, analyse des ondes de pression négatives, suivi de la pression, patrouilles et surveillance aérienne. Une petite fuite (par exemple 0,3 % du débit) est difficile à distinguer de l'incertitude des compteurs et des variations de stock dans la ligne ; la surveillance repose donc sur plusieurs méthodes.\n\n**Coup de bélier.** La fermeture rapide d'une vanne ou l'arrêt brutal d'une pompe provoque une surpression transitoire qui peut rompre une canalisation. On fixe des temps de fermeture minimaux et des dispositifs de protection (soupapes de décharge).\n\n**Emprise et tiers.** La première cause d'accident est l'agression par des tiers : engins de terrassement, piquages frauduleux. La **servitude** (emprise) interdit constructions et travaux profonds, et le tracé est balisé et patrouillé.\n\n**Conduite à tenir en cas de fuite présumée.** Arrêter le pompage, isoler le tronçon par les vannes, déclencher le plan d'urgence, alerter les autorités (information sans délai, article 241) et contenir la pollution. *Exemple (hypothèse) :* une ligne perd 40 bars en quelques minutes alors que le débit de sortie est inférieur de 8 % à celui d'entrée : on stoppe et on isole d'abord, on cherche ensuite.\n\n**Intégrité.** Lorsqu'une inspection montre une perte de paroi importante, on réduit la pression de service le temps d'évaluer le défaut, puis on répare (manchon, remplacement de tronçon) selon les critères de la norme. Le ministère peut demander les rapports d'inspection, les registres de réparations et les essais d'épreuve.",
-      "keyPoints": [
-        "ASME B31.4 (liquides) et ASME B31.8 (gaz) encadrent la conception ; tubes selon API 5L.",
-        "Revêtement et protection cathodique contre la corrosion externe ; racleurs instrumentés pour l'état de la paroi.",
-        "Détecter une fuite : bilan des volumes, ondes de pression, SCADA, patrouilles : aucune méthode seule ne suffit.",
-        "Coup de bélier : fixer des temps minimaux de fermeture des vannes.",
-        "Article 143 : accès des tiers, transparence tarifaire et non-discrimination."
-      ]
-    },
-    {
-      "id": "m3",
-      "title": "Transport maritime et cabotage",
-      "theme": "Transport maritime et cabotage",
-      "minutes": 10,
-      "body": "Au Gabon, l'essentiel du brut s'exporte par la mer, et les produits raffinés ou importés sont répartis le long de la côte. Le transport maritime d'hydrocarbures obéit à la fois au droit maritime, aux conventions internationales et à la loi n° 002/2019, qui range le transport parmi les activités aval soumises à autorisation (articles 130 et 135).\n\n**Vocabulaire.** Le **cabotage** est le transport entre deux ports d'un même pays. Le **connaissement** est le document de transport : reçu de la marchandise, preuve du contrat et titre représentatif de la cargaison. La **charte-partie** est le contrat d'affrètement. Le **temps de planche** est le délai accordé pour charger ou décharger ; au-delà, l'affréteur paie des **surestaries**. Les règles propres au cabotage national (pavillon, réservation) sont à confirmer dans les textes maritimes gabonais.\n\n**Les navires.** On distingue, par taille croissante : les caboteurs et petits pétroliers de produits (quelques milliers de m³), les pétroliers de produits de taille moyenne (MR), les Aframax, les Suezmax et les VLCC (très gros transporteurs de brut). Le choix du navire dépend du **tirant d'eau** des ports, de la taille des lots acceptés par les dépôts de destination et du coût du fret.\n\n**Sécurité et pollution.** La convention SOLAS traite de la sécurité de la navigation ; la convention **MARPOL, annexe I**, de la prévention de la pollution par les hydrocarbures : double coque pour les pétroliers neufs, séparation des ballasts, interdiction de rejet d'eaux huileuses au-delà de limites strictes. Les grands pétroliers disposent d'un système de gaz inerte qui maintient l'atmosphère des citernes à moins de 8 % d'oxygène, ce qui exclut l'explosion. La convention OPRC de 1990 impose des plans d'urgence, et la responsabilité civile du propriétaire est organisée par la convention CLC. Il faut vérifier lesquelles l'État gabonais a ratifiées.\n\n**Acceptation d'un navire.** Avant l'accostage, le terminal ou l'affréteur procède à une **inspection préalable du navire** (état, équipage, certificats, historique) selon des questionnaires du secteur.\n\n**Contrôle des quantités.** À l'arrivée, on compare la quantité du connaissement avec celle mesurée à terre, à 15 °C et nette d'eau. *Exemple (hypothèse) :* 11 950 m³ au connaissement, 11 880 m³ reçus : 70 m³ d'écart, soit environ 0,6 %. On ne règle pas l'écart en modifiant les stocks : on établit contradictoirement les mesures, on émet des réserves (lettre de protestation) et on compare avec le **facteur d'expérience du navire**, rapport des quantités mesurées à terre et à bord sur de nombreuses opérations.\n\n**Planification.** *Exemple (hypothèse) :* dépôt de 30 000 m³ utiles contenant 18 000 m³, consommation de 600 m³ par jour, cargaison de 15 000 m³ attendue dans 4 jours. Le stock sera de 18 000 − 2 400 = 15 600 m³ et la place libre de 14 400 m³, inférieure à la cargaison : débordement de 600 m³, il faut donc décaler, fractionner ou réorienter.\n\n**Pollution accidentelle.** Un rejet à proximité d'un terminal déclenche l'alerte, le plan d'urgence, le relevé de preuves (photos, échantillons) et l'application du principe pollueur-payeur. L'exploitant informe sans délai l'administration (article 241).",
-      "keyPoints": [
-        "Cabotage : transport entre ports d'un même pays ; règles propres à confirmer dans les textes maritimes.",
-        "Connaissement : reçu, preuve du contrat et titre de la cargaison ; surestaries après dépassement du temps de planche.",
-        "MARPOL annexe I : prévention de la pollution par hydrocarbures ; gaz inerte contre l'explosion des citernes.",
-        "Inspection préalable des navires avant accostage ; écarts de quantité réglés par mesures contradictoires.",
-        "Adapter la taille du lot au tirant d'eau des ports et à la place libre des dépôts."
-      ]
-    },
-    {
-      "id": "m4",
-      "title": "Terminaux et bouées de chargement",
-      "theme": "Terminaux et bouées de chargement",
-      "minutes": 10,
-      "body": "Un **terminal pétrolier** est le point où les hydrocarbures passent de la terre au navire (ou l'inverse). Il se compose de réservoirs, de pompes, d'un système de comptage, de lignes de transfert et d'un ou plusieurs postes d'accostage. Au Gabon, le terminal de Cap Lopez, près de Port-Gentil, est le principal terminal d'exportation de brut ; d'autres installations côtières et en mer complètent le dispositif.\n\n**Types de postes de chargement.**\n- **Poste à quai ou appontement** : le navire accoste et se raccorde par des **bras de chargement** articulés, équipés d'un système de déconnexion d'urgence.\n- **Bouée à ancrage unique** (SPM, ou CALM pour les bouées à chaînes) : le pétrolier s'amarre en mer et pivote autour de la bouée selon le vent et le courant ; le brut arrive par des flexibles sous-marins puis des flexibles flottants. Elle évite de construire un appontement en eau profonde.\n- **Unité flottante de stockage et de déchargement (FSO)** : navire ancré en permanence qui stocke le brut avant de le transférer aux pétroliers navettes.\n\n**Avant le transfert.** On remplit la **liste de contrôle de sécurité navire-terre**, signée des deux parties : communications, moyens de lutte contre l'incendie, arrêt d'urgence, plans de rejet, interdiction de fumer, état des amarres et des flexibles. Les conditions de **météo et de houle** sont comparées aux limites fixées.\n\n**Pendant le transfert.** Le chargement démarre à **débit réduit** pour vérifier l'étanchéité, limiter l'électricité statique et éviter les surpressions avant que les lignes soient remplies ; le débit monte ensuite jusqu'à la valeur nominale. Une surveillance continue compare le volume chargé côté terre et côté navire. Un **arrêt d'urgence** ferme les vannes avec un temps de fermeture calculé pour éviter le coup de bélier.\n\n**Cas de fuite ou de dégradation.** Une chute de pression avec écart de volume entre terre et navire signale une fuite possible de flexible : arrêt du chargement, alerte, plan d'urgence, localisation (plongeurs, véhicule sous-marin, surveillance aérienne). Si la houle dépasse les critères préétablis, on suspend le transfert et, si nécessaire, on se déconnecte.\n\n**Comptage et contrôle.** Le mesurage et le comptage de la production sont une prérogative exclusive de l'État, qui peut la déléguer (article 246 de la loi n° 002/2019) ; le comptage dynamique sert pour la production fiscale (article 252). Les agents du ministère s'intéressent donc à l'étalonnage des compteurs, aux scellés et aux procédures de rapprochement entre quantités à terre et à bord.\n\n**Sur le terrain.** *Exemple (hypothèse) :* le navire se présente sans que son inspection préalable soit complétée. L'exploitant invoque les surestaries. La réponse est claire : la sécurité prime sur le calendrier commercial, et le prescrit d'hygiène, de santé, de sécurité et d'environnement (article 171) s'applique ; l'accostage attend l'acceptation du navire.",
-      "keyPoints": [
-        "Trois grands postes : appontement avec bras de chargement, bouée à ancrage unique (SPM/CALM), FSO.",
-        "Liste de contrôle navire-terre signée avant tout transfert ; limites de météo et de houle préétablies.",
-        "Démarrer à débit réduit : étanchéité, électricité statique, surpressions.",
-        "Arrêt d'urgence avec temps de fermeture calculé contre le coup de bélier.",
-        "Article 246 : mesurage et comptage de la production, prérogative exclusive de l'État."
-      ]
-    },
-    {
-      "id": "m5",
-      "title": "SGEPP et stocks de sécurité",
-      "theme": "Stocks de sécurité et SGEPP",
-      "minutes": 9,
-      "body": "Un pays qui importe ou raffine des produits pétroliers doit se protéger d'une rupture d'approvisionnement : retard de navire, panne de raffinerie, tension sur le marché mondial. C'est le rôle des **stocks**, dont la loi n° 002/2019 organise deux niveaux.\n\n**Cadre légal.** L'article 147 permet à l'État de requérir la constitution d'un **stock stratégique ou de sécurité**. L'article 149 oblige le distributeur à détenir en permanence un **stock commercial minimum**, fixé par voie réglementaire. L'article 148 impose le respect des spécifications en vigueur.\n\n**La SGEPP.** La Société gabonaise d'entreposage des produits pétroliers (SGEPP) figure parmi les sociétés sous tutelle du ministère des Hydrocarbures. Elle est liée à l'entreposage et à la gestion des dépôts de produits pétroliers. Le détail de ses missions, de son statut et de ses dépôts est à confirmer auprès du ministère avant toute citation précise.\n\n**Trois notions à distinguer.**\n- Le **stock d'exploitation** (ou tampon) absorbe le rythme des réceptions et des livraisons.\n- Le **stock commercial minimum** est celui que le distributeur ne descend jamais en dessous.\n- Le **stock de sécurité** (stratégique) est une réserve mobilisable sur décision de l'autorité en cas de crise.\n\n**Couverture en jours.** Elle se calcule en divisant le **stock utilisable** par la consommation moyenne journalière. Le stock utilisable est inférieur au stock physique : il faut retrancher le **fond de bac** non pompable. *Exemple (hypothèse) :* 24 000 m³ de gazole en bac, fond non pompable de 2 000 m³, consommation de 800 m³ par jour : (24 000 − 2 000)/800 = 27,5 jours, et non 30. Des organisations internationales retiennent souvent 90 jours d'importations nettes comme repère ; l'objectif d'un pays dépend de ses textes.\n\n*Autre exemple (hypothèse) :* consommation de 2 000 m³ par jour, objectif de 30 jours de stock de sécurité en plus de 10 jours de stock commercial, capacité utile des dépôts de 45 000 m³. Il faut 40 × 2 000 = 80 000 m³ ; il manque 35 000 m³ de capacité.\n\n**Qualité et rotation.** Un stock dormant vieillit : l'essence s'oxyde (gommes) et perd ses fractions légères, le kérosène peut se charger en eau. On pratique donc une **rotation** : les produits les plus anciens sortent d'abord et sont remplacés, pour rester conformes (article 148).\n\n**Mobilisation en crise.** Face à un retard de cargaison, la décision de libérer une partie du stock de sécurité revient à l'autorité compétente, pour une durée limitée, avec un **plan de reconstitution**. Le stock de sécurité ne sert pas aux ventes courantes.\n\n**Contrôle.** Les agents assermentés (articles 19 et 20) dressent des procès-verbaux. Un **inventaire contradictoire** (jaugeages simultanés, bacs à l'arrêt, signatures des parties) fonde la constatation d'un manque. Un distributeur sous le minimum est mis en demeure, puis sanctionné selon les textes, jamais sans base écrite.",
-      "keyPoints": [
-        "Article 147 : stock stratégique ou de sécurité requis par l'État ; article 149 : stock commercial minimum du distributeur.",
-        "Couverture en jours = stock utilisable (hors fond de bac) / consommation journalière.",
-        "Stock d'exploitation, stock commercial et stock de sécurité sont trois notions distinctes.",
-        "Rotation des stocks pour garder les spécifications ; reconstitution après toute mobilisation.",
-        "SGEPP : société sous tutelle liée à l'entreposage ; missions précises à confirmer."
-      ]
-    },
-    {
-      "id": "m6",
-      "title": "Mesure, jaugeage, pertes et écarts",
-      "theme": "Mesure, jaugeage, pertes et écarts",
-      "minutes": 10,
-      "body": "Dans le négoce des hydrocarbures, **quelques dixièmes de pour cent** de volume représentent des sommes considérables. La mesure rigoureuse est donc une affaire de finances publiques autant que de technique : le mesurage et le comptage de la production sont une prérogative de l'État (article 246 de la loi n° 002/2019), et le contrôle technique fait partie des contrôles de l'administration (article 243).\n\n**Jaugeage d'un bac.** On mesure la **hauteur** de liquide (ruban lesté ou sonde manuelle, ou jauge automatique à radar ou à servomoteur), puis on la convertit en volume grâce au **barème de jaugeage** (table de calibrage) du bac. On mesure aussi la **température** (thermomètre à plusieurs niveaux) et la **masse volumique** (densimètre). Pour un bac à toit flottant, on corrige le poids du toit. L'eau libre au fond se détecte avec une pâte indicatrice.\n\n**Du volume observé au volume net.**\n- **Volume brut observé** : lu au bac, à la température réelle.\n- **Volume brut standard** : corrigé à la température de référence de 15 °C par un coefficient de dilatation (tables normalisées de l'API MPMS).\n- **Volume net standard** : volume brut standard retranché de l'eau et des sédiments.\n*Exemple simplifié (hypothèse) :* 10 000 m³ de gazole à 35 °C, coefficient moyen de 0,0008 par °C : à 15 °C, le volume vaut 10 000 × (1 − 0,0008 × 20) = 9 840 m³. Un volume non corrigé surévalue la quantité.\n\n**Comptage en ligne.** On utilise des débitmètres (turbine, volumétrique, à effet Coriolis) qui doivent être **étalonnés** périodiquement avec un étalon (prouveur) ; les résultats se rapprochent du jaugeage des bacs.\n\n**Bilan et écarts.** Stock théorique = stock initial + réceptions − livraisons. *Exemple (hypothèse) :* 12 000 + 8 000 − 7 900 = 12 100 m³ ; si le stock final mesuré est de 12 050 m³, la perte apparente est de 50 m³ (environ 0,6 % des livraisons).\n\n**Origines des écarts.** On distingue :\n- les **pertes réelles** : évaporation (« respiration » des bacs à toit fixe, que l'on réduit par une peinture réfléchissante, un toit flottant et des soupapes en bon état), fuites, vols, ruissellements ;\n- les **erreurs de mesure** : barèmes erronés, instruments non étalonnés, température mal relevée, eau non déduite ;\n- les **erreurs de comptabilité** : mouvements non enregistrés, mauvaises unités.\n\n**Biais ou perte aléatoire ?** Un écart qui reste du même côté pendant des mois (par exemple 0,5 % de moins à terre qu'à bord, constamment) signale un **biais systématique** : étalonnage, barème ou méthode de température. Le **facteur d'expérience du navire** permet de le mettre en évidence. On corrige la cause avant de chercher un coupable.\n\n**Sur le terrain.** L'inspecteur ne signe jamais un bilan sans les relevés bruts (hauteurs, températures, densités) et exige les certificats d'étalonnage. Aucune intervention sur les compteurs fiscaux n'est possible sans le contrôle de l'administration.",
-      "keyPoints": [
-        "Jaugeage : hauteur, température, masse volumique, barème du bac, correction du toit flottant.",
-        "Volume brut observé, brut standard à 15 °C, net standard sans eau ni sédiments.",
-        "Bilan : stock initial + réceptions − livraisons = stock théorique ; comparer au stock mesuré.",
-        "Pertes réelles, erreurs de mesure, erreurs de comptabilité : trois origines à distinguer.",
-        "Un écart toujours du même côté révèle un biais systématique, pas un hasard."
-      ]
-    },
-    {
-      "id": "m7",
-      "title": "Sécurité, pollution, autorisation et contrôle des installations",
-      "theme": "Sécurité, pollution, autorisation et contrôle",
-      "minutes": 12,
-      "body": "**Autorisation.** Les activités aval, dont le transport, l'entreposage, le stockage, l'exportation et la distribution (liste de l'article 135), exigent une autorisation d'exploitation délivrée par l'autorité compétente ; la transformation (raffinage) exige un décret. Ces autorisations ne sont délivrées qu'à des personnes physiques ou morales de droit gabonais justifiant de compétences techniques et de capacités financières (article 131). L'autorisation est **incessible et non transmissible** (article 134) et une autorisation délivrée en violation de la loi est **nulle** (article 136). À la fin de l'exploitation, le titulaire remet le site en état (article 137).\n\n**Prescriptions et études de dangers.** Toute personne exerçant une activité d'hydrocarbures respecte les prescriptions d'hygiène, de santé, de sécurité, de sûreté et d'environnement fixées par voie réglementaire (article 171). Seuls des cabinets agréés réalisent les **études de dangers**, validées par les services compétents et révisées périodiquement (article 172). Le cadre général de l'environnement est la loi n° 007/2014 du 1er août 2014 relative à la protection de l'environnement.\n\n**Incendie.** Le feu d'hydrocarbure liquide est un feu de **classe B** : on l'éteint avec de la **mousse** (qui étouffe et empêche le retour des vapeurs) ou de la poudre ; l'eau en jet plein est inadaptée car elle étale le liquide enflammé. Scénarios usuels : feu de cuvette, feu d'anneau sur toit flottant, feu de bac. La tactique repose sur le **refroidissement des bacs voisins** et l'application de mousse sur la nappe. Les moyens à contrôler : réseau d'eau d'incendie, réserve d'eau, réserve d'émulseur, pompes de secours, détecteurs de gaz et de flamme, exercices périodiques, plan d'opération interne. Les zones où une atmosphère explosive peut apparaître sont classées (zones 0, 1 et 2) et le matériel électrique y est adapté.\n\n**Pollution.** Les moyens de lutte : barrages flottants, écrémeurs, absorbants, dispersants (utilisés seulement avec autorisation). Les plans d'urgence sont organisés en trois **niveaux** : le niveau 1 correspond à un déversement mineur traité par les moyens de l'exploitant ; les niveaux 2 et 3 mobilisent l'aide régionale ou nationale puis internationale. Le titulaire répond de tous les dommages causés par son activité (article 179), souscrit des assurances (article 180) et informe **sans délai** l'administration de toute perturbation, de tout incident ou accident (article 241), même si l'événement paraît mineur ou contenu en cuvette.\n\n**Contrôle et sanctions.** Les agents du ministère contrôlent (article 18) ; ceux qui ont prêté serment sont officiers de police judiciaire spéciaux et dressent des procès-verbaux (articles 19 et 20). Exercer une activité aval sans autorisation expose, après mise en demeure, à une pénalité de 1 000 000 à 30 000 000 FCFA (article 284). En cas de récidive, les pénalités sont doublées et l'autorisation peut être retirée (article 265).\n\n**Sur le terrain.** *Exemple (hypothèse) :* un inspecteur trouve un dépôt exploité sans autorisation : procès-verbal, mise en demeure, puis pénalité. Il ne ferme pas de sa seule initiative sans procédure.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
-      "keyPoints": [
-        "Autorisation aval : droit gabonais, compétences et capacités financières (art. 131), incessible (art. 134), nulle si illégale (art. 136).",
-        "Études de dangers : cabinets agréés uniquement (art. 172) ; prescriptions HSSE (art. 171).",
-        "Feu d'hydrocarbure : classe B, mousse et refroidissement des bacs voisins.",
-        "Information sans délai de tout incident (art. 241) ; responsabilité de tous les dommages (art. 179).",
-        "Sans autorisation : procès-verbal, mise en demeure, puis 1 à 30 millions FCFA (art. 284) ; récidive : doublement (art. 265)."
-      ]
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 172",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-  ],
-  "questions": [
-    {
-      "id": "min-stockage-001",
-      "theme": "Réservoirs et dépôts",
-      "level": 1,
-      "q": "Quel type de réservoir limite le mieux les pertes par évaporation pour un brut ou une essence stockés à pression atmosphérique ?",
-      "choices": [
-        "Le réservoir à toit fixe conique, ventilé directement à l'air libre",
-        "Le réservoir enterré, rempli à moitié pour limiter la température",
-        "Le réservoir à toit fixe muni d'un simple évent de grand diamètre",
-        "Le réservoir à toit flottant qui suit le niveau"
-      ],
-      "answer": 3,
-      "explain": "Le toit flottant repose sur le liquide et supprime presque le ciel gazeux : l'évaporation et l'atmosphère inflammable sont réduites. Le toit fixe garde un ciel gazeux qui respire à chaque variation de niveau ou de température ; un évent plus grand ou un remplissage partiel n'y change rien.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-002",
-      "theme": "Réservoirs et dépôts",
-      "level": 1,
-      "q": "Quel type de stockage convient au propane ou au butane (GPL) conservé liquéfié à température ambiante ?",
-      "choices": [
-        "Les sphères ou cigares sous pression",
-        "Les bacs à toit flottant externe à pression atmosphérique",
-        "Les bacs à toit fixe munis d'une soupape de dépression",
-        "Les cuvettes enterrées à fond ouvert et bétonnées"
-      ],
-      "answer": 0,
-      "explain": "Le GPL n'est liquide à température ambiante que sous pression : on le stocke dans des sphères ou des cigares sous pression. Les bacs atmosphériques, flottants ou fixes, ne tiennent pas la pression, et une cuvette ouverte laisserait le gaz s'échapper.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-003",
-      "theme": "Réservoirs et dépôts",
-      "level": 1,
-      "q": "Quel est le rôle principal de la cuvette de rétention d'un parc de bacs ?",
-      "choices": [
-        "Augmenter la capacité de stockage utile du dépôt",
-        "Réduire l'évaporation du produit dans les bacs voisins",
-        "Contenir le produit en cas de fuite d'un bac",
-        "Servir de réserve d'eau pour la lutte contre l'incendie"
-      ],
-      "answer": 2,
-      "explain": "La cuvette limite l'étalement du produit et protège les sols, les cours d'eau et les installations voisines. Elle n'accroît pas la capacité du dépôt, ne réduit pas l'évaporation des bacs et ne doit pas servir de réserve d'eau (le mélange eau et hydrocarbures est un danger).",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-004",
-      "theme": "Réservoirs et dépôts",
-      "level": 1,
-      "q": "Quelle norme sert couramment de référence pour la conception des bacs soudés de stockage à pression atmosphérique ?",
-      "choices": [
-        "L'ASME B31.4, qui traite les canalisations de liquides",
-        "L'API 5L, qui définit les tubes en acier de ligne",
-        "L'API 650, dont l'inspection relève de l'API 653",
-        "La convention MARPOL, annexe I, pour les navires"
-      ],
-      "answer": 2,
-      "explain": "L'API 650 traite de la conception des réservoirs ; l'API 653 de leur inspection et de leur réparation. L'ASME B31.4 vise les pipelines, l'API 5L les tubes et MARPOL les navires.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-005",
-      "theme": "Réservoirs et dépôts",
-      "level": 2,
-      "q": "Lors d'une visite de dépôt, vous constatez que l'eau de fond d'un bac de gazole n'a pas été purgée depuis des mois. Quel est le risque principal ?",
-      "choices": [
-        "Corrosion du fond et contamination du produit livré",
-        "Une hausse de la pression de vapeur qui ferait sauter les soupapes de sécurité du bac",
-        "Un risque de gel du produit dans les lignes de livraison pendant la saison fraîche",
-        "Une dilatation du toit qui bloquerait l'échelle d'accès au sommet du bac"
-      ],
-      "answer": 0,
-      "explain": "L'eau libre s'accumule au fond : elle corrode la tôle et se retrouve dans les produits livrés (contamination, bactéries). La purge régulière fait partie des contrôles de base. La pression de vapeur, le gel ou la dilatation du toit n'ont aucun lien avec l'eau de fond sous un climat équatorial.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-006",
-      "theme": "Réservoirs et dépôts",
-      "level": 2,
-      "q": "Trois bacs de 10 000 m³ chacun partagent la même cuvette. Selon la règle courante, quelle est la capacité minimale de rétention ?",
-      "choices": [
-        "Environ 3 000 m³, soit 10 % du volume total des trois bacs",
-        "Environ 5 000 m³, la moitié du plus grand réservoir",
-        "Pas de capacité minimale exigée pour un produit non volatil",
-        "Au moins 10 000 m³, la capacité du plus grand réservoir"
-      ],
-      "answer": 3,
-      "explain": "La règle usuelle est de retenir au moins le volume du plus grand réservoir de la cuvette (le texte applicable précise le coefficient exact et doit être confirmé). 10 % du total ou la moitié d'un bac est insuffisant, et l'absence de volatilité ne supprime pas l'exigence de rétention : un gazole épandu pollue autant.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-007",
-      "theme": "Réservoirs et dépôts",
-      "level": 2,
-      "q": "Pourquoi un bac de gazole à toit fixe est-il équipé d'une soupape de pression et de dépression ?",
-      "choices": [
-        "Pour garder en permanence une surpression qui empêche l'entrée d'air dans le ciel gazeux",
-        "Pour laisser le bac respirer sans déformer la robe ni le toit",
-        "Pour accélérer l'évaporation et éviter la formation de dépôts au fond du bac",
-        "Pour remplacer la purge d'eau en cas de forte pluie sur le toit"
-      ],
-      "answer": 1,
-      "explain": "Lors du remplissage, vidange ou changement de température, le volume du ciel gazeux varie : la soupape protège la structure contre la surpression et l'écrasement par dépression. Une surpression permanente fatiguerait les soudures, l'évaporation est à limiter et la soupape ne remplace jamais la purge.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-008",
-      "theme": "Réservoirs et dépôts",
-      "level": 2,
-      "q": "Pourquoi les précautions contre l'inflammation sont-elles plus strictes pour l'essence que pour le gazole, sous un climat à 30 °C ?",
-      "choices": [
-        "Parce que l'essence est plus dense que l'eau et coule au fond des cuvettes de rétention",
-        "Parce que le gazole n'est jamais inflammable, quelle que soit sa température ni son état",
-        "Parce que le point d'éclair du gazole est inférieur à celui de l'essence utilisée",
-        "Parce que son point d'éclair très bas rend son ciel gazeux inflammable en permanence"
-      ],
-      "answer": 3,
-      "explain": "L'essence a un point d'éclair très inférieur à 0 °C : à 30 °C, ses vapeurs forment toujours un mélange inflammable. Le gazole (point d'éclair minimal usuel de 55 °C) ne dégage pas de vapeurs inflammables à température ambiante, mais il brûle s'il est chauffé ou pulvérisé. L'essence est plus légère que l'eau.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-009",
-      "theme": "Réservoirs et dépôts",
-      "level": 3,
-      "q": "Hypothèse : le fond d'un bac mesure 4 mm, l'épaisseur minimale admissible est de 2,5 mm et la corrosion est de 0,2 mm par an. Combien d'années de marge théorique reste-t-il, à vitesse constante ?",
-      "choices": [
-        "20 ans",
-        "7,5 ans",
-        "12,5 ans",
-        "32,5 ans"
-      ],
-      "answer": 1,
-      "explain": "Marge = (épaisseur actuelle − minimale)/vitesse = (4 − 2,5)/0,2 = 7,5 ans. Diviser 4 par 0,2 donne 20 ans (on oublie le minimum) ; 2,5/0,2 donne 12,5 ans (on utilise le minimum au lieu de la marge) ; (4 + 2,5)/0,2 donne 32,5 ans (erreur de signe). En pratique, on inspecte bien avant d'atteindre cette limite.",
-      "seconds": 90,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-010",
-      "theme": "Réservoirs et dépôts",
-      "level": 3,
-      "q": "Un exploitant veut ajouter deux bacs dans la cuvette existante d'un dépôt autorisé et propose de commencer les travaux immédiatement. Que doit exiger le chef de service ?",
-      "choices": [
-        "Une étude de dangers mise à jour et une autorisation modifiée avant les travaux",
-        "Un simple courrier d'information à l'administration, envoyé à la fin du chantier",
-        "Pas de formalité, la cuvette existante garantissant déjà la rétention nécessaire",
-        "Le refus de toute extension, quel que soit le contenu précis du dossier déposé"
-      ],
-      "answer": 0,
-      "explain": "L'ajout de bacs modifie les risques (rétention, distances, incendie) : l'étude de dangers, réalisée seulement par un cabinet agréé (art. 172), doit être mise à jour, et l'implantation des dépôts relève de la réglementation (art. 145). Informer après coup est trop tard ; supposer la rétention suffisante est faux avec plus de volume ; un refus systématique ne repose sur aucun texte.",
-      "seconds": 100,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 145",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        },
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 172",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-011",
-      "theme": "Pipelines : conception, surveillance et fuites",
-      "level": 1,
-      "q": "Quelle norme sert couramment de référence pour la conception des canalisations terrestres de transport de liquides (brut, produits) ?",
-      "choices": [
-        "L'API 650",
-        "L'ASME B31.8, qui concerne le gaz",
-        "L'ASME B31.4",
-        "La convention SOLAS"
-      ],
-      "answer": 2,
-      "explain": "L'ASME B31.4 traite les systèmes de transport de liquides par canalisation. L'API 650 vise les réservoirs, l'ASME B31.8 les canalisations de gaz, et SOLAS la sécurité des navires.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-012",
-      "theme": "Pipelines : conception, surveillance et fuites",
-      "level": 1,
-      "q": "Quelle est la fonction de la protection cathodique d'une canalisation enterrée ?",
-      "choices": [
-        "Limiter la corrosion externe de l'acier",
-        "Réchauffer le produit pour faciliter son pompage",
-        "Mesurer le débit en continu sur toute la longueur",
-        "Détecter les piquages frauduleux par les ondes radio"
-      ],
-      "answer": 0,
-      "explain": "Un courant imposé ou des anodes sacrificielles font de l'acier la cathode d'un circuit, ce qui empêche sa dissolution. Elle ne chauffe pas le produit, ne mesure pas le débit et ne détecte pas les piquages.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-013",
-      "theme": "Pipelines : conception, surveillance et fuites",
-      "level": 1,
-      "q": "Que permet de détecter un racleur instrumenté passé dans une canalisation en service ?",
-      "choices": [
-        "Le prix du brut transporté et sa teneur en soufre",
-        "La position exacte des vannes de sectionnement fermées",
-        "Les erreurs de lecture des compteurs de la station d'arrivée",
-        "L'état de la paroi : amincissements, fissures, déformations"
-      ],
-      "answer": 3,
-      "explain": "Le racleur instrumenté mesure l'état de la paroi sans arrêter l'écoulement. Il ne renseigne ni sur la qualité commerciale du produit ni sur la position des vannes, ni sur les compteurs.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-014",
-      "theme": "Pipelines : conception, surveillance et fuites",
-      "level": 1,
-      "q": "À quoi sert l'épreuve hydrostatique avant la mise en service d'une canalisation neuve ?",
-      "choices": [
-        "Nettoyer la ligne en évacuant les dépôts de brut restant du montage",
-        "Vérifier résistance et étanchéité sous pression supérieure au maximum de service",
-        "Calibrer les compteurs de la station de départ avant le premier envoi",
-        "Mesurer la vitesse de corrosion interne de la ligne neuve par prélèvements"
-      ],
-      "answer": 1,
-      "explain": "On remplit la ligne d'eau et on la met à une pression supérieure à la pression maximale de service (au moins 1,25 fois selon l'ASME B31.4) pour vérifier qu'elle résiste et ne fuit pas. Le nettoyage, le calibrage et la mesure de corrosion relèvent d'autres opérations.",
-      "seconds": 55,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-015",
-      "theme": "Pipelines : conception, surveillance et fuites",
-      "level": 2,
-      "q": "Vous suivez un oléoduc : la pression chute brutalement et le débit de sortie est inférieur de 8 % à celui d'entrée. Quelle est la première action ?",
-      "choices": [
-        "Augmenter la pression de pompage pour compenser la baisse de débit constatée",
-        "Attendre 24 heures de mesures supplémentaires pour confirmer la tendance",
-        "Lancer immédiatement un racleur pour localiser précisément la fuite",
-        "Arrêter le pompage, isoler le tronçon et déclencher le plan d'urgence"
-      ],
-      "answer": 3,
-      "explain": "Une chute de pression avec un écart de débit signale une fuite probable : on stoppe, on isole et on active le plan d'urgence avant de localiser. Pomper davantage aggrave le déversement, attendre laisse la pollution s'étendre, et un racleur bloqué ou endommagé au droit de la fuite compliquerait les choses.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-016",
-      "theme": "Pipelines : conception, surveillance et fuites",
-      "level": 2,
-      "q": "Pourquoi la fermeture trop rapide d'une vanne de ligne peut-elle endommager une canalisation ?",
-      "choices": [
-        "Elle fait cavitier immédiatement toutes les pompes de la station",
-        "Elle provoque un coup de bélier, une surpression transitoire",
-        "Elle favorise la corrosion interne du tube par l'eau",
-        "Elle dilate l'acier et ouvre les soudures par la chaleur"
-      ],
-      "answer": 1,
-      "explain": "L'arrêt brutal d'une colonne de liquide en mouvement convertit son énergie cinétique en surpression qui se propage dans la ligne. On fixe donc des temps de fermeture minimaux. Les autres explications ne correspondent pas à ce phénomène.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-017",
-      "theme": "Pipelines : conception, surveillance et fuites",
-      "level": 2,
-      "q": "Pourquoi une fuite de 0,3 % du débit est-elle difficile à détecter par simple comparaison entre entrée et sortie ?",
-      "choices": [
-        "Parce que l'incertitude des mesures est du même ordre que la fuite",
-        "Parce que les compteurs ne mesurent pas le débit des liquides en ligne",
-        "Parce que les petites fuites s'évaporent toujours avant d'être mesurées",
-        "Parce que le bilan ne peut se faire qu'à l'arrêt complet du pompage"
-      ],
-      "answer": 0,
-      "explain": "Compteurs et températures ont une incertitude de l'ordre de quelques dixièmes de pour cent, et le stock contenu dans la ligne varie avec pression et température : une petite fuite se noie dans ce bruit. D'où la combinaison de méthodes (ondes de pression, patrouilles, supervision).",
-      "seconds": 75,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-018",
-      "theme": "Pipelines : conception, surveillance et fuites",
-      "level": 2,
-      "q": "Pourquoi interdit-on les constructions et les travaux profonds sur l'emprise (servitude) d'une canalisation ?",
-      "choices": [
-        "Parce que le sol compacté augmente la pression dans la ligne",
-        "Parce que le produit transporté contamine les cultures par diffusion",
-        "Parce que les agressions par des tiers sont fréquentes",
-        "Parce que l'emprise sert à héberger les stations de pompage"
-      ],
-      "answer": 2,
-      "explain": "Engins de terrassement et piquages frauduleux comptent parmi les premières causes de fuites : la servitude, balisée et patrouillée, protège la ligne. Les autres raisons avancées n'ont pas de fondement technique.",
-      "seconds": 55,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-019",
-      "theme": "Pipelines : conception, surveillance et fuites",
-      "level": 3,
-      "q": "Une inspection par racleur instrumenté révèle une perte de paroi de 60 % sur 3 mètres, alors que la ligne fonctionne à 90 % de la pression maximale de service. Quelle décision convient ?",
-      "choices": [
-        "Maintenir la pression et surveiller visuellement le tronçon chaque semaine",
-        "Réduire la pression, évaluer le défaut, puis réparer",
-        "Attendre la prochaine campagne d'inspection prévue dans trois ans",
-        "Renforcer uniquement la protection cathodique en augmentant le courant injecté"
-      ],
-      "answer": 1,
-      "explain": "Un tel défaut peut céder : on réduit la pression, on évalue sa criticité selon la norme, puis on répare. La surveillance visuelle d'une ligne enterrée est illusoire, l'attente est dangereuse et la protection cathodique ne restitue pas l'épaisseur perdue.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-020",
-      "theme": "Pipelines : conception, surveillance et fuites",
-      "level": 3,
-      "q": "Un tiers demande à transporter son brut par une canalisation qui a de la capacité disponible. L'exploitant refuse sans motif technique. Quelle est la position fondée ?",
-      "choices": [
-        "Le refus est valable, car l'exploitant est propriétaire de la ligne et en fixe seul l'usage",
-        "Le refus est valable si le demandeur est un concurrent direct de l'exploitant",
-        "Le premier demandeur doit toujours obtenir la capacité, sans aucune condition technique",
-        "Le refus est contraire à la liberté d'accès, à la transparence et à la non-discrimination (art. 143)"
-      ],
-      "answer": 3,
-      "explain": "L'article 143 impose à tout exploitant d'infrastructures et réseaux de transport de garantir aux tiers la liberté d'accès, la transparence tarifaire, l'égalité de traitement et la non-discrimination. Un refus doit reposer sur un motif objectif (capacité, sécurité). La propriété ou la concurrence ne suffisent pas, et il ne s'agit pas d'un droit absolu du premier demandeur.",
-      "seconds": 90,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 143",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-021",
-      "theme": "Transport maritime et cabotage",
-      "level": 1,
-      "q": "Qu'appelle-t-on cabotage ?",
-      "choices": [
-        "Le transport en haute mer entre deux continents",
-        "Le transport maritime entre deux ports d'un même pays",
-        "Le transport par barges sur les fleuves et lacs uniquement",
-        "Le remorquage de plateformes entre deux champs"
-      ],
-      "answer": 1,
-      "explain": "Le cabotage consiste à naviguer le long des côtes entre ports d'un même pays. Le transport intercontinental, fluvial ou le remorquage de plateformes sont autres choses. Les règles propres au cabotage gabonais sont à confirmer dans les textes maritimes.",
-      "seconds": 40,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-022",
-      "theme": "Transport maritime et cabotage",
-      "level": 1,
-      "q": "Que représente le connaissement dans un transport maritime de produits pétroliers ?",
-      "choices": [
-        "Le certificat de jaugeage du réservoir de départ du produit",
-        "L'autorisation d'exportation délivrée par l'administration au chargeur",
-        "Le plan de chargement des citernes établi par le second capitaine",
-        "Un reçu, la preuve du contrat et le titre de la cargaison"
-      ],
-      "answer": 3,
-      "explain": "Le connaissement a trois fonctions : reçu, preuve du contrat, titre de la cargaison. Il n'est ni un certificat de jaugeage, ni une autorisation d'exportation, ni un plan de chargement.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-023",
-      "theme": "Transport maritime et cabotage",
-      "level": 1,
-      "q": "Que sont les surestaries ?",
-      "choices": [
-        "La taxe perçue par le port à l'entrée de chaque navire",
-        "L'indemnité due par l'affréteur si le temps de planche est dépassé",
-        "La prime d'assurance versée chaque année par l'armateur",
-        "Les frais de pilotage et de remorquage facturés à l'accostage du navire"
-      ],
-      "answer": 1,
-      "explain": "Si le chargement ou le déchargement dépasse le temps de planche prévu à la charte-partie, l'affréteur paie des surestaries à l'armateur. Taxe portuaire, assurance et pilotage sont des coûts distincts.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-024",
-      "theme": "Transport maritime et cabotage",
-      "level": 1,
-      "q": "Quelle convention internationale traite de la prévention de la pollution par les hydrocarbures provenant des navires ?",
-      "choices": [
-        "MARPOL, annexe I",
-        "SOLAS, chapitre sur la sécurité de la navigation",
-        "La convention sur le droit de la mer, pour la zone économique seulement",
-        "La convention OPRC, qui fixe le prix du fret"
-      ],
-      "answer": 0,
-      "explain": "MARPOL annexe I vise la pollution par hydrocarbures (double coque, séparation des ballasts, limites de rejet). SOLAS traite de la sécurité en mer ; OPRC organise la préparation et la lutte contre la pollution, et ne fixe aucun prix de fret.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-025",
-      "theme": "Transport maritime et cabotage",
-      "level": 2,
-      "q": "Un petit pays reçoit du gazole par cabotage entre deux ports de sa côte. Pourquoi ne pas utiliser systématiquement le plus gros pétrolier possible ?",
-      "choices": [
-        "Parce que les gros navires ne peuvent pas transporter de produits raffinés",
-        "Parce que les petits navires sont toujours moins polluants que les gros",
-        "Parce que le lot doit convenir au tirant d'eau et aux dépôts",
-        "Parce que le connaissement est interdit pour les grands navires pétroliers"
-      ],
-      "answer": 2,
-      "explain": "Le tirant d'eau des ports et la capacité de réception des dépôts limitent la taille utile du lot : un très gros navire ne pourrait ni accoster ni être déchargé en une fois. Les autres affirmations sont inexactes.",
-      "seconds": 65,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-026",
-      "theme": "Transport maritime et cabotage",
-      "level": 2,
-      "q": "Le connaissement indique 11 950 m³ à 15 °C ; à terre, vous mesurez 11 880 m³. Que faites-vous ?",
-      "choices": [
-        "Refuser la cargaison et renvoyer le navire au port de départ",
-        "Mesures contradictoires, réserves écrites et comparaison avec le facteur d'expérience",
-        "Accepter sans réserve, l'écart étant inférieur à 1 % du volume",
-        "Corriger les stocks du dépôt pour que les chiffres concordent exactement"
-      ],
-      "answer": 1,
-      "explain": "L'écart est de 70 m³ (environ 0,6 %) : on le traite par des mesures contradictoires (jaugeages, température, eau), des réserves écrites et la comparaison avec l'historique du navire. Un refus est disproportionné, accepter sans trace prive de tout recours, et modifier les stocks falsifie la comptabilité.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-027",
-      "theme": "Transport maritime et cabotage",
-      "level": 2,
-      "q": "Quel dispositif protège les citernes à cargaison d'un grand pétrolier contre l'explosion ?",
-      "choices": [
-        "La double coque, qui empêche les vapeurs de s'enflammer dans les citernes",
-        "Une ventilation qui renouvelle l'air des citernes en continu pendant le voyage",
-        "Un revêtement réfléchissant sur les ponts du navire pour limiter l'échauffement",
-        "Un gaz inerte qui maintient l'oxygène des citernes très bas"
-      ],
-      "answer": 3,
-      "explain": "Le gaz inerte réduit l'oxygène (moins de 8 % en volume) : le mélange ne peut plus brûler. La double coque limite les fuites vers la mer, pas l'explosion ; renouveler l'air amènerait de l'oxygène ; un revêtement réfléchissant ne règle pas le risque.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-028",
-      "theme": "Transport maritime et cabotage",
-      "level": 2,
-      "q": "Quel est le but de l'inspection préalable d'un navire avant son acceptation par un terminal ?",
-      "choices": [
-        "Vérifier la conformité du navire et de son équipage",
-        "Calculer le fret et les surestaries à l'avance avec l'armateur",
-        "Mesurer la densité de la cargaison à bord avant l'accostage",
-        "Obtenir l'autorisation de pêche dans la zone du terminal pétrolier"
-      ],
-      "answer": 0,
-      "explain": "L'inspection préalable (questionnaire, visite) évalue la sécurité du navire et de son équipage avant tout transfert. Elle ne sert ni au calcul du fret, ni à la densité, ni aux autorisations de pêche.",
-      "seconds": 55,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-029",
-      "theme": "Transport maritime et cabotage",
-      "level": 3,
-      "q": "Un caboteur rejette des eaux de ballast huileuses à cinq milles d'un terminal. Quelle réponse est la plus appropriée ?",
-      "choices": [
-        "Laisser la nappe se disperser naturellement sans intervenir",
-        "Employer immédiatement des dispersants sans demander d'autorisation",
-        "Alerter, activer le plan d'urgence et relever les preuves du rejet",
-        "Demander au navire de quitter la zone pour régler l'affaire à l'amiable"
-      ],
-      "answer": 2,
-      "explain": "L'alerte, le plan d'urgence, les preuves (photos, échantillons) et la mise en cause du responsable sont la réponse standard. Les dispersants exigent une autorisation et le renvoi du navire fait disparaître le responsable et les preuves. L'obligation d'information immédiate de l'administration (art. 241) s'applique aux exploitants.",
-      "seconds": 90,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 241",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-030",
-      "theme": "Transport maritime et cabotage",
-      "level": 3,
-      "q": "Dépôt de 30 000 m³ utiles contenant 18 000 m³, consommation de 600 m³ par jour. Une cargaison de 15 000 m³ arrive dans 4 jours. Peut-on la décharger entièrement ?",
-      "choices": [
-        "Oui : la place sera de 15 600 m³, plus que la cargaison",
-        "Non : il manquerait 3 000 m³, car la consommation ne compte pas",
-        "Non : 14 400 m³ de place seulement, soit 600 m³ de moins ; décaler ou fractionner",
-        "Oui : la consommation de 4 jours vaut 6 000 m³ et libère assez de place"
-      ],
-      "answer": 2,
-      "explain": "Stock au jour 4 : 18 000 − 4 × 600 = 15 600 m³ ; place libre : 30 000 − 15 600 = 14 400 m³ ; déficit de 600 m³. Le chiffre de 15 600 est le stock, pas la place ; 3 000 ignore la consommation ; 4 × 600 = 2 400 et non 6 000.",
-      "seconds": 110,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-031",
-      "theme": "Terminaux et bouées de chargement",
-      "level": 1,
-      "q": "Qu'est-ce qu'une bouée à ancrage unique (SPM/CALM) ?",
-      "choices": [
-        "Une bouée où le pétrolier s'amarre et pivote selon le vent",
-        "Une plateforme fixe en béton construite sur pilotis au large",
-        "Un navire ancré en permanence servant de stockage flottant",
-        "Un bras de chargement articulé installé sur un quai du port"
-      ],
-      "answer": 0,
-      "explain": "La bouée à ancrage unique permet le chargement au large, le navire tournant autour d'elle ; les flexibles sous-marins la relient à la terre. Une plateforme, un FSO ou un bras sur quai sont d'autres installations.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-032",
-      "theme": "Terminaux et bouées de chargement",
-      "level": 1,
-      "q": "Que désigne le sigle FSO ?",
-      "choices": [
-        "Unité flottante de séparation et de forage",
-        "Navire de soutien et de sauvetage en mer",
-        "Unité flottante de stockage et de déchargement",
-        "Système fixe d'oléoduc offshore"
-      ],
-      "answer": 2,
-      "explain": "FSO signifie unité flottante de stockage et de déchargement : un navire ancré qui reçoit le brut, le stocke et le transfère aux pétroliers navettes. Les autres définitions ne correspondent pas au sigle.",
-      "seconds": 40,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-033",
-      "theme": "Terminaux et bouées de chargement",
-      "level": 1,
-      "q": "Quel est le rôle d'un bras de chargement marin ?",
-      "choices": [
-        "Mesurer la hauteur de liquide dans les citernes du navire à quai",
-        "Relier le collecteur du navire au quai, avec déconnexion d'urgence",
-        "Amarrer le navire à la place des cordages et des remorqueurs",
-        "Pomper le ballast du navire vers les bacs de stockage du terminal"
-      ],
-      "answer": 1,
-      "explain": "Le bras articulé suit le mouvement du navire et peut se déconnecter en urgence. Il ne jauge pas les citernes, n'amarre pas le navire et ne pompe pas le ballast.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-034",
-      "theme": "Terminaux et bouées de chargement",
-      "level": 1,
-      "q": "Qu'est-ce que la liste de contrôle de sécurité navire-terre ?",
-      "choices": [
-        "Une facture détaillée des opérations de chargement",
-        "Un plan d'évacuation du personnel du terminal uniquement",
-        "Un certificat de classification valable cinq ans",
-        "Un document signé des deux parties avant le transfert"
-      ],
-      "answer": 3,
-      "explain": "Elle vérifie ensemble communications, moyens incendie, arrêt d'urgence, amarres et flexibles avant le transfert. Ce n'est ni une facture, ni un plan d'évacuation, ni un certificat de classification.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-035",
-      "theme": "Terminaux et bouées de chargement",
-      "level": 2,
-      "q": "Pourquoi démarre-t-on un chargement à débit réduit ?",
-      "choices": [
-        "Vérifier l'étanchéité, limiter l'électricité statique et éviter les surpressions",
-        "Économiser l'énergie des pompes pendant la première heure de chargement",
-        "Laisser aux équipes le temps de relever les prix du marché",
-        "Réduire la température du produit à bord avant le plein débit"
-      ],
-      "answer": 0,
-      "explain": "Un faible débit permet de détecter une fuite, de limiter l'accumulation de charges statiques et d'éviter les surpressions à l'entrée des citernes. Le prix du marché et la température du produit n'ont aucun rôle ici.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-036",
-      "theme": "Terminaux et bouées de chargement",
-      "level": 2,
-      "q": "Pendant un chargement à une bouée, la houle dépasse les limites préétablies. Que faire ?",
-      "choices": [
-        "Augmenter le débit pour finir avant l'arrivée de la tempête",
-        "Continuer si le commandant du navire est d'accord",
-        "Suspendre le transfert, se déconnecter si besoin",
-        "Resserrer les amarres au maximum et poursuivre"
-      ],
-      "answer": 2,
-      "explain": "Les limites de houle protègent amarres et flexibles : leur dépassement impose d'arrêter et, si besoin, de déconnecter. Accélérer, se fier au seul avis du commandant ou tendre les amarres au maximum augmente la contrainte et le risque de rupture.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-037",
-      "theme": "Terminaux et bouées de chargement",
-      "level": 2,
-      "q": "Pourquoi fixe-t-on un temps minimal de fermeture des vannes d'arrêt d'urgence d'un terminal ?",
-      "choices": [
-        "Pour laisser au navire le temps de terminer sa facturation",
-        "Pour éviter l'évaporation du produit à l'ouverture",
-        "Pour limiter le coup de bélier dans lignes et flexibles",
-        "Pour que les compteurs puissent recalculer le volume chargé"
-      ],
-      "answer": 2,
-      "explain": "Une fermeture trop brusque crée un coup de bélier qui peut rompre une ligne ou un flexible ; le temps de fermeture est calculé en fonction de la longueur et du débit. Les autres raisons n'ont pas de lien avec l'arrêt d'urgence.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-038",
-      "theme": "Terminaux et bouées de chargement",
-      "level": 2,
-      "q": "Au terminal d'exportation, qui détient la prérogative du mesurage et du comptage de la production ?",
-      "choices": [
-        "L'État, qui peut la déléguer (art. 246)",
-        "Le contracteur seul, selon son contrat avec l'acheteur",
-        "L'armateur du navire, car la cargaison est à bord",
-        "L'acheteur du brut, qui fixe ses propres tables"
-      ],
-      "answer": 0,
-      "explain": "Selon l'article 246, le mesurage et le comptage de la production sont une prérogative exclusive de l'État, susceptible de délégation. Le contracteur, l'armateur ou l'acheteur n'en sont pas titulaires de plein droit.",
-      "seconds": 60,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 246",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-039",
-      "theme": "Terminaux et bouées de chargement",
-      "level": 3,
-      "q": "Pendant un chargement à la bouée, la pression au collecteur du navire monte, le débit côté terre chute et un écart de volume apparaît entre terre et bord. Que faites-vous ?",
-      "choices": [
-        "Réduire le débit de moitié et poursuivre le chargement en surveillant la pression",
-        "Attendre la fin du chargement pour comparer les volumes terre et bord",
-        "Basculer vers une autre bouée sans arrêter les pompes du terminal",
-        "Arrêt d'urgence, alerte, plan d'urgence, puis localisation de la fuite"
-      ],
-      "answer": 3,
-      "explain": "Les signaux concordent avec une obstruction ou une fuite de flexible : on arrête d'abord, on alerte, on active le plan d'urgence, puis on localise (plongeurs, véhicule sous-marin, surveillance aérienne). Poursuivre, même à faible débit, ou attendre aggrave la pollution ; basculer sans arrêt est dangereux.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-040",
-      "theme": "Terminaux et bouées de chargement",
-      "level": 3,
-      "q": "Un navire se présente à l'accostage sans que son inspection préalable soit complétée, et l'exploitant invoque les surestaries pour exiger le chargement. Que répond l'inspecteur ?",
-      "choices": [
-        "Le chargement commence, l'inspection sera complétée plus tard",
-        "L'accostage attend l'acceptation du navire : la sécurité prime (art. 171)",
-        "L'inspection est facultative pour les navires déjà venus ici",
-        "Les surestaries lèvent l'obligation de sécurité si l'armateur les accepte"
-      ],
-      "answer": 1,
-      "explain": "L'article 171 impose le respect des prescriptions d'hygiène, santé, sécurité, sûreté et environnement. Un coût commercial (surestaries) ne remplace pas la vérification du navire, et l'inspection ne peut être reportée après le chargement.",
-      "seconds": 90,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 171",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-041",
-      "theme": "Stocks de sécurité et SGEPP",
-      "level": 1,
-      "q": "Que signifie le sigle SGEPP ?",
-      "choices": [
-        "Société gabonaise d'exploitation des puits profonds",
-        "Syndicat général des exploitants de pipelines et de ports",
-        "Service gabonais d'étude des produits pétrochimiques",
-        "Société gabonaise d'entreposage des produits pétroliers"
-      ],
-      "answer": 3,
-      "explain": "SGEPP signifie Société gabonaise d'entreposage des produits pétroliers, société sous tutelle du ministère des Hydrocarbures. Ses missions précises sont à confirmer auprès du ministère.",
-      "seconds": 40,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-042",
-      "theme": "Stocks de sécurité et SGEPP",
-      "level": 1,
-      "q": "Que prévoit l'article 147 de la loi n° 002/2019 ?",
-      "choices": [
-        "L'État peut requérir un stock stratégique ou de sécurité",
-        "Chaque distributeur doit stocker 90 jours de consommation",
-        "Les dépôts sont gérés exclusivement par l'État",
-        "Le stock de sécurité est libre de toute spécification"
-      ],
-      "answer": 0,
-      "explain": "L'article 147 permet à l'État de requérir un stock stratégique ou de sécurité. Il ne fixe pas un nombre de jours précis ; le stock commercial minimum relève de l'article 149 et les spécifications de l'article 148.",
-      "seconds": 50,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 147",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-043",
-      "theme": "Stocks de sécurité et SGEPP",
-      "level": 1,
-      "q": "Que prévoit l'article 149 pour le distributeur ?",
-      "choices": [
-        "L'interdiction de détenir plus de 10 jours de stock",
-        "La livraison obligatoire de tout le stock à l'État chaque année",
-        "La détention permanente d'un stock commercial minimum fixé par voie réglementaire",
-        "L'obligation de stocker uniquement de l'essence"
-      ],
-      "answer": 2,
-      "explain": "L'article 149 impose au distributeur un stock commercial minimum permanent dont le niveau est précisé par voie réglementaire. Rien n'interdit un stock plus élevé et rien ne limite le produit à l'essence.",
-      "seconds": 50,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 149",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-044",
-      "theme": "Stocks de sécurité et SGEPP",
-      "level": 1,
-      "q": "Quelle est la différence entre stock commercial minimum et stock de sécurité ?",
-      "choices": [
-        "Le premier appartient à l'État, le second au distributeur",
-        "Les deux sont synonymes dans la loi et dans la pratique",
-        "Exploitation courante pour le premier ; réserve de crise pour le second",
-        "Le premier concerne les produits importés, le second les raffinés localement"
-      ],
-      "answer": 2,
-      "explain": "Le stock commercial est le plancher que le distributeur ne descend jamais en dessous ; le stock de sécurité (article 147) est une réserve que l'autorité peut libérer. Ils ne sont ni synonymes ni distingués par l'origine des produits ou leur propriétaire.",
-      "seconds": 60,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 147",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        },
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 149",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-045",
-      "theme": "Stocks de sécurité et SGEPP",
-      "level": 2,
-      "q": "Hypothèse : 24 000 m³ de gazole en bac, fond non pompable de 2 000 m³, consommation de 800 m³ par jour. Quelle est la couverture réelle ?",
-      "choices": [
-        "27,5 jours",
-        "30 jours",
-        "25 jours",
-        "22 jours"
-      ],
-      "answer": 0,
-      "explain": "Stock utilisable = 24 000 − 2 000 = 22 000 m³ ; 22 000/800 = 27,5 jours. 30 jours oublie le fond de bac ; 25 jours soustrait 2 000/800 deux fois ; 22 jours confond le stock utilisable en milliers avec les jours.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-046",
-      "theme": "Stocks de sécurité et SGEPP",
-      "level": 2,
-      "q": "Pourquoi renouveler périodiquement un stock de sécurité d'essence ?",
-      "choices": [
-        "L'essence perd de sa densité en restant longtemps à l'abri de la lumière",
-        "La loi interdit tout stockage de plus de trois mois dans un dépôt",
-        "Le renouvellement augmente la capacité de stockage du dépôt",
-        "Un stock dormant vieillit et sort des spécifications (art. 148)"
-      ],
-      "answer": 3,
-      "explain": "L'essence s'oxyde (gommes) et perd ses fractions légères ; il faut la faire tourner pour rester conforme aux spécifications en vigueur (article 148). Aucune durée légale de trois mois n'est citée, et la rotation n'augmente pas la capacité.",
-      "seconds": 60,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 148",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-047",
-      "theme": "Stocks de sécurité et SGEPP",
-      "level": 2,
-      "q": "Un navire est retardé et le pays risque une rupture de gazole. Que proposez-vous ?",
-      "choices": [
-        "Laisser chaque distributeur puiser librement dans le stock de sécurité",
-        "Libération partielle du stock de sécurité par l'autorité, puis reconstitution",
-        "Fermer toutes les stations tant que le navire n'est pas arrivé au port",
-        "Utiliser le stock de sécurité pour couvrir les ventes courantes du mois"
-      ],
-      "answer": 1,
-      "explain": "Le stock de sécurité se mobilise sur décision de l'autorité, pour une durée limitée et avec un plan de reconstitution. L'ouvrir librement ou l'utiliser pour les ventes courantes le videra, et fermer les stations aggrave la crise.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-048",
-      "theme": "Stocks de sécurité et SGEPP",
-      "level": 2,
-      "q": "Quelle méthode fonde la constatation d'un manque lors d'un inventaire de stock de sécurité ?",
-      "choices": [
-        "Une déclaration écrite de l'exploitant, sans contrôle sur place",
-        "Une estimation à partir des ventes de l'année précédente",
-        "Un jaugeage unique réalisé sur le plus grand bac du dépôt",
-        "Un inventaire contradictoire signé des parties, bacs à l'arrêt"
-      ],
-      "answer": 3,
-      "explain": "Pour qu'un écart soit opposable, les mesures sont faites en présence des parties, au même moment, bacs à l'arrêt, et signées. Une simple déclaration, une estimation ou un seul bac ne prouvent rien.",
-      "seconds": 65,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-049",
-      "theme": "Stocks de sécurité et SGEPP",
-      "level": 3,
-      "q": "Hypothèse : consommation de 2 000 m³ par jour, objectif de 30 jours de stock de sécurité en plus de 10 jours de stock commercial, capacité utile des dépôts de 45 000 m³. Quelle capacité manque-t-il ?",
-      "choices": [
-        "15 000 m³",
-        "35 000 m³",
-        "20 000 m³",
-        "80 000 m³"
-      ],
-      "answer": 1,
-      "explain": "Besoin = (30 + 10) × 2 000 = 80 000 m³ ; déficit = 80 000 − 45 000 = 35 000 m³. 15 000 oublie le stock commercial (60 000 − 45 000) ; 20 000 confond 80 000 − 60 000 ; 80 000 est le besoin, pas le manque.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-050",
-      "theme": "Stocks de sécurité et SGEPP",
-      "level": 3,
-      "q": "Un distributeur reste sous son stock commercial minimum depuis un mois. Quelle démarche respecte le droit ?",
-      "choices": [
-        "Constat par agents assermentés, mise en demeure, puis sanctions prévues",
-        "Fermer immédiatement le dépôt sans aucune formalité préalable",
-        "Ne rien faire, car le stock commercial est une affaire privée",
-        "Imposer de sa propre initiative un stock supérieur au minimum fixé"
-      ],
-      "answer": 0,
-      "explain": "Les agents assermentés (OPJ spéciaux) constatent les infractions par procès-verbal (art. 19 et 20), puis la mise en demeure précède la sanction. Fermer sans formalité, tolérer ou alourdir de sa propre initiative l'obligation sont irréguliers.",
-      "seconds": 90,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 19",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        },
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 20",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        },
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 149",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-051",
-      "theme": "Mesure, jaugeage, pertes et écarts",
-      "level": 1,
-      "q": "Comment procède-t-on au jaugeage manuel d'un bac ?",
-      "choices": [
-        "Pesée du bac entier sur une bascule adaptée aux grandes charges",
-        "Relevé de la seule température de la robe, sans autre mesure",
-        "Mesure de la hauteur au ruban lesté, puis conversion par le barème du bac",
-        "Déduction du volume à partir de la livraison de la veille au dépôt"
-      ],
-      "answer": 2,
-      "explain": "Le jaugeage donne une hauteur, convertie en volume par le barème de jaugeage du bac. Peser un bac entier est irréaliste, la température seule ne donne aucun volume, et déduire d'une livraison antérieure n'est pas une mesure.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-052",
-      "theme": "Mesure, jaugeage, pertes et écarts",
-      "level": 1,
-      "q": "Pourquoi ramène-t-on les volumes à 15 °C ?",
-      "choices": [
-        "Les produits se dilatent avec la température ; il faut une référence commune",
-        "La loi interdit de mesurer à toute autre température que 15 °C",
-        "Les bacs sont toujours à 15 °C en pratique sous ce climat",
-        "La température n'a aucune influence sur la masse du produit"
-      ],
-      "answer": 0,
-      "explain": "Le volume d'un produit varie avec la température alors que sa masse reste constante ; la correction à 15 °C permet de comparer et de facturer équitablement. Les bacs sont rarement à 15 °C sous un climat tropical, et la masse reste constante.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-053",
-      "theme": "Mesure, jaugeage, pertes et écarts",
-      "level": 1,
-      "q": "Que représente le volume net standard ?",
-      "choices": [
-        "Le volume lu directement au bac, à la température réelle",
-        "Le volume maximal que le bac peut contenir",
-        "Le volume de produit livré chaque jour",
-        "Le volume à 15 °C sans eau ni sédiments"
-      ],
-      "answer": 3,
-      "explain": "Le volume brut observé est celui du bac ; le volume brut standard est corrigé à 15 °C ; le volume net standard retranche en plus l'eau et les sédiments. La capacité du bac et le débit journalier sont d'autres notions.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-054",
-      "theme": "Mesure, jaugeage, pertes et écarts",
-      "level": 1,
-      "q": "À quoi sert l'étalonnage d'un débitmètre avec un prouveur ?",
-      "choices": [
-        "À augmenter la vitesse d'écoulement du produit",
-        "À vérifier la justesse de la mesure",
-        "À mesurer la densité du produit transporté",
-        "À éviter toute maintenance du compteur"
-      ],
-      "answer": 1,
-      "explain": "L'étalon compare le volume mesuré par le compteur à un volume de référence, ce qui permet de corriger sa dérive. Il ne change ni la vitesse, ni la densité, et ne dispense pas de la maintenance.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-055",
-      "theme": "Mesure, jaugeage, pertes et écarts",
-      "level": 2,
-      "q": "Hypothèse simplifiée : 10 000 m³ de gazole observés à 35 °C, coefficient moyen de 0,0008 par °C. Quel est le volume à 15 °C ?",
-      "choices": [
-        "10 160 m³",
-        "9 200 m³",
-        "9 984 m³",
-        "9 840 m³"
-      ],
-      "answer": 3,
-      "explain": "On refroidit de 20 °C : 10 000 × (1 − 0,0008 × 20) = 9 840 m³. 10 160 est un volume corrigé dans le mauvais sens ; 9 200 utilise un coefficient dix fois trop fort ; 9 984 corrige de 2 °C seulement.",
-      "seconds": 90,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-056",
-      "theme": "Mesure, jaugeage, pertes et écarts",
-      "level": 2,
-      "q": "Bilan : stock initial 12 000 m³, réceptions 8 000 m³, livraisons 7 900 m³, stock final mesuré 12 050 m³. Quel est l'écart ?",
-      "choices": [
-        "Un gain apparent de 50 m³",
-        "Une perte apparente de 50 m³",
-        "Une perte apparente de 150 m³",
-        "Un gain apparent de 100 m³"
-      ],
-      "answer": 1,
-      "explain": "Stock théorique = 12 000 + 8 000 − 7 900 = 12 100 m³ ; mesuré = 12 050 m³ ; l'écart de −50 m³ est une perte apparente (environ 0,6 % des livraisons). Les autres résultats viennent d'une erreur de signe ou d'addition.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-057",
-      "theme": "Mesure, jaugeage, pertes et écarts",
-      "level": 2,
-      "q": "Quelle mesure réduit les pertes par respiration d'un bac à toit fixe contenant un produit volatil ?",
-      "choices": [
-        "Peinture blanche réfléchissante, soupapes en bon état ou toit flottant",
-        "Peinture noire, pour que le produit chauffe plus vite le jour",
-        "Suppression de la soupape pour éviter toute surpression",
-        "Maintien du remplissage à 10 % de la capacité en permanence"
-      ],
-      "answer": 0,
-      "explain": "La respiration vient des cycles de température et de remplissage : réduire l'échauffement, soigner les soupapes ou supprimer le ciel gazeux (toit flottant) diminue les pertes. Une peinture noire échauffe, supprimer la soupape est dangereux, et un bac presque vide augmente le ciel gazeux.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-058",
-      "theme": "Mesure, jaugeage, pertes et écarts",
-      "level": 2,
-      "q": "À quoi sert le facteur d'expérience du navire ?",
-      "choices": [
-        "Fixer le prix du fret de la prochaine cargaison transportée",
-        "Déterminer la vitesse maximale du navire en charge",
-        "Détecter un biais systématique entre terre et bord",
-        "Calculer le temps de planche autorisé au port de déchargement"
-      ],
-      "answer": 2,
-      "explain": "Le rapport cumulé des quantités mesurées à terre et à bord met en évidence un écart constant dû à la méthode ou aux instruments. Il ne fixe ni le fret, ni la vitesse, ni le temps de planche.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-059",
-      "theme": "Mesure, jaugeage, pertes et écarts",
-      "level": 3,
-      "q": "Depuis six mois, les quantités reçues au dépôt sont toujours inférieures de 0,5 à 0,6 % à celles du connaissement. Quelle est la meilleure analyse ?",
-      "choices": [
-        "Une série de pertes aléatoires sans lien avec la mesure ni les barèmes",
-        "Un biais systématique probable : audit contradictoire des instruments et barèmes",
-        "Un vol quotidien réalisé sur le navire, à signaler à la police maritime",
-        "Un phénomène normal qu'il suffit d'ignorer pour les comptes annuels"
-      ],
-      "answer": 1,
-      "explain": "Un écart toujours du même côté et de même ordre est typique d'un biais de mesure plutôt que d'un hasard ; on vérifie barèmes, compteurs et méthode de température avec les parties. Accuser un vol ou classer sans suite sans vérifier est infondé.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-060",
-      "theme": "Mesure, jaugeage, pertes et écarts",
-      "level": 3,
-      "q": "Un exploitant veut remplacer lui-même ses compteurs fiscaux de production sans prévenir l'administration, après étalonnage interne. Quelle est la position fondée ?",
-      "choices": [
-        "Accepter, dès lors que l'étalonnage interne est correct et documenté",
-        "Accepter, à condition d'informer l'administration après coup",
-        "Laisser faire, car cela relève du contrat privé avec l'acheteur",
-        "Refuser : prérogative de l'État (art. 246), intervention sous son contrôle"
-      ],
-      "answer": 3,
-      "explain": "Selon l'article 246, mesurage et comptage de la production sont une prérogative exclusive de l'État, et l'article 252 vise le comptage dynamique pour la production fiscale. Un étalonnage interne ou une information tardive ne remplace pas le contrôle de l'administration.",
-      "seconds": 90,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 246",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        },
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 252",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-061",
-      "theme": "Sécurité, pollution, autorisation et contrôle",
-      "level": 1,
-      "q": "À qui l'autorisation d'une activité aval peut-elle être délivrée (art. 131) ?",
-      "choices": [
-        "Toute société étrangère, même sans établissement de droit gabonais",
-        "Personnes de droit gabonais justifiant de compétences et de capacités financières",
-        "Uniquement les entreprises publiques placées sous la tutelle du ministère",
-        "Toute personne qui en fait la demande, sans justificatif particulier"
-      ],
-      "answer": 1,
-      "explain": "L'article 131 réserve ces autorisations aux personnes physiques ou morales de droit gabonais justifiant de compétences techniques et de capacités financières. Les étrangers sans société de droit gabonais, les seules entreprises publiques ou le premier venu ne sont pas visés.",
-      "seconds": 55,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 131",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-062",
-      "theme": "Sécurité, pollution, autorisation et contrôle",
-      "level": 1,
-      "q": "Une autorisation de dépôt peut-elle être cédée librement à un repreneur ?",
-      "choices": [
-        "Oui, par simple acte entre les deux sociétés concernées",
-        "Oui, si le repreneur paie une redevance à l'État",
-        "Oui, mais seulement à une filiale du même groupe",
-        "Non : incessible et non transmissible (art. 134)"
-      ],
-      "answer": 3,
-      "explain": "L'article 134 rend l'autorisation incessible et non transmissible : le repreneur doit demander la sienne. Un acte, une redevance ou un lien de filiale n'y changent rien.",
-      "seconds": 50,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 134",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-063",
-      "theme": "Sécurité, pollution, autorisation et contrôle",
-      "level": 1,
-      "q": "Qui réalise les études de dangers d'un dépôt (art. 172) ?",
-      "choices": [
-        "Uniquement les services du ministère",
-        "Des cabinets agréés",
-        "L'exploitant seul, sans validation",
-        "Tout bureau d'études étranger"
-      ],
-      "answer": 1,
-      "explain": "L'article 172 réserve la réalisation des études de dangers aux cabinets agréés ; elles sont validées par les services techniques compétents et révisées périodiquement. L'exploitant seul ou un bureau non agréé ne suffit pas.",
-      "seconds": 50,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 172",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-064",
-      "theme": "Sécurité, pollution, autorisation et contrôle",
-      "level": 1,
-      "q": "À quelle classe appartient un feu d'hydrocarbure liquide, et quel agent est adapté ?",
-      "choices": [
-        "Classe B ; mousse ou poudre",
-        "Classe A ; l'eau en jet plein",
-        "Classe C ; le sable humide",
-        "Classe D ; l'eau pulvérisée"
-      ],
-      "answer": 0,
-      "explain": "Les liquides inflammables relèvent de la classe B, éteinte par la mousse (étouffement) ou la poudre. L'eau en jet plein étale le liquide enflammé. Les classes C et D concernent les gaz et les métaux.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-065",
-      "theme": "Sécurité, pollution, autorisation et contrôle",
-      "level": 2,
-      "q": "Un feu se déclare dans la cuvette d'un bac. Quelle tactique est la plus adaptée ?",
-      "choices": [
-        "Inonder la cuvette d'eau jusqu'à débordement complet",
-        "Évacuer le site sans refroidir les bacs voisins",
-        "Refroidir les bacs voisins et mousser la nappe",
-        "Vidanger aussitôt tous les bacs de la cuvette en feu"
-      ],
-      "answer": 2,
-      "explain": "Il faut protéger les bacs voisins du rayonnement et étouffer la nappe par la mousse. Inonder la cuvette fait déborder le produit enflammé, évacuer sans refroidir laisse l'incendie se propager, et vidanger des bacs dans la zone est dangereux et trop lent.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-066",
-      "theme": "Sécurité, pollution, autorisation et contrôle",
-      "level": 2,
-      "q": "Une fuite de 5 m³ est contenue en cuvette ; l'exploitant estime qu'il n'y a pas de pollution et n'informe pas l'administration. Qu'en dites-vous ?",
-      "choices": [
-        "Il n'y est tenu que si le produit atteint un cours d'eau ou le sol voisin",
-        "Il doit informer sans délai, même pour un incident contenu (art. 241)",
-        "Il peut regrouper la déclaration de l'incident avec son rapport de fin de mois",
-        "Seule la présence d'un blessé grave rend l'information de l'administration obligatoire"
-      ],
-      "answer": 1,
-      "explain": "L'article 241 impose d'informer sans délai l'administration de toute perturbation, de tout incident ou accident, sans condition de gravité ou de pollution. Retarder la déclaration ou la limiter aux blessés graves est irrégulier.",
-      "seconds": 70,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 241",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-067",
-      "theme": "Sécurité, pollution, autorisation et contrôle",
-      "level": 2,
-      "q": "Dans un plan d'urgence à trois niveaux, qu'est-ce qu'un déversement de niveau 1 ?",
-      "choices": [
-        "Un déversement exigeant l'aide internationale immédiate",
-        "Un déversement survenu hors des eaux nationales",
-        "Un déversement impossible à contenir sur le site",
-        "Un déversement mineur traité par l'exploitant seul"
-      ],
-      "answer": 3,
-      "explain": "Le niveau 1 correspond à un déversement mineur géré localement par l'exploitant ; les niveaux 2 et 3 mobilisent l'aide régionale ou nationale puis internationale.",
-      "seconds": 55,
-      "status": "draft"
-    },
-    {
-      "id": "min-stockage-068",
-      "theme": "Sécurité, pollution, autorisation et contrôle",
-      "level": 2,
-      "q": "Un dépôt cesse définitivement son activité. Quelle obligation pèse sur le titulaire de l'autorisation (art. 137) ?",
-      "choices": [
-        "Remettre le site en état au terme de l'exploitation",
-        "Abandonner les installations sur place sans suite",
-        "Transférer le site à l'État sans condition",
-        "Reverser les droits d'autorisation au titulaire précédent"
-      ],
-      "answer": 0,
-      "explain": "L'article 137 impose au titulaire de remettre le site en état au terme de l'exploitation. L'abandon, le transfert sans condition ou un reversement ne sont pas prévus.",
-      "seconds": 55,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 137",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-069",
-      "theme": "Sécurité, pollution, autorisation et contrôle",
-      "level": 3,
-      "q": "Lors d'un contrôle, vous découvrez un dépôt exploité sans autorisation. Quelle suite est conforme à la loi ?",
-      "choices": [
-        "Fermeture immédiate sans formalité et saisie des véhicules du site",
-        "Amende de 50 à 2 500 millions FCFA, prévue pour le torchage",
-        "PV, mise en demeure, puis pénalité de 1 à 30 millions FCFA (art. 284)",
-        "Simple avertissement oral à l'exploitant, sans aucune trace écrite"
-      ],
-      "answer": 2,
-      "explain": "L'article 284 prévoit, après mise en demeure, une pénalité de 1 000 000 à 30 000 000 FCFA pour une activité aval sans autorisation ; les agents assermentés dressent des procès-verbaux (art. 19 et 20). La fourchette de 50 à 2 500 millions vise le torchage (art. 269), et un avertissement oral ne laisse aucune base.",
-      "seconds": 100,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 284",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        },
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 19",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        },
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 20",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-stockage-070",
-      "theme": "Sécurité, pollution, autorisation et contrôle",
-      "level": 3,
-      "q": "Un exploitant déjà sanctionné pour un manquement de sécurité en commet un second. Que prévoit l'article 265 ?",
-      "choices": [
-        "Un simple rappel écrit de la sanction déjà infligée",
-        "L'effacement de la première pénalité en cas de régularisation tardive",
-        "Doublement des pénalités et retrait possible de l'autorisation",
-        "Une réduction de moitié de la pénalité si l'exploitant est de bonne foi"
-      ],
-      "answer": 2,
-      "explain": "L'article 265 prévoit qu'en cas de récidive les pénalités sont portées au double, et que la récidive peut aussi être sanctionnée du retrait de l'autorisation et de l'interdiction d'exercer. Rappel, effacement ou réduction ne figurent pas dans ce texte.",
-      "seconds": 80,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 265",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
+   ]
+  },
+  {
+   "id": "min-stockage-011",
+   "theme": "Pipelines : conception, surveillance et fuites",
+   "level": 1,
+   "q": "Quelle norme sert couramment de référence pour la conception des canalisations terrestres de transport de liquides (brut, produits) ?",
+   "choices": [
+    "L'API 650",
+    "L'ASME B31.8, qui concerne le gaz",
+    "L'ASME B31.4",
+    "La convention SOLAS"
+   ],
+   "answer": 2,
+   "explain": "L'ASME B31.4 traite les systèmes de transport de liquides par canalisation. L'API 650 vise les réservoirs, l'ASME B31.8 les canalisations de gaz, et SOLAS la sécurité des navires.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-012",
+   "theme": "Pipelines : conception, surveillance et fuites",
+   "level": 1,
+   "q": "Quelle est la fonction de la protection cathodique d'une canalisation enterrée ?",
+   "choices": [
+    "Limiter la corrosion externe de l'acier",
+    "Réchauffer le produit pour faciliter son pompage",
+    "Mesurer le débit en continu sur toute la longueur",
+    "Détecter les piquages frauduleux par les ondes radio"
+   ],
+   "answer": 0,
+   "explain": "Un courant imposé ou des anodes sacrificielles font de l'acier la cathode d'un circuit, ce qui empêche sa dissolution. Elle ne chauffe pas le produit, ne mesure pas le débit et ne détecte pas les piquages.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-013",
+   "theme": "Pipelines : conception, surveillance et fuites",
+   "level": 1,
+   "q": "Que permet de détecter un racleur instrumenté passé dans une canalisation en service ?",
+   "choices": [
+    "Le prix du brut transporté et sa teneur en soufre",
+    "La position exacte des vannes de sectionnement fermées",
+    "Les erreurs de lecture des compteurs de la station d'arrivée",
+    "L'état de la paroi : amincissements, fissures, déformations"
+   ],
+   "answer": 3,
+   "explain": "Le racleur instrumenté mesure l'état de la paroi sans arrêter l'écoulement. Il ne renseigne ni sur la qualité commerciale du produit ni sur la position des vannes, ni sur les compteurs.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-014",
+   "theme": "Pipelines : conception, surveillance et fuites",
+   "level": 1,
+   "q": "À quoi sert l'épreuve hydrostatique avant la mise en service d'une canalisation neuve ?",
+   "choices": [
+    "Nettoyer la ligne en évacuant les dépôts de brut restant du montage",
+    "Vérifier résistance et étanchéité sous pression supérieure au maximum de service",
+    "Calibrer les compteurs de la station de départ avant le premier envoi",
+    "Mesurer la vitesse de corrosion interne de la ligne neuve par prélèvements"
+   ],
+   "answer": 1,
+   "explain": "On remplit la ligne d'eau et on la met à une pression supérieure à la pression maximale de service (au moins 1,25 fois selon l'ASME B31.4) pour vérifier qu'elle résiste et ne fuit pas. Le nettoyage, le calibrage et la mesure de corrosion relèvent d'autres opérations.",
+   "seconds": 55,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-015",
+   "theme": "Pipelines : conception, surveillance et fuites",
+   "level": 2,
+   "q": "Vous suivez un oléoduc : la pression chute brutalement et le débit de sortie est inférieur de 8 % à celui d'entrée. Quelle est la première action ?",
+   "choices": [
+    "Augmenter la pression de pompage pour compenser la baisse de débit constatée",
+    "Attendre 24 heures de mesures supplémentaires pour confirmer la tendance",
+    "Lancer immédiatement un racleur pour localiser précisément la fuite",
+    "Arrêter le pompage, isoler le tronçon et déclencher le plan d'urgence"
+   ],
+   "answer": 3,
+   "explain": "Une chute de pression avec un écart de débit signale une fuite probable : on stoppe, on isole et on active le plan d'urgence avant de localiser. Pomper davantage aggrave le déversement, attendre laisse la pollution s'étendre, et un racleur bloqué ou endommagé au droit de la fuite compliquerait les choses.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-016",
+   "theme": "Pipelines : conception, surveillance et fuites",
+   "level": 2,
+   "q": "Pourquoi la fermeture trop rapide d'une vanne de ligne peut-elle endommager une canalisation ?",
+   "choices": [
+    "Elle fait cavitier immédiatement toutes les pompes de la station",
+    "Elle provoque un coup de bélier, une surpression transitoire",
+    "Elle favorise la corrosion interne du tube par l'eau",
+    "Elle dilate l'acier et ouvre les soudures par la chaleur"
+   ],
+   "answer": 1,
+   "explain": "L'arrêt brutal d'une colonne de liquide en mouvement convertit son énergie cinétique en surpression qui se propage dans la ligne. On fixe donc des temps de fermeture minimaux. Les autres explications ne correspondent pas à ce phénomène.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-017",
+   "theme": "Pipelines : conception, surveillance et fuites",
+   "level": 2,
+   "q": "Pourquoi une fuite de 0,3 % du débit est-elle difficile à détecter par simple comparaison entre entrée et sortie ?",
+   "choices": [
+    "Parce que l'incertitude des mesures est du même ordre que la fuite",
+    "Parce que les compteurs ne mesurent pas le débit des liquides en ligne",
+    "Parce que les petites fuites s'évaporent toujours avant d'être mesurées",
+    "Parce que le bilan ne peut se faire qu'à l'arrêt complet du pompage"
+   ],
+   "answer": 0,
+   "explain": "Compteurs et températures ont une incertitude de l'ordre de quelques dixièmes de pour cent, et le stock contenu dans la ligne varie avec pression et température : une petite fuite se noie dans ce bruit. D'où la combinaison de méthodes (ondes de pression, patrouilles, supervision).",
+   "seconds": 75,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-018",
+   "theme": "Pipelines : conception, surveillance et fuites",
+   "level": 2,
+   "q": "Pourquoi interdit-on les constructions et les travaux profonds sur l'emprise (servitude) d'une canalisation ?",
+   "choices": [
+    "Parce que le sol compacté augmente la pression dans la ligne",
+    "Parce que le produit transporté contamine les cultures par diffusion",
+    "Parce que les agressions par des tiers sont fréquentes",
+    "Parce que l'emprise sert à héberger les stations de pompage"
+   ],
+   "answer": 2,
+   "explain": "Engins de terrassement et piquages frauduleux comptent parmi les premières causes de fuites : la servitude, balisée et patrouillée, protège la ligne. Les autres raisons avancées n'ont pas de fondement technique.",
+   "seconds": 55,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-019",
+   "theme": "Pipelines : conception, surveillance et fuites",
+   "level": 3,
+   "q": "Une inspection par racleur instrumenté révèle une perte de paroi de 60 % sur 3 mètres, alors que la ligne fonctionne à 90 % de la pression maximale de service. Quelle décision convient ?",
+   "choices": [
+    "Maintenir la pression et surveiller visuellement le tronçon chaque semaine",
+    "Réduire la pression, évaluer le défaut, puis réparer",
+    "Attendre la prochaine campagne d'inspection prévue dans trois ans",
+    "Renforcer uniquement la protection cathodique en augmentant le courant injecté"
+   ],
+   "answer": 1,
+   "explain": "Un tel défaut peut céder : on réduit la pression, on évalue sa criticité selon la norme, puis on répare. La surveillance visuelle d'une ligne enterrée est illusoire, l'attente est dangereuse et la protection cathodique ne restitue pas l'épaisseur perdue.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-020",
+   "theme": "Pipelines : conception, surveillance et fuites",
+   "level": 3,
+   "q": "Un tiers demande à transporter son brut par une canalisation qui a de la capacité disponible. L'exploitant refuse sans motif technique. Quelle est la position fondée ?",
+   "choices": [
+    "Le refus est valable, car l'exploitant est propriétaire de la ligne et en fixe seul l'usage",
+    "Le refus est valable si le demandeur est un concurrent direct de l'exploitant",
+    "Le premier demandeur doit toujours obtenir la capacité, sans aucune condition technique",
+    "Le refus est contraire à la liberté d'accès, à la transparence et à la non-discrimination (art. 143)"
+   ],
+   "answer": 3,
+   "explain": "L'article 143 impose à tout exploitant d'infrastructures et réseaux de transport de garantir aux tiers la liberté d'accès, la transparence tarifaire, l'égalité de traitement et la non-discrimination. Un refus doit reposer sur un motif objectif (capacité, sécurité). La propriété ou la concurrence ne suffisent pas, et il ne s'agit pas d'un droit absolu du premier demandeur.",
+   "seconds": 90,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 143",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-  ]
+   ]
+  },
+  {
+   "id": "min-stockage-021",
+   "theme": "Transport maritime et cabotage",
+   "level": 1,
+   "q": "Qu'appelle-t-on cabotage ?",
+   "choices": [
+    "Le transport en haute mer entre deux continents",
+    "Le transport maritime entre deux ports d'un même pays",
+    "Le transport par barges sur les fleuves et lacs uniquement",
+    "Le remorquage de plateformes entre deux champs"
+   ],
+   "answer": 1,
+   "explain": "Le cabotage consiste à naviguer le long des côtes entre ports d'un même pays. Le transport intercontinental, fluvial ou le remorquage de plateformes sont autres choses. Les règles propres au cabotage gabonais sont à confirmer dans les textes maritimes.",
+   "seconds": 40,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-022",
+   "theme": "Transport maritime et cabotage",
+   "level": 1,
+   "q": "Que représente le connaissement dans un transport maritime de produits pétroliers ?",
+   "choices": [
+    "Le certificat de jaugeage du réservoir de départ du produit",
+    "L'autorisation d'exportation délivrée par l'administration au chargeur",
+    "Le plan de chargement des citernes établi par le second capitaine",
+    "Un reçu, la preuve du contrat et le titre de la cargaison"
+   ],
+   "answer": 3,
+   "explain": "Le connaissement a trois fonctions : reçu, preuve du contrat, titre de la cargaison. Il n'est ni un certificat de jaugeage, ni une autorisation d'exportation, ni un plan de chargement.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-023",
+   "theme": "Transport maritime et cabotage",
+   "level": 1,
+   "q": "Que sont les surestaries ?",
+   "choices": [
+    "La taxe perçue par le port à l'entrée de chaque navire",
+    "L'indemnité due par l'affréteur si le temps de planche est dépassé",
+    "La prime d'assurance versée chaque année par l'armateur",
+    "Les frais de pilotage et de remorquage facturés à l'accostage du navire"
+   ],
+   "answer": 1,
+   "explain": "Si le chargement ou le déchargement dépasse le temps de planche prévu à la charte-partie, l'affréteur paie des surestaries à l'armateur. Taxe portuaire, assurance et pilotage sont des coûts distincts.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-024",
+   "theme": "Transport maritime et cabotage",
+   "level": 1,
+   "q": "Quelle convention internationale traite de la prévention de la pollution par les hydrocarbures provenant des navires ?",
+   "choices": [
+    "MARPOL, annexe I",
+    "SOLAS, chapitre sur la sécurité de la navigation",
+    "La convention sur le droit de la mer, pour la zone économique seulement",
+    "La convention OPRC, qui fixe le prix du fret"
+   ],
+   "answer": 0,
+   "explain": "MARPOL annexe I vise la pollution par hydrocarbures (double coque, séparation des ballasts, limites de rejet). SOLAS traite de la sécurité en mer ; OPRC organise la préparation et la lutte contre la pollution, et ne fixe aucun prix de fret.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-025",
+   "theme": "Transport maritime et cabotage",
+   "level": 2,
+   "q": "Un petit pays reçoit du gazole par cabotage entre deux ports de sa côte. Pourquoi ne pas utiliser systématiquement le plus gros pétrolier possible ?",
+   "choices": [
+    "Parce que les gros navires ne peuvent pas transporter de produits raffinés",
+    "Parce que les petits navires sont toujours moins polluants que les gros",
+    "Parce que le lot doit convenir au tirant d'eau et aux dépôts",
+    "Parce que le connaissement est interdit pour les grands navires pétroliers"
+   ],
+   "answer": 2,
+   "explain": "Le tirant d'eau des ports et la capacité de réception des dépôts limitent la taille utile du lot : un très gros navire ne pourrait ni accoster ni être déchargé en une fois. Les autres affirmations sont inexactes.",
+   "seconds": 65,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-026",
+   "theme": "Transport maritime et cabotage",
+   "level": 2,
+   "q": "Le connaissement indique 11 950 m³ à 15 °C ; à terre, vous mesurez 11 880 m³. Que faites-vous ?",
+   "choices": [
+    "Refuser la cargaison et renvoyer le navire au port de départ",
+    "Mesures contradictoires, réserves écrites et comparaison avec le facteur d'expérience",
+    "Accepter sans réserve, l'écart étant inférieur à 1 % du volume",
+    "Corriger les stocks du dépôt pour que les chiffres concordent exactement"
+   ],
+   "answer": 1,
+   "explain": "L'écart est de 70 m³ (environ 0,6 %) : on le traite par des mesures contradictoires (jaugeages, température, eau), des réserves écrites et la comparaison avec l'historique du navire. Un refus est disproportionné, accepter sans trace prive de tout recours, et modifier les stocks falsifie la comptabilité.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-027",
+   "theme": "Transport maritime et cabotage",
+   "level": 2,
+   "q": "Quel dispositif protège les citernes à cargaison d'un grand pétrolier contre l'explosion ?",
+   "choices": [
+    "La double coque, qui empêche les vapeurs de s'enflammer dans les citernes",
+    "Une ventilation qui renouvelle l'air des citernes en continu pendant le voyage",
+    "Un revêtement réfléchissant sur les ponts du navire pour limiter l'échauffement",
+    "Un gaz inerte qui maintient l'oxygène des citernes très bas"
+   ],
+   "answer": 3,
+   "explain": "Le gaz inerte réduit l'oxygène (moins de 8 % en volume) : le mélange ne peut plus brûler. La double coque limite les fuites vers la mer, pas l'explosion ; renouveler l'air amènerait de l'oxygène ; un revêtement réfléchissant ne règle pas le risque.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-028",
+   "theme": "Transport maritime et cabotage",
+   "level": 2,
+   "q": "Quel est le but de l'inspection préalable d'un navire avant son acceptation par un terminal ?",
+   "choices": [
+    "Vérifier la conformité du navire et de son équipage",
+    "Calculer le fret et les surestaries à l'avance avec l'armateur",
+    "Mesurer la densité de la cargaison à bord avant l'accostage",
+    "Obtenir l'autorisation de pêche dans la zone du terminal pétrolier"
+   ],
+   "answer": 0,
+   "explain": "L'inspection préalable (questionnaire, visite) évalue la sécurité du navire et de son équipage avant tout transfert. Elle ne sert ni au calcul du fret, ni à la densité, ni aux autorisations de pêche.",
+   "seconds": 55,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-029",
+   "theme": "Transport maritime et cabotage",
+   "level": 3,
+   "q": "Un caboteur rejette des eaux de ballast huileuses à cinq milles d'un terminal. Quelle réponse est la plus appropriée ?",
+   "choices": [
+    "Laisser la nappe se disperser naturellement sans intervenir",
+    "Employer immédiatement des dispersants sans demander d'autorisation",
+    "Alerter, activer le plan d'urgence et relever les preuves du rejet",
+    "Demander au navire de quitter la zone pour régler l'affaire à l'amiable"
+   ],
+   "answer": 2,
+   "explain": "L'alerte, le plan d'urgence, les preuves (photos, échantillons) et la mise en cause du responsable sont la réponse standard. Les dispersants exigent une autorisation et le renvoi du navire fait disparaître le responsable et les preuves. L'obligation d'information immédiate de l'administration (art. 241) s'applique aux exploitants.",
+   "seconds": 90,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 241",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-030",
+   "theme": "Transport maritime et cabotage",
+   "level": 3,
+   "q": "Dépôt de 30 000 m³ utiles contenant 18 000 m³, consommation de 600 m³ par jour. Une cargaison de 15 000 m³ arrive dans 4 jours. Peut-on la décharger entièrement ?",
+   "choices": [
+    "Oui : la place sera de 15 600 m³, plus que la cargaison",
+    "Non : il manquerait 3 000 m³, car la consommation ne compte pas",
+    "Non : 14 400 m³ de place seulement, soit 600 m³ de moins ; décaler ou fractionner",
+    "Oui : la consommation de 4 jours vaut 6 000 m³ et libère assez de place"
+   ],
+   "answer": 2,
+   "explain": "Stock au jour 4 : 18 000 − 4 × 600 = 15 600 m³ ; place libre : 30 000 − 15 600 = 14 400 m³ ; déficit de 600 m³. Le chiffre de 15 600 est le stock, pas la place ; 3 000 ignore la consommation ; 4 × 600 = 2 400 et non 6 000.",
+   "seconds": 110,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-031",
+   "theme": "Terminaux et bouées de chargement",
+   "level": 1,
+   "q": "Qu'est-ce qu'une bouée à ancrage unique (SPM/CALM) ?",
+   "choices": [
+    "Une bouée où le pétrolier s'amarre et pivote selon le vent",
+    "Une plateforme fixe en béton construite sur pilotis au large",
+    "Un navire ancré en permanence servant de stockage flottant",
+    "Un bras de chargement articulé installé sur un quai du port"
+   ],
+   "answer": 0,
+   "explain": "La bouée à ancrage unique permet le chargement au large, le navire tournant autour d'elle ; les flexibles sous-marins la relient à la terre. Une plateforme, un FSO ou un bras sur quai sont d'autres installations.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-032",
+   "theme": "Terminaux et bouées de chargement",
+   "level": 1,
+   "q": "Que désigne le sigle FSO ?",
+   "choices": [
+    "Unité flottante de séparation et de forage",
+    "Navire de soutien et de sauvetage en mer",
+    "Unité flottante de stockage et de déchargement",
+    "Système fixe d'oléoduc offshore"
+   ],
+   "answer": 2,
+   "explain": "FSO signifie unité flottante de stockage et de déchargement : un navire ancré qui reçoit le brut, le stocke et le transfère aux pétroliers navettes. Les autres définitions ne correspondent pas au sigle.",
+   "seconds": 40,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-033",
+   "theme": "Terminaux et bouées de chargement",
+   "level": 1,
+   "q": "Quel est le rôle d'un bras de chargement marin ?",
+   "choices": [
+    "Mesurer la hauteur de liquide dans les citernes du navire à quai",
+    "Relier le collecteur du navire au quai, avec déconnexion d'urgence",
+    "Amarrer le navire à la place des cordages et des remorqueurs",
+    "Pomper le ballast du navire vers les bacs de stockage du terminal"
+   ],
+   "answer": 1,
+   "explain": "Le bras articulé suit le mouvement du navire et peut se déconnecter en urgence. Il ne jauge pas les citernes, n'amarre pas le navire et ne pompe pas le ballast.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-034",
+   "theme": "Terminaux et bouées de chargement",
+   "level": 1,
+   "q": "Qu'est-ce que la liste de contrôle de sécurité navire-terre ?",
+   "choices": [
+    "Une facture détaillée des opérations de chargement",
+    "Un plan d'évacuation du personnel du terminal uniquement",
+    "Un certificat de classification valable cinq ans",
+    "Un document signé des deux parties avant le transfert"
+   ],
+   "answer": 3,
+   "explain": "Elle vérifie ensemble communications, moyens incendie, arrêt d'urgence, amarres et flexibles avant le transfert. Ce n'est ni une facture, ni un plan d'évacuation, ni un certificat de classification.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-035",
+   "theme": "Terminaux et bouées de chargement",
+   "level": 2,
+   "q": "Pourquoi démarre-t-on un chargement à débit réduit ?",
+   "choices": [
+    "Vérifier l'étanchéité, limiter l'électricité statique et éviter les surpressions",
+    "Économiser l'énergie des pompes pendant la première heure de chargement",
+    "Laisser aux équipes le temps de relever les prix du marché",
+    "Réduire la température du produit à bord avant le plein débit"
+   ],
+   "answer": 0,
+   "explain": "Un faible débit permet de détecter une fuite, de limiter l'accumulation de charges statiques et d'éviter les surpressions à l'entrée des citernes. Le prix du marché et la température du produit n'ont aucun rôle ici.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-036",
+   "theme": "Terminaux et bouées de chargement",
+   "level": 2,
+   "q": "Pendant un chargement à une bouée, la houle dépasse les limites préétablies. Que faire ?",
+   "choices": [
+    "Augmenter le débit pour finir avant l'arrivée de la tempête",
+    "Continuer si le commandant du navire est d'accord",
+    "Suspendre le transfert, se déconnecter si besoin",
+    "Resserrer les amarres au maximum et poursuivre"
+   ],
+   "answer": 2,
+   "explain": "Les limites de houle protègent amarres et flexibles : leur dépassement impose d'arrêter et, si besoin, de déconnecter. Accélérer, se fier au seul avis du commandant ou tendre les amarres au maximum augmente la contrainte et le risque de rupture.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-037",
+   "theme": "Terminaux et bouées de chargement",
+   "level": 2,
+   "q": "Pourquoi fixe-t-on un temps minimal de fermeture des vannes d'arrêt d'urgence d'un terminal ?",
+   "choices": [
+    "Pour laisser au navire le temps de terminer sa facturation",
+    "Pour éviter l'évaporation du produit à l'ouverture",
+    "Pour limiter le coup de bélier dans lignes et flexibles",
+    "Pour que les compteurs puissent recalculer le volume chargé"
+   ],
+   "answer": 2,
+   "explain": "Une fermeture trop brusque crée un coup de bélier qui peut rompre une ligne ou un flexible ; le temps de fermeture est calculé en fonction de la longueur et du débit. Les autres raisons n'ont pas de lien avec l'arrêt d'urgence.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-038",
+   "theme": "Terminaux et bouées de chargement",
+   "level": 2,
+   "q": "Au terminal d'exportation, qui détient la prérogative du mesurage et du comptage de la production ?",
+   "choices": [
+    "L'État, qui peut la déléguer (art. 246)",
+    "Le contracteur seul, selon son contrat avec l'acheteur",
+    "L'armateur du navire, car la cargaison est à bord",
+    "L'acheteur du brut, qui fixe ses propres tables"
+   ],
+   "answer": 0,
+   "explain": "Selon l'article 246, le mesurage et le comptage de la production sont une prérogative exclusive de l'État, susceptible de délégation. Le contracteur, l'armateur ou l'acheteur n'en sont pas titulaires de plein droit.",
+   "seconds": 60,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 246",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-039",
+   "theme": "Terminaux et bouées de chargement",
+   "level": 3,
+   "q": "Pendant un chargement à la bouée, la pression au collecteur du navire monte, le débit côté terre chute et un écart de volume apparaît entre terre et bord. Que faites-vous ?",
+   "choices": [
+    "Réduire le débit de moitié et poursuivre le chargement en surveillant la pression",
+    "Attendre la fin du chargement pour comparer les volumes terre et bord",
+    "Basculer vers une autre bouée sans arrêter les pompes du terminal",
+    "Arrêt d'urgence, alerte, plan d'urgence, puis localisation de la fuite"
+   ],
+   "answer": 3,
+   "explain": "Les signaux concordent avec une obstruction ou une fuite de flexible : on arrête d'abord, on alerte, on active le plan d'urgence, puis on localise (plongeurs, véhicule sous-marin, surveillance aérienne). Poursuivre, même à faible débit, ou attendre aggrave la pollution ; basculer sans arrêt est dangereux.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-040",
+   "theme": "Terminaux et bouées de chargement",
+   "level": 3,
+   "q": "Un navire se présente à l'accostage sans que son inspection préalable soit complétée, et l'exploitant invoque les surestaries pour exiger le chargement. Que répond l'inspecteur ?",
+   "choices": [
+    "Le chargement commence, l'inspection sera complétée plus tard",
+    "L'accostage attend l'acceptation du navire : la sécurité prime (art. 171)",
+    "L'inspection est facultative pour les navires déjà venus ici",
+    "Les surestaries lèvent l'obligation de sécurité si l'armateur les accepte"
+   ],
+   "answer": 1,
+   "explain": "L'article 171 impose le respect des prescriptions d'hygiène, santé, sécurité, sûreté et environnement. Un coût commercial (surestaries) ne remplace pas la vérification du navire, et l'inspection ne peut être reportée après le chargement.",
+   "seconds": 90,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 171",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-041",
+   "theme": "Stocks de sécurité et SGEPP",
+   "level": 1,
+   "q": "Que signifie le sigle SGEPP ?",
+   "choices": [
+    "Société gabonaise d'exploitation des puits profonds",
+    "Syndicat général des exploitants de pipelines et de ports",
+    "Service gabonais d'étude des produits pétrochimiques",
+    "Société gabonaise d'entreposage des produits pétroliers"
+   ],
+   "answer": 3,
+   "explain": "SGEPP signifie Société gabonaise d'entreposage des produits pétroliers, société sous tutelle du ministère des Hydrocarbures. Ses missions précises sont à confirmer auprès du ministère.",
+   "seconds": 40,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-042",
+   "theme": "Stocks de sécurité et SGEPP",
+   "level": 1,
+   "q": "Que prévoit l'article 147 de la loi n° 002/2019 ?",
+   "choices": [
+    "L'État peut requérir un stock stratégique ou de sécurité",
+    "Chaque distributeur doit stocker 90 jours de consommation",
+    "Les dépôts sont gérés exclusivement par l'État",
+    "Le stock de sécurité est libre de toute spécification"
+   ],
+   "answer": 0,
+   "explain": "L'article 147 permet à l'État de requérir un stock stratégique ou de sécurité. Il ne fixe pas un nombre de jours précis ; le stock commercial minimum relève de l'article 149 et les spécifications de l'article 148.",
+   "seconds": 50,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 147",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-043",
+   "theme": "Stocks de sécurité et SGEPP",
+   "level": 1,
+   "q": "Que prévoit l'article 149 pour le distributeur ?",
+   "choices": [
+    "L'interdiction de détenir plus de 10 jours de stock",
+    "La livraison obligatoire de tout le stock à l'État chaque année",
+    "La détention permanente d'un stock commercial minimum fixé par voie réglementaire",
+    "L'obligation de stocker uniquement de l'essence"
+   ],
+   "answer": 2,
+   "explain": "L'article 149 impose au distributeur un stock commercial minimum permanent dont le niveau est précisé par voie réglementaire. Rien n'interdit un stock plus élevé et rien ne limite le produit à l'essence.",
+   "seconds": 50,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 149",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-044",
+   "theme": "Stocks de sécurité et SGEPP",
+   "level": 1,
+   "q": "Quelle est la différence entre stock commercial minimum et stock de sécurité ?",
+   "choices": [
+    "Le premier appartient à l'État, le second au distributeur",
+    "Les deux sont synonymes dans la loi et dans la pratique",
+    "Exploitation courante pour le premier ; réserve de crise pour le second",
+    "Le premier concerne les produits importés, le second les raffinés localement"
+   ],
+   "answer": 2,
+   "explain": "Le stock commercial est le plancher que le distributeur ne descend jamais en dessous ; le stock de sécurité (article 147) est une réserve que l'autorité peut libérer. Ils ne sont ni synonymes ni distingués par l'origine des produits ou leur propriétaire.",
+   "seconds": 60,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 147",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    },
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 149",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-045",
+   "theme": "Stocks de sécurité et SGEPP",
+   "level": 2,
+   "q": "Hypothèse : 24 000 m³ de gazole en bac, fond non pompable de 2 000 m³, consommation de 800 m³ par jour. Quelle est la couverture réelle ?",
+   "choices": [
+    "27,5 jours",
+    "30 jours",
+    "25 jours",
+    "22 jours"
+   ],
+   "answer": 0,
+   "explain": "Stock utilisable = 24 000 − 2 000 = 22 000 m³ ; 22 000/800 = 27,5 jours. 30 jours oublie le fond de bac ; 25 jours soustrait 2 000/800 deux fois ; 22 jours confond le stock utilisable en milliers avec les jours.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-046",
+   "theme": "Stocks de sécurité et SGEPP",
+   "level": 2,
+   "q": "Pourquoi renouveler périodiquement un stock de sécurité d'essence ?",
+   "choices": [
+    "L'essence perd de sa densité en restant longtemps à l'abri de la lumière",
+    "La loi interdit tout stockage de plus de trois mois dans un dépôt",
+    "Le renouvellement augmente la capacité de stockage du dépôt",
+    "Un stock dormant vieillit et sort des spécifications (art. 148)"
+   ],
+   "answer": 3,
+   "explain": "L'essence s'oxyde (gommes) et perd ses fractions légères ; il faut la faire tourner pour rester conforme aux spécifications en vigueur (article 148). Aucune durée légale de trois mois n'est citée, et la rotation n'augmente pas la capacité.",
+   "seconds": 60,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 148",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-047",
+   "theme": "Stocks de sécurité et SGEPP",
+   "level": 2,
+   "q": "Un navire est retardé et le pays risque une rupture de gazole. Que proposez-vous ?",
+   "choices": [
+    "Laisser chaque distributeur puiser librement dans le stock de sécurité",
+    "Libération partielle du stock de sécurité par l'autorité, puis reconstitution",
+    "Fermer toutes les stations tant que le navire n'est pas arrivé au port",
+    "Utiliser le stock de sécurité pour couvrir les ventes courantes du mois"
+   ],
+   "answer": 1,
+   "explain": "Le stock de sécurité se mobilise sur décision de l'autorité, pour une durée limitée et avec un plan de reconstitution. L'ouvrir librement ou l'utiliser pour les ventes courantes le videra, et fermer les stations aggrave la crise.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-048",
+   "theme": "Stocks de sécurité et SGEPP",
+   "level": 2,
+   "q": "Quelle méthode fonde la constatation d'un manque lors d'un inventaire de stock de sécurité ?",
+   "choices": [
+    "Une déclaration écrite de l'exploitant, sans contrôle sur place",
+    "Une estimation à partir des ventes de l'année précédente",
+    "Un jaugeage unique réalisé sur le plus grand bac du dépôt",
+    "Un inventaire contradictoire signé des parties, bacs à l'arrêt"
+   ],
+   "answer": 3,
+   "explain": "Pour qu'un écart soit opposable, les mesures sont faites en présence des parties, au même moment, bacs à l'arrêt, et signées. Une simple déclaration, une estimation ou un seul bac ne prouvent rien.",
+   "seconds": 65,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-049",
+   "theme": "Stocks de sécurité et SGEPP",
+   "level": 3,
+   "q": "Hypothèse : consommation de 2 000 m³ par jour, objectif de 30 jours de stock de sécurité en plus de 10 jours de stock commercial, capacité utile des dépôts de 45 000 m³. Quelle capacité manque-t-il ?",
+   "choices": [
+    "15 000 m³",
+    "35 000 m³",
+    "20 000 m³",
+    "80 000 m³"
+   ],
+   "answer": 1,
+   "explain": "Besoin = (30 + 10) × 2 000 = 80 000 m³ ; déficit = 80 000 − 45 000 = 35 000 m³. 15 000 oublie le stock commercial (60 000 − 45 000) ; 20 000 confond 80 000 − 60 000 ; 80 000 est le besoin, pas le manque.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-050",
+   "theme": "Stocks de sécurité et SGEPP",
+   "level": 3,
+   "q": "Un distributeur reste sous son stock commercial minimum depuis un mois. Quelle démarche respecte le droit ?",
+   "choices": [
+    "Constat par agents assermentés, mise en demeure, puis sanctions prévues",
+    "Fermer immédiatement le dépôt sans aucune formalité préalable",
+    "Ne rien faire, car le stock commercial est une affaire privée",
+    "Imposer de sa propre initiative un stock supérieur au minimum fixé"
+   ],
+   "answer": 0,
+   "explain": "Les agents assermentés (OPJ spéciaux) constatent les infractions par procès-verbal (art. 19 et 20), puis la mise en demeure précède la sanction. Fermer sans formalité, tolérer ou alourdir de sa propre initiative l'obligation sont irréguliers.",
+   "seconds": 90,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 19",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    },
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 20",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    },
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 149",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-051",
+   "theme": "Mesure, jaugeage, pertes et écarts",
+   "level": 1,
+   "q": "Comment procède-t-on au jaugeage manuel d'un bac ?",
+   "choices": [
+    "Pesée du bac entier sur une bascule adaptée aux grandes charges",
+    "Relevé de la seule température de la robe, sans autre mesure",
+    "Mesure de la hauteur au ruban lesté, puis conversion par le barème du bac",
+    "Déduction du volume à partir de la livraison de la veille au dépôt"
+   ],
+   "answer": 2,
+   "explain": "Le jaugeage donne une hauteur, convertie en volume par le barème de jaugeage du bac. Peser un bac entier est irréaliste, la température seule ne donne aucun volume, et déduire d'une livraison antérieure n'est pas une mesure.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-052",
+   "theme": "Mesure, jaugeage, pertes et écarts",
+   "level": 1,
+   "q": "Pourquoi ramène-t-on les volumes à 15 °C ?",
+   "choices": [
+    "Les produits se dilatent avec la température ; il faut une référence commune",
+    "La loi interdit de mesurer à toute autre température que 15 °C",
+    "Les bacs sont toujours à 15 °C en pratique sous ce climat",
+    "La température n'a aucune influence sur la masse du produit"
+   ],
+   "answer": 0,
+   "explain": "Le volume d'un produit varie avec la température alors que sa masse reste constante ; la correction à 15 °C permet de comparer et de facturer équitablement. Les bacs sont rarement à 15 °C sous un climat tropical, et la masse reste constante.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-053",
+   "theme": "Mesure, jaugeage, pertes et écarts",
+   "level": 1,
+   "q": "Que représente le volume net standard ?",
+   "choices": [
+    "Le volume lu directement au bac, à la température réelle",
+    "Le volume maximal que le bac peut contenir",
+    "Le volume de produit livré chaque jour",
+    "Le volume à 15 °C sans eau ni sédiments"
+   ],
+   "answer": 3,
+   "explain": "Le volume brut observé est celui du bac ; le volume brut standard est corrigé à 15 °C ; le volume net standard retranche en plus l'eau et les sédiments. La capacité du bac et le débit journalier sont d'autres notions.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-054",
+   "theme": "Mesure, jaugeage, pertes et écarts",
+   "level": 1,
+   "q": "À quoi sert l'étalonnage d'un débitmètre avec un prouveur ?",
+   "choices": [
+    "À augmenter la vitesse d'écoulement du produit",
+    "À vérifier la justesse de la mesure",
+    "À mesurer la densité du produit transporté",
+    "À éviter toute maintenance du compteur"
+   ],
+   "answer": 1,
+   "explain": "L'étalon compare le volume mesuré par le compteur à un volume de référence, ce qui permet de corriger sa dérive. Il ne change ni la vitesse, ni la densité, et ne dispense pas de la maintenance.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-055",
+   "theme": "Mesure, jaugeage, pertes et écarts",
+   "level": 2,
+   "q": "Hypothèse simplifiée : 10 000 m³ de gazole observés à 35 °C, coefficient moyen de 0,0008 par °C. Quel est le volume à 15 °C ?",
+   "choices": [
+    "10 160 m³",
+    "9 200 m³",
+    "9 984 m³",
+    "9 840 m³"
+   ],
+   "answer": 3,
+   "explain": "On refroidit de 20 °C : 10 000 × (1 − 0,0008 × 20) = 9 840 m³. 10 160 est un volume corrigé dans le mauvais sens ; 9 200 utilise un coefficient dix fois trop fort ; 9 984 corrige de 2 °C seulement.",
+   "seconds": 90,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-056",
+   "theme": "Mesure, jaugeage, pertes et écarts",
+   "level": 2,
+   "q": "Bilan : stock initial 12 000 m³, réceptions 8 000 m³, livraisons 7 900 m³, stock final mesuré 12 050 m³. Quel est l'écart ?",
+   "choices": [
+    "Un gain apparent de 50 m³",
+    "Une perte apparente de 50 m³",
+    "Une perte apparente de 150 m³",
+    "Un gain apparent de 100 m³"
+   ],
+   "answer": 1,
+   "explain": "Stock théorique = 12 000 + 8 000 − 7 900 = 12 100 m³ ; mesuré = 12 050 m³ ; l'écart de −50 m³ est une perte apparente (environ 0,6 % des livraisons). Les autres résultats viennent d'une erreur de signe ou d'addition.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-057",
+   "theme": "Mesure, jaugeage, pertes et écarts",
+   "level": 2,
+   "q": "D'après la figure, quelle mesure réduit les pertes par respiration d'un bac à toit fixe contenant un produit volatil ?",
+   "choices": [
+    "Une peinture noire, pour que le produit chauffe plus vite le jour",
+    "La suppression de la soupape pour éviter toute surpression",
+    "Le maintien du remplissage à 10 % de la capacité en permanence",
+    "Une peinture blanche réfléchissante et des soupapes en bon état, ou le passage à un toit flottant qui supprime l'espace vapeur"
+   ],
+   "answer": 3,
+   "explain": "La respiration vient des cycles de température et de remplissage : réduire l'échauffement, soigner les soupapes ou supprimer l'espace vapeur (toit flottant de la figure) diminue les pertes. Une peinture noire échauffe, supprimer la soupape est dangereux, et un bac presque vide augmente l'espace vapeur.",
+   "seconds": 70,
+   "status": "draft",
+   "img": "svg/min-reservoir-toit-flottant.svg",
+   "imgAlt": "Deux bacs de stockage dans une cuvette de rétention délimitée par des murs. À gauche, un bac à toit fixe avec une soupape de pression et de dépression au sommet, un espace vapeur au-dessus du produit et une couche d'eau de fond. À droite, un bac à toit flottant posé sur le produit, avec un joint d'étanchéité. Entrée et sortie du produit sur le côté, robinet de purge d'eau en bas."
+  },
+  {
+   "id": "min-stockage-058",
+   "theme": "Mesure, jaugeage, pertes et écarts",
+   "level": 2,
+   "q": "À quoi sert le facteur d'expérience du navire ?",
+   "choices": [
+    "Fixer le prix du fret de la prochaine cargaison transportée",
+    "Déterminer la vitesse maximale du navire en charge",
+    "Détecter un biais systématique entre terre et bord",
+    "Calculer le temps de planche autorisé au port de déchargement"
+   ],
+   "answer": 2,
+   "explain": "Le rapport cumulé des quantités mesurées à terre et à bord met en évidence un écart constant dû à la méthode ou aux instruments. Il ne fixe ni le fret, ni la vitesse, ni le temps de planche.",
+   "seconds": 60,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-059",
+   "theme": "Mesure, jaugeage, pertes et écarts",
+   "level": 3,
+   "q": "Depuis six mois, les quantités reçues au dépôt sont toujours inférieures de 0,5 à 0,6 % à celles du connaissement. Quelle est la meilleure analyse ?",
+   "choices": [
+    "Une série de pertes aléatoires sans lien avec la mesure ni les barèmes",
+    "Un biais systématique probable : audit contradictoire des instruments et barèmes",
+    "Un vol quotidien réalisé sur le navire, à signaler à la police maritime",
+    "Un phénomène normal qu'il suffit d'ignorer pour les comptes annuels"
+   ],
+   "answer": 1,
+   "explain": "Un écart toujours du même côté et de même ordre est typique d'un biais de mesure plutôt que d'un hasard ; on vérifie barèmes, compteurs et méthode de température avec les parties. Accuser un vol ou classer sans suite sans vérifier est infondé.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-060",
+   "theme": "Mesure, jaugeage, pertes et écarts",
+   "level": 3,
+   "q": "Un exploitant veut remplacer lui-même ses compteurs fiscaux de production sans prévenir l'administration, après étalonnage interne. Quelle est la position fondée ?",
+   "choices": [
+    "Accepter, dès lors que l'étalonnage interne est correct et documenté",
+    "Accepter, à condition d'informer l'administration après coup",
+    "Laisser faire, car cela relève du contrat privé avec l'acheteur",
+    "Refuser : prérogative de l'État (art. 246), intervention sous son contrôle"
+   ],
+   "answer": 3,
+   "explain": "Selon l'article 246, mesurage et comptage de la production sont une prérogative exclusive de l'État, et l'article 252 vise le comptage dynamique pour la production fiscale. Un étalonnage interne ou une information tardive ne remplace pas le contrôle de l'administration.",
+   "seconds": 90,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 246",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    },
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 252",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-061",
+   "theme": "Sécurité, pollution, autorisation et contrôle",
+   "level": 1,
+   "q": "À qui l'autorisation d'une activité aval peut-elle être délivrée (art. 131) ?",
+   "choices": [
+    "Toute société étrangère, même sans établissement de droit gabonais",
+    "Personnes de droit gabonais justifiant de compétences et de capacités financières",
+    "Uniquement les entreprises publiques placées sous la tutelle du ministère",
+    "Toute personne qui en fait la demande, sans justificatif particulier"
+   ],
+   "answer": 1,
+   "explain": "L'article 131 réserve ces autorisations aux personnes physiques ou morales de droit gabonais justifiant de compétences techniques et de capacités financières. Les étrangers sans société de droit gabonais, les seules entreprises publiques ou le premier venu ne sont pas visés.",
+   "seconds": 55,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 131",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-062",
+   "theme": "Sécurité, pollution, autorisation et contrôle",
+   "level": 1,
+   "q": "Une autorisation de dépôt peut-elle être cédée librement à un repreneur ?",
+   "choices": [
+    "Oui, par simple acte entre les deux sociétés concernées",
+    "Oui, si le repreneur paie une redevance à l'État",
+    "Oui, mais seulement à une filiale du même groupe",
+    "Non : incessible et non transmissible (art. 134)"
+   ],
+   "answer": 3,
+   "explain": "L'article 134 rend l'autorisation incessible et non transmissible : le repreneur doit demander la sienne. Un acte, une redevance ou un lien de filiale n'y changent rien.",
+   "seconds": 50,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 134",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-063",
+   "theme": "Sécurité, pollution, autorisation et contrôle",
+   "level": 1,
+   "q": "Qui réalise les études de dangers d'un dépôt (art. 172) ?",
+   "choices": [
+    "Uniquement les services du ministère",
+    "Des cabinets agréés",
+    "L'exploitant seul, sans validation",
+    "Tout bureau d'études étranger"
+   ],
+   "answer": 1,
+   "explain": "L'article 172 réserve la réalisation des études de dangers aux cabinets agréés ; elles sont validées par les services techniques compétents et révisées périodiquement. L'exploitant seul ou un bureau non agréé ne suffit pas.",
+   "seconds": 50,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 172",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-064",
+   "theme": "Sécurité, pollution, autorisation et contrôle",
+   "level": 1,
+   "q": "Sur le triangle du feu, le combustible d'un feu de bac est un hydrocarbure liquide. À quelle classe appartient ce feu, et quel agent est adapté ?",
+   "choices": [
+    "Classe A ; l'eau en jet plein",
+    "Classe B ; mousse ou poudre",
+    "Classe C ; le sable humide",
+    "Classe D ; l'eau pulvérisée"
+   ],
+   "answer": 1,
+   "explain": "Les liquides inflammables relèvent de la classe B : la mousse étouffe la nappe (suppression du comburant, un côté du triangle), la poudre agit aussi sur la flamme. L'eau en jet plein étale le liquide enflammé. Les classes C et D concernent les gaz et les métaux.",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/fire-triangle.svg",
+   "imgAlt": "Triangle du feu : énergie d'activation (chaleur, étincelle, flamme), combustible (bois, gaz, pétrole) et comburant (oxygène de l'air, 21 %). Le feu exige les trois éléments réunis. Pour éteindre, on supprime un côté : couper l'alimentation en combustible, étouffer pour supprimer le comburant, ou refroidir pour supprimer la chaleur."
+  },
+  {
+   "id": "min-stockage-065",
+   "theme": "Sécurité, pollution, autorisation et contrôle",
+   "level": 2,
+   "q": "Un feu se déclare dans la cuvette d'un bac. En vous appuyant sur les côtés du triangle du feu, quelle tactique est la plus adaptée ?",
+   "choices": [
+    "Inonder la cuvette d'eau jusqu'à débordement complet",
+    "Évacuer le site sans refroidir les bacs voisins",
+    "Refroidir les bacs voisins (chaleur) et mousser la nappe (comburant)",
+    "Vidanger aussitôt tous les bacs de la cuvette en feu"
+   ],
+   "answer": 2,
+   "explain": "Il faut protéger les bacs voisins du rayonnement (supprimer la chaleur) et étouffer la nappe par la mousse (supprimer le comburant). Inonder la cuvette fait déborder le produit enflammé, évacuer sans refroidir laisse l'incendie se propager, et vidanger des bacs dans la zone est dangereux et trop lent.",
+   "seconds": 70,
+   "status": "draft",
+   "img": "svg/fire-triangle.svg",
+   "imgAlt": "Triangle du feu : énergie d'activation (chaleur, étincelle, flamme), combustible (bois, gaz, pétrole) et comburant (oxygène de l'air, 21 %). Le feu exige les trois éléments réunis. Pour éteindre, on supprime un côté : couper l'alimentation en combustible, étouffer pour supprimer le comburant, ou refroidir pour supprimer la chaleur."
+  },
+  {
+   "id": "min-stockage-066",
+   "theme": "Sécurité, pollution, autorisation et contrôle",
+   "level": 2,
+   "q": "Une fuite de 5 m³ est contenue en cuvette ; l'exploitant estime qu'il n'y a pas de pollution et n'informe pas l'administration. Qu'en dites-vous ?",
+   "choices": [
+    "Il n'y est tenu que si le produit atteint un cours d'eau ou le sol voisin",
+    "Il doit informer sans délai, même pour un incident contenu (art. 241)",
+    "Il peut regrouper la déclaration de l'incident avec son rapport de fin de mois",
+    "Seule la présence d'un blessé grave rend l'information de l'administration obligatoire"
+   ],
+   "answer": 1,
+   "explain": "L'article 241 impose d'informer sans délai l'administration de toute perturbation, de tout incident ou accident, sans condition de gravité ou de pollution. Retarder la déclaration ou la limiter aux blessés graves est irrégulier.",
+   "seconds": 70,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 241",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-067",
+   "theme": "Sécurité, pollution, autorisation et contrôle",
+   "level": 2,
+   "q": "Dans un plan d'urgence à trois niveaux, qu'est-ce qu'un déversement de niveau 1 ?",
+   "choices": [
+    "Un déversement exigeant l'aide internationale immédiate",
+    "Un déversement survenu hors des eaux nationales",
+    "Un déversement impossible à contenir sur le site",
+    "Un déversement mineur traité par l'exploitant seul"
+   ],
+   "answer": 3,
+   "explain": "Le niveau 1 correspond à un déversement mineur géré localement par l'exploitant ; les niveaux 2 et 3 mobilisent l'aide régionale ou nationale puis internationale.",
+   "seconds": 55,
+   "status": "draft"
+  },
+  {
+   "id": "min-stockage-068",
+   "theme": "Sécurité, pollution, autorisation et contrôle",
+   "level": 2,
+   "q": "Un dépôt cesse définitivement son activité. Quelle obligation pèse sur le titulaire de l'autorisation (art. 137) ?",
+   "choices": [
+    "Remettre le site en état au terme de l'exploitation",
+    "Abandonner les installations sur place sans suite",
+    "Transférer le site à l'État sans condition",
+    "Reverser les droits d'autorisation au titulaire précédent"
+   ],
+   "answer": 0,
+   "explain": "L'article 137 impose au titulaire de remettre le site en état au terme de l'exploitation. L'abandon, le transfert sans condition ou un reversement ne sont pas prévus.",
+   "seconds": 55,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 137",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-069",
+   "theme": "Sécurité, pollution, autorisation et contrôle",
+   "level": 3,
+   "q": "Lors d'un contrôle, vous découvrez un dépôt exploité sans autorisation. Quelle suite est conforme à la loi ?",
+   "choices": [
+    "Fermeture immédiate sans formalité et saisie des véhicules du site",
+    "Amende de 50 à 2 500 millions FCFA, prévue pour le torchage",
+    "PV, mise en demeure, puis pénalité de 1 à 30 millions FCFA (art. 284)",
+    "Simple avertissement oral à l'exploitant, sans aucune trace écrite"
+   ],
+   "answer": 2,
+   "explain": "L'article 284 prévoit, après mise en demeure, une pénalité de 1 000 000 à 30 000 000 FCFA pour une activité aval sans autorisation ; les agents assermentés dressent des procès-verbaux (art. 19 et 20). La fourchette de 50 à 2 500 millions vise le torchage (art. 269), et un avertissement oral ne laisse aucune base.",
+   "seconds": 100,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 284",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    },
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 19",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    },
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 20",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-stockage-070",
+   "theme": "Sécurité, pollution, autorisation et contrôle",
+   "level": 3,
+   "q": "Un exploitant déjà sanctionné pour un manquement de sécurité en commet un second. Que prévoit l'article 265 ?",
+   "choices": [
+    "Un simple rappel écrit de la sanction déjà infligée",
+    "L'effacement de la première pénalité en cas de régularisation tardive",
+    "Doublement des pénalités et retrait possible de l'autorisation",
+    "Une réduction de moitié de la pénalité si l'exploitant est de bonne foi"
+   ],
+   "answer": 2,
+   "explain": "L'article 265 prévoit qu'en cas de récidive les pénalités sont portées au double, et que la récidive peut aussi être sanctionnée du retrait de l'autorisation et de l'interdiction d'exercer. Rappel, effacement ou réduction ne figurent pas dans ce texte.",
+   "seconds": 80,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 265",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  }
+ ]
 }

@@ -41,7 +41,9 @@
         "Contrat à terme ou d'échange : prix fixé ; option de vente : plancher contre prime ; tunnel : prix borné.",
         "Prix net avec option de vente : prix de marché moins la prime si le marché monte ; plancher moins la prime s'il baisse.",
         "Limites : risque de base, coût de la prime, regret, besoin de cadre et de contrôle."
-      ]
+      ],
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "m4",
@@ -55,7 +57,9 @@
         "Art. 189 de la loi n° 002/2019 : liste des prélèvements ; RMP (art. 209), part de l'État au moins 45 % ou 40 % (art. 215), PID/PIH 1 % et 2 % (art. 217).",
         "Les coûts étant largement fixes, une baisse du prix réduit les recettes de l'État plus que proportionnellement.",
         "Les primes sont ponctuelles : ne pas les compter comme recettes récurrentes."
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur. Total État 250 000 barils."
     },
     {
       "id": "m5",
@@ -69,7 +73,9 @@
         "Sensibilité = volume × taux de change × part de l'État ; dans l'exemple, 18,56 milliards de FCFA par dollar.",
         "Prix et volume se composent par produit, pas par addition.",
         "L'excédent par rapport à l'hypothèse est exceptionnel : à épargner, non à engager en dépenses permanentes."
-      ]
+      ],
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "m6",
@@ -453,17 +459,19 @@
       "id": "min-economie-petroliere-021",
       "theme": "Volatilité et couvertures",
       "level": 1,
-      "q": "Que mesure la volatilité du prix du pétrole ?",
+      "q": "Sur la courbe, le prix du baril fictif passe de 82 USD à 58 USD en quatre trimestres, puis remonte à 80 USD. Quelle notion décrit l'amplitude de ces variations ?",
       "choices": [
-        "Le niveau moyen du prix constaté sur l'année écoulée, en dollars",
+        "Le niveau moyen du prix constaté sur la période, en dollars",
         "La part du brut vendue sur le marché à terme",
-        "Le coût de production moyen d'un baril sur l'ensemble des champs du pays",
-        "L'amplitude des variations du prix sur une période donnée"
+        "Le coût de production moyen d'un baril sur l'ensemble des champs",
+        "La volatilité : l'amplitude des variations du prix sur une période donnée"
       ],
       "answer": 3,
-      "explain": "La volatilité mesure l'ampleur des fluctuations d'un prix. Elle ne se confond ni avec le niveau moyen, ni avec la part des ventes à terme, ni avec un coût de production.",
+      "explain": "La volatilité mesure l'amplitude des variations d'un prix sur une période : ici, un écart de 24 USD entre le point haut et le point bas. Elle se transmet directement aux recettes de l'État producteur.",
       "seconds": 40,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "min-economie-petroliere-022",
@@ -636,15 +644,15 @@
       "id": "min-economie-petroliere-032",
       "theme": "Recettes pétrolières et budget",
       "level": 1,
-      "q": "Quelle est la bonne description de la redevance minière proportionnelle (RMP) ?",
+      "q": "Sur le schéma, 100 000 barils sont prélevés d'abord sur la production totale. Quelle est la bonne description de cette redevance minière proportionnelle (RMP) ?",
       "choices": [
         "Elle est versée seulement en phase d'exploration, avant toute production",
         "Elle est calculée sur le bénéfice net après récupération des coûts",
-        "Elle est négociée librement pour tous les contrats sans fourchette légale",
-        "Due dès la mise en production sur la production totale disponible"
+        "Elle est négociée librement pour tous les contrats, sans fourchette légale",
+        "Elle est due dès la mise en production sur la production totale disponible"
       ],
       "answer": 3,
-      "explain": "La RMP s'applique dès la mise en production sur la production totale disponible (art. 209) et n'entre pas dans les coûts pétroliers (art. 211). Elle n'est pas due en exploration, ne dépend pas du bénéfice net, et la loi prévoit des fourchettes.",
+      "explain": "La RMP est due dès la mise en production, sur la production totale disponible (article 209), dans une fourchette fixée par la loi selon le type d'hydrocarbure et la zone. Elle est prélevée avant la récupération des coûts, comme le montre le schéma.",
       "seconds": 60,
       "status": "draft",
       "refs": [
@@ -653,7 +661,9 @@
           "art": "209 et 211",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur. Total État 250 000 barils."
     },
     {
       "id": "min-economie-petroliere-033",
@@ -705,15 +715,15 @@
       "id": "min-economie-petroliere-035",
       "theme": "Recettes pétrolières et budget",
       "level": 2,
-      "q": "Pour les liquides en zone conventionnelle, quelle est la part minimale de l'État dans le partage de la production restante ?",
+      "q": "Sur le schéma, la part de l'État au partage est de 150 000 barils sur 300 000. Pour des liquides en zone conventionnelle, quel est le plancher légal et cette part est-elle conforme ?",
       "choices": [
-        "25 %",
-        "60 % de la production restante",
-        "10 %",
-        "45 %"
+        "25 % : la part du schéma est très supérieure au plancher",
+        "60 % : la part du schéma est insuffisante",
+        "10 % : la part du schéma est très supérieure au plancher",
+        "45 % : la part du schéma, de 50 %, est conforme"
       ],
       "answer": 3,
-      "explain": "L'article 215 fixe la part minimale à 45 % (zone conventionnelle) et 40 % (mer profonde) pour les liquides ; pour le gaz 25 % et 20 %. 25 % est le chiffre du gaz, 10 % est le plafond de participation de l'État (art. 218).",
+      "explain": "Pour les liquides en zone conventionnelle, la part de l'État ne peut être inférieure à 45 % de la production restante (article 215). 150 000 / 300 000 = 50 % : la part du schéma respecte ce plancher. Le plancher de 25 % concerne le gaz.",
       "seconds": 60,
       "status": "draft",
       "refs": [
@@ -722,21 +732,23 @@
           "art": "215",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur. Total État 250 000 barils."
     },
     {
       "id": "min-economie-petroliere-036",
       "theme": "Recettes pétrolières et budget",
       "level": 2,
-      "q": "La production de la loi de finances 2025 est d'environ 11,125 millions de tonnes. Avec 7,3 barils par tonne (ordre de grandeur), quelle est la production annuelle en barils ?",
+      "q": "Le panneau de sensibilité retient une production de 80 millions de barils. Avec 7,3 barils par tonne (ordre de grandeur), à combien de millions de tonnes cela correspond-il ?",
       "choices": [
-        "Environ 1,5 million de barils",
-        "Environ 81 millions de barils",
-        "Environ 8 millions de barils",
-        "Environ 812 millions de barils"
+        "Environ 584 millions de tonnes",
+        "Environ 11 millions de tonnes",
+        "Environ 1,1 million de tonnes",
+        "Environ 110 millions de tonnes"
       ],
       "answer": 1,
-      "explain": "11,125 × 7,3 ≈ 81,2 millions de barils par an, soit environ 222 000 barils par jour. 1,5 million vient d'une division au lieu d'une multiplication, 8 et 812 sont des erreurs d'ordre de grandeur.",
+      "explain": "80 / 7,3 ≈ 10,96 millions de tonnes, soit environ 11 : un ordre de grandeur proche de la production de la loi de finances 2025 (environ 11,1 millions de tonnes). 584 résulte d'une multiplication au lieu d'une division.",
       "seconds": 75,
       "status": "draft",
       "refs": [
@@ -745,7 +757,9 @@
           "art": "",
           "url": "https://www.gabonreview.com/budget-du-gabon-2025-4-204-milliards-de-fcfa-pour-defier-la-crise-et-reinventer-leconomie/"
         }
-      ]
+      ],
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "min-economie-petroliere-037",
@@ -797,15 +811,15 @@
       "id": "min-economie-petroliere-039",
       "theme": "Recettes pétrolières et budget",
       "level": 3,
-      "q": "Exemple simplifié : production valorisée 6 000 M USD ; RMP 10 % ; coûts récupérés 2 400 ; part de l'État 45 % de la production restante. Quelles sont les recettes de l'État (hors impôts) ?",
+      "q": "D'après le schéma, quelles sont les recettes de l'État en barils (hors impôts), redevance et part du partage comprises ?",
       "choices": [
-        "1 950 M USD",
-        "1 350 M USD",
-        "2 250 M USD",
-        "2 700 M USD, en appliquant 45 % à toute la production"
+        "250 000 barils",
+        "150 000 barils",
+        "400 000 barils",
+        "750 000 barils"
       ],
       "answer": 0,
-      "explain": "RMP = 600 ; production restante = 6 000 − 600 − 2 400 = 3 000 ; part de l'État = 1 350 ; total = 1 950. 1 350 oublie la RMP, 2 250 additionne à tort 600 et 1 650, 2 700 applique 45 % à la production totale.",
+      "explain": "L'État reçoit 100 000 barils de redevance (RMP) et 150 000 barils de la production à partager : 250 000 barils. Les 150 000 seuls oublient la redevance ; 750 000 barils est la part du contracteur.",
       "seconds": 110,
       "status": "draft",
       "refs": [
@@ -814,21 +828,23 @@
           "art": "209, 215 et 221",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur. Total État 250 000 barils."
     },
     {
       "id": "min-economie-petroliere-040",
       "theme": "Recettes pétrolières et budget",
       "level": 3,
-      "q": "Pourquoi une baisse de 10 % du prix du baril peut-elle réduire la part de l'État de plus de 10 % ?",
+      "q": "Sur le schéma, une baisse du prix oblige à consacrer 630 000 barils (le plafond) à la récupération des coûts au lieu de 600 000. Quelle conséquence pour la production à partager et pour l'État (part de 50 %) ?",
       "choices": [
-        "Parce que la loi impose une baisse de la RMP égale au double de la baisse du prix",
-        "Parce que l'État doit rembourser aux contracteurs la baisse de prix",
-        "Les coûts à récupérer sont largement fixes en dollars : il faut plus de barils pour les couvrir, la production à partager diminue",
-        "Parce que la part de l'État est fixée en barils et non en valeur"
+        "Elle monte à 330 000 barils, donc la part de l'État augmente",
+        "Elle reste à 300 000 barils : les coûts n'influent pas sur le partage",
+        "Elle tombe à 270 000 barils et la part de l'État à 135 000 barils",
+        "Elle tombe à 270 000 barils, mais la part de l'État reste à 150 000"
       ],
       "answer": 2,
-      "explain": "Quand le prix baisse, les coûts récupérables (fixes en dollars) absorbent davantage de barils ; la production à partager baisse plus vite que le prix, et la part de l'État aussi. Aucune règle ne double la baisse de la RMP et l'État n'indemnise pas les contracteurs. La part en barils n'explique pas l'effet.",
+      "explain": "Les coûts étant largement fixes en dollars, une baisse du prix exige plus de barils pour les récupérer : la production à partager passe de 300 000 à 270 000 barils et la part de l'État (50 %) de 150 000 à 135 000. C'est l'effet de levier du prix.",
       "seconds": 110,
       "status": "draft",
       "refs": [
@@ -837,7 +853,9 @@
           "art": "220 et 221",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-partage-production.svg",
+      "imgAlt": "Cascade fictive en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 avec un plafond de 70 % soit 630 000 ; production à partager 300 000, répartie en 150 000 pour l'État et 150 000 pour le contracteur. Total État 250 000 barils."
     },
     {
       "id": "min-economie-petroliere-041",
@@ -859,7 +877,7 @@
       "id": "min-economie-petroliere-042",
       "theme": "Hypothèses budgétaires et sensibilité",
       "level": 1,
-      "q": "Selon la presse économique gabonaise, quel prix du baril ont retenu les lois de finances 2024 et 2025 ?",
+      "q": "La ligne pointillée du graphique est à 75 USD. Selon la presse économique gabonaise, quels prix du baril ont retenu les lois de finances 2024 et 2025 ?",
       "choices": [
         "65 USD pour 2024 et 75 USD pour 2025, en hausse",
         "75 USD pour 2024 et 79 USD pour 2025",
@@ -867,7 +885,7 @@
         "79 USD pour 2024 et 75 USD pour 2025"
       ],
       "answer": 3,
-      "explain": "Les documents de préparation rapportés par la presse indiquent 79 USD (2024) et 75 USD (2025), en baisse. Le chiffre de 65 USD correspond plutôt à 2026. Ces valeurs sont à confirmer dans les lois de finances.",
+      "explain": "La presse rapporte 79 USD le baril pour la loi de finances 2024 et 75 USD pour 2025 (valeurs à confirmer dans les textes officiels). La ligne pointillée du graphique, fictive, reprend ce niveau de 75 USD.",
       "seconds": 50,
       "status": "draft",
       "refs": [
@@ -881,23 +899,27 @@
           "art": "",
           "url": "https://ecomatin.net/recettes-petrolieres-le-gabon-vise-1-600-milliards-fcfa-en-2026-en-hausse-de-33"
         }
-      ]
+      ],
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "min-economie-petroliere-043",
       "theme": "Hypothèses budgétaires et sensibilité",
       "level": 1,
-      "q": "Pourquoi retient-on en général une hypothèse de prix prudente dans une loi de finances ?",
+      "q": "Sur la courbe, le prix passe sous l'hypothèse de 75 USD de T3 à T7. Pourquoi une loi de finances retient-elle en général une hypothèse de prix prudente ?",
       "choices": [
-        "Pour réduire artificiellement les impôts pétroliers dus par les compagnies pétrolières",
+        "Pour réduire artificiellement les impôts pétroliers dus par les compagnies",
         "Parce que le prix réel est toujours inférieur à l'hypothèse",
         "Pour éviter d'engager des dépenses sur des recettes qui ne se réaliseraient pas",
         "Pour que l'État puisse dépenser plus que ses recettes prévues"
       ],
       "answer": 2,
-      "explain": "Une hypothèse prudente protège contre un déficit imprévu. Elle ne modifie pas l'impôt dû, le prix réel n'est pas toujours plus bas, et son rôle n'est pas de permettre un dépassement des dépenses.",
+      "explain": "Une hypothèse prudente limite le risque de dépenser des recettes qui ne viendraient pas ; la courbe montre cinq trimestres consécutifs sous 75 USD. Le prix réel n'est pas toujours inférieur à l'hypothèse (T1, T2 et T8 la dépassent).",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "min-economie-petroliere-044",
@@ -919,31 +941,33 @@
       "id": "min-economie-petroliere-045",
       "theme": "Hypothèses budgétaires et sensibilité",
       "level": 2,
-      "q": "Chiffres d'exemple : 80 millions de barils, 580 FCFA pour 1 USD, part de l'État 40 %. Quelle est la perte de recettes de l'État si le baril baisse de 10 USD ?",
+      "q": "D'après le panneau de sensibilité, de combien les recettes de l'État varient-elles pour 1 USD de baisse du baril ?",
       "choices": [
+        "Environ 18,56 milliards de FCFA",
         "Environ 185,6 milliards de FCFA",
-        "Environ 464 milliards de FCFA",
-        "Environ 18,6 milliards de FCFA, pour un seul dollar",
-        "Environ 1 856 milliards de FCFA"
+        "Environ 1 856 milliards de FCFA",
+        "Environ 4,64 milliards de FCFA"
       ],
       "answer": 0,
-      "explain": "80 × 10⁶ × 10 × 580 × 0,40 = 185,6 milliards de FCFA. 464 oublie la part de l'État, 18,6 correspond à un seul dollar, 1 856 est une erreur d'un facteur 10.",
+      "explain": "80 millions de barils × 1 USD × 580 FCFA × 40 % = 18,56 milliards de FCFA par dollar. 185,6 milliards correspond à une baisse de 10 USD.",
       "seconds": 90,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "min-economie-petroliere-046",
       "theme": "Hypothèses budgétaires et sensibilité",
       "level": 2,
-      "q": "Au prix de 70 USD, 80 millions de barils : le taux passe de 596 à 571 FCFA pour 1 USD. De combien baisse la valeur brute de la production en FCFA ?",
+      "q": "D'après le tableau du panneau, de combien la recette de l'État diminue-t-elle quand le prix passe de 75 USD à 65 USD ?",
       "choices": [
-        "56 milliards de FCFA",
-        "14 milliards de FCFA",
-        "140 milliards de FCFA",
-        "1 400 milliards de FCFA"
+        "18,56 milliards de FCFA",
+        "92,8 milliards de FCFA",
+        "185,6 milliards de FCFA",
+        "1 856 milliards de FCFA"
       ],
       "answer": 2,
-      "explain": "80 × 10⁶ × 70 × (596 − 571) = 140 milliards de FCFA de valeur brute. 56 serait la part de l'État à 40 %, 14 et 1 400 sont des erreurs de puissance de dix.",
+      "explain": "1 392,0 − 1 206,4 = 185,6 milliards de FCFA, soit 10 × 18,56. La décimale mal placée donne 18,56 ou 1 856.",
       "seconds": 90,
       "status": "draft",
       "refs": [
@@ -952,13 +976,15 @@
           "art": "",
           "url": "https://ecomatin.net/recettes-petrolieres-le-gabon-vise-1-600-milliards-fcfa-en-2026-en-hausse-de-33"
         }
-      ]
+      ],
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "min-economie-petroliere-047",
       "theme": "Hypothèses budgétaires et sensibilité",
       "level": 2,
-      "q": "Le prix réel est de 85 USD contre 75 USD prévus (+13,3 %), mais la production est inférieure de 5 %. Comment évolue la valeur de la production ?",
+      "q": "Sur le tableau, la recette passe de 1 392 (75 USD) à 1 577,6 (85 USD), soit +13,3 %. Si la production est de plus inférieure de 5 %, comment évolue la recette ?",
       "choices": [
         "Environ +13,3 %, car le volume n'a pas d'effet",
         "Environ +7,7 % : 1,133 × 0,95 ≈ 1,077",
@@ -966,31 +992,35 @@
         "Environ −5 %, car le volume domine toujours"
       ],
       "answer": 1,
-      "explain": "Prix et volume se combinent par produit : 1,133 × 0,95 ≈ 1,077. L'addition (+8,3 %) est une approximation fausse, ignorer le volume ou le faire dominer l'est aussi.",
+      "explain": "Prix et volume se combinent par produit : 1,133 × 0,95 ≈ 1,077, soit +7,7 %. L'addition (+8,3 %) est une erreur ; le prix ne s'efface pas devant le volume.",
       "seconds": 80,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "min-economie-petroliere-048",
       "theme": "Hypothèses budgétaires et sensibilité",
       "level": 2,
-      "q": "Vous êtes chef de service. Un écart de prix de +20 USD par rapport à l'hypothèse produit une recette exceptionnelle. Quelle utilisation est la plus saine ?",
+      "q": "Sur la courbe, aux trimestres T1, T2 et T8, le prix dépasse l'hypothèse de 75 USD et dégage une recette exceptionnelle. Quelle utilisation de cet écart est la plus saine ?",
       "choices": [
-        "Créer des postes permanents de fonctionnaires, financés chaque année par cet écart de prix",
-        "Réduire le solde de la dette uniquement si le prix baisse ensuite",
+        "Créer des postes permanents de fonctionnaires, financés chaque année par cet écart",
+        "Réduire la dette uniquement si le prix baisse ensuite",
         "Augmenter les subventions pour toute l'année suivante",
         "L'épargner ou rembourser de la dette plutôt que financer des dépenses permanentes"
       ],
       "answer": 3,
-      "explain": "Une recette exceptionnelle ne se répète pas : l'engager en dépenses permanentes crée un déficit lorsque le prix baisse. L'épargne ou le désendettement est plus prudent. Attendre une baisse du prix pour agir est inutile, et des subventions annuelles sont difficiles à réduire.",
+      "explain": "L'écart entre prix réel et hypothèse est une recette exceptionnelle, non récurrente : la bonne pratique est de l'épargner ou de rembourser de la dette. La courbe montre qu'il peut disparaître en quelques trimestres.",
       "seconds": 75,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "min-economie-petroliere-049",
       "theme": "Hypothèses budgétaires et sensibilité",
       "level": 3,
-      "q": "Chiffres d'exemple : dépenses 4 000, recettes non pétrolières 2 600 (milliards de FCFA), sensibilité 18,56 milliards par USD. Quel est le prix d'équilibre budgétaire ?",
+      "q": "Avec la sensibilité du panneau, dépenses de 4 000 et recettes non pétrolières de 2 600 (milliards de FCFA), quel est le prix d'équilibre budgétaire ?",
       "choices": [
         "Environ 30 USD",
         "Environ 44 USD",
@@ -998,25 +1028,29 @@
         "Environ 105 USD"
       ],
       "answer": 2,
-      "explain": "Il faut 4 000 − 2 600 = 1 400 de recettes pétrolières ; 1 400 / 18,56 ≈ 75 USD. 30 oublie la part de l'État, 44 oublie le taux de change, 105 n'a pas de fondement.",
+      "explain": "Recettes pétrolières nécessaires : 4 000 − 2 600 = 1 400 milliards ; 1 400 / 18,56 ≈ 75 USD. À 75 USD, le tableau donne 1 392, soit presque l'équilibre.",
       "seconds": 110,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "min-economie-petroliere-050",
       "theme": "Hypothèses budgétaires et sensibilité",
       "level": 3,
-      "q": "Prix d'équilibre de 75 USD, hypothèse de loi de finances à 65 USD, Brent observé à 70 USD. Quel jugement est le plus juste ?",
+      "q": "Le prix d'équilibre du budget fictif est de 75 USD. L'hypothèse de loi de finances est de 65 USD et la courbe indique 72 USD au trimestre T7. Quel jugement est le plus juste ?",
       "choices": [
-        "Hypothèse prudente, mais 5 USD de prix manquent encore pour équilibrer le budget",
-        "Le budget est équilibré, car 70 USD est supérieur à l'hypothèse de 65 USD retenue",
-        "L'hypothèse est imprudente, car elle est inférieure au prix observé",
-        "Le budget est excédentaire de 5 USD, car 70 dépasse 65"
+        "Hypothèse prudente, mais le prix observé reste inférieur de 3 USD au prix d'équilibre",
+        "Budget équilibré, car 72 USD dépasse l'hypothèse de 65 USD",
+        "Hypothèse imprudente, car elle est inférieure au prix observé",
+        "Budget excédentaire de 7 USD, car 72 USD dépasse 65 USD"
       ],
       "answer": 0,
-      "explain": "Le budget s'équilibre à 75 USD : à 70 USD, il manque l'équivalent de 5 USD de prix (environ 93 milliards de FCFA avec 18,56 milliards par USD). Une hypothèse inférieure au prix observé est prudente et non imprudente ; dépasser l'hypothèse ne suffit pas à équilibrer.",
+      "explain": "Une hypothèse inférieure au prix observé est prudente. Mais l'équilibre exige 75 USD : à 72 USD, il manque encore 3 USD de prix, soit environ 56 milliards de FCFA (3 × 18,56). Dépasser l'hypothèse ne suffit pas à équilibrer le budget.",
       "seconds": 110,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-prix-brut-sensibilite.svg",
+      "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
     },
     {
       "id": "min-economie-petroliere-051",

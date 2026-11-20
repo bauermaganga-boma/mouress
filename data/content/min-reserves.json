@@ -13,7 +13,9 @@
         "Perméabilité (mD) : elle gouverne le débit (loi de Darcy) ; porosité et perméabilité ne sont pas équivalentes.",
         "Bo convertit le volume de fond en volume de surface : volume stock = volume de fond / Bo.",
         "Carottes, diagraphies, essais de puits et analyses PVT fournissent les valeurs."
-      ]
+      ],
+      "img": "svg/min-systeme-petrolier.svg",
+      "imgAlt": "Coupe d'un système pétrolier : roche mère en bas, deux flèches de migration vers un réservoir en voûte (anticlinal) surmonté d'une couverture imperméable ; dans le réservoir, gaz au sommet, huile au milieu et eau en bas, séparés par des contacts en pointillés. Le puits P1 est foré au sommet de la structure, le puits P2 sur le flanc, dans la zone d'eau."
     },
     {
       "id": "m2",
@@ -55,7 +57,9 @@
         "Statut : développées en production, développées non en production, non développées.",
         "Sans contact fluide connu, les prouvées s'arrêtent au plus bas niveau d'hydrocarbures connu.",
         "Sans projet approuvé, les volumes sont des ressources contingentes, pas des réserves."
-      ]
+      ],
+      "img": "svg/min-matrice-reserves-ressources.svg",
+      "imgAlt": "Matrice de classification des ressources : colonnes estimation basse (P90), meilleure estimation (P50) et estimation haute (P10) ; lignes production, réserves (1P, 2P, 3P), ressources contingentes (1C, 2C, 3C), ressources prospectives et quantités non récupérables. Flèches : incertitude croissante vers la droite, maturité croissante vers le haut."
     },
     {
       "id": "m5",
@@ -69,7 +73,9 @@
         "Déclin exponentiel : q = q₀ e^(−Dt) ; réserves restantes = (q − q abandon) / D.",
         "Après un long historique, bilan matière et déclin priment sur la volumétrie.",
         "Toute estimation s'exprime en fourchette (P90 – P50 – P10)."
-      ]
+      ],
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "m6",
@@ -153,7 +159,7 @@
       "id": "min-reserves-004",
       "theme": "Propriétés du réservoir",
       "level": 1,
-      "q": "Quel est le rôle de la couverture dans un système pétrolier ?",
+      "q": "Sur la coupe du système pétrolier, repérez la couche grise qui surmonte la voûte du réservoir : la couverture. Quel est son rôle ?",
       "choices": [
         "Générer les hydrocarbures à partir de la matière organique",
         "Stocker les hydrocarbures dans ses pores connectés et perméables",
@@ -161,9 +167,11 @@
         "Transporter les hydrocarbures de la roche mère vers le piège"
       ],
       "answer": 2,
-      "explain": "La couverture est une roche imperméable qui empêche la remontée des fluides. La génération est le rôle de la roche mère, le stockage celui de la roche réservoir, le transport vers le piège celui de la migration.",
+      "explain": "Sur la coupe, la couverture est la roche imperméable posée sur le réservoir : elle empêche la remontée des fluides. La génération est le rôle de la roche mère, le stockage celui de la roche réservoir, le transport vers le piège celui de la migration.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-systeme-petrolier.svg",
+      "imgAlt": "Coupe d'un système pétrolier : roche mère en bas, deux flèches de migration vers un réservoir en voûte (anticlinal) surmonté d'une couverture imperméable ; dans le réservoir, gaz au sommet, huile au milieu et eau en bas, séparés par des contacts en pointillés. Le puits P1 est foré au sommet de la structure, le puits P2 sur le flanc, dans la zone d'eau."
     },
     {
       "id": "min-reserves-005",
@@ -478,7 +486,7 @@
       "id": "min-reserves-023",
       "theme": "Ressources et réserves",
       "level": 1,
-      "q": "Que sont les ressources prospectives ?",
+      "q": "Dans la matrice de classification, la ligne « ressources prospectives » se trouve du côté « non découvert ». Que sont les ressources prospectives ?",
       "choices": [
         "Des quantités estimées récupérables dans des accumulations non encore découvertes, déduites de données indirectes",
         "Des réserves déjà produites et comptabilisées en production cumulée depuis la mise en service",
@@ -486,7 +494,7 @@
         "Des volumes en place dans un champ en production"
       ],
       "answer": 0,
-      "explain": "Les ressources prospectives concernent des accumulations non découvertes, estimées à partir de données indirectes. Les quantités déjà produites sont la production cumulée ; un développement approuvé relève des réserves ; le volume en place n'est pas une ressource récupérable.",
+      "explain": "Sur la matrice, les ressources prospectives sont classées parmi les quantités non découvertes, estimées à partir de données indirectes. Les quantités déjà produites sont la production cumulée ; un développement approuvé relève des réserves ; le volume en place n'est pas une ressource récupérable.",
       "seconds": 50,
       "status": "draft",
       "refs": [
@@ -495,7 +503,9 @@
           "art": "Définitions et classification",
           "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
         }
-      ]
+      ],
+      "img": "svg/min-matrice-reserves-ressources.svg",
+      "imgAlt": "Matrice de classification des ressources : colonnes estimation basse (P90), meilleure estimation (P50) et estimation haute (P10) ; lignes production, réserves (1P, 2P, 3P), ressources contingentes (1C, 2C, 3C), ressources prospectives et quantités non récupérables. Flèches : incertitude croissante vers la droite, maturité croissante vers le haut."
     },
     {
       "id": "min-reserves-024",
@@ -556,15 +566,15 @@
       "id": "min-reserves-027",
       "theme": "Ressources et réserves",
       "level": 2,
-      "q": "Un opérateur déclare un gisement de gaz découvert qui ne dispose ni de contrat de vente ni de projet de développement. Quelle catégorie est la plus appropriée ?",
+      "q": "Un opérateur déclare un gisement de gaz découvert qui ne dispose ni de contrat de vente ni de projet de développement. Dans quelle ligne de la matrice de classification le rangez-vous ?",
       "choices": [
-        "Réserves prouvées",
+        "Réserves prouvées (1P)",
         "Ressources prospectives de la zone",
-        "Réserves probables",
+        "Réserves probables (2P)",
         "Ressources contingentes"
       ],
       "answer": 3,
-      "explain": "Une accumulation découverte sans débouché ni projet n'est pas commerciale : ressources contingentes. Les réserves, prouvées ou probables, exigent la commercialité ; les ressources prospectives concernent des accumulations non découvertes.",
+      "explain": "Sur la matrice, une accumulation découverte sans débouché ni projet n'est pas commerciale : elle relève des ressources contingentes (1C, 2C, 3C). Les réserves, prouvées ou probables, exigent la commercialité ; les ressources prospectives concernent des accumulations non découvertes.",
       "seconds": 60,
       "status": "draft",
       "refs": [
@@ -573,7 +583,9 @@
           "art": "Définitions et classification",
           "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
         }
-      ]
+      ],
+      "img": "svg/min-matrice-reserves-ressources.svg",
+      "imgAlt": "Matrice de classification des ressources : colonnes estimation basse (P90), meilleure estimation (P50) et estimation haute (P10) ; lignes production, réserves (1P, 2P, 3P), ressources contingentes (1C, 2C, 3C), ressources prospectives et quantités non récupérables. Flèches : incertitude croissante vers la droite, maturité croissante vers le haut."
     },
     {
       "id": "min-reserves-028",
@@ -595,7 +607,7 @@
       "id": "min-reserves-029",
       "theme": "Ressources et réserves",
       "level": 3,
-      "q": "Un rapport annuel présente comme « réserves » 120 millions de m³ d'huile en place, sans facteur de récupération ni projet. Quelle objection formulez-vous ?",
+      "q": "Sur la matrice de classification, le volume d'hydrocarbures en place ne correspond à aucune case de réserves. Un rapport annuel présente pourtant comme « réserves » 120 millions de m³ d'huile en place, sans facteur de récupération ni projet. Quelle objection formulez-vous ?",
       "choices": [
         "Rien à objecter : le volume en place est toujours la mesure officielle des réserves déclarées à l'État",
         "Il faut seulement convertir les m³ en barils pour que ce soit valable",
@@ -603,7 +615,7 @@
         "Il faut ajouter le gaz associé, sans changer la méthode"
       ],
       "answer": 2,
-      "explain": "Le volume en place est la quantité totale dans la roche ; seule une fraction récupérable, commerciale et restante constitue des réserves. La conversion d'unités ou l'ajout de gaz ne corrigent pas l'erreur de définition.",
+      "explain": "Le volume en place est la quantité totale dans la roche ; seule une fraction récupérable, commerciale et restante entre dans les cases « réserves » de la matrice. La conversion d'unités ou l'ajout de gaz ne corrigent pas l'erreur de définition.",
       "seconds": 90,
       "status": "draft",
       "refs": [
@@ -612,7 +624,9 @@
           "art": "Définitions et classification",
           "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
         }
-      ]
+      ],
+      "img": "svg/min-matrice-reserves-ressources.svg",
+      "imgAlt": "Matrice de classification des ressources : colonnes estimation basse (P90), meilleure estimation (P50) et estimation haute (P10) ; lignes production, réserves (1P, 2P, 3P), ressources contingentes (1C, 2C, 3C), ressources prospectives et quantités non récupérables. Flèches : incertitude croissante vers la droite, maturité croissante vers le haut."
     },
     {
       "id": "min-reserves-030",
@@ -664,7 +678,7 @@
       "id": "min-reserves-032",
       "theme": "Classification des réserves",
       "level": 1,
-      "q": "Quelles sont les trois catégories de réserves du système de gestion des ressources pétrolières ?",
+      "q": "D'après la matrice de classification, quelles sont les trois catégories de réserves du système de gestion des ressources pétrolières ?",
       "choices": [
         "Brutes, nettes et marginales",
         "Prouvées, probables et possibles",
@@ -672,7 +686,7 @@
         "Découvertes, contingentes et prospectives"
       ],
       "answer": 1,
-      "explain": "Les réserves se divisent en prouvées, probables et possibles selon l'incertitude. Brut/net est une autre distinction ; conventionnel/offshore est géographique ; découvertes, contingentes et prospectives sont des familles de ressources.",
+      "explain": "La ligne « réserves » de la matrice compte trois cases (1P, 2P, 3P) : prouvées, probables et possibles, selon l'incertitude. Brut/net est une autre distinction ; conventionnel/offshore est géographique ; découvertes, contingentes et prospectives sont des familles de ressources.",
       "seconds": 45,
       "status": "draft",
       "refs": [
@@ -681,7 +695,9 @@
           "art": "Définitions et classification",
           "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
         }
-      ]
+      ],
+      "img": "svg/min-matrice-reserves-ressources.svg",
+      "imgAlt": "Matrice de classification des ressources : colonnes estimation basse (P90), meilleure estimation (P50) et estimation haute (P10) ; lignes production, réserves (1P, 2P, 3P), ressources contingentes (1C, 2C, 3C), ressources prospectives et quantités non récupérables. Flèches : incertitude croissante vers la droite, maturité croissante vers le haut."
     },
     {
       "id": "min-reserves-033",
@@ -710,7 +726,7 @@
       "id": "min-reserves-034",
       "theme": "Classification des réserves",
       "level": 1,
-      "q": "Que représente la catégorie 2P ?",
+      "q": "Sur la matrice de classification, la case 2P se situe dans la colonne « meilleure estimation ». Que représente la catégorie 2P ?",
       "choices": [
         "Prouvées plus probables, avec une meilleure estimation à P50",
         "Les réserves possibles uniquement",
@@ -718,7 +734,7 @@
         "Les réserves de deux champs additionnées dans un seul rapport consolidé"
       ],
       "answer": 0,
-      "explain": "2P = prouvées + probables, et la meilleure estimation correspond à P50. Les possibles seules ne forment pas 2P ; les ressources contingentes utilisent la notation 1C, 2C, 3C ; 2P ne désigne pas deux champs.",
+      "explain": "Sur la matrice, 2P = prouvées + probables, et la meilleure estimation correspond à P50. Les possibles seules ne forment pas 2P ; les ressources contingentes utilisent la notation 1C, 2C, 3C ; 2P ne désigne pas deux champs.",
       "seconds": 50,
       "status": "draft",
       "refs": [
@@ -727,13 +743,15 @@
           "art": "Définitions et classification",
           "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
         }
-      ]
+      ],
+      "img": "svg/min-matrice-reserves-ressources.svg",
+      "imgAlt": "Matrice de classification des ressources : colonnes estimation basse (P90), meilleure estimation (P50) et estimation haute (P10) ; lignes production, réserves (1P, 2P, 3P), ressources contingentes (1C, 2C, 3C), ressources prospectives et quantités non récupérables. Flèches : incertitude croissante vers la droite, maturité croissante vers le haut."
     },
     {
       "id": "min-reserves-035",
       "theme": "Classification des réserves",
       "level": 2,
-      "q": "Un champ compte 30 Mbbl de réserves prouvées, 12 Mbbl de probables et 8 Mbbl de possibles. Quelle est la valeur de 2P ?",
+      "q": "D'après la matrice de classification, les catégories 1P, 2P et 3P se cumulent. Un champ compte 30 Mbbl de réserves prouvées, 12 Mbbl de probables et 8 Mbbl de possibles. Quelle est la valeur de 2P ?",
       "choices": [
         "12 Mbbl",
         "42 Mbbl (30 + 12)",
@@ -741,9 +759,11 @@
         "38 Mbbl"
       ],
       "answer": 1,
-      "explain": "2P = prouvées + probables = 30 + 12 = 42 Mbbl. 12 oublie les prouvées ; 50 est la valeur de 3P ; 38 est une addition prouvées + possibles, qui n'a pas de sens de classification.",
+      "explain": "Sur la matrice, 2P = prouvées + probables = 30 + 12 = 42 Mbbl. 12 oublie les prouvées ; 50 est la valeur de 3P ; 38 est une addition prouvées + possibles, qui n'a pas de sens de classification.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-matrice-reserves-ressources.svg",
+      "imgAlt": "Matrice de classification des ressources : colonnes estimation basse (P90), meilleure estimation (P50) et estimation haute (P10) ; lignes production, réserves (1P, 2P, 3P), ressources contingentes (1C, 2C, 3C), ressources prospectives et quantités non récupérables. Flèches : incertitude croissante vers la droite, maturité croissante vers le haut."
     },
     {
       "id": "min-reserves-036",
@@ -896,7 +916,7 @@
       "id": "min-reserves-043",
       "theme": "Méthodes d'estimation",
       "level": 1,
-      "q": "Que fait-on lors d'une analyse de courbe de déclin ?",
+      "q": "Sur la courbe de production, la partie qui suit le plateau est prolongée jusqu'à la ligne « limite économique ». Que fait-on lors d'une analyse de courbe de déclin ?",
       "choices": [
         "On calcule la porosité moyenne à partir des carottes prélevées dans les puits d'appréciation",
         "On extrapole le débit de production jusqu'à un débit d'abandon économique",
@@ -904,9 +924,11 @@
         "On compare les prix de vente du pétrole d'une année à l'autre"
       ],
       "answer": 1,
-      "explain": "L'analyse de déclin prolonge la tendance de production observée jusqu'au débit d'abandon et en déduit les réserves restantes. Les carottes, la viscosité et les prix ne sont pas l'objet de cette méthode.",
+      "explain": "Comme sur le graphique, l'analyse de déclin prolonge la tendance de production observée jusqu'au débit d'abandon et en déduit les réserves restantes. Les carottes, la viscosité et les prix ne sont pas l'objet de cette méthode.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "min-reserves-044",
@@ -976,33 +998,37 @@
       "id": "min-reserves-048",
       "theme": "Méthodes d'estimation",
       "level": 2,
-      "q": "Un puits produit 1 000 m³/j au départ avec un déclin exponentiel de taux nominal D = 0,2 par an. Quel est son débit après 5 ans ?",
+      "q": "Sur la courbe de production, on lit le débit à l'année 6 ; le déclin qui suit obéit à la loi exponentielle indiquée sous le graphique. Quel est le débit 5 ans après l'année 6 ?",
       "choices": [
-        "Environ 368 m³/j",
-        "Environ 0 m³/j",
-        "Environ 500 m³/j, soit la moitié",
-        "Environ 800 m³/j"
+        "Environ 7 400 b/j",
+        "Environ 0 b/j",
+        "Environ 10 000 b/j, soit la moitié",
+        "Environ 16 000 b/j"
       ],
       "answer": 0,
-      "explain": "q = q₀ × e^(−D·t) = 1 000 × e⁻¹ ≈ 368 m³/j. 0 correspond à un déclin linéaire (1 000 − 200 × 5) ; 500 et 800 ne découlent pas de la loi exponentielle.",
+      "explain": "À l'année 6, q₀ = 20 000 b/j et D = 0,2 par an : q = 20 000 × e⁻¹ ≈ 7 400 b/j, valeur cohérente avec la courbe entre l'année 9 (11 000) et l'année 12 (6 000). 0 correspond à un déclin linéaire (20 000 − 4 000 × 5) ; 10 000 et 16 000 ne découlent pas de la loi exponentielle.",
       "seconds": 75,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "min-reserves-049",
       "theme": "Méthodes d'estimation",
       "level": 3,
-      "q": "Le puits précédent (1 000 m³/j, D = 0,2 par an) sera abandonné à 100 m³/j. Quelles sont ses réserves restantes, en comptant 365 jours par an ?",
+      "q": "Sur la courbe, le champ est abandonné quand son débit atteint la limite économique. À partir de l'année 6 (début du déclin), quelles sont les réserves restantes, en comptant 365 jours par an et avec le taux D indiqué sous le graphique ?",
       "choices": [
-        "Environ 0,33 million de m³",
-        "Environ 3,29 millions de m³",
-        "Environ 12 millions de m³",
-        "Environ 1,64 million de m³"
+        "Environ 6,6 millions de barils",
+        "Environ 65,7 millions de barils",
+        "Environ 36,5 millions de barils",
+        "Environ 32,9 millions de barils"
       ],
       "answer": 3,
-      "explain": "Réserves restantes = (q − q abandon) × 365 / D = 900 × 365 / 0,2 ≈ 1,64 million de m³. 0,33 oublie la division par D ; 3,29 utilise D = 0,1 ; 12 n'a pas de fondement.",
+      "explain": "Réserves restantes = (q − q abandon) × 365 / D = (20 000 − 2 000) × 365 / 0,2 ≈ 32,9 millions de barils. 6,6 oublie la division par D ; 65,7 utilise D = 0,1 ; 36,5 oublie de retrancher le débit d'abandon.",
       "seconds": 100,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "min-reserves-050",

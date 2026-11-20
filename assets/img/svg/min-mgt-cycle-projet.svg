@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Cycle de vie d'un projet en cinq phases : initialisation (étude d'opportunité), cadrage (lettre de mission), planification (plan de projet), réalisation (livrables), clôture (réception, bilan, retour d'expérience). Après chaque phase, une revue de fin de phase conduit à une décision : poursuivre, corriger ou arrêter. Le suivi et la maîtrise accompagnent la planification et la réalisation.</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.o{fill:#B85C0A;font-weight:bold}
+.p{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.l{fill:#E8EAEE;stroke:#061F44;stroke-width:2}
+.k{fill:none;stroke:#061F44;stroke-width:2.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Cycle de vie d'un projet</text>
+
+<!-- phases -->
+<rect x="15" y="80" width="130" height="80" rx="8" class="p"/>
+<text x="80" y="104" class="c b">1</text><text x="80" y="124" class="c b">Initialisation</text><text x="80" y="144" class="c">(opportunité)</text>
+<rect x="175" y="80" width="130" height="80" rx="8" class="p"/>
+<text x="240" y="104" class="c b">2</text><text x="240" y="124" class="c b">Cadrage</text>
+<rect x="335" y="80" width="130" height="80" rx="8" class="p"/>
+<text x="400" y="104" class="c b">3</text><text x="400" y="124" class="c b">Planification</text>
+<rect x="495" y="80" width="130" height="80" rx="8" class="p"/>
+<text x="560" y="104" class="c b">4</text><text x="560" y="124" class="c b">Réalisation</text>
+<rect x="655" y="80" width="130" height="80" rx="8" class="p"/>
+<text x="720" y="104" class="c b">5</text><text x="720" y="124" class="c b">Clôture</text>
+
+<!-- flèches -->
+<path d="M145,120H173M305,120H333M465,120H493M625,120H653" class="k" marker-end="url(#ar)"/>
+
+<!-- revues -->
+<g fill="#F28C28" stroke="#061F44" stroke-width="2">
+<path d="M160,175l14,14l-14,14l-14,-14z"/><path d="M320,175l14,14l-14,14l-14,-14z"/><path d="M480,175l14,14l-14,14l-14,-14z"/><path d="M640,175l14,14l-14,14l-14,-14z"/>
+</g>
+<path d="M160,162V175M320,162V175M480,162V175M640,162V175" class="k"/>
+<text x="400" y="232" class="c o">Revue de fin de phase et décision : poursuivre, corriger ou arrêter</text>
+
+<!-- livrables -->
+<text x="15" y="270" class="b">Livrable principal de chaque phase</text>
+<rect x="15" y="282" width="130" height="64" rx="6" class="l"/>
+<text x="80" y="306" class="c">Étude</text><text x="80" y="326" class="c">d'opportunité</text>
+<rect x="175" y="282" width="130" height="64" rx="6" class="l"/>
+<text x="240" y="306" class="c">Lettre</text><text x="240" y="326" class="c">de mission</text>
+<rect x="335" y="282" width="130" height="64" rx="6" class="l"/>
+<text x="400" y="306" class="c">Plan de projet</text><text x="400" y="326" class="c">(lots, budget)</text>
+<rect x="495" y="282" width="130" height="64" rx="6" class="l"/>
+<text x="560" y="306" class="c">Livrables</text><text x="560" y="326" class="c">du projet</text>
+<rect x="655" y="282" width="130" height="64" rx="6" class="l"/>
+<text x="720" y="306" class="c">Réception,</text><text x="720" y="326" class="c">bilan, REX</text>
+
+<!-- suivi et maîtrise -->
+<rect x="335" y="380" width="290" height="46" rx="23" fill="#F9DDBB" stroke="#B85C0A" stroke-width="2.5"/>
+<text x="480" y="408" class="c b">Suivi et maîtrise (délais, coûts, risques)</text>
+<path d="M400,380V350M560,380V350" class="k" marker-end="url(#ar)"/>
+<text x="15" y="470" style="font-size:13px">REX : retour d'expérience. Le suivi et la maîtrise couvrent la planification et la réalisation.</text>
+</svg>

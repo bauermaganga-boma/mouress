@@ -3,100 +3,109 @@
   "modules": [
     {
       "id": "m1",
-      "title": "Propriétés du réservoir : porosité, perméabilité, saturation",
-      "theme": "Propriétés du réservoir",
+      "title": "De la tête de puits à l'export : la chaîne de production",
+      "theme": "Chaîne de production",
       "minutes": 10,
-      "body": "Un **réservoir** est une roche poreuse et perméable (grès ou carbonate) qui contient des hydrocarbures sous une **couverture** imperméable, dans un **piège**. Pour l'agent du ministère qui lit un rapport de gisement, quatre grandeurs reviennent partout.\n\n**La porosité (φ)** est le rapport du volume des vides au volume total de la roche : φ = Vp / Vt. Elle mesure la capacité de stockage. Une porosité de 20 % signifie que 20 % du volume de roche est du vide. Les valeurs courantes vont de 5 % (réservoir médiocre) à 30 % (très bon grès peu compacté). Exemple chiffré (valeurs d'illustration) : un bloc de 50 millions de m³ de roche à 18 % de porosité offre 9 millions de m³ de pores.\n\n**La saturation (S)** est la fraction du volume poreux occupée par un fluide : Sw pour l'eau, So pour l'huile, Sg pour le gaz, avec Sw + So + Sg = 1. L'eau ne disparaît jamais complètement : la **saturation en eau irréductible (Swi)** est l'eau retenue sur les grains, qui ne bouge pas. La part du volume de roche occupée par les hydrocarbures vaut φ × (1 − Sw). Avec φ = 0,20 et Sw = 0,35, elle vaut 0,20 × 0,65 = 13 %.\n\n**La perméabilité (k)** mesure l'aptitude de la roche à laisser circuler un fluide. Elle s'exprime en **darcy** ; on utilise le **millidarcy (mD)**. Un réservoir à 1 mD est serré, de 100 à 1 000 mD il est excellent. La **loi de Darcy** relie le débit à la perméabilité : q = k × A × ΔP / (μ × L), où A est la section, ΔP la chute de pression, μ la viscosité et L la longueur. À chute de pression égale, une huile deux fois plus visqueuse s'écoule deux fois moins vite. Porosité et perméabilité ne sont pas liées de façon simple : une roche peut être très poreuse (beaucoup de volume) mais peu perméable (pores mal connectés), donc difficile à produire.\n\n**Le facteur volumétrique (Bo, Bg)** convertit le volume de fond en volume de surface. Si Bo = 1,25, il faut 1,25 m³ d'huile dans le réservoir pour obtenir 1 m³ de pétrole stocké, car du gaz se dégage en remontant. Ainsi 1 000 000 m³ d'huile de fond donnent 800 000 m³ en stock.\n\n**La pression et la température** déterminent l'état des fluides. En première approche, la pression augmente d'environ 0,1 bar par mètre de profondeur dans une colonne d'eau ; la **pression de bulle** est celle sous laquelle le gaz commence à se libérer de l'huile.\n\nCes mesures proviennent des **carottes** (analyses en laboratoire), des **diagraphies** (mesures dans le puits), des **essais de puits** et des analyses PVT (pression, volume, température) des fluides. Aucune n'est parfaite : la carotte est précise mais ponctuelle, la diagraphie est continue mais indirecte.\n\n**Sur le terrain.** Quand un opérateur annonce « très bon réservoir », demandez les trois chiffres (φ, Sw, k), leur source (carotte ou diagraphie) et le nombre de puits qui les appuient. Comparez le volume en place (lié à φ et Sw) et la productivité attendue (liée à k) : un réservoir à 28 % de porosité et 3 mD stocke beaucoup mais produit mal, alors qu'un réservoir à 14 % et 250 mD stocke moins mais débite bien.",
+      "img": "svg/separator-3phase.svg",
+      "imgAlt": "Schéma d'un séparateur triphasique horizontal : le mélange de gaz, d'huile et d'eau entre d'un côté, puis le gaz, l'huile et l'eau sortent par trois sorties distinctes",
+      "body": "La production pétrolière est une chaîne continue : **puits, collecte, séparation, traitement, stockage, export**. L'agent du ministère doit savoir où se situe chaque volume, car la loi n° 002/2019 attache des effets fiscaux à un point précis de cette chaîne.\n\n**Les étapes**\n\n- Les effluents (mélange d'huile, de gaz et d'eau) arrivent des puits par les lignes de collecte.\n- Le **séparateur** trie les phases par gravité : le gaz sort par le haut, l'huile et l'eau se superposent, chacune quittant l'appareil par sa propre sortie (voir le schéma).\n- Le **séparateur d'essai**, branché sur un seul puits à la fois, permet l'essai de puits : il mesure séparément les débits d'huile, de gaz et d'eau de ce puits.\n- La **déshydratation et le dessalage** ramènent l'eau et les sels de l'huile sous la spécification de vente. La compression concerne le gaz.\n- L'huile est ensuite stockée dans des bacs, puis enlevée par pétrolier ou exportée par pipeline.\n\n**Le point de comptage fiscal.** L'article 9 de la loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures définit la *production totale disponible* comme le volume déterminé à l'aide d'un point de comptage fiscal situé au lieu d'extraction des effluents, c'est-à-dire en sortie de séparateur et **avant le stockage**. Ni la tête de puits (mélange non séparé), ni le terminal, ni le chargement du pétrolier ne servent de base. L'article 248 soumet le choix et l'emplacement de tout équipement de comptage à l'approbation du ministère : un opérateur ne peut pas déplacer ce point après les bacs. L'article 250 place l'enlèvement des hydrocarbures sous le contrôle conjoint des ministères chargés des Hydrocarbures et de l'Économie.\n\n**Unités et calculs de base.** Un baril vaut environ 159 litres (0,159 m³). Le bilan d'un terminal s'écrit : production reçue = enlèvements + variation de stock.\n\n*Exemple fictif.* Le stock passe de 200 000 à 260 000 barils en un mois, avec 700 000 barils enlevés : le terminal a reçu 700 000 + 60 000 = 760 000 barils.\n\nPour l'huile, on retranche l'eau : huile = liquide × (1 − taux d'eau). *Exemple fictif :* un puits produit 5 000 b/j de liquide avec 60 % d'eau, soit 5 000 × 0,4 = 2 000 b/j d'huile. Avec 30 000 b/j de liquide, 30 % d'eau et 1 % de pertes de traitement, on attend 30 000 × 0,7 × 0,99 = 20 790 b/j exportables.\n\n**Contrôle de cohérence.** *Exemple fictif :* un opérateur déclare 1 000 000 barils ; les enlèvements sont de 900 000 et le stock passe de 100 000 à 150 000 barils. Le bilan donne 950 000 barils : 50 000 barils d'écart sont à faire expliquer. Les articles 243 (contrôle technique et comptable) et 246 fondent cette demande d'explication.\n\n**Sur le terrain.** Devant un rapport, repérez d'abord où a été pris chaque volume (sortie séparateur, bac ou chargement) avant de comparer les chiffres.",
       "keyPoints": [
-        "Porosité φ = volume des vides / volume total : elle mesure la capacité de stockage.",
-        "Saturations : Sw + So + Sg = 1 ; l'eau irréductible Swi ne s'écoule pas.",
-        "Perméabilité (mD) : elle gouverne le débit (loi de Darcy) ; porosité et perméabilité ne sont pas équivalentes.",
-        "Bo convertit le volume de fond en volume de surface : volume stock = volume de fond / Bo.",
-        "Carottes, diagraphies, essais de puits et analyses PVT fournissent les valeurs."
+        "La chaîne : puits, collecte, séparation, traitement, stockage, export.",
+        "Article 9 : le point de comptage fiscal est en sortie séparateur, avant stockage.",
+        "Le séparateur d'essai mesure séparément huile, gaz et eau d'un seul puits.",
+        "Production reçue = enlèvements + variation de stock ; huile = liquide × (1 − taux d'eau).",
+        "Article 248 : emplacement du comptage approuvé par le ministère ; article 250 : enlèvement sous contrôle conjoint."
       ]
     },
     {
       "id": "m2",
-      "title": "Mécanismes de drainage et facteur de récupération",
-      "theme": "Mécanismes de drainage",
+      "title": "Plates-formes fixes, unités flottantes et obligations de l'opérateur",
+      "theme": "Plates-formes et unités flottantes",
       "minutes": 10,
-      "body": "Un gisement ne se vide pas de lui-même : il faut une **énergie** qui pousse les fluides vers le puits. Cette énergie est le **mécanisme de drainage**. Le connaître permet d'anticiper la pression, le gaz et l'eau produits, et donc la quantité finalement récupérable.\n\n**1. Expansion de la roche et des fluides.** Au-dessus de la pression de bulle, l'huile, l'eau et la roche se détendent légèrement quand la pression baisse. L'énergie est faible : la pression chute vite et la récupération reste de quelques pour cent.\n\n**2. Entraînement par le gaz dissous.** Sous la pression de bulle, le gaz se libère de l'huile en petites bulles et la pousse. La pression baisse vite, le rapport gaz/huile (GOR) monte, le débit chute. Récupération usuelle, à titre indicatif : de 5 à 30 %.\n\n**3. Gaz de couverture (chapeau de gaz).** Un chapeau de gaz au-dessus de l'huile se détend et la pousse vers le bas. La pression baisse lentement. Récupération indicative : de 20 à 40 %. Produire trop tôt le gaz du chapeau le prive de son rôle moteur : c'est une erreur de gestion classique. Si un puits proche du toit produit un excès de gaz (cône de gaz), on réduit son débit ou on le reperfore plus bas.\n\n**4. Aquifère actif.** L'eau de l'aquifère remonte et remplace l'huile produite. La pression reste presque stable, mais les puits produisent de l'eau de plus en plus tôt (percée d'eau). C'est souvent le meilleur mécanisme naturel : récupération indicative de 35 à 75 %.\n\n**5. Drainage gravitaire**, dans les gisements très inclinés et épais, et **mécanismes combinés**, fréquents en réalité.\n\nCes fourchettes sont indicatives et varient fortement selon les roches et les fluides ; elles ne remplacent jamais l'étude du champ.\n\n**Récupération secondaire et assistée.** Quand l'énergie naturelle ne suffit plus, l'opérateur **injecte** de l'eau ou du gaz pour maintenir la pression et déplacer l'huile : c'est la récupération secondaire. La récupération assistée ajoute des procédés qui changent les propriétés de l'huile ou de la roche (vapeur, polymères, tensioactifs, dioxyde de carbone). Le **taux de remplacement des vides** compare le volume injecté au volume produit, tous deux en conditions de réservoir : produire 8 000 m³/j et injecter 6 000 m³/j donne 75 %.\n\n**Le facteur de récupération** : FR = récupéré / en place. Il se décompose en **efficacité de déplacement** (fraction d'huile délogée dans la zone balayée) multipliée par l'**efficacité de balayage volumétrique** (part du réservoir touchée). Avec 0,70 et 0,50, FR = 35 %.\n\n**Sur le terrain.** Lisez trois courbes avant toute décision : pression en fonction de la production cumulée, GOR et pourcentage d'eau. Pression stable et eau croissante : aquifère. Pression qui s'effondre et GOR en hausse : gaz dissous. Une demande d'injection dans un champ dont la pression a peu baissé doit être justifiée par une étude (bilan matière ou simulation), et les réserves supplémentaires qu'elle promet ne se comptent qu'une fois le projet approuvé (voir module 4).",
+      "img": "svg/min-torchage-valorisation-gaz.svg",
+      "imgAlt": "Schéma de la chaîne du gaz associé : du puits et du séparateur vers le traitement et la compression, puis la réinjection, l'autoconsommation, la valorisation ou, en dernier recours, la torche, avec un compteur sur chaque branche",
+      "body": "Offshore, la production passe par deux grandes familles d'installations : les **plates-formes fixes** et les **unités flottantes**. Leur différence commande le mode d'export et donc le suivi administratif.\n\n**Plate-forme fixe.** Posée sur le fond, elle ne dispose en général d'aucun stockage : l'huile part par pipeline sous-marin vers la côte ou vers une unité de stockage. Un arrêt du pipeline impose presque aussitôt de réduire la production.\n\n**Unité flottante (FPSO).** Le sigle désigne une unité flottante de production, de stockage et de déchargement. Ce navire sépare les phases, traite l'huile, la stocke dans ses cuves et la décharge sur un pétrolier navette. Elle évite un pipeline d'export, mais son stockage est limité : la production dépend du calendrier des enlèvements.\n\n*Exemple fictif.* Une unité dispose de 600 000 barils de stockage libre et produit 20 000 b/j. Si le pétrolier navette est retardé, elle atteint la saturation en 600 000 / 20 000 = 30 jours, puis doit réduire sa production.\n\n**Gaz sur une unité flottante.** Comme le montre le schéma, la compression est en amont de toutes les destinations du gaz (réinjection, autoconsommation, vente, torche). Une panne de compression oblige à envoyer le gaz à la torche.\n\n**Obligations de l'opérateur selon la loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures**\n\n- **Article 241 :** informer sans délai l'administration de toute perturbation, incident ou accident susceptible d'avoir un impact sur les activités, en précisant nature, gravité, causes, solutions et durée estimée.\n- **Article 248 :** faire approuver par les services du ministère le choix, l'emplacement, l'installation, la **modification** et l'**adjonction** de tout équipement de mesurage ou de comptage. L'approbation est préalable ; l'accord d'un partenaire ou un certificat du fabricant ne la remplace pas.\n- **Article 249 :** l'étalonnage relève des services compétents du ministère.\n- **Article 251 :** audits techniques d'intégrité et de fonctionnement régulier des appareils de mesurage et des installations de production, de traitement et de stockage, réalisés par les services compétents.\n- **Articles 125 et 269 :** le torchage est interdit sauf dérogation, et sanctionné en cas de violation (de 50 millions à 2,5 milliards de FCFA, selon la gravité).\n\n**Cas pratiques.** Lors d'une inspection, vous constatez un second compteur ajouté en parallèle sur la ligne d'export, sans dossier d'approbation. La conduite proportionnée consiste à consigner l'écart, demander la régularisation (art. 248) et vérifier l'étalonnage (art. 249), sans arrêter toute la production.\n\nSi une unité annonce une panne de compression avec torchage important et poursuit sa production sans rien déclarer, l'opérateur manque à l'obligation d'information (art. 241) et s'expose à une pénalité pour torchage (art. 269).\n\n**Sur le terrain.** Demandez toujours le type d'installation, la capacité de stockage et le calendrier des enlèvements avant d'interpréter une baisse de production.",
       "keyPoints": [
-        "Cinq mécanismes : expansion, gaz dissous, gaz de couverture, aquifère, gravité (souvent combinés).",
-        "Aquifère actif : pression stable et eau croissante ; gaz dissous : pression qui chute et GOR en hausse.",
-        "Récupération secondaire : injection d'eau ou de gaz ; assistée : vapeur, polymères, CO₂, etc.",
-        "FR = efficacité de déplacement × efficacité de balayage.",
-        "Les fourchettes de récupération sont indicatives ; l'étude du champ prime."
+        "Plate-forme fixe : pas de stockage, export par pipeline ; FPSO : produit, stocke et décharge elle-même.",
+        "Le stockage limité d'une unité flottante la rend dépendante des enlèvements.",
+        "Article 241 : informer sans délai de tout incident ou perturbation.",
+        "Article 248 : approbation préalable pour tout compteur (choix, emplacement, modification, adjonction).",
+        "Articles 249 et 251 : étalonnage et audits techniques par les services du ministère."
       ]
     },
     {
       "id": "m3",
-      "title": "Hydrocarbures en place, ressources et réserves",
-      "theme": "Ressources et réserves",
-      "minutes": 9,
-      "body": "Le vocabulaire est strict, car de lui dépendent la déclaration, la fiscalité et la valeur d'un titre.\n\n**Le volume d'hydrocarbures en place** est la quantité totale contenue dans la roche, avant toute production, qu'elle soit récupérable ou non. Ce n'est **pas** une réserve.\n\n**Les ressources** sont l'ensemble des quantités d'hydrocarbures estimées récupérables. Selon le **système de gestion des ressources pétrolières** (PRMS en anglais, publié par la Society of Petroleum Engineers, mise à jour 2018), on distingue trois familles :\n\n- les **ressources prospectives** : accumulations non encore découvertes, estimées à partir de données indirectes (sismique, analogues) ;\n- les **ressources contingentes** : accumulations découvertes, mais dont le développement n'est pas encore commercialement établi (absence de débouché, de projet, d'autorisation, de financement) ;\n- les **réserves** : quantités qu'on peut **commercialement récupérer** à partir d'accumulations connues, à une date donnée, selon des conditions définies.\n\nPour être une réserve, une quantité doit réunir quatre critères : être **découverte**, **récupérable**, **commerciale** (projet de développement défini, économiquement viable) et **restante** (non encore produite à la date de référence). Exemple (chiffres d'illustration) : récupérable initial de 50 millions de barils, production cumulée de 32 millions : réserves restantes de 18 millions de barils.\n\n**Les unités.** Le pétrole se compte en m³, en barils (bbl) ou en millions de barils (Mbbl) ; le gaz en m³ ou en pieds cubes. Repère : 1 m³ vaut environ 6,29 barils ; donc 2 millions de m³ valent environ 12,6 millions de barils. Le **baril équivalent pétrole** (bep) additionne gaz et huile selon leur énergie ; on retient en général environ 6 000 pieds cubes de gaz par bep (à vérifier selon la convention du rapport).\n\n**Brut et net.** Les réserves **brutes** sont celles de 100 % du champ ; les réserves **nettes** correspondent à la part d'un titulaire. Un champ de 20 Mbbl brut détenu à 25 % donne 5 Mbbl net (avant effets des clauses de partage). Dans un contrat de partage de production, la quote-part du contracteur dépend aussi des règles de récupération des coûts et de partage, d'où l'importance de préciser la base de calcul.\n\n**Le facteur économique.** Une quantité est « commerciale » seulement aux prix, coûts et conditions fixés. Si le prix baisse durablement, la fin de vie économique arrive plus tôt, certains volumes cessent d'être des réserves et redeviennent des ressources contingentes.\n\n**Cadre gabonais.** La loi n° 002/2019 définit le gisement comme une accumulation d'hydrocarbures contenue dans un ou plusieurs réservoirs (article 9). En cas de découverte, le contracteur informe sans délai l'administration (article 63) et entreprend les travaux d'appréciation pour établir le caractère commercial dans les 18 mois (zone conventionnelle) ou 24 mois (mer profonde et très profonde), à compter de la notification (article 64).\n\n**Sur le terrain.** Devant un tableau, demandez toujours : à quelle date ? brutes ou nettes ? quels prix et quel projet ? volume en place ou récupérable ?",
+      "title": "Mesurage, comptage dynamique et étalonnage",
+      "theme": "Mesurage et comptage fiscal",
+      "minutes": 10,
+      "body": "Le **mesurage** et le **comptage** de la production sont au cœur du contrôle fiscal. Les articles 245 à 252 de la loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures en fixent le cadre.\n\n**Un cadre juridique précis**\n\n- **Article 246 :** le mesurage et le comptage de la production d'hydrocarbures sont une **prérogative exclusive de l'État**, qui peut la déléguer. L'administration contrôle régulièrement la conformité des appareils en présence de l'opérateur.\n- **Article 247 :** le point de comptage fiscal est placé sous le contrôle et la supervision des services du ministère.\n- **Article 248 :** approbation préalable de tout équipement de comptage.\n- **Article 249 :** l'**étalonnage** est réalisé par les services compétents du ministère, avec possibilité de délégation. Ni le fabricant, ni l'opérateur, ni l'acheteur n'en sont titulaires par défaut.\n- **Article 245 :** lors d'une transaction, le compteur doit être agréé par le ministère ; toute autre forme de mesurage n'est pas opposable à l'État, sans préjudice des sanctions.\n- **Article 252 :** le contracteur détermine la production totale disponible par **comptage dynamique** ; toute autre forme de détermination est interdite. Le jaugeage manuel des bacs peut servir au recoupement, jamais de base fiscale.\n- **Article 280 :** après mise en demeure, la violation des dispositions sur les ensembles de mesurage, de comptage et d'étalonnage est sanctionnée d'une pénalité de 1 000 000 000 à 2 500 000 000 FCFA.\n\n**Du volume brut à l'huile nette.** Le volume lu au compteur est corrigé par le **facteur de compteur**, puis diminué du taux d'eau et de sédiments (BSW).\n\n*Exemple fictif.* Un compteur indique 400 000 barils avec un facteur de 0,995 : volume corrigé = 400 000 × 0,995 = 398 000 barils. Avec un BSW de 0,5 %, l'huile nette vaut 398 000 × 0,995 = 396 010 barils.\n\n**Incertitude.** Un compteur d'incertitude ±0,25 % qui mesure 2 000 000 barils sur le mois a une plage de 2 000 000 × 0,0025 = ±5 000 barils. Deux compteurs en série, d'incertitude ±0,25 % chacun, ont une incertitude combinée d'environ ±0,35 %.\n\n*Exemple fictif.* Ils indiquent 1 000 000 et 1 018 000 barils : l'écart de 1,8 % dépasse nettement l'incertitude attendue. Il faut enquêter (étalonnage, facteur de compteur, scellés, correction de température) avant de retenir un volume. Prendre la moyenne ou le minimum sans analyse masquerait l'erreur.\n\n**Cas pratique.** Un opérateur vous remet un volume déterminé au jaugeage de bacs en demandant de le retenir comme production fiscale. Répondez que le comptage dynamique est imposé (art. 252) : ce volume sert au recoupement. Une attestation de l'opérateur ne change pas la règle.\n\n**Sur le terrain.** Contrôlez la validité de l'étalonnage, l'intégrité des scellés et l'agrément du compteur avant d'accepter un volume.",
       "keyPoints": [
-        "Volume en place n'est pas réserve : il faut un facteur de récupération, un projet et la commercialité.",
-        "Quatre critères : découvertes, récupérables, commerciales, restantes.",
-        "Prospectives (non découvertes), contingentes (découvertes, non commerciales), réserves (commerciales).",
-        "Brut = 100 % du champ ; net = part du titulaire ; 1 m³ ≈ 6,29 bbl.",
-        "Le prix et les coûts font basculer des volumes entre réserves et ressources contingentes."
+        "Article 246 : mesurage et comptage sont une prérogative de l'État, déléguable.",
+        "Article 252 : comptage dynamique obligatoire pour la production fiscale ; le jaugeage ne sert qu'au recoupement.",
+        "Article 249 : étalonnage par les services du ministère, avec délégation possible.",
+        "Article 245 : un compteur non agréé n'est pas opposable à l'État.",
+        "Volume corrigé = volume lu × facteur de compteur ; huile nette = volume corrigé × (1 − BSW).",
+        "Article 280 : pénalité de 1 à 2,5 milliards de FCFA après mise en demeure."
       ]
     },
     {
       "id": "m4",
-      "title": "Classification : prouvées, probables, possibles",
-      "theme": "Classification des réserves",
+      "title": "Allocation de production, redevance et partage",
+      "theme": "Allocation de production",
       "minutes": 10,
-      "body": "Au sein des réserves, le **système de gestion des ressources pétrolières** (PRMS) distingue trois catégories selon le degré d'incertitude.\n\n- **Réserves prouvées (1P)** : forte certitude raisonnable de récupération. Dans une approche probabiliste, il y a au moins **90 %** de chances (P90) que les quantités réellement récupérées égalent ou dépassent l'estimation.\n- **Réserves probables** : plus incertaines. Prouvées + probables forment la catégorie **2P**, dont l'estimation centrale (meilleure estimation) correspond à **P50** : autant de chances de dépasser que de ne pas atteindre.\n- **Réserves possibles** : encore plus incertaines. Prouvées + probables + possibles forment la catégorie **3P**, avec au moins **10 %** de chances (P10) d'être atteintes ou dépassées.\n\nLes ressources contingentes ont leurs propres bornes (1C, 2C, 3C), qu'il ne faut jamais additionner aux réserves.\n\n**Méthodes déterministe et probabiliste.** En méthode déterministe, l'ingénieur retient un scénario pour chaque catégorie (prudent, meilleur, optimiste). En méthode probabiliste, il traite les paramètres comme des distributions et lit P90, P50, P10.\n\n**Statut de développement.** On classe aussi les réserves selon la maturité : **développées en production** (puits en service), **développées non en production** (puits prêt, en attente de raccordement ou d'arrêt temporaire) et **non développées** (puits ou installations à réaliser). Les ressources contingentes se rangent selon la maturité du projet (par exemple développement en attente, non clarifié, non viable). Pour compter des réserves, le projet doit être approuvé ou son approbation raisonnablement attendue, avec engagement de l'opérateur.\n\n**Limite en profondeur.** En l'absence d'un contact eau–huile établi, les réserves prouvées s'arrêtent au **plus bas niveau d'hydrocarbures connu** (par exemple 2 450 m) ; au-delà, l'extension relève des probables ou des possibles.\n\n**Agrégation.** Additionner arithmétiquement les réserves prouvées de plusieurs champs donne un total plutôt **prudent** (inférieur au vrai P90 du portefeuille) ; additionner les possibles donne un total plutôt optimiste.\n\n**Exemple.** Un champ a 30 Mbbl prouvées, 12 Mbbl probables, 8 Mbbl possibles (chiffres d'illustration). 1P = 30 ; 2P = 42 ; 3P = 50.\n\n**Cas typiques.** Un pilote de récupération assistée sans décision d'investissement ne génère pas de réserves : les volumes sont des ressources contingentes. Une extension mal imagée par la sismique, au-delà des zones testées par puits, est généralement classée en possibles.\n\n**Sur le terrain.** Contrôlez que 1P ≤ 2P ≤ 3P, que chaque catégorie est rattachée à une date et à un projet, et que les ressources contingentes ne se glissent pas dans les réserves. Si un rapport d'un opérateur utilise une autre classification (par exemple celle d'une bourse), demandez le tableau de correspondance.\n\nLe texte de référence est le PRMS (mise à jour 2018) de la Society of Petroleum Engineers.",
+      "body": "Quand plusieurs champs ou plusieurs contrats partagent une même installation, un seul compteur fiscal mesure le total. Il faut alors **répartir** ce total : c'est l'**allocation de production**.\n\n**Le facteur d'allocation.** Il vaut la quantité fiscale mesurée divisée par la somme des estimations de chaque champ. Chaque champ reçoit son estimation multipliée par ce facteur.\n\n*Exemple fictif.* Deux champs A (40 000 barils estimés) et B (10 000 barils estimés) partagent une unité ; la mesure fiscale est de 47 500 barils. Facteur = 47 500 / 50 000 = 0,95. A reçoit 38 000 barils et B 9 500 barils.\n\n*Autre exemple fictif.* Trois champs estimés à 20 000, 30 000 et 50 000 barils, pour 90 000 barils mesurés après un arrêt de 2 jours : le facteur vaut 0,9. Une perte de 10 % est élevée : il faut chercher la cause (calibrage des essais de puits, arrêt, torchage non déclaré). Le prix de vente n'intervient pas dans un facteur de quantités.\n\n**Les définitions de la loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures**\n\n- **Production totale disponible** (art. 9) : volume déterminé au point de comptage fiscal.\n- **Production nette** (art. 9) : production totale disponible diminuée de la part de l'État au titre de la redevance minière proportionnelle (RMP).\n- **Production restante** (art. 9) : production nette diminuée des prélèvements au titre des coûts pétroliers.\n- **RMP** (art. 209) : elle est assise sur la production totale disponible issue de la zone délimitée, non sur la production restante ni sur le chiffre d'affaires.\n- **Récupération des coûts pétroliers** (art. 221) : plafond annuel de 70 % pour les hydrocarbures liquides en zone conventionnelle, 75 % pour les liquides en offshore profond et très profond, 80 % pour le gaz en zone conventionnelle, 90 % pour le gaz en offshore profond et très profond.\n\n*Exemple fictif.* Un champ produit 1 000 000 barils (production totale disponible) avec une RMP de 10 % (taux choisi pour l'exemple). La production nette vaut 1 000 000 × 0,9 = 900 000 barils ; la part de l'État est de 100 000 barils.\n\n**Unitisation (art. 88).** Lorsqu'un gisement s'étend sur le périmètre de plusieurs contrats de partage de production, les contracteurs conviennent d'une unitisation dans un délai n'excédant pas vingt-quatre mois, avec approbation de l'autorité compétente. À défaut d'accord, c'est cette autorité qui détermine les modalités et conditions. Aucune attribution automatique ni caducité n'est prévue.\n\n**Vigilance.** L'allocation influence la RMP et le partage de production. Si un opérateur modifie sans prévenir la clé d'allocation entre deux champs de régimes fiscaux différents (art. 209 et 214), exigez un accord écrit et une justification : on n'accepte pas de déplacement de production pour une raison fiscale.\n\n**Sur le terrain.** Vérifiez que la somme des quantités allouées égale la mesure fiscale, et que la méthode d'allocation n'a pas changé sans approbation.",
       "keyPoints": [
-        "Prouvées (P90, 1P), probables (2P = P50), possibles (3P = P10) : incertitude croissante.",
-        "Déterministe : trois scénarios ; probabiliste : distributions et lecture de P90, P50, P10.",
-        "Statut : développées en production, développées non en production, non développées.",
-        "Sans contact fluide connu, les prouvées s'arrêtent au plus bas niveau d'hydrocarbures connu.",
-        "Sans projet approuvé, les volumes sont des ressources contingentes, pas des réserves."
+        "Facteur d'allocation = mesure fiscale / somme des estimations.",
+        "Article 9 : production totale disponible, production nette, production restante.",
+        "Article 209 : la RMP porte sur la production totale disponible.",
+        "Article 221 : plafonds de 70, 75, 80 et 90 % pour la récupération des coûts pétroliers.",
+        "Article 88 : unitisation à convenir en 24 mois au plus ; à défaut, l'autorité compétente décide."
       ]
     },
     {
       "id": "m5",
-      "title": "Méthodes d'estimation et calculs simples",
-      "theme": "Méthodes d'estimation",
-      "minutes": 12,
-      "body": "Trois méthodes principales, souvent combinées, servent à estimer volumes et réserves.\n\n**1. Méthode volumétrique.** Elle convient avant la production ou en début de vie. Le volume d'huile en place en conditions de stock vaut :\n\nSTOIIP = A × h × (N/B) × φ × (1 − Sw) / Bo\n\navec A la surface, h l'épaisseur utile, N/B la fraction de roche réservoir (on peut l'omettre dans un exemple simple), φ la porosité, Sw la saturation en eau, Bo le facteur volumétrique. **Exemple** (valeurs d'illustration) : A = 200 ha = 2 000 000 m², h = 15 m, φ = 0,20, Sw = 0,30, Bo = 1,25. Volume de roche : 30 millions de m³ ; volume de pores : 6 millions ; volume d'huile de fond : 4,2 millions ; huile en stock : 4,2 / 1,25 = 3,36 millions de m³. Avec un facteur de récupération de 30 %, le récupérable vaut environ 1,0 million de m³.\n\n**2. Bilan matière.** Il applique la conservation de la matière au réservoir : volume produit = expansion des fluides, de la roche et de l'aquifère. Il exige un historique de production et de pression et des analyses PVT. Pour un **gaz** sans aquifère, la droite P/Z en fonction de la production cumulée Gp donne les réserves : P/Z = (Pi/Zi) × (1 − Gp/G). **Exemple** : Pi/Zi = 300 bar ; après 2 milliards de m³ produits, P/Z = 240 ; 240/300 = 0,8 = 1 − 2/G, donc G = 10 milliards de m³ en place.\n\n**3. Courbes de déclin.** On extrapole le débit q(t) jusqu'à un débit d'abandon économique. Le déclin **exponentiel** s'écrit q = q₀ × e^(−D·t) ; le déclin hyperbolique convient mieux aux déclins qui ralentissent. **Exemple** : q₀ = 1 000 m³/j et D = 0,2 par an (taux nominal continu). Après 5 ans : 1 000 × e⁻¹ ≈ 368 m³/j. Réserves restantes jusqu'à un débit d'abandon de 100 m³/j : (1 000 − 100) × 365 / 0,2 ≈ 1,64 million de m³. La durée de vie restante vaut ln(10)/0,2 ≈ 11,5 ans.\n\n**4. Simulation et analogies.** La simulation numérique du réservoir (modèle 3D) prolonge les méthodes précédentes ; les champs analogues servent à juger si un facteur de récupération est plausible.\n\n**Choix de la méthode.** Avant ou au début de la production : volumétrie et analogues ; après plusieurs années d'historique : bilan matière et déclin, plus contraignants car fondés sur le comportement réel. Les incertitudes (surface, épaisseur, Sw, FR) se traduisent en fourchettes P90 – P50 – P10, jamais en un seul chiffre.\n\n**Sur le terrain.** Si la volumétrie annonce 40 millions de m³ et que 15 ans de déclin bien ajusté n'en donnent que 22, ne retenez pas la plus haute : exigez une explication (compartimentation, aquifère, FR).",
+      "title": "Eau produite, gaz associé et torchage",
+      "theme": "Eau, gaz et torchage",
+      "minutes": 10,
+      "img": "svg/min-torchage-valorisation-gaz.svg",
+      "imgAlt": "Schéma de la chaîne du gaz associé : séparateur, traitement et compression, puis réinjection, autoconsommation, valorisation et vente, ou torche en dernier recours, un compteur étant placé sur chaque branche",
+      "body": "Un puits produit rarement de l'huile seule : il débite aussi de l'**eau** et du **gaz associé**. Leur suivi est un enjeu technique, environnemental et fiscal.\n\n**L'eau.** Le **taux d'eau** est la part d'eau dans le liquide produit : taux d'eau = débit d'eau / (débit d'eau + débit d'huile). Il augmente avec la vie du champ.\n\n*Exemple fictif.* Un puits produit 8 000 b/j de liquide avec 75 % d'eau : huile = 8 000 × 0,25 = 2 000 b/j, et 6 000 b/j d'eau.\n\n**Le gaz associé.** Le **rapport gaz-huile (RGH)** relie le gaz à l'huile produite. *Exemple fictif :* 20 000 Sm³/j d'huile avec un RGH de 150 donnent 20 000 × 150 = 3 000 000 Sm³/j de gaz.\n\n**Les destinations du gaz.** Le schéma montre le bilan : gaz produit = réinjecté + autoconsommé + vendu + torché ou rejeté + pertes. La torche est le dernier recours.\n\n*Exemple fictif.* Un champ produit 2 000 000 Sm³/j de gaz associé, en consomme 300 000 comme combustible, en réinjecte 1 500 000 et ne vend rien : le gaz torché est de 2 000 000 − 300 000 − 1 500 000 = 200 000 Sm³/j.\n\n**Le cadre de la loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures**\n\n- **Article 125 :** le torchage et le rejet de gaz sont **interdits**. À la demande du contracteur et sur avis des services compétents de l'administration des hydrocarbures, ils peuvent être autorisés pour une durée déterminée par l'administration en charge de l'Environnement. Aucun pourcentage libre n'est prévu.\n- **Article 127 :** tous les champs en production doivent être équipés d'appareils de mesurage du gaz torché, dont le choix, le dimensionnement et l'emplacement sont approuvés, et les volumes torchés sont déclarés à l'autorité compétente. Une simple estimation ne suffit pas.\n- **Article 128 :** les sociétés amont développent ou utilisent des techniques adaptées de récupération et de réinjection du gaz, pour optimiser la production et conserver la ressource. Réinjecter n'est donc pas interdit : c'est encouragé.\n- **Article 269 :** violation de l'interdiction de torchage, défaut d'exécution du plan de réduction ou dépassement des seuils : pénalité de 50 000 000 à 2 500 000 000 FCFA, selon la gravité, sans préjudice d'autres sanctions.\n\n*Exemple fictif de contrôle.* Un champ produit 1 500 000 Sm³/j de gaz associé, avec un seuil de torchage de 5 % : seuil = 75 000 Sm³/j. S'il torche 180 000 Sm³/j, le dépassement est de 105 000 Sm³/j et une pénalité de l'article 269 est possible.\n\n**Sur le terrain.** Rapprochez toujours le bilan gaz du schéma : une branche non mesurée ou un gaz « manquant » signale souvent un torchage non déclaré.",
       "keyPoints": [
-        "Volumétrie : STOIIP = A × h × φ × (1 − Sw) / Bo (avec rapport utile/total si nécessaire).",
-        "Gaz : droite P/Z = (Pi/Zi)(1 − Gp/G) pour estimer le volume en place.",
-        "Déclin exponentiel : q = q₀ e^(−Dt) ; réserves restantes = (q − q abandon) / D.",
-        "Après un long historique, bilan matière et déclin priment sur la volumétrie.",
-        "Toute estimation s'exprime en fourchette (P90 – P50 – P10)."
+        "Taux d'eau = débit d'eau / (eau + huile) ; huile = liquide × (1 − taux d'eau).",
+        "Gaz associé = huile × rapport gaz-huile.",
+        "Bilan gaz : réinjecté + autoconsommé + vendu + torché + pertes.",
+        "Article 125 : torchage interdit, dérogation possible pour une durée déterminée.",
+        "Article 127 : mesure et déclaration obligatoires du gaz torché ; article 269 : pénalité de 50 millions à 2,5 milliards de FCFA."
       ]
     },
     {
       "id": "m6",
-      "title": "Déclaration annuelle des réserves à l'État",
-      "theme": "Déclaration annuelle à l'État",
+      "title": "Courbe de déclin, production différée et disponibilité",
+      "theme": "Déclin, optimisation et arrêts",
       "minutes": 10,
-      "body": "Le Ministère a besoin de connaître, chaque année, l'état des réserves du pays pour piloter la politique pétrolière, vérifier la production et suivre la fiscalité. L'opérateur transmet donc un état de ses réserves à l'administration.\n\n**Fondements juridiques.** La loi n° 002/2019 du 16 juillet 2019 impose au titulaire d'une autorisation de fournir aux services de l'administration des hydrocarbures un rapport sur l'état de ses activités et toute information technique, économique et financière dans les conditions et délais requis (article 182). Elle prévoit que le contracteur transmette toutes les informations relatives au bilan gaz (article 119), informe l'administration sans délai d'une découverte (article 63) et ne communique cette information aux tiers qu'avec son autorisation préalable. Le contracteur qui ne transmet pas dans les délais prévus par le contrat les données, études et rapports requis s'expose, après mise en demeure de quinze jours, à une pénalité de 500 000 à 5 000 000 de francs CFA (article 267). Le **format exact, le calendrier et les modèles** de la déclaration de réserves sont précisés par les textes réglementaires et les contrats en vigueur ; **ils sont à confirmer auprès de la Direction générale des Hydrocarbures** avant d'être cités.\n\n**Contenu type d'une déclaration.**\n- Date de référence (en pratique le 31 décembre) et unités.\n- Réserves par **champ** et par **catégorie** (1P, 2P, 3P), avec le statut de développement, séparées des ressources contingentes.\n- Production de l'année et production cumulée.\n- Méthodes et hypothèses : prix, coûts, taux de change, limite économique, facteur de récupération.\n- **Tableau de réconciliation** : réserves début + découvertes et extensions + révisions + acquisitions − cessions − production = réserves fin. Exemple (chiffres d'illustration) : 120 + 10 − 5 − 15 = 110 millions de barils.\n- Le bilan gaz (production, utilisation, torchage, vente) pour les champs concernés.\n\n**Contrôles de l'agent.**\n1. **Complétude** : tous les champs, toutes les catégories, la date.\n2. **Cohérence arithmétique** : réconciliation exacte, 1P ≤ 2P ≤ 3P.\n3. **Cohérence avec les mesures** : la production déclarée doit être compatible avec le comptage dynamique exigé pour déterminer la production fiscale (article 252).\n4. **Explication des révisions** : une hausse sans nouveau puits ni nouvelle étude se justifie par écrit.\n5. **Délais** : comparer la date de réception à l'échéance du contrat.\n\n**Confidentialité.** Les volumes d'une découverte récente sont sensibles : ne les communiquez pas à un tiers sans validation hiérarchique et autorisation (article 63).\n\n**Sur le terrain.** Si un rapport arrive en retard, constatez le retard par rapport au contrat, faites engager la mise en demeure, puis la pénalité prévue si la transmission n'a toujours pas eu lieu, au lieu de sanctionner d'emblée.",
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ avec trois phases : montée, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel jusqu'à la limite économique de 2 000 barils par jour, vers l'année 17,5",
+      "body": "La production d'un champ suit un **profil** en trois temps, illustré par la courbe : une **montée**, un **plateau** puis un **déclin** jusqu'à la limite économique, où l'on procède à l'abandon.\n\n**Le déclin exponentiel.** Il suppose une perte constante en pourcentage par unité de temps : q(t) = q₀ × e^(−D·t), où D est le taux de déclin et t le temps écoulé depuis le début du déclin.\n\n*Exemple fictif (valeurs de la courbe).* Plateau de 20 000 b/j jusqu'à l'année 6, puis D = 0,2 par an. À l'année 15, t = 15 − 6 = 9 ans : q = 20 000 × e^(−1,8) ≈ 3 300 b/j. À l'année 9, on lit environ 11 000 b/j.\n\n**Les arrêts.** Un arrêt **programmé** est planifié à l'avance (maintenance générale, inspection réglementaire). Un arrêt **non programmé** est subi (panne, stockage plein, pétrolier retardé) ou déclenché par la sécurité.\n\nLa **production différée** est la quantité qu'un arrêt a empêchée ; si le réservoir garde sa pression, elle peut être récupérée plus tard.\n\n*Exemple fictif.* Un champ au plateau à 20 000 b/j est arrêté 4 jours : production différée = 20 000 × 4 = 80 000 barils. Pour 5 jours, 100 000 barils.\n\nLe **taux de disponibilité** vaut (durée totale − durée d'arrêt) / durée totale. Une unité arrêtée 3 jours sur 30 a une disponibilité de 27 / 30 = 90 %.\n\n**Rôle du ministère (loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures)**\n\n- **Article 86 :** le plan de développement approuvé fournit la prévision de référence. *Exemple fictif :* la courbe prévoit environ 11 000 b/j à l'année 9, mais la mesure donne 8 000 b/j. Le champ est nettement sous la prévision : le ministère demande une analyse écrite du comportement du réservoir et un plan d'action. Il ne réduit pas les redevances d'office et n'arrête pas un champ sans motif grave.\n- **Article 256 :** le ministère approuve les budgets des activités amont et valide les dépenses qui en résultent ; il ne les rédige ni ne les paie.\n- **Article 241 :** tout arrêt non programmé susceptible d'avoir un impact doit être signalé sans délai. Un stock plein explique la cause de l'arrêt, mais n'annule pas la production différée ni l'obligation d'informer.\n- **Article 128 :** pour contrer le déclin, la loi favorise la récupération et la réinjection du gaz, au lieu du torchage.\n\n**Cas pratique.** Un arrêt non programmé de 5 jours survient au plateau, avec stock plein et pétrolier retardé, sans déclaration de l'opérateur : vous retenez 100 000 barils de production différée et rappelez l'obligation d'informer sans délai (art. 241).\n\n**Sur le terrain.** Superposez la mesure à la courbe du plan de développement : un écart durable justifie toujours une demande d'explications.",
       "keyPoints": [
-        "Article 182 : rapport sur l'état des activités ; article 119 : bilan gaz ; article 63 : découverte et confidentialité.",
-        "Article 267 : mise en demeure de quinze jours, puis pénalité de 500 000 à 5 000 000 de francs CFA.",
-        "Déclaration par champ et par catégorie, à une date de référence, avec hypothèses.",
-        "Réconciliation : début + découvertes et extensions + révisions − production = fin.",
-        "Format et calendrier exacts : à confirmer auprès de la Direction générale des Hydrocarbures."
+        "Profil : montée, plateau, déclin jusqu'à la limite économique puis abandon.",
+        "Déclin exponentiel : q(t) = q₀ × e^(−D·t).",
+        "Production différée = débit au plateau × durée d'arrêt ; disponibilité = (durée − arrêt) / durée.",
+        "Article 86 : un écart avec le plan de développement appelle une analyse écrite.",
+        "Article 241 : information sans délai ; article 128 : réinjection du gaz favorisée."
       ]
     },
     {
       "id": "m7",
-      "title": "Audit et vérification des réserves déclarées",
-      "theme": "Audit et vérification",
+      "title": "Rapports, bilans, écarts et sanctions",
+      "theme": "Rapports, écarts et vérifications",
       "minutes": 10,
-      "body": "Vérifier une déclaration de réserves revient à contrôler trois choses : les **données**, la **méthode** et le **respect des définitions**.\n\n**Qui vérifie ?** L'**évaluateur indépendant** est un tiers qualifié, sans conflit d'intérêts, mandaté par l'opérateur, par un financeur ou par l'État, pour auditer les volumes. L'administration exerce de son côté son contrôle : la loi n° 002/2019 précise que le contrôle des activités d'hydrocarbures comprend notamment le contrôle technique, comptable, juridique et fiscal (article 243) et prévoit des audits techniques sur le fonctionnement des appareils de mesurage et de comptage (article 251).\n\n**Liste de contrôle.**\n1. **Données de base** : cartes structurales, diagraphies, carottes, analyses PVT, essais de puits, historiques de production et de pression. Sans pièce, pas de validation.\n2. **Volume en place** : cohérence de la surface, de l'épaisseur, de φ, de Sw et de Bo avec les puits.\n3. **Facteur de récupération** : comparez au mécanisme de drainage et aux champs analogues. Annoncer 65 % pour un champ à gaz dissous est suspect.\n4. **Méthodes croisées** : volumétrie, bilan matière et déclin doivent aboutir à des ordres de grandeur compatibles ; sinon, on retient la méthode la plus contrainte par les données.\n5. **Hypothèses économiques** : prix et coûts conduisent à la limite économique, donc à la durée de vie et aux volumes classés en réserves.\n6. **Classification** : respect des définitions (statut, 1P ≤ 2P ≤ 3P, projet approuvé).\n7. **Périmètre** : double comptage entre permis voisins partageant un même réservoir. La mise en commun des gisements est le cadre prévu par la loi (articles 88 et 98).\n\n**Signaux d'alerte.**\n- Prouvées supérieures aux probables, ou réserves qui augmentent chaque année sans nouveau puits ni étude.\n- Facteur de récupération très supérieur à celui d'analogues.\n- Volumes en place présentés comme des réserves.\n- Prix ou coûts non cohérents avec la période.\n\n**Un indicateur simple.** Le rapport R/P compare les réserves à la production annuelle : 24 Mbbl de réserves 2P pour 6 Mbbl par an donne R/P = 4 ans (chiffres d'illustration).\n\n**Écarts avec l'audit.** Si l'opérateur annonce 50 millions de m³ et l'audit 38 (écart de 24 %), on n'applique ni moyenne ni sanction immédiate : on demande un **rapprochement** poste par poste (volume en place, FR, limite économique, périmètre), on fait documenter chaque écart et on décide ensuite. Les tolérances d'écart acceptables ne sont pas fixées par la loi ; elles dépendent de la pratique de l'organisme et du contrat, à confirmer.\n\n**Sur le terrain.** Consignez par écrit pièces reçues, questions, réponses et décisions : cette traçabilité protège l'agent et l'État.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+      "body": "Le contrôle de la production repose sur des **rapports** de l'opérateur et sur leur **vérification** par le ministère. Les articles 182, 243, 246, 247, 265, 267 et 278 de la loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures en fixent le cadre.\n\n**Les obligations d'information**\n\n- **Article 182 :** le titulaire d'une autorisation fournit aux services compétents un rapport sur l'état de ses activités et toute information administrative, technique, économique et financière utile, dans les conditions et délais requis.\n- **Article 243 :** le ministère exerce un contrôle technique et comptable.\n- **Article 247 :** le point de comptage fiscal est placé sous le contrôle et la supervision des services du ministère.\n\n**Le bilan matière, premier contrôle.** Le premier contrôle d'un rapport mensuel est le bilan : production = enlèvements + variation des stocks + usages.\n\n*Exemple fictif.* Stock d'ouverture 80 000 barils, stock de clôture 110 000, enlèvements 600 000 : production attendue = 600 000 + 30 000 = 630 000 barils.\n\nL'**écart relatif** se calcule en rapportant l'écart au bilan. *Exemple fictif :* un rapport annonce 1 050 000 barils pour un bilan de 1 000 000 : écart de 50 000 barils, soit 5 %.\n\n*Autre exemple fictif.* Un rapport déclare 2 000 000 barils, le bilan donne 1 940 000 : écart de 60 000 barils, soit 3 %, six fois la tolérance contractuelle de 0,5 %. L'arrondi des compteurs ne l'explique pas : exigez une explication et des justificatifs écrits.\n\n**Quand l'écart persiste.** Avec un écart inexpliqué de 2 % et des compteurs en série qui diffèrent de 1,5 % (alors que l'incertitude attendue d'un compteur est de l'ordre de 0,25 %), la démarche la plus rigoureuse croise les étalonnages (art. 249), les scellés, les facteurs de compteur et les cargaisons, puis trace l'analyse (art. 246). Corriger arbitrairement ou attendre un an ne résout rien.\n\n**Les sanctions**\n\n- **Article 267 :** pénalité de 500 000 à 5 000 000 FCFA pour défaut de transmission des données et rapports, après mise en demeure de quinze jours.\n- **Article 278 :** entrave aux missions de contrôle, par exemple un refus d'accès au point de comptage fiscal : pénalité de 10 à 100 millions de FCFA.\n- **Article 265 :** en cas de récidive, les pénalités sont portées au double, avec possibilité de retrait de l'autorisation.\n\n*Cas pratique.* Une société refuse la mise en demeure, ne transmet pas les rapports, puis récidive l'année suivante : elle s'expose à la pénalité de l'article 267, doublée (art. 265), et au retrait possible de l'autorisation.\n\n**Sur le terrain.** Conservez une trace écrite de chaque demande d'explication et de chaque réponse : elle fonde la suite de la procédure.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
       "keyPoints": [
-        "L'évaluateur indépendant audite ; l'administration contrôle (technique, comptable, juridique, fiscal : article 243).",
-        "Contrôler les données, le volume en place, le facteur de récupération et la cohérence entre méthodes.",
-        "Signaux d'alerte : 1P supérieur à 2P, hausses sans nouvelles données, FR irréaliste, double comptage.",
-        "R/P = réserves / production annuelle.",
-        "Devant un écart d'audit : rapprochement et traçabilité, ni moyenne ni sanction immédiate."
+        "Article 182 : rapport sur l'état des activités et informations utiles aux services compétents.",
+        "Premier contrôle : bilan production = enlèvements + variation de stocks + usages.",
+        "Écart relatif = écart / bilan ; comparer à la tolérance et à l'incertitude des compteurs.",
+        "Article 267 : pénalité après mise en demeure de quinze jours ; article 278 : entrave aux contrôles.",
+        "Article 265 : pénalités doublées en cas de récidive, retrait possible de l'autorisation."
       ]
     }
   ],
@@ -128,7 +137,7 @@
       "id": "min-production-002",
       "theme": "Chaîne de production",
       "level": 1,
-      "q": "Quel équipement permet de mesurer séparément les débits d'huile, de gaz et d'eau d'un puits donné ?",
+      "q": "Sur le schéma du séparateur triphasique, chaque phase quitte l'appareil par sa propre sortie. Quel équipement, fondé sur le même principe et branché sur un seul puits à la fois, permet de mesurer séparément les débits d'huile, de gaz et d'eau de ce puits ?",
       "choices": [
         "Le séparateur d'essai",
         "Le bac de stockage",
@@ -136,9 +145,11 @@
         "Le prouveur d'étalonnage"
       ],
       "answer": 0,
-      "explain": "Le séparateur d'essai isole la production d'un puits pour mesurer ses trois phases : c'est l'essai de puits. Le bac stocke l'huile, la torche brûle les rejets de gaz et le prouveur sert à étalonner un compteur.",
+      "explain": "Comme sur le schéma, le séparateur trie les trois phases ; le séparateur d'essai isole la production d'un puits pour mesurer chacune d'elles : c'est l'essai de puits. Le bac stocke l'huile, la torche brûle les rejets de gaz et le prouveur sert à étalonner un compteur.",
       "seconds": 40,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/separator-3phase.svg",
+      "imgAlt": "Séparateur triphasique horizontal : le mélange gaz, huile et eau entre à gauche par un déflecteur ; le gaz sort en haut après l'extracteur de brouillard, l'huile passe par-dessus le déversoir et sort à droite, l'eau sort en bas ; l'interface huile/eau est repérée."
     },
     {
       "id": "min-production-003",
@@ -449,7 +460,7 @@
       "id": "min-production-019",
       "theme": "Plates-formes et unités flottantes",
       "level": 3,
-      "q": "Un opérateur annonce une panne de la compression du gaz sur son unité flottante, avec torchage important, et continue sa production sans prévenir. Quelles obligations ou risques sont en jeu ?",
+      "q": "Sur le schéma de la chaîne du gaz, la compression se trouve en amont de toutes les destinations. Un opérateur annonce une panne de la compression du gaz sur son unité flottante, avec torchage important, et continue sa production sans prévenir. Quelles obligations ou risques sont en jeu ?",
       "choices": [
         "Pas d'obligation, car une panne est un événement d'exploitation courant et prévisible",
         "Seule obligation : le mentionner dans le rapport annuel de l'année suivante, sans urgence",
@@ -457,7 +468,7 @@
         "Obligation d'informer sans délai (art. 241) et risque de pénalité pour torchage (art. 269)"
       ],
       "answer": 3,
-      "explain": "Une perturbation susceptible d'avoir un impact sur les activités doit être signalée sans délai (art. 241). Le torchage est interdit hors dérogation et seuils (art. 125) et peut être sanctionné de 50 millions à 2,5 milliards de FCFA (art. 269). Un rapport annuel serait bien trop tardif.",
+      "explain": "Sans compression, le gaz ne peut plus aller vers la réinjection ni vers les autres usages et part à la torche. Une perturbation susceptible d'avoir un impact sur les activités doit être signalée sans délai (art. 241). Le torchage est interdit hors dérogation et seuils (art. 125) et peut être sanctionné de 50 millions à 2,5 milliards de FCFA (art. 269). Un rapport annuel serait bien trop tardif.",
       "seconds": 100,
       "status": "draft",
       "refs": [
@@ -466,7 +477,9 @@
           "art": "Articles 241, 125 et 269",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-torchage-valorisation-gaz.svg",
+      "imgAlt": "Chaîne du gaz associé : puits, séparateur, traitement et compression, puis quatre branches munies chacune d'un compteur : réinjection dans le gisement, autoconsommation du champ, valorisation et vente (électricité, GPL, GNL, marché intérieur) et, en dernier recours, torche (interdite sauf dérogation). Bilan gaz : produit = réinjecté + autoconsommé + vendu + torché ou rejeté + pertes."
     },
     {
       "id": "min-production-020",
@@ -952,7 +965,7 @@
       "id": "min-production-043",
       "theme": "Eau, gaz et torchage",
       "level": 1,
-      "q": "Que doit faire le contracteur pour le gaz torché, selon l'article 127 ?",
+      "q": "Sur le schéma de la chaîne du gaz, un compteur est placé sur chaque branche, y compris celle de la torche. Que doit faire le contracteur pour le gaz torché, selon l'article 127 ?",
       "choices": [
         "Estimer les volumes à vue depuis la torche et les conserver en archives",
         "Déclarer les volumes uniquement en cas d'incident majeur sur l'installation de production",
@@ -960,7 +973,7 @@
         "Faire mesurer le gaz torché par l'acheteur du gaz, à ses frais"
       ],
       "answer": 2,
-      "explain": "L'article 127 oblige à équiper tous les champs en production d'appareils de mesurage du gaz torché, dont le choix, le dimensionnement et l'emplacement sont approuvés, et à déclarer les volumes torchés à l'autorité compétente.",
+      "explain": "L'article 127 oblige à équiper tous les champs en production d'appareils de mesurage du gaz torché, dont le choix, le dimensionnement et l'emplacement sont approuvés, et à déclarer les volumes torchés à l'autorité compétente : c'est le compteur de la branche « torche ».",
       "seconds": 50,
       "status": "draft",
       "refs": [
@@ -969,7 +982,9 @@
           "art": "Article 127",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-torchage-valorisation-gaz.svg",
+      "imgAlt": "Chaîne du gaz associé : puits, séparateur, traitement et compression, puis quatre branches munies chacune d'un compteur : réinjection dans le gisement, autoconsommation du champ, valorisation et vente (électricité, GPL, GNL, marché intérieur) et, en dernier recours, torche (interdite sauf dérogation). Bilan gaz : produit = réinjecté + autoconsommé + vendu + torché ou rejeté + pertes."
     },
     {
       "id": "min-production-044",
@@ -1030,7 +1045,7 @@
       "id": "min-production-047",
       "theme": "Eau, gaz et torchage",
       "level": 2,
-      "q": "Un champ produit 2 000 000 Sm³/j de gaz associé, en consomme 300 000 comme combustible, en réinjecte 1 500 000 et torche le reste. Quel est le débit torché ?",
+      "q": "Sur le schéma de la chaîne du gaz, le bilan additionne le gaz réinjecté, autoconsommé, vendu et torché. Un champ produit 2 000 000 Sm³/j de gaz associé, en consomme 300 000 comme combustible, en réinjecte 1 500 000 et ne vend rien. Quel est le débit torché, en négligeant les pertes ?",
       "choices": [
         "200 000 Sm³/j torchés",
         "500 000 Sm³/j au total",
@@ -1038,9 +1053,11 @@
         "1 700 000 Sm³/j au total"
       ],
       "answer": 0,
-      "explain": "Torché = 2 000 000 − 300 000 − 1 500 000 = 200 000 Sm³/j. 500 000 oublie la réinjection ; 300 000 est le combustible ; 1 700 000 additionne combustible et réinjection.",
+      "explain": "Torché = 2 000 000 − 300 000 − 1 500 000 = 200 000 Sm³/j, comme le donne le bilan du schéma. 500 000 oublie la réinjection ; 300 000 est le combustible ; 1 700 000 additionne combustible et réinjection.",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-torchage-valorisation-gaz.svg",
+      "imgAlt": "Chaîne du gaz associé : puits, séparateur, traitement et compression, puis quatre branches munies chacune d'un compteur : réinjection dans le gisement, autoconsommation du champ, valorisation et vente (électricité, GPL, GNL, marché intérieur) et, en dernier recours, torche (interdite sauf dérogation). Bilan gaz : produit = réinjecté + autoconsommé + vendu + torché ou rejeté + pertes."
     },
     {
       "id": "min-production-048",
@@ -1069,7 +1086,7 @@
       "id": "min-production-049",
       "theme": "Eau, gaz et torchage",
       "level": 3,
-      "q": "Un champ produit 1 500 000 Sm³/j de gaz associé. Le seuil fixé est de 5 % de torchage. L'opérateur torche 180 000 Sm³/j. Que concluez-vous ?",
+      "q": "Sur le schéma de la chaîne du gaz, la torche est le dernier recours et son volume est comparé à un seuil. Un champ produit 1 500 000 Sm³/j de gaz associé. Le seuil fixé est de 5 % de torchage. L'opérateur torche 180 000 Sm³/j. Que concluez-vous ?",
       "choices": [
         "Le seuil est de 180 000 Sm³/j ; aucun dépassement n'est constaté sur ce champ",
         "Seuil de 75 000 Sm³/j ; le dépassement atteint 180 000 Sm³/j, soit tout le volume torché",
@@ -1086,7 +1103,9 @@
           "art": "Article 269",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-torchage-valorisation-gaz.svg",
+      "imgAlt": "Chaîne du gaz associé : puits, séparateur, traitement et compression, puis quatre branches munies chacune d'un compteur : réinjection dans le gisement, autoconsommation du champ, valorisation et vente (électricité, GPL, GNL, marché intérieur) et, en dernier recours, torche (interdite sauf dérogation). Bilan gaz : produit = réinjecté + autoconsommé + vendu + torché ou rejeté + pertes."
     },
     {
       "id": "min-production-050",
@@ -1186,33 +1205,37 @@
       "id": "min-production-055",
       "theme": "Déclin, optimisation et arrêts",
       "level": 2,
-      "q": "Un champ de 20 000 b/j connaît un déclin effectif de 10 % par an. Quel sera son débit après deux ans ?",
+      "q": "Sur la courbe de production, le plateau est de 20 000 b/j jusqu'à l'année 6, puis le déclin suit la loi indiquée sous le graphique. Quel est le débit à l'année 15 ?",
       "choices": [
-        "16 000 b/j",
-        "16 200 b/j (20 000 × 0,9 × 0,9)",
-        "18 000 b/j après deux ans",
-        "10 000 b/j"
+        "Environ 6 000 b/j",
+        "Environ 3 300 b/j",
+        "Environ 1 000 b/j",
+        "Environ 9 000 b/j"
       ],
       "answer": 1,
-      "explain": "20 000 × 0,9 × 0,9 = 16 200 b/j. 16 000 additionne deux fois 10 % de la valeur initiale (déclin linéaire) ; 18 000 correspond à un an ; 10 000 est une division par deux sans fondement.",
+      "explain": "Le déclin dure 15 − 6 = 9 ans : q = 20 000 × e^(−0,2 × 9) = 20 000 × e^(−1,8) ≈ 3 300 b/j. 6 000 b/j est la valeur lue à l'année 12, sans poursuivre le calcul ; 1 000 et 9 000 ne découlent pas de la loi exponentielle.",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "min-production-056",
       "theme": "Déclin, optimisation et arrêts",
       "level": 2,
-      "q": "Un champ de 15 000 b/j est arrêté pendant 4 jours. Quelle est la production différée ?",
+      "q": "Le champ de la courbe de production est arrêté pendant 4 jours alors qu'il est au plateau. Quelle est la production différée ?",
       "choices": [
-        "15 000 barils",
-        "3 750 barils",
-        "60 000 barils",
-        "600 000 barils"
+        "20 000 barils",
+        "5 000 barils",
+        "80 000 barils",
+        "800 000 barils"
       ],
       "answer": 2,
-      "explain": "15 000 × 4 = 60 000 barils. 15 000 ne compte qu'un jour ; 3 750 résulte d'une division ; 600 000 est une erreur de zéros.",
+      "explain": "Au plateau, le débit est de 20 000 b/j : 20 000 × 4 = 80 000 barils. 20 000 ne compte qu'un jour ; 5 000 résulte d'une division ; 800 000 est une erreur de zéros.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "min-production-057",
@@ -1234,7 +1257,7 @@
       "id": "min-production-058",
       "theme": "Déclin, optimisation et arrêts",
       "level": 2,
-      "q": "Un champ chute plus vite que la prévision du plan de développement approuvé. Quelle action est la plus pertinente pour le ministère ?",
+      "q": "La courbe représente la prévision du plan de développement approuvé : environ 11 000 b/j à l'année 9. À cette date, la mesure du champ donne 8 000 b/j. Quelle action est la plus pertinente pour le ministère ?",
       "choices": [
         "Réduire d'office les redevances de l'opérateur pour compenser le déclin constaté",
         "Demander une analyse écrite du comportement du réservoir et un plan d'action",
@@ -1242,7 +1265,7 @@
         "Arrêter immédiatement la production du champ sans autre forme de procédure"
       ],
       "answer": 1,
-      "explain": "Un écart avec le plan de développement (art. 86) justifie une demande d'explications écrites. Le ministère ne réduit pas les redevances d'office, ne néglige pas un écart notable et n'arrête pas un champ sans motif grave.",
+      "explain": "Le champ est nettement sous la courbe prévue : un écart avec le plan de développement (art. 86) justifie une demande d'explications écrites. Le ministère ne réduit pas les redevances d'office, ne néglige pas un écart notable et n'arrête pas un champ sans motif grave.",
       "seconds": 80,
       "status": "draft",
       "refs": [
@@ -1251,21 +1274,23 @@
           "art": "Article 86",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "min-production-059",
       "theme": "Déclin, optimisation et arrêts",
       "level": 3,
-      "q": "Un arrêt non programmé de 5 jours touche un champ de 12 000 b/j, avec un stock plein et un pétrolier retardé. L'opérateur n'a rien déclaré. Quelle analyse faites-vous ?",
+      "q": "Le champ de la courbe de production est au plateau lorsqu'un arrêt non programmé de 5 jours survient, avec un stock plein et un pétrolier retardé. L'opérateur n'a rien déclaré. Quelle analyse faites-vous ?",
       "choices": [
-        "Production différée de 12 000 barils ; l'information n'est pas obligatoire ici",
-        "Production différée de 60 000 barils ; l'opérateur n'a pas à informer l'administration",
-        "Production différée de 60 000 barils ; information sans délai due (art. 241)",
+        "Production différée de 20 000 barils ; l'information n'est pas obligatoire ici",
+        "Production différée de 100 000 barils ; l'opérateur n'a pas à informer l'administration",
+        "Production différée de 100 000 barils ; information sans délai due (art. 241)",
         "Pas de production différée, car le stock plein explique à lui seul l'arrêt"
       ],
       "answer": 2,
-      "explain": "12 000 × 5 = 60 000 barils différés. L'article 241 impose l'information sans délai d'une perturbation ayant un impact. Le stock plein explique la cause de l'arrêt (arrêt imposé), pas l'absence de différé.",
+      "explain": "Au plateau, 20 000 × 5 = 100 000 barils différés. L'article 241 impose l'information sans délai d'une perturbation ayant un impact. Le stock plein explique la cause de l'arrêt (arrêt imposé), pas l'absence de différé.",
       "seconds": 100,
       "status": "draft",
       "refs": [
@@ -1274,13 +1299,15 @@
           "art": "Article 241",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
     },
     {
       "id": "min-production-060",
       "theme": "Déclin, optimisation et arrêts",
       "level": 3,
-      "q": "Un opérateur propose, pour contrer le déclin, de réinjecter l'essentiel du gaz associé plutôt que de le torcher. Que dit la loi ?",
+      "q": "Sur le schéma de la chaîne du gaz, une branche renvoie le gaz dans le gisement. Un opérateur propose, pour contrer le déclin, de réinjecter l'essentiel du gaz associé plutôt que de le torcher. Que dit la loi ?",
       "choices": [
         "Elle favorise récupération et réinjection du gaz pour conserver la ressource (art. 128)",
         "Elle l'interdit, car le gaz associé appartient à l'opérateur et non à l'État gabonais, selon la loi",
@@ -1297,7 +1324,9 @@
           "art": "Article 128",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-torchage-valorisation-gaz.svg",
+      "imgAlt": "Chaîne du gaz associé : puits, séparateur, traitement et compression, puis quatre branches munies chacune d'un compteur : réinjection dans le gisement, autoconsommation du champ, valorisation et vente (électricité, GPL, GNL, marché intérieur) et, en dernier recours, torche (interdite sauf dérogation). Bilan gaz : produit = réinjecté + autoconsommé + vendu + torché ou rejeté + pertes."
     },
     {
       "id": "min-production-061",

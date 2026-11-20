@@ -55,7 +55,9 @@
         "Distinguer points de pourcentage et pourcentage relatif.",
         "Taux annuel moyen : racine n-ième du rapport, non la moyenne simple des taux.",
         "Arrondir à la fin et refaire le calcul par une autre voie avant diffusion."
-      ]
+      ],
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA. Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95. Croissance du chiffre d'affaires 2023-2024 : +12,5 % ; marge nette 2024 : environ 13,2 %."
     },
     {
       "id": "m5",
@@ -69,7 +71,9 @@
         "Une moyenne peut masquer une forte dispersion.",
         "Corrélation n'est pas causalité ; montrer un historique suffisant.",
         "Titre-message, unité, source et axe complet : les bases d'un graphique honnête."
-      ]
+      ],
+      "img": "svg/min-graphiques-trompeurs.svg",
+      "imgAlt": "Mêmes données fictives, deux graphiques en barres de la production de 2022 (500) et 2023 (520 millions de barils, soit +4 %). À gauche, graphique trompeur dont l'axe vertical commence à 490 : la barre de 2023 paraît trois fois plus haute. À droite, graphique correct dont l'axe commence à 0 : les deux barres ont presque la même hauteur."
     },
     {
       "id": "m6",
@@ -83,7 +87,9 @@
         "Titres-messages, une idée par page, mêmes unités dans tout le document.",
         "Séparer constat, analyse et recommandation ; ne jamais cacher une mauvaise nouvelle.",
         "Version numérotée, relecture des chiffres, validation hiérarchique avant diffusion."
-      ]
+      ],
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA. Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95. Croissance du chiffre d'affaires 2023-2024 : +12,5 % ; marge nette 2024 : environ 13,2 %."
     },
     {
       "id": "m7",
@@ -585,7 +591,7 @@
       "id": "min-statistiques-031",
       "theme": "Moyennes, évolutions et pourcentages",
       "level": 1,
-      "q": "Quelle est la formule de l'évolution en pourcentage entre deux valeurs ?",
+      "q": "Sur le graphique en barres, le chiffre d'affaires passe de 640 (2023) à 720 (2024). Quelle formule applique-t-on pour obtenir son évolution en pourcentage ?",
       "choices": [
         "(valeur initiale − valeur finale) / valeur finale × 100, exprimé en points",
         "(valeur finale − valeur initiale) / valeur initiale × 100",
@@ -593,57 +599,65 @@
         "(valeur finale + valeur initiale) / 2"
       ],
       "answer": 1,
-      "explain": "On rapporte la variation à la valeur de départ. Les autres formules utilisent une base erronée ou ne mesurent pas une évolution.",
+      "explain": "On rapporte la variation à la valeur de départ. Les autres formules utilisent une base erronée ou ne mesurent pas une évolution. (Figure : (720 − 640) / 640 × 100 = +12,5 %, valeur indiquée sous le graphique.)",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA. Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95. Croissance du chiffre d'affaires 2023-2024 : +12,5 % ; marge nette 2024 : environ 13,2 %."
     },
     {
       "id": "min-statistiques-032",
       "theme": "Moyennes, évolutions et pourcentages",
       "level": 1,
-      "q": "La médiane d'une série de valeurs est :",
+      "q": "Les résultats nets du graphique en barres (35, 52, 41, 78 et 95 millions de FCFA) sont rangés par ordre croissant. Quelle est leur médiane ?",
       "choices": [
-        "La somme des valeurs divisée par leur nombre, c'est-à-dire la moyenne arithmétique",
-        "La valeur la plus fréquente de la série",
-        "La différence entre la plus grande et la plus petite valeur",
-        "La valeur centrale de la série ordonnée, peu sensible aux valeurs extrêmes"
+        "60,2 millions de FCFA, la somme divisée par cinq",
+        "41 millions de FCFA, la deuxième valeur",
+        "78 millions de FCFA, la quatrième valeur",
+        "52 millions de FCFA, la valeur centrale de la série ordonnée"
       ],
       "answer": 3,
-      "explain": "La médiane partage la série en deux moitiés. La première définition est la moyenne, la deuxième le mode, la troisième l'étendue.",
+      "explain": "Série ordonnée : 35, 41, 52, 78, 95. La valeur centrale est 52. La moyenne (60,2) est plus élevée car elle subit l'effet des valeurs fortes 78 et 95.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA. Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95. Croissance du chiffre d'affaires 2023-2024 : +12,5 % ; marge nette 2024 : environ 13,2 %."
     },
     {
       "id": "min-statistiques-033",
       "theme": "Moyennes, évolutions et pourcentages",
       "level": 1,
-      "q": "La part d'un élément dans un total se calcule par :",
+      "q": "Sur le graphique en barres, quelle est la part du résultat net dans le chiffre d'affaires en 2024 ?",
       "choices": [
-        "total / élément × 100 en prenant le total pour base",
-        "élément − total",
-        "élément / total × 100",
-        "(élément + total) / 2"
+        "Environ 7,6 %, en divisant le chiffre d'affaires par le résultat net",
+        "Environ 95 %, en reprenant la valeur du résultat net",
+        "Environ 13,2 %, en divisant 95 par 720",
+        "Environ 75,8 %, en soustrayant 95 de 720 puis en divisant"
       ],
       "answer": 2,
-      "explain": "Une part est le rapport de l'élément au total, exprimé en pourcentage. Les autres opérations n'ont pas ce sens.",
+      "explain": "Part = élément / total × 100 = 95 / 720 × 100 ≈ 13,2 % (marge nette 2024, rappelée sous le graphique). Diviser dans le mauvais sens donne 7,6 %.",
       "seconds": 40,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA. Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95. Croissance du chiffre d'affaires 2023-2024 : +12,5 % ; marge nette 2024 : environ 13,2 %."
     },
     {
       "id": "min-statistiques-034",
       "theme": "Moyennes, évolutions et pourcentages",
       "level": 1,
-      "q": "Une hausse de 12 % à 15 % d'une part est une hausse de :",
+      "q": "D'après le graphique en barres, la marge nette passe d'environ 8,3 % en 2020 (35 / 420) à environ 13,2 % en 2024 (95 / 720). Quelle est la hausse ?",
       "choices": [
-        "3 points de pourcentage",
-        "3 pour cent exactement",
-        "15 pour cent",
-        "1,25 point de pourcentage"
+        "Environ 4,9 points de pourcentage",
+        "Environ 4,9 pour cent",
+        "Environ 58 points de pourcentage",
+        "Environ 1,6 point de pourcentage"
       ],
       "answer": 0,
-      "explain": "La différence arithmétique entre deux pourcentages s'exprime en points. En relatif, 3/12 donne +25 %, ce qui n'est pas non plus « 3 % ».",
+      "explain": "13,2 − 8,3 ≈ 4,9 points de pourcentage. En relatif, la marge a augmenté d'environ 58 % ; il faut préciser laquelle des deux mesures on cite.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA. Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95. Croissance du chiffre d'affaires 2023-2024 : +12,5 % ; marge nette 2024 : environ 13,2 %."
     },
     {
       "id": "min-statistiques-035",
@@ -665,49 +679,55 @@
       "id": "min-statistiques-036",
       "theme": "Moyennes, évolutions et pourcentages",
       "level": 2,
-      "q": "La production passe de 2,7 à 2,43 millions de barils (fictif). Quelle est l'évolution ?",
+      "q": "Sur la figure, la production passe de 500 à 520 millions de barils entre 2022 et 2023. Quelle est l'évolution en pourcentage ?",
       "choices": [
-        "−0,27 %",
-        "−10 %",
-        "−11,1 %",
+        "+20 %, la différence brute",
+        "+4 %",
+        "+3,8 %, en prenant 520 pour base",
         "+10 %"
       ],
       "answer": 1,
-      "explain": "(2,43 − 2,7) / 2,7 = −0,1, soit −10 %. −11,1 % serait le calcul avec la mauvaise base ; −0,27 est la variation en valeur absolue (en millions).",
+      "explain": "(520 − 500) / 500 × 100 = +4 %. La base est la valeur initiale : prendre 520 donne +3,8 %. Le graphique de gauche, à axe tronqué, laisse croire à une hausse bien plus forte.",
       "seconds": 65,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-graphiques-trompeurs.svg",
+      "imgAlt": "Mêmes données fictives, deux graphiques en barres de la production de 2022 (500) et 2023 (520 millions de barils, soit +4 %). À gauche, graphique trompeur dont l'axe vertical commence à 490 : la barre de 2023 paraît trois fois plus haute. À droite, graphique correct dont l'axe commence à 0 : les deux barres ont presque la même hauteur."
     },
     {
       "id": "min-statistiques-037",
       "theme": "Moyennes, évolutions et pourcentages",
       "level": 2,
-      "q": "Après une baisse de 10 %, quelle hausse faut-il pour revenir au niveau initial ?",
+      "q": "Sur le graphique en barres, le chiffre d'affaires baisse de 510 (2021) à 480 (2022). Quelle hausse faudrait-il pour revenir à 510 ?",
       "choices": [
-        "+10 % (retour apparent au niveau de départ)",
-        "Environ +11,1 %",
-        "+9 %",
-        "+20 %"
+        "+5,9 %, la même variation en sens inverse",
+        "+6,25 %",
+        "+30 %",
+        "+3 %"
       ],
       "answer": 1,
-      "explain": "Si l'on part de 100, on arrive à 90 ; pour revenir à 100, il faut 10/90 = 11,1 %. +10 % donnerait 99.",
+      "explain": "510 / 480 = 1,0625, soit +6,25 %. La baisse de 30 sur 510 vaut −5,9 % ; la hausse se calcule sur la nouvelle base, plus faible, donc elle est plus grande.",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA. Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95. Croissance du chiffre d'affaires 2023-2024 : +12,5 % ; marge nette 2024 : environ 13,2 %."
     },
     {
       "id": "min-statistiques-038",
       "theme": "Moyennes, évolutions et pourcentages",
       "level": 2,
-      "q": "Une production passe de 100 à 121 en deux ans (fictif). Quel est le taux de croissance annuel moyen ?",
+      "q": "Sur le graphique en barres, le résultat net passe de 41 (2022) à 78 (2023) millions de FCFA. Quelle est son évolution ?",
       "choices": [
-        "10,5 % par an",
-        "21 % par an",
-        "11 % par an",
-        "10 % par an"
+        "+47,4 %, en prenant 78 pour base",
+        "+37 %, la différence brute",
+        "+190 %, le rapport entre les deux valeurs",
+        "+90 %"
       ],
       "answer": 3,
-      "explain": "1,10 × 1,10 = 1,21 : le taux annuel constant est de 10 %. La moyenne simple de 21 % sur deux ans donnerait 10,5, qui ne reproduit pas 121.",
+      "explain": "(78 − 41) / 41 × 100 ≈ +90 %. 190 % est le rapport 78 / 41, non l'évolution ; 47,4 % prend la mauvaise base.",
       "seconds": 80,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA. Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95. Croissance du chiffre d'affaires 2023-2024 : +12,5 % ; marge nette 2024 : environ 13,2 %."
     },
     {
       "id": "min-statistiques-039",
@@ -761,7 +781,7 @@
       "id": "min-statistiques-042",
       "theme": "Lecture de graphiques et pièges",
       "level": 1,
-      "q": "Qu'est-ce qu'un axe vertical tronqué ?",
+      "q": "Sur la figure, le graphique de gauche porte l'axe vertical « 490 à 530 ». Quel défaut présente-t-il ?",
       "choices": [
         "Un axe qui ne commence pas à zéro et exagère visuellement les écarts",
         "Un axe qui porte les mois au lieu des valeurs, avec une graduation irrégulière",
@@ -769,9 +789,11 @@
         "Un axe en couleur"
       ],
       "answer": 0,
-      "explain": "Si l'axe commence à 96, une petite baisse devient spectaculaire. Les autres défauts sont différents (absence d'unité, de titre, choix de couleur).",
+      "explain": "Si l'axe commence à 96, une petite baisse devient spectaculaire. Les autres défauts sont différents (absence d'unité, de titre, choix de couleur). (Figure : l'axe tronqué fait paraître la barre de 2023 trois fois plus haute que celle de 2022, pour une hausse de 4 %.)",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-graphiques-trompeurs.svg",
+      "imgAlt": "Mêmes données fictives, deux graphiques en barres de la production de 2022 (500) et 2023 (520 millions de barils, soit +4 %). À gauche, graphique trompeur dont l'axe vertical commence à 490 : la barre de 2023 paraît trois fois plus haute. À droite, graphique correct dont l'axe commence à 0 : les deux barres ont presque la même hauteur."
     },
     {
       "id": "min-statistiques-043",
@@ -793,7 +815,7 @@
       "id": "min-statistiques-044",
       "theme": "Lecture de graphiques et pièges",
       "level": 1,
-      "q": "Que doit-on regarder en premier en lisant un graphique ?",
+      "q": "Devant chacun des deux graphiques de la figure, que faut-il regarder en premier avant d'en tirer une conclusion ?",
       "choices": [
         "Uniquement la couleur de la courbe principale",
         "Le nom du service qui l'a publié",
@@ -801,15 +823,17 @@
         "La position de la légende"
       ],
       "answer": 2,
-      "explain": "Ces éléments conditionnent l'interprétation. La forme ne se comprend qu'après.",
+      "explain": "Ces éléments conditionnent l'interprétation. La forme ne se comprend qu'après. (Figure : le titre et l'échelle du graphique de gauche (axe de 490 à 530) auraient alerté avant de regarder la hauteur des barres.)",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-graphiques-trompeurs.svg",
+      "imgAlt": "Mêmes données fictives, deux graphiques en barres de la production de 2022 (500) et 2023 (520 millions de barils, soit +4 %). À gauche, graphique trompeur dont l'axe vertical commence à 490 : la barre de 2023 paraît trois fois plus haute. À droite, graphique correct dont l'axe commence à 0 : les deux barres ont presque la même hauteur."
     },
     {
       "id": "min-statistiques-045",
       "theme": "Lecture de graphiques et pièges",
       "level": 2,
-      "q": "Votre collègue présente un graphique en barres dont l'axe commence à 96 pour des valeurs de 98 à 100. Que lui dites-vous ?",
+      "q": "Le graphique de gauche de la figure commence son axe à 490 pour des valeurs de 500 et 520. Que dites-vous à son auteur ?",
       "choices": [
         "Que l'axe doit partir de zéro pour que les barres reflètent les écarts réels",
         "Que c'est correct car cela rend la lecture plus claire et met bien en évidence les écarts",
@@ -817,31 +841,35 @@
         "Qu'il suffit de colorier la plus petite barre en rouge"
       ],
       "answer": 0,
-      "explain": "Les barres représentent une quantité par leur longueur ; tronquer l'axe exagère les écarts. Relief ou couleur n'y changent rien.",
+      "explain": "Les barres représentent une quantité par leur longueur ; tronquer l'axe exagère les écarts. Relief ou couleur n'y changent rien. (Figure : le graphique de droite, à axe depuis zéro, montre la hausse à sa vraie taille.)",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-graphiques-trompeurs.svg",
+      "imgAlt": "Mêmes données fictives, deux graphiques en barres de la production de 2022 (500) et 2023 (520 millions de barils, soit +4 %). À gauche, graphique trompeur dont l'axe vertical commence à 490 : la barre de 2023 paraît trois fois plus haute. À droite, graphique correct dont l'axe commence à 0 : les deux barres ont presque la même hauteur."
     },
     {
       "id": "min-statistiques-046",
       "theme": "Lecture de graphiques et pièges",
       "level": 2,
-      "q": "Une moyenne de production de 90 pour cinq champs peut-elle cacher des écarts ?",
+      "q": "La moyenne du résultat net du graphique en barres sur cinq ans est de 60,2 millions de FCFA (301 / 5). Que peut-on en dire ?",
       "choices": [
-        "Non : une moyenne donne toujours un résumé complet de la série étudiée, quelle que soit sa dispersion",
-        "Oui, mais seulement si le total est inférieur à 100",
-        "Oui : elle peut résulter de valeurs très dispersées, il faut examiner la répartition",
-        "Non : la moyenne est égale à la médiane"
+        "Elle donne un résumé complet : la dispersion n'a pas d'importance",
+        "Elle n'est valable que si le total dépasse 300 millions",
+        "Elle masque la dispersion : les valeurs vont de 35 à 95, il faut examiner la répartition",
+        "Elle est toujours égale à la médiane de la série"
       ],
       "answer": 2,
-      "explain": "Une moyenne de 90 peut venir de 10, 10, 10, 10 et 410. Seule l'observation des valeurs ou de la médiane révèle la dispersion.",
+      "explain": "Une moyenne peut résulter de valeurs très dispersées (35 à 95 ici) ; ici, elle est de plus supérieure à la médiane (52). Il faut regarder la répartition et pas seulement la moyenne.",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA. Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95. Croissance du chiffre d'affaires 2023-2024 : +12,5 % ; marge nette 2024 : environ 13,2 %."
     },
     {
       "id": "min-statistiques-047",
       "theme": "Lecture de graphiques et pièges",
       "level": 2,
-      "q": "Un graphique à double axe montre la production et le prix sur la même période, avec des échelles choisies pour que les courbes se superposent. Quel risque principal ?",
+      "q": "Sur le graphique en barres, le résultat net (35 à 95) paraît petit face au chiffre d'affaires (420 à 720). Pour faire se superposer les courbes, on envisage un double axe aux échelles choisies à la main. Quel est le risque principal ?",
       "choices": [
         "Consommer plus de papier à l'impression, ce qui augmente le coût de production du rapport",
         "Suggérer un lien étroit entre les deux séries par un choix d'échelles arbitraire",
@@ -849,9 +877,11 @@
         "Rendre le graphique trop précis"
       ],
       "answer": 1,
-      "explain": "Avec deux axes, on peut faire coïncider presque n'importe quelles courbes. Il vaut mieux deux graphiques séparés, aux échelles explicites.",
+      "explain": "Avec deux axes, on peut faire coïncider presque n'importe quelles courbes. Il vaut mieux deux graphiques séparés, aux échelles explicites. (Figure : le double axe aux échelles arbitraires suggère un lien étroit entre séries ; mieux vaut garder une échelle commune ou deux graphiques séparés.)",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA. Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95. Croissance du chiffre d'affaires 2023-2024 : +12,5 % ; marge nette 2024 : environ 13,2 %."
     },
     {
       "id": "min-statistiques-048",
@@ -889,17 +919,19 @@
       "id": "min-statistiques-050",
       "theme": "Lecture de graphiques et pièges",
       "level": 3,
-      "q": "On vous demande de présenter au directeur la baisse de 100 à 98 de la production (−2 %). Quelle présentation est la plus honnête ?",
+      "q": "D'après la figure, quelle présentation est la plus honnête pour montrer la hausse de 500 à 520 millions de barils (+4 %) au directeur ?",
       "choices": [
-        "Courbe à axe complet, titre « −2 % en 2025 », source et unité indiquées",
-        "Axe de 97 à 100 pour que la baisse soit nettement visible",
-        "Camembert à deux parts, 98 % et 2 %",
-        "Tableau sans titre ni unité"
+        "Le graphique de droite, axe depuis zéro, titre « +4 % en 2023 », source et unité indiquées",
+        "Le graphique de gauche, car il rend la hausse bien visible pour la lecture",
+        "Un camembert à deux parts, 96 % et 4 %, sans autre indication",
+        "Un tableau sans titre ni unité, pour rester neutre"
       ],
       "answer": 0,
-      "explain": "L'axe complet et le chiffre exact évitent de dramatiser ou de minimiser. L'axe tronqué exagère, le camembert représente mal une évolution et un tableau sans unité est inutilisable.",
+      "explain": "Un graphique honnête garde l'axe complet, énonce le message dans le titre (+4 %) et indique unité et source. Le graphique de gauche, à axe tronqué, exagère la hausse ; un camembert ne convient pas à une évolution.",
       "seconds": 100,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-graphiques-trompeurs.svg",
+      "imgAlt": "Mêmes données fictives, deux graphiques en barres de la production de 2022 (500) et 2023 (520 millions de barils, soit +4 %). À gauche, graphique trompeur dont l'axe vertical commence à 490 : la barre de 2023 paraît trois fois plus haute. À droite, graphique correct dont l'axe commence à 0 : les deux barres ont presque la même hauteur."
     },
     {
       "id": "min-statistiques-051",
@@ -969,17 +1001,19 @@
       "id": "min-statistiques-055",
       "theme": "Rapport annuel et présentation à la hiérarchie",
       "level": 2,
-      "q": "Vous devez titrer une page où les exportations baissent de 5 % en volume. Quel titre est le meilleur ?",
+      "q": "Pour la page qui présente le graphique en barres, quel titre énonce le mieux le message principal des données ?",
       "choices": [
-        "« Les exportations baissent de 5 % en volume en 2025 »",
-        "« Exportations »",
+        "« Le chiffre d'affaires progresse de 12,5 % en 2024 »",
+        "« Chiffres »",
         "« Tableau 4 : données du secteur »",
         "« Résultats divers »"
       ],
       "answer": 0,
-      "explain": "Un titre-message annonce la conclusion que le lecteur doit retenir. Les autres titres sont neutres et obligent à chercher le message.",
+      "explain": "Un bon titre énonce le message : le chiffre d'affaires passe de 640 à 720, soit +12,5 %. Les titres génériques n'indiquent ni le sens ni l'ordre de grandeur du phénomène.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/finance-bar-chart.svg",
+      "imgAlt": "Histogramme du chiffre d'affaires et du résultat net de 2020 à 2024 en millions de FCFA. Chiffre d'affaires : 420, 510, 480, 640, 720. Résultat net : 35, 52, 41, 78, 95. Croissance du chiffre d'affaires 2023-2024 : +12,5 % ; marge nette 2024 : environ 13,2 %."
     },
     {
       "id": "min-statistiques-056",

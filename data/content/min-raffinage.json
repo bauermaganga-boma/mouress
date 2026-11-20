@@ -1,1323 +1,1349 @@
 {
-  "profile": "min-raffinage",
-  "modules": [
+ "profile": "min-raffinage",
+ "modules": [
+  {
+   "id": "m1",
+   "title": "Schéma d'une raffinerie et distillation du brut",
+   "theme": "Schéma de raffinerie et distillation",
+   "minutes": 10,
+   "body": "Une **raffinerie** transforme le pétrole brut, mélange complexe d'hydrocarbures, en produits finis : gaz de pétrole liquéfiés (GPL), essences, carburéacteur (kérosène), gazole, fiouls, bitumes. Son organisation générale suit une logique en trois étapes : **séparer** (distillation), **transformer** (conversion : reformage, craquage) et **purifier** (hydrotraitement, adoucissement), puis **mélanger** les composants pour obtenir des produits conformes aux spécifications.\n\n**Le dessalage.** Avant toute chauffe, le brut est lavé à l'eau pour éliminer les sels (chlorures) et les sédiments, qui provoqueraient corrosion et encrassement des fours et des échangeurs.\n\n**La distillation atmosphérique.** Le brut préchauffé dans un train d'échangeurs, puis porté à environ 350-370 °C dans un four, est envoyé dans une colonne qui fonctionne à pression voisine de la pression atmosphérique. Les constituants se répartissent selon leur **température d'ébullition** : en tête les gaz et le naphta léger, puis le naphta lourd, le kérosène, le gazole, et en fond le **résidu atmosphérique**. Des soutirages latéraux, complétés par de petites colonnes de rectification, prélèvent chaque coupe. Ordres de grandeur usuels : essence et naphta de 30 à 180 °C environ, kérosène de 150 à 250 °C, gazole de 250 à 350 °C.\n\n**La distillation sous vide.** Le résidu atmosphérique, trop lourd pour être chauffé davantage sans se décomposer, est redistillé sous pression réduite. On obtient des distillats sous vide, charge habituelle du craquage catalytique ou de l'hydrocraquage, et un **résidu sous vide** (bitume, fioul lourd, charge de cokéfaction).\n\n**Les unités de conversion et de purification.** Le **reformage catalytique** valorise le naphta lourd en essence à indice d'octane élevé et produit de l'hydrogène. Le **craquage** casse les molécules lourdes en molécules plus légères et plus valorisables. L'**hydrotraitement** retire le soufre et l'azote en présence d'hydrogène. Les gaz acides riches en sulfure d'hydrogène (H₂S) sont traités dans une unité de récupération du soufre.\n\n**Les services généraux.** Une raffinerie comprend aussi un parc de stockage (bruts, produits intermédiaires et finis), une torche de sécurité, des utilités (vapeur, électricité, eau de refroidissement, air instrument), un traitement des effluents et un poste de chargement.\n\n**Configurations.** On distingue la raffinerie **simple** (« hydroskimming » : distillation, reformage, hydrotraitement), dont le rendement en produits lourds reste élevé, et la raffinerie à **conversion**, dotée de craquage ou de cokéfaction, qui valorise mieux les résidus. Le choix dépend du brut traité et du marché visé.\n\n**Exemple chiffré** (fictif, pour illustrer). Un four de distillation chauffe 100 t/h de brut (capacité calorifique d'environ 2,1 kJ/kg.K) de 150 à 350 °C : Q = (100 000 / 3 600) × 2,1 × 200 ≈ 11,7 MW de puissance absorbée.\n\n**Pour un agent du ministère.** Savoir lire un schéma de procédé permet de comprendre les déclarations d'un opérateur : un brut léger donne davantage de coupes légères, un brut lourd davantage de résidu ; les arrêts d'une unité (par exemple le reformage) se répercutent sur la qualité des essences. La SOGARA (Société gabonaise de raffinage, à Port-Gentil) est la raffinerie du pays ; son schéma exact, ses unités en service et sa capacité sont à confirmer auprès de l'exploitant.",
+   "keyPoints": [
+    "Une raffinerie sépare, transforme, purifie puis mélange pour obtenir des produits conformes.",
+    "La distillation sépare le brut par température d'ébullition : atmosphérique d'abord, puis sous vide pour le résidu.",
+    "Reformage, craquage et hydrotraitement valorisent et purifient les coupes.",
+    "Le dessalage protège les équipements contre la corrosion et l'encrassement.",
+    "La configuration (simple ou à conversion) détermine la valorisation des résidus."
+   ],
+   "img": "svg/distillation-column.svg",
+   "imgAlt": "Colonne de distillation en schéma de principe : l'alimentation entre à mi-hauteur ; en tête, les vapeurs passent dans un condenseur puis un ballon de reflux d'où partent le reflux vers la colonne et le distillat ; en bas, un rebouilleur chauffe le fond d'où sort le résidu ; zones de rectification en haut et d'épuisement en bas, séparées par des plateaux."
+  },
+  {
+   "id": "m2",
+   "title": "Reformage, craquage et hydrotraitement",
+   "theme": "Procédés de conversion et de purification",
+   "minutes": 11,
+   "body": "Les coupes issues de la distillation ne correspondent pas à la demande du marché : trop de résidu lourd, essence de faible indice d'octane, soufre excessif. Les unités de conversion et de purification corrigent ce déséquilibre.\n\n**Le reformage catalytique.** Il transforme un naphta lourd (environ 80-180 °C) en **reformat**, base d'essence à indice d'octane élevé (souvent de l'ordre de 95 à 100 RON). Les réactions principales sont la déshydrogénation des naphtènes en aromatiques, l'isomérisation et la déshydrocyclisation des paraffines. L'opération se déroule vers 480-520 °C, sous pression modérée, avec un catalyseur à base de **platine** (parfois associé à un autre métal). Le procédé **libère de l'hydrogène**, précieux pour l'hydrotraitement. Le catalyseur est sensible aux poisons (soufre, azote, métaux) et se recouvre de coke : une régénération périodique ou continue est nécessaire. Le naphta est donc toujours hydrotraité avant le reformage.\n\n**Le craquage catalytique en lit fluidisé (FCC).** La charge (distillat sous vide) rencontre un catalyseur en poudre (zéolithe) dans un réacteur ascendant (« riser ») vers 500-550 °C. Les grosses molécules se brisent en essence, en GPL riche en oléfines, en gazole léger de qualité médiocre et en coke déposé sur le catalyseur. Le catalyseur est brûlé en continu dans un régénérateur, ce qui fournit la chaleur nécessaire à la réaction.\n\n**L'hydrocraquage.** Il craque la charge en présence d'hydrogène et d'un catalyseur, sous haute pression. Il produit surtout du kérosène et du gazole de très bonne qualité, avec peu de soufre. Il consomme beaucoup d'hydrogène et exige des investissements élevés.\n\n**Le craquage thermique.** La viscoréduction et la cokéfaction traitent les résidus par la chaleur seule : la première réduit la viscosité des fiouls, la seconde produit des distillats et du coke de pétrole.\n\n**L'hydrotraitement.** Un mélange de charge et d'hydrogène traverse un lit de catalyseur (cobalt-molybdène ou nickel-molybdène) à environ 300-400 °C et 30 à 100 bar. Le soufre est converti en H₂S, l'azote en ammoniac, les oléfines sont saturées. Le gaz riche en H₂S est lavé aux amines puis transformé en soufre élémentaire dans l'unité Claus. L'hydrotraitement permet d'atteindre les faibles teneurs en soufre exigées pour le gazole et l'essence (10 ppm dans les spécifications européennes).\n\n**Autres procédés.** L'isomérisation valorise le naphta léger, l'alkylation produit une essence de haute qualité à partir de GPL oléfinique.\n\n**Exemple chiffré** (fictif). Un naphta lourd à 60 RON est reformé en un reformat à 98 RON. Mélangé à 40 % de naphta isomérisé à 85 RON, l'ensemble donne, en première approximation linéaire en volume, 0,6 × 98 + 0,4 × 85 = 92,8 RON : l'essence atteint une valeur proche de la qualité « super ». Les indices d'octane ne se mélangent pas parfaitement de façon linéaire ; le calcul reste approximatif.\n\n**Intérêt pour le suivi administratif.** Ces unités déterminent la capacité réelle du site à produire des carburants conformes. Un opérateur sans reformage ni hydrotraitement doit importer des composants ou des produits finis pour respecter les spécifications. Cela éclaire l'analyse des déclarations de production et des besoins d'importation.",
+   "keyPoints": [
+    "Le reformage transforme le naphta lourd en reformat à haut indice d'octane et libère de l'hydrogène.",
+    "Le FCC craque le distillat sous vide en essence et en GPL ; le coke brûlé au régénérateur fournit la chaleur.",
+    "L'hydrocraquage, sous hydrogène, donne un kérosène et un gazole de très bonne qualité.",
+    "L'hydrotraitement retire le soufre sous forme de H₂S, ensuite converti en soufre élémentaire par l'unité Claus.",
+    "Le catalyseur du reformage est sensible aux poisons : le naphta est hydrotraité avant."
+   ],
+   "img": "svg/min-raffinerie-schema.svg",
+   "imgAlt": "Schéma de principe d'une raffinerie : le brut passe par le dessalage et le four, puis par la colonne de distillation atmosphérique qui soutire du haut vers le bas le gaz, le naphta, le kérosène, le gazole et le résidu atmosphérique. Le naphta est hydrotraité puis reformé en base d'essence (avec de l'hydrogène) ; le kérosène et le gazole sont hydrotraités ; le résidu atmosphérique va à la distillation sous vide, dont le distillat est craqué en essence et gazole et dont le résidu sous vide donne bitume et fioul lourd."
+  },
+  {
+   "id": "m3",
+   "title": "Rendements, bilan matière et calculs simples",
+   "theme": "Rendements et bilan matière",
+   "minutes": 11,
+   "body": "Le **bilan matière** exprime la conservation de la masse : en régime stable, ce qui entre dans la raffinerie sort sous forme de produits, de fuel consommé sur place, de torchage et de pertes. Écrit pour l'ensemble du site ou pour une unité, il est l'outil de base pour vérifier la cohérence des déclarations d'un opérateur.\n\n**Définitions utiles.**\n- **Rendement massique** d'un produit = masse du produit / masse de brut traité × 100.\n- **Rendement volumique** : même rapport en volume. Après conversion, le total des volumes peut dépasser 100 %, car les produits sont moins denses que la charge (gain volumique).\n- **Écart de bilan (pertes)** = (entrées − sorties mesurées) / entrées × 100. Un écart de l'ordre de 0,3 à 1 % de la charge est généralement jugé plausible ; au-delà, il faut chercher la cause (erreurs de mesure, fuites, torchage non comptabilisé).\n- **Produits blancs** : essences, kérosène, gazole. **Produits noirs** : fiouls, résidus, bitumes.\n\n**Conversions pratiques.** 1 tonne de brut moyen représente environ 7,3 barils (la valeur varie de 6,9 à 7,5 selon la densité). Une capacité de 1 million de tonnes par an correspond donc à environ 7,3 × 1 000 000 / 365 ≈ 20 000 barils par jour. Pour passer du volume à la masse, on multiplie par la **densité à 15 °C** de chaque produit.\n\n**Exemple de bilan** (chiffres fictifs). Une raffinerie traite 100 000 t de brut sur une période. Produits mesurés : GPL 3 000 t, naphta 15 000 t, kérosène 12 000 t, gazole 28 000 t, résidu 37 000 t, fuel de procédé et torche déclarés 4 600 t. Total des sorties : 99 600 t. L'écart est de 400 t, soit 0,4 % : cohérent. Rendement cumulé en GPL, naphta, kérosène et gazole : (3 000 + 15 000 + 12 000 + 28 000) / 100 000, soit 58 %. Si le même opérateur déclarait seulement 94 000 t de sorties, l'écart de 6 % exigerait une vérification.\n\n**Rôle de la nature du brut.** Un brut léger donne beaucoup de naphta, de kérosène et de gazole ; un brut lourd donne davantage de résidu. Le rendement réel dépend aussi du **mode de marche** : point de coupe, gravité de la conversion, demandes saisonnières.\n\n**Consommation propre.** Une raffinerie brûle une partie de sa production (gaz de raffinerie, fioul) pour ses fours et ses utilités, typiquement de l'ordre de 4 à 8 % du brut traité pour une raffinerie complexe ; cette consommation doit apparaître au bilan.\n\n**Bilan par constituant.** Pour une unité de distillation traitant F tonnes avec une fraction x de léger, avec un distillat D à pureté xD et un résidu B à xB, on écrit F = D + B et F·x = D·xD + B·xB. Avec F = 100 t/h, x = 0,40, xD = 0,90 et xB = 0,10, D = 100 × (0,40 − 0,10) / (0,90 − 0,10) = 37,5 t/h.\n\n**Usage administratif.** Le rapprochement entre brut reçu, produits livrés et variations de stock, validé par des mesurages fiables (jaugeage, compteurs étalonnés), est la base du suivi par les services du ministère.",
+   "keyPoints": [
+    "En régime stable, entrées = sorties (produits, fuel de procédé, torche, pertes).",
+    "Un écart de bilan de quelques dixièmes de pour cent est plausible ; un écart de plusieurs points est suspect.",
+    "1 tonne de brut moyen représente environ 7,3 barils : 1 million de t/an vaut environ 20 000 barils par jour.",
+    "Après conversion, la somme des rendements volumiques peut dépasser 100 %.",
+    "La nature du brut et le mode de marche déterminent la répartition des produits."
+   ],
+   "img": "svg/min-produits-baril.svg",
+   "imgAlt": "Barres d'un exemple fictif donnant, pour 100 barils de brut : GPL et gaz 3 barils, essences 28, kérosène 8, gazole 30, fioul lourd et résidus 28, autoconsommation et pertes 3. Un bandeau précise que ces rendements sont fictifs et indicatifs."
+  },
+  {
+   "id": "m4",
+   "title": "Qualité des produits pétroliers",
+   "theme": "Qualité des produits",
+   "minutes": 10,
+   "body": "Un produit fini doit répondre à des **spécifications** : seuils mesurés en laboratoire selon des méthodes normalisées (ASTM, ISO, EN). La qualité protège les moteurs, la sécurité des usagers, l'environnement et le consommateur, et permet la vente et le transport.\n\n**Principales caractéristiques.**\n- **Indice d'octane** (RON, MON) des essences : résistance au cliquetis ; il se mesure sur un moteur d'essai normalisé.\n- **Indice de cétane** du gazole : aptitude à l'auto-inflammation ; plus il est élevé, meilleur est le démarrage.\n- **Teneur en soufre** (en ppm ou en % massique) : conditionne les émissions d'oxydes de soufre et la durée de vie des catalyseurs de dépollution.\n- **Pression de vapeur Reid** (PVR) des essences : volatilité, risque de bouchon de vapeur et émissions évaporatives.\n- **Courbe de distillation** (méthode ASTM D86) : répartition des points d'ébullition.\n- **Densité à 15 °C** et **viscosité** : transactions commerciales et comportement dans les moteurs.\n- **Point d'éclair** : température minimale pour laquelle les vapeurs s'enflamment au contact d'une flamme ; il fixe le classement en matière de risque d'incendie.\n- **Propriétés à froid** du gazole : point de trouble, point d'écoulement.\n- **Carburéacteur** : point de congélation, point de fumée, stabilité thermique, absence d'eau libre ; la référence est la spécification Jet A-1.\n\n**Textes de référence usuels.** Les spécifications européennes EN 228 (essence) et EN 590 (gazole) servent souvent de modèle dans les pays qui n'ont pas de spécification propre ; les spécifications nationales applicables au Gabon sont à confirmer auprès des services compétents du ministère.\n\n**Chaîne de contrôle.** Elle comprend : échantillonnage représentatif (normes d'échantillonnage, flacons propres, scellés), analyse au laboratoire de la raffinerie, contre-analyse indépendante pour les cas litigieux, puis émission d'un **certificat de qualité** par lot. La traçabilité de l'échantillon (étiquette, date, point de prélèvement) est essentielle, car un résultat contesté doit pouvoir être justifié.\n\n**Les mélanges (« blending »).** Les produits finis résultent du mélange de composants (reformat, naphta isomérisé, composants du FCC) pour atteindre simultanément octane, PVR et soufre. Le soufre résiduel ou la volatilité d'un lot hors spécification peuvent obliger à retraiter le lot.\n\n**Non-conformité.** Un lot hors spécification est retenu, reclassé ou retraité. La loi n° 002/2019 prévoit des sanctions pour la commercialisation de lubrifiants non conformes (article 289) : pénalité de 500 000 à 10 000 000 FCFA avec saisie et destruction.\n\n**Exemple chiffré** (fictif). Une essence mesurée à 92,0 RON pour une spécification minimale de 95 RON est non conforme : le lot ne peut pas être commercialisé comme « super ». Un gazole contenant 0,5 % massique de soufre renferme 5 000 ppm, soit 500 fois plus que la limite de 10 ppm européenne.\n\n**Rôle de l'agent.** Il vérifie que l'opérateur dispose d'un laboratoire équipé et étalonné, que les certificats suivent chaque livraison et que les contre-analyses sont possibles en cas de litige.",
+   "keyPoints": [
+    "Les spécifications portent sur l'octane, le cétane, le soufre, la volatilité, le point d'éclair et les propriétés à froid.",
+    "Les méthodes d'essai sont normalisées (ASTM, ISO, EN) ; les spécifications gabonaises applicables sont à confirmer.",
+    "L'échantillonnage représentatif et la traçabilité fondent la validité d'un résultat.",
+    "Un lot hors spécification est retenu, reclassé ou retraité ; l'article 289 sanctionne les lubrifiants non conformes.",
+    "Le certificat de qualité accompagne chaque lot livré."
+   ]
+  },
+  {
+   "id": "m5",
+   "title": "Indicateurs de performance d'une raffinerie",
+   "theme": "Indicateurs de performance",
+   "minutes": 10,
+   "body": "Un indicateur de performance est une mesure régulière, définie sans ambiguïté, qui permet de comparer une période à une autre ou un site à un autre. Pour un agent du ministère, ils servent à lire les rapports d'activité de l'opérateur (article 182 de la loi n° 002/2019 pour les rapports d'activité et informations) et à repérer les écarts.\n\n**Indicateurs de production.**\n- **Taux d'utilisation** = quantité de brut traitée / capacité nominale × 100. Exemple fictif : 16 000 barils par jour traités pour 20 000 de capacité, soit 80 %.\n- **Rendement en produits blancs** et **rendement en résidu**, à comparer avec le schéma de la raffinerie.\n- **Taux de conformité** des lots : part des lots conformes dès la première analyse.\n\n**Indicateurs de fiabilité.**\n- **Disponibilité** = temps de marche / temps calendaire × 100. Exemple : 330 jours de marche sur 365 donnent 90,4 %, soit 35 jours d'arrêt programmé et non programmé.\n- **Nombre d'arrêts non programmés** et durée moyenne de rétablissement.\n- **Taux de réalisation de la maintenance préventive**.\n\n**Indicateurs d'efficacité énergétique.** Le **fuel consommé en propre** (en % du brut) et l'**intensité énergétique** (énergie consommée rapportée à la capacité équivalente de distillation, comme dans l'indice d'intensité énergétique de Solomon) mesurent l'efficacité. Toute dérive augmente le coût et les émissions.\n\n**Indicateurs économiques.** La **marge de raffinage** est la différence entre la valeur des produits obtenus et le coût du brut. Exemple fictif : produits valorisés en moyenne 85 dollars le baril, brut à 78 dollars, soit 7 dollars par baril ; à 16 000 barils par jour, cela fait 112 000 dollars par jour avant coûts d'exploitation. La marge dépend fortement du prix du brut, des cours des produits et de la configuration.\n\n**Indicateurs de sécurité et d'environnement.**\n- **Taux de fréquence** (TF) = nombre d'accidents avec arrêt × 1 000 000 / heures travaillées. Exemple : 3 accidents avec arrêt pour 1 500 000 heures donnent un TF de 2,0.\n- **Taux de gravité** : jours perdus rapportés aux heures travaillées.\n- **Pertes de confinement**, volumes torchés, rejets dans l'eau, déchets.\n\n**Bonnes pratiques de lecture.**\n- Toujours vérifier la **définition** (par exemple, capacité nominale ou capacité effective) et la **période** de référence.\n- Comparer des indicateurs cohérents : une baisse du taux d'utilisation causée par un arrêt programmé n'a pas la même signification qu'une baisse due à des pannes répétées.\n- Associer un indicateur à une **cible** et à un **seuil d'alerte**.\n- Un indicateur ne remplace pas la visite de terrain : un excellent taux de fréquence peut cacher un défaut de déclaration.\n\n**Cas d'usage.** Si le taux d'utilisation de la SOGARA chute durablement alors que la disponibilité reste élevée, la cause est probablement externe (approvisionnement en brut, demande), et non technique.",
+   "keyPoints": [
+    "Taux d'utilisation = brut traité / capacité nominale ; disponibilité = temps de marche / temps calendaire.",
+    "La marge de raffinage compare la valeur des produits au coût du brut.",
+    "Taux de fréquence = accidents avec arrêt × 1 000 000 / heures travaillées.",
+    "Toujours vérifier la définition et la période de référence d'un indicateur.",
+    "Un indicateur doit avoir une cible, un seuil d'alerte et être confronté au terrain."
+   ]
+  },
+  {
+   "id": "m6",
+   "title": "Arrêts programmés et sécurité des procédés",
+   "theme": "Arrêts programmés et sécurité",
+   "minutes": 11,
+   "body": "Un **arrêt programmé** (« arrêt général » ou **arrêt pour grands travaux**) est une interruption planifiée d'une unité ou de toute la raffinerie pour inspecter, maintenir, réparer ou modifier les équipements. Il intervient généralement tous les trois à cinq ans selon les unités, dure souvent de quelques semaines à deux mois et mobilise des centaines d'intervenants supplémentaires. C'est la période la plus risquée et la plus coûteuse de la vie d'un site.\n\n**Phases d'un arrêt.**\n1. **Préparation** (12 à 24 mois avant) : constitution du périmètre des travaux, appels d'offres, commande des pièces à délai long, planification au chemin critique.\n2. **Gel du périmètre** : au-delà d'une date, toute demande de travaux nouveau est refusée ou fortement encadrée, car elle perturbe le calendrier et les coûts.\n3. **Mise à l'arrêt** : réduction de la charge, vidange, déshuilage, vapeur, inertage à l'azote, dégazage, isolement par plaques pleines (consignation).\n4. **Travaux et inspection** : ouverture des équipements, contrôles non destructifs, épreuves, remplacement de catalyseurs, réparations.\n5. **Remise en service** : revue de sécurité avant démarrage, essais d'étanchéité, redémarrage progressif.\n6. **Retour d'expérience** : bilan des écarts de durée et de coût, nouvelles leçons.\n\n**Risques spécifiques.** Intervention en **espace confiné** (cuves, colonnes) avec risque d'asphyxie ; **travaux par points chauds** en zone d'hydrocarbures ; **sulfure de fer pyrophorique**, qui s'enflamme spontanément au contact de l'air dans les équipements soufrés ; coactivité d'entreprises sous-traitantes ; levage ; travail en hauteur. Les risques sont maîtrisés par les **permis de travail**, la **consignation** des équipements, la mesure de gaz, le balisage, la formation et la désignation d'un responsable de sécurité.\n\n**Sécurité des procédés.** Elle repose sur plusieurs barrières : conception sûre, étude de dangers et analyse **HAZOP** (identification des dérives du procédé), automatismes de sécurité (arrêt d'urgence, niveaux de sécurité SIL), soupapes de sûreté reliées à la **torche**, détection de gaz et d'incendie, moyens de lutte et plans d'urgence. La culture de sécurité et les retours d'expérience d'accidents (explosions de réservoirs, pertes de confinement) sont essentiels.\n\n**Cadre légal.** L'article 3 de la loi n° 002/2019 impose les règles de qualité, hygiène, santé, sécurité et environnement. L'article 171 oblige toute personne exerçant une activité d'hydrocarbures à respecter les prescriptions d'hygiène, de santé, de sécurité, de sûreté et d'environnement fixées par voie réglementaire. L'article 241 impose au titulaire de signaler sans délai tout incident ou accident.\n\n**Exemple chiffré** (fictif). Un arrêt prévu de 40 jours dérape de 6 jours ; si le manque à gagner est de 100 000 dollars par jour, la dérive coûte 600 000 dollars. D'où l'intérêt de bien préparer le périmètre.\n\n**Rôle de l'agent.** Demander le calendrier de l'arrêt, les plans de gestion des risques, la liste des inspections réglementaires prévues et le plan d'approvisionnement du marché pendant l'arrêt (importations, stocks), notamment au regard de l'obligation d'approvisionner en priorité le marché national.",
+   "keyPoints": [
+    "Un arrêt programmé se prépare 12 à 24 mois à l'avance ; le gel du périmètre protège le calendrier.",
+    "Les risques majeurs sont l'espace confiné, les points chauds, le sulfure de fer pyrophorique et la coactivité.",
+    "Permis de travail, consignation et mesure de gaz sont les barrières de base.",
+    "HAZOP, soupapes, torche et automatismes de sécurité forment les barrières de sécurité des procédés.",
+    "La loi impose le respect des règles QHSE (art. 3, 171) et le signalement immédiat des incidents (art. 241)."
+   ]
+  },
+  {
+   "id": "m7",
+   "title": "Suivi réglementaire de l'aval par l'administration",
+   "theme": "Suivi réglementaire et SOGARA",
+   "minutes": 11,
+   "body": "Les activités **aval** (raffinage, stockage, transport, distribution) relèvent du Titre IV de la loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures. Le ministère en charge des Hydrocarbures en assure le suivi à travers ses directions techniques (le site du ministère cite notamment une Direction de l'Aval pétrolier et gazier et une Direction générale des Études et Laboratoires ; l'organisation a évolué ces dernières années et reste à confirmer).\n\n**Autorisation.** La transformation d'hydrocarbures, donc le **raffinage**, exige une autorisation d'exploitation matérialisée par **décret du Président de la République**, sur proposition de l'autorité compétente ; les autres activités aval sont autorisées par l'autorité compétente (article 130). L'autorisation est **incessible et non transmissible** (article 134).\n\n**Obligations du titulaire.**\n- Approvisionner en **priorité le marché national** selon les modalités fixées par arrêté (article 138).\n- Remettre en état le site au terme de l'exploitation (article 137).\n- Transmettre les rapports d'activité et informations demandés (article 182).\n- Signaler sans délai toute perturbation, incident ou accident (article 241).\n- Respecter les prescriptions d'hygiène, santé, sécurité, sûreté et environnement (article 171).\n\n**Prix du brut destiné au raffinage.** Les livraisons de brut et de gaz naturel à l'industrie nationale du raffinage sont facturées au prix fixé par voie réglementaire (article 139, second alinéa).\n\n**Régime fiscal.** L'aval relève du droit commun (articles 204 et 236) : aucun régime d'exonération spécifique de l'amont ne s'y applique.\n\n**Contrôle.** Il est assuré par les agents des services compétents du ministère (article 18) ; ceux qui ont prêté serment sont officiers de police judiciaire spéciaux et dressent des procès-verbaux (articles 19 et 20). Le contrôle comprend le volet technique et le volet comptable, juridique et fiscal (article 243).\n\n**Sanctions.** Exercer une activité aval sans autorisation expose, après mise en demeure, à une pénalité de 1 000 000 à 30 000 000 FCFA (article 284) ; le manquement aux obligations de contenu local dans l'aval, à 5 000 000 à 100 000 000 FCFA (article 286) ; la commercialisation de lubrifiants non conformes, à 500 000 à 10 000 000 FCFA avec saisie et destruction (article 289). En cas de récidive, les pénalités sont doublées (article 265).\n\n**La SOGARA.** La Société gabonaise de raffinage, établie à Port-Gentil, est la raffinerie du pays ; le ministère la cite parmi les sociétés placées sous sa tutelle. Le suivi administratif porte sur : programme de production et d'arrêts, approvisionnement en brut, livraisons au marché, stocks, qualité des produits, incidents et respect de l'environnement. L'agent s'appuie sur des déclarations périodiques, des visites de site et des rapprochements de chiffres (bilan matière, certificats de qualité). Les chiffres de capacité et de production doivent être demandés à l'exploitant ou aux services compétents.\n\n**Exemple pratique.** Un chef de service reçoit un rapport indiquant un arrêt non programmé de trois semaines. Il demande la cause, l'impact sur l'approvisionnement du marché, l'état des stocks et le plan de redémarrage, puis consigne le tout dans un compte rendu.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+   "keyPoints": [
+    "Le raffinage exige une autorisation d'exploitation par décret du Président de la République (art. 130), incessible (art. 134).",
+    "Le raffineur approvisionne en priorité le marché national (art. 138) ; le prix du brut est fixé par voie réglementaire (art. 139).",
+    "Le contrôle revient aux agents du ministère, dont certains sont officiers de police judiciaire spéciaux (art. 18-20).",
+    "Sanctions de l'aval : art. 284 (sans autorisation), 286 (contenu local), 289 (lubrifiants non conformes).",
+    "Le suivi s'appuie sur déclarations, visites de site et rapprochement des chiffres."
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "min-raffinage-001",
+   "theme": "Schéma de raffinerie et distillation",
+   "level": 1,
+   "q": "Sur le schéma de la colonne, l'alimentation entre à mi-hauteur, le distillat sort en tête et le résidu au fond. Quelle propriété physique explique cette séparation ?",
+   "choices": [
+    "La température d'ébullition de chaque constituant",
+    "La couleur du produit soutiré à chaque plateau de la colonne",
+    "La teneur en soufre de chaque coupe mesurée en laboratoire",
+    "La viscosité du brut mesurée à la sortie du four"
+   ],
+   "answer": 0,
+   "explain": "Les composés les plus légers (bas point d'ébullition) se vaporisent, montent vers le condenseur et sortent en distillat ; les plus lourds restent en fond, où le rebouilleur les chauffe. La couleur, le soufre et la viscosité sont des caractéristiques de qualité, pas le principe de séparation.",
+   "seconds": 45,
+   "status": "draft",
+   "img": "svg/distillation-column.svg",
+   "imgAlt": "Colonne de distillation en schéma de principe : l'alimentation entre à mi-hauteur ; en tête, les vapeurs passent dans un condenseur puis un ballon de reflux d'où partent le reflux vers la colonne et le distillat ; en bas, un rebouilleur chauffe le fond d'où sort le résidu ; zones de rectification en haut et d'épuisement en bas, séparées par des plateaux."
+  },
+  {
+   "id": "min-raffinage-002",
+   "theme": "Schéma de raffinerie et distillation",
+   "level": 1,
+   "q": "À quoi sert le dessalage du brut avant son entrée dans le four ?",
+   "choices": [
+    "Augmenter l'indice d'octane des coupes légères avant leur envoi au stockage",
+    "Réduire la teneur en soufre des gazoles avant leur passage au stockage",
+    "Récupérer l'hydrogène contenu dans le brut avant sa chauffe au four",
+    "Retirer sels et sédiments, causes de corrosion et d'encrassement"
+   ],
+   "answer": 3,
+   "explain": "Le lavage à l'eau retire les chlorures et les sédiments, causes de corrosion et d'encrassement des échangeurs et des fours. Il n'agit ni sur l'octane ni sur le soufre, et le brut ne contient pas d'hydrogène récupérable à cette étape.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-003",
+   "theme": "Schéma de raffinerie et distillation",
+   "level": 1,
+   "q": "Sur le schéma de la colonne, quel produit sort tout en bas, après le rebouilleur ? Dans une distillation atmosphérique du brut, de quelle coupe s'agit-il ?",
+   "choices": [
+    "Le distillat, produit de tête, recueilli dans le ballon de reflux",
+    "Le reflux, renvoyé vers le haut de la colonne pour améliorer la séparation",
+    "L'alimentation, qui entre à mi-hauteur et ressort aussitôt en fond",
+    "Le résidu, produit de fond : le résidu atmosphérique, envoyé à la distillation sous vide"
+   ],
+   "answer": 3,
+   "explain": "Le schéma indique « résidu (produit de fond) » sous le rebouilleur ; en distillation atmosphérique du brut, il s'agit du résidu atmosphérique (produits les plus lourds, point d'ébullition supérieur à 350-370 °C environ), redistillé sous vide. Le distillat sort en tête, le reflux retourne dans la colonne, et l'alimentation entre à mi-hauteur.",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/distillation-column.svg",
+   "imgAlt": "Colonne de distillation en schéma de principe : l'alimentation entre à mi-hauteur ; en tête, les vapeurs passent dans un condenseur puis un ballon de reflux d'où partent le reflux vers la colonne et le distillat ; en bas, un rebouilleur chauffe le fond d'où sort le résidu ; zones de rectification en haut et d'épuisement en bas, séparées par des plateaux."
+  },
+  {
+   "id": "min-raffinage-004",
+   "theme": "Schéma de raffinerie et distillation",
+   "level": 1,
+   "q": "Sur le schéma de la raffinerie, le résidu atmosphérique est envoyé dans une colonne sous vide. Pourquoi le redistille-t-on sous pression réduite plutôt qu'à la pression atmosphérique ?",
+   "choices": [
+    "Pour favoriser volontairement le dépôt de coke dans les tubes du four",
+    "Pour séparer les distillats lourds sans les décomposer par la chaleur",
+    "Pour éliminer l'eau résiduelle laissée par le dessalage du brut",
+    "Pour concentrer les sels dans la coupe la plus légère de la colonne atmosphérique"
+   ],
+   "answer": 1,
+   "explain": "Sous vide, les points d'ébullition baissent : on évite le craquage thermique indésirable et l'encrassement. Le dessalage a lieu avant la distillation (début du schéma), et l'on ne cherche pas à produire du coke ni à concentrer des sels.",
+   "seconds": 50,
+   "status": "draft",
+   "img": "svg/min-raffinerie-schema.svg",
+   "imgAlt": "Schéma de principe d'une raffinerie : le brut passe par le dessalage et le four, puis par la colonne de distillation atmosphérique qui soutire du haut vers le bas le gaz, le naphta, le kérosène, le gazole et le résidu atmosphérique. Le naphta est hydrotraité puis reformé en base d'essence (avec de l'hydrogène) ; le kérosène et le gazole sont hydrotraités ; le résidu atmosphérique va à la distillation sous vide, dont le distillat est craqué en essence et gazole et dont le résidu sous vide donne bitume et fioul lourd."
+  },
+  {
+   "id": "min-raffinage-005",
+   "theme": "Schéma de raffinerie et distillation",
+   "level": 2,
+   "q": "Un brut lourd remplace un brut léger dans la raffinerie, sans changement d'unités. Quelle conséquence est la plus probable ?",
+   "choices": [
+    "Une hausse du rendement en GPL et en naphta",
+    "Une part plus forte de résidu et une baisse des coupes légères",
+    "Une disparition du besoin de distillation sous vide",
+    "Une baisse de la température de sortie du four"
+   ],
+   "answer": 1,
+   "explain": "Un brut lourd contient moins de composés volatils : plus de résidu, moins de naphta, kérosène et gazole. Il augmente le besoin de la distillation sous vide et de conversion, et ne permet pas de réduire la chauffe.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-006",
+   "theme": "Schéma de raffinerie et distillation",
+   "level": 2,
+   "q": "Un four chauffe 100 t/h de brut (cp = 2,1 kJ/kg.K) de 150 à 350 °C. Quelle puissance absorbe le brut ? (Q = débit × cp × écart de température)",
+   "choices": [
+    "11,7 MW",
+    "Environ 21,0 MW",
+    "Environ 42,0 MW",
+    "Environ 4,20 MW"
+   ],
+   "answer": 0,
+   "explain": "Débit = 100 000 / 3 600 = 27,8 kg/s ; Q = 27,8 × 2,1 × 200 ≈ 11 700 kW soit 11,7 MW. Les autres valeurs proviennent d'erreurs d'unité ou d'oubli d'un facteur (conversion t/h en kg/s, par exemple).",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-007",
+   "theme": "Schéma de raffinerie et distillation",
+   "level": 2,
+   "q": "Vous lisez un schéma de procédé : le kérosène est soutiré latéralement à un niveau situé entre le naphta et le gazole. Pourquoi cet ordre ?",
+   "choices": [
+    "Parce que sa densité est la plus faible de toutes les coupes de la colonne",
+    "Parce qu'il est produit après le gazole dans un autre four",
+    "Parce que son indice de cétane doit être maximal",
+    "Son ébullition est intermédiaire entre naphta et gazole"
+   ],
+   "answer": 3,
+   "explain": "Dans la colonne, les coupes se classent par plage d'ébullition : naphta (30-180 °C), kérosène (150-250 °C), gazole (250-350 °C). Le naphta est en réalité la coupe la moins dense, et tous sont séparés dans la même colonne.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-008",
+   "theme": "Schéma de raffinerie et distillation",
+   "level": 2,
+   "q": "Imaginez la raffinerie du schéma sans son unité de craquage catalytique : il ne reste que la distillation, le reformage et l'hydrotraitement. Que peut-on prévoir pour sa production ?",
+   "choices": [
+    "Une production maximale de kérosène à partir du résidu sous vide",
+    "Une absence de besoin de torche et de services généraux",
+    "Un rendement important en produits lourds (fioul, bitume), faute d'unité qui convertisse le distillat et le résidu sous vide",
+    "Un gazole sans soufre sans aucune unité fournissant de l'hydrogène"
+   ],
+   "answer": 2,
+   "explain": "Sans craquage ni cokéfaction, le distillat sous vide et le résidu ne sont pas convertis : ils sortent en fiouls ou bitumes. La torche et les utilités restent indispensables, et l'hydrotraitement exige de l'hydrogène (ici issu du reformage ou d'une unité dédiée).",
+   "seconds": 70,
+   "status": "draft",
+   "img": "svg/min-raffinerie-schema.svg",
+   "imgAlt": "Schéma de principe d'une raffinerie : le brut passe par le dessalage et le four, puis par la colonne de distillation atmosphérique qui soutire du haut vers le bas le gaz, le naphta, le kérosène, le gazole et le résidu atmosphérique. Le naphta est hydrotraité puis reformé en base d'essence (avec de l'hydrogène) ; le kérosène et le gazole sont hydrotraités ; le résidu atmosphérique va à la distillation sous vide, dont le distillat est craqué en essence et gazole et dont le résidu sous vide donne bitume et fioul lourd."
+  },
+  {
+   "id": "min-raffinage-009",
+   "theme": "Schéma de raffinerie et distillation",
+   "level": 3,
+   "q": "Vous êtes chef de service et recevez le bilan d'une raffinerie dont les coupes légères diminuent depuis un mois, avec un brut dont le fournisseur a changé. Quelle première vérification est la plus pertinente ?",
+   "choices": [
+    "Contrôler l'état des soupapes de la torche uniquement",
+    "Exiger l'arrêt immédiat de la distillation sous vide",
+    "Comparer les analyses (densité, distillation) des deux bruts",
+    "Vérifier la date du dernier étalonnage des pompes d'eau de refroidissement"
+   ],
+   "answer": 2,
+   "explain": "Un changement de brut modifie les rendements par construction : l'analyse du brut (densité, distillation, soufre) explique d'abord l'évolution. Les autres actions n'expliquent pas une baisse de coupes légères et ne sont pas prioritaires.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-010",
+   "theme": "Schéma de raffinerie et distillation",
+   "level": 3,
+   "q": "Une raffinerie de 1 million de tonnes par an fonctionne à 80 % de sa capacité, avec 7,3 barils par tonne. Quel débit approximatif traite-t-elle ?",
+   "choices": [
+    "Environ 8 000 barils par jour",
+    "Environ 16 000 barils par jour",
+    "Environ 20 000 barils par jour",
+    "Environ 29 000 barils par jour"
+   ],
+   "answer": 1,
+   "explain": "Capacité : 1 000 000 × 7,3 / 365 ≈ 20 000 barils par jour ; à 80 %, environ 16 000. 20 000 serait la pleine capacité, 29 000 un dépassement irréaliste, et 8 000 une erreur de conversion.",
+   "seconds": 110,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-011",
+   "theme": "Procédés de conversion et de purification",
+   "level": 1,
+   "q": "Quel est le produit principal du reformage catalytique ?",
+   "choices": [
+    "Un reformat à indice d'octane élevé, avec dégagement d'hydrogène",
+    "Un gazole à fort indice de cétane et riche en soufre",
+    "Un résidu sous vide destiné aux bitumes",
+    "Un GPL pur sans aucune trace d'oléfines"
+   ],
+   "answer": 0,
+   "explain": "Le reformage transforme le naphta lourd en composés aromatiques à haut octane et libère de l'hydrogène. Il ne produit ni gazole ni bitume, et ses gaz sont des légers mélangés.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-012",
+   "theme": "Procédés de conversion et de purification",
+   "level": 1,
+   "q": "Sur le schéma de la raffinerie, quelle charge alimente l'unité de craquage catalytique en lit fluidisé (FCC) ?",
+   "choices": [
+    "Le distillat issu de la distillation sous vide",
+    "Le GPL récupéré en tête de la colonne atmosphérique",
+    "Le naphta léger déjà hydrotraité pour l'isomérisation",
+    "Le kérosène hydrotraité, stocké comme produit fini"
+   ],
+   "answer": 0,
+   "explain": "La flèche « distillat sous vide » du schéma alimente le FCC, qui le valorise en essence et en gazole. Le GPL, le naphta et le kérosène sont des produits plus légers qu'on ne cherche pas à craquer.",
+   "seconds": 45,
+   "status": "draft",
+   "img": "svg/min-raffinerie-schema.svg",
+   "imgAlt": "Schéma de principe d'une raffinerie : le brut passe par le dessalage et le four, puis par la colonne de distillation atmosphérique qui soutire du haut vers le bas le gaz, le naphta, le kérosène, le gazole et le résidu atmosphérique. Le naphta est hydrotraité puis reformé en base d'essence (avec de l'hydrogène) ; le kérosène et le gazole sont hydrotraités ; le résidu atmosphérique va à la distillation sous vide, dont le distillat est craqué en essence et gazole et dont le résidu sous vide donne bitume et fioul lourd."
+  },
+  {
+   "id": "min-raffinage-013",
+   "theme": "Procédés de conversion et de purification",
+   "level": 1,
+   "q": "Sur le schéma de la raffinerie, le naphta, le kérosène et le gazole passent chacun par une unité d'hydrotraitement. Quel est le rôle principal de cette unité ?",
+   "choices": [
+    "Casser les molécules lourdes en molécules plus petites",
+    "Retirer le soufre et l'azote, en présence d'hydrogène et d'un catalyseur",
+    "Augmenter fortement l'indice d'octane du naphta",
+    "Séparer le brut par température d'ébullition"
+   ],
+   "answer": 1,
+   "explain": "L'hydrotraitement convertit le soufre en H₂S et l'azote en ammoniac. Le craquage casse les molécules, le reformage augmente l'octane et la distillation sépare par ébullition.",
+   "seconds": 45,
+   "status": "draft",
+   "img": "svg/min-raffinerie-schema.svg",
+   "imgAlt": "Schéma de principe d'une raffinerie : le brut passe par le dessalage et le four, puis par la colonne de distillation atmosphérique qui soutire du haut vers le bas le gaz, le naphta, le kérosène, le gazole et le résidu atmosphérique. Le naphta est hydrotraité puis reformé en base d'essence (avec de l'hydrogène) ; le kérosène et le gazole sont hydrotraités ; le résidu atmosphérique va à la distillation sous vide, dont le distillat est craqué en essence et gazole et dont le résidu sous vide donne bitume et fioul lourd."
+  },
+  {
+   "id": "min-raffinage-014",
+   "theme": "Procédés de conversion et de purification",
+   "level": 1,
+   "q": "Que devient le sulfure d'hydrogène (H₂S) produit par l'hydrotraitement ?",
+   "choices": [
+    "Il est injecté directement dans les réservoirs d'essence pour la désodoriser",
+    "Il est brûlé sans traitement et rejeté dans l'air ambiant",
+    "Il est capté aux amines puis converti en soufre élémentaire",
+    "Il est recyclé comme catalyseur dans le réformeur"
+   ],
+   "answer": 2,
+   "explain": "Le gaz acide est capté aux amines puis converti en soufre élémentaire, produit vendable. L'injecter dans un produit ou le rejeter sans traitement serait dangereux et interdit ; il n'est pas un catalyseur du reformage.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-015",
+   "theme": "Procédés de conversion et de purification",
+   "level": 2,
+   "q": "Sur le schéma de la raffinerie, le naphta est hydrotraité avant d'entrer dans le reformage catalytique. Pourquoi cet ordre ?",
+   "choices": [
+    "Parce que le reformage ne fonctionne qu'à haute pression d'oxygène",
+    "Parce que l'hydrotraitement augmente le point de coupe du naphta",
+    "Parce que le platine exige une charge riche en soufre",
+    "Parce que le soufre et l'azote empoisonnent le catalyseur au platine"
+   ],
+   "answer": 3,
+   "explain": "Le catalyseur de reformage est sensible aux poisons (soufre, azote, métaux) ; l'hydrotraitement les retire en amont. Le reformage n'utilise pas d'oxygène et n'a pas besoin de soufre.",
+   "seconds": 60,
+   "status": "draft",
+   "img": "svg/min-raffinerie-schema.svg",
+   "imgAlt": "Schéma de principe d'une raffinerie : le brut passe par le dessalage et le four, puis par la colonne de distillation atmosphérique qui soutire du haut vers le bas le gaz, le naphta, le kérosène, le gazole et le résidu atmosphérique. Le naphta est hydrotraité puis reformé en base d'essence (avec de l'hydrogène) ; le kérosène et le gazole sont hydrotraités ; le résidu atmosphérique va à la distillation sous vide, dont le distillat est craqué en essence et gazole et dont le résidu sous vide donne bitume et fioul lourd."
+  },
+  {
+   "id": "min-raffinage-016",
+   "theme": "Procédés de conversion et de purification",
+   "level": 2,
+   "q": "Dans le FCC, d'où provient la chaleur nécessaire aux réactions de craquage ?",
+   "choices": [
+    "De la combustion du coke déposé sur le catalyseur, dans le régénérateur",
+    "D'un four annexe alimenté par du gaz naturel exclusivement",
+    "D'une résistance électrique située dans le riser",
+    "Du refroidissement des produits en sortie de colonne"
+   ],
+   "answer": 0,
+   "explain": "Le coke déposé sur le catalyseur est brûlé en continu dans le régénérateur ; le catalyseur chaud rapporte la chaleur au réacteur. Aucune source séparée ne compense, et le refroidissement des produits ne chauffe pas le réacteur.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-017",
+   "theme": "Procédés de conversion et de purification",
+   "level": 2,
+   "q": "Un opérateur souhaite produire davantage de gazole et de kérosène de très bonne qualité à partir de distillats lourds. Quel procédé conviendrait le mieux ?",
+   "choices": [
+    "L'hydrocraquage, au prix d'une forte consommation d'hydrogène",
+    "La viscoréduction, uniquement pour réduire la viscosité du fioul",
+    "Le dessalage supplémentaire du brut reçu",
+    "L'alkylation du GPL pour produire du bitume"
+   ],
+   "answer": 0,
+   "explain": "L'hydrocraquage sous hydrogène donne des distillats moyens peu soufrés mais est coûteux. La viscoréduction traite les résidus, le dessalage protège les équipements, et l'alkylation produit de l'essence, non du bitume.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-018",
+   "theme": "Procédés de conversion et de purification",
+   "level": 2,
+   "q": "Un naphta reformé à 98 RON est mélangé à 40 % de naphta isomérisé à 85 RON (60 % de reformat). Quel indice approximatif, en supposant un mélange linéaire en volume ?",
+   "choices": [
+    "Environ 91,5 RON",
+    "Environ 95,0 RON",
+    "Environ 97,2 RON",
+    "Environ 92,8 RON"
+   ],
+   "answer": 3,
+   "explain": "0,6 × 98 + 0,4 × 85 = 58,8 + 34,0 = 92,8. Les autres valeurs résultent d'une mauvaise pondération. Les indices d'octane ne se mélangent qu'approximativement de façon linéaire : la valeur est indicative.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-019",
+   "theme": "Procédés de conversion et de purification",
+   "level": 3,
+   "q": "Après un arrêt, le réformeur produit moins d'hydrogène et l'activité baisse. L'analyse montre beaucoup de coke sur le catalyseur. Quelle action est la plus logique ?",
+   "choices": [
+    "Augmenter la teneur en soufre de la charge pour protéger le platine",
+    "Arrêter le dessalage du brut pour économiser de l'eau",
+    "Régénérer le catalyseur en brûlant le coke, après avoir vérifié la qualité de la charge",
+    "Remplacer le platine par un catalyseur de FCC"
+   ],
+   "answer": 2,
+   "explain": "Le coke désactive le catalyseur : régénération (brûlage contrôlé) et contrôle de la charge pour limiter les poisons. Le soufre est un poison, le dessalage est sans rapport, et les catalyseurs de FCC ne conviennent pas au reformage.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-020",
+   "theme": "Procédés de conversion et de purification",
+   "level": 3,
+   "q": "Une raffinerie doit passer d'un gazole à 5 000 ppm de soufre à un gazole à 10 ppm. Quel est l'ordre de grandeur de la réduction à obtenir ?",
+   "choices": [
+    "Environ 90 %",
+    "Environ 99,8 %",
+    "Environ 50 %",
+    "Environ 99,98 %"
+   ],
+   "answer": 1,
+   "explain": "(5 000 − 10) / 5 000 = 0,998 soit 99,8 %. 90 % et 50 % sont insuffisants, et 99,98 % correspondrait à 1 ppm. Cet effort exige un hydrotraitement poussé (catalyseur, pression, hydrogène).",
+   "seconds": 110,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-021",
+   "theme": "Rendements et bilan matière",
+   "level": 1,
+   "q": "Dans l'exemple (fictif) de la figure, quelle part des 100 barils de brut est constituée de produits blancs (essences, kérosène et gazole) ?",
+   "choices": [
+    "94 %",
+    "38 %",
+    "66 %",
+    "58 %"
+   ],
+   "answer": 2,
+   "explain": "Essences 28 + kérosène 8 + gazole 30 = 66 barils sur 100, soit 66 %. 94 % ajoute à tort le fioul lourd et les résidus, 38 % ne compte que les essences et le kérosène avec le GPL et les pertes, et 58 % est une erreur d'addition.",
+   "seconds": 45,
+   "status": "draft",
+   "img": "svg/min-produits-baril.svg",
+   "imgAlt": "Barres d'un exemple fictif donnant, pour 100 barils de brut : GPL et gaz 3 barils, essences 28, kérosène 8, gazole 30, fioul lourd et résidus 28, autoconsommation et pertes 3. Un bandeau précise que ces rendements sont fictifs et indicatifs."
+  },
+  {
+   "id": "min-raffinage-022",
+   "theme": "Rendements et bilan matière",
+   "level": 1,
+   "q": "Comment calcule-t-on le rendement massique d'un produit ?",
+   "choices": [
+    "Volume du produit divisé par volume du produit voisin",
+    "Masse du produit divisée par masse de brut traité, en pourcentage",
+    "Masse du produit divisée par la capacité nominale en barils",
+    "Valeur du produit divisée par son prix de vente"
+   ],
+   "answer": 1,
+   "explain": "Le rendement massique compare la masse du produit à celle de la charge. Il ne se mesure ni par rapport à un autre produit, ni à une capacité, ni à une valeur.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-023",
+   "theme": "Rendements et bilan matière",
+   "level": 1,
+   "q": "Pourquoi la somme des rendements volumiques peut-elle dépasser 100 % après conversion ?",
+   "choices": [
+    "Parce que la raffinerie crée de la matière dans le réformeur",
+    "Parce que les mesures de volume sont toujours majorées",
+    "Parce que le fioul résiduel est compté deux fois",
+    "Parce que les produits sont moins denses que la charge (gain volumique)"
+   ],
+   "answer": 3,
+   "explain": "En craquant des molécules lourdes en molécules plus légères, on obtient des produits moins denses : à masse égale, le volume augmente. Ce n'est ni une erreur de mesure ni une création de matière.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-024",
+   "theme": "Rendements et bilan matière",
+   "level": 1,
+   "q": "Environ combien de barils contient une tonne de brut moyen ?",
+   "choices": [
+    "Environ 3,2 barils",
+    "Environ 12,5 barils",
+    "Environ 7,3 barils",
+    "Environ 0,15 baril"
+   ],
+   "answer": 2,
+   "explain": "Pour un brut moyen, 1 tonne représente de l'ordre de 7,3 barils (6,9 à 7,5 selon la densité). Les autres valeurs sont incohérentes avec la densité des bruts (environ 0,85 t/m³).",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-025",
+   "theme": "Rendements et bilan matière",
+   "level": 2,
+   "q": "Un opérateur traite 5 000 t/j de brut et déclare 4 880 t/j de produits et fuel. Quel est l'écart de bilan ?",
+   "choices": [
+    "0,24 %, soit 12 t/j non expliquées",
+    "12 %, soit 600 t/j non expliquées",
+    "2,4 %, soit 120 t/j non expliquées",
+    "Il n'y a aucun écart car les volumes diffèrent"
+   ],
+   "answer": 2,
+   "explain": "Écart = (5 000 − 4 880) / 5 000 = 120 / 5 000 = 2,4 %. Cet écart dépasse les valeurs habituelles (de l'ordre de 0,3 à 1 %) : une vérification est justifiée. Le bilan se fait en masse, non en volume.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-026",
+   "theme": "Rendements et bilan matière",
+   "level": 2,
+   "q": "Une raffinerie traite 100 000 barils de brut par jour, avec les rendements de l'exemple (fictif) de la figure. Quelle quantité de gazole produit-elle par jour ?",
+   "choices": [
+    "30 000 barils par jour",
+    "28 000 barils par jour",
+    "3 000 barils par jour",
+    "38 000 barils par jour"
+   ],
+   "answer": 0,
+   "explain": "La figure donne 30 barils de gazole pour 100 barils de brut, soit 30 % : 100 000 × 0,30 = 30 000 barils par jour. 28 000 correspond aux essences, 3 000 au GPL ou aux pertes, et 38 000 additionne gazole et kérosène.",
+   "seconds": 70,
+   "status": "draft",
+   "img": "svg/min-produits-baril.svg",
+   "imgAlt": "Barres d'un exemple fictif donnant, pour 100 barils de brut : GPL et gaz 3 barils, essences 28, kérosène 8, gazole 30, fioul lourd et résidus 28, autoconsommation et pertes 3. Un bandeau précise que ces rendements sont fictifs et indicatifs."
+  },
+  {
+   "id": "min-raffinage-027",
+   "theme": "Rendements et bilan matière",
+   "level": 2,
+   "q": "Pour une distillation : alimentation 100 t/h à 40 % de léger, distillat à 90 %, résidu à 10 % de léger. Quel débit de distillat ?",
+   "choices": [
+    "37,5 t/h",
+    "40,0 t/h",
+    "60,0 t/h",
+    "50,0 t/h"
+   ],
+   "answer": 0,
+   "explain": "D = F × (x − xB) / (xD − xB) = 100 × 0,30 / 0,80 = 37,5 t/h. Le résidu vaut alors 62,5 t/h. 40 serait obtenu en ignorant la composition, et 60 est le débit de résidu approché.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-028",
+   "theme": "Rendements et bilan matière",
+   "level": 2,
+   "q": "La capacité d'une raffinerie est de 20 000 barils par jour ; elle traite 16 000 barils. Quel est son taux d'utilisation ?",
+   "choices": [
+    "20 %",
+    "125 %",
+    "64 %",
+    "80 %"
+   ],
+   "answer": 3,
+   "explain": "16 000 / 20 000 = 0,80. 125 % serait l'inverse du rapport, et 20 % la part inutilisée.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-029",
+   "theme": "Rendements et bilan matière",
+   "level": 3,
+   "q": "Une raffinerie traite 20 000 barils par jour de brut à 0,85 de densité environ (7,3 barils par tonne). Combien de tonnes par jour environ ?",
+   "choices": [
+    "Environ 2 740 t/j",
+    "Environ 17 000 t/j",
+    "Environ 146 000 t/j",
+    "Environ 270 t/j"
+   ],
+   "answer": 0,
+   "explain": "20 000 / 7,3 ≈ 2 740 t/j. 17 000 correspondrait à une multiplication par la densité sans passer par le facteur barils par tonne ; 146 000 est 20 000 × 7,3, soit l'inverse de l'opération.",
+   "seconds": 110,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-030",
+   "theme": "Rendements et bilan matière",
+   "level": 3,
+   "q": "Une raffinerie sans aucune unité de conversion déclare un rendement en produits blancs de 90 %, alors que l'exemple (fictif) de la figure en donne 66 % pour un brut moyen, avec une consommation propre de 1 % du brut et un écart de bilan de 0,1 %. Que faire ?",
+   "choices": [
+    "Valider le rapport, car des chiffres excellents sont toujours exacts",
+    "Demander les mesurages et calibrages, ces chiffres étant peu plausibles",
+    "Exiger immédiatement une sanction pécuniaire sans aucune autre vérification",
+    "Ignorer le rapport tant qu'aucun accident n'est survenu"
+   ],
+   "answer": 1,
+   "explain": "Sans conversion, le rendement en produits blancs est borné par la nature du brut ; 90 % est loin de l'ordre de grandeur de la figure, et une consommation de 1 % est inhabituellement basse. La démarche normale est de vérifier les mesures. Valider sans contrôle ou sanctionner sans preuve est également inadapté.",
+   "seconds": 120,
+   "status": "draft",
+   "img": "svg/min-produits-baril.svg",
+   "imgAlt": "Barres d'un exemple fictif donnant, pour 100 barils de brut : GPL et gaz 3 barils, essences 28, kérosène 8, gazole 30, fioul lourd et résidus 28, autoconsommation et pertes 3. Un bandeau précise que ces rendements sont fictifs et indicatifs."
+  },
+  {
+   "id": "min-raffinage-031",
+   "theme": "Qualité des produits",
+   "level": 1,
+   "q": "Que mesure l'indice d'octane d'une essence ?",
+   "choices": [
+    "Son aptitude à s'enflammer sans bougie",
+    "Sa résistance au cliquetis dans le moteur",
+    "Sa teneur en soufre en parties par million",
+    "Sa température de congélation"
+   ],
+   "answer": 1,
+   "explain": "L'octane caractérise la résistance à l'auto-inflammation prématurée (cliquetis). L'aptitude à l'auto-inflammation relève du cétane du gazole ; soufre et congélation sont d'autres caractéristiques.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-032",
+   "theme": "Qualité des produits",
+   "level": 1,
+   "q": "Quel indice caractérise l'aptitude du gazole à s'enflammer par compression ?",
+   "choices": [
+    "L'indice de cétane",
+    "L'indice d'octane RON",
+    "La pression de vapeur Reid",
+    "Le point de fumée"
+   ],
+   "answer": 0,
+   "explain": "Le cétane mesure l'auto-inflammation du gazole. Le RON concerne l'essence, la PVR la volatilité de l'essence, et le point de fumée le kérosène.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-033",
+   "theme": "Qualité des produits",
+   "level": 1,
+   "q": "Que mesure la pression de vapeur Reid (PVR) d'une essence ?",
+   "choices": [
+    "Sa volatilité",
+    "Sa viscosité cinématique",
+    "Sa teneur en eau libre",
+    "Sa résistance au gel"
+   ],
+   "answer": 0,
+   "explain": "La PVR exprime la tendance à s'évaporer, utile pour le démarrage à froid, les émissions évaporatives et le risque de bouchon de vapeur.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-034",
+   "theme": "Qualité des produits",
+   "level": 1,
+   "q": "Quel est le rôle d'un certificat de qualité délivré pour un lot de produit fini ?",
+   "choices": [
+    "Garantir au client le prix de vente final du lot",
+    "Remplacer l'autorisation d'exploitation de la raffinerie",
+    "Fixer la quantité de brut à acheter",
+    "Attester la conformité du lot aux spécifications"
+   ],
+   "answer": 3,
+   "explain": "Le certificat rend compte des résultats d'analyse d'un lot et de leur conformité. Il ne fixe ni le prix, ni ne remplace une autorisation, ni ne détermine les achats de brut.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-035",
+   "theme": "Qualité des produits",
+   "level": 2,
+   "q": "Un gazole contient 0,5 % massique de soufre. Combien cela représente-t-il en ppm ?",
+   "choices": [
+    "500 ppm",
+    "50 ppm",
+    "5 000 ppm",
+    "50 000 ppm"
+   ],
+   "answer": 2,
+   "explain": "1 % = 10 000 ppm, donc 0,5 % = 5 000 ppm. C'est 500 fois plus que la limite européenne de 10 ppm.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-036",
+   "theme": "Qualité des produits",
+   "level": 2,
+   "q": "Une essence mesurée à 92,0 RON pour une spécification minimale de 95 RON est reçue. Quelle décision est appropriée ?",
+   "choices": [
+    "Le vendre tel quel, avec une réduction de prix pour l'acheteur",
+    "Ajouter de l'eau pour augmenter la densité",
+    "Retenir le lot, puis le reclasser ou le retraiter",
+    "Ignorer l'écart car il est inférieur à 5 %"
+   ],
+   "answer": 2,
+   "explain": "Un lot hors spécification n'est pas commercialisable sous la qualité visée : on le retient, on le reclasse ou on le retraite (ajout de composants à haut octane). Les autres actions ne corrigent pas le défaut.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-037",
+   "theme": "Qualité des produits",
+   "level": 2,
+   "q": "Lors d'un contrôle, l'agent constate que l'échantillon n'est ni étiqueté, ni scellé. Que peut-il en conclure ?",
+   "choices": [
+    "L'échantillon reste valable, puisque seul le résultat chiffré compte vraiment",
+    "La traçabilité est insuffisante : le résultat sera contestable",
+    "Le produit est forcément conforme",
+    "L'analyse doit être refaite par la raffinerie seule, sans témoin"
+   ],
+   "answer": 1,
+   "explain": "L'identification et le scellement garantissent que l'échantillon analysé est bien celui du lot : sans eux, le résultat est contestable. Il ne dit rien de la conformité du produit, et une contre-analyse indépendante est préférable.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-038",
+   "theme": "Qualité des produits",
+   "level": 2,
+   "q": "Quel texte cité par la loi n° 002/2019 sanctionne la commercialisation de lubrifiants non conformes ?",
+   "choices": [
+    "L'article 289 (500 000 à 10 000 000 FCFA, saisie et destruction)",
+    "L'article 284, avec 1 000 000 à 30 000 000 FCFA après mise en demeure",
+    "L'article 286, avec 5 000 000 à 100 000 000 FCFA",
+    "L'article 265, avec doublement automatique pour tous"
+   ],
+   "answer": 0,
+   "explain": "L'article 289 vise les lubrifiants non conformes. L'article 284 concerne l'activité aval sans autorisation, l'article 286 le contenu local aval, et l'article 265 la récidive (pénalités portées au double).",
+   "seconds": 70,
+   "status": "draft",
+   "refs": [
     {
-      "id": "m1",
-      "title": "Schéma d'une raffinerie et distillation du brut",
-      "theme": "Schéma de raffinerie et distillation",
-      "minutes": 10,
-      "body": "Une **raffinerie** transforme le pétrole brut, mélange complexe d'hydrocarbures, en produits finis : gaz de pétrole liquéfiés (GPL), essences, carburéacteur (kérosène), gazole, fiouls, bitumes. Son organisation générale suit une logique en trois étapes : **séparer** (distillation), **transformer** (conversion : reformage, craquage) et **purifier** (hydrotraitement, adoucissement), puis **mélanger** les composants pour obtenir des produits conformes aux spécifications.\n\n**Le dessalage.** Avant toute chauffe, le brut est lavé à l'eau pour éliminer les sels (chlorures) et les sédiments, qui provoqueraient corrosion et encrassement des fours et des échangeurs.\n\n**La distillation atmosphérique.** Le brut préchauffé dans un train d'échangeurs, puis porté à environ 350-370 °C dans un four, est envoyé dans une colonne qui fonctionne à pression voisine de la pression atmosphérique. Les constituants se répartissent selon leur **température d'ébullition** : en tête les gaz et le naphta léger, puis le naphta lourd, le kérosène, le gazole, et en fond le **résidu atmosphérique**. Des soutirages latéraux, complétés par de petites colonnes de rectification, prélèvent chaque coupe. Ordres de grandeur usuels : essence et naphta de 30 à 180 °C environ, kérosène de 150 à 250 °C, gazole de 250 à 350 °C.\n\n**La distillation sous vide.** Le résidu atmosphérique, trop lourd pour être chauffé davantage sans se décomposer, est redistillé sous pression réduite. On obtient des distillats sous vide, charge habituelle du craquage catalytique ou de l'hydrocraquage, et un **résidu sous vide** (bitume, fioul lourd, charge de cokéfaction).\n\n**Les unités de conversion et de purification.** Le **reformage catalytique** valorise le naphta lourd en essence à indice d'octane élevé et produit de l'hydrogène. Le **craquage** casse les molécules lourdes en molécules plus légères et plus valorisables. L'**hydrotraitement** retire le soufre et l'azote en présence d'hydrogène. Les gaz acides riches en sulfure d'hydrogène (H₂S) sont traités dans une unité de récupération du soufre.\n\n**Les services généraux.** Une raffinerie comprend aussi un parc de stockage (bruts, produits intermédiaires et finis), une torche de sécurité, des utilités (vapeur, électricité, eau de refroidissement, air instrument), un traitement des effluents et un poste de chargement.\n\n**Configurations.** On distingue la raffinerie **simple** (« hydroskimming » : distillation, reformage, hydrotraitement), dont le rendement en produits lourds reste élevé, et la raffinerie à **conversion**, dotée de craquage ou de cokéfaction, qui valorise mieux les résidus. Le choix dépend du brut traité et du marché visé.\n\n**Exemple chiffré** (fictif, pour illustrer). Un four de distillation chauffe 100 t/h de brut (capacité calorifique d'environ 2,1 kJ/kg.K) de 150 à 350 °C : Q = (100 000 / 3 600) × 2,1 × 200 ≈ 11,7 MW de puissance absorbée.\n\n**Pour un agent du ministère.** Savoir lire un schéma de procédé permet de comprendre les déclarations d'un opérateur : un brut léger donne davantage de coupes légères, un brut lourd davantage de résidu ; les arrêts d'une unité (par exemple le reformage) se répercutent sur la qualité des essences. La SOGARA (Société gabonaise de raffinage, à Port-Gentil) est la raffinerie du pays ; son schéma exact, ses unités en service et sa capacité sont à confirmer auprès de l'exploitant.",
-      "keyPoints": [
-        "Une raffinerie sépare, transforme, purifie puis mélange pour obtenir des produits conformes.",
-        "La distillation sépare le brut par température d'ébullition : atmosphérique d'abord, puis sous vide pour le résidu.",
-        "Reformage, craquage et hydrotraitement valorisent et purifient les coupes.",
-        "Le dessalage protège les équipements contre la corrosion et l'encrassement.",
-        "La configuration (simple ou à conversion) détermine la valorisation des résidus."
-      ]
-    },
-    {
-      "id": "m2",
-      "title": "Reformage, craquage et hydrotraitement",
-      "theme": "Procédés de conversion et de purification",
-      "minutes": 11,
-      "body": "Les coupes issues de la distillation ne correspondent pas à la demande du marché : trop de résidu lourd, essence de faible indice d'octane, soufre excessif. Les unités de conversion et de purification corrigent ce déséquilibre.\n\n**Le reformage catalytique.** Il transforme un naphta lourd (environ 80-180 °C) en **reformat**, base d'essence à indice d'octane élevé (souvent de l'ordre de 95 à 100 RON). Les réactions principales sont la déshydrogénation des naphtènes en aromatiques, l'isomérisation et la déshydrocyclisation des paraffines. L'opération se déroule vers 480-520 °C, sous pression modérée, avec un catalyseur à base de **platine** (parfois associé à un autre métal). Le procédé **libère de l'hydrogène**, précieux pour l'hydrotraitement. Le catalyseur est sensible aux poisons (soufre, azote, métaux) et se recouvre de coke : une régénération périodique ou continue est nécessaire. Le naphta est donc toujours hydrotraité avant le reformage.\n\n**Le craquage catalytique en lit fluidisé (FCC).** La charge (distillat sous vide) rencontre un catalyseur en poudre (zéolithe) dans un réacteur ascendant (« riser ») vers 500-550 °C. Les grosses molécules se brisent en essence, en GPL riche en oléfines, en gazole léger de qualité médiocre et en coke déposé sur le catalyseur. Le catalyseur est brûlé en continu dans un régénérateur, ce qui fournit la chaleur nécessaire à la réaction.\n\n**L'hydrocraquage.** Il craque la charge en présence d'hydrogène et d'un catalyseur, sous haute pression. Il produit surtout du kérosène et du gazole de très bonne qualité, avec peu de soufre. Il consomme beaucoup d'hydrogène et exige des investissements élevés.\n\n**Le craquage thermique.** La viscoréduction et la cokéfaction traitent les résidus par la chaleur seule : la première réduit la viscosité des fiouls, la seconde produit des distillats et du coke de pétrole.\n\n**L'hydrotraitement.** Un mélange de charge et d'hydrogène traverse un lit de catalyseur (cobalt-molybdène ou nickel-molybdène) à environ 300-400 °C et 30 à 100 bar. Le soufre est converti en H₂S, l'azote en ammoniac, les oléfines sont saturées. Le gaz riche en H₂S est lavé aux amines puis transformé en soufre élémentaire dans l'unité Claus. L'hydrotraitement permet d'atteindre les faibles teneurs en soufre exigées pour le gazole et l'essence (10 ppm dans les spécifications européennes).\n\n**Autres procédés.** L'isomérisation valorise le naphta léger, l'alkylation produit une essence de haute qualité à partir de GPL oléfinique.\n\n**Exemple chiffré** (fictif). Un naphta lourd à 60 RON est reformé en un reformat à 98 RON. Mélangé à 40 % de naphta isomérisé à 85 RON, l'ensemble donne, en première approximation linéaire en volume, 0,6 × 98 + 0,4 × 85 = 92,8 RON : l'essence atteint une valeur proche de la qualité « super ». Les indices d'octane ne se mélangent pas parfaitement de façon linéaire ; le calcul reste approximatif.\n\n**Intérêt pour le suivi administratif.** Ces unités déterminent la capacité réelle du site à produire des carburants conformes. Un opérateur sans reformage ni hydrotraitement doit importer des composants ou des produits finis pour respecter les spécifications. Cela éclaire l'analyse des déclarations de production et des besoins d'importation.",
-      "keyPoints": [
-        "Le reformage transforme le naphta lourd en reformat à haut indice d'octane et libère de l'hydrogène.",
-        "Le FCC craque le distillat sous vide en essence et en GPL ; le coke brûlé au régénérateur fournit la chaleur.",
-        "L'hydrocraquage, sous hydrogène, donne un kérosène et un gazole de très bonne qualité.",
-        "L'hydrotraitement retire le soufre sous forme de H₂S, ensuite converti en soufre élémentaire par l'unité Claus.",
-        "Le catalyseur du reformage est sensible aux poisons : le naphta est hydrotraité avant."
-      ]
-    },
-    {
-      "id": "m3",
-      "title": "Rendements, bilan matière et calculs simples",
-      "theme": "Rendements et bilan matière",
-      "minutes": 11,
-      "body": "Le **bilan matière** exprime la conservation de la masse : en régime stable, ce qui entre dans la raffinerie sort sous forme de produits, de fuel consommé sur place, de torchage et de pertes. Écrit pour l'ensemble du site ou pour une unité, il est l'outil de base pour vérifier la cohérence des déclarations d'un opérateur.\n\n**Définitions utiles.**\n- **Rendement massique** d'un produit = masse du produit / masse de brut traité × 100.\n- **Rendement volumique** : même rapport en volume. Après conversion, le total des volumes peut dépasser 100 %, car les produits sont moins denses que la charge (gain volumique).\n- **Écart de bilan (pertes)** = (entrées − sorties mesurées) / entrées × 100. Un écart de l'ordre de 0,3 à 1 % de la charge est généralement jugé plausible ; au-delà, il faut chercher la cause (erreurs de mesure, fuites, torchage non comptabilisé).\n- **Produits blancs** : essences, kérosène, gazole. **Produits noirs** : fiouls, résidus, bitumes.\n\n**Conversions pratiques.** 1 tonne de brut moyen représente environ 7,3 barils (la valeur varie de 6,9 à 7,5 selon la densité). Une capacité de 1 million de tonnes par an correspond donc à environ 7,3 × 1 000 000 / 365 ≈ 20 000 barils par jour. Pour passer du volume à la masse, on multiplie par la **densité à 15 °C** de chaque produit.\n\n**Exemple de bilan** (chiffres fictifs). Une raffinerie traite 100 000 t de brut sur une période. Produits mesurés : GPL 3 000 t, naphta 15 000 t, kérosène 12 000 t, gazole 28 000 t, résidu 37 000 t, fuel de procédé et torche déclarés 4 600 t. Total des sorties : 99 600 t. L'écart est de 400 t, soit 0,4 % : cohérent. Rendement cumulé en GPL, naphta, kérosène et gazole : (3 000 + 15 000 + 12 000 + 28 000) / 100 000, soit 58 %. Si le même opérateur déclarait seulement 94 000 t de sorties, l'écart de 6 % exigerait une vérification.\n\n**Rôle de la nature du brut.** Un brut léger donne beaucoup de naphta, de kérosène et de gazole ; un brut lourd donne davantage de résidu. Le rendement réel dépend aussi du **mode de marche** : point de coupe, gravité de la conversion, demandes saisonnières.\n\n**Consommation propre.** Une raffinerie brûle une partie de sa production (gaz de raffinerie, fioul) pour ses fours et ses utilités, typiquement de l'ordre de 4 à 8 % du brut traité pour une raffinerie complexe ; cette consommation doit apparaître au bilan.\n\n**Bilan par constituant.** Pour une unité de distillation traitant F tonnes avec une fraction x de léger, avec un distillat D à pureté xD et un résidu B à xB, on écrit F = D + B et F·x = D·xD + B·xB. Avec F = 100 t/h, x = 0,40, xD = 0,90 et xB = 0,10, D = 100 × (0,40 − 0,10) / (0,90 − 0,10) = 37,5 t/h.\n\n**Usage administratif.** Le rapprochement entre brut reçu, produits livrés et variations de stock, validé par des mesurages fiables (jaugeage, compteurs étalonnés), est la base du suivi par les services du ministère.",
-      "keyPoints": [
-        "En régime stable, entrées = sorties (produits, fuel de procédé, torche, pertes).",
-        "Un écart de bilan de quelques dixièmes de pour cent est plausible ; un écart de plusieurs points est suspect.",
-        "1 tonne de brut moyen représente environ 7,3 barils : 1 million de t/an vaut environ 20 000 barils par jour.",
-        "Après conversion, la somme des rendements volumiques peut dépasser 100 %.",
-        "La nature du brut et le mode de marche déterminent la répartition des produits."
-      ]
-    },
-    {
-      "id": "m4",
-      "title": "Qualité des produits pétroliers",
-      "theme": "Qualité des produits",
-      "minutes": 10,
-      "body": "Un produit fini doit répondre à des **spécifications** : seuils mesurés en laboratoire selon des méthodes normalisées (ASTM, ISO, EN). La qualité protège les moteurs, la sécurité des usagers, l'environnement et le consommateur, et permet la vente et le transport.\n\n**Principales caractéristiques.**\n- **Indice d'octane** (RON, MON) des essences : résistance au cliquetis ; il se mesure sur un moteur d'essai normalisé.\n- **Indice de cétane** du gazole : aptitude à l'auto-inflammation ; plus il est élevé, meilleur est le démarrage.\n- **Teneur en soufre** (en ppm ou en % massique) : conditionne les émissions d'oxydes de soufre et la durée de vie des catalyseurs de dépollution.\n- **Pression de vapeur Reid** (PVR) des essences : volatilité, risque de bouchon de vapeur et émissions évaporatives.\n- **Courbe de distillation** (méthode ASTM D86) : répartition des points d'ébullition.\n- **Densité à 15 °C** et **viscosité** : transactions commerciales et comportement dans les moteurs.\n- **Point d'éclair** : température minimale pour laquelle les vapeurs s'enflamment au contact d'une flamme ; il fixe le classement en matière de risque d'incendie.\n- **Propriétés à froid** du gazole : point de trouble, point d'écoulement.\n- **Carburéacteur** : point de congélation, point de fumée, stabilité thermique, absence d'eau libre ; la référence est la spécification Jet A-1.\n\n**Textes de référence usuels.** Les spécifications européennes EN 228 (essence) et EN 590 (gazole) servent souvent de modèle dans les pays qui n'ont pas de spécification propre ; les spécifications nationales applicables au Gabon sont à confirmer auprès des services compétents du ministère.\n\n**Chaîne de contrôle.** Elle comprend : échantillonnage représentatif (normes d'échantillonnage, flacons propres, scellés), analyse au laboratoire de la raffinerie, contre-analyse indépendante pour les cas litigieux, puis émission d'un **certificat de qualité** par lot. La traçabilité de l'échantillon (étiquette, date, point de prélèvement) est essentielle, car un résultat contesté doit pouvoir être justifié.\n\n**Les mélanges (« blending »).** Les produits finis résultent du mélange de composants (reformat, naphta isomérisé, composants du FCC) pour atteindre simultanément octane, PVR et soufre. Le soufre résiduel ou la volatilité d'un lot hors spécification peuvent obliger à retraiter le lot.\n\n**Non-conformité.** Un lot hors spécification est retenu, reclassé ou retraité. La loi n° 002/2019 prévoit des sanctions pour la commercialisation de lubrifiants non conformes (article 289) : pénalité de 500 000 à 10 000 000 FCFA avec saisie et destruction.\n\n**Exemple chiffré** (fictif). Une essence mesurée à 92,0 RON pour une spécification minimale de 95 RON est non conforme : le lot ne peut pas être commercialisé comme « super ». Un gazole contenant 0,5 % massique de soufre renferme 5 000 ppm, soit 500 fois plus que la limite de 10 ppm européenne.\n\n**Rôle de l'agent.** Il vérifie que l'opérateur dispose d'un laboratoire équipé et étalonné, que les certificats suivent chaque livraison et que les contre-analyses sont possibles en cas de litige.",
-      "keyPoints": [
-        "Les spécifications portent sur l'octane, le cétane, le soufre, la volatilité, le point d'éclair et les propriétés à froid.",
-        "Les méthodes d'essai sont normalisées (ASTM, ISO, EN) ; les spécifications gabonaises applicables sont à confirmer.",
-        "L'échantillonnage représentatif et la traçabilité fondent la validité d'un résultat.",
-        "Un lot hors spécification est retenu, reclassé ou retraité ; l'article 289 sanctionne les lubrifiants non conformes.",
-        "Le certificat de qualité accompagne chaque lot livré."
-      ]
-    },
-    {
-      "id": "m5",
-      "title": "Indicateurs de performance d'une raffinerie",
-      "theme": "Indicateurs de performance",
-      "minutes": 10,
-      "body": "Un indicateur de performance est une mesure régulière, définie sans ambiguïté, qui permet de comparer une période à une autre ou un site à un autre. Pour un agent du ministère, ils servent à lire les rapports d'activité de l'opérateur (article 182 de la loi n° 002/2019 pour les rapports d'activité et informations) et à repérer les écarts.\n\n**Indicateurs de production.**\n- **Taux d'utilisation** = quantité de brut traitée / capacité nominale × 100. Exemple fictif : 16 000 barils par jour traités pour 20 000 de capacité, soit 80 %.\n- **Rendement en produits blancs** et **rendement en résidu**, à comparer avec le schéma de la raffinerie.\n- **Taux de conformité** des lots : part des lots conformes dès la première analyse.\n\n**Indicateurs de fiabilité.**\n- **Disponibilité** = temps de marche / temps calendaire × 100. Exemple : 330 jours de marche sur 365 donnent 90,4 %, soit 35 jours d'arrêt programmé et non programmé.\n- **Nombre d'arrêts non programmés** et durée moyenne de rétablissement.\n- **Taux de réalisation de la maintenance préventive**.\n\n**Indicateurs d'efficacité énergétique.** Le **fuel consommé en propre** (en % du brut) et l'**intensité énergétique** (énergie consommée rapportée à la capacité équivalente de distillation, comme dans l'indice d'intensité énergétique de Solomon) mesurent l'efficacité. Toute dérive augmente le coût et les émissions.\n\n**Indicateurs économiques.** La **marge de raffinage** est la différence entre la valeur des produits obtenus et le coût du brut. Exemple fictif : produits valorisés en moyenne 85 dollars le baril, brut à 78 dollars, soit 7 dollars par baril ; à 16 000 barils par jour, cela fait 112 000 dollars par jour avant coûts d'exploitation. La marge dépend fortement du prix du brut, des cours des produits et de la configuration.\n\n**Indicateurs de sécurité et d'environnement.**\n- **Taux de fréquence** (TF) = nombre d'accidents avec arrêt × 1 000 000 / heures travaillées. Exemple : 3 accidents avec arrêt pour 1 500 000 heures donnent un TF de 2,0.\n- **Taux de gravité** : jours perdus rapportés aux heures travaillées.\n- **Pertes de confinement**, volumes torchés, rejets dans l'eau, déchets.\n\n**Bonnes pratiques de lecture.**\n- Toujours vérifier la **définition** (par exemple, capacité nominale ou capacité effective) et la **période** de référence.\n- Comparer des indicateurs cohérents : une baisse du taux d'utilisation causée par un arrêt programmé n'a pas la même signification qu'une baisse due à des pannes répétées.\n- Associer un indicateur à une **cible** et à un **seuil d'alerte**.\n- Un indicateur ne remplace pas la visite de terrain : un excellent taux de fréquence peut cacher un défaut de déclaration.\n\n**Cas d'usage.** Si le taux d'utilisation de la SOGARA chute durablement alors que la disponibilité reste élevée, la cause est probablement externe (approvisionnement en brut, demande), et non technique.",
-      "keyPoints": [
-        "Taux d'utilisation = brut traité / capacité nominale ; disponibilité = temps de marche / temps calendaire.",
-        "La marge de raffinage compare la valeur des produits au coût du brut.",
-        "Taux de fréquence = accidents avec arrêt × 1 000 000 / heures travaillées.",
-        "Toujours vérifier la définition et la période de référence d'un indicateur.",
-        "Un indicateur doit avoir une cible, un seuil d'alerte et être confronté au terrain."
-      ]
-    },
-    {
-      "id": "m6",
-      "title": "Arrêts programmés et sécurité des procédés",
-      "theme": "Arrêts programmés et sécurité",
-      "minutes": 11,
-      "body": "Un **arrêt programmé** (« arrêt général » ou **arrêt pour grands travaux**) est une interruption planifiée d'une unité ou de toute la raffinerie pour inspecter, maintenir, réparer ou modifier les équipements. Il intervient généralement tous les trois à cinq ans selon les unités, dure souvent de quelques semaines à deux mois et mobilise des centaines d'intervenants supplémentaires. C'est la période la plus risquée et la plus coûteuse de la vie d'un site.\n\n**Phases d'un arrêt.**\n1. **Préparation** (12 à 24 mois avant) : constitution du périmètre des travaux, appels d'offres, commande des pièces à délai long, planification au chemin critique.\n2. **Gel du périmètre** : au-delà d'une date, toute demande de travaux nouveau est refusée ou fortement encadrée, car elle perturbe le calendrier et les coûts.\n3. **Mise à l'arrêt** : réduction de la charge, vidange, déshuilage, vapeur, inertage à l'azote, dégazage, isolement par plaques pleines (consignation).\n4. **Travaux et inspection** : ouverture des équipements, contrôles non destructifs, épreuves, remplacement de catalyseurs, réparations.\n5. **Remise en service** : revue de sécurité avant démarrage, essais d'étanchéité, redémarrage progressif.\n6. **Retour d'expérience** : bilan des écarts de durée et de coût, nouvelles leçons.\n\n**Risques spécifiques.** Intervention en **espace confiné** (cuves, colonnes) avec risque d'asphyxie ; **travaux par points chauds** en zone d'hydrocarbures ; **sulfure de fer pyrophorique**, qui s'enflamme spontanément au contact de l'air dans les équipements soufrés ; coactivité d'entreprises sous-traitantes ; levage ; travail en hauteur. Les risques sont maîtrisés par les **permis de travail**, la **consignation** des équipements, la mesure de gaz, le balisage, la formation et la désignation d'un responsable de sécurité.\n\n**Sécurité des procédés.** Elle repose sur plusieurs barrières : conception sûre, étude de dangers et analyse **HAZOP** (identification des dérives du procédé), automatismes de sécurité (arrêt d'urgence, niveaux de sécurité SIL), soupapes de sûreté reliées à la **torche**, détection de gaz et d'incendie, moyens de lutte et plans d'urgence. La culture de sécurité et les retours d'expérience d'accidents (explosions de réservoirs, pertes de confinement) sont essentiels.\n\n**Cadre légal.** L'article 3 de la loi n° 002/2019 impose les règles de qualité, hygiène, santé, sécurité et environnement. L'article 171 oblige toute personne exerçant une activité d'hydrocarbures à respecter les prescriptions d'hygiène, de santé, de sécurité, de sûreté et d'environnement fixées par voie réglementaire. L'article 241 impose au titulaire de signaler sans délai tout incident ou accident.\n\n**Exemple chiffré** (fictif). Un arrêt prévu de 40 jours dérape de 6 jours ; si le manque à gagner est de 100 000 dollars par jour, la dérive coûte 600 000 dollars. D'où l'intérêt de bien préparer le périmètre.\n\n**Rôle de l'agent.** Demander le calendrier de l'arrêt, les plans de gestion des risques, la liste des inspections réglementaires prévues et le plan d'approvisionnement du marché pendant l'arrêt (importations, stocks), notamment au regard de l'obligation d'approvisionner en priorité le marché national.",
-      "keyPoints": [
-        "Un arrêt programmé se prépare 12 à 24 mois à l'avance ; le gel du périmètre protège le calendrier.",
-        "Les risques majeurs sont l'espace confiné, les points chauds, le sulfure de fer pyrophorique et la coactivité.",
-        "Permis de travail, consignation et mesure de gaz sont les barrières de base.",
-        "HAZOP, soupapes, torche et automatismes de sécurité forment les barrières de sécurité des procédés.",
-        "La loi impose le respect des règles QHSE (art. 3, 171) et le signalement immédiat des incidents (art. 241)."
-      ]
-    },
-    {
-      "id": "m7",
-      "title": "Suivi réglementaire de l'aval par l'administration",
-      "theme": "Suivi réglementaire et SOGARA",
-      "minutes": 11,
-      "body": "Les activités **aval** (raffinage, stockage, transport, distribution) relèvent du Titre IV de la loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures. Le ministère en charge des Hydrocarbures en assure le suivi à travers ses directions techniques (le site du ministère cite notamment une Direction de l'Aval pétrolier et gazier et une Direction générale des Études et Laboratoires ; l'organisation a évolué ces dernières années et reste à confirmer).\n\n**Autorisation.** La transformation d'hydrocarbures, donc le **raffinage**, exige une autorisation d'exploitation matérialisée par **décret du Président de la République**, sur proposition de l'autorité compétente ; les autres activités aval sont autorisées par l'autorité compétente (article 130). L'autorisation est **incessible et non transmissible** (article 134).\n\n**Obligations du titulaire.**\n- Approvisionner en **priorité le marché national** selon les modalités fixées par arrêté (article 138).\n- Remettre en état le site au terme de l'exploitation (article 137).\n- Transmettre les rapports d'activité et informations demandés (article 182).\n- Signaler sans délai toute perturbation, incident ou accident (article 241).\n- Respecter les prescriptions d'hygiène, santé, sécurité, sûreté et environnement (article 171).\n\n**Prix du brut destiné au raffinage.** Les livraisons de brut et de gaz naturel à l'industrie nationale du raffinage sont facturées au prix fixé par voie réglementaire (article 139, second alinéa).\n\n**Régime fiscal.** L'aval relève du droit commun (articles 204 et 236) : aucun régime d'exonération spécifique de l'amont ne s'y applique.\n\n**Contrôle.** Il est assuré par les agents des services compétents du ministère (article 18) ; ceux qui ont prêté serment sont officiers de police judiciaire spéciaux et dressent des procès-verbaux (articles 19 et 20). Le contrôle comprend le volet technique et le volet comptable, juridique et fiscal (article 243).\n\n**Sanctions.** Exercer une activité aval sans autorisation expose, après mise en demeure, à une pénalité de 1 000 000 à 30 000 000 FCFA (article 284) ; le manquement aux obligations de contenu local dans l'aval, à 5 000 000 à 100 000 000 FCFA (article 286) ; la commercialisation de lubrifiants non conformes, à 500 000 à 10 000 000 FCFA avec saisie et destruction (article 289). En cas de récidive, les pénalités sont doublées (article 265).\n\n**La SOGARA.** La Société gabonaise de raffinage, établie à Port-Gentil, est la raffinerie du pays ; le ministère la cite parmi les sociétés placées sous sa tutelle. Le suivi administratif porte sur : programme de production et d'arrêts, approvisionnement en brut, livraisons au marché, stocks, qualité des produits, incidents et respect de l'environnement. L'agent s'appuie sur des déclarations périodiques, des visites de site et des rapprochements de chiffres (bilan matière, certificats de qualité). Les chiffres de capacité et de production doivent être demandés à l'exploitant ou aux services compétents.\n\n**Exemple pratique.** Un chef de service reçoit un rapport indiquant un arrêt non programmé de trois semaines. Il demande la cause, l'impact sur l'approvisionnement du marché, l'état des stocks et le plan de redémarrage, puis consigne le tout dans un compte rendu.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
-      "keyPoints": [
-        "Le raffinage exige une autorisation d'exploitation par décret du Président de la République (art. 130), incessible (art. 134).",
-        "Le raffineur approvisionne en priorité le marché national (art. 138) ; le prix du brut est fixé par voie réglementaire (art. 139).",
-        "Le contrôle revient aux agents du ministère, dont certains sont officiers de police judiciaire spéciaux (art. 18-20).",
-        "Sanctions de l'aval : art. 284 (sans autorisation), 286 (contenu local), 289 (lubrifiants non conformes).",
-        "Le suivi s'appuie sur déclarations, visites de site et rapprochement des chiffres."
-      ]
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 289",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-  ],
-  "questions": [
-    {
-      "id": "min-raffinage-001",
-      "theme": "Schéma de raffinerie et distillation",
-      "level": 1,
-      "q": "Quelle propriété physique sépare les constituants du brut dans une colonne de distillation ?",
-      "choices": [
-        "La couleur du produit soutiré à chaque plateau de la colonne",
-        "La température d'ébullition de chaque constituant",
-        "La teneur en soufre de chaque coupe mesurée en laboratoire",
-        "La viscosité du brut mesurée à la sortie du four"
-      ],
-      "answer": 1,
-      "explain": "La distillation exploite les différences de volatilité : les composés les plus légers (bas point d'ébullition) montent en tête, les plus lourds restent en fond. La couleur, le soufre et la viscosité sont des caractéristiques de qualité, pas le principe de séparation.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-002",
-      "theme": "Schéma de raffinerie et distillation",
-      "level": 1,
-      "q": "À quoi sert le dessalage du brut avant son entrée dans le four ?",
-      "choices": [
-        "Augmenter l'indice d'octane des coupes légères avant leur envoi au stockage",
-        "Réduire la teneur en soufre des gazoles avant leur passage au stockage",
-        "Récupérer l'hydrogène contenu dans le brut avant sa chauffe au four",
-        "Retirer sels et sédiments, causes de corrosion et d'encrassement"
-      ],
-      "answer": 3,
-      "explain": "Le lavage à l'eau retire les chlorures et les sédiments, causes de corrosion et d'encrassement des échangeurs et des fours. Il n'agit ni sur l'octane ni sur le soufre, et le brut ne contient pas d'hydrogène récupérable à cette étape.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-003",
-      "theme": "Schéma de raffinerie et distillation",
-      "level": 1,
-      "q": "Quelle coupe constitue le fond de la colonne de distillation atmosphérique ?",
-      "choices": [
-        "Le GPL, soutiré en tête de la colonne atmosphérique avec les gaz légers",
-        "Le naphta léger, destiné à l'isomérisation ou au reformage catalytique",
-        "Le résidu atmosphérique, envoyé à la distillation sous vide",
-        "Le kérosène, soutiré en latéral haut de la colonne atmosphérique"
-      ],
-      "answer": 2,
-      "explain": "Les produits les plus lourds (point d'ébullition supérieur à 350-370 °C environ) restent en fond : c'est le résidu atmosphérique. GPL et naphta léger sortent en tête, le kérosène en soutirage latéral.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-004",
-      "theme": "Schéma de raffinerie et distillation",
-      "level": 1,
-      "q": "Pourquoi redistille-t-on le résidu atmosphérique sous pression réduite plutôt qu'à la pression atmosphérique ?",
-      "choices": [
-        "Pour favoriser volontairement le dépôt de coke dans les tubes du four",
-        "Pour séparer les distillats lourds sans les décomposer par la chaleur",
-        "Pour éliminer l'eau résiduelle laissée par le dessalage du brut",
-        "Pour concentrer les sels dans la coupe la plus légère de la colonne atmosphérique"
-      ],
-      "answer": 1,
-      "explain": "Sous vide, les points d'ébullition baissent : on évite le craquage thermique indésirable et l'encrassement. Le dessalage a lieu avant la distillation, et l'on ne cherche pas à produire du coke ni à concentrer des sels.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-005",
-      "theme": "Schéma de raffinerie et distillation",
-      "level": 2,
-      "q": "Un brut lourd remplace un brut léger dans la raffinerie, sans changement d'unités. Quelle conséquence est la plus probable ?",
-      "choices": [
-        "Une hausse du rendement en GPL et en naphta",
-        "Une part plus forte de résidu et une baisse des coupes légères",
-        "Une disparition du besoin de distillation sous vide",
-        "Une baisse de la température de sortie du four"
-      ],
-      "answer": 1,
-      "explain": "Un brut lourd contient moins de composés volatils : plus de résidu, moins de naphta, kérosène et gazole. Il augmente le besoin de la distillation sous vide et de conversion, et ne permet pas de réduire la chauffe.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-006",
-      "theme": "Schéma de raffinerie et distillation",
-      "level": 2,
-      "q": "Un four chauffe 100 t/h de brut (cp = 2,1 kJ/kg.K) de 150 à 350 °C. Quelle puissance absorbe le brut ? (Q = débit × cp × écart de température)",
-      "choices": [
-        "11,7 MW",
-        "Environ 21,0 MW",
-        "Environ 42,0 MW",
-        "Environ 4,20 MW"
-      ],
-      "answer": 0,
-      "explain": "Débit = 100 000 / 3 600 = 27,8 kg/s ; Q = 27,8 × 2,1 × 200 ≈ 11 700 kW soit 11,7 MW. Les autres valeurs proviennent d'erreurs d'unité ou d'oubli d'un facteur (conversion t/h en kg/s, par exemple).",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-007",
-      "theme": "Schéma de raffinerie et distillation",
-      "level": 2,
-      "q": "Vous lisez un schéma de procédé : le kérosène est soutiré latéralement à un niveau situé entre le naphta et le gazole. Pourquoi cet ordre ?",
-      "choices": [
-        "Parce que sa densité est la plus faible de toutes les coupes de la colonne",
-        "Parce qu'il est produit après le gazole dans un autre four",
-        "Parce que son indice de cétane doit être maximal",
-        "Son ébullition est intermédiaire entre naphta et gazole"
-      ],
-      "answer": 3,
-      "explain": "Dans la colonne, les coupes se classent par plage d'ébullition : naphta (30-180 °C), kérosène (150-250 °C), gazole (250-350 °C). Le naphta est en réalité la coupe la moins dense, et tous sont séparés dans la même colonne.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-008",
-      "theme": "Schéma de raffinerie et distillation",
-      "level": 2,
-      "q": "Une raffinerie ne dispose que de distillation, de reformage et d'hydrotraitement. Que peut-on prévoir pour sa production ?",
-      "choices": [
-        "Une production maximale de kérosène à partir du résidu sous vide",
-        "Une absence de besoin de torche et de services généraux",
-        "Un gazole sans soufre sans aucune unité d'hydrogène",
-        "Un rendement important en produits lourds, faute d'unité de conversion des résidus"
-      ],
-      "answer": 3,
-      "explain": "Sans craquage ni cokéfaction, le résidu n'est pas converti : il sort en fiouls ou bitumes. La torche et les utilités restent indispensables, et l'hydrotraitement exige de l'hydrogène (ici issu du reformage ou d'une unité dédiée).",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-009",
-      "theme": "Schéma de raffinerie et distillation",
-      "level": 3,
-      "q": "Vous êtes chef de service et recevez le bilan d'une raffinerie dont les coupes légères diminuent depuis un mois, avec un brut dont le fournisseur a changé. Quelle première vérification est la plus pertinente ?",
-      "choices": [
-        "Contrôler l'état des soupapes de la torche uniquement",
-        "Exiger l'arrêt immédiat de la distillation sous vide",
-        "Comparer les analyses (densité, distillation) des deux bruts",
-        "Vérifier la date du dernier étalonnage des pompes d'eau de refroidissement"
-      ],
-      "answer": 2,
-      "explain": "Un changement de brut modifie les rendements par construction : l'analyse du brut (densité, distillation, soufre) explique d'abord l'évolution. Les autres actions n'expliquent pas une baisse de coupes légères et ne sont pas prioritaires.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-010",
-      "theme": "Schéma de raffinerie et distillation",
-      "level": 3,
-      "q": "Une raffinerie de 1 million de tonnes par an fonctionne à 80 % de sa capacité, avec 7,3 barils par tonne. Quel débit approximatif traite-t-elle ?",
-      "choices": [
-        "Environ 8 000 barils par jour",
-        "Environ 16 000 barils par jour",
-        "Environ 20 000 barils par jour",
-        "Environ 29 000 barils par jour"
-      ],
-      "answer": 1,
-      "explain": "Capacité : 1 000 000 × 7,3 / 365 ≈ 20 000 barils par jour ; à 80 %, environ 16 000. 20 000 serait la pleine capacité, 29 000 un dépassement irréaliste, et 8 000 une erreur de conversion.",
-      "seconds": 110,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-011",
-      "theme": "Procédés de conversion et de purification",
-      "level": 1,
-      "q": "Quel est le produit principal du reformage catalytique ?",
-      "choices": [
-        "Un reformat à indice d'octane élevé, avec dégagement d'hydrogène",
-        "Un gazole à fort indice de cétane et riche en soufre",
-        "Un résidu sous vide destiné aux bitumes",
-        "Un GPL pur sans aucune trace d'oléfines"
-      ],
-      "answer": 0,
-      "explain": "Le reformage transforme le naphta lourd en composés aromatiques à haut octane et libère de l'hydrogène. Il ne produit ni gazole ni bitume, et ses gaz sont des légers mélangés.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-012",
-      "theme": "Procédés de conversion et de purification",
-      "level": 1,
-      "q": "Quelle est la charge habituelle d'une unité de craquage catalytique en lit fluidisé (FCC) ?",
-      "choices": [
-        "Du GPL récupéré en tête de la colonne atmosphérique",
-        "Du naphta léger déjà hydrotraité pour l'isomérisation",
-        "Du kérosène stocké à l'état de produit fini",
-        "Un distillat issu de la distillation sous vide"
-      ],
-      "answer": 3,
-      "explain": "Le FCC valorise des distillats lourds sous vide en essence et GPL. Le GPL, le naphta léger et le kérosène sont des produits plus légers qu'on ne cherche pas à craquer.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-013",
-      "theme": "Procédés de conversion et de purification",
-      "level": 1,
-      "q": "Quel est le rôle principal de l'hydrotraitement ?",
-      "choices": [
-        "Casser les molécules lourdes en molécules plus petites",
-        "Augmenter fortement l'indice d'octane du naphta",
-        "Séparer le brut par température d'ébullition",
-        "Retirer le soufre et l'azote, en présence d'hydrogène et d'un catalyseur"
-      ],
-      "answer": 3,
-      "explain": "L'hydrotraitement convertit le soufre en H₂S et l'azote en ammoniac. Le craquage casse les molécules, le reformage augmente l'octane et la distillation sépare par ébullition.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-014",
-      "theme": "Procédés de conversion et de purification",
-      "level": 1,
-      "q": "Que devient le sulfure d'hydrogène (H₂S) produit par l'hydrotraitement ?",
-      "choices": [
-        "Il est injecté directement dans les réservoirs d'essence pour la désodoriser",
-        "Il est brûlé sans traitement et rejeté dans l'air ambiant",
-        "Il est capté aux amines puis converti en soufre élémentaire",
-        "Il est recyclé comme catalyseur dans le réformeur"
-      ],
-      "answer": 2,
-      "explain": "Le gaz acide est capté aux amines puis converti en soufre élémentaire, produit vendable. L'injecter dans un produit ou le rejeter sans traitement serait dangereux et interdit ; il n'est pas un catalyseur du reformage.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-015",
-      "theme": "Procédés de conversion et de purification",
-      "level": 2,
-      "q": "Pourquoi le naphta est-il hydrotraité avant d'entrer dans le reformage catalytique ?",
-      "choices": [
-        "Parce que le reformage ne fonctionne qu'à haute pression d'oxygène",
-        "Parce que l'hydrotraitement augmente le point de coupe du naphta",
-        "Parce que le soufre et l'azote empoisonnent le catalyseur au platine",
-        "Parce que le platine exige une charge riche en soufre"
-      ],
-      "answer": 2,
-      "explain": "Le catalyseur de reformage est sensible aux poisons (soufre, azote, métaux) ; l'hydrotraitement les retire en amont. Le reformage n'utilise pas d'oxygène et n'a pas besoin de soufre.",
-      "seconds": 60,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-016",
-      "theme": "Procédés de conversion et de purification",
-      "level": 2,
-      "q": "Dans le FCC, d'où provient la chaleur nécessaire aux réactions de craquage ?",
-      "choices": [
-        "De la combustion du coke déposé sur le catalyseur, dans le régénérateur",
-        "D'un four annexe alimenté par du gaz naturel exclusivement",
-        "D'une résistance électrique située dans le riser",
-        "Du refroidissement des produits en sortie de colonne"
-      ],
-      "answer": 0,
-      "explain": "Le coke déposé sur le catalyseur est brûlé en continu dans le régénérateur ; le catalyseur chaud rapporte la chaleur au réacteur. Aucune source séparée ne compense, et le refroidissement des produits ne chauffe pas le réacteur.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-017",
-      "theme": "Procédés de conversion et de purification",
-      "level": 2,
-      "q": "Un opérateur souhaite produire davantage de gazole et de kérosène de très bonne qualité à partir de distillats lourds. Quel procédé conviendrait le mieux ?",
-      "choices": [
-        "L'hydrocraquage, au prix d'une forte consommation d'hydrogène",
-        "La viscoréduction, uniquement pour réduire la viscosité du fioul",
-        "Le dessalage supplémentaire du brut reçu",
-        "L'alkylation du GPL pour produire du bitume"
-      ],
-      "answer": 0,
-      "explain": "L'hydrocraquage sous hydrogène donne des distillats moyens peu soufrés mais est coûteux. La viscoréduction traite les résidus, le dessalage protège les équipements, et l'alkylation produit de l'essence, non du bitume.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-018",
-      "theme": "Procédés de conversion et de purification",
-      "level": 2,
-      "q": "Un naphta reformé à 98 RON est mélangé à 40 % de naphta isomérisé à 85 RON (60 % de reformat). Quel indice approximatif, en supposant un mélange linéaire en volume ?",
-      "choices": [
-        "Environ 91,5 RON",
-        "Environ 95,0 RON",
-        "Environ 97,2 RON",
-        "Environ 92,8 RON"
-      ],
-      "answer": 3,
-      "explain": "0,6 × 98 + 0,4 × 85 = 58,8 + 34,0 = 92,8. Les autres valeurs résultent d'une mauvaise pondération. Les indices d'octane ne se mélangent qu'approximativement de façon linéaire : la valeur est indicative.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-019",
-      "theme": "Procédés de conversion et de purification",
-      "level": 3,
-      "q": "Après un arrêt, le réformeur produit moins d'hydrogène et l'activité baisse. L'analyse montre beaucoup de coke sur le catalyseur. Quelle action est la plus logique ?",
-      "choices": [
-        "Augmenter la teneur en soufre de la charge pour protéger le platine",
-        "Arrêter le dessalage du brut pour économiser de l'eau",
-        "Régénérer le catalyseur en brûlant le coke, après avoir vérifié la qualité de la charge",
-        "Remplacer le platine par un catalyseur de FCC"
-      ],
-      "answer": 2,
-      "explain": "Le coke désactive le catalyseur : régénération (brûlage contrôlé) et contrôle de la charge pour limiter les poisons. Le soufre est un poison, le dessalage est sans rapport, et les catalyseurs de FCC ne conviennent pas au reformage.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-020",
-      "theme": "Procédés de conversion et de purification",
-      "level": 3,
-      "q": "Une raffinerie doit passer d'un gazole à 5 000 ppm de soufre à un gazole à 10 ppm. Quel est l'ordre de grandeur de la réduction à obtenir ?",
-      "choices": [
-        "Environ 90 %",
-        "Environ 99,8 %",
-        "Environ 50 %",
-        "Environ 99,98 %"
-      ],
-      "answer": 1,
-      "explain": "(5 000 − 10) / 5 000 = 0,998 soit 99,8 %. 90 % et 50 % sont insuffisants, et 99,98 % correspondrait à 1 ppm. Cet effort exige un hydrotraitement poussé (catalyseur, pression, hydrogène).",
-      "seconds": 110,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-021",
-      "theme": "Rendements et bilan matière",
-      "level": 1,
-      "q": "Que traduit le bilan matière d'une raffinerie en régime stable ?",
-      "choices": [
-        "La création de matière par les réactions de craquage",
-        "La conservation de la masse : entrées = sorties, pertes et consommations incluses",
-        "La disparition de matière lors de la distillation sous vide",
-        "Une égalité entre volumes en entrée et volumes en sortie"
-      ],
-      "answer": 1,
-      "explain": "La masse est conservée ; les volumes ne le sont pas nécessairement, car les densités diffèrent. Les réactions transforment la matière sans la créer ni la détruire.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-022",
-      "theme": "Rendements et bilan matière",
-      "level": 1,
-      "q": "Comment calcule-t-on le rendement massique d'un produit ?",
-      "choices": [
-        "Volume du produit divisé par volume du produit voisin",
-        "Masse du produit divisée par masse de brut traité, en pourcentage",
-        "Masse du produit divisée par la capacité nominale en barils",
-        "Valeur du produit divisée par son prix de vente"
-      ],
-      "answer": 1,
-      "explain": "Le rendement massique compare la masse du produit à celle de la charge. Il ne se mesure ni par rapport à un autre produit, ni à une capacité, ni à une valeur.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-023",
-      "theme": "Rendements et bilan matière",
-      "level": 1,
-      "q": "Pourquoi la somme des rendements volumiques peut-elle dépasser 100 % après conversion ?",
-      "choices": [
-        "Parce que la raffinerie crée de la matière dans le réformeur",
-        "Parce que les mesures de volume sont toujours majorées",
-        "Parce que le fioul résiduel est compté deux fois",
-        "Parce que les produits sont moins denses que la charge (gain volumique)"
-      ],
-      "answer": 3,
-      "explain": "En craquant des molécules lourdes en molécules plus légères, on obtient des produits moins denses : à masse égale, le volume augmente. Ce n'est ni une erreur de mesure ni une création de matière.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-024",
-      "theme": "Rendements et bilan matière",
-      "level": 1,
-      "q": "Environ combien de barils contient une tonne de brut moyen ?",
-      "choices": [
-        "Environ 3,2 barils",
-        "Environ 12,5 barils",
-        "Environ 7,3 barils",
-        "Environ 0,15 baril"
-      ],
-      "answer": 2,
-      "explain": "Pour un brut moyen, 1 tonne représente de l'ordre de 7,3 barils (6,9 à 7,5 selon la densité). Les autres valeurs sont incohérentes avec la densité des bruts (environ 0,85 t/m³).",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-025",
-      "theme": "Rendements et bilan matière",
-      "level": 2,
-      "q": "Un opérateur traite 5 000 t/j de brut et déclare 4 880 t/j de produits et fuel. Quel est l'écart de bilan ?",
-      "choices": [
-        "0,24 %, soit 12 t/j non expliquées",
-        "12 %, soit 600 t/j non expliquées",
-        "2,4 %, soit 120 t/j non expliquées",
-        "Il n'y a aucun écart car les volumes diffèrent"
-      ],
-      "answer": 2,
-      "explain": "Écart = (5 000 − 4 880) / 5 000 = 120 / 5 000 = 2,4 %. Cet écart dépasse les valeurs habituelles (de l'ordre de 0,3 à 1 %) : une vérification est justifiée. Le bilan se fait en masse, non en volume.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-026",
-      "theme": "Rendements et bilan matière",
-      "level": 2,
-      "q": "Sur 100 000 t de brut, une raffinerie sort 3 000 t de GPL, 15 000 t de naphta, 12 000 t de kérosène, 28 000 t de gazole, 37 000 t de résidu, 4 600 t de fuel et torche. Quel est l'écart de bilan ?",
-      "choices": [
-        "4 %, soit 4 000 t",
-        "0,4 %, soit 400 t",
-        "Nul, car le total est de 100 000 t",
-        "1,4 %, soit 1 400 t"
-      ],
-      "answer": 1,
-      "explain": "Sorties = 3 000 + 15 000 + 12 000 + 28 000 + 37 000 + 4 600 = 99 600 t. Écart = 400 / 100 000 = 0,4 %. Un tel écart est jugé plausible.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-027",
-      "theme": "Rendements et bilan matière",
-      "level": 2,
-      "q": "Pour une distillation : alimentation 100 t/h à 40 % de léger, distillat à 90 %, résidu à 10 % de léger. Quel débit de distillat ?",
-      "choices": [
-        "37,5 t/h",
-        "40,0 t/h",
-        "60,0 t/h",
-        "50,0 t/h"
-      ],
-      "answer": 0,
-      "explain": "D = F × (x − xB) / (xD − xB) = 100 × 0,30 / 0,80 = 37,5 t/h. Le résidu vaut alors 62,5 t/h. 40 serait obtenu en ignorant la composition, et 60 est le débit de résidu approché.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-028",
-      "theme": "Rendements et bilan matière",
-      "level": 2,
-      "q": "La capacité d'une raffinerie est de 20 000 barils par jour ; elle traite 16 000 barils. Quel est son taux d'utilisation ?",
-      "choices": [
-        "20 %",
-        "125 %",
-        "64 %",
-        "80 %"
-      ],
-      "answer": 3,
-      "explain": "16 000 / 20 000 = 0,80. 125 % serait l'inverse du rapport, et 20 % la part inutilisée.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-029",
-      "theme": "Rendements et bilan matière",
-      "level": 3,
-      "q": "Une raffinerie traite 20 000 barils par jour de brut à 0,85 de densité environ (7,3 barils par tonne). Combien de tonnes par jour environ ?",
-      "choices": [
-        "Environ 2 740 t/j",
-        "Environ 17 000 t/j",
-        "Environ 146 000 t/j",
-        "Environ 270 t/j"
-      ],
-      "answer": 0,
-      "explain": "20 000 / 7,3 ≈ 2 740 t/j. 17 000 correspondrait à une multiplication par la densité sans passer par le facteur barils par tonne ; 146 000 est 20 000 × 7,3, soit l'inverse de l'opération.",
-      "seconds": 110,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-030",
-      "theme": "Rendements et bilan matière",
-      "level": 3,
-      "q": "Une raffinerie déclare un rendement en produits blancs très élevé, une consommation propre de 1 % du brut et un écart de bilan de 0,1 %, alors que le schéma ne comprend aucune unité de conversion. Que faire ?",
-      "choices": [
-        "Valider le rapport, car des chiffres excellents sont toujours exacts",
-        "Exiger immédiatement une sanction pécuniaire sans aucune autre vérification",
-        "Demander les mesurages et calibrages, ces chiffres étant peu plausibles",
-        "Ignorer le rapport tant qu'aucun accident n'est survenu"
-      ],
-      "answer": 2,
-      "explain": "Sans conversion, le rendement en produits blancs est borné par la nature du brut ; une consommation de 1 % est inhabituellement basse. La démarche normale est de vérifier les mesures. Valider sans contrôle ou sanctionner sans preuve est également inadapté.",
-      "seconds": 120,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-031",
-      "theme": "Qualité des produits",
-      "level": 1,
-      "q": "Que mesure l'indice d'octane d'une essence ?",
-      "choices": [
-        "Son aptitude à s'enflammer sans bougie",
-        "Sa résistance au cliquetis dans le moteur",
-        "Sa teneur en soufre en parties par million",
-        "Sa température de congélation"
-      ],
-      "answer": 1,
-      "explain": "L'octane caractérise la résistance à l'auto-inflammation prématurée (cliquetis). L'aptitude à l'auto-inflammation relève du cétane du gazole ; soufre et congélation sont d'autres caractéristiques.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-032",
-      "theme": "Qualité des produits",
-      "level": 1,
-      "q": "Quel indice caractérise l'aptitude du gazole à s'enflammer par compression ?",
-      "choices": [
-        "L'indice de cétane",
-        "L'indice d'octane RON",
-        "La pression de vapeur Reid",
-        "Le point de fumée"
-      ],
-      "answer": 0,
-      "explain": "Le cétane mesure l'auto-inflammation du gazole. Le RON concerne l'essence, la PVR la volatilité de l'essence, et le point de fumée le kérosène.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-033",
-      "theme": "Qualité des produits",
-      "level": 1,
-      "q": "Que mesure la pression de vapeur Reid (PVR) d'une essence ?",
-      "choices": [
-        "Sa volatilité",
-        "Sa viscosité cinématique",
-        "Sa teneur en eau libre",
-        "Sa résistance au gel"
-      ],
-      "answer": 0,
-      "explain": "La PVR exprime la tendance à s'évaporer, utile pour le démarrage à froid, les émissions évaporatives et le risque de bouchon de vapeur.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-034",
-      "theme": "Qualité des produits",
-      "level": 1,
-      "q": "Quel est le rôle d'un certificat de qualité délivré pour un lot de produit fini ?",
-      "choices": [
-        "Garantir au client le prix de vente final du lot",
-        "Remplacer l'autorisation d'exploitation de la raffinerie",
-        "Fixer la quantité de brut à acheter",
-        "Attester la conformité du lot aux spécifications"
-      ],
-      "answer": 3,
-      "explain": "Le certificat rend compte des résultats d'analyse d'un lot et de leur conformité. Il ne fixe ni le prix, ni ne remplace une autorisation, ni ne détermine les achats de brut.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-035",
-      "theme": "Qualité des produits",
-      "level": 2,
-      "q": "Un gazole contient 0,5 % massique de soufre. Combien cela représente-t-il en ppm ?",
-      "choices": [
-        "500 ppm",
-        "50 ppm",
-        "5 000 ppm",
-        "50 000 ppm"
-      ],
-      "answer": 2,
-      "explain": "1 % = 10 000 ppm, donc 0,5 % = 5 000 ppm. C'est 500 fois plus que la limite européenne de 10 ppm.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-036",
-      "theme": "Qualité des produits",
-      "level": 2,
-      "q": "Une essence mesurée à 92,0 RON pour une spécification minimale de 95 RON est reçue. Quelle décision est appropriée ?",
-      "choices": [
-        "Le vendre tel quel, avec une réduction de prix pour l'acheteur",
-        "Ajouter de l'eau pour augmenter la densité",
-        "Retenir le lot, puis le reclasser ou le retraiter",
-        "Ignorer l'écart car il est inférieur à 5 %"
-      ],
-      "answer": 2,
-      "explain": "Un lot hors spécification n'est pas commercialisable sous la qualité visée : on le retient, on le reclasse ou on le retraite (ajout de composants à haut octane). Les autres actions ne corrigent pas le défaut.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-037",
-      "theme": "Qualité des produits",
-      "level": 2,
-      "q": "Lors d'un contrôle, l'agent constate que l'échantillon n'est ni étiqueté, ni scellé. Que peut-il en conclure ?",
-      "choices": [
-        "L'échantillon reste valable, puisque seul le résultat chiffré compte vraiment",
-        "La traçabilité est insuffisante : le résultat sera contestable",
-        "Le produit est forcément conforme",
-        "L'analyse doit être refaite par la raffinerie seule, sans témoin"
-      ],
-      "answer": 1,
-      "explain": "L'identification et le scellement garantissent que l'échantillon analysé est bien celui du lot : sans eux, le résultat est contestable. Il ne dit rien de la conformité du produit, et une contre-analyse indépendante est préférable.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-038",
-      "theme": "Qualité des produits",
-      "level": 2,
-      "q": "Quel texte cité par la loi n° 002/2019 sanctionne la commercialisation de lubrifiants non conformes ?",
-      "choices": [
-        "L'article 289 (500 000 à 10 000 000 FCFA, saisie et destruction)",
-        "L'article 284, avec 1 000 000 à 30 000 000 FCFA après mise en demeure",
-        "L'article 286, avec 5 000 000 à 100 000 000 FCFA",
-        "L'article 265, avec doublement automatique pour tous"
-      ],
-      "answer": 0,
-      "explain": "L'article 289 vise les lubrifiants non conformes. L'article 284 concerne l'activité aval sans autorisation, l'article 286 le contenu local aval, et l'article 265 la récidive (pénalités portées au double).",
-      "seconds": 70,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 289",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-039",
-      "theme": "Qualité des produits",
-      "level": 3,
-      "q": "Une essence doit respecter à la fois l'octane, la volatilité et le soufre. Un lot est à 96 RON et 8 ppm de soufre, mais sa PVR dépasse la limite estivale. Quelle est la meilleure analyse ?",
-      "choices": [
-        "Le lot est conforme, car l'octane suffit à valider l'essence",
-        "Le lot est conforme, car le soufre est très bas",
-        "Il faut le rejeter définitivement sans possibilité d'ajustement",
-        "Non conforme sur la PVR ; le mélange peut être corrigé"
-      ],
-      "answer": 3,
-      "explain": "Chaque caractéristique est contraignante : un excès de PVR rend le lot non conforme malgré un bon octane et un faible soufre. Le mélange peut être corrigé (retrait de butanes, par exemple) ; un rejet définitif n'est pas toujours nécessaire.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-040",
-      "theme": "Qualité des produits",
-      "level": 3,
-      "q": "Un opérateur conteste un résultat défavorable du laboratoire de l'administration. Quelle démarche respecte le mieux les règles de la preuve ?",
-      "choices": [
-        "Refaire l'analyse avec une méthode non normalisée, plus rapide à obtenir",
-        "Remplacer l'échantillon par un prélèvement plus récent sans traçabilité",
-        "Une contre-analyse sur échantillon témoin scellé, même méthode normalisée",
-        "Annuler le résultat parce qu'il est défavorable"
-      ],
-      "answer": 2,
-      "explain": "Un échantillon témoin scellé et une méthode normalisée identique garantissent la comparabilité. Une méthode non normalisée ou un nouveau prélèvement non tracé ne permettent pas de trancher, et on n'annule pas un résultat sur simple contestation.",
-      "seconds": 110,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-041",
-      "theme": "Indicateurs de performance",
-      "level": 1,
-      "q": "Comment définit-on le taux d'utilisation d'une raffinerie ?",
-      "choices": [
-        "Temps de marche divisé par temps calendaire",
-        "Marge de raffinage divisée par le prix du brut",
-        "Brut traité divisé par capacité nominale, en pourcentage",
-        "Accidents avec arrêt divisés par heures travaillées"
-      ],
-      "answer": 2,
-      "explain": "Le taux d'utilisation compare la charge réelle à la capacité. Le temps de marche donne la disponibilité, les accidents le taux de fréquence.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-042",
-      "theme": "Indicateurs de performance",
-      "level": 1,
-      "q": "Que mesure la disponibilité d'une unité ?",
-      "choices": [
-        "La quantité de produits vendus à l'exportation",
-        "La part du temps calendaire où l'unité est en marche",
-        "La marge brute réalisée sur chaque baril",
-        "Le nombre d'inspecteurs présents sur le site"
-      ],
-      "answer": 1,
-      "explain": "Disponibilité = temps de marche / temps calendaire × 100. Les ventes, la marge et les effectifs relèvent d'autres indicateurs.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-043",
-      "theme": "Indicateurs de performance",
-      "level": 1,
-      "q": "Quelle est la formule du taux de fréquence des accidents avec arrêt ?",
-      "choices": [
-        "Jours perdus × 100 / effectifs moyens annuels",
-        "Accidents × 1 000 000 / heures travaillées",
-        "Accidents × 365 / capacité de la raffinerie",
-        "Heures travaillées × 1 000 000 / accidents"
-      ],
-      "answer": 1,
-      "explain": "Le taux de fréquence rapporte le nombre d'accidents avec arrêt à un million d'heures travaillées. Les autres formules mesurent la gravité ou n'ont pas de sens.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-044",
-      "theme": "Indicateurs de performance",
-      "level": 1,
-      "q": "Que représente la marge de raffinage ?",
-      "choices": [
-        "Le prix de vente du brut à l'exportation",
-        "Le coût total de l'arrêt programmé",
-        "La capacité en barils par jour",
-        "La différence entre la valeur des produits obtenus et le coût du brut"
-      ],
-      "answer": 3,
-      "explain": "La marge compare la valeur des produits au coût de la matière première. Elle varie avec les prix du brut et des produits.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-045",
-      "theme": "Indicateurs de performance",
-      "level": 2,
-      "q": "Une raffinerie compte 330 jours de marche sur 365. Quelle est la disponibilité ?",
-      "choices": [
-        "Environ 9,6 %",
-        "Environ 100 %",
-        "Environ 110 %",
-        "90,4 %"
-      ],
-      "answer": 3,
-      "explain": "330 / 365 = 0,904. Le complément (9,6 %) correspond au temps d'arrêt. Une disponibilité ne peut dépasser 100 %.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-046",
-      "theme": "Indicateurs de performance",
-      "level": 2,
-      "q": "Trois accidents avec arrêt surviennent pour 1 500 000 heures travaillées. Quel est le taux de fréquence ?",
-      "choices": [
-        "0,5",
-        "5,0",
-        "2,0",
-        "0,2"
-      ],
-      "answer": 2,
-      "explain": "TF = 3 × 1 000 000 / 1 500 000 = 2,0. 0,5 serait l'inverse du résultat, 5,0 une erreur sur le diviseur, 0,2 une erreur d'échelle.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-047",
-      "theme": "Indicateurs de performance",
-      "level": 2,
-      "q": "Produits valorisés à 85 dollars le baril, brut à 78 dollars, 16 000 barils par jour traités. Quelle marge journalière brute (chiffres fictifs) ?",
-      "choices": [
-        "7 000 dollars par jour",
-        "112 000 dollars par jour",
-        "1 360 000 dollars par jour",
-        "1 248 000 dollars par jour"
-      ],
-      "answer": 1,
-      "explain": "Marge = 85 − 78 = 7 dollars par baril ; × 16 000 = 112 000 dollars par jour. 1 248 000 correspond au coût du brut, 1 360 000 à la valeur des produits.",
-      "seconds": 80,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-048",
-      "theme": "Indicateurs de performance",
-      "level": 2,
-      "q": "Le taux d'utilisation chute durablement, alors que la disponibilité reste élevée (unités en bon état). Quelle cause est la plus probable ?",
-      "choices": [
-        "Une cause externe : approvisionnement en brut insuffisant ou demande faible",
-        "Une panne généralisée de toutes les unités",
-        "Un défaut de sécurité sur la torche",
-        "Une surproduction de GPL"
-      ],
-      "answer": 0,
-      "explain": "Des unités disponibles mais peu chargées indiquent un manque de charge ou de débouchés. Une panne généralisée réduirait la disponibilité.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-049",
-      "theme": "Indicateurs de performance",
-      "level": 3,
-      "q": "Un rapport annonce un taux de fréquence nul sur l'année. Que doit faire l'agent avant de conclure à une excellente sécurité ?",
-      "choices": [
-        "Vérifier la définition, la déclaration des incidents et le terrain",
-        "Conclure que la sécurité est irréprochable sur tout le site",
-        "Demander le doublement immédiat des effectifs du service sécurité du site",
-        "Supprimer l'indicateur des futurs rapports"
-      ],
-      "answer": 0,
-      "explain": "Un taux nul peut cacher un défaut de déclaration ou une définition restrictive (sous-traitants exclus). Le contrôle croisé avec les incidents signalés et la visite sur site est nécessaire.",
-      "seconds": 100,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-050",
-      "theme": "Indicateurs de performance",
-      "level": 3,
-      "q": "Une raffinerie affiche une marge élevée un trimestre et faible le suivant, sans changement de production. Quelle explication est la plus cohérente ?",
-      "choices": [
-        "Une évolution des prix du brut et des produits, qui déterminent la marge",
-        "Une baisse du nombre de barils par tonne",
-        "Un changement de la formule du taux de fréquence",
-        "Une erreur systématique du bilan matière"
-      ],
-      "answer": 0,
-      "explain": "La marge dépend des prix, non de la production seule. Le facteur barils par tonne et les indicateurs de sécurité sont sans lien, et un écart de bilan ne produit pas de variation de marge à production égale.",
-      "seconds": 110,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-051",
-      "theme": "Arrêts programmés et sécurité",
-      "level": 1,
-      "q": "Qu'est-ce qu'un arrêt programmé de raffinerie ?",
-      "choices": [
-        "Une panne imprévue d'une pompe de transfert isolée",
-        "Une fermeture administrative décidée après une sanction",
-        "Une interruption planifiée pour inspecter et maintenir",
-        "Un changement de fournisseur de brut"
-      ],
-      "answer": 2,
-      "explain": "L'arrêt programmé est préparé longtemps à l'avance. Une panne imprévue est un arrêt non programmé ; la fermeture administrative ou un changement de brut sont d'autres événements.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-052",
-      "theme": "Arrêts programmés et sécurité",
-      "level": 1,
-      "q": "À quoi sert le gel du périmètre des travaux d'un arrêt ?",
-      "choices": [
-        "À interdire toute inspection des équipements pendant l'arrêt",
-        "À limiter les ajouts tardifs au programme de travaux",
-        "À garantir un redémarrage sans essai",
-        "À supprimer la consignation des équipements"
-      ],
-      "answer": 1,
-      "explain": "Passé une date, tout nouveau travail est encadré ou refusé pour garder la maîtrise du planning. Il n'interdit pas l'inspection et ne supprime ni les essais ni la consignation.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-053",
-      "theme": "Arrêts programmés et sécurité",
-      "level": 1,
-      "q": "Quel est le danger du sulfure de fer pyrophorique ?",
-      "choices": [
-        "Il neutralise le catalyseur de reformage en quelques heures",
-        "Il s'enflamme spontanément au contact de l'air",
-        "Il provoque la congélation du gazole en hiver",
-        "Il augmente l'indice de cétane"
-      ],
-      "answer": 1,
-      "explain": "Le sulfure de fer formé en milieu soufré s'enflamme au contact de l'air lors de l'ouverture : on le maintient humide ou on l'inerte. Il n'a pas les effets cités.",
-      "seconds": 50,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-054",
-      "theme": "Arrêts programmés et sécurité",
-      "level": 1,
-      "q": "Que signifie HAZOP ?",
-      "choices": [
-        "Une analyse systématique des dérives du procédé",
-        "Un test d'étanchéité des soupapes de sûreté de la torche",
-        "Une méthode de mesure du soufre dans le gazole",
-        "Un type de catalyseur utilisé dans le FCC"
-      ],
-      "answer": 0,
-      "explain": "HAZOP (étude de dangers et d'exploitabilité) examine, point par point, ce qui se passe si un paramètre dérive. Ce n'est ni un essai de soupape, ni une analyse de produit, ni un catalyseur.",
-      "seconds": 45,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-055",
-      "theme": "Arrêts programmés et sécurité",
-      "level": 2,
-      "q": "Avant l'entrée d'un intervenant dans une colonne, quelle séquence est cohérente ?",
-      "choices": [
-        "Permis de travail, ouverture, puis mesure de gaz si le temps le permet",
-        "Mesure de gaz uniquement, sans consignation",
-        "Ouverture immédiate pour accélérer l'arrêt",
-        "Vidange, dégazage, consignation, mesure de gaz, puis permis"
-      ],
-      "answer": 3,
-      "explain": "L'espace confiné exige un équipement vidé, dégazé, isolé, vérifié par mesure de gaz et couvert par un permis de travail. Sauter une étape expose à l'asphyxie, l'explosion ou l'intoxication.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-056",
-      "theme": "Arrêts programmés et sécurité",
-      "level": 2,
-      "q": "Un arrêt prévu de 40 jours dépasse de 6 jours, à 100 000 dollars de manque à gagner par jour (chiffres fictifs). Quel est le coût de la dérive ?",
-      "choices": [
-        "240 000 dollars",
-        "4 000 000 dollars",
-        "600 000 dollars",
-        "6 000 000 dollars"
-      ],
-      "answer": 2,
-      "explain": "6 jours × 100 000 dollars = 600 000 dollars. 4 000 000 dollars correspondrait aux 40 jours prévus, 6 000 000 dollars à une multiplication par 60.",
-      "seconds": 70,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-057",
-      "theme": "Arrêts programmés et sécurité",
-      "level": 2,
-      "q": "Quelle disposition de la loi n° 002/2019 impose de signaler sans délai tout incident ou accident ?",
-      "choices": [
-        "L'article 138 (approvisionnement du marché national)",
-        "L'article 134 (incessibilité de l'autorisation)",
-        "L'article 130 (autorisation d'exploitation)",
-        "L'article 241 (obligations du titulaire)"
-      ],
-      "answer": 3,
-      "explain": "L'article 241 oblige le titulaire à signaler sans délai toute perturbation, incident ou accident. Les articles 130, 134 et 138 portent sur l'autorisation, l'incessibilité et l'approvisionnement du marché.",
-      "seconds": 70,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 241",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-058",
-      "theme": "Arrêts programmés et sécurité",
-      "level": 2,
-      "q": "Quelle disposition de la loi impose le respect des prescriptions d'hygiène, de santé, de sécurité, de sûreté et d'environnement par toute personne exerçant une activité d'hydrocarbures ?",
-      "choices": [
-        "L'article 137",
-        "L'article 171",
-        "L'article 289",
-        "L'article 18"
-      ],
-      "answer": 1,
-      "explain": "L'article 171 fixe ce principe, les prescriptions détaillées étant définies par voie réglementaire. L'article 137 traite de la remise en état, l'article 289 des lubrifiants non conformes et l'article 18 du contrôle.",
-      "seconds": 70,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 171",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-059",
-      "theme": "Arrêts programmés et sécurité",
-      "level": 3,
-      "q": "Un chef de service reçoit la demande d'ajouter 25 travaux au périmètre d'un arrêt, à trois semaines du début, après le gel. Quelle réponse est la plus prudente ?",
-      "choices": [
-        "Examiner chaque demande selon sa criticité et son effet sur le planning",
-        "Accepter toutes les demandes pour éviter de devoir ouvrir un nouvel arrêt",
-        "Refuser sans analyse y compris les travaux de sécurité urgents",
-        "Reporter l'arrêt d'un an sans évaluation"
-      ],
-      "answer": 0,
-      "explain": "Après le gel, seuls les travaux justifiés (sécurité, fiabilité critique) devraient être admis, après analyse d'impact. Tout accepter ou tout refuser revient à ne pas gérer le risque, et un report sans analyse peut aggraver la situation.",
-      "seconds": 110,
-      "status": "draft"
-    },
-    {
-      "id": "min-raffinage-060",
-      "theme": "Arrêts programmés et sécurité",
-      "level": 3,
-      "q": "Pendant l'arrêt de la SOGARA, le marché national risque la pénurie. Quelle démarche de l'administration est la plus cohérente avec l'article 138 ?",
-      "choices": [
-        "Autoriser l'exportation de tous les stocks pendant l'arrêt programmé",
-        "Interdire l'arrêt, quelle que soit l'urgence technique",
-        "Ne rien demander, car l'arrêt est une affaire interne",
-        "Demander le plan d'approvisionnement : stocks et importations"
-      ],
-      "answer": 3,
-      "explain": "L'article 138 impose d'approvisionner en priorité le marché national : l'administration s'assure que l'arrêt est couvert par des stocks ou des importations. Interdire l'arrêt peut compromettre la sécurité, et l'ignorer ne protège pas le marché.",
-      "seconds": 110,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 138",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-061",
-      "theme": "Suivi réglementaire et SOGARA",
-      "level": 1,
-      "q": "Quel acte matérialise l'autorisation d'exploitation d'une activité de transformation d'hydrocarbures (raffinage) ?",
-      "choices": [
-        "Un arrêté pris par le chef de service aval",
-        "Une décision du directeur de la raffinerie",
-        "Un simple courrier de la direction des douanes",
-        "Un décret du Président de la République"
-      ],
-      "answer": 3,
-      "explain": "Selon l'article 130, la transformation d'hydrocarbures exige une autorisation d'exploitation matérialisée par décret du Président de la République, sur proposition de l'autorité compétente.",
-      "seconds": 45,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 130",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-062",
-      "theme": "Suivi réglementaire et SOGARA",
-      "level": 1,
-      "q": "Une autorisation aval peut-elle être cédée à un tiers ?",
-      "choices": [
-        "Oui, librement, par simple contrat privé",
-        "Oui, après un délai d'un an",
-        "Non, elle est incessible et non transmissible",
-        "Oui, si le nouveau titulaire est un sous-traitant"
-      ],
-      "answer": 2,
-      "explain": "L'article 134 prévoit que l'autorisation d'exercice d'une activité aval est incessible et non transmissible, sans exception prévue.",
-      "seconds": 45,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 134",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-063",
-      "theme": "Suivi réglementaire et SOGARA",
-      "level": 1,
-      "q": "Qui bénéficie en priorité de l'approvisionnement d'une raffinerie, selon la loi n° 002/2019 ?",
-      "choices": [
-        "Le marché international, au meilleur prix",
-        "Le marché national, selon les modalités fixées par arrêté",
-        "Les actionnaires du raffineur",
-        "L'opérateur amont qui a fourni le brut"
-      ],
-      "answer": 1,
-      "explain": "L'article 138 impose aux raffineries, usines pétrochimiques et usines de lubrifiants d'approvisionner en priorité le marché national, selon les modalités définies par arrêté de l'autorité compétente.",
-      "seconds": 45,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 138",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-064",
-      "theme": "Suivi réglementaire et SOGARA",
-      "level": 1,
-      "q": "À quel prix les livraisons de brut sont-elles facturées à l'industrie nationale du raffinage ?",
-      "choices": [
-        "Au cours du jour, sans aucun encadrement",
-        "Au prix fixé par voie réglementaire",
-        "À un prix fixé librement par le raffineur",
-        "Au prix du carburant à la pompe"
-      ],
-      "answer": 1,
-      "explain": "Le second alinéa de l'article 139 prévoit que les livraisons de brut et de gaz naturel à l'industrie nationale du raffinage sont facturées au prix fixé par voie réglementaire.",
-      "seconds": 45,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 139",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-065",
-      "theme": "Suivi réglementaire et SOGARA",
-      "level": 2,
-      "q": "Une société exerce une activité de stockage aval sans autorisation. Quelle sanction la loi prévoit-elle, après mise en demeure ?",
-      "choices": [
-        "Une pénalité de 1 000 000 à 30 000 000 FCFA (article 284)",
-        "Une pénalité de 5 000 000 à 100 000 000 FCFA (article 286)",
-        "Une pénalité de 500 000 à 10 000 000 FCFA (article 289)",
-        "Une pénalité de 50 000 000 à 2 500 000 000 FCFA (article 269)"
-      ],
-      "answer": 0,
-      "explain": "L'article 284 sanctionne l'exercice d'une activité aval sans autorisation. L'article 286 vise le contenu local aval, l'article 289 les lubrifiants non conformes, l'article 269 le torchage.",
-      "seconds": 70,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 284",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-066",
-      "theme": "Suivi réglementaire et SOGARA",
-      "level": 2,
-      "q": "Quel régime fiscal s'applique, en principe, au titulaire d'une autorisation aval ?",
-      "choices": [
-        "Un régime d'exonération fiscale de cinq ans renouvelables",
-        "Le partage de production applicable à l'amont",
-        "Un régime exempt de toute fiscalité",
-        "Le droit commun, avec les taxes sur produits finis"
-      ],
-      "answer": 3,
-      "explain": "Les articles 204 et 236 indiquent que l'aval relève du droit commun ; le régime spécifique de la loi vise l'amont.",
-      "seconds": 70,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Articles 204 et 236",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-067",
-      "theme": "Suivi réglementaire et SOGARA",
-      "level": 2,
-      "q": "Quelle est la qualité des agents du ministère qui ont prêté serment pour contrôler le secteur ?",
-      "choices": [
-        "Magistrats siégeant en chambre d'instruction",
-        "Agents de la douane sans pouvoir de constat",
-        "Officiers de police judiciaire spéciaux, dont les procès-verbaux font foi jusqu'à preuve contraire",
-        "Experts privés désignés par l'opérateur"
-      ],
-      "answer": 2,
-      "explain": "Selon les articles 18 à 20, les agents assermentés ont la qualité d'officiers de police judiciaire spéciaux et leurs procès-verbaux font foi jusqu'à preuve contraire.",
-      "seconds": 70,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Articles 18 à 20",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-068",
-      "theme": "Suivi réglementaire et SOGARA",
-      "level": 2,
-      "q": "Un rapport d'activité annuel de la raffinerie est jugé incomplet. Quelle base légale permet de réclamer les informations ?",
-      "choices": [
-        "L'article 130 sur le décret d'autorisation",
-        "L'article 182 sur la fourniture de rapports d'activité et d'informations",
-        "L'article 134 sur l'incessibilité",
-        "L'article 289 sur les lubrifiants"
-      ],
-      "answer": 1,
-      "explain": "L'article 182 oblige le titulaire à fournir des rapports d'activité et des informations. Les autres articles traitent de l'autorisation, de l'incessibilité et des lubrifiants non conformes.",
-      "seconds": 70,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 182",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-069",
-      "theme": "Suivi réglementaire et SOGARA",
-      "level": 3,
-      "q": "Vous êtes chef de service. La raffinerie n'a pas déclaré un arrêt non programmé de trois semaines et le marché a manqué de produits. Quelle démarche est la plus conforme à la loi ?",
-      "choices": [
-        "Ignorer l'événement en attendant le prochain rapport annuel de l'opérateur",
-        "Demander cause et impact, dresser un constat, puis mettre en demeure",
-        "Retirer immédiatement l'autorisation d'exploitation par arrêté",
-        "Négocier une sanction orale sans écrit"
-      ],
-      "answer": 1,
-      "explain": "Le contrôle repose sur le constat écrit et la mise en demeure avant sanction (article 284, par analogie de procédure) ; l'article 241 impose en outre de signaler sans délai tout incident. Le retrait immédiat par arrêté ne respecte pas la procédure, et un arrangement oral n'a pas de valeur probante.",
-      "seconds": 110,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 241",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
-    },
-    {
-      "id": "min-raffinage-070",
-      "theme": "Suivi réglementaire et SOGARA",
-      "level": 3,
-      "q": "Un opérateur aval récidive après sanction pour un manquement. Quelle est la conséquence prévue par la loi ?",
-      "choices": [
-        "Pénalités doublées, retrait possible de l'autorisation",
-        "Les pénalités restent identiques mais sont étalées dans le temps",
-        "L'infraction est effacée après un an",
-        "Seule une amende symbolique est prévue"
-      ],
-      "answer": 0,
-      "explain": "L'article 265 prévoit que, en cas de récidive, les pénalités sont portées au double, la récidive pouvant aussi être sanctionnée par le retrait de l'autorisation et l'interdiction d'exercer.",
-      "seconds": 110,
-      "status": "draft",
-      "refs": [
-        {
-          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
-          "art": "Article 265",
-          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
-        }
-      ]
+   ]
+  },
+  {
+   "id": "min-raffinage-039",
+   "theme": "Qualité des produits",
+   "level": 3,
+   "q": "Une essence doit respecter à la fois l'octane, la volatilité et le soufre. Un lot est à 96 RON et 8 ppm de soufre, mais sa PVR dépasse la limite estivale. Quelle est la meilleure analyse ?",
+   "choices": [
+    "Le lot est conforme, car l'octane suffit à valider l'essence",
+    "Le lot est conforme, car le soufre est très bas",
+    "Il faut le rejeter définitivement sans possibilité d'ajustement",
+    "Non conforme sur la PVR ; le mélange peut être corrigé"
+   ],
+   "answer": 3,
+   "explain": "Chaque caractéristique est contraignante : un excès de PVR rend le lot non conforme malgré un bon octane et un faible soufre. Le mélange peut être corrigé (retrait de butanes, par exemple) ; un rejet définitif n'est pas toujours nécessaire.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-040",
+   "theme": "Qualité des produits",
+   "level": 3,
+   "q": "Un opérateur conteste un résultat défavorable du laboratoire de l'administration. Quelle démarche respecte le mieux les règles de la preuve ?",
+   "choices": [
+    "Refaire l'analyse avec une méthode non normalisée, plus rapide à obtenir",
+    "Remplacer l'échantillon par un prélèvement plus récent sans traçabilité",
+    "Une contre-analyse sur échantillon témoin scellé, même méthode normalisée",
+    "Annuler le résultat parce qu'il est défavorable"
+   ],
+   "answer": 2,
+   "explain": "Un échantillon témoin scellé et une méthode normalisée identique garantissent la comparabilité. Une méthode non normalisée ou un nouveau prélèvement non tracé ne permettent pas de trancher, et on n'annule pas un résultat sur simple contestation.",
+   "seconds": 110,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-041",
+   "theme": "Indicateurs de performance",
+   "level": 1,
+   "q": "Comment définit-on le taux d'utilisation d'une raffinerie ?",
+   "choices": [
+    "Temps de marche divisé par temps calendaire",
+    "Marge de raffinage divisée par le prix du brut",
+    "Brut traité divisé par capacité nominale, en pourcentage",
+    "Accidents avec arrêt divisés par heures travaillées"
+   ],
+   "answer": 2,
+   "explain": "Le taux d'utilisation compare la charge réelle à la capacité. Le temps de marche donne la disponibilité, les accidents le taux de fréquence.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-042",
+   "theme": "Indicateurs de performance",
+   "level": 1,
+   "q": "Que mesure la disponibilité d'une unité ?",
+   "choices": [
+    "La quantité de produits vendus à l'exportation",
+    "La part du temps calendaire où l'unité est en marche",
+    "La marge brute réalisée sur chaque baril",
+    "Le nombre d'inspecteurs présents sur le site"
+   ],
+   "answer": 1,
+   "explain": "Disponibilité = temps de marche / temps calendaire × 100. Les ventes, la marge et les effectifs relèvent d'autres indicateurs.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-043",
+   "theme": "Indicateurs de performance",
+   "level": 1,
+   "q": "Quelle est la formule du taux de fréquence des accidents avec arrêt ?",
+   "choices": [
+    "Jours perdus × 100 / effectifs moyens annuels",
+    "Accidents × 1 000 000 / heures travaillées",
+    "Accidents × 365 / capacité de la raffinerie",
+    "Heures travaillées × 1 000 000 / accidents"
+   ],
+   "answer": 1,
+   "explain": "Le taux de fréquence rapporte le nombre d'accidents avec arrêt à un million d'heures travaillées. Les autres formules mesurent la gravité ou n'ont pas de sens.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-044",
+   "theme": "Indicateurs de performance",
+   "level": 1,
+   "q": "Que représente la marge de raffinage ?",
+   "choices": [
+    "Le prix de vente du brut à l'exportation",
+    "Le coût total de l'arrêt programmé",
+    "La capacité en barils par jour",
+    "La différence entre la valeur des produits obtenus et le coût du brut"
+   ],
+   "answer": 3,
+   "explain": "La marge compare la valeur des produits au coût de la matière première. Elle varie avec les prix du brut et des produits.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-045",
+   "theme": "Indicateurs de performance",
+   "level": 2,
+   "q": "Une raffinerie compte 330 jours de marche sur 365. Quelle est la disponibilité ?",
+   "choices": [
+    "Environ 9,6 %",
+    "Environ 100 %",
+    "Environ 110 %",
+    "90,4 %"
+   ],
+   "answer": 3,
+   "explain": "330 / 365 = 0,904. Le complément (9,6 %) correspond au temps d'arrêt. Une disponibilité ne peut dépasser 100 %.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-046",
+   "theme": "Indicateurs de performance",
+   "level": 2,
+   "q": "Trois accidents avec arrêt surviennent pour 1 500 000 heures travaillées. Quel est le taux de fréquence ?",
+   "choices": [
+    "0,5",
+    "5,0",
+    "2,0",
+    "0,2"
+   ],
+   "answer": 2,
+   "explain": "TF = 3 × 1 000 000 / 1 500 000 = 2,0. 0,5 serait l'inverse du résultat, 5,0 une erreur sur le diviseur, 0,2 une erreur d'échelle.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-047",
+   "theme": "Indicateurs de performance",
+   "level": 2,
+   "q": "Produits valorisés à 85 dollars le baril, brut à 78 dollars, 16 000 barils par jour traités. Quelle marge journalière brute (chiffres fictifs) ?",
+   "choices": [
+    "7 000 dollars par jour",
+    "112 000 dollars par jour",
+    "1 360 000 dollars par jour",
+    "1 248 000 dollars par jour"
+   ],
+   "answer": 1,
+   "explain": "Marge = 85 − 78 = 7 dollars par baril ; × 16 000 = 112 000 dollars par jour. 1 248 000 correspond au coût du brut, 1 360 000 à la valeur des produits.",
+   "seconds": 80,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-048",
+   "theme": "Indicateurs de performance",
+   "level": 2,
+   "q": "Le taux d'utilisation chute durablement, alors que la disponibilité reste élevée (unités en bon état). Quelle cause est la plus probable ?",
+   "choices": [
+    "Une cause externe : approvisionnement en brut insuffisant ou demande faible",
+    "Une panne généralisée de toutes les unités",
+    "Un défaut de sécurité sur la torche",
+    "Une surproduction de GPL"
+   ],
+   "answer": 0,
+   "explain": "Des unités disponibles mais peu chargées indiquent un manque de charge ou de débouchés. Une panne généralisée réduirait la disponibilité.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-049",
+   "theme": "Indicateurs de performance",
+   "level": 3,
+   "q": "Un rapport annonce un taux de fréquence nul sur l'année. Que doit faire l'agent avant de conclure à une excellente sécurité ?",
+   "choices": [
+    "Vérifier la définition, la déclaration des incidents et le terrain",
+    "Conclure que la sécurité est irréprochable sur tout le site",
+    "Demander le doublement immédiat des effectifs du service sécurité du site",
+    "Supprimer l'indicateur des futurs rapports"
+   ],
+   "answer": 0,
+   "explain": "Un taux nul peut cacher un défaut de déclaration ou une définition restrictive (sous-traitants exclus). Le contrôle croisé avec les incidents signalés et la visite sur site est nécessaire.",
+   "seconds": 100,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-050",
+   "theme": "Indicateurs de performance",
+   "level": 3,
+   "q": "Une raffinerie affiche une marge élevée un trimestre et faible le suivant, sans changement de production. Quelle explication est la plus cohérente ?",
+   "choices": [
+    "Une évolution des prix du brut et des produits, qui déterminent la marge",
+    "Une baisse du nombre de barils par tonne",
+    "Un changement de la formule du taux de fréquence",
+    "Une erreur systématique du bilan matière"
+   ],
+   "answer": 0,
+   "explain": "La marge dépend des prix, non de la production seule. Le facteur barils par tonne et les indicateurs de sécurité sont sans lien, et un écart de bilan ne produit pas de variation de marge à production égale.",
+   "seconds": 110,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-051",
+   "theme": "Arrêts programmés et sécurité",
+   "level": 1,
+   "q": "Qu'est-ce qu'un arrêt programmé de raffinerie ?",
+   "choices": [
+    "Une panne imprévue d'une pompe de transfert isolée",
+    "Une fermeture administrative décidée après une sanction",
+    "Une interruption planifiée pour inspecter et maintenir",
+    "Un changement de fournisseur de brut"
+   ],
+   "answer": 2,
+   "explain": "L'arrêt programmé est préparé longtemps à l'avance. Une panne imprévue est un arrêt non programmé ; la fermeture administrative ou un changement de brut sont d'autres événements.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-052",
+   "theme": "Arrêts programmés et sécurité",
+   "level": 1,
+   "q": "À quoi sert le gel du périmètre des travaux d'un arrêt ?",
+   "choices": [
+    "À interdire toute inspection des équipements pendant l'arrêt",
+    "À limiter les ajouts tardifs au programme de travaux",
+    "À garantir un redémarrage sans essai",
+    "À supprimer la consignation des équipements"
+   ],
+   "answer": 1,
+   "explain": "Passé une date, tout nouveau travail est encadré ou refusé pour garder la maîtrise du planning. Il n'interdit pas l'inspection et ne supprime ni les essais ni la consignation.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-053",
+   "theme": "Arrêts programmés et sécurité",
+   "level": 1,
+   "q": "Quel est le danger du sulfure de fer pyrophorique ?",
+   "choices": [
+    "Il neutralise le catalyseur de reformage en quelques heures",
+    "Il s'enflamme spontanément au contact de l'air",
+    "Il provoque la congélation du gazole en hiver",
+    "Il augmente l'indice de cétane"
+   ],
+   "answer": 1,
+   "explain": "Le sulfure de fer formé en milieu soufré s'enflamme au contact de l'air lors de l'ouverture : on le maintient humide ou on l'inerte. Il n'a pas les effets cités.",
+   "seconds": 50,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-054",
+   "theme": "Arrêts programmés et sécurité",
+   "level": 1,
+   "q": "Que signifie HAZOP ?",
+   "choices": [
+    "Une analyse systématique des dérives du procédé",
+    "Un test d'étanchéité des soupapes de sûreté de la torche",
+    "Une méthode de mesure du soufre dans le gazole",
+    "Un type de catalyseur utilisé dans le FCC"
+   ],
+   "answer": 0,
+   "explain": "HAZOP (étude de dangers et d'exploitabilité) examine, point par point, ce qui se passe si un paramètre dérive. Ce n'est ni un essai de soupape, ni une analyse de produit, ni un catalyseur.",
+   "seconds": 45,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-055",
+   "theme": "Arrêts programmés et sécurité",
+   "level": 2,
+   "q": "Avant l'entrée d'un intervenant dans une colonne, quelle séquence est cohérente ?",
+   "choices": [
+    "Permis de travail, ouverture, puis mesure de gaz si le temps le permet",
+    "Mesure de gaz uniquement, sans consignation",
+    "Ouverture immédiate pour accélérer l'arrêt",
+    "Vidange, dégazage, consignation, mesure de gaz, puis permis"
+   ],
+   "answer": 3,
+   "explain": "L'espace confiné exige un équipement vidé, dégazé, isolé, vérifié par mesure de gaz et couvert par un permis de travail. Sauter une étape expose à l'asphyxie, l'explosion ou l'intoxication.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-056",
+   "theme": "Arrêts programmés et sécurité",
+   "level": 2,
+   "q": "Un arrêt prévu de 40 jours dépasse de 6 jours, à 100 000 dollars de manque à gagner par jour (chiffres fictifs). Quel est le coût de la dérive ?",
+   "choices": [
+    "240 000 dollars",
+    "4 000 000 dollars",
+    "600 000 dollars",
+    "6 000 000 dollars"
+   ],
+   "answer": 2,
+   "explain": "6 jours × 100 000 dollars = 600 000 dollars. 4 000 000 dollars correspondrait aux 40 jours prévus, 6 000 000 dollars à une multiplication par 60.",
+   "seconds": 70,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-057",
+   "theme": "Arrêts programmés et sécurité",
+   "level": 2,
+   "q": "Quelle disposition de la loi n° 002/2019 impose de signaler sans délai tout incident ou accident ?",
+   "choices": [
+    "L'article 138 (approvisionnement du marché national)",
+    "L'article 134 (incessibilité de l'autorisation)",
+    "L'article 130 (autorisation d'exploitation)",
+    "L'article 241 (obligations du titulaire)"
+   ],
+   "answer": 3,
+   "explain": "L'article 241 oblige le titulaire à signaler sans délai toute perturbation, incident ou accident. Les articles 130, 134 et 138 portent sur l'autorisation, l'incessibilité et l'approvisionnement du marché.",
+   "seconds": 70,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 241",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-  ]
+   ]
+  },
+  {
+   "id": "min-raffinage-058",
+   "theme": "Arrêts programmés et sécurité",
+   "level": 2,
+   "q": "Quelle disposition de la loi impose le respect des prescriptions d'hygiène, de santé, de sécurité, de sûreté et d'environnement par toute personne exerçant une activité d'hydrocarbures ?",
+   "choices": [
+    "L'article 137",
+    "L'article 171",
+    "L'article 289",
+    "L'article 18"
+   ],
+   "answer": 1,
+   "explain": "L'article 171 fixe ce principe, les prescriptions détaillées étant définies par voie réglementaire. L'article 137 traite de la remise en état, l'article 289 des lubrifiants non conformes et l'article 18 du contrôle.",
+   "seconds": 70,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 171",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-raffinage-059",
+   "theme": "Arrêts programmés et sécurité",
+   "level": 3,
+   "q": "Un chef de service reçoit la demande d'ajouter 25 travaux au périmètre d'un arrêt, à trois semaines du début, après le gel. Quelle réponse est la plus prudente ?",
+   "choices": [
+    "Examiner chaque demande selon sa criticité et son effet sur le planning",
+    "Accepter toutes les demandes pour éviter de devoir ouvrir un nouvel arrêt",
+    "Refuser sans analyse y compris les travaux de sécurité urgents",
+    "Reporter l'arrêt d'un an sans évaluation"
+   ],
+   "answer": 0,
+   "explain": "Après le gel, seuls les travaux justifiés (sécurité, fiabilité critique) devraient être admis, après analyse d'impact. Tout accepter ou tout refuser revient à ne pas gérer le risque, et un report sans analyse peut aggraver la situation.",
+   "seconds": 110,
+   "status": "draft"
+  },
+  {
+   "id": "min-raffinage-060",
+   "theme": "Arrêts programmés et sécurité",
+   "level": 3,
+   "q": "Pendant l'arrêt de la SOGARA, le marché national risque la pénurie. Quelle démarche de l'administration est la plus cohérente avec l'article 138 ?",
+   "choices": [
+    "Autoriser l'exportation de tous les stocks pendant l'arrêt programmé",
+    "Interdire l'arrêt, quelle que soit l'urgence technique",
+    "Ne rien demander, car l'arrêt est une affaire interne",
+    "Demander le plan d'approvisionnement : stocks et importations"
+   ],
+   "answer": 3,
+   "explain": "L'article 138 impose d'approvisionner en priorité le marché national : l'administration s'assure que l'arrêt est couvert par des stocks ou des importations. Interdire l'arrêt peut compromettre la sécurité, et l'ignorer ne protège pas le marché.",
+   "seconds": 110,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 138",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-raffinage-061",
+   "theme": "Suivi réglementaire et SOGARA",
+   "level": 1,
+   "q": "Quel acte matérialise l'autorisation d'exploitation d'une activité de transformation d'hydrocarbures (raffinage) ?",
+   "choices": [
+    "Un arrêté pris par le chef de service aval",
+    "Une décision du directeur de la raffinerie",
+    "Un simple courrier de la direction des douanes",
+    "Un décret du Président de la République"
+   ],
+   "answer": 3,
+   "explain": "Selon l'article 130, la transformation d'hydrocarbures exige une autorisation d'exploitation matérialisée par décret du Président de la République, sur proposition de l'autorité compétente.",
+   "seconds": 45,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 130",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-raffinage-062",
+   "theme": "Suivi réglementaire et SOGARA",
+   "level": 1,
+   "q": "Une autorisation aval peut-elle être cédée à un tiers ?",
+   "choices": [
+    "Oui, librement, par simple contrat privé",
+    "Oui, après un délai d'un an",
+    "Non, elle est incessible et non transmissible",
+    "Oui, si le nouveau titulaire est un sous-traitant"
+   ],
+   "answer": 2,
+   "explain": "L'article 134 prévoit que l'autorisation d'exercice d'une activité aval est incessible et non transmissible, sans exception prévue.",
+   "seconds": 45,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 134",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-raffinage-063",
+   "theme": "Suivi réglementaire et SOGARA",
+   "level": 1,
+   "q": "Qui bénéficie en priorité de l'approvisionnement d'une raffinerie, selon la loi n° 002/2019 ?",
+   "choices": [
+    "Le marché international, au meilleur prix",
+    "Le marché national, selon les modalités fixées par arrêté",
+    "Les actionnaires du raffineur",
+    "L'opérateur amont qui a fourni le brut"
+   ],
+   "answer": 1,
+   "explain": "L'article 138 impose aux raffineries, usines pétrochimiques et usines de lubrifiants d'approvisionner en priorité le marché national, selon les modalités définies par arrêté de l'autorité compétente.",
+   "seconds": 45,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 138",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-raffinage-064",
+   "theme": "Suivi réglementaire et SOGARA",
+   "level": 1,
+   "q": "À quel prix les livraisons de brut sont-elles facturées à l'industrie nationale du raffinage ?",
+   "choices": [
+    "Au cours du jour, sans aucun encadrement",
+    "Au prix fixé par voie réglementaire",
+    "À un prix fixé librement par le raffineur",
+    "Au prix du carburant à la pompe"
+   ],
+   "answer": 1,
+   "explain": "Le second alinéa de l'article 139 prévoit que les livraisons de brut et de gaz naturel à l'industrie nationale du raffinage sont facturées au prix fixé par voie réglementaire.",
+   "seconds": 45,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 139",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-raffinage-065",
+   "theme": "Suivi réglementaire et SOGARA",
+   "level": 2,
+   "q": "Une société exerce une activité de stockage aval sans autorisation. Quelle sanction la loi prévoit-elle, après mise en demeure ?",
+   "choices": [
+    "Une pénalité de 1 000 000 à 30 000 000 FCFA (article 284)",
+    "Une pénalité de 5 000 000 à 100 000 000 FCFA (article 286)",
+    "Une pénalité de 500 000 à 10 000 000 FCFA (article 289)",
+    "Une pénalité de 50 000 000 à 2 500 000 000 FCFA (article 269)"
+   ],
+   "answer": 0,
+   "explain": "L'article 284 sanctionne l'exercice d'une activité aval sans autorisation. L'article 286 vise le contenu local aval, l'article 289 les lubrifiants non conformes, l'article 269 le torchage.",
+   "seconds": 70,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 284",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-raffinage-066",
+   "theme": "Suivi réglementaire et SOGARA",
+   "level": 2,
+   "q": "Quel régime fiscal s'applique, en principe, au titulaire d'une autorisation aval ?",
+   "choices": [
+    "Un régime d'exonération fiscale de cinq ans renouvelables",
+    "Le partage de production applicable à l'amont",
+    "Un régime exempt de toute fiscalité",
+    "Le droit commun, avec les taxes sur produits finis"
+   ],
+   "answer": 3,
+   "explain": "Les articles 204 et 236 indiquent que l'aval relève du droit commun ; le régime spécifique de la loi vise l'amont.",
+   "seconds": 70,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Articles 204 et 236",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-raffinage-067",
+   "theme": "Suivi réglementaire et SOGARA",
+   "level": 2,
+   "q": "Quelle est la qualité des agents du ministère qui ont prêté serment pour contrôler le secteur ?",
+   "choices": [
+    "Magistrats siégeant en chambre d'instruction",
+    "Agents de la douane sans pouvoir de constat",
+    "Officiers de police judiciaire spéciaux, dont les procès-verbaux font foi jusqu'à preuve contraire",
+    "Experts privés désignés par l'opérateur"
+   ],
+   "answer": 2,
+   "explain": "Selon les articles 18 à 20, les agents assermentés ont la qualité d'officiers de police judiciaire spéciaux et leurs procès-verbaux font foi jusqu'à preuve contraire.",
+   "seconds": 70,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Articles 18 à 20",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-raffinage-068",
+   "theme": "Suivi réglementaire et SOGARA",
+   "level": 2,
+   "q": "Un rapport d'activité annuel de la raffinerie est jugé incomplet. Quelle base légale permet de réclamer les informations ?",
+   "choices": [
+    "L'article 130 sur le décret d'autorisation",
+    "L'article 182 sur la fourniture de rapports d'activité et d'informations",
+    "L'article 134 sur l'incessibilité",
+    "L'article 289 sur les lubrifiants"
+   ],
+   "answer": 1,
+   "explain": "L'article 182 oblige le titulaire à fournir des rapports d'activité et des informations. Les autres articles traitent de l'autorisation, de l'incessibilité et des lubrifiants non conformes.",
+   "seconds": 70,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 182",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-raffinage-069",
+   "theme": "Suivi réglementaire et SOGARA",
+   "level": 3,
+   "q": "Vous êtes chef de service. La raffinerie n'a pas déclaré un arrêt non programmé de trois semaines et le marché a manqué de produits. Quelle démarche est la plus conforme à la loi ?",
+   "choices": [
+    "Ignorer l'événement en attendant le prochain rapport annuel de l'opérateur",
+    "Demander cause et impact, dresser un constat, puis mettre en demeure",
+    "Retirer immédiatement l'autorisation d'exploitation par arrêté",
+    "Négocier une sanction orale sans écrit"
+   ],
+   "answer": 1,
+   "explain": "Le contrôle repose sur le constat écrit et la mise en demeure avant sanction (article 284, par analogie de procédure) ; l'article 241 impose en outre de signaler sans délai tout incident. Le retrait immédiat par arrêté ne respecte pas la procédure, et un arrangement oral n'a pas de valeur probante.",
+   "seconds": 110,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 241",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  },
+  {
+   "id": "min-raffinage-070",
+   "theme": "Suivi réglementaire et SOGARA",
+   "level": 3,
+   "q": "Un opérateur aval récidive après sanction pour un manquement. Quelle est la conséquence prévue par la loi ?",
+   "choices": [
+    "Pénalités doublées, retrait possible de l'autorisation",
+    "Les pénalités restent identiques mais sont étalées dans le temps",
+    "L'infraction est effacée après un an",
+    "Seule une amende symbolique est prévue"
+   ],
+   "answer": 0,
+   "explain": "L'article 265 prévoit que, en cas de récidive, les pénalités sont portées au double, la récidive pouvant aussi être sanctionnée par le retrait de l'autorisation et l'interdiction d'exercer.",
+   "seconds": 110,
+   "status": "draft",
+   "refs": [
+    {
+     "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+     "art": "Article 265",
+     "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+    }
+   ]
+  }
+ ]
 }
