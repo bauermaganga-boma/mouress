@@ -111,7 +111,7 @@ export default async function render(ctx, root) {
     const cards = (data.branches || []).filter((br) => !br.sharedOnly).map((br) => ({ br, n: postes(data, { domain: d, branch: br.id }).length })).filter((x) => x.n)
       .map(({ br, n }) => bigCard({ href: `#/formation/${d}/${br.id}`, ico: br.icon || (br.id === 'support' ? 'briefcase' : br.id === 'reglementation' ? 'book' : 'wrench'), title: br.name, desc: br.desc, count: n, meta: dm.institution ? n + ' formation' + (n > 1 ? 's' : '') : undefined })).join('');
     root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...home2, { label: dm.name }], back: back1, eyebrow: dm.institution ? 'Famille de formations' : 'Type de métier', title: dm.name, text: dm.institution ? 'Choisissez une famille de formations. Chacune regroupe plusieurs modules.' : 'Quel type de métier ?' })}
-      ${dm.institution ? minInfoHTML() : ''}<div class="grid grid-2 funnel-grid">${cards}</div></div>`;
+      <div class="grid grid-2 funnel-grid${dm.institution ? ' min-compact' : ''}">${cards}</div></div>`;
     return;
   }
 
@@ -123,7 +123,7 @@ export default async function render(ctx, root) {
   if (br.noLevel) {
     const fl = postes(data, { domain: d, branch: b });
     ctx.setTitle(`${dm.name} · ${br.name}`);
-    root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...c2, { label: br.name }], back: `#/formation/${d}`, eyebrow: dm.institution ? 'Formations' : 'Fonctions', title: `${dm.name} › ${br.name}`, text: dm.institution ? `${fl.length} formation${fl.length > 1 ? 's' : ''}. Choisissez celle à travailler ou à tester.` : `${plural(fl.length)}. Choisissez la fonction à travailler ou à tester.` })}<div class="grid grid-3">${fl.map((p) => posteCard(data, p, avail, d)).join('')}</div></div>`;
+    root.innerHTML = `<div class="container page">${pageHead({ crumbs: [...c2, { label: br.name }], back: `#/formation/${d}`, eyebrow: dm.institution ? 'Formations' : 'Fonctions', title: `${dm.name} › ${br.name}`, text: dm.institution ? `${fl.length} formation${fl.length > 1 ? 's' : ''}. Choisissez celle à travailler ou à tester.` : `${plural(fl.length)}. Choisissez la fonction à travailler ou à tester.` })}<div class="grid grid-3${dm.institution ? ' min-compact' : ''}">${fl.map((p) => posteCard(data, p, avail, d)).join('')}</div></div>`;
     remember(root);
     return;
   }

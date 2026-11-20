@@ -56,3 +56,23 @@
   .poste-price { grid-column: 2; }
 }
 @media print { .receipt { box-shadow: none; border: 0; } }
+
+/* Ministère : cartes plus compactes */
+.min-compact { gap: var(--sp-3); }
+.min-compact .funnel-card { padding: var(--sp-3) var(--sp-4); gap: var(--sp-3); min-height: 0; }
+.min-compact .funnel-ico { width: 40px; height: 40px; border-radius: 12px; }
+.min-compact .funnel-ico svg { width: 22px; height: 22px; }
+.min-compact .funnel-title { font-size: 1rem; }
+.min-compact .funnel-body .muted { font-size: .85rem; }
+.min-compact .pcard { padding: var(--sp-3); gap: var(--sp-1); }
+.min-compact .pcard h3 { font-size: 1rem; }
+.min-compact .pcard p { font-size: .85rem; }
+.min-compact .pcard-foot { margin-top: var(--sp-1); }
+@media (max-width: 640px) {
+  .min-compact.grid-2, .min-compact.grid-3 { grid-template-columns: 1fr; gap: .5rem; }
+  .min-compact .funnel-card { padding: .6rem .75rem; gap: .6rem; }
+  .min-compact .funnel-ico { width: 34px; height: 34px; border-radius: 10px; }
+  .min-compact .funnel-ico svg { width: 18px; height: 18px; }
+  .min-compact .funnel-body .muted { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .min-compact .pcard p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+}
