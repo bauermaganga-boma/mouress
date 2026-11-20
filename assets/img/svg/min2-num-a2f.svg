@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Authentification à deux facteurs : le premier facteur est ce que l'on sait (le mot de passe, ici volé par un attaquant), le second est ce que l'on possède ou ce que l'on est ; sans le second facteur, l'attaquant est bloqué. En bas, comparaison des seconds facteurs : code par SMS (moins sûr, peut être détourné par échange de carte SIM), application d'authentification (plus sûr), clé physique (plus sûr). Une demande d'approbation que l'on n'a pas déclenchée se refuse puis se signale.</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FFFFFF;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Authentification à deux facteurs (A2F)</text>
+
+<!-- facteur 1 -->
+<rect x="30" y="54" width="240" height="86" rx="8" class="bl"/>
+<text x="150" y="80" class="c b">Facteur 1 : ce que</text>
+<text x="150" y="98" class="c b">vous savez</text>
+<text x="150" y="124" class="c">Mot de passe (volé ici)</text>
+<!-- facteur 2 -->
+<rect x="30" y="160" width="240" height="86" rx="8" class="bl"/>
+<text x="150" y="186" class="c b">Facteur 2 : ce que vous</text>
+<text x="150" y="204" class="c b">possédez ou ce que vous êtes</text>
+<text x="150" y="230" class="c">Téléphone, clé, empreinte</text>
+
+<!-- serveur -->
+<rect x="340" y="90" width="170" height="120" rx="8" class="gr"/>
+<text x="425" y="124" class="c b">Connexion à la</text>
+<text x="425" y="144" class="c b">messagerie</text>
+<text x="425" y="172" class="c">les deux facteurs</text>
+<text x="425" y="190" class="c">sont exigés</text>
+<path d="M272,97H338" class="nv" marker-end="url(#ar)"/>
+<path d="M272,203H338" class="nv" marker-end="url(#ar)"/>
+
+<!-- attaquant -->
+<rect x="600" y="54" width="170" height="86" rx="8" class="wh"/>
+<text x="685" y="80" class="c b">Attaquant</text>
+<text x="685" y="102" class="c">a le mot de passe,</text>
+<text x="685" y="122" class="c">pas le second facteur</text>
+<path d="M598,97H512" class="or" marker-end="url(#ao)"/>
+<text x="555" y="86" class="c o">tente</text>
+<rect x="600" y="160" width="170" height="86" rx="8" fill="#FFFFFF" stroke="#F28C28" stroke-width="3"/>
+<text x="685" y="190" class="c o">Accès bloqué</text>
+<text x="685" y="212" class="c">sans le second</text>
+<text x="685" y="230" class="c">facteur</text>
+<path d="M512,150H685V158" class="or" marker-end="url(#ao)"/>
+
+<!-- comparaison -->
+<text x="30" y="296" class="b">Choisir le second facteur</text>
+<rect x="30" y="308" width="740" height="40" class="wh"/>
+<text x="46" y="334" class="b">Code par SMS</text>
+<rect x="310" y="318" width="120" height="20" fill="#E8EAEE" stroke="#061F44" stroke-width="1.5"/><rect x="310" y="318" width="40" height="20" fill="#F28C28"/>
+<text x="446" y="334">moins sûr : détournable (échange de carte SIM)</text>
+<rect x="30" y="348" width="740" height="40" class="wh"/>
+<text x="46" y="374" class="b">Application d'authentification</text>
+<rect x="310" y="358" width="120" height="20" fill="#E8EAEE" stroke="#061F44" stroke-width="1.5"/><rect x="310" y="358" width="80" height="20" fill="#061F44"/>
+<text x="446" y="374">plus sûr que le SMS</text>
+<rect x="30" y="388" width="740" height="40" class="wh"/>
+<text x="46" y="414" class="b">Clé physique</text>
+<rect x="310" y="398" width="120" height="20" fill="#E8EAEE" stroke="#061F44" stroke-width="1.5"/><rect x="310" y="398" width="120" height="20" fill="#061F44"/>
+<text x="446" y="414">plus sûr que le SMS</text>
+
+<rect x="30" y="440" width="740" height="44" rx="6" class="bl"/>
+<text x="400" y="460" class="c b">Code ou demande d'approbation que vous n'avez pas déclenchés :</text>
+<text x="400" y="478" class="c">ne pas communiquer le code, refuser la demande, puis signaler</text>
+</svg>

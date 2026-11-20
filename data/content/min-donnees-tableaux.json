@@ -29,7 +29,9 @@
     "Utiliser la moyenne pondérée quand les effectifs diffèrent ; ne pas moyenner des moyennes.",
     "Mesurer aussi la dispersion (étendue, quartiles, écart-type), pas seulement le centre.",
     "N'arrondir qu'à la fin et toujours indiquer l'effectif et l'unité."
-   ]
+   ],
+   "img": "svg/min2-num-moyenne-mediane.svg",
+   "imgAlt": "Moyenne et médiane avec une valeur extrême, exemple fictif : dépôts de cinq stations en milliers de litres, 10, 12, 11, 13 et 54. Axe gradué de 0 à 60. La médiane de la série ordonnée 10, 11, 12, 13, 54 vaut 12 ; la moyenne, (10+12+11+13+54)/5, vaut 20. La valeur 54 tire la moyenne vers le haut, la médiane reste au centre du groupe."
   },
   {
    "id": "m3",
@@ -59,7 +61,9 @@
     "Comparer le total du tableau croisé au total de la source pour détecter une erreur.",
     "La moyenne globale se recalcule à partir des totaux, pas en moyennant les moyennes.",
     "Regrouper les dates par année et mois, et actualiser le tableau après chaque changement de données."
-   ]
+   ],
+   "img": "svg/min2-num-tcd.svg",
+   "imgAlt": "Tableau croisé dynamique, valeurs fictives : à gauche la liste source de quatre lignes (Région, Trimestre, Volume : Nord T1 120, Nord T2 140, Sud T1 80, Sud T2 60) ; au centre les quatre zones du tableau croisé (Filtres : Année ; Lignes : Région ; Colonnes : Trimestre ; Valeurs : Somme de Volume) ; à droite le résultat : Nord 120 et 140, total 260 ; Sud 80 et 60, total 140 ; totaux T1 200, T2 200, total général 400. Une flèche Actualiser relie la source au tableau."
   },
   {
    "id": "m5",
@@ -89,7 +93,9 @@
     "Fixer des cibles et des seuils avec une règle écrite d'alerte.",
     "Compléter la moyenne par une mesure de dispersion ou la part hors délai.",
     "Source unique, date de mise à jour affichée et responsable de la qualité."
-   ]
+   ],
+   "img": "svg/min-mgt-tableau-de-bord.svg",
+   "imgAlt": "Tableau de bord mensuel d'un service, valeurs fictives : dossiers traités dans les délais 72 % pour une cible de 90 % (rouge) ; délai moyen de traitement 11 jours pour une cible de 10 jours (orange) ; taux d'absentéisme 4 % pour un maximum de 5 % (vert) ; agents utilisant le nouvel outil 78 % pour une cible de 80 % (orange). Chaque ligne porte ses seuils vert, orange et rouge."
   },
   {
    "id": "m7",
@@ -103,7 +109,9 @@
     "Vérifier à la source les valeurs aberrantes et toujours afficher l'effectif.",
     "Note de décision : conclusion d'abord, chiffres clés, options, limites, prochaine étape.",
     "Diffuser des données agrégées ou anonymisées et protéger les accès."
-   ]
+   ],
+   "img": "svg/min-graphiques-trompeurs.svg",
+   "imgAlt": "Mêmes données fictives, deux présentations : la production passe de 500 à 520 millions de barils (+4 %). À gauche, graphique trompeur dont l'axe vertical commence à 490 : la barre de 2023 paraît trois fois plus haute que celle de 2022. À droite, graphique correct dont l'axe commence à 0 : les deux barres sont presque de même hauteur"
   }
  ],
  "questions": [
@@ -293,7 +301,7 @@
    "id": "min-donnees-tableaux-012",
    "theme": "Somme, moyenne, médiane et dispersion",
    "level": 1,
-   "q": "Les délais de traitement de vos dossiers comportent quelques cas exceptionnellement longs. Quel indicateur de tendance centrale est le plus robuste à ces cas ?",
+   "q": "La figure représente les dépôts de cinq stations (valeurs fictives), dont l'un est très supérieur aux autres. Quel indicateur de tendance centrale est le plus robuste face à une valeur extrême de ce type ?",
    "choices": [
     "La moyenne, parce qu'elle tient compte de chaque valeur et donne donc l'image la plus fidèle",
     "Le maximum, parce qu'il signale directement les délais que le service doit corriger en priorité",
@@ -303,7 +311,9 @@
    "answer": 2,
    "explain": "Un délai extrême tire la moyenne vers le haut, alors que la médiane reste au milieu de la série. Le maximum est utile pour repérer les cas, mais ne décrit pas la situation typique ; la somme varie au contraire à chaque dossier ajouté.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-moyenne-mediane.svg",
+   "imgAlt": "Moyenne et médiane avec une valeur extrême, exemple fictif : dépôts de cinq stations en milliers de litres, 10, 12, 11, 13 et 54. Axe gradué de 0 à 60. La médiane de la série ordonnée 10, 11, 12, 13, 54 vaut 12 ; la moyenne, (10+12+11+13+54)/5, vaut 20. La valeur 54 tire la moyenne vers le haut, la médiane reste au centre du groupe."
   },
   {
    "id": "min-donnees-tableaux-013",
@@ -405,7 +415,7 @@
    "id": "min-donnees-tableaux-019",
    "theme": "Somme, moyenne, médiane et dispersion",
    "level": 3,
-   "q": "Les dépôts de cinq stations valent 10, 12, 11, 13 et 54 milliers de litres (chiffres fictifs). Votre directeur demande un chiffre « typique » pour sa note. Que proposez-vous ?",
+   "q": "La figure représente les dépôts de cinq stations en milliers de litres (chiffres fictifs). Votre directeur demande un chiffre « typique » pour sa note. Que proposez-vous ?",
    "choices": [
     "La moyenne (20), car elle intègre toutes les stations sans en écarter aucune",
     "Le maximum (54), car il montre la capacité réelle que le réseau peut atteindre",
@@ -415,7 +425,9 @@
    "answer": 3,
    "explain": "La moyenne (20) est tirée vers le haut par la valeur 54 : aucune station ne s'en approche, hormis celle-là. La médiane (série 10, 11, 12, 13, 54) vaut 12 et décrit la situation typique. On signale la valeur de 54 pour la contrôler à la source.",
    "seconds": 80,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-moyenne-mediane.svg",
+   "imgAlt": "Moyenne et médiane avec une valeur extrême, exemple fictif : dépôts de cinq stations en milliers de litres, 10, 12, 11, 13 et 54. Axe gradué de 0 à 60. La médiane de la série ordonnée 10, 11, 12, 13, 54 vaut 12 ; la moyenne, (10+12+11+13+54)/5, vaut 20. La valeur 54 tire la moyenne vers le haut, la médiane reste au centre du groupe."
   },
   {
    "id": "min-donnees-tableaux-020",
@@ -651,7 +663,7 @@
    "id": "min-donnees-tableaux-034",
    "theme": "Tableaux croisés et agrégation",
    "level": 1,
-   "q": "Dans un tableau croisé, quelle est la fonction de la zone « Valeurs » ?",
+   "q": "Sur la figure, le champ « Volume » est placé dans l'une des quatre zones du tableau croisé. Quelle est la fonction de cette zone, intitulée « Valeurs » ?",
    "choices": [
     "Elle contient la mesure à agréger (somme, nombre, moyenne) pour chaque croisement",
     "Elle sert à choisir les catégories affichées en lignes dans la marge gauche du tableau",
@@ -661,13 +673,15 @@
    "answer": 0,
    "explain": "Lignes et colonnes définissent les catégories, le filtre restreint le périmètre, et la zone Valeurs calcule la mesure (somme, nombre, moyenne). La mise en forme relève d'un autre menu.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-tcd.svg",
+   "imgAlt": "Tableau croisé dynamique, valeurs fictives : à gauche la liste source de quatre lignes (Région, Trimestre, Volume : Nord T1 120, Nord T2 140, Sud T1 80, Sud T2 60) ; au centre les quatre zones du tableau croisé (Filtres : Année ; Lignes : Région ; Colonnes : Trimestre ; Valeurs : Somme de Volume) ; à droite le résultat : Nord 120 et 140, total 260 ; Sud 80 et 60, total 140 ; totaux T1 200, T2 200, total général 400. Une flèche Actualiser relie la source au tableau."
   },
   {
    "id": "min-donnees-tableaux-035",
    "theme": "Tableaux croisés et agrégation",
    "level": 2,
-   "q": "Dans un tableau croisé fictif, le Nord a 120 puis 140 au premier et second trimestres, le Sud 80 puis 60. Quelle est la part du Nord dans le total général ?",
+   "q": "Sur le tableau croisé de la figure (chiffres fictifs), quelle est la part du Nord dans le total général ?",
    "choices": [
     "65 %, soit 260 pour le Nord rapportés au total général de 400",
     "55 %, obtenue en rapportant le premier trimestre du Nord au total du trimestre",
@@ -677,7 +691,9 @@
    "answer": 0,
    "explain": "Nord = 120 + 140 = 260 ; Sud = 80 + 60 = 140 ; total = 400. Part du Nord : 260 / 400 = 65 %. Dans le tableur, on l'obtient avec l'option « % du total général ».",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-tcd.svg",
+   "imgAlt": "Tableau croisé dynamique, valeurs fictives : à gauche la liste source de quatre lignes (Région, Trimestre, Volume : Nord T1 120, Nord T2 140, Sud T1 80, Sud T2 60) ; au centre les quatre zones du tableau croisé (Filtres : Année ; Lignes : Région ; Colonnes : Trimestre ; Valeurs : Somme de Volume) ; à droite le résultat : Nord 120 et 140, total 260 ; Sud 80 et 60, total 140 ; totaux T1 200, T2 200, total général 400. Une flèche Actualiser relie la source au tableau."
   },
   {
    "id": "min-donnees-tableaux-036",
@@ -797,7 +813,7 @@
    "id": "min-donnees-tableaux-043",
    "theme": "Choisir le bon graphique",
    "level": 1,
-   "q": "Pour un graphique en barres, que doit-on respecter pour l'axe vertical ?",
+   "q": "En comparant les deux graphiques de la figure, que doit-on respecter pour l'axe vertical d'un graphique en barres ?",
    "choices": [
     "Il doit commencer à la plus petite valeur, pour mieux faire ressortir les différences entre barres",
     "Il doit être masqué, afin que seul le titre porte le message du graphique",
@@ -807,7 +823,9 @@
    "answer": 2,
    "explain": "La longueur d'une barre est proportionnelle à la valeur ; si l'axe est tronqué, les écarts sont exagérés. Masquer l'axe ou changer d'échelle prive le lecteur de repères fiables.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-graphiques-trompeurs.svg",
+   "imgAlt": "Mêmes données fictives, deux présentations : la production passe de 500 à 520 millions de barils (+4 %). À gauche, graphique trompeur dont l'axe vertical commence à 490 : la barre de 2023 paraît trois fois plus haute que celle de 2022. À droite, graphique correct dont l'axe commence à 0 : les deux barres sont presque de même hauteur"
   },
   {
    "id": "min-donnees-tableaux-044",
@@ -867,17 +885,19 @@
    "id": "min-donnees-tableaux-047",
    "theme": "Choisir le bon graphique",
    "level": 2,
-   "q": "Deux barres valent 98 et 100. L'axe vertical commence à 96. Que voit le lecteur ?",
+   "q": "Sur le graphique de gauche de la figure, les deux barres valent 500 et 520 et l'axe vertical commence à 490. Que voit le lecteur ?",
    "choices": [
-    "Une seconde barre deux fois plus haute que la première, alors que l'écart réel est de 2 %",
+    "Une seconde barre trois fois plus haute que la première, alors que l'écart réel est de 4 %",
     "Deux barres de hauteur presque identique, comme le montrent les valeurs réelles",
     "Une seconde barre cinquante fois plus haute que la première",
     "Une première barre plus haute que la seconde, puisque l'axe est décalé"
    ],
    "answer": 0,
-   "explain": "Hauteurs visibles : 98 − 96 = 2 et 100 − 96 = 4, donc 4 est deux fois 2. Un écart réel de 2 % apparaît comme un écart de 100 % : c'est l'effet trompeur d'un axe tronqué. Les autres lectures sont fausses.",
+   "explain": "Hauteurs visibles : 500 − 490 = 10 et 520 − 490 = 30, donc 30 est trois fois 10. Un écart réel de 4 % apparaît comme un écart de 200 % : c'est l'effet trompeur d'un axe tronqué (graphique de droite : axe depuis zéro, barres presque égales). Les autres lectures sont fausses.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-graphiques-trompeurs.svg",
+   "imgAlt": "Mêmes données fictives, deux présentations : la production passe de 500 à 520 millions de barils (+4 %). À gauche, graphique trompeur dont l'axe vertical commence à 490 : la barre de 2023 paraît trois fois plus haute que celle de 2022. À droite, graphique correct dont l'axe commence à 0 : les deux barres sont presque de même hauteur"
   },
   {
    "id": "min-donnees-tableaux-048",
@@ -979,7 +999,7 @@
    "id": "min-donnees-tableaux-054",
    "theme": "Construire et lire un tableau de bord",
    "level": 1,
-   "q": "Pourquoi associer une cible à chaque indicateur ?",
+   "q": "Sur le tableau de bord de la figure, aucun résultat (par exemple « 72 % ») n'est présenté seul. Pourquoi associer une cible à chaque indicateur ?",
    "choices": [
     "Parce que la cible remplace la valeur mesurée lorsqu'elle est plus favorable",
     "Parce que les logiciels de tableau de bord exigent une cible pour afficher un graphique",
@@ -989,7 +1009,9 @@
    "answer": 3,
    "explain": "Pour interpréter une valeur, il faut une référence : cible, période précédente, norme. La cible ne remplace pas la mesure, n'est pas imposée techniquement par les outils, et ne dispense pas de regarder la tendance.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-mgt-tableau-de-bord.svg",
+   "imgAlt": "Tableau de bord mensuel d'un service, valeurs fictives : dossiers traités dans les délais 72 % pour une cible de 90 % (rouge) ; délai moyen de traitement 11 jours pour une cible de 10 jours (orange) ; taux d'absentéisme 4 % pour un maximum de 5 % (vert) ; agents utilisant le nouvel outil 78 % pour une cible de 80 % (orange). Chaque ligne porte ses seuils vert, orange et rouge."
   },
   {
    "id": "min-donnees-tableaux-055",
@@ -1043,7 +1065,7 @@
    "id": "min-donnees-tableaux-058",
    "theme": "Construire et lire un tableau de bord",
    "level": 2,
-   "q": "Un tableau de bord affiche seulement « 34 » pour un indicateur, sans autre précision. Que lui manque-t-il ?",
+   "q": "Comparez le tableau de bord de la figure à un autre tableau qui afficherait seulement « 34 » pour un indicateur, sans autre précision. Que lui manque-t-il ?",
    "choices": [
     "Des couleurs plus vives, afin que le chiffre attire l'œil du lecteur",
     "Un nombre supérieur de décimales, pour montrer la précision du calcul",
@@ -1053,7 +1075,9 @@
    "answer": 2,
    "explain": "Sans unité (jours ? dossiers ?), période et référence, un chiffre ne dit rien. La mise en forme, les décimales ou la 3D n'apportent aucune interprétation.",
    "seconds": 55,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-mgt-tableau-de-bord.svg",
+   "imgAlt": "Tableau de bord mensuel d'un service, valeurs fictives : dossiers traités dans les délais 72 % pour une cible de 90 % (rouge) ; délai moyen de traitement 11 jours pour une cible de 10 jours (orange) ; taux d'absentéisme 4 % pour un maximum de 5 % (vert) ; agents utilisant le nouvel outil 78 % pour une cible de 80 % (orange). Chaque ligne porte ses seuils vert, orange et rouge."
   },
   {
    "id": "min-donnees-tableaux-059",

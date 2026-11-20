@@ -13,7 +13,9 @@
     "Après toute modification, mettre à jour les champs (clic droit, ou touche F9) pour actualiser numéros de page et titres.",
     "Saut de page et espacement des paragraphes remplacent les retours à la ligne répétés.",
     "Les sections permettent de changer l'orientation ou la numérotation de page au milieu d'un document."
-   ]
+   ],
+   "img": "svg/min2-num-styles-plan.svg",
+   "imgAlt": "Styles de titre et table des matières automatique : à gauche un extrait de rapport où les paragraphes portent les styles Titre 1, Titre 2 et Normal, plus un intertitre mis en gras à la main sans style de titre ; à droite la table des matières générée, qui liste les trois titres stylés avec leurs numéros de page mais pas l'intertitre manuel ; en bas, rappel de mettre à jour les champs après une modification. Valeurs fictives."
   },
   {
    "id": "m2",
@@ -27,7 +29,9 @@
     "Marges homogènes, police sobre de 11 ou 12 points, numéro de page automatique en pied de page.",
     "Enregistrer un modèle de document évite de réutiliser une ancienne note et ses informations obsolètes.",
     "Diffuser la version définitive en PDF ; inspecter le document pour retirer les métadonnées avant un envoi externe."
-   ]
+   ],
+   "img": "svg/min-lettre-administrative.svg",
+   "imgAlt": "Gabarit annoté d'une lettre administrative : en-tête, lieu et date, destinataire, objet, appel, corps en trois temps, formule finale, signature, pièces jointes"
   },
   {
    "id": "m3",
@@ -73,7 +77,9 @@
     "Contraste, taille de police suffisante et textes de remplacement pour les images garantissent lisibilité et accessibilité.",
     "Les notes du présentateur ne sont pas visibles du public, mais restent dans le fichier : les retirer avant tout envoi externe.",
     "Répéter en chronométrant et prévoir un plan B (PDF) sont des réflexes indispensables."
-   ]
+   ],
+   "img": "photo/office-meeting.jpg",
+   "imgAlt": "Photographie d'une salle de réunion avec une table et un tableau à feuilles, évoquant le travail collaboratif et la réunion à plusieurs."
   },
   {
    "id": "m6",
@@ -87,7 +93,9 @@
     "Pour un fichier volumineux ou à modifier à plusieurs, préférer un lien de partage à une pièce jointe.",
     "Document sensible : le protéger, et transmettre le mot de passe par un autre canal.",
     "Un message suspect (hameçonnage) ne se clique pas, se signale ; toute demande de virement se confirme par un second canal."
-   ]
+   ],
+   "img": "svg/min-hameconnage.svg",
+   "imgAlt": "Courriel d'hameçonnage fictif avec six indices numérotés : adresse d'expéditeur étrangère à l'organisme, urgence et menace dans l'objet, formule générique, fautes, demande de mot de passe, lien dont l'adresse réelle diffère ; puis déroulé de l'attaque en quatre étapes"
   },
   {
    "id": "m7",
@@ -159,7 +167,7 @@
    "id": "min-bureautique-003",
    "theme": "Traitement de texte : styles et table des matières",
    "level": 1,
-   "q": "Pourquoi faut-il « mettre à jour les champs » après avoir ajouté deux pages au milieu d'un rapport ?",
+   "q": "D'après le schéma, après avoir ajouté deux pages au milieu d'un rapport, pourquoi faut-il « mettre à jour les champs » de la table des matières ?",
    "choices": [
     "Pour que le logiciel enregistre une copie de sauvegarde du fichier sur le serveur du service avant toute modification de la mise en page",
     "Pour que les deux pages ajoutées soient automatiquement relues par le correcteur",
@@ -169,7 +177,9 @@
    "answer": 3,
    "explain": "La table des matières est un champ calculé : elle ne se recalcule pas toute seule à chaque frappe. La mise à jour (clic droit ou F9) actualise les numéros de page. Elle n'effectue ni sauvegarde, ni correction, ni nettoyage des styles.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-styles-plan.svg",
+   "imgAlt": "Styles de titre et table des matières automatique : à gauche un extrait de rapport où les paragraphes portent les styles Titre 1, Titre 2 et Normal, plus un intertitre mis en gras à la main sans style de titre ; à droite la table des matières générée, qui liste les trois titres stylés avec leurs numéros de page mais pas l'intertitre manuel ; en bas, rappel de mettre à jour les champs après une modification. Valeurs fictives."
   },
   {
    "id": "min-bureautique-004",
@@ -191,7 +201,7 @@
    "id": "min-bureautique-005",
    "theme": "Traitement de texte : styles et table des matières",
    "level": 2,
-   "q": "Un agent a mis ses intertitres en gras taille 14 sans appliquer de style. Il génère la table des matières : elle est vide. Quelle est la cause et la correction ?",
+   "q": "Sur le schéma, l'intertitre « Observations de terrain » est en gras taille 14 sans style de titre, et la table des matières générée ne le reprend pas. Quelle est la cause et la correction ?",
    "choices": [
     "La table des matières est protégée en écriture ; il faut demander le mot de passe de déverrouillage à l'administrateur du réseau du ministère",
     "Aucun style de titre n'est appliqué ; il faut affecter Titre 1 ou Titre 2 à chaque intertitre puis mettre à jour la table",
@@ -201,13 +211,15 @@
    "answer": 1,
    "explain": "La table se construit à partir des niveaux de plan fournis par les styles de titre. Une mise en forme manuelle n'en crée pas. Il n'existe pas de mot de passe sur ce champ, l'italique n'a aucun effet et il n'y a pas de seuil de pages.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-styles-plan.svg",
+   "imgAlt": "Styles de titre et table des matières automatique : à gauche un extrait de rapport où les paragraphes portent les styles Titre 1, Titre 2 et Normal, plus un intertitre mis en gras à la main sans style de titre ; à droite la table des matières générée, qui liste les trois titres stylés avec leurs numéros de page mais pas l'intertitre manuel ; en bas, rappel de mettre à jour les champs après une modification. Valeurs fictives."
   },
   {
    "id": "min-bureautique-006",
    "theme": "Traitement de texte : styles et table des matières",
    "level": 2,
-   "q": "Un chef de service veut passer tous les titres de niveau 1 de son rapport (vingt titres) du bleu au noir. Quelle méthode est la plus fiable ?",
+   "q": "Sur le schéma, les titres de niveau 1 portent le style Titre 1. Un chef de service veut passer tous les titres de niveau 1 de son rapport (vingt titres) du bleu au noir. Quelle méthode est la plus fiable ?",
    "choices": [
     "Sélectionner chaque titre l'un après l'autre, puis changer sa couleur manuellement en vérifiant chaque page du rapport",
     "Utiliser Rechercher et remplacer pour retaper chaque titre en police noire",
@@ -217,7 +229,9 @@
    "answer": 3,
    "explain": "La modification du style est la méthode prévue : un seul réglage, appliqué à tous les paragraphes du même style, sans oubli possible. Les autres solutions sont longues, risquées ou ne changent pas le fichier lui-même.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-styles-plan.svg",
+   "imgAlt": "Styles de titre et table des matières automatique : à gauche un extrait de rapport où les paragraphes portent les styles Titre 1, Titre 2 et Normal, plus un intertitre mis en gras à la main sans style de titre ; à droite la table des matières générée, qui liste les trois titres stylés avec leurs numéros de page mais pas l'intertitre manuel ; en bas, rappel de mettre à jour les champs après une modification. Valeurs fictives."
   },
   {
    "id": "min-bureautique-007",
@@ -287,7 +301,7 @@
    "id": "min-bureautique-011",
    "theme": "Mise en page d'une note officielle",
    "level": 1,
-   "q": "Quel est le rôle de l'objet dans une note administrative ?",
+   "q": "Sur le gabarit annoté de la lettre administrative, une ligne « Objet » précède le corps du texte. Quel est le rôle de l'objet dans une note administrative ?",
    "choices": [
     "Remplacer entièrement le corps du texte lorsque la note est urgente et que le temps de lecture du destinataire est limité",
     "Annoncer en une phrase courte et précise le sujet de la note, avant même la lecture du corps",
@@ -297,13 +311,15 @@
    "answer": 1,
    "explain": "L'objet permet de comprendre le sujet sans ouvrir le document et de classer la note. Il ne remplace pas le texte, ne sert pas à compter les pages et n'indique pas qui a saisi le document.",
    "seconds": 40,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-lettre-administrative.svg",
+   "imgAlt": "Gabarit annoté d'une lettre administrative : en-tête, lieu et date, destinataire, objet, appel, corps en trois temps, formule finale, signature, pièces jointes"
   },
   {
    "id": "min-bureautique-012",
    "theme": "Mise en page d'une note officielle",
    "level": 1,
-   "q": "Quelle mention signale que deux documents sont joints à une note ?",
+   "q": "D'après le gabarit annoté de la lettre administrative, quelle mention signale que deux documents sont joints à une note ?",
    "choices": [
     "« Objet : 2 », placé en haut de la page, à droite de la mention du ministère, avant la date et le lieu",
     "« Ref : 2 », placé à la fin du dernier paragraphe du texte",
@@ -313,7 +329,9 @@
    "answer": 3,
    "explain": "La mention « PJ » (pièces jointes) suivie du nombre est la convention habituelle. L'objet, la référence et la copie conforme ont d'autres fonctions.",
    "seconds": 40,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-lettre-administrative.svg",
+   "imgAlt": "Gabarit annoté d'une lettre administrative : en-tête, lieu et date, destinataire, objet, appel, corps en trois temps, formule finale, signature, pièces jointes"
   },
   {
    "id": "min-bureautique-013",
@@ -651,7 +669,7 @@
    "id": "min-bureautique-033",
    "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
    "level": 1,
-   "q": "À quoi sert un tableau croisé dynamique ?",
+   "q": "Sur la figure, la liste de gauche a été résumée dans le tableau de droite, appelé tableau croisé dynamique. À quoi sert ce type de tableau ?",
    "choices": [
     "À protéger un classeur par un mot de passe lors de l'envoi",
     "À regrouper et totaliser les données selon plusieurs critères sans modifier les données d'origine",
@@ -661,7 +679,9 @@
    "answer": 1,
    "explain": "Le TCD synthétise : sommes, moyennes ou nombres par catégorie, en laissant la source intacte. Il ne protège pas un fichier, ne convertit pas de format et ne gère pas la messagerie.",
    "seconds": 40,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-tcd.svg",
+   "imgAlt": "Tableau croisé dynamique, valeurs fictives : à gauche la liste source de quatre lignes (Région, Trimestre, Volume : Nord T1 120, Nord T2 140, Sud T1 80, Sud T2 60) ; au centre les quatre zones du tableau croisé (Filtres : Année ; Lignes : Région ; Colonnes : Trimestre ; Valeurs : Somme de Volume) ; à droite le résultat : Nord 120 et 140, total 260 ; Sud 80 et 60, total 140 ; totaux T1 200, T2 200, total général 400. Une flèche Actualiser relie la source au tableau."
   },
   {
    "id": "min-bureautique-034",
@@ -699,7 +719,7 @@
    "id": "min-bureautique-036",
    "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
    "level": 2,
-   "q": "Votre tableau croisé dynamique affiche des totaux par direction. Un collègue corrige trois montants dans la source, mais le TCD ne bouge pas. Que faites-vous ?",
+   "q": "Sur la figure, le tableau croisé affiche des totaux par région à partir de la liste source. Un collègue corrige trois montants dans la liste, mais le tableau ne bouge pas. Que faites-vous ?",
    "choices": [
     "Supprimer le TCD et ressaisir tous les totaux à la main",
     "Actualiser le tableau croisé dynamique, qui ne se met pas à jour automatiquement",
@@ -709,7 +729,9 @@
    "answer": 1,
    "explain": "Un TCD garde ses résultats jusqu'à l'actualisation (clic droit, Actualiser). Ressaisir est inutile et risqué ; rouvrir ou trier la source n'actualise pas le tableau.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-tcd.svg",
+   "imgAlt": "Tableau croisé dynamique, valeurs fictives : à gauche la liste source de quatre lignes (Région, Trimestre, Volume : Nord T1 120, Nord T2 140, Sud T1 80, Sud T2 60) ; au centre les quatre zones du tableau croisé (Filtres : Année ; Lignes : Région ; Colonnes : Trimestre ; Valeurs : Somme de Volume) ; à droite le résultat : Nord 120 et 140, total 260 ; Sud 80 et 60, total 140 ; totaux T1 200, T2 200, total général 400. Une flèche Actualiser relie la source au tableau."
   },
   {
    "id": "min-bureautique-037",
@@ -765,7 +787,7 @@
    "id": "min-bureautique-040",
    "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
    "level": 3,
-   "q": "Dans une note à destination de la direction, un histogramme compare deux années : 96 et 100 (en pourcentage de réalisation). L'axe vertical commence à 95 et la deuxième colonne paraît cinq fois plus haute. Que lui reprochez-vous et que proposez-vous ?",
+   "q": "Dans une note à destination de la direction, un histogramme compare deux années de taux de réalisation avec un axe vertical tronqué, comme le graphique de gauche de la figure. Que lui reprochez-vous et que proposez-vous ?",
    "choices": [
     "Rien à reprocher : un graphique doit toujours viser à montrer des écarts spectaculaires pour retenir l'attention de la direction",
     "Les colonnes sont trop larges ; il faut les remplacer par un camembert",
@@ -773,9 +795,11 @@
     "Le titre est trop précis ; il vaut mieux ne pas en mettre du tout pour éviter les critiques de la direction"
    ],
    "answer": 2,
-   "explain": "Un axe qui ne part pas de zéro dans un histogramme déforme la perception : 4 points d'écart paraissent énormes. Une échelle honnête et des valeurs affichées garantissent la lecture. Le camembert et la suppression du titre n'apportent rien.",
+   "explain": "Un axe qui ne part pas de zéro dans un histogramme déforme la perception : sur la figure, une hausse de 4 % (500 à 520) fait paraître la deuxième barre trois fois plus haute. Une échelle honnête depuis zéro et des valeurs affichées garantissent la lecture. Le camembert et la suppression du titre ne corrigent rien.",
    "seconds": 100,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-graphiques-trompeurs.svg",
+   "imgAlt": "Mêmes données fictives, deux présentations : la production passe de 500 à 520 millions de barils (+4 %). À gauche, graphique trompeur dont l'axe vertical commence à 490 : la barre de 2023 paraît trois fois plus haute que celle de 2022. À droite, graphique correct dont l'axe commence à 0 : les deux barres sont presque de même hauteur"
   },
   {
    "id": "min-bureautique-041",
@@ -989,7 +1013,7 @@
    "id": "min-bureautique-054",
    "theme": "Messagerie professionnelle",
    "level": 1,
-   "q": "Que faire d'un message inattendu qui demande de cliquer sur un lien pour « éviter la fermeture de votre compte » ?",
+   "q": "Sur le courriel fictif de la figure, que faites-vous face à ce message inattendu qui demande de cliquer sur un lien pour « éviter la fermeture de votre compte » ?",
    "choices": [
     "Cliquer sur le lien pour vérifier rapidement si le site est authentique, puis refermer la page",
     "Le transférer à tous les collègues du service pour les prévenir, sans l'avoir signalé au service informatique",
@@ -999,7 +1023,9 @@
    "answer": 2,
    "explain": "L'urgence, l'expéditeur inattendu et le lien sont des indices d'hameçonnage. La bonne réaction est de ne pas interagir et de signaler. Cliquer, répondre avec un mot de passe ou diffuser à tous aggrave le risque.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-hameconnage.svg",
+   "imgAlt": "Courriel d'hameçonnage fictif avec six indices numérotés : adresse d'expéditeur étrangère à l'organisme, urgence et menace dans l'objet, formule générique, fautes, demande de mot de passe, lien dont l'adresse réelle diffère ; puis déroulé de l'attaque en quatre étapes"
   },
   {
    "id": "min-bureautique-055",

@@ -13,7 +13,9 @@
     "Pouvoirs de l'article 21 : injonctions et mises en demeure, accès sans restriction aux sites et aux documents, mesures conservatoires.",
     "Le secret professionnel s'impose (article 22) ; transiger relève du Directeur général compétent ou de l'autorité compétente (article 23).",
     "Le contrôle comprend le volet technique et le volet comptable, juridique et fiscal (articles 243 et 244)."
-   ]
+   ],
+   "img": "svg/min-hierarchie-normes.svg",
+   "imgAlt": "Schéma de la hiérarchie des normes, de la plus forte à la plus faible : Constitution, traités, lois, ordonnances, décrets, arrêtés, circulaires."
   },
   {
    "id": "m2",
@@ -59,7 +61,9 @@
     "Un fait, un constat : le non-cumul des pénalités ne s'applique pas (article 264).",
     "Le procès-verbal est dressé par un agent assermenté et fait foi jusqu'à preuve contraire (article 19).",
     "Respecter le contradictoire ; aucune modification sans nouvelle preuve ; recommandations mesurables avec délai."
-   ]
+   ],
+   "img": "svg/min2-ctrl-modele-pv.svg",
+   "imgAlt": "Gabarit annoté d'un procès-verbal de constat : mentions de l'agent assermenté et de l'ordre de mission, date, heure et lieu, faits observés, mesures relevées, disposition méconnue, déclarations de l'opérateur, annexes numérotées, signatures avec mention du refus de signer et remise de copie contre décharge, accompagnés de sept explications numérotées."
   },
   {
    "id": "m5",
@@ -89,7 +93,9 @@
     "Retard météo : reprogrammer, informer, ne jamais pousser l'équipage.",
     "Contrôles propres : torchage (articles 125 à 127), comptage (articles 247 et 252), enlèvements (article 250), eaux (article 244).",
     "Sécuriser les preuves avant le retour : copies, échantillons scellés, notification d'incident (article 241)."
-   ]
+   ],
+   "img": "photo/fpso.jpg",
+   "imgAlt": "Photographie d'une unité flottante de production et de stockage (FPSO) amarrée en mer, vue de haut : coque rouge et orange, installations de traitement sur le pont, héliport vert à l'arrière et torche au sommet d'un mât à l'avant."
   },
   {
    "id": "m7",
@@ -103,7 +109,9 @@
     "Conflit d'intérêts : le déclarer sans délai à la hiérarchie et se retirer du dossier.",
     "Secret professionnel (article 22) ; l'agent ne négocie pas : la transaction relève de l'article 23.",
     "Corruption ou pressions : refuser, consigner, rendre compte, maintenir le constat étayé."
-   ]
+   ],
+   "img": "svg/min-arbre-conflit-interets.svg",
+   "imgAlt": "Arbre de décision : un cadeau ou une invitation est proposé, ou un conflit d'intérêts potentiel existe ; l'arbre indique la conduite à tenir (refuser, informer la hiérarchie, se retirer du dossier)."
   }
  ],
  "questions": [
@@ -341,7 +349,7 @@
    "id": "min-inspection-011",
    "theme": "Base légale et prérogatives de l'agent contrôleur",
    "level": 3,
-   "q": "Un opérateur conteste une mesure prise lors de votre contrôle auprès du responsable administratif, puis forme un recours hiérarchique devant le Ministre, qui garde le silence pendant plus de trente jours. Quelle est la conséquence juridique ?",
+   "q": "Sur le schéma des voies de recours, un opérateur conteste une mesure prise lors de votre contrôle auprès du responsable administratif, puis forme un recours hiérarchique devant le Ministre, qui garde le silence pendant plus de trente jours. Quelle est la conséquence juridique ?",
    "choices": [
     "Le silence vaut acceptation du recours et annule la mesure contestée par l'opérateur",
     "Le silence vaut rejet ; un recours contentieux reste possible",
@@ -358,7 +366,9 @@
      "art": "Article 21",
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-   ]
+   ],
+   "img": "svg/min-recours-administratifs.svg",
+   "imgAlt": "Schéma des voies de recours contre une décision administrative : recours gracieux auprès de l'auteur, hiérarchique auprès du supérieur, de tutelle si un texte le prévoit, puis recours contentieux devant la juridiction administrative."
   },
   {
    "id": "min-inspection-012",
@@ -433,7 +443,7 @@
    "id": "min-inspection-015",
    "theme": "Préparer une inspection",
    "level": 2,
-   "q": "Vous classez trois sites selon probabilité × gravité (échelle de 1 à 5). Site A : 2 et 5 ; site B : 4 et 3 ; site C : 5 et 1. Dans quel ordre les visitez-vous, en suivant ce score ?",
+   "q": "Sur la matrice de risque 5 par 5, vous classez trois sites selon probabilité × gravité. Site A : probabilité 2 et gravité 5 ; site B : 4 et 3 ; site C : 5 et 1. Dans quel ordre les visitez-vous, en suivant ce score ?",
    "choices": [
     "B (12), puis A (10), puis C (5)",
     "A (10), puis B (12), puis C (5)",
@@ -443,23 +453,27 @@
    "answer": 0,
    "explain": "Le produit donne 12 pour B, 10 pour A et 5 pour C : on part du score le plus élevé. L'ordre A, B, C ne suit pas les scores. Traiter C en premier inverse la logique. Placer tous les sites au même rang ferait perdre l'intérêt de la méthode ; elle reste une aide, un site à gravité maximale pouvant être visité en priorité.",
    "seconds": 75,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/risk-matrix.svg",
+   "imgAlt": "Matrice de risque de 5 par 5 : la probabilité en abscisse, la gravité en ordonnée, le niveau de risque étant le produit des deux, de faible (vert) à critique (rouge)."
   },
   {
    "id": "min-inspection-016",
    "theme": "Préparer une inspection",
    "level": 2,
-   "q": "Vous inspectez un parc de stockage de brut où un dégagement de gaz toxique est possible. Quel équipement minimal choisissez-vous ?",
+   "q": "La photo montre un intervenant équipé d'un casque, de protections auditives et d'un harnais. Vous inspectez un parc de stockage de brut où un dégagement de gaz toxique est possible. Quel équipement individuel faut-il ajouter à ceux de la photo ?",
    "choices": [
-    "Une tenue de ville avec un gilet de visiteur fourni à l'entrée du site",
-    "Casque, lunettes, chaussures de sécurité, vêtements ignifugés, détecteur de gaz portatif",
-    "Un casque seul, le reste étant fourni sur place sans aucun contrôle",
-    "Aucun équipement personnel : tout relève de la seule responsabilité de l'opérateur et de son service sécurité"
+    "Un gilet de visiteur fourni à l'entrée du site",
+    "Un détecteur de gaz portatif",
+    "Un second casque de rechange pour l'accompagnateur",
+    "Un appareil photo ordinaire pour les constats"
    ],
    "answer": 1,
-   "explain": "Les équipements de protection individuelle de base en zone d'exploitation comprennent casque, lunettes, chaussures de sécurité, vêtements ignifugés et antistatiques, et détecteur de gaz portatif lorsque l'atmosphère peut être dangereuse. L'inspecteur doit arriver équipé et ne pas déléguer sa sécurité à l'opérateur.",
+   "explain": "Le casque, les protections auditives et le harnais ne détectent pas le gaz. En atmosphère possiblement dangereuse, l'inspecteur ajoute un détecteur de gaz portatif aux équipements de base (casque, lunettes, chaussures de sécurité, vêtements ignifugés) et ne délègue pas sa sécurité à l'opérateur. Un gilet de visiteur ou un casque de rechange ne protègent pas du gaz ; un appareil photo ordinaire n'est pas admis en zone classée.",
    "seconds": 60,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/workers-ppe.jpg",
+   "imgAlt": "Photographie d'un ouvrier, vu de dos et de profil, sur une plateforme de travail d'une installation industrielle : casque bleu avec protections auditives jaunes, combinaison bleue à bandes réfléchissantes, harnais antichute orange relié par une longe, au milieu de tuyauteries rouillées."
   },
   {
    "id": "min-inspection-017",
@@ -613,7 +627,7 @@
    "id": "min-inspection-024",
    "theme": "Conduire l'inspection sur site",
    "level": 1,
-   "q": "Une photo horodatée d'une torche en fonctionnement constitue quelle sorte de preuve ?",
+   "q": "La photo montre une torche en fonctionnement. Une photo horodatée de ce type, prise par l'inspecteur, constitue quelle sorte de preuve ?",
    "choices": [
     "Une preuve testimoniale, fondée sur des déclarations",
     "Une preuve documentaire, issue d'un registre comptable",
@@ -623,7 +637,9 @@
    "answer": 2,
    "explain": "Ce que l'on voit, mesure ou prélève est une preuve physique. Les preuves testimoniales sont les déclarations des personnes ; les preuves documentaires sont des pièces comme les registres ou les certificats. Une photo prise par l'inspecteur n'est pas une déclaration de l'opérateur.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/flare-stack.jpg",
+   "imgAlt": "Photographie d'une torche de production : un mât métallique haubané au sommet duquel brûle une grande flamme de gaz torché, avec un épais panache de fumée noire, devant un ciel bleu."
   },
   {
    "id": "min-inspection-025",
@@ -805,7 +821,7 @@
    "id": "min-inspection-034",
    "theme": "Constat, preuves et rapport",
    "level": 2,
-   "q": "Laquelle de ces formulations constitue un constat correct ?",
+   "q": "Dans la rubrique « Quoi : des faits » du modèle de procès-verbal, laquelle de ces formulations constitue un constat correct ?",
    "choices": [
     "« La torche brûle beaucoup trop ; l'opérateur est manifestement négligent. »",
     "« Il semble que le torchage du puits P-3 soit probablement excessif. »",
@@ -822,7 +838,9 @@
      "art": "Article 125",
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-   ]
+   ],
+   "img": "svg/min2-ctrl-modele-pv.svg",
+   "imgAlt": "Gabarit annoté d'un procès-verbal de constat : mentions de l'agent assermenté et de l'ordre de mission, date, heure et lieu, faits observés, mesures relevées, disposition méconnue, déclarations de l'opérateur, annexes numérotées, signatures avec mention du refus de signer et remise de copie contre décharge, accompagnés de sept explications numérotées."
   },
   {
    "id": "min-inspection-035",
@@ -1279,7 +1297,7 @@
    "id": "min-inspection-056",
    "theme": "Inspection en mer et logistique",
    "level": 2,
-   "q": "Vous suivez un enlèvement de brut sur un terminal en mer. Qui contrôle l'opération, selon la loi ?",
+   "q": "La photo montre une unité flottante de production et de stockage amarrée en mer. Vous suivez l'enlèvement d'une cargaison de brut sur un terminal de ce type. Qui contrôle l'opération, selon la loi ?",
    "choices": [
     "L'opérateur, seul, puisqu'il connaît le mieux ses propres installations",
     "Le capitaine du navire pétrolier, seul, en tant que maître à bord",
@@ -1296,7 +1314,9 @@
      "art": "Article 250",
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-   ]
+   ],
+   "img": "photo/fpso.jpg",
+   "imgAlt": "Photographie d'une unité flottante de production et de stockage (FPSO) amarrée en mer, vue de haut : coque rouge et orange, installations de traitement sur le pont, héliport vert à l'arrière et torche au sommet d'un mât à l'avant."
   },
   {
    "id": "min-inspection-057",
@@ -1435,7 +1455,7 @@
    "id": "min-inspection-064",
    "theme": "Relations avec l'opérateur et éthique de l'inspecteur",
    "level": 1,
-   "q": "Le directeur d'une entreprise sous-traitante du site est votre proche parent. Que faites-vous ?",
+   "q": "Sur l'arbre de décision, le directeur d'une entreprise sous-traitante du site est votre proche parent : c'est un conflit d'intérêts potentiel. Que faites-vous ?",
    "choices": [
     "Je poursuis la mission sans rien dire, mon lien étant sans effet sur mes constats",
     "Je le déclare sans délai à ma hiérarchie et je me retire du dossier concerné",
@@ -1445,7 +1465,9 @@
    "answer": 1,
    "explain": "Un lien familial est un conflit d'intérêts : on le déclare et on se retire. Le cacher est plus grave que le lien lui-même ; surcompenser par la sévérité est aussi une partialité.",
    "seconds": 50,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-arbre-conflit-interets.svg",
+   "imgAlt": "Arbre de décision : un cadeau ou une invitation est proposé, ou un conflit d'intérêts potentiel existe ; l'arbre indique la conduite à tenir (refuser, informer la hiérarchie, se retirer du dossier)."
   },
   {
    "id": "min-inspection-065",

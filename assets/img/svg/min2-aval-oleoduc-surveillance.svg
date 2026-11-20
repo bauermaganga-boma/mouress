@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Oléoduc entre une station de départ et un terminal : débit d'entrée de 500 m³/h et de sortie de 460 m³/h, chute brutale de pression à l'endroit d'une fuite, vannes de sectionnement, lanceur de racleur et anode de protection cathodique</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}.n{font-size:13px}.w{fill:#FCFBF8;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+.gd{fill:none;stroke:#D5D9E0;stroke-width:1.5}
+.da{fill:none;stroke:#B85C0A;stroke-width:2.5;stroke-dasharray:8 6}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Surveiller un oléoduc : débit, pression, racleur (schéma)</text>
+<text x="400" y="52" class="c o">VALEURS FICTIVES : entrée 500 m³/h, sortie 460 m³/h</text>
+<path d="M90,80V230H715" class="s"/>
+<text x="84" y="100" class="e n">Pression</text>
+<path d="M90,110L715,190" class="da"/>
+<path d="M90,110L440,150L440,196L715,214" fill="none" stroke="#061F44" stroke-width="3.5"/>
+<text x="600" y="168" class="o">Profil normal (tirets)</text>
+<text x="190" y="98" class="b">Profil avec fuite : chute brutale</text>
+<circle cx="440" cy="173" r="7" fill="#F28C28" stroke="#061F44" stroke-width="2"/>
+<text x="452" y="246" class="n">Position de la fuite</text>
+<rect x="30" y="300" width="70" height="60" class="bl"/><text x="65" y="326" class="c n b">Station</text><text x="65" y="344" class="c n b">de départ</text>
+<path d="M100,330H700" stroke="#061F44" stroke-width="12"/>
+<rect x="700" y="300" width="75" height="60" class="bl"/><text x="737" y="326" class="c n b">Terminal</text><text x="737" y="344" class="c n b">d'arrivée</text>
+<path d="M20,282H100" class="nv" marker-end="url(#ar)"/><text x="20" y="270" class="b">Entrée : 500 m³/h</text>
+<path d="M700,282H775" class="nv" marker-end="url(#ar)"/><text x="778" y="270" class="b e">Sortie : 460 m³/h</text>
+<path d="M440,338V380" class="or" marker-end="url(#ao)"/>
+<text x="452" y="372" class="o">Fuite</text>
+<rect x="234" y="316" width="14" height="28" class="gr"/><rect x="590" y="316" width="14" height="28" class="gr"/>
+<text x="241" y="304" class="c n">Vanne</text><text x="597" y="304" class="c n">Vanne</text>
+<rect x="110" y="316" width="50" height="28" rx="14" fill="#F28C28" stroke="#061F44" stroke-width="2"/>
+<path d="M135,346V392" class="ld"/><text x="135" y="410" class="c n b">Lanceur de racleur</text>
+<rect x="300" y="394" width="40" height="14" class="gr"/><path d="M320,394V342" class="ld"/>
+<text x="320" y="428" class="c n b">Anode : protection</text><text x="320" y="445" class="c n b">cathodique</text>
+<rect x="520" y="392" width="250" height="58" rx="8" class="bl"/>
+<text x="530" y="414" class="b">Écart de débit : 500 − 460 = 40 m³/h</text>
+<text x="530" y="434" class="b">soit 8 % du débit d'entrée</text>
+<text x="400" y="486" class="c n">Valeurs fictives. Le racleur instrumenté inspecte la paroi de l'intérieur de la ligne.</text>
+</svg>

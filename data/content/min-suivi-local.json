@@ -14,8 +14,8 @@
     "Une base de calcul ou une définition manquante doit être levée par écrit avant tout contrôle.",
     "Le format exact du plan relève des textes réglementaires et du contrat : à confirmer."
    ],
-   "img": "svg/min-indicateurs-contenu-local.svg",
-   "imgAlt": "Tableau fictif d'un plan de contenu local, avec les colonnes prévu, réalisé et taux. Effectif total : 200 prévu, 200 réalisé (100 %). Gabonais dans l'effectif : 170 prévus, 150 réalisés (88 %). Expatriés remplacés par un Gabonais : 4 prévus, 3 réalisés (75 %). Formation : 6 000 heures prévues, 4 800 réalisées (80 %). Achats à des entreprises autochtones : 600 millions de FCFA prévus, 420 réalisés (70 %). Contrats confiés à des PME nationales : 12 prévus, 6 réalisés (50 %)."
+   "img": "svg/min2-ctrl-entreprise-autochtone.svg",
+   "imgAlt": "Schéma des trois conditions cumulatives de l'entreprise autochtone : au moins 60 % du capital détenu par des nationaux, direction assurée par des nationaux, au moins 80 % de nationaux parmi les employés. Deux exemples fictifs : la société X (capital 62 %, gérant gabonais, 85 % de nationaux) remplit les trois conditions ; la société Y (capital 70 %, direction effective par un cadre étranger, 75 % de nationaux) ne les remplit pas."
   },
   {
    "id": "m2",
@@ -45,7 +45,9 @@
     "Démarche : complétude, cohérence interne, rapprochement externe, échantillonnage.",
     "Un écart ou un signal d'alerte appelle une question écrite, non une accusation.",
     "L'entrave aux contrôles est sanctionnée (art. 278) : consigner chaque demande restée sans réponse."
-   ]
+   ],
+   "img": "svg/min-itie-rapprochement.svg",
+   "imgAlt": "Schéma de rapprochement : les entreprises déclarent leurs paiements à l'État, l'État déclare ses recettes ; le rapport rapproche les deux déclarations, explique et documente les écarts, puis est publié."
   },
   {
    "id": "m4",
@@ -107,7 +109,9 @@
     "Un tableau de bord pluriannuel par opérateur permet de lire la tendance.",
     "Un calendrier et un registre partagés évitent la perte de suivi lors des changements d'agents.",
     "Respecter la confidentialité des données des opérateurs."
-   ]
+   ],
+   "img": "svg/min-mgt-tableau-de-bord.svg",
+   "imgAlt": "Tableau de bord mensuel fictif d'un service : chaque indicateur est comparé à une cible avec un code couleur (rouge, orange, vert) : dossiers traités dans les délais 72 % pour une cible de 90 %, délai moyen de traitement 11 jours pour une cible de 10 jours, taux d'absentéisme 4 %."
   }
  ],
  "questions": [
@@ -172,15 +176,15 @@
    "id": "min-suivi-local-004",
    "theme": "Lire un plan de contenu local",
    "level": 1,
-   "q": "Un plan cite un partenaire présenté comme « entreprise autochtone ». Quelles conditions faut-il lui vérifier selon l'article 9 de la loi ?",
+   "q": "Sur le schéma, la société Y (capital national 70 %, direction effective assurée par un cadre étranger, 75 % d'employés nationaux) est citée dans un plan comme « entreprise autochtone ». Que concluez-vous selon l'article 9 de la loi ?",
    "choices": [
-    "Capital détenu à 51 % par des nationaux, dirigeants étrangers acceptés, et 50 % d'employés nationaux au minimum",
-    "Capital entièrement détenu par l'État, avec 80 % de nationaux dans la direction seulement",
-    "Simple immatriculation au Gabon, sans aucune condition sur la détention du capital ni sur le personnel employé",
-    "Capital détenu à partir de 60 % par des nationaux qui la dirigent, et au moins 80 % de nationaux employés"
+    "Elle l'est, car son capital national dépasse le seuil de 60 % exigé",
+    "Elle l'est, car son taux d'emploi de 75 % est proche du seuil exigé",
+    "Elle l'est, car une simple immatriculation au Gabon suffit en droit",
+    "Elle ne l'est pas : la direction n'est pas nationale et l'emploi reste sous 80 %"
    ],
    "answer": 3,
-   "explain": "L'article 9 définit l'entreprise autochtone comme une société de droit gabonais dont le capital est détenu à partir de 60 % par des nationaux qui la dirigent et qui emploie au moins 80 % de nationaux. Un capital public entier correspond à l'opérateur national, et la seule immatriculation ne suffit pas.",
+   "explain": "L'article 9 pose trois conditions cumulatives : capital détenu à partir de 60 % par des nationaux, direction assurée par eux, au moins 80 % de nationaux employés. La société Y satisfait la condition de capital, mais sa direction est étrangère et son taux d'emploi (75 %) est inférieur à 80 % : elle n'est pas autochtone. L'immatriculation au Gabon ne suffit pas.",
    "seconds": 45,
    "status": "draft",
    "refs": [
@@ -189,7 +193,9 @@
      "art": "Article 9",
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-   ]
+   ],
+   "img": "svg/min2-ctrl-entreprise-autochtone.svg",
+   "imgAlt": "Schéma des trois conditions cumulatives de l'entreprise autochtone : au moins 60 % du capital détenu par des nationaux, direction assurée par des nationaux, au moins 80 % de nationaux parmi les employés. Deux exemples fictifs : la société X (capital 62 %, gérant gabonais, 85 % de nationaux) remplit les trois conditions ; la société Y (capital 70 %, direction effective par un cadre étranger, 75 % de nationaux) ne les remplit pas."
   },
   {
    "id": "min-suivi-local-005",
@@ -600,7 +606,7 @@
    "id": "min-suivi-local-026",
    "theme": "Vérification sur pièces",
    "level": 2,
-   "q": "Un sous-traitant déclare 150 000 heures de salariés gabonais, mais ses déclarations sociales n'en couvrent que 90 000. Quelle est votre première démarche ?",
+   "q": "Sur le schéma de rapprochement, deux déclarations sont comparées et les écarts doivent être expliqués. Un sous-traitant déclare 150 000 heures de salariés gabonais, mais ses déclarations sociales n'en couvrent que 90 000. Quelle est votre première démarche ?",
    "choices": [
     "Conclure à une fraude et proposer aussitôt une pénalité",
     "Ignorer l'écart, les déclarations sociales étant toujours incomplètes",
@@ -610,7 +616,9 @@
    "answer": 2,
    "explain": "L'écart de 60 000 heures (40 %) est un signal : il appelle une explication écrite avant toute qualification. Conclure à la fraude sans instruction est prématuré, ignorer l'écart est une faute de suivi, et modifier les chiffres unilatéralement n'est pas contradictoire. Chiffres fictifs.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-itie-rapprochement.svg",
+   "imgAlt": "Schéma de rapprochement : les entreprises déclarent leurs paiements à l'État, l'État déclare ses recettes ; le rapport rapproche les deux déclarations, explique et documente les écarts, puis est publié."
   },
   {
    "id": "min-suivi-local-027",
@@ -1280,7 +1288,7 @@
    "id": "min-suivi-local-058",
    "theme": "Sous-traitance et dialogue avec les PME",
    "level": 2,
-   "q": "Votre grille de suivi demande la part d'achats auprès d'« entreprises autochtones ». Un collègue y inclut toutes les sociétés de droit gabonais. Que lui dites-vous ?",
+   "q": "Votre grille de suivi demande la part d'achats auprès d'« entreprises autochtones ». Un collègue y inclut la société Y du schéma, société de droit gabonais (capital national 70 %, direction effective étrangère, 75 % d'employés nationaux). Que lui dites-vous ?",
    "choices": [
     "Que les deux notions sont identiques selon la loi, toute société de droit gabonais étant par définition autochtone",
     "Que l'entreprise autochtone n'est définie nulle part dans la loi et relève uniquement de la pratique des opérateurs",
@@ -1297,7 +1305,9 @@
      "art": "Article 9",
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-   ]
+   ],
+   "img": "svg/min2-ctrl-entreprise-autochtone.svg",
+   "imgAlt": "Schéma des trois conditions cumulatives de l'entreprise autochtone : au moins 60 % du capital détenu par des nationaux, direction assurée par des nationaux, au moins 80 % de nationaux parmi les employés. Deux exemples fictifs : la société X (capital 62 %, gérant gabonais, 85 % de nationaux) remplit les trois conditions ; la société Y (capital 70 %, direction effective par un cadre étranger, 75 % de nationaux) ne les remplit pas."
   },
   {
    "id": "min-suivi-local-059",
@@ -1376,7 +1386,7 @@
    "id": "min-suivi-local-063",
    "theme": "Rapport au cabinet et suivi dans la durée",
    "level": 1,
-   "q": "À quoi sert un tableau de bord pluriannuel par opérateur ?",
+   "q": "Sur ce modèle de tableau de bord à code couleur, chaque indicateur est comparé à une cible. À quoi sert un tableau de bord pluriannuel par opérateur ?",
    "choices": [
     "À suivre les indicateurs dans la durée et à dégager la tendance",
     "À remplacer toute vérification sur pièces",
@@ -1386,7 +1396,9 @@
    "answer": 0,
    "explain": "Un tableau de bord conserve l'historique des indicateurs et permet de distinguer un opérateur qui progresse d'un autre qui recule. Il ne remplace pas la vérification, et les données restent confidentielles.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-mgt-tableau-de-bord.svg",
+   "imgAlt": "Tableau de bord mensuel fictif d'un service : chaque indicateur est comparé à une cible avec un code couleur (rouge, orange, vert) : dossiers traités dans les délais 72 % pour une cible de 90 %, délai moyen de traitement 11 jours pour une cible de 10 jours, taux d'absentéisme 4 %."
   },
   {
    "id": "min-suivi-local-064",
@@ -1415,7 +1427,7 @@
    "id": "min-suivi-local-065",
    "theme": "Rapport au cabinet et suivi dans la durée",
    "level": 2,
-   "q": "Un opérateur A progresse de 3 points de nationaux par an, un opérateur B recule de 3 points chaque année, tous deux sous la cible. Comment le présentez-vous au cabinet ?",
+   "q": "Sur un tableau de bord à code couleur comme celui du schéma, vous suivez deux opérateurs. Un opérateur A progresse de 3 points de nationaux par an, un opérateur B recule de 3 points chaque année, tous deux sous la cible. Comment le présentez-vous au cabinet ?",
    "choices": [
     "Distinguer les deux trajectoires : A « à surveiller, en progrès », B « en dégradation », avec risque de relance",
     "Les classer tous deux simplement « non conformes », sans nuance, puisque les deux restent sous la cible fixée",
@@ -1425,7 +1437,9 @@
    "answer": 0,
    "explain": "La tendance éclaire la décision : un opérateur qui progresse ne justifie pas la même réponse qu'un autre qui se dégrade. Se limiter à une année ou à un seul cas appauvrit l'information donnée au cabinet.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-mgt-tableau-de-bord.svg",
+   "imgAlt": "Tableau de bord mensuel fictif d'un service : chaque indicateur est comparé à une cible avec un code couleur (rouge, orange, vert) : dossiers traités dans les délais 72 % pour une cible de 90 %, délai moyen de traitement 11 jours pour une cible de 10 jours, taux d'absentéisme 4 %."
   },
   {
    "id": "min-suivi-local-066",

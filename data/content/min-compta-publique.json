@@ -12,7 +12,9 @@
     "Séparation de l'ordonnateur et du comptable : deux fonctions incompatibles pour une même personne.",
     "Principes : régularité, sincérité, image fidèle, indépendance des exercices, non-compensation.",
     "Comptabilités budgétaire, générale et patrimoniale : elles se complètent."
-   ]
+   ],
+   "img": "svg/min2-compta-droits-constates.svg",
+   "imgAlt": "Frise sur deux exercices : service rendu le 28 novembre de l'exercice N, paiement le 15 février de l'exercice N+1 ; la charge suit l'exercice où naît l'obligation (exemple fictif)."
   },
   {
    "id": "m2",
@@ -26,7 +28,9 @@
     "Le comptable contrôle la régularité, pas l'opportunité ; il peut rejeter par écrit en motivant.",
     "La réquisition de l'ordonnateur est encadrée ; elle ne couvre pas tous les motifs de rejet.",
     "Pièce falsifiée : sanctions disciplinaires et pénales."
-   ]
+   ],
+   "img": "svg/min-chaine-depense.svg",
+   "imgAlt": "Schéma de la chaîne de la dépense : engagement, liquidation, ordonnancement, paiement, avec la répartition entre ordonnateur et comptable public."
   },
   {
    "id": "m3",
@@ -40,7 +44,9 @@
     "Reçus à souche, livre de caisse et contrôles inopinés : la tenue des documents est essentielle.",
     "Le régisseur est responsable personnellement et pécuniairement ; il est en principe cautionné ou assuré.",
     "Un prêt de caisse ou une dépense hors acte constitutif est une faute."
-   ]
+   ],
+   "img": "svg/min2-compta-regies.svg",
+   "imgAlt": "Schéma des deux régies : régie d'avances (avance, dépenses, justification, reconstitution) et régie de recettes (encaissement, reçu à souche, versement au comptable)."
   },
   {
    "id": "m4",
@@ -70,7 +76,9 @@
     "Suivi du carburant par bons numérotés rattachés à un véhicule ; comparer la consommation réelle à la consommation attendue.",
     "Entretien préventif, devis préalable, contrôle de la prestation avant paiement.",
     "Assurance de responsabilité civile obligatoire ; déclaration du sinistre dans les délais."
-   ]
+   ],
+   "img": "svg/min2-compta-carnet-bord.svg",
+   "imgAlt": "Extrait fictif de carnet de bord d'un véhicule : date, conducteur, ordre de mission, kilométrages de départ et d'arrivée, bon de carburant, visa."
   },
   {
    "id": "m6",
@@ -100,7 +108,9 @@
     "Régisseurs et gestionnaires des matières répondent des fonds et des biens qu'ils détiennent.",
     "Responsabilités disciplinaire, pénale et civile s'ajoutent.",
     "Passation de service : inventaire contradictoire et procès-verbal signé."
-   ]
+   ],
+   "img": "svg/min2-compta-qui-repond.svg",
+   "imgAlt": "Tableau « Qui répond de quoi ? » : comptable public, ordonnateur, régisseur et gestionnaire des matières, avec ce dont chacun répond et devant qui."
   },
   {
    "id": "m8",
@@ -114,7 +124,9 @@
     "Une mission de contrôle suit des étapes : lettre de mission, vérifications, contradiction, rapport, suivi.",
     "Pendant un contrôle : coopérer, ne rien détruire, répondre par écrit aux observations.",
     "Contrôle interne : séparation des tâches, écritures signées, archivage, accès limités."
-   ]
+   ],
+   "img": "svg/min2-compta-controles.svg",
+   "imgAlt": "Schéma des contrôles selon leur moment : avant la dépense (contrôle financier a priori), pendant (hiérarchique, comptable, interne), après (inspection, juge des comptes, loi de règlement)."
   }
  ],
  "questions": [
@@ -230,7 +242,7 @@
    "id": "min-compta-publique-006",
    "theme": "Principes comptables publics",
    "level": 2,
-   "q": "Des ordinateurs sont livrés le 20 décembre et facturés en janvier. En comptabilité générale en droits constatés, à quel exercice rattache-t-on la charge ?",
+   "q": "D'après la frise du schéma sur deux exercices, des ordinateurs sont livrés le 20 décembre et facturés en janvier. En comptabilité générale en droits constatés, à quel exercice rattache-t-on la charge ?",
    "choices": [
     "À l'exercice de la réception de la facture, seule date certaine",
     "À l'exercice du paiement effectif par le comptable",
@@ -240,7 +252,9 @@
    "answer": 3,
    "explain": "En droits constatés, la charge est rattachée à l'exercice où l'obligation naît, c'est-à-dire à la livraison. C'est le principe d'indépendance des exercices. La date de facture ou de paiement relève plutôt d'une logique de caisse ; le choix libre de l'ordonnateur fausserait la sincérité.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-compta-droits-constates.svg",
+   "imgAlt": "Frise de deux exercices séparés par le 31 décembre : service rendu le 28 novembre (exercice N) et paiement le 15 février (exercice N+1), avec le principe du rattachement de la charge (exemple fictif)."
   },
   {
    "id": "min-compta-publique-007",
@@ -358,7 +372,7 @@
    "id": "min-compta-publique-014",
    "theme": "Pièces justificatives",
    "level": 1,
-   "q": "Que contrôle le comptable avant de payer ?",
+   "q": "Sur le schéma de la chaîne de la dépense, à l'étape du paiement, que contrôle le comptable avant de payer ?",
    "choices": [
     "L'opportunité de la dépense au regard de la politique du ministère concerné",
     "La qualité technique des équipements achetés par le service demandeur",
@@ -368,7 +382,9 @@
    "answer": 2,
    "explain": "Le comptable contrôle la régularité formelle et financière, pas l'opportunité ni la qualité technique, qui relèvent de l'ordonnateur et du service utilisateur. Le nombre d'agents n'entre pas dans les contrôles de paiement.",
    "seconds": 60,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-chaine-depense.svg",
+   "imgAlt": "Schéma de la chaîne de la dépense en quatre étapes (engagement, liquidation, ordonnancement, paiement), l'étape du paiement listant les contrôles du comptable public."
   },
   {
    "id": "min-compta-publique-015",
@@ -534,7 +550,7 @@
    "id": "min-compta-publique-025",
    "theme": "Régies d'avances et de recettes",
    "level": 2,
-   "q": "Avance de 2 000 000 FCFA ; dépenses justifiées : 1 600 000 FCFA. Quel montant faut-il reconstituer pour rétablir l'avance ?",
+   "q": "Le schéma des régies indique que la reconstitution rétablit l'avance du régisseur. Pour une avance de 2 000 000 FCFA et des dépenses justifiées de 1 600 000 FCFA, quel montant faut-il reconstituer pour rétablir l'avance ?",
    "choices": [
     "2 000 000 FCFA",
     "400 000 FCFA",
@@ -544,7 +560,9 @@
    "answer": 3,
    "explain": "La reconstitution rétablit le niveau de l'avance à hauteur des dépenses justifiées : 1 600 000 FCFA. Reconstituer 2 000 000 FCFA dépasserait l'avance initiale, 400 000 FCFA est le solde resté en caisse, et 3 600 000 FCFA n'a pas de sens.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-compta-regies.svg",
+   "imgAlt": "Schéma de la régie d'avances (avance, dépenses, justification, reconstitution) et de la régie de recettes, avec un exemple fictif d'avance de 1 000 000 FCFA et de dépenses justifiées de 700 000 FCFA."
   },
   {
    "id": "min-compta-publique-026",
@@ -698,7 +716,7 @@
    "id": "min-compta-publique-035",
    "theme": "Inventaire et comptabilité des matières",
    "level": 2,
-   "q": "Un véhicule acquis 24 000 000 FCFA est amorti linéairement sur 8 ans. Quelle est sa valeur nette comptable après 4 ans ?",
+   "q": "Le graphique d'amortissement linéaire montre la valeur nette décroissante d'un bien (exemple fictif). Un véhicule acquis 24 000 000 FCFA est amorti linéairement sur 8 ans. Quelle est sa valeur nette comptable après 4 ans ?",
    "choices": [
     "12 000 000 FCFA",
     "3 000 000 FCFA",
@@ -708,7 +726,9 @@
    "answer": 0,
    "explain": "L'annuité est de 24 000 000 / 8 = 3 000 000 FCFA ; après 4 ans, 12 000 000 FCFA ont été amortis, d'où 12 000 000 FCFA de valeur nette. 3 000 000 FCFA est l'annuité, 20 000 000 FCFA ne correspond pas à 4 ans, et 24 000 000 FCFA est la valeur brute.",
    "seconds": 80,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-compta-amortissement.svg",
+   "imgAlt": "Histogramme de la valeur nette comptable d'un bien fictif de 16 millions de FCFA amorti sur 8 ans : de 16 millions à l'année 0 jusqu'à 0 à l'année 8, par pas de 2 millions."
   },
   {
    "id": "min-compta-publique-036",
@@ -830,7 +850,7 @@
    "id": "min-compta-publique-043",
    "theme": "Parc automobile",
    "level": 1,
-   "q": "À quoi sert le carnet de bord d'un véhicule ?",
+   "q": "Sur l'extrait fictif de carnet de bord (dates, conducteurs, kilométrages, bons de carburant), à quoi sert ce document ?",
    "choices": [
     "À consigner trajets, kilométrages, conducteurs et carburant",
     "À remplacer la carte grise lorsque celle-ci est perdue ou périmée",
@@ -840,7 +860,9 @@
    "answer": 0,
    "explain": "Le carnet de bord permet de contrôler l'usage et la consommation. Il ne remplace pas la carte grise ni les procédures d'achat, et ne détermine pas la valeur de revente.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-compta-carnet-bord.svg",
+   "imgAlt": "Extrait fictif de carnet de bord : deux lignes avec date, conducteur, ordre de mission, kilométrage de départ et d'arrivée, bon de carburant et visa."
   },
   {
    "id": "min-compta-publique-044",
@@ -1164,7 +1186,7 @@
    "id": "min-compta-publique-063",
    "theme": "Responsabilités",
    "level": 1,
-   "q": "De quelles opérations le régisseur répond-il ?",
+   "q": "Sur le tableau « Qui répond de quoi ? », de quelles opérations le régisseur répond-il ?",
    "choices": [
     "Des seules dépenses de son service, à l'exclusion des recettes",
     "Des fonds de sa régie, comme un comptable",
@@ -1174,7 +1196,9 @@
    "answer": 1,
    "explain": "Le régisseur manie des deniers publics : il répond comme un comptable des fonds de sa régie, quel que soit leur montant.",
    "seconds": 50,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-compta-qui-repond.svg",
+   "imgAlt": "Tableau de quatre acteurs (comptable public, ordonnateur, régisseur, gestionnaire des matières) avec ce dont chacun répond et devant qui."
   },
   {
    "id": "min-compta-publique-064",
@@ -1324,7 +1348,7 @@
    "id": "min-compta-publique-073",
    "theme": "Contrôle et audit",
    "level": 1,
-   "q": "Quel est le rôle du contrôle financier a priori ?",
+   "q": "Sur le schéma des contrôles avant, pendant et après la dépense, quel est le rôle du contrôle financier a priori ?",
    "choices": [
     "Juger les comptes des comptables plusieurs années après l'exercice",
     "Réaliser l'inventaire physique des biens à la clôture de l'exercice",
@@ -1334,7 +1358,9 @@
    "answer": 3,
    "explain": "Le contrôle financier donne ou refuse son visa avant la décision de dépense, ce qui prévient l'irrégularité. Juger les comptes est le rôle du juge ; l'inventaire et l'inspection des véhicules relèvent des services gestionnaires.",
    "seconds": 55,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-compta-controles.svg",
+   "imgAlt": "Schéma en trois colonnes : avant la dépense (contrôle financier a priori), pendant (contrôle hiérarchique, du comptable, interne), après (inspection, Cour des comptes, loi de règlement)."
   },
   {
    "id": "min-compta-publique-074",

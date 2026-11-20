@@ -45,7 +45,9 @@
         "Réserves 1P, 2P, 3P : de plus en plus larges, avec une confiance décroissante ; ressources et réserves ne sont pas synonymes.",
         "BSW = part d'eau ; GOR = gaz par baril d'huile ; API = légèreté du brut (API = 141,5 / d − 131,5).",
         "La sismique réduit le risque mais seul le forage prouve la présence d'hydrocarbures."
-      ]
+      ],
+      "img": "svg/min-matrice-reserves-ressources.svg",
+      "imgAlt": "Matrice de classification des ressources : colonnes estimation basse (P90), meilleure estimation (P50) et estimation haute (P10) ; lignes production, réserves (1P, 2P, 3P), ressources contingentes (1C, 2C, 3C), ressources prospectives et quantités non récupérables. Flèches : incertitude croissante vers la droite, maturité croissante vers le haut."
     },
     {
       "id": "m4",
@@ -91,7 +93,9 @@
         "Baril équivalent pétrole : convention d'environ 6 000 pi³ de gaz pour 1 bep.",
         "Production annuelle = débit journalier × nombre de jours de production.",
         "Plafond de récupération des coûts (art. 221) et part minimale de l'État (art. 215) : fourchettes de la loi, à vérifier au contrat."
-      ]
+      ],
+      "img": "svg/min2-amont-unites-conversion.svg",
+      "imgAlt": "Fiche de conversion : 1 baril ≈ 159 litres ≈ 0,159 m³ ; 1 m³ ≈ 6,29 barils ; 1 m³ de gaz ≈ 35,3 pieds cubes ; 6 000 pieds cubes ≈ 1 baril équivalent pétrole ; exemples chiffrés fictifs en bas."
     },
     {
       "id": "m7",
@@ -105,7 +109,9 @@
         "Découverte : information sans délai (art. 63) ; appréciation sous 18 ou 24 mois (art. 64).",
         "Développement et production : plan de développement approuvé (art. 86) et opérateur de droit gabonais (art. 85).",
         "Abandon : plan d'abandon et de réhabilitation avant toute opération (art. 173) et fonds de réhabilitation (art. 175-176)."
-      ]
+      ],
+      "img": "svg/min2-amont-durees-titres.svg",
+      "imgAlt": "Frise des durées et délais clés : autorisation de prospection 18 mois au plus ; exploration 8 ans plus 1 an de prorogation, plafond de 10 ans ; appréciation sous 18 ou 24 mois ; installations sous 2 ans ; développement-production de 25 à 35 ans au maximum selon le cas."
     }
   ],
   "questions": [
@@ -486,7 +492,7 @@
       "id": "min-amont-bases-022",
       "theme": "Vocabulaire essentiel de l'amont",
       "level": 1,
-      "q": "Quelle est la différence entre ressources et réserves ?",
+      "q": "Sur la matrice de classification, la ligne « réserves » (1P, 2P, 3P) est distincte des lignes « ressources ». Quelle est la différence entre ressources et réserves ?",
       "choices": [
         "Les réserves sont la part des ressources récupérable commercialement",
         "Les réserves sont les ressources qui ont déjà été produites",
@@ -496,7 +502,9 @@
       "answer": 0,
       "explain": "Les ressources englobent toutes les quantités susceptibles d'être récupérées ; les réserves sont la part considérée comme récupérable commercialement. Elles évoluent avec les connaissances, la technologie et les prix.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-matrice-reserves-ressources.svg",
+      "imgAlt": "Matrice de classification des ressources : colonnes P90, P50 et P10 ; lignes production, réserves (1P, 2P, 3P), ressources contingentes, ressources prospectives et quantités non récupérables ; la maturité croît vers le haut."
     },
     {
       "id": "min-amont-bases-023",
@@ -534,7 +542,7 @@
       "id": "min-amont-bases-025",
       "theme": "Vocabulaire essentiel de l'amont",
       "level": 2,
-      "q": "Une société annonce 100 millions de barils de réserves « 1P ». Que signifie 1P ?",
+      "q": "Sur la matrice de classification, repérez la case 1P : une société annonce 100 millions de barils de réserves « 1P ». Que signifie 1P ?",
       "choices": [
         "Des réserves possibles, de faible probabilité de succès",
         "Des réserves du seul premier puits foré",
@@ -544,7 +552,9 @@
       "answer": 3,
       "explain": "1P désigne les réserves prouvées, jugées très probables. 2P ajoute les probables, 3P les possibles. 1P n'a rien à voir avec le nombre de puits ni avec la vente.",
       "seconds": 55,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-matrice-reserves-ressources.svg",
+      "imgAlt": "Matrice de classification : la ligne des réserves comprend trois cases, 1P, 2P et 3P, placées respectivement dans les colonnes estimation basse, meilleure estimation et estimation haute."
     },
     {
       "id": "min-amont-bases-026",
@@ -873,7 +883,7 @@
       "id": "min-amont-bases-043",
       "theme": "Installations de production",
       "level": 1,
-      "q": "Que désigne un FPSO ?",
+      "q": "Quel type d'installation la photo montre-t-elle ?",
       "choices": [
         "Une plateforme fixe posée sur le fond",
         "Un oléoduc terrestre de grande longueur",
@@ -881,15 +891,17 @@
         "Une unité flottante de production et de stockage"
       ],
       "answer": 3,
-      "explain": "Le FPSO traite, stocke le brut et le décharge sur des navires-citernes. Une plateforme fixe repose sur le fond, un oléoduc est une conduite et un navire de forage sert à creuser les puits.",
+      "explain": "La photo montre un FPSO : une coque de navire portant les installations de traitement, un héliport et une torche, sans derrick de forage. Il traite, stocke le brut et le décharge sur des navires-citernes. Une plateforme fixe repose sur le fond, un oléoduc est une conduite et un navire de forage sert à creuser les puits.",
       "seconds": 40,
-      "status": "draft"
+      "status": "draft",
+      "img": "photo/fpso.jpg",
+      "imgAlt": "Photo aérienne d'une unité flottante de production en mer : longue coque de navire rouge et rouille, installations de traitement à l'avant, héliport vert à l'arrière, torche en flamme au sommet d'un mât ; aucun derrick de forage."
     },
     {
       "id": "min-amont-bases-044",
       "theme": "Installations de production",
       "level": 1,
-      "q": "Que prévoit l'article 125 de la loi n° 002/2019 au sujet du torchage ?",
+      "q": "La photo montre une flamme qui brûle au sommet d'un mât sur un site pétrolier, avec un panache de fumée noire. Que prévoit l'article 125 de la loi n° 002/2019 au sujet de cette pratique ?",
       "choices": [
         "Il est libre dans les limites du bloc",
         "Interdit, sauf dérogation temporaire",
@@ -906,7 +918,9 @@
           "art": "Article 125",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "photo/flare-stack.jpg",
+      "imgAlt": "Photo d'une torche : haut mât métallique haubané dont l'extrémité brûle une grande flamme orange, avec un panache de fumée noire, sur fond de ciel bleu et d'arbres."
     },
     {
       "id": "min-amont-bases-045",
@@ -974,7 +988,7 @@
       "id": "min-amont-bases-048",
       "theme": "Installations de production",
       "level": 2,
-      "q": "Quelle est la fonction principale d'un compresseur de gaz sur un site de production ?",
+      "q": "Sur la photo, une machine à plusieurs cylindres, reliée à de grosses tuyauteries, comprime du gaz. Quelle est la fonction principale d'un compresseur de gaz sur un site de production ?",
       "choices": [
         "Séparer l'eau du gaz par simple gravité dans un ballon",
         "Refroidir le brut avant son stockage en bac",
@@ -984,7 +998,9 @@
       "answer": 2,
       "explain": "Un compresseur élève la pression du gaz, ce qui permet de le réinjecter, de l'exporter ou de le consommer. La séparation par gravité est le rôle du séparateur, et le mesurage relève d'appareils de comptage.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "photo/gas-compressor.jpg",
+      "imgAlt": "Photo d'un compresseur de gaz à pistons exposé sous un abri : bloc de cylindres gris, grosses tuyauteries peintes en jaune et en vert, volant grillagé à gauche et panneau explicatif bleu (exemple d'exposition)."
     },
     {
       "id": "min-amont-bases-049",
@@ -1100,7 +1116,7 @@
       "id": "min-amont-bases-055",
       "theme": "Unités et conversions",
       "level": 2,
-      "q": "Un champ produit 10 000 b/j (valeur d'illustration). Combien cela représente-t-il en m³ par jour ?",
+      "q": "Sur la fiche de conversion, le sens baril vers m³ est indiqué. Un champ produit 10 000 b/j (valeur d'illustration). Combien cela représente-t-il en m³ par jour ?",
       "choices": [
         "Environ 62 900 m³/j",
         "Environ 1 590 m³/j",
@@ -1110,7 +1126,9 @@
       "answer": 1,
       "explain": "10 000 × 0,159 = 1 590 m³/j. 62 900 vient de la multiplication par 6,29, soit le sens de conversion inverse ; 159 et 15 900 sont des erreurs d'un facteur 10.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-amont-unites-conversion.svg",
+      "imgAlt": "Fiche de conversion : bloc pétrole (1 baril ≈ 0,159 m³, 1 m³ ≈ 6,29 barils), bloc gaz (1 m³ ≈ 35,3 pi³, 6 000 pi³ ≈ 1 bep) et exemples fictifs."
     },
     {
       "id": "min-amont-bases-056",
@@ -1148,7 +1166,7 @@
       "id": "min-amont-bases-058",
       "theme": "Unités et conversions",
       "level": 2,
-      "q": "Avec la convention d'environ 6 000 pi³ pour 1 baril équivalent pétrole, que valent 12 millions de pi³ de gaz ?",
+      "q": "Avec la convention de la fiche de conversion pour le baril équivalent pétrole, que valent 12 millions de pi³ de gaz ?",
       "choices": [
         "Environ 72 000 barils équivalent pétrole",
         "Environ 200 barils équivalent pétrole",
@@ -1158,7 +1176,9 @@
       "answer": 3,
       "explain": "12 000 000 / 6 000 = 2 000 bep. Multiplier donnerait un résultat absurde (72 milliards) ; les autres valeurs sont des erreurs de facteur 10.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-amont-unites-conversion.svg",
+      "imgAlt": "Fiche de conversion : dans le bloc gaz, 6 000 pi³ de gaz valent environ 1 baril équivalent pétrole (bep) et bep = pi³ ÷ 6 000."
     },
     {
       "id": "min-amont-bases-059",
@@ -1236,7 +1256,7 @@
       "id": "min-amont-bases-062",
       "theme": "Phases du projet et autorisations administratives",
       "level": 1,
-      "q": "Quelle est la durée de la période d'exploration et sa limite maximale selon l'article 83 ?",
+      "q": "Sur la frise des durées, repérez la barre de l'exploration, avec sa prorogation et son plafond en pointillés. Quelle est la durée de la période d'exploration et sa limite maximale selon l'article 83 ?",
       "choices": [
         "8 ans plus 1 an, 10 ans au plus",
         "5 ans, non renouvelable, sans extension",
@@ -1253,7 +1273,9 @@
           "art": "Article 83",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min2-amont-durees-titres.svg",
+      "imgAlt": "Frise des durées : barre d'exploration de 8 ans, prorogation d'un an en orange et plafond de 10 ans en pointillés ; en dessous, les durées de développement-production."
     },
     {
       "id": "min-amont-bases-063",
@@ -1305,7 +1327,7 @@
       "id": "min-amont-bases-065",
       "theme": "Phases du projet et autorisations administratives",
       "level": 2,
-      "q": "Un opérateur a découvert des hydrocarbures dans une zone de mer profonde. Dans quel délai doit-il entreprendre les travaux d'appréciation (art. 64) ?",
+      "q": "Sur la frise des durées, les délais d'appréciation sont différents selon la zone. Un opérateur a découvert des hydrocarbures dans une zone de mer profonde. Dans quel délai doit-il entreprendre les travaux d'appréciation (art. 64) ?",
       "choices": [
         "18 mois, comme pour la zone conventionnelle",
         "12 mois, quelle que soit la zone concernée",
@@ -1322,7 +1344,9 @@
           "art": "Article 64",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min2-amont-durees-titres.svg",
+      "imgAlt": "Frise des durées : la ligne « appréciation » compte deux barres, 18 mois en zone conventionnelle et 24 mois en mer profonde, à compter de la notification de la découverte."
     },
     {
       "id": "min-amont-bases-066",

@@ -13,7 +13,9 @@
         "Ne pas confondre flux (production du mois) et stock (réserves, stocks à une date).",
         "Produit, exporté, perçu et prévu sont des notions différentes à ne jamais mélanger.",
         "Une fiche d'indicateur fixe la définition et garantit la comparabilité d'une année à l'autre."
-      ]
+      ],
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée, plateau à 20 000 b/j puis déclin exponentiel jusqu'à la limite économique de 2 000 b/j et l'abandon ; l'axe vertical est le débit en barils par jour."
     },
     {
       "id": "m2",
@@ -27,7 +29,9 @@
         "Suivre un calendrier de collecte et utiliser un formulaire type avec définitions et unités.",
         "Conserver l'original reçu et tenir un journal de collecte daté.",
         "Toute donnée d'origine inconnue doit être vérifiée avant usage."
-      ]
+      ],
+      "img": "svg/min-itie-rapprochement.svg",
+      "imgAlt": "Schéma du rapprochement des déclarations : les entreprises déclarent les paiements, l'État déclare les recettes, un rapport compare les deux et examine l'écart sans le présumer frauduleux."
     },
     {
       "id": "m3",
@@ -41,7 +45,9 @@
         "Un zéro n'est pas une valeur manquante : on note « n.d. » et on explique.",
         "Marquer les données provisoires ou définitives et conserver l'historique des révisions.",
         "Tenir un journal des corrections et signaler toute rupture de série."
-      ]
+      ],
+      "img": "svg/min2-eco-controle-coherence.svg",
+      "imgAlt": "Deux tableaux d'exemple fictifs : à gauche un bilan de production (production 2,7 ; exportations 2,4 ; livraison au raffinage 0,2 ; variation de stock 0, en millions de barils) ; à droite trois champs à 40, 30 et 20 milliers de b/j et un total transmis de 95."
     },
     {
       "id": "m4",
@@ -103,7 +109,9 @@
         "Agrégation, anonymisation et règle des petits effectifs protègent la confidentialité.",
         "Vérifier destinataires et contenus cachés avant tout envoi ; messagerie professionnelle uniquement.",
         "En cas de doute ou de demande extérieure, s'abstenir et orienter vers le service désigné."
-      ]
+      ],
+      "img": "svg/min-classification-information.svg",
+      "imgAlt": "Tableau des quatre niveaux de classification de l'information, du plus sensible au moins sensible : secret, confidentiel, interne, public, avec qui peut lire, exemples et protection."
     }
   ],
   "questions": [
@@ -127,7 +135,7 @@
       "id": "min-statistiques-002",
       "theme": "Indicateurs du secteur",
       "level": 1,
-      "q": "La production de pétrole d'un champ est exprimée en « b/j ». Que signifie cette unité ?",
+      "q": "Sur la courbe de production du schéma, l'axe vertical est gradué en « b/j ». Que signifie cette unité ?",
       "choices": [
         "Des barils par jour, c'est-à-dire un débit de production moyen",
         "Des barils bruts par jalon, mesurés à chaque étape de forage",
@@ -137,7 +145,9 @@
       "answer": 0,
       "explain": "L'unité b/j désigne des barils par jour : un flux exprimé par unité de temps. Les autres propositions inventent des sens qui n'existent pas.",
       "seconds": 40,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-courbe-declin.svg",
+      "imgAlt": "Courbe de production d'un champ : montée, plateau à 20 000 b/j puis déclin exponentiel jusqu'à la limite économique de 2 000 b/j et l'abandon ; l'axe vertical est le débit en barils par jour."
     },
     {
       "id": "min-statistiques-003",
@@ -399,7 +409,7 @@
       "id": "min-statistiques-019",
       "theme": "Sources et collecte",
       "level": 3,
-      "q": "Deux sources donnent des exportations différentes de 6 % pour le même mois (écart fictif) : l'opérateur et les douanes. Que recommandez-vous ?",
+      "q": "Le schéma montre le principe du rapprochement de deux déclarations indépendantes. Deux sources donnent des exportations différentes de 6 % pour le même mois (écart fictif) : l'opérateur et les douanes. Que recommandez-vous ?",
       "choices": [
         "Retenir automatiquement la valeur la plus élevée, afin de ne pas sous-estimer les exportations du pays",
         "Retenir la moyenne des deux, sans mention particulière",
@@ -409,7 +419,9 @@
       "answer": 3,
       "explain": "Un écart se traite par enquête : décalage de dates de chargement, unités, conversions. Choisir le maximum ou la moyenne n'a pas de fondement ; se fier à une seule source sans contrôle ne règle pas la divergence.",
       "seconds": 100,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-itie-rapprochement.svg",
+      "imgAlt": "Schéma du rapprochement des déclarations : les entreprises déclarent les paiements, l'État déclare les recettes, un rapport compare les deux et examine l'écart sans le présumer frauduleux."
     },
     {
       "id": "min-statistiques-020",
@@ -495,7 +507,7 @@
       "id": "min-statistiques-025",
       "theme": "Qualité et cohérence des données",
       "level": 2,
-      "q": "Trois champs déclarent 40, 30 et 20 milliers de b/j ; le total transmis est de 95. Que faites-vous avant publication ?",
+      "q": "Sur le tableau de droite du schéma, trois champs déclarent les valeurs indiquées et le total transmis est donné. Que faites-vous avant publication ?",
       "choices": [
         "Publier 95, la différence étant faible, puisque le total transmis par les opérateurs fait foi pour le ministère",
         "Publier 90 sans en parler, c'est la somme exacte",
@@ -505,7 +517,9 @@
       "answer": 3,
       "explain": "La somme donne 90 ; un écart doit être expliqué : peut-être un champ non listé, peut-être une erreur. Publier sans comprendre, corriger en silence ou moyenner sont des pratiques à éviter.",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-eco-controle-coherence.svg",
+      "imgAlt": "Deux tableaux d'exemple fictifs : à gauche un bilan de production (production 2,7 ; exportations 2,4 ; livraison au raffinage 0,2 ; variation de stock 0, en millions de barils) ; à droite trois champs à 40, 30 et 20 milliers de b/j et un total transmis de 95."
     },
     {
       "id": "min-statistiques-026",
@@ -559,7 +573,7 @@
       "id": "min-statistiques-029",
       "theme": "Qualité et cohérence des données",
       "level": 3,
-      "q": "Un test de cohérence donne : production de 2,7 millions de barils, exportations de 2,4, livraison au raffinage de 0,2, variation de stock nulle (chiffres fictifs). Que concluez-vous ?",
+      "q": "Sur le bilan de production du schéma (chiffres fictifs), appliquez le test de cohérence. Que concluez-vous ?",
       "choices": [
         "Un écart de 0,1 million de barils reste à expliquer avant de valider le bilan",
         "Le bilan est parfait car les chiffres sont du même ordre de grandeur et le stock ne varie pas",
@@ -569,7 +583,9 @@
       "answer": 0,
       "explain": "2,4 + 0,2 = 2,6 ; l'écart avec 2,7 est de 0,1 million. On cherche la cause (stock, consommation locale, pertes de mesure). Les autres conclusions ne découlent pas des chiffres.",
       "seconds": 100,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-eco-controle-coherence.svg",
+      "imgAlt": "Deux tableaux d'exemple fictifs : à gauche un bilan de production (production 2,7 ; exportations 2,4 ; livraison au raffinage 0,2 ; variation de stock 0, en millions de barils) ; à droite trois champs à 40, 30 et 20 milliers de b/j et un total transmis de 95."
     },
     {
       "id": "min-statistiques-030",
@@ -1099,7 +1115,7 @@
       "id": "min-statistiques-061",
       "theme": "Diffusion et confidentialité",
       "level": 1,
-      "q": "Quelle donnée est typiquement sensible et doit être protégée avant publication ?",
+      "q": "D'après l'échelle de classification du schéma, quelle donnée est typiquement sensible et doit être protégée avant publication ?",
       "choices": [
         "La production d'un champ précis transmise par un opérateur dans un cadre réglementaire",
         "Le total national de production publié dans un rapport validé et déjà diffusé au public",
@@ -1109,7 +1125,9 @@
       "answer": 0,
       "explain": "Les informations propres à un opérateur peuvent relever de la confidentialité commerciale. Un total validé, un nom officiel ou une liste d'abréviations ne posent pas de difficulté.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-classification-information.svg",
+      "imgAlt": "Tableau des quatre niveaux de classification de l'information, du plus sensible au moins sensible : secret, confidentiel, interne, public, avec qui peut lire, exemples et protection."
     },
     {
       "id": "min-statistiques-062",

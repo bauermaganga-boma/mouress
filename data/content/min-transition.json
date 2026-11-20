@@ -45,7 +45,9 @@
     "CDN 3.0 (2025-2035) : scénario avec mesures existantes et scénario avec mesures additionnelles, conditionné à un appui international.",
     "Sans action, l'absorption s'éroderait et les émissions hors forêts augmenteraient : le secteur pétrolier est concerné.",
     "Un pourcentage de réduction exige une référence claire (année de base ou scénario tendanciel)."
-   ]
+   ],
+   "img": "svg/min2-hse-cdn-scenarios.svg",
+   "imgAlt": "Graphique en barres de l'absorption nette de CO₂ avec les forêts, selon la CDN 3.0 du Gabon : environ moins 73,3 millions de tonnes en 2020, moins 58,2 en 2035 sans action, moins 92,4 avec les mesures existantes (58,7 % de mieux) et moins 121,5 avec les mesures additionnelles (108,6 % de mieux), conditionnées à un appui international."
   },
   {
    "id": "m4",
@@ -75,7 +77,9 @@
     "Audit énergétique : mesurer d'abord, puis classer les actions par coût et gain.",
     "Solaire avec batteries : intermittent, à concevoir en hybride pour remplacer le diesel.",
     "Suivre l'intensité et le total absolu pour éviter l'effet rebond."
-   ]
+   ],
+   "img": "photo/hse-panneaux-solaires-raffinerie.jpg",
+   "imgAlt": "Toiture couverte de rangées de panneaux solaires photovoltaïques, avec au fond une raffinerie (colonnes, cheminées, bacs blancs) et quelques techniciens en gilet fluorescent sous un ciel bleu."
   },
   {
    "id": "m6",
@@ -89,7 +93,9 @@
     "Réservoirs : aquifères salins profonds ou gisements épuisés ; les puits anciens sont le principal risque de fuite.",
     "Récupération assistée du pétrole : intérêt économique, bilan climatique discuté.",
     "Surveillance, fermeture et responsabilité à long terme sont indispensables ; cadre gabonais à vérifier."
-   ]
+   ],
+   "img": "svg/min2-hse-chaine-ccs.svg",
+   "imgAlt": "Schéma du captage et stockage du carbone en trois étapes : captage à la source, transport par canalisation ou navire, injection dans un aquifère salin profond sous une roche couverture ; des puits anciens d'un gisement épuisé sont une fuite possible ; bilan fictif de 1 000 000 t captées, 200 000 t émises par l'énergie du procédé, 800 000 t stockées net."
   },
   {
    "id": "m7",
@@ -103,7 +109,9 @@
     "Exiger un plan de gestion du gaz associé dès la conception d'un champ.",
     "Exiger des données harmonisées : unités et conditions normalisées, méthode documentée.",
     "Face à une hausse du torchage : causes, étalonnage, comparaison avec le plan, plan correctif."
-   ]
+   ],
+   "img": "svg/min-torchage-valorisation-gaz.svg",
+   "imgAlt": "Chaîne du gaz associé : puits, séparateur, traitement et compression, puis quatre destinations mesurées par des compteurs (réinjection, autoconsommation du champ, valorisation et vente, torche en dernier recours) et un bilan gaz qui additionne ces postes."
   }
  ],
  "questions": [
@@ -436,15 +444,15 @@
    "id": "min-transition-018",
    "theme": "Torchage et méthane",
    "level": 2,
-   "q": "Un champ isolé produit peu de gaz associé. Quelle solution de valorisation est généralement la plus adaptée ?",
+   "q": "Sur la chaîne du gaz associé de la figure, un champ isolé produit peu de gaz. Quelle destination mesurée est généralement la plus adaptée, avant le recours à la torche ?",
    "choices": [
     "Construire un gazoduc de plusieurs centaines de kilomètres jusqu'à la côte",
     "Continuer à torcher en attendant que les volumes augmentent naturellement",
-    "Produire de l'électricité sur place pour remplacer le diesel des groupes électrogènes",
+    "Autoconsommer le gaz sur place pour produire l'électricité et remplacer le diesel",
     "Injecter le gaz dans le réseau électrique national par un câble sous-marin"
    ],
    "answer": 2,
-   "explain": "Pour un petit volume, la production d'électricité sur site évite le coût d'un gazoduc et supprime du diesel. Le gazoduc est disproportionné, attendre contrevient à l'article 125 et le gaz ne s'injecte pas dans un réseau électrique.",
+   "explain": "Pour un petit volume, l'autoconsommation du champ (électricité produite sur place) évite le coût d'un gazoduc et supprime du diesel. La torche n'est que le dernier recours (article 125), et le gaz ne s'injecte pas dans un réseau électrique.",
    "seconds": 70,
    "status": "draft",
    "refs": [
@@ -453,7 +461,9 @@
      "art": "art. 128",
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-   ]
+   ],
+   "img": "svg/min-torchage-valorisation-gaz.svg",
+   "imgAlt": "Chaîne du gaz associé : puits, séparateur, traitement et compression, puis quatre destinations mesurées par des compteurs (réinjection, autoconsommation du champ, valorisation et vente, torche en dernier recours) et un bilan gaz qui additionne ces postes."
   },
   {
    "id": "min-transition-019",
@@ -590,15 +600,15 @@
    "id": "min-transition-025",
    "theme": "Engagements climatiques du Gabon",
    "level": 2,
-   "q": "Dans la CDN 3.0, que distingue le scénario avec mesures additionnelles du scénario avec mesures existantes ?",
+   "q": "Sur le graphique de la CDN 3.0, qu'est-ce qui distingue la barre « mesures additionnelles » de la barre « mesures existantes » ?",
    "choices": [
-    "Il repose uniquement sur des mesures déjà financées par le budget de l'État",
-    "Il suppose l'arrêt total de la production pétrolière avant 2030",
-    "Il ajoute des mesures conditionnées à un appui financier international",
-    "Il exclut les forêts du calcul pour ne comptabiliser que l'énergie"
+    "Elle repose uniquement sur des mesures déjà financées par le budget de l'État",
+    "Elle suppose l'arrêt total de la production pétrolière avant 2030",
+    "Elle ajoute des mesures qui dépendent d'un appui financier international",
+    "Elle exclut les forêts du calcul pour ne retenir que l'énergie"
    ],
    "answer": 2,
-   "explain": "Le scénario avec mesures existantes regroupe les mesures déjà engagées ; le scénario avec mesures additionnelles ajoute des mesures qui exigent un appui international. Aucun des deux ne suppose l'arrêt du pétrole, et les forêts sont prises en compte dans les deux.",
+   "explain": "La barre « mesures existantes » regroupe les mesures déjà engagées ; la barre « mesures additionnelles » (environ −121,5 Mt en 2035) y ajoute des mesures qui exigent un appui international. Aucune ne suppose l'arrêt du pétrole, et les forêts sont prises en compte dans les deux : le graphique montre l'absorption nette avec les forêts.",
    "seconds": 70,
    "status": "draft",
    "refs": [
@@ -607,21 +617,23 @@
      "art": "tableau 4",
      "url": "https://unfccc.int/sites/default/files/2025-12/NDC3.0_Gabon_5_11_2025-final%20version.pdf"
     }
-   ]
+   ],
+   "img": "svg/min2-hse-cdn-scenarios.svg",
+   "imgAlt": "Graphique en barres de l'absorption nette de CO₂ avec les forêts, selon la CDN 3.0 du Gabon : environ moins 73,3 millions de tonnes en 2020, moins 58,2 en 2035 sans action, moins 92,4 avec les mesures existantes (58,7 % de mieux) et moins 121,5 avec les mesures additionnelles (108,6 % de mieux), conditionnées à un appui international."
   },
   {
    "id": "min-transition-026",
    "theme": "Engagements climatiques du Gabon",
    "level": 2,
-   "q": "Un collègue affirme : « Le Gabon est un puits de carbone, il n'a donc rien à faire pour le climat. » Quelle est la meilleure réponse ?",
+   "q": "Un collègue affirme : « Le Gabon est un puits de carbone, il n'a donc rien à faire pour le climat. » Que lui répondez-vous en comparant les barres « 2020 » et « 2035 tendanciel » du graphique ?",
    "choices": [
-    "Vous avez raison, car la CDN 3.0 ne fixe aucune mesure pour les secteurs émetteurs",
-    "Sans action, la capacité d'absorption s'érodera et les émissions hors forêts augmenteront",
-    "Vous avez tort, car le Gabon est en réalité un émetteur net de gaz à effet de serre",
-    "Vous avez raison, car le secteur pétrolier est exclu de tous les inventaires"
+    "Vous avez raison : la barre tendancielle de 2035 est plus courte, donc le pays absorbera davantage sans agir",
+    "Sans action, la barre passe de −73,3 à −58,2 : l'absorption s'érode et les émissions hors forêts augmentent",
+    "Vous avez tort : les barres sont sous la ligne zéro car le Gabon est un émetteur net de gaz",
+    "Vous avez raison : le secteur pétrolier est exclu des inventaires, donc le graphique ne le concerne pas"
    ],
    "answer": 1,
-   "explain": "La CDN 3.0 montre que, dans le scénario tendanciel, l'absorption passe d'environ −73,3 Mt en 2020 à −58,3 Mt en 2035, et que les émissions hors forêts progressent d'environ 43 %. Le statut de puits est réel mais fragile ; la CDN prévoit des mesures pour l'énergie et le secteur pétrolier est dans l'inventaire.",
+   "explain": "La barre 2035 tendanciel (environ −58 Mt) est plus courte que celle de 2020 (−73,3 Mt) : sans action, l'absorption diminue d'environ 15 Mt et, hors forêts, les émissions augmentent d'environ 43 % entre 2020 et 2035. Sous la ligne zéro, le pays est un puits net, pas un émetteur ; ce statut est réel mais fragile, et le secteur pétrolier est dans l'inventaire.",
    "seconds": 70,
    "status": "draft",
    "refs": [
@@ -630,7 +642,9 @@
      "art": "section 4.1",
      "url": "https://unfccc.int/sites/default/files/2025-12/NDC3.0_Gabon_5_11_2025-final%20version.pdf"
     }
-   ]
+   ],
+   "img": "svg/min2-hse-cdn-scenarios.svg",
+   "imgAlt": "Graphique en barres de l'absorption nette de CO₂ avec les forêts, selon la CDN 3.0 du Gabon : environ moins 73,3 millions de tonnes en 2020, moins 58,2 en 2035 sans action, moins 92,4 avec les mesures existantes (58,7 % de mieux) et moins 121,5 avec les mesures additionnelles (108,6 % de mieux), conditionnées à un appui international."
   },
   {
    "id": "min-transition-027",
@@ -1047,7 +1061,7 @@
    "id": "min-transition-047",
    "theme": "Efficacité énergétique et énergies renouvelables",
    "level": 2,
-   "q": "Quel est le principal inconvénient d'un champ solaire sans stockage pour alimenter un site pétrolier isolé 24 heures sur 24 ?",
+   "q": "Les panneaux de la photo alimenteraient un site pétrolier isolé qui fonctionne 24 heures sur 24, sans batteries ni groupe d'appoint. Quel est le principal inconvénient de cette installation ?",
    "choices": [
     "Il émet davantage de CO₂ que le diesel sur l'ensemble de son cycle de vie",
     "Il ne peut pas être installé sur un terrain où il pleut plusieurs mois par an",
@@ -1057,7 +1071,9 @@
    "answer": 2,
    "explain": "Le solaire produit seulement le jour et varie selon la météo : une conception hybride (stockage, appoint) est souvent nécessaire. Son bilan carbone est bien meilleur que le diesel ; il fonctionne même par temps nuageux avec un rendement réduit, et ne consomme pas d'eau de mer.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/hse-panneaux-solaires-raffinerie.jpg",
+   "imgAlt": "Toiture couverte de rangées de panneaux solaires photovoltaïques, avec au fond une raffinerie (colonnes, cheminées, bacs blancs) et quelques techniciens en gilet fluorescent sous un ciel bleu."
   },
   {
    "id": "min-transition-048",
@@ -1175,7 +1191,7 @@
    "id": "min-transition-055",
    "theme": "Captage et stockage du carbone",
    "level": 2,
-   "q": "Un opérateur propose de stocker du CO₂ dans un gisement épuisé qui compte de nombreux puits anciens. Quel est le principal point de vigilance ?",
+   "q": "Sur le schéma du stockage, un opérateur propose d'utiliser un gisement épuisé qui compte de nombreux puits anciens. Quel est le principal point de vigilance ?",
    "choices": [
     "La couleur de la roche réservoir, qui influence la vitesse de dissolution",
     "L'étanchéité des puits anciens, qui peuvent constituer des voies de fuite du CO₂",
@@ -1185,7 +1201,9 @@
    "answer": 1,
    "explain": "Les puits anciens sont un chemin potentiel de remontée du CO₂ : on doit vérifier leur intégrité ou les reboucher. Les autres éléments (couleur, personnel de nuit, distance à la capitale) ne conditionnent pas la sécurité du stockage.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-hse-chaine-ccs.svg",
+   "imgAlt": "Schéma du captage et stockage du carbone en trois étapes : captage à la source, transport par canalisation ou navire, injection dans un aquifère salin profond sous une roche couverture ; des puits anciens d'un gisement épuisé sont une fuite possible ; bilan fictif de 1 000 000 t captées, 200 000 t émises par l'énergie du procédé, 800 000 t stockées net."
   },
   {
    "id": "min-transition-056",
@@ -1223,7 +1241,7 @@
    "id": "min-transition-058",
    "theme": "Captage et stockage du carbone",
    "level": 2,
-   "q": "Exemple fictif : un projet capte 1 000 000 t de CO₂ par an, mais l'énergie nécessaire émet 200 000 t. Quel est le stockage net annuel ?",
+   "q": "Le bilan fictif de la figure donne le CO₂ capté et les émissions de l'énergie nécessaire au procédé. Quel est le stockage net annuel ?",
    "choices": [
     "1 000 000 tonnes de CO₂",
     "1 200 000 tonnes de CO₂ au total",
@@ -1233,7 +1251,9 @@
    "answer": 2,
    "explain": "Le bilan net déduit les émissions du projet : 1 000 000 − 200 000 = 800 000 t. 1 000 000 ignore les émissions du procédé ; 1 200 000 les additionne par erreur ; 200 000 ne retient que les émissions du procédé.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-hse-chaine-ccs.svg",
+   "imgAlt": "Schéma du captage et stockage du carbone en trois étapes : captage à la source, transport par canalisation ou navire, injection dans un aquifère salin profond sous une roche couverture ; des puits anciens d'un gisement épuisé sont une fuite possible ; bilan fictif de 1 000 000 t captées, 200 000 t émises par l'énergie du procédé, 800 000 t stockées net."
   },
   {
    "id": "min-transition-059",

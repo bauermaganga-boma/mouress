@@ -29,7 +29,9 @@
     "La cote est un identifiant unique et stable, distinct du titre.",
     "Un intitulé précis (objet, producteur, dates) évite les dossiers « Divers ».",
     "L'ISAD(G) normalise la description des fonds ; un répertoire numérique suffit pour commencer."
-   ]
+   ],
+   "img": "svg/min2-archives-plan-classement.svg",
+   "imgAlt": "Schéma du plan de classement : fonds, série, dossier, pièce ; en dessous, la cote fictive CTR-2024-017 décomposée en code de série, année d'ouverture et numéro d'ordre."
   },
   {
    "id": "m3",
@@ -59,7 +61,9 @@
     "Une numérisation probante suppose une procédure documentée, un contrôle qualité et un journal.",
     "Formats ouverts (PDF/A) et métadonnées garantissent la pérennité ; ISO 14721 (OAIS) donne le modèle.",
     "Une sauvegarde n'est pas un archivage ; appliquer la règle 3 copies, 2 supports, 1 hors site."
-   ]
+   ],
+   "img": "svg/min2-archives-numerisation.svg",
+   "imgAlt": "Schéma en six étapes d'une numérisation à valeur probante : préparer, numériser, contrôler la qualité, nommer et classer en format durable, empreinte numérique et journal des opérations, décider du sort de l'original."
   },
   {
    "id": "m5",
@@ -73,7 +77,9 @@
     "Principe du besoin d'en connaître : accès par profil, révisé à chaque mutation ou départ.",
     "Papier : registre de sortie, local fermé, broyeur ; numérique : compte individuel, journal d'accès.",
     "Toute demande d'un tiers passe par la hiérarchie et est tracée."
-   ]
+   ],
+   "img": "svg/min2-archives-niveaux-sensibilite.svg",
+   "imgAlt": "Tableau des quatre niveaux de sensibilité (public, interne, restreint, confidentiel) avec qui peut lire chaque niveau et des exemples, l'accès se restreignant du public vers le confidentiel."
   },
   {
    "id": "m6",
@@ -87,7 +93,9 @@
     "Rayonnages surélevés, local sec et loin des fuites, boîtes sans acide, contrôle des nuisibles.",
     "Incendie : détection, extincteurs adaptés, installation électrique contrôlée, plan d'évacuation.",
     "Plan de sinistre et duplicata hors site pour les documents vitaux ; intervenir vite sur un document mouillé."
-   ]
+   ],
+   "img": "photo/min-archives-rayonnages-mobiles.jpg",
+   "imgAlt": "Allée d'un magasin d'archives avec rayonnages mobiles orange : en tête de chaque travée, une étiquette indique un numéro de travée et une plage de numéros ; des boîtes d'archives sont visibles sur les rayonnages ouverts."
   },
   {
    "id": "m7",
@@ -101,7 +109,9 @@
     "Toute divulgation à un tiers exige l'accord préalable de l'autorité compétente (article 12).",
     "Contrats originaux et données essentielles : conservation longue, duplicata hors site, accès tracé.",
     "Supports techniques à vérifier et à migrer régulièrement ; restitution des dossiers au départ d'un agent."
-   ]
+   ],
+   "img": "svg/min-cycle-vie-donnee.svg",
+   "imgAlt": "Schéma en six étapes du cycle de vie d'une donnée pétrolière : acquisition, remise au Ministère avec bordereau, contrôle qualité, conservation, confidentialité, accès contrôlé."
   }
  ],
  "questions": [
@@ -299,17 +309,19 @@
    "id": "min-archives-012",
    "theme": "Plan de classement et cotation",
    "level": 1,
-   "q": "Qu'est-ce qu'une cote en archivage ?",
+   "q": "Sur la photo de ce magasin d'archives, chaque travée porte une étiquette avec un numéro de travée suivi d'une plage de numéros (par exemple « 8 : 106 à 112 »). À quoi servent ces repères ?",
    "choices": [
-    "Le prix de conservation d'un carton chaque année de stockage",
-    "La note attribuée par l'archiviste à la qualité du dossier archivé",
-    "Le résumé du contenu rédigé sur la couverture du dossier",
-    "L'identifiant unique et stable qui localise un dossier ou un carton"
+    "À indiquer le coût de conservation annuel de chaque travée de rayonnage",
+    "À noter la qualité des dossiers que contient chaque travée de rayonnage",
+    "À donner la date prévue de destruction des cartons de la travée",
+    "À retrouver un carton : chaque travée couvre une plage de cotes"
    ],
    "answer": 3,
-   "explain": "La cote identifie et localise un dossier sans ambiguïté. Elle ne mesure pas un coût, ne note pas la qualité, et ne remplace pas l'intitulé, qui décrit le contenu.",
+   "explain": "La cote identifie et localise un dossier ou un carton sans ambiguïté : les étiquettes de travée renvoient à des plages de cotes pour le retrouver vite. Elles n'indiquent ni un coût, ni une note de qualité, ni une date de destruction.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/min-archives-rayonnages-mobiles.jpg",
+   "imgAlt": "Allée d'un magasin d'archives avec rayonnages mobiles orange : en tête de chaque travée, une étiquette indique un numéro de travée et une plage de numéros (par exemple « 8 : 106 à 112 » et « 7 : 92 à 98 »). Des boîtes d'archives sont visibles sur les rayonnages ouverts, avec un panneau de sortie de secours au fond du couloir."
   },
   {
    "id": "min-archives-013",
@@ -379,7 +391,7 @@
    "id": "min-archives-017",
    "theme": "Plan de classement et cotation",
    "level": 2,
-   "q": "Un chef de service veut numéroter ses cartons. Quelle cote respecte les bonnes pratiques ?",
+   "q": "Le schéma du plan de classement décompose la cote fictive « CTR-2024-017 » en série, année et numéro d'ordre. En suivant ce modèle, quelle cote de carton respecte les bonnes pratiques ?",
    "choices": [
     "TIT-2024-017 : série, année et numéro d'ordre, au format constant",
     "« Carton de Marc » : nom de l'agent, facile à retenir pour tous",
@@ -389,7 +401,9 @@
    "answer": 0,
    "explain": "Une cote lisible combine un code de série, un élément chronologique et un numéro d'ordre selon un format fixe. Un nom d'agent, une priorité ou un emplacement ne sont pas stables.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-archives-plan-classement.svg",
+   "imgAlt": "Schéma du plan de classement (fonds, série, dossier, pièce) et de la cote fictive CTR-2024-017, décomposée en code de série, année d'ouverture et numéro d'ordre."
   },
   {
    "id": "min-archives-018",
@@ -527,7 +541,7 @@
    "id": "min-archives-026",
    "theme": "Conservation, tri et élimination",
    "level": 2,
-   "q": "Un service veut éliminer 40 cartons de dossiers de fournitures dont le délai est échu. Quelle est la première étape après l'établissement de la liste ?",
+   "q": "Le schéma présente les étapes d'une élimination. Un service a déjà établi la liste (étape 1) de 40 cartons de dossiers de fournitures dont le délai est échu. Quelle est la première vérification à faire ensuite ?",
    "choices": [
     "Déposer immédiatement les cartons chez un broyeur privé pour gagner du temps",
     "Vérifier qu'aucun contentieux, contrôle ou enquête n'est en cours",
@@ -537,7 +551,9 @@
    "answer": 1,
    "explain": "Avant toute destruction, on s'assure de l'absence de gel (litige, audit, enquête). La destruction ne vient qu'après liste, vérification, bordereau et validation. Numériser sans liste ni décision n'a pas de sens.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-archives-bordereau-elimination.svg",
+   "imgAlt": "Schéma en six étapes d'une élimination régulière : liste des dossiers échus, vérification de l'absence de gel, bordereau d'élimination, validation, destruction sécurisée, conservation du bordereau."
   },
   {
    "id": "min-archives-027",
@@ -678,7 +694,7 @@
    "id": "min-archives-035",
    "theme": "Archives électroniques et numérisation",
    "level": 2,
-   "q": "Vous numérisez des contrats papier. Quelle condition renforce la valeur de preuve des copies ?",
+   "q": "Le schéma présente la chaîne de numérisation d'un document. Vous numérisez des contrats papier : quelle condition renforce la valeur de preuve des copies ?",
    "choices": [
     "Une numérisation rapide à basse résolution pour gagner du temps sur le calendrier",
     "L'enregistrement des fichiers dans un dossier partagé simplement nommé « Scan »",
@@ -688,7 +704,9 @@
    "answer": 2,
    "explain": "Une copie est crédible si le processus est maîtrisé et tracé. Une résolution trop basse, un dossier non structuré ou la destruction automatique des originaux affaiblissent la preuve et peuvent être illégaux.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-archives-numerisation.svg",
+   "imgAlt": "Schéma en six étapes d'une numérisation à valeur probante : préparer, numériser, contrôler la qualité, nommer et classer, empreinte numérique et journal, décider du sort de l'original."
   },
   {
    "id": "min-archives-036",
@@ -710,7 +728,7 @@
    "id": "min-archives-037",
    "theme": "Archives électroniques et numérisation",
    "level": 2,
-   "q": "Quelle règle de sauvegarde est couramment recommandée pour des fichiers importants ?",
+   "q": "D'après le schéma de la règle de sauvegarde, quelle organisation de copies est recommandée pour des fichiers importants ?",
    "choices": [
     "Une seule copie sur le disque de l'ordinateur de bureau du service",
     "Trois copies, sur deux types de supports, dont une hors site",
@@ -720,7 +738,9 @@
    "answer": 1,
    "explain": "Plusieurs copies, sur supports différents et dont une distante, limitent le risque d'un sinistre unique. Une copie unique ou deux copies au même endroit ne protègent pas contre la perte ou le vol.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-sauvegarde-3-2-1.svg",
+   "imgAlt": "Schéma de la règle de sauvegarde 3-2-1 : l'original sur le poste de travail, une sauvegarde sur un disque externe ou un serveur, une copie hors site ; rappel de trois copies, deux types de supports et une copie hors site."
   },
   {
    "id": "min-archives-038",
@@ -790,7 +810,7 @@
    "id": "min-archives-042",
    "theme": "Confidentialité et accès",
    "level": 1,
-   "q": "Parmi ces niveaux de sensibilité, lequel est le plus restrictif ?",
+   "q": "Sur l'échelle de sensibilité du schéma (public, interne, restreint, confidentiel), lequel de ces niveaux est le plus restrictif ?",
    "choices": [
     "Public",
     "Confidentiel",
@@ -800,7 +820,9 @@
    "answer": 1,
    "explain": "Le niveau « confidentiel » limite l'accès à quelques personnes nommées. Public et diffusable n'ont aucune restriction, et interne reste ouvert à tout le ministère.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-archives-niveaux-sensibilite.svg",
+   "imgAlt": "Tableau des quatre niveaux de sensibilité avec qui peut lire chacun : public (toute personne), interne (agents du ministère), restreint (un service ou une équipe), confidentiel (quelques personnes nommées), avec une flèche de restriction croissante."
   },
   {
    "id": "min-archives-043",
@@ -966,7 +988,7 @@
    "id": "min-archives-053",
    "theme": "Conservation physique et sinistres",
    "level": 1,
-   "q": "À quelle distance minimale du sol convient-il de surélever les rayonnages ?",
+   "q": "Sur le schéma d'un local d'archives, le repère 5 signale un point de contrôle au bas des rayonnages. À quelle distance minimale du sol convient-il de les surélever ?",
    "choices": [
     "Sans distance : on pose directement les cartons sur le sol",
     "Au moins 10 à 15 cm, contre les petites infiltrations",
@@ -976,7 +998,9 @@
    "answer": 1,
    "explain": "Surélever les cartons de 10 à 15 cm au moins évite le contact avec l'eau en cas de fuite. Poser sur le sol expose à l'humidité, et trois mètres rendraient le rayonnage inutilisable.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-archives-local-conservation.svg",
+   "imgAlt": "Coupe d'un local d'archives avec un rayonnage chargé de boîtes et six repères numérotés : toit, détection incendie, distance au mur, boîtes, hauteur au-dessus du sol (repère 5, flèche entre le sol et le bas du rayonnage) et hygromètre."
   },
   {
    "id": "min-archives-054",
@@ -998,7 +1022,7 @@
    "id": "min-archives-055",
    "theme": "Conservation physique et sinistres",
    "level": 2,
-   "q": "Un hygromètre indique 72 % d'humidité dans le local d'archives. Quelle action immédiate est la plus pertinente ?",
+   "q": "Sur le schéma d'un local d'archives, le repère 6 est un hygromètre. Il indique 72 % d'humidité dans le local. Quelle action immédiate est la plus pertinente ?",
    "choices": [
     "Ouvrir toutes les fenêtres en pleine saison des pluies pour aérer",
     "Fermer le local à clé et ne plus l'ouvrir pendant plusieurs mois",
@@ -1008,23 +1032,27 @@
    "answer": 3,
    "explain": "Il faut ramener l'humidité sous 60 %, chercher l'origine et contrôler l'état des fonds. Ouvrir en pleine pluie aggrave le problème, fermer ne règle rien et empiler plus de cartons n'absorbe rien.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-archives-local-conservation.svg",
+   "imgAlt": "Coupe d'un local d'archives avec six repères numérotés ; le repère 6 est un hygromètre à aiguille, dont la légende indique de viser 45 à 55 % d'humidité et de s'alerter au-delà de 60 %."
   },
   {
    "id": "min-archives-056",
    "theme": "Conservation physique et sinistres",
    "level": 2,
-   "q": "Dans un local d'archives, quels éléments sont à proscrire ?",
+   "q": "Sur la photo de ce rayonnage d'archives, quel élément est contraire aux bonnes pratiques de conservation ?",
    "choices": [
-    "Rayonnages métalliques et boîtes d'archives sans acide",
-    "Hygromètres, déshumidificateurs et détecteurs de fumée en état de marche",
-    "Produits inflammables, repas, électricité non contrôlée, fumeurs",
-    "Extincteurs vérifiés et plan d'évacuation affiché à l'entrée du local"
+    "Des boîtes rangées sur des rayonnages métalliques, et non à même le sol",
+    "Des boîtes portant une étiquette avec un numéro d'identification",
+    "Un carton d'emballage de fruits réutilisé comme boîte d'archives",
+    "Des boîtes rangées côte à côte, accessibles à hauteur de main"
    ],
    "answer": 2,
-   "explain": "Produits inflammables, nourriture et électricité mal entretenue multiplient les risques d'incendie et de nuisibles. Les équipements cités dans les autres choix sont au contraire des mesures de protection.",
+   "explain": "Un carton de récupération (ici un emballage de fruits) n'est ni sans acide ni adapté : il abîme les documents et attire les nuisibles. Les rayonnages métalliques, les boîtes étiquetées et un rangement ordonné sont, eux, de bonnes pratiques.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/min-archives-boites-etiquetees.jpg",
+   "imgAlt": "Rayonnages métalliques gris remplis de boîtes d'archives de formats variés, la plupart avec une étiquette portant un numéro ; parmi elles, un carton d'emballage de fruits imprimé réutilisé comme boîte, et des feuilles volantes retenues par des pinces."
   },
   {
    "id": "min-archives-057",
@@ -1243,7 +1271,7 @@
    "id": "min-archives-069",
    "theme": "Documents sensibles du secteur pétrolier",
    "level": 3,
-   "q": "Un opérateur n'a pas transmis ses données et rapports dans les délais. Vous constatez qu'aucun inventaire des réceptions n'existe. Quelle action est la plus utile ?",
+   "q": "Le schéma du cycle de vie d'une donnée pétrolière prévoit une remise au Ministère avec un bordereau. Un opérateur n'a pas transmis ses données et rapports dans les délais, et vous constatez qu'aucun inventaire des réceptions n'existe. Quelle action est la plus utile ?",
    "choices": [
     "Ne rien faire, car sans inventaire aucune sanction n'est envisageable",
     "Dresser l'inventaire des données reçues, puis mettre en demeure l'opérateur",
@@ -1260,7 +1288,9 @@
      "art": "Article 267",
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-   ]
+   ],
+   "img": "svg/min-cycle-vie-donnee.svg",
+   "imgAlt": "Schéma en six étapes du cycle de vie d'une donnée pétrolière : acquisition, remise au Ministère avec métadonnées et bordereau, contrôle qualité, conservation, confidentialité, accès contrôlé."
   },
   {
    "id": "min-archives-070",

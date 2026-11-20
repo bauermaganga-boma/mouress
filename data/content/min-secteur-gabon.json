@@ -45,7 +45,9 @@
     "Réserves prouvées de pétrole : environ 2 milliards de barils (EIA, d'après l'Oil & Gas Journal).",
     "Le ratio R/P est statique : il surestime souvent l'horizon de production.",
     "Mesurage de la production : prérogative exclusive de l'État (article 246)."
-   ]
+   ],
+   "img": "svg/min-matrice-reserves-ressources.svg",
+   "imgAlt": "Matrice de classification des ressources : colonnes estimation basse (P90), meilleure estimation (P50) et estimation haute (P10) ; lignes production, réserves (1P, 2P, 3P), ressources contingentes (1C, 2C, 3C), ressources prospectives et quantités non récupérables. Flèches : incertitude croissante vers la droite, maturité croissante vers le haut."
   },
   {
    "id": "m4",
@@ -59,7 +61,9 @@
     "Primes et redevance proportionnelle ne sont pas des coûts pétroliers (articles 206 et 211).",
     "Récupération des coûts plafonnée (70 % pour les liquides en zone conventionnelle, article 221).",
     "Les recettes liées à la hausse des prix sont à traiter comme temporaires."
-   ]
+   ],
+   "img": "svg/min-prix-brut-sensibilite.svg",
+   "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
   },
   {
    "id": "m5",
@@ -73,7 +77,9 @@
     "Leviers : récupération secondaire, forages de densification, reprise de puits.",
     "Loi de 2019 : préférence pour l'opérateur national et les entreprises autochtones sur les champs marginaux et matures.",
     "Plan d'abandon et fonds de réhabilitation exigés (article 173)."
-   ]
+   ],
+   "img": "svg/min-courbe-declin.svg",
+   "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
   },
   {
    "id": "m6",
@@ -103,7 +109,9 @@
     "Pénalité de 50 millions à 2,5 milliards de FCFA en cas de torchage interdit (article 269).",
     "SOGARA : unique raffinerie, 24 000 b/j de capacité en 2020 (EIA) ; priorité au marché national.",
     "Diversification et transition : épargner, réduire les émissions, valoriser le gaz local."
-   ]
+   ],
+   "img": "svg/min-torchage-valorisation-gaz.svg",
+   "imgAlt": "Chaîne du gaz associé : puits, séparateur, traitement et compression, puis quatre branches munies chacune d'un compteur : réinjection dans le gisement, autoconsommation du champ, valorisation et vente (électricité, GPL, GNL, marché intérieur) et, en dernier recours, torche (interdite sauf dérogation). Bilan gaz : produit = réinjecté + autoconsommé + vendu + torché ou rejeté + pertes."
   }
  ],
  "questions": [
@@ -764,18 +772,20 @@
    "id": "min-secteur-gabon-028",
    "theme": "Production et réserves : lire les chiffres",
    "level": 2,
-   "q": "Quelle est la définition correcte des réserves prouvées ?",
+   "q": "Sur la matrice de classification des ressources et des réserves, une découverte a été faite mais aucun plan de développement n'est approuvé : elle n'est pas encore commerciale. Dans quelle ligne la classe-t-on ?",
    "choices": [
-    "L'ensemble des quantités présumées dans un bassin, même non forées",
-    "Les quantités déjà produites depuis la découverte",
-    "Les quantités que la société nationale estime souhaitables",
-    "Les quantités récupérables avec une certitude raisonnable dans les conditions techniques et économiques actuelles"
+    "Production, car le brut est déjà découvert en sous-sol",
+    "Réserves prouvées (1P), car la découverte est confirmée par un forage",
+    "Ressources prospectives, car ces quantités restent à découvrir",
+    "Ressources contingentes (1C, 2C, 3C), découvertes mais pas encore commerciales"
    ],
    "answer": 3,
-   "explain": "Une réserve prouvée est une quantité récupérable avec certitude raisonnable dans les conditions actuelles. Les ressources non forées sont au mieux des ressources potentielles ; le cumul déjà produit est de la production passée ; une estimation politique n'est pas une catégorie de réserves.",
+   "explain": "Sur la matrice, les réserves (1P, 2P, 3P) sont les quantités commerciales restant à produire ; les ressources contingentes (1C, 2C, 3C) sont découvertes mais non commerciales à ce stade ; les ressources prospectives ne sont pas encore découvertes ; la production désigne les quantités déjà produites. Une réserve prouvée suppose en plus une certitude raisonnable de récupération dans les conditions techniques et économiques actuelles.",
    "seconds": 70,
    "status": "draft",
-   "refs": []
+   "refs": [],
+   "img": "svg/min-matrice-reserves-ressources.svg",
+   "imgAlt": "Matrice de classification des ressources : colonnes estimation basse (P90), meilleure estimation (P50) et estimation haute (P10) ; lignes production, réserves (1P, 2P, 3P), ressources contingentes (1C, 2C, 3C), ressources prospectives et quantités non récupérables. Flèches : incertitude croissante vers la droite, maturité croissante vers le haut."
   },
   {
    "id": "min-secteur-gabon-029",
@@ -924,15 +934,15 @@
    "id": "min-secteur-gabon-035",
    "theme": "Pétrole, économie et budget de l'État",
    "level": 2,
-   "q": "Après une baisse durable du prix du brut, quelle conséquence budgétaire est la plus probable pour un pays très dépendant du pétrole ?",
+   "q": "Sur le tableau de sensibilité du budget (valeurs fictives), un dollar de prix du baril vaut 18,56 milliards de FCFA de recette pour l'État. Si le prix tombe de 75 à 65 dollars, de combien la recette baisse-t-elle, et quelle est la conséquence budgétaire pour un pays très dépendant du pétrole ?",
    "choices": [
-    "Une hausse automatique des recettes grâce à la production accrue",
-    "Aucun effet tant que la production nationale reste stable",
-    "Une baisse des recettes et une dégradation du solde, imposant ajustements ou financements",
-    "Une baisse des dépenses publiques sans aucune décision de l'État"
+    "De 18,56 milliards de FCFA ; aucune conséquence tant que la production nationale reste stable",
+    "De 1 206,4 milliards de FCFA ; le solde budgétaire s'améliore grâce à la baisse des coûts",
+    "De 185,6 milliards de FCFA ; le solde se dégrade, ce qui impose des ajustements ou des financements",
+    "De 1 392 milliards de FCFA ; les dépenses publiques baissent d'elles-mêmes dans la même proportion"
    ],
    "answer": 2,
-   "explain": "Quand le prix baisse durablement, les recettes pétrolières baissent et le solde se dégrade, d'où des ajustements ou un recours au financement, comme le programme avec le FMI de 2017 après la chute des prix de 2014. La production stable ne compense pas le prix, et les dépenses ne baissent pas d'elles-mêmes.",
+   "explain": "Le tableau donne 18,56 milliards de FCFA par dollar : 10 dollars de baisse représentent 185,6 milliards (la recette passe de 1 392 à 1 206,4). Pour un pays très dépendant du pétrole, la recette baisse et le solde se dégrade, d'où ajustements ou financement, comme le programme avec le FMI de 2017 après la chute des prix de 2014. 18,56 est l'effet d'un seul dollar, 1 206,4 la recette à 65 dollars et 1 392 la recette à 75 dollars.",
    "seconds": 70,
    "status": "draft",
    "refs": [
@@ -941,21 +951,23 @@
      "art": "Déséquilibres budgétaires",
      "url": "https://www.imf.org/en/News/Articles/2024/05/28/pr24187-gabon-imf-executive-board-concludes-2014-art-iv-consult"
     }
-   ]
+   ],
+   "img": "svg/min-prix-brut-sensibilite.svg",
+   "imgAlt": "Valeurs fictives : courbe du prix du baril sur huit trimestres (82, 78, 71, 64, 58, 63, 72, 80 dollars) comparée à une ligne pointillée d'hypothèse budgétaire à 75 dollars ; panneau de sensibilité : production 80 millions de barils, 580 FCFA pour 1 dollar, part de l'État 40 %, soit 18,56 milliards de FCFA par dollar ; recette de l'État 1 206,4 à 65 dollars, 1 392 à 75 dollars, 1 577,6 à 85 dollars."
   },
   {
    "id": "min-secteur-gabon-036",
    "theme": "Pétrole, économie et budget de l'État",
    "level": 2,
-   "q": "Exemple fictif : production disponible 100 unités, coûts récupérables 90, plafond de récupération 70 %, part minimale de l'État 45 % sur le reste. Quelle quantité revient au minimum à l'État ?",
+   "q": "Sur la cascade fictive du partage de la production, 300 000 barils restent à partager entre l'État et le contracteur. Si le contrat fixe à 45 % la part de l'État sur cette production à partager, quelle quantité lui revient (hors redevance) ?",
    "choices": [
-    "30 unités, soit la production restante avant partage",
-    "13,5 unités",
-    "45 unités, soit 45 % de la production totale",
-    "31,5 unités, soit 45 % des 70 unités de coûts récupérés"
+    "150 000 barils, soit la part de l'État figurant sur le schéma",
+    "135 000 barils, soit 45 % des 300 000 barils à partager",
+    "405 000 barils, soit 45 % des 900 000 barils restant après la redevance",
+    "450 000 barils, soit 45 % de la production totale"
    ],
    "answer": 1,
-   "explain": "La récupération est plafonnée à 70 unités ; il reste 30 unités à partager, dont 45 % reviennent à l'État, soit 13,5 unités. 30 est la production restante avant partage, 45 est la part minimale en pourcentage de la production totale (erreur de base), et 31,5 correspond à 45 % de 70, c'est-à-dire des coûts récupérés.",
+   "explain": "Sur le schéma, la production à partager est de 300 000 barils, après la redevance et la récupération des coûts : 45 % × 300 000 = 135 000 barils. 150 000 est la part de 50 % du schéma, 405 000 applique 45 % à la production après redevance (erreur de base) et 450 000 l'applique à la production totale.",
    "seconds": 100,
    "status": "draft",
    "refs": [
@@ -964,7 +976,9 @@
      "art": "Articles 215 et 221",
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-   ]
+   ],
+   "img": "svg/min-partage-production.svg",
+   "imgAlt": "Cascade du partage de la production, chiffres fictifs en barils : production totale 1 000 000 ; redevance minière de 10 % soit 100 000 ; reste 900 000 ; récupération des coûts 600 000 (plafond de 70 % soit 630 000) ; production à partager 300 000 ; part de l'État 150 000 et part du contracteur 150 000"
   },
   {
    "id": "min-secteur-gabon-037",
@@ -1159,15 +1173,15 @@
    "id": "min-secteur-gabon-045",
    "theme": "Champs matures et déclin",
    "level": 2,
-   "q": "Exemple fictif : un champ produit 100 000 b/j avec un déclin de 5 % par an. Quelle sera sa production après deux ans, sans nouveaux forages ?",
+   "q": "Sur le profil de production d'un champ (valeurs d'illustration), la courbe quitte le plateau à l'année 6. Que se passe-t-il ensuite, sans nouveaux forages, et que marque la limite économique de 2 000 barils par jour ?",
    "choices": [
-    "Environ 90 000 b/j, soit une baisse linéaire",
-    "Environ 95 000 b/j",
-    "Environ 85 000 b/j",
-    "Environ 90 250 b/j"
+    "La production remonte vers 24 000 b/j ; la limite économique est un plafond de production fixé par l'État",
+    "La production reste à 20 000 b/j jusqu'à l'année 12, puis le champ est abandonné par décision administrative",
+    "La production baisse de 2 000 b/j chaque année ; la limite économique est le seuil de rentabilité des puits voisins",
+    "La production décline de façon exponentielle (environ 11 000 b/j à l'année 9) ; sous la limite économique, l'abandon intervient"
    ],
    "answer": 3,
-   "explain": "Le déclin est composé : 100 000 × 0,95 = 95 000 après un an, puis 95 000 × 0,95 = 90 250. 90 000 serait un déclin linéaire de 5 000 b/j par an, 95 000 correspond à la seule première année, et 85 000 suppose un déclin de 15 %.",
+   "explain": "Après le plateau, le profil montre un déclin exponentiel : environ 11 000 b/j à l'année 9 et 6 000 b/j à l'année 12. La limite économique de 2 000 b/j est le niveau en dessous duquel l'exploitation n'est plus rentable : l'abandon intervient vers l'année 17,5. Le déclin n'est ni linéaire ni une remontée, et la limite n'est pas un plafond réglementaire.",
    "seconds": 80,
    "status": "draft",
    "refs": [
@@ -1176,7 +1190,9 @@
      "art": "Production",
      "url": "https://www.eia.gov/international/analysis/country/GAB"
     }
-   ]
+   ],
+   "img": "svg/min-courbe-declin.svg",
+   "imgAlt": "Courbe de production d'un champ : montée de l'année 0 à 2, plateau à 20 000 barils par jour jusqu'à l'année 6, puis déclin exponentiel (environ 11 000 b/j à l'année 9, 6 000 b/j à l'année 12) jusqu'à la limite économique de 2 000 b/j, atteinte vers l'année 17,5 où a lieu l'abandon."
   },
   {
    "id": "min-secteur-gabon-046",
@@ -1625,7 +1641,7 @@
    "id": "min-secteur-gabon-065",
    "theme": "Gaz, diversification et transition",
    "level": 2,
-   "q": "Lors d'une inspection, vous constatez qu'un champ n'a aucun compteur de gaz torché. Quelle obligation est violée ?",
+   "q": "Sur le schéma de la chaîne du gaz associé, chaque destination du gaz, y compris la torche, est équipée d'un compteur (C). Lors d'une inspection, vous constatez qu'un champ n'a aucun compteur de gaz torché. Quelle obligation est violée ?",
    "choices": [
     "L'obligation d'équiper les champs d'appareils approuvés de mesurage et de déclarer les volumes (article 127)",
     "L'obligation de réinjecter 100 % du gaz (article 128)",
@@ -1642,7 +1658,9 @@
      "art": "Article 127",
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-   ]
+   ],
+   "img": "svg/min-torchage-valorisation-gaz.svg",
+   "imgAlt": "Chaîne du gaz associé : puits, séparateur, traitement et compression, puis quatre branches munies chacune d'un compteur : réinjection dans le gisement, autoconsommation du champ, valorisation et vente (électricité, GPL, GNL, marché intérieur) et, en dernier recours, torche (interdite sauf dérogation). Bilan gaz : produit = réinjecté + autoconsommé + vendu + torché ou rejeté + pertes."
   },
   {
    "id": "min-secteur-gabon-066",

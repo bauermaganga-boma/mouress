@@ -29,7 +29,9 @@
     "Selon la presse (novembre 2026) : super 735 FCFA, gasoil 705 FCFA, butane 4 950 FCFA la bouteille de 12,5 kg.",
     "La prise en charge a coûté 30 milliards de FCFA en septembre 2026, contre 7 à 9 avant la guerre en Ukraine.",
     "Réformer par étapes, en protégeant les produits sociaux et en informant à l’avance."
-   ]
+   ],
+   "img": "svg/min-prix-brut-sensibilite.svg",
+   "imgAlt": "Courbe fictive du prix du baril sur huit trimestres comparée à une hypothèse budgétaire de 75 dollars, et tableau de sensibilité : un dollar de prix vaut 18,56 milliards de FCFA de recette de l'État."
   },
   {
    "id": "m3",
@@ -75,7 +77,9 @@
     "Écart en volume = jours manquants × consommation journalière.",
     "Outils légaux : stock stratégique (article 147), importation temporaire (article 140).",
     "Prioriser les usages essentiels et tenir une main courante des décisions."
-   ]
+   ],
+   "img": "svg/min-cellule-crise.svg",
+   "imgAlt": "Organisation type d'une cellule de crise : directeur unique, coordonnateur, cellule situation avec main courante, experts, conseil juridique, communication, liaison avec l'exploitant, équipe d'anticipation ; trame d'un point de situation en cinq rubriques."
   },
   {
    "id": "m6",
@@ -89,7 +93,9 @@
     "Un indicateur national peut masquer une tension locale : décomposer par site.",
     "Fréquence : quotidienne en tension, hebdomadaire ou mensuelle en situation normale.",
     "Recouper les sources et dater chaque donnée avant publication."
-   ]
+   ],
+   "img": "svg/min-mgt-tableau-de-bord.svg",
+   "imgAlt": "Tableau de bord mensuel fictif : quatre indicateurs avec leurs cibles et seuils vert, orange, rouge, un résultat chiffré, une jauge et un feu de couleur par ligne."
   },
   {
    "id": "m7",
@@ -103,7 +109,9 @@
     "Citer le texte officiel en vigueur plutôt que la presse, avec date et source.",
     "Un graphique de la structure du prix montre où va chaque franc.",
     "Face à une rumeur : faits chiffrés, pas de spéculation, renvoi aux communiqués officiels."
-   ]
+   ],
+   "img": "svg/min-graphiques-trompeurs.svg",
+   "imgAlt": "Mêmes données fictives présentées de deux façons : à gauche un graphique trompeur dont l'axe vertical commence à 490, à droite un graphique correct dont l'axe commence à 0."
   },
   {
    "id": "m8",
@@ -470,7 +478,7 @@
    "id": "min-prix-019",
    "theme": "Prix réglementés et subventions au Gabon",
    "level": 3,
-   "q": "Un collègue affirme que la subvention « ne coûte rien, puisque le pays produit du pétrole ». Que lui répondre dans la note au cabinet ?",
+   "q": "La figure montre que chaque dollar de prix du baril pèse sur la recette de l'État (valeurs fictives). Un collègue affirme que la subvention « ne coûte rien, puisque le pays produit du pétrole ». Que lui répondre dans la note au cabinet ?",
    "choices": [
     "Il a raison : le pays produit son brut, donc vendre sous le prix de revient n’a aucun coût pour l’État",
     "Elle ne coûte que si le prix du dollar monte",
@@ -487,7 +495,9 @@
      "art": "Charge mensuelle de la prise en charge par l’État",
      "url": "https://www.gabonreview.com/carburants-a-30-milliards-par-mois-letat-veut-revoir-la-facture-des-prix-stabilises/"
     }
-   ]
+   ],
+   "img": "svg/min-prix-brut-sensibilite.svg",
+   "imgAlt": "Courbe fictive du prix du baril sur huit trimestres comparée à une hypothèse budgétaire de 75 dollars, et tableau de sensibilité : un dollar de prix vaut 18,56 milliards de FCFA de recette de l'État."
   },
   {
    "id": "min-prix-020",
@@ -798,17 +808,19 @@
    "id": "min-prix-035",
    "theme": "Stocks de sécurité",
    "level": 2,
-   "q": "Cas fictif : stock de 30 millions de litres, consommation de 1,2 million de litres par jour. Combien de jours de couverture ?",
+   "q": "D'après la figure (valeurs fictives), combien de jours de couverture représente le stock au début du suivi ?",
    "choices": [
-    "25 jours",
-    "36 jours",
-    "18 jours",
-    "250 jours"
+    "6 jours",
+    "12 jours",
+    "5 jours",
+    "4 jours"
    ],
    "answer": 0,
-   "explain": "30 000 000 ÷ 1 200 000 = 25. Les autres résultats viennent d’une mauvaise division ou d’une erreur de virgule.",
+   "explain": "Jours de couverture = stock ÷ consommation journalière = 12 000 m³ ÷ 2 000 m³ par jour = 6 jours. 12 est le stock en milliers de m³, 5 le jour d'arrivée du navire et 4 le jour où le seuil de sécurité est atteint.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-couverture-stock.svg",
+   "imgAlt": "Courbe fictive du stock d'un dépôt : 12 000 m³ au départ, baisse de 2 000 m³ par jour, seuil de sécurité de 4 000 m³ atteint au jour 4, stock de 2 000 m³ au jour 5 puis arrivée d'un navire de 10 000 m³ ; formule : jours de couverture égale stock divisé par consommation journalière."
   },
   {
    "id": "min-prix-036",
@@ -876,7 +888,7 @@
    "id": "min-prix-039",
    "theme": "Stocks de sécurité",
    "level": 3,
-   "q": "Gasoil : 6 jours de stock à Libreville, prochaine cargaison attendue dans 9 jours. Quelle décision est la plus adaptée ?",
+   "q": "Sur la figure, le stock passe sous le seuil de sécurité avant l'arrivée du navire. Pour le gasoil à Libreville, il reste 6 jours de stock et la prochaine cargaison est attendue dans 9 jours. Quelle décision est la plus adaptée ?",
    "choices": [
     "Attendre l’arrivée du navire sans rien changer, puisque le stock couvre déjà plus de la moitié du délai d’attente",
     "Prioriser les usages essentiels, accélérer l’arrivée de la cargaison et informer sur la situation réelle",
@@ -886,7 +898,9 @@
    "answer": 1,
    "explain": "Le manque est de trois jours : il faut agir sur l’offre (accélérer la cargaison), la demande (priorités) et l’information. Attendre expose à la rupture, doubler le prix est une mesure non décidée par l’agent, et vider le stock national transfère le problème.",
    "seconds": 100,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-couverture-stock.svg",
+   "imgAlt": "Courbe fictive du stock d'un dépôt : 12 000 m³ au départ, baisse de 2 000 m³ par jour, seuil de sécurité de 4 000 m³ atteint au jour 4, stock de 2 000 m³ au jour 5 puis arrivée d'un navire de 10 000 m³ ; formule : jours de couverture égale stock divisé par consommation journalière."
   },
   {
    "id": "min-prix-040",
@@ -908,7 +922,7 @@
    "id": "min-prix-041",
    "theme": "Scénarios de rupture",
    "level": 1,
-   "q": "Face à un risque de pénurie, quel est le premier réflexe d’un cadre du ministère ?",
+   "q": "Sur la trame d'un point de situation de la cellule de crise, la première rubrique est consacrée aux faits confirmés. Face à un risque de pénurie, quel est le premier réflexe d'un cadre du ministère ?",
    "choices": [
     "Établir les faits : stocks par dépôt, cargaisons attendues, ventes récentes",
     "Annoncer publiquement la fin des stocks",
@@ -925,7 +939,9 @@
      "art": "Réunion du 5 octobre 2026 et rôle de la SGEPP",
      "url": "https://www.gabonreview.com/penurie-de-carburant-le-gabon-sous-pression-letat-tente-de-reprendre-le-controle/"
     }
-   ]
+   ],
+   "img": "svg/min-cellule-crise.svg",
+   "imgAlt": "Organisation type d'une cellule de crise : directeur unique, coordonnateur, cellule situation avec main courante, experts, conseil juridique, communication, liaison avec l'exploitant, équipe d'anticipation ; trame d'un point de situation en cinq rubriques."
   },
   {
    "id": "min-prix-042",
@@ -1194,7 +1210,7 @@
    "id": "min-prix-058",
    "theme": "Indicateurs de suivi",
    "level": 2,
-   "q": "Un indicateur de suivi est défini. Quel élément est indispensable pour qu’il soit utile ?",
+   "q": "Sur le tableau de bord de la figure, chaque indicateur porte une cible et des seuils. Quel élément est indispensable pour qu'un indicateur de suivi soit utile ?",
    "choices": [
     "Un graphique en couleur, un titre accrocheur et une présentation soignée pour la direction",
     "Un nom en anglais",
@@ -1204,13 +1220,15 @@
    "answer": 3,
    "explain": "Un indicateur sans définition précise ni suite concrète n’a pas d’usage. L’aspect visuel, la langue ou la rareté de la publication ne le rendent pas fiable.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-mgt-tableau-de-bord.svg",
+   "imgAlt": "Tableau de bord mensuel fictif : quatre indicateurs avec leurs cibles et seuils vert, orange, rouge, un résultat chiffré, une jauge et un feu de couleur par ligne."
   },
   {
    "id": "min-prix-059",
    "theme": "Indicateurs de suivi",
    "level": 3,
-   "q": "Tableau de bord : stock national à 28 jours, Libreville à 5 jours, ventes locales en hausse de 40 % sur une semaine, cargaison retardée. Quelle lecture est la plus juste ?",
+   "q": "Sur un tableau de bord comme celui de la figure, on lit : stock national à 28 jours, Libreville à 5 jours, ventes locales en hausse de 40 % sur une semaine, cargaison retardée. Quelle lecture est la plus juste ?",
    "choices": [
     "Situation normale, car le stock national est élevé et la hausse des ventes n’est que ponctuelle, sans lien avec la cargaison",
     "Panne du système de comptage, aucune action requise",
@@ -1220,7 +1238,9 @@
    "answer": 3,
    "explain": "La conjonction d’un stock local bas, d’une hausse des ventes et d’un retard de cargaison est un signal d’alerte. Se rassurer avec la moyenne nationale ou parler de panne sans vérifier est une erreur d’analyse.",
    "seconds": 100,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-mgt-tableau-de-bord.svg",
+   "imgAlt": "Tableau de bord mensuel fictif : quatre indicateurs avec leurs cibles et seuils vert, orange, rouge, un résultat chiffré, une jauge et un feu de couleur par ligne."
   },
   {
    "id": "min-prix-060",
@@ -1258,7 +1278,7 @@
    "id": "min-prix-062",
    "theme": "Communication sur les prix",
    "level": 1,
-   "q": "Pourquoi désigner un porte-parole unique ?",
+   "q": "Sur le schéma d'une cellule de crise, la communication prépare des messages validés par le directeur. Pourquoi désigner en plus un porte-parole unique ?",
    "choices": [
     "Pour que les autres agents ne reçoivent jamais d’information sur les décisions en cours",
     "Pour éviter les contradictions entre services et parler d’une seule voix",
@@ -1268,7 +1288,9 @@
    "answer": 1,
    "explain": "Un porte-parole unique garantit la cohérence du message. Il ne coupe pas l’information interne, n’empêche pas les écrits et ne vise pas la lenteur.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-cellule-crise.svg",
+   "imgAlt": "Organisation type d'une cellule de crise : directeur unique, coordonnateur, cellule situation avec main courante, experts, conseil juridique, communication, liaison avec l'exploitant, équipe d'anticipation ; trame d'un point de situation en cinq rubriques."
   },
   {
    "id": "min-prix-063",

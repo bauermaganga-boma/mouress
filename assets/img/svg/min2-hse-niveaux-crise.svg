@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Grille pédagogique de trois niveaux de crise, non officielle : niveau 1 vigilance (incident maîtrisé par l'exploitant, sans victime ni impact hors site), niveau 2 alerte (événement grave ou évolutif, cellule restreinte), niveau 3 crise majeure (victimes, pollution étendue ou menace sur l'approvisionnement, cellule complète) ; règle surclasser en cas de doute puis déclasser ; seuils fictifs de couverture de gasoil de 10 jours pour l'alerte et 5 jours pour la crise</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.o{fill:#B85C0A;font-weight:bold}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="28" class="h">Niveaux de crise : grille pédagogique</text>
+<text x="400" y="48" class="c">exemple non officiel, la grille du ministère est à confirmer</text>
+
+<!-- niveau 1 -->
+<rect x="20" y="62" width="240" height="40" fill="#DCE6F5" stroke="#061F44" stroke-width="2.5"/>
+<text x="140" y="88" class="c b" style="font-size:16px">Niveau 1 : vigilance</text>
+<rect x="20" y="102" width="240" height="170" fill="#FFFFFF" stroke="#061F44" stroke-width="2.5"/>
+<text x="32" y="128" class="b">Situation</text>
+<text x="32" y="148">Incident maîtrisé par l'exploitant,</text>
+<text x="32" y="166">sans victime ni impact hors site.</text>
+<text x="32" y="198" class="b">Réponse du ministère</text>
+<text x="32" y="218">Il est informé et suit l'événement.</text>
+<text x="32" y="238">Pas d'activation de la cellule.</text>
+
+<!-- niveau 2 -->
+<rect x="280" y="62" width="240" height="40" fill="#F28C28" fill-opacity="0.45" stroke="#061F44" stroke-width="2.5"/>
+<text x="400" y="88" class="c b" style="font-size:16px">Niveau 2 : alerte</text>
+<rect x="280" y="102" width="240" height="170" fill="#FFFFFF" stroke="#061F44" stroke-width="2.5"/>
+<text x="292" y="128" class="b">Situation</text>
+<text x="292" y="148">Événement grave ou évolutif.</text>
+<text x="292" y="198" class="b">Réponse du ministère</text>
+<text x="292" y="218">Cellule restreinte mobilisée par</text>
+<text x="292" y="236">la direction concernée, points</text>
+<text x="292" y="254">de situation réguliers.</text>
+
+<!-- niveau 3 -->
+<rect x="540" y="62" width="240" height="40" fill="#F28C28" stroke="#061F44" stroke-width="2.5"/>
+<text x="660" y="88" class="c b" style="font-size:16px">Niveau 3 : crise majeure</text>
+<rect x="540" y="102" width="240" height="170" fill="#FFFFFF" stroke="#061F44" stroke-width="2.5"/>
+<text x="552" y="128" class="b">Situation</text>
+<text x="552" y="148">Victimes, pollution étendue ou</text>
+<text x="552" y="166">menace sur l'approvisionnement.</text>
+<text x="552" y="198" class="b">Réponse du ministère</text>
+<text x="552" y="218">Cellule de crise au complet, avec</text>
+<text x="552" y="236">le cabinet et, si besoin, les autres</text>
+<text x="552" y="254">administrations.</text>
+
+<!-- règle -->
+<path d="M120,300H680" class="nv" marker-end="url(#ar)"/>
+<text x="400" y="322" class="c b">En cas de doute, surclasser ; déclasser quand les faits sont établis</text>
+<text x="400" y="342" class="c">Le niveau est réexaminé à chaque point de situation.</text>
+
+<!-- critères -->
+<rect x="20" y="360" width="760" height="52" rx="8" fill="#E8EAEE" stroke="#061F44" stroke-width="2"/>
+<text x="400" y="382" class="c b">Critères de classement</text>
+<text x="400" y="402" class="c">victimes, étendue, évolution, capacité de l'exploitant, approvisionnement, médias</text>
+
+<!-- seuils -->
+<rect x="20" y="424" width="760" height="62" rx="8" fill="#FFFFFF" stroke="#B85C0A" stroke-width="2.5"/>
+<text x="400" y="448" class="c o">Seuils chiffrés fixés à l'avance (exemple fictif, couverture de gasoil)</text>
+<text x="400" y="472" class="c">seuil d'alerte : 10 jours de couverture   |   seuil de crise : 5 jours de couverture</text>
+</svg>

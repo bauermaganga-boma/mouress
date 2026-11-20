@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Zones d'effets d'un scénario d'incendie de cuvette dans une étude de dangers (exemple fictif) : cercle létal de 80 mètres, cercle d'effets irréversibles de 200 mètres, un logement à 60 mètres, un lotissement à 150 mètres construit après l'étude et un poste de chargement ajouté depuis</title>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.o{fill:#B85C0A;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Étude de dangers : zones d'effets d'un incendie de cuvette</text>
+
+<!-- zones -->
+<circle cx="270" cy="255" r="200" fill="#DCE6F5" fill-opacity="0.6" stroke="#061F44" stroke-width="2" stroke-dasharray="8 5"/>
+<circle cx="270" cy="255" r="80" fill="#F28C28" fill-opacity="0.38" stroke="#B85C0A" stroke-width="2.5"/>
+
+<!-- cuvette -->
+<rect x="240" y="238" width="60" height="34" class="gr"/>
+<text x="270" y="260" class="c" style="font-size:13px">Cuvette</text>
+
+<!-- rayons -->
+<path d="M270,255H350" stroke="#B85C0A" stroke-width="2.5" fill="none"/>
+<text x="296" y="226" class="o" transform="rotate(0)">80 m</text>
+<path d="M270,255L411,114" stroke="#061F44" stroke-width="1.8" fill="none"/>
+<text x="352" y="170" class="b" transform="rotate(-45 352 170)">200 m</text>
+
+<!-- logement à 60 m -->
+<path d="M262,315V300L270,293L278,300V315Z" class="bl" style="stroke-width:2"/>
+<text x="270" y="335" class="c b">Logement L</text>
+<text x="270" y="351" class="c">à 60 m</text>
+
+<!-- lotissement à 150 m -->
+<path d="M410,262V248L418,241L426,248V262ZM434,262V248L442,241L450,248V262ZM422,285V271L430,264L438,271V285Z" class="bl" style="stroke-width:2"/>
+<text x="430" y="305" class="c b">Lotissement H</text>
+<text x="430" y="321" class="c">à 150 m</text>
+<text x="430" y="337" class="c">construit après</text>
+<text x="430" y="353" class="c">l'étude</text>
+
+<!-- poste de chargement -->
+<rect x="198" y="150" width="110" height="28" class="gr" style="stroke-dasharray:5 3"/>
+<text x="253" y="169" class="c" style="font-size:13px">Poste de chargement</text>
+<text x="253" y="196" class="c" style="font-size:13px">ajouté depuis l'étude</text>
+
+<!-- échelle -->
+<path d="M60,470H160" stroke="#061F44" stroke-width="3"/>
+<path d="M60,464V476M160,464V476" stroke="#061F44" stroke-width="2"/>
+<text x="110" y="490" class="c">100 m</text>
+
+<!-- panneau droit -->
+<rect x="500" y="60" width="270" height="380" rx="8" fill="#FFFFFF" stroke="#061F44" stroke-width="2"/>
+<rect x="516" y="84" width="22" height="22" fill="#F28C28" fill-opacity="0.45" stroke="#B85C0A" stroke-width="2"/>
+<text x="548" y="95" class="b">Zone 1 : effets létaux</text>
+<text x="548" y="113">rayon de 80 m (exemple)</text>
+<rect x="516" y="138" width="22" height="22" fill="#DCE6F5" stroke="#061F44" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="548" y="149" class="b">Zone 2 : effets irréversibles</text>
+<text x="548" y="167">rayon de 200 m (exemple)</text>
+<path d="M516,196H754" stroke="#061F44" stroke-width="1.5"/>
+<text x="516" y="222" class="b">Chaque zone est limitée par</text>
+<text x="516" y="242" class="b">un seuil d'effet à distance :</text>
+<text x="516" y="272">- effets thermiques (chaleur)</text>
+<text x="516" y="294">- surpression (onde de choc)</text>
+<text x="516" y="316">- toxicité (concentration)</text>
+<path d="M516,338H754" stroke="#061F44" stroke-width="1.5"/>
+<text x="516" y="364" class="o">Schéma fictif, hors échelle.</text>
+<text x="516" y="384">Distances d'exemple,</text>
+<text x="516" y="404">non réglementaires.</text>
+</svg>

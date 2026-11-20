@@ -45,7 +45,9 @@
     "MARPOL annexe I : prévention de la pollution par hydrocarbures ; gaz inerte contre l'explosion des citernes.",
     "Inspection préalable des navires avant accostage ; écarts de quantité réglés par mesures contradictoires.",
     "Adapter la taille du lot au tirant d'eau des ports et à la place libre des dépôts."
-   ]
+   ],
+   "img": "photo/min-aval-navire-petrolier.jpg",
+   "imgAlt": "Photographie d'un pétrolier à quai le long d'un appontement : un remorqueur est collé à sa coque à gauche, des collecteurs de chargement sont visibles sur le pont avant et la jetée s'étend à droite, sur une mer calme."
   },
   {
    "id": "m4",
@@ -59,7 +61,9 @@
     "Démarrer à débit réduit : étanchéité, électricité statique, surpressions.",
     "Arrêt d'urgence avec temps de fermeture calculé contre le coup de bélier.",
     "Article 246 : mesurage et comptage de la production, prérogative exclusive de l'État."
-   ]
+   ],
+   "img": "svg/min-niveaux-deversement.svg",
+   "imgAlt": "Trois niveaux de réponse à un déversement d'hydrocarbures : niveau 1 moyens locaux de l'exploitant, niveau 2 moyens régionaux ou mutualisés, niveau 3 aide internationale ; cinq priorités d'intervention et règle de dérive de la nappe."
   },
   {
    "id": "m5",
@@ -89,7 +93,9 @@
     "Bilan : stock initial + réceptions − livraisons = stock théorique ; comparer au stock mesuré.",
     "Pertes réelles, erreurs de mesure, erreurs de comptabilité : trois origines à distinguer.",
     "Un écart toujours du même côté révèle un biais systématique, pas un hasard."
-   ]
+   ],
+   "img": "svg/min2-aval-jaugeage-15c.svg",
+   "imgAlt": "Un bac de stockage avec un ruban lesté descendu jusqu'au fond, la hauteur de produit, l'eau de fond et une température de 35 °C ; quatre étapes d'un relevé ; exemple fictif de 10 000 m³ observés à 35 °C qui valent 9 840 m³ à 15 °C."
   },
   {
    "id": "m7",
@@ -103,7 +109,9 @@
     "Feu d'hydrocarbure : classe B, mousse et refroidissement des bacs voisins.",
     "Information sans délai de tout incident (art. 241) ; responsabilité de tous les dommages (art. 179).",
     "Sans autorisation : procès-verbal, mise en demeure, puis 1 à 30 millions FCFA (art. 284) ; récidive : doublement (art. 265)."
-   ]
+   ],
+   "img": "svg/min-modele-barrieres.svg",
+   "imgAlt": "Modèle des barrières (fromage suisse) pour un bac d'hydrocarbure : ronde, alarme de niveau haut, cuvette de rétention et déluge d'eau ; une trajectoire arrêtée par une barrière sans trou et une trajectoire qui traverse quatre trous alignés jusqu'à l'accident."
   }
  ],
  "questions": [
@@ -311,7 +319,7 @@
    "id": "min-stockage-012",
    "theme": "Pipelines : conception, surveillance et fuites",
    "level": 1,
-   "q": "Quelle est la fonction de la protection cathodique d'une canalisation enterrée ?",
+   "q": "Sur la figure, une anode est reliée à la canalisation enterrée. Quelle est la fonction de la protection cathodique d'une canalisation enterrée ?",
    "choices": [
     "Limiter la corrosion externe de l'acier",
     "Réchauffer le produit pour faciliter son pompage",
@@ -321,13 +329,15 @@
    "answer": 0,
    "explain": "Un courant imposé ou des anodes sacrificielles font de l'acier la cathode d'un circuit, ce qui empêche sa dissolution. Elle ne chauffe pas le produit, ne mesure pas le débit et ne détecte pas les piquages.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-oleoduc-surveillance.svg",
+   "imgAlt": "Oléoduc entre une station de départ et un terminal : débit d'entrée de 500 m³/h et de sortie de 460 m³/h, profil de pression avec chute brutale au point de fuite, vannes de sectionnement, lanceur de racleur et anode de protection cathodique."
   },
   {
    "id": "min-stockage-013",
    "theme": "Pipelines : conception, surveillance et fuites",
    "level": 1,
-   "q": "Que permet de détecter un racleur instrumenté passé dans une canalisation en service ?",
+   "q": "Sur la figure, un racleur part du lanceur situé à la station de départ. Que permet de détecter un racleur instrumenté passé dans une canalisation en service ?",
    "choices": [
     "Le prix du brut transporté et sa teneur en soufre",
     "La position exacte des vannes de sectionnement fermées",
@@ -337,7 +347,9 @@
    "answer": 3,
    "explain": "Le racleur instrumenté mesure l'état de la paroi sans arrêter l'écoulement. Il ne renseigne ni sur la qualité commerciale du produit ni sur la position des vannes, ni sur les compteurs.",
    "seconds": 50,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-oleoduc-surveillance.svg",
+   "imgAlt": "Oléoduc entre une station de départ et un terminal : débit d'entrée de 500 m³/h et de sortie de 460 m³/h, profil de pression avec chute brutale au point de fuite, vannes de sectionnement, lanceur de racleur et anode de protection cathodique."
   },
   {
    "id": "min-stockage-014",
@@ -359,7 +371,7 @@
    "id": "min-stockage-015",
    "theme": "Pipelines : conception, surveillance et fuites",
    "level": 2,
-   "q": "Vous suivez un oléoduc : la pression chute brutalement et le débit de sortie est inférieur de 8 % à celui d'entrée. Quelle est la première action ?",
+   "q": "Sur la figure d'un oléoduc, la pression chute brutalement et le débit de sortie est inférieur au débit d'entrée. Quelle est la première action ?",
    "choices": [
     "Augmenter la pression de pompage pour compenser la baisse de débit constatée",
     "Attendre 24 heures de mesures supplémentaires pour confirmer la tendance",
@@ -369,7 +381,9 @@
    "answer": 3,
    "explain": "Une chute de pression avec un écart de débit signale une fuite probable : on stoppe, on isole et on active le plan d'urgence avant de localiser. Pomper davantage aggrave le déversement, attendre laisse la pollution s'étendre, et un racleur bloqué ou endommagé au droit de la fuite compliquerait les choses.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-oleoduc-surveillance.svg",
+   "imgAlt": "Oléoduc entre une station de départ et un terminal : débit d'entrée de 500 m³/h et de sortie de 460 m³/h, profil de pression avec chute brutale au point de fuite, vannes de sectionnement, lanceur de racleur et anode de protection cathodique."
   },
   {
    "id": "min-stockage-016",
@@ -558,7 +572,7 @@
    "id": "min-stockage-027",
    "theme": "Transport maritime et cabotage",
    "level": 2,
-   "q": "Quel dispositif protège les citernes à cargaison d'un grand pétrolier contre l'explosion ?",
+   "q": "Sur la photo, un pétrolier est à quai. Quel dispositif protège les citernes à cargaison d'un grand navire de ce type contre l'explosion ?",
    "choices": [
     "La double coque, qui empêche les vapeurs de s'enflammer dans les citernes",
     "Une ventilation qui renouvelle l'air des citernes en continu pendant le voyage",
@@ -568,7 +582,9 @@
    "answer": 3,
    "explain": "Le gaz inerte réduit l'oxygène (moins de 8 % en volume) : le mélange ne peut plus brûler. La double coque limite les fuites vers la mer, pas l'explosion ; renouveler l'air amènerait de l'oxygène ; un revêtement réfléchissant ne règle pas le risque.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/min-aval-navire-petrolier.jpg",
+   "imgAlt": "Photographie d'un pétrolier à quai le long d'un appontement : un remorqueur est collé à sa coque à gauche, des collecteurs de chargement sont visibles sur le pont avant et la jetée s'étend à droite, sur une mer calme."
   },
   {
    "id": "min-stockage-028",
@@ -932,7 +948,7 @@
    "id": "min-stockage-047",
    "theme": "Stocks de sécurité et SGEPP",
    "level": 2,
-   "q": "Un navire est retardé et le pays risque une rupture de gazole. Que proposez-vous ?",
+   "q": "Sur la figure, le stock passe sous le seuil de sécurité avant l'arrivée du navire. Si un navire est ainsi retardé et que le pays risque une rupture de gazole, que proposez-vous ?",
    "choices": [
     "Laisser chaque distributeur puiser librement dans le stock de sécurité",
     "Libération partielle du stock de sécurité par l'autorité, puis reconstitution",
@@ -942,7 +958,9 @@
    "answer": 1,
    "explain": "Le stock de sécurité se mobilise sur décision de l'autorité, pour une durée limitée et avec un plan de reconstitution. L'ouvrir librement ou l'utiliser pour les ventes courantes le videra, et fermer les stations aggrave la crise.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-couverture-stock.svg",
+   "imgAlt": "Courbe fictive du stock d'un dépôt : 12 000 m³ au départ, baisse de 2 000 m³ par jour, seuil de sécurité de 4 000 m³ atteint au jour 4, stock de 2 000 m³ au jour 5 puis arrivée d'un navire de 10 000 m³ ; formule : jours de couverture égale stock divisé par consommation journalière."
   },
   {
    "id": "min-stockage-048",
@@ -1013,7 +1031,7 @@
    "id": "min-stockage-051",
    "theme": "Mesure, jaugeage, pertes et écarts",
    "level": 1,
-   "q": "Comment procède-t-on au jaugeage manuel d'un bac ?",
+   "q": "Sur la figure, un ruban lesté est descendu dans le bac. Comment procède-t-on au jaugeage manuel d'un bac ?",
    "choices": [
     "Pesée du bac entier sur une bascule adaptée aux grandes charges",
     "Relevé de la seule température de la robe, sans autre mesure",
@@ -1023,7 +1041,9 @@
    "answer": 2,
    "explain": "Le jaugeage donne une hauteur, convertie en volume par le barème de jaugeage du bac. Peser un bac entier est irréaliste, la température seule ne donne aucun volume, et déduire d'une livraison antérieure n'est pas une mesure.",
    "seconds": 50,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-jaugeage-15c.svg",
+   "imgAlt": "Un bac de stockage avec un ruban lesté descendu jusqu'au fond, la hauteur de produit, l'eau de fond et une température de 35 °C ; quatre étapes d'un relevé ; exemple fictif de 10 000 m³ observés à 35 °C qui valent 9 840 m³ à 15 °C."
   },
   {
    "id": "min-stockage-052",
@@ -1045,7 +1065,7 @@
    "id": "min-stockage-053",
    "theme": "Mesure, jaugeage, pertes et écarts",
    "level": 1,
-   "q": "Que représente le volume net standard ?",
+   "q": "Sur la figure, la dernière étape d'un relevé donne le volume net standard. Que représente ce volume ?",
    "choices": [
     "Le volume lu directement au bac, à la température réelle",
     "Le volume maximal que le bac peut contenir",
@@ -1055,7 +1075,9 @@
    "answer": 3,
    "explain": "Le volume brut observé est celui du bac ; le volume brut standard est corrigé à 15 °C ; le volume net standard retranche en plus l'eau et les sédiments. La capacité du bac et le débit journalier sont d'autres notions.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-jaugeage-15c.svg",
+   "imgAlt": "Un bac de stockage avec un ruban lesté descendu jusqu'au fond, la hauteur de produit, l'eau de fond et une température de 35 °C ; quatre étapes d'un relevé ; exemple fictif de 10 000 m³ observés à 35 °C qui valent 9 840 m³ à 15 °C."
   },
   {
    "id": "min-stockage-054",
@@ -1315,7 +1337,7 @@
    "id": "min-stockage-067",
    "theme": "Sécurité, pollution, autorisation et contrôle",
    "level": 2,
-   "q": "Dans un plan d'urgence à trois niveaux, qu'est-ce qu'un déversement de niveau 1 ?",
+   "q": "Sur le schéma des niveaux de réponse, trois niveaux sont distingués. Dans un plan d'urgence à trois niveaux, qu'est-ce qu'un déversement de niveau 1 ?",
    "choices": [
     "Un déversement exigeant l'aide internationale immédiate",
     "Un déversement survenu hors des eaux nationales",
@@ -1325,7 +1347,9 @@
    "answer": 3,
    "explain": "Le niveau 1 correspond à un déversement mineur géré localement par l'exploitant ; les niveaux 2 et 3 mobilisent l'aide régionale ou nationale puis internationale.",
    "seconds": 55,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-niveaux-deversement.svg",
+   "imgAlt": "Trois niveaux de réponse à un déversement d'hydrocarbures : niveau 1 moyens locaux de l'exploitant, niveau 2 moyens régionaux ou mutualisés, niveau 3 aide internationale ; cinq priorités d'intervention et règle de dérive de la nappe."
   },
   {
    "id": "min-stockage-068",

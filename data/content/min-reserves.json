@@ -29,7 +29,9 @@
         "Récupération secondaire : injection d'eau ou de gaz ; assistée : vapeur, polymères, CO₂, etc.",
         "FR = efficacité de déplacement × efficacité de balayage.",
         "Les fourchettes de récupération sont indicatives ; l'étude du champ prime."
-      ]
+      ],
+      "img": "svg/min2-amont-mecanismes-drainage.svg",
+      "imgAlt": "Graphique de la pression du réservoir (en % de la pression initiale) selon la récupération (en % du volume en place) pour trois mécanismes : A gaz dissous, pression qui chute vite, récupération de 5 à 30 % ; B chapeau de gaz, baisse lente, 20 à 40 % ; C aquifère actif, pression presque stable, 35 à 75 % ; fourchettes indicatives."
     },
     {
       "id": "m3",
@@ -43,7 +45,9 @@
         "Prospectives (non découvertes), contingentes (découvertes, non commerciales), réserves (commerciales).",
         "Brut = 100 % du champ ; net = part du titulaire ; 1 m³ ≈ 6,29 bbl.",
         "Le prix et les coûts font basculer des volumes entre réserves et ressources contingentes."
-      ]
+      ],
+      "img": "svg/min-matrice-reserves-ressources.svg",
+      "imgAlt": "Matrice de classification des ressources : colonnes estimation basse (P90), meilleure estimation (P50) et estimation haute (P10) ; lignes production, réserves (1P, 2P, 3P), ressources contingentes (1C, 2C, 3C), ressources prospectives et quantités non récupérables. Flèches : incertitude croissante vers la droite, maturité croissante vers le haut."
     },
     {
       "id": "m4",
@@ -89,7 +93,9 @@
         "Déclaration par champ et par catégorie, à une date de référence, avec hypothèses.",
         "Réconciliation : début + découvertes et extensions + révisions − production = fin.",
         "Format et calendrier exacts : à confirmer auprès de la Direction générale des Hydrocarbures."
-      ]
+      ],
+      "img": "svg/min2-amont-courbe-p90-p10.svg",
+      "imgAlt": "Courbe de probabilité de dépassement d'un volume (valeurs fictives) : P90 = 20 millions de barils, P50 = 60, P10 = 150. Les catégories 1P, 2P et 3P d'une déclaration correspondent à ces niveaux de confiance croissants en incertitude."
     },
     {
       "id": "m7",
@@ -103,7 +109,9 @@
         "Signaux d'alerte : 1P supérieur à 2P, hausses sans nouvelles données, FR irréaliste, double comptage.",
         "R/P = réserves / production annuelle.",
         "Devant un écart d'audit : rapprochement et traçabilité, ni moyenne ni sanction immédiate."
-      ]
+      ],
+      "img": "svg/min-deroule-inspection.svg",
+      "imgAlt": "Déroulé d'une inspection ou d'un audit en cinq étapes : préparation, visite sur site avec réunions d'ouverture et de clôture, constat, rapport avec procès-verbal, suites."
     }
   ],
   "questions": [
@@ -289,7 +297,7 @@
       "id": "min-reserves-012",
       "theme": "Mécanismes de drainage",
       "level": 1,
-      "q": "Parmi les mécanismes naturels, lequel conduit en général au meilleur facteur de récupération ?",
+      "q": "Sur le graphique des trois mécanismes de drainage, comparez les plages de récupération indiquées en bas. Parmi les mécanismes naturels, lequel conduit en général au meilleur facteur de récupération ?",
       "choices": [
         "Un aquifère actif qui maintient la pression",
         "Le gaz dissous seul sous la pression de bulle",
@@ -299,7 +307,9 @@
       "answer": 0,
       "explain": "À titre indicatif, un aquifère actif atteint 35 à 75 %, contre 5 à 30 % pour le gaz dissous, quelques pour cent pour la simple expansion et 20 à 40 % pour un chapeau de gaz. Les fourchettes varient selon les champs.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-amont-mecanismes-drainage.svg",
+      "imgAlt": "Graphique pression en fonction de la récupération : trois courbes A (gaz dissous, 5 à 30 %), B (chapeau de gaz, 20 à 40 %) et C (aquifère actif, 35 à 75 %) ; les plages de récupération sont tracées sous l'axe horizontal."
     },
     {
       "id": "min-reserves-013",
@@ -337,7 +347,7 @@
       "id": "min-reserves-015",
       "theme": "Mécanismes de drainage",
       "level": 2,
-      "q": "Un champ voit sa pression baisser vite, son rapport gaz/huile monter et son débit chuter. Quel mécanisme domine probablement ?",
+      "q": "Sur le graphique des mécanismes de drainage, une des courbes de pression s'effondre dès le début de la production. Un champ voit ainsi sa pression baisser vite, son rapport gaz/huile monter et son débit chuter. Quel mécanisme domine probablement ?",
       "choices": [
         "Un aquifère actif",
         "Un chapeau de gaz volumineux",
@@ -347,13 +357,15 @@
       "answer": 2,
       "explain": "Pression qui s'effondre, gaz libre qui augmente et débit en baisse sont les signes du gaz dissous. Un aquifère maintient la pression ; un grand chapeau de gaz la fait baisser lentement ; la gravité n'explique pas la montée du rapport gaz/huile.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-amont-mecanismes-drainage.svg",
+      "imgAlt": "Graphique pression en fonction de la récupération : la courbe A (gaz dissous) chute très vite, la courbe B (chapeau de gaz) baisse lentement, la courbe C (aquifère actif) reste presque stable."
     },
     {
       "id": "min-reserves-016",
       "theme": "Mécanismes de drainage",
       "level": 2,
-      "q": "Dans un champ, la pression reste presque stable alors que le pourcentage d'eau des puits augmente d'année en année. Quelle hypothèse est la plus plausible ?",
+      "q": "Sur le graphique des mécanismes de drainage, une des courbes de pression reste presque horizontale. Dans un champ, la pression reste ainsi presque stable alors que le pourcentage d'eau des puits augmente d'année en année. Quelle hypothèse est la plus plausible ?",
       "choices": [
         "Un chapeau de gaz qui s'étend à mesure de la production",
         "Un épuisement par gaz dissous",
@@ -363,7 +375,9 @@
       "answer": 3,
       "explain": "Pression stable et venues d'eau croissantes caractérisent un aquifère actif. Le chapeau de gaz ferait monter le gaz, pas l'eau ; le gaz dissous ferait chuter la pression ; une erreur de compteur de gaz n'explique pas l'eau.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-amont-mecanismes-drainage.svg",
+      "imgAlt": "Graphique pression en fonction de la récupération : la courbe C (aquifère actif) reste presque horizontale autour de 90 % de la pression initiale, alors que les courbes A et B descendent."
     },
     {
       "id": "min-reserves-017",
@@ -703,7 +717,7 @@
       "id": "min-reserves-033",
       "theme": "Classification des réserves",
       "level": 1,
-      "q": "En approche probabiliste, que signifie P90 pour les réserves prouvées ?",
+      "q": "Sur la courbe de probabilité du schéma (valeurs fictives), le repère P90 se lit en haut de la courbe, pour le plus faible des trois volumes. En approche probabiliste, que signifie P90 pour les réserves prouvées ?",
       "choices": [
         "Que 90 % du volume en place sera produit au cours de la durée de vie du champ",
         "Que l'estimation peut être dépassée par moins de 10 % des champs du portefeuille de l'opérateur",
@@ -720,7 +734,9 @@
           "art": "Définitions et classification",
           "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
         }
-      ]
+      ],
+      "img": "svg/min2-amont-courbe-p90-p10.svg",
+      "imgAlt": "Courbe de probabilité de dépassement d'un volume en millions de barils : P90 = 20 en haut à gauche, P50 = 60 au milieu, P10 = 150 en bas à droite."
     },
     {
       "id": "min-reserves-034",
@@ -1280,7 +1296,7 @@
       "id": "min-reserves-062",
       "theme": "Audit et vérification",
       "level": 1,
-      "q": "Que comprend le contrôle des activités d'hydrocarbures selon l'article 243 de la loi n° 002/2019 ?",
+      "q": "Sur le schéma du déroulé d'un contrôle, les cinq étapes vont de la préparation aux suites. Que comprend le contrôle des activités d'hydrocarbures selon l'article 243 de la loi n° 002/2019 ?",
       "choices": [
         "Uniquement le contrôle de la qualité des carburants à la pompe et de l'état des stations",
         "Seulement la vérification du paiement des taxes douanières",
@@ -1297,7 +1313,9 @@
           "art": "Article 243",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-deroule-inspection.svg",
+      "imgAlt": "Déroulé d'un contrôle en cinq étapes : préparation, visite sur site avec réunions d'ouverture et de clôture, constat, rapport avec procès-verbal, suites."
     },
     {
       "id": "min-reserves-063",
@@ -1326,7 +1344,7 @@
       "id": "min-reserves-064",
       "theme": "Audit et vérification",
       "level": 1,
-      "q": "Quelles pièces demandez-vous en priorité pour vérifier le volume en place déclaré d'un champ ?",
+      "q": "La photo montre des carottes de roche rangées en caisses, l'une des sources de données de base d'un champ. Quelles pièces demandez-vous en priorité pour vérifier le volume en place déclaré d'un champ ?",
       "choices": [
         "Seulement le prix de vente des cargaisons exportées au cours des trois dernières années",
         "Le plan de formation du personnel du champ et le calendrier des recrutements locaux",
@@ -1336,7 +1354,9 @@
       "answer": 2,
       "explain": "Le volume en place se vérifie avec les données de base du sous-sol : cartes, diagraphies, carottes, PVT, essais. Les prix, la formation et l'organigramme n'informent pas le volume.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "photo/min-amont-carottes-caisses.jpg",
+      "imgAlt": "Photo de deux caisses en bois contenant dix longs cylindres de roche grise (carottes), rangés en lignes avec des repères de profondeur (exemple hors Gabon)."
     },
     {
       "id": "min-reserves-065",
@@ -1420,7 +1440,7 @@
       "id": "min-reserves-069",
       "theme": "Audit et vérification",
       "level": 3,
-      "q": "Une déclaration annonce 50 millions de m³ de réserves 2P, l'audit externe 38 (écart de 24 %). Quelle conduite est la plus appropriée ?",
+      "q": "Sur le schéma du déroulé d'un contrôle, le constat précède le rapport. Une déclaration annonce 50 millions de m³ de réserves 2P, l'audit externe 38 (écart de 24 %). Quelle conduite est la plus appropriée ?",
       "choices": [
         "Retenir la moyenne de 44 millions de m³ sans autre examen, afin de concilier rapidement l'opérateur et l'auditeur",
         "Appliquer immédiatement une sanction à l'opérateur",
@@ -1430,7 +1450,9 @@
       "answer": 3,
       "explain": "Un écart important s'analyse poste par poste, avec traçabilité, avant décision. La moyenne est arbitraire, la sanction immédiate prématurée et l'acceptation sans examen contraire au rôle de contrôle.",
       "seconds": 100,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-deroule-inspection.svg",
+      "imgAlt": "Déroulé d'un contrôle en cinq étapes : préparation, visite sur site, constat, rapport avec procès-verbal, suites ; le constat documente les écarts avant toute décision."
     },
     {
       "id": "min-reserves-070",

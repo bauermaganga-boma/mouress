@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Styles de titre et table des matières automatique : à gauche un extrait de rapport où les paragraphes portent les styles Titre 1, Titre 2 et Normal, plus un intertitre mis en gras à la main sans style de titre ; à droite la table des matières générée, qui liste les trois titres stylés avec leurs numéros de page mais pas l'intertitre manuel ; en bas, rappel de mettre à jour les champs après une modification. Valeurs fictives.</title>
+<defs>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.t{font-size:13px;font-weight:bold}
+.pn{fill:#FFFFFF;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:1.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:1.5}
+.wn{fill:#FFFFFF;stroke:#F28C28;stroke-width:2.5;stroke-dasharray:6 4}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Styles de titre et table des matières automatique</text>
+
+<!-- document -->
+<text x="30" y="62" class="b">Document (extrait, valeurs fictives)</text>
+<rect x="30" y="72" width="390" height="320" rx="6" class="pn"/>
+
+<rect x="42" y="86" width="64" height="26" rx="4" class="bl"/><text x="74" y="104" class="t c">Titre 1</text>
+<text x="118" y="105" class="b" style="font-size:18px">1  Contexte de la mission</text>
+
+<rect x="42" y="128" width="64" height="26" rx="4" class="gr"/><text x="74" y="146" class="t c">Normal</text>
+<text x="118" y="146">Texte courant du rapport...</text>
+
+<rect x="42" y="170" width="64" height="26" rx="4" class="bl"/><text x="74" y="188" class="t c">Titre 2</text>
+<text x="118" y="188" class="b" style="font-size:16px">1.1  Objectifs</text>
+
+<rect x="42" y="212" width="64" height="26" rx="4" class="gr"/><text x="74" y="230" class="t c">Normal</text>
+<text x="118" y="230">Texte courant du rapport...</text>
+
+<rect x="42" y="254" width="64" height="26" rx="4" class="bl"/><text x="74" y="272" class="t c">Titre 1</text>
+<text x="118" y="273" class="b" style="font-size:18px">2  Résultats</text>
+
+<rect x="42" y="296" width="64" height="26" rx="4" class="gr"/><text x="74" y="314" class="t c">Normal</text>
+<text x="118" y="314">Texte courant du rapport...</text>
+
+<rect x="36" y="338" width="378" height="46" rx="4" class="wn"/>
+<rect x="42" y="346" width="64" height="26" rx="4" class="gr"/><text x="74" y="364" class="t c">Normal</text>
+<text x="118" y="360" class="b" style="font-size:14px">Observations de terrain</text>
+<text x="118" y="377" style="font-size:13px">gras 14 pt tapé à la main : aucun style de titre</text>
+
+<!-- flèche -->
+<path d="M424,200H452" class="or" marker-end="url(#ao)"/>
+<text x="438" y="186" class="c o">génère</text>
+
+<!-- table des matières -->
+<text x="470" y="62" class="b">Table des matières automatique</text>
+<rect x="470" y="72" width="300" height="320" rx="6" class="pn"/>
+<text x="486" y="102" class="b" style="font-size:16px">Table des matières</text>
+<line x1="486" y1="112" x2="754" y2="112" stroke="#061F44" stroke-width="1.5"/>
+<text x="486" y="140">1  Contexte de la mission</text><text x="754" y="140" class="e">3</text>
+<text x="504" y="168">1.1  Objectifs</text><text x="754" y="168" class="e">3</text>
+<text x="486" y="196">2  Résultats</text><text x="754" y="196" class="e">5</text>
+<rect x="482" y="260" width="276" height="108" rx="4" class="wn"/>
+<text x="496" y="284" class="o">« Observations de terrain »</text>
+<text x="496" y="306">n'apparaît pas : le titre n'a</text>
+<text x="496" y="326">aucun style Titre 1 ou Titre 2,</text>
+<text x="496" y="346">donc aucun niveau de plan.</text>
+
+<!-- bas -->
+<rect x="30" y="410" width="740" height="64" rx="6" class="bl"/>
+<text x="400" y="436" class="c b">Après un ajout de pages ou un changement de titre</text>
+<text x="400" y="458" class="c">clic droit sur la table, « Mettre à jour les champs » (touche F9 dans beaucoup de logiciels)</text>
+</svg>

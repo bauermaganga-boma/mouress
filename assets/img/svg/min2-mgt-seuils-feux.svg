@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Cible, seuils et zones d'un indicateur, exemple fictif : taux de dossiers traités dans les délais, plus haut est mieux. Référence de départ 60 pour cent ; cible 90 pour cent ; zone rouge sous 75, orange de 75 à moins de 90, verte à partir de 90. Trois mesures fictives : 62 au premier trimestre (rouge), 78 au deuxième (orange, écart de moins 12 points par rapport à la cible), 91 au troisième (vert).</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.w{fill:#FFFFFF;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Cible et seuils d'un indicateur (exemple fictif)</text>
+<text x="400" y="56" class="c">Taux de dossiers traités dans les délais (en %) : plus haut est mieux</text>
+<rect x="80" y="125" width="373.3333333333333" height="70" fill="#F4B6B0" stroke="#061F44" stroke-width="2.5"/>
+<rect x="453.3333333333333" y="125" width="159.99999999999994" height="70" fill="#FBD9A8" stroke="#061F44" stroke-width="2.5"/>
+<rect x="613.3333333333333" y="125" width="106.66666666666674" height="70" fill="#BFE3C6" stroke="#061F44" stroke-width="2.5"/>
+<text x="266.66666666666663" y="166" class="c b">Rouge : sous 75</text>
+<text x="533.3333333333333" y="156" class="c b">Orange</text>
+<text x="533.3333333333333" y="176" class="c">75 à 89</text>
+<text x="666.6666666666666" y="156" class="c b">Vert</text>
+<text x="666.6666666666666" y="176" class="c">90 et +</text>
+<line x1="80" y1="195" x2="80" y2="205" stroke="#061F44" stroke-width="2"/><text x="80" y="224" class="c">40</text>
+<line x1="293.3333333333333" y1="195" x2="293.3333333333333" y2="205" stroke="#061F44" stroke-width="2"/><text x="293.3333333333333" y="224" class="c">60</text>
+<line x1="453.3333333333333" y1="195" x2="453.3333333333333" y2="205" stroke="#061F44" stroke-width="2"/><text x="453.3333333333333" y="224" class="c">75</text>
+<line x1="613.3333333333333" y1="195" x2="613.3333333333333" y2="205" stroke="#061F44" stroke-width="2"/><text x="613.3333333333333" y="224" class="c">90</text>
+<line x1="720" y1="195" x2="720" y2="205" stroke="#061F44" stroke-width="2"/><text x="720" y="224" class="c">100</text>
+<line x1="293.3333333333333" y1="105" x2="293.3333333333333" y2="125" stroke="#061F44" stroke-width="3"/><text x="293.3333333333333" y="98" class="c b">Référence : 60</text>
+<line x1="613.3333333333333" y1="105" x2="613.3333333333333" y2="125" stroke="#B85C0A" stroke-width="3"/><text x="623.3333333333333" y="98" class="c o">Cible : 90</text>
+<line x1="453.3333333333333" y1="105" x2="453.3333333333333" y2="125" stroke="#B85C0A" stroke-width="3"/><text x="441.3333333333333" y="98" class="c o">Seuil : 75</text>
+<text x="80" y="262" class="b">Mesures trimestrielles (fictives) :</text>
+<line x1="314.66666666666663" y1="205" x2="314.66666666666663" y2="274" stroke="#F28C28" stroke-width="2.5" stroke-dasharray="4 4"/><circle cx="314.66666666666663" cy="288" r="14" fill="#F28C28" stroke="#061F44" stroke-width="2.5"/><text x="314.66666666666663" y="293" class="c b" style="font-size:13px">T1</text>
+<text x="314.66666666666663" y="322" class="c b">62 %</text>
+<line x1="485.3333333333333" y1="205" x2="485.3333333333333" y2="274" stroke="#F28C28" stroke-width="2.5" stroke-dasharray="4 4"/><circle cx="485.3333333333333" cy="288" r="14" fill="#F28C28" stroke="#061F44" stroke-width="2.5"/><text x="485.3333333333333" y="293" class="c b" style="font-size:13px">T2</text>
+<text x="485.3333333333333" y="322" class="c b">78 %</text>
+<line x1="624" y1="205" x2="624" y2="274" stroke="#F28C28" stroke-width="2.5" stroke-dasharray="4 4"/><circle cx="624" cy="288" r="14" fill="#F28C28" stroke="#061F44" stroke-width="2.5"/><text x="624" y="293" class="c b" style="font-size:13px">T3</text>
+<text x="624" y="322" class="c b">91 %</text>
+<rect x="80" y="355" width="640" height="105" rx="8" class="bl"/>
+<text x="95" y="382" class="b">Écart = résultat mesuré - cible. Exemple du T2 : 78 - 90 = -12 points.</text>
+<text x="95" y="408">Les zones sont fixées avant la mesure et inscrites dans la fiche de l'indicateur.</text>
+<text x="95" y="432">Sens de lecture à préciser : ici plus haut est mieux ; pour un délai, plus bas est mieux.</text>
+<text x="95" y="452">Valeurs inventées, à titre d'exemple.</text>
+</svg>

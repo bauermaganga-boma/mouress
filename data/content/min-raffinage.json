@@ -61,7 +61,9 @@
     "L'échantillonnage représentatif et la traçabilité fondent la validité d'un résultat.",
     "Un lot hors spécification est retenu, reclassé ou retraité ; l'article 289 sanctionne les lubrifiants non conformes.",
     "Le certificat de qualité accompagne chaque lot livré."
-   ]
+   ],
+   "img": "svg/min2-aval-fiche-essais-carburant.svg",
+   "imgAlt": "Tableau d'une fiche d'essais fictive : lot A d'essence avec un indice d'octane de 92,0 pour un minimum de 95 (non conforme) et un soufre conforme ; lot B de gazole avec densité, eau et cétane conformes mais un point d'éclair de 38 °C pour plus de 55 °C exigé (non conforme)."
   },
   {
    "id": "m5",
@@ -75,7 +77,9 @@
     "Taux de fréquence = accidents avec arrêt × 1 000 000 / heures travaillées.",
     "Toujours vérifier la définition et la période de référence d'un indicateur.",
     "Un indicateur doit avoir une cible, un seuil d'alerte et être confronté au terrain."
-   ]
+   ],
+   "img": "svg/min-mgt-tableau-de-bord.svg",
+   "imgAlt": "Tableau de bord mensuel fictif : quatre indicateurs avec leurs cibles et seuils vert, orange, rouge, un résultat chiffré, une jauge et un feu de couleur par ligne."
   },
   {
    "id": "m6",
@@ -89,7 +93,9 @@
     "Permis de travail, consignation et mesure de gaz sont les barrières de base.",
     "HAZOP, soupapes, torche et automatismes de sécurité forment les barrières de sécurité des procédés.",
     "La loi impose le respect des règles QHSE (art. 3, 171) et le signalement immédiat des incidents (art. 241)."
-   ]
+   ],
+   "img": "svg/min-modele-barrieres.svg",
+   "imgAlt": "Modèle des barrières (fromage suisse) pour un bac d'hydrocarbure : ronde, alarme de niveau haut, cuvette de rétention et déluge d'eau ; une trajectoire arrêtée par une barrière sans trou et une trajectoire qui traverse quatre trous alignés jusqu'à l'accident."
   },
   {
    "id": "m7",
@@ -103,7 +109,9 @@
     "Le contrôle revient aux agents du ministère, dont certains sont officiers de police judiciaire spéciaux (art. 18-20).",
     "Sanctions de l'aval : art. 284 (sans autorisation), 286 (contenu local), 289 (lubrifiants non conformes).",
     "Le suivi s'appuie sur déclarations, visites de site et rapprochement des chiffres."
-   ]
+   ],
+   "img": "svg/min-circuit-decision-administrative.svg",
+   "imgAlt": "Circuit d'une décision administrative en quatre étapes (réception, instruction, décision, notification et archivage), avec la forme de l'acte selon l'objet, dont l'autorisation de raffinage par décret du Président de la République, puis les recours hiérarchique et contentieux."
   }
  ],
  "questions": [
@@ -511,7 +519,7 @@
    "id": "min-raffinage-025",
    "theme": "Rendements et bilan matière",
    "level": 2,
-   "q": "Un opérateur traite 5 000 t/j de brut et déclare 4 880 t/j de produits et fuel. Quel est l'écart de bilan ?",
+   "q": "Sur la figure (valeurs fictives), l'entrée et les sorties de matière d'une raffinerie sont indiquées en tonnes par jour. Quel est l'écart de bilan ?",
    "choices": [
     "0,24 %, soit 12 t/j non expliquées",
     "12 %, soit 600 t/j non expliquées",
@@ -521,7 +529,9 @@
    "answer": 2,
    "explain": "Écart = (5 000 − 4 880) / 5 000 = 120 / 5 000 = 2,4 %. Cet écart dépasse les valeurs habituelles (de l'ordre de 0,3 à 1 %) : une vérification est justifiée. Le bilan se fait en masse, non en volume.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-indicateurs-raffinerie.svg",
+   "imgAlt": "Trois indicateurs fictifs d'une raffinerie : taux d'utilisation (16 000 barils traités pour 20 000 de capacité), disponibilité (330 jours de marche sur 365) et bilan matière (5 000 t/j en entrée, 4 880 t/j en sortie, écart de 120 t/j)."
   },
   {
    "id": "min-raffinage-026",
@@ -561,7 +571,7 @@
    "id": "min-raffinage-028",
    "theme": "Rendements et bilan matière",
    "level": 2,
-   "q": "La capacité d'une raffinerie est de 20 000 barils par jour ; elle traite 16 000 barils. Quel est son taux d'utilisation ?",
+   "q": "Sur la figure (valeurs fictives), la capacité et le brut traité d'une raffinerie sont donnés en barils par jour. Quel est son taux d'utilisation ?",
    "choices": [
     "20 %",
     "125 %",
@@ -571,7 +581,9 @@
    "answer": 3,
    "explain": "16 000 / 20 000 = 0,80. 125 % serait l'inverse du rapport, et 20 % la part inutilisée.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-indicateurs-raffinerie.svg",
+   "imgAlt": "Trois indicateurs fictifs d'une raffinerie : taux d'utilisation (16 000 barils traités pour 20 000 de capacité), disponibilité (330 jours de marche sur 365) et bilan matière (5 000 t/j en entrée, 4 880 t/j en sortie, écart de 120 t/j)."
   },
   {
    "id": "min-raffinage-029",
@@ -691,7 +703,7 @@
    "id": "min-raffinage-036",
    "theme": "Qualité des produits",
    "level": 2,
-   "q": "Une essence mesurée à 92,0 RON pour une spécification minimale de 95 RON est reçue. Quelle décision est appropriée ?",
+   "q": "Sur la fiche d'essais, le lot A d'essence est mesuré à un indice d'octane inférieur à la spécification minimale. Quelle décision est appropriée pour ce lot ?",
    "choices": [
     "Le vendre tel quel, avec une réduction de prix pour l'acheteur",
     "Ajouter de l'eau pour augmenter la densité",
@@ -701,7 +713,9 @@
    "answer": 2,
    "explain": "Un lot hors spécification n'est pas commercialisable sous la qualité visée : on le retient, on le reclasse ou on le retraite (ajout de composants à haut octane). Les autres actions ne corrigent pas le défaut.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-fiche-essais-carburant.svg",
+   "imgAlt": "Tableau d'une fiche d'essais fictive : lot A d'essence avec un indice d'octane de 92,0 pour un minimum de 95 (non conforme) et un soufre conforme ; lot B de gazole avec densité, eau et cétane conformes mais un point d'éclair de 38 °C pour plus de 55 °C exigé (non conforme)."
   },
   {
    "id": "min-raffinage-037",
@@ -778,7 +792,7 @@
    "id": "min-raffinage-041",
    "theme": "Indicateurs de performance",
    "level": 1,
-   "q": "Comment définit-on le taux d'utilisation d'une raffinerie ?",
+   "q": "La figure présente trois indicateurs d'une raffinerie, dont le taux d'utilisation. Comment définit-on ce taux d'utilisation ?",
    "choices": [
     "Temps de marche divisé par temps calendaire",
     "Marge de raffinage divisée par le prix du brut",
@@ -788,7 +802,9 @@
    "answer": 2,
    "explain": "Le taux d'utilisation compare la charge réelle à la capacité. Le temps de marche donne la disponibilité, les accidents le taux de fréquence.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-indicateurs-raffinerie.svg",
+   "imgAlt": "Trois indicateurs fictifs d'une raffinerie : taux d'utilisation (16 000 barils traités pour 20 000 de capacité), disponibilité (330 jours de marche sur 365) et bilan matière (5 000 t/j en entrée, 4 880 t/j en sortie, écart de 120 t/j)."
   },
   {
    "id": "min-raffinage-042",
@@ -842,7 +858,7 @@
    "id": "min-raffinage-045",
    "theme": "Indicateurs de performance",
    "level": 2,
-   "q": "Une raffinerie compte 330 jours de marche sur 365. Quelle est la disponibilité ?",
+   "q": "Sur la figure (valeurs fictives), l'année d'une raffinerie comprend des jours de marche et des jours d'arrêt. Quelle est sa disponibilité ?",
    "choices": [
     "Environ 9,6 %",
     "Environ 100 %",
@@ -852,7 +868,9 @@
    "answer": 3,
    "explain": "330 / 365 = 0,904. Le complément (9,6 %) correspond au temps d'arrêt. Une disponibilité ne peut dépasser 100 %.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-indicateurs-raffinerie.svg",
+   "imgAlt": "Trois indicateurs fictifs d'une raffinerie : taux d'utilisation (16 000 barils traités pour 20 000 de capacité), disponibilité (330 jours de marche sur 365) et bilan matière (5 000 t/j en entrée, 4 880 t/j en sortie, écart de 120 t/j)."
   },
   {
    "id": "min-raffinage-046",
@@ -1096,7 +1114,7 @@
    "id": "min-raffinage-060",
    "theme": "Arrêts programmés et sécurité",
    "level": 3,
-   "q": "Pendant l'arrêt de la SOGARA, le marché national risque la pénurie. Quelle démarche de l'administration est la plus cohérente avec l'article 138 ?",
+   "q": "Sur la figure, le stock d'un dépôt passe sous le seuil de sécurité avant l'arrivée du navire. Pendant l'arrêt de la SOGARA, le marché national risque un manque comparable. Quelle démarche de l'administration est la plus cohérente avec l'article 138 ?",
    "choices": [
     "Autoriser l'exportation de tous les stocks pendant l'arrêt programmé",
     "Interdire l'arrêt, quelle que soit l'urgence technique",
@@ -1113,13 +1131,15 @@
      "art": "Article 138",
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-   ]
+   ],
+   "img": "svg/min2-aval-couverture-stock.svg",
+   "imgAlt": "Courbe fictive du stock d'un dépôt : 12 000 m³ au départ, baisse de 2 000 m³ par jour, seuil de sécurité de 4 000 m³ atteint au jour 4, stock de 2 000 m³ au jour 5 puis arrivée d'un navire de 10 000 m³ ; formule : jours de couverture égale stock divisé par consommation journalière."
   },
   {
    "id": "min-raffinage-061",
    "theme": "Suivi réglementaire et SOGARA",
    "level": 1,
-   "q": "Quel acte matérialise l'autorisation d'exploitation d'une activité de transformation d'hydrocarbures (raffinage) ?",
+   "q": "Sur le schéma du circuit d'une décision, la forme de l'acte dépend de son objet. Quel acte matérialise l'autorisation d'exploitation d'une activité de transformation d'hydrocarbures (raffinage) ?",
    "choices": [
     "Un arrêté pris par le chef de service aval",
     "Une décision du directeur de la raffinerie",
@@ -1136,7 +1156,9 @@
      "art": "Article 130",
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
     }
-   ]
+   ],
+   "img": "svg/min-circuit-decision-administrative.svg",
+   "imgAlt": "Circuit d'une décision administrative en quatre étapes (réception, instruction, décision, notification et archivage), avec la forme de l'acte selon l'objet, dont l'autorisation de raffinage par décret du Président de la République, puis les recours hiérarchique et contentieux."
   },
   {
    "id": "min-raffinage-062",

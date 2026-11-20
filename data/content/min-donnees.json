@@ -13,7 +13,9 @@
         "Carottes et déblais sont des données physiques à conserver en carothèque.",
         "Les volumes fiscaux sont mesurés au point de comptage fiscal, sous contrôle du Ministère (art. 247).",
         "La donnée brute est irremplaçable ; l’interprétation est un produit d’analyse."
-      ]
+      ],
+      "img": "svg/seismic-section.svg",
+      "imgAlt": "Section sismique interprétée : temps double en millisecondes en fonction de la distance en kilomètres, avec un anticlinal (piège structural), une faille normale et un point brillant signalant un réservoir potentiel."
     },
     {
       "id": "m2",
@@ -27,7 +29,9 @@
         "Le cadastre des hydrocarbures, tenu par le Ministère, consigne les informations sur blocs et titres (art. 15).",
         "Les agents sont tenus au secret professionnel (art. 22).",
         "Toute mise à disposition de données à un tiers exige l’aval de l’autorité compétente."
-      ]
+      ],
+      "img": "svg/min-cycle-contrat-petrolier.svg",
+      "imgAlt": "Schéma du cycle de vie d'un contrat pétrolier : octroi, exploration (transmission des données), développement, production, abandon, avec suivi et contrôle du ministère."
     },
     {
       "id": "m3",
@@ -57,7 +61,9 @@
         "Identifiants uniques de puits et de bloc, et système de coordonnées documenté.",
         "Formats courants : SEG-Y/SEG-D, LAS/DLIS ; modèle PPDM ; normes Energistics.",
         "Un contrôle à la réception avec seuil de conformité évite d’archiver des données inutilisables."
-      ]
+      ],
+      "img": "svg/min-tableau-donnees.svg",
+      "imgAlt": "Exemple de tableau de données propre : une ligne par observation (date, province, site, volume en milliers de barils, conforme), une colonne par variable, un seul type par colonne."
     },
     {
       "id": "m5",
@@ -72,8 +78,8 @@
         "Les carottes et échantillons exigent une carothèque contrôlée et un inventaire.",
         "Sauvegarde (reprise rapide) et archivage (long terme) sont distincts."
       ],
-      "img": "svg/min-cycle-vie-donnee.svg",
-      "imgAlt": "Cycle de vie d'une donnée pétrolière en six étapes : 1 acquisition (sismique, puits, production) ; 2 remise au Ministère au fur et à mesure, avec métadonnées et bordereau ; 3 contrôle qualité (fichier lisible et complet, unités, coordonnées, identifiants) ; 4 conservation (sauvegarde 3-2-1, archivage, carothèque) ; 5 confidentialité, durée fixée au contrat à confirmer ; 6 accès contrôlé en salle de données ; puis de nouveaux travaux produisent de nouvelles données."
+      "img": "photo/min-eco-salle-serveurs.jpg",
+      "imgAlt": "Photographie d'une salle informatique : baies noires alignées, câbles bleus bien rangés, faux plancher perforé et armoire au fond de la pièce."
     },
     {
       "id": "m6",
@@ -88,8 +94,8 @@
         "Salle de données : accord de confidentialité, comptes nominatifs, journal de consultation.",
         "Tous les candidats reçoivent le même lot, aux mêmes conditions."
       ],
-      "img": "svg/min-cycle-vie-donnee.svg",
-      "imgAlt": "Cycle de vie d'une donnée pétrolière en six étapes : 1 acquisition (sismique, puits, production) ; 2 remise au Ministère au fur et à mesure, avec métadonnées et bordereau ; 3 contrôle qualité (fichier lisible et complet, unités, coordonnées, identifiants) ; 4 conservation (sauvegarde 3-2-1, archivage, carothèque) ; 5 confidentialité, durée fixée au contrat à confirmer ; 6 accès contrôlé en salle de données ; puis de nouveaux travaux produisent de nouvelles données."
+      "img": "svg/min-classification-information.svg",
+      "imgAlt": "Tableau des quatre niveaux de classification de l'information, du plus sensible au moins sensible : secret, confidentiel, interne, public, avec qui peut lire, exemples et protection."
     },
     {
       "id": "m7",
@@ -103,7 +109,9 @@
         "Sauvegardes déconnectées et chiffrement contre rançongiciel et vol.",
         "Données personnelles : loi n° 001/2011 modifiée par la loi n° 025/2023, contrôle par la CNPDCP.",
         "En cas d’incident : déconnecter, alerter, ne pas réparer seul."
-      ]
+      ],
+      "img": "svg/min-hameconnage.svg",
+      "imgAlt": "Exemple fictif de courriel d'hameçonnage avec six indices numérotés (adresse de l'expéditeur, urgence et menace, formule générique, fautes, demande de mot de passe, lien trompeur) et le déroulé d'une attaque réussie."
     }
   ],
   "questions": [
@@ -232,7 +240,7 @@
       "id": "min-donnees-008",
       "theme": "Types de données pétrolières",
       "level": 2,
-      "q": "Parmi ces éléments, lequel est une donnée physique et non numérique ?",
+      "q": "La photo montre des carottes de roche rangées en caisses. Parmi ces éléments, lequel est une donnée physique de même nature, et non numérique ?",
       "choices": [
         "Un fichier LAS de diagraphies",
         "Un rapport journalier de forage scanné",
@@ -242,7 +250,9 @@
       "answer": 3,
       "explain": "La carotte est un objet : elle se conserve en carothèque. Les trois autres éléments sont des fichiers, même s’ils reposent sur des supports.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "photo/min-eco-carottes-boites.jpg",
+      "imgAlt": "Photographie de deux caisses en bois contenant des carottes de roche grise, longs cylindres rangés côte à côte et étiquetés par profondeur : un échantillon physique, non numérique."
     },
     {
       "id": "min-donnees-009",
@@ -982,7 +992,7 @@
       "id": "min-donnees-045",
       "theme": "Conservation et sauvegarde",
       "level": 2,
-      "q": "Le service ne possède qu’une copie de la sismique 3D d’un bloc, sur un disque de bureau. Quelle action est la plus adaptée ?",
+      "q": "Le schéma de la règle 3-2-1 est affiché dans le service, qui ne possède qu'une copie de la sismique 3D d'un bloc, sur un disque de bureau. Quelle action est la plus adaptée ?",
       "choices": [
         "Acheter un disque plus grand et conserver la copie unique avec beaucoup de soin",
         "Envoyer l’unique copie par courriel à un collègue pour qu’il la garde aussi",
@@ -992,7 +1002,9 @@
       "answer": 2,
       "explain": "La donnée est irremplaçable et sa perte coûterait très cher : la règle 3-2-1 s’applique. Un seul disque reste un point de défaillance, et l’envoi par courriel n’est ni une sauvegarde ni sécurisé.",
       "seconds": 80,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-sauvegarde-3-2-1.svg",
+      "imgAlt": "Schéma de la règle de sauvegarde 3-2-1 : trois copies (original plus deux sauvegardes), deux types de supports, une copie hors site conservée dans un autre lieu."
     },
     {
       "id": "min-donnees-046",
@@ -1030,7 +1042,7 @@
       "id": "min-donnees-048",
       "theme": "Conservation et sauvegarde",
       "level": 2,
-      "q": "Une inondation menace le local où se trouvent le serveur et la seule copie hors ligne. Quelle faiblesse cela révèle-t-il ?",
+      "q": "Sur le schéma 3-2-1, le site principal et le site distant sont séparés. Ici, une inondation menace le local où se trouvent le serveur et la seule copie hors ligne. Quelle faiblesse cela révèle-t-il ?",
       "choices": [
         "Un manque de pare-feu",
         "Un défaut de format de fichier",
@@ -1040,7 +1052,9 @@
       "answer": 3,
       "explain": "Séparer les sites protège contre incendie, inondation ou vol. Pare-feu, formats et mots de passe répondent à d’autres risques.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-sauvegarde-3-2-1.svg",
+      "imgAlt": "Schéma de la règle de sauvegarde 3-2-1 : trois copies (original plus deux sauvegardes), deux types de supports, une copie hors site conservée dans un autre lieu."
     },
     {
       "id": "min-donnees-049",

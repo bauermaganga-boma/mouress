@@ -3,7 +3,7 @@
 // - JSON de contenu (data/*.json) et images (assets/img) : cache-first, remplis Ã  la demande.
 // - Mise Ã  jour propre : nouvelle version = nouveau nom de cache ; l'ancienne est supprimÃ©e Ã  l'activation ;
 //   la nouvelle version attend (waiting) jusqu'Ã  ce que l'utilisateur clique Â« Actualiser Â» (message SKIP_WAITING).
-const VERSION = 'mrs-v47';
+const VERSION = 'mrs-v48';
 const SHELL = `${VERSION}-shell`;
 const CONTENT = `${VERSION}-content`;
 

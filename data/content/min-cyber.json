@@ -29,7 +29,9 @@
     "L’A2F ajoute un second élément (application, clé physique) et bloque l’accès en cas de vol du mot de passe.",
     "Une demande d’approbation ou un code que vous n’avez pas déclenché se refuse et se signale.",
     "Les comptes nominatifs et le moindre privilège permettent de savoir qui a fait quoi."
-   ]
+   ],
+   "img": "svg/min2-num-a2f.svg",
+   "imgAlt": "Authentification à deux facteurs : le premier facteur est ce que l'on sait (le mot de passe, ici volé par un attaquant), le second est ce que l'on possède ou ce que l'on est ; sans le second facteur, l'attaquant est bloqué. En bas, comparaison des seconds facteurs : code par SMS (moins sûr, peut être détourné par échange de carte SIM), application d'authentification (plus sûr), clé physique (plus sûr). Une demande d'approbation que l'on n'a pas déclenchée se refuse puis se signale."
   },
   {
    "id": "m3",
@@ -43,7 +45,9 @@
     "Une pièce jointe non attendue ou une demande d’activer des macros est un signal d’alerte.",
     "Téléphone : verrouillage, mises à jour, applications officielles ; perte ou vol à signaler immédiatement.",
     "Un interlocuteur qui change de numéro ou demande un code se vérifie par un second canal."
-   ]
+   ],
+   "img": "svg/min-hameconnage.svg",
+   "imgAlt": "Courriel d'hameçonnage fictif avec six indices numérotés : adresse d'expéditeur étrangère à l'organisme, urgence et menace dans l'objet, formule générique, fautes, demande de mot de passe, lien dont l'adresse réelle diffère ; puis déroulé de l'attaque en quatre étapes"
   },
   {
    "id": "m4",
@@ -73,7 +77,9 @@
     "Filtre de confidentialité et conversation discrète dans les transports et les lieux publics.",
     "Mission à l’étranger : emporter le minimum de données et changer les accès au retour.",
     "En télétravail : accès fournis par le ministère, pas de transfert vers une messagerie personnelle."
-   ]
+   ],
+   "img": "svg/min2-num-wifi-rpv.svg",
+   "imgAlt": "Trois façons de se connecter en déplacement. En haut, Wi-Fi public sans protection : l'ordinateur passe par le Wi-Fi de l'hôtel, où une personne malveillante peut observer le trafic ou installer un faux réseau portant le même nom, avant d'atteindre le réseau du ministère. Au milieu, avec le réseau privé virtuel (RPV) du ministère : les échanges sont chiffrés entre l'appareil et le réseau interne, donc illisibles pour l'observateur. En bas, le partage de connexion du téléphone professionnel, qui évite le Wi-Fi public."
   },
   {
    "id": "m6",
@@ -87,7 +93,9 @@
     "Loi n° 027/2023 (cybersécurité) et loi n° 025/2023 modifiant la loi n° 001/2011 (données personnelles), à confirmer.",
     "L’ANINF est l’agence technique de l’État pour le numérique ; l’autorité de protection des données est distincte.",
     "Une fuite de données personnelles peut imposer une notification : la décision revient au responsable désigné."
-   ]
+   ],
+   "img": "svg/min2-num-incident-reflexes.svg",
+   "imgAlt": "Les six réflexes face à un incident de sécurité, dans l'ordre : 1 ne pas paniquer et ne pas effacer les messages ou fichiers ; 2 isoler le poste en débranchant le câble réseau ou en coupant le Wi-Fi, sans l'éteindre brutalement ; 3 alerter le service informatique et la hiérarchie par un canal sûr en donnant l'heure, ce qui s'est passé et les actions déjà faites ; 4 ne pas réparer seul, ne pas répondre à l'attaquant, ne pas payer de rançon ; 5 noter les faits (expéditeur, capture d'écran, nom du fichier) ; 6 changer les mots de passe concernés depuis un appareil sain, sur indication de l'informatique."
   },
   {
    "id": "m7",
@@ -293,7 +301,7 @@
    "id": "min-cyber-012",
    "theme": "Mots de passe et authentification",
    "level": 1,
-   "q": "Que signifie l’authentification à deux facteurs ?",
+   "q": "D'après le schéma, que signifie l'authentification à deux facteurs ?",
    "choices": [
     "Utiliser deux mots de passe différents saisis l’un après l’autre sur le même écran de connexion",
     "Se connecter depuis deux appareils différents au cours de la même journée",
@@ -303,7 +311,9 @@
    "answer": 2,
    "explain": "L’A2F associe deux catégories de preuve : ce que l’on sait (mot de passe) et ce que l’on possède (téléphone, clé) ou ce que l’on est (empreinte). Deux mots de passe restent un seul type de facteur ; elle ne dépend ni du nombre d’appareils ni de l’intervention de collègues.",
    "seconds": 50,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-a2f.svg",
+   "imgAlt": "Authentification à deux facteurs : le premier facteur est ce que l'on sait (le mot de passe, ici volé par un attaquant), le second est ce que l'on possède ou ce que l'on est ; sans le second facteur, l'attaquant est bloqué. En bas, comparaison des seconds facteurs : code par SMS (moins sûr, peut être détourné par échange de carte SIM), application d'authentification (plus sûr), clé physique (plus sûr). Une demande d'approbation que l'on n'a pas déclenchée se refuse puis se signale."
   },
   {
    "id": "min-cyber-013",
@@ -389,7 +399,7 @@
    "id": "min-cyber-018",
    "theme": "Mots de passe et authentification",
    "level": 2,
-   "q": "Pour recevoir ses codes d’A2F, un agent hésite entre le SMS, une application d’authentification et une clé physique. Quel classement est le plus conforme aux bonnes pratiques ?",
+   "q": "Sur le schéma, trois seconds facteurs sont comparés. Un agent hésite entre le SMS, une application d'authentification et une clé physique pour recevoir ses codes d'A2F. Quel classement est le plus conforme aux bonnes pratiques ?",
    "choices": [
     "SMS en priorité, car tout le monde sait l’utiliser sans rien installer",
     "Application d’authentification en dernier, car elle consomme de la batterie",
@@ -399,13 +409,15 @@
    "answer": 2,
    "explain": "Le SMS peut être intercepté ou détourné par échange de carte SIM, alors que les codes générés dans une application ou une clé physique restent sur l’appareil. Le SMS reste préférable à l’absence d’A2F, mais il est le moins robuste des trois.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-a2f.svg",
+   "imgAlt": "Authentification à deux facteurs : le premier facteur est ce que l'on sait (le mot de passe, ici volé par un attaquant), le second est ce que l'on possède ou ce que l'on est ; sans le second facteur, l'attaquant est bloqué. En bas, comparaison des seconds facteurs : code par SMS (moins sûr, peut être détourné par échange de carte SIM), application d'authentification (plus sûr), clé physique (plus sûr). Une demande d'approbation que l'on n'a pas déclenchée se refuse puis se signale."
   },
   {
    "id": "min-cyber-019",
    "theme": "Mots de passe et authentification",
    "level": 3,
-   "q": "Un attaquant a obtenu le mot de passe d’un inspecteur par hameçonnage et tente de se connecter à la messagerie. L’inspecteur a activé l’A2F par application. Quel est l’état de la situation ?",
+   "q": "Sur le schéma, un attaquant dispose du mot de passe d'un inspecteur, obtenu par hameçonnage, et tente de se connecter à la messagerie. L'inspecteur a activé l'A2F par application. Quel est l'état de la situation ?",
    "choices": [
     "L’attaquant est bloqué, donc le mot de passe peut rester inchangé sans risque",
     "L’attaquant a désormais accès à tout, l’A2F ne protégeant que contre la perte de téléphone",
@@ -415,7 +427,9 @@
    "answer": 3,
    "explain": "L’A2F empêche la connexion, mais le mot de passe est compromis : il peut être réutilisé ailleurs ou combiné à une attaque par fatigue de notifications. Il faut le changer, signaler l’incident et vérifier les connexions récentes. L’A2F ne se désactive pas d’elle-même.",
    "seconds": 90,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-a2f.svg",
+   "imgAlt": "Authentification à deux facteurs : le premier facteur est ce que l'on sait (le mot de passe, ici volé par un attaquant), le second est ce que l'on possède ou ce que l'on est ; sans le second facteur, l'attaquant est bloqué. En bas, comparaison des seconds facteurs : code par SMS (moins sûr, peut être détourné par échange de carte SIM), application d'authentification (plus sûr), clé physique (plus sûr). Une demande d'approbation que l'on n'a pas déclenchée se refuse puis se signale."
   },
   {
    "id": "min-cyber-020",
@@ -765,7 +779,7 @@
    "id": "min-cyber-041",
    "theme": "Travail à distance",
    "level": 1,
-   "q": "Quel est le principal risque d’un réseau Wi-Fi public (hôtel, aéroport, café) ?",
+   "q": "D'après le schéma, quel est le principal risque du Wi-Fi public de l'hôtel (ligne 1) ?",
    "choices": [
     "Il consomme obligatoirement plus de batterie que tous les autres réseaux",
     "Il bloque l’accès aux sites du ministère pour des raisons de fréquences",
@@ -775,13 +789,15 @@
    "answer": 2,
    "explain": "Un réseau ouvert n’est pas maîtrisé : interception, faux point d’accès (« jumeau maléfique »). Les autres affirmations sont sans rapport avec la sécurité.",
    "seconds": 50,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-wifi-rpv.svg",
+   "imgAlt": "Trois façons de se connecter en déplacement. En haut, Wi-Fi public sans protection : l'ordinateur passe par le Wi-Fi de l'hôtel, où une personne malveillante peut observer le trafic ou installer un faux réseau portant le même nom, avant d'atteindre le réseau du ministère. Au milieu, avec le réseau privé virtuel (RPV) du ministère : les échanges sont chiffrés entre l'appareil et le réseau interne, donc illisibles pour l'observateur. En bas, le partage de connexion du téléphone professionnel, qui évite le Wi-Fi public."
   },
   {
    "id": "min-cyber-042",
    "theme": "Travail à distance",
    "level": 1,
-   "q": "À quoi sert un réseau privé virtuel (RPV) fourni par le ministère ?",
+   "q": "Sur le schéma, la ligne 2 montre l'ordinateur relié au ministère par un réseau privé virtuel (RPV) à travers le Wi-Fi de l'hôtel. À quoi sert ce RPV fourni par le ministère ?",
    "choices": [
     "À augmenter la vitesse de connexion de tous les sites visités",
     "À masquer vos actions professionnelles à votre hiérarchie et au service informatique du ministère",
@@ -791,7 +807,9 @@
    "answer": 3,
    "explain": "Le RPV crée un tunnel chiffré qui protège les données en transit. Il n’accélère pas la connexion, ne remplace pas l’authentification et n’est pas fait pour cacher des activités à l’employeur.",
    "seconds": 50,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-wifi-rpv.svg",
+   "imgAlt": "Trois façons de se connecter en déplacement. En haut, Wi-Fi public sans protection : l'ordinateur passe par le Wi-Fi de l'hôtel, où une personne malveillante peut observer le trafic ou installer un faux réseau portant le même nom, avant d'atteindre le réseau du ministère. Au milieu, avec le réseau privé virtuel (RPV) du ministère : les échanges sont chiffrés entre l'appareil et le réseau interne, donc illisibles pour l'observateur. En bas, le partage de connexion du téléphone professionnel, qui évite le Wi-Fi public."
   },
   {
    "id": "min-cyber-043",
@@ -829,7 +847,7 @@
    "id": "min-cyber-045",
    "theme": "Travail à distance",
    "level": 2,
-   "q": "Vous devez consulter urgemment un document interne depuis un aéroport. Seul un Wi-Fi gratuit est disponible. Quelle solution est la plus sûre ?",
+   "q": "Vous devez consulter urgemment un document interne depuis un aéroport. Seul un Wi-Fi gratuit est disponible. D'après les trois montages du schéma, quelle solution est la plus sûre ?",
    "choices": [
     "Utiliser le Wi-Fi gratuit en vérifiant seulement que son nom semble correct",
     "Utiliser le Wi-Fi gratuit en désactivant temporairement l’antivirus pour aller plus vite",
@@ -839,7 +857,9 @@
    "answer": 3,
    "explain": "Le partage de connexion et le RPV forment une double barrière. Un nom de réseau se falsifie facilement ; désactiver l’antivirus aggrave le risque ; un ordinateur en libre-service peut enregistrer vos frappes et vos identifiants.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-wifi-rpv.svg",
+   "imgAlt": "Trois façons de se connecter en déplacement. En haut, Wi-Fi public sans protection : l'ordinateur passe par le Wi-Fi de l'hôtel, où une personne malveillante peut observer le trafic ou installer un faux réseau portant le même nom, avant d'atteindre le réseau du ministère. Au milieu, avec le réseau privé virtuel (RPV) du ministère : les échanges sont chiffrés entre l'appareil et le réseau interne, donc illisibles pour l'observateur. En bas, le partage de connexion du téléphone professionnel, qui évite le Wi-Fi public."
   },
   {
    "id": "min-cyber-046",
@@ -1003,7 +1023,7 @@
    "id": "min-cyber-055",
    "theme": "Signalement et cadre gabonais",
    "level": 2,
-   "q": "Vous venez de cliquer sur un lien suspect et d’y saisir votre mot de passe. Quel est le bon enchaînement ?",
+   "q": "D'après le schéma des réflexes, vous venez de cliquer sur un lien suspect et d'y saisir votre mot de passe. Quel est le bon enchaînement ?",
    "choices": [
     "Isoler le poste du réseau, alerter l’informatique par téléphone, puis changer le mot de passe",
     "Effacer le courriel, changer le mot de passe seul et ne rien dire à personne pour éviter de s’exposer",
@@ -1013,13 +1033,15 @@
    "answer": 0,
    "explain": "La rapidité est essentielle : le mot de passe peut être utilisé en quelques minutes. Il faut limiter la propagation, informer par un canal sûr et suivre les consignes. Se taire, attendre ou différer favorise l’attaquant et l’effacement du message supprime une preuve.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-incident-reflexes.svg",
+   "imgAlt": "Les six réflexes face à un incident de sécurité, dans l'ordre : 1 ne pas paniquer et ne pas effacer les messages ou fichiers ; 2 isoler le poste en débranchant le câble réseau ou en coupant le Wi-Fi, sans l'éteindre brutalement ; 3 alerter le service informatique et la hiérarchie par un canal sûr en donnant l'heure, ce qui s'est passé et les actions déjà faites ; 4 ne pas réparer seul, ne pas répondre à l'attaquant, ne pas payer de rançon ; 5 noter les faits (expéditeur, capture d'écran, nom du fichier) ; 6 changer les mots de passe concernés depuis un appareil sain, sur indication de l'informatique."
   },
   {
    "id": "min-cyber-056",
    "theme": "Signalement et cadre gabonais",
    "level": 2,
-   "q": "Au moment de signaler un incident, quelles informations sont utiles à l’équipe informatique ?",
+   "q": "D'après le schéma, au moment de signaler un incident, quelles informations sont utiles à l'équipe informatique ?",
    "choices": [
     "Uniquement votre nom, car l’informatique retrouve le reste seule",
     "L’heure, ce qui s’est passé, les fichiers concernés et les actions déjà effectuées",
@@ -1029,7 +1051,9 @@
    "answer": 1,
    "explain": "Un signalement factuel et précis accélère l’analyse. Il ne faut jamais communiquer son mot de passe ; les suppositions sur l’auteur et les sanctions ne servent pas à l’intervention immédiate.",
    "seconds": 60,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-num-incident-reflexes.svg",
+   "imgAlt": "Les six réflexes face à un incident de sécurité, dans l'ordre : 1 ne pas paniquer et ne pas effacer les messages ou fichiers ; 2 isoler le poste en débranchant le câble réseau ou en coupant le Wi-Fi, sans l'éteindre brutalement ; 3 alerter le service informatique et la hiérarchie par un canal sûr en donnant l'heure, ce qui s'est passé et les actions déjà faites ; 4 ne pas réparer seul, ne pas répondre à l'attaquant, ne pas payer de rançon ; 5 noter les faits (expéditeur, capture d'écran, nom du fichier) ; 6 changer les mots de passe concernés depuis un appareil sain, sur indication de l'informatique."
   },
   {
    "id": "min-cyber-057",
@@ -1074,7 +1098,7 @@
    "id": "min-cyber-059",
    "theme": "Signalement et cadre gabonais",
    "level": 3,
-   "q": "Un agent découvre que l’ordinateur d’un collègue absent affiche des fichiers qui changent de nom un à un. Il hésite entre éteindre brutalement la machine et alerter. Quelle décision est la plus judicieuse ?",
+   "q": "La photo montre l'extrémité d'un câble réseau (fiche RJ45). Un agent découvre que l'ordinateur d'un collègue absent affiche des fichiers qui changent de nom un à un. Il hésite entre éteindre brutalement la machine et alerter. Quelle décision est la plus judicieuse ?",
    "choices": [
     "Éteindre la machine brutalement en maintenant le bouton enfoncé jusqu’à son arrêt complet",
     "Débrancher le câble réseau, ne rien éteindre sans avis et appeler l’informatique",
@@ -1084,7 +1108,9 @@
    "answer": 1,
    "explain": "Les symptômes évoquent un rançongiciel en cours de chiffrement. L’isoler du réseau limite la propagation ; l’extinction brutale peut effacer des traces utiles ; un nettoyage de disque détruit des éléments et ne résout rien. L’informatique décide de la suite.",
    "seconds": 100,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/min-num-cable-reseau-rj45.jpg",
+   "imgAlt": "Gros plan sur l'extrémité d'un câble réseau gris : une fiche RJ45 transparente aux contacts dorés, reliée à un câble souple, sur fond blanc. C'est la prise que l'on débranche pour couper un poste d'un réseau filaire."
   },
   {
    "id": "min-cyber-060",

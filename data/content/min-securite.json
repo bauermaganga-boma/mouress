@@ -45,7 +45,9 @@
     "Texas City (2005, 15 morts) : bâtiments occupés trop proches d'une unité et instruments de niveau défaillants.",
     "Buncefield (2005) : une barrière de secours rendue inopérante par un défaut de maintenance suffit à provoquer l'accident.",
     "Deepwater Horizon (2010, 11 morts) : l'échec d'une barrière ultime après une cascade d'erreurs de décision."
-   ]
+   ],
+   "img": "photo/oil-rig-offshore.jpg",
+   "imgAlt": "Plateforme de forage pétrolier semi-submersible amarrée près d'une côte boisée : colonnes rouges plongeant dans l'eau, derrick en treillis au centre, deux grues (une jaune, une bleue) et, au premier plan, une mer calme où se reflètent les couleurs."
   },
   {
    "id": "m4",
@@ -59,7 +61,9 @@
     "Le comptage des personnes présentes repose sur un registre à jour, sous-traitants et visiteurs compris.",
     "Seuls les exercices réguliers, suivis d'un compte rendu et d'actions, prouvent qu'un plan fonctionne.",
     "L'article 241 impose d'informer sans délai l'administration de tout incident ou accident."
-   ]
+   ],
+   "img": "svg/min2-hse-plan-site-nuage.svg",
+   "imgAlt": "Plan de site fictif vu de dessus : une fuite de gaz sur l'unité de traitement à gauche, deux cercles de zones d'effets autour d'elle, un nuage orange qui dérive vers l'est sous un vent d'ouest et passe par la salle de contrôle, un second stockage avec sa propre zone en bas à droite, et quatre points candidats : A au nord, hors des zones et relié par deux routes, B dans le nuage à l'est, C dans la zone de l'unité, D dans la zone du second stockage."
   },
   {
    "id": "m5",
@@ -89,7 +93,9 @@
     "Les prescriptions techniques détaillées relèvent des textes d'application, à vérifier avant tout contrôle.",
     "Les scénarios sont évalués par leurs effets (thermiques, surpression, toxiques) et leur probabilité.",
     "Toute modification notable ou accident significatif appelle une révision de l'étude."
-   ]
+   ],
+   "img": "svg/min2-hse-zones-effets.svg",
+   "imgAlt": "Schéma fictif d'une étude de dangers pour un incendie de cuvette : un cercle orange de 80 mètres (effets létaux) dans un cercle bleu de 200 mètres (effets irréversibles), un logement L à 60 mètres dans la zone létale, un lotissement H à 150 mètres construit après l'étude et un poste de chargement ajouté depuis l'étude ; une échelle de 100 mètres et la liste des effets thermiques, de surpression et toxiques."
   },
   {
    "id": "m7",
@@ -576,15 +582,15 @@
    "id": "min-securite-026",
    "theme": "Accidents majeurs et retour d'expérience",
    "level": 2,
-   "q": "Quelle est la nature de l'événement initial de Deepwater Horizon en 2010 ?",
+   "q": "Deepwater Horizon (2010) a commencé par une éruption que le bloc obturateur de puits n'a pas réussi à arrêter. Sur le schéma du bloc obturateur, quel organe est conçu pour couper la garniture de forage et fermer le puits en dernier recours ?",
    "choices": [
-    "Une collision entre la plateforme et un navire ravitailleur en approche",
-    "Une éruption, que le bloc obturateur de puits n'a pas réussi à arrêter",
-    "Un incendie de cuvette survenu sur un dépôt pétrolier côtier voisin",
-    "Le naufrage de la plateforme causé par une tempête tropicale"
+    "Le bell nipple, tout en haut de l'empilement",
+    "Les mâchoires aveugles cisaillantes (BSR), au milieu de la pile",
+    "La ligne de pompage (kill line), qui amène le fluide de la pompe",
+    "La tête de tubage (casing head), à la base de la pile"
    ],
    "answer": 1,
-   "explain": "Une éruption (venue non maîtrisée de gaz et d'hydrocarbures) a mené à l'explosion de la plateforme : 11 morts. Le bloc obturateur du puits n'a pas fermé le puits. Les autres scénarios ne correspondent pas aux conclusions des enquêtes.",
+   "explain": "Les mâchoires aveugles cisaillantes (BSR) coupent le tube et ferment le puits en dernier recours ; à Deepwater Horizon, le bloc obturateur n'a pas fermé le puits après l'éruption (11 morts). Le bell nipple est en tête de pile, la kill line sert à pomper pour reprendre le contrôle et la tête de tubage porte la pile : aucun ne coupe le tube.",
    "seconds": 60,
    "status": "draft",
    "refs": [
@@ -593,7 +599,9 @@
      "art": "Résumé du rapport final",
      "url": "https://csb.gov/assets/1/20/20160412_Macondo_Full_Exec_Summary.pdf"
     }
-   ]
+   ],
+   "img": "svg/bop-stack.svg",
+   "imgAlt": "Schéma en coupe d'un bloc obturateur de puits (BOP) : de haut en bas, bell nipple, obturateur annulaire, mâchoires aveugles cisaillantes (BSR), mâchoires à tiges supérieures, spool avec ligne de duse et ligne de pompage (kill line), mâchoires à tiges inférieures et tête de tubage."
   },
   {
    "id": "min-securite-027",
@@ -732,17 +740,19 @@
    "id": "min-securite-034",
    "theme": "Plan d'urgence et d'évacuation",
    "level": 1,
-   "q": "Où doit être situé le point de rassemblement d'un plan d'évacuation ?",
+   "q": "Sur le plan du site de la figure, le vent d'ouest pousse le nuage vers l'est et deux scénarios ont leurs zones d'effets dessinées. Quel point proposé convient comme point de rassemblement ?",
    "choices": [
-    "Au plus près de l'unité pour intervenir plus vite",
-    "Hors des zones d'effet des scénarios majeurs identifiés",
-    "Devant le bâtiment administratif, quel que soit le scénario",
-    "Au pied de la torche, point le plus visible du site"
+    "Le point B, sur la trajectoire du nuage, loin des unités",
+    "Le point A, hors des zones d'effets et desservi par deux routes",
+    "Le point C, au plus près de l'unité pour intervenir plus vite",
+    "Le point D, à côté du second stockage, facile à repérer"
    ],
    "answer": 1,
-   "explain": "Le point de rassemblement doit rester sûr dans les scénarios retenus par l'étude de dangers, et idéalement accessible par deux itinéraires. Se rassembler près de l'unité ou de la torche expose les personnes ; l'emplacement doit être choisi selon les scénarios, non par habitude.",
+   "explain": "Le point A est hors des cercles d'effets, à l'écart de la trajectoire du nuage et relié par deux routes. B est dans le nuage, C dans la zone d'effets de l'unité qui fuit et D dans la zone du second stockage : le point de rassemblement se choisit d'après les scénarios de l'étude de dangers, non par commodité ou pour sa visibilité.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-hse-plan-site-nuage.svg",
+   "imgAlt": "Plan de site fictif vu de dessus : une fuite de gaz sur l'unité de traitement à gauche, deux cercles de zones d'effets autour d'elle, un nuage orange qui dérive vers l'est sous un vent d'ouest et passe par la salle de contrôle, un second stockage avec sa propre zone en bas à droite, et quatre points candidats : A au nord, hors des zones et relié par deux routes, B dans le nuage à l'est, C dans la zone de l'unité, D dans la zone du second stockage."
   },
   {
    "id": "min-securite-035",
@@ -780,17 +790,19 @@
    "id": "min-securite-037",
    "theme": "Plan d'urgence et d'évacuation",
    "level": 2,
-   "q": "En cas de nuage de gaz issu d'une fuite, quel déplacement convient pour un salarié du site ?",
+   "q": "Un nuage de gaz issu de la fuite dérive vers l'est, comme le montre la figure. Vous êtes à la salle de contrôle, sur sa trajectoire. Quel déplacement convient pour rejoindre le rassemblement ?",
    "choices": [
-    "Suivre le vent pour courir plus vite",
-    "Se déplacer de côté ou à contre-vent par rapport à la source, vers le point de rassemblement",
-    "Se rendre dans le local technique le plus proche pour couper l'alimentation, quelle que soit la distance",
-    "Monter sur une structure élevée pour mieux voir la fuite"
+    "Vers l'est, vers le point B, dans le sens du vent pour aller plus vite",
+    "De côté, vers le nord en direction du point A, pour quitter la trajectoire du nuage",
+    "Vers l'unité qui fuit, pour couper l'alimentation de la ligne",
+    "Nulle part : rester dans la salle de contrôle, porte ouverte, en attendant les secours"
    ],
    "answer": 1,
-   "explain": "Le nuage est entraîné par le vent : s'éloigner de côté ou à contre-vent évite de rester sur sa trajectoire. Suivre le vent expose au nuage ; retourner vers la zone ou monter pour observer augmente l'exposition.",
+   "explain": "Le nuage est entraîné par le vent : on s'écarte de sa trajectoire, de côté ou à contre-vent, ici vers le nord (point A). Aller vers l'est reste dans le nuage ; retourner vers l'unité ou rester sur place augmente l'exposition.",
    "seconds": 60,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-hse-plan-site-nuage.svg",
+   "imgAlt": "Plan de site fictif vu de dessus : une fuite de gaz sur l'unité de traitement à gauche, deux cercles de zones d'effets autour d'elle, un nuage orange qui dérive vers l'est sous un vent d'ouest et passe par la salle de contrôle, un second stockage avec sa propre zone en bas à droite, et quatre points candidats : A au nord, hors des zones et relié par deux routes, B dans le nuage à l'est, C dans la zone de l'unité, D dans la zone du second stockage."
   },
   {
    "id": "min-securite-038",
@@ -917,17 +929,19 @@
    "id": "min-securite-044",
    "theme": "Permis de travail et maîtrise des interventions",
    "level": 1,
-   "q": "Qui délivre les permis de travail sur un site pétrolier ?",
+   "q": "Lors d'une visite d'atelier avant des travaux, vous relevez les équipements de secours visibles sur la photo. Lequel sert à rincer les yeux après une projection de produit, et doit donc rester dégagé et accessible ?",
    "choices": [
-    "L'exploitant du site, par son responsable habilité",
-    "L'agent d'inspection du ministère, après visite préalable du chantier",
-    "L'entreprise sous-traitante, pour elle-même",
-    "Le maire de la commune d'implantation"
+    "Le lave-yeux, le bac jaune fixé au mur",
+    "La douche de sécurité à tirette, en haut à gauche",
+    "La boîte rouge « Couverture », à droite",
+    "L'extincteur à tuyau noir et cône, près du sol"
    ],
    "answer": 0,
-   "explain": "Le permis de travail est un outil de l'exploitant, qui connaît l'état de ses installations. L'administration contrôle le système sans délivrer les permis, et un intervenant ne peut se l'accorder à lui-même.",
+   "explain": "Le lave-yeux (bac jaune signalé par un pictogramme vert représentant un œil) rince les yeux. La douche de sécurité sert au corps entier, la couverture étouffe un début de feu sur une personne et l'extincteur éteint un foyer. Ces équipements doivent être signalés, dégagés et testés ; l'exploitant vérifie leur présence avant de délivrer un permis de travail.",
    "seconds": 40,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/hse-equipements-securite.jpg",
+   "imgAlt": "Mur blanc d'un local de laboratoire avec, de gauche à droite, une douche de sécurité à tirette et un lave-yeux jaune fixé au mur avec leurs pictogrammes verts, deux pictogrammes rouges d'extincteur, une boîte rouge marquée « Couverture » et deux extincteurs rouges accrochés près du sol, dont un à tuyau noir et cône diffuseur."
   },
   {
    "id": "min-securite-045",
@@ -1135,17 +1149,19 @@
    "id": "min-securite-055",
    "theme": "Études de dangers et cadre réglementaire",
    "level": 2,
-   "q": "Une étude indique 80 mètres de rayon d'effet létal pour un incendie de cuvette, et un logement se trouve à 60 mètres. Que concluez-vous ?",
+   "q": "Sur le schéma de l'étude de dangers, un logement L est repéré par rapport aux zones d'effets d'un incendie de cuvette. Que concluez-vous ?",
    "choices": [
-    "Le dossier ne peut conclure à un risque négligeable sans mesures complémentaires",
-    "Le risque est négligeable, car un logement est un bâtiment fermé",
-    "Le risque est acceptable, la distance dépassant 50 mètres",
-    "L'assurance suffit à régler le problème"
+    "Il est dans la zone d'effets létaux : aucun risque négligeable sans mesures complémentaires",
+    "Le risque est négligeable, car un logement est un bâtiment fermé qui protège de la chaleur",
+    "Le risque est acceptable, car le logement reste à plus de 50 mètres de la cuvette",
+    "L'assurance du propriétaire suffit à régler le problème sans autre mesure"
    ],
    "answer": 0,
-   "explain": "Le logement est dans la zone d'effets létaux : il faut des mesures (distance, barrières, limitation de l'urbanisation). Un bâtiment fermé ne protège pas d'un effet thermique létal, et l'assurance n'éteint pas le risque.",
+   "explain": "Le logement, à 60 mètres, est dans la zone d'effets létaux de 80 mètres : il faut des mesures (distance, barrières, limitation de l'urbanisation). Un bâtiment fermé ne protège pas d'un effet thermique létal, et l'assurance n'éteint pas le risque.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-hse-zones-effets.svg",
+   "imgAlt": "Schéma fictif d'une étude de dangers pour un incendie de cuvette : un cercle orange de 80 mètres (effets létaux) dans un cercle bleu de 200 mètres (effets irréversibles), un logement L à 60 mètres dans la zone létale, un lotissement H à 150 mètres construit après l'étude et un poste de chargement ajouté depuis l'étude ; une échelle de 100 mètres et la liste des effets thermiques, de surpression et toxiques."
   },
   {
    "id": "min-securite-056",
@@ -1213,7 +1229,7 @@
    "id": "min-securite-059",
    "theme": "Études de dangers et cadre réglementaire",
    "level": 3,
-   "q": "Une étude validée il y a six ans n'a pas été révisée ; depuis, un lotissement s'est construit à 150 m et un nouveau poste de chargement a été ajouté. Que faites-vous ?",
+   "q": "Le schéma est celui d'une étude validée il y a six ans et jamais révisée. Depuis, le lotissement H s'est construit à 150 m de la cuvette et un poste de chargement a été ajouté. Que faites-vous ?",
    "choices": [
     "Ne rien faire : l'étude a déjà été validée par l'administration il y a six ans",
     "Demander seulement l'affichage d'une information dans le quartier voisin",
@@ -1230,7 +1246,9 @@
      "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
      "art": "Article 172"
     }
-   ]
+   ],
+   "img": "svg/min2-hse-zones-effets.svg",
+   "imgAlt": "Schéma fictif d'une étude de dangers pour un incendie de cuvette : un cercle orange de 80 mètres (effets létaux) dans un cercle bleu de 200 mètres (effets irréversibles), un logement L à 60 mètres dans la zone létale, un lotissement H à 150 mètres construit après l'étude et un poste de chargement ajouté depuis l'étude ; une échelle de 100 mètres et la liste des effets thermiques, de surpression et toxiques."
   },
   {
    "id": "min-securite-060",

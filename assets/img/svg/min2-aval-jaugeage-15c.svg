@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Jaugeage d'un bac : ruban lesté, hauteur de produit, eau de fond et température de 35 degrés ; quatre étapes du relevé ; exemple fictif où 10 000 m³ observés à 35 °C valent 9 840 m³ à 15 °C</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}.n{font-size:13px}.w{fill:#FCFBF8;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+.gd{fill:none;stroke:#D5D9E0;stroke-width:1.5}
+.da{fill:none;stroke:#B85C0A;stroke-width:2.5;stroke-dasharray:8 6}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Jaugeage d'un bac et volume à 15 °C (exemple fictif)</text>
+<text x="400" y="52" class="c o">EXEMPLE FICTIF : coefficient simplifié de 0,0008 par °C</text>
+<rect x="60" y="100" width="170" height="260" fill="#FCFBF8"/>
+<rect x="62" y="160" width="166" height="170" fill="#DCE6F5"/>
+<rect x="62" y="330" width="166" height="28" fill="#F28C28" opacity="0.65"/>
+<rect x="60" y="100" width="170" height="260" class="s"/>
+<path d="M120,76V350" class="ld"/><rect x="112" y="70" width="16" height="10" class="gr"/>
+<path d="M120,340L113,352H127z" fill="#061F44"/>
+<path d="M260,160V330M252,160H268M252,330H268" class="ld"/>
+<text x="270" y="242" class="b">Hauteur</text><text x="270" y="260" class="b">de produit</text>
+<text x="150" y="214" class="n b">Produit</text>
+<text x="150" y="350" class="n b">Eau de fond</text>
+<text x="136" y="66" class="b">Ruban lesté</text>
+<text x="60" y="384" class="n">Température du produit : 35 °C</text>
+<text x="60" y="410" class="b">Même repère de jauge</text><text x="60" y="428" class="b">à chaque mesure.</text>
+<text x="368" y="94" class="b">Étapes d'un relevé</text>
+<rect x="330" y="104" width="440" height="40" rx="6" class="bl"/><text x="380" y="129"><tspan class="o">1 </tspan>Hauteur de produit puis table de jaugeage</text>
+<rect x="330" y="150" width="440" height="40" rx="6" class="bl"/><text x="380" y="175"><tspan class="o">2 </tspan>Température et densité relevées sur échantillon</text>
+<rect x="330" y="196" width="440" height="40" rx="6" class="bl"/><text x="380" y="221"><tspan class="o">3 </tspan>Correction du volume pour le ramener à 15 °C</text>
+<rect x="330" y="242" width="440" height="40" rx="6" class="bl"/><text x="380" y="267"><tspan class="o">4 </tspan>Retrait de l'eau libre : volume net standard</text>
+<text x="368" y="312" class="b">Même gazole, deux volumes selon la température</text>
+<rect x="380" y="327" width="150" height="100" fill="#F28C28" stroke="#061F44" stroke-width="2"/>
+<rect x="580" y="334.6" width="150" height="92.4" fill="#061F44" stroke="#061F44" stroke-width="2"/>
+<text x="455" y="372" class="c b">10 000 m³</text><text x="455" y="392" class="c n">observés à 35 °C</text>
+<text x="655" y="374" class="w c">9 840 m³</text><text x="655" y="395" class="w c n">à 15 °C</text>
+<text x="368" y="450" class="n b">Calcul : 10 000 × (1 − 0,0008 × 20) = 9 840 m³</text>
+<text x="368" y="470" class="n">Chaud, le produit occupe plus de place : on compare toujours à 15 °C.</text>
+</svg>

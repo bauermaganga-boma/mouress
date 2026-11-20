@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Du volume observé au volume net standard : correction de température, puis retrait de l'eau et des sédiments (exemple fictif)</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}.n{font-size:13px}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+
+<text x="400" y="30" class="h">Du volume observé au volume net standard</text>
+<rect x="25" y="70" width="170" height="110" class="bl"/>
+<text x="110" y="98" class="c b">Volume brut observé</text>
+<text x="110" y="124" class="c">10 000 m³</text><text x="110" y="144" class="c n">lu à 45 °C</text><text x="110" y="164" class="c n">(barème ou compteur)</text>
+<path d="M200,125H300" class="or" marker-end="url(#ao)"/>
+<text x="250" y="92" class="c n o">× facteur de</text><text x="250" y="108" class="c n o">température</text>
+<text x="250" y="152" class="c n">0,976</text>
+<rect x="305" y="70" width="190" height="110" class="bl"/>
+<text x="400" y="98" class="c b">Volume brut standard</text>
+<text x="400" y="124" class="c">9 760 m³</text><text x="400" y="144" class="c n">ramené à 15 °C</text>
+<path d="M500,125H600" class="or" marker-end="url(#ao)"/>
+<text x="550" y="92" class="c n o">− eau et</text><text x="550" y="108" class="c n o">sédiments</text>
+<text x="550" y="152" class="c n">0,4 %</text>
+<rect x="605" y="70" width="170" height="110" fill="#F28C28" fill-opacity="0.3" stroke="#061F44" stroke-width="2.5"/>
+<text x="690" y="98" class="c b">Volume net standard</text>
+<text x="690" y="124" class="c">9 721 m³</text><text x="690" y="144" class="c n">sans eau ni sédiments,</text><text x="690" y="162" class="c n">à 15 °C</text>
+<rect x="25" y="225" width="240" height="190" class="gr"/>
+<text x="145" y="252" class="c b">Température</text>
+<text x="40" y="280" class="n">Le volume d'un liquide</text><text x="40" y="298" class="n">augmente avec la chaleur.</text>
+<text x="40" y="326" class="n">On le ramène à 15 °C.</text>
+<text x="40" y="354" class="n">Vérifier : sonde étalonnée,</text><text x="40" y="372" class="n">table ou coefficient utilisé.</text>
+<rect x="280" y="225" width="240" height="190" class="gr"/>
+<text x="400" y="252" class="c b">Pression</text>
+<text x="295" y="280" class="n">Dans une ligne de comptage</text><text x="295" y="298" class="n">sous pression, le liquide est</text><text x="295" y="316" class="n">un peu comprimé.</text>
+<text x="295" y="344" class="n">Une correction de</text><text x="295" y="362" class="n">compressibilité s'ajoute à</text><text x="295" y="380" class="n">celle de température.</text>
+<rect x="535" y="225" width="240" height="190" class="gr"/>
+<text x="655" y="252" class="c b">Eau et sédiments</text>
+<text x="550" y="280" class="n">Mesurés sur un échantillon</text><text x="550" y="298" class="n">représentatif du transfert.</text>
+<text x="550" y="326" class="n">Ils sont retirés : seul le</text><text x="550" y="344" class="n">produit net est compté.</text>
+<text x="550" y="372" class="n">Vérifier : méthode, scellés.</text>
+<text x="400" y="455" class="c n">Chaque correction doit être tracée et vérifiable.</text>
+<text x="400" y="480" class="c n">Schéma d'illustration : coefficient et valeurs fictifs (approximation pédagogique).</text>
+</svg>

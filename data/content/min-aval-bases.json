@@ -60,7 +60,9 @@
     "Les distributeurs achètent, acheminent et vendent ; la liste est à confirmer.",
     "La SOGARA ne couvre qu'une partie de la demande nationale : le reste est importé.",
     "Chiffres et noms d'organisation : toujours les dater et en citer la source."
-   ]
+   ],
+   "img": "photo/refinery-night.jpg",
+   "imgAlt": "Photographie de nuit d'un complexe de raffinage : tours et structures métalliques éclairées de rangées de lumières derrière une clôture, sur fond de ciel noir."
   },
   {
    "id": "m5",
@@ -74,7 +76,9 @@
     "Articles 131 et 134 : autorisation réservée au droit gabonais, incessible et non transmissible.",
     "Articles 138, 140 et 141 : marché national prioritaire, importation en cas de nécessité, exportation de l'excédent.",
     "Articles 147 et 149 : stock stratégique et stock commercial minimum ; article 284 : pénalité de 1 à 30 millions de FCFA."
-   ]
+   ],
+   "img": "svg/min-circuit-decision-administrative.svg",
+   "imgAlt": "Circuit d'une décision administrative en quatre étapes (réception, instruction, décision, notification et archivage), avec la forme de l'acte selon l'objet, dont l'autorisation de raffinage par décret du Président de la République, puis les recours hiérarchique et contentieux."
   },
   {
    "id": "m6",
@@ -88,7 +92,9 @@
     "Les volumes se comparent à 15 °C ; un écart apparent peut venir de la température.",
     "Le jaugeage donne le volume d'un bac ; on mesure aussi température et densité.",
     "Le GPL se mesure plutôt en masse qu'en volume."
-   ]
+   ],
+   "img": "svg/min2-aval-jaugeage-15c.svg",
+   "imgAlt": "Un bac de stockage avec un ruban lesté descendu jusqu'au fond, la hauteur de produit, l'eau de fond et une température de 35 °C ; quatre étapes d'un relevé ; exemple fictif de 10 000 m³ observés à 35 °C qui valent 9 840 m³ à 15 °C."
   },
   {
    "id": "m7",
@@ -102,7 +108,9 @@
     "Une cargaison est contrôlée à l'arrivée par un inspecteur indépendant (quantité, température, densité, échantillons).",
     "CIF : le vendeur paie fret et assurance ; FOB : le vendeur livre à bord.",
     "Les surestaries sont les indemnités de retard d'un navire à quai."
-   ]
+   ],
+   "img": "photo/min-aval-navire-petrolier.jpg",
+   "imgAlt": "Photographie d'un pétrolier à quai le long d'un appontement : un remorqueur est collé à sa coque à gauche, des collecteurs de chargement sont visibles sur le pont avant et la jetée s'étend à droite, sur une mer calme."
   }
  ],
  "questions": [
@@ -144,7 +152,7 @@
    "id": "min-aval-bases-003",
    "theme": "Du brut au produit fini",
    "level": 1,
-   "q": "Pourquoi dessale-t-on le brut avant de le chauffer ?",
+   "q": "Sur le schéma de la raffinerie, le brut passe par une première unité avant d'entrer dans le four. Pourquoi cette étape est-elle nécessaire avant de chauffer le brut ?",
    "choices": [
     "Pour éviter la corrosion et l'encrassement des équipements par les sels",
     "Pour que le produit fini ait un goût moins salé et qu'il se conserve plus longtemps dans les bacs",
@@ -154,7 +162,9 @@
    "answer": 0,
    "explain": "Les sels contenus dans le brut corrodent et encrassent fours et colonnes. Le dessalage n'agit ni sur un « goût », ni sur l'indice d'octane (qui concerne l'essence), ni sensiblement sur la densité.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-raffinerie-schema.svg",
+   "imgAlt": "Schéma de principe d'une raffinerie : le brut passe par le dessalage et le four, puis par la colonne de distillation atmosphérique qui soutire du haut vers le bas le gaz, le naphta, le kérosène, le gazole et le résidu atmosphérique. Le naphta est hydrotraité puis reformé en base d'essence (avec de l'hydrogène) ; le kérosène et le gazole sont hydrotraités ; le résidu atmosphérique va à la distillation sous vide, dont le distillat est craqué en essence et gazole et dont le résidu sous vide donne bitume et fioul lourd."
   },
   {
    "id": "min-aval-bases-004",
@@ -196,7 +206,7 @@
    "id": "min-aval-bases-006",
    "theme": "Du brut au produit fini",
    "level": 2,
-   "q": "Votre rapport d'exploitation mentionne une hydrodésulfuration. À quoi sert cette unité ?",
+   "q": "Sur le schéma de la raffinerie, le naphta, le kérosène et le gazole passent chacun par une unité d'hydrotraitement. Que fait l'hydrodésulfuration réalisée dans ces unités ?",
    "choices": [
     "À ajouter du soufre dans les produits pour augmenter leur pouvoir lubrifiant",
     "À retirer le soufre des coupes pétrolières avec de l'hydrogène et un catalyseur",
@@ -206,13 +216,15 @@
    "answer": 1,
    "explain": "L'hydrodésulfuration, un hydrotraitement, élimine le soufre sous forme de sulfure d'hydrogène, pour respecter les limites des spécifications. Le dessalage retire sels et eau du brut ; la liquéfaction du gaz est une autre opération.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-raffinerie-schema.svg",
+   "imgAlt": "Schéma de principe d'une raffinerie : le brut passe par le dessalage et le four, puis par la colonne de distillation atmosphérique qui soutire du haut vers le bas le gaz, le naphta, le kérosène, le gazole et le résidu atmosphérique. Le naphta est hydrotraité puis reformé en base d'essence (avec de l'hydrogène) ; le kérosène et le gazole sont hydrotraités ; le résidu atmosphérique va à la distillation sous vide, dont le distillat est craqué en essence et gazole et dont le résidu sous vide donne bitume et fioul lourd."
   },
   {
    "id": "min-aval-bases-007",
    "theme": "Du brut au produit fini",
    "level": 2,
-   "q": "Pourquoi distille-t-on le résidu atmosphérique sous vide plutôt que de le chauffer davantage ?",
+   "q": "Sur le schéma de la raffinerie, le résidu de la distillation atmosphérique est envoyé dans une colonne sous vide. Pourquoi le distille-t-on sous vide plutôt que de le chauffer davantage ?",
    "choices": [
     "Parce que le vide supprime tout le soufre du résidu",
     "Parce que le vide permet d'économiser de l'eau de refroidissement uniquement et de réduire la consommation électrique des pompes de l'usine",
@@ -222,7 +234,9 @@
    "answer": 2,
    "explain": "En diminuant la pression, on vaporise les coupes lourdes à des températures plus basses, avant qu'elles ne se craquent thermiquement. Le vide ne retire pas le soufre et le résidu n'est pas un gaz.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-raffinerie-schema.svg",
+   "imgAlt": "Schéma de principe d'une raffinerie : le brut passe par le dessalage et le four, puis par la colonne de distillation atmosphérique qui soutire du haut vers le bas le gaz, le naphta, le kérosène, le gazole et le résidu atmosphérique. Le naphta est hydrotraité puis reformé en base d'essence (avec de l'hydrogène) ; le kérosène et le gazole sont hydrotraités ; le résidu atmosphérique va à la distillation sous vide, dont le distillat est craqué en essence et gazole et dont le résidu sous vide donne bitume et fioul lourd."
   },
   {
    "id": "min-aval-bases-008",
@@ -385,7 +399,7 @@
    "id": "min-aval-bases-017",
    "theme": "Les produits pétroliers",
    "level": 2,
-   "q": "Dans un local de stockage de bouteilles de GPL, où doit se faire la ventilation ?",
+   "q": "Sur la figure, une fuite de GPL forme une couche de gaz dans la pièce. Dans un local de stockage de bouteilles de GPL, où doit se faire la ventilation ?",
    "choices": [
     "Uniquement au plafond, car le gaz monte",
     "En partie basse, car le GPL est plus lourd que l'air et s'accumule au sol",
@@ -395,7 +409,9 @@
    "answer": 1,
    "explain": "Le GPL étant plus dense que l'air, une fuite s'accumule au niveau du sol : la ventilation basse permet de l'évacuer, et on évite toute source d'étincelle près du sol. Ventiler uniquement en haut est inefficace.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-bouteille-gpl.svg",
+   "imgAlt": "À gauche, coupe d'une bouteille de GPL debout, robinet en haut : environ 85 % de GPL liquide et environ 15 % de vapeur pour la dilatation, collerette portant la tare. À droite, coupe d'une pièce où une fuite de gaz plus lourd que l'air forme une couche au ras du sol."
   },
   {
    "id": "min-aval-bases-018",
@@ -528,17 +544,19 @@
    "id": "min-aval-bases-025",
    "theme": "La chaîne aval",
    "level": 2,
-   "q": "Un dépôt contient 10 000 m³ de gazole et la consommation est de 2 000 m³ par jour (chiffres fictifs). Un navire est annoncé avec 8 jours de retard. Que se passe-t-il ?",
+   "q": "Sur la figure (valeurs fictives), le stock de départ du dépôt et la consommation par jour sont indiqués. Si le navire prévu au jour 5 avait 3 jours de retard, que se passerait-il ?",
    "choices": [
-    "Le stock couvre 5 jours : il y aura 3 jours de rupture si rien d'autre n'est fait",
-    "Le stock couvre 20 jours, il n'y a aucun risque",
-    "Le stock couvre 8 jours, donc juste assez",
+    "Le stock couvre 6 jours : navire au jour 8, il manquerait 2 jours",
+    "Le stock couvre 12 jours : il n'y a aucun risque de rupture",
+    "Le stock couvre 5 jours : le navire arriverait juste à temps",
     "Il n'y a pas de rupture, car le retard du navire ne change pas la consommation, ni le niveau des stocks des stations"
    ],
    "answer": 0,
-   "explain": "Autonomie = 10 000 / 2 000 = 5 jours. Avec 8 jours de retard, il manque 3 jours, sauf mesure compensatoire (autre navire, stock de sécurité, rationnement). Les autres calculs sont faux.",
+   "explain": "Couverture = 12 000 ÷ 2 000 = 6 jours. Avec un navire prévu au jour 5 et 3 jours de retard, il arrive au jour 8 : le stock est épuisé depuis le jour 6, soit 2 jours de rupture, sauf mesure compensatoire (autre navire, stock de sécurité, rationnement). Les autres lectures sont fausses.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-couverture-stock.svg",
+   "imgAlt": "Courbe fictive du stock d'un dépôt : 12 000 m³ au départ, baisse de 2 000 m³ par jour, seuil de sécurité de 4 000 m³ atteint au jour 4, stock de 2 000 m³ au jour 5 puis arrivée d'un navire de 10 000 m³ ; formule : jours de couverture égale stock divisé par consommation journalière."
   },
   {
    "id": "min-aval-bases-026",
@@ -567,7 +585,7 @@
    "id": "min-aval-bases-027",
    "theme": "La chaîne aval",
    "level": 2,
-   "q": "Pourquoi le gaz butane est-il transporté dans des citernes ou bouteilles spéciales ?",
+   "q": "Sur la photo, des bouteilles de GPL sont rangées dans un parc grillagé. Pourquoi le gaz butane est-il transporté dans des citernes ou bouteilles spéciales ?",
    "choices": [
     "Parce qu'il est plus lourd que le gazole et abîme les routes",
     "Parce qu'il est radioactif",
@@ -577,7 +595,9 @@
    "answer": 3,
    "explain": "Le GPL liquéfié est conservé sous pression : il faut des citernes et bouteilles conçues pour cela. Il n'est ni radioactif, ni solide, et son poids n'est pas la raison du choix.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/min-aval-bouteilles-gpl.jpg",
+   "imgAlt": "Photographie de bouteilles de gaz de pétrole liquéfié rangées debout dans un parc grillagé couvert d'un toit, avec un extincteur rouge posé contre le muret au premier plan."
   },
   {
    "id": "min-aval-bases-028",
@@ -1159,7 +1179,7 @@
    "id": "min-aval-bases-057",
    "theme": "Unités et mesures",
    "level": 2,
-   "q": "1 000 m³ de gazole sont relevés à 30 °C. Que peut-on dire du volume à 15 °C ?",
+   "q": "Sur la figure, 10 000 m³ de gazole sont relevés à 35 °C. Que peut-on dire de leur volume à 15 °C ?",
    "choices": [
     "Il est légèrement inférieur, car le liquide se dilate quand il chauffe",
     "Il est identique, la température n'influe pas sur le volume des liquides pétroliers",
@@ -1167,9 +1187,11 @@
     "Il est nul, le produit se solidifie à 15 °C"
    ],
    "answer": 0,
-   "explain": "À 30 °C le gazole est plus dilaté qu'à 15 °C : pour la même quantité de matière, le volume à 15 °C est plus petit (de l'ordre de 1,5 % ici, valeur indicative). Le froid contracte le liquide et le gazole reste liquide à 15 °C.",
+   "explain": "À 35 °C le gazole est plus dilaté qu'à 15 °C : pour la même quantité de matière, le volume à 15 °C est plus petit (9 840 m³ dans l'exemple de la figure, soit environ 1,6 % de moins, valeur indicative). Le froid contracte le liquide et le gazole reste liquide à 15 °C.",
    "seconds": 70,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-aval-jaugeage-15c.svg",
+   "imgAlt": "Un bac de stockage avec un ruban lesté descendu jusqu'au fond, la hauteur de produit, l'eau de fond et une température de 35 °C ; quatre étapes d'un relevé ; exemple fictif de 10 000 m³ observés à 35 °C qui valent 9 840 m³ à 15 °C."
   },
   {
    "id": "min-aval-bases-058",
@@ -1278,7 +1300,7 @@
    "id": "min-aval-bases-064",
    "theme": "Importation et exportation de produits",
    "level": 1,
-   "q": "Que mesure l'inspecteur indépendant à l'arrivée d'un navire de produits ?",
+   "q": "Sur la photo, un navire pétrolier est à quai le long d'un appontement. Que mesure l'inspecteur indépendant à l'arrivée d'un navire de produits ?",
    "choices": [
     "Uniquement la couleur du produit observée à la lumière du jour, ainsi que l'odeur des vapeurs dans chaque bac du dépôt",
     "Le prix international du jour",
@@ -1288,7 +1310,9 @@
    "answer": 3,
    "explain": "L'inspecteur indépendant établit les quantités reçues et prélève des échantillons pour l'analyse de qualité. Couleur seule, prix ou moteur ne sont pas l'objet du contrôle.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/min-aval-navire-petrolier.jpg",
+   "imgAlt": "Photographie d'un pétrolier à quai le long d'un appontement : un remorqueur est collé à sa coque à gauche, des collecteurs de chargement sont visibles sur le pont avant et la jetée s'étend à droite, sur une mer calme."
   },
   {
    "id": "min-aval-bases-065",

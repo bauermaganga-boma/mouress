@@ -13,7 +13,9 @@
         "Le Brent (mer du Nord, daté et contrats à terme) sert de référence à une grande part des bruts, dont africains.",
         "Prix d'un brut non coté = référence + ou − différentiel de qualité et de logistique.",
         "Le dollar est la monnaie de cotation : la parité euro-dollar influence la valeur en FCFA."
-      ]
+      ],
+      "img": "photo/oil-rig-offshore.jpg",
+      "imgAlt": "Photographie d'une plateforme pétrolière et gazière en mer, en Norvège : une structure industrielle posée sur des piliers au-dessus de l'eau (la mer du Nord est la région d'origine du Brent)."
     },
     {
       "id": "m2",
@@ -27,7 +29,9 @@
         "Gabon : membre en 1975, retrait en 1995, retour le 1er juillet 2016, producteur d'environ 0,2 % de l'offre mondiale.",
         "Limites : non-respect des quotas, pétrole de schiste américain, pertes de parts de marché.",
         "Pour le Gabon, les décisions de l'OPEP+ sont une donnée extérieure à intégrer dans les scénarios."
-      ]
+      ],
+      "img": "svg/min2-eco-opep-equilibre.svg",
+      "imgAlt": "Schéma d'exemple : l'offre mondiale passe de 100 à 99 millions de barils par jour (coupe de 1) ; l'élasticité-prix de court terme de la demande est de −0,05 ; la relation utilisée est variation de la demande = élasticité × variation du prix ; il faut trouver de combien le prix doit monter."
     },
     {
       "id": "m3",
@@ -89,7 +93,9 @@
         "Une vraie diversification se mesure par des parts hors pétrole durables, non par un simple effet de prix.",
         "Leviers : transformation locale, gaz, contenu local, recettes non pétrolières.",
         "Compenser une baisse durable par la dette est risqué."
-      ]
+      ],
+      "img": "svg/min2-eco-dependance-recettes.svg",
+      "imgAlt": "Graphique d'exemple fictif : barre des recettes totales de l'État à 100 %, dont 36 % de pétrole et 64 % de recettes non pétrolières ; seconde barre montrant une baisse de 25 % des recettes pétrolières, les autres restant inchangées."
     },
     {
       "id": "m7",
@@ -103,7 +109,9 @@
         "FSRG : issu du Fonds pour les générations futures, réorganisé en 2012, géré par le FGIS.",
         "Gouvernance : règles écrites d'alimentation et de retrait, audit, publication ; Principes de Santiago (2008).",
         "Équilibre entre actifs liquides (réserve) et projets locaux (développement)."
-      ]
+      ],
+      "img": "svg/min2-eco-fonds-epargne.svg",
+      "imgAlt": "Schémas d'exemple fictifs : à gauche, prix du budget 65 USD, prix observé 85 USD, sensibilité de 18,56 milliards de FCFA par USD et règle d'épargne de l'écart ; à droite, fonds de capital initial 1 000, rendement de +4 % et retrait annuel de −3 % du capital initial."
     }
   ],
   "questions": [
@@ -379,7 +387,7 @@
       "id": "min-economie-petroliere-016",
       "theme": "OPEP et marché mondial",
       "level": 2,
-      "q": "Hypothèses d'exemple : offre mondiale de 100 Mb/j, coupe de 1 Mb/j, élasticité-prix de court terme de la demande de −0,05. De combien le prix doit-il monter environ pour rétablir l'équilibre ?",
+      "q": "Sur le schéma d'exemple, l'offre mondiale est réduite par la coupe indiquée et l'élasticité-prix de court terme de la demande est donnée. De combien le prix doit-il monter environ pour rétablir l'équilibre ?",
       "choices": [
         "Environ 1 %",
         "Environ 5 %",
@@ -389,7 +397,9 @@
       "answer": 3,
       "explain": "La coupe retire 1 % de l'offre ; avec une élasticité de −0,05, la demande ne baisse de 1 % que si le prix monte de 1 % / 0,05 = 20 %. 1 % ignore l'élasticité, 5 % reprend l'élasticité elle-même, 50 % n'a pas de fondement.",
       "seconds": 90,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-eco-opep-equilibre.svg",
+      "imgAlt": "Schéma d'exemple : l'offre mondiale passe de 100 à 99 millions de barils par jour (coupe de 1) ; l'élasticité-prix de court terme de la demande est de −0,05 ; la relation utilisée est variation de la demande = élasticité × variation du prix ; il faut trouver de combien le prix doit monter."
     },
     {
       "id": "min-economie-petroliere-017",
@@ -1127,7 +1137,7 @@
       "id": "min-economie-petroliere-055",
       "theme": "Dépendance et diversification",
       "level": 2,
-      "q": "Chiffres d'exemple : le pétrole fournit 36 % des recettes totales ; ses recettes baissent de 25 %. De combien baissent les recettes totales, toutes choses égales par ailleurs ?",
+      "q": "D'après le graphique d'exemple, le pétrole fournit une part des recettes totales et ses recettes subissent la baisse indiquée. De combien baissent les recettes totales, toutes choses égales par ailleurs ?",
       "choices": [
         "De 9 %",
         "De 25 %",
@@ -1137,7 +1147,9 @@
       "answer": 0,
       "explain": "0,36 × 25 % = 9 %. 25 % supposerait que tout le budget soit pétrolier, 36 est la part initiale, 6,25 est une erreur de calcul.",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-eco-dependance-recettes.svg",
+      "imgAlt": "Graphique d'exemple fictif : barre des recettes totales de l'État à 100 %, dont 36 % de pétrole et 64 % de recettes non pétrolières ; seconde barre montrant une baisse de 25 % des recettes pétrolières, les autres restant inchangées."
     },
     {
       "id": "min-economie-petroliere-056",
@@ -1301,7 +1313,7 @@
       "id": "min-economie-petroliere-065",
       "theme": "Fonds souverains et épargne",
       "level": 2,
-      "q": "Capital de 1 000, rendement de 4 %, retrait annuel de 3 % du capital initial. Quelle est la valeur du capital à la fin de l'année ?",
+      "q": "D'après le schéma du fonds, quelle est la valeur du capital à la fin de l'année ?",
       "choices": [
         "1 070, en additionnant rendement et retrait",
         "1 040",
@@ -1311,13 +1323,15 @@
       "answer": 2,
       "explain": "1 000 + 4 % × 1 000 − 3 % × 1 000 = 1 000 + 40 − 30 = 1 010. 1 070 additionne retrait et rendement, 1 040 ignore le retrait, 970 ignore le rendement.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-eco-fonds-epargne.svg",
+      "imgAlt": "Schémas d'exemple fictifs : à gauche, prix du budget 65 USD, prix observé 85 USD, sensibilité de 18,56 milliards de FCFA par USD et règle d'épargne de l'écart ; à droite, fonds de capital initial 1 000, rendement de +4 % et retrait annuel de −3 % du capital initial."
     },
     {
       "id": "min-economie-petroliere-066",
       "theme": "Fonds souverains et épargne",
       "level": 2,
-      "q": "Budget fondé sur 65 USD ; prix observé 85 USD ; sensibilité de 18,56 milliards de FCFA par USD. Quel montant la règle d'épargne de l'écart de prix met-elle de côté ?",
+      "q": "D'après le schéma, quel montant la règle d'épargne de l'écart de prix met-elle de côté ?",
       "choices": [
         "371,2 milliards de FCFA",
         "928 milliards de FCFA",
@@ -1327,7 +1341,9 @@
       "answer": 0,
       "explain": "20 USD × 18,56 = 371,2 milliards de FCFA. 928 ignore la part de l'État (avec 40 %), 37,1 et 3 712 sont des erreurs de puissance de dix.",
       "seconds": 80,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-eco-fonds-epargne.svg",
+      "imgAlt": "Schémas d'exemple fictifs : à gauche, prix du budget 65 USD, prix observé 85 USD, sensibilité de 18,56 milliards de FCFA par USD et règle d'épargne de l'écart ; à droite, fonds de capital initial 1 000, rendement de +4 % et retrait annuel de −3 % du capital initial."
     },
     {
       "id": "min-economie-petroliere-067",

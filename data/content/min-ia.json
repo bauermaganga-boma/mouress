@@ -29,7 +29,9 @@
     "Les traductions de termes juridiques et pétroliers doivent être relues par un agent compétent.",
     "Bonne tâche : répétitive, facile à vérifier, erreur peu coûteuse, données non sensibles.",
     "Les décisions qui engagent l'État restent humaines et documentées."
-   ]
+   ],
+   "img": "svg/min-circuit-courrier.svg",
+   "imgAlt": "Circuit du courrier : arrivée, enregistrement, imputation, traitement, départ, archivage, avec suivi par un échéancier"
   },
   {
    "id": "m3",
@@ -43,7 +45,9 @@
     "Les biais peuvent ignorer les réalités locales ou désavantager certains profils.",
     "Un courriel parfaitement rédigé peut être un hameçonnage : confirmer par un second canal.",
     "Avant de saisir : l'information est-elle publique ? l'outil est-il autorisé ?"
-   ]
+   ],
+   "img": "photo/min-num-salle-serveurs.jpg",
+   "imgAlt": "Photographie de baies de serveurs informatiques alignées dans une salle technique : des unités empilées dans des armoires métalliques, avec des voyants lumineux verts et jaunes et des câbles, sous un éclairage bleuté. C'est le type de lieu où fonctionnent et sont conservées les données d'un service informatique."
   },
   {
    "id": "m4",
@@ -73,7 +77,9 @@
     "Utiliser les outils autorisés par l'administration, pas des applications inconnues.",
     "Citer des sources vérifiées par soi-même ; la responsabilité du document reste à l'agent.",
     "Aucune décision individuelle déléguée à l'outil ; signaler sans délai tout incident."
-   ]
+   ],
+   "img": "svg/min-classification-information.svg",
+   "imgAlt": "Niveaux de classification de l'information, du moins sensible au plus sensible : Public (diffusion libre), Interne (agents du ministère), Confidentiel (besoin d'en connaître), Secret ou très sensible (très peu de personnes). Appellations à confirmer dans la politique de sécurité du ministère."
   },
   {
    "id": "m6",
@@ -87,7 +93,9 @@
     "Existence d'une loi gabonaise générale sur l'IA non confirmée ; stratégie nationale en préparation (à faire valider).",
     "Repères : recommandation UNESCO (2021) et règlement européen 2024/1689 (approche par risques).",
     "Principes : supervision humaine, transparence, équité, responsabilité, proportionnalité."
-   ]
+   ],
+   "img": "svg/min-hierarchie-normes.svg",
+   "imgAlt": "Hiérarchie des normes : Constitution, traités, lois, ordonnances, décrets, arrêtés, circulaires"
   },
   {
    "id": "m7",
@@ -272,7 +280,7 @@
    "id": "min-ia-009",
    "theme": "Comprendre l'IA générative",
    "level": 3,
-   "q": "Une direction hésite entre un outil public sur internet et un outil interne hébergé par l'administration. Quel critère est le plus décisif pour des documents internes ?",
+   "q": "La photo montre des serveurs informatiques, là où sont conservées les données saisies dans un outil. Une direction hésite entre un outil public sur internet et un outil interne hébergé par l'administration. Quel critère est le plus décisif pour des documents internes ?",
    "choices": [
     "Qui héberge et conserve les données saisies, et selon quelles conditions de confidentialité.",
     "Le nombre de langues que l'outil sait parler, car le ministère traite avec des partenaires étrangers.",
@@ -282,7 +290,9 @@
    "answer": 0,
    "explain": "Pour des documents internes, la maîtrise des données (hébergement, conservation, réutilisation) prime. Les autres critères comptent, mais secondairement.",
    "seconds": 80,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/min-num-salle-serveurs.jpg",
+   "imgAlt": "Photographie de baies de serveurs informatiques alignées dans une salle technique : des unités empilées dans des armoires métalliques, avec des voyants lumineux verts et jaunes et des câbles, sous un éclairage bleuté. C'est le type de lieu où fonctionnent et sont conservées les données d'un service informatique."
   },
   {
    "id": "min-ia-010",
@@ -464,7 +474,7 @@
    "id": "min-ia-021",
    "theme": "Limites et risques de l'IA",
    "level": 1,
-   "q": "Qu'arrive-t-il à un texte saisi dans un service d'IA externe grand public ?",
+   "q": "La photo montre des serveurs, comme ceux sur lesquels fonctionnent les services d'IA externes. Qu'arrive-t-il à un texte saisi dans un service d'IA externe grand public ?",
    "choices": [
     "Il reste sur le poste de l'agent et n'est lu que par l'outil, sans quitter le réseau du ministère.",
     "Il est automatiquement effacé dès que la conversation est fermée, selon une règle universelle.",
@@ -474,7 +484,9 @@
    "answer": 2,
    "explain": "Avec un service externe, les données quittent l'organisation ; leur conservation et leur réutilisation dépendent des conditions du prestataire, qu'il faut lire. Aucune garantie universelle n'existe.",
    "seconds": 50,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/min-num-salle-serveurs.jpg",
+   "imgAlt": "Photographie de baies de serveurs informatiques alignées dans une salle technique : des unités empilées dans des armoires métalliques, avec des voyants lumineux verts et jaunes et des câbles, sous un éclairage bleuté. C'est le type de lieu où fonctionnent et sont conservées les données d'un service informatique."
   },
   {
    "id": "min-ia-022",
@@ -496,7 +508,7 @@
    "id": "min-ia-023",
    "theme": "Limites et risques de l'IA",
    "level": 1,
-   "q": "Lequel de ces documents est le plus sensible à envoyer à un outil externe ?",
+   "q": "D'après le tableau des niveaux de classification, lequel de ces documents est le plus sensible à envoyer à un outil externe ?",
    "choices": [
     "Un projet de contrat de partage de production en cours de négociation.",
     "Un communiqué de presse déjà diffusé sur le site du ministère.",
@@ -506,7 +518,9 @@
    "answer": 0,
    "explain": "Un contrat en négociation est confidentiel et stratégique. Les trois autres documents sont déjà publics.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-classification-information.svg",
+   "imgAlt": "Niveaux de classification de l'information, du moins sensible au plus sensible : Public (diffusion libre), Interne (agents du ministère), Confidentiel (besoin d'en connaître), Secret ou très sensible (très peu de personnes). Appellations à confirmer dans la politique de sécurité du ministère."
   },
   {
    "id": "min-ia-024",
@@ -592,7 +606,7 @@
    "id": "min-ia-029",
    "theme": "Limites et risques de l'IA",
    "level": 3,
-   "q": "Un chef de service veut gagner du temps : il propose de coller dans un outil gratuit le rapport sismique d'un bloc non attribué pour en obtenir un résumé. Quelle est l'analyse correcte ?",
+   "q": "Un chef de service veut gagner du temps : il propose de coller dans un outil gratuit le rapport sismique d'un bloc non attribué pour en obtenir un résumé. D'après le tableau des niveaux de classification, quelle est l'analyse correcte ?",
    "choices": [
     "Le risque est faible, puisque l'outil est gratuit et qu'aucune facture ne sera émise au nom du ministère pour cet usage ponctuel.",
     "Le risque est acceptable si l'on retire la page de garde et le nom de l'opérateur concerné.",
@@ -602,7 +616,9 @@
    "answer": 2,
    "explain": "Les données de blocs non attribués ont une valeur économique et contractuelle ; un service externe public ne présente pas de garanties. Retirer une page de garde ne suffit pas, et personne ne peut garantir que le contenu reste incompris.",
    "seconds": 90,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-classification-information.svg",
+   "imgAlt": "Niveaux de classification de l'information, du moins sensible au plus sensible : Public (diffusion libre), Interne (agents du ministère), Confidentiel (besoin d'en connaître), Secret ou très sensible (très peu de personnes). Appellations à confirmer dans la politique de sécurité du ministère."
   },
   {
    "id": "min-ia-030",
@@ -793,7 +809,7 @@
    "id": "min-ia-041",
    "theme": "Règles de bon usage",
    "level": 1,
-   "q": "Quelle est la règle de base concernant les données sensibles et les services d'IA externes ?",
+   "q": "D'après le tableau des niveaux de classification, quelle est la règle de base concernant les données sensibles (confidentielles ou plus) et les services d'IA externes ?",
    "choices": [
     "Ne jamais saisir de données sensibles dans un service externe ; en cas de doute, la donnée est sensible.",
     "Saisir les données sensibles seulement en soirée, lorsque le service est moins fréquenté et donc moins surveillé par ses équipes.",
@@ -803,7 +819,9 @@
    "answer": 0,
    "explain": "La règle est l'abstention. Ni l'heure, ni la langue, ni une indication « privée » du service ne protègent la donnée.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-classification-information.svg",
+   "imgAlt": "Niveaux de classification de l'information, du moins sensible au plus sensible : Public (diffusion libre), Interne (agents du ministère), Confidentiel (besoin d'en connaître), Secret ou très sensible (très peu de personnes). Appellations à confirmer dans la politique de sécurité du ministère."
   },
   {
    "id": "min-ia-042",
@@ -1196,7 +1214,7 @@
    "id": "min-ia-062",
    "theme": "IA et secteur pétrolier",
    "level": 1,
-   "q": "Quelles données alimentent typiquement un modèle de maintenance prédictive d'une pompe ?",
+   "q": "La photo montre une pompe à balancier de puits. Quelles données alimentent typiquement un modèle de maintenance prédictive d'un tel équipement ?",
    "choices": [
     "Les fiches de paie des opérateurs qui utilisent la pompe.",
     "Les mesures de vibrations, température, pression et courant, ainsi que l'historique des pannes.",
@@ -1206,7 +1224,9 @@
    "answer": 1,
    "explain": "Un modèle apprend sur des mesures d'exploitation et des pannes passées. Les autres données n'ont pas de rapport avec l'état de l'équipement.",
    "seconds": 45,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/pumpjack.jpg",
+   "imgAlt": "Photographie d'une pompe à balancier de puits pétrolier, entourée d'une clôture au milieu d'une prairie, sous un ciel bleu, avec des arbres et des bâtiments à l'arrière-plan."
   },
   {
    "id": "min-ia-063",
@@ -1308,7 +1328,7 @@
    "id": "min-ia-069",
    "theme": "IA et secteur pétrolier",
    "level": 3,
-   "q": "Une alerte d'un système prédictif recommande l'arrêt d'une unité de compression, mais le responsable d'exploitation, se fondant sur ses constatations, souhaite continuer. Quelle est la bonne approche ?",
+   "q": "La photo montre un compresseur de gaz. Une alerte d'un système prédictif recommande l'arrêt d'une unité de compression de ce type, mais le responsable d'exploitation, se fondant sur ses constatations, souhaite continuer. Quelle est la bonne approche ?",
    "choices": [
     "Obéir à l'alerte dans tous les cas, puisqu'un algorithme n'a aucune raison de se tromper et ne subit pas la pression de l'exploitation.",
     "Ignorer l'alerte dans tous les cas, puisque seul le responsable d'exploitation peut décider de l'arrêt.",
@@ -1318,7 +1338,9 @@
    "answer": 2,
    "explain": "Une alerte ne remplace ni la procédure ni la décision humaine ; elle est une information à confronter aux mesures. Obéir ou ignorer par principe sont deux erreurs symétriques.",
    "seconds": 90,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/gas-compressor.jpg",
+   "imgAlt": "Photographie d'un compresseur de gaz à moteur : de gros cylindres gris alignés sur un bâti, des collecteurs jaunes et un tuyau vert, installés sous un abri vitré avec un garde-corps en tubes inox."
   },
   {
    "id": "min-ia-070",

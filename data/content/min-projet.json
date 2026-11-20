@@ -1,1261 +1,1269 @@
 {
- "profile": "min-projet",
- "modules": [
-  {
-   "id": "m1",
-   "title": "Qu’est-ce qu’un projet ? Le cycle de vie",
-   "theme": "Cycle de vie d’un projet",
-   "minutes": 9,
-   "body": "Un **projet** est un ensemble d’actions **temporaires**, coordonnées, qui vise à produire un résultat **unique** (un service, un outil, un document, une procédure) avec des moyens et un délai limités. Il s’oppose à l’**activité courante** (ou processus), répétitive et permanente : établir chaque mois le bulletin statistique d’un service est une activité ; refondre la procédure d’instruction des demandes avec un nouvel outil, en huit mois et avec un budget dédié, est un projet.\n\nTout projet est encadré par trois contraintes liées entre elles, souvent appelées le **triangle** : le **périmètre** (ce qui est livré, avec son niveau de qualité), le **coût** et le **délai**. Agir sur l’une agit presque toujours sur les autres : ajouter une fonction coûte du temps et de l’argent ; réduire le délai impose de réduire le périmètre ou d’ajouter des moyens.\n\nLe **cycle de vie** décrit les grandes phases, avec à chaque fin une **revue** et une **décision** (poursuivre, corriger, arrêter) :\n\n- **Initialisation (opportunité)** : un besoin ou une demande est identifié ; une étude d’opportunité et de faisabilité compare des scénarios, y compris celui de ne rien faire.\n- **Cadrage** : objectifs, périmètre, parties prenantes, organisation, premières estimations de coût et de délai ; le commanditaire signe une lettre de mission.\n- **Planification** : découpage en lots de travaux, calendrier, budget détaillé, plan de gestion des risques.\n- **Réalisation** : production des livrables, avec suivi et maîtrise permanents (délais, coûts, qualité, risques, changements).\n- **Clôture** : réception des livrables, bilan, retour d’expérience, transfert à l’exploitation, archivage.\n\nLes **rôles** à connaître : le **commanditaire** (ou sponsor), qui décide et finance ; la **maîtrise d’ouvrage** (MOA), qui exprime le besoin et valide ; la **maîtrise d’œuvre** (MOE), qui conçoit et réalise la solution ; le **chef de projet**, responsable de la conduite au quotidien ; le **comité de pilotage**, qui arbitre aux moments clés.\n\nUn **jalon** est un point de contrôle daté, sans durée propre, qui marque l’achèvement d’une étape importante ; un **livrable** est un produit vérifiable (rapport, application, guide). Les jalons rendent le projet lisible pour la hiérarchie.\n\nDeux manières de conduire un projet coexistent. L’approche **prédictive** fixe un plan détaillé dès le départ : elle convient quand le besoin est stable et bien connu. L’approche **itérative** livre par petites étapes successives et ajuste selon les retours des utilisateurs : elle convient mieux quand le besoin évolue, par exemple pour une application interne dont les utilisateurs découvrent les usages en l’essayant.\n\nExemple (fictif) : le service des statistiques d’une direction veut remplacer la collecte de fichiers par courriel par un portail de déclaration en ligne. L’idée n’est pas lancée directement : on commence par une étude d’opportunité (volume de déclarations, erreurs actuelles, coût du statu quo), puis par le cadrage. Un agent qui propose d’acheter du matériel dès le premier jour brûle les étapes : sans objectifs ni périmètre validés, l’achat risque d’être inadapté.\n\nL’administration a en outre ses règles propres (commande publique, exécution budgétaire, archivage) : elles s’appliquent à toutes les phases, et le chef de projet doit les intégrer dès la planification.",
-   "keyPoints": [
-    "Un projet est temporaire et produit un résultat unique, à la différence d’une activité courante répétitive.",
-    "Le triangle périmètre – coût – délai : modifier l’un agit sur les autres.",
-    "Chaque phase se termine par une revue et une décision (poursuivre, corriger, arrêter).",
-    "MOA = exprime le besoin et valide ; MOE = conçoit et réalise ; le chef de projet conduit au quotidien.",
-    "Le choix entre approche prédictive et itérative dépend de la stabilité du besoin."
-   ],
-   "img": "svg/min-mgt-cycle-projet.svg",
-   "imgAlt": "Cycle de vie d’un projet en cinq phases successives : 1 initialisation (étude d’opportunité), 2 cadrage (lettre de mission), 3 planification (plan de projet avec lots et budget), 4 réalisation (livrables du projet), 5 clôture (réception, bilan, retour d’expérience). Après chaque phase, une revue de fin de phase conduit à une décision : poursuivre, corriger ou arrêter. Le suivi et la maîtrise accompagnent la planification et la réalisation."
-  },
-  {
-   "id": "m2",
-   "title": "Cadrer un projet : objectifs, périmètre, parties prenantes",
-   "theme": "Cadrage : objectifs, périmètre, parties prenantes",
-   "minutes": 10,
-   "body": "Le **cadrage** est l’étape la plus rentable du projet : la plupart des dérapages constatés en réalisation trouvent leur origine dans un cadrage flou. Il répond à quatre questions : pourquoi (objectifs), quoi (périmètre), qui (parties prenantes et organisation), avec quelles limites (coût, délai, contraintes).\n\n**Les objectifs.** Un bon objectif est **SMART** : spécifique, mesurable, atteignable, réaliste et défini dans le temps. Comparez : « améliorer le traitement des demandes d’autorisation » (vague) et « ramener de 30 à 15 jours le délai moyen de traitement des demandes d’autorisation d’ici le 31 décembre » (précis, mesurable, daté). Les chiffres de cet exemple sont fictifs. On distingue l’objectif **final** (l’effet recherché par l’administration) des livrables (ce que le projet produit pour y parvenir).\n\n**Le périmètre.** Il liste ce qui est **inclus** et, tout aussi important, ce qui est **exclu**. Il se décline en livrables, regroupés en lots de travaux. Un périmètre mal borné favorise la **dérive du périmètre** : des demandes s’ajoutent au fil de l’eau, sans que coût ni délai soient revus. Toute modification doit passer par une procédure de **gestion des changements** : demande écrite, analyse d’impact sur coût, délai et risques, décision du commanditaire ou du comité de pilotage.\n\n**Les parties prenantes.** Ce sont toutes les personnes ou organisations qui influencent le projet ou sont affectées par lui : direction générale, services utilisateurs, direction des finances, services informatiques, prestataires, opérateurs ou sociétés sous tutelle concernés, partenaires extérieurs. On les recense, puis on les classe sur une grille **pouvoir / intérêt** :\n\n- fort pouvoir, fort intérêt : à **gérer de près** (associer aux décisions) ;\n- fort pouvoir, faible intérêt : à **tenir satisfait** ;\n- faible pouvoir, fort intérêt : à **tenir informé** ;\n- faible pouvoir, faible intérêt : à **surveiller**.\n\nOublier un service utilisateur au cadrage est l’une des causes les plus fréquentes de rejet d’un outil à la livraison.\n\n**L’organisation.** On désigne le commanditaire, le chef de projet, les référents des services, et on précise qui fait quoi avec une **matrice des responsabilités (RACI)** : pour chaque livrable, qui **réalise** (R), qui **approuve** (A, une seule personne), qui est **consulté** (C) et qui est **informé** (I). Cette règle d’un seul « A » évite les conflits entre directions qui croient chacune décider.\n\n**Le document de cadrage.** Il regroupe le contexte, les objectifs, le périmètre, les livrables, les parties prenantes, l’organisation, le calendrier à grandes mailles, le budget estimatif, les risques majeurs et les hypothèses. La **lettre de mission** (ou charte) en est l’acte officiel : le commanditaire y nomme le chef de projet et lui délègue une marge de manœuvre claire.\n\nLorsque les attentes sont contradictoires (par exemple tout le périmètre, en moitié moins de temps et avec un budget réduit), le chef de projet ne promet pas l’impossible : il présente des **scénarios** d’arbitrage et obtient une décision écrite du commanditaire.",
-   "keyPoints": [
-    "Un cadrage rigoureux évite l’essentiel des dérapages ultérieurs.",
-    "Objectif SMART : spécifique, mesurable, atteignable, réaliste, daté.",
-    "Le périmètre indique ce qui est inclus et ce qui est exclu ; tout changement passe par la gestion des changements.",
-    "Grille pouvoir / intérêt : gérer de près, tenir satisfait, tenir informé, surveiller.",
-    "RACI : un seul approbateur (A) par livrable ; la lettre de mission officialise le chef de projet."
-   ],
-   "img": "svg/min-mgt-parties-prenantes.svg",
-   "imgAlt": "Grille pouvoir et intérêt à quatre cases. En haut à droite (pouvoir et intérêt élevés), gérer étroitement : 1 directeur sponsor et 5 cabinet du ministre. En haut à gauche (pouvoir élevé, intérêt faible), tenir satisfait : 2 service financier. En bas à droite (pouvoir faible, intérêt élevé), tenir informé : 3 agents du service. En bas à gauche (pouvoir et intérêt faibles), surveiller : 4 usagers non concernés."
-  },
-  {
-   "id": "m3",
-   "title": "Planifier : lots de travaux, Gantt et chemin critique",
-   "theme": "Planning : diagramme de Gantt et chemin critique",
-   "minutes": 12,
-   "body": "Planifier, c’est transformer le périmètre en **tâches**, leur donner des **durées**, les enchaîner et affecter des ressources. On commence par le **découpage** du projet en lots de travaux, puis en tâches de plus en plus fines, jusqu’à des unités estimables et attribuables à une personne.\n\n**Estimer les durées.** Quand l’incertitude est forte, on utilise l’estimation à **trois points** : durée optimiste O, probable P, pessimiste Pe ; durée retenue = (O + 4P + Pe) / 6. Exemple (chiffres fictifs) : O = 4 jours, P = 6 jours, Pe = 14 jours, soit (4 + 24 + 14) / 6 = 7 jours.\n\n**Le diagramme de Gantt** représente les tâches en lignes et le temps en colonnes ; chaque tâche est une barre, les liens montrent les dépendances, les jalons apparaissent sous forme de losanges. Il est parfait pour communiquer, mais il ne dit pas à lui seul quelles tâches commandent la date de fin : c’est le rôle du **réseau de tâches** et du **chemin critique**.\n\n**Le chemin critique** est la suite de tâches reliées dont la **marge est nulle** : tout retard sur l’une d’elles retarde la fin du projet. Sa longueur est la **durée minimale** du projet. Les autres tâches ont une **marge totale** : le retard qu’elles peuvent prendre sans décaler la fin.\n\n**Exemple chiffré (fictif).** Cinq tâches : A (3 jours, sans antécédent) ; B (4 jours, après A) ; C (2 jours, après A) ; D (5 jours, après B et C) ; E (3 jours, après D).\n\n- Chemin A-B-D-E : 3 + 4 + 5 + 3 = **15 jours**.\n- Chemin A-C-D-E : 3 + 2 + 5 + 3 = 13 jours.\n\nLe chemin critique est A-B-D-E, la durée du projet est de 15 jours, et la tâche C dispose d’une marge de 15 − 13 = **2 jours**.\n\n**Calcul de marge.** Pour une tâche : fin au plus tôt = début au plus tôt + durée ; marge = fin au plus tard − fin au plus tôt. Une tâche de 6 jours, qui ne peut commencer qu’après le jour 10 et doit finir au plus tard au jour 20, finit au plus tôt au jour 16 ; sa marge est de 4 jours.\n\n**Raccourcir un projet.** Seule une réduction sur le chemin critique raccourcit la durée. Mais attention : quand on accélère une tâche critique, un autre chemin peut devenir critique à son tour. Si deux chemins ont la même longueur (par exemple 13 jours chacun), ils sont tous deux critiques, et gagner un jour sur un seul d’entre eux ne change pas la date de fin.\n\n**Bonnes pratiques.** Prévoir des jalons validés par le commanditaire ; intégrer les délais propres à l’administration (circuit de signature, procédure de mise en concurrence, disponibilité des instances) ; ne pas surcharger les agents partagés avec leur activité courante ; garder une marge globale de sécurité ; mettre à jour le planning à chaque point d’avancement et conserver la version de référence pour mesurer les écarts.",
-   "keyPoints": [
-    "Découper le projet en lots et en tâches estimables avant de dater quoi que ce soit.",
-    "Le Gantt communique le calendrier ; le chemin critique indique ce qui commande la date de fin.",
-    "Chemin critique = suite de tâches à marge nulle ; sa longueur donne la durée minimale du projet.",
-    "Marge = fin au plus tard − fin au plus tôt ; durée à trois points = (O + 4P + Pe) / 6.",
-    "Raccourcir un projet exige d’agir sur le chemin critique, en surveillant l’apparition d’un second chemin critique."
-   ],
-   "img": "svg/gantt-chart.svg",
-   "imgAlt": "Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais et mise en service S11-S12, réception S13 forment le chemin critique. Commande des équipements S3-S5 et formation des équipes S8-S11 ont chacune une semaine de marge."
-  },
-  {
-   "id": "m4",
-   "title": "Construire et suivre le budget d’un projet",
-   "theme": "Budget du projet",
-   "minutes": 11,
-   "body": "Le **budget** d’un projet est l’estimation des dépenses nécessaires, répartie par poste (études, matériel, prestations, formation, frais de mission, etc.) et par période. Dans l’administration, il s’inscrit dans l’enveloppe fixée par la loi de finances et les règles d’exécution de la dépense publique ; le chef de projet ne décide donc pas seul : il prépare, justifie, puis suit une enveloppe validée par le commanditaire et les services financiers.\n\n**Estimer.** Selon la maturité du projet, on utilise :\n\n- l’estimation **analogique**, fondée sur des projets comparables : rapide, avec une fourchette large, adaptée à l’étude d’opportunité ;\n- l’estimation **ascendante**, poste par poste, à partir des lots de travaux : plus longue mais plus fiable, adaptée à la planification.\n\nL’estimation se précise au fil des phases : on annonce d’abord une **fourchette** (par exemple de 150 à 250 millions de FCFA, chiffres fictifs), puis un montant ferme après le cadrage détaillé et les consultations.\n\n**Raisonner en coût complet.** Le coût d’acquisition n’est qu’une partie du **coût total de possession** : il faut ajouter l’exploitation, la maintenance, les licences, la formation des utilisateurs et le renouvellement. Un outil bon marché à l’achat mais coûteux à maintenir peut revenir plus cher qu’une solution plus onéreuse au départ.\n\n**Prévoir une réserve.** Une **réserve pour aléas** couvre les risques identifiés et l’incertitude ; sa gestion est encadrée (qui peut l’utiliser, sur décision de qui). Une commande doit toujours respecter les règles de la commande publique : il est interdit de fractionner artificiellement un achat pour passer sous un seuil de procédure.\n\n**Mesurer l’écart : la méthode de la valeur acquise.** Trois grandeurs, exprimées en argent :\n\n- **valeur planifiée (VP)** : le travail qui devait être fait à la date du jour, valorisé au budget ;\n- **valeur acquise (VA)** : le travail réellement fait, valorisé au budget ;\n- **coût réel (CR)** : ce qui a effectivement été dépensé.\n\nOn en déduit l’indice de performance des coûts **IPC = VA / CR** (inférieur à 1 : dépassement) et l’indice de performance des délais **IPD = VA / VP** (inférieur à 1 : retard).\n\n**Exemple chiffré (fictif).** Budget total (BAC) de 200 millions de FCFA. À mi-parcours, 50 % du travail devait être fait (VP = 100) ; 40 % l’est réellement (VA = 80) ; 100 millions ont été dépensés (CR = 100).\n\n- IPC = 80 / 100 = **0,8** : le projet coûte plus que prévu pour le travail accompli.\n- IPD = 80 / 100 = **0,8** : le projet est en retard.\n- Estimation à l’achèvement : EAC = BAC / IPC = 200 / 0,8 = **250 millions**, soit 50 millions de plus que prévu si la tendance se poursuit.\n\n**Que faire en cas de dérive ?** Documenter l’écart, en rechercher les causes, présenter des options chiffrées au comité de pilotage (réduire le périmètre, étaler la réalisation, demander un financement complémentaire) et obtenir une décision. On ne cache jamais un dépassement en espérant le rattraper.",
-   "keyPoints": [
-    "Le budget se prépare, se justifie et se suit dans l’enveloppe validée par le commanditaire et les services financiers.",
-    "Estimation analogique pour un ordre de grandeur, ascendante pour un budget fiable ; on annonce d’abord une fourchette.",
-    "Raisonner en coût total de possession, pas seulement en coût d’achat ; prévoir une réserve pour aléas.",
-    "IPC = VA / CR (coûts) ; IPD = VA / VP (délais) ; EAC = BAC / IPC.",
-    "Fractionner un achat pour éviter une procédure est interdit ; en cas de dérive, on alerte avec des options chiffrées."
-   ]
-  },
-  {
-   "id": "m5",
-   "title": "Identifier et maîtriser les risques",
-   "theme": "Gestion des risques",
-   "minutes": 10,
-   "body": "Un **risque** est un événement **incertain** qui, s’il se produit, affecte les objectifs du projet (coût, délai, qualité, image). Un risque qui s’est réalisé devient un **problème** ou un incident, qu’il faut traiter. Gérer les risques, c’est s’en occuper **avant** qu’ils surviennent.\n\n**Démarche en cinq temps.**\n\n1. **Identifier** : séances de réflexion avec l’équipe et les parties prenantes, retours d’expérience de projets antérieurs, revue des contraintes (délais de commande publique, disponibilité d’un agent clé, dépendance à un fournisseur, coupure d’électricité ou de réseau).\n2. **Analyser** : évaluer la **probabilité** (échelle de 1 à 5) et l’**impact** (de 1 à 5). La **criticité** = probabilité × impact.\n3. **Prioriser** : traiter d’abord les risques de criticité élevée, selon un seuil fixé à l’avance.\n4. **Traiter** : choisir une stratégie et définir des actions, un responsable et une échéance.\n5. **Surveiller** : revoir les risques à chaque point d’avancement.\n\n**Exemple chiffré (fictif).** Risque 1 : retard de livraison du matériel (probabilité 4, impact 3, criticité 12). Risque 2 : indisponibilité du site le jour de la recette (probabilité 2, impact 5, criticité 10). Le risque 1 est traité en premier, même si l’impact du second est plus fort.\n\n**Les quatre stratégies face à une menace.**\n\n- **Éviter** : modifier le projet pour supprimer la cause (abandonner une option trop incertaine).\n- **Réduire** (atténuer) : diminuer la probabilité ou l’impact (former un second agent, documenter les procédures, tester avant la mise en service).\n- **Transférer** : faire porter tout ou partie du risque par un tiers (garantie de bonne exécution, pénalités de retard et assurance prévues au contrat).\n- **Accepter** : ne rien faire de plus, en connaissance de cause, éventuellement avec une réserve ou un plan de secours.\n\n**Le registre des risques** est un tableau vivant : description (cause, événement, conséquence), probabilité, impact, criticité, stratégie, actions, **propriétaire**, échéance, état. Le propriétaire est la personne la mieux placée pour surveiller le risque et agir, pas forcément le chef de projet. Un risque oublié dans le registre est un risque subi.\n\n**Risque résiduel et risque secondaire.** Une mesure ne supprime pas toujours tout : une mesure ramenant une criticité de 20 à 8 laisse un **risque résiduel**, à suivre et à faire accepter explicitement si l’on est sous le seuil de tolérance. Une mesure peut aussi en créer un autre (**risque secondaire**).\n\n**Quand le risque se réalise.** On le déclare comme incident, on active le plan de réponse prévu, on mesure l’impact sur le planning et le budget, on informe le commanditaire et le comité de pilotage selon les seuils convenus, et on met à jour le registre. Il existe aussi des risques **positifs** (opportunités), que l’on cherche à saisir.",
-   "keyPoints": [
-    "Un risque est un événement incertain ; réalisé, il devient un problème à traiter.",
-    "Criticité = probabilité × impact ; on traite d’abord les risques les plus critiques.",
-    "Quatre stratégies face à une menace : éviter, réduire, transférer, accepter.",
-    "Le registre des risques est tenu à jour, avec un propriétaire et une échéance pour chaque action.",
-    "Après traitement, le risque résiduel est suivi et explicitement accepté s’il est sous le seuil de tolérance."
-   ],
-   "img": "svg/risk-matrix.svg",
-   "imgAlt": "Matrice de risque 5 par 5 : probabilité en abscisse de 1 improbable à 5 fréquent, gravité en ordonnée de 1 mineure à 5 catastrophique, criticité égale au produit des deux. Niveaux : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
-  },
-  {
-   "id": "m6",
-   "title": "Suivre l’avancement : tableaux de bord et comités de pilotage",
-   "theme": "Suivi, tableaux de bord et comités de pilotage",
-   "minutes": 10,
-   "body": "Piloter, c’est comparer régulièrement le **réalisé** au **prévu**, comprendre les écarts et **décider**. Sans suivi, un projet dérive en silence ; avec un suivi trop lourd, l’équipe passe son temps à rendre compte au lieu de produire. Il faut donc peu d’indicateurs, mais fiables.\n\n**Le tableau de bord** est une synthèse périodique (souvent mensuelle, d’une à deux pages) qui présente quelques indicateurs clés :\n\n- **avancement** : livrables validés par rapport aux livrables prévus à la date ;\n- **délais** : jalons tenus ou en retard, écart de planning ;\n- **coûts** : consommé, reste à faire, estimation à l’achèvement ;\n- **risques** : principaux risques et évolution de leur criticité ;\n- **qualité** et **changements** : anomalies ouvertes, demandes de changement en attente.\n\nUn bon indicateur est **mesurable**, **objectif** et **utile à la décision**. Le pourcentage d’avancement « à l’œil » est un mauvais indicateur : mieux vaut compter les livrables achevés et validés. Le nombre d’heures passées mesure l’effort consommé, pas le résultat obtenu.\n\n**Les voyants** (vert, orange, rouge) donnent une lecture rapide. Ils reposent sur des **seuils de tolérance** fixés dès le cadrage : par exemple, vert si l’écart de coût est inférieur à 5 %, orange entre 5 et 10 %, rouge au-delà (valeurs fictives). Un voyant rouge signifie que l’écart dépasse la tolérance du chef de projet et appelle une **décision du niveau supérieur**.\n\n**Les instances.** On distingue :\n\n- le **comité de projet** (technique, fréquent, autour du chef de projet et des référents) : il suit les tâches et résout les difficultés opérationnelles ;\n- le **comité de pilotage** (COPIL), plus rare (par exemple chaque trimestre et à chaque jalon majeur), réuni autour du commanditaire et des décideurs : il valide les jalons, arbitre entre périmètre, coût et délai, alloue les moyens et lève les obstacles.\n\n**Réussir un comité de pilotage.** Envoyer le dossier à l’avance ; centrer l’ordre du jour sur les **décisions à prendre**, avec des options et la recommandation du chef de projet ; rédiger un compte rendu court mentionnant les décisions, les actions, leurs responsables et leurs échéances ; vérifier à la séance suivante que les actions ont été menées.\n\n**Alerter tôt.** Si un jalon risque d’être manqué de trois semaines et que le prochain comité a lieu dans six semaines, on prévient le commanditaire immédiatement, avec des options, sans attendre. Un chef de projet qui cache une mauvaise nouvelle perd la confiance et les marges d’action.\n\n**Attention aux tableaux de bord trop beaux.** Si tous les voyants sont verts alors que l’équipe exprime des inquiétudes, il faut vérifier la fiabilité des indicateurs : sont-ils déclaratifs ou fondés sur des livrables validés ? Le rôle du chef de projet est de dire la vérité, pas de rassurer.",
-   "keyPoints": [
-    "Piloter, c’est comparer le réalisé au prévu et décider ; peu d’indicateurs, mais fiables.",
-    "Préférer les indicateurs fondés sur des livrables validés aux estimations déclaratives.",
-    "Les seuils de tolérance fixés au cadrage déterminent les voyants et le moment de remonter l’information.",
-    "Comité de projet = suivi opérationnel ; comité de pilotage = décisions et arbitrages.",
-    "Alerter tôt, avec des options ; un comité efficace se prépare et produit des actions datées."
-   ],
-   "img": "svg/min-mgt-tableau-de-bord.svg",
-   "imgAlt": "Tableau de bord mensuel d’un service, valeurs fictives, avec jauge, trait de cible et feu de couleur. Dossiers traités dans les délais : 72 % pour une cible de 90 %, rouge (vert à partir de 90 %, orange de 75 à 89 %, rouge sous 75 %). Délai moyen de traitement : 11 jours pour une cible de 10 jours, orange (orange de 11 à 13 jours). Taux d’absentéisme : 4 % pour un maximum de 5 %, vert. Agents utilisant le nouvel outil : 78 % pour une cible de 80 %, orange (orange de 70 à 79 %)."
-  },
-  {
-   "id": "m7",
-   "title": "Clôturer, tirer les leçons et exemples de projets de ministère",
-   "theme": "Clôture, retour d’expérience et exemples de projets",
-   "minutes": 10,
-   "body": "La **clôture** est trop souvent bâclée : l’équipe est déjà mobilisée sur d’autres sujets. Pourtant, c’est elle qui transforme les livrables en bénéfices durables et qui capitalise l’expérience.\n\n**Les étapes de la clôture.**\n\n1. **Réception** (recette) des livrables : vérification de leur conformité aux exigences, formalisée par un **procès-verbal de réception**, signé par le commanditaire ou la maîtrise d’ouvrage. Les anomalies mineures peuvent donner lieu à une réception **avec réserves**, assortie d’un plan de levée daté.\n2. **Transfert à l’exploitation** : documentation, formation des agents, désignation d’un responsable de la maintenance et du fonctionnement courant. Un outil livré mais non repris par un service est un projet raté.\n3. **Clôture administrative et financière** : marchés soldés, engagements apurés, paiements finalisés, ressources libérées.\n4. **Bilan final** : comparaison entre objectifs, coûts et délais prévus et réalisés, explication des écarts.\n5. **Archivage** du dossier de projet (lettre de mission, décisions, procès-verbaux, registre des risques, livrables) selon les règles d’archivage de l’administration.\n\n**Le retour d’expérience (REX).** Il consiste à analyser avec toute l’équipe et les principales parties prenantes ce qui a bien fonctionné, ce qui a posé problème et pourquoi, afin d’en tirer des règles pour les projets suivants. Il se pratique dans un esprit **constructif et sans recherche de coupable** et, idéalement, à chaque jalon et pas seulement à la fin. Un REX qui ne débouche pas sur des actions (liste de contrôle, modèle de document, formation) reste lettre morte.\n\n**Mesurer les bénéfices.** Quelques mois après la clôture, on vérifie que l’objectif a été atteint : par exemple, le délai de traitement est-il bien passé de 30 à 15 jours (valeurs fictives) ? Ce suivi relève du service exploitant et du commanditaire.\n\n**Exemples (fictifs) de projets dans un ministère.**\n\n- Portail de déclaration en ligne des données de production, remplaçant l’envoi de fichiers par courriel.\n- Numérisation et classement des dossiers d’autorisation.\n- Mise en place d’un circuit électronique du courrier et des parapheurs.\n- Tableau de bord de suivi des indicateurs de la direction.\n- Organisation d’un cycle de formation pour les inspecteurs.\n\nDans chacun, les mêmes questions reviennent : qui commande, quels objectifs mesurables, quel périmètre, quelles parties prenantes (services, sociétés sous tutelle, partenaires), quels jalons et quelle reprise en exploitation.\n\n**Cas de décision.** À la clôture d’un portail, deux réserves ne sont pas levées et les utilisateurs sont peu formés : on prononce la réception avec réserves, on fixe un plan de levée daté, on programme une formation complémentaire, et la clôture formelle n’est signée qu’une fois les réserves levées.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
-   "keyPoints": [
-    "La clôture comprend réception, transfert à l’exploitation, clôture financière, bilan et archivage.",
-    "La réception avec réserves exige un plan de levée daté ; la clôture formelle suit la levée des réserves.",
-    "Le retour d’expérience est constructif, sans chercher de coupable, et débouche sur des actions concrètes.",
-    "Les bénéfices attendus se mesurent après la clôture, par rapport aux objectifs initiaux.",
-    "Les projets d’un ministère (portail, numérisation, circuit du courrier, tableau de bord, formation) suivent la même démarche."
-   ]
-  }
- ],
- "questions": [
-  {
-   "id": "min-projet-001",
-   "theme": "Cycle de vie d’un projet",
-   "level": 1,
-   "q": "Parmi les définitions suivantes, laquelle décrit un projet, par opposition à une activité courante ?",
-   "choices": [
-    "Une activité répétitive confiée en permanence à un service pour produire toujours le même résultat",
-    "Tout travail dont la durée dépasse un an, quel que soit son objectif",
-    "Un ensemble d’actions temporaires, avec un début et une fin, visant à produire un résultat unique",
-    "Toute action mobilisant un budget d’investissement important"
-   ],
-   "answer": 2,
-   "explain": "Un projet est temporaire et vise un résultat unique. L’activité courante est répétitive et permanente. La durée ou le budget ne suffisent pas à définir un projet : un travail de trois mois peut en être un, et une dépense importante peut relever d’une activité courante.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-002",
-   "theme": "Cycle de vie d’un projet",
-   "level": 1,
-   "q": "D’après la figure, quelle phase suit la planification, et que décide-t-on à la fin de chaque phase ?",
-   "choices": [
-    "La réalisation ; une revue de fin de phase conduit à poursuivre, corriger ou arrêter",
-    "La clôture ; la décision de fin de phase n’est prise qu’une seule fois, à la livraison",
-    "La réalisation ; les revues sont réservées aux projets dont le budget dépasse la réserve",
-    "Le cadrage ; la revue est facultative et laissée au choix de l’équipe"
-   ],
-   "answer": 0,
-   "explain": "La figure place la réalisation (phase 4) après la planification (phase 3). À la fin de chaque phase, une revue débouche sur une décision : poursuivre, corriger ou arrêter. Le cadrage précède la planification et la clôture vient en dernier ; les revues ne sont pas facultatives.",
-   "seconds": 45,
-   "status": "draft",
-   "img": "svg/min-mgt-cycle-projet.svg",
-   "imgAlt": "Cycle de vie d’un projet en cinq phases successives : 1 initialisation (étude d’opportunité), 2 cadrage (lettre de mission), 3 planification (plan de projet avec lots et budget), 4 réalisation (livrables du projet), 5 clôture (réception, bilan, retour d’expérience). Après chaque phase, une revue de fin de phase conduit à une décision : poursuivre, corriger ou arrêter. Le suivi et la maîtrise accompagnent la planification et la réalisation."
-  },
-  {
-   "id": "min-projet-003",
-   "theme": "Cycle de vie d’un projet",
-   "level": 1,
-   "q": "Les trois contraintes qui encadrent un projet, souvent représentées sous forme de triangle, sont :",
-   "choices": [
-    "le nombre d’agents, le nombre de réunions et le nombre de documents",
-    "la hiérarchie, la durée des réunions et le niveau de signature",
-    "le sponsor, le prestataire et l’utilisateur final",
-    "le périmètre (avec sa qualité), le coût et le délai"
-   ],
-   "answer": 3,
-   "explain": "Périmètre (qualité), coût et délai sont liés : agir sur l’un modifie en général les autres. Les autres propositions énumèrent des éléments de fonctionnement ou des acteurs, non des contraintes de projet.",
-   "seconds": 45,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-004",
-   "theme": "Cycle de vie d’un projet",
-   "level": 1,
-   "q": "Dans un projet, quelle est la répartition classique entre maîtrise d’ouvrage (MOA) et maîtrise d’œuvre (MOE) ?",
-   "choices": [
-    "La MOA réalise techniquement la solution ; la MOE exprime le besoin",
-    "La MOA exprime le besoin et valide ; la MOE conçoit et réalise la solution",
-    "La MOA suit seulement les paiements ; la MOE choisit les objectifs politiques",
-    "La MOA et la MOE désignent la même personne dans tous les projets, quelle que soit leur taille"
-   ],
-   "answer": 1,
-   "explain": "La maîtrise d’ouvrage porte le besoin, décide et valide ; la maîtrise d’œuvre apporte l’expertise de conception et de réalisation. Les rôles peuvent être tenus par des services différents, d’où l’intérêt de les préciser dès le cadrage.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-005",
-   "theme": "Cycle de vie d’un projet",
-   "level": 1,
-   "q": "Qu’est-ce qu’un jalon de projet ?",
-   "choices": [
-    "Une tâche longue dont la durée dépasse un mois et qui mobilise l’ensemble des agents de l’équipe projet",
-    "Une réunion hebdomadaire de l’équipe projet",
-    "Un document décrivant les risques du projet",
-    "Un point de contrôle daté marquant l’achèvement d’une étape importante, sans durée propre"
-   ],
-   "answer": 3,
-   "explain": "Un jalon a une date mais pas de durée : c’est un repère de contrôle (par exemple « cahier des charges validé »). Une tâche, une réunion ou un registre sont d’une autre nature.",
-   "seconds": 40,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-006",
-   "theme": "Cycle de vie d’un projet",
-   "level": 2,
-   "q": "Vous êtes chef de service. Un collègue veut commander immédiatement un nouveau matériel pour un projet qui n’a encore fait l’objet d’aucune étude. Que répondez-vous ?",
-   "choices": [
-    "Commander dès que possible : le matériel sera toujours utile, et la précision viendra plus tard sans attendre la validation du moindre document",
-    "Il faut d’abord une étude d’opportunité et de faisabilité qui compare des scénarios, y compris celui de ne rien faire",
-    "Attendre la fin complète de la réalisation pour décider de ce qu’il faut acheter",
-    "Demander à chaque service de choisir librement son propre matériel, sans étude commune"
-   ],
-   "answer": 1,
-   "explain": "L’étude d’opportunité justifie le besoin et compare les solutions avant tout engagement de dépense. Acheter avant le cadrage expose à un matériel inadapté ; décider après la réalisation est absurde ; des achats dispersés ruinent la cohérence du projet.",
-   "seconds": 70,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-007",
-   "theme": "Cycle de vie d’un projet",
-   "level": 2,
-   "q": "Votre projet est en réalisation. Un directeur demande d’ajouter une fonction non prévue au portail. Quelle est la bonne réaction ?",
-   "choices": [
-    "L’accepter immédiatement pour ne pas contrarier un directeur, en absorbant l’effort dans l’équipe, sans informer le comité de pilotage ni revoir le planning",
-    "La refuser systématiquement, car on ne change jamais rien en cours de réalisation",
-    "Évaluer l’impact sur coût, délai et risques, puis soumettre la demande à la décision du commanditaire selon la procédure de changement",
-    "L’ajouter discrètement à la fin du projet, sans en parler au comité de pilotage"
-   ],
-   "answer": 2,
-   "explain": "Un changement n’est ni accepté ni refusé par principe : il est analysé et décidé par l’instance compétente. Accepter sans analyse nourrit la dérive du périmètre ; refuser par principe ignore des besoins légitimes ; agir discrètement viole la transparence.",
-   "seconds": 70,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-008",
-   "theme": "Cycle de vie d’un projet",
-   "level": 2,
-   "q": "Laquelle de ces situations relève d’un projet plutôt que d’une activité courante ?",
-   "choices": [
-    "La refonte de la procédure d’instruction des demandes avec un outil nouveau, sur huit mois et avec un budget dédié",
-    "La rédaction mensuelle du bulletin de statistiques habituel du service, sur un format inchangé depuis plusieurs années, avec les mêmes données et la même équipe",
-    "L’enregistrement quotidien du courrier arrivé à la direction",
-    "Le suivi hebdomadaire de la présence des agents du service"
-   ],
-   "answer": 0,
-   "explain": "La refonte est temporaire, produit un résultat nouveau et dispose de moyens dédiés. Les trois autres tâches sont périodiques et récurrentes : ce sont des activités courantes.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-009",
-   "theme": "Cycle de vie d’un projet",
-   "level": 3,
-   "q": "Les livrables de la phase de planification sont terminés. L’équipe, pressée, propose d’enchaîner sans attendre sur la réalisation. D’après la figure, que doit faire le chef de projet ?",
-   "choices": [
-    "Enchaîner : la revue ralentirait le projet, puisque les livrables sont de toute façon terminés, puisque la planification a déjà été validée oralement",
-    "Organiser la revue de fin de phase et obtenir la décision du comité (poursuivre, corriger ou arrêter) avant d’engager la réalisation",
-    "Reporter la décision à la clôture du projet, qui servira de revue globale",
-    "Laisser l’équipe décider seule, car elle connaît le mieux ses livrables"
-   ],
-   "answer": 1,
-   "explain": "Dans la figure, chaque phase se termine par une revue de fin de phase et une décision. Elle confirme que les résultats sont conformes avant d’engager de nouveaux moyens. La reporter à la clôture prive le commanditaire de sa capacité d’arbitrage.",
-   "seconds": 80,
-   "status": "draft",
-   "img": "svg/min-mgt-cycle-projet.svg",
-   "imgAlt": "Cycle de vie d’un projet en cinq phases successives : 1 initialisation (étude d’opportunité), 2 cadrage (lettre de mission), 3 planification (plan de projet avec lots et budget), 4 réalisation (livrables du projet), 5 clôture (réception, bilan, retour d’expérience). Après chaque phase, une revue de fin de phase conduit à une décision : poursuivre, corriger ou arrêter. Le suivi et la maîtrise accompagnent la planification et la réalisation."
-  },
-  {
-   "id": "min-projet-010",
-   "theme": "Cycle de vie d’un projet",
-   "level": 3,
-   "q": "Vous conduisez une application interne dont les utilisateurs découvrent leurs besoins en l’essayant. Quelle approche est la plus adaptée ?",
-   "choices": [
-    "Un plan prédictif détaillé et figé dès le départ, pour limiter toute modification, quelles que soient les remarques formulées par les futurs utilisateurs",
-    "Pas de planification du tout, chacun avançant selon son inspiration du moment",
-    "Une livraison unique à la fin, sans point d’étape ni retour des utilisateurs",
-    "Une approche itérative : livrer par petites étapes et ajuster selon les retours des utilisateurs"
-   ],
-   "answer": 3,
-   "explain": "Quand le besoin est mal connu ou évolutif, l’approche itérative réduit le risque de livrer un outil inadapté. L’approche prédictive convient à un besoin stable ; supprimer toute planification ou tout point d’étape est une faute de conduite de projet.",
-   "seconds": 90,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-011",
-   "theme": "Cadrage : objectifs, périmètre, parties prenantes",
-   "level": 1,
-   "q": "Que signifie le sigle SMART pour un objectif ?",
-   "choices": [
-    "Spécifique, mesurable, atteignable, réaliste, défini dans le temps",
-    "Simple, motivant, approuvé, régulier, transmis, et partagé avec toute l’équipe",
-    "Stratégique, mensuel, annuel, rédigé, testé",
-    "Standard, modifiable, accepté, révisable, traçable"
-   ],
-   "answer": 0,
-   "explain": "Un objectif SMART peut être vérifié : on sait quoi mesurer et pour quelle date. Les autres propositions mélangent des qualités sans lien avec la formulation d’un objectif.",
-   "seconds": 45,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-012",
-   "theme": "Cadrage : objectifs, périmètre, parties prenantes",
-   "level": 1,
-   "q": "Dans un projet, le périmètre est :",
-   "choices": [
-    "la liste des personnes qui travaillent dans le service concerné, avec leur fonction et leur grade",
-    "le budget global de la direction qui porte le projet",
-    "l’ensemble de ce qui est inclus dans le projet et, explicitement, ce qui en est exclu",
-    "la zone géographique où se trouvent les bureaux du projet"
-   ],
-   "answer": 2,
-   "explain": "Le périmètre délimite les livrables et les travaux ; indiquer les exclusions évite les malentendus et la dérive du périmètre. Il ne se confond ni avec l’effectif, ni avec le budget, ni avec une localisation.",
-   "seconds": 45,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-013",
-   "theme": "Cadrage : objectifs, périmètre, parties prenantes",
-   "level": 1,
-   "q": "Qu’appelle-t-on « partie prenante » d’un projet ?",
-   "choices": [
-    "Toute personne ou organisation qui influence le projet ou qui est affectée par lui",
-    "Uniquement les agents qui participent aux réunions de l’équipe projet et qui signent la feuille de présence à chacune d’elles",
-    "Uniquement le prestataire qui reçoit le paiement",
-    "Uniquement le commanditaire qui finance le projet"
-   ],
-   "answer": 0,
-   "explain": "Les parties prenantes incluent les utilisateurs, les services voisins, les décideurs, les prestataires, les organismes extérieurs. Les limiter à l’équipe ou au financeur conduit à oublier ceux qui rejetteront peut-être le résultat.",
-   "seconds": 45,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-014",
-   "theme": "Cadrage : objectifs, périmètre, parties prenantes",
-   "level": 1,
-   "q": "Quel est le rôle de la lettre de mission (ou charte de projet) ?",
-   "choices": [
-    "Elle remplace le planning détaillé et le budget du projet",
-    "Elle sert uniquement à informer la presse du lancement du projet",
-    "Le commanditaire y désigne le chef de projet et lui fixe objectifs, périmètre et marge de manœuvre",
-    "Elle décrit les anomalies relevées pendant la recette de l’outil"
-   ],
-   "answer": 2,
-   "explain": "La lettre de mission donne au chef de projet sa légitimité et son cadre d’action. Elle ne remplace pas le planning ; elle n’est pas un document de communication externe et n’a rien à voir avec la recette.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-015",
-   "theme": "Cadrage : objectifs, périmètre, parties prenantes",
-   "level": 2,
-   "q": "Parmi ces objectifs, lequel est correctement formulé selon la logique SMART ? (Chiffres fictifs.)",
-   "choices": [
-    "Améliorer sensiblement et durablement la qualité du traitement des demandes d’autorisation dans le service",
-    "Ramener de 30 à 15 jours le délai moyen de traitement des demandes d’autorisation d’ici le 31 décembre",
-    "Mettre en place un outil informatique moderne, performant et apprécié de l’ensemble des agents concernés",
-    "Faire en sorte que les agents du service traitent les demandes plus vite, dès que cela sera possible"
-   ],
-   "answer": 1,
-   "explain": "Seul le premier objectif est mesurable (30 jours vers 15 jours) et daté (31 décembre). Les autres restent vagues : « sensiblement », « moderne », « plus vite » ne permettent aucune vérification.",
-   "seconds": 60,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-016",
-   "theme": "Cadrage : objectifs, périmètre, parties prenantes",
-   "level": 2,
-   "q": "Sur la grille de la figure, le directeur (n° 1) est très influent et très concerné par votre projet. Comment le traiter ?",
-   "choices": [
-    "Le tenir informé seulement, avec un compte rendu à la livraison",
-    "Le gérer étroitement : l’associer aux décisions importantes et rechercher son accord",
-    "Le surveiller, avec un minimum d’informations",
-    "Le tenir satisfait sans l’associer, car il n’appartient pas à l’équipe projet"
-   ],
-   "answer": 1,
-   "explain": "Fort pouvoir et fort intérêt : case « gérer étroitement ». Sa position peut faire réussir ou échouer le projet, il faut donc l’associer. Surveiller, informer une seule fois ou ne pas l’associer correspondent à d’autres cases.",
-   "seconds": 60,
-   "status": "draft",
-   "img": "svg/min-mgt-parties-prenantes.svg",
-   "imgAlt": "Grille pouvoir et intérêt à quatre cases. En haut à droite (pouvoir et intérêt élevés), gérer étroitement : 1 directeur sponsor et 5 cabinet du ministre. En haut à gauche (pouvoir élevé, intérêt faible), tenir satisfait : 2 service financier. En bas à droite (pouvoir faible, intérêt élevé), tenir informé : 3 agents du service. En bas à gauche (pouvoir et intérêt faibles), surveiller : 4 usagers non concernés."
-  },
-  {
-   "id": "min-projet-017",
-   "theme": "Cadrage : objectifs, périmètre, parties prenantes",
-   "level": 2,
-   "q": "À la livraison, un service utilisateur rejette l’outil : il n’avait jamais été consulté. D’après la grille de la figure, comment traiter les agents du service (n° 3), et que faire dès le cadrage d’un prochain projet ?",
-   "choices": [
-    "Les surveiller seulement ; ne consulter les utilisateurs qu’après la livraison",
-    "Les tenir satisfaits ; confier la liste des utilisateurs au prestataire",
-    "Les tenir informés et les consulter régulièrement ; recenser et classer toutes les parties prenantes dès le cadrage",
-    "Les ignorer, car leur pouvoir est faible ; limiter la consultation aux services du commanditaire, sans consultation préalable"
-   ],
-   "answer": 2,
-   "explain": "Les agents utilisateurs ont un fort intérêt mais un faible pouvoir : case « tenir informé », avec consultation régulière. L’analyse des parties prenantes se fait au cadrage ; consulter après la livraison est trop tard, et le prestataire ne connaît pas l’organisation interne.",
-   "seconds": 70,
-   "status": "draft",
-   "img": "svg/min-mgt-parties-prenantes.svg",
-   "imgAlt": "Grille pouvoir et intérêt à quatre cases. En haut à droite (pouvoir et intérêt élevés), gérer étroitement : 1 directeur sponsor et 5 cabinet du ministre. En haut à gauche (pouvoir élevé, intérêt faible), tenir satisfait : 2 service financier. En bas à droite (pouvoir faible, intérêt élevé), tenir informé : 3 agents du service. En bas à gauche (pouvoir et intérêt faibles), surveiller : 4 usagers non concernés."
-  },
-  {
-   "id": "min-projet-018",
-   "theme": "Cadrage : objectifs, périmètre, parties prenantes",
-   "level": 2,
-   "q": "Un nouveau besoin non prévu s’ajoute chaque semaine au projet, sans revue de coût ni de délai. Comment nomme-t-on ce phénomène et comment le maîtriser ?",
-   "choices": [
-    "Le glissement du planning ; on le maîtrise en supprimant tous les jalons et en repoussant les échéances",
-    "Le risque résiduel ; on le maîtrise en l’acceptant sans condition",
-    "La réserve pour aléas ; on la maîtrise en la doublant systématiquement",
-    "La dérive du périmètre ; on la maîtrise par une procédure de gestion des changements"
-   ],
-   "answer": 3,
-   "explain": "La dérive du périmètre est l’ajout progressif de demandes sans réévaluation. La parade est de formaliser chaque demande, d’en mesurer l’impact et de la faire arbitrer. Les autres termes désignent d’autres notions.",
-   "seconds": 60,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-019",
-   "theme": "Cadrage : objectifs, périmètre, parties prenantes",
-   "level": 3,
-   "q": "Le commanditaire exige tout le périmètre, en moitié moins de temps et avec un budget réduit de 30 %. Que doit faire le chef de projet ?",
-   "choices": [
-    "Présenter des scénarios d’arbitrage entre périmètre, délai et coût et obtenir une décision écrite du commanditaire",
-    "Accepter pour ne pas contrarier le commanditaire et essayer de tenir par un effort exceptionnel de l’équipe",
-    "Refuser le projet en bloc sans proposer la moindre alternative au commanditaire",
-    "Annoncer en interne que tout sera tenu, puis réduire discrètement la qualité des livrables"
-   ],
-   "answer": 0,
-   "explain": "Les trois contraintes sont liées ; le rôle du chef de projet est de rendre les arbitrages visibles et de les faire trancher par la personne qui en a l’autorité. Promettre l’impossible ou dégrader la qualité en silence détruit la confiance.",
-   "seconds": 90,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-020",
-   "theme": "Cadrage : objectifs, périmètre, parties prenantes",
-   "level": 3,
-   "q": "Deux directions pensent chacune devoir approuver un livrable, et le projet est bloqué. Quelle règle de la matrice RACI aurait dû éviter la situation ?",
-   "choices": [
-    "Chaque livrable doit avoir au moins deux approbateurs, pour partager la responsabilité entre les directions",
-    "Un seul approbateur (A) par livrable, les autres personnes étant consultées ou informées",
-    "L’ensemble des personnes de la matrice doit être consulté avant chaque décision",
-    "Le chef de projet doit réaliser lui-même tous les livrables"
-   ],
-   "answer": 1,
-   "explain": "La clarté de la responsabilité exige un seul « A ». Plusieurs approbateurs ou une consultation généralisée créent exactement les blocages décrits. Le chef de projet coordonne mais ne réalise pas tout.",
-   "seconds": 80,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-021",
-   "theme": "Planning : diagramme de Gantt et chemin critique",
-   "level": 1,
-   "q": "Qu’est-ce qu’un diagramme de Gantt ?",
-   "choices": [
-    "Un schéma de l’organisation hiérarchique des services qui participent au projet",
-    "Un tableau de répartition du budget par nature de dépense",
-    "Un tableau de barres horizontales présentant les tâches en lignes, le temps en colonnes, leurs durées et leurs enchaînements",
-    "Une liste des risques classés par criticité décroissante"
-   ],
-   "answer": 2,
-   "explain": "Le Gantt est un outil de planification visuelle des tâches dans le temps. L’organigramme, la répartition budgétaire et le classement des risques sont d’autres outils.",
-   "seconds": 45,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-022",
-   "theme": "Planning : diagramme de Gantt et chemin critique",
-   "level": 1,
-   "q": "Sur le diagramme de Gantt de la figure, quelles tâches forment le chemin critique ?",
-   "choices": [
-    "Commande des équipements, montage, formation des équipes et réception",
-    "Étude et plans, commande des équipements, formation des équipes et réception",
-    "Étude et plans, génie civil, montage, essais et mise en service, réception",
-    "Génie civil, commande des équipements, essais et mise en service et réception"
-   ],
-   "answer": 2,
-   "explain": "Le chemin critique est la suite de tâches à marge nulle (barres foncées de la figure) : étude et plans (S1-S2), génie civil (S3-S6), montage (S7-S10), essais (S11-S12) et réception (S13), soit 13 semaines. La commande des équipements et la formation ont une semaine de marge.",
-   "seconds": 45,
-   "status": "draft",
-   "img": "svg/gantt-chart.svg",
-   "imgAlt": "Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais et mise en service S11-S12, réception S13 forment le chemin critique. Commande des équipements S3-S5 et formation des équipes S8-S11 ont chacune une semaine de marge."
-  },
-  {
-   "id": "min-projet-023",
-   "theme": "Planning : diagramme de Gantt et chemin critique",
-   "level": 1,
-   "q": "Sur le diagramme de la figure, quelle est la marge de la tâche « Formation des équipes », et que signifie-t-elle ?",
-   "choices": [
-    "Pas de marge : tout retard de la formation retarde immédiatement la réception",
-    "Quatre semaines : c’est la durée de la tâche, qui peut donc être reportée de quatre semaines",
-    "Deux semaines : la formation peut glisser jusqu’à la fin des essais sans conséquence",
-    "Une semaine : la tâche peut prendre une semaine de retard sans retarder la fin du projet"
-   ],
-   "answer": 3,
-   "explain": "La figure indique « marge : 1 sem » pour la formation (S8-S11) : elle peut finir en S12 sans retarder la réception en S13. Les tâches du chemin critique, elles, n’ont aucune marge.",
-   "seconds": 45,
-   "status": "draft",
-   "img": "svg/gantt-chart.svg",
-   "imgAlt": "Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais et mise en service S11-S12, réception S13 forment le chemin critique. Commande des équipements S3-S5 et formation des équipes S8-S11 ont chacune une semaine de marge."
-  },
-  {
-   "id": "min-projet-024",
-   "theme": "Planning : diagramme de Gantt et chemin critique",
-   "level": 1,
-   "q": "À quoi sert le découpage du projet en lots de travaux ?",
-   "choices": [
-    "À répartir le budget de manière égale entre tous les agents du service",
-    "À décomposer le projet en livrables et en tâches de plus en plus fines, assez petites pour être estimées et attribuées",
-    "À remplacer le planning et le suivi des risques",
-    "À réduire automatiquement la durée du projet de moitié"
-   ],
-   "answer": 1,
-   "explain": "Le découpage est la base de la planification et du budget : on ne peut estimer ni dater ce qui n’est pas décomposé. Il ne supprime aucun suivi et ne raccourcit pas le projet par lui-même.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-025",
-   "theme": "Planning : diagramme de Gantt et chemin critique",
-   "level": 2,
-   "q": "Tâches (chiffres fictifs) : A 3 jours, sans antécédent ; B 4 jours, après A ; C 2 jours, après A ; D 5 jours, après B et C ; E 3 jours, après D. Quelle est la durée minimale du projet ?",
-   "choices": [
-    "12 jours",
-    "17 jours",
-    "13 jours (durée du chemin A-C-D-E)",
-    "15 jours"
-   ],
-   "answer": 3,
-   "explain": "Chemin A-B-D-E : 3 + 4 + 5 + 3 = 15 jours. Chemin A-C-D-E : 3 + 2 + 5 + 3 = 13 jours. La durée minimale est celle du chemin le plus long : 15 jours. Le chiffre 13 est la longueur du chemin non critique ; 17 additionnerait à tort des tâches parallèles.",
-   "seconds": 90,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-026",
-   "theme": "Planning : diagramme de Gantt et chemin critique",
-   "level": 2,
-   "q": "Dans le même réseau (A 3 j ; B 4 j après A ; C 2 j après A ; D 5 j après B et C ; E 3 j après D), quelle est la marge de la tâche C ?",
-   "choices": [
-    "0 jour",
-    "2 jours",
-    "4 jours (durée de la tâche B)",
-    "5 jours"
-   ],
-   "answer": 1,
-   "explain": "C est sur le chemin A-C-D-E de 13 jours, alors que le chemin critique dure 15 jours : la marge est 15 − 13 = 2 jours. Une marge nulle serait celle de B, tâche critique.",
-   "seconds": 80,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-027",
-   "theme": "Planning : diagramme de Gantt et chemin critique",
-   "level": 2,
-   "q": "Une tâche de 6 jours ne peut débuter qu’après le jour 10 et doit s’achever au plus tard le jour 20. Quelle est sa marge ? (Chiffres fictifs.)",
-   "choices": [
-    "6 jours",
-    "10 jours",
-    "4 jours",
-    "0 jour"
-   ],
-   "answer": 2,
-   "explain": "Fin au plus tôt = 10 + 6 = 16. Marge = fin au plus tard − fin au plus tôt = 20 − 16 = 4 jours. La durée de la tâche (6) et la date de début (10) ne sont pas la marge.",
-   "seconds": 80,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-028",
-   "theme": "Planning : diagramme de Gantt et chemin critique",
-   "level": 2,
-   "q": "Vous estimez une tâche incertaine : durée optimiste 4 jours, probable 6 jours, pessimiste 14 jours. Quelle durée retenez-vous avec l’estimation à trois points ?",
-   "choices": [
-    "7 jours",
-    "6 jours",
-    "9 jours (moyenne simple)",
-    "8 jours"
-   ],
-   "answer": 0,
-   "explain": "(O + 4P + Pe) / 6 = (4 + 24 + 14) / 6 = 42 / 6 = 7 jours. 6 est la durée probable seule ; 9 est la moyenne simple des trois valeurs (4 + 6 + 14 = 24, divisé par 3 = 8, non 9) ; 8 en est le résultat exact mais ignore la pondération du probable.",
-   "seconds": 90,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-029",
-   "theme": "Planning : diagramme de Gantt et chemin critique",
-   "level": 3,
-   "q": "D’après le diagramme de la figure, la commande des équipements (S3-S5) prend deux semaines de retard. Quelle conséquence sur la fin du projet ?",
-   "choices": [
-    "La fin du projet recule d’une semaine : la marge d’une semaine est consommée, il reste une semaine de retard sur le chemin critique",
-    "La fin du projet recule de deux semaines, car la tâche est en retard de deux semaines, puisque chaque semaine de retard décale la date de réception",
-    "Pas de conséquence, car la commande n’appartient pas au chemin critique",
-    "La fin du projet n’est pas affectée, car le retard est absorbé par la formation des équipes"
-   ],
-   "answer": 0,
-   "explain": "La commande dispose d’une semaine de marge : sur deux semaines de retard, une est absorbée et l’autre retarde le montage, donc la fin du projet (14 semaines au lieu de 13). Une tâche hors chemin critique retarde le projet dès que son retard dépasse sa marge.",
-   "seconds": 110,
-   "status": "draft",
-   "img": "svg/gantt-chart.svg",
-   "imgAlt": "Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais et mise en service S11-S12, réception S13 forment le chemin critique. Commande des équipements S3-S5 et formation des équipes S8-S11 ont chacune une semaine de marge."
-  },
-  {
-   "id": "min-projet-030",
-   "theme": "Planning : diagramme de Gantt et chemin critique",
-   "level": 3,
-   "q": "Dans le même diagramme, un renfort ramène le montage de quatre à trois semaines. Quelle est la nouvelle durée minimale du projet ?",
-   "choices": [
-    "13 semaines : les tâches en parallèle (commande, formation) empêchent tout gain de temps",
-    "12 semaines : le montage est sur le chemin critique, donc la semaine gagnée raccourcit le projet",
-    "11 semaines : le gain d’une semaine s’ajoute à la semaine de marge de la formation",
-    "14 semaines : un renfort ajoute toujours une semaine de coordination"
-   ],
-   "answer": 1,
-   "explain": "Le montage est sur le chemin critique : le ramener à trois semaines avance les essais et la réception d’une semaine, soit 12 semaines au total. Les marges des tâches parallèles ne s’ajoutent pas à ce gain ; la formation passe alors à marge nulle.",
-   "seconds": 100,
-   "status": "draft",
-   "img": "svg/gantt-chart.svg",
-   "imgAlt": "Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais et mise en service S11-S12, réception S13 forment le chemin critique. Commande des équipements S3-S5 et formation des équipes S8-S11 ont chacune une semaine de marge."
-  },
-  {
-   "id": "min-projet-031",
-   "theme": "Budget du projet",
-   "level": 1,
-   "q": "Que contient le budget d’un projet ?",
-   "choices": [
-    "L’estimation des dépenses nécessaires, répartie par poste et par période, validée avant tout engagement",
-    "La liste des personnes qui ont le droit de signer les bons de commande",
-    "Le montant global déjà dépensé par la direction depuis sa création",
-    "Le calendrier des réunions du comité de pilotage"
-   ],
-   "answer": 0,
-   "explain": "Le budget est un outil de prévision et de maîtrise des dépenses. Les droits de signature, les dépenses historiques et le calendrier de réunions sont d’autres documents.",
-   "seconds": 45,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-032",
-   "theme": "Budget du projet",
-   "level": 1,
-   "q": "À quoi sert la réserve pour aléas ?",
-   "choices": [
-    "À financer discrètement des demandes nouvelles du commanditaire sans les valider, ce qui évite de lancer une procédure de changement",
-    "À augmenter les primes des membres de l’équipe en fin de projet",
-    "À faire face aux risques identifiés et aux incertitudes, avec des règles d’utilisation précises",
-    "À payer les dépenses courantes de la direction qui porte le projet"
-   ],
-   "answer": 2,
-   "explain": "La réserve n’est pas une cagnotte libre : elle est destinée aux aléas, et son utilisation doit être décidée selon des règles connues du commanditaire.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-033",
-   "theme": "Budget du projet",
-   "level": 1,
-   "q": "Qu’appelle-t-on coût total de possession d’un outil ?",
-   "choices": [
-    "Le coût d’acquisition majoré de l’exploitation, de la maintenance, de la formation et du renouvellement sur sa durée de vie",
-    "Uniquement le prix payé au fournisseur le jour de l’achat",
-    "Le prix de vente de l’outil sur le marché après dix ans",
-    "Le coût de la formation initiale des agents seulement"
-   ],
-   "answer": 0,
-   "explain": "Comparer des solutions sur le seul prix d’achat est trompeur : l’exploitation et la maintenance pèsent souvent davantage sur la durée de vie.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-034",
-   "theme": "Budget du projet",
-   "level": 1,
-   "q": "Dans la méthode de la valeur acquise, que mesure l’indice IPC = VA / CR ?",
-   "choices": [
-    "La performance sur les délais : une valeur inférieure à 1 signale un retard sur le planning prévu initial",
-    "Le niveau de satisfaction des utilisateurs à la livraison",
-    "La performance sur les coûts : une valeur inférieure à 1 signale un dépassement",
-    "Le pourcentage du budget placé en réserve pour aléas"
-   ],
-   "answer": 2,
-   "explain": "L’IPC compare la valeur du travail réalisé (VA) à ce qu’il a réellement coûté (CR). L’indice de délais est l’IPD = VA / VP. Aucun des deux ne mesure la satisfaction ni la réserve.",
-   "seconds": 60,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-035",
-   "theme": "Budget du projet",
-   "level": 2,
-   "q": "Budget total de 200 millions de FCFA (fictif). À mi-parcours : valeur planifiée 100, valeur acquise 80, coût réel 100. Que vaut l’IPC et que signifie-t-il ?",
-   "choices": [
-    "1,25 : le projet coûte moins cher que prévu pour le travail réalisé",
-    "0,8 : le projet coûte plus cher que prévu pour le travail réalisé",
-    "0,8 : le projet avance plus vite que prévu",
-    "1,0 : le projet est exactement conforme au budget"
-   ],
-   "answer": 1,
-   "explain": "IPC = VA / CR = 80 / 100 = 0,8, inférieur à 1 : pour 80 millions de travail accompli, on a dépensé 100 millions. Une valeur de 1,25 aurait inversé le rapport ; 0,8 pour l’IPC ne parle pas de délai.",
-   "seconds": 80,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-036",
-   "theme": "Budget du projet",
-   "level": 2,
-   "q": "Même projet : avancement prévu 50 % (VP = 100), avancement réel 40 % (VA = 80). Quel est l’IPD et que signifie-t-il ?",
-   "choices": [
-    "1,25 : le projet est en avance sur le planning",
-    "0,5 : le projet a consommé la moitié de son budget",
-    "0,8 : le projet est en dépassement de coût uniquement",
-    "0,8 : le projet est en retard sur le planning"
-   ],
-   "answer": 3,
-   "explain": "IPD = VA / VP = 80 / 100 = 0,8, inférieur à 1 : il y a du retard. Le dépassement de coût se lit sur l’IPC. 0,5 est un pourcentage d’avancement prévu, non un indice.",
-   "seconds": 80,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-037",
-   "theme": "Budget du projet",
-   "level": 2,
-   "q": "Même projet (budget 200 millions, IPC = 0,8). Si la tendance se poursuit, quelle est l’estimation du coût à l’achèvement ?",
-   "choices": [
-    "160 millions de FCFA",
-    "200 millions de FCFA",
-    "250 millions de FCFA",
-    "300 millions de FCFA (budget initial majoré de 50 %)"
-   ],
-   "answer": 2,
-   "explain": "EAC = BAC / IPC = 200 / 0,8 = 250 millions, soit 50 millions de dépassement probable. 160 résulterait d’une multiplication (200 × 0,8) à l’envers ; 200 ignorerait la dérive ; 300 n’a aucun fondement dans les données.",
-   "seconds": 80,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-038",
-   "theme": "Budget du projet",
-   "level": 2,
-   "q": "Le devis d’un prestataire dépasse l’enveloppe de 15 %. Quelle réaction est conforme aux bonnes pratiques et aux règles de la commande publique ?",
-   "choices": [
-    "Fractionner la commande en plusieurs achats plus petits pour passer sous le seuil d’une procédure",
-    "Accepter le devis et couvrir l’écart en utilisant des lignes budgétaires d’autres projets sans l’annoncer, afin de ne pas retarder la signature du marché",
-    "Retirer discrètement certains contrôles de qualité du contrat pour réduire le prix",
-    "Revoir les spécifications ou le périmètre, ou rechercher un financement complémentaire, dans le respect de la procédure de mise en concurrence"
-   ],
-   "answer": 3,
-   "explain": "Le fractionnement artificiel d’un achat contourne les règles de la commande publique. Mélanger les lignes sans décision ou supprimer des contrôles sont aussi des fautes. On agit sur le périmètre ou le financement, en transparence.",
-   "seconds": 80,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-039",
-   "theme": "Budget du projet",
-   "level": 3,
-   "q": "À mi-parcours, IPC = 0,8, IPD = 0,8, la réserve restante est de 10 millions et l’estimation à l’achèvement dépasse le budget de 50 millions. Que faites-vous ?",
-   "choices": [
-    "Alerter le comité de pilotage avec l’estimation à l’achèvement et des options chiffrées (réduire le périmètre, étaler, financer) et demander une décision",
-    "Attendre la fin du projet pour présenter le bilan complet des écarts",
-    "Utiliser la réserve de 10 millions et espérer rattraper les 40 millions restants sans le dire",
-    "Demander à l’équipe de travailler davantage sans modifier ni périmètre ni budget"
-   ],
-   "answer": 0,
-   "explain": "Un écart de cette ampleur dépasse les marges du chef de projet : il faut une décision du niveau supérieur, fondée sur des options chiffrées. Cacher la dérive ou la rattraper par la seule bonne volonté de l’équipe est irréaliste.",
-   "seconds": 100,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-040",
-   "theme": "Budget du projet",
-   "level": 3,
-   "q": "Dans la phase d’opportunité, on vous demande un ordre de grandeur du coût d’un projet de portail, sans cahier des charges. Quelle méthode retenez-vous ?",
-   "choices": [
-    "Une estimation ascendante poste par poste très détaillée, annoncée comme montant définitif, même si le cahier des charges n’est pas encore rédigé",
-    "Une estimation analogique à partir de projets comparables, annoncée sous forme de fourchette large, à affiner ensuite",
-    "Pas d’estimation tant que le prestataire n’est pas choisi",
-    "Un montant unique repris tel quel du budget de la direction, sans lien avec le projet"
-   ],
-   "answer": 1,
-   "explain": "Sans cahier des charges, l’estimation ascendante n’est pas possible. L’analogie donne rapidement un ordre de grandeur, en fourchette, qui se précise avec le cadrage et les consultations. Annoncer un montant ferme prématuré est risqué.",
-   "seconds": 90,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-041",
-   "theme": "Gestion des risques",
-   "level": 1,
-   "q": "Qu’est-ce qu’un risque de projet ?",
-   "choices": [
-    "Un événement qui s’est déjà produit et qu’il faut traiter immédiatement",
-    "Une erreur commise par un membre de l’équipe projet",
-    "Un événement incertain qui, s’il se produit, a un effet sur les objectifs du projet",
-    "Un désaccord entre deux services sur le calendrier"
-   ],
-   "answer": 2,
-   "explain": "Le risque est une possibilité, non un fait. Quand il se réalise, il devient un problème ou un incident. Une erreur ou un désaccord actuel est déjà un problème.",
-   "seconds": 45,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-042",
-   "theme": "Gestion des risques",
-   "level": 1,
-   "q": "D’après la matrice de risque de la figure, quelle est la criticité d’un risque de probabilité 3 (possible) et de gravité 4 (majeure), et de quel niveau est-il ?",
-   "choices": [
-    "7 : niveau moyen (5 à 9)",
-    "12 : niveau critique (15 et plus)",
-    "12 : niveau élevé (10 à 14)",
-    "16 : niveau critique (15 et plus)"
-   ],
-   "answer": 2,
-   "explain": "La criticité est le produit probabilité × gravité : 3 × 4 = 12, case orange « Élevé 10-14 » de la figure. Additionner donne 7 ; 16 correspond à une probabilité de 4 avec une gravité de 4, et le niveau critique ne commence qu’à 15.",
-   "seconds": 45,
-   "status": "draft",
-   "img": "svg/risk-matrix.svg",
-   "imgAlt": "Matrice de risque 5 par 5 : probabilité en abscisse de 1 improbable à 5 fréquent, gravité en ordonnée de 1 mineure à 5 catastrophique, criticité égale au produit des deux. Niveaux : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
-  },
-  {
-   "id": "min-projet-043",
-   "theme": "Gestion des risques",
-   "level": 1,
-   "q": "Quelles sont les quatre stratégies de réponse à une menace ?",
-   "choices": [
-    "Éviter, retarder, doubler, oublier ou ignorer",
-    "Réduire, publier, supprimer, différer",
-    "Transférer, annuler, cacher, accepter",
-    "Éviter, réduire, transférer, accepter"
-   ],
-   "answer": 3,
-   "explain": "Ces quatre réponses sont : éviter la cause, réduire la probabilité ou l’impact, transférer à un tiers, accepter en connaissance de cause. Les autres combinaisons mêlent des attitudes fautives (cacher, oublier).",
-   "seconds": 45,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-044",
-   "theme": "Gestion des risques",
-   "level": 1,
-   "q": "Que contient un registre des risques tenu à jour ?",
-   "choices": [
-    "Uniquement la liste des incidents survenus depuis le début du projet, classés par date, avec le nom de la personne qui les a signalés",
-    "Pour chaque risque : description, probabilité, impact, criticité, stratégie, actions, propriétaire, échéance et état",
-    "Uniquement les risques jugés sans importance par le comité",
-    "Le calendrier des paiements aux prestataires"
-   ],
-   "answer": 1,
-   "explain": "Le registre est un outil de suivi proactif, qui contient les risques à venir et leur traitement. Il se distingue d’un journal d’incidents et d’un échéancier de paiements.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-045",
-   "theme": "Gestion des risques",
-   "level": 2,
-   "q": "Sur la matrice de la figure, risque 1 : retard de livraison du matériel (probabilité 4, gravité 3) ; risque 2 : site indisponible le jour de la recette (probabilité 2, gravité 5). Lequel traiter en premier ?",
-   "choices": [
-    "Le risque 2, de criticité 10, car sa gravité est la plus forte",
-    "Le risque 2, de criticité 7, car il est le plus rare",
-    "Le risque 1, de criticité 7, car il est le plus fréquent",
-    "Le risque 1, de criticité 12 contre 10 pour le risque 2, tous deux de niveau élevé"
-   ],
-   "answer": 3,
-   "explain": "Risque 1 : 4 × 3 = 12 ; risque 2 : 2 × 5 = 10. Tous deux sont dans la zone orange (10 à 14), mais le risque 1 a la plus forte criticité et passe en premier. Les valeurs 7 viennent d’additions erronées.",
-   "seconds": 80,
-   "status": "draft",
-   "img": "svg/risk-matrix.svg",
-   "imgAlt": "Matrice de risque 5 par 5 : probabilité en abscisse de 1 improbable à 5 fréquent, gravité en ordonnée de 1 mineure à 5 catastrophique, criticité égale au produit des deux. Niveaux : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
-  },
-  {
-   "id": "min-projet-046",
-   "theme": "Gestion des risques",
-   "level": 2,
-   "q": "Le contrat avec le prestataire prévoit une garantie de bonne exécution et des pénalités de retard. Quelle stratégie illustre cette clause ?",
-   "choices": [
-    "L’évitement total du risque, par suppression de toutes ses causes dans le contrat",
-    "Le transfert d’une partie du risque vers le prestataire",
-    "L’acceptation passive du risque",
-    "La suppression du risque par abandon du projet"
-   ],
-   "answer": 1,
-   "explain": "Les garanties et pénalités font porter une part des conséquences par un tiers : c’est un transfert partiel. Le risque n’est pas supprimé, ni accepté passivement.",
-   "seconds": 55,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-047",
-   "theme": "Gestion des risques",
-   "level": 2,
-   "q": "L’agent qui détient seul la connaissance d’un dispositif risque de quitter le service. Vous organisez un binôme et un document de procédure. De quelle stratégie s’agit-il ?",
-   "choices": [
-    "Éviter le risque, car il n’y a plus aucune probabilité de départ",
-    "Transférer le risque au prestataire informatique",
-    "Réduire le risque, en diminuant son impact en cas de départ",
-    "Accepter le risque sans aucune mesure particulière"
-   ],
-   "answer": 2,
-   "explain": "Le binôme et la documentation ne suppriment pas le départ possible, mais en limitent les conséquences : c’est une réduction. Ni transfert ni acceptation : on agit en interne.",
-   "seconds": 70,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-048",
-   "theme": "Gestion des risques",
-   "level": 2,
-   "q": "Qui doit être désigné propriétaire d’un risque dans le registre ?",
-   "choices": [
-    "La personne la mieux placée pour le surveiller et déclencher les actions, même si ce n’est pas le chef de projet",
-    "Toujours le chef de projet, qui est responsable de tout dans le projet",
-    "Toujours le directeur du ministère, pour donner du poids à la décision",
-    "Personne, afin d’éviter de mettre un agent en difficulté"
-   ],
-   "answer": 0,
-   "explain": "Le propriétaire est choisi pour sa capacité d’agir sur le risque. Le chef de projet ne peut pas tout porter, et un risque sans propriétaire n’est jamais traité.",
-   "seconds": 60,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-049",
-   "theme": "Gestion des risques",
-   "level": 3,
-   "q": "Un retard de livraison de six semaines, identifié comme risque, vient de se produire. Quelle est la première démarche ?",
-   "choices": [
-    "Attendre le prochain comité de pilotage sans rien faire d’ici là",
-    "Le déclarer comme incident, activer le plan de réponse, mesurer l’impact sur planning et budget, informer le commanditaire et mettre à jour le registre",
-    "Modifier le planning de référence pour que le retard n’apparaisse plus",
-    "Demander à l’équipe de rattraper le retard sans en informer le commanditaire"
-   ],
-   "answer": 1,
-   "explain": "Un risque réalisé se traite : déclaration, plan de réponse, analyse d’impact, information selon les seuils convenus. Masquer l’écart en changeant la référence est une faute ; attendre ou taire l’incident aggrave la situation.",
-   "seconds": 100,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-050",
-   "theme": "Gestion des risques",
-   "level": 3,
-   "q": "Une mesure ramène un risque de la criticité 20 à la criticité 8. D’après la matrice de la figure, de quel niveau à quel niveau passe-t-on, et que faire du risque restant sachant que le seuil de tolérance du projet est de 10 ?",
-   "choices": [
-    "De critique à moyen ; le conserver comme risque résiduel, le surveiller et le faire accepter explicitement",
-    "De critique à moyen ; le supprimer du registre, puisqu’il est devenu faible, même si le contexte du projet change fortement",
-    "D’élevé à faible ; le garder au registre sans jamais le revoir",
-    "De critique à faible ; relancer des mesures jusqu’à zéro, quel qu’en soit le coût"
-   ],
-   "answer": 0,
-   "explain": "20 est dans la zone critique (15 et plus) et 8 dans la zone moyenne (5 à 9) de la figure. Sous le seuil de 10, le risque résiduel est accepté formellement et suivi. Le supprimer du registre le ferait oublier ; chercher le risque zéro est coûteux et irréaliste.",
-   "seconds": 90,
-   "status": "draft",
-   "img": "svg/risk-matrix.svg",
-   "imgAlt": "Matrice de risque 5 par 5 : probabilité en abscisse de 1 improbable à 5 fréquent, gravité en ordonnée de 1 mineure à 5 catastrophique, criticité égale au produit des deux. Niveaux : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
-  },
-  {
-   "id": "min-projet-051",
-   "theme": "Suivi, tableaux de bord et comités de pilotage",
-   "level": 1,
-   "q": "À quoi sert un tableau de bord de projet ?",
-   "choices": [
-    "À synthétiser périodiquement quelques indicateurs clés (avancement, délais, coûts, risques) pour aider à décider",
-    "À archiver tous les courriels échangés par l’équipe projet, ainsi que tous les documents produits par les prestataires pendant la durée du marché",
-    "À présenter l’organigramme complet du ministère",
-    "À remplacer les réunions du comité de pilotage"
-   ],
-   "answer": 0,
-   "explain": "Le tableau de bord est un outil d’aide à la décision, court et régulier. Il ne remplace ni l’archivage, ni les instances de pilotage.",
-   "seconds": 45,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-052",
-   "theme": "Suivi, tableaux de bord et comités de pilotage",
-   "level": 1,
-   "q": "Quel est le rôle principal du comité de pilotage ?",
-   "choices": [
-    "Réaliser les tâches techniques à la place de l’équipe projet",
-    "Rédiger les comptes rendus de chaque réunion de l’équipe",
-    "Valider les jalons, arbitrer entre périmètre, coût et délai, allouer les moyens et lever les obstacles",
-    "Saisir les dépenses dans les outils de gestion budgétaire"
-   ],
-   "answer": 2,
-   "explain": "Le comité de pilotage décide ; il ne réalise pas les tâches et ne tient pas le secrétariat. Ses décisions engagent les moyens et orientent le projet.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-053",
-   "theme": "Suivi, tableaux de bord et comités de pilotage",
-   "level": 1,
-   "q": "Quelle différence existe-t-il entre comité de projet et comité de pilotage ?",
-   "choices": [
-    "Le comité de projet suit l’opérationnel avec l’équipe ; le comité de pilotage décide avec les décideurs, plus rarement",
-    "Le comité de projet décide du budget ; le comité de pilotage prépare le café",
-    "Ils sont identiques et se tiennent toujours le même jour",
-    "Le comité de pilotage ne réunit que des prestataires externes"
-   ],
-   "answer": 0,
-   "explain": "Le comité de projet est fréquent et technique ; le comité de pilotage, plus rare, est stratégique et réunit le commanditaire et les décideurs.",
-   "seconds": 55,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-054",
-   "theme": "Suivi, tableaux de bord et comités de pilotage",
-   "level": 1,
-   "q": "Dans le tableau de bord de la figure, la ligne « Dossiers traités dans les délais » est au rouge (72 % pour une cible de 90 %). Que signifie ce feu rouge ?",
-   "choices": [
-    "Le résultat est supérieur à la cible et le projet est terminé avec succès",
-    "Le chef de projet peut poursuivre sans rien signaler, car le voyant est décoratif, même si l’écart continue de se creuser chaque mois",
-    "L’équipe est en congé collectif et l’indicateur n’a pas été mesuré",
-    "L’écart dépasse la tolérance prévue (rouge sous 75 %) et appelle une décision du niveau supérieur"
-   ],
-   "answer": 3,
-   "explain": "La figure fixe le rouge sous 75 % : à 72 %, la tolérance est franchie. Le rouge est une alerte qui remonte au commanditaire ou au comité de pilotage. Les autres interprétations n’ont aucun fondement.",
-   "seconds": 45,
-   "status": "draft",
-   "img": "svg/min-mgt-tableau-de-bord.svg",
-   "imgAlt": "Tableau de bord mensuel d’un service, valeurs fictives, avec jauge, trait de cible et feu de couleur. Dossiers traités dans les délais : 72 % pour une cible de 90 %, rouge (vert à partir de 90 %, orange de 75 à 89 %, rouge sous 75 %). Délai moyen de traitement : 11 jours pour une cible de 10 jours, orange (orange de 11 à 13 jours). Taux d’absentéisme : 4 % pour un maximum de 5 %, vert. Agents utilisant le nouvel outil : 78 % pour une cible de 80 %, orange (orange de 70 à 79 %)."
-  },
-  {
-   "id": "min-projet-055",
-   "theme": "Suivi, tableaux de bord et comités de pilotage",
-   "level": 2,
-   "q": "Quel indicateur d’avancement est le plus fiable pour un portail comportant dix livrables ?",
-   "choices": [
-    "L’impression générale du chef de projet sur l’état du projet, recueillie à l’occasion des réunions de suivi hebdomadaires",
-    "Le nombre de livrables validés par rapport aux livrables prévus à la date",
-    "Le nombre d’heures déjà passées par l’équipe",
-    "Le nombre de courriels échangés avec le prestataire"
-   ],
-   "answer": 1,
-   "explain": "Un indicateur fondé sur des livrables validés est objectif et vérifiable. L’impression est subjective ; les heures mesurent l’effort et non le résultat ; les courriels n’indiquent rien sur l’avancement.",
-   "seconds": 60,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-056",
-   "theme": "Suivi, tableaux de bord et comités de pilotage",
-   "level": 2,
-   "q": "Quels éléments font l’utilité du compte rendu d’un comité de pilotage ?",
-   "choices": [
-    "Le détail complet des échanges, intervention par intervention, sans distinction, y compris les échanges informels tenus en marge de la séance",
-    "Les opinions personnelles du rédacteur sur chaque participant",
-    "Uniquement la liste des présents et la durée de la réunion",
-    "Les décisions prises, les actions avec leur responsable et leur échéance, et les points d’alerte"
-   ],
-   "answer": 3,
-   "explain": "Le compte rendu sert à agir : décisions, actions datées, responsables. Un verbatim ou des opinions ne permettent pas le suivi ; la liste des présents seule est insuffisante.",
-   "seconds": 60,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-057",
-   "theme": "Suivi, tableaux de bord et comités de pilotage",
-   "level": 2,
-   "q": "Un jalon risque d’être manqué de trois semaines ; le prochain comité de pilotage est dans six semaines. Que faites-vous ?",
-   "choices": [
-    "J’attends le comité de pilotage, dont l’ordre du jour est déjà fixé",
-    "Je demande à l’équipe de ne parler de rien tant que le retard n’est pas confirmé et je laisse la situation évoluer d’elle-même",
-    "J’alerte immédiatement le commanditaire en présentant des options, sans attendre le comité",
-    "Je modifie la date du jalon dans le planning sans en informer personne"
-   ],
-   "answer": 2,
-   "explain": "Une alerte précoce laisse des marges d’action. Attendre ou dissimuler fait perdre du temps et la confiance du commanditaire.",
-   "seconds": 70,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-058",
-   "theme": "Suivi, tableaux de bord et comités de pilotage",
-   "level": 2,
-   "q": "Dans la figure, chaque ligne affiche ses seuils vert, orange et rouge, fixés à l’avance. Que représente un seuil de tolérance dans le suivi d’un projet ?",
-   "choices": [
-    "Un écart maximal fixé à l’avance, au-delà duquel le chef de projet doit remonter l’information",
-    "Un nombre maximal de réunions que l’équipe peut tenir par mois",
-    "Le nombre maximal d’agents qui peuvent quitter le projet",
-    "Un montant dépensable sans informer personne, dans la limite de la réserve pour aléas"
-   ],
-   "answer": 0,
-   "explain": "Comme les seuils de la figure, la tolérance est définie au cadrage avec le commanditaire : elle dit à partir de quel écart une décision du niveau supérieur est nécessaire. Elle ne concerne ni le nombre de réunions ni les effectifs.",
-   "seconds": 60,
-   "status": "draft",
-   "img": "svg/min-mgt-tableau-de-bord.svg",
-   "imgAlt": "Tableau de bord mensuel d’un service, valeurs fictives, avec jauge, trait de cible et feu de couleur. Dossiers traités dans les délais : 72 % pour une cible de 90 %, rouge (vert à partir de 90 %, orange de 75 à 89 %, rouge sous 75 %). Délai moyen de traitement : 11 jours pour une cible de 10 jours, orange (orange de 11 à 13 jours). Taux d’absentéisme : 4 % pour un maximum de 5 %, vert. Agents utilisant le nouvel outil : 78 % pour une cible de 80 %, orange (orange de 70 à 79 %)."
-  },
-  {
-   "id": "min-projet-059",
-   "theme": "Suivi, tableaux de bord et comités de pilotage",
-   "level": 3,
-   "q": "Votre tableau de bord est tout vert, alors que l’équipe vous dit que le projet s’enlise. Les indicateurs reposent sur les déclarations des responsables de lots. Que faites-vous ?",
-   "choices": [
-    "Fonder les indicateurs sur des livrables validés, recouper avec les retours de l’équipe et corriger le tableau de bord",
-    "Maintenir les voyants verts pour ne pas inquiéter la hiérarchie",
-    "Supprimer le tableau de bord, car il ne sert à rien",
-    "Demander aux responsables de lots de déclarer des pourcentages plus élevés"
-   ],
-   "answer": 0,
-   "explain": "Des voyants verts sur des déclarations non vérifiées donnent une fausse sécurité. Le chef de projet dit la vérité : indicateurs objectifs et recoupement avec le terrain. Les autres attitudes aggravent le défaut.",
-   "seconds": 100,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-060",
-   "theme": "Suivi, tableaux de bord et comités de pilotage",
-   "level": 3,
-   "q": "Vos comités de pilotage s’éternisent sans décision, les dossiers étant remis le matin même. Comment les améliorer ?",
-   "choices": [
-    "Allonger la durée des réunions pour pouvoir tout aborder en détail",
-    "Envoyer le dossier à l’avance et centrer l’ordre du jour sur les décisions à prendre, avec options et recommandation du chef de projet",
-    "Supprimer les comités de pilotage et décider seul sur tous les sujets",
-    "Inviter davantage de participants pour partager la responsabilité"
-   ],
-   "answer": 1,
-   "explain": "Un comité décide quand il a des options claires et du temps pour préparer. Allonger, supprimer ou multiplier les participants ne règle pas le défaut de préparation.",
-   "seconds": 90,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-061",
-   "theme": "Clôture, retour d’expérience et exemples de projets",
-   "level": 1,
-   "q": "Quelles sont les étapes de la clôture d’un projet ?",
-   "choices": [
-    "Lancement de nouveaux travaux, recrutement de l’équipe et achat de matériel, puis élaboration du budget de l’année suivante",
-    "Rédaction de la lettre de mission et analyse des parties prenantes",
-    "Réception des livrables, transfert à l’exploitation, clôture financière, bilan final et archivage",
-    "Choix du prestataire et signature du marché"
-   ],
-   "answer": 2,
-   "explain": "Ces étapes ferment le projet de manière ordonnée. Les autres propositions concernent le lancement et le cadrage.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-062",
-   "theme": "Clôture, retour d’expérience et exemples de projets",
-   "level": 1,
-   "q": "Qu’est-ce qu’un retour d’expérience ?",
-   "choices": [
-    "Une analyse collective de ce qui a bien ou mal fonctionné, pour en tirer des règles pour les projets suivants",
-    "La recherche du responsable des erreurs, afin de le sanctionner",
-    "Un simple compte rendu financier destiné aux services du budget",
-    "Une liste des agents à récompenser en fin de projet"
-   ],
-   "answer": 0,
-   "explain": "Le retour d’expérience est constructif et collectif : l’objectif est d’apprendre, non de chercher un coupable. Il ne se limite pas aux finances ni aux récompenses.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-063",
-   "theme": "Clôture, retour d’expérience et exemples de projets",
-   "level": 1,
-   "q": "Que constate le procès-verbal de réception ?",
-   "choices": [
-    "L’approbation du budget pour le projet suivant",
-    "Le départ en retraite du chef de projet",
-    "La liste des risques encore ouverts à la fin du projet, classée par ordre de criticité décroissante",
-    "La conformité des livrables aux exigences, éventuellement avec des réserves"
-   ],
-   "answer": 3,
-   "explain": "Le procès-verbal de réception formalise l’acceptation des livrables par le commanditaire ou la maîtrise d’ouvrage. Les réserves doivent être levées selon un plan daté.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-064",
-   "theme": "Clôture, retour d’expérience et exemples de projets",
-   "level": 1,
-   "q": "Que compare le bilan final d’un projet ?",
-   "choices": [
-    "Les salaires des membres de l’équipe avec ceux d’autres services, afin d’harmoniser les rémunérations entre les directions du ministère",
-    "Les objectifs, coûts et délais prévus avec ceux réellement constatés, en expliquant les écarts",
-    "Le nombre de réunions tenues avec celui d’un autre ministère",
-    "Les opinions des directeurs sur le projet, sans données"
-   ],
-   "answer": 1,
-   "explain": "Le bilan s’appuie sur des faits : prévu contre réalisé et analyse des écarts. Les autres comparaisons n’ont pas de lien avec la performance du projet.",
-   "seconds": 50,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-065",
-   "theme": "Clôture, retour d’expérience et exemples de projets",
-   "level": 2,
-   "q": "Quand pratiquer le retour d’expérience ?",
-   "choices": [
-    "Uniquement trois ans après la clôture, quand les souvenirs sont décantés, lorsque tous les membres de l’équipe auront quitté le service",
-    "Jamais, car les mêmes erreurs ne se reproduisent pas",
-    "Uniquement si le projet a échoué, pour identifier le coupable",
-    "À chaque jalon important et à la clôture, avec l’équipe et les principales parties prenantes"
-   ],
-   "answer": 3,
-   "explain": "Les enseignements sont plus utiles s’ils sont recueillis tôt et régulièrement. Attendre trop longtemps fait oublier les faits ; limiter le REX aux échecs prive des bonnes pratiques.",
-   "seconds": 65,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-066",
-   "theme": "Clôture, retour d’expérience et exemples de projets",
-   "level": 2,
-   "q": "Quels documents doit contenir le dossier de projet archivé ?",
-   "choices": [
-    "Uniquement les courriels personnels des membres de l’équipe",
-    "La lettre de mission, les décisions et procès-verbaux, le registre des risques et les livrables, selon les règles d’archivage de l’administration",
-    "Uniquement les photos prises pendant les réunions",
-    "Aucun document : l’archivage est facultatif pour un projet interne"
-   ],
-   "answer": 1,
-   "explain": "Un dossier complet permet de justifier les décisions et de réutiliser l’expérience. Il suit les règles d’archivage en vigueur dans l’administration.",
-   "seconds": 60,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-067",
-   "theme": "Clôture, retour d’expérience et exemples de projets",
-   "level": 2,
-   "q": "Un nouvel outil est livré, mais aucun service n’en assure l’exploitation. Quelle étape de clôture a été négligée ?",
-   "choices": [
-    "La rédaction de la lettre de mission du projet suivant, conservés sur leurs messageries individuelles sans tri ni classement",
-    "L’analyse des parties prenantes du cadrage",
-    "Le transfert à l’exploitation : documentation, formation et désignation d’un responsable de la maintenance",
-    "L’estimation des durées à trois points"
-   ],
-   "answer": 2,
-   "explain": "Un outil non repris par un service tombe en désuétude. Le transfert à l’exploitation fait partie de la clôture ; les autres étapes concernent d’autres phases.",
-   "seconds": 65,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-068",
-   "theme": "Clôture, retour d’expérience et exemples de projets",
-   "level": 2,
-   "q": "Six mois après la clôture d’un portail de déclaration, que vérifie-t-on ?",
-   "choices": [
-    "Que les bénéfices attendus sont atteints, par exemple le délai de traitement visé dans l’objectif",
-    "Que le planning initial a été respecté à la journée près, pourtant sans rapport avec l’exploitation du nouvel outil livré",
-    "Que la réserve pour aléas a été entièrement dépensée",
-    "Que le chef de projet a participé à toutes les réunions"
-   ],
-   "answer": 0,
-   "explain": "Le projet n’est utile que si l’objectif est atteint. La mesure des bénéfices compare le résultat observé à la cible fixée au cadrage. Le planning ou la réserve ne disent rien de l’effet obtenu.",
-   "seconds": 60,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-069",
-   "theme": "Clôture, retour d’expérience et exemples de projets",
-   "level": 3,
-   "q": "À la clôture d’un portail de déclaration, deux réserves ne sont pas levées et les utilisateurs sont peu formés. Quelle décision est la plus appropriée ?",
-   "choices": [
-    "Prononcer la réception sans réserve pour respecter la date, et traiter les anomalies plus tard sans suivi",
-    "Prononcer la réception avec réserves, fixer un plan de levée daté, programmer une formation complémentaire et ne clore formellement qu’une fois les réserves levées",
-    "Refuser définitivement le portail et relancer un nouveau projet à zéro",
-    "Clore le projet et laisser les utilisateurs se débrouiller avec le prestataire"
-   ],
-   "answer": 1,
-   "explain": "La réception avec réserves permet de poursuivre tout en gardant la pression sur le prestataire. Les anomalies sont tracées et la formation complète le transfert. Refuser en bloc est disproportionné ; clore sans suivi fait perdre toute garantie.",
-   "seconds": 100,
-   "status": "draft"
-  },
-  {
-   "id": "min-projet-070",
-   "theme": "Clôture, retour d’expérience et exemples de projets",
-   "level": 3,
-   "q": "Trois projets successifs ont dérapé à cause d’un cadrage flou, d’après les retours d’expérience. Que décide la direction pour y remédier ?",
-   "choices": [
-    "Remplacer les chefs de projet sans changer la méthode de travail, en espérant que les nouveaux responsables obtiennent de meilleurs résultats",
-    "Supprimer les retours d’expérience, qui n’apportent rien",
-    "Passer directement à la réalisation pour gagner du temps",
-    "Ajouter à la méthode une liste de contrôle de cadrage et un point de revue obligatoire avant le lancement de tout projet"
-   ],
-   "answer": 3,
-   "explain": "Le retour d’expérience doit déboucher sur une action durable : ici, un outil de contrôle du cadrage et une revue formelle avant lancement. Changer les personnes sans changer la méthode ne corrige pas la cause.",
-   "seconds": 90,
-   "status": "draft"
-  }
- ]
+  "profile": "min-projet",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Qu’est-ce qu’un projet ? Le cycle de vie",
+      "theme": "Cycle de vie d’un projet",
+      "minutes": 9,
+      "body": "Un **projet** est un ensemble d’actions **temporaires**, coordonnées, qui vise à produire un résultat **unique** (un service, un outil, un document, une procédure) avec des moyens et un délai limités. Il s’oppose à l’**activité courante** (ou processus), répétitive et permanente : établir chaque mois le bulletin statistique d’un service est une activité ; refondre la procédure d’instruction des demandes avec un nouvel outil, en huit mois et avec un budget dédié, est un projet.\n\nTout projet est encadré par trois contraintes liées entre elles, souvent appelées le **triangle** : le **périmètre** (ce qui est livré, avec son niveau de qualité), le **coût** et le **délai**. Agir sur l’une agit presque toujours sur les autres : ajouter une fonction coûte du temps et de l’argent ; réduire le délai impose de réduire le périmètre ou d’ajouter des moyens.\n\nLe **cycle de vie** décrit les grandes phases, avec à chaque fin une **revue** et une **décision** (poursuivre, corriger, arrêter) :\n\n- **Initialisation (opportunité)** : un besoin ou une demande est identifié ; une étude d’opportunité et de faisabilité compare des scénarios, y compris celui de ne rien faire.\n- **Cadrage** : objectifs, périmètre, parties prenantes, organisation, premières estimations de coût et de délai ; le commanditaire signe une lettre de mission.\n- **Planification** : découpage en lots de travaux, calendrier, budget détaillé, plan de gestion des risques.\n- **Réalisation** : production des livrables, avec suivi et maîtrise permanents (délais, coûts, qualité, risques, changements).\n- **Clôture** : réception des livrables, bilan, retour d’expérience, transfert à l’exploitation, archivage.\n\nLes **rôles** à connaître : le **commanditaire** (ou sponsor), qui décide et finance ; la **maîtrise d’ouvrage** (MOA), qui exprime le besoin et valide ; la **maîtrise d’œuvre** (MOE), qui conçoit et réalise la solution ; le **chef de projet**, responsable de la conduite au quotidien ; le **comité de pilotage**, qui arbitre aux moments clés.\n\nUn **jalon** est un point de contrôle daté, sans durée propre, qui marque l’achèvement d’une étape importante ; un **livrable** est un produit vérifiable (rapport, application, guide). Les jalons rendent le projet lisible pour la hiérarchie.\n\nDeux manières de conduire un projet coexistent. L’approche **prédictive** fixe un plan détaillé dès le départ : elle convient quand le besoin est stable et bien connu. L’approche **itérative** livre par petites étapes successives et ajuste selon les retours des utilisateurs : elle convient mieux quand le besoin évolue, par exemple pour une application interne dont les utilisateurs découvrent les usages en l’essayant.\n\nExemple (fictif) : le service des statistiques d’une direction veut remplacer la collecte de fichiers par courriel par un portail de déclaration en ligne. L’idée n’est pas lancée directement : on commence par une étude d’opportunité (volume de déclarations, erreurs actuelles, coût du statu quo), puis par le cadrage. Un agent qui propose d’acheter du matériel dès le premier jour brûle les étapes : sans objectifs ni périmètre validés, l’achat risque d’être inadapté.\n\nL’administration a en outre ses règles propres (commande publique, exécution budgétaire, archivage) : elles s’appliquent à toutes les phases, et le chef de projet doit les intégrer dès la planification.",
+      "keyPoints": [
+        "Un projet est temporaire et produit un résultat unique, à la différence d’une activité courante répétitive.",
+        "Le triangle périmètre – coût – délai : modifier l’un agit sur les autres.",
+        "Chaque phase se termine par une revue et une décision (poursuivre, corriger, arrêter).",
+        "MOA = exprime le besoin et valide ; MOE = conçoit et réalise ; le chef de projet conduit au quotidien.",
+        "Le choix entre approche prédictive et itérative dépend de la stabilité du besoin."
+      ],
+      "img": "svg/min-mgt-cycle-projet.svg",
+      "imgAlt": "Cycle de vie d’un projet en cinq phases successives : 1 initialisation (étude d’opportunité), 2 cadrage (lettre de mission), 3 planification (plan de projet avec lots et budget), 4 réalisation (livrables du projet), 5 clôture (réception, bilan, retour d’expérience). Après chaque phase, une revue de fin de phase conduit à une décision : poursuivre, corriger ou arrêter. Le suivi et la maîtrise accompagnent la planification et la réalisation."
+    },
+    {
+      "id": "m2",
+      "title": "Cadrer un projet : objectifs, périmètre, parties prenantes",
+      "theme": "Cadrage : objectifs, périmètre, parties prenantes",
+      "minutes": 10,
+      "body": "Le **cadrage** est l’étape la plus rentable du projet : la plupart des dérapages constatés en réalisation trouvent leur origine dans un cadrage flou. Il répond à quatre questions : pourquoi (objectifs), quoi (périmètre), qui (parties prenantes et organisation), avec quelles limites (coût, délai, contraintes).\n\n**Les objectifs.** Un bon objectif est **SMART** : spécifique, mesurable, atteignable, réaliste et défini dans le temps. Comparez : « améliorer le traitement des demandes d’autorisation » (vague) et « ramener de 30 à 15 jours le délai moyen de traitement des demandes d’autorisation d’ici le 31 décembre » (précis, mesurable, daté). Les chiffres de cet exemple sont fictifs. On distingue l’objectif **final** (l’effet recherché par l’administration) des livrables (ce que le projet produit pour y parvenir).\n\n**Le périmètre.** Il liste ce qui est **inclus** et, tout aussi important, ce qui est **exclu**. Il se décline en livrables, regroupés en lots de travaux. Un périmètre mal borné favorise la **dérive du périmètre** : des demandes s’ajoutent au fil de l’eau, sans que coût ni délai soient revus. Toute modification doit passer par une procédure de **gestion des changements** : demande écrite, analyse d’impact sur coût, délai et risques, décision du commanditaire ou du comité de pilotage.\n\n**Les parties prenantes.** Ce sont toutes les personnes ou organisations qui influencent le projet ou sont affectées par lui : direction générale, services utilisateurs, direction des finances, services informatiques, prestataires, opérateurs ou sociétés sous tutelle concernés, partenaires extérieurs. On les recense, puis on les classe sur une grille **pouvoir / intérêt** :\n\n- fort pouvoir, fort intérêt : à **gérer de près** (associer aux décisions) ;\n- fort pouvoir, faible intérêt : à **tenir satisfait** ;\n- faible pouvoir, fort intérêt : à **tenir informé** ;\n- faible pouvoir, faible intérêt : à **surveiller**.\n\nOublier un service utilisateur au cadrage est l’une des causes les plus fréquentes de rejet d’un outil à la livraison.\n\n**L’organisation.** On désigne le commanditaire, le chef de projet, les référents des services, et on précise qui fait quoi avec une **matrice des responsabilités (RACI)** : pour chaque livrable, qui **réalise** (R), qui **approuve** (A, une seule personne), qui est **consulté** (C) et qui est **informé** (I). Cette règle d’un seul « A » évite les conflits entre directions qui croient chacune décider.\n\n**Le document de cadrage.** Il regroupe le contexte, les objectifs, le périmètre, les livrables, les parties prenantes, l’organisation, le calendrier à grandes mailles, le budget estimatif, les risques majeurs et les hypothèses. La **lettre de mission** (ou charte) en est l’acte officiel : le commanditaire y nomme le chef de projet et lui délègue une marge de manœuvre claire.\n\nLorsque les attentes sont contradictoires (par exemple tout le périmètre, en moitié moins de temps et avec un budget réduit), le chef de projet ne promet pas l’impossible : il présente des **scénarios** d’arbitrage et obtient une décision écrite du commanditaire.",
+      "keyPoints": [
+        "Un cadrage rigoureux évite l’essentiel des dérapages ultérieurs.",
+        "Objectif SMART : spécifique, mesurable, atteignable, réaliste, daté.",
+        "Le périmètre indique ce qui est inclus et ce qui est exclu ; tout changement passe par la gestion des changements.",
+        "Grille pouvoir / intérêt : gérer de près, tenir satisfait, tenir informé, surveiller.",
+        "RACI : un seul approbateur (A) par livrable ; la lettre de mission officialise le chef de projet."
+      ],
+      "img": "svg/min-mgt-parties-prenantes.svg",
+      "imgAlt": "Grille pouvoir et intérêt à quatre cases. En haut à droite (pouvoir et intérêt élevés), gérer étroitement : 1 directeur sponsor et 5 cabinet du ministre. En haut à gauche (pouvoir élevé, intérêt faible), tenir satisfait : 2 service financier. En bas à droite (pouvoir faible, intérêt élevé), tenir informé : 3 agents du service. En bas à gauche (pouvoir et intérêt faibles), surveiller : 4 usagers non concernés."
+    },
+    {
+      "id": "m3",
+      "title": "Planifier : lots de travaux, Gantt et chemin critique",
+      "theme": "Planning : diagramme de Gantt et chemin critique",
+      "minutes": 12,
+      "body": "Planifier, c’est transformer le périmètre en **tâches**, leur donner des **durées**, les enchaîner et affecter des ressources. On commence par le **découpage** du projet en lots de travaux, puis en tâches de plus en plus fines, jusqu’à des unités estimables et attribuables à une personne.\n\n**Estimer les durées.** Quand l’incertitude est forte, on utilise l’estimation à **trois points** : durée optimiste O, probable P, pessimiste Pe ; durée retenue = (O + 4P + Pe) / 6. Exemple (chiffres fictifs) : O = 4 jours, P = 6 jours, Pe = 14 jours, soit (4 + 24 + 14) / 6 = 7 jours.\n\n**Le diagramme de Gantt** représente les tâches en lignes et le temps en colonnes ; chaque tâche est une barre, les liens montrent les dépendances, les jalons apparaissent sous forme de losanges. Il est parfait pour communiquer, mais il ne dit pas à lui seul quelles tâches commandent la date de fin : c’est le rôle du **réseau de tâches** et du **chemin critique**.\n\n**Le chemin critique** est la suite de tâches reliées dont la **marge est nulle** : tout retard sur l’une d’elles retarde la fin du projet. Sa longueur est la **durée minimale** du projet. Les autres tâches ont une **marge totale** : le retard qu’elles peuvent prendre sans décaler la fin.\n\n**Exemple chiffré (fictif).** Cinq tâches : A (3 jours, sans antécédent) ; B (4 jours, après A) ; C (2 jours, après A) ; D (5 jours, après B et C) ; E (3 jours, après D).\n\n- Chemin A-B-D-E : 3 + 4 + 5 + 3 = **15 jours**.\n- Chemin A-C-D-E : 3 + 2 + 5 + 3 = 13 jours.\n\nLe chemin critique est A-B-D-E, la durée du projet est de 15 jours, et la tâche C dispose d’une marge de 15 − 13 = **2 jours**.\n\n**Calcul de marge.** Pour une tâche : fin au plus tôt = début au plus tôt + durée ; marge = fin au plus tard − fin au plus tôt. Une tâche de 6 jours, qui ne peut commencer qu’après le jour 10 et doit finir au plus tard au jour 20, finit au plus tôt au jour 16 ; sa marge est de 4 jours.\n\n**Raccourcir un projet.** Seule une réduction sur le chemin critique raccourcit la durée. Mais attention : quand on accélère une tâche critique, un autre chemin peut devenir critique à son tour. Si deux chemins ont la même longueur (par exemple 13 jours chacun), ils sont tous deux critiques, et gagner un jour sur un seul d’entre eux ne change pas la date de fin.\n\n**Bonnes pratiques.** Prévoir des jalons validés par le commanditaire ; intégrer les délais propres à l’administration (circuit de signature, procédure de mise en concurrence, disponibilité des instances) ; ne pas surcharger les agents partagés avec leur activité courante ; garder une marge globale de sécurité ; mettre à jour le planning à chaque point d’avancement et conserver la version de référence pour mesurer les écarts.",
+      "keyPoints": [
+        "Découper le projet en lots et en tâches estimables avant de dater quoi que ce soit.",
+        "Le Gantt communique le calendrier ; le chemin critique indique ce qui commande la date de fin.",
+        "Chemin critique = suite de tâches à marge nulle ; sa longueur donne la durée minimale du projet.",
+        "Marge = fin au plus tard − fin au plus tôt ; durée à trois points = (O + 4P + Pe) / 6.",
+        "Raccourcir un projet exige d’agir sur le chemin critique, en surveillant l’apparition d’un second chemin critique."
+      ],
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais et mise en service S11-S12, réception S13 forment le chemin critique. Commande des équipements S3-S5 et formation des équipes S8-S11 ont chacune une semaine de marge."
+    },
+    {
+      "id": "m4",
+      "title": "Construire et suivre le budget d’un projet",
+      "theme": "Budget du projet",
+      "minutes": 11,
+      "body": "Le **budget** d’un projet est l’estimation des dépenses nécessaires, répartie par poste (études, matériel, prestations, formation, frais de mission, etc.) et par période. Dans l’administration, il s’inscrit dans l’enveloppe fixée par la loi de finances et les règles d’exécution de la dépense publique ; le chef de projet ne décide donc pas seul : il prépare, justifie, puis suit une enveloppe validée par le commanditaire et les services financiers.\n\n**Estimer.** Selon la maturité du projet, on utilise :\n\n- l’estimation **analogique**, fondée sur des projets comparables : rapide, avec une fourchette large, adaptée à l’étude d’opportunité ;\n- l’estimation **ascendante**, poste par poste, à partir des lots de travaux : plus longue mais plus fiable, adaptée à la planification.\n\nL’estimation se précise au fil des phases : on annonce d’abord une **fourchette** (par exemple de 150 à 250 millions de FCFA, chiffres fictifs), puis un montant ferme après le cadrage détaillé et les consultations.\n\n**Raisonner en coût complet.** Le coût d’acquisition n’est qu’une partie du **coût total de possession** : il faut ajouter l’exploitation, la maintenance, les licences, la formation des utilisateurs et le renouvellement. Un outil bon marché à l’achat mais coûteux à maintenir peut revenir plus cher qu’une solution plus onéreuse au départ.\n\n**Prévoir une réserve.** Une **réserve pour aléas** couvre les risques identifiés et l’incertitude ; sa gestion est encadrée (qui peut l’utiliser, sur décision de qui). Une commande doit toujours respecter les règles de la commande publique : il est interdit de fractionner artificiellement un achat pour passer sous un seuil de procédure.\n\n**Mesurer l’écart : la méthode de la valeur acquise.** Trois grandeurs, exprimées en argent :\n\n- **valeur planifiée (VP)** : le travail qui devait être fait à la date du jour, valorisé au budget ;\n- **valeur acquise (VA)** : le travail réellement fait, valorisé au budget ;\n- **coût réel (CR)** : ce qui a effectivement été dépensé.\n\nOn en déduit l’indice de performance des coûts **IPC = VA / CR** (inférieur à 1 : dépassement) et l’indice de performance des délais **IPD = VA / VP** (inférieur à 1 : retard).\n\n**Exemple chiffré (fictif).** Budget total (BAC) de 200 millions de FCFA. À mi-parcours, 50 % du travail devait être fait (VP = 100) ; 40 % l’est réellement (VA = 80) ; 100 millions ont été dépensés (CR = 100).\n\n- IPC = 80 / 100 = **0,8** : le projet coûte plus que prévu pour le travail accompli.\n- IPD = 80 / 100 = **0,8** : le projet est en retard.\n- Estimation à l’achèvement : EAC = BAC / IPC = 200 / 0,8 = **250 millions**, soit 50 millions de plus que prévu si la tendance se poursuit.\n\n**Que faire en cas de dérive ?** Documenter l’écart, en rechercher les causes, présenter des options chiffrées au comité de pilotage (réduire le périmètre, étaler la réalisation, demander un financement complémentaire) et obtenir une décision. On ne cache jamais un dépassement en espérant le rattraper.",
+      "keyPoints": [
+        "Le budget se prépare, se justifie et se suit dans l’enveloppe validée par le commanditaire et les services financiers.",
+        "Estimation analogique pour un ordre de grandeur, ascendante pour un budget fiable ; on annonce d’abord une fourchette.",
+        "Raisonner en coût total de possession, pas seulement en coût d’achat ; prévoir une réserve pour aléas.",
+        "IPC = VA / CR (coûts) ; IPD = VA / VP (délais) ; EAC = BAC / IPC.",
+        "Fractionner un achat pour éviter une procédure est interdit ; en cas de dérive, on alerte avec des options chiffrées."
+      ],
+      "img": "svg/min2-mgt-courbe-s-budget.svg",
+      "imgAlt": "Courbe en S : budget cumulé prévu (pointillés) et dépenses réelles cumulées (trait orange) en millions de FCFA fictifs sur douze mois ; au mois 6, prévu 50 et réalisé 32, soit un écart de moins 18."
+    },
+    {
+      "id": "m5",
+      "title": "Identifier et maîtriser les risques",
+      "theme": "Gestion des risques",
+      "minutes": 10,
+      "body": "Un **risque** est un événement **incertain** qui, s’il se produit, affecte les objectifs du projet (coût, délai, qualité, image). Un risque qui s’est réalisé devient un **problème** ou un incident, qu’il faut traiter. Gérer les risques, c’est s’en occuper **avant** qu’ils surviennent.\n\n**Démarche en cinq temps.**\n\n1. **Identifier** : séances de réflexion avec l’équipe et les parties prenantes, retours d’expérience de projets antérieurs, revue des contraintes (délais de commande publique, disponibilité d’un agent clé, dépendance à un fournisseur, coupure d’électricité ou de réseau).\n2. **Analyser** : évaluer la **probabilité** (échelle de 1 à 5) et l’**impact** (de 1 à 5). La **criticité** = probabilité × impact.\n3. **Prioriser** : traiter d’abord les risques de criticité élevée, selon un seuil fixé à l’avance.\n4. **Traiter** : choisir une stratégie et définir des actions, un responsable et une échéance.\n5. **Surveiller** : revoir les risques à chaque point d’avancement.\n\n**Exemple chiffré (fictif).** Risque 1 : retard de livraison du matériel (probabilité 4, impact 3, criticité 12). Risque 2 : indisponibilité du site le jour de la recette (probabilité 2, impact 5, criticité 10). Le risque 1 est traité en premier, même si l’impact du second est plus fort.\n\n**Les quatre stratégies face à une menace.**\n\n- **Éviter** : modifier le projet pour supprimer la cause (abandonner une option trop incertaine).\n- **Réduire** (atténuer) : diminuer la probabilité ou l’impact (former un second agent, documenter les procédures, tester avant la mise en service).\n- **Transférer** : faire porter tout ou partie du risque par un tiers (garantie de bonne exécution, pénalités de retard et assurance prévues au contrat).\n- **Accepter** : ne rien faire de plus, en connaissance de cause, éventuellement avec une réserve ou un plan de secours.\n\n**Le registre des risques** est un tableau vivant : description (cause, événement, conséquence), probabilité, impact, criticité, stratégie, actions, **propriétaire**, échéance, état. Le propriétaire est la personne la mieux placée pour surveiller le risque et agir, pas forcément le chef de projet. Un risque oublié dans le registre est un risque subi.\n\n**Risque résiduel et risque secondaire.** Une mesure ne supprime pas toujours tout : une mesure ramenant une criticité de 20 à 8 laisse un **risque résiduel**, à suivre et à faire accepter explicitement si l’on est sous le seuil de tolérance. Une mesure peut aussi en créer un autre (**risque secondaire**).\n\n**Quand le risque se réalise.** On le déclare comme incident, on active le plan de réponse prévu, on mesure l’impact sur le planning et le budget, on informe le commanditaire et le comité de pilotage selon les seuils convenus, et on met à jour le registre. Il existe aussi des risques **positifs** (opportunités), que l’on cherche à saisir.",
+      "keyPoints": [
+        "Un risque est un événement incertain ; réalisé, il devient un problème à traiter.",
+        "Criticité = probabilité × impact ; on traite d’abord les risques les plus critiques.",
+        "Quatre stratégies face à une menace : éviter, réduire, transférer, accepter.",
+        "Le registre des risques est tenu à jour, avec un propriétaire et une échéance pour chaque action.",
+        "Après traitement, le risque résiduel est suivi et explicitement accepté s’il est sous le seuil de tolérance."
+      ],
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 par 5 : probabilité en abscisse de 1 improbable à 5 fréquent, gravité en ordonnée de 1 mineure à 5 catastrophique, criticité égale au produit des deux. Niveaux : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
+    },
+    {
+      "id": "m6",
+      "title": "Suivre l’avancement : tableaux de bord et comités de pilotage",
+      "theme": "Suivi, tableaux de bord et comités de pilotage",
+      "minutes": 10,
+      "body": "Piloter, c’est comparer régulièrement le **réalisé** au **prévu**, comprendre les écarts et **décider**. Sans suivi, un projet dérive en silence ; avec un suivi trop lourd, l’équipe passe son temps à rendre compte au lieu de produire. Il faut donc peu d’indicateurs, mais fiables.\n\n**Le tableau de bord** est une synthèse périodique (souvent mensuelle, d’une à deux pages) qui présente quelques indicateurs clés :\n\n- **avancement** : livrables validés par rapport aux livrables prévus à la date ;\n- **délais** : jalons tenus ou en retard, écart de planning ;\n- **coûts** : consommé, reste à faire, estimation à l’achèvement ;\n- **risques** : principaux risques et évolution de leur criticité ;\n- **qualité** et **changements** : anomalies ouvertes, demandes de changement en attente.\n\nUn bon indicateur est **mesurable**, **objectif** et **utile à la décision**. Le pourcentage d’avancement « à l’œil » est un mauvais indicateur : mieux vaut compter les livrables achevés et validés. Le nombre d’heures passées mesure l’effort consommé, pas le résultat obtenu.\n\n**Les voyants** (vert, orange, rouge) donnent une lecture rapide. Ils reposent sur des **seuils de tolérance** fixés dès le cadrage : par exemple, vert si l’écart de coût est inférieur à 5 %, orange entre 5 et 10 %, rouge au-delà (valeurs fictives). Un voyant rouge signifie que l’écart dépasse la tolérance du chef de projet et appelle une **décision du niveau supérieur**.\n\n**Les instances.** On distingue :\n\n- le **comité de projet** (technique, fréquent, autour du chef de projet et des référents) : il suit les tâches et résout les difficultés opérationnelles ;\n- le **comité de pilotage** (COPIL), plus rare (par exemple chaque trimestre et à chaque jalon majeur), réuni autour du commanditaire et des décideurs : il valide les jalons, arbitre entre périmètre, coût et délai, alloue les moyens et lève les obstacles.\n\n**Réussir un comité de pilotage.** Envoyer le dossier à l’avance ; centrer l’ordre du jour sur les **décisions à prendre**, avec des options et la recommandation du chef de projet ; rédiger un compte rendu court mentionnant les décisions, les actions, leurs responsables et leurs échéances ; vérifier à la séance suivante que les actions ont été menées.\n\n**Alerter tôt.** Si un jalon risque d’être manqué de trois semaines et que le prochain comité a lieu dans six semaines, on prévient le commanditaire immédiatement, avec des options, sans attendre. Un chef de projet qui cache une mauvaise nouvelle perd la confiance et les marges d’action.\n\n**Attention aux tableaux de bord trop beaux.** Si tous les voyants sont verts alors que l’équipe exprime des inquiétudes, il faut vérifier la fiabilité des indicateurs : sont-ils déclaratifs ou fondés sur des livrables validés ? Le rôle du chef de projet est de dire la vérité, pas de rassurer.",
+      "keyPoints": [
+        "Piloter, c’est comparer le réalisé au prévu et décider ; peu d’indicateurs, mais fiables.",
+        "Préférer les indicateurs fondés sur des livrables validés aux estimations déclaratives.",
+        "Les seuils de tolérance fixés au cadrage déterminent les voyants et le moment de remonter l’information.",
+        "Comité de projet = suivi opérationnel ; comité de pilotage = décisions et arbitrages.",
+        "Alerter tôt, avec des options ; un comité efficace se prépare et produit des actions datées."
+      ],
+      "img": "svg/min-mgt-tableau-de-bord.svg",
+      "imgAlt": "Tableau de bord mensuel d’un service, valeurs fictives, avec jauge, trait de cible et feu de couleur. Dossiers traités dans les délais : 72 % pour une cible de 90 %, rouge (vert à partir de 90 %, orange de 75 à 89 %, rouge sous 75 %). Délai moyen de traitement : 11 jours pour une cible de 10 jours, orange (orange de 11 à 13 jours). Taux d’absentéisme : 4 % pour un maximum de 5 %, vert. Agents utilisant le nouvel outil : 78 % pour une cible de 80 %, orange (orange de 70 à 79 %)."
+    },
+    {
+      "id": "m7",
+      "title": "Clôturer, tirer les leçons et exemples de projets de ministère",
+      "theme": "Clôture, retour d’expérience et exemples de projets",
+      "minutes": 10,
+      "body": "La **clôture** est trop souvent bâclée : l’équipe est déjà mobilisée sur d’autres sujets. Pourtant, c’est elle qui transforme les livrables en bénéfices durables et qui capitalise l’expérience.\n\n**Les étapes de la clôture.**\n\n1. **Réception** (recette) des livrables : vérification de leur conformité aux exigences, formalisée par un **procès-verbal de réception**, signé par le commanditaire ou la maîtrise d’ouvrage. Les anomalies mineures peuvent donner lieu à une réception **avec réserves**, assortie d’un plan de levée daté.\n2. **Transfert à l’exploitation** : documentation, formation des agents, désignation d’un responsable de la maintenance et du fonctionnement courant. Un outil livré mais non repris par un service est un projet raté.\n3. **Clôture administrative et financière** : marchés soldés, engagements apurés, paiements finalisés, ressources libérées.\n4. **Bilan final** : comparaison entre objectifs, coûts et délais prévus et réalisés, explication des écarts.\n5. **Archivage** du dossier de projet (lettre de mission, décisions, procès-verbaux, registre des risques, livrables) selon les règles d’archivage de l’administration.\n\n**Le retour d’expérience (REX).** Il consiste à analyser avec toute l’équipe et les principales parties prenantes ce qui a bien fonctionné, ce qui a posé problème et pourquoi, afin d’en tirer des règles pour les projets suivants. Il se pratique dans un esprit **constructif et sans recherche de coupable** et, idéalement, à chaque jalon et pas seulement à la fin. Un REX qui ne débouche pas sur des actions (liste de contrôle, modèle de document, formation) reste lettre morte.\n\n**Mesurer les bénéfices.** Quelques mois après la clôture, on vérifie que l’objectif a été atteint : par exemple, le délai de traitement est-il bien passé de 30 à 15 jours (valeurs fictives) ? Ce suivi relève du service exploitant et du commanditaire.\n\n**Exemples (fictifs) de projets dans un ministère.**\n\n- Portail de déclaration en ligne des données de production, remplaçant l’envoi de fichiers par courriel.\n- Numérisation et classement des dossiers d’autorisation.\n- Mise en place d’un circuit électronique du courrier et des parapheurs.\n- Tableau de bord de suivi des indicateurs de la direction.\n- Organisation d’un cycle de formation pour les inspecteurs.\n\nDans chacun, les mêmes questions reviennent : qui commande, quels objectifs mesurables, quel périmètre, quelles parties prenantes (services, sociétés sous tutelle, partenaires), quels jalons et quelle reprise en exploitation.\n\n**Cas de décision.** À la clôture d’un portail, deux réserves ne sont pas levées et les utilisateurs sont peu formés : on prononce la réception avec réserves, on fixe un plan de levée daté, on programme une formation complémentaire, et la clôture formelle n’est signée qu’une fois les réserves levées.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+      "keyPoints": [
+        "La clôture comprend réception, transfert à l’exploitation, clôture financière, bilan et archivage.",
+        "La réception avec réserves exige un plan de levée daté ; la clôture formelle suit la levée des réserves.",
+        "Le retour d’expérience est constructif, sans chercher de coupable, et débouche sur des actions concrètes.",
+        "Les bénéfices attendus se mesurent après la clôture, par rapport aux objectifs initiaux.",
+        "Les projets d’un ministère (portail, numérisation, circuit du courrier, tableau de bord, formation) suivent la même démarche."
+      ],
+      "img": "photo/min-mgt-salle-reunion.jpg",
+      "imgAlt": "Photographie d'une pièce lumineuse avec une table en bois et six chaises blanches aux pieds en bois, un pot de crayons et un petit présentoir sur la table, sans aucune personne dans la pièce."
+    }
+  ],
+  "questions": [
+    {
+      "id": "min-projet-001",
+      "theme": "Cycle de vie d’un projet",
+      "level": 1,
+      "q": "Parmi les définitions suivantes, laquelle décrit un projet, par opposition à une activité courante ?",
+      "choices": [
+        "Une activité répétitive confiée en permanence à un service pour produire toujours le même résultat",
+        "Tout travail dont la durée dépasse un an, quel que soit son objectif",
+        "Un ensemble d’actions temporaires, avec un début et une fin, visant à produire un résultat unique",
+        "Toute action mobilisant un budget d’investissement important"
+      ],
+      "answer": 2,
+      "explain": "Un projet est temporaire et vise un résultat unique. L’activité courante est répétitive et permanente. La durée ou le budget ne suffisent pas à définir un projet : un travail de trois mois peut en être un, et une dépense importante peut relever d’une activité courante.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-002",
+      "theme": "Cycle de vie d’un projet",
+      "level": 1,
+      "q": "D’après la figure, quelle phase suit la planification, et que décide-t-on à la fin de chaque phase ?",
+      "choices": [
+        "La réalisation ; une revue de fin de phase conduit à poursuivre, corriger ou arrêter",
+        "La clôture ; la décision de fin de phase n’est prise qu’une seule fois, à la livraison",
+        "La réalisation ; les revues sont réservées aux projets dont le budget dépasse la réserve",
+        "Le cadrage ; la revue est facultative et laissée au choix de l’équipe"
+      ],
+      "answer": 0,
+      "explain": "La figure place la réalisation (phase 4) après la planification (phase 3). À la fin de chaque phase, une revue débouche sur une décision : poursuivre, corriger ou arrêter. Le cadrage précède la planification et la clôture vient en dernier ; les revues ne sont pas facultatives.",
+      "seconds": 45,
+      "status": "draft",
+      "img": "svg/min-mgt-cycle-projet.svg",
+      "imgAlt": "Cycle de vie d’un projet en cinq phases successives : 1 initialisation (étude d’opportunité), 2 cadrage (lettre de mission), 3 planification (plan de projet avec lots et budget), 4 réalisation (livrables du projet), 5 clôture (réception, bilan, retour d’expérience). Après chaque phase, une revue de fin de phase conduit à une décision : poursuivre, corriger ou arrêter. Le suivi et la maîtrise accompagnent la planification et la réalisation."
+    },
+    {
+      "id": "min-projet-003",
+      "theme": "Cycle de vie d’un projet",
+      "level": 1,
+      "q": "Les trois contraintes qui encadrent un projet, souvent représentées sous forme de triangle, sont :",
+      "choices": [
+        "le nombre d’agents, le nombre de réunions et le nombre de documents",
+        "la hiérarchie, la durée des réunions et le niveau de signature",
+        "le sponsor, le prestataire et l’utilisateur final",
+        "le périmètre (avec sa qualité), le coût et le délai"
+      ],
+      "answer": 3,
+      "explain": "Périmètre (qualité), coût et délai sont liés : agir sur l’un modifie en général les autres. Les autres propositions énumèrent des éléments de fonctionnement ou des acteurs, non des contraintes de projet.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-004",
+      "theme": "Cycle de vie d’un projet",
+      "level": 1,
+      "q": "Dans un projet, quelle est la répartition classique entre maîtrise d’ouvrage (MOA) et maîtrise d’œuvre (MOE) ?",
+      "choices": [
+        "La MOA réalise techniquement la solution ; la MOE exprime le besoin",
+        "La MOA exprime le besoin et valide ; la MOE conçoit et réalise la solution",
+        "La MOA suit seulement les paiements ; la MOE choisit les objectifs politiques",
+        "La MOA et la MOE désignent la même personne dans tous les projets, quelle que soit leur taille"
+      ],
+      "answer": 1,
+      "explain": "La maîtrise d’ouvrage porte le besoin, décide et valide ; la maîtrise d’œuvre apporte l’expertise de conception et de réalisation. Les rôles peuvent être tenus par des services différents, d’où l’intérêt de les préciser dès le cadrage.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-005",
+      "theme": "Cycle de vie d’un projet",
+      "level": 1,
+      "q": "Qu’est-ce qu’un jalon de projet ?",
+      "choices": [
+        "Une tâche longue dont la durée dépasse un mois et qui mobilise l’ensemble des agents de l’équipe projet",
+        "Une réunion hebdomadaire de l’équipe projet",
+        "Un document décrivant les risques du projet",
+        "Un point de contrôle daté marquant l’achèvement d’une étape importante, sans durée propre"
+      ],
+      "answer": 3,
+      "explain": "Un jalon a une date mais pas de durée : c’est un repère de contrôle (par exemple « cahier des charges validé »). Une tâche, une réunion ou un registre sont d’une autre nature.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-006",
+      "theme": "Cycle de vie d’un projet",
+      "level": 2,
+      "q": "Vous êtes chef de service. Un collègue veut commander immédiatement un nouveau matériel pour un projet qui n’a encore fait l’objet d’aucune étude. Que répondez-vous ?",
+      "choices": [
+        "Commander dès que possible : le matériel sera toujours utile, et la précision viendra plus tard sans attendre la validation du moindre document",
+        "Il faut d’abord une étude d’opportunité et de faisabilité qui compare des scénarios, y compris celui de ne rien faire",
+        "Attendre la fin complète de la réalisation pour décider de ce qu’il faut acheter",
+        "Demander à chaque service de choisir librement son propre matériel, sans étude commune"
+      ],
+      "answer": 1,
+      "explain": "L’étude d’opportunité justifie le besoin et compare les solutions avant tout engagement de dépense. Acheter avant le cadrage expose à un matériel inadapté ; décider après la réalisation est absurde ; des achats dispersés ruinent la cohérence du projet.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-007",
+      "theme": "Cycle de vie d’un projet",
+      "level": 2,
+      "q": "Votre projet est en réalisation. Un directeur demande d’ajouter une fonction non prévue au portail. Quelle est la bonne réaction ?",
+      "choices": [
+        "L’accepter immédiatement pour ne pas contrarier un directeur, en absorbant l’effort dans l’équipe, sans informer le comité de pilotage ni revoir le planning",
+        "La refuser systématiquement, car on ne change jamais rien en cours de réalisation",
+        "Évaluer l’impact sur coût, délai et risques, puis soumettre la demande à la décision du commanditaire selon la procédure de changement",
+        "L’ajouter discrètement à la fin du projet, sans en parler au comité de pilotage"
+      ],
+      "answer": 2,
+      "explain": "Un changement n’est ni accepté ni refusé par principe : il est analysé et décidé par l’instance compétente. Accepter sans analyse nourrit la dérive du périmètre ; refuser par principe ignore des besoins légitimes ; agir discrètement viole la transparence.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-008",
+      "theme": "Cycle de vie d’un projet",
+      "level": 2,
+      "q": "Laquelle de ces situations relève d’un projet plutôt que d’une activité courante ?",
+      "choices": [
+        "La refonte de la procédure d’instruction des demandes avec un outil nouveau, sur huit mois et avec un budget dédié",
+        "La rédaction mensuelle du bulletin de statistiques habituel du service, sur un format inchangé depuis plusieurs années, avec les mêmes données et la même équipe",
+        "L’enregistrement quotidien du courrier arrivé à la direction",
+        "Le suivi hebdomadaire de la présence des agents du service"
+      ],
+      "answer": 0,
+      "explain": "La refonte est temporaire, produit un résultat nouveau et dispose de moyens dédiés. Les trois autres tâches sont périodiques et récurrentes : ce sont des activités courantes.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-009",
+      "theme": "Cycle de vie d’un projet",
+      "level": 3,
+      "q": "Les livrables de la phase de planification sont terminés. L’équipe, pressée, propose d’enchaîner sans attendre sur la réalisation. D’après la figure, que doit faire le chef de projet ?",
+      "choices": [
+        "Enchaîner : la revue ralentirait le projet, puisque les livrables sont de toute façon terminés, puisque la planification a déjà été validée oralement",
+        "Organiser la revue de fin de phase et obtenir la décision du comité (poursuivre, corriger ou arrêter) avant d’engager la réalisation",
+        "Reporter la décision à la clôture du projet, qui servira de revue globale",
+        "Laisser l’équipe décider seule, car elle connaît le mieux ses livrables"
+      ],
+      "answer": 1,
+      "explain": "Dans la figure, chaque phase se termine par une revue de fin de phase et une décision. Elle confirme que les résultats sont conformes avant d’engager de nouveaux moyens. La reporter à la clôture prive le commanditaire de sa capacité d’arbitrage.",
+      "seconds": 80,
+      "status": "draft",
+      "img": "svg/min-mgt-cycle-projet.svg",
+      "imgAlt": "Cycle de vie d’un projet en cinq phases successives : 1 initialisation (étude d’opportunité), 2 cadrage (lettre de mission), 3 planification (plan de projet avec lots et budget), 4 réalisation (livrables du projet), 5 clôture (réception, bilan, retour d’expérience). Après chaque phase, une revue de fin de phase conduit à une décision : poursuivre, corriger ou arrêter. Le suivi et la maîtrise accompagnent la planification et la réalisation."
+    },
+    {
+      "id": "min-projet-010",
+      "theme": "Cycle de vie d’un projet",
+      "level": 3,
+      "q": "Vous conduisez une application interne dont les utilisateurs découvrent leurs besoins en l’essayant. Quelle approche est la plus adaptée ?",
+      "choices": [
+        "Un plan prédictif détaillé et figé dès le départ, pour limiter toute modification, quelles que soient les remarques formulées par les futurs utilisateurs",
+        "Pas de planification du tout, chacun avançant selon son inspiration du moment",
+        "Une livraison unique à la fin, sans point d’étape ni retour des utilisateurs",
+        "Une approche itérative : livrer par petites étapes et ajuster selon les retours des utilisateurs"
+      ],
+      "answer": 3,
+      "explain": "Quand le besoin est mal connu ou évolutif, l’approche itérative réduit le risque de livrer un outil inadapté. L’approche prédictive convient à un besoin stable ; supprimer toute planification ou tout point d’étape est une faute de conduite de projet.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-011",
+      "theme": "Cadrage : objectifs, périmètre, parties prenantes",
+      "level": 1,
+      "q": "Que signifie le sigle SMART pour un objectif ?",
+      "choices": [
+        "Spécifique, mesurable, atteignable, réaliste, défini dans le temps",
+        "Simple, motivant, approuvé, régulier, transmis, et partagé avec toute l’équipe",
+        "Stratégique, mensuel, annuel, rédigé, testé",
+        "Standard, modifiable, accepté, révisable, traçable"
+      ],
+      "answer": 0,
+      "explain": "Un objectif SMART peut être vérifié : on sait quoi mesurer et pour quelle date. Les autres propositions mélangent des qualités sans lien avec la formulation d’un objectif.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-012",
+      "theme": "Cadrage : objectifs, périmètre, parties prenantes",
+      "level": 1,
+      "q": "Dans un projet, le périmètre est :",
+      "choices": [
+        "la liste des personnes qui travaillent dans le service concerné, avec leur fonction et leur grade",
+        "le budget global de la direction qui porte le projet",
+        "l’ensemble de ce qui est inclus dans le projet et, explicitement, ce qui en est exclu",
+        "la zone géographique où se trouvent les bureaux du projet"
+      ],
+      "answer": 2,
+      "explain": "Le périmètre délimite les livrables et les travaux ; indiquer les exclusions évite les malentendus et la dérive du périmètre. Il ne se confond ni avec l’effectif, ni avec le budget, ni avec une localisation.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-013",
+      "theme": "Cadrage : objectifs, périmètre, parties prenantes",
+      "level": 1,
+      "q": "Qu’appelle-t-on « partie prenante » d’un projet ?",
+      "choices": [
+        "Toute personne ou organisation qui influence le projet ou qui est affectée par lui",
+        "Uniquement les agents qui participent aux réunions de l’équipe projet et qui signent la feuille de présence à chacune d’elles",
+        "Uniquement le prestataire qui reçoit le paiement",
+        "Uniquement le commanditaire qui finance le projet"
+      ],
+      "answer": 0,
+      "explain": "Les parties prenantes incluent les utilisateurs, les services voisins, les décideurs, les prestataires, les organismes extérieurs. Les limiter à l’équipe ou au financeur conduit à oublier ceux qui rejetteront peut-être le résultat.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-014",
+      "theme": "Cadrage : objectifs, périmètre, parties prenantes",
+      "level": 1,
+      "q": "Quel est le rôle de la lettre de mission (ou charte de projet) ?",
+      "choices": [
+        "Elle remplace le planning détaillé et le budget du projet",
+        "Elle sert uniquement à informer la presse du lancement du projet",
+        "Le commanditaire y désigne le chef de projet et lui fixe objectifs, périmètre et marge de manœuvre",
+        "Elle décrit les anomalies relevées pendant la recette de l’outil"
+      ],
+      "answer": 2,
+      "explain": "La lettre de mission donne au chef de projet sa légitimité et son cadre d’action. Elle ne remplace pas le planning ; elle n’est pas un document de communication externe et n’a rien à voir avec la recette.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-015",
+      "theme": "Cadrage : objectifs, périmètre, parties prenantes",
+      "level": 2,
+      "q": "Parmi ces objectifs, lequel est correctement formulé selon la logique SMART ? (Chiffres fictifs.)",
+      "choices": [
+        "Améliorer sensiblement et durablement la qualité du traitement des demandes d’autorisation dans le service",
+        "Ramener de 30 à 15 jours le délai moyen de traitement des demandes d’autorisation d’ici le 31 décembre",
+        "Mettre en place un outil informatique moderne, performant et apprécié de l’ensemble des agents concernés",
+        "Faire en sorte que les agents du service traitent les demandes plus vite, dès que cela sera possible"
+      ],
+      "answer": 1,
+      "explain": "Seul le premier objectif est mesurable (30 jours vers 15 jours) et daté (31 décembre). Les autres restent vagues : « sensiblement », « moderne », « plus vite » ne permettent aucune vérification.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-016",
+      "theme": "Cadrage : objectifs, périmètre, parties prenantes",
+      "level": 2,
+      "q": "Sur la grille de la figure, le directeur (n° 1) est très influent et très concerné par votre projet. Comment le traiter ?",
+      "choices": [
+        "Le tenir informé seulement, avec un compte rendu à la livraison",
+        "Le gérer étroitement : l’associer aux décisions importantes et rechercher son accord",
+        "Le surveiller, avec un minimum d’informations",
+        "Le tenir satisfait sans l’associer, car il n’appartient pas à l’équipe projet"
+      ],
+      "answer": 1,
+      "explain": "Fort pouvoir et fort intérêt : case « gérer étroitement ». Sa position peut faire réussir ou échouer le projet, il faut donc l’associer. Surveiller, informer une seule fois ou ne pas l’associer correspondent à d’autres cases.",
+      "seconds": 60,
+      "status": "draft",
+      "img": "svg/min-mgt-parties-prenantes.svg",
+      "imgAlt": "Grille pouvoir et intérêt à quatre cases. En haut à droite (pouvoir et intérêt élevés), gérer étroitement : 1 directeur sponsor et 5 cabinet du ministre. En haut à gauche (pouvoir élevé, intérêt faible), tenir satisfait : 2 service financier. En bas à droite (pouvoir faible, intérêt élevé), tenir informé : 3 agents du service. En bas à gauche (pouvoir et intérêt faibles), surveiller : 4 usagers non concernés."
+    },
+    {
+      "id": "min-projet-017",
+      "theme": "Cadrage : objectifs, périmètre, parties prenantes",
+      "level": 2,
+      "q": "À la livraison, un service utilisateur rejette l’outil : il n’avait jamais été consulté. D’après la grille de la figure, comment traiter les agents du service (n° 3), et que faire dès le cadrage d’un prochain projet ?",
+      "choices": [
+        "Les surveiller seulement ; ne consulter les utilisateurs qu’après la livraison",
+        "Les tenir satisfaits ; confier la liste des utilisateurs au prestataire",
+        "Les tenir informés et les consulter régulièrement ; recenser et classer toutes les parties prenantes dès le cadrage",
+        "Les ignorer, car leur pouvoir est faible ; limiter la consultation aux services du commanditaire, sans consultation préalable"
+      ],
+      "answer": 2,
+      "explain": "Les agents utilisateurs ont un fort intérêt mais un faible pouvoir : case « tenir informé », avec consultation régulière. L’analyse des parties prenantes se fait au cadrage ; consulter après la livraison est trop tard, et le prestataire ne connaît pas l’organisation interne.",
+      "seconds": 70,
+      "status": "draft",
+      "img": "svg/min-mgt-parties-prenantes.svg",
+      "imgAlt": "Grille pouvoir et intérêt à quatre cases. En haut à droite (pouvoir et intérêt élevés), gérer étroitement : 1 directeur sponsor et 5 cabinet du ministre. En haut à gauche (pouvoir élevé, intérêt faible), tenir satisfait : 2 service financier. En bas à droite (pouvoir faible, intérêt élevé), tenir informé : 3 agents du service. En bas à gauche (pouvoir et intérêt faibles), surveiller : 4 usagers non concernés."
+    },
+    {
+      "id": "min-projet-018",
+      "theme": "Cadrage : objectifs, périmètre, parties prenantes",
+      "level": 2,
+      "q": "Un nouveau besoin non prévu s’ajoute chaque semaine au projet, sans revue de coût ni de délai. Comment nomme-t-on ce phénomène et comment le maîtriser ?",
+      "choices": [
+        "Le glissement du planning ; on le maîtrise en supprimant tous les jalons et en repoussant les échéances",
+        "Le risque résiduel ; on le maîtrise en l’acceptant sans condition",
+        "La réserve pour aléas ; on la maîtrise en la doublant systématiquement",
+        "La dérive du périmètre ; on la maîtrise par une procédure de gestion des changements"
+      ],
+      "answer": 3,
+      "explain": "La dérive du périmètre est l’ajout progressif de demandes sans réévaluation. La parade est de formaliser chaque demande, d’en mesurer l’impact et de la faire arbitrer. Les autres termes désignent d’autres notions.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-019",
+      "theme": "Cadrage : objectifs, périmètre, parties prenantes",
+      "level": 3,
+      "q": "Le commanditaire exige tout le périmètre, en moitié moins de temps et avec un budget réduit de 30 %. Que doit faire le chef de projet ?",
+      "choices": [
+        "Présenter des scénarios d’arbitrage entre périmètre, délai et coût et obtenir une décision écrite du commanditaire",
+        "Accepter pour ne pas contrarier le commanditaire et essayer de tenir par un effort exceptionnel de l’équipe",
+        "Refuser le projet en bloc sans proposer la moindre alternative au commanditaire",
+        "Annoncer en interne que tout sera tenu, puis réduire discrètement la qualité des livrables"
+      ],
+      "answer": 0,
+      "explain": "Les trois contraintes sont liées ; le rôle du chef de projet est de rendre les arbitrages visibles et de les faire trancher par la personne qui en a l’autorité. Promettre l’impossible ou dégrader la qualité en silence détruit la confiance.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-020",
+      "theme": "Cadrage : objectifs, périmètre, parties prenantes",
+      "level": 3,
+      "q": "Deux directions pensent chacune devoir approuver un livrable, et le projet est bloqué. Quelle règle de la matrice RACI aurait dû éviter la situation ?",
+      "choices": [
+        "Chaque livrable doit avoir au moins deux approbateurs, pour partager la responsabilité entre les directions",
+        "Un seul approbateur (A) par livrable, les autres personnes étant consultées ou informées",
+        "L’ensemble des personnes de la matrice doit être consulté avant chaque décision",
+        "Le chef de projet doit réaliser lui-même tous les livrables"
+      ],
+      "answer": 1,
+      "explain": "La clarté de la responsabilité exige un seul « A ». Plusieurs approbateurs ou une consultation généralisée créent exactement les blocages décrits. Le chef de projet coordonne mais ne réalise pas tout.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-021",
+      "theme": "Planning : diagramme de Gantt et chemin critique",
+      "level": 1,
+      "q": "Qu'est-ce qu'un diagramme de Gantt, comme celui de la figure ?",
+      "choices": [
+        "Un schéma de l’organisation hiérarchique des services qui participent au projet",
+        "Un tableau de répartition du budget par nature de dépense",
+        "Un tableau de barres horizontales présentant les tâches en lignes, le temps en colonnes, leurs durées et leurs enchaînements",
+        "Une liste des risques classés par criticité décroissante"
+      ],
+      "answer": 2,
+      "explain": "Le Gantt est un outil de planification visuelle des tâches dans le temps. L’organigramme, la répartition budgétaire et le classement des risques sont d’autres outils.",
+      "seconds": 45,
+      "status": "draft",
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais et mise en service S11-S12, réception S13 forment le chemin critique. Commande des équipements S3-S5 et formation des équipes S8-S11 ont chacune une semaine de marge."
+    },
+    {
+      "id": "min-projet-022",
+      "theme": "Planning : diagramme de Gantt et chemin critique",
+      "level": 1,
+      "q": "Sur le diagramme de Gantt de la figure, quelles tâches forment le chemin critique ?",
+      "choices": [
+        "Commande des équipements, montage, formation des équipes et réception",
+        "Étude et plans, commande des équipements, formation des équipes et réception",
+        "Étude et plans, génie civil, montage, essais et mise en service, réception",
+        "Génie civil, commande des équipements, essais et mise en service et réception"
+      ],
+      "answer": 2,
+      "explain": "Le chemin critique est la suite de tâches à marge nulle (barres foncées de la figure) : étude et plans (S1-S2), génie civil (S3-S6), montage (S7-S10), essais (S11-S12) et réception (S13), soit 13 semaines. La commande des équipements et la formation ont une semaine de marge.",
+      "seconds": 45,
+      "status": "draft",
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais et mise en service S11-S12, réception S13 forment le chemin critique. Commande des équipements S3-S5 et formation des équipes S8-S11 ont chacune une semaine de marge."
+    },
+    {
+      "id": "min-projet-023",
+      "theme": "Planning : diagramme de Gantt et chemin critique",
+      "level": 1,
+      "q": "Sur le diagramme de la figure, quelle est la marge de la tâche « Formation des équipes », et que signifie-t-elle ?",
+      "choices": [
+        "Pas de marge : tout retard de la formation retarde immédiatement la réception",
+        "Quatre semaines : c’est la durée de la tâche, qui peut donc être reportée de quatre semaines",
+        "Deux semaines : la formation peut glisser jusqu’à la fin des essais sans conséquence",
+        "Une semaine : la tâche peut prendre une semaine de retard sans retarder la fin du projet"
+      ],
+      "answer": 3,
+      "explain": "La figure indique « marge : 1 sem » pour la formation (S8-S11) : elle peut finir en S12 sans retarder la réception en S13. Les tâches du chemin critique, elles, n’ont aucune marge.",
+      "seconds": 45,
+      "status": "draft",
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais et mise en service S11-S12, réception S13 forment le chemin critique. Commande des équipements S3-S5 et formation des équipes S8-S11 ont chacune une semaine de marge."
+    },
+    {
+      "id": "min-projet-024",
+      "theme": "Planning : diagramme de Gantt et chemin critique",
+      "level": 1,
+      "q": "À quoi sert le découpage du projet en lots de travaux ?",
+      "choices": [
+        "À répartir le budget de manière égale entre tous les agents du service",
+        "À décomposer le projet en livrables et en tâches de plus en plus fines, assez petites pour être estimées et attribuées",
+        "À remplacer le planning et le suivi des risques",
+        "À réduire automatiquement la durée du projet de moitié"
+      ],
+      "answer": 1,
+      "explain": "Le découpage est la base de la planification et du budget : on ne peut estimer ni dater ce qui n’est pas décomposé. Il ne supprime aucun suivi et ne raccourcit pas le projet par lui-même.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-025",
+      "theme": "Planning : diagramme de Gantt et chemin critique",
+      "level": 2,
+      "q": "Tâches (chiffres fictifs) : A 3 jours, sans antécédent ; B 4 jours, après A ; C 2 jours, après A ; D 5 jours, après B et C ; E 3 jours, après D. Quelle est la durée minimale du projet ?",
+      "choices": [
+        "12 jours",
+        "17 jours",
+        "13 jours (durée du chemin A-C-D-E)",
+        "15 jours"
+      ],
+      "answer": 3,
+      "explain": "Chemin A-B-D-E : 3 + 4 + 5 + 3 = 15 jours. Chemin A-C-D-E : 3 + 2 + 5 + 3 = 13 jours. La durée minimale est celle du chemin le plus long : 15 jours. Le chiffre 13 est la longueur du chemin non critique ; 17 additionnerait à tort des tâches parallèles.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-026",
+      "theme": "Planning : diagramme de Gantt et chemin critique",
+      "level": 2,
+      "q": "Dans le même réseau (A 3 j ; B 4 j après A ; C 2 j après A ; D 5 j après B et C ; E 3 j après D), quelle est la marge de la tâche C ?",
+      "choices": [
+        "0 jour",
+        "2 jours",
+        "4 jours (durée de la tâche B)",
+        "5 jours"
+      ],
+      "answer": 1,
+      "explain": "C est sur le chemin A-C-D-E de 13 jours, alors que le chemin critique dure 15 jours : la marge est 15 − 13 = 2 jours. Une marge nulle serait celle de B, tâche critique.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-027",
+      "theme": "Planning : diagramme de Gantt et chemin critique",
+      "level": 2,
+      "q": "Une tâche de 6 jours ne peut débuter qu’après le jour 10 et doit s’achever au plus tard le jour 20. Quelle est sa marge ? (Chiffres fictifs.)",
+      "choices": [
+        "6 jours",
+        "10 jours",
+        "4 jours",
+        "0 jour"
+      ],
+      "answer": 2,
+      "explain": "Fin au plus tôt = 10 + 6 = 16. Marge = fin au plus tard − fin au plus tôt = 20 − 16 = 4 jours. La durée de la tâche (6) et la date de début (10) ne sont pas la marge.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-028",
+      "theme": "Planning : diagramme de Gantt et chemin critique",
+      "level": 2,
+      "q": "Vous estimez une tâche incertaine : durée optimiste 4 jours, probable 6 jours, pessimiste 14 jours. Quelle durée retenez-vous avec l’estimation à trois points ?",
+      "choices": [
+        "7 jours",
+        "6 jours",
+        "9 jours (moyenne simple)",
+        "8 jours"
+      ],
+      "answer": 0,
+      "explain": "(O + 4P + Pe) / 6 = (4 + 24 + 14) / 6 = 42 / 6 = 7 jours. 6 est la durée probable seule ; 9 est la moyenne simple des trois valeurs (4 + 6 + 14 = 24, divisé par 3 = 8, non 9) ; 8 en est le résultat exact mais ignore la pondération du probable.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-029",
+      "theme": "Planning : diagramme de Gantt et chemin critique",
+      "level": 3,
+      "q": "D’après le diagramme de la figure, la commande des équipements (S3-S5) prend deux semaines de retard. Quelle conséquence sur la fin du projet ?",
+      "choices": [
+        "La fin du projet recule d’une semaine : la marge d’une semaine est consommée, il reste une semaine de retard sur le chemin critique",
+        "La fin du projet recule de deux semaines, car la tâche est en retard de deux semaines, puisque chaque semaine de retard décale la date de réception",
+        "Pas de conséquence, car la commande n’appartient pas au chemin critique",
+        "La fin du projet n’est pas affectée, car le retard est absorbé par la formation des équipes"
+      ],
+      "answer": 0,
+      "explain": "La commande dispose d’une semaine de marge : sur deux semaines de retard, une est absorbée et l’autre retarde le montage, donc la fin du projet (14 semaines au lieu de 13). Une tâche hors chemin critique retarde le projet dès que son retard dépasse sa marge.",
+      "seconds": 110,
+      "status": "draft",
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais et mise en service S11-S12, réception S13 forment le chemin critique. Commande des équipements S3-S5 et formation des équipes S8-S11 ont chacune une semaine de marge."
+    },
+    {
+      "id": "min-projet-030",
+      "theme": "Planning : diagramme de Gantt et chemin critique",
+      "level": 3,
+      "q": "Dans le même diagramme, un renfort ramène le montage de quatre à trois semaines. Quelle est la nouvelle durée minimale du projet ?",
+      "choices": [
+        "13 semaines : les tâches en parallèle (commande, formation) empêchent tout gain de temps",
+        "12 semaines : le montage est sur le chemin critique, donc la semaine gagnée raccourcit le projet",
+        "11 semaines : le gain d’une semaine s’ajoute à la semaine de marge de la formation",
+        "14 semaines : un renfort ajoute toujours une semaine de coordination"
+      ],
+      "answer": 1,
+      "explain": "Le montage est sur le chemin critique : le ramener à trois semaines avance les essais et la réception d’une semaine, soit 12 semaines au total. Les marges des tâches parallèles ne s’ajoutent pas à ce gain ; la formation passe alors à marge nulle.",
+      "seconds": 100,
+      "status": "draft",
+      "img": "svg/gantt-chart.svg",
+      "imgAlt": "Diagramme de Gantt sur 13 semaines avec chemin critique : étude et plans S1-S2, génie civil S3-S6, montage S7-S10, essais et mise en service S11-S12, réception S13 forment le chemin critique. Commande des équipements S3-S5 et formation des équipes S8-S11 ont chacune une semaine de marge."
+    },
+    {
+      "id": "min-projet-031",
+      "theme": "Budget du projet",
+      "level": 1,
+      "q": "La figure présente le budget d'un projet sous forme de courbe cumulée. À quoi correspond la courbe en pointillés, et que lit-on au mois 6 ?",
+      "choices": [
+        "Le budget prévu, réparti par période : 50 millions de FCFA cumulés au mois 6 (chiffres fictifs)",
+        "Les dépenses réelles : 32 millions de FCFA cumulés au mois 6",
+        "La réserve pour aléas : 18 millions de FCFA encore disponibles au mois 6",
+        "Le budget total du projet : 100 millions de FCFA déjà dépensés dès le mois 6"
+      ],
+      "answer": 0,
+      "explain": "La courbe en pointillés est le budget prévu, réparti par période et cumulé : 50 millions de FCFA au mois 6 (chiffres fictifs). La courbe orange représente les dépenses réelles (32 au mois 6). Le budget d'un projet est estimé par poste et par période, puis validé avant tout engagement.",
+      "seconds": 45,
+      "status": "draft",
+      "img": "svg/min2-mgt-courbe-s-budget.svg",
+      "imgAlt": "Courbe en S : budget cumulé prévu (pointillés) et dépenses réelles cumulées (trait orange) en millions de FCFA fictifs sur douze mois ; au mois 6, prévu 50 et réalisé 32, soit un écart de moins 18."
+    },
+    {
+      "id": "min-projet-032",
+      "theme": "Budget du projet",
+      "level": 1,
+      "q": "À quoi sert la réserve pour aléas ?",
+      "choices": [
+        "À financer discrètement des demandes nouvelles du commanditaire sans les valider, ce qui évite de lancer une procédure de changement",
+        "À augmenter les primes des membres de l’équipe en fin de projet",
+        "À faire face aux risques identifiés et aux incertitudes, avec des règles d’utilisation précises",
+        "À payer les dépenses courantes de la direction qui porte le projet"
+      ],
+      "answer": 2,
+      "explain": "La réserve n’est pas une cagnotte libre : elle est destinée aux aléas, et son utilisation doit être décidée selon des règles connues du commanditaire.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-033",
+      "theme": "Budget du projet",
+      "level": 1,
+      "q": "Qu’appelle-t-on coût total de possession d’un outil ?",
+      "choices": [
+        "Le coût d’acquisition majoré de l’exploitation, de la maintenance, de la formation et du renouvellement sur sa durée de vie",
+        "Uniquement le prix payé au fournisseur le jour de l’achat",
+        "Le prix de vente de l’outil sur le marché après dix ans",
+        "Le coût de la formation initiale des agents seulement"
+      ],
+      "answer": 0,
+      "explain": "Comparer des solutions sur le seul prix d’achat est trompeur : l’exploitation et la maintenance pèsent souvent davantage sur la durée de vie.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-034",
+      "theme": "Budget du projet",
+      "level": 1,
+      "q": "Dans la méthode de la valeur acquise, que mesure l’indice IPC = VA / CR ?",
+      "choices": [
+        "La performance sur les délais : une valeur inférieure à 1 signale un retard sur le planning prévu initial",
+        "Le niveau de satisfaction des utilisateurs à la livraison",
+        "La performance sur les coûts : une valeur inférieure à 1 signale un dépassement",
+        "Le pourcentage du budget placé en réserve pour aléas"
+      ],
+      "answer": 2,
+      "explain": "L’IPC compare la valeur du travail réalisé (VA) à ce qu’il a réellement coûté (CR). L’indice de délais est l’IPD = VA / VP. Aucun des deux ne mesure la satisfaction ni la réserve.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-035",
+      "theme": "Budget du projet",
+      "level": 2,
+      "q": "Budget total de 200 millions de FCFA (fictif). À mi-parcours : valeur planifiée 100, valeur acquise 80, coût réel 100. Que vaut l’IPC et que signifie-t-il ?",
+      "choices": [
+        "1,25 : le projet coûte moins cher que prévu pour le travail réalisé",
+        "0,8 : le projet coûte plus cher que prévu pour le travail réalisé",
+        "0,8 : le projet avance plus vite que prévu",
+        "1,0 : le projet est exactement conforme au budget"
+      ],
+      "answer": 1,
+      "explain": "IPC = VA / CR = 80 / 100 = 0,8, inférieur à 1 : pour 80 millions de travail accompli, on a dépensé 100 millions. Une valeur de 1,25 aurait inversé le rapport ; 0,8 pour l’IPC ne parle pas de délai.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-036",
+      "theme": "Budget du projet",
+      "level": 2,
+      "q": "Même projet : avancement prévu 50 % (VP = 100), avancement réel 40 % (VA = 80). Quel est l’IPD et que signifie-t-il ?",
+      "choices": [
+        "1,25 : le projet est en avance sur le planning",
+        "0,5 : le projet a consommé la moitié de son budget",
+        "0,8 : le projet est en dépassement de coût uniquement",
+        "0,8 : le projet est en retard sur le planning"
+      ],
+      "answer": 3,
+      "explain": "IPD = VA / VP = 80 / 100 = 0,8, inférieur à 1 : il y a du retard. Le dépassement de coût se lit sur l’IPC. 0,5 est un pourcentage d’avancement prévu, non un indice.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-037",
+      "theme": "Budget du projet",
+      "level": 2,
+      "q": "Même projet (budget 200 millions, IPC = 0,8). Si la tendance se poursuit, quelle est l’estimation du coût à l’achèvement ?",
+      "choices": [
+        "160 millions de FCFA",
+        "200 millions de FCFA",
+        "250 millions de FCFA",
+        "300 millions de FCFA (budget initial majoré de 50 %)"
+      ],
+      "answer": 2,
+      "explain": "EAC = BAC / IPC = 200 / 0,8 = 250 millions, soit 50 millions de dépassement probable. 160 résulterait d’une multiplication (200 × 0,8) à l’envers ; 200 ignorerait la dérive ; 300 n’a aucun fondement dans les données.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-038",
+      "theme": "Budget du projet",
+      "level": 2,
+      "q": "Le devis d’un prestataire dépasse l’enveloppe de 15 %. Quelle réaction est conforme aux bonnes pratiques et aux règles de la commande publique ?",
+      "choices": [
+        "Fractionner la commande en plusieurs achats plus petits pour passer sous le seuil d’une procédure",
+        "Accepter le devis et couvrir l’écart en utilisant des lignes budgétaires d’autres projets sans l’annoncer, afin de ne pas retarder la signature du marché",
+        "Retirer discrètement certains contrôles de qualité du contrat pour réduire le prix",
+        "Revoir les spécifications ou le périmètre, ou rechercher un financement complémentaire, dans le respect de la procédure de mise en concurrence"
+      ],
+      "answer": 3,
+      "explain": "Le fractionnement artificiel d’un achat contourne les règles de la commande publique. Mélanger les lignes sans décision ou supprimer des contrôles sont aussi des fautes. On agit sur le périmètre ou le financement, en transparence.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-039",
+      "theme": "Budget du projet",
+      "level": 3,
+      "q": "À mi-parcours, IPC = 0,8, IPD = 0,8, la réserve restante est de 10 millions et l’estimation à l’achèvement dépasse le budget de 50 millions. Que faites-vous ?",
+      "choices": [
+        "Alerter le comité de pilotage avec l’estimation à l’achèvement et des options chiffrées (réduire le périmètre, étaler, financer) et demander une décision",
+        "Attendre la fin du projet pour présenter le bilan complet des écarts",
+        "Utiliser la réserve de 10 millions et espérer rattraper les 40 millions restants sans le dire",
+        "Demander à l’équipe de travailler davantage sans modifier ni périmètre ni budget"
+      ],
+      "answer": 0,
+      "explain": "Un écart de cette ampleur dépasse les marges du chef de projet : il faut une décision du niveau supérieur, fondée sur des options chiffrées. Cacher la dérive ou la rattraper par la seule bonne volonté de l’équipe est irréaliste.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-040",
+      "theme": "Budget du projet",
+      "level": 3,
+      "q": "Dans la phase d’opportunité, on vous demande un ordre de grandeur du coût d’un projet de portail, sans cahier des charges. Quelle méthode retenez-vous ?",
+      "choices": [
+        "Une estimation ascendante poste par poste très détaillée, annoncée comme montant définitif, même si le cahier des charges n’est pas encore rédigé",
+        "Une estimation analogique à partir de projets comparables, annoncée sous forme de fourchette large, à affiner ensuite",
+        "Pas d’estimation tant que le prestataire n’est pas choisi",
+        "Un montant unique repris tel quel du budget de la direction, sans lien avec le projet"
+      ],
+      "answer": 1,
+      "explain": "Sans cahier des charges, l’estimation ascendante n’est pas possible. L’analogie donne rapidement un ordre de grandeur, en fourchette, qui se précise avec le cadrage et les consultations. Annoncer un montant ferme prématuré est risqué.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-041",
+      "theme": "Gestion des risques",
+      "level": 1,
+      "q": "Qu’est-ce qu’un risque de projet ?",
+      "choices": [
+        "Un événement qui s’est déjà produit et qu’il faut traiter immédiatement",
+        "Une erreur commise par un membre de l’équipe projet",
+        "Un événement incertain qui, s’il se produit, a un effet sur les objectifs du projet",
+        "Un désaccord entre deux services sur le calendrier"
+      ],
+      "answer": 2,
+      "explain": "Le risque est une possibilité, non un fait. Quand il se réalise, il devient un problème ou un incident. Une erreur ou un désaccord actuel est déjà un problème.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-042",
+      "theme": "Gestion des risques",
+      "level": 1,
+      "q": "D’après la matrice de risque de la figure, quelle est la criticité d’un risque de probabilité 3 (possible) et de gravité 4 (majeure), et de quel niveau est-il ?",
+      "choices": [
+        "7 : niveau moyen (5 à 9)",
+        "12 : niveau critique (15 et plus)",
+        "12 : niveau élevé (10 à 14)",
+        "16 : niveau critique (15 et plus)"
+      ],
+      "answer": 2,
+      "explain": "La criticité est le produit probabilité × gravité : 3 × 4 = 12, case orange « Élevé 10-14 » de la figure. Additionner donne 7 ; 16 correspond à une probabilité de 4 avec une gravité de 4, et le niveau critique ne commence qu’à 15.",
+      "seconds": 45,
+      "status": "draft",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 par 5 : probabilité en abscisse de 1 improbable à 5 fréquent, gravité en ordonnée de 1 mineure à 5 catastrophique, criticité égale au produit des deux. Niveaux : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
+    },
+    {
+      "id": "min-projet-043",
+      "theme": "Gestion des risques",
+      "level": 1,
+      "q": "Quelles sont les quatre stratégies de réponse à une menace ?",
+      "choices": [
+        "Éviter, retarder, doubler, oublier ou ignorer",
+        "Réduire, publier, supprimer, différer",
+        "Transférer, annuler, cacher, accepter",
+        "Éviter, réduire, transférer, accepter"
+      ],
+      "answer": 3,
+      "explain": "Ces quatre réponses sont : éviter la cause, réduire la probabilité ou l’impact, transférer à un tiers, accepter en connaissance de cause. Les autres combinaisons mêlent des attitudes fautives (cacher, oublier).",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-044",
+      "theme": "Gestion des risques",
+      "level": 1,
+      "q": "Que contient un registre des risques tenu à jour ?",
+      "choices": [
+        "Uniquement la liste des incidents survenus depuis le début du projet, classés par date, avec le nom de la personne qui les a signalés",
+        "Pour chaque risque : description, probabilité, impact, criticité, stratégie, actions, propriétaire, échéance et état",
+        "Uniquement les risques jugés sans importance par le comité",
+        "Le calendrier des paiements aux prestataires"
+      ],
+      "answer": 1,
+      "explain": "Le registre est un outil de suivi proactif, qui contient les risques à venir et leur traitement. Il se distingue d’un journal d’incidents et d’un échéancier de paiements.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-045",
+      "theme": "Gestion des risques",
+      "level": 2,
+      "q": "Sur la matrice de la figure, risque 1 : retard de livraison du matériel (probabilité 4, gravité 3) ; risque 2 : site indisponible le jour de la recette (probabilité 2, gravité 5). Lequel traiter en premier ?",
+      "choices": [
+        "Le risque 2, de criticité 10, car sa gravité est la plus forte",
+        "Le risque 2, de criticité 7, car il est le plus rare",
+        "Le risque 1, de criticité 7, car il est le plus fréquent",
+        "Le risque 1, de criticité 12 contre 10 pour le risque 2, tous deux de niveau élevé"
+      ],
+      "answer": 3,
+      "explain": "Risque 1 : 4 × 3 = 12 ; risque 2 : 2 × 5 = 10. Tous deux sont dans la zone orange (10 à 14), mais le risque 1 a la plus forte criticité et passe en premier. Les valeurs 7 viennent d’additions erronées.",
+      "seconds": 80,
+      "status": "draft",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 par 5 : probabilité en abscisse de 1 improbable à 5 fréquent, gravité en ordonnée de 1 mineure à 5 catastrophique, criticité égale au produit des deux. Niveaux : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
+    },
+    {
+      "id": "min-projet-046",
+      "theme": "Gestion des risques",
+      "level": 2,
+      "q": "Le contrat avec le prestataire prévoit une garantie de bonne exécution et des pénalités de retard. Quelle stratégie illustre cette clause ?",
+      "choices": [
+        "L’évitement total du risque, par suppression de toutes ses causes dans le contrat",
+        "Le transfert d’une partie du risque vers le prestataire",
+        "L’acceptation passive du risque",
+        "La suppression du risque par abandon du projet"
+      ],
+      "answer": 1,
+      "explain": "Les garanties et pénalités font porter une part des conséquences par un tiers : c’est un transfert partiel. Le risque n’est pas supprimé, ni accepté passivement.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-047",
+      "theme": "Gestion des risques",
+      "level": 2,
+      "q": "L’agent qui détient seul la connaissance d’un dispositif risque de quitter le service. Vous organisez un binôme et un document de procédure. De quelle stratégie s’agit-il ?",
+      "choices": [
+        "Éviter le risque, car il n’y a plus aucune probabilité de départ",
+        "Transférer le risque au prestataire informatique",
+        "Réduire le risque, en diminuant son impact en cas de départ",
+        "Accepter le risque sans aucune mesure particulière"
+      ],
+      "answer": 2,
+      "explain": "Le binôme et la documentation ne suppriment pas le départ possible, mais en limitent les conséquences : c’est une réduction. Ni transfert ni acceptation : on agit en interne.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-048",
+      "theme": "Gestion des risques",
+      "level": 2,
+      "q": "Qui doit être désigné propriétaire d’un risque dans le registre ?",
+      "choices": [
+        "La personne la mieux placée pour le surveiller et déclencher les actions, même si ce n’est pas le chef de projet",
+        "Toujours le chef de projet, qui est responsable de tout dans le projet",
+        "Toujours le directeur du ministère, pour donner du poids à la décision",
+        "Personne, afin d’éviter de mettre un agent en difficulté"
+      ],
+      "answer": 0,
+      "explain": "Le propriétaire est choisi pour sa capacité d’agir sur le risque. Le chef de projet ne peut pas tout porter, et un risque sans propriétaire n’est jamais traité.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-049",
+      "theme": "Gestion des risques",
+      "level": 3,
+      "q": "Un retard de livraison de six semaines, identifié comme risque, vient de se produire. Quelle est la première démarche ?",
+      "choices": [
+        "Attendre le prochain comité de pilotage sans rien faire d’ici là",
+        "Le déclarer comme incident, activer le plan de réponse, mesurer l’impact sur planning et budget, informer le commanditaire et mettre à jour le registre",
+        "Modifier le planning de référence pour que le retard n’apparaisse plus",
+        "Demander à l’équipe de rattraper le retard sans en informer le commanditaire"
+      ],
+      "answer": 1,
+      "explain": "Un risque réalisé se traite : déclaration, plan de réponse, analyse d’impact, information selon les seuils convenus. Masquer l’écart en changeant la référence est une faute ; attendre ou taire l’incident aggrave la situation.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-050",
+      "theme": "Gestion des risques",
+      "level": 3,
+      "q": "Une mesure ramène un risque de la criticité 20 à la criticité 8. D’après la matrice de la figure, de quel niveau à quel niveau passe-t-on, et que faire du risque restant sachant que le seuil de tolérance du projet est de 10 ?",
+      "choices": [
+        "De critique à moyen ; le conserver comme risque résiduel, le surveiller et le faire accepter explicitement",
+        "De critique à moyen ; le supprimer du registre, puisqu’il est devenu faible, même si le contexte du projet change fortement",
+        "D’élevé à faible ; le garder au registre sans jamais le revoir",
+        "De critique à faible ; relancer des mesures jusqu’à zéro, quel qu’en soit le coût"
+      ],
+      "answer": 0,
+      "explain": "20 est dans la zone critique (15 et plus) et 8 dans la zone moyenne (5 à 9) de la figure. Sous le seuil de 10, le risque résiduel est accepté formellement et suivi. Le supprimer du registre le ferait oublier ; chercher le risque zéro est coûteux et irréaliste.",
+      "seconds": 90,
+      "status": "draft",
+      "img": "svg/risk-matrix.svg",
+      "imgAlt": "Matrice de risque 5 par 5 : probabilité en abscisse de 1 improbable à 5 fréquent, gravité en ordonnée de 1 mineure à 5 catastrophique, criticité égale au produit des deux. Niveaux : faible de 1 à 4, moyen de 5 à 9, élevé de 10 à 14, critique à partir de 15."
+    },
+    {
+      "id": "min-projet-051",
+      "theme": "Suivi, tableaux de bord et comités de pilotage",
+      "level": 1,
+      "q": "À quoi sert un tableau de bord de projet ?",
+      "choices": [
+        "À synthétiser périodiquement quelques indicateurs clés (avancement, délais, coûts, risques) pour aider à décider",
+        "À archiver tous les courriels échangés par l’équipe projet, ainsi que tous les documents produits par les prestataires pendant la durée du marché",
+        "À présenter l’organigramme complet du ministère",
+        "À remplacer les réunions du comité de pilotage"
+      ],
+      "answer": 0,
+      "explain": "Le tableau de bord est un outil d’aide à la décision, court et régulier. Il ne remplace ni l’archivage, ni les instances de pilotage.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-052",
+      "theme": "Suivi, tableaux de bord et comités de pilotage",
+      "level": 1,
+      "q": "Quel est le rôle principal du comité de pilotage ?",
+      "choices": [
+        "Réaliser les tâches techniques à la place de l’équipe projet",
+        "Rédiger les comptes rendus de chaque réunion de l’équipe",
+        "Valider les jalons, arbitrer entre périmètre, coût et délai, allouer les moyens et lever les obstacles",
+        "Saisir les dépenses dans les outils de gestion budgétaire"
+      ],
+      "answer": 2,
+      "explain": "Le comité de pilotage décide ; il ne réalise pas les tâches et ne tient pas le secrétariat. Ses décisions engagent les moyens et orientent le projet.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-053",
+      "theme": "Suivi, tableaux de bord et comités de pilotage",
+      "level": 1,
+      "q": "Quelle différence existe-t-il entre comité de projet et comité de pilotage ?",
+      "choices": [
+        "Le comité de projet suit l’opérationnel avec l’équipe ; le comité de pilotage décide avec les décideurs, plus rarement",
+        "Le comité de projet décide du budget ; le comité de pilotage prépare le café",
+        "Ils sont identiques et se tiennent toujours le même jour",
+        "Le comité de pilotage ne réunit que des prestataires externes"
+      ],
+      "answer": 0,
+      "explain": "Le comité de projet est fréquent et technique ; le comité de pilotage, plus rare, est stratégique et réunit le commanditaire et les décideurs.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-054",
+      "theme": "Suivi, tableaux de bord et comités de pilotage",
+      "level": 1,
+      "q": "Dans le tableau de bord de la figure, la ligne « Dossiers traités dans les délais » est au rouge (72 % pour une cible de 90 %). Que signifie ce feu rouge ?",
+      "choices": [
+        "Le résultat est supérieur à la cible et le projet est terminé avec succès",
+        "Le chef de projet peut poursuivre sans rien signaler, car le voyant est décoratif, même si l’écart continue de se creuser chaque mois",
+        "L’équipe est en congé collectif et l’indicateur n’a pas été mesuré",
+        "L’écart dépasse la tolérance prévue (rouge sous 75 %) et appelle une décision du niveau supérieur"
+      ],
+      "answer": 3,
+      "explain": "La figure fixe le rouge sous 75 % : à 72 %, la tolérance est franchie. Le rouge est une alerte qui remonte au commanditaire ou au comité de pilotage. Les autres interprétations n’ont aucun fondement.",
+      "seconds": 45,
+      "status": "draft",
+      "img": "svg/min-mgt-tableau-de-bord.svg",
+      "imgAlt": "Tableau de bord mensuel d’un service, valeurs fictives, avec jauge, trait de cible et feu de couleur. Dossiers traités dans les délais : 72 % pour une cible de 90 %, rouge (vert à partir de 90 %, orange de 75 à 89 %, rouge sous 75 %). Délai moyen de traitement : 11 jours pour une cible de 10 jours, orange (orange de 11 à 13 jours). Taux d’absentéisme : 4 % pour un maximum de 5 %, vert. Agents utilisant le nouvel outil : 78 % pour une cible de 80 %, orange (orange de 70 à 79 %)."
+    },
+    {
+      "id": "min-projet-055",
+      "theme": "Suivi, tableaux de bord et comités de pilotage",
+      "level": 2,
+      "q": "Quel indicateur d’avancement est le plus fiable pour un portail comportant dix livrables ?",
+      "choices": [
+        "L’impression générale du chef de projet sur l’état du projet, recueillie à l’occasion des réunions de suivi hebdomadaires",
+        "Le nombre de livrables validés par rapport aux livrables prévus à la date",
+        "Le nombre d’heures déjà passées par l’équipe",
+        "Le nombre de courriels échangés avec le prestataire"
+      ],
+      "answer": 1,
+      "explain": "Un indicateur fondé sur des livrables validés est objectif et vérifiable. L’impression est subjective ; les heures mesurent l’effort et non le résultat ; les courriels n’indiquent rien sur l’avancement.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-056",
+      "theme": "Suivi, tableaux de bord et comités de pilotage",
+      "level": 2,
+      "q": "Quels éléments font l’utilité du compte rendu d’un comité de pilotage ?",
+      "choices": [
+        "Le détail complet des échanges, intervention par intervention, sans distinction, y compris les échanges informels tenus en marge de la séance",
+        "Les opinions personnelles du rédacteur sur chaque participant",
+        "Uniquement la liste des présents et la durée de la réunion",
+        "Les décisions prises, les actions avec leur responsable et leur échéance, et les points d’alerte"
+      ],
+      "answer": 3,
+      "explain": "Le compte rendu sert à agir : décisions, actions datées, responsables. Un verbatim ou des opinions ne permettent pas le suivi ; la liste des présents seule est insuffisante.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-057",
+      "theme": "Suivi, tableaux de bord et comités de pilotage",
+      "level": 2,
+      "q": "Un jalon risque d’être manqué de trois semaines ; le prochain comité de pilotage est dans six semaines. Que faites-vous ?",
+      "choices": [
+        "J’attends le comité de pilotage, dont l’ordre du jour est déjà fixé",
+        "Je demande à l’équipe de ne parler de rien tant que le retard n’est pas confirmé et je laisse la situation évoluer d’elle-même",
+        "J’alerte immédiatement le commanditaire en présentant des options, sans attendre le comité",
+        "Je modifie la date du jalon dans le planning sans en informer personne"
+      ],
+      "answer": 2,
+      "explain": "Une alerte précoce laisse des marges d’action. Attendre ou dissimuler fait perdre du temps et la confiance du commanditaire.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-058",
+      "theme": "Suivi, tableaux de bord et comités de pilotage",
+      "level": 2,
+      "q": "Dans la figure, chaque ligne affiche ses seuils vert, orange et rouge, fixés à l’avance. Que représente un seuil de tolérance dans le suivi d’un projet ?",
+      "choices": [
+        "Un écart maximal fixé à l’avance, au-delà duquel le chef de projet doit remonter l’information",
+        "Un nombre maximal de réunions que l’équipe peut tenir par mois",
+        "Le nombre maximal d’agents qui peuvent quitter le projet",
+        "Un montant dépensable sans informer personne, dans la limite de la réserve pour aléas"
+      ],
+      "answer": 0,
+      "explain": "Comme les seuils de la figure, la tolérance est définie au cadrage avec le commanditaire : elle dit à partir de quel écart une décision du niveau supérieur est nécessaire. Elle ne concerne ni le nombre de réunions ni les effectifs.",
+      "seconds": 60,
+      "status": "draft",
+      "img": "svg/min-mgt-tableau-de-bord.svg",
+      "imgAlt": "Tableau de bord mensuel d’un service, valeurs fictives, avec jauge, trait de cible et feu de couleur. Dossiers traités dans les délais : 72 % pour une cible de 90 %, rouge (vert à partir de 90 %, orange de 75 à 89 %, rouge sous 75 %). Délai moyen de traitement : 11 jours pour une cible de 10 jours, orange (orange de 11 à 13 jours). Taux d’absentéisme : 4 % pour un maximum de 5 %, vert. Agents utilisant le nouvel outil : 78 % pour une cible de 80 %, orange (orange de 70 à 79 %)."
+    },
+    {
+      "id": "min-projet-059",
+      "theme": "Suivi, tableaux de bord et comités de pilotage",
+      "level": 3,
+      "q": "Votre tableau de bord est tout vert, alors que l’équipe vous dit que le projet s’enlise. Les indicateurs reposent sur les déclarations des responsables de lots. Que faites-vous ?",
+      "choices": [
+        "Fonder les indicateurs sur des livrables validés, recouper avec les retours de l’équipe et corriger le tableau de bord",
+        "Maintenir les voyants verts pour ne pas inquiéter la hiérarchie",
+        "Supprimer le tableau de bord, car il ne sert à rien",
+        "Demander aux responsables de lots de déclarer des pourcentages plus élevés"
+      ],
+      "answer": 0,
+      "explain": "Des voyants verts sur des déclarations non vérifiées donnent une fausse sécurité. Le chef de projet dit la vérité : indicateurs objectifs et recoupement avec le terrain. Les autres attitudes aggravent le défaut.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-060",
+      "theme": "Suivi, tableaux de bord et comités de pilotage",
+      "level": 3,
+      "q": "Vos comités de pilotage s’éternisent sans décision, les dossiers étant remis le matin même. Comment les améliorer ?",
+      "choices": [
+        "Allonger la durée des réunions pour pouvoir tout aborder en détail",
+        "Envoyer le dossier à l’avance et centrer l’ordre du jour sur les décisions à prendre, avec options et recommandation du chef de projet",
+        "Supprimer les comités de pilotage et décider seul sur tous les sujets",
+        "Inviter davantage de participants pour partager la responsabilité"
+      ],
+      "answer": 1,
+      "explain": "Un comité décide quand il a des options claires et du temps pour préparer. Allonger, supprimer ou multiplier les participants ne règle pas le défaut de préparation.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-061",
+      "theme": "Clôture, retour d’expérience et exemples de projets",
+      "level": 1,
+      "q": "Quelles sont les étapes de la clôture d’un projet ?",
+      "choices": [
+        "Lancement de nouveaux travaux, recrutement de l’équipe et achat de matériel, puis élaboration du budget de l’année suivante",
+        "Rédaction de la lettre de mission et analyse des parties prenantes",
+        "Réception des livrables, transfert à l’exploitation, clôture financière, bilan final et archivage",
+        "Choix du prestataire et signature du marché"
+      ],
+      "answer": 2,
+      "explain": "Ces étapes ferment le projet de manière ordonnée. Les autres propositions concernent le lancement et le cadrage.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-062",
+      "theme": "Clôture, retour d’expérience et exemples de projets",
+      "level": 1,
+      "q": "Qu’est-ce qu’un retour d’expérience ?",
+      "choices": [
+        "Une analyse collective de ce qui a bien ou mal fonctionné, pour en tirer des règles pour les projets suivants",
+        "La recherche du responsable des erreurs, afin de le sanctionner",
+        "Un simple compte rendu financier destiné aux services du budget",
+        "Une liste des agents à récompenser en fin de projet"
+      ],
+      "answer": 0,
+      "explain": "Le retour d’expérience est constructif et collectif : l’objectif est d’apprendre, non de chercher un coupable. Il ne se limite pas aux finances ni aux récompenses.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-063",
+      "theme": "Clôture, retour d’expérience et exemples de projets",
+      "level": 1,
+      "q": "Que constate le procès-verbal de réception ?",
+      "choices": [
+        "L’approbation du budget pour le projet suivant",
+        "Le départ en retraite du chef de projet",
+        "La liste des risques encore ouverts à la fin du projet, classée par ordre de criticité décroissante",
+        "La conformité des livrables aux exigences, éventuellement avec des réserves"
+      ],
+      "answer": 3,
+      "explain": "Le procès-verbal de réception formalise l’acceptation des livrables par le commanditaire ou la maîtrise d’ouvrage. Les réserves doivent être levées selon un plan daté.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-064",
+      "theme": "Clôture, retour d’expérience et exemples de projets",
+      "level": 1,
+      "q": "Que compare le bilan final d’un projet ?",
+      "choices": [
+        "Les salaires des membres de l’équipe avec ceux d’autres services, afin d’harmoniser les rémunérations entre les directions du ministère",
+        "Les objectifs, coûts et délais prévus avec ceux réellement constatés, en expliquant les écarts",
+        "Le nombre de réunions tenues avec celui d’un autre ministère",
+        "Les opinions des directeurs sur le projet, sans données"
+      ],
+      "answer": 1,
+      "explain": "Le bilan s’appuie sur des faits : prévu contre réalisé et analyse des écarts. Les autres comparaisons n’ont pas de lien avec la performance du projet.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-065",
+      "theme": "Clôture, retour d’expérience et exemples de projets",
+      "level": 2,
+      "q": "Quand pratiquer le retour d’expérience ?",
+      "choices": [
+        "Uniquement trois ans après la clôture, quand les souvenirs sont décantés, lorsque tous les membres de l’équipe auront quitté le service",
+        "Jamais, car les mêmes erreurs ne se reproduisent pas",
+        "Uniquement si le projet a échoué, pour identifier le coupable",
+        "À chaque jalon important et à la clôture, avec l’équipe et les principales parties prenantes"
+      ],
+      "answer": 3,
+      "explain": "Les enseignements sont plus utiles s’ils sont recueillis tôt et régulièrement. Attendre trop longtemps fait oublier les faits ; limiter le REX aux échecs prive des bonnes pratiques.",
+      "seconds": 65,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-066",
+      "theme": "Clôture, retour d’expérience et exemples de projets",
+      "level": 2,
+      "q": "Quels documents doit contenir le dossier de projet archivé ?",
+      "choices": [
+        "Uniquement les courriels personnels des membres de l’équipe",
+        "La lettre de mission, les décisions et procès-verbaux, le registre des risques et les livrables, selon les règles d’archivage de l’administration",
+        "Uniquement les photos prises pendant les réunions",
+        "Aucun document : l’archivage est facultatif pour un projet interne"
+      ],
+      "answer": 1,
+      "explain": "Un dossier complet permet de justifier les décisions et de réutiliser l’expérience. Il suit les règles d’archivage en vigueur dans l’administration.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-067",
+      "theme": "Clôture, retour d’expérience et exemples de projets",
+      "level": 2,
+      "q": "Un nouvel outil est livré, mais aucun service n’en assure l’exploitation. Quelle étape de clôture a été négligée ?",
+      "choices": [
+        "La rédaction de la lettre de mission du projet suivant, conservés sur leurs messageries individuelles sans tri ni classement",
+        "L’analyse des parties prenantes du cadrage",
+        "Le transfert à l’exploitation : documentation, formation et désignation d’un responsable de la maintenance",
+        "L’estimation des durées à trois points"
+      ],
+      "answer": 2,
+      "explain": "Un outil non repris par un service tombe en désuétude. Le transfert à l’exploitation fait partie de la clôture ; les autres étapes concernent d’autres phases.",
+      "seconds": 65,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-068",
+      "theme": "Clôture, retour d’expérience et exemples de projets",
+      "level": 2,
+      "q": "Six mois après la clôture d’un portail de déclaration, que vérifie-t-on ?",
+      "choices": [
+        "Que les bénéfices attendus sont atteints, par exemple le délai de traitement visé dans l’objectif",
+        "Que le planning initial a été respecté à la journée près, pourtant sans rapport avec l’exploitation du nouvel outil livré",
+        "Que la réserve pour aléas a été entièrement dépensée",
+        "Que le chef de projet a participé à toutes les réunions"
+      ],
+      "answer": 0,
+      "explain": "Le projet n’est utile que si l’objectif est atteint. La mesure des bénéfices compare le résultat observé à la cible fixée au cadrage. Le planning ou la réserve ne disent rien de l’effet obtenu.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-069",
+      "theme": "Clôture, retour d’expérience et exemples de projets",
+      "level": 3,
+      "q": "À la clôture d’un portail de déclaration, deux réserves ne sont pas levées et les utilisateurs sont peu formés. Quelle décision est la plus appropriée ?",
+      "choices": [
+        "Prononcer la réception sans réserve pour respecter la date, et traiter les anomalies plus tard sans suivi",
+        "Prononcer la réception avec réserves, fixer un plan de levée daté, programmer une formation complémentaire et ne clore formellement qu’une fois les réserves levées",
+        "Refuser définitivement le portail et relancer un nouveau projet à zéro",
+        "Clore le projet et laisser les utilisateurs se débrouiller avec le prestataire"
+      ],
+      "answer": 1,
+      "explain": "La réception avec réserves permet de poursuivre tout en gardant la pression sur le prestataire. Les anomalies sont tracées et la formation complète le transfert. Refuser en bloc est disproportionné ; clore sans suivi fait perdre toute garantie.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-projet-070",
+      "theme": "Clôture, retour d’expérience et exemples de projets",
+      "level": 3,
+      "q": "Trois projets successifs ont dérapé à cause d’un cadrage flou, d’après les retours d’expérience. Que décide la direction pour y remédier ?",
+      "choices": [
+        "Remplacer les chefs de projet sans changer la méthode de travail, en espérant que les nouveaux responsables obtiennent de meilleurs résultats",
+        "Supprimer les retours d’expérience, qui n’apportent rien",
+        "Passer directement à la réalisation pour gagner du temps",
+        "Ajouter à la méthode une liste de contrôle de cadrage et un point de revue obligatoire avant le lancement de tout projet"
+      ],
+      "answer": 3,
+      "explain": "Le retour d’expérience doit déboucher sur une action durable : ici, un outil de contrôle du cadrage et une revue formelle avant lancement. Changer les personnes sans changer la méthode ne corrige pas la cause.",
+      "seconds": 90,
+      "status": "draft"
+    }
+  ]
 }

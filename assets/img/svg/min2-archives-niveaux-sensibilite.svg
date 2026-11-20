@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Exemple de classification de l'information à quatre niveaux de sensibilité : public, interne, restreint, confidentiel, avec qui peut lire et des exemples.</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.o{fill:#B85C0A;font-weight:bold}.w{fill:#FCFBF8;font-weight:bold}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FCFBF8;stroke:#061F44;stroke-width:2.5}
+.or{fill:#FDEBD3;stroke:#F28C28;stroke-width:3}
+.nv{fill:#061F44;stroke:#061F44;stroke-width:2.5}
+.ln{fill:none;stroke:#061F44;stroke-width:3}
+.lo{fill:none;stroke:#F28C28;stroke-width:3}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Niveaux de sensibilité de l’information</text>
+<rect x="24" y="62" width="170" height="34" rx="0" class="nv"/>
+<text x="109" y="84" class="c w">Niveau</text>
+<rect x="194" y="62" width="280" height="34" rx="0" class="nv"/>
+<text x="334" y="84" class="c w">Qui peut lire</text>
+<rect x="474" y="62" width="280" height="34" rx="0" class="nv"/>
+<text x="614" y="84" class="c w">Exemples</text>
+<rect x="24" y="96" width="170" height="32" rx="0" class="bl"/>
+<text x="32" y="119" class="b">Public</text>
+<rect x="194" y="96" width="280" height="32" rx="0" class="bl"/>
+<text x="334" y="119" class="c">Toute personne</text>
+<rect x="474" y="96" width="280" height="32" rx="0" class="bl"/>
+<text x="614" y="119" class="c">Textes publiés, communiqués</text>
+<rect x="24" y="128" width="170" height="32" rx="0" class="wh"/>
+<text x="32" y="151" class="b">Interne</text>
+<rect x="194" y="128" width="280" height="32" rx="0" class="wh"/>
+<text x="334" y="151" class="c">Les agents du ministère</text>
+<rect x="474" y="128" width="280" height="32" rx="0" class="wh"/>
+<text x="614" y="151" class="c">Notes et procédures internes</text>
+<rect x="24" y="160" width="170" height="32" rx="0" class="bl"/>
+<text x="32" y="183" class="b">Restreint</text>
+<rect x="194" y="160" width="280" height="32" rx="0" class="bl"/>
+<text x="334" y="183" class="c">Un service ou une équipe précise</text>
+<rect x="474" y="160" width="280" height="32" rx="0" class="bl"/>
+<text x="614" y="183" class="c">Dossiers de travail d’un service</text>
+<rect x="24" y="192" width="170" height="32" rx="0" class="wh"/>
+<text x="32" y="215" class="b">Confidentiel</text>
+<rect x="194" y="192" width="280" height="32" rx="0" class="wh"/>
+<text x="334" y="215" class="c">Quelques personnes nommées</text>
+<rect x="474" y="192" width="280" height="32" rx="0" class="wh"/>
+<text x="614" y="215" class="c">Contrats, données stratégiques</text>
+<path d="M770,96V220" class="lo" marker-end="url(#ao)"/>
+<text x="400" y="258" class="c">Restriction croissante de l’accès, du public vers le confidentiel (exemple illustratif).</text>
+<text x="400" y="280" class="c">Le niveau figure sur le document, dans ses métadonnées et sur la boîte d’archives.</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Deux sections : à gauche en temps double, un horizon réellement plat situé sous un corps rapide (sel ou carbonate) apparaît remonté en forme de voûte, ce qui crée une fausse structure ; à droite, après conversion en profondeur avec un bon modèle de vitesse, l’horizon est plat ; relation profondeur égale vitesse moyenne fois temps double divisé par 2</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}.t{font-size:13px}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+.dz{fill:none;stroke:#061F44;stroke-width:1.5;stroke-dasharray:6 5}
+.og{fill:#F28C28;stroke:#061F44;stroke-width:2}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Corps rapide : de la section en temps à la profondeur</text>
+
+<rect x="30" y="80" width="340" height="290" class="s" fill="#FFFFFF"/>
+<rect x="430" y="80" width="340" height="290" class="s" fill="#FFFFFF"/>
+<text x="200" y="68" class="c b">Section en temps double (ms)</text>
+<text x="600" y="68" class="c b">Section en profondeur (m)</text>
+<ellipse cx="200" cy="190" rx="85" ry="26" class="gr"/>
+<ellipse cx="600" cy="190" rx="85" ry="26" class="gr"/>
+<text x="200" y="195" class="c t">corps rapide</text><text x="600" y="195" class="c t">corps rapide</text>
+<text x="200" y="146" class="c t">vitesse élevée (exemple : 4 500 m/s)</text><text x="600" y="146" class="c t">vitesse élevée (exemple : 4 500 m/s)</text>
+<text x="48" y="104" class="t">couches au-dessus : 2 500 m/s (exemple)</text><text x="448" y="104" class="t">couches au-dessus : 2 500 m/s (exemple)</text>
+<path d="M30,300Q200,238 370,300" class="or"/>
+<path d="M430,300H770" class="or"/>
+<text x="200" y="332" class="c o">horizon apparemment remonté</text>
+<text x="600" y="332" class="c o">horizon réel : plat</text>
+<text x="200" y="352" class="c t">fausse structure possible</text>
+<text x="600" y="352" class="c t">aucune fermeture réelle</text>
+<path d="M375,250H425" class="nv" marker-end="url(#ar)"/>
+<text x="400" y="240" class="c t">conversion</text>
+<rect x="30" y="392" width="740" height="82" rx="12" class="bl"/>
+<text x="400" y="420" class="c b">Profondeur = vitesse moyenne × temps double ÷ 2</text>
+<text x="400" y="446" class="c">Exemple : 2 500 m/s × 2,000 s ÷ 2 = 2 500 m</text>
+<text x="400" y="466" class="c t">Sans modèle de vitesse fiable, une carte en profondeur n’est pas démontrée.</text>
+</svg>

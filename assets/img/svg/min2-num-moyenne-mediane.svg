@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Moyenne et médiane avec une valeur extrême, exemple fictif : dépôts de cinq stations en milliers de litres, 10, 12, 11, 13 et 54. Axe gradué de 0 à 60. La médiane de la série ordonnée 10, 11, 12, 13, 54 vaut 12 ; la moyenne, (10+12+11+13+54)/5, vaut 20. La valeur 54 tire la moyenne vers le haut, la médiane reste au centre du groupe.</title>
+<defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.cell{fill:#FFFFFF;stroke:#061F44;stroke-width:1.5}
+.hd{fill:#DCE6F5;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Moyenne et médiane : l'effet d'une valeur extrême</text>
+<text x="400" y="52" class="c" style="font-size:13px">Dépôts de cinq stations en une journée, en milliers de litres (valeurs fictives)</text>
+
+<!-- tableau -->
+<rect x="30" y="72" width="120" height="30" class="hd"/><text x="90" y="92" class="c b">Station</text>
+<rect x="150" y="72" width="100" height="30" class="hd"/><text x="200" y="92" class="c b">Dépôt</text>
+<g class="c">
+<rect x="30" y="102" width="120" height="28" class="cell"/><text x="90" y="121" class="c">Station 1</text><rect x="150" y="102" width="100" height="28" class="cell"/><text x="200" y="121" class="c">10</text>
+<rect x="30" y="130" width="120" height="28" class="cell"/><text x="90" y="149" class="c">Station 2</text><rect x="150" y="130" width="100" height="28" class="cell"/><text x="200" y="149" class="c">12</text>
+<rect x="30" y="158" width="120" height="28" class="cell"/><text x="90" y="177" class="c">Station 3</text><rect x="150" y="158" width="100" height="28" class="cell"/><text x="200" y="177" class="c">11</text>
+<rect x="30" y="186" width="120" height="28" class="cell"/><text x="90" y="205" class="c">Station 4</text><rect x="150" y="186" width="100" height="28" class="cell"/><text x="200" y="205" class="c">13</text>
+<rect x="30" y="214" width="120" height="28" class="cell"/><text x="90" y="233" class="c">Station 5</text><rect x="150" y="214" width="100" height="28" fill="#FFFFFF" stroke="#F28C28" stroke-width="3"/><text x="200" y="233" class="c o">54</text>
+</g>
+
+<!-- axe -->
+<text x="300" y="92" class="b">Position des cinq valeurs sur l'axe</text>
+<line x1="300" y1="200" x2="760" y2="200" stroke="#061F44" stroke-width="2.5"/>
+<g stroke="#061F44" stroke-width="2">
+<line x1="300" y1="194" x2="300" y2="206"/><line x1="376" y1="194" x2="376" y2="206"/><line x1="453" y1="194" x2="453" y2="206"/><line x1="530" y1="194" x2="530" y2="206"/><line x1="607" y1="194" x2="607" y2="206"/><line x1="683" y1="194" x2="683" y2="206"/><line x1="760" y1="194" x2="760" y2="206"/>
+</g>
+<g class="c" style="font-size:13px">
+<text x="300" y="226" class="c">0</text><text x="376" y="226" class="c">10</text><text x="453" y="226" class="c">20</text><text x="530" y="226" class="c">30</text><text x="607" y="226" class="c">40</text><text x="683" y="226" class="c">50</text><text x="760" y="226" class="c">60</text>
+</g>
+<!-- points: x = 300 + v*7.667 -->
+<circle cx="377" cy="200" r="8" fill="#061F44"/>
+<circle cx="392" cy="180" r="8" fill="#061F44"/>
+<circle cx="384" cy="160" r="8" fill="#061F44"/>
+<circle cx="400" cy="140" r="8" fill="#061F44"/>
+<circle cx="714" cy="200" r="9" fill="#F28C28" stroke="#B85C0A" stroke-width="2"/>
+<text x="714" y="176" class="c o">54</text>
+<text x="300" y="252" style="font-size:13px">litres déposés (milliers)</text>
+
+<!-- repères médiane et moyenne -->
+<line x1="392" y1="120" x2="392" y2="200" stroke="#061F44" stroke-width="3" stroke-dasharray="7 4"/>
+<line x1="453" y1="120" x2="453" y2="200" stroke="#F28C28" stroke-width="3.5"/>
+<text x="386" y="114" class="e b">Médiane = 12</text>
+<text x="460" y="114" class="o">Moyenne = 20</text>
+
+<!-- explications -->
+<rect x="30" y="290" width="355" height="170" rx="6" fill="#DCE6F5" stroke="#061F44" stroke-width="2"/>
+<text x="46" y="316" class="b">Médiane = 12</text>
+<text x="46" y="340">Série ordonnée : 10, 11, 12, 13, 54</text>
+<text x="46" y="362">La valeur du milieu est 12.</text>
+<text x="46" y="388">Quatre stations sur cinq sont proches</text>
+<text x="46" y="408">de 12 : la médiane décrit la situation</text>
+<text x="46" y="428">habituelle.</text>
+<rect x="415" y="290" width="355" height="170" rx="6" fill="#FFFFFF" stroke="#F28C28" stroke-width="2.5"/>
+<text x="431" y="316" class="o">Moyenne = 20</text>
+<text x="431" y="340">(10 + 12 + 11 + 13 + 54) / 5 = 20</text>
+<text x="431" y="362">Aucune station n'est proche de 20.</text>
+<text x="431" y="388">La seule valeur de 54 tire la moyenne</text>
+<text x="431" y="408">vers le haut : vérifier si c'est une vraie</text>
+<text x="431" y="428">valeur ou une erreur de saisie.</text>
+<text x="400" y="486" class="c" style="font-size:13px">Exemple fictif.</text>
+</svg>

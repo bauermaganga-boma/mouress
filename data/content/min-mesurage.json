@@ -13,7 +13,9 @@
     "La masse ne dépend pas de la température, le volume oui : m = ρ × V.",
     "Distinguer volume brut observé, volume brut standard et volume net standard.",
     "Un volume de gaz n'a de sens qu'avec ses conditions de pression et de température."
-   ]
+   ],
+   "img": "svg/min-produits-baril.svg",
+   "imgAlt": "Schéma des produits obtenus à partir de 100 barils de brut (rendements indicatifs donnés à titre d'exemple) : GPL et gaz 3, essences 28, kérosène 8, gazole 30, fioul lourd et résidus 28, autoconsommation et pertes 3."
   },
   {
    "id": "m2",
@@ -27,7 +29,9 @@
     "Une erreur de 1 °C sur un brut vaut environ 0,08 % sur le volume.",
     "Volume net standard = volume brut standard × (1 − eau et sédiments / 100).",
     "Gaz : correction en pression, en température et par le facteur de compressibilité."
-   ]
+   ],
+   "img": "svg/min2-ctrl-correction-volume.svg",
+   "imgAlt": "Schéma en trois étapes : un volume brut observé de 10 000 m³ lu à 45 °C est multiplié par un facteur de température de 0,976 pour donner un volume brut standard de 9 760 m³ à 15 °C, puis diminué de 0,4 % d'eau et de sédiments pour donner un volume net standard de 9 721 m³. Trois encadrés expliquent la température, la pression et l'eau et les sédiments."
   },
   {
    "id": "m3",
@@ -42,8 +46,8 @@
     "Le point de comptage fiscal est défini à l'article 9 et supervisé par le ministère (article 247).",
     "Paramètres du calculateur : scellés, journal d'événements et justificatif pour toute modification."
    ],
-   "img": "svg/min-point-comptage-fiscal.svg",
-   "imgAlt": "Schéma d'un point de comptage fiscal, de gauche à droite : séparateur, filtre, tronçon droit avec redresseur d'écoulement, compteur, sondes de température (T) et de pression (P), densimètre, préleveur automatique, puis stockage et enlèvement. Une dérivation en pointillés, avec une vanne fermée et plombée, contourne le compteur ; une boucle d'étalonnage avec le prouveur est montée en parallèle sous le compteur ; un calculateur de débit est placé en haut."
+   "img": "photo/ctrl-debitmetre-coriolis.jpg",
+   "imgAlt": "Photographie d'un compteur à effet Coriolis ouvert, posé sur une surface claire : on voit un tube métallique en forme de U fixé sur un support, relié au corps du compteur muni de deux raccords et d'une étiquette."
   },
   {
    "id": "m4",
@@ -57,7 +61,9 @@
     "Température : au moins trois hauteurs, puis moyenne.",
     "Quantité transférée = volume net standard après − volume net standard avant.",
     "Jauger uniquement bac isolé, niveau stabilisé, avec les parties présentes."
-   ]
+   ],
+   "img": "svg/min2-ctrl-jaugeage-bac.svg",
+   "imgAlt": "Coupe d'un bac de stockage : un ruban gradué part du point de référence en haut et descend jusqu'à la plaque de touche au fond. Le creux (5,50 m) va du point de référence à la surface du liquide, la hauteur de liquide (10,50 m) de la surface au fond, avec 0,35 m d'eau libre au fond et trois sondes de température (haut, milieu, bas). À droite, un extrait de barème de jaugeage (hauteur de liquide et volume brut) et les cinq étapes de la méthode."
   },
   {
    "id": "m5",
@@ -71,7 +77,9 @@
     "Récipient rempli à 80 % au plus, scellé et étiqueté ; échantillons témoins conservés.",
     "Masse volumique à l'aréomètre ou au tube oscillant, ramenée à 15 °C.",
     "Eau : Karl Fischer ou distillation ; eau et sédiments : centrifugation ; résultats contradictoires : enquête et échantillon témoin."
-   ]
+   ],
+   "img": "svg/min-point-comptage-fiscal.svg",
+   "imgAlt": "Schéma de principe d'un point de comptage fiscal : séparateur, filtre, longueur droite et redresseur, compteur avec sondes de température et de pression, densimètre, préleveur automatique, prouveur sur boucle d'étalonnage, dérivation plombée et calculateur de débit."
   },
   {
    "id": "m6",
@@ -101,7 +109,9 @@
     "Erreur normalisée En = (x1 − x2) / √(U1² + U2²) ; |En| ≤ 1 : résultats compatibles.",
     "Écart bord-terre et bilans : à comparer à la tolérance du contrat.",
     "Écarts toujours du même signe : biais systématique, donc enquête."
-   ]
+   ],
+   "img": "svg/min2-ctrl-justesse-fidelite.svg",
+   "imgAlt": "Quatre cibles de tir : juste et fidèle (points groupés au centre), fidèle mais pas juste (points groupés mais décalés du centre), juste mais pas fidèle (points dispersés autour du centre), ni juste ni fidèle (points dispersés et décalés). Deux encadrés définissent la justesse et la fidélité."
   },
   {
    "id": "m8",
@@ -221,7 +231,7 @@
    "id": "min-mesurage-007",
    "theme": "Grandeurs et unités",
    "level": 1,
-   "q": "Quel volume sert, en général, de base aux calculs fiscaux et commerciaux d'une cargaison de brut ?",
+   "q": "Sur le schéma, trois volumes se succèdent de gauche à droite. Lequel sert, en général, de base aux calculs fiscaux et commerciaux d'une cargaison de brut ?",
    "choices": [
     "Le volume brut observé, lu à la température du moment",
     "La capacité nominale du bac de chargement",
@@ -231,7 +241,9 @@
    "answer": 3,
    "explain": "Le volume net standard est ramené aux conditions de référence et débarrassé de l'eau et des sédiments. Le volume brut observé dépend des conditions du moment ; la capacité nominale d'un bac n'est pas une quantité mesurée ; le totalisateur brut doit être corrigé par le facteur de compteur.",
    "seconds": 40,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-ctrl-correction-volume.svg",
+   "imgAlt": "Schéma en trois étapes : un volume brut observé de 10 000 m³ lu à 45 °C est multiplié par un facteur de température de 0,976 pour donner un volume brut standard de 9 760 m³ à 15 °C, puis diminué de 0,4 % d'eau et de sédiments pour donner un volume net standard de 9 721 m³. Trois encadrés expliquent la température, la pression et l'eau et les sédiments."
   },
   {
    "id": "min-mesurage-008",
@@ -333,7 +345,7 @@
    "id": "min-mesurage-014",
    "theme": "Conditions standards et corrections",
    "level": 1,
-   "q": "À quoi sert le facteur de correction en température d'un liquide pétrolier ?",
+   "q": "Sur le schéma, le volume brut observé est multiplié par un facteur de température pour donner le volume brut standard. À quoi sert ce facteur de correction en température ?",
    "choices": [
     "À ramener le volume observé au volume à 15 °C",
     "À corriger la dérive du compteur par rapport à l'étalon",
@@ -343,7 +355,9 @@
    "answer": 0,
    "explain": "Le facteur de correction en température (tables ISO 91, API MPMS 11.1, ASTM D1250) ramène le volume à la température de référence. La dérive du compteur est corrigée par le facteur de compteur ; l'eau et les sédiments par la teneur mesurée en laboratoire ; la conversion en barils par le facteur 6,2898.",
    "seconds": 40,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-ctrl-correction-volume.svg",
+   "imgAlt": "Schéma en trois étapes : un volume brut observé de 10 000 m³ lu à 45 °C est multiplié par un facteur de température de 0,976 pour donner un volume brut standard de 9 760 m³ à 15 °C, puis diminué de 0,4 % d'eau et de sédiments pour donner un volume net standard de 9 721 m³. Trois encadrés expliquent la température, la pression et l'eau et les sédiments."
   },
   {
    "id": "min-mesurage-015",
@@ -397,17 +411,19 @@
    "id": "min-mesurage-018",
    "theme": "Conditions standards et corrections",
    "level": 2,
-   "q": "Un volume brut standard de 9 760 m³ de brut contient 0,4 % d'eau et sédiments. Quel est le volume net standard ?",
+   "q": "En suivant la dernière étape du schéma, un volume brut standard de 20 000 m³ de brut contient 0,5 % d'eau et sédiments. Quel est le volume net standard ?",
    "choices": [
-    "Environ 9 799,04 m³",
-    "Environ 9 760,0 m³",
-    "Environ 9 369,6 m³",
-    "Environ 9 721 m³"
+    "Environ 20 100 m³",
+    "Environ 20 000 m³",
+    "Environ 19 000 m³",
+    "Environ 19 900 m³"
    ],
    "answer": 3,
-   "explain": "Volume net = 9 760 × (1 − 0,4 / 100) = 9 760 × 0,996 ≈ 9 721 m³. 9 799 m³ ajoute l'eau au lieu de la retirer ; 9 760 m³ revient à ne pas déduire l'eau ; 9 370 m³ vient d'une erreur de virgule (4 % au lieu de 0,4 %).",
+   "explain": "Volume net = 20 000 × (1 − 0,5 / 100) = 19 900 m³. 20 100 m³ ajoute l'eau au lieu de la retirer ; 20 000 m³ revient à ne pas déduire l'eau ; 19 000 m³ vient d'une erreur de virgule (5 % au lieu de 0,5 %).",
    "seconds": 60,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-ctrl-correction-volume.svg",
+   "imgAlt": "Schéma en trois étapes : un volume brut observé de 10 000 m³ lu à 45 °C est multiplié par un facteur de température de 0,976 pour donner un volume brut standard de 9 760 m³ à 15 °C, puis diminué de 0,4 % d'eau et de sédiments pour donner un volume net standard de 9 721 m³. Trois encadrés expliquent la température, la pression et l'eau et les sédiments."
   },
   {
    "id": "min-mesurage-019",
@@ -461,17 +477,19 @@
    "id": "min-mesurage-022",
    "theme": "Débitmètres et comptage fiscal",
    "level": 1,
-   "q": "Quel type de compteur mesure directement le débit massique d'un liquide ?",
+   "q": "La photo montre un compteur de liquide ouvert, dont un tube métallique en U est fixé sur un support. De quel type de compteur s'agit-il, et que mesure-t-il directement ?",
    "choices": [
-    "Le compteur à effet Coriolis",
-    "Le compteur à turbine à hélice",
-    "Le compteur à ultrasons multicorde",
-    "La plaque à orifice calibrée"
+    "Un compteur à effet Coriolis : il mesure directement le débit massique",
+    "Une turbine à hélice : elle mesure le volume grâce à la vitesse du liquide",
+    "Un compteur à ultrasons : il mesure la vitesse du liquide dans la conduite",
+    "Une plaque à orifice : elle mesure une pression différentielle"
    ],
    "answer": 0,
-   "explain": "Le compteur à effet Coriolis mesure la masse et la masse volumique grâce à la vibration de tubes. La turbine et les ultrasons mesurent la vitesse ou le volume ; la plaque à orifice mesure une pression différentielle liée au débit volumique.",
+   "explain": "Le compteur à effet Coriolis fait vibrer des tubes, ici un tube en U : la masse et la masse volumique se déduisent de cette vibration, d'où une mesure directe du débit massique. La turbine et les ultrasons mesurent une vitesse ou un volume ; la plaque à orifice mesure une pression différentielle liée au débit volumique.",
    "seconds": 40,
-   "status": "draft"
+   "status": "draft",
+   "img": "photo/ctrl-debitmetre-coriolis.jpg",
+   "imgAlt": "Photographie d'un compteur à effet Coriolis ouvert, posé sur une surface claire : on voit un tube métallique en forme de U fixé sur un support, relié au corps du compteur muni de deux raccords et d'une étiquette."
   },
   {
    "id": "min-mesurage-023",
@@ -638,7 +656,7 @@
    "id": "min-mesurage-032",
    "theme": "Jaugeage de bacs",
    "level": 1,
-   "q": "Dans le jaugeage d'un bac, que désigne le « creux » ?",
+   "q": "Sur le schéma du bac, repérez la cote qui part du point de référence, en haut, et s'arrête à la surface du liquide. Que mesure cette cote ?",
    "choices": [
     "La hauteur de produit mesurée depuis le fond jusqu'à la surface",
     "La distance entre le point de référence et la surface du liquide dans le bac",
@@ -648,7 +666,9 @@
    "answer": 1,
    "explain": "Le creux (ou vide) est mesuré depuis le point de référence jusqu'à la surface du produit ; la mesure « en plein » est la hauteur de produit depuis le fond. L'eau libre se repère avec la pâte détectrice, et le volume mort est un autre concept lié à la tuyauterie.",
    "seconds": 40,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-ctrl-jaugeage-bac.svg",
+   "imgAlt": "Coupe d'un bac de stockage : un ruban gradué part du point de référence en haut et descend jusqu'à la plaque de touche au fond. Le creux (5,50 m) va du point de référence à la surface du liquide, la hauteur de liquide (10,50 m) de la surface au fond, avec 0,35 m d'eau libre au fond et trois sondes de température (haut, milieu, bas). À droite, un extrait de barème de jaugeage (hauteur de liquide et volume brut) et les cinq étapes de la méthode."
   },
   {
    "id": "min-mesurage-033",
@@ -670,7 +690,7 @@
    "id": "min-mesurage-034",
    "theme": "Jaugeage de bacs",
    "level": 1,
-   "q": "Quel document permet de convertir la hauteur de liquide lue dans un bac en volume ?",
+   "q": "Sur le schéma du bac, l'extrait de tableau placé à droite associe une hauteur de liquide à un volume. De quel document est-il tiré ?",
    "choices": [
     "Le certificat d'analyse de la masse volumique du produit",
     "Le rapport d'étalonnage du compteur de chargement",
@@ -680,7 +700,9 @@
    "answer": 3,
    "explain": "Le barème de jaugeage est le tableau hauteur-volume obtenu par la calibration du bac. Les autres documents traitent de la densité, du compteur ou de l'enlèvement, mais ne donnent pas la relation hauteur-volume du bac.",
    "seconds": 40,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-ctrl-jaugeage-bac.svg",
+   "imgAlt": "Coupe d'un bac de stockage : un ruban gradué part du point de référence en haut et descend jusqu'à la plaque de touche au fond. Le creux (5,50 m) va du point de référence à la surface du liquide, la hauteur de liquide (10,50 m) de la surface au fond, avec 0,35 m d'eau libre au fond et trois sondes de température (haut, milieu, bas). À droite, un extrait de barème de jaugeage (hauteur de liquide et volume brut) et les cinq étapes de la méthode."
   },
   {
    "id": "min-mesurage-035",
@@ -702,7 +724,7 @@
    "id": "min-mesurage-036",
    "theme": "Jaugeage de bacs",
    "level": 2,
-   "q": "Un bac à toit flottant est jaugé dans la zone où le toit repose sur le liquide. Le toit pèse 50 tonnes et le produit a une masse volumique de 800 kg/m³. Quelle est la correction de volume à appliquer ?",
+   "q": "Sur le schéma des deux réservoirs, le bac de droite est à toit flottant. Il est jaugé dans la zone où ce toit repose sur le liquide. Le toit pèse 50 tonnes et le produit a une masse volumique de 800 kg/m³. Quelle est la correction de volume à appliquer ?",
    "choices": [
     "40 m³ (masse du toit × masse volumique en t/m³)",
     "6,25 m³ (le dixième du volume exact)",
@@ -712,7 +734,9 @@
    "answer": 2,
    "explain": "Le toit déplace un volume égal à sa masse divisée par la masse volumique du produit : 50 000 kg / 800 kg/m³ = 62,5 m³. 40 m³ résulte d'une multiplication au lieu d'une division ; 6,25 et 625 m³ sont des erreurs d'un facteur dix.",
    "seconds": 75,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min-reservoir-toit-flottant.svg",
+   "imgAlt": "Coupe de deux réservoirs dans une cuvette de rétention : à gauche un bac à toit fixe avec soupape et espace vapeur, à droite un bac à toit flottant avec joint d'étanchéité, eau de fond avec purge, entrée et sortie du produit."
   },
   {
    "id": "min-mesurage-037",
@@ -734,7 +758,7 @@
    "id": "min-mesurage-038",
    "theme": "Jaugeage de bacs",
    "level": 2,
-   "q": "Les températures relevées dans un bac sont de 38 °C en haut, 36 °C au milieu et 33 °C en bas. Quelle température moyenne retenez-vous ?",
+   "q": "Sur le schéma du bac, trois relevés de température sont faits (en haut, au milieu et en bas) : 38 °C, 36 °C et 33 °C. Quelle température moyenne retenez-vous ?",
    "choices": [
     "Environ 35,7 °C",
     "38,0 °C, la température de la couche supérieure",
@@ -744,7 +768,9 @@
    "answer": 0,
    "explain": "On fait la moyenne des trois relevés : (38 + 36 + 33) / 3 ≈ 35,7 °C. Retenir une seule lecture ou ignorer une partie de la hauteur biaise la température moyenne du produit, donc la correction de volume.",
    "seconds": 60,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-ctrl-jaugeage-bac.svg",
+   "imgAlt": "Coupe d'un bac de stockage : un ruban gradué part du point de référence en haut et descend jusqu'à la plaque de touche au fond. Le creux (5,50 m) va du point de référence à la surface du liquide, la hauteur de liquide (10,50 m) de la surface au fond, avec 0,35 m d'eau libre au fond et trois sondes de température (haut, milieu, bas). À droite, un extrait de barème de jaugeage (hauteur de liquide et volume brut) et les cinq étapes de la méthode."
   },
   {
    "id": "min-mesurage-039",
@@ -1133,7 +1159,7 @@
    "id": "min-mesurage-062",
    "theme": "Écarts et incertitudes",
    "level": 1,
-   "q": "Des mesures répétées sont très groupées, mais toutes éloignées de la valeur vraie. Que traduit cette situation ?",
+   "q": "Sur le schéma des quatre cibles, l'une montre des points très groupés mais tous éloignés du centre, qui représente la valeur vraie. Que traduit cette situation ?",
    "choices": [
     "Une bonne fidélité mais une mauvaise justesse : un biais",
     "Une bonne justesse mais une mauvaise fidélité : une dispersion",
@@ -1143,7 +1169,9 @@
    "answer": 0,
    "explain": "Des résultats groupés dénotent une bonne fidélité (faible dispersion) ; leur éloignement de la valeur vraie dénote un biais, c'est-à-dire une mauvaise justesse. Les trois autres lectures inversent ou confondent les deux notions.",
    "seconds": 60,
-   "status": "draft"
+   "status": "draft",
+   "img": "svg/min2-ctrl-justesse-fidelite.svg",
+   "imgAlt": "Quatre cibles de tir : juste et fidèle (points groupés au centre), fidèle mais pas juste (points groupés mais décalés du centre), juste mais pas fidèle (points dispersés autour du centre), ni juste ni fidèle (points dispersés et décalés). Deux encadrés définissent la justesse et la fidélité."
   },
   {
    "id": "min-mesurage-063",

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Trois façons de se connecter en déplacement. En haut, Wi-Fi public sans protection : l'ordinateur passe par le Wi-Fi de l'hôtel, où une personne malveillante peut observer le trafic ou installer un faux réseau portant le même nom, avant d'atteindre le réseau du ministère. Au milieu, avec le réseau privé virtuel (RPV) du ministère : les échanges sont chiffrés entre l'appareil et le réseau interne, donc illisibles pour l'observateur. En bas, le partage de connexion du téléphone professionnel, qui évite le Wi-Fi public.</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.wh{fill:#FFFFFF;stroke:#061F44;stroke-width:2.5}
+.wn{fill:#FFFFFF;stroke:#F28C28;stroke-width:3}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Se connecter hors des locaux : Wi-Fi public, RPV, partage de connexion</text>
+
+<!-- ligne 1 : wifi public -->
+<text x="30" y="60" class="o">1. Wi-Fi public sans protection : à éviter pour un document sensible</text>
+<rect x="30" y="72" width="140" height="64" rx="6" class="bl"/><text x="100" y="100" class="c b">Ordinateur</text><text x="100" y="120" class="c">en mission</text>
+<path d="M172,104H258" class="or" marker-end="url(#ao)"/>
+<rect x="260" y="72" width="150" height="64" rx="6" class="gr"/><text x="335" y="100" class="c b">Wi-Fi de l'hôtel</text><text x="335" y="120" class="c">ouvert à tous</text>
+<path d="M412,104H578" class="or" marker-end="url(#ao)"/>
+<text x="495" y="94" class="c o">trafic lisible</text>
+<rect x="580" y="72" width="190" height="64" rx="6" class="wh"/><text x="675" y="100" class="c b">Réseau du ministère</text><text x="675" y="120" class="c">interne</text>
+<rect x="225" y="150" width="220" height="30" rx="15" class="wn"/>
+<text x="335" y="170" class="c o">observateur ou faux Wi-Fi</text>
+<path d="M335,150V138" class="or" marker-end="url(#ao)"/>
+
+<!-- ligne 2 : rpv -->
+<text x="30" y="214" class="b">2. Avec le RPV du ministère : échanges chiffrés</text>
+<rect x="172" y="248" width="598" height="20" rx="10" fill="#F28C28" opacity="0.35"/>
+<path d="M172,258H578" class="nv" marker-end="url(#ar)"/>
+<rect x="30" y="226" width="140" height="64" rx="6" class="bl"/><text x="100" y="254" class="c b">Ordinateur</text><text x="100" y="274" class="c">avec RPV</text>
+<rect x="260" y="226" width="150" height="64" rx="6" class="gr"/><text x="335" y="254" class="c b">Wi-Fi de l'hôtel</text><text x="335" y="274" class="c">toujours public</text>
+<text x="495" y="244" class="c b">tunnel chiffré (RPV)</text>
+<rect x="580" y="226" width="190" height="64" rx="6" class="wh"/><text x="675" y="254" class="c b">Réseau du ministère</text><text x="675" y="274" class="c">interne</text>
+<text x="335" y="312" class="c" style="font-size:13px">l'observateur ne voit que du trafic chiffré</text>
+
+<!-- ligne 3 : partage de connexion -->
+<text x="30" y="352" class="b">3. Partage de connexion du téléphone professionnel : on évite le Wi-Fi public</text>
+<rect x="30" y="364" width="140" height="64" rx="6" class="bl"/><text x="100" y="392" class="c b">Ordinateur</text><text x="100" y="412" class="c">en mission</text>
+<path d="M172,396H258" class="nv" marker-end="url(#ar)"/>
+<rect x="260" y="364" width="150" height="64" rx="6" class="gr"/><text x="335" y="392" class="c b">Téléphone</text><text x="335" y="412" class="c">professionnel</text>
+<path d="M412,396H508" class="nv" marker-end="url(#ar)"/>
+<rect x="510" y="364" width="120" height="64" rx="6" class="gr"/><text x="570" y="392" class="c b">Réseau</text><text x="570" y="412" class="c">mobile</text>
+<path d="M632,396H678" class="nv" marker-end="url(#ar)"/>
+<rect x="680" y="364" width="90" height="64" rx="6" class="wh"/><text x="725" y="392" class="c b">Réseau</text><text x="725" y="412" class="c">interne</text>
+
+<rect x="30" y="450" width="740" height="34" rx="6" class="bl"/>
+<text x="400" y="472" class="c b">Toujours : adresse en https (cadenas), disque chiffré, appareil jamais sans surveillance</text>
+</svg>

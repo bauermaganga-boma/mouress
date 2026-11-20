@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Plan de site fictif : une fuite de gaz sur l'unité de traitement, un nuage qui dérive vers l'est sous un vent d'ouest, deux zones d'effets circulaires, une salle de contrôle sur la trajectoire du nuage, un second stockage avec sa propre zone et quatre points candidats A, B, C et D pour le rassemblement</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.o{fill:#B85C0A;font-weight:bold}
+.pt{fill:#061F44;stroke:#FCFBF8;stroke-width:2}
+.pl{font-size:16px;font-weight:bold;fill:#FCFBF8;text-anchor:middle}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Plan de site : fuite de gaz et points de rassemblement</text>
+
+<!-- limite du site -->
+<rect x="40" y="48" width="720" height="398" fill="none" stroke="#061F44" stroke-width="2" stroke-dasharray="10 6"/>
+<text x="50" y="438" class="b">Limite du site</text>
+
+<!-- routes -->
+<path d="M360,48V125H760" fill="none" stroke="#B9BEC8" stroke-width="9"/>
+<text x="560" y="118" class="c" style="fill:#5A6578">Routes d'accès</text>
+
+<!-- zones d'effets unité 1 -->
+<circle cx="190" cy="255" r="120" fill="#DCE6F5" fill-opacity="0.65" stroke="#061F44" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="190" cy="255" r="70" fill="#F28C28" fill-opacity="0.35" stroke="#B85C0A" stroke-width="2.5"/>
+
+<!-- nuage -->
+<path d="M225,255L600,185Q615,255 600,325Z" fill="#F28C28" fill-opacity="0.22" stroke="#B85C0A" stroke-width="2" stroke-dasharray="3 4"/>
+<text x="470" y="222" class="o">Nuage de gaz</text>
+
+<!-- unité 1 -->
+<rect x="160" y="238" width="60" height="34" class="" fill="#E8EAEE" stroke="#061F44" stroke-width="2.5"/>
+<text x="190" y="300" class="c b">Unité de traitement</text>
+<polygon points="190,205 195,216 207,216 197,223 201,235 190,228 179,235 183,223 173,216 185,216" fill="#F28C28" stroke="#B85C0A" stroke-width="1.5" transform="translate(0,-4)"/>
+<text x="212" y="214" class="o">Fuite</text>
+
+<!-- salle de contrôle -->
+<rect x="332" y="238" width="62" height="34" fill="#DCE6F5" stroke="#061F44" stroke-width="2.5"/>
+<text x="363" y="262" class="c" style="font-size:13px">Contrôle</text>
+<text x="363" y="292" class="c b">Salle de contrôle</text>
+<text x="363" y="312" class="c o">Vous êtes ici</text>
+
+<!-- unité 2 -->
+<circle cx="650" cy="390" r="55" fill="#DCE6F5" fill-opacity="0.65" stroke="#061F44" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="622" y="373" width="56" height="34" fill="#E8EAEE" stroke="#061F44" stroke-width="2.5"/>
+<text x="650" y="466" class="c b">Stockage (autre scénario)</text>
+
+<!-- points candidats -->
+<circle cx="360" cy="125" r="17" class="pt"/><text x="360" y="131" class="pl">A</text>
+<circle cx="560" cy="255" r="17" class="pt"/><text x="560" y="261" class="pl">B</text>
+<circle cx="190" cy="360" r="17" class="pt"/><text x="190" y="366" class="pl">C</text>
+<circle cx="650" cy="352" r="17" class="pt"/><text x="650" y="358" class="pl">D</text>
+
+<!-- vent -->
+<path d="M70,90H230" stroke="#061F44" stroke-width="3.5" fill="none" marker-end="url(#ar)"/>
+<text x="70" y="80" class="b">Vent d'ouest : le nuage dérive vers l'est</text>
+
+<!-- légende -->
+<rect x="440" y="62" width="14" height="14" fill="#F28C28" fill-opacity="0.35" stroke="#B85C0A"/>
+<text x="460" y="74">Effets létaux</text>
+<rect x="560" y="62" width="14" height="14" fill="#DCE6F5" stroke="#061F44" stroke-dasharray="3 2"/>
+<text x="580" y="74">Effets irréversibles</text>
+<text x="40" y="490" class="b">Schéma fictif, distances d'exemple, hors échelle</text>
+</svg>

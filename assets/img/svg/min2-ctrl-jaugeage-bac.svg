@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Jaugeage d'un bac de stockage : point de référence, creux, hauteur de liquide, eau libre, températures et extrait de barème de jaugeage (exemple fictif)</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}.n{font-size:13px}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+
+<text x="400" y="30" class="h">Jaugeage d'un bac : du creux au volume</text>
+<text x="245" y="68" class="c b">Point de référence</text>
+<path d="M245,73V95" class="ld" marker-end="url(#ar)"/>
+<rect x="170" y="95" width="150" height="330" class="s"/>
+<rect x="171" y="208" width="148" height="216" fill="#DCE6F5"/>
+<rect x="171" y="385" width="148" height="39" fill="#E8EAEE"/>
+<path d="M171,385H319" stroke="#061F44" stroke-width="1.5" stroke-dasharray="5 4"/>
+<path d="M171,208H319" stroke="#061F44" stroke-width="2"/>
+<path d="M245,95V410" stroke="#F28C28" stroke-width="3"/>
+<path d="M245,410l-7,10h14z" fill="#F28C28"/>
+<rect x="215" y="420" width="60" height="5" fill="#061F44"/>
+<text x="245" y="448" class="c n">Plaque de touche (fond du bac)</text>
+<path d="M155,95H185M155,208H185M155,425H185" class="ld"/>
+<path d="M165,98V205" class="nv" marker-start="url(#ar)" marker-end="url(#ar)" stroke-width="2"/>
+<path d="M165,211V422" class="nv" marker-start="url(#ar)" marker-end="url(#ar)" stroke-width="2"/>
+<text x="150" y="146" class="e b">Creux</text><text x="150" y="163" class="e n">5,50 m</text>
+<text x="150" y="312" class="e b">Hauteur de</text><text x="150" y="329" class="e b">liquide</text><text x="150" y="346" class="e n">10,50 m</text>
+<circle cx="300" cy="250" r="5" fill="#B85C0A"/><circle cx="300" cy="305" r="5" fill="#B85C0A"/><circle cx="300" cy="360" r="5" fill="#B85C0A"/>
+<text x="332" y="255" class="n">T haut</text><text x="332" y="310" class="n">T milieu</text><text x="332" y="365" class="n">T bas</text>
+<text x="332" y="408" class="n o">Eau libre : 0,35 m</text>
+<text x="332" y="426" class="n">(pâte détectrice)</text>
+<text x="332" y="126" class="n">Ruban orange</text>
+<text x="332" y="143" class="n">et plomb jusqu'au fond</text>
+<text x="470" y="95" class="b">Extrait de barème de jaugeage</text>
+<rect x="470" y="105" width="310" height="28" class="gr"/>
+<text x="480" y="124" class="b n">Hauteur de liquide (m)</text><text x="770" y="124" class="b n e">Volume brut (m³)</text>
+<rect x="470" y="133" width="310" height="28" fill="#FCFBF8" stroke="#061F44" stroke-width="2"/>
+<text x="480" y="152" class="n">10,40</text><text x="770" y="152" class="n e">8 320</text>
+<rect x="470" y="161" width="310" height="28" fill="#F28C28" fill-opacity="0.3" stroke="#061F44" stroke-width="2"/>
+<text x="480" y="180" class="n b">10,50</text><text x="770" y="180" class="n b e">8 400</text>
+<rect x="470" y="189" width="310" height="28" fill="#FCFBF8" stroke="#061F44" stroke-width="2"/>
+<text x="480" y="208" class="n">10,60</text><text x="770" y="208" class="n e">8 480</text>
+<text x="470" y="256" class="b">Méthode</text>
+<text x="470" y="282" class="n">1. Mesurer le creux ou la hauteur au ruban</text>
+<text x="470" y="306" class="n">2. Repérer l'eau libre à la pâte détectrice</text>
+<text x="470" y="330" class="n">3. Relever les températures à 3 niveaux</text>
+<text x="470" y="354" class="n">4. Lire le volume brut au barème du bac</text>
+<text x="470" y="378" class="n">5. Retrancher l'eau libre, corriger à 15 °C</text>
+<text x="470" y="414" class="n o">Hauteur de référence = creux + hauteur de liquide</text>
+<text x="400" y="486" class="c n">Schéma d'illustration : valeurs fictives, non à l'échelle.</text>
+</svg>

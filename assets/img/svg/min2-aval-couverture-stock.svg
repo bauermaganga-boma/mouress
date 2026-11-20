@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="ttl">
+<title id="ttl">Courbe fictive du stock d'un dépôt de gasoil : 12 000 m³ au départ, baisse de 2 000 m³ par jour, seuil du stock de sécurité à 4 000 m³ atteint au jour 4, stock de 2 000 m³ au jour 5 avant l'arrivée d'un navire de 10 000 m³</title>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#061F44"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto"><path d="M0,0L10,5L0,10z" fill="#F28C28"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;font-size:14px;fill:#061F44}
+.h{font-size:20px;font-weight:bold;text-anchor:middle}
+.b{font-weight:bold}.c{text-anchor:middle}.e{text-anchor:end}.o{fill:#B85C0A;font-weight:bold}.n{font-size:13px}.w{fill:#FCFBF8;font-weight:bold}
+.s{fill:none;stroke:#061F44;stroke-width:2.5}
+.bl{fill:#DCE6F5;stroke:#061F44;stroke-width:2.5}
+.gr{fill:#E8EAEE;stroke:#061F44;stroke-width:2.5}
+.or{fill:none;stroke:#F28C28;stroke-width:3.5}
+.nv{fill:none;stroke:#061F44;stroke-width:3.5}
+.ld{fill:none;stroke:#061F44;stroke-width:1.5}
+.gd{fill:none;stroke:#D5D9E0;stroke-width:1.5}
+.da{fill:none;stroke:#B85C0A;stroke-width:2.5;stroke-dasharray:8 6}
+</style>
+</defs>
+<rect width="800" height="500" fill="#FCFBF8"/>
+<text x="400" y="30" class="h">Jours de couverture d'un stock de gasoil (exemple fictif)</text>
+<text x="400" y="52" class="c o">EXEMPLE FICTIF : consommation de 2 000 m³ par jour</text>
+<path d="M90,400.0H720" class="gd"/><text x="82" y="405.0" class="e">0</text>
+<path d="M90,296.7H720" class="gd"/><text x="82" y="301.7" class="e">4 000</text>
+<path d="M90,193.3H720" class="gd"/><text x="82" y="198.3" class="e">8 000</text>
+<path d="M90,90.0H720" class="gd"/><text x="82" y="95.0" class="e">12 000</text>
+<path d="M90,400V406" class="ld"/><text x="90" y="424" class="c">0</text>
+<path d="M216,400V406" class="ld"/><text x="216" y="424" class="c">2</text>
+<path d="M342,400V406" class="ld"/><text x="342" y="424" class="c">4</text>
+<path d="M468,400V406" class="ld"/><text x="468" y="424" class="c">6</text>
+<path d="M594,400V406" class="ld"/><text x="594" y="424" class="c">8</text>
+<path d="M720,400V406" class="ld"/><text x="720" y="424" class="c">10</text>
+<path d="M90,90V400H720" class="s"/>
+<text x="400" y="448" class="c b">Jours écoulés depuis le début du suivi</text>
+<text x="20" y="250" transform="rotate(-90 20 250)" class="c b">Stock utilisable (m³)</text>
+<path d="M90,296.6666666666667H720" class="da"/>
+<text x="100" y="288.6666666666667" class="o">Seuil du stock de sécurité : 4 000 m³</text>
+<path d="M90,90L405,348.3L405,90L720,348.3" fill="none" stroke="#061F44" stroke-width="3.5"/>
+<circle cx="90" cy="90" r="6" fill="#061F44"/>
+<circle cx="342" cy="296.7" r="7" fill="#F28C28" stroke="#061F44" stroke-width="2"/>
+<circle cx="405" cy="348.3" r="7" fill="#B85C0A" stroke="#061F44" stroke-width="2"/>
+<text x="100" y="80" class="b">Début : 12 000 m³</text>
+<path d="M413,342.3333333333333V100" class="or" marker-end="url(#ao)"/>
+<text x="391" y="130" class="b e">Arrivée d'un navire</text>
+<text x="391" y="148" class="n e">au jour 5 : + 10 000 m³</text>
+<text x="334" y="322.6666666666667" class="e n">Jour 4 : 4 000 m³</text>
+<text x="397" y="370.3333333333333" class="e o">Jour 5 : 2 000 m³, sous le seuil</text>
+<rect x="500" y="92" width="220" height="58" rx="8" class="bl"/>
+<text x="510" y="114" class="b">Jours de couverture =</text>
+<text x="510" y="134" class="b">stock ÷ consommation par jour</text>
+<text x="400" y="480" class="c n">Valeurs fictives, pour s'exercer. Le stock baisse de 2 000 m³ chaque jour entre deux livraisons.</text>
+</svg>

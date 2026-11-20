@@ -13,7 +13,9 @@
         "Sel aptien : couverture du pré-sel et source de difficultés d'imagerie pour le post-sel.",
         "Zone conventionnelle (0 à 500 m) et mer profonde (au-delà de 500 m) : définitions de l'article 9 de la loi n° 002/2019.",
         "Un analogue (Rabi-Kounga, Diaman-1) n'est valable que si réservoir, piège et charge sont comparables."
-      ]
+      ],
+      "img": "photo/min-amont-affleurement-schiste-gres.jpg",
+      "imgAlt": "Photo d'un affleurement aux États-Unis (exemple hors Gabon) : des bancs de grès clair redressés forment des crêtes, bordés de pentes de schiste gris-beige, sous un ciel bleu. On y lit en surface l'alternance de roches réservoirs et de roches argileuses."
     },
     {
       "id": "m2",
@@ -43,7 +45,9 @@
         "Une fermeture inférieure à l'incertitude de conversion n'est pas démontrée.",
         "Sous le sel ou un carbonate rapide, la remontée apparente peut créer de fausses structures.",
         "Une anomalie d'amplitude est un indice, jamais une preuve d'hydrocarbures."
-      ]
+      ],
+      "img": "svg/min2-amont-vitesse-remontee.svg",
+      "imgAlt": "Deux sections côte à côte : en temps double, un horizon réellement plat situé sous un corps rapide apparaît relevé en voûte (fausse structure) ; en profondeur, après conversion avec un modèle de vitesse, il est plat. Rappel : profondeur = vitesse moyenne × temps double ÷ 2."
     },
     {
       "id": "m4",
@@ -89,7 +93,9 @@
         "Toute conclusion doit renvoyer à une donnée ; recalculer les volumes avec les paramètres annoncés.",
         "Un changement de paramètre non justifié (Sw, épaisseur utile, surface) est un signal d'alerte.",
         "Distinguer le mesuré, le calculé et le supposé ; terminer par des demandes précises et datées."
-      ]
+      ],
+      "img": "svg/min2-amont-courbe-p90-p10.svg",
+      "imgAlt": "Courbe de probabilité de dépassement d'un volume de prospect (valeurs fictives) : P90 = 20 millions de barils, P50 = 60, P10 = 150 ; la probabilité de dépasser le volume diminue quand le volume augmente."
     },
     {
       "id": "m7",
@@ -103,7 +109,9 @@
         "Inexécution : pénalité proportionnelle à l'engagement financier minimum (art. 270).",
         "Retard de transmission des données : pénalité de 500 000 à 5 000 000 de francs CFA après mise en demeure de 15 jours (art. 267).",
         "Comités techniques de suivi : pénalité de 10 à 100 millions de francs CFA en cas de refus malgré mise en demeure (art. 277)."
-      ]
+      ],
+      "img": "svg/min2-amont-durees-titres.svg",
+      "imgAlt": "Frise des durées et délais clés : autorisation de prospection 18 mois au plus ; exploration 8 ans plus 1 an de prorogation, plafond de 10 ans ; appréciation sous 18 ou 24 mois ; installations sous 2 ans ; durées de développement-production de 25 à 35 ans au maximum selon le cas."
     },
     {
       "id": "m8",
@@ -117,7 +125,9 @@
         "Cadastre : cartographie des blocs (art. 9), tenu par le Ministère, informations de blocs et titres publiées selon la réglementation (art. 15).",
         "Retard de transmission : mise en demeure de 15 jours puis pénalité de 500 000 à 5 000 000 de francs CFA (art. 267).",
         "Un lot de données est exploitable seulement avec ses métadonnées et ses rapports d'acquisition."
-      ]
+      ],
+      "img": "svg/min-cycle-vie-donnee.svg",
+      "imgAlt": "Cycle de vie d'une donnée pétrolière en six étapes : acquisition, remise au Ministère au fur et à mesure avec métadonnées et bordereau, contrôle qualité, conservation, période de confidentialité, accès contrôlé en salle de données."
     }
   ],
   "questions": [
@@ -378,7 +388,7 @@
       "id": "min-geologie-012",
       "theme": "Sismique 2D et 3D : acquisition et traitement",
       "level": 1,
-      "q": "Quelles sont les sources sismiques les plus courantes en mer et à terre ?",
+      "q": "Le navire de la photo, vu à quai, remorque en campagne un réseau de sources et de longs câbles récepteurs. Quelles sont les sources sismiques les plus courantes en mer et leurs équivalents à terre ?",
       "choices": [
         "Lasers en mer, associés à des marteaux-piqueurs à terre pour frapper le sol de façon répétée",
         "Canons à air en mer ; camions vibrateurs ou charges explosives à terre",
@@ -386,9 +396,11 @@
         "Magnétomètres en mer ; gravimètres à terre"
       ],
       "answer": 1,
-      "explain": "Les canons à air (mer) et les vibrateurs ou explosifs (terre) sont les sources de la sismique réflexion. Les autres appareils appartiennent à des méthodes différentes ou n'émettent pas d'énergie acoustique utilisable.",
+      "explain": "Les canons à air (mer) et les vibrateurs ou explosifs (terre) sont les sources de la sismique réflexion. Les autres appareils appartiennent à des méthodes différentes ou n'émettent pas d'énergie acoustique utilisable. La photo montre un navire sismique : c'est lui qui tracte les canons à air et les flûtes réceptrices.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "photo/min-amont-navire-sismique.jpg",
+      "imgAlt": "Photo d'un navire sismique à quai dans un port : coque crème et rouge, passerelle à l'avant, deux grues à l'arrière, grand pont de travail dégagé et héliport ; aucune flûte n'est déployée."
     },
     {
       "id": "min-geologie-013",
@@ -545,7 +557,7 @@
       "id": "min-geologie-022",
       "theme": "Interprétation sismique et incertitudes",
       "level": 1,
-      "q": "Que faut-il obligatoirement pour convertir une carte en temps en carte en profondeur ?",
+      "q": "Sur le schéma, la section en temps double est convertie en section en profondeur (flèche « conversion »). Que faut-il obligatoirement pour réaliser cette conversion ?",
       "choices": [
         "Un modèle de prix du pétrole",
         "Une carte topographique du fond marin seulement",
@@ -553,9 +565,11 @@
         "Un inventaire des navires"
       ],
       "answer": 2,
-      "explain": "La profondeur se calcule à partir du temps et de la vitesse. Sans modèle de vitesse, la conversion n'est pas possible, et l'incertitude sur la vitesse devient une incertitude sur la profondeur.",
+      "explain": "La profondeur se calcule à partir du temps et de la vitesse. Sans modèle de vitesse, la conversion n'est pas possible, et l'incertitude sur la vitesse devient une incertitude sur la profondeur. Le schéma le résume : profondeur = vitesse moyenne × temps double ÷ 2.",
       "seconds": 40,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-amont-vitesse-remontee.svg",
+      "imgAlt": "Deux sections reliées par une flèche « conversion » : à gauche en temps double avec un horizon relevé sous un corps rapide, à droite en profondeur avec un horizon plat ; la formule profondeur = vitesse moyenne × temps double ÷ 2 figure en bas."
     },
     {
       "id": "min-geologie-023",
@@ -633,7 +647,7 @@
       "id": "min-geologie-027",
       "theme": "Interprétation sismique et incertitudes",
       "level": 2,
-      "q": "Sous un corps rapide (sel ou carbonate), les réflecteurs profonds paraissent plus hauts en temps. Quel risque en découle ?",
+      "q": "Sur la section en temps du schéma, l'horizon situé sous le corps rapide apparaît relevé en voûte alors qu'il est plat sur la section en profondeur. Quel risque en découle ?",
       "choices": [
         "Une disparition totale du signal sismique au-dessous du corps rapide, qui devient opaque",
         "Une augmentation de la porosité",
@@ -643,7 +657,9 @@
       "answer": 2,
       "explain": "Cette remontée apparente est un effet de vitesse : l'onde traverse plus vite le corps rapide, donc revient plus tôt. Elle peut créer des structures qui n'existent pas en profondeur.",
       "seconds": 70,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-amont-vitesse-remontee.svg",
+      "imgAlt": "À gauche, section en temps double : un horizon orange en voûte sous un corps rapide gris ; à droite, section en profondeur : le même horizon est parfaitement plat, donc sans fermeture réelle."
     },
     {
       "id": "min-geologie-028",
@@ -740,7 +756,7 @@
       "id": "min-geologie-033",
       "theme": "Diagraphies et carottes",
       "level": 1,
-      "q": "Quelle est la différence entre une carotte et des déblais de forage ?",
+      "q": "Sur la photo, des cylindres de roche continus sont rangés dans des caisses en bois et repérés par leur profondeur. Quelle est la différence entre ce type d'échantillon et des déblais de forage ?",
       "choices": [
         "La carotte est un échantillon de boue séchée au laboratoire ; les déblais sont des cylindres de roche prélevés",
         "Il n'y a aucune différence",
@@ -748,9 +764,11 @@
         "Les déblais sont prélevés après forage, la carotte avant"
       ],
       "answer": 2,
-      "explain": "La carotte conserve la structure de la roche et permet des mesures précises ; les déblais sont mélangés et d'origine moins précise. Les deux sont des échantillons de roche, pas de boue.",
+      "explain": "La carotte conserve la structure de la roche et permet des mesures précises ; les déblais sont mélangés et d'origine moins précise. Les deux sont des échantillons de roche, pas de boue. La photo montre des carottes : des cylindres de roche continus, rangés et repérés en profondeur.",
       "seconds": 45,
-      "status": "draft"
+      "status": "draft",
+      "img": "photo/min-amont-carottes-caisses.jpg",
+      "imgAlt": "Photo de deux caisses en bois superposées contenant dix longs cylindres de roche grise (carottes), rangés en lignes, avec des repères de profondeur écrits à la main (exemple hors Gabon)."
     },
     {
       "id": "min-geologie-034",
@@ -854,7 +872,7 @@
       "id": "min-geologie-040",
       "theme": "Diagraphies et carottes",
       "level": 3,
-      "q": "Un opérateur veut envoyer les carottes à l'étranger pour analyse, puis les détruire. Quelle est la position à adopter ?",
+      "q": "Un opérateur veut envoyer à l'étranger, pour analyse, puis détruire des carottes comme celles de la photo, rangées en caisses et repérées par profondeur. Quelle est la position à adopter ?",
       "choices": [
         "Autoriser librement, car les carottes appartiennent à l'opérateur",
         "Subordonner tout envoi ou toute destruction à l'accord de l'administration, exiger les résultats d'analyse et vérifier le contrat",
@@ -871,7 +889,9 @@
           "art": "art. 10 et art. 12",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "photo/min-amont-carottes-caisses.jpg",
+      "imgAlt": "Photo de deux caisses en bois contenant dix longs cylindres de roche grise (carottes), rangés en lignes et repérés par des étiquettes de profondeur (exemple hors Gabon)."
     },
     {
       "id": "min-geologie-041",
@@ -911,7 +931,7 @@
       "id": "min-geologie-043",
       "theme": "Évaluation du potentiel d'un bloc",
       "level": 1,
-      "q": "Que signifie un volume P90 ?",
+      "q": "Sur la courbe de probabilité du schéma (valeurs fictives), le repère P90 est placé en haut de la courbe, pour un faible volume. Que signifie un volume P90 ?",
       "choices": [
         "Une valeur dépassée seulement dans 10 % des cas, donc une estimation haute",
         "La valeur du baril en dollars",
@@ -921,7 +941,9 @@
       "answer": 3,
       "explain": "P90 est le quantile à 90 % de probabilité de dépassement : l'estimation prudente. P10 est l'estimation haute, P50 la médiane. Aucune de ces valeurs n'est une certitude.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-amont-courbe-p90-p10.svg",
+      "imgAlt": "Courbe de probabilité de dépassement d'un volume en millions de barils : P90 = 20 en haut à gauche (90 % de probabilité), P50 = 60 au milieu, P10 = 150 en bas à droite (10 % de probabilité)."
     },
     {
       "id": "min-geologie-044",
@@ -1087,7 +1109,7 @@
       "id": "min-geologie-053",
       "theme": "Lecture critique d'un rapport d'exploration",
       "level": 1,
-      "q": "Pourquoi demander une fourchette P90 à P10 plutôt qu'un chiffre unique ?",
+      "q": "Sur la courbe de probabilité du schéma, le volume du prospect change fortement selon le niveau de confiance retenu. Pourquoi demander une fourchette P90 à P10 plutôt qu'un chiffre unique ?",
       "choices": [
         "Parce que les paramètres sont incertains et que l'incertitude doit être visible",
         "Parce que la loi interdit les chiffres uniques",
@@ -1097,7 +1119,9 @@
       "answer": 0,
       "explain": "Une estimation honnête indique le domaine des valeurs plausibles. Un chiffre unique masque le risque. Aucun texte n'interdit les chiffres uniques et P50 est la médiane, pas une erreur.",
       "seconds": 50,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min2-amont-courbe-p90-p10.svg",
+      "imgAlt": "Courbe de probabilité de dépassement d'un volume en millions de barils (valeurs fictives) avec trois repères : P90 = 20, P50 = 60, P10 = 150 ; l'écart entre P90 et P10 est large."
     },
     {
       "id": "min-geologie-054",
@@ -1289,7 +1313,7 @@
       "id": "min-geologie-063",
       "theme": "Programme minimum de travaux et suivi",
       "level": 1,
-      "q": "Quelle est la durée de la période d'exploration prévue à l'article 83 ?",
+      "q": "Sur la frise des durées, la barre de l'exploration comprend une période initiale, une prorogation et un plafond en pointillés. Quelle est la durée de la période d'exploration prévue à l'article 83 ?",
       "choices": [
         "Trois ans, non prorogeable, puis passage obligatoire à la phase de production",
         "Huit ans, prorogeable d'un an, dix ans au maximum avec les extensions",
@@ -1306,7 +1330,9 @@
           "art": "art. 83",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min2-amont-durees-titres.svg",
+      "imgAlt": "Frise des durées : la barre d'exploration compte 8 ans (bleu), 1 an de prorogation (orange) et un plafond de 10 ans en pointillés, au-dessus des barres de développement-production plus longues."
     },
     {
       "id": "min-geologie-064",
@@ -1489,7 +1515,7 @@
       "id": "min-geologie-072",
       "theme": "Restitution des données à l'État et cadastre",
       "level": 1,
-      "q": "Quand le contracteur doit-il transmettre ses données au Ministère ?",
+      "q": "Sur le schéma du cycle de vie d'une donnée, repérez l'étape de remise au Ministère. Quand le contracteur doit-il transmettre ses données ?",
       "choices": [
         "Seulement à la fin du contrat, lors de l'arrêt de l'exploration",
         "Seulement sur demande de la presse",
@@ -1506,7 +1532,9 @@
           "art": "art. 12",
           "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
         }
-      ]
+      ],
+      "img": "svg/min-cycle-vie-donnee.svg",
+      "imgAlt": "Cycle de vie d'une donnée en six étapes ; la deuxième étape, remise au Ministère, est indiquée « au fur et à mesure » avec métadonnées et bordereau."
     },
     {
       "id": "min-geologie-073",
@@ -1597,7 +1625,7 @@
       "id": "min-geologie-077",
       "theme": "Restitution des données à l'État et cadastre",
       "level": 2,
-      "q": "Le Ministère reçoit un lot de données sans système de coordonnées ni unités. Que faites-vous ?",
+      "q": "Sur le schéma du cycle de vie d'une donnée, la remise au Ministère s'accompagne de métadonnées et d'un bordereau. Le Ministère reçoit pourtant un lot sans système de coordonnées ni unités. Que faites-vous ?",
       "choices": [
         "J'accepte le lot tel quel et je laisse les utilisateurs deviner le système de coordonnées",
         "Je détruis le lot",
@@ -1607,7 +1635,9 @@
       "answer": 3,
       "explain": "Sans métadonnées (système de coordonnées, altitude de référence, unités, auteur), une donnée peut être mal positionnée ou mal interprétée. Deviner est risqué.",
       "seconds": 60,
-      "status": "draft"
+      "status": "draft",
+      "img": "svg/min-cycle-vie-donnee.svg",
+      "imgAlt": "Cycle de vie d'une donnée en six étapes ; l'étape de remise au Ministère mentionne les métadonnées et le bordereau, avant le contrôle qualité."
     },
     {
       "id": "min-geologie-078",
