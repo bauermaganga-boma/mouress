@@ -206,9 +206,9 @@ async function trainingView(env) {
       <section class="block"><div class="split"><h2>Échéances</h2>${lateCount ? badge(`${lateCount} en retard`, 'ko') : ''}</div><div class="card">${dueListHTML(assignments)}</div></section>`;
   } else {
     body = `${addPeopleForm(s)}<h2 style="margin-top:var(--sp-5)">Collaborateurs</h2><div class="table-wrap"><table class="table"><caption class="sr-only">Collaborateurs et liens</caption>
-      <thead><tr><th>Collaborateur</th><th>Tests</th><th>Dernier score</th><th>Lien personnel</th></tr></thead><tbody>
+      <thead><tr><th>Collaborateur</th><th>Tests</th><th>Dernier score</th><th>Lien personnel</th><th><span class="sr-only">Actions</span></th></tr></thead><tbody>
       ${invs.map((i) => `<tr><td><a href="${base}?collab=${esc(i.id)}"><strong>${esc(i.name)}</strong></a><br><span class="xs muted">${esc(i.email)}</span></td><td>${i.stats.count}</td>
-        <td>${i.stats.count ? `${i.stats.overallLast} % ${trend(i.stats.overallDelta)}` : statusBadge(i.status)}</td><td>${shareButtons(i, s, company.name)}</td></tr>`).join('')}</tbody></table></div>`;
+        <td>${i.stats.count ? `${i.stats.overallLast} % ${trend(i.stats.overallDelta)}` : statusBadge(i.status)}</td><td>${shareButtons(i, s, company.name)}</td><td><button type="button" class="btn btn-danger-outline btn-sm" data-remove-collab="${esc(i.id)}" aria-label="Retirer ${esc(i.name)} de cette équipe">${icon('x', 14)} Retirer</button></td></tr>`).join('')}</tbody></table></div>`;
   }
 
   root.innerHTML = `<div class="container page">${head}
@@ -216,6 +216,17 @@ async function trainingView(env) {
     <div class="tab-body">${body}</div></div>`;
   bindAddForm(env);
   bindAssign(env, assignments, null, invs, allRecs);
+  if (!root.dataset.removeBound) root.dataset.removeBound = '1', root.addEventListener('click', async (e) => {
+    const rm = e.target.closest('[data-remove-collab]');
+    if (!rm) return;
+    const inv = invs.find((i) => i.id === rm.dataset.removeCollab);
+    if (!window.confirm(`Retirer ${inv?.name || 'ce collaborateur'} de cette équipe ?
+
+Son lien ne fonctionnera plus et ses résultats et assignations de cette session seront supprimés. Le Pass payé n’est pas remboursé.`)) return;
+    await ctx.store.removeInvitation(rm.dataset.removeCollab);
+    ctx.toast('Collaborateur retiré.');
+    await session(ctx, root);
+  });
   root.querySelector('#csv')?.addEventListener('click', () => {
     const rows = [['Collaborateur', 'E-mail', 'Tests passés', '1er test (%)', 'Dernier test (%)', 'Évolution (pts)', ...themes.flatMap((t) => [`${t} — dernier (%)`, `${t} — évolution (pts)`])]];
     for (const i of invs) {
@@ -264,7 +275,7 @@ export async function billing(ctx, root) {
   const total = orders.reduce((a, o) => a + o.total, 0);
   root.innerHTML = `<div class="container page">
     <div class="crumbs"><a href="#/rh">Tableau de bord</a><span>›</span><span>Facturation</span></div>
-    <div class="page-head split"><div><h1 class="h1-md">Facturation / Mes Pass</h1><p class="muted">Un Pass = une personne pour un poste. Prix provisoires par niveau : Technicien / Superviseur ${esc(fmtMoney(CONFIG.PASS_PRICES.tech))}, Ingénieur / Cadre ${esc(fmtMoney(CONFIG.PASS_PRICES.ing))}.</p></div>
+    <div class="page-head split"><div><h1 class="h1-md">Facturation / Mes Pass</h1><p class="muted">Un Pass = une personne pour un poste. Prix provisoires par niveau : opérateur ${esc(fmtMoney(CONFIG.PASS_PRICES.tech))}, agent de maîtrise ${esc(fmtMoney(CONFIG.PASS_PRICES.sup))}, cadre et ingénieur ${esc(fmtMoney(CONFIG.PASS_PRICES.ing))}.</p></div>
       <a class="btn btn-primary" href="#/rh/inviter">${icon('plus', 18)} Acheter des Pass</a></div>${demoBanner()}
     <div class="grid grid-3 stats"><div class="card stat"><span class="stat-n">${passes.length}</span><span class="muted small">Pass achetés</span></div>
       <div class="card stat"><span class="stat-n">${orders.length}</span><span class="muted small">commandes</span></div>

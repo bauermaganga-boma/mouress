@@ -22,9 +22,11 @@ export async function employeeParcours(ctx, company, emp) {
   return `<section class="block" id="emp-parcours"><div class="split"><h2>Parcours de poste</h2><a class="btn btn-light btn-sm" href="#/rh/poste/${esc(poste.id)}">${icon('edit', 14)} Thématiques du poste</a></div>
     ${x.total ? `<div class="card"><div class="split small"><span><strong>${esc(poste.name)}</strong> · ${x.valide} / ${x.total} thématiques validées</span><strong>${x.pct} %</strong></div>${bar(x.pct, x.pct >= 70 ? 'ok' : x.pct < 40 ? 'ko' : '')}
       ${na ? `<p class="small" style="margin-top:var(--sp-3)">${icon('target', 14)} Prochaine étape : <strong>${esc(na.item.title)}</strong>${href ? ` <a href="${esc(href)}" ${href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>Ouvrir</a>` : ''}</p>` : '<p class="small" style="margin-top:var(--sp-3)">Toutes les thématiques sont validées.</p>'}</div>
-      <div class="table-wrap"><table class="table"><caption class="sr-only">Thématiques du poste</caption><thead><tr><th>Thématique</th><th>Statut</th><th>Commentaire du responsable</th></tr></thead><tbody>
+      <p class="sv-legend"><span class="l-ok">Validé</span><span class="l-mid">En cours</span><span>À faire</span><span class="l-ko">Échéance dépassée</span></p>
+      <div class="table-wrap"><table class="table"><caption class="sr-only">Thématiques du poste</caption><thead><tr><th>Thématique</th><th>Statut</th><th>Échéance</th><th>Commentaire du responsable</th></tr></thead><tbody>
       ${x.rows.map((r) => `<tr><td><strong>${esc(r.item.title)}</strong><br>${badge(KINDS[r.item.kind].label, KINDS[r.item.kind].tone)}${r.item.hours ? ` <span class="xs muted">${r.item.hours} h</span>` : ''}${r.via ? ` <span class="xs muted">${esc(r.via)}</span>` : ''}</td>
         <td class="sv sv-${r.status}"><select class="sel-sm sv-sel" data-ep-st="${esc(r.item.id)}" aria-label="Statut : ${esc(r.item.title)}"><option value="auto" ${r.auto ? 'selected' : ''}>${r.auto ? STATUS_P[r.status].label + ' (auto)' : 'Automatique'}</option>${ST_ORDER.map((k) => `<option value="${k}" ${!r.auto && r.status === k ? 'selected' : ''}>${STATUS_P[k].label}</option>`).join('')}</select>${r.date ? `<span class="xs muted">${fmtDate(r.date)}</span>` : ''}</td>
+        <td><input type="date" class="sel-sm sv-due ${r.late ? 'is-late' : ''}" data-ep-due="${esc(r.item.id)}" value="${r.due ? fmtDateInput(r.due) : ''}" aria-label="Échéance : ${esc(r.item.title)}"></td>
         <td><input type="text" class="sel-sm ep-com" data-ep-com="${esc(r.item.id)}" maxlength="300" value="${esc(r.comment || '')}" placeholder="Remarque, preuve de validation…" aria-label="Commentaire : ${esc(r.item.title)}"></td></tr>`).join('')}</tbody></table></div>`
       : `<div class="card"><p class="muted">Aucune thématique n’est définie pour le poste « ${esc(poste.name)} ». <a href="#/rh/poste/${esc(poste.id)}">Créer le parcours du poste</a></p></div>`}
     <div class="card review-card" id="revue"><div class="split"><h3>Revue de management</h3>${badge(rs.label, rs.tone)}</div>
@@ -40,12 +42,12 @@ export function bindEmployeeParcours(ctx, root, company, getEmp, redraw) {
   root.addEventListener('change', async (e) => {
     const st = e.target.closest('[data-ep-st]');
     if (st) { await ctx.store.setSuivi({ companyId: company.id, employeeId: getEmp().id, itemId: st.dataset.epSt, status: st.value }); ctx.toast('Suivi mis à jour.'); await redraw(); return; }
+    const du = e.target.closest('[data-ep-due]');
+    if (du) { await ctx.store.setSuivi({ companyId: company.id, employeeId: getEmp().id, itemId: du.dataset.epDue, due: du.value ? new Date(du.value + 'T12:00:00').getTime() : null }); ctx.toast('Échéance mise à jour.'); await redraw(); return; }
     const com = e.target.closest('[data-ep-com]');
     if (com) {
       const itemId = com.dataset.epCom;
-      const cur = (await ctx.store.listSuivi(company.id, getEmp().id)).find((s) => s.itemId === itemId);
-      if (!cur && !com.value.trim()) return;
-      await ctx.store.setSuivi({ companyId: company.id, employeeId: getEmp().id, itemId, status: cur?.status || 'en_cours', comment: com.value });
+      await ctx.store.setSuivi({ companyId: company.id, employeeId: getEmp().id, itemId, comment: com.value });
       ctx.toast('Commentaire enregistré.'); await redraw();
     }
   });

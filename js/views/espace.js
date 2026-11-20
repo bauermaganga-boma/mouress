@@ -84,13 +84,31 @@ export default async function render(ctx, root) {
     return `<a class="card card-link" href="#/profil/${esc(pid)}"><h4>${esc(pname(pid))}</h4><div class="split xs muted"><span>Cours : ${done}${mods ? ' / ' + mods : ''} module(s)</span><span>${practiced ? `Entraînement : ${pct(ok, practiced)} % de réussite` : 'Pas d’entraînement'}</span></div>${bar(mods ? pct(done, mods) : 0, 'ok')}</a>`;
   }).join('');
 
+  // Résumé et prochaine étape
+  const passedN = attempts.filter((a) => a.passed).length;
+  const modulesN = Object.values(progress).reduce((a, p) => a + Object.keys(p.modules || {}).length, 0);
+  const pendingAs = collabs.flatMap((c) => c.assignments.filter((a) => !a.doneAt)).sort((a, b) => a.due - b.due);
+  const nextA = pendingAs[0];
+  const waiting = collabs.find((c) => c.invitation.status === 'invited' || c.invitation.status === 'training');
+  const next = nextA ? { t: 'Prochaine tâche à faire', d: `${assignmentTitle(nextA, contents[nextA.profileId])} · avant le ${fmtDate(nextA.due)}`, href: assignmentHref(nextA), l: 'Commencer' }
+    : waiting ? { t: 'Votre test vous attend', d: `${waiting.session.title} · ${waiting.company.name}`, href: `#/t/${waiting.invitation.token}`, l: 'Ouvrir mon Pass' }
+    : !attempts.length ? { t: 'Commencez votre premier parcours', d: 'Choisissez un profil, suivez les cours puis entraînez-vous avant l’examen.', href: '#/formation', l: 'Choisir un profil' }
+    : { t: 'Continuez à progresser', d: 'Retravaillez vos thèmes faibles avec les entraînements conseillés ci-dessous.', href: '#/formation', l: 'Voir les profils' };
+
   root.innerHTML = `<div class="container page">
-    <div class="page-head"><p class="eyebrow dark">Candidat et collaborateur</p><h1 class="h1-md">Mon espace</h1>
+    <div class="page-head"><p class="eyebrow dark">Candidat et collaborateur</p><h1 class="h1-md">${me.name ? 'Bonjour ' + esc(me.name.split(' ')[0]) : 'Mon espace'}</h1>
       <p>Retrouvez votre parcours, vos résultats et vos attestations. Les données sont enregistrées sur cet appareil.</p></div>
-    <form class="card me-form" id="me" novalidate><div class="form-grid">
+    <div class="grid grid-4 stats me-stats">
+      <div class="card stat"><span class="stat-n">${modulesN}</span><span class="muted small">module(s) de cours suivis</span></div>
+      <div class="card stat"><span class="stat-n">${attempts.length}</span><span class="muted small">examen(s) passé(s)</span></div>
+      <div class="card stat"><span class="stat-n">${passedN}</span><span class="muted small">réussi(s)</span></div>
+      <div class="card stat"><span class="stat-n">${certs.length}</span><span class="muted small">attestation(s)</span></div></div>
+    <section class="card me-next" aria-label="Prochaine étape"><div><p class="eyebrow dark">Prochaine étape</p><h2>${esc(next.t)}</h2><p class="muted small">${esc(next.d)}</p></div><a class="btn btn-primary" href="${esc(next.href)}">${esc(next.l)} ${icon('arrow', 16)}</a></section>
+    <details class="card me-form" ${me.email ? '' : 'open'}><summary>Mon profil${me.email ? ' · ' + esc(me.email) : ''}</summary>
+    <form id="me" novalidate style="margin-top:var(--sp-3)"><div class="form-grid">
       <div class="field"><label for="me-name">Nom et prénom</label><input id="me-name" type="text" autocomplete="name" value="${esc(me.name)}"></div>
       <div class="field"><label for="me-email">E-mail <span class="hint">(relie votre compte à votre parcours d’entreprise)</span></label><input id="me-email" type="email" autocomplete="email" value="${esc(me.email)}"></div></div>
-      <div class="field-error" id="me-err" role="alert"></div><button class="btn btn-outline btn-sm" type="submit">Enregistrer</button></form>
+      <div class="field-error" id="me-err" role="alert"></div><button class="btn btn-outline btn-sm" type="submit">Enregistrer</button></form></details>
 
     ${postes.length ? `<section class="block"><h2>Mon parcours de poste</h2>${postes.map(({ company, emp, x, poste, practice }) => { const na = nextAction(x.rows); const href = na ? actionHref(na, poste.id) : ''; const rs = reviewState(x.review);
       return `<article class="card parcours"><div class="split" style="align-items:flex-start"><div><p class="eyebrow dark">${esc(company.name)}</p><h3>${esc(poste.name)}</h3><p class="muted small">${x.valide} / ${x.total} thématiques validées${emp.team ? ' · ' + esc(emp.team) : ''}</p></div><strong class="stat-n">${x.pct} %</strong></div>${bar(x.pct, x.pct >= 70 ? 'ok' : '')}

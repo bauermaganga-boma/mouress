@@ -1,4 +1,5 @@
 // Achat de Pass : poste → personnes → paiement (simulé) → liens personnels générés APRÈS paiement.
+import { sectorProfiles, sectorDomains } from '../sector.js';
 import { CONFIG } from '../../config.js';
 import { getProfilesData, getAvailability, levelOf, domainOf, branchOf, loadContent } from '../data.js';
 import { esc, fmtMoney, fmtDateInput, fmtDate } from '../util.js';
@@ -28,6 +29,8 @@ export async function invite(ctx, root, helpers) {
   const data = await getProfilesData();
   const avail = await getAvailability();
   const company = await ctx.store.getCompany(ctx.user.companyId);
+  const sector = await ctx.store.getCompanySector(company.id);
+  const pool = sectorProfiles(data, sector);
   const existing = ctx.query.get('session') ? await ctx.store.getSession(ctx.query.get('session')) : null;
   if (existing && existing.companyId !== company.id) { ctx.go('/rh'); return; }
   // Activation d'un élément du plan de formation d'un collaborateur : poste et personne imposés.
@@ -52,7 +55,7 @@ export async function invite(ctx, root, helpers) {
       <div class="card" id="poste-box"><h2 class="h3-sm">${locked ? 'Poste' : '2. Poste'}</h2>
         ${locked ? `<p><strong>${esc(profileOf(profileId)?.name || profileId)}</strong></p>` : `
         <div class="field"><label for="p-q">Rechercher un poste</label><input id="p-q" type="search" placeholder="Ex. technicien, forage, comptable…" autocomplete="off"></div>
-        <div class="form-grid"><div class="field"><label for="p-d">Secteur</label><select id="p-d"><option value="">Tous</option>${(data.domains || []).map((d) => `<option value="${esc(d.id)}">${esc(d.name)}</option>`).join('')}</select></div>
+        <div class="form-grid"><div class="field"><label for="p-d">Secteur</label><select id="p-d"><option value="">Tous</option>${sectorDomains(data, sector).map((d) => `<option value="${esc(d.id)}">${esc(d.name)}</option>`).join('')}</select></div>
         <div class="field"><label for="p-l">Niveau</label><select id="p-l"><option value="">Tous</option>${(data.levels || []).map((l) => `<option value="${esc(l.id)}">${esc(l.name)} — ${esc(fmtMoney(passPrice(l.id)))}</option>`).join('')}</select></div></div>
         <div class="poste-list" id="poste-list" role="radiogroup" aria-label="Poste"></div>`}
       </div>
@@ -78,7 +81,7 @@ export async function invite(ctx, root, helpers) {
   const drawList = () => {
     const box = $('#poste-list'); if (!box) return;
     const q = norm($('#p-q').value); const dm = $('#p-d').value; const lv = $('#p-l').value;
-    const list = data.profiles.filter((p) => (!dm || p.domains.includes(dm)) && (!lv || p.level === lv) && (!q || norm(`${p.name} ${p.desc}`).includes(q)));
+    const list = pool.filter((p) => (!dm || p.domains.includes(dm)) && (!lv || p.level === lv) && (!q || norm(`${p.name} ${p.desc}`).includes(q)));
     box.innerHTML = list.map((p) => `<label class="poste-opt"><input type="radio" name="poste" value="${esc(p.id)}" ${p.id === profileId ? 'checked' : ''}>
       <span class="poste-body"><strong>${esc(p.name)}</strong><span class="xs muted">${esc(levelOf(data, p.level)?.name || '')} · ${esc(branchOf(data, p.branch)?.name || '')}</span>${available(p.id) ? '' : '<span class="badge badge-warn">Bientôt disponible</span>'}</span>
       <span class="poste-price">${esc(fmtMoney(passPrice(p.level)))}</span></label>`).join('') || '<p class="muted small">Aucun poste ne correspond.</p>';

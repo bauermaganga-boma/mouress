@@ -7,6 +7,7 @@ import { COMPLIANCE, habilitations, compliance, passPrice, validity } from '../p
 import { band, BAND_LABEL, collabStats, matrixThemes, gaps, recommend } from '../skills.js';
 import { employeeFormations } from './rh-formations.js';
 import { employeeParcours, bindEmployeeParcours } from './rh-emp-parcours.js';
+import { sectorProfiles } from '../sector.js';
 
 const DAY = 86400000;
 const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -16,9 +17,12 @@ const PLAN_LABEL = { planned: { label: 'Planifiée', tone: 'info' }, in_progress
 const planBadge = (p) => (p.status !== 'done' && p.late ? badge('En retard', 'ko') : badge(PLAN_LABEL[p.status].label, PLAN_LABEL[p.status].tone));
 const pill = (st) => badge(COMPLIANCE[st].label, COMPLIANCE[st].tone);
 
-export function profileOptions(data, selected = '') {
+export function profileOptions(data, selected = '', sectorId = '') {
+  const pool = sectorProfiles(data, sectorId);
+  const sel = data.profiles.find((p) => p.id === selected);
+  if (sel && !pool.includes(sel)) pool.push(sel);
   return (data.levels || []).map((lv) => {
-    const ps = data.profiles.filter((p) => p.level === lv.id);
+    const ps = pool.filter((p) => p.level === lv.id);
     return ps.length ? `<optgroup label="${esc(lv.name)}">${ps.map((p) => `<option value="${esc(p.id)}" ${p.id === selected ? 'selected' : ''}>${esc(p.name)}</option>`).join('')}</optgroup>` : '';
   }).join('');
 }
@@ -78,7 +82,9 @@ export function parseEmployeeCsv(text, data) {
 }
 
 /* ------------------------------------------------------------------ Onglet « Mes équipes » */
-export async function renderTeamTab(ctx, host, company, data, trainingSessions, redraw) {
+export async function renderTeamTab(ctx, host, company, data, trainingSessions, redraw, opts = {}) {
+  const sector = opts.sector || '';
+  const orgList = opts.employees || [];
   const { rows, plans, pById } = await loadTeam(ctx, company, data);
   if (!ctx.alive()) return;
   const count = (st) => rows.filter((r) => r.status === st).length;
@@ -86,6 +92,7 @@ export async function renderTeamTab(ctx, host, company, data, trainingSessions, 
   const teams = [...new Set(rows.map((r) => r.e.team).filter(Boolean))].sort();
   const usedProfiles = [...new Set(rows.map((r) => r.e.profileId).filter(Boolean))];
   const f = { q: '', team: '', profile: '', status: '' };
+  const depts = [...new Set(orgList.map((o) => o.dept).filter(Boolean))].sort();
 
   host.innerHTML = `
     <div class="grid grid-4 stats">
@@ -94,6 +101,7 @@ export async function renderTeamTab(ctx, host, company, data, trainingSessions, 
       <div class="card stat"><span class="stat-n">${count('soon')}</span><span class="muted small">expirent sous ${CONFIG.ALERT_DAYS} j</span></div>
       <div class="card stat"><span class="stat-n">${count('expired')}</span><span class="muted small">expirées · ${plans.filter((p) => p.late).length} plan(s) en retard</span></div></div>
     ${alerts.length ? `<section class="block"><h2>Alertes</h2><div class="card"><ul class="due-list">${alerts.slice(0, 8).map((a) => `<li>${badge(a.kind === 'cert' ? 'Habilitation' : 'Échéance', a.tone)}<span><strong>${esc(a.r.e.name)}</strong><br><span class="xs muted">${esc(a.text)}</span></span><a class="btn btn-light btn-sm" href="#/rh/equipe/${esc(a.r.e.id)}">Voir la fiche</a></li>`).join('')}</ul>${alerts.length > 8 ? `<p class="xs muted">+ ${alerts.length - 8} autre(s) alerte(s) dans les fiches.</p>` : ''}</div></section>` : ''}
+    <datalist id="dl-dept">${depts.map((d) => `<option value="${esc(d)}">`).join('')}</datalist><datalist id="dl-team">${teams.map((d) => `<option value="${esc(d)}">`).join('')}</datalist>
     <section class="block"><div class="split"><h2>Annuaire des collaborateurs</h2><div class="btn-row">
       <button type="button" class="btn btn-sm btn-light" id="csv-dir">${icon('download', 14)} Export CSV</button></div></div>
       <div class="card filters-card"><div class="form-grid">
@@ -107,8 +115,9 @@ export async function renderTeamTab(ctx, host, company, data, trainingSessions, 
           <form id="emp-form" novalidate style="margin-top:var(--sp-4)">
             <div class="field"><label for="e-name">Nom et prénom</label><input id="e-name" type="text" required></div>
             <div class="field"><label for="e-email">E-mail</label><input id="e-email" type="email" required></div>
-            <div class="field"><label for="e-prof">Poste / profil</label><select id="e-prof"><option value="">— Choisir —</option>${profileOptions(data)}</select></div>
-            <div class="form-grid"><div class="field"><label for="e-team">Équipe ou service</label><input id="e-team" type="text" placeholder="Ex. Maintenance"></div>
+            <div class="field"><label for="e-prof">Poste / profil</label><select id="e-prof"><option value="">— Choisir —</option>${profileOptions(data, '', sector)}</select></div>
+            <div class="form-grid"><div class="field"><label for="e-dept">Département</label><input id="e-dept" type="text" list="dl-dept" placeholder="Ex. Département Maintenance"></div><div class="field"><label for="e-team">Service</label><input id="e-team" type="text" list="dl-team" placeholder="Ex. Maintenance Port-Gentil"></div>
+              <div class="field"><label for="e-mgr">Responsable (manager)</label><select id="e-mgr"><option value="">— Aucun —</option>${orgList.slice().sort((a, b) => a.name.localeCompare(b.name)).map((m) => `<option value="${esc(m.id)}">${esc(m.name)}</option>`).join('')}</select></div>
               <div class="field"><label for="e-hire">Date d’embauche (facultatif)</label><input id="e-hire" type="date"></div></div>
             <div class="field-error" id="e-err" role="alert"></div><button class="btn btn-primary" type="submit">Ajouter</button></form></details>
         <details class="card add-box"><summary class="btn btn-outline btn-sm">${icon('download', 14)} Importer un CSV</summary>
@@ -127,7 +136,7 @@ export async function renderTeamTab(ctx, host, company, data, trainingSessions, 
     const list = rows.filter((r) => (!q || norm(`${r.e.name} ${r.e.email}`).includes(q)) && (!f.team || r.e.team === f.team) && (!f.profile || r.e.profileId === f.profile) && (!f.status || r.status === f.status));
     $('#d-count').textContent = `${list.length} collaborateur${list.length > 1 ? 's' : ''}`;
     $('#dir').innerHTML = list.map((r) => `<a class="card card-link emp-card" href="#/rh/equipe/${esc(r.e.id)}">${avatar(r.e, 52)}<div class="emp-main"><strong>${esc(r.e.name)}</strong><span class="xs muted">${esc(r.e.email)}</span>
-      <span class="small">${esc(pById.get(r.e.profileId)?.name || 'Poste non renseigné')}${r.e.team ? ` · ${esc(r.e.team)}` : ''}</span></div>
+      <span class="small">${esc(pById.get(r.e.profileId)?.name || 'Poste non renseigné')}${r.e.team ? ` · ${esc(r.e.team)}` : ''}${orgList.find((o) => o.id === r.e.id)?.dept ? ` · ${esc(orgList.find((o) => o.id === r.e.id).dept)}` : ''}</span></div>
       <div class="emp-side">${pill(r.status)}<span class="funnel-go sm">${icon('arrow', 18)}</span></div></a>`).join('') || '<div class="card"><p class="muted">Aucun collaborateur ne correspond. Ajoutez-en un ou importez un CSV.</p></div>';
   };
   draw();
@@ -154,6 +163,7 @@ export async function renderTeamTab(ctx, host, company, data, trainingSessions, 
     if (rows.some((r) => r.e.email === email.toLowerCase())) { err.textContent = 'Un collaborateur existe déjà avec cet e-mail.'; return; }
     const hire = $('#e-hire').value ? new Date($('#e-hire').value + 'T00:00:00').getTime() : null;
     const emp = await ctx.store.saveEmployee({ companyId: company.id, name, email, profileId: $('#e-prof').value, team: $('#e-team').value, hireDate: hire });
+    await ctx.store.setOrg(emp.id, { dept: $('#e-dept').value, managerId: $('#e-mgr').value });
     ctx.toast('Collaborateur ajouté.');
     ctx.go(`/rh/equipe/${emp.id}`);
   });
@@ -173,6 +183,7 @@ export async function employee(ctx, root) {
   const data = await getProfilesData();
   const company = await ctx.store.getCompany(ctx.user.companyId);
   const pById = new Map(data.profiles.map((p) => [p.id, p]));
+  const sector = await ctx.store.getCompanySector(company.id);
   const back = '#/rh?vue=equipes';
   const notFound = async () => (await import('./notfound.js')).default(ctx, root);
   const id = ctx.params.id;
@@ -184,6 +195,9 @@ export async function employee(ctx, root) {
     const habs = habilitations(certs, pById).sort((a, b) => a.v.until - b.v.until);
     const st = compliance(habs, plans);
     const poste = pById.get(emp.profileId);
+    const org = await ctx.store.getOrg(emp.id);
+    const colleagues = (await ctx.store.listEmployees(company.id)).filter((x) => x.id !== emp.id).sort((a, b) => a.name.localeCompare(b.name));
+    const boss = colleagues.find((x) => x.id === org.managerId);
     ctx.setTitle(emp.name);
 
     // historique des examens regroupé par profil, avec matrice et écarts
@@ -211,15 +225,17 @@ export async function employee(ctx, root) {
 
     root.innerHTML = `<div class="container page">
       ${pageHead({ crumbs: [{ label: 'Espace entreprise', href: '#/rh' }, { label: 'Mes équipes', href: back }, { label: emp.name }], back, eyebrow: emp.team || 'Collaborateur', title: emp.name,
-        text: `${poste ? poste.name + (levelOf(data, poste.level) ? ' · ' + levelOf(data, poste.level).name : '') : 'Poste non renseigné'}${emp.hireDate ? ` · embauché le ${fmtDate(emp.hireDate)}` : ''}` })}
+        text: `${poste ? poste.name + (levelOf(data, poste.level) ? ' · ' + levelOf(data, poste.level).name : '') : 'Poste non renseigné'}${emp.hireDate ? ` · embauché le ${fmtDate(emp.hireDate)}` : ''}${org.dept ? ` · ${org.dept}` : ''}${boss ? ` · responsable : ${boss.name}` : ''}` })}
       <div class="emp-id">${avatar(emp, 84)}<div class="btn-row emp-head-row" style="margin:0">${pill(st)}<span class="muted small">${esc(emp.email)}</span></div></div>
       <div class="btn-row" style="margin:var(--sp-3) 0 var(--sp-5)"><details class="inline-details"><summary class="btn btn-light btn-sm">Modifier la fiche</summary>
         <form id="emp-edit" class="card" novalidate style="margin-top:var(--sp-3)"><div class="form-grid">
           <div class="photo-field">${avatar(emp, 56)}<label class="btn btn-light btn-sm" for="x-photo">Changer la photo</label><input id="x-photo" type="file" accept="image/*" hidden>${emp.photo ? '<button type="button" class="btn btn-ghost btn-sm" id="x-photo-del">Retirer la photo</button>' : ''}</div>
           <div class="field"><label for="x-name">Nom</label><input id="x-name" type="text" value="${esc(emp.name)}"></div>
           <div class="field"><label for="x-email">E-mail</label><input id="x-email" type="email" value="${esc(emp.email)}"></div>
-          <div class="field"><label for="x-prof">Poste / profil</label><select id="x-prof"><option value="">— Aucun —</option>${profileOptions(data, emp.profileId)}</select></div>
-          <div class="field"><label for="x-team">Équipe ou service</label><input id="x-team" type="text" value="${esc(emp.team)}"></div>
+          <div class="field"><label for="x-prof">Poste / profil</label><select id="x-prof"><option value="">— Aucun —</option>${profileOptions(data, emp.profileId, sector)}</select></div>
+          <div class="field"><label for="x-dept">Département</label><input id="x-dept" type="text" value="${esc(org.dept)}"></div>
+          <div class="field"><label for="x-mgr">Responsable (manager)</label><select id="x-mgr"><option value="">— Aucun —</option>${colleagues.map((m) => `<option value="${esc(m.id)}" ${m.id === org.managerId ? 'selected' : ''}>${esc(m.name)}</option>`).join('')}</select></div>
+          <div class="field"><label for="x-team">Service</label><input id="x-team" type="text" value="${esc(emp.team)}"></div>
           <div class="field"><label for="x-hire">Date d’embauche</label><input id="x-hire" type="date" value="${emp.hireDate ? fmtDateInput(emp.hireDate) : ''}"></div></div>
           <div class="field-error" id="x-err" role="alert"></div><div class="btn-row"><button class="btn btn-primary" type="submit">Enregistrer</button><button type="button" class="btn btn-danger btn-sm" id="emp-del">Supprimer le collaborateur</button></div></form></details></div>
 
@@ -235,7 +251,7 @@ export async function employee(ctx, root) {
       <section class="block"><div class="split"><h2>Plan de formation</h2><button type="button" class="btn btn-navy btn-sm" id="csv-plan">${icon('download', 14)} Export CSV</button></div>
         ${plans.length ? `<div class="table-wrap"><table class="table"><caption class="sr-only">Plan de formation</caption><thead><tr><th>Formation</th><th>Motif</th><th>Priorité</th><th>Échéance</th><th>Statut</th><th>Actions</th></tr></thead><tbody>${planRows}</tbody></table></div>` : '<div class="card"><p class="muted">Aucune formation planifiée.</p></div>'}
         <details class="card add-box" style="margin-top:var(--sp-4)"><summary class="btn btn-outline btn-sm">${icon('plus', 14)} Ajouter au plan</summary>
-          <form id="plan-form" novalidate style="margin-top:var(--sp-4)"><div class="field"><label for="pl-prof">Formation (profil)</label><select id="pl-prof">${profileOptions(data, emp.profileId)}</select></div>
+          <form id="plan-form" novalidate style="margin-top:var(--sp-4)"><div class="field"><label for="pl-prof">Formation (profil)</label><select id="pl-prof">${profileOptions(data, emp.profileId, sector)}</select></div>
             <div class="form-grid"><div class="field"><label for="pl-due">Échéance</label><input id="pl-due" type="date" value="${fmtDateInput(Date.now() + 60 * DAY)}"></div>
               <div class="field"><label for="pl-reason">Motif</label><select id="pl-reason">${Object.entries(REASON).map(([k, v]) => `<option value="${k}">${esc(v)}</option>`).join('')}</select></div>
               <div class="field"><label for="pl-prio">Priorité</label><select id="pl-prio">${Object.entries(PRIORITY).map(([k, v]) => `<option value="${k}" ${k === 'normale' ? 'selected' : ''}>${esc(v)}</option>`).join('')}</select></div></div>
@@ -292,6 +308,7 @@ export async function employee(ctx, root) {
       if (name.length < 2 || !isEmail(email)) { err.textContent = 'Nom et e-mail valides requis.'; return; }
       const hire = root.querySelector('#x-hire').value ? new Date(root.querySelector('#x-hire').value + 'T00:00:00').getTime() : null;
       await ctx.store.saveEmployee({ ...emp, name, email, profileId: root.querySelector('#x-prof').value, team: root.querySelector('#x-team').value, hireDate: hire });
+      await ctx.store.setOrg(emp.id, { dept: root.querySelector('#x-dept').value, managerId: root.querySelector('#x-mgr').value });
       ctx.toast('Fiche enregistrée.'); await draw();
     } else if (e.target.id === 'plan-form') {
       e.preventDefault();

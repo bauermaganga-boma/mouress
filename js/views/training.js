@@ -10,12 +10,6 @@ const STEPS = [
   { n: 3, ico: 'chart', t: 'Décidez sur des faits', d: 'Score global, résultat par thème, temps passé et statut : tout est dans votre tableau de bord, exportable en CSV.' },
 ];
 
-const MOURESS = [
-  { ico: 'bolt', t: 'Prestation technique EIA', d: 'Études, réalisation, mise en service et maintenance en électricité, instrumentation et automatisme.' },
-  { ico: 'users', t: 'Placement de personnel et assistance technique', d: 'Des profils techniques qualifiés, évalués avant d’être placés.' },
-  { ico: 'book', t: 'Formation professionnelle', d: 'Des parcours adaptés aux réalités de vos installations et de vos équipes.' },
-];
-
 export default async function render(ctx, root) {
   ctx.setTitle('');
   const data = await getProfilesData();
@@ -80,24 +74,16 @@ export default async function render(ctx, root) {
   <section class="section" id="offre">
     <div class="container">
       <div class="section-head"><p class="eyebrow dark">Offre entreprise</p><h2>1 Pass = 1 personne</h2>
-        <p class="muted">Vous payez par personne et par poste, sans abonnement. Tarifs provisoires, selon le niveau du poste.</p></div>
-      <div class="grid grid-2 packs">
-        <article class="card pack"><h3>Technicien</h3><p class="pack-price">${esc(fmtMoney(passPrice('tech')))}</p><p class="muted small">Opérateur, technicien, superviseur (tarif technicien pour l’instant)</p></article>
-        <article class="card pack pack-featured"><h3>Ingénieur / Cadre</h3><p class="pack-price">${esc(fmtMoney(passPrice('ing')))}</p><p class="muted small">Ingénieur, cadre, chef de site et management</p></article>
+        <p class="muted">Vous payez par personne et par poste, sans abonnement. Le tarif dépend du niveau du poste (prix par agent, provisoires).</p></div>
+      <div class="grid grid-3 packs">
+        <article class="card pack"><h3>Opérateur</h3><p class="pack-price">${esc(fmtMoney(passPrice('tech')))}</p><p class="muted small">Opérateur, technicien, agent et assistant</p></article>
+        <article class="card pack"><h3>Agent de maîtrise</h3><p class="pack-price">${esc(fmtMoney(passPrice('sup')))}</p><p class="muted small">Superviseur, contremaître et chef d’équipe</p></article>
+        <article class="card pack pack-featured"><h3>Cadre et ingénieur</h3><p class="pack-price">${esc(fmtMoney(passPrice('ing')))}</p><p class="muted small">Ingénieur et cadre (chef de site et management : ${esc(fmtMoney(passPrice('mgr')))})</p></article>
       </div>
       <div class="card included"><h3>Ce que comprend chaque Pass</h3>
         <ul class="incl-list"><li>${icon('book', 18)} Formation : modules de cours du poste</li><li>${icon('target', 18)} Entraînement illimité, avec corrections expliquées</li>
         <li>${icon('clock', 18)} Examen de ${CONFIG.EXAM_QUESTIONS} questions, ${CONFIG.ATTEMPTS_PER_PASS} tentatives</li><li>${icon('award', 18)} Attestation vérifiable en cas de réussite</li><li>${icon('chart', 18)} Résultat par thème transmis à votre entreprise</li></ul>
         <div class="btn-row"><a class="btn btn-primary btn-lg" href="#/inscription">Créer un compte entreprise</a><a class="btn btn-outline btn-lg" href="${esc(C.whatsapp)}" target="_blank" rel="noopener">${icon('whatsapp', 18)} Parler à un conseiller</a></div></div>
-    </div>
-  </section>
-
-  <section class="section section-navy" id="mouress">
-    <div class="container">
-      <div class="section-head"><p class="eyebrow">Qui est MOURESS</p><h2>Une entreprise technique qui évalue comme elle recrute</h2>
-        <p class="lead-light">MOURESS accompagne les opérateurs de l’industrie gabonaise et sous-régionale. Nos tests viennent du terrain : ce sont les questions que nous poserions à un technicien avant de l’envoyer sur site.</p></div>
-      <div class="grid grid-3">${MOURESS.map((m) => `<article class="card card-dark"><div class="step-ico dark">${icon(m.ico, 26)}</div><h3>${m.t}</h3><p>${m.d}</p></article>`).join('')}</div>
-      <p class="sectors-line"><strong>Secteurs :</strong> pétrole &amp; gaz · mines · logistique &amp; port · industrie · énergie</p>
     </div>
   </section>
 

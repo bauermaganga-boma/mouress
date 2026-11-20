@@ -24,6 +24,7 @@ import { CONFIG } from '../config.js';
 import { uid, makeToken, certCode, sha256 } from './util.js';
 import { formationMethods } from './formations-store.js';
 import { parcoursMethods } from './parcours-store.js';
+import { orgMethods } from './org-store.js';
 import { buildSeed } from './seed.js';
 
 const KEY = 'mrs.db.v1';
@@ -261,6 +262,31 @@ class LocalStore {
     const i = this.db.invitations.find((x) => x.id === invitationId);
     if (i) { i.decision = decision || null; this._save(); }
   }
+  /** Retire un candidat ou un collaborateur d'une session : son lien devient invalide, ses tentatives et assignations sont supprimées.
+   *  La commande (facturation) et les attestations déjà délivrées restent. */
+  async removeInvitation(invitationId) {
+    const i = this.db.invitations.find((x) => x.id === invitationId);
+    if (!i) return false;
+    this.db.invitations = this.db.invitations.filter((x) => x.id !== invitationId);
+    this.db.attempts = this.db.attempts.filter((a) => a.invitationId !== invitationId);
+    this.db.assignments = this.db.assignments.filter((a) => a.invitationId !== invitationId);
+    for (const p of this.db.plan) if (p.invitationId === invitationId) { p.invitationId = null; p.sessionId = null; p.status = 'planned'; }
+    this._save();
+    return true;
+  }
+  /** Corrige le nom ou l'e-mail d'un candidat (le lien reste le même). */
+  async updateInvitation(invitationId, { name, email }) {
+    const i = this.db.invitations.find((x) => x.id === invitationId);
+    if (!i) return false;
+    if (name != null) i.name = String(name).trim();
+    if (email != null) i.email = String(email).trim();
+    this._save();
+    return true;
+  }
+  async setSessionDeadline(sessionId, deadline) {
+    const s = this.db.sessions.find((x) => x.id === sessionId);
+    if (s) { s.deadline = deadline; this._save(); }
+  }
 
   // ---------- Mes équipes : collaborateurs, plan de formation ----------
   async listEmployees(companyId) { return this.db.employees.filter((e) => e.companyId === companyId).map((e) => ({ ...e })); }
@@ -377,7 +403,7 @@ export async function initStore() {
   } else {
     store = new LocalStore();
   }
-  Object.assign(store, formationMethods, parcoursMethods);
+  Object.assign(store, formationMethods, parcoursMethods, orgMethods);
   await store.init();
   return store;
 }

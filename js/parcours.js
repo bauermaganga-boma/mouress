@@ -14,20 +14,26 @@ const REC_TO_P = { planned: 'a_faire', in_progress: 'en_cours', done: 'valide' }
  * 1) saisie manuelle du management ; 2) formation du catalogue liée ; 3) résultat d'examen sur le thème de la plateforme.
  */
 export function deriveStatus(item, ctx) {
-  const manual = ctx.suivi.find((s) => s.itemId === item.id);
-  if (manual) return { status: manual.status, auto: false, comment: manual.comment || '', date: manual.date || null };
+  const row = ctx.suivi.find((s) => s.itemId === item.id);
+  const base = deriveCore(item, ctx, row);
+  const due = row?.due || item.due || null;
+  return { ...base, due, late: base.status !== 'valide' && !!due && due < Date.now() };
+}
+
+function deriveCore(item, ctx, manual) {
+  if (manual && manual.status !== 'auto') return { status: manual.status, auto: false, comment: manual.comment || '', date: manual.date || null };
   if (item.source === 'formation') {
     const r = ctx.records.find((x) => x.formationId === item.formationId);
-    if (r) return { status: REC_TO_P[r.status] || 'a_faire', auto: true, comment: '', date: r.doneAt || r.date || null, via: 'inscription' };
+    if (r) return { status: REC_TO_P[r.status] || 'a_faire', auto: true, date: r.doneAt || r.date || null, via: 'inscription', comment: manual?.comment || '' };
   }
   if (item.source === 'theme') {
     const p = ctx.stats?.themesLast?.[item.theme];
     if (p != null) {
       const at = ctx.stats.last?.finishedAt || null;
-      return { status: p >= ctx.passMark ? 'valide' : 'en_cours', auto: true, comment: '', date: at, via: `examen : ${p} %` };
+      return { status: p >= ctx.passMark ? 'valide' : 'en_cours', auto: true, comment: manual?.comment || '', date: at, via: `examen : ${p} %` };
     }
   }
-  return { status: 'a_faire', auto: true, comment: '', date: null };
+  return { status: 'a_faire', auto: true, comment: manual?.comment || '', date: null };
 }
 
 export const progressOf = (states) => {
@@ -51,7 +57,7 @@ export async function buildModel(ctx, company, employees) {
     const rows = mine.map((item) => ({ item, ...deriveStatus(item, c), formation: fById.get(item.formationId) || null }));
     for (const r of rows) if (r.status === 'valide' && r.date) events.push({ ts: r.date, employeeId: e.id });
     const rv = reviews.find((x) => x.employeeId === e.id) || null;
-    per.set(e.id, { emp: e, rows, ...progressOf(rows), review: rv, stats });
+    per.set(e.id, { emp: e, rows, ...progressOf(rows), late: rows.filter((r) => r.late).length, review: rv, stats });
   }
   return { items, byProfile, per, events, reviews, formations, records };
 }
@@ -117,3 +123,22 @@ export async function ensureDemo(ctx, company, employees) {
 }
 
 export { STATUS_P };
+
+/** Ajoute le département et le responsable (manager) à chaque collaborateur. */
+export async function withOrg(ctx, employees) {
+  const org = await ctx.store.listOrg();
+  return employees.map((e) => ({ ...e, dept: org[e.id]?.dept || '', managerId: org[e.id]?.managerId || '' }));
+}
+
+/** Démonstration : secteur, départements, services et managers de l'entreprise démo (une seule fois). */
+export async function ensureDemoOrg(ctx, company, employees) {
+  if (!company.demo || await ctx.store.orgDemoDone(company.id)) return;
+  await ctx.store.markOrgDemo(company.id);
+  if (!(await ctx.store.getCompanySector(company.id))) await ctx.store.setCompanySector(company.id, 'petrole-gaz');
+  const dept = { 'Maintenance Port-Gentil': 'Département Maintenance', 'Production offshore': 'Département Production', QHSE: 'Département QHSE' };
+  const mgr = { e_demo2: 'e_demo1', e_demo3: 'e_demo1', e_demo4: 'e_demo1', e_demo5: 'e_demo1', e_demo8: 'e_demo6' };
+  for (const e of employees) {
+    if (e.id === 'e_demo4' || e.id === 'e_demo5') await ctx.store.saveEmployee({ ...e, team: 'Maintenance Libreville' });
+    await ctx.store.setOrg(e.id, { dept: dept[e.team] || '', managerId: mgr[e.id] || '' });
+  }
+}

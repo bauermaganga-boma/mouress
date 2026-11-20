@@ -8,14 +8,31 @@ import { recruitListHTML, recruitCounts } from './rh-recruit.js';
 import { renderTeamTab } from './rh-teams.js';
 import { renderFormationsTab } from './rh-formations.js';
 import { renderPilotage } from './rh-pilotage.js';
+import { sectorList, sectorById, sectorProfiles } from '../sector.js';
+import { withOrg, ensureDemoOrg } from '../parcours.js';
+
+/** Premier écran du back-office : l'entreprise choisit son secteur d'activité ; ses postes et formations restent ensuite dans ce secteur. */
+function sectorChooser(ctx, root, data, company, current) {
+  const list = sectorList(data);
+  root.innerHTML = `<div class="container page"><div class="page-head"><p class="eyebrow dark">Espace entreprise</p><h1 class="page-title">${esc(company.name)}</h1>
+    <p class="lead">${current ? 'Changez de secteur d’activité.' : 'Commencez par choisir votre secteur d’activité.'} Les postes et les formations proposés resteront dans ce secteur.</p></div>
+    <div class="grid grid-2 sector-pick">${list.map((s) => `<button type="button" class="card card-link funnel-card sector-card ${s.id === current ? 'is-on' : ''}" data-sector="${esc(s.id)}"><span class="funnel-ico">${icon(s.icon || 'factory', 28)}</span><span class="funnel-body"><strong class="funnel-title">${esc(s.name)}</strong>${s.desc ? `<span class="muted small">${esc(s.desc)}</span>` : ''}<span class="funnel-meta">${badge(`${sectorProfiles(data, s.id).length} postes`)}${s.id === current ? badge('Secteur actuel', 'ok') : ''}</span></span><span class="funnel-go">${icon('arrow', 22)}</span></button>`).join('')}</div>
+    ${current ? '<p><a class="btn btn-light" href="#/rh">Annuler</a></p>' : ''}</div>`;
+  root.querySelectorAll('[data-sector]').forEach((b) => b.addEventListener('click', async () => { await ctx.store.setCompanySector(company.id, b.dataset.sector); ctx.toast('Secteur enregistré.'); ctx.go('/rh'); await dashboard(ctx, root); }));
+}
 
 export async function dashboard(ctx, root) {
   ctx.setTitle('Tableau de bord entreprise');
   const data = await getProfilesData();
   const company = await ctx.store.getCompany(ctx.user.companyId);
   const sessions = await ctx.store.listSessions(company.id);
-  const employees = await ctx.store.listEmployees(company.id);
+  let employees = await ctx.store.listEmployees(company.id);
+  await ensureDemoOrg(ctx, company, employees);
+  employees = await withOrg(ctx, await ctx.store.listEmployees(company.id));
+  const sector = await ctx.store.getCompanySector(company.id);
   if (!ctx.alive()) return;
+  if (!sector || ctx.query.get('secteur') === 'choisir') { sectorChooser(ctx, root, data, company, sector); return; }
+  const sec = sectorById(data, sector);
   const vue = ['recrutements', 'equipes', 'formations'].includes(ctx.query.get('vue')) ? ctx.query.get('vue') : 'pilotage';
   const nbFormations = (await ctx.store.listFormations(company.id)).length;
   const recruits = sessions.filter((s) => s.type === 'recruitment');
@@ -25,7 +42,7 @@ export async function dashboard(ctx, root) {
   const sum = (k) => counts.reduce((a, c) => a + c[k], 0);
 
   root.innerHTML = `<div class="container page">
-    <div class="page-head split"><div><p class="eyebrow dark">Espace entreprise</p><h1 class="page-title">${esc(company.name)}</h1></div>
+    <div class="page-head split"><div><p class="eyebrow dark">Espace entreprise</p><h1 class="page-title">${esc(company.name)}</h1><p class="sector-line">${icon('factory', 16)} Secteur : <strong>${esc(sec?.name || sector)}</strong> · <a href="#/rh?secteur=choisir">Changer</a></p></div>
       <div class="btn-row">${vue === 'formations' ? `<a class="btn btn-primary" href="#/rh?vue=formations&nouvelle=1">${icon('plus', 18)} Nouvelle formation</a>` : `<a class="btn btn-primary" href="#/rh/inviter${vue === 'equipes' ? '?type=training' : '?type=recruitment'}">${icon('plus', 18)} ${vue === 'equipes' ? 'Inviter un collaborateur' : 'Nouveau recrutement'}</a>`}<a class="btn btn-outline" href="#/rh/facturation">${icon('card', 18)} Facturation / Mes Pass</a></div></div>
     ${company.demo ? '<div class="alert alert-warn"><strong>Entreprise Démo</strong> — données fictives, stockées dans ce navigateur.</div>' : ''}
     <div class="seg seg-4" role="tablist" aria-label="Type de suivi">
@@ -37,7 +54,7 @@ export async function dashboard(ctx, root) {
   const host = root.querySelector('#tab-body');
 
   if (vue === 'pilotage') {
-    await renderPilotage(ctx, host, company, data, sessions, employees);
+    await renderPilotage(ctx, host, company, data, sessions, employees, { sector });
     return;
   }
 
@@ -52,12 +69,12 @@ export async function dashboard(ctx, root) {
   }
 
   if (vue === 'formations') {
-    await renderFormationsTab(ctx, host, company, () => dashboard(ctx, root));
+    await renderFormationsTab(ctx, host, company, () => dashboard(ctx, root), { sector });
     if (ctx.query.get('nouvelle')) { const d = host.querySelector('#new-formation'); if (d) { d.open = true; d.scrollIntoView({ block: 'start' }); } }
     return;
   }
 
-  await renderTeamTab(ctx, host, company, data, trainings, () => dashboard(ctx, root));
+  await renderTeamTab(ctx, host, company, data, trainings, () => dashboard(ctx, root), { sector, employees });
   if (!ctx.alive()) return;
 
   // échéances d'assignations des sessions de montée en compétences (cours / séries d'entraînement)

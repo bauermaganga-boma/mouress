@@ -63,3 +63,42 @@
 .link-row p { margin: 0; }
 .review-card { margin-top: var(--sp-4); display: grid; gap: var(--sp-2); }
 .cand-link { display: grid; gap: .3rem; border-top: 1px dashed var(--c-line-strong); padding-top: var(--sp-3); }
+
+/* Vues par rôle et indicateurs lisibles */
+.role-tabs { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-bottom: var(--sp-2); }
+.role-lead { font-size: var(--fs-xs); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--c-muted); margin-right: .3rem; }
+.role-tab { min-height: 40px; display: inline-flex; align-items: center; padding: .3rem .9rem; border: 1.5px solid var(--c-line-strong); border-radius: var(--r-pill); background: #fff; color: var(--c-navy); font-size: var(--fs-sm); font-weight: 600; text-decoration: none; }
+.role-tab:hover { border-color: var(--c-navy); }
+.role-tab[aria-current="true"] { background: var(--c-navy); border-color: var(--c-navy); color: #fff; }
+.role-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: var(--sp-3); margin-bottom: var(--sp-4); }
+.role-head p { margin: 0; }
+.scope-pick { display: flex; align-items: center; gap: .6rem; }
+.scope-pick select { min-height: 44px; }
+.rh-shortcuts { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: var(--sp-4); }
+.hint-card { background: var(--c-info-bg); border-color: transparent; }
+.sector-line { margin: .25rem 0 0; font-size: var(--fs-sm); color: var(--c-muted); display: flex; align-items: center; gap: .4rem; }
+.sector-card { text-align: left; width: 100%; font: inherit; cursor: pointer; }
+.sector-card.is-on { border-color: var(--c-navy); box-shadow: 0 0 0 2px var(--c-navy) inset; }
+
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: var(--sp-3); margin-bottom: var(--sp-5); }
+.kpi { display: grid; gap: .15rem; align-content: start; padding: var(--sp-4); border-left: 5px solid var(--c-line-strong); }
+.kpi-label { font-size: var(--fs-sm); font-weight: 700; color: var(--c-ink); }
+.kpi-val { font-size: 2rem; font-weight: 800; color: var(--c-navy); line-height: 1.1; }
+.kpi-def { font-size: var(--fs-xs); color: var(--c-muted); line-height: 1.35; }
+.kpi-ok { border-left-color: var(--c-ok); } .kpi-ok .kpi-val { color: var(--c-ok); }
+.kpi-warn { border-left-color: #D99A1E; } .kpi-warn .kpi-val { color: var(--c-warn); }
+.kpi-ko { border-left-color: var(--c-ko); } .kpi-ko .kpi-val { color: var(--c-ko); }
+
+.people-table td { vertical-align: middle; }
+.people-table .emp-inline { align-items: center; }
+
+/* Suivi : légende, échéances */
+.sv-legend { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; font-size: var(--fs-xs); color: var(--c-muted); margin: 0 0 var(--sp-3); }
+.sv-legend span::before { content: ''; display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: .4rem; background: #B9B3A6; }
+.sv-legend .l-ok::before { background: var(--c-ok); } .sv-legend .l-mid::before { background: #E0A526; } .sv-legend .l-ko::before { background: var(--c-ko); }
+.sv-due { display: block; margin-top: .25rem; width: 100%; min-height: 34px; font-size: var(--fs-xs); }
+.sv-due.is-late { border-color: var(--c-ko); color: var(--c-ko); }
+.idea-list { display: grid; gap: .5rem; margin: var(--sp-3) 0 0; padding: 0; list-style: none; }
+.idea-list li { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); padding: .5rem .7rem; background: #fff; border: 1px solid var(--c-line); border-radius: var(--r-md); flex-wrap: wrap; }
+.idea-list .idea-t { display: grid; }
+.kpi-val.long { font-size: 1.45rem; }

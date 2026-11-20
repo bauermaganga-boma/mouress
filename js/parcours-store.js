@@ -24,7 +24,7 @@ export const parcoursMethods = {
     const row = {
       id: t.id || uid('th'), companyId: t.companyId, profileId: t.profileId, title: clean(t.title), kind, source,
       theme: source === 'theme' ? clean(t.theme) : '', formationId: source === 'formation' ? clean(t.formationId, 60) : '',
-      hours: Math.max(0, Math.min(999, Number(t.hours) || 0)), note: clean(t.note, 300),
+      hours: Math.max(0, Math.min(999, Number(t.hours) || 0)), note: clean(t.note, 300), due: Number(t.due) > 0 ? Number(t.due) : null,
       order: t.order ?? (mine.reduce((m, i) => Math.max(m, i.order), 0) + 1), createdAt: t.createdAt || Date.now(),
     };
     const i = d.items.findIndex((x) => x.id === row.id);
@@ -40,14 +40,17 @@ export const parcoursMethods = {
     [it.order, o.order] = [o.order, it.order]; write(d);
   },
   async listSuivi(companyId, employeeId) { return read().suivi.filter((s) => s.companyId === companyId && (!employeeId || s.employeeId === employeeId)); },
-  async setSuivi({ companyId, employeeId, itemId, status, comment, date }) {
+  /** status : 'a_faire' | 'en_cours' | 'valide' (fixé par le responsable) ou 'auto' (déduit des examens et inscriptions). due : échéance propre au collaborateur. */
+  async setSuivi({ companyId, employeeId, itemId, status, comment, date, due }) {
     const d = read();
     let row = d.suivi.find((s) => s.employeeId === employeeId && s.itemId === itemId);
-    if (status === 'auto') { d.suivi = d.suivi.filter((s) => s !== row); write(d); return null; }
-    const st = STATUS_P[status] ? status : 'a_faire';
-    if (!row) { row = { id: uid('sv'), companyId, employeeId, itemId, comment: '' }; d.suivi.push(row); }
-    row.status = st; row.date = date || row.date || Date.now(); row.updatedAt = Date.now();
+    if (!row) { if (status === 'auto' && !comment && !due) return null; row = { id: uid('sv'), companyId, employeeId, itemId, status: 'auto', comment: '', due: null }; d.suivi.push(row); }
+    if (status !== undefined) row.status = status === 'auto' ? 'auto' : STATUS_P[status] ? status : 'a_faire';
+    if (row.status !== 'auto') row.date = date || row.date || Date.now();
     if (comment !== undefined) row.comment = clean(comment, 300);
+    if (due !== undefined) row.due = Number(due) > 0 ? Number(due) : null;
+    row.updatedAt = Date.now();
+    if (row.status === 'auto' && !row.comment && !row.due) { d.suivi = d.suivi.filter((s) => s !== row); write(d); return null; }
     write(d);
     return row;
   },

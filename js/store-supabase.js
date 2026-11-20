@@ -168,6 +168,13 @@ export class SupabaseStore {
   // ---------- Recrutements, équipes, plan de formation (NON TESTÉ, comme le reste de cet adaptateur) ----------
   async setSessionStatus(id, status) { await this._rest(`sessions?id=eq.${id}`, { method: 'PATCH', body: { status } }); }
   async setDecision(invitationId, decision) { await this._rest(`invitations?id=eq.${invitationId}`, { method: 'PATCH', body: { decision: decision || null } }); }
+  // Non testé contre une vraie instance : suppose des clés étrangères en cascade sur invitations (tentatives, assignations).
+  async removeInvitation(invitationId) { await this._rest(`invitations?id=eq.${invitationId}`, { method: 'DELETE' }); return true; }
+  async updateInvitation(invitationId, { name, email }) {
+    const body = {}; if (name != null) body.name = String(name).trim(); if (email != null) body.email = String(email).trim();
+    await this._rest(`invitations?id=eq.${invitationId}`, { method: 'PATCH', body }); return true;
+  }
+  async setSessionDeadline(sessionId, deadline) { await this._rest(`sessions?id=eq.${sessionId}`, { method: 'PATCH', body: { deadline: iso(deadline) } }); }
 
   _emp(r) { return { id: r.id, companyId: r.company_id, name: r.name, email: r.email, profileId: r.profile_id || '', team: r.team || '', hireDate: ts(r.hire_date), createdAt: ts(r.created_at) }; }
   _empRow(e) { return { company_id: e.companyId, name: e.name, email: String(e.email).trim().toLowerCase(), profile_id: e.profileId || null, team: e.team || null, hire_date: iso(e.hireDate) }; }
