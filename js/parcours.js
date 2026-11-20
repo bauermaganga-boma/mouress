@@ -127,12 +127,14 @@ export { STATUS_P };
 /** Ajoute le département et le responsable (manager) à chaque collaborateur. */
 export async function withOrg(ctx, employees) {
   const org = await ctx.store.listOrg();
-  return employees.map((e) => ({ ...e, dept: org[e.id]?.dept || '', managerId: org[e.id]?.managerId || '' }));
+  return employees.map((e) => { const o = org[e.id] || {}; return { ...e, dept: o.dept || '', managerId: o.managerId || '', base: o.base || '', regime: o.regime || '', workPlace: o.workPlace || '', siteName: o.siteName || '', cycleStart: o.cycleStart || null, absence: o.absence || null }; });
 }
 
 /** Démonstration : secteur, départements, services et managers de l'entreprise démo (une seule fois). */
 export async function ensureDemoOrg(ctx, company, employees) {
-  if (!company.demo || await ctx.store.orgDemoDone(company.id)) return;
+  if (!company.demo) return;
+  await ensureDemoPresence(ctx, company, employees);
+  if (await ctx.store.orgDemoDone(company.id)) return;
   await ctx.store.markOrgDemo(company.id);
   if (!(await ctx.store.getCompanySector(company.id))) await ctx.store.setCompanySector(company.id, 'petrole-gaz');
   const dept = { 'Maintenance Port-Gentil': 'Département Maintenance', 'Production offshore': 'Département Production', QHSE: 'Département QHSE' };
@@ -141,4 +143,23 @@ export async function ensureDemoOrg(ctx, company, employees) {
     if (e.id === 'e_demo4' || e.id === 'e_demo5') await ctx.store.saveEmployee({ ...e, team: 'Maintenance Libreville' });
     await ctx.store.setOrg(e.id, { dept: dept[e.team] || '', managerId: mgr[e.id] || '' });
   }
+}
+
+/** Démonstration : base, régime de rotation, lieu et absences (une seule fois, indépendamment du reste). */
+async function ensureDemoPresence(ctx, company, employees) {
+  const key = company.id + ':presence';
+  if (await ctx.store.orgDemoDone(key)) return;
+  await ctx.store.markOrgDemo(key);
+  const now = Date.now();
+  const P = {
+    e_demo1: { base: 'Base Port-Gentil', regime: '14/14', workPlace: 'offshore', siteName: 'Plateforme Mandji', cycleStart: now - 5 * DAY },
+    e_demo2: { base: 'Base Port-Gentil', regime: 'sedentaire' },
+    e_demo3: { base: 'Base Port-Gentil', regime: '28/28', workPlace: 'site', siteName: 'Terminal Cap Lopez', cycleStart: now - 11 * DAY },
+    e_demo4: { base: 'Base Libreville', regime: 'sedentaire', absence: { type: 'conge', from: now - 2 * DAY, to: now + 6 * DAY } },
+    e_demo5: { base: 'Base Libreville', regime: 'sedentaire', absence: { type: 'formation', from: now + 2 * DAY, to: now + 3 * DAY } },
+    e_demo6: { base: 'Base Port-Gentil', regime: '14/14', workPlace: 'offshore', siteName: 'Plateforme Mandji', cycleStart: now - 8 * DAY },
+    e_demo7: { base: 'Base Port-Gentil', regime: '14/14', workPlace: 'site', siteName: 'Cap Lopez', cycleStart: now - 3 * DAY },
+    e_demo8: { base: 'Base Port-Gentil', regime: '14/14', workPlace: 'offshore', siteName: 'Plateforme Mandji', cycleStart: now - 16 * DAY },
+  };
+  for (const e of employees) if (P[e.id]) await ctx.store.setOrg(e.id, P[e.id]);
 }

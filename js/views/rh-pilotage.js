@@ -6,6 +6,7 @@ import { icon, badge, bar, avatar } from '../ui.js';
 import { loadTeam } from './rh-teams.js';
 import { recruitCounts } from './rh-recruit.js';
 import { buildModel, reviewState, ensureDemo, nextAction, actionHref } from '../parcours.js';
+import { whereIs, aptitude } from '../presence.js';
 
 const DAY = 86400000;
 const MONTHS = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
@@ -104,6 +105,9 @@ export async function renderPilotage(ctx, host, company, data, sessions, employe
     for (const e of emps.filter((x) => !x.profileId)) todo.push({ w: 6, tone: '', tag: 'Poste manquant', who: e.name, text: 'Renseignez son poste pour lui attribuer un parcours.', href: `#/rh/equipe/${e.id}` });
     for (const pid of posteIds.filter((id) => !(model.byProfile.get(id) || []).length)) todo.push({ w: 6, tone: 'info', tag: 'Parcours à créer', who: pName(pid), text: 'Aucune thématique définie pour ce poste.', href: `#/rh/poste/${pid}` });
   }
+  // personnes actuellement sur site ou offshore sans habilitation valide : urgence absolue
+  const here = emps.map((e) => ({ e, w: whereIs(e, now), apt: aptitude(rows.find((r) => r.e.id === e.id)?.habs || [], now) }));
+  for (const x of here.filter((q) => ['site', 'offshore'].includes(q.w.lieu) && q.apt.key === 'ko')) todo.push({ w: 0, tone: 'ko', tag: 'Sur site sans habilitation', who: x.e.name, text: `${x.w.place || x.w.label} : ${x.apt.detail}`, href: `#/rh/equipe/${x.e.id}` });
   todo.sort((a, b) => a.w - b.w);
   const todoMax = role === 'dg' ? 6 : 10;
   const todoHTML = `<section class="block"><div class="split"><h2>${role === 'dg' ? 'Points d’attention' : 'À traiter'}</h2>${todo.length ? badge(`${todo.length} action${todo.length > 1 ? 's' : ''}`, 'warn') : ''}</div>
@@ -174,7 +178,12 @@ export async function renderPilotage(ctx, host, company, data, sessions, employe
 
   const picker = choices.length ? `<div class="scope-pick"><label for="scope-sel" class="label">${R.pick}</label><select id="scope-sel">${choices.map(([v, l]) => `<option value="${esc(v)}" ${v === scope ? 'selected' : ''}>${esc(l)}</option>`).join('')}</select></div>`
     : (['dept', 'service', 'manager'].includes(role) ? '<p class="muted small">Aucun périmètre : renseignez le département, le service et le responsable dans les fiches collaborateurs.</p>' : '');
-  host.innerHTML = `<nav class="role-tabs" aria-label="Vue du back-office"><span class="role-lead">Vue</span>${ROLES.map((r) => `<a class="role-tab" href="#/rh?role=${r.k}" aria-current="${r.k === role}">${esc(r.label)}</a>`).join('')}</nav>
+  const nHere = (...k) => here.filter((q) => k.includes(q.w.lieu)).length;
+  const dateFr = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  const who = String(ctx.user?.name || '').split(' ')[0];
+  const hero = `<section class="hero-card"><div class="hero-txt"><p class="hero-date">${esc(dateFr)}</p><h2>Bonjour${who ? ' ' + esc(who) : ''}</h2><p>Vous avez <strong>${todo.length} élément${todo.length > 1 ? 's' : ''} à traiter</strong> aujourd’hui${opts.espace ? ' · ' + esc(opts.espace) : ''}.</p></div>
+    <a class="hero-stats" href="#/rh?vue=presence" aria-label="Voir la présence"><span><strong>${nHere('base')}</strong>à la base</span><span><strong>${nHere('site')}</strong>sur site</span><span><strong>${nHere('offshore')}</strong>offshore</span><span><strong>${nHere('repos', 'conge', 'maladie', 'deplacement', 'formation')}</strong>repos, absents</span></a></section>`;
+  host.innerHTML = `${hero}<nav class="role-tabs" aria-label="Vue du back-office"><span class="role-lead">Vue</span>${ROLES.map((r) => `<a class="role-tab" href="#/rh?role=${r.k}" aria-current="${r.k === role}">${esc(r.label)}</a>`).join('')}</nav>
     <div class="role-head"><p class="muted small">${esc(R.desc)}</p>${picker}</div>${body}`;
   host.querySelector('#scope-sel')?.addEventListener('change', (e) => { ctx.go(`/rh?role=${role}&scope=${encodeURIComponent(e.target.value)}`); });
 }

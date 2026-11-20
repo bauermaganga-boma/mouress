@@ -4,6 +4,8 @@ import { imgSrc } from './data.js';
 
 const P = {
   rig: '<path d="M12 3 6 21M12 3l6 18M8.5 14h7M10 9h4M4 21h16M12 3v3"/>',
+  calendar: '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
+  menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
   refinery: '<path d="M4 21V9l4-3v15M8 21V12h5v9M13 21V7h3v14M16 21v-9h4v9M3 21h18M14.5 7V3"/>',
   mine: '<path d="M3 20l5-9 3 5 3-7 7 11H3zM9 20l2-4"/>',
   ship: '<path d="M3 15l2 5h14l2-5-9-3-9 3zM12 12V4h5v3h-5M7 10h3M5 20c2 1.5 4 1.5 7 0 3 1.5 5 1.5 7 0"/>',
