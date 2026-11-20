@@ -1,0 +1,1426 @@
+{
+  "profile": "min-reserves",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Propriétés du réservoir : porosité, perméabilité, saturation",
+      "theme": "Propriétés du réservoir",
+      "minutes": 10,
+      "body": "Un **réservoir** est une roche poreuse et perméable (grès ou carbonate) qui contient des hydrocarbures sous une **couverture** imperméable, dans un **piège**. Pour l'agent du ministère qui lit un rapport de gisement, quatre grandeurs reviennent partout.\n\n**La porosité (φ)** est le rapport du volume des vides au volume total de la roche : φ = Vp / Vt. Elle mesure la capacité de stockage. Une porosité de 20 % signifie que 20 % du volume de roche est du vide. Les valeurs courantes vont de 5 % (réservoir médiocre) à 30 % (très bon grès peu compacté). Exemple chiffré (valeurs d'illustration) : un bloc de 50 millions de m³ de roche à 18 % de porosité offre 9 millions de m³ de pores.\n\n**La saturation (S)** est la fraction du volume poreux occupée par un fluide : Sw pour l'eau, So pour l'huile, Sg pour le gaz, avec Sw + So + Sg = 1. L'eau ne disparaît jamais complètement : la **saturation en eau irréductible (Swi)** est l'eau retenue sur les grains, qui ne bouge pas. La part du volume de roche occupée par les hydrocarbures vaut φ × (1 − Sw). Avec φ = 0,20 et Sw = 0,35, elle vaut 0,20 × 0,65 = 13 %.\n\n**La perméabilité (k)** mesure l'aptitude de la roche à laisser circuler un fluide. Elle s'exprime en **darcy** ; on utilise le **millidarcy (mD)**. Un réservoir à 1 mD est serré, de 100 à 1 000 mD il est excellent. La **loi de Darcy** relie le débit à la perméabilité : q = k × A × ΔP / (μ × L), où A est la section, ΔP la chute de pression, μ la viscosité et L la longueur. À chute de pression égale, une huile deux fois plus visqueuse s'écoule deux fois moins vite. Porosité et perméabilité ne sont pas liées de façon simple : une roche peut être très poreuse (beaucoup de volume) mais peu perméable (pores mal connectés), donc difficile à produire.\n\n**Le facteur volumétrique (Bo, Bg)** convertit le volume de fond en volume de surface. Si Bo = 1,25, il faut 1,25 m³ d'huile dans le réservoir pour obtenir 1 m³ de pétrole stocké, car du gaz se dégage en remontant. Ainsi 1 000 000 m³ d'huile de fond donnent 800 000 m³ en stock.\n\n**La pression et la température** déterminent l'état des fluides. En première approche, la pression augmente d'environ 0,1 bar par mètre de profondeur dans une colonne d'eau ; la **pression de bulle** est celle sous laquelle le gaz commence à se libérer de l'huile.\n\nCes mesures proviennent des **carottes** (analyses en laboratoire), des **diagraphies** (mesures dans le puits), des **essais de puits** et des analyses PVT (pression, volume, température) des fluides. Aucune n'est parfaite : la carotte est précise mais ponctuelle, la diagraphie est continue mais indirecte.\n\n**Sur le terrain.** Quand un opérateur annonce « très bon réservoir », demandez les trois chiffres (φ, Sw, k), leur source (carotte ou diagraphie) et le nombre de puits qui les appuient. Comparez le volume en place (lié à φ et Sw) et la productivité attendue (liée à k) : un réservoir à 28 % de porosité et 3 mD stocke beaucoup mais produit mal, alors qu'un réservoir à 14 % et 250 mD stocke moins mais débite bien.",
+      "keyPoints": [
+        "Porosité φ = volume des vides / volume total : elle mesure la capacité de stockage.",
+        "Saturations : Sw + So + Sg = 1 ; l'eau irréductible Swi ne s'écoule pas.",
+        "Perméabilité (mD) : elle gouverne le débit (loi de Darcy) ; porosité et perméabilité ne sont pas équivalentes.",
+        "Bo convertit le volume de fond en volume de surface : volume stock = volume de fond / Bo.",
+        "Carottes, diagraphies, essais de puits et analyses PVT fournissent les valeurs."
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Mécanismes de drainage et facteur de récupération",
+      "theme": "Mécanismes de drainage",
+      "minutes": 10,
+      "body": "Un gisement ne se vide pas de lui-même : il faut une **énergie** qui pousse les fluides vers le puits. Cette énergie est le **mécanisme de drainage**. Le connaître permet d'anticiper la pression, le gaz et l'eau produits, et donc la quantité finalement récupérable.\n\n**1. Expansion de la roche et des fluides.** Au-dessus de la pression de bulle, l'huile, l'eau et la roche se détendent légèrement quand la pression baisse. L'énergie est faible : la pression chute vite et la récupération reste de quelques pour cent.\n\n**2. Entraînement par le gaz dissous.** Sous la pression de bulle, le gaz se libère de l'huile en petites bulles et la pousse. La pression baisse vite, le rapport gaz/huile (GOR) monte, le débit chute. Récupération usuelle, à titre indicatif : de 5 à 30 %.\n\n**3. Gaz de couverture (chapeau de gaz).** Un chapeau de gaz au-dessus de l'huile se détend et la pousse vers le bas. La pression baisse lentement. Récupération indicative : de 20 à 40 %. Produire trop tôt le gaz du chapeau le prive de son rôle moteur : c'est une erreur de gestion classique. Si un puits proche du toit produit un excès de gaz (cône de gaz), on réduit son débit ou on le reperfore plus bas.\n\n**4. Aquifère actif.** L'eau de l'aquifère remonte et remplace l'huile produite. La pression reste presque stable, mais les puits produisent de l'eau de plus en plus tôt (percée d'eau). C'est souvent le meilleur mécanisme naturel : récupération indicative de 35 à 75 %.\n\n**5. Drainage gravitaire**, dans les gisements très inclinés et épais, et **mécanismes combinés**, fréquents en réalité.\n\nCes fourchettes sont indicatives et varient fortement selon les roches et les fluides ; elles ne remplacent jamais l'étude du champ.\n\n**Récupération secondaire et assistée.** Quand l'énergie naturelle ne suffit plus, l'opérateur **injecte** de l'eau ou du gaz pour maintenir la pression et déplacer l'huile : c'est la récupération secondaire. La récupération assistée ajoute des procédés qui changent les propriétés de l'huile ou de la roche (vapeur, polymères, tensioactifs, dioxyde de carbone). Le **taux de remplacement des vides** compare le volume injecté au volume produit, tous deux en conditions de réservoir : produire 8 000 m³/j et injecter 6 000 m³/j donne 75 %.\n\n**Le facteur de récupération** : FR = récupéré / en place. Il se décompose en **efficacité de déplacement** (fraction d'huile délogée dans la zone balayée) multipliée par l'**efficacité de balayage volumétrique** (part du réservoir touchée). Avec 0,70 et 0,50, FR = 35 %.\n\n**Sur le terrain.** Lisez trois courbes avant toute décision : pression en fonction de la production cumulée, GOR et pourcentage d'eau. Pression stable et eau croissante : aquifère. Pression qui s'effondre et GOR en hausse : gaz dissous. Une demande d'injection dans un champ dont la pression a peu baissé doit être justifiée par une étude (bilan matière ou simulation), et les réserves supplémentaires qu'elle promet ne se comptent qu'une fois le projet approuvé (voir module 4).",
+      "keyPoints": [
+        "Cinq mécanismes : expansion, gaz dissous, gaz de couverture, aquifère, gravité (souvent combinés).",
+        "Aquifère actif : pression stable et eau croissante ; gaz dissous : pression qui chute et GOR en hausse.",
+        "Récupération secondaire : injection d'eau ou de gaz ; assistée : vapeur, polymères, CO₂, etc.",
+        "FR = efficacité de déplacement × efficacité de balayage.",
+        "Les fourchettes de récupération sont indicatives ; l'étude du champ prime."
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Hydrocarbures en place, ressources et réserves",
+      "theme": "Ressources et réserves",
+      "minutes": 9,
+      "body": "Le vocabulaire est strict, car de lui dépendent la déclaration, la fiscalité et la valeur d'un titre.\n\n**Le volume d'hydrocarbures en place** est la quantité totale contenue dans la roche, avant toute production, qu'elle soit récupérable ou non. Ce n'est **pas** une réserve.\n\n**Les ressources** sont l'ensemble des quantités d'hydrocarbures estimées récupérables. Selon le **système de gestion des ressources pétrolières** (PRMS en anglais, publié par la Society of Petroleum Engineers, mise à jour 2018), on distingue trois familles :\n\n- les **ressources prospectives** : accumulations non encore découvertes, estimées à partir de données indirectes (sismique, analogues) ;\n- les **ressources contingentes** : accumulations découvertes, mais dont le développement n'est pas encore commercialement établi (absence de débouché, de projet, d'autorisation, de financement) ;\n- les **réserves** : quantités qu'on peut **commercialement récupérer** à partir d'accumulations connues, à une date donnée, selon des conditions définies.\n\nPour être une réserve, une quantité doit réunir quatre critères : être **découverte**, **récupérable**, **commerciale** (projet de développement défini, économiquement viable) et **restante** (non encore produite à la date de référence). Exemple (chiffres d'illustration) : récupérable initial de 50 millions de barils, production cumulée de 32 millions : réserves restantes de 18 millions de barils.\n\n**Les unités.** Le pétrole se compte en m³, en barils (bbl) ou en millions de barils (Mbbl) ; le gaz en m³ ou en pieds cubes. Repère : 1 m³ vaut environ 6,29 barils ; donc 2 millions de m³ valent environ 12,6 millions de barils. Le **baril équivalent pétrole** (bep) additionne gaz et huile selon leur énergie ; on retient en général environ 6 000 pieds cubes de gaz par bep (à vérifier selon la convention du rapport).\n\n**Brut et net.** Les réserves **brutes** sont celles de 100 % du champ ; les réserves **nettes** correspondent à la part d'un titulaire. Un champ de 20 Mbbl brut détenu à 25 % donne 5 Mbbl net (avant effets des clauses de partage). Dans un contrat de partage de production, la quote-part du contracteur dépend aussi des règles de récupération des coûts et de partage, d'où l'importance de préciser la base de calcul.\n\n**Le facteur économique.** Une quantité est « commerciale » seulement aux prix, coûts et conditions fixés. Si le prix baisse durablement, la fin de vie économique arrive plus tôt, certains volumes cessent d'être des réserves et redeviennent des ressources contingentes.\n\n**Cadre gabonais.** La loi n° 002/2019 définit le gisement comme une accumulation d'hydrocarbures contenue dans un ou plusieurs réservoirs (article 9). En cas de découverte, le contracteur informe sans délai l'administration (article 63) et entreprend les travaux d'appréciation pour établir le caractère commercial dans les 18 mois (zone conventionnelle) ou 24 mois (mer profonde et très profonde), à compter de la notification (article 64).\n\n**Sur le terrain.** Devant un tableau, demandez toujours : à quelle date ? brutes ou nettes ? quels prix et quel projet ? volume en place ou récupérable ?",
+      "keyPoints": [
+        "Volume en place n'est pas réserve : il faut un facteur de récupération, un projet et la commercialité.",
+        "Quatre critères : découvertes, récupérables, commerciales, restantes.",
+        "Prospectives (non découvertes), contingentes (découvertes, non commerciales), réserves (commerciales).",
+        "Brut = 100 % du champ ; net = part du titulaire ; 1 m³ ≈ 6,29 bbl.",
+        "Le prix et les coûts font basculer des volumes entre réserves et ressources contingentes."
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Classification : prouvées, probables, possibles",
+      "theme": "Classification des réserves",
+      "minutes": 10,
+      "body": "Au sein des réserves, le **système de gestion des ressources pétrolières** (PRMS) distingue trois catégories selon le degré d'incertitude.\n\n- **Réserves prouvées (1P)** : forte certitude raisonnable de récupération. Dans une approche probabiliste, il y a au moins **90 %** de chances (P90) que les quantités réellement récupérées égalent ou dépassent l'estimation.\n- **Réserves probables** : plus incertaines. Prouvées + probables forment la catégorie **2P**, dont l'estimation centrale (meilleure estimation) correspond à **P50** : autant de chances de dépasser que de ne pas atteindre.\n- **Réserves possibles** : encore plus incertaines. Prouvées + probables + possibles forment la catégorie **3P**, avec au moins **10 %** de chances (P10) d'être atteintes ou dépassées.\n\nLes ressources contingentes ont leurs propres bornes (1C, 2C, 3C), qu'il ne faut jamais additionner aux réserves.\n\n**Méthodes déterministe et probabiliste.** En méthode déterministe, l'ingénieur retient un scénario pour chaque catégorie (prudent, meilleur, optimiste). En méthode probabiliste, il traite les paramètres comme des distributions et lit P90, P50, P10.\n\n**Statut de développement.** On classe aussi les réserves selon la maturité : **développées en production** (puits en service), **développées non en production** (puits prêt, en attente de raccordement ou d'arrêt temporaire) et **non développées** (puits ou installations à réaliser). Les ressources contingentes se rangent selon la maturité du projet (par exemple développement en attente, non clarifié, non viable). Pour compter des réserves, le projet doit être approuvé ou son approbation raisonnablement attendue, avec engagement de l'opérateur.\n\n**Limite en profondeur.** En l'absence d'un contact eau–huile établi, les réserves prouvées s'arrêtent au **plus bas niveau d'hydrocarbures connu** (par exemple 2 450 m) ; au-delà, l'extension relève des probables ou des possibles.\n\n**Agrégation.** Additionner arithmétiquement les réserves prouvées de plusieurs champs donne un total plutôt **prudent** (inférieur au vrai P90 du portefeuille) ; additionner les possibles donne un total plutôt optimiste.\n\n**Exemple.** Un champ a 30 Mbbl prouvées, 12 Mbbl probables, 8 Mbbl possibles (chiffres d'illustration). 1P = 30 ; 2P = 42 ; 3P = 50.\n\n**Cas typiques.** Un pilote de récupération assistée sans décision d'investissement ne génère pas de réserves : les volumes sont des ressources contingentes. Une extension mal imagée par la sismique, au-delà des zones testées par puits, est généralement classée en possibles.\n\n**Sur le terrain.** Contrôlez que 1P ≤ 2P ≤ 3P, que chaque catégorie est rattachée à une date et à un projet, et que les ressources contingentes ne se glissent pas dans les réserves. Si un rapport d'un opérateur utilise une autre classification (par exemple celle d'une bourse), demandez le tableau de correspondance.\n\nLe texte de référence est le PRMS (mise à jour 2018) de la Society of Petroleum Engineers.",
+      "keyPoints": [
+        "Prouvées (P90, 1P), probables (2P = P50), possibles (3P = P10) : incertitude croissante.",
+        "Déterministe : trois scénarios ; probabiliste : distributions et lecture de P90, P50, P10.",
+        "Statut : développées en production, développées non en production, non développées.",
+        "Sans contact fluide connu, les prouvées s'arrêtent au plus bas niveau d'hydrocarbures connu.",
+        "Sans projet approuvé, les volumes sont des ressources contingentes, pas des réserves."
+      ]
+    },
+    {
+      "id": "m5",
+      "title": "Méthodes d'estimation et calculs simples",
+      "theme": "Méthodes d'estimation",
+      "minutes": 12,
+      "body": "Trois méthodes principales, souvent combinées, servent à estimer volumes et réserves.\n\n**1. Méthode volumétrique.** Elle convient avant la production ou en début de vie. Le volume d'huile en place en conditions de stock vaut :\n\nSTOIIP = A × h × (N/B) × φ × (1 − Sw) / Bo\n\navec A la surface, h l'épaisseur utile, N/B la fraction de roche réservoir (on peut l'omettre dans un exemple simple), φ la porosité, Sw la saturation en eau, Bo le facteur volumétrique. **Exemple** (valeurs d'illustration) : A = 200 ha = 2 000 000 m², h = 15 m, φ = 0,20, Sw = 0,30, Bo = 1,25. Volume de roche : 30 millions de m³ ; volume de pores : 6 millions ; volume d'huile de fond : 4,2 millions ; huile en stock : 4,2 / 1,25 = 3,36 millions de m³. Avec un facteur de récupération de 30 %, le récupérable vaut environ 1,0 million de m³.\n\n**2. Bilan matière.** Il applique la conservation de la matière au réservoir : volume produit = expansion des fluides, de la roche et de l'aquifère. Il exige un historique de production et de pression et des analyses PVT. Pour un **gaz** sans aquifère, la droite P/Z en fonction de la production cumulée Gp donne les réserves : P/Z = (Pi/Zi) × (1 − Gp/G). **Exemple** : Pi/Zi = 300 bar ; après 2 milliards de m³ produits, P/Z = 240 ; 240/300 = 0,8 = 1 − 2/G, donc G = 10 milliards de m³ en place.\n\n**3. Courbes de déclin.** On extrapole le débit q(t) jusqu'à un débit d'abandon économique. Le déclin **exponentiel** s'écrit q = q₀ × e^(−D·t) ; le déclin hyperbolique convient mieux aux déclins qui ralentissent. **Exemple** : q₀ = 1 000 m³/j et D = 0,2 par an (taux nominal continu). Après 5 ans : 1 000 × e⁻¹ ≈ 368 m³/j. Réserves restantes jusqu'à un débit d'abandon de 100 m³/j : (1 000 − 100) × 365 / 0,2 ≈ 1,64 million de m³. La durée de vie restante vaut ln(10)/0,2 ≈ 11,5 ans.\n\n**4. Simulation et analogies.** La simulation numérique du réservoir (modèle 3D) prolonge les méthodes précédentes ; les champs analogues servent à juger si un facteur de récupération est plausible.\n\n**Choix de la méthode.** Avant ou au début de la production : volumétrie et analogues ; après plusieurs années d'historique : bilan matière et déclin, plus contraignants car fondés sur le comportement réel. Les incertitudes (surface, épaisseur, Sw, FR) se traduisent en fourchettes P90 – P50 – P10, jamais en un seul chiffre.\n\n**Sur le terrain.** Si la volumétrie annonce 40 millions de m³ et que 15 ans de déclin bien ajusté n'en donnent que 22, ne retenez pas la plus haute : exigez une explication (compartimentation, aquifère, FR).",
+      "keyPoints": [
+        "Volumétrie : STOIIP = A × h × φ × (1 − Sw) / Bo (avec rapport utile/total si nécessaire).",
+        "Gaz : droite P/Z = (Pi/Zi)(1 − Gp/G) pour estimer le volume en place.",
+        "Déclin exponentiel : q = q₀ e^(−Dt) ; réserves restantes = (q − q abandon) / D.",
+        "Après un long historique, bilan matière et déclin priment sur la volumétrie.",
+        "Toute estimation s'exprime en fourchette (P90 – P50 – P10)."
+      ]
+    },
+    {
+      "id": "m6",
+      "title": "Déclaration annuelle des réserves à l'État",
+      "theme": "Déclaration annuelle à l'État",
+      "minutes": 10,
+      "body": "Le Ministère a besoin de connaître, chaque année, l'état des réserves du pays pour piloter la politique pétrolière, vérifier la production et suivre la fiscalité. L'opérateur transmet donc un état de ses réserves à l'administration.\n\n**Fondements juridiques.** La loi n° 002/2019 du 16 juillet 2019 impose au titulaire d'une autorisation de fournir aux services de l'administration des hydrocarbures un rapport sur l'état de ses activités et toute information technique, économique et financière dans les conditions et délais requis (article 182). Elle prévoit que le contracteur transmette toutes les informations relatives au bilan gaz (article 119), informe l'administration sans délai d'une découverte (article 63) et ne communique cette information aux tiers qu'avec son autorisation préalable. Le contracteur qui ne transmet pas dans les délais prévus par le contrat les données, études et rapports requis s'expose, après mise en demeure de quinze jours, à une pénalité de 500 000 à 5 000 000 de francs CFA (article 267). Le **format exact, le calendrier et les modèles** de la déclaration de réserves sont précisés par les textes réglementaires et les contrats en vigueur ; **ils sont à confirmer auprès de la Direction générale des Hydrocarbures** avant d'être cités.\n\n**Contenu type d'une déclaration.**\n- Date de référence (en pratique le 31 décembre) et unités.\n- Réserves par **champ** et par **catégorie** (1P, 2P, 3P), avec le statut de développement, séparées des ressources contingentes.\n- Production de l'année et production cumulée.\n- Méthodes et hypothèses : prix, coûts, taux de change, limite économique, facteur de récupération.\n- **Tableau de réconciliation** : réserves début + découvertes et extensions + révisions + acquisitions − cessions − production = réserves fin. Exemple (chiffres d'illustration) : 120 + 10 − 5 − 15 = 110 millions de barils.\n- Le bilan gaz (production, utilisation, torchage, vente) pour les champs concernés.\n\n**Contrôles de l'agent.**\n1. **Complétude** : tous les champs, toutes les catégories, la date.\n2. **Cohérence arithmétique** : réconciliation exacte, 1P ≤ 2P ≤ 3P.\n3. **Cohérence avec les mesures** : la production déclarée doit être compatible avec le comptage dynamique exigé pour déterminer la production fiscale (article 252).\n4. **Explication des révisions** : une hausse sans nouveau puits ni nouvelle étude se justifie par écrit.\n5. **Délais** : comparer la date de réception à l'échéance du contrat.\n\n**Confidentialité.** Les volumes d'une découverte récente sont sensibles : ne les communiquez pas à un tiers sans validation hiérarchique et autorisation (article 63).\n\n**Sur le terrain.** Si un rapport arrive en retard, constatez le retard par rapport au contrat, faites engager la mise en demeure, puis la pénalité prévue si la transmission n'a toujours pas eu lieu, au lieu de sanctionner d'emblée.",
+      "keyPoints": [
+        "Article 182 : rapport sur l'état des activités ; article 119 : bilan gaz ; article 63 : découverte et confidentialité.",
+        "Article 267 : mise en demeure de quinze jours, puis pénalité de 500 000 à 5 000 000 de francs CFA.",
+        "Déclaration par champ et par catégorie, à une date de référence, avec hypothèses.",
+        "Réconciliation : début + découvertes et extensions + révisions − production = fin.",
+        "Format et calendrier exacts : à confirmer auprès de la Direction générale des Hydrocarbures."
+      ]
+    },
+    {
+      "id": "m7",
+      "title": "Audit et vérification des réserves déclarées",
+      "theme": "Audit et vérification",
+      "minutes": 10,
+      "body": "Vérifier une déclaration de réserves revient à contrôler trois choses : les **données**, la **méthode** et le **respect des définitions**.\n\n**Qui vérifie ?** L'**évaluateur indépendant** est un tiers qualifié, sans conflit d'intérêts, mandaté par l'opérateur, par un financeur ou par l'État, pour auditer les volumes. L'administration exerce de son côté son contrôle : la loi n° 002/2019 précise que le contrôle des activités d'hydrocarbures comprend notamment le contrôle technique, comptable, juridique et fiscal (article 243) et prévoit des audits techniques sur le fonctionnement des appareils de mesurage et de comptage (article 251).\n\n**Liste de contrôle.**\n1. **Données de base** : cartes structurales, diagraphies, carottes, analyses PVT, essais de puits, historiques de production et de pression. Sans pièce, pas de validation.\n2. **Volume en place** : cohérence de la surface, de l'épaisseur, de φ, de Sw et de Bo avec les puits.\n3. **Facteur de récupération** : comparez au mécanisme de drainage et aux champs analogues. Annoncer 65 % pour un champ à gaz dissous est suspect.\n4. **Méthodes croisées** : volumétrie, bilan matière et déclin doivent aboutir à des ordres de grandeur compatibles ; sinon, on retient la méthode la plus contrainte par les données.\n5. **Hypothèses économiques** : prix et coûts conduisent à la limite économique, donc à la durée de vie et aux volumes classés en réserves.\n6. **Classification** : respect des définitions (statut, 1P ≤ 2P ≤ 3P, projet approuvé).\n7. **Périmètre** : double comptage entre permis voisins partageant un même réservoir. La mise en commun des gisements est le cadre prévu par la loi (articles 88 et 98).\n\n**Signaux d'alerte.**\n- Prouvées supérieures aux probables, ou réserves qui augmentent chaque année sans nouveau puits ni étude.\n- Facteur de récupération très supérieur à celui d'analogues.\n- Volumes en place présentés comme des réserves.\n- Prix ou coûts non cohérents avec la période.\n\n**Un indicateur simple.** Le rapport R/P compare les réserves à la production annuelle : 24 Mbbl de réserves 2P pour 6 Mbbl par an donne R/P = 4 ans (chiffres d'illustration).\n\n**Écarts avec l'audit.** Si l'opérateur annonce 50 millions de m³ et l'audit 38 (écart de 24 %), on n'applique ni moyenne ni sanction immédiate : on demande un **rapprochement** poste par poste (volume en place, FR, limite économique, périmètre), on fait documenter chaque écart et on décide ensuite. Les tolérances d'écart acceptables ne sont pas fixées par la loi ; elles dépendent de la pratique de l'organisme et du contrat, à confirmer.\n\n**Sur le terrain.** Consignez par écrit pièces reçues, questions, réponses et décisions : cette traçabilité protège l'agent et l'État.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+      "keyPoints": [
+        "L'évaluateur indépendant audite ; l'administration contrôle (technique, comptable, juridique, fiscal : article 243).",
+        "Contrôler les données, le volume en place, le facteur de récupération et la cohérence entre méthodes.",
+        "Signaux d'alerte : 1P supérieur à 2P, hausses sans nouvelles données, FR irréaliste, double comptage.",
+        "R/P = réserves / production annuelle.",
+        "Devant un écart d'audit : rapprochement et traçabilité, ni moyenne ni sanction immédiate."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "min-reserves-001",
+      "theme": "Propriétés du réservoir",
+      "level": 1,
+      "q": "Dans un rapport de gisement, comment définit-on la porosité d'une roche réservoir ?",
+      "choices": [
+        "L'aptitude de la roche à laisser circuler un fluide sous un gradient de pression",
+        "Le rapport du volume des vides au volume total de la roche",
+        "La fraction du volume des pores occupée par l'eau de formation",
+        "Le rapport de la masse de la roche sèche à son volume apparent"
+      ],
+      "answer": 1,
+      "explain": "La porosité φ = Vp / Vt mesure la capacité de stockage. L'aptitude à laisser circuler un fluide est la perméabilité ; la fraction des pores occupée par l'eau est la saturation en eau ; le rapport masse/volume est la masse volumique de la roche.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-002",
+      "theme": "Propriétés du réservoir",
+      "level": 1,
+      "q": "Dans quelle unité exprime-t-on usuellement la perméabilité d'un réservoir ?",
+      "choices": [
+        "Le pourcentage du volume de roche",
+        "Le bar par mètre de profondeur",
+        "Le mètre cube par jour",
+        "Le millidarcy (mD)"
+      ],
+      "answer": 3,
+      "explain": "La perméabilité se mesure en darcy, et en pratique en millidarcy. Le pourcentage est l'unité de la porosité et des saturations ; le bar par mètre est un gradient de pression ; le mètre cube par jour est un débit.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-003",
+      "theme": "Propriétés du réservoir",
+      "level": 1,
+      "q": "Dans un réservoir contenant de l'huile, de l'eau et du gaz, que vaut la somme des saturations Sw + So + Sg ?",
+      "choices": [
+        "Un, soit 100 % du volume poreux",
+        "La valeur de la porosité",
+        "La valeur de la perméabilité exprimée en millidarcy",
+        "Zéro lorsque le gaz est absent du réservoir"
+      ],
+      "answer": 0,
+      "explain": "Les trois fluides se partagent la totalité du volume poreux : la somme vaut 1. Elle ne dépend ni de la porosité ni de la perméabilité, et elle ne s'annule pas en l'absence de gaz (alors Sw + So = 1).",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-004",
+      "theme": "Propriétés du réservoir",
+      "level": 1,
+      "q": "Quel est le rôle de la couverture dans un système pétrolier ?",
+      "choices": [
+        "Générer les hydrocarbures à partir de la matière organique",
+        "Stocker les hydrocarbures dans ses pores connectés et perméables",
+        "Retenir les hydrocarbures sous une roche très peu perméable qui empêche leur remontée",
+        "Transporter les hydrocarbures de la roche mère vers le piège"
+      ],
+      "answer": 2,
+      "explain": "La couverture est une roche imperméable qui empêche la remontée des fluides. La génération est le rôle de la roche mère, le stockage celui de la roche réservoir, le transport vers le piège celui de la migration.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-005",
+      "theme": "Propriétés du réservoir",
+      "level": 2,
+      "q": "Un bloc de réservoir de 50 millions de m³ de roche présente une porosité de 18 %. Quel est le volume des pores ?",
+      "choices": [
+        "41,0 millions de m³",
+        "2,8 millions de m³",
+        "90,0 millions de m³",
+        "9,0 millions de m³"
+      ],
+      "answer": 3,
+      "explain": "Vp = φ × Vt = 0,18 × 50 = 9,0 millions de m³. 41 correspond à 50 × 0,82 (volume de grains) ; 2,8 vient d'une division 50/18 erronée ; 90 d'une multiplication par 1,8.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-006",
+      "theme": "Propriétés du réservoir",
+      "level": 2,
+      "q": "Un réservoir a une porosité de 20 % et une saturation en eau de 35 %. Quelle fraction du volume de roche est occupée par les hydrocarbures ?",
+      "choices": [
+        "13 % du volume de roche",
+        "20 %, soit la porosité",
+        "7 %, en prenant Sw au lieu de 1 − Sw",
+        "65 %"
+      ],
+      "answer": 0,
+      "explain": "φ × (1 − Sw) = 0,20 × 0,65 = 13 %. 20 % oublie la saturation ; 7 % utilise Sw au lieu de (1 − Sw) ; 65 % est la saturation en hydrocarbures sans multiplier par la porosité.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-007",
+      "theme": "Propriétés du réservoir",
+      "level": 2,
+      "q": "Pour un même réservoir et une même chute de pression, l'opérateur apprend que l'huile est deux fois plus visqueuse qu'estimé. Que devient le débit selon la loi de Darcy ?",
+      "choices": [
+        "Il est doublé",
+        "Il reste inchangé",
+        "Il est divisé par deux, le débit étant inversement proportionnel à μ",
+        "Il est divisé par quatre"
+      ],
+      "answer": 2,
+      "explain": "Dans q = k × A × ΔP / (μ × L), le débit est inversement proportionnel à la viscosité : μ double, q est divisé par deux. Il n'est pas doublé (mauvais sens) ni inchangé, et la relation n'est pas quadratique.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-008",
+      "theme": "Propriétés du réservoir",
+      "level": 2,
+      "q": "Le facteur volumétrique de fond d'une huile est Bo = 1,25. Combien de m³ de pétrole stocké obtient-on à partir de 1 000 000 m³ d'huile dans le réservoir ?",
+      "choices": [
+        "1 250 000 m³",
+        "800 000 m³",
+        "1 000 000 m³",
+        "750 000 m³"
+      ],
+      "answer": 1,
+      "explain": "Volume en stock = volume de fond / Bo = 1 000 000 / 1,25 = 800 000 m³ : du gaz se dégage en remontant. 1 250 000 multiplie au lieu de diviser ; 1 000 000 ignore Bo ; 750 000 est un calcul sans fondement (1 − 0,25).",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-009",
+      "theme": "Propriétés du réservoir",
+      "level": 3,
+      "q": "Deux réservoirs candidats : A (porosité 28 %, perméabilité 3 mD) et B (porosité 14 %, perméabilité 250 mD). Vous devez estimer lequel donne le meilleur débit par puits. Quelle est la bonne analyse ?",
+      "choices": [
+        "A débitera mieux, car une porosité plus forte signifie toujours un meilleur débit, quelle que soit la perméabilité de la roche",
+        "Les deux se valent, car porosité et perméabilité sont toujours équivalentes",
+        "B débitera probablement mieux, car la perméabilité gouverne le débit, même si A stocke davantage",
+        "Une comparaison est impossible sans connaître la saturation en gaz de chaque réservoir"
+      ],
+      "answer": 2,
+      "explain": "La porosité renseigne sur le volume stocké, la perméabilité sur l'aptitude à s'écouler (loi de Darcy). A est un bon stockage mais une roche serrée ; B stocke moins mais débite bien. Les deux grandeurs ne sont pas équivalentes, et la comparaison de principe est possible sans la saturation en gaz.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-010",
+      "theme": "Propriétés du réservoir",
+      "level": 3,
+      "q": "Un intervalle d'huile a une saturation en eau de 25 %, égale à sa saturation en eau irréductible. Que produira-t-il en début de vie ?",
+      "choices": [
+        "Un mélange à 25 % d'eau dès la mise en production, par entraînement",
+        "Des hydrocarbures sans eau, car l'eau est immobile",
+        "De l'eau uniquement, car elle est plus mouillante",
+        "Rien, car la saturation en huile est trop faible"
+      ],
+      "answer": 1,
+      "explain": "À Sw = Swi, l'eau est retenue sur les grains et ne s'écoule pas : l'intervalle produit des hydrocarbures sans eau tant que l'eau mobile n'arrive pas d'ailleurs. Avec 75 % d'huile, la saturation n'est pas trop faible ; l'eau produite à 25 % ou seule suppose une eau mobile.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-011",
+      "theme": "Mécanismes de drainage",
+      "level": 1,
+      "q": "Dans un gisement d'huile dont la pression passe sous la pression de bulle, quel mécanisme de drainage apparaît ?",
+      "choices": [
+        "L'entraînement par un aquifère actif remontant sous le gisement",
+        "Le drainage gravitaire sans variation de pression",
+        "L'injection naturelle d'eau depuis la surface",
+        "L'entraînement par le gaz dissous qui se libère de l'huile et la pousse vers les puits"
+      ],
+      "answer": 3,
+      "explain": "Sous la pression de bulle, le gaz se dégage dans l'huile et la pousse : c'est le gaz dissous. L'aquifère ne dépend pas de la pression de bulle ; le drainage gravitaire est un autre mécanisme ; l'injection naturelle d'eau depuis la surface n'existe pas.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-012",
+      "theme": "Mécanismes de drainage",
+      "level": 1,
+      "q": "Parmi les mécanismes naturels, lequel conduit en général au meilleur facteur de récupération ?",
+      "choices": [
+        "Un aquifère actif qui maintient la pression",
+        "Le gaz dissous seul sous la pression de bulle",
+        "L'expansion de la roche et des fluides au-dessus de la pression de bulle",
+        "Un petit chapeau de gaz sans apport d'eau"
+      ],
+      "answer": 0,
+      "explain": "À titre indicatif, un aquifère actif atteint 35 à 75 %, contre 5 à 30 % pour le gaz dissous, quelques pour cent pour la simple expansion et 20 à 40 % pour un chapeau de gaz. Les fourchettes varient selon les champs.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-013",
+      "theme": "Mécanismes de drainage",
+      "level": 1,
+      "q": "Qu'appelle-t-on récupération secondaire ?",
+      "choices": [
+        "L'abandon définitif d'un puits après son épuisement naturel et son bouchage",
+        "Le retraitement des déchets de forage et des boues en surface avant rejet",
+        "La vente du gaz associé à un autre producteur",
+        "L'injection d'eau ou de gaz pour maintenir la pression et déplacer l'huile vers les puits"
+      ],
+      "answer": 3,
+      "explain": "La récupération secondaire consiste à apporter de l'énergie par injection d'eau ou de gaz. L'abandon, le retraitement des déchets et la vente du gaz ne sont pas des méthodes de récupération.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-014",
+      "theme": "Mécanismes de drainage",
+      "level": 1,
+      "q": "Que désigne la récupération assistée ?",
+      "choices": [
+        "Des procédés (vapeur, polymères, CO₂) qui modifient l'huile ou la roche",
+        "La simple fermeture temporaire des puits pour remonter la pression et rétablir l'équilibre du gisement",
+        "Un contrôle de l'État sur la production de chaque puits",
+        "Le remplacement d'une pompe défaillante au fond du puits"
+      ],
+      "answer": 0,
+      "explain": "La récupération assistée agit sur la viscosité, la tension interfaciale ou la mobilité de l'huile. La fermeture temporaire, le contrôle administratif et le remplacement d'une pompe n'en font pas partie.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-015",
+      "theme": "Mécanismes de drainage",
+      "level": 2,
+      "q": "Un champ voit sa pression baisser vite, son rapport gaz/huile monter et son débit chuter. Quel mécanisme domine probablement ?",
+      "choices": [
+        "Un aquifère actif",
+        "Un chapeau de gaz volumineux",
+        "Le gaz dissous",
+        "Le drainage gravitaire"
+      ],
+      "answer": 2,
+      "explain": "Pression qui s'effondre, gaz libre qui augmente et débit en baisse sont les signes du gaz dissous. Un aquifère maintient la pression ; un grand chapeau de gaz la fait baisser lentement ; la gravité n'explique pas la montée du rapport gaz/huile.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-016",
+      "theme": "Mécanismes de drainage",
+      "level": 2,
+      "q": "Dans un champ, la pression reste presque stable alors que le pourcentage d'eau des puits augmente d'année en année. Quelle hypothèse est la plus plausible ?",
+      "choices": [
+        "Un chapeau de gaz qui s'étend à mesure de la production",
+        "Un épuisement par gaz dissous",
+        "Une erreur systématique des compteurs de gaz",
+        "Un aquifère actif qui remplace l'huile produite au fur et à mesure"
+      ],
+      "answer": 3,
+      "explain": "Pression stable et venues d'eau croissantes caractérisent un aquifère actif. Le chapeau de gaz ferait monter le gaz, pas l'eau ; le gaz dissous ferait chuter la pression ; une erreur de compteur de gaz n'explique pas l'eau.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-017",
+      "theme": "Mécanismes de drainage",
+      "level": 2,
+      "q": "Un opérateur produit 8 000 m³/j de fluides en conditions de réservoir et injecte 6 000 m³/j d'eau. Quel est le taux de remplacement des vides ?",
+      "choices": [
+        "75 %",
+        "133 %",
+        "25 %",
+        "48 %"
+      ],
+      "answer": 0,
+      "explain": "Taux = volume injecté / volume produit = 6 000 / 8 000 = 75 %. 133 % inverse le rapport ; 25 % est le déficit ; 48 % n'a pas de fondement.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-018",
+      "theme": "Mécanismes de drainage",
+      "level": 2,
+      "q": "L'efficacité de déplacement d'un projet d'injection d'eau est de 0,70 et l'efficacité de balayage volumétrique de 0,50. Quel facteur de récupération en résulte ?",
+      "choices": [
+        "60 %",
+        "20 %",
+        "35 %",
+        "120 %"
+      ],
+      "answer": 2,
+      "explain": "FR = efficacité de déplacement × efficacité de balayage = 0,70 × 0,50 = 35 %. 60 % est une moyenne arithmétique, 20 % une différence, et 120 % une addition, impossible pour une récupération.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-019",
+      "theme": "Mécanismes de drainage",
+      "level": 3,
+      "q": "Dans un champ d'huile à chapeau de gaz, des puits proches du toit produisent un gaz en excès (cône de gaz). Quelle mesure est la plus appropriée pour préserver la récupération finale ?",
+      "choices": [
+        "Augmenter leur débit pour produire le gaz le plus tôt possible et réduire les coûts",
+        "Réduire leur débit ou les reperforer plus bas pour préserver l'énergie du chapeau",
+        "Les laisser en l'état, le gaz produit n'ayant aucun effet sur la pression du réservoir ni sur la récupération finale",
+        "Les convertir en puits d'injection d'eau au sommet du réservoir"
+      ],
+      "answer": 1,
+      "explain": "Le chapeau de gaz est la principale énergie de drainage : le produire trop tôt fait chuter la pression et réduit la récupération d'huile. On réduit donc le débit des puits concernés ou on les reperfore plus bas. Les laisser en l'état ou accélérer la production aggrave la perte d'énergie.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-020",
+      "theme": "Mécanismes de drainage",
+      "level": 3,
+      "q": "Un opérateur dépose un projet d'injection d'eau dans un champ dont la pression n'a baissé que de 2 % alors que 30 % de l'huile a été produite. Que demandez-vous en priorité ?",
+      "choices": [
+        "D'approuver, car l'injection augmente toujours la récupération d'huile et améliore la pression du champ",
+        "De refuser, car l'injection est interdite quand la pression est stable selon la réglementation en vigueur",
+        "Une étude (bilan matière ou simulation) justifiant l'intérêt, avant de retenir des réserves liées au projet",
+        "D'inscrire aussitôt les volumes supplémentaires en réserves prouvées"
+      ],
+      "answer": 2,
+      "explain": "Une pression quasi stable suggère un aquifère actif : l'injection peut être peu utile. Il faut démontrer le gain par une étude, et les réserves ne se comptent qu'une fois le projet approuvé. L'injection n'est pas interdite et n'augmente pas toujours la récupération.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-021",
+      "theme": "Ressources et réserves",
+      "level": 1,
+      "q": "Selon le système de gestion des ressources pétrolières, que sont les réserves ?",
+      "choices": [
+        "La totalité des hydrocarbures contenus dans la roche avant toute production, qu'ils soient récupérables ou non",
+        "Des quantités commercialement récupérables à partir d'accumulations connues, à une date donnée",
+        "Les quantités estimées dans des structures non encore forées, à partir de la sismique",
+        "Les volumes découverts mais sans débouché commercial établi"
+      ],
+      "answer": 1,
+      "explain": "Les réserves sont les quantités commercialement récupérables d'accumulations connues, à une date donnée. Le volume contenu dans la roche est le volume en place ; les structures non forées relèvent des ressources prospectives ; les découvertes non commerciales sont des ressources contingentes.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-022",
+      "theme": "Ressources et réserves",
+      "level": 1,
+      "q": "Parmi les propositions suivantes, laquelle n'est PAS un critère pour qu'une quantité soit classée en réserve ?",
+      "choices": [
+        "Être découverte",
+        "Être commerciale, avec un projet de développement défini",
+        "Être restante à la date de référence",
+        "Être détenue par l'opérateur national"
+      ],
+      "answer": 3,
+      "explain": "Les quatre critères sont : découverte, récupérable, commerciale et restante. La détention par l'opérateur national n'en fait pas partie : la qualité du détenteur ne change pas la nature d'une quantité.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-023",
+      "theme": "Ressources et réserves",
+      "level": 1,
+      "q": "Que sont les ressources prospectives ?",
+      "choices": [
+        "Des quantités estimées récupérables dans des accumulations non encore découvertes, déduites de données indirectes",
+        "Des réserves déjà produites et comptabilisées en production cumulée depuis la mise en service",
+        "Des découvertes dont le développement est approuvé et engagé",
+        "Des volumes en place dans un champ en production"
+      ],
+      "answer": 0,
+      "explain": "Les ressources prospectives concernent des accumulations non découvertes, estimées à partir de données indirectes. Les quantités déjà produites sont la production cumulée ; un développement approuvé relève des réserves ; le volume en place n'est pas une ressource récupérable.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-024",
+      "theme": "Ressources et réserves",
+      "level": 1,
+      "q": "Que sont les ressources contingentes ?",
+      "choices": [
+        "Des quantités à découvrir dans un bloc nouvellement attribué",
+        "Des quantités découvertes dont le caractère commercial n'est pas encore établi (débouché, projet, financement)",
+        "Les réserves nettes d'un titulaire après partage de production, avant tout calcul de redevance",
+        "Les volumes torchés ou rejetés pendant les essais de puits"
+      ],
+      "answer": 1,
+      "explain": "Les ressources contingentes sont découvertes mais dépendent d'une condition non levée (débouché, projet, autorisation, financement). Les quantités à découvrir sont prospectives ; les réserves nettes sont une autre notion ; les volumes torchés ne sont pas une catégorie de ressources.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-025",
+      "theme": "Ressources et réserves",
+      "level": 2,
+      "q": "Combien de barils représentent environ 2 millions de m³ de pétrole, sachant que 1 m³ vaut environ 6,29 barils ?",
+      "choices": [
+        "12,6 millions de barils",
+        "0,32 million de barils",
+        "3,2 millions de barils",
+        "126 millions de barils, à un facteur dix près"
+      ],
+      "answer": 0,
+      "explain": "2 × 6,29 = 12,58, soit environ 12,6 millions de barils. 0,32 divise au lieu de multiplier ; 3,2 inverse l'ordre de grandeur ; 126 se trompe d'un facteur 10.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-026",
+      "theme": "Ressources et réserves",
+      "level": 2,
+      "q": "Le récupérable initial d'un champ est de 50 millions de barils et la production cumulée au 31 décembre est de 32 millions. Quelles sont les réserves restantes (avant toute révision) ?",
+      "choices": [
+        "82 millions de barils, en additionnant au lieu de soustraire",
+        "32 millions de barils",
+        "18 millions de barils",
+        "1,6 million de barils"
+      ],
+      "answer": 2,
+      "explain": "Réserves restantes = récupérable initial − production cumulée = 50 − 32 = 18 millions de barils. 82 additionne au lieu de soustraire ; 32 est la production cumulée ; 1,6 vient d'un rapport 50/32.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-027",
+      "theme": "Ressources et réserves",
+      "level": 2,
+      "q": "Un opérateur déclare un gisement de gaz découvert qui ne dispose ni de contrat de vente ni de projet de développement. Quelle catégorie est la plus appropriée ?",
+      "choices": [
+        "Réserves prouvées",
+        "Ressources prospectives de la zone",
+        "Réserves probables",
+        "Ressources contingentes"
+      ],
+      "answer": 3,
+      "explain": "Une accumulation découverte sans débouché ni projet n'est pas commerciale : ressources contingentes. Les réserves, prouvées ou probables, exigent la commercialité ; les ressources prospectives concernent des accumulations non découvertes.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-028",
+      "theme": "Ressources et réserves",
+      "level": 2,
+      "q": "Un champ de 20 millions de barils de réserves brutes est détenu à 25 % par un titulaire. Quelles sont ses réserves nettes, avant effets contractuels de partage ?",
+      "choices": [
+        "5 millions de barils",
+        "80 millions de barils",
+        "20 millions de barils",
+        "45 millions de barils"
+      ],
+      "answer": 0,
+      "explain": "Réserves nettes = 25 % × 20 = 5 millions de barils. 80 divise par 0,25 ; 20 ignore la participation ; 45 additionne 20 et 25. Les clauses de partage peuvent ensuite modifier la quote-part du contracteur.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-029",
+      "theme": "Ressources et réserves",
+      "level": 3,
+      "q": "Un rapport annuel présente comme « réserves » 120 millions de m³ d'huile en place, sans facteur de récupération ni projet. Quelle objection formulez-vous ?",
+      "choices": [
+        "Rien à objecter : le volume en place est toujours la mesure officielle des réserves déclarées à l'État",
+        "Il faut seulement convertir les m³ en barils pour que ce soit valable",
+        "Le volume en place n'est pas une réserve : il faut un facteur de récupération et un projet",
+        "Il faut ajouter le gaz associé, sans changer la méthode"
+      ],
+      "answer": 2,
+      "explain": "Le volume en place est la quantité totale dans la roche ; seule une fraction récupérable, commerciale et restante constitue des réserves. La conversion d'unités ou l'ajout de gaz ne corrigent pas l'erreur de définition.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-030",
+      "theme": "Ressources et réserves",
+      "level": 3,
+      "q": "Le prix du pétrole baisse durablement et les coûts d'exploitation d'un champ marginal dépassent bientôt les recettes. Quel effet a ce changement sur les réserves déclarées ?",
+      "choices": [
+        "Elles restent identiques, car le prix n'intervient pas dans la définition économique des réserves ni dans leur calcul",
+        "Elles diminuent : la limite économique arrive plus tôt et certains volumes deviennent contingents",
+        "Elles augmentent, car le champ produira plus longtemps pour compenser",
+        "Elles passent automatiquement en réserves prouvées"
+      ],
+      "answer": 1,
+      "explain": "Les réserves sont commerciales aux prix et coûts retenus : une baisse durable avance la limite économique, réduit les réserves et reclasse certains volumes en ressources contingentes (récupérables si les prix remontent). Le prix intervient donc bien dans la définition.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-031",
+      "theme": "Classification des réserves",
+      "level": 1,
+      "q": "Que signifie le sigle PRMS, utilisé pour classer les réserves ?",
+      "choices": [
+        "Programme régional de mesure des sondages",
+        "Protocole de régulation des marchés pétroliers",
+        "Système de gestion des ressources pétrolières",
+        "Plan de réalisation des mises en service"
+      ],
+      "answer": 2,
+      "explain": "PRMS désigne le système de gestion des ressources pétrolières (Petroleum Resources Management System), publié par la Society of Petroleum Engineers, mise à jour 2018. Les autres intitulés n'existent pas.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-032",
+      "theme": "Classification des réserves",
+      "level": 1,
+      "q": "Quelles sont les trois catégories de réserves du système de gestion des ressources pétrolières ?",
+      "choices": [
+        "Brutes, nettes et marginales",
+        "Prouvées, probables et possibles",
+        "Conventionnelles, offshore et très profondes",
+        "Découvertes, contingentes et prospectives"
+      ],
+      "answer": 1,
+      "explain": "Les réserves se divisent en prouvées, probables et possibles selon l'incertitude. Brut/net est une autre distinction ; conventionnel/offshore est géographique ; découvertes, contingentes et prospectives sont des familles de ressources.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-033",
+      "theme": "Classification des réserves",
+      "level": 1,
+      "q": "En approche probabiliste, que signifie P90 pour les réserves prouvées ?",
+      "choices": [
+        "Que 90 % du volume en place sera produit au cours de la durée de vie du champ",
+        "Que l'estimation peut être dépassée par moins de 10 % des champs du portefeuille de l'opérateur",
+        "Que 90 % des puits du champ sont productifs",
+        "Au moins 90 % de chances que la quantité récupérée égale ou dépasse l'estimation, d'où le caractère prudent de P90"
+      ],
+      "answer": 3,
+      "explain": "P90 est une estimation prudente : au moins 90 % de probabilité que la quantité réellement récupérée l'égale ou la dépasse. Ce n'est ni un facteur de récupération de 90 %, ni un pourcentage de champs, ni de puits productifs.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-034",
+      "theme": "Classification des réserves",
+      "level": 1,
+      "q": "Que représente la catégorie 2P ?",
+      "choices": [
+        "Prouvées plus probables, avec une meilleure estimation à P50",
+        "Les réserves possibles uniquement",
+        "Les ressources contingentes de niveau intermédiaire, notées 2C par le système",
+        "Les réserves de deux champs additionnées dans un seul rapport consolidé"
+      ],
+      "answer": 0,
+      "explain": "2P = prouvées + probables, et la meilleure estimation correspond à P50. Les possibles seules ne forment pas 2P ; les ressources contingentes utilisent la notation 1C, 2C, 3C ; 2P ne désigne pas deux champs.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-035",
+      "theme": "Classification des réserves",
+      "level": 2,
+      "q": "Un champ compte 30 Mbbl de réserves prouvées, 12 Mbbl de probables et 8 Mbbl de possibles. Quelle est la valeur de 2P ?",
+      "choices": [
+        "12 Mbbl",
+        "42 Mbbl (30 + 12)",
+        "50 Mbbl, valeur de 3P",
+        "38 Mbbl"
+      ],
+      "answer": 1,
+      "explain": "2P = prouvées + probables = 30 + 12 = 42 Mbbl. 12 oublie les prouvées ; 50 est la valeur de 3P ; 38 est une addition prouvées + possibles, qui n'a pas de sens de classification.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-036",
+      "theme": "Classification des réserves",
+      "level": 2,
+      "q": "Un puits est foré, équipé et testé, mais attend son raccordement à l'installation de traitement. Comment classe-t-on ses réserves selon leur statut ?",
+      "choices": [
+        "Développées en production",
+        "Non développées",
+        "Ressources contingentes non viables",
+        "Développées non en production"
+      ],
+      "answer": 3,
+      "explain": "Les réserves d'un puits prêt mais non raccordé sont développées non en production. Elles ne sont pas en production faute d'écoulement ; elles ne sont pas non développées car l'investissement est fait ; et un projet engagé n'est pas non viable.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-037",
+      "theme": "Classification des réserves",
+      "level": 2,
+      "q": "Dans un compartiment, le plus bas niveau d'hydrocarbures connu par un puits est à 2 450 m et aucun contact eau–huile n'est établi. Jusqu'où les réserves prouvées peuvent-elles s'étendre vers le bas ?",
+      "choices": [
+        "Jusqu'à un contact estimé par la sismique à 2 500 m",
+        "Jusqu'à la base de la structure, quelle qu'elle soit",
+        "Jusqu'à 2 450 m",
+        "Jusqu'à 2 450 m plus une marge de sécurité de 50 m"
+      ],
+      "answer": 2,
+      "explain": "En l'absence de contact établi, les prouvées s'arrêtent au plus bas niveau d'hydrocarbures connu. Un contact sismique, la base de la structure ou une marge arbitraire relèvent de l'estimation et ne permettent de classer que des probables ou des possibles.",
+      "seconds": 75,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-038",
+      "theme": "Classification des réserves",
+      "level": 2,
+      "q": "On additionne arithmétiquement les réserves prouvées de plusieurs champs. Comment le total se compare-t-il au vrai P90 du portefeuille ?",
+      "choices": [
+        "Il lui est toujours exactement égal, quels que soient les champs",
+        "Il est généralement plus optimiste",
+        "Il n'a aucun lien avec lui",
+        "Il est généralement plus prudent que ce P90"
+      ],
+      "answer": 3,
+      "explain": "La somme des P90 de champs distincts est inférieure au P90 de la somme : l'addition arithmétique est donc prudente pour les prouvées (et optimiste pour les possibles). L'égalité n'est vraie que si les champs sont parfaitement corrélés.",
+      "seconds": 75,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-039",
+      "theme": "Classification des réserves",
+      "level": 3,
+      "q": "Un opérateur ajoute 8 Mbbl à ses réserves prouvées grâce à un projet d'injection de polymère testé en pilote, sans décision d'investissement ni budget. Que faites-vous ?",
+      "choices": [
+        "Vous demandez de les reclasser en ressources contingentes tant que le projet n'est pas approuvé, sans les supprimer de la déclaration",
+        "Vous les acceptez, car un pilote réussi suffit à prouver les réserves et justifie à lui seul l'investissement",
+        "Vous les classez en réserves possibles sans condition",
+        "Vous les supprimez définitivement de la déclaration"
+      ],
+      "answer": 0,
+      "explain": "Pour compter des réserves, le projet doit être approuvé ou son approbation raisonnablement attendue avec engagement. Faute de décision d'investissement, ces volumes sont des ressources contingentes : on ne les supprime pas, on les classe correctement.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-040",
+      "theme": "Classification des réserves",
+      "level": 3,
+      "q": "Deux puits ont testé de l'huile dans un compartiment. Une interprétation sismique incertaine suggère une extension vers l'ouest. Le projet de développement est approuvé. Comment classer le volume de cette extension ?",
+      "choices": [
+        "En réserves prouvées, car le projet est approuvé et que les deux puits ont testé de l'huile",
+        "En ressources prospectives, car aucune donnée n'existe",
+        "En réserves possibles, car l'incertitude est élevée au-delà des zones testées, les prouvées se limitant à ces zones",
+        "Il ne doit pas du tout apparaître, car la sismique n'est pas une donnée"
+      ],
+      "answer": 2,
+      "explain": "Les prouvées sont limitées aux zones validées par les puits ; une extension reposant sur la seule sismique incertaine relève généralement des possibles (voire des probables si les données la soutiennent). La sismique est bien une donnée, et l'approbation du projet ne change pas le niveau d'incertitude du volume.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-041",
+      "theme": "Méthodes d'estimation",
+      "level": 1,
+      "q": "Quelle expression donne le volume d'huile en place en conditions de stock par la méthode volumétrique ?",
+      "choices": [
+        "A × h × k × (1 − Sw) × Bo",
+        "A × h × φ × (1 − Sw) / Bo",
+        "A × h × φ × Sw × Bo",
+        "A × φ × (1 − Sw) / (h × Bo)"
+      ],
+      "answer": 1,
+      "explain": "STOIIP = A × h × φ × (1 − Sw) / Bo : volume de roche × porosité × saturation en hydrocarbures, ramené en surface par Bo. La perméabilité n'intervient pas ; Sw doit être remplacé par (1 − Sw) ; l'épaisseur est un multiplicateur.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-042",
+      "theme": "Méthodes d'estimation",
+      "level": 1,
+      "q": "De quoi a-t-on besoin pour appliquer un bilan matière à un réservoir ?",
+      "choices": [
+        "Uniquement de la surface du champ et de son épaisseur moyenne, mesurées sur un seul puits",
+        "D'un contrat de vente de la production",
+        "De la production cumulée, de la pression dans le temps et du PVT",
+        "D'une image sismique en trois dimensions seulement"
+      ],
+      "answer": 2,
+      "explain": "Le bilan matière relie les volumes produits à la baisse de pression : il exige donc l'historique de production, l'historique de pression et les propriétés PVT. Surface et épaisseur servent à la volumétrie ; un contrat de vente et la sismique ne suffisent pas.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-043",
+      "theme": "Méthodes d'estimation",
+      "level": 1,
+      "q": "Que fait-on lors d'une analyse de courbe de déclin ?",
+      "choices": [
+        "On calcule la porosité moyenne à partir des carottes prélevées dans les puits d'appréciation",
+        "On extrapole le débit de production jusqu'à un débit d'abandon économique",
+        "On mesure la viscosité de l'huile en laboratoire",
+        "On compare les prix de vente du pétrole d'une année à l'autre"
+      ],
+      "answer": 1,
+      "explain": "L'analyse de déclin prolonge la tendance de production observée jusqu'au débit d'abandon et en déduit les réserves restantes. Les carottes, la viscosité et les prix ne sont pas l'objet de cette méthode.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-044",
+      "theme": "Méthodes d'estimation",
+      "level": 1,
+      "q": "Dans quelle situation la méthode volumétrique est-elle la plus utilisée ?",
+      "choices": [
+        "Après quarante ans de production sans modification des puits, quand l'historique est très long",
+        "Seulement pour les champs de gaz sans aquifère",
+        "Uniquement lorsque l'État l'exige par arrêté",
+        "Avant la production ou en début de vie, quand l'historique est faible"
+      ],
+      "answer": 3,
+      "explain": "Faute d'historique, on estime à partir de la géologie et des mesures de puits : c'est la volumétrie. Avec un long historique, on privilégie bilan matière et déclin. Elle s'applique aussi à l'huile, et aucune exigence d'arrêté n'est nécessaire.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-045",
+      "theme": "Méthodes d'estimation",
+      "level": 2,
+      "q": "Un réservoir a pour surface 2 000 000 m², épaisseur utile 15 m, porosité 0,20, saturation en eau 0,30 et Bo = 1,25. Quel volume d'huile en stock obtient-on ?",
+      "choices": [
+        "3,36 millions de m³",
+        "4,20 millions de m³",
+        "6,00 millions de m³",
+        "5,25 millions de m³, en multipliant par Bo"
+      ],
+      "answer": 0,
+      "explain": "Roche : 30 M m³ ; pores : 6 M ; huile de fond : 6 × 0,70 = 4,2 M ; en stock : 4,2 / 1,25 = 3,36 M m³. 4,20 oublie Bo ; 6,00 oublie à la fois Sw et Bo ; 5,25 multiplie par Bo au lieu de diviser.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-046",
+      "theme": "Méthodes d'estimation",
+      "level": 2,
+      "q": "Avec un facteur de récupération de 30 % et un volume en place de 3,36 millions de m³, quel est le volume récupérable ?",
+      "choices": [
+        "Environ 1,3 million de m³",
+        "Environ 1,0 million de m³",
+        "Environ 2,4 millions de m³",
+        "Environ 3,4 millions de m³"
+      ],
+      "answer": 1,
+      "explain": "3,36 × 0,30 ≈ 1,0 million de m³. 1,3 utilise 4,2 au lieu de 3,36 ; 2,4 correspond à 70 % de récupération ; 3,4 ne tient pas compte du facteur de récupération.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-047",
+      "theme": "Méthodes d'estimation",
+      "level": 2,
+      "q": "Un gisement de gaz sans aquifère a Pi/Zi = 300 bar. Après 2 milliards de m³ produits, P/Z = 240 bar. Quel est le volume de gaz en place G ?",
+      "choices": [
+        "2,5 milliards de m³",
+        "12,5 milliards de m³",
+        "8 milliards de m³",
+        "10 milliards de m³"
+      ],
+      "answer": 3,
+      "explain": "P/Z = (Pi/Zi)(1 − Gp/G) donne 0,8 = 1 − 2/G, donc G = 10 milliards de m³. 2,5 vient de 2/0,8 ; 12,5 de 10/0,8 ; 8 est un volume sans lien avec la droite P/Z.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-048",
+      "theme": "Méthodes d'estimation",
+      "level": 2,
+      "q": "Un puits produit 1 000 m³/j au départ avec un déclin exponentiel de taux nominal D = 0,2 par an. Quel est son débit après 5 ans ?",
+      "choices": [
+        "Environ 368 m³/j",
+        "Environ 0 m³/j",
+        "Environ 500 m³/j, soit la moitié",
+        "Environ 800 m³/j"
+      ],
+      "answer": 0,
+      "explain": "q = q₀ × e^(−D·t) = 1 000 × e⁻¹ ≈ 368 m³/j. 0 correspond à un déclin linéaire (1 000 − 200 × 5) ; 500 et 800 ne découlent pas de la loi exponentielle.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-049",
+      "theme": "Méthodes d'estimation",
+      "level": 3,
+      "q": "Le puits précédent (1 000 m³/j, D = 0,2 par an) sera abandonné à 100 m³/j. Quelles sont ses réserves restantes, en comptant 365 jours par an ?",
+      "choices": [
+        "Environ 0,33 million de m³",
+        "Environ 3,29 millions de m³",
+        "Environ 12 millions de m³",
+        "Environ 1,64 million de m³"
+      ],
+      "answer": 3,
+      "explain": "Réserves restantes = (q − q abandon) × 365 / D = 900 × 365 / 0,2 ≈ 1,64 million de m³. 0,33 oublie la division par D ; 3,29 utilise D = 0,1 ; 12 n'a pas de fondement.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-050",
+      "theme": "Méthodes d'estimation",
+      "level": 3,
+      "q": "Après 15 ans de production, la volumétrie d'un opérateur donne 40 millions de m³ récupérables, alors qu'une courbe de déclin bien ajustée à l'historique en donne 22. Quelle démarche est la plus rigoureuse ?",
+      "choices": [
+        "Exiger une explication de l'écart avant de retenir la valeur (compartimentation, aquifère)",
+        "Retenir la valeur la plus élevée, plus favorable à l'État, sans en discuter les hypothèses ni les données",
+        "Retenir la moyenne des deux, soit 31 millions de m³, pour concilier les deux méthodes",
+        "Ignorer la courbe de déclin, car elle ne concerne que le passé"
+      ],
+      "answer": 0,
+      "explain": "Un déclin ajusté sur un long historique est contraint par le comportement réel : un écart aussi fort doit être expliqué (volume en place surestimé, compartiments non drainés, etc.). Choisir la plus haute ou la moyenne sans analyse est arbitraire.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-051",
+      "theme": "Déclaration annuelle à l'État",
+      "level": 1,
+      "q": "Quel article de la loi n° 002/2019 oblige le titulaire d'une autorisation à fournir à l'administration un rapport sur l'état de ses activités et les informations techniques, économiques et financières ?",
+      "choices": [
+        "L'article 227",
+        "L'article 125, relatif au torchage",
+        "L'article 182",
+        "L'article 252 (comptage)"
+      ],
+      "answer": 2,
+      "explain": "Le titre VIII de la loi traite de l'obligation d'information : l'article 182 impose le rapport. L'article 227 concerne le régime douanier, l'article 125 l'interdiction du torchage et l'article 252 le comptage dynamique.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 182",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-052",
+      "theme": "Déclaration annuelle à l'État",
+      "level": 1,
+      "q": "À quelle date les réserves d'une déclaration annuelle sont-elles habituellement arrêtées ?",
+      "choices": [
+        "À la date de signature du contrat de partage de production",
+        "À une date de référence fixe, en pratique le 31 décembre, précisée dans le rapport",
+        "À la date de délivrance du titre pétrolier",
+        "À la date de la dernière production du champ"
+      ],
+      "answer": 1,
+      "explain": "Une déclaration est datée : les réserves sont arrêtées à une date de référence, en pratique la fin de l'exercice. Les dates de signature, de délivrance du titre ou de dernière production ne servent pas de référence annuelle commune.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-053",
+      "theme": "Déclaration annuelle à l'État",
+      "level": 1,
+      "q": "Quelle équation constitue le tableau de réconciliation des réserves d'une année ?",
+      "choices": [
+        "Réserves de fin + production = volume en place, quel que soit le champ concerné",
+        "Réserves de début × facteur de récupération = réserves de fin, appliqué champ par champ",
+        "Réserves de début + découvertes et extensions + révisions − production = réserves de fin",
+        "Réserves de fin − réserves de début = production cumulée, exprimée en volume de stock"
+      ],
+      "answer": 2,
+      "explain": "La réconciliation explique chaque variation des réserves entre deux dates : découvertes, extensions, révisions, acquisitions, cessions et production. Les autres relations mélangent volume en place, facteur de récupération ou production cumulée.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-054",
+      "theme": "Déclaration annuelle à l'État",
+      "level": 1,
+      "q": "Un contracteur ne transmet pas dans les délais prévus par son contrat les données et rapports requis pour les activités amont. Que prévoit l'article 267 de la loi n° 002/2019 ?",
+      "choices": [
+        "Le retrait immédiat du titre, sans mise en demeure et sans possibilité de régularisation",
+        "Mise en demeure de quinze jours, puis pénalité de 500 000 à 5 000 000 de francs CFA",
+        "Une pénalité de 50 à 500 millions de francs CFA dès le premier jour de retard",
+        "Pas de sanction, le contrat réglant seul la question de la transmission des rapports"
+      ],
+      "answer": 1,
+      "explain": "L'article 267 prévoit, sans préjudice des autres sanctions contractuelles, une mise en demeure de quinze jours puis une pénalité de 500 000 à 5 000 000 de francs CFA. Il n'y a ni retrait immédiat ni pénalité sans mise en demeure.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 267",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-055",
+      "theme": "Déclaration annuelle à l'État",
+      "level": 2,
+      "q": "Dans un rapport, les réserves de début d'année sont de 120 Mbbl, les extensions de 10 Mbbl, les révisions de −5 Mbbl et la production de 15 Mbbl, sans découverte ni cession. Quelles sont les réserves de fin d'année ?",
+      "choices": [
+        "130 Mbbl, en oubliant la production",
+        "100 Mbbl",
+        "120 Mbbl, en supposant les mouvements nuls",
+        "110 Mbbl"
+      ],
+      "answer": 3,
+      "explain": "120 + 10 − 5 − 15 = 110 Mbbl. 130 oublie la production et la révision ; 100 retranche deux fois la production ; 120 suppose que les mouvements se compensent, ce qui n'est pas le cas.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-056",
+      "theme": "Déclaration annuelle à l'État",
+      "level": 2,
+      "q": "Pour contrôler la production annuelle déclarée dans un bilan de réserves, sur quelle base de mesure vous appuyez-vous ?",
+      "choices": [
+        "Le comptage dynamique prévu à l'article 252 pour la production fiscale",
+        "Une estimation du bureau d'études de l'opérateur, sans pièce justificative ni contrôle",
+        "Le volume en place déclaré dans le rapport de l'année précédente",
+        "Le prix moyen de vente sur le marché international"
+      ],
+      "answer": 0,
+      "explain": "L'article 252 oblige le contracteur à utiliser le comptage dynamique pour déterminer la production fiscale correspondant à la production totale disponible, toute autre méthode étant interdite. Les estimations sans pièce, le volume en place ou le prix ne mesurent pas la production.",
+      "seconds": 75,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 252",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-057",
+      "theme": "Déclaration annuelle à l'État",
+      "level": 2,
+      "q": "Quel est le niveau de présentation attendu pour les réserves dans la déclaration annuelle à exploiter par le Ministère ?",
+      "choices": [
+        "Un seul total national sans distinction de champ ni de catégorie, pour préserver la confidentialité",
+        "Par champ et par catégorie (1P, 2P, 3P), séparées des ressources contingentes",
+        "Uniquement le total des réserves possibles pour chaque contrat",
+        "Le seul volume en place, sans facteur de récupération"
+      ],
+      "answer": 1,
+      "explain": "Pour vérifier une déclaration, il faut le détail par champ et par catégorie, avec statut de développement, et sans mélange avec les ressources contingentes. Un total national ou le seul volume en place ne permettent aucun contrôle.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-058",
+      "theme": "Déclaration annuelle à l'État",
+      "level": 2,
+      "q": "Un investisseur étranger sollicite un agent pour obtenir les volumes d'une découverte récente. Quelle règle de la loi n° 002/2019 s'applique ?",
+      "choices": [
+        "Pas de restriction : les volumes de découverte sont publics dès la notification à l'administration",
+        "L'agent peut les donner s'il demande une contrepartie écrite à l'investisseur concerné",
+        "Seul le contracteur est libre d'en parler, l'administration n'ayant aucun droit d'autorisation",
+        "Toute communication aux tiers est soumise à l'autorisation préalable de l'administration (article 63)"
+      ],
+      "answer": 3,
+      "explain": "L'article 63 impose d'informer l'administration sans délai et soumet toute communication aux tiers à son autorisation préalable. Il n'y a pas de publicité automatique ; l'agent doit référer à sa hiérarchie, et l'administration conserve bien un pouvoir d'autorisation.",
+      "seconds": 75,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 63",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-059",
+      "theme": "Déclaration annuelle à l'État",
+      "level": 3,
+      "q": "Le 15 mars, le contracteur n'a pas transmis le rapport qui était dû pour le 28 février selon son contrat. Quelle démarche est la bonne ?",
+      "choices": [
+        "Constater le retard, faire engager la mise en demeure de quinze jours, puis la pénalité si besoin",
+        "Appliquer immédiatement la pénalité maximale sans aucune formalité ni mise en demeure préalable",
+        "Attendre le rapport de l'année suivante, la déclaration étant annuelle et le retard sans conséquence",
+        "Retirer le titre le jour même, la loi l'imposant en cas de retard de transmission, quelle que soit sa durée"
+      ],
+      "answer": 0,
+      "explain": "L'article 267 prévoit une mise en demeure de quinze jours avant la pénalité de 500 000 à 5 000 000 de francs CFA ; la règle ne prévoit pas de sanction sans formalité ni de retrait automatique, et l'administration ne peut pas ignorer le retard.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 267",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-060",
+      "theme": "Déclaration annuelle à l'État",
+      "level": 3,
+      "q": "Le rapport de réserves d'un champ à gaz associé ne comprend ni le gaz torché ni le gaz réinjecté. Quelles obligations rappelez-vous au contracteur ?",
+      "choices": [
+        "Elles ne s'appliquent pas, le gaz associé étant hors du champ de la loi",
+        "L'obligation de vendre tout le gaz à l'opérateur national avant déclaration",
+        "Le bilan gaz (article 119) et le mesurage des volumes torchés (article 127) et leur déclaration",
+        "La seule obligation de déclarer le gaz à l'État voisin, par la voie diplomatique"
+      ],
+      "answer": 2,
+      "explain": "L'article 119 impose au contracteur de transmettre à l'administration toutes les informations relatives au bilan gaz ; l'article 127 prévoit le mesurage et la déclaration des volumes torchés. Le gaz associé est bien dans le champ de la loi, et ces articles n'imposent ni vente obligatoire ni déclaration à un État voisin.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 119",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        },
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 127",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-061",
+      "theme": "Audit et vérification",
+      "level": 1,
+      "q": "Qu'est-ce qu'un évaluateur indépendant de réserves ?",
+      "choices": [
+        "Un tiers qualifié, sans conflit d'intérêts, chargé d'auditer les volumes",
+        "Un agent de l'opérateur chargé de défendre ses chiffres devant l'administration et les partenaires",
+        "Un notaire chargé d'enregistrer les titres pétroliers et les actes de cession de parts",
+        "Un expert-comptable chargé du seul calcul des impôts"
+      ],
+      "answer": 0,
+      "explain": "L'évaluateur indépendant apporte une revue technique impartiale. Un agent de l'opérateur n'est pas indépendant ; le notaire et l'expert-comptable ont d'autres missions.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-062",
+      "theme": "Audit et vérification",
+      "level": 1,
+      "q": "Que comprend le contrôle des activités d'hydrocarbures selon l'article 243 de la loi n° 002/2019 ?",
+      "choices": [
+        "Uniquement le contrôle de la qualité des carburants à la pompe et de l'état des stations",
+        "Seulement la vérification du paiement des taxes douanières",
+        "Notamment le contrôle technique, comptable, juridique et fiscal",
+        "Exclusivement l'inspection des installations en mer"
+      ],
+      "answer": 2,
+      "explain": "L'article 243 énonce que le contrôle comprend notamment les volets technique, comptable, juridique et fiscal. Il ne se limite ni aux carburants, ni aux taxes douanières, ni aux installations en mer.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 243",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-063",
+      "theme": "Audit et vérification",
+      "level": 1,
+      "q": "Parmi ces constats dans une déclaration, lequel est manifestement incohérent ?",
+      "choices": [
+        "Des réserves probables inférieures aux réserves possibles, prises isolément",
+        "Des réserves prouvées supérieures aux réserves prouvées plus probables pour un même champ à la même date",
+        "Un champ dont les réserves diminuent avec la production",
+        "Un volume en place supérieur aux réserves"
+      ],
+      "answer": 1,
+      "explain": "1P est inclus dans 2P : la valeur de 1P ne peut pas dépasser 2P. Des probables plus faibles que les possibles, des réserves qui diminuent avec la production et un volume en place supérieur au récupérable sont possibles.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-064",
+      "theme": "Audit et vérification",
+      "level": 1,
+      "q": "Quelles pièces demandez-vous en priorité pour vérifier le volume en place déclaré d'un champ ?",
+      "choices": [
+        "Seulement le prix de vente des cargaisons exportées au cours des trois dernières années",
+        "Le plan de formation du personnel du champ et le calendrier des recrutements locaux",
+        "Cartes, diagraphies, carottes, analyses PVT et essais de puits",
+        "L'organigramme de la société opératrice"
+      ],
+      "answer": 2,
+      "explain": "Le volume en place se vérifie avec les données de base du sous-sol : cartes, diagraphies, carottes, PVT, essais. Les prix, la formation et l'organigramme n'informent pas le volume.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-065",
+      "theme": "Audit et vérification",
+      "level": 2,
+      "q": "Un opérateur annonce un facteur de récupération de 65 % pour un champ drainé par le gaz dissous. Que faites-vous ?",
+      "choices": [
+        "Vous l'acceptez, car un facteur élevé est toujours favorable pour l'État et pour la durée de vie du champ",
+        "Vous le comparez à des analogues et au mécanisme, et demandez une justification",
+        "Vous le ramenez automatiquement à 10 %",
+        "Vous ne le contrôlez pas, le facteur de récupération étant confidentiel"
+      ],
+      "answer": 1,
+      "explain": "Le gaz dissous donne en général de faibles récupérations (de l'ordre de 5 à 30 %) : 65 % est suspect et doit être justifié par des analogues et des données. On ne le corrige pas arbitrairement et on ne l'accepte pas par principe.",
+      "seconds": 75,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-066",
+      "theme": "Audit et vérification",
+      "level": 2,
+      "q": "Pourquoi vérifier les hypothèses de prix et de coûts d'une déclaration de réserves ?",
+      "choices": [
+        "Parce que le prix change la porosité du réservoir",
+        "Parce que les réserves se calculent en dollars et non en volume, selon la pratique comptable internationale",
+        "Parce qu'elles n'ont aucune influence, mais doivent figurer au rapport",
+        "Parce qu'elles fixent la limite économique, donc la durée de vie et le volume en réserves"
+      ],
+      "answer": 3,
+      "explain": "Une réserve est commerciale aux prix et coûts retenus : ils fixent la limite économique et donc la durée de vie du champ. Le prix n'agit pas sur la porosité ; les réserves restent des volumes ; et ces hypothèses ont bien une influence.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Système de gestion des ressources pétrolières (PRMS), mise à jour 2018, Society of Petroleum Engineers",
+          "art": "Définitions et classification",
+          "url": "https://www.spe.org/en/industry/petroleum-resources-management-system-2018/"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-067",
+      "theme": "Audit et vérification",
+      "level": 2,
+      "q": "Deux permis voisins déclarent chacun 10 Mbbl pour un même réservoir qui traverse leur limite. Quel risque identifiez-vous, et quel cadre légal est prévu ?",
+      "choices": [
+        "Un double comptage, à traiter par la mise en commun des gisements (articles 88 et 98), avant validation",
+        "Aucun risque, car chaque permis est indépendant et déclare ses propres volumes à l'administration",
+        "Un risque fiscal uniquement, sans lien avec les réserves",
+        "Un risque de torchage, traité à l'article 125"
+      ],
+      "answer": 0,
+      "explain": "Un même volume compté deux fois gonfle les réserves nationales. La loi prévoit la mise en commun des gisements entre contracteurs (articles 88 et 98). Un réservoir commun relie bien les deux permis ; le torchage (article 125) est un sujet différent.",
+      "seconds": 75,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 88",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-reserves-068",
+      "theme": "Audit et vérification",
+      "level": 2,
+      "q": "Un champ a 24 Mbbl de réserves 2P et produit 6 Mbbl par an. Quel est son rapport R/P ?",
+      "choices": [
+        "0,25 an",
+        "4 ans",
+        "30 ans",
+        "144 ans"
+      ],
+      "answer": 1,
+      "explain": "R/P = réserves / production annuelle = 24 / 6 = 4 ans. 0,25 inverse le rapport ; 30 additionne ; 144 multiplie.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-069",
+      "theme": "Audit et vérification",
+      "level": 3,
+      "q": "Une déclaration annonce 50 millions de m³ de réserves 2P, l'audit externe 38 (écart de 24 %). Quelle conduite est la plus appropriée ?",
+      "choices": [
+        "Retenir la moyenne de 44 millions de m³ sans autre examen, afin de concilier rapidement l'opérateur et l'auditeur",
+        "Appliquer immédiatement une sanction à l'opérateur",
+        "Accepter les 50 millions de m³, l'opérateur connaissant mieux son champ, sans justificatif complémentaire de sa part",
+        "Demander un rapprochement poste par poste (volume en place, facteur de récupération, limite économique) et documenter les écarts"
+      ],
+      "answer": 3,
+      "explain": "Un écart important s'analyse poste par poste, avec traçabilité, avant décision. La moyenne est arbitraire, la sanction immédiate prématurée et l'acceptation sans examen contraire au rôle de contrôle.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-reserves-070",
+      "theme": "Audit et vérification",
+      "level": 3,
+      "q": "Depuis cinq ans, les réserves restantes d'un champ restent constantes alors que 3 Mbbl sont produits chaque année, sans nouveau puits ni étude. Comment interprétez-vous ce constat ?",
+      "choices": [
+        "Comme un signal d'alerte : des révisions positives compensent la production sans justification, à faire documenter",
+        "Comme une preuve de bonne gestion du réservoir et de la qualité de la déclaration",
+        "Comme normal, les réserves étant un chiffre fixe d'un champ, établi une fois pour toutes à la découverte",
+        "Comme sans importance si le prix du pétrole est resté stable"
+      ],
+      "answer": 0,
+      "explain": "Des réserves qui ne baissent pas malgré la production supposent des révisions positives annuelles : sans nouvelles données, c'est un signal d'alerte. Les réserves ne sont pas un chiffre fixe, et la stabilité du prix ne justifie pas les révisions.",
+      "seconds": 90,
+      "status": "draft"
+    }
+  ]
+}

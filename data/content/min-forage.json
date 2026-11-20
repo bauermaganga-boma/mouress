@@ -1,0 +1,1658 @@
+{
+  "profile": "min-forage",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Architecture d’un puits : tubages et cimentation",
+      "theme": "Architecture du puits : tubages et cimentation",
+      "minutes": 10,
+      "body": "Un puits pétrolier est un trou foré dont le diamètre diminue avec la profondeur. Ses parois sont soutenues par des colonnes de tubes d’acier, les **tubages**, scellées à la roche par du **ciment**. Cet ensemble est la première ligne de défense du puits : c’est lui qui isole les couches traversées entre elles et protège les nappes d’eau douce.\n\n**Les colonnes, de la surface vers le fond**\n- Le **tube guide** (ou conducteur) est enfoncé ou cimenté tout en haut ; il évite l’effondrement des terrains meubles et guide le forage.\n- Le **tubage de surface** protège les nappes d’eau douce, porte la **tête de puits** et reçoit le **bloc d’obturation** (obturateur de puits).\n- Les **tubages intermédiaires** isolent les zones instables, les zones de pertes ou les couches de pressions très différentes.\n- Le **tubage de production** (ou une **colonne perdue**, suspendue dans le tubage précédent sans remonter à la surface) traverse ou isole le réservoir. À l’intérieur descend la **colonne de production**, avec sa garniture d’étanchéité et ses vannes de sécurité.\n\nÀ titre d’exemple (valeurs usuelles, non réglementaires) : 30 pouces, 20 pouces, 13 pouces 3/8, 9 pouces 5/8 puis 7 pouces. L’extrémité basse de chaque colonne s’appelle le **sabot**. Après l’avoir cimenté, on fore quelques mètres sous le sabot et on réalise un **essai d’absorption** : on pressurise jusqu’à ce que la formation commence à absorber du fluide. Cela donne la pression, donc la densité équivalente de boue, que la formation supporte. Si ce seuil est de 1,70 kg/L et que la boue prévue est de 1,45 kg/L, la marge est de 0,25 kg/L (exemple).\n\n**La cimentation primaire** consiste à pomper un laitier de ciment dans le tubage, puis à le repousser dans l’espace annulaire entre tubage et trou. Ses objectifs : ancrer le tubage, **isoler les zones** entre elles (eau, huile, gaz), protéger l’acier de la corrosion. Elle est contrôlée par l’essai de pression du tubage, la mesure des volumes pompés et retournés, et une **diagraphie d’évaluation du ciment** (acoustique ou ultrasonique). Les tubes suivent en général la spécification API 5CT (ISO 11960), le ciment la spécification API 10A (ISO 10426-1) ; la norme API Std 65-2 traite de l’isolement des zones à risque d’écoulement pendant la construction du puits.\n\n**Pression et profondeur.** La pression hydrostatique vaut environ 0,0981 × densité (kg/L) × profondeur verticale vraie (m), en bar. Avec une boue de 1,20 kg/L à 3 000 m de profondeur verticale : 0,0981 × 1,20 × 3 000 ≈ 353 bar. Dans un puits dévié, c’est la profondeur **verticale vraie**, et non la profondeur mesurée le long du trou, qui compte.\n\n**Ce que l’agent du ministère contrôle.** Il compare le schéma de tubage du programme approuvé avec le schéma « tel que construit » : profondeurs des sabots, diamètres, hauteur de ciment, résultats des essais. Tout écart important (sabot remonté, ciment insuffisant, tubage coincé) doit être expliqué et porté à la connaissance de l’administration, dans le cadre de l’obligation d’information du titulaire (loi n° 002/2019, article 182). Un puits mal cimenté peut mettre en communication des couches qui devaient rester isolées, avec un risque de pollution des nappes ou de pression à la tête de puits.",
+      "keyPoints": [
+        "Tube guide, tubage de surface, tubages intermédiaires et tubage de production (ou colonne perdue) isolent les couches et portent la tête de puits.",
+        "La cimentation primaire ancre le tubage et isole les zones ; elle se contrôle par essais de pression et diagraphie d’évaluation du ciment.",
+        "L’essai d’absorption sous le sabot donne la pression maximale supportée par la formation.",
+        "La pression hydrostatique se calcule sur la profondeur verticale vraie : 0,0981 × densité (kg/L) × profondeur (m).",
+        "Tout écart entre le schéma de tubage approuvé et le schéma construit doit être justifié et signalé."
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Fluides de forage",
+      "theme": "Fluides de forage",
+      "minutes": 9,
+      "body": "Le **fluide de forage** (la « boue ») circule en circuit fermé : pompé dans les tiges, il sort par l’outil, remonte par l’espace annulaire en emportant les déblais, passe sur les tamis vibrants et les équipements de traitement, puis retourne aux bacs. Pour un agent du ministère, c’est avant tout un **organe de sécurité**.\n\n**Fonctions principales**\n- **Contrôler les pressions** : la colonne de boue exerce une pression hydrostatique supérieure à la pression des fluides de la roche (pression de pores). C’est la barrière primaire.\n- Remonter les déblais et les maintenir en suspension à l’arrêt des pompes (propriété de gel).\n- Refroidir et lubrifier l’outil et les tiges.\n- Stabiliser les parois et former un gâteau de boue qui limite les pertes dans la roche.\n- Transmettre l’information (suivi géologique des déblais, mesures en cours de forage).\n\n**Familles de boues.** Les boues à base d’eau sont les plus courantes et les moins coûteuses. Les boues à base d’huile ou synthétiques stabilisent mieux les argiles sensibles à l’eau et lubrifient mieux les puits déviés, mais elles posent plus de contraintes de **traitement des déblais** et de protection de l’environnement. Les produits typiques : la baryte pour alourdir, l’argile bentonite pour épaissir, des colmatants contre les pertes.\n\n**Densité et fenêtre de forage.** La densité doit rester dans une fenêtre : au-dessus de la pression de pores, sinon c’est la **venue** ; en dessous de la pression de fracturation, sinon ce sont les **pertes de circulation**. Exemple chiffré : pression de pores équivalente de 1,05 kg/L à 3 000 m ; boue à 1,20 kg/L. La surpression est de 0,0981 × (1,20 − 1,05) × 3 000 ≈ 44 bar. Si la formation ne supporte que 1,25 kg/L, la fenêtre n’est plus que de 0,05 kg/L à ce niveau : il faut revoir le schéma de tubage plutôt que forcer.\n\n**Mesures courantes sur le chantier** : densité (balance à boue), viscosité (entonnoir de Marsh), filtrat (filtre-presse), pH, teneur en solides et en sable. Elles sont consignées chaque jour dans le rapport de boue, et les procédures d’essai sont décrites dans la série API RP 13B.\n\n**Pertes de circulation.** Si le niveau baisse aux bacs, la hauteur de boue dans le puits peut diminuer, la pression hydrostatique baisse, et une venue peut s’ensuivre. Il faut remplir le puits, réduire le débit, colmater, et surveiller étroitement.\n\n**Environnement et déchets.** La loi n° 002/2019 range parmi les obligations du secteur la préservation de l’environnement et la gestion des déchets (article 170) ; le contrôle technique de l’administration porte notamment sur la qualité des eaux, des boues et des huiles usagées issues des activités d’hydrocarbures (articles 242 et 244). Les prescriptions d’hygiène, santé, sécurité et environnement sont définies par voie réglementaire (article 171). Un agent qui reçoit une demande de rejet ou de traitement de boues ou de déblais vérifie donc le cadre environnemental applicable (étude d’impact et plan de gestion, autorisation de l’administration de l’Environnement) avant de se prononcer, et ne se contente pas d’une teneur déclarée par l’opérateur.",
+      "keyPoints": [
+        "La boue est la barrière primaire : sa pression hydrostatique doit dépasser la pression de pores.",
+        "Densité trop faible : venue ; densité trop forte : fracturation et pertes de circulation.",
+        "Les boues à base d’huile ou synthétiques exigent un traitement plus strict des déblais.",
+        "Le rapport de boue consigne densité, viscosité, filtrat, pH et solides chaque jour.",
+        "Le contrôle technique du ministère couvre la qualité des boues et des eaux (loi 002/2019, art. 242 et 244)."
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Barrières de sécurité et contrôle des éruptions",
+      "theme": "Barrières de sécurité et contrôle des éruptions",
+      "minutes": 11,
+      "body": "Une **éruption** est une sortie incontrôlée de fluides de formation hors du puits. Elle est précédée d’une **venue** : une entrée non voulue de fluides de la roche dans le puits. Tant que la venue est détectée tôt et maîtrisée, c’est un incident de contrôle de puits ; si elle ne l’est pas, c’est l’éruption, avec risque de vies perdues, d’incendie et de pollution majeure.\n\n**Principe des deux barrières.** Un puits est conçu pour disposer en permanence d’au moins deux barrières indépendantes entre le réservoir et l’extérieur. En forage, la **barrière primaire** est la colonne de boue (pression hydrostatique). La **barrière secondaire** est constituée du tubage cimenté, de la tête de puits et du **bloc d’obturation**. Si une barrière est défaillante, on s’arrête et on la rétablit avant de poursuivre.\n\n**Le bloc d’obturation** est un empilement d’équipements fixé sur la tête de puits : un ou plusieurs **obturateurs annulaires** (qui se referment sur n’importe quelle forme), des **obturateurs à mâchoires** (sur tiges, aveugles ou cisaillantes), des lignes de duse et de neutralisation, et une **unité de commande** à accumulateurs qui assure la fermeture rapide. La norme API Standard 53 décrit les systèmes de contrôle de puits ; les essais de pression à l’installation puis à intervalles réguliers, ainsi que les exercices de fermeture, sont consignés. Offshore, le bloc peut reposer au fond de la mer.\n\n**Détecter la venue.** Signes d’alerte : augmentation du volume aux bacs (gain), débit de retour supérieur au débit pompé, baisse de la pression de pompage, puits qui coule pompes arrêtées. La règle est de **fermer le puits sans attendre**, puis de relever les pressions stabilisées en tête de tiges et en tête d’espace annulaire.\n\n**Rétablir l’équilibre.** On calcule la densité de la boue d’alourdissement à partir de la pression stabilisée en tête de tiges (SIDPP) : augmentation de densité = SIDPP / (0,0981 × profondeur verticale vraie). Exemple : SIDPP de 20 bar à 2 000 m, soit 20 / (0,0981 × 2 000) ≈ 0,10 kg/L ; une boue de 1,20 kg/L passe à environ 1,30 kg/L. La circulation se fait ensuite à débit réduit par la duse, selon la méthode du foreur ou la méthode d’attente. Le personnel de poste doit détenir une certification en contrôle de puits à jour.\n\n**Cadre légal.** Le titulaire doit informer sans délai l’administration de toute perturbation, incident ou accident, en précisant nature, gravité, causes, solutions envisagées et durée estimée (loi n° 002/2019, article 241). Il doit aussi déclarer immédiatement tout dommage ou sinistre, disposer d’un plan de prévention des risques industriels et d’un plan de traitement d’urgence d’application immédiate (article 182). Sa responsabilité couvre l’ensemble des dommages causés, y compris hors du périmètre de l’autorisation (article 179), et l’action se prescrit après trente ans à compter de la découverte du dommage.\n\n**En inspection**, l’agent demande : date et résultat du dernier essai du bloc d’obturation, registre des exercices, plan de contrôle de puits, certificats du personnel, état des barrières.",
+      "keyPoints": [
+        "Venue : entrée de fluides de formation dans le puits ; éruption : venue non maîtrisée.",
+        "Deux barrières indépendantes sont exigées : la boue (primaire) et tubage cimenté, tête de puits et bloc d’obturation (secondaire).",
+        "Signes de venue : gain aux bacs, débit de retour accru, puits qui coule pompes arrêtées ; réaction : fermer le puits.",
+        "Une barrière défaillante impose l’arrêt et son rétablissement avant toute reprise.",
+        "Les incidents sont à notifier sans délai à l’administration (loi 002/2019, art. 241 et 182)."
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Programme de forage et autorisation",
+      "theme": "Programme de forage et autorisation",
+      "minutes": 10,
+      "body": "Aucun forage ne démarre sans un **programme de forage** : le document technique par lequel l’opérateur démontre qu’il sait forer le puits en sécurité, dans les règles de l’art et dans le cadre de son contrat. Son examen est l’un des moments où l’administration peut le plus utilement agir, avant que les risques ne se matérialisent.\n\n**Base juridique.** L’autorisation exclusive d’exploration confère à son titulaire le droit exclusif de réaliser, dans une zone délimitée, au nom et pour le compte de l’État, les travaux d’exploration, notamment les forages d’exploration et d’appréciation « tels que prévus dans le contrat » (loi n° 002/2019, article 81). Le ministère chargé des Hydrocarbures approuve les budgets liés à l’exécution des activités amont (article 256). Avant toute opération, le titulaire soumet au ministère des Hydrocarbures et à celui de l’Environnement un plan d’abandon et de réhabilitation de site (article 173). Les études de dangers sont réalisées par des cabinets agréés et validées par les services techniques (article 172). Les modalités précises de l’autorisation de forage relèvent du contrat et des textes d’application : à confirmer auprès de la direction compétente.\n\n**Contenu attendu d’un programme** (liste usuelle, à adapter) :\n- objectifs géologiques, position, trajectoire et profondeur finale ;\n- prévision des pressions (pores, fracturation) et des températures, avec les puits voisins ;\n- schéma de tubage, justification des sabots et programme de cimentation ;\n- programme de boue (types, densités, fenêtre) ;\n- équipements de contrôle de puits (bloc d’obturation, essais) et **plan de contrôle de puits** ;\n- plan d’urgence, évacuation, plan de gestion des déchets ;\n- calendrier, coûts estimés et indicateurs de suivi.\n\n**Le point clé** est la cohérence entre la fenêtre de densités (pores et fracturation) et le schéma de tubage. Un programme où chaque section est forée avec une marge très faible, sans tubage de réserve, est un signal d’alerte.\n\n**Dates et délais.** En cas de découverte, le contracteur informe en priorité et sans délai l’administration ; toute communication à des tiers est soumise à son autorisation préalable (article 63). Les travaux d’appréciation doivent être entrepris dans un délai n’excédant pas dix-huit mois en zone conventionnelle et vingt-quatre mois en offshore profond et très profond, à compter de la notification de la découverte (article 64). Exemple : une découverte notifiée le 15 mars 2026 en offshore profond donne une échéance au 15 mars 2028.\n\n**Modifications en cours de forage.** Approfondissement, changement de trajectoire, tubage supplémentaire : l’opérateur doit déposer une demande motivée, avec l’incidence sur les risques et sur le budget, et obtenir l’accord avant d’exécuter, sauf urgence de sécurité, qu’il doit alors notifier sans délai. Le coût journalier de l’appareil (par exemple 150 000 dollars par jour, chiffre indicatif) ne justifie jamais de valider un dossier incomplet.",
+      "keyPoints": [
+        "Le programme de forage démontre la maîtrise technique et sécuritaire du puits avant tout démarrage.",
+        "Il contient objectifs, trajectoire, prévision de pressions, schéma de tubage, boue, cimentation, plan de contrôle de puits et plan d’urgence.",
+        "Base légale : droit de forer (art. 81), budgets approuvés (art. 256), plan d’abandon avant toute opération (art. 173), études de dangers par cabinets agréés (art. 172).",
+        "Découverte : information prioritaire et sans délai (art. 63) ; appréciation sous 18 ou 24 mois (art. 64).",
+        "Toute modification majeure se demande et s’approuve avant exécution ; la pression du calendrier ne remplace pas un dossier complet."
+      ]
+    },
+    {
+      "id": "m5",
+      "title": "Rapports journaliers et fin de puits",
+      "theme": "Rapports journaliers et fin de puits",
+      "minutes": 9,
+      "body": "Pendant le forage, l’opérateur tient des **rapports journaliers** : le **rapport de forage** résume les vingt-quatre dernières heures (profondeur à minuit, opérations réalisées, vitesse d’avancement, incidents, personnel à bord), le **rapport de boue** donne les propriétés et les consommations, le **rapport géologique** décrit les formations rencontrées et les indices d’hydrocarbures. Ces documents sont la mémoire du puits et la première source de contrôle à distance pour l’administration.\n\n**Ce que l’agent y cherche**\n- la cohérence entre rapports : profondeur, densité de boue, volumes ;\n- les incidents (pertes, venues, coincements, essais de bloc d’obturation) et leur notification ;\n- le **temps non productif**, c’est-à-dire le temps perdu en incidents, attentes et réparations ;\n- l’avancement par rapport au programme et au budget.\n\nExemple de calcul (valeurs indicatives) : un puits dure 28 jours dont 5 jours de temps non productif ; la part de temps perdu est de 5 / 28 ≈ 18 %. Si la durée prévue était de 22 jours et le budget approuvé de 30 millions de dollars, un dépassement de durée de 6 jours doit s’accompagner d’une analyse des causes et, si le budget est touché, d’une procédure d’approbation conforme au contrat (le ministère approuve les budgets amont, loi n° 002/2019, article 256).\n\n**Obligations d’information.** Le titulaire fournit aux services compétents un rapport sur l’état de ses activités et toute information technique, économique et financière demandée, « dans les conditions et délais requis » (article 182). Il informe sans délai de toute perturbation, incident ou accident (article 241). Une venue, même maîtrisée, une perte de circulation importante ou un coincement sérieux se signalent sans attendre le rapport du lendemain.\n\n**Le rapport de fin de puits** est la synthèse remise après la fin des opérations : déroulement chronologique, résultats géologiques et des essais, schéma de tubage et de complétion tel que construit, problèmes rencontrés et enseignements, coûts réels. Il est accompagné des **données de puits** : diagraphies, carottes, échantillons de déblais, résultats d’essais. Leur conservation et leur remise au ministère sont régies par le contrat et les textes en vigueur. Parmi les directions citées sur le site du ministère, la Direction des Affaires économiques, juridiques et de la gestion des données est celle qui porte la gestion des données ; l’organisation du ministère ayant évolué, cette attribution est à confirmer.\n\n**Bonnes pratiques de contrôle** : exiger des rapports signés et datés, conserver un historique, relancer par écrit les pièces manquantes, ne jamais classer un dossier de puits sans le rapport de fin de puits et les données associées.",
+      "keyPoints": [
+        "Rapport de forage, rapport de boue et rapport géologique sont les trois sources quotidiennes de suivi.",
+        "Le temps non productif mesure le temps perdu en incidents et attentes : 5 jours sur 28, soit environ 18 % (exemple).",
+        "Le titulaire doit fournir rapports et informations techniques dans les délais requis (loi 002/2019, art. 182).",
+        "Les incidents sont notifiés sans délai (art. 241) sans attendre le rapport journalier suivant.",
+        "Le rapport de fin de puits et les données associées (diagraphies, carottes) conditionnent la clôture du dossier."
+      ]
+    },
+    {
+      "id": "m6",
+      "title": "Essais de puits",
+      "theme": "Essais de puits",
+      "minutes": 9,
+      "body": "Un **essai de puits** consiste à faire produire le puits pendant une durée contrôlée pour mesurer ce qu’il peut donner. Il fournit trois choses : des **débits** (huile, gaz, eau), des **pressions et températures** et des **échantillons de fluides**. Les résultats alimentent l’évaluation des réserves et, en cas de découverte, la décision de développement.\n\n**Principaux types d’essais**\n- L’**essai aux tiges** est un essai temporaire, réalisé avec le train de tiges descendu en face de la couche à tester.\n- L’**essai de production** de courte durée est réalisé avec une garniture de complétion provisoire.\n- L’**essai de remontée de pression** consiste à fermer le puits après un débit et à suivre la remontée de la pression. Il permet d’estimer la perméabilité, l’endommagement autour du puits et la pression du réservoir.\n- L’**essai d’interférence** observe la réaction d’un puits voisin et renseigne sur la communication entre puits.\n\n**Grandeurs à connaître.** Le **rapport gaz-huile** est le volume de gaz produit par volume d’huile. Exemple : 1 200 m³/j d’huile et 180 000 m³/j de gaz donnent 150 m³/m³. Pour qu’un échantillon soit représentatif, il faut que l’écoulement soit stabilisé avant de le prélever.\n\n**Équipement et sécurité.** Le fluide produit passe par un séparateur d’essai, puis le gaz est brûlé et l’huile stockée ou brûlée. Avant l’ouverture du puits, un agent vérifie : l’essai de pression des lignes d’essai, la présence de vannes de sécurité en surface et en fond de puits, le plan d’urgence, la zone de sécurité autour du brûleur, la compétence du personnel et la possibilité de fermer le puits depuis un poste éloigné.\n\n**Torchage lors des essais.** La loi n° 002/2019 pose l’interdiction du torchage et du rejet de gaz (article 125). À titre exceptionnel, à la demande du contracteur et sur avis des services compétents de l’administration des hydrocarbures, le torchage peut être autorisé pour une durée fixée par l’administration chargée de l’Environnement. Le contracteur qui viole l’interdiction est passible d’une pénalité de 50 000 000 à 2 500 000 000 de francs CFA (article 269). L’agent doit donc vérifier, avant un essai de plusieurs jours, qu’une autorisation existe pour la période et le volume prévus. Pour les champs en production, un appareil de mesurage du gaz torché approuvé et la déclaration des volumes s’imposent (article 127).\n\n**Résultats et commercialité.** Les résultats d’un essai ne suffisent pas à déclarer un gisement commercial. Le caractère commercialement exploitable fait l’objet d’une **déclaration de commercialité** signée par l’État et le contracteur (article 64), après les travaux d’appréciation. Un débit initial élevé suivi d’une chute rapide signale un réservoir limité : on demande des essais complémentaires.\n\n**Incident pendant un essai.** Une fuite sur une ligne d’essai, même sans blessé, est notifiée sans délai (article 241) avec nature, gravité, causes, solutions et durée estimée.",
+      "keyPoints": [
+        "Un essai de puits mesure débits, pressions, températures et fluides pour caractériser le réservoir.",
+        "L’essai de remontée de pression renseigne sur la perméabilité, l’endommagement et la pression du réservoir.",
+        "Le torchage est interdit (art. 125) sauf autorisation temporaire ; l’infraction est sanctionnée (art. 269).",
+        "La déclaration de commercialité est signée par l’État et le contracteur (art. 64) après appréciation.",
+        "Tout incident d’essai, même sans blessé, est à notifier sans délai (art. 241)."
+      ]
+    },
+    {
+      "id": "m7",
+      "title": "Intégrité des puits en production",
+      "theme": "Intégrité des puits en production",
+      "minutes": 10,
+      "body": "L’**intégrité d’un puits** est sa capacité à contenir les fluides de façon sûre pendant toute sa vie. La norme ISO 16530-1:2017, « Intégrité des puits – gouvernance du cycle de vie », s’applique à toutes les phases : définition, conception, construction, exploitation, intervention (reconditionnement) et abandon. Elle ne traite pas du contrôle des éruptions en forage. Son principe : maintenir en permanence des **barrières** vérifiées, surveillées, avec des responsabilités claires.\n\n**Barrières d’un puits en production.** On trouve un **ensemble de barrières** : le tubage de production et son ciment, la garniture d’étanchéité, la colonne de production, la tête de puits et l’arbre de production avec ses vannes, et la **vanne de sécurité de fond** commandée depuis la surface. Chaque élément fait l’objet d’essais périodiques (étanchéité de la vanne de sécurité, fonctionnement des vannes maîtresses) dont les résultats sont consignés.\n\n**Surveillance des pressions annulaires.** Les espaces entre colonnes sont équipés de manomètres. Une pression qui remonte après purge est une **pression annulaire soutenue** : indice de fuite d’une barrière. Exemple : une pression passant de 5 à 40 bar en un mois puis revenant après purge est le signe d’une communication ; une simple purge n’est pas une réponse, il faut un diagnostic (essais de purge et de remontée, recherche de fuite). Pour les puits en mer, la pratique API RP 90 traite la gestion des pressions annulaires.\n\n**Corrosion et usure.** L’état du tubage se contrôle par des diagraphies d’inspection (calibre multi-bras, mesure d’épaisseur), complétées par l’analyse des fluides (eau, CO₂, H₂S) et par l’injection d’inhibiteurs. Un puits vieillissant exige des intervalles de contrôle plus courts.\n\n**Classement par risque.** Beaucoup d’opérateurs classent leurs puits selon l’état des barrières : un puits qui ne dispose plus que d’une seule barrière fonctionnelle devient prioritaire : mesures compensatoires, réduction du débit, plan de réparation daté.\n\n**Cadre légal.** Le titulaire fournit un rapport sur l’état de ses activités, informe les populations et les autorités des zones environnantes des risques de ses activités, dispose d’un plan de prévention et de protection contre les risques industriels et déclare immédiatement tout dommage ou sinistre (loi n° 002/2019, article 182). Les incidents sont notifiés sans délai (article 241). Le contracteur informe l’administration, dans un délai de deux mois, de ceux de ses puits qui atteignent une production cumulée dont le niveau est fixé dans le contrat de partage de production (article 228). Les audits techniques d’intégrité prévus à l’article 251 portent sur les appareils de mesurage et de comptage et sur les installations de production, de traitement, de stockage et d’enlèvement en surface ; pour les puits eux-mêmes, on s’appuie sur les rapports de surveillance exigés de l’opérateur.\n\n**Cas d’un puits dégradé.** Pression annulaire soutenue et corrosion avérée : l’opérateur ne peut se contenter de réduire le débit. L’administration exige une évaluation de risque documentée, des limites opératoires, une surveillance renforcée et un échéancier de réparation ou d’abandon.",
+      "keyPoints": [
+        "ISO 16530-1:2017 couvre tout le cycle de vie du puits, de la conception à l’abandon.",
+        "Une pression annulaire qui remonte après purge indique une fuite de barrière et appelle un diagnostic.",
+        "Vanne de sécurité de fond, vannes de tête et garniture d’étanchéité font l’objet d’essais périodiques consignés.",
+        "Un puits à barrière unique est prioritaire : mesures compensatoires et plan de réparation daté.",
+        "Production cumulée atteinte : information sous deux mois (art. 228) ; sinistre à déclarer immédiatement (art. 182)."
+      ]
+    },
+    {
+      "id": "m8",
+      "title": "Bouchage et abandon d’un puits",
+      "theme": "Bouchage et abandon d’un puits",
+      "minutes": 10,
+      "body": "Quand un puits ne produit plus, n’a rien donné ou n’est plus sûr à exploiter, il est **bouché et abandonné**. L’objectif est simple et exigeant : **isoler durablement les formations** perméables entre elles et de la surface, pour qu’aucun fluide ne puisse remonter, ni polluer une nappe, ni fuir en mer. L’abandon est l’une des phases du cycle de vie du puits dans la norme ISO 16530-1.\n\n**Techniques.** On installe des **bouchons de ciment** en face des réservoirs et des couches perméables, au sabot des tubages et en surface ; parfois un bouchon mécanique sert d’appui. On peut couper et retirer les tubages à faible profondeur, puis la tête de puits, afin de rendre le site propre. Les bonnes pratiques (par exemple NORSOK D-010, API et recommandations sectorielles) exigent des barrières permanentes d’une longueur et d’une qualité vérifiées ; chaque bouchon est contrôlé par un **essai de poids** (on pose le train de tiges sur le ciment durci pour confirmer sa position et sa résistance) et par un **essai de pression**.\n\n**Abandon temporaire ou définitif.** Un puits peut être **suspendu** (fermé de façon sûre, avec des barrières vérifiées, en vue d’une reprise) ou bouché **définitivement**. Un puits suspendu reste soumis à une surveillance périodique, car il vieillit comme les autres.\n\n**Cadre juridique gabonais.** Avant toute opération, le titulaire d’une autorisation soumet aux ministères en charge des Hydrocarbures et de l’Environnement le plan d’abandon et de réhabilitation de site ; à toute cessation d’activités, il réhabilite chaque site conformément à la réglementation et aux règles de l’art (loi n° 002/2019, article 173). Les plans d’abandon et de réhabilitation sont définis par voie réglementaire conjointement par les administrations des hydrocarbures et de l’Environnement. En cas de carence ou d’inexécution du titulaire, l’État réalise les travaux par imputation sur le **fonds de réhabilitation** constitué par l’intéressé, et le titulaire prend en charge les frais supplémentaires si le fonds est insuffisant (article 174). Ce fonds est alimenté par des dotations annuelles, qui entrent dans les coûts pétroliers sans être des actifs du titulaire (article 175) ; il est domicilié au Gabon auprès de la BEAC ou d’un établissement de crédit de droit gabonais, il est insaisissable et réservé à son objet (article 176). Tout retard d’alimentation entraîne une pénalité égale à 1/500e par jour de retard des sommes annuelles dues (article 177). Exemple : pour une dotation annuelle de 500 millions de francs CFA payée avec 20 jours de retard, la pénalité est de 500 000 000 × 20 / 500 = 20 millions de francs CFA.\n\n**Responsabilité de long terme.** La responsabilité du titulaire couvre l’ensemble des dommages causés par son activité, y compris au-delà du périmètre de l’autorisation ; l’action se prescrit après trente ans à compter de la découverte du dommage (article 179). Une fuite constatée des années après le bouchage peut donc engager le titulaire.\n\n**Rôle de l’agent.** Examiner le programme de bouchage avant exécution, vérifier que les barrières couvrent chaque zone perméable, exiger les résultats d’essais, recevoir le rapport de fin d’abandon, contrôler le site (coupe de tête de puits, nettoyage) et s’assurer que le fonds de réhabilitation est alimenté.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+      "keyPoints": [
+        "Le bouchage isole durablement les formations entre elles et de la surface, par des bouchons de ciment vérifiés.",
+        "Chaque bouchon se contrôle par essai de poids et essai de pression.",
+        "Plan d’abandon et de réhabilitation à soumettre avant toute opération (loi 002/2019, art. 173).",
+        "Fonds de réhabilitation : dotations annuelles, compte au Gabon, insaisissable ; pénalité de 1/500e par jour de retard (art. 175 à 177).",
+        "Responsabilité du titulaire : tous dommages, y compris hors périmètre, prescription trentenaire (art. 179)."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "min-forage-001",
+      "theme": "Architecture du puits : tubages et cimentation",
+      "level": 1,
+      "q": "Quel est le rôle principal du tubage de surface d’un puits ?",
+      "choices": [
+        "Isoler le réservoir en production et acheminer les hydrocarbures jusqu’au séparateur de surface",
+        "Transporter les hydrocarbures jusqu’au séparateur",
+        "Protéger les nappes d’eau douce et porter la tête de puits ainsi que le bloc d’obturation",
+        "Remplacer le ciment entre le tubage et la roche"
+      ],
+      "answer": 2,
+      "explain": "Le tubage de surface protège les nappes d’eau douce et sert de support à la tête de puits et au bloc d’obturation. Le réservoir est traité par le tubage de production ; le transport des fluides est assuré par la colonne de production, pas par un tubage ; et le tubage n’a pas vocation à remplacer le ciment, qui est un élément distinct de l’isolement.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-002",
+      "theme": "Architecture du puits : tubages et cimentation",
+      "level": 1,
+      "q": "À quoi sert principalement la cimentation primaire d’un tubage ?",
+      "choices": [
+        "Ancrer le tubage et isoler les zones traversées les unes des autres",
+        "Alourdir la boue de forage et mesurer le débit avant la descente du tubage dans le trou",
+        "Mesurer le débit du puits en production",
+        "Remplacer la colonne de production"
+      ],
+      "answer": 0,
+      "explain": "La cimentation primaire scelle le tubage à la roche, empêche la communication entre zones (eau, huile, gaz) et protège l’acier. Elle n’a rien à voir avec la densité de la boue, avec la mesure de débit, ni avec la colonne de production, qui est un équipement intérieur différent.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-003",
+      "theme": "Architecture du puits : tubages et cimentation",
+      "level": 1,
+      "q": "Qu’appelle-t-on une colonne perdue ?",
+      "choices": [
+        "Une colonne de tubes tombée accidentellement au fond du puits",
+        "Un tubage cimenté puis abandonné au fond du puits après un incident de forage non récupérable",
+        "La colonne de production retirée après un essai",
+        "Une colonne de tubes suspendue dans le tubage précédent, qui ne remonte pas jusqu’à la surface"
+      ],
+      "answer": 3,
+      "explain": "La colonne perdue est descendue et accrochée à l’intérieur du tubage précédent : elle économise de l’acier et du temps. Ce n’est donc ni un accident de chute, ni un tubage abandonné, ni la colonne de production retirée.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-004",
+      "theme": "Architecture du puits : tubages et cimentation",
+      "level": 1,
+      "q": "Que signifie le terme « sabot » dans un puits tubé ?",
+      "choices": [
+        "La tête de puits située en surface",
+        "L’extrémité inférieure d’une colonne de tubage",
+        "Le bouchon de ciment posé à l’abandon",
+        "La vanne de sécurité placée sous le bloc d’obturation"
+      ],
+      "answer": 1,
+      "explain": "Le sabot est le bas de la colonne ; c’est sous lui qu’on réalise l’essai d’absorption. La tête de puits est en surface, le bouchon de ciment est un autre élément, et la vanne de sécurité est un équipement de contrôle, non un repère du tubage.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-005",
+      "theme": "Architecture du puits : tubages et cimentation",
+      "level": 2,
+      "q": "Une boue de 1,20 kg/L est utilisée à 3 000 m de profondeur verticale vraie. Quelle est la pression hydrostatique approximative au fond ?",
+      "choices": [
+        "Environ 353 bar",
+        "Environ 36 bar",
+        "Environ 3 530 bar",
+        "Environ 1 200 bar"
+      ],
+      "answer": 0,
+      "explain": "On calcule 0,0981 × 1,20 × 3 000 ≈ 353 bar. Les valeurs de 36 et de 3 530 sont des erreurs d’un facteur 10 sur la virgule, et 1 200 bar confond la densité en kg/m³ avec une pression.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-006",
+      "theme": "Architecture du puits : tubages et cimentation",
+      "level": 2,
+      "q": "Un essai d’absorption sous le sabot indique que la formation supporte une densité équivalente de 1,65 kg/L. Le programme prévoit une boue maximale de 1,45 kg/L pour la section suivante. Quelle est la marge disponible ?",
+      "choices": [
+        "0,10 kg/L",
+        "1,65 kg/L",
+        "0,20 kg/L",
+        "3,10 kg/L"
+      ],
+      "answer": 2,
+      "explain": "La marge est la différence : 1,65 − 1,45 = 0,20 kg/L. 0,10 serait un calcul erroné, 1,65 est la limite de la formation elle-même, et 3,10 additionne à tort les deux valeurs.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-007",
+      "theme": "Architecture du puits : tubages et cimentation",
+      "level": 2,
+      "q": "Pour calculer la pression hydrostatique dans un puits dévié, quelle profondeur utilise-t-on ?",
+      "choices": [
+        "La profondeur mesurée le long du trou",
+        "La profondeur verticale vraie",
+        "La profondeur du sabot de surface",
+        "La longueur totale du train de tiges"
+      ],
+      "answer": 1,
+      "explain": "La pression dépend de la hauteur verticale de la colonne de fluide : c’est la profondeur verticale vraie. La profondeur mesurée la surestime dans un puits dévié ; le sabot de surface et la longueur des tiges ne sont pas des repères de pression.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-008",
+      "theme": "Architecture du puits : tubages et cimentation",
+      "level": 2,
+      "q": "Vous inspectez un rapport de cimentation du tubage de production : des pertes de circulation sont survenues pendant le pompage et la diagraphie montre un ciment partiel en face de l’aquifère. Que demandez-vous ?",
+      "choices": [
+        "Rien de particulier : un ciment partiel est courant et le forage peut se poursuivre tant que la boue reste suffisamment dense et le niveau stable",
+        "Seulement un nouvel essai d’absorption du sabot précédent",
+        "Le remplacement de la boue par une boue plus légère",
+        "Une évaluation complète du ciment et, si nécessaire, une cimentation corrective avant la poursuite des opérations"
+      ],
+      "answer": 3,
+      "explain": "Un ciment partiel face à un aquifère laisse craindre une communication entre zones, avec risque de pollution. Il faut évaluer et, si besoin, corriger avant de continuer. Un essai d’absorption précédent ne dit rien de ce ciment, et l’allègement de la boue n’apporte aucun isolement.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 182",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-009",
+      "theme": "Architecture du puits : tubages et cimentation",
+      "level": 3,
+      "q": "L’opérateur propose d’arrêter le tubage intermédiaire à 2 300 m au lieu des 2 500 m approuvés, « pour économiser », alors qu’une zone surpressurée est attendue à 2 400 m. Quelle est la bonne réponse ?",
+      "choices": [
+        "Accepter : un sabot plus haut laisse moins de trou à découvert et reste, dans tous les cas, plus sûr pour le puits et moins coûteux",
+        "Refuser un accord oral et exiger une demande écrite motivée, avec nouvelle analyse de pressions et d’essai d’absorption",
+        "Accepter si le coût du tubage baisse d’au moins 10 %",
+        "Refuser sans examen, car aucun changement n’est jamais permis"
+      ],
+      "answer": 1,
+      "explain": "Un sabot plus haut laisserait la zone surpressurée à découvert dans une section où la formation peut ne pas supporter la boue d’alourdissement nécessaire : le risque s’accroît. Une modification se justifie par écrit et par une analyse technique. Le seul critère de coût est inacceptable, mais refuser par principe sans examen ne l’est pas davantage : la procédure de modification existe.",
+      "seconds": 110,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 256",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-010",
+      "theme": "Architecture du puits : tubages et cimentation",
+      "level": 3,
+      "q": "Après un coincement, l’opérateur a descendu le tubage de production 40 m plus haut que prévu, et la couche cible n’est plus entièrement isolée. Comment l’agent du ministère doit-il traiter la situation ?",
+      "choices": [
+        "Demander un compte rendu écrit des causes et des conséquences, avec un schéma tel que construit et un plan de remédiation",
+        "Attendre le rapport de fin de puits, sans réagir avant",
+        "Considérer l’écart comme mineur puisqu’il est inférieur à 50 m, et le mentionner seulement dans le rapport final de fin de puits",
+        "Exiger le forage immédiat d’un nouveau puits"
+      ],
+      "answer": 0,
+      "explain": "Un écart de ce type touche l’isolement de la couche et doit être expliqué et documenté sans attendre la fin de puits, dans le cadre de l’obligation d’information. Il n’existe pas de seuil de 50 m qui rende l’écart négligeable, et un nouveau puits est disproportionné tant que la remédiation n’a pas été étudiée.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 182",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-011",
+      "theme": "Fluides de forage",
+      "level": 1,
+      "q": "Quelle fonction de la boue de forage est la plus directement liée à la sécurité du puits ?",
+      "choices": [
+        "Refroidir l’outil de forage et évacuer la chaleur produite par la rotation vers les bacs de surface",
+        "Lubrifier les tiges dans les parties déviées",
+        "Permettre l’analyse géologique des déblais",
+        "Exercer une pression hydrostatique supérieure à celle des fluides de la roche"
+      ],
+      "answer": 3,
+      "explain": "La barrière primaire d’un puits en forage est la colonne de boue : sa pression doit dépasser la pression de pores. Le refroidissement, la lubrification et la lecture des déblais sont des fonctions utiles, mais elles ne retiennent pas les fluides de la roche.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-012",
+      "theme": "Fluides de forage",
+      "level": 1,
+      "q": "Quel produit est employé pour alourdir une boue de forage ?",
+      "choices": [
+        "La bentonite",
+        "La baryte",
+        "Un colmatant à base de fibres",
+        "La soude caustique"
+      ],
+      "answer": 1,
+      "explain": "La baryte, sulfate de baryum très dense, sert d’alourdissant. La bentonite est une argile qui épaissit, les fibres colmatent les pertes, et la soude sert principalement à régler le pH.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-013",
+      "theme": "Fluides de forage",
+      "level": 1,
+      "q": "Quelle est la conséquence d’une boue trop légère par rapport à la pression de pores ?",
+      "choices": [
+        "Le risque d’une venue de fluides de formation dans le puits",
+        "Des pertes de circulation importantes dans une formation fracturée, avec baisse rapide du niveau dans les bacs",
+        "Une corrosion accélérée de la tête de puits",
+        "Une baisse immédiate de la température du fond"
+      ],
+      "answer": 0,
+      "explain": "Si la pression hydrostatique devient inférieure à la pression de pores, les fluides de la roche peuvent entrer dans le puits : c’est la venue. Les pertes de circulation sont l’effet d’une boue trop lourde, et les deux autres propositions ne découlent pas de la densité.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-014",
+      "theme": "Fluides de forage",
+      "level": 1,
+      "q": "Pourquoi les boues à base d’huile exigent-elles plus de précautions environnementales que les boues à base d’eau ?",
+      "choices": [
+        "Elles sont toujours plus denses, plus coûteuses et plus dangereuses à pomper que les boues à base d’eau",
+        "Elles ne peuvent pas être recyclées en circuit fermé",
+        "Leurs déblais et rejets contiennent de l’huile et demandent un traitement plus strict",
+        "Elles sont interdites au Gabon par la loi sur les hydrocarbures"
+      ],
+      "answer": 2,
+      "explain": "Les déblais imprégnés d’huile ou de fluide synthétique ont un impact potentiel plus important et exigent un traitement approprié. Ces boues se recyclent en circuit fermé et ne sont pas interdites par la loi n° 002/2019 ; leur densité n’est pas systématiquement supérieure.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 170",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-015",
+      "theme": "Fluides de forage",
+      "level": 2,
+      "q": "La pression de pores équivalente est de 1,05 kg/L à 3 000 m ; la boue est à 1,20 kg/L. Quelle est la surpression approximative sur la formation ?",
+      "choices": [
+        "Environ 4,4 bar",
+        "Environ 44 bar",
+        "Environ 441 bar",
+        "Environ 15 bar"
+      ],
+      "answer": 1,
+      "explain": "La surpression est de 0,0981 × (1,20 − 1,05) × 3 000 ≈ 44 bar. Les valeurs de 4,4 et 441 bar sont des erreurs d’un facteur 10, et 15 correspond à l’écart de densité en centièmes, sans conversion en pression.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-016",
+      "theme": "Fluides de forage",
+      "level": 2,
+      "q": "Le rapport journalier signale 80 m³ de boue perdus dans une zone fracturée. Quel point un inspecteur vérifie-t-il en priorité ?",
+      "choices": [
+        "Que la boue perdue sera facturée à l’opérateur par le ministère et déduite des coûts pétroliers récupérables",
+        "Que la densité de la boue est abaissée en dessous de 1,0 kg/L",
+        "Que les tamis vibrants sont remplacés",
+        "Que le puits est maintenu plein et que la pression hydrostatique reste supérieure à la pression de pores, avec un plan de colmatage"
+      ],
+      "answer": 3,
+      "explain": "Une perte importante peut faire baisser le niveau dans le puits et donc la pression hydrostatique : la venue devient possible. La priorité est de garder le puits plein et de colmater. La facturation de la boue n’est pas du ressort du ministère, une boue inférieure à 1,0 kg/L serait plus légère que l’eau, et les tamis n’ont aucun lien avec les pertes.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-017",
+      "theme": "Fluides de forage",
+      "level": 2,
+      "q": "Quel instrument sert à mesurer la densité de la boue sur le chantier ?",
+      "choices": [
+        "L’entonnoir de Marsh",
+        "Le filtre-presse",
+        "La balance à boue",
+        "Le pH-mètre"
+      ],
+      "answer": 2,
+      "explain": "La balance à boue donne la densité. L’entonnoir de Marsh mesure la viscosité apparente, le filtre-presse le filtrat et le pH-mètre l’acidité ou l’alcalinité de la boue.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-018",
+      "theme": "Fluides de forage",
+      "level": 2,
+      "q": "Sur quelle base l’administration contrôle-t-elle la qualité des eaux, des boues et des huiles usagées issues des forages ?",
+      "choices": [
+        "Sur le contrôle technique de l’administration et les obligations en matière de déchets de la loi n° 002/2019",
+        "Sur la seule déclaration annuelle de la société de forage, sans aucun contrôle technique de l’administration",
+        "Sur un usage non écrit entre opérateurs",
+        "Sur le contrat de location de l’appareil de forage"
+      ],
+      "answer": 0,
+      "explain": "La loi range la gestion des déchets et la préservation de l’environnement dans les obligations du secteur (art. 170) et fait porter le contrôle technique notamment sur la qualité des eaux, des boues et des huiles usagées (art. 242 et 244). Une déclaration, un usage informel ou un contrat commercial ne fondent pas ce contrôle.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 170, 242, 244",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-019",
+      "theme": "Fluides de forage",
+      "level": 3,
+      "q": "L’opérateur d’un forage en mer demande à rejeter des déblais contaminés à la boue synthétique en indiquant une teneur en huile « acceptable ». Comment réagissez-vous ?",
+      "choices": [
+        "Approuver, puisque la teneur est déclarée par l’opérateur lui-même et que le rejet est de courte durée, sans autre vérification",
+        "Refuser tout rejet, quelles que soient les règles en vigueur",
+        "Vérifier le cadre environnemental applicable (étude d’impact, plan de gestion, autorisation de l’Environnement) avant de répondre",
+        "Transférer la demande à l’assureur de l’opérateur"
+      ],
+      "answer": 2,
+      "explain": "Un rejet ne s’approuve pas sur une teneur déclarée : il faut s’assurer qu’il rentre dans le cadre réglementaire et dans les plans de gestion environnementale et sociale approuvés. Refuser tout rejet sans regarder les textes serait arbitraire, et l’assureur n’est pas une autorité de contrôle.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 170",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-020",
+      "theme": "Fluides de forage",
+      "level": 3,
+      "q": "Pour contrôler une zone surpressurée, l’opérateur porte la boue de 1,20 à 1,45 kg/L alors que le sabot précédent supporte 1,50 kg/L. Quel est le risque principal et la réponse adaptée ?",
+      "choices": [
+        "Un risque de corrosion de la baryte, à traiter en changeant d’alourdissant sans toucher au schéma de tubage ni au programme",
+        "Une fenêtre quasi nulle qui expose aux pertes et à la fracturation : réexaminer le schéma de tubage et prévoir un tubage supplémentaire",
+        "Aucun risque tant que 1,45 reste inférieur à 1,50",
+        "Un risque limité à la lubrification : ajouter un lubrifiant"
+      ],
+      "answer": 1,
+      "explain": "Avec 0,05 kg/L de marge, la moindre surcharge due à la circulation ou à une fluctuation de densité peut fracturer la formation, d’où des pertes puis une venue. Le remède est de revoir le schéma de tubage. L’idée que 1,45 < 1,50 suffit ignore les variations dynamiques de pression ; les autres pistes ne concernent pas ce risque.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-021",
+      "theme": "Barrières de sécurité et contrôle des éruptions",
+      "level": 1,
+      "q": "Quelle est la barrière primaire lors du forage d’un puits ?",
+      "choices": [
+        "La colonne de boue exerçant une pression hydrostatique suffisante",
+        "Le bloc d’obturation, qui reste installé en permanence sur la tête de puits pendant toute la vie du puits",
+        "Le tubage de surface seul",
+        "La vanne de sécurité de fond"
+      ],
+      "answer": 0,
+      "explain": "La barrière primaire est la boue dont la pression retient les fluides de la roche. Le bloc d’obturation, avec le tubage cimenté et la tête de puits, forme la barrière secondaire ; la vanne de sécurité de fond est un équipement de production.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-022",
+      "theme": "Barrières de sécurité et contrôle des éruptions",
+      "level": 1,
+      "q": "Quelle est la fonction du bloc d’obturation ?",
+      "choices": [
+        "Mesurer en continu la densité de la boue et régler automatiquement le débit des pompes de circulation",
+        "Soutenir les parois du puits avant le tubage",
+        "Fermer le puits en cas de venue pour empêcher l’éruption",
+        "Préparer le laitier de ciment"
+      ],
+      "answer": 2,
+      "explain": "Le bloc d’obturation, installé sur la tête de puits, permet de fermer le puits et de contrôler les pressions. Il n’a aucun rôle de mesure de densité, de soutien des parois ni de préparation du ciment.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-023",
+      "theme": "Barrières de sécurité et contrôle des éruptions",
+      "level": 1,
+      "q": "Quelle différence existe-t-il entre une venue et une éruption ?",
+      "choices": [
+        "Pas de différence réelle : les deux termes désignent le même événement, avec seulement un changement de vocabulaire selon l’opérateur",
+        "La venue est une entrée non voulue de fluides dans le puits ; l’éruption est une venue qui n’a pas pu être maîtrisée",
+        "La venue se produit en production, l’éruption en forage",
+        "L’éruption n’arrive qu’en mer"
+      ],
+      "answer": 1,
+      "explain": "Une venue détectée à temps et maîtrisée reste un incident de contrôle de puits ; si elle échappe au contrôle, c’est l’éruption. Les deux événements existent en forage comme en mer et à terre et ne sont pas synonymes.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-024",
+      "theme": "Barrières de sécurité et contrôle des éruptions",
+      "level": 1,
+      "q": "Lequel de ces signes est un indice de venue pendant le forage ?",
+      "choices": [
+        "Une baisse de la densité de la boue sortie, sans aucun gain de volume constaté dans les bacs de surface",
+        "Une baisse du volume de déblais aux tamis",
+        "Une hausse de la température de l’air ambiant",
+        "Une augmentation du volume de boue dans les bacs sans ajout volontaire"
+      ],
+      "answer": 3,
+      "explain": "Un gain de volume aux bacs montre que des fluides de formation entrent dans le puits et poussent la boue vers la surface. Les autres propositions ne sont pas des indices fiables ; une baisse de densité en sortie peut accompagner une venue de gaz, mais le gain de volume reste l’alerte la plus directe.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-025",
+      "theme": "Barrières de sécurité et contrôle des éruptions",
+      "level": 2,
+      "q": "Après fermeture du puits, la pression stabilisée en tête de tiges est de 20 bar à 2 000 m de profondeur verticale ; la boue est à 1,20 kg/L. Quelle densité approximative de boue d’alourdissement est requise ?",
+      "choices": [
+        "Environ 1,22 kg/L",
+        "Environ 1,40 kg/L",
+        "Environ 1,30 kg/L",
+        "Environ 1,50 kg/L"
+      ],
+      "answer": 2,
+      "explain": "La hausse de densité est 20 / (0,0981 × 2 000) ≈ 0,10 kg/L, donc 1,20 + 0,10 ≈ 1,30 kg/L. 1,22 oublie le facteur de profondeur, 1,40 et 1,50 surestiment l’alourdissement.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-026",
+      "theme": "Barrières de sécurité et contrôle des éruptions",
+      "level": 2,
+      "q": "Lors d’une visite d’appareil, que vérifiez-vous en priorité pour le bloc d’obturation ?",
+      "choices": [
+        "La date et le résultat du dernier essai de pression, ainsi que le registre des exercices de fermeture",
+        "La couleur de peinture de l’équipement et la présence de l’affichage du fournisseur sur chaque obturateur du bloc",
+        "Le nombre d’appareils de forage de la société dans le pays",
+        "Le prix d’achat de l’équipement"
+      ],
+      "answer": 0,
+      "explain": "Un équipement de sécurité ne vaut que par ses essais et par l’entraînement du personnel : essais de pression consignés et exercices de fermeture. La peinture, le parc de la société et le prix d’achat n’indiquent rien sur la fiabilité.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-027",
+      "theme": "Barrières de sécurité et contrôle des éruptions",
+      "level": 2,
+      "q": "Pendant une intervention, l’une des deux barrières d’un puits est testée défaillante. Que doit-il se passer ?",
+      "choices": [
+        "Continuer en accélérant pour finir plus vite la section, puis régulariser les essais après coup avec le rapport de fin de puits",
+        "Continuer avec une seule barrière tant que la boue est lourde",
+        "Attendre le prochain rapport mensuel avant de décider",
+        "Arrêter l’opération et rétablir la barrière avant de poursuivre"
+      ],
+      "answer": 3,
+      "explain": "Le principe est de disposer de deux barrières indépendantes en permanence : si l’une manque, on s’arrête et on la rétablit. Accélérer ou poursuivre avec une seule barrière expose à l’éruption, et attendre le rapport mensuel serait trop tard.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-028",
+      "theme": "Barrières de sécurité et contrôle des éruptions",
+      "level": 2,
+      "q": "Une venue importante a été maîtrisée, sans blessé. L’opérateur envoie son rapport deux semaines plus tard. Cette pratique est-elle conforme à la loi n° 002/2019 ?",
+      "choices": [
+        "Oui : sans blessé et sans pollution, aucune information n’est exigée par la loi avant le rapport de fin de puits",
+        "Non : l’administration doit être informée sans délai de tout incident, avec nature, gravité, causes, solutions et durée estimée",
+        "Oui : un délai de quinze jours est fixé par la loi",
+        "Non, mais seulement si l’incident a eu lieu en mer"
+      ],
+      "answer": 1,
+      "explain": "L’article 241 oblige le titulaire à informer sans délai de toute perturbation, incident ou accident, et précise le contenu de l’information. Aucun délai de quinze jours n’est prévu, l’absence de blessé ne dispense pas, et la règle vaut à terre comme en mer.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 241",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-029",
+      "theme": "Barrières de sécurité et contrôle des éruptions",
+      "level": 3,
+      "q": "Lors des essais de pression du bloc d’obturation, les mâchoires sur tiges fuient. L’opérateur demande de poursuivre le forage « jusqu’à la fin de la section ». Que décidez-vous ?",
+      "choices": [
+        "Autoriser la poursuite, puisque l’obturateur annulaire peut fermer sur les tiges, et reporter la réparation à la fin de la section",
+        "Autoriser si un second essai la semaine suivante réussit",
+        "Autoriser si la boue est alourdie de 0,05 kg/L",
+        "Exiger l’arrêt, la réparation ou le remplacement de l’élément, puis un nouvel essai concluant avant de reprendre"
+      ],
+      "answer": 3,
+      "explain": "Un équipement de la barrière secondaire défaillant interdit de poursuivre : on répare et on reteste. S’appuyer sur un autre élément pour compenser, reporter l’essai d’une semaine ou alourdir légèrement la boue ne rétablit pas la redondance exigée.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-030",
+      "theme": "Barrières de sécurité et contrôle des éruptions",
+      "level": 3,
+      "q": "Une éruption en mer pollue des zones de pêche hors du périmètre de l’autorisation. Quelle disposition fonde la responsabilité du titulaire pour ces dommages ?",
+      "choices": [
+        "L’article 81 : droit exclusif de réaliser les travaux d’exploration dans la zone délimitée du contrat d’hydrocarbures",
+        "L’article 125 : interdiction du torchage",
+        "L’article 179 : la responsabilité couvre tous les dommages, y compris au-delà du périmètre de l’autorisation",
+        "L’article 173 : plan d’abandon et de réhabilitation"
+      ],
+      "answer": 2,
+      "explain": "L’article 179 vise l’ensemble des dommages causés par l’activité et ses effets induits, y compris au-delà du périmètre ; l’action se prescrit après trente ans. L’article 81 définit le droit exclusif, l’article 125 le torchage et l’article 173 le plan d’abandon : aucun ne fonde la réparation des dommages extérieurs.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 179",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-031",
+      "theme": "Programme de forage et autorisation",
+      "level": 1,
+      "q": "Selon l’article 81 de la loi n° 002/2019, que confère l’autorisation exclusive d’exploration en matière de forage ?",
+      "choices": [
+        "Le droit de forer sans limite de nombre dans tout le pays, y compris hors de la zone délimitée par l’autorisation",
+        "Le droit exclusif de réaliser les forages d’exploration et d’appréciation prévus dans le contrat, dans la zone délimitée",
+        "Le droit de produire et d’exporter sans autre formalité",
+        "Le droit de céder librement le puits à un tiers"
+      ],
+      "answer": 1,
+      "explain": "L’article 81 donne un droit exclusif, limité à une zone délimitée et aux travaux prévus au contrat (sismique, forages d’exploration et d’appréciation). Il ne vaut pas pour tout le pays, ni pour la production ou l’exportation, ni pour une cession libre.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 81",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-032",
+      "theme": "Programme de forage et autorisation",
+      "level": 1,
+      "q": "Lequel de ces éléments ne figure pas normalement dans un programme de forage ?",
+      "choices": [
+        "Le schéma de tubage et la justification des profondeurs de sabots",
+        "Le plan de contrôle de puits",
+        "Le programme de boue",
+        "Le bilan comptable annuel de la société mère"
+      ],
+      "answer": 3,
+      "explain": "Un programme de forage contient des éléments techniques et de sécurité. Le bilan comptable de la société mère relève d’un autre dossier ; les trois autres éléments sont au cœur du programme.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-033",
+      "theme": "Programme de forage et autorisation",
+      "level": 1,
+      "q": "Que doit soumettre le titulaire aux ministères des Hydrocarbures et de l’Environnement avant toute opération ?",
+      "choices": [
+        "Le plan de licenciement du personnel",
+        "Le rapport de fin de puits, rédigé après le forage et la mise en service du puits",
+        "Le plan d’abandon et de réhabilitation de site",
+        "Le décompte des volumes torchés"
+      ],
+      "answer": 2,
+      "explain": "L’article 173 impose le dépôt du plan d’abandon et de réhabilitation de site avant toute opération. Le rapport de fin de puits intervient après le forage, et le décompte des volumes torchés se rapporte à l’exploitation.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 173",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-034",
+      "theme": "Programme de forage et autorisation",
+      "level": 1,
+      "q": "Qui approuve les budgets liés à l’exécution des activités amont ?",
+      "choices": [
+        "Le ministère en charge des Hydrocarbures",
+        "Le ministère chargé du Tourisme",
+        "Le fournisseur de l’appareil de forage",
+        "La société de sous-traitance retenue pour le forage"
+      ],
+      "answer": 0,
+      "explain": "L’article 256 de la loi n° 002/2019 confie l’approbation de ces budgets au ministère en charge des Hydrocarbures. Le fournisseur de l’appareil et les sous-traitants ne sont pas des autorités d’approbation.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 256",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-035",
+      "theme": "Programme de forage et autorisation",
+      "level": 2,
+      "q": "Une découverte est notifiée à l’administration le 15 mars 2026 pour un bloc en offshore profond. Quelle est l’échéance pour entreprendre les travaux d’appréciation ?",
+      "choices": [
+        "Le 15 septembre 2027, soit dix-huit mois",
+        "Le 15 mars 2027, soit douze mois",
+        "Il n’existe pas d’échéance",
+        "Le 15 mars 2028, soit vingt-quatre mois"
+      ],
+      "answer": 3,
+      "explain": "L’article 64 fixe dix-huit mois en zone conventionnelle et vingt-quatre mois en offshore profond et très profond, à compter de la notification : soit le 15 mars 2028. Dix-huit mois valent pour la zone conventionnelle ; douze mois n’existent pas ; et l’absence d’échéance est fausse puisque la loi prévoit une sanction.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 64",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-036",
+      "theme": "Programme de forage et autorisation",
+      "level": 2,
+      "q": "Après une découverte, l’opérateur souhaite l’annoncer à des investisseurs et à la presse. Que prévoit la loi ?",
+      "choices": [
+        "La communication est libre dès que l’administration est informée, pourvu que l’opérateur reste prudent dans ses annonces publiques",
+        "Toute communication à des tiers est soumise à l’autorisation préalable de l’administration des hydrocarbures",
+        "La communication est interdite pendant dix ans",
+        "Seuls les journalistes étrangers sont concernés"
+      ],
+      "answer": 1,
+      "explain": "L’article 63 prévoit l’information prioritaire et sans délai de l’administration, puis soumet toute communication aux tiers à son autorisation préalable. Elle n’est donc pas libre, et aucune interdiction de dix ans n’existe.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 63",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-037",
+      "theme": "Programme de forage et autorisation",
+      "level": 2,
+      "q": "Parmi les points suivants, lequel est le plus déterminant dans l’examen de la sécurité d’un programme de forage ?",
+      "choices": [
+        "La cohérence entre la fenêtre de densités (pores et fracturation) et le schéma de tubage",
+        "La couleur de l’appareil de forage et le nombre de pages de la note de présentation remise à l’administration",
+        "Le nombre de pages du programme",
+        "Le nom du fournisseur de l’outil de forage"
+      ],
+      "answer": 0,
+      "explain": "Le schéma de tubage doit permettre de rester dans la fenêtre entre pression de pores et pression de fracturation sur chaque section : c’est le cœur de la maîtrise du puits. Les autres éléments sont secondaires ou sans rapport.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-038",
+      "theme": "Programme de forage et autorisation",
+      "level": 2,
+      "q": "Un opérateur remet une étude de dangers établie par son bureau d’études interne non agréé. Quelle est la position de l’agent ?",
+      "choices": [
+        "Elle est recevable si elle est signée par le directeur général et accompagnée d’une lettre d’engagement de l’opérateur",
+        "Elle est recevable car l’agrément n’existe que pour l’aval",
+        "Elle n’est pas recevable : seuls les cabinets agréés peuvent réaliser les études de dangers",
+        "Elle est recevable si elle est traduite en anglais"
+      ],
+      "answer": 2,
+      "explain": "L’article 172 réserve la réalisation des études de dangers aux cabinets agréés, et prévoit validation par les services techniques et révision périodique. La signature du dirigeant, la nature amont ou aval de l’activité ou la langue n’y changent rien.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 172",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-039",
+      "theme": "Programme de forage et autorisation",
+      "level": 3,
+      "q": "En cours de forage, l’opérateur veut approfondir le puits de 400 m et ajouter un tubage, sans demande formelle. Que faites-vous ?",
+      "choices": [
+        "Exiger une demande écrite motivée, avec l’incidence sur les risques et le budget, et l’accord préalable, sauf urgence de sécurité à notifier sans délai",
+        "Laisser faire : seul le rapport de fin de puits compte, et l’administration pourra ensuite constater les écarts éventuels sans rien exiger",
+        "Interdire toute modification, quelle qu’en soit la raison",
+        "Déléguer la décision au chef de chantier de l’opérateur"
+      ],
+      "answer": 0,
+      "explain": "Une modification majeure se traite avant exécution, avec analyse des risques et budget (le ministère approuve les budgets amont, art. 256), sauf urgence de sécurité, notifiée sans délai (art. 241). Se contenter du rapport final prive l’administration de tout contrôle ; interdire toute modification est irréaliste ; et le chef de chantier de l’opérateur n’est pas l’autorité.",
+      "seconds": 110,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 256, 241",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-040",
+      "theme": "Programme de forage et autorisation",
+      "level": 3,
+      "q": "Un opérateur dépose un programme sans plan de contrôle de puits ni plan d’urgence, en insistant : l’appareil coûte 150 000 dollars par jour d’attente (chiffre indicatif). Quelle est la réponse adaptée ?",
+      "choices": [
+        "Valider sous réserve, les documents manquants pouvant suivre après le démarrage, dès lors que l’opérateur promet une régularisation rapide",
+        "Valider dès que l’opérateur paie les droits de dossier",
+        "Valider en demandant seulement le plan d’urgence",
+        "Retourner le dossier comme incomplet : la pression du calendrier ne remplace pas ces documents de sécurité"
+      ],
+      "answer": 3,
+      "explain": "Le plan de contrôle de puits et le plan d’urgence sont des conditions de sécurité qui précèdent le forage ; la loi exige un plan de traitement d’urgence d’application immédiate (art. 182). Valider « sous réserve » inverse l’ordre logique, et ni le paiement de droits ni une validation partielle ne comblent le manque.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 182",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-041",
+      "theme": "Rapports journaliers et fin de puits",
+      "level": 1,
+      "q": "Que contient en général le rapport journalier de forage ?",
+      "choices": [
+        "Les comptes annuels de la société, le bilan financier consolidé et la liste des principaux clients de l’opérateur",
+        "Le plan d’abandon du puits",
+        "La profondeur atteinte, les opérations des 24 dernières heures, les incidents et le personnel à bord",
+        "La liste des clients de l’opérateur"
+      ],
+      "answer": 2,
+      "explain": "Le rapport journalier résume la journée : profondeur, opérations, avancement, incidents, personnel. Les comptes annuels, le plan d’abandon et la clientèle relèvent d’autres documents.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-042",
+      "theme": "Rapports journaliers et fin de puits",
+      "level": 1,
+      "q": "Que désigne le « temps non productif » dans un rapport de forage ?",
+      "choices": [
+        "Le temps perdu en incidents, attentes et réparations",
+        "Le temps où l’appareil est transporté vers un autre pays",
+        "Le temps de repos réglementaire de l’équipe",
+        "Le temps de forage effectif à l’avancement maximal"
+      ],
+      "answer": 0,
+      "explain": "Le temps non productif regroupe les pertes de temps imputables aux incidents, aux attentes et aux réparations ; c’est un indicateur de performance et de risque. Le repos du personnel et le forage effectif sont autre chose.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-043",
+      "theme": "Rapports journaliers et fin de puits",
+      "level": 1,
+      "q": "Que doit contenir un rapport de fin de puits ?",
+      "choices": [
+        "Uniquement la facture finale du sous-traitant principal et le détail des coûts de location de l’appareil de forage",
+        "Seulement la liste du personnel de l’appareil",
+        "Uniquement les photographies de l’appareil",
+        "La synthèse du déroulement, des résultats, du schéma tel que construit, des incidents et des coûts réels"
+      ],
+      "answer": 3,
+      "explain": "Le rapport de fin de puits est une synthèse complète : chronologie, résultats géologiques et d’essais, schéma tel que construit, difficultés, enseignements et coûts. Une facture, une liste de personnel ou des photos ne la remplacent pas.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-044",
+      "theme": "Rapports journaliers et fin de puits",
+      "level": 1,
+      "q": "D’après l’article 182 de la loi n° 002/2019, que doit fournir le titulaire aux services compétents ?",
+      "choices": [
+        "Uniquement un rapport annuel sur la fiscalité, remis après la clôture de l’exercice et sans information technique ni environnementale",
+        "Un rapport sur l’état de ses activités et les informations techniques, économiques et financières demandées, dans les conditions et délais requis",
+        "Une information facultative, à sa discrétion",
+        "Un rapport remis uniquement en cas de condamnation"
+      ],
+      "answer": 1,
+      "explain": "L’article 182 impose un rapport sur l’état des activités et toute information administrative, technique, économique et financière, y compris en matière de qualité, santé et environnement, dans les délais requis. Elle n’est ni facultative ni limitée à la fiscalité.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 182",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-045",
+      "theme": "Rapports journaliers et fin de puits",
+      "level": 2,
+      "q": "Un puits a duré 28 jours, dont 5 jours de temps non productif. Quelle est la part de temps non productif ?",
+      "choices": [
+        "Environ 18 %",
+        "Environ 5 %",
+        "Environ 28 %",
+        "Environ 56 %"
+      ],
+      "answer": 0,
+      "explain": "On divise 5 par 28, soit environ 17,9 %. 5 % confond le nombre de jours et le pourcentage, 28 % reprend la durée totale, et 56 % résulte d’une erreur de multiplication.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-046",
+      "theme": "Rapports journaliers et fin de puits",
+      "level": 2,
+      "q": "Le rapport de forage indique une profondeur de 3 120 m, le rapport de boue 3 085 m pour le même jour. Que faites-vous ?",
+      "choices": [
+        "Retenir la valeur la plus élevée sans vérifier, puisqu’elle correspond à la profondeur réellement atteinte par l’outil sur la journée",
+        "Ignorer l’écart, qui est de l’ordre de 1 %",
+        "Recouper avec les autres sources (suivi géologique, rapport de l’appareil) et demander une correction signée",
+        "Annuler le rapport de la journée"
+      ],
+      "answer": 2,
+      "explain": "Une incohérence entre rapports se traite par recoupement et correction écrite, car la profondeur conditionne toute l’interprétation. Retenir la plus forte valeur ou ignorer l’écart introduit une erreur dans les données ; annuler le rapport entier prive le dossier d’une pièce utile.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-047",
+      "theme": "Rapports journaliers et fin de puits",
+      "level": 2,
+      "q": "Le rapport journalier mentionne une venue maîtrisée par fermeture du puits, jamais notifiée à l’administration. Quelle disposition est en cause ?",
+      "choices": [
+        "L’article 125 : interdiction du torchage",
+        "L’article 241 : information sans délai de tout incident ou accident",
+        "L’article 81 : droit exclusif d’exploration dans la zone délimitée, avec les forages prévus dans le contrat",
+        "L’article 173 : plan d’abandon avant toute opération"
+      ],
+      "answer": 1,
+      "explain": "L’article 241 oblige à informer sans délai de toute perturbation, incident ou accident susceptible d’avoir un impact sur les activités. Les trois autres articles traitent respectivement du torchage, du droit d’exploration et de l’abandon.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 241",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-048",
+      "theme": "Rapports journaliers et fin de puits",
+      "level": 2,
+      "q": "Parmi les directions citées sur le site du ministère, laquelle porte la gestion des données (organisation à confirmer) ?",
+      "choices": [
+        "La Direction de l’Aval pétrolier et gazier, chargée des activités de raffinage, de stockage et de distribution",
+        "La Direction générale des Études et Laboratoires seule",
+        "La Direction de l’Amont pétrolier et gazier seule",
+        "La Direction des Affaires économiques, juridiques et de la gestion des données"
+      ],
+      "answer": 3,
+      "explain": "Selon le site minpetrole.ga, c’est la Direction des Affaires économiques, juridiques et de la gestion des données qui porte la gestion des données. L’aval, les études et laboratoires et l’amont ont d’autres missions ; l’organisation ayant changé plusieurs fois, l’attribution est à confirmer avec le ministère.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-049",
+      "theme": "Rapports journaliers et fin de puits",
+      "level": 3,
+      "q": "Un rapport de fin de puits arrive huit mois après la fin du forage, sans les diagraphies finales. Quelle est la bonne conduite ?",
+      "choices": [
+        "Clore le dossier : huit mois de retard valent acceptation tacite et l’administration ne peut plus rien réclamer à l’opérateur",
+        "Relancer par écrit en invoquant l’obligation d’information et les délais du contrat, et ne pas clore le dossier avant réception",
+        "Reconstituer soi-même les diagraphies à partir des rapports journaliers",
+        "Demander seulement un résumé oral"
+      ],
+      "answer": 1,
+      "explain": "L’article 182 impose de fournir les informations demandées dans les conditions et délais requis. L’agent relance par écrit et garde le dossier ouvert. Le silence ne vaut pas acceptation, on ne reconstitue pas des données de mesure, et un résumé oral n’a aucune valeur de pièce.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 182",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-050",
+      "theme": "Rapports journaliers et fin de puits",
+      "level": 3,
+      "q": "Le puits devait durer 22 jours pour 30 millions de dollars (chiffres d’exemple) ; il a duré 28 jours et le coût dépasse de 25 % le budget approuvé. Que doit exiger l’agent ?",
+      "choices": [
+        "Une analyse écrite de l’écart (causes, temps non productif) et la régularisation du budget selon la procédure prévue au contrat",
+        "Pas d’action nécessaire : un dépassement de moins de 30 % est toujours toléré par les contrats et n’appelle aucune justification écrite",
+        "La suspension immédiate de tous les puits de l’opérateur",
+        "La seule modification du rapport de fin de puits"
+      ],
+      "answer": 0,
+      "explain": "Le ministère approuve les budgets amont (art. 256) : un dépassement se justifie et se régularise selon le contrat. Il n’existe pas de tolérance automatique de 30 %, la suspension générale est disproportionnée, et retoucher le rapport ne règle pas le fond.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 256",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-051",
+      "theme": "Essais de puits",
+      "level": 1,
+      "q": "Quel est l’objectif principal d’un essai de puits ?",
+      "choices": [
+        "Remplacer la cimentation du tubage et augmenter durablement la pression de gisement",
+        "Mesurer la densité de la boue de forage",
+        "Préparer le plan d’abandon",
+        "Mesurer débits, pressions et fluides pour caractériser le réservoir"
+      ],
+      "answer": 3,
+      "explain": "L’essai de puits fournit des débits, des pressions et des échantillons qui servent à évaluer le réservoir. Il ne remplace pas la cimentation, ne mesure pas la boue et ne prépare pas l’abandon.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-052",
+      "theme": "Essais de puits",
+      "level": 1,
+      "q": "Que permet d’estimer un essai de remontée de pression ?",
+      "choices": [
+        "L’épaisseur du tubage de surface, la profondeur des sabots et le diamètre de la tête de puits",
+        "La perméabilité du réservoir, l’endommagement autour du puits et la pression du réservoir",
+        "La densité de la boue à utiliser",
+        "Le coût du forage"
+      ],
+      "answer": 1,
+      "explain": "En fermant le puits après un débit et en suivant la remontée de pression, on estime les propriétés du réservoir. L’épaisseur du tubage, la densité de la boue et le coût ne s’en déduisent pas.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-053",
+      "theme": "Essais de puits",
+      "level": 1,
+      "q": "Que prévoit l’article 125 de la loi n° 002/2019 à propos du torchage ?",
+      "choices": [
+        "Le torchage et le rejet de gaz sont interdits, sauf autorisation exceptionnelle pour une durée déterminée",
+        "Le torchage est libre dans toutes les zones et à toutes les phases des opérations, sans formalité particulière",
+        "Le torchage est interdit sans aucune exception",
+        "Le torchage est autorisé pendant les essais sans formalité"
+      ],
+      "answer": 0,
+      "explain": "L’article 125 pose l’interdiction ; à titre exceptionnel, à la demande du contracteur et sur avis des services de l’administration des hydrocarbures, il peut être autorisé pour une durée fixée par l’administration chargée de l’Environnement. Il n’est donc ni libre ni absolu, et les essais ne font pas exception.",
+      "seconds": 55,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 125",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-054",
+      "theme": "Essais de puits",
+      "level": 1,
+      "q": "Que mesure le rapport gaz-huile ?",
+      "choices": [
+        "La densité du gaz par rapport à l’air, à pression atmosphérique et à 15 degrés",
+        "Le débit d’eau par unité de gaz",
+        "Le volume de gaz produit par volume d’huile produite",
+        "La pression du gaz à la tête de puits"
+      ],
+      "answer": 2,
+      "explain": "Le rapport gaz-huile exprime les quantités relatives de gaz et d’huile produites ; il oriente le choix des installations. Les autres propositions décrivent d’autres grandeurs.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-055",
+      "theme": "Essais de puits",
+      "level": 2,
+      "q": "Un essai donne 1 200 m³/j d’huile et 180 000 m³/j de gaz. Quel est le rapport gaz-huile ?",
+      "choices": [
+        "15 m³/m³",
+        "150 m³/m³",
+        "1 500 m³/m³",
+        "216 m³/m³"
+      ],
+      "answer": 1,
+      "explain": "On divise 180 000 par 1 200 : 150 m³ de gaz par m³ d’huile. Les valeurs de 15 et 1 500 sont des erreurs d’un facteur 10, et 216 résulte d’une multiplication au lieu de la division.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-056",
+      "theme": "Essais de puits",
+      "level": 2,
+      "q": "L’opérateur prévoit de brûler à la torche le gaz d’un essai de dix jours, sans avoir sollicité d’autorisation. Que dites-vous ?",
+      "choices": [
+        "Le torchage d’essai est toujours permis, sans condition, car il est de courte durée et fait partie des opérations normales",
+        "L’autorisation n’est requise qu’au-delà de trente jours",
+        "Seule une amende de 10 000 FCFA est prévue",
+        "L’essai ne peut débuter sans autorisation de torchage ; sinon l’opérateur s’expose à la pénalité prévue par la loi"
+      ],
+      "answer": 3,
+      "explain": "Le torchage est interdit sauf autorisation (art. 125), et la violation de l’interdiction est passible d’une pénalité de 50 000 000 à 2 500 000 000 FCFA (art. 269). Aucun seuil de trente jours ni amende symbolique n’est prévu.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 125, 269",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-057",
+      "theme": "Essais de puits",
+      "level": 2,
+      "q": "Avant l’ouverture d’un puits en essai, quelle vérification de sécurité est la plus pertinente ?",
+      "choices": [
+        "Uniquement la couleur des lignes d’essai, l’affichage des consignes et la propreté générale du chantier d’essai",
+        "Uniquement la date de naissance du personnel",
+        "Les essais de pression des lignes d’essai, les vannes de sécurité, le plan d’urgence et la zone de sécurité autour du brûleur",
+        "Uniquement le prix du baril de pétrole"
+      ],
+      "answer": 2,
+      "explain": "La sécurité d’un essai repose sur l’étanchéité et la fermeture possible du circuit, le plan d’urgence et l’éloignement du brûleur. Les autres propositions n’ont aucun lien avec la sécurité de l’opération.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-058",
+      "theme": "Essais de puits",
+      "level": 2,
+      "q": "Pour qu’un échantillon de fluide prélevé pendant l’essai soit représentatif, que doit-on faire avant le prélèvement ?",
+      "choices": [
+        "Stabiliser l’écoulement afin que les débits et pressions soient constants",
+        "Fermer le puits pendant une heure et prélever aussitôt, afin d’éviter toute modification de la température",
+        "Ajouter de la boue lourde dans les lignes",
+        "Réduire la température du séparateur à zéro degré"
+      ],
+      "answer": 0,
+      "explain": "Un échantillon prélevé avant stabilisation reflète les fluides du puits ou de la boue, et non le réservoir. Les autres actions altèrent l’échantillon.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-059",
+      "theme": "Essais de puits",
+      "level": 3,
+      "q": "Un essai affiche 300 m³/j d’huile pendant deux jours, puis une chute rapide. L’opérateur veut déclarer le gisement commercial. Que répondez-vous ?",
+      "choices": [
+        "Signer la déclaration immédiatement, car 300 m³/j est un débit élevé qui suffit à prouver le caractère commercial du gisement entier",
+        "Refuser tout nouveau puits d’appréciation",
+        "Demander des essais et travaux d’appréciation complémentaires : la déclaration de commercialité est signée par l’État et le contracteur après appréciation",
+        "Déclarer le gisement non commercial sans étude"
+      ],
+      "answer": 2,
+      "explain": "Une chute rapide de débit suggère un réservoir limité ; la commercialité s’établit par les travaux d’appréciation, dans les délais de l’article 64, et la déclaration est signée conjointement par l’État et le contracteur. Signer sur un débit initial est prématuré, refuser tout puits d’appréciation est arbitraire, et conclure sans étude l’est tout autant.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 64",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-060",
+      "theme": "Essais de puits",
+      "level": 3,
+      "q": "Une fuite sur une ligne d’essai provoque un petit feu, rapidement éteint, sans blessé. L’opérateur prévoit d’en parler dans le rapport de fin de puits. Quelle est la position de l’agent ?",
+      "choices": [
+        "Il est trop mineur : aucun avis n’est dû puisque le feu a été éteint rapidement par le personnel de l’appareil de forage",
+        "L’incident doit être notifié sans délai, avec nature, gravité, causes, solutions envisagées et durée estimée",
+        "La notification est due seulement s’il y a au moins un blessé",
+        "La notification est due seulement à la fin du mois"
+      ],
+      "answer": 1,
+      "explain": "L’article 241 vise toute perturbation, incident ou accident susceptible d’avoir un impact, sans seuil de gravité humain, et l’article 182 impose de déclarer immédiatement tout dommage ou sinistre. Le rapport de fin de puits intervient trop tard.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 241, 182",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-061",
+      "theme": "Intégrité des puits en production",
+      "level": 1,
+      "q": "Que couvre la norme ISO 16530-1:2017 ?",
+      "choices": [
+        "La gouvernance de l’intégrité du puits sur tout son cycle de vie",
+        "Le calcul des coûts de forage, la répartition des charges et le suivi des dépenses de l’opérateur",
+        "La fiscalité pétrolière des pays d’Afrique centrale",
+        "La formation du personnel de bureau"
+      ],
+      "answer": 0,
+      "explain": "La norme traite de la gestion de l’intégrité des puits, de la conception à l’abandon. Les coûts de forage, la fiscalité et la formation du personnel de bureau ne relèvent pas de son objet.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "ISO 16530-1:2017 – Industries du pétrole et du gaz naturel – Intégrité des puits – Partie 1 : gouvernance du cycle de vie",
+          "art": "Objet et domaine d’application",
+          "url": "https://www.iso.org/standard/63192.html"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-062",
+      "theme": "Intégrité des puits en production",
+      "level": 1,
+      "q": "Que révèle une pression annulaire qui remonte après chaque purge ?",
+      "choices": [
+        "Une simple variation de la température ambiante",
+        "Un défaut du manomètre uniquement",
+        "Une fuite probable d’une barrière du puits",
+        "Un excès de lubrification des vannes"
+      ],
+      "answer": 2,
+      "explain": "Une pression annulaire soutenue est l’indice classique d’une communication à travers une barrière. Attribuer le phénomène à la météo ou au seul manomètre sans diagnostic serait dangereux ; la lubrification n’y est pour rien.",
+      "seconds": 55,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-063",
+      "theme": "Intégrité des puits en production",
+      "level": 1,
+      "q": "Dans quel délai le contracteur informe-t-il l’administration lorsqu’un puits atteint la production cumulée fixée par le contrat de partage de production ?",
+      "choices": [
+        "Dans un délai de deux jours",
+        "Dans un délai de deux mois",
+        "Dans un délai de deux ans",
+        "Pas d’information exigée par la loi"
+      ],
+      "answer": 1,
+      "explain": "L’article 228 fixe un délai de deux mois pour informer les services compétents des administrations des hydrocarbures et des douanes. Deux jours et deux ans ne sont pas les délais de la loi, et l’information est bien exigée.",
+      "seconds": 55,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 228",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-064",
+      "theme": "Intégrité des puits en production",
+      "level": 1,
+      "q": "Quel équipement est un élément de barrière en puits de production ?",
+      "choices": [
+        "Le tamis vibrant, qui retire les déblais de la boue avant son retour dans les bacs de surface",
+        "La pompe de la boue",
+        "Le bac de réserve de boue",
+        "La vanne de sécurité de fond commandée depuis la surface"
+      ],
+      "answer": 3,
+      "explain": "La vanne de sécurité de fond peut fermer le puits en cas d’urgence. Le tamis, la pompe à boue et le bac appartiennent au circuit de boue du forage et non à la production.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-065",
+      "theme": "Intégrité des puits en production",
+      "level": 2,
+      "q": "La pression annulaire passe de 5 à 40 bar en un mois et redescend après purge. Quelle est la bonne réaction ?",
+      "choices": [
+        "Purger régulièrement la pression et ne rien changer, tant que la valeur reste inférieure à la limite de la tête de puits",
+        "Couper les manomètres pour éviter les fausses alertes",
+        "Réaliser un diagnostic (essais de purge et de remontée, recherche de fuite) plutôt que de purger sans analyse",
+        "Augmenter le débit pour faire baisser la pression"
+      ],
+      "answer": 2,
+      "explain": "Une pression soutenue indique une fuite de barrière : il faut en trouver l’origine. Purger sans analyse masque le problème, couper les mesures supprime l’information, et augmenter le débit ne traite pas la cause.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "ISO 16530-1:2017 – Industries du pétrole et du gaz naturel – Intégrité des puits – Partie 1 : gouvernance du cycle de vie",
+          "art": "Surveillance de l’intégrité",
+          "url": "https://www.iso.org/standard/63192.html"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-066",
+      "theme": "Intégrité des puits en production",
+      "level": 2,
+      "q": "Quelle méthode permet de contrôler l’état d’un tubage de production en place ?",
+      "choices": [
+        "Les diagraphies d’inspection (calibre multi-bras, mesure d’épaisseur)",
+        "Un contrôle visuel du tubage depuis la surface, complété par une mesure de la température de la tête",
+        "Une mesure de la densité de la boue",
+        "Un calcul du prix du baril"
+      ],
+      "answer": 0,
+      "explain": "Les diagraphies d’inspection mesurent le diamètre intérieur et l’épaisseur de l’acier à l’intérieur du puits. Le tubage n’est pas visible depuis la surface, et la densité de la boue ou le prix du baril n’ont aucun rapport.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-067",
+      "theme": "Intégrité des puits en production",
+      "level": 2,
+      "q": "Que vérifie un inspecteur pour la vanne de sécurité de fond d’un puits en production ?",
+      "choices": [
+        "La seule présence d’une plaque d’identification et du certificat d’origine remis par le fabricant de la vanne",
+        "Le nombre d’employés de l’opérateur",
+        "La couleur de la vanne",
+        "Les résultats consignés des essais périodiques d’étanchéité et de fermeture"
+      ],
+      "answer": 3,
+      "explain": "Une vanne de sécurité n’a de valeur que si elle ferme et retient : on vérifie donc les essais périodiques. Une plaque, un effectif ou une couleur ne prouvent rien.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-068",
+      "theme": "Intégrité des puits en production",
+      "level": 2,
+      "q": "Un puits ne dispose plus que d’une seule barrière fonctionnelle. Comment le traiter ?",
+      "choices": [
+        "Comme un puits normal, sans suivi particulier, puisqu’une barrière unique suffit tant qu’il produit sans incident",
+        "En priorité : mesures compensatoires, réduction du débit éventuelle et plan de réparation daté",
+        "Le laisser jusqu’à la fermeture annuelle de l’opérateur",
+        "Le classer comme sans importance"
+      ],
+      "answer": 1,
+      "explain": "Un puits à barrière unique perd sa redondance : il doit passer en tête des priorités, avec mesures compensatoires et échéancier de remise en état. L’ignorer ou l’attendre jusqu’à une date lointaine accroît le risque.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "ISO 16530-1:2017 – Industries du pétrole et du gaz naturel – Intégrité des puits – Partie 1 : gouvernance du cycle de vie",
+          "art": "Barrières",
+          "url": "https://www.iso.org/standard/63192.html"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-069",
+      "theme": "Intégrité des puits en production",
+      "level": 3,
+      "q": "Un puits vieillissant présente une pression annulaire soutenue et une corrosion avérée. L’opérateur propose de seulement réduire le débit. Que décidez-vous ?",
+      "choices": [
+        "Accepter, car réduire le débit règle durablement le problème de barrière et dispense de toute évaluation de risque écrite",
+        "Imposer la fermeture définitive immédiate sans évaluation",
+        "Attendre la prochaine inspection annuelle",
+        "Exiger une évaluation de risque écrite, des limites opératoires, une surveillance renforcée et un échéancier de réparation ou d’abandon"
+      ],
+      "answer": 3,
+      "explain": "Réduire le débit ne rétablit pas une barrière défaillante. L’administration exige une démonstration de risque, des limites et un échéancier. Imposer l’abandon immédiat sans évaluation peut être disproportionné, et attendre un an laisse un risque ouvert.",
+      "seconds": 110,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "ISO 16530-1:2017 – Industries du pétrole et du gaz naturel – Intégrité des puits – Partie 1 : gouvernance du cycle de vie",
+          "art": "Gestion des puits en défaut",
+          "url": "https://www.iso.org/standard/63192.html"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-070",
+      "theme": "Intégrité des puits en production",
+      "level": 3,
+      "q": "Une fuite de gaz est détectée au niveau d’un puits situé près d’un village. Quelles obligations de l’article 182 s’appliquent notamment au titulaire ?",
+      "choices": [
+        "Attendre l’inspection annuelle pour en parler, puis régulariser la déclaration dans le rapport de fin d’année",
+        "Informer uniquement ses actionnaires",
+        "Déclarer immédiatement le sinistre, informer populations et autorités, appliquer le plan de traitement d’urgence",
+        "Pas d’obligation, la fuite étant sans blessé"
+      ],
+      "answer": 2,
+      "explain": "L’article 182 impose de déclarer immédiatement tout dommage ou sinistre, d’informer les populations et les autorités des zones environnantes des risques et de disposer d’un plan de traitement d’urgence d’application immédiate. Informer les seuls actionnaires ou attendre est contraire à la loi.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 182",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-071",
+      "theme": "Bouchage et abandon d’un puits",
+      "level": 1,
+      "q": "Quel est l’objectif principal du bouchage définitif d’un puits ?",
+      "choices": [
+        "Augmenter le débit des puits voisins en rétablissant la pression du gisement dans la zone drainée",
+        "Isoler durablement les formations entre elles et de la surface",
+        "Mesurer la pression du réservoir",
+        "Faciliter l’accès au puits pour une visite touristique"
+      ],
+      "answer": 1,
+      "explain": "Le bouchage vise un isolement durable pour empêcher toute remontée de fluide, pollution de nappe ou fuite en mer. Les autres objectifs ne le concernent pas.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-072",
+      "theme": "Bouchage et abandon d’un puits",
+      "level": 1,
+      "q": "Quel matériau est le plus utilisé pour réaliser un bouchon d’abandon ?",
+      "choices": [
+        "Le sable sec",
+        "La boue de forage seule",
+        "La mousse de polystyrène",
+        "Le ciment"
+      ],
+      "answer": 3,
+      "explain": "Le bouchon de ciment est la technique de référence pour créer une barrière permanente. Le sable sec et la boue ne tiennent pas dans le temps, et la mousse ne résiste pas aux pressions.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-073",
+      "theme": "Bouchage et abandon d’un puits",
+      "level": 1,
+      "q": "Selon l’article 173 de la loi n° 002/2019, que doit faire le titulaire à toute cessation d’activités ?",
+      "choices": [
+        "Laisser le site en l’état, puisque la nature reprendra ses droits sans intervention de l’opérateur",
+        "Céder le site à son sous-traitant sans formalité",
+        "Réhabiliter chaque site conformément à la réglementation et aux règles de l’art",
+        "Attendre un ordre de justice pour agir"
+      ],
+      "answer": 2,
+      "explain": "L’article 173 oblige à réhabiliter chaque site à toute cessation d’activités, et à soumettre le plan avant toute opération. Laisser le site en l’état ou le céder sans formalité est contraire à la loi.",
+      "seconds": 55,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 173",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-074",
+      "theme": "Bouchage et abandon d’un puits",
+      "level": 1,
+      "q": "Où est domicilié le fonds de réhabilitation de sites ?",
+      "choices": [
+        "Au Gabon, auprès de la BEAC ou d’un établissement de crédit de droit gabonais",
+        "À l’étranger, dans une banque choisie par l’opérateur, avec libre disposition des fonds pour ses propres besoins",
+        "Dans la caisse de l’appareil de forage",
+        "Chez le sous-traitant de l’opérateur"
+      ],
+      "answer": 0,
+      "explain": "L’article 176 domicilie le fonds au Gabon, sous le contrôle de la COBAC ; il est insaisissable et réservé à son objet. Une banque étrangère, une caisse de chantier ou un sous-traitant ne sont pas autorisés.",
+      "seconds": 55,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 176",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-075",
+      "theme": "Bouchage et abandon d’un puits",
+      "level": 2,
+      "q": "Une dotation annuelle au fonds de réhabilitation est de 500 millions de FCFA, versée avec 20 jours de retard. Quelle est la pénalité de l’article 177 ?",
+      "choices": [
+        "2 millions de FCFA",
+        "200 millions de FCFA",
+        "10 millions de FCFA",
+        "20 millions de FCFA"
+      ],
+      "answer": 3,
+      "explain": "La pénalité est de 1/500e par jour de retard : 500 000 000 × 20 / 500 = 20 000 000 FCFA. 2 et 200 millions sont des erreurs d’un facteur 10, et 10 millions correspond à 10 jours.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 177",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-076",
+      "theme": "Bouchage et abandon d’un puits",
+      "level": 2,
+      "q": "Comment vérifie-t-on la position et la résistance d’un bouchon de ciment posé dans un puits ?",
+      "choices": [
+        "Par une inspection visuelle depuis la surface, après remontée du train de tiges, suivie d’une signature",
+        "Par un essai de poids (appui du train de tiges) et un essai de pression",
+        "Par la mesure du prix du ciment",
+        "Par la signature du chef de chantier seule"
+      ],
+      "answer": 1,
+      "explain": "Le bouchon est invisible : on le sollicite avec le train de tiges et on le teste en pression pour s’assurer de sa position et de son étanchéité. Un contrôle visuel ou une signature ne prouvent rien.",
+      "seconds": 65,
+      "status": "draft"
+    },
+    {
+      "id": "min-forage-077",
+      "theme": "Bouchage et abandon d’un puits",
+      "level": 2,
+      "q": "En cas de carence du titulaire, qui réalise les travaux de réhabilitation et comment sont-ils financés ?",
+      "choices": [
+        "L’État, par imputation sur le fonds de réhabilitation, le titulaire couvrant les frais en cas d’insuffisance",
+        "Les riverains, à leurs frais, avant de pouvoir réclamer une indemnisation à l’opérateur devant les tribunaux",
+        "L’État, sans aucun recours sur le titulaire",
+        "La loi reste muette sur ce cas"
+      ],
+      "answer": 0,
+      "explain": "L’article 174 prévoit que l’État réalise les travaux par imputation sur le fonds, et que le titulaire prend en charge les frais supplémentaires si le fonds est insuffisant. Les riverains ne paient pas, l’État dispose d’un recours, et la loi traite bien ce cas.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 174",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-078",
+      "theme": "Bouchage et abandon d’un puits",
+      "level": 2,
+      "q": "Quelle différence existe-t-il entre un puits suspendu et un puits bouché définitivement ?",
+      "choices": [
+        "Pas de différence : les deux termes désignent exactement la même opération, appliquée à des périodes différentes",
+        "Le puits suspendu ne nécessite aucune surveillance",
+        "Le puits suspendu est fermé de façon sûre en vue d’une reprise ; le puits bouché est isolé de façon permanente",
+        "Le puits bouché peut être rouvert sans nouvel essai"
+      ],
+      "answer": 2,
+      "explain": "Un puits suspendu garde des barrières vérifiées et une surveillance, car il peut être réactivé ; un puits bouché définitivement l’est de façon permanente. Les autres propositions sont inexactes.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "ISO 16530-1:2017 – Industries du pétrole et du gaz naturel – Intégrité des puits – Partie 1 : gouvernance du cycle de vie",
+          "art": "Abandon",
+          "url": "https://www.iso.org/standard/63192.html"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-079",
+      "theme": "Bouchage et abandon d’un puits",
+      "level": 3,
+      "q": "Pour abandonner un puits, l’opérateur propose un seul bouchon de 30 m face au réservoir, sans essai, et rien sur l’aquifère superficiel. Quelle est la réponse adaptée ?",
+      "choices": [
+        "Demander un programme avec barrières vérifiées sur chaque zone perméable, dont l’aquifère, et les résultats des essais",
+        "Accepter, puisque le réservoir est isolé et que l’aquifère superficiel est protégé par le tubage de surface déjà en place",
+        "Accepter si l’opérateur s’engage à contrôler plus tard",
+        "Exiger de reboucher entièrement le puits sans analyse"
+      ],
+      "answer": 0,
+      "explain": "Il faut isoler chaque zone perméable, pas seulement le réservoir, et vérifier chaque barrière. Un engagement de contrôle ultérieur ne remplace pas les essais, mais reboucher entièrement sans analyse est disproportionné.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 173",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-forage-080",
+      "theme": "Bouchage et abandon d’un puits",
+      "level": 3,
+      "q": "Une fuite est constatée douze ans après le bouchage d’un puits, polluant des terres voisines. La responsabilité du titulaire est-elle engagée ?",
+      "choices": [
+        "Non : l’abandon éteint toute responsabilité du titulaire dès que le bouchon est posé et que le site est restitué à l’État",
+        "Non : elle se prescrit après cinq ans",
+        "Oui, mais seulement si l’opérateur est encore propriétaire du terrain",
+        "Oui : elle couvre tous les dommages, y compris hors périmètre, et l’action se prescrit après trente ans à compter de la découverte du dommage"
+      ],
+      "answer": 3,
+      "explain": "L’article 179 prévoit la responsabilité de l’ensemble des dommages causés par l’activité, au-delà du périmètre, et une prescription trentenaire à compter de la découverte du dommage. L’abandon ne l’éteint pas ; cinq ans n’est pas le délai ; la propriété du terrain n’est pas une condition.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Art. 179",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    }
+  ]
+}

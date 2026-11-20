@@ -1,0 +1,1535 @@
+{
+  "profile": "min-production",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Propriétés du réservoir : porosité, perméabilité, saturation",
+      "theme": "Propriétés du réservoir",
+      "minutes": 10,
+      "body": "Un **réservoir** est une roche poreuse et perméable (grès ou carbonate) qui contient des hydrocarbures sous une **couverture** imperméable, dans un **piège**. Pour l'agent du ministère qui lit un rapport de gisement, quatre grandeurs reviennent partout.\n\n**La porosité (φ)** est le rapport du volume des vides au volume total de la roche : φ = Vp / Vt. Elle mesure la capacité de stockage. Une porosité de 20 % signifie que 20 % du volume de roche est du vide. Les valeurs courantes vont de 5 % (réservoir médiocre) à 30 % (très bon grès peu compacté). Exemple chiffré (valeurs d'illustration) : un bloc de 50 millions de m³ de roche à 18 % de porosité offre 9 millions de m³ de pores.\n\n**La saturation (S)** est la fraction du volume poreux occupée par un fluide : Sw pour l'eau, So pour l'huile, Sg pour le gaz, avec Sw + So + Sg = 1. L'eau ne disparaît jamais complètement : la **saturation en eau irréductible (Swi)** est l'eau retenue sur les grains, qui ne bouge pas. La part du volume de roche occupée par les hydrocarbures vaut φ × (1 − Sw). Avec φ = 0,20 et Sw = 0,35, elle vaut 0,20 × 0,65 = 13 %.\n\n**La perméabilité (k)** mesure l'aptitude de la roche à laisser circuler un fluide. Elle s'exprime en **darcy** ; on utilise le **millidarcy (mD)**. Un réservoir à 1 mD est serré, de 100 à 1 000 mD il est excellent. La **loi de Darcy** relie le débit à la perméabilité : q = k × A × ΔP / (μ × L), où A est la section, ΔP la chute de pression, μ la viscosité et L la longueur. À chute de pression égale, une huile deux fois plus visqueuse s'écoule deux fois moins vite. Porosité et perméabilité ne sont pas liées de façon simple : une roche peut être très poreuse (beaucoup de volume) mais peu perméable (pores mal connectés), donc difficile à produire.\n\n**Le facteur volumétrique (Bo, Bg)** convertit le volume de fond en volume de surface. Si Bo = 1,25, il faut 1,25 m³ d'huile dans le réservoir pour obtenir 1 m³ de pétrole stocké, car du gaz se dégage en remontant. Ainsi 1 000 000 m³ d'huile de fond donnent 800 000 m³ en stock.\n\n**La pression et la température** déterminent l'état des fluides. En première approche, la pression augmente d'environ 0,1 bar par mètre de profondeur dans une colonne d'eau ; la **pression de bulle** est celle sous laquelle le gaz commence à se libérer de l'huile.\n\nCes mesures proviennent des **carottes** (analyses en laboratoire), des **diagraphies** (mesures dans le puits), des **essais de puits** et des analyses PVT (pression, volume, température) des fluides. Aucune n'est parfaite : la carotte est précise mais ponctuelle, la diagraphie est continue mais indirecte.\n\n**Sur le terrain.** Quand un opérateur annonce « très bon réservoir », demandez les trois chiffres (φ, Sw, k), leur source (carotte ou diagraphie) et le nombre de puits qui les appuient. Comparez le volume en place (lié à φ et Sw) et la productivité attendue (liée à k) : un réservoir à 28 % de porosité et 3 mD stocke beaucoup mais produit mal, alors qu'un réservoir à 14 % et 250 mD stocke moins mais débite bien.",
+      "keyPoints": [
+        "Porosité φ = volume des vides / volume total : elle mesure la capacité de stockage.",
+        "Saturations : Sw + So + Sg = 1 ; l'eau irréductible Swi ne s'écoule pas.",
+        "Perméabilité (mD) : elle gouverne le débit (loi de Darcy) ; porosité et perméabilité ne sont pas équivalentes.",
+        "Bo convertit le volume de fond en volume de surface : volume stock = volume de fond / Bo.",
+        "Carottes, diagraphies, essais de puits et analyses PVT fournissent les valeurs."
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Mécanismes de drainage et facteur de récupération",
+      "theme": "Mécanismes de drainage",
+      "minutes": 10,
+      "body": "Un gisement ne se vide pas de lui-même : il faut une **énergie** qui pousse les fluides vers le puits. Cette énergie est le **mécanisme de drainage**. Le connaître permet d'anticiper la pression, le gaz et l'eau produits, et donc la quantité finalement récupérable.\n\n**1. Expansion de la roche et des fluides.** Au-dessus de la pression de bulle, l'huile, l'eau et la roche se détendent légèrement quand la pression baisse. L'énergie est faible : la pression chute vite et la récupération reste de quelques pour cent.\n\n**2. Entraînement par le gaz dissous.** Sous la pression de bulle, le gaz se libère de l'huile en petites bulles et la pousse. La pression baisse vite, le rapport gaz/huile (GOR) monte, le débit chute. Récupération usuelle, à titre indicatif : de 5 à 30 %.\n\n**3. Gaz de couverture (chapeau de gaz).** Un chapeau de gaz au-dessus de l'huile se détend et la pousse vers le bas. La pression baisse lentement. Récupération indicative : de 20 à 40 %. Produire trop tôt le gaz du chapeau le prive de son rôle moteur : c'est une erreur de gestion classique. Si un puits proche du toit produit un excès de gaz (cône de gaz), on réduit son débit ou on le reperfore plus bas.\n\n**4. Aquifère actif.** L'eau de l'aquifère remonte et remplace l'huile produite. La pression reste presque stable, mais les puits produisent de l'eau de plus en plus tôt (percée d'eau). C'est souvent le meilleur mécanisme naturel : récupération indicative de 35 à 75 %.\n\n**5. Drainage gravitaire**, dans les gisements très inclinés et épais, et **mécanismes combinés**, fréquents en réalité.\n\nCes fourchettes sont indicatives et varient fortement selon les roches et les fluides ; elles ne remplacent jamais l'étude du champ.\n\n**Récupération secondaire et assistée.** Quand l'énergie naturelle ne suffit plus, l'opérateur **injecte** de l'eau ou du gaz pour maintenir la pression et déplacer l'huile : c'est la récupération secondaire. La récupération assistée ajoute des procédés qui changent les propriétés de l'huile ou de la roche (vapeur, polymères, tensioactifs, dioxyde de carbone). Le **taux de remplacement des vides** compare le volume injecté au volume produit, tous deux en conditions de réservoir : produire 8 000 m³/j et injecter 6 000 m³/j donne 75 %.\n\n**Le facteur de récupération** : FR = récupéré / en place. Il se décompose en **efficacité de déplacement** (fraction d'huile délogée dans la zone balayée) multipliée par l'**efficacité de balayage volumétrique** (part du réservoir touchée). Avec 0,70 et 0,50, FR = 35 %.\n\n**Sur le terrain.** Lisez trois courbes avant toute décision : pression en fonction de la production cumulée, GOR et pourcentage d'eau. Pression stable et eau croissante : aquifère. Pression qui s'effondre et GOR en hausse : gaz dissous. Une demande d'injection dans un champ dont la pression a peu baissé doit être justifiée par une étude (bilan matière ou simulation), et les réserves supplémentaires qu'elle promet ne se comptent qu'une fois le projet approuvé (voir module 4).",
+      "keyPoints": [
+        "Cinq mécanismes : expansion, gaz dissous, gaz de couverture, aquifère, gravité (souvent combinés).",
+        "Aquifère actif : pression stable et eau croissante ; gaz dissous : pression qui chute et GOR en hausse.",
+        "Récupération secondaire : injection d'eau ou de gaz ; assistée : vapeur, polymères, CO₂, etc.",
+        "FR = efficacité de déplacement × efficacité de balayage.",
+        "Les fourchettes de récupération sont indicatives ; l'étude du champ prime."
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Hydrocarbures en place, ressources et réserves",
+      "theme": "Ressources et réserves",
+      "minutes": 9,
+      "body": "Le vocabulaire est strict, car de lui dépendent la déclaration, la fiscalité et la valeur d'un titre.\n\n**Le volume d'hydrocarbures en place** est la quantité totale contenue dans la roche, avant toute production, qu'elle soit récupérable ou non. Ce n'est **pas** une réserve.\n\n**Les ressources** sont l'ensemble des quantités d'hydrocarbures estimées récupérables. Selon le **système de gestion des ressources pétrolières** (PRMS en anglais, publié par la Society of Petroleum Engineers, mise à jour 2018), on distingue trois familles :\n\n- les **ressources prospectives** : accumulations non encore découvertes, estimées à partir de données indirectes (sismique, analogues) ;\n- les **ressources contingentes** : accumulations découvertes, mais dont le développement n'est pas encore commercialement établi (absence de débouché, de projet, d'autorisation, de financement) ;\n- les **réserves** : quantités qu'on peut **commercialement récupérer** à partir d'accumulations connues, à une date donnée, selon des conditions définies.\n\nPour être une réserve, une quantité doit réunir quatre critères : être **découverte**, **récupérable**, **commerciale** (projet de développement défini, économiquement viable) et **restante** (non encore produite à la date de référence). Exemple (chiffres d'illustration) : récupérable initial de 50 millions de barils, production cumulée de 32 millions : réserves restantes de 18 millions de barils.\n\n**Les unités.** Le pétrole se compte en m³, en barils (bbl) ou en millions de barils (Mbbl) ; le gaz en m³ ou en pieds cubes. Repère : 1 m³ vaut environ 6,29 barils ; donc 2 millions de m³ valent environ 12,6 millions de barils. Le **baril équivalent pétrole** (bep) additionne gaz et huile selon leur énergie ; on retient en général environ 6 000 pieds cubes de gaz par bep (à vérifier selon la convention du rapport).\n\n**Brut et net.** Les réserves **brutes** sont celles de 100 % du champ ; les réserves **nettes** correspondent à la part d'un titulaire. Un champ de 20 Mbbl brut détenu à 25 % donne 5 Mbbl net (avant effets des clauses de partage). Dans un contrat de partage de production, la quote-part du contracteur dépend aussi des règles de récupération des coûts et de partage, d'où l'importance de préciser la base de calcul.\n\n**Le facteur économique.** Une quantité est « commerciale » seulement aux prix, coûts et conditions fixés. Si le prix baisse durablement, la fin de vie économique arrive plus tôt, certains volumes cessent d'être des réserves et redeviennent des ressources contingentes.\n\n**Cadre gabonais.** La loi n° 002/2019 définit le gisement comme une accumulation d'hydrocarbures contenue dans un ou plusieurs réservoirs (article 9). En cas de découverte, le contracteur informe sans délai l'administration (article 63) et entreprend les travaux d'appréciation pour établir le caractère commercial dans les 18 mois (zone conventionnelle) ou 24 mois (mer profonde et très profonde), à compter de la notification (article 64).\n\n**Sur le terrain.** Devant un tableau, demandez toujours : à quelle date ? brutes ou nettes ? quels prix et quel projet ? volume en place ou récupérable ?",
+      "keyPoints": [
+        "Volume en place n'est pas réserve : il faut un facteur de récupération, un projet et la commercialité.",
+        "Quatre critères : découvertes, récupérables, commerciales, restantes.",
+        "Prospectives (non découvertes), contingentes (découvertes, non commerciales), réserves (commerciales).",
+        "Brut = 100 % du champ ; net = part du titulaire ; 1 m³ ≈ 6,29 bbl.",
+        "Le prix et les coûts font basculer des volumes entre réserves et ressources contingentes."
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Classification : prouvées, probables, possibles",
+      "theme": "Classification des réserves",
+      "minutes": 10,
+      "body": "Au sein des réserves, le **système de gestion des ressources pétrolières** (PRMS) distingue trois catégories selon le degré d'incertitude.\n\n- **Réserves prouvées (1P)** : forte certitude raisonnable de récupération. Dans une approche probabiliste, il y a au moins **90 %** de chances (P90) que les quantités réellement récupérées égalent ou dépassent l'estimation.\n- **Réserves probables** : plus incertaines. Prouvées + probables forment la catégorie **2P**, dont l'estimation centrale (meilleure estimation) correspond à **P50** : autant de chances de dépasser que de ne pas atteindre.\n- **Réserves possibles** : encore plus incertaines. Prouvées + probables + possibles forment la catégorie **3P**, avec au moins **10 %** de chances (P10) d'être atteintes ou dépassées.\n\nLes ressources contingentes ont leurs propres bornes (1C, 2C, 3C), qu'il ne faut jamais additionner aux réserves.\n\n**Méthodes déterministe et probabiliste.** En méthode déterministe, l'ingénieur retient un scénario pour chaque catégorie (prudent, meilleur, optimiste). En méthode probabiliste, il traite les paramètres comme des distributions et lit P90, P50, P10.\n\n**Statut de développement.** On classe aussi les réserves selon la maturité : **développées en production** (puits en service), **développées non en production** (puits prêt, en attente de raccordement ou d'arrêt temporaire) et **non développées** (puits ou installations à réaliser). Les ressources contingentes se rangent selon la maturité du projet (par exemple développement en attente, non clarifié, non viable). Pour compter des réserves, le projet doit être approuvé ou son approbation raisonnablement attendue, avec engagement de l'opérateur.\n\n**Limite en profondeur.** En l'absence d'un contact eau–huile établi, les réserves prouvées s'arrêtent au **plus bas niveau d'hydrocarbures connu** (par exemple 2 450 m) ; au-delà, l'extension relève des probables ou des possibles.\n\n**Agrégation.** Additionner arithmétiquement les réserves prouvées de plusieurs champs donne un total plutôt **prudent** (inférieur au vrai P90 du portefeuille) ; additionner les possibles donne un total plutôt optimiste.\n\n**Exemple.** Un champ a 30 Mbbl prouvées, 12 Mbbl probables, 8 Mbbl possibles (chiffres d'illustration). 1P = 30 ; 2P = 42 ; 3P = 50.\n\n**Cas typiques.** Un pilote de récupération assistée sans décision d'investissement ne génère pas de réserves : les volumes sont des ressources contingentes. Une extension mal imagée par la sismique, au-delà des zones testées par puits, est généralement classée en possibles.\n\n**Sur le terrain.** Contrôlez que 1P ≤ 2P ≤ 3P, que chaque catégorie est rattachée à une date et à un projet, et que les ressources contingentes ne se glissent pas dans les réserves. Si un rapport d'un opérateur utilise une autre classification (par exemple celle d'une bourse), demandez le tableau de correspondance.\n\nLe texte de référence est le PRMS (mise à jour 2018) de la Society of Petroleum Engineers.",
+      "keyPoints": [
+        "Prouvées (P90, 1P), probables (2P = P50), possibles (3P = P10) : incertitude croissante.",
+        "Déterministe : trois scénarios ; probabiliste : distributions et lecture de P90, P50, P10.",
+        "Statut : développées en production, développées non en production, non développées.",
+        "Sans contact fluide connu, les prouvées s'arrêtent au plus bas niveau d'hydrocarbures connu.",
+        "Sans projet approuvé, les volumes sont des ressources contingentes, pas des réserves."
+      ]
+    },
+    {
+      "id": "m5",
+      "title": "Méthodes d'estimation et calculs simples",
+      "theme": "Méthodes d'estimation",
+      "minutes": 12,
+      "body": "Trois méthodes principales, souvent combinées, servent à estimer volumes et réserves.\n\n**1. Méthode volumétrique.** Elle convient avant la production ou en début de vie. Le volume d'huile en place en conditions de stock vaut :\n\nSTOIIP = A × h × (N/B) × φ × (1 − Sw) / Bo\n\navec A la surface, h l'épaisseur utile, N/B la fraction de roche réservoir (on peut l'omettre dans un exemple simple), φ la porosité, Sw la saturation en eau, Bo le facteur volumétrique. **Exemple** (valeurs d'illustration) : A = 200 ha = 2 000 000 m², h = 15 m, φ = 0,20, Sw = 0,30, Bo = 1,25. Volume de roche : 30 millions de m³ ; volume de pores : 6 millions ; volume d'huile de fond : 4,2 millions ; huile en stock : 4,2 / 1,25 = 3,36 millions de m³. Avec un facteur de récupération de 30 %, le récupérable vaut environ 1,0 million de m³.\n\n**2. Bilan matière.** Il applique la conservation de la matière au réservoir : volume produit = expansion des fluides, de la roche et de l'aquifère. Il exige un historique de production et de pression et des analyses PVT. Pour un **gaz** sans aquifère, la droite P/Z en fonction de la production cumulée Gp donne les réserves : P/Z = (Pi/Zi) × (1 − Gp/G). **Exemple** : Pi/Zi = 300 bar ; après 2 milliards de m³ produits, P/Z = 240 ; 240/300 = 0,8 = 1 − 2/G, donc G = 10 milliards de m³ en place.\n\n**3. Courbes de déclin.** On extrapole le débit q(t) jusqu'à un débit d'abandon économique. Le déclin **exponentiel** s'écrit q = q₀ × e^(−D·t) ; le déclin hyperbolique convient mieux aux déclins qui ralentissent. **Exemple** : q₀ = 1 000 m³/j et D = 0,2 par an (taux nominal continu). Après 5 ans : 1 000 × e⁻¹ ≈ 368 m³/j. Réserves restantes jusqu'à un débit d'abandon de 100 m³/j : (1 000 − 100) × 365 / 0,2 ≈ 1,64 million de m³. La durée de vie restante vaut ln(10)/0,2 ≈ 11,5 ans.\n\n**4. Simulation et analogies.** La simulation numérique du réservoir (modèle 3D) prolonge les méthodes précédentes ; les champs analogues servent à juger si un facteur de récupération est plausible.\n\n**Choix de la méthode.** Avant ou au début de la production : volumétrie et analogues ; après plusieurs années d'historique : bilan matière et déclin, plus contraignants car fondés sur le comportement réel. Les incertitudes (surface, épaisseur, Sw, FR) se traduisent en fourchettes P90 – P50 – P10, jamais en un seul chiffre.\n\n**Sur le terrain.** Si la volumétrie annonce 40 millions de m³ et que 15 ans de déclin bien ajusté n'en donnent que 22, ne retenez pas la plus haute : exigez une explication (compartimentation, aquifère, FR).",
+      "keyPoints": [
+        "Volumétrie : STOIIP = A × h × φ × (1 − Sw) / Bo (avec rapport utile/total si nécessaire).",
+        "Gaz : droite P/Z = (Pi/Zi)(1 − Gp/G) pour estimer le volume en place.",
+        "Déclin exponentiel : q = q₀ e^(−Dt) ; réserves restantes = (q − q abandon) / D.",
+        "Après un long historique, bilan matière et déclin priment sur la volumétrie.",
+        "Toute estimation s'exprime en fourchette (P90 – P50 – P10)."
+      ]
+    },
+    {
+      "id": "m6",
+      "title": "Déclaration annuelle des réserves à l'État",
+      "theme": "Déclaration annuelle à l'État",
+      "minutes": 10,
+      "body": "Le Ministère a besoin de connaître, chaque année, l'état des réserves du pays pour piloter la politique pétrolière, vérifier la production et suivre la fiscalité. L'opérateur transmet donc un état de ses réserves à l'administration.\n\n**Fondements juridiques.** La loi n° 002/2019 du 16 juillet 2019 impose au titulaire d'une autorisation de fournir aux services de l'administration des hydrocarbures un rapport sur l'état de ses activités et toute information technique, économique et financière dans les conditions et délais requis (article 182). Elle prévoit que le contracteur transmette toutes les informations relatives au bilan gaz (article 119), informe l'administration sans délai d'une découverte (article 63) et ne communique cette information aux tiers qu'avec son autorisation préalable. Le contracteur qui ne transmet pas dans les délais prévus par le contrat les données, études et rapports requis s'expose, après mise en demeure de quinze jours, à une pénalité de 500 000 à 5 000 000 de francs CFA (article 267). Le **format exact, le calendrier et les modèles** de la déclaration de réserves sont précisés par les textes réglementaires et les contrats en vigueur ; **ils sont à confirmer auprès de la Direction générale des Hydrocarbures** avant d'être cités.\n\n**Contenu type d'une déclaration.**\n- Date de référence (en pratique le 31 décembre) et unités.\n- Réserves par **champ** et par **catégorie** (1P, 2P, 3P), avec le statut de développement, séparées des ressources contingentes.\n- Production de l'année et production cumulée.\n- Méthodes et hypothèses : prix, coûts, taux de change, limite économique, facteur de récupération.\n- **Tableau de réconciliation** : réserves début + découvertes et extensions + révisions + acquisitions − cessions − production = réserves fin. Exemple (chiffres d'illustration) : 120 + 10 − 5 − 15 = 110 millions de barils.\n- Le bilan gaz (production, utilisation, torchage, vente) pour les champs concernés.\n\n**Contrôles de l'agent.**\n1. **Complétude** : tous les champs, toutes les catégories, la date.\n2. **Cohérence arithmétique** : réconciliation exacte, 1P ≤ 2P ≤ 3P.\n3. **Cohérence avec les mesures** : la production déclarée doit être compatible avec le comptage dynamique exigé pour déterminer la production fiscale (article 252).\n4. **Explication des révisions** : une hausse sans nouveau puits ni nouvelle étude se justifie par écrit.\n5. **Délais** : comparer la date de réception à l'échéance du contrat.\n\n**Confidentialité.** Les volumes d'une découverte récente sont sensibles : ne les communiquez pas à un tiers sans validation hiérarchique et autorisation (article 63).\n\n**Sur le terrain.** Si un rapport arrive en retard, constatez le retard par rapport au contrat, faites engager la mise en demeure, puis la pénalité prévue si la transmission n'a toujours pas eu lieu, au lieu de sanctionner d'emblée.",
+      "keyPoints": [
+        "Article 182 : rapport sur l'état des activités ; article 119 : bilan gaz ; article 63 : découverte et confidentialité.",
+        "Article 267 : mise en demeure de quinze jours, puis pénalité de 500 000 à 5 000 000 de francs CFA.",
+        "Déclaration par champ et par catégorie, à une date de référence, avec hypothèses.",
+        "Réconciliation : début + découvertes et extensions + révisions − production = fin.",
+        "Format et calendrier exacts : à confirmer auprès de la Direction générale des Hydrocarbures."
+      ]
+    },
+    {
+      "id": "m7",
+      "title": "Audit et vérification des réserves déclarées",
+      "theme": "Audit et vérification",
+      "minutes": 10,
+      "body": "Vérifier une déclaration de réserves revient à contrôler trois choses : les **données**, la **méthode** et le **respect des définitions**.\n\n**Qui vérifie ?** L'**évaluateur indépendant** est un tiers qualifié, sans conflit d'intérêts, mandaté par l'opérateur, par un financeur ou par l'État, pour auditer les volumes. L'administration exerce de son côté son contrôle : la loi n° 002/2019 précise que le contrôle des activités d'hydrocarbures comprend notamment le contrôle technique, comptable, juridique et fiscal (article 243) et prévoit des audits techniques sur le fonctionnement des appareils de mesurage et de comptage (article 251).\n\n**Liste de contrôle.**\n1. **Données de base** : cartes structurales, diagraphies, carottes, analyses PVT, essais de puits, historiques de production et de pression. Sans pièce, pas de validation.\n2. **Volume en place** : cohérence de la surface, de l'épaisseur, de φ, de Sw et de Bo avec les puits.\n3. **Facteur de récupération** : comparez au mécanisme de drainage et aux champs analogues. Annoncer 65 % pour un champ à gaz dissous est suspect.\n4. **Méthodes croisées** : volumétrie, bilan matière et déclin doivent aboutir à des ordres de grandeur compatibles ; sinon, on retient la méthode la plus contrainte par les données.\n5. **Hypothèses économiques** : prix et coûts conduisent à la limite économique, donc à la durée de vie et aux volumes classés en réserves.\n6. **Classification** : respect des définitions (statut, 1P ≤ 2P ≤ 3P, projet approuvé).\n7. **Périmètre** : double comptage entre permis voisins partageant un même réservoir. La mise en commun des gisements est le cadre prévu par la loi (articles 88 et 98).\n\n**Signaux d'alerte.**\n- Prouvées supérieures aux probables, ou réserves qui augmentent chaque année sans nouveau puits ni étude.\n- Facteur de récupération très supérieur à celui d'analogues.\n- Volumes en place présentés comme des réserves.\n- Prix ou coûts non cohérents avec la période.\n\n**Un indicateur simple.** Le rapport R/P compare les réserves à la production annuelle : 24 Mbbl de réserves 2P pour 6 Mbbl par an donne R/P = 4 ans (chiffres d'illustration).\n\n**Écarts avec l'audit.** Si l'opérateur annonce 50 millions de m³ et l'audit 38 (écart de 24 %), on n'applique ni moyenne ni sanction immédiate : on demande un **rapprochement** poste par poste (volume en place, FR, limite économique, périmètre), on fait documenter chaque écart et on décide ensuite. Les tolérances d'écart acceptables ne sont pas fixées par la loi ; elles dépendent de la pratique de l'organisme et du contrat, à confirmer.\n\n**Sur le terrain.** Consignez par écrit pièces reçues, questions, réponses et décisions : cette traçabilité protège l'agent et l'État.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+      "keyPoints": [
+        "L'évaluateur indépendant audite ; l'administration contrôle (technique, comptable, juridique, fiscal : article 243).",
+        "Contrôler les données, le volume en place, le facteur de récupération et la cohérence entre méthodes.",
+        "Signaux d'alerte : 1P supérieur à 2P, hausses sans nouvelles données, FR irréaliste, double comptage.",
+        "R/P = réserves / production annuelle.",
+        "Devant un écart d'audit : rapprochement et traçabilité, ni moyenne ni sanction immédiate."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "min-production-001",
+      "theme": "Chaîne de production",
+      "level": 1,
+      "q": "Selon la loi n° 002/2019, où se situe le point de comptage fiscal qui détermine la production totale disponible ?",
+      "choices": [
+        "À l'entrée du terminal d'export, après le stockage de l'huile dans les bacs",
+        "À la tête de chaque puits, avant toute séparation des phases du fluide produit",
+        "Sortie séparateur, avant stockage, au lieu d'extraction des effluents de puits",
+        "Au moment du chargement de l'huile sur le pétrolier d'enlèvement, à quai"
+      ],
+      "answer": 2,
+      "explain": "L'article 9 définit la production totale disponible comme le volume déterminé à l'aide d'un point de comptage fiscal situé au lieu d'extraction des effluents, sortie séparateur, avant le stockage. Le terminal et le chargement sont en aval et ne servent pas à cela ; la tête de puits donne le mélange avant séparation.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 9",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-002",
+      "theme": "Chaîne de production",
+      "level": 1,
+      "q": "Quel équipement permet de mesurer séparément les débits d'huile, de gaz et d'eau d'un puits donné ?",
+      "choices": [
+        "Le séparateur d'essai",
+        "Le bac de stockage",
+        "La torche de sécurité",
+        "Le prouveur d'étalonnage"
+      ],
+      "answer": 0,
+      "explain": "Le séparateur d'essai isole la production d'un puits pour mesurer ses trois phases : c'est l'essai de puits. Le bac stocke l'huile, la torche brûle les rejets de gaz et le prouveur sert à étalonner un compteur.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-003",
+      "theme": "Chaîne de production",
+      "level": 1,
+      "q": "Quelle est l'étape qui permet à l'huile d'atteindre la spécification de vente sur le taux d'eau et de sels ?",
+      "choices": [
+        "La collecte par les lignes d'écoulement reliées au collecteur",
+        "La compression du gaz associé avant réinjection ou export",
+        "Le jaugeage des bacs",
+        "Le traitement par déshydratation et dessalage"
+      ],
+      "answer": 3,
+      "explain": "La déshydratation et le dessalage retirent eau et sels de l'huile. La collecte regroupe les puits, la compression concerne le gaz et le jaugeage est une mesure de niveau qui ne traite rien.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-004",
+      "theme": "Chaîne de production",
+      "level": 1,
+      "q": "À quoi correspond approximativement 1 baril, en volume ?",
+      "choices": [
+        "Environ 100 litres",
+        "159 litres environ",
+        "Environ 205 litres, comme un fût",
+        "Environ 1 000 litres, un mètre cube entier"
+      ],
+      "answer": 1,
+      "explain": "1 baril pétrolier vaut environ 158,99 litres, soit 0,159 m³. 205 litres correspond à un fût courant, 1 000 litres à un mètre cube.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-005",
+      "theme": "Chaîne de production",
+      "level": 2,
+      "q": "Le stock d'un terminal passe de 200 000 à 260 000 barils en un mois, avec des enlèvements de 700 000 barils. Quelle production a reçu le terminal ?",
+      "choices": [
+        "760 000 barils (700 000 + 60 000)",
+        "640 000 barils",
+        "700 000 barils",
+        "960 000 barils, stock final inclus"
+      ],
+      "answer": 0,
+      "explain": "Production reçue = enlèvements + variation de stock = 700 000 + 60 000 = 760 000 barils. 640 000 résulte d'une soustraction à tort ; 700 000 oublie le stock ; 960 000 additionne le stock final.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-006",
+      "theme": "Chaîne de production",
+      "level": 2,
+      "q": "Un puits produit 5 000 b/j de liquide avec un taux d'eau de 60 %. Quelle est sa production d'huile ?",
+      "choices": [
+        "3 000 b/j (eau)",
+        "4 000 b/j d'huile et d'eau",
+        "300 b/j",
+        "2 000 b/j d'huile"
+      ],
+      "answer": 3,
+      "explain": "Huile = liquide × (1 − taux d'eau) = 5 000 × 0,4 = 2 000 b/j. 3 000 b/j est le débit d'eau ; 4 000 et 300 ne correspondent à aucun calcul correct.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-007",
+      "theme": "Chaîne de production",
+      "level": 2,
+      "q": "Vous êtes chef de service et un opérateur place son point de mesure fiscal après les bacs de stockage. Que lui répondez-vous ?",
+      "choices": [
+        "C'est acceptable si l'opérateur démontre que le stockage stabilise l'huile et améliore la précision des mesures",
+        "La loi place le point de comptage fiscal avant stockage ; il faut refuser ou soumettre à approbation",
+        "C'est libre : l'opérateur choisit l'emplacement de ses appareils selon ses besoins d'exploitation",
+        "C'est valable à condition que l'opérateur transmette un rapport mensuel détaillé au ministère"
+      ],
+      "answer": 1,
+      "explain": "L'article 9 situe la production totale disponible avant le stockage et l'article 248 soumet l'emplacement de tout équipement de comptage à l'approbation du ministère. Le choix n'est donc pas libre, et un rapport ne remplace pas l'approbation.",
+      "seconds": 75,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Articles 9 et 248",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-008",
+      "theme": "Chaîne de production",
+      "level": 2,
+      "q": "Parmi ces opérations, laquelle s'effectue sous le contrôle conjoint des services des ministères chargés des Hydrocarbures et de l'Économie ?",
+      "choices": [
+        "Le forage d'un puits de développement",
+        "Le choix du produit désémulsifiant",
+        "L'enlèvement des hydrocarbures",
+        "L'entretien des vannes"
+      ],
+      "answer": 2,
+      "explain": "L'article 250 prévoit que les opérations d'enlèvement s'effectuent sous le contrôle conjoint des deux ministères. Les trois autres opérations relèvent de l'exploitation technique de l'opérateur.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 250",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-009",
+      "theme": "Chaîne de production",
+      "level": 3,
+      "q": "Un champ envoie 30 000 b/j de liquide à la séparation avec 30 % d'eau. Après déshydratation, 1 % de l'huile reste perdue en pertes de traitement et en gaz dissous. Quelle huile exportable attend-on, environ ?",
+      "choices": [
+        "Environ 21 000 b/j, sans perte",
+        "Environ 29 700 b/j au total",
+        "9 000 b/j",
+        "Environ 20 790 b/j (21 000 × 0,99)"
+      ],
+      "answer": 3,
+      "explain": "Huile = 30 000 × 0,7 = 21 000 b/j ; avec 1 % de perte : 21 000 × 0,99 = 20 790 b/j. 21 000 oublie la perte ; 29 700 oublie l'eau ; 9 000 est le volume d'eau.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-010",
+      "theme": "Chaîne de production",
+      "level": 3,
+      "q": "Un opérateur déclare 1 000 000 barils produits dans le mois. Le terminal a enlevé 900 000 barils, et le stock est passé de 100 000 à 150 000 barils. Que concluez-vous ?",
+      "choices": [
+        "Le bilan est exact car 1 000 000 est supérieur aux enlèvements",
+        "Il y a 50 000 barils d'écart avec le bilan, à faire expliquer",
+        "Il manque 100 000 barils, soit le stock initial",
+        "Il y a 50 000 barils de moins que déclaré, mais cela ne regarde que l'opérateur"
+      ],
+      "answer": 1,
+      "explain": "Le bilan donne 900 000 + 50 000 = 950 000 barils, contre 1 000 000 déclarés : 50 000 barils d'écart à expliquer. Comparer à 1 000 000 aux seuls enlèvements est trompeur, le stock initial n'est pas un manquant, et le ministère contrôle précisément ces écarts.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Articles 243 et 246",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-011",
+      "theme": "Plates-formes et unités flottantes",
+      "level": 1,
+      "q": "Que signifie le sigle FPSO, en français ?",
+      "choices": [
+        "Plate-forme fixe de production sous-marine et d'oléoduc",
+        "Poste flottant de pompage et de séparation d'huile en mer ouverte",
+        "Unité flottante de production, de stockage et de déchargement",
+        "Système de forage profond et de sécurité opérationnelle"
+      ],
+      "answer": 2,
+      "explain": "Le FPSO (Floating Production, Storage and Offloading) est un navire qui produit, stocke et décharge l'huile. Les autres propositions ne correspondent à aucun équipement de ce nom.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-012",
+      "theme": "Plates-formes et unités flottantes",
+      "level": 1,
+      "q": "Quel est l'un des principaux inconvénients d'une unité flottante par rapport à un pipeline d'export ?",
+      "choices": [
+        "Son stockage limité la rend dépendante du calendrier des enlèvements",
+        "Elle ne peut pas séparer l'huile et le gaz, faute de place sur le pont de la coque",
+        "Elle est toujours fixée au sol marin",
+        "Elle ne permet aucune mesure fiable de la production à cause du mouvement de la coque"
+      ],
+      "answer": 0,
+      "explain": "Les cuves d'une unité flottante sont de taille limitée : un retard du pétrolier navette peut forcer à réduire la production. Une telle unité sépare bien les phases, flotte et peut être équipée de mesures.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-013",
+      "theme": "Plates-formes et unités flottantes",
+      "level": 1,
+      "q": "Selon la loi n° 002/2019, qui approuve le choix et l'emplacement d'un équipement de comptage installé sur une plate-forme ?",
+      "choices": [
+        "L'opérateur lui-même, seul, selon ses besoins techniques",
+        "Les services du ministère chargé des Hydrocarbures",
+        "Le seul ministère chargé de l'Environnement et du climat",
+        "Le pétrolier d'enlèvement"
+      ],
+      "answer": 1,
+      "explain": "L'article 248 exige l'approbation par les services compétents du ministère chargé des Hydrocarbures du choix, de l'emplacement, de l'installation, de la modification et de l'adjonction de tout équipement de mesurage ou de comptage.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 248",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-014",
+      "theme": "Plates-formes et unités flottantes",
+      "level": 1,
+      "q": "Quelle obligation le titulaire d'une autorisation a-t-il en cas d'incident sur une installation de production ?",
+      "choices": [
+        "Attendre le rapport annuel pour en parler",
+        "Informer seulement les actionnaires",
+        "Informer sans délai l'administration",
+        "Déclarer l'incident uniquement s'il fait des blessés"
+      ],
+      "answer": 2,
+      "explain": "L'article 241 impose d'informer sans délai l'administration de toute perturbation, tout incident ou accident susceptible d'avoir un impact sur les activités, en précisant nature, gravité, causes, solutions et durée estimée.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 241",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-015",
+      "theme": "Plates-formes et unités flottantes",
+      "level": 2,
+      "q": "Une unité flottante dispose de 600 000 barils de stockage libre et produit 20 000 b/j. Le pétrolier navette est retardé. Combien de jours avant de devoir réduire la production ?",
+      "choices": [
+        "30 jours exactement",
+        "20 jours (à peine)",
+        "12 jours seulement",
+        "120 jours en tout, soit 4 mois"
+      ],
+      "answer": 0,
+      "explain": "600 000 / 20 000 = 30 jours. Les autres valeurs proviennent d'erreurs de division ou d'unités.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-016",
+      "theme": "Plates-formes et unités flottantes",
+      "level": 2,
+      "q": "Un opérateur veut modifier le compteur de gaz d'une plate-forme. Quelle démarche est correcte ?",
+      "choices": [
+        "Modifier d'abord, puis informer le ministère dans le rapport mensuel de production",
+        "Modifier sans prévenir si le nouveau compteur est plus précis que l'ancien",
+        "Demander l'accord du seul partenaire majoritaire du contrat",
+        "Demander l'approbation des services du ministère avant toute modification"
+      ],
+      "answer": 3,
+      "explain": "L'article 248 vise la modification et l'adjonction d'équipements : l'approbation est préalable. Un meilleur compteur ou l'accord d'un partenaire ne remplace pas l'approbation de l'administration.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 248",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-017",
+      "theme": "Plates-formes et unités flottantes",
+      "level": 2,
+      "q": "Quel type d'audit la loi n° 002/2019 prévoit-elle sur l'ensemble des appareils de mesurage et des installations de production, de traitement et de stockage ?",
+      "choices": [
+        "Des audits financiers réalisés par les banques qui financent les installations",
+        "Des audits de qualité par les clients",
+        "Des audits techniques d'intégrité, par les services compétents du ministère",
+        "Des audits de personnel réalisés par l'opérateur lui-même et ses sous-traitants"
+      ],
+      "answer": 2,
+      "explain": "L'article 251 prévoit des audits techniques sur l'intégrité et le fonctionnement régulier et optimal des appareils de mesurage, de comptage et des installations, par les services compétents du ministère.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 251",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-018",
+      "theme": "Plates-formes et unités flottantes",
+      "level": 2,
+      "q": "Parmi ces installations, laquelle exige en général un pipeline pour l'export de l'huile, plutôt qu'un chargement direct sur pétrolier ?",
+      "choices": [
+        "Une plate-forme fixe sans stockage",
+        "Une unité flottante avec cuves",
+        "Un champ à terre exporté par camions",
+        "Une unité flottante déchargeant vers un navire navette"
+      ],
+      "answer": 0,
+      "explain": "Une plate-forme fixe sans stockage envoie sa production par pipeline sous-marin vers la côte ou vers une unité de stockage. L'unité flottante stocke et décharge elle-même.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-019",
+      "theme": "Plates-formes et unités flottantes",
+      "level": 3,
+      "q": "Un opérateur annonce une panne de la compression du gaz sur son unité flottante, avec torchage important, et continue sa production sans prévenir. Quelles obligations ou risques sont en jeu ?",
+      "choices": [
+        "Pas d'obligation, car une panne est un événement d'exploitation courant et prévisible",
+        "Seule obligation : le mentionner dans le rapport annuel de l'année suivante, sans urgence",
+        "Obligation d'informer uniquement le ministère de l'Économie, sans l'administration des hydrocarbures",
+        "Obligation d'informer sans délai (art. 241) et risque de pénalité pour torchage (art. 269)"
+      ],
+      "answer": 3,
+      "explain": "Une perturbation susceptible d'avoir un impact sur les activités doit être signalée sans délai (art. 241). Le torchage est interdit hors dérogation et seuils (art. 125) et peut être sanctionné de 50 millions à 2,5 milliards de FCFA (art. 269). Un rapport annuel serait bien trop tardif.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Articles 241, 125 et 269",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-020",
+      "theme": "Plates-formes et unités flottantes",
+      "level": 3,
+      "q": "Vous inspectez une plate-forme et constatez qu'un second compteur a été ajouté en parallèle sur la ligne d'export, sans dossier d'approbation. Quelle est la bonne conduite ?",
+      "choices": [
+        "Ignorer l'ajout, puisque la production déclarée n'est pas modifiée par cet appareil",
+        "Consigner l'écart, demander la régularisation et vérifier son étalonnage",
+        "Interdire toute la production de l'unité",
+        "Accepter l'appareil dès lors qu'il porte un certificat de conformité du fabricant"
+      ],
+      "answer": 1,
+      "explain": "L'adjonction d'un équipement relève de l'approbation (art. 248) et l'étalonnage de l'administration (art. 249). La réponse proportionnée consiste à consigner, régulariser et vérifier, pas à ignorer ni à arrêter toute la production. Un certificat du fabricant ne remplace ni l'approbation ni l'étalonnage.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Articles 248 et 249",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-021",
+      "theme": "Mesurage et comptage fiscal",
+      "level": 1,
+      "q": "Quel type de comptage la loi impose-t-elle au contracteur pour déterminer la production fiscale ?",
+      "choices": [
+        "Le comptage dynamique",
+        "Le jaugeage manuel des bacs",
+        "L'estimation par essais de puits",
+        "Le calcul à partir des ventes déclarées"
+      ],
+      "answer": 0,
+      "explain": "L'article 252 impose le comptage dynamique pour la production totale disponible ; toute autre forme de détermination est interdite. Jaugeage, essais et ventes ne peuvent donc remplacer le comptage dynamique pour la production fiscale.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 252",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-022",
+      "theme": "Mesurage et comptage fiscal",
+      "level": 1,
+      "q": "Selon l'article 246 de la loi n° 002/2019, le mesurage et le comptage de la production d'hydrocarbures sont...",
+      "choices": [
+        "Une compétence exclusive de l'opérateur, sans délégation possible",
+        "Une activité libre ouverte à tous les partenaires du contrat",
+        "Une obligation réservée aux seuls acheteurs de l'huile brute",
+        "Une prérogative exclusive de l'État, susceptible de délégation"
+      ],
+      "answer": 3,
+      "explain": "L'article 246 attribue cette prérogative à l'État, qui peut la déléguer, et l'administration contrôle régulièrement la conformité des appareils en présence de l'opérateur.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 246",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-023",
+      "theme": "Mesurage et comptage fiscal",
+      "level": 1,
+      "q": "Qui réalise les opérations d'étalonnage des appareils de comptage ?",
+      "choices": [
+        "Uniquement le fabricant du compteur, lors de sa livraison sur le site",
+        "Les services compétents du ministère, avec possibilité de délégation",
+        "Uniquement l'opérateur, sous sa propre responsabilité et à ses frais",
+        "Uniquement l'acheteur de l'huile"
+      ],
+      "answer": 1,
+      "explain": "L'article 249 confie l'étalonnage aux services compétents du ministère, avec possibilité de délégation. Ni le fabricant, ni l'opérateur, ni l'acheteur n'en sont titulaires par défaut.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 249",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-024",
+      "theme": "Mesurage et comptage fiscal",
+      "level": 1,
+      "q": "Quelle pénalité peut frapper un contracteur qui viole les dispositions sur les ensembles de mesurage, de comptage et d'étalonnage, après mise en demeure ?",
+      "choices": [
+        "De 500 000 à 5 000 000 FCFA, par manquement",
+        "De 5 000 000 à 50 000 000 FCFA",
+        "De 1 000 000 000 à 2 500 000 000 FCFA, après mise en demeure",
+        "De 10 000 000 à 100 000 000 FCFA"
+      ],
+      "answer": 2,
+      "explain": "L'article 280 prévoit cette pénalité. 500 000 à 5 000 000 correspond au défaut de transmission de données (art. 267), 5 à 50 millions aux fonds de concours (art. 268), 10 à 100 millions à l'entrave aux contrôles (art. 278).",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 280",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-025",
+      "theme": "Mesurage et comptage fiscal",
+      "level": 2,
+      "q": "Un compteur indique 400 000 barils avec un facteur de compteur de 0,995. Quel est le volume corrigé ?",
+      "choices": [
+        "402 000 barils",
+        "399 995 barils, au total",
+        "400 000 barils",
+        "398 000 barils (400 000 × 0,995)"
+      ],
+      "answer": 3,
+      "explain": "400 000 × 0,995 = 398 000 barils. 402 000 résulte d'une division au lieu d'une multiplication, 399 995 d'une soustraction de 0,005, et 400 000 ignore le facteur.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-026",
+      "theme": "Mesurage et comptage fiscal",
+      "level": 2,
+      "q": "Le volume corrigé est de 398 000 barils et le BSW est de 0,5 %. Quelle est l'huile nette ?",
+      "choices": [
+        "395 000 barils",
+        "396 010 barils (398 000 × 0,995)",
+        "398 005 barils au total",
+        "397 500 barils"
+      ],
+      "answer": 1,
+      "explain": "398 000 × (1 − 0,005) = 396 010 barils. Les autres valeurs ne correspondent pas à ce calcul.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-027",
+      "theme": "Mesurage et comptage fiscal",
+      "level": 2,
+      "q": "Un compteur d'incertitude ±0,25 % mesure 2 000 000 barils sur le mois. Quelle plage d'incertitude en barils est attendue ?",
+      "choices": [
+        "±500 barils",
+        "±50 000 barils",
+        "±5 000 barils",
+        "±25 000 barils"
+      ],
+      "answer": 2,
+      "explain": "2 000 000 × 0,0025 = 5 000 barils. Les autres valeurs décalent la virgule.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-028",
+      "theme": "Mesurage et comptage fiscal",
+      "level": 2,
+      "q": "Un opérateur vous remet un volume déterminé au jaugeage manuel de bacs, en demandant de le retenir comme production fiscale. Que répondez-vous ?",
+      "choices": [
+        "Comptage dynamique imposé ; ce volume sert au recoupement, pas de base fiscale",
+        "Accepté, car le jaugeage des bacs est bien plus fiable qu'un compteur dynamique en mer",
+        "Accepté si l'opérateur signe une attestation de conformité",
+        "Refusé, car les bacs ne peuvent jamais être jaugés avec précision"
+      ],
+      "answer": 0,
+      "explain": "L'article 252 impose le comptage dynamique et interdit toute autre forme de détermination de la production totale disponible. Le jaugeage reste utile en recoupement. Une attestation ne change pas la règle.",
+      "seconds": 75,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 252",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-029",
+      "theme": "Mesurage et comptage fiscal",
+      "level": 3,
+      "q": "Pour une transaction, une société utilise un compteur non agréé par le ministère. Quelle est la conséquence juridique sur la mesure qu'il fournit ?",
+      "choices": [
+        "Il reste opposable à l'État s'il est précis et vérifié par l'opérateur",
+        "Il n'est pas opposable à l'État et expose le contrevenant aux sanctions",
+        "Il est opposable à l'État seulement si l'acheteur de l'huile l'accepte par écrit",
+        "Il est opposable à l'État pour la moitié seulement du volume mesuré"
+      ],
+      "answer": 1,
+      "explain": "L'article 245 impose, lors d'une transaction, un compteur agréé par le ministère et précise que toute autre forme de mesurage n'est pas opposable à l'État, sans préjudice des sanctions. La précision ou l'accord de l'acheteur n'y changent rien.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 245",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-030",
+      "theme": "Mesurage et comptage fiscal",
+      "level": 3,
+      "q": "Deux compteurs en série sur la ligne d'export indiquent 1 000 000 et 1 018 000 barils. L'incertitude de chacun est de ±0,25 %. Que faire ?",
+      "choices": [
+        "Retenir la moyenne des deux compteurs",
+        "Retenir le plus petit volume, par prudence, puis demander un nouvel étalonnage plus tard",
+        "Enquêter : 1,8 % dépasse l'incertitude attendue ; vérifier étalonnage et scellés",
+        "Ne rien faire : un écart inférieur à 2 % entre deux compteurs est toujours normal"
+      ],
+      "answer": 2,
+      "explain": "Les deux incertitudes combinées valent environ ±0,35 %, très en dessous de 1,8 %. Il faut rechercher la cause (étalonnage, facteur de compteur, scellés, correction de température) avant de retenir un volume. Choisir la moyenne ou le minimum sans analyse ne ferait que masquer l'erreur.",
+      "seconds": 110,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Articles 246 et 249",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-031",
+      "theme": "Allocation de production",
+      "level": 1,
+      "q": "Comment calcule-t-on un facteur d'allocation entre champs partageant une installation ?",
+      "choices": [
+        "Quantité fiscale mesurée divisée par la somme des estimations",
+        "Somme des estimations divisée par la quantité fiscale mesurée à la sortie",
+        "Différence entre l'estimation la plus haute et la plus basse",
+        "Moyenne des estimations multipliée par le nombre de champs"
+      ],
+      "answer": 0,
+      "explain": "Le facteur est le rapport de la mesure fiscale à la somme des estimations ; chaque champ reçoit son estimation multipliée par ce facteur. Le rapport inverse donnerait un coefficient faux.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-032",
+      "theme": "Allocation de production",
+      "level": 1,
+      "q": "Selon la loi n° 002/2019, la production nette correspond à...",
+      "choices": [
+        "La production restante diminuée des prélèvements au titre des coûts pétroliers",
+        "La production du seul puits le plus productif de la zone délimitée",
+        "La production totale disponible augmentée du gaz torché et du gaz combustible",
+        "La production totale disponible moins la part de l'État au titre de la RMP"
+      ],
+      "answer": 3,
+      "explain": "L'article 9 définit la production nette comme la production totale disponible diminuée de la part de l'État au titre de la RMP. La production restante est la production nette diminuée des prélèvements au titre des coûts pétroliers.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 9",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-033",
+      "theme": "Allocation de production",
+      "level": 1,
+      "q": "Sur quelle assiette porte la redevance minière proportionnelle (RMP) ?",
+      "choices": [
+        "La production restante",
+        "Le chiffre d'affaires hors taxes",
+        "La production totale disponible",
+        "La seule part de l'État"
+      ],
+      "answer": 2,
+      "explain": "L'article 209 assoit la RMP sur la production totale disponible issue de la zone délimitée. Elle ne dépend ni de la production restante ni du chiffre d'affaires.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 209",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-034",
+      "theme": "Allocation de production",
+      "level": 1,
+      "q": "Dans quel délai maximal les contracteurs concernés doivent-ils convenir d'une unitisation lorsqu'un gisement s'étend sur le périmètre de plusieurs contrats de partage de production ?",
+      "choices": [
+        "24 mois",
+        "Six mois au plus",
+        "Douze mois",
+        "Soixante jours ouvrables"
+      ],
+      "answer": 0,
+      "explain": "L'article 88 fixe un délai n'excédant pas vingt-quatre mois, avec approbation de l'autorité compétente. À défaut d'accord, c'est elle qui détermine les modalités.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 88",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-035",
+      "theme": "Allocation de production",
+      "level": 2,
+      "q": "Deux champs A (40 000 barils estimés) et B (10 000 barils estimés) partagent une unité. La mesure fiscale est de 47 500 barils. Quelle quantité revient à A ?",
+      "choices": [
+        "40 000 barils",
+        "47 500 barils, le total mesuré",
+        "35 000 barils",
+        "38 000 barils (40 000 × 0,95)"
+      ],
+      "answer": 3,
+      "explain": "Facteur = 47 500 / 50 000 = 0,95. A reçoit 40 000 × 0,95 = 38 000 barils et B 9 500 barils. 40 000 ignore le facteur ; 47 500 est le total.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-036",
+      "theme": "Allocation de production",
+      "level": 2,
+      "q": "Un champ produit 1 000 000 barils (production totale disponible) avec une RMP de 10 % (taux d'exemple). Quelle est la production nette ?",
+      "choices": [
+        "100 000 barils",
+        "900 000 barils (1 000 000 × 0,9)",
+        "1 100 000 barils au total",
+        "990 000 barils"
+      ],
+      "answer": 1,
+      "explain": "Production nette = 1 000 000 × (1 − 0,10) = 900 000 barils. 100 000 est la part de l'État ; 1 100 000 ajoute la redevance ; 990 000 n'a pas de fondement.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Articles 9 et 209",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-037",
+      "theme": "Allocation de production",
+      "level": 2,
+      "q": "Quel plafond annuel de récupération des coûts pétroliers s'applique, selon la loi, aux hydrocarbures liquides produits en zone conventionnelle ?",
+      "choices": [
+        "70 % par an",
+        "75 % (offshore profond)",
+        "80 % (gaz)",
+        "90 % du volume"
+      ],
+      "answer": 0,
+      "explain": "L'article 221 fixe 70 % (liquides, zone conventionnelle), 75 % (liquides, offshore profond et très profond), 80 % (gaz, conventionnelle) et 90 % (gaz, offshore profond et très profond).",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 221",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-038",
+      "theme": "Allocation de production",
+      "level": 2,
+      "q": "Un opérateur modifie, sans prévenir, la clé d'allocation entre deux champs qui n'ont pas le même régime fiscal. Quelle est la bonne réaction ?",
+      "choices": [
+        "Accepter, car l'allocation relève des seuls partenaires et de leur accord interne",
+        "Refuser tout changement d'allocation pour toujours, quelle que soit la raison invoquée",
+        "Attendre la clôture annuelle pour examiner la question avec l'ensemble du dossier fiscal de l'opérateur",
+        "Exiger accord écrit et justification : pas de déplacement de production pour raison fiscale"
+      ],
+      "answer": 3,
+      "explain": "L'allocation influence la RMP et le partage de production : une clé modifiée peut déplacer des quantités entre régimes. L'administration demande donc accord écrit et justification. Il ne s'agit ni d'accepter sans examen, ni d'interdire tout changement, ni d'attendre un an.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Articles 209 et 214",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-039",
+      "theme": "Allocation de production",
+      "level": 3,
+      "q": "Trois champs A, B et C (estimations 20 000, 30 000 et 50 000 barils) partagent une unité. La mesure fiscale est de 90 000 barils, après un arrêt de 2 jours. Que concluez-vous du facteur d'allocation ?",
+      "choices": [
+        "Le facteur vaut 1,1 ; les champs ont produit plus",
+        "Le facteur vaut 0,9 ; l'écart de 10 % reste à expliquer",
+        "Le facteur vaut 0,9 ; c'est normal, il n'y a rien à vérifier",
+        "Le facteur n'est pas calculable sans connaître les prix de vente"
+      ],
+      "answer": 1,
+      "explain": "Facteur = 90 000 / 100 000 = 0,9. Une perte de 10 % est élevée : il faut chercher la cause (calibrage des essais, arrêt, torchage non déclaré). Le prix de vente n'intervient pas dans un facteur de quantités.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-040",
+      "theme": "Allocation de production",
+      "level": 3,
+      "q": "Un gisement s'étend sur deux contrats de partage de production, avec 60 % des réserves dans le contrat X et 40 % dans le contrat Y. Les opérateurs ne s'entendent pas à l'issue de vingt-quatre mois. Quelle disposition de la loi s'applique ?",
+      "choices": [
+        "Le contrat X l'emporte automatiquement car il détient la majorité des réserves",
+        "L'État prend la totalité du gisement et l'exploite seul ensuite",
+        "L'autorité compétente détermine les modalités de l'unitisation (art. 88)",
+        "L'unitisation devient caduque et chaque contrat exploite sa part séparément"
+      ],
+      "answer": 2,
+      "explain": "L'article 88 prévoit que, faute d'accord entre les contracteurs, l'autorité compétente détermine les modalités et conditions de l'unitisation. Aucune règle d'attribution automatique ou de caducité n'est prévue.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 88",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-041",
+      "theme": "Eau, gaz et torchage",
+      "level": 1,
+      "q": "Comment calcule-t-on le taux d'eau d'un puits ?",
+      "choices": [
+        "Débit d'huile divisé par le débit d'eau, en barils par jour mesurés",
+        "Débit de gaz divisé par le débit d'huile en Sm³ par jour",
+        "Débit d'eau divisé par le débit d'huile seul, sans le gaz",
+        "Débit d'eau divisé par la somme des débits d'eau et d'huile"
+      ],
+      "answer": 3,
+      "explain": "Le taux d'eau est la part d'eau dans le liquide produit. Le deuxième calcul est un rapport huile-eau ; le troisième est le rapport gaz-huile ; le dernier omet l'huile au dénominateur.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-042",
+      "theme": "Eau, gaz et torchage",
+      "level": 1,
+      "q": "Que dit l'article 125 de la loi n° 002/2019 sur le torchage ?",
+      "choices": [
+        "Ils sont libres si l'opérateur les déclare",
+        "Interdits, avec dérogation possible pour une durée déterminée",
+        "Ils sont autorisés jusqu'à 20 % de la production de gaz de chaque champ",
+        "Ils sont interdits sans aucune exception possible, même temporaire"
+      ],
+      "answer": 1,
+      "explain": "L'article 125 pose l'interdiction, avec une dérogation possible à la demande du contracteur, sur avis des services compétents de l'administration des hydrocarbures, pour une durée déterminée par l'administration en charge de l'Environnement. Aucun pourcentage libre n'est prévu.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 125",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-043",
+      "theme": "Eau, gaz et torchage",
+      "level": 1,
+      "q": "Que doit faire le contracteur pour le gaz torché, selon l'article 127 ?",
+      "choices": [
+        "Estimer les volumes à vue depuis la torche et les conserver en archives",
+        "Déclarer les volumes uniquement en cas d'incident majeur sur l'installation de production",
+        "Équiper les champs d'appareils de mesurage approuvés et déclarer les volumes",
+        "Faire mesurer le gaz torché par l'acheteur du gaz, à ses frais"
+      ],
+      "answer": 2,
+      "explain": "L'article 127 oblige à équiper tous les champs en production d'appareils de mesurage du gaz torché, dont le choix, le dimensionnement et l'emplacement sont approuvés, et à déclarer les volumes torchés à l'autorité compétente.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 127",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-044",
+      "theme": "Eau, gaz et torchage",
+      "level": 1,
+      "q": "Quelle pénalité l'article 269 prévoit-il pour violation de l'interdiction de torchage ?",
+      "choices": [
+        "De 50 000 000 à 2 500 000 000 FCFA, selon la gravité",
+        "De 500 000 à 5 000 000 FCFA, par manquement",
+        "De 5 000 000 à 50 000 000 FCFA",
+        "De 10 000 000 à 100 000 000 FCFA"
+      ],
+      "answer": 0,
+      "explain": "L'article 269 fixe 50 millions à 2,5 milliards de FCFA, sans préjudice d'autres sanctions ; elle vise aussi le défaut d'exécution du plan de réduction et le dépassement des seuils.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 269",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-045",
+      "theme": "Eau, gaz et torchage",
+      "level": 2,
+      "q": "Un puits produit 8 000 b/j de liquide avec 75 % d'eau. Combien d'huile produit-il ?",
+      "choices": [
+        "6 000 b/j (eau)",
+        "2 000 b/j d'huile",
+        "75 b/j",
+        "8 000 b/j de liquide"
+      ],
+      "answer": 1,
+      "explain": "Huile = 8 000 × 0,25 = 2 000 b/j. 6 000 b/j est l'eau, 8 000 b/j le liquide total.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-046",
+      "theme": "Eau, gaz et torchage",
+      "level": 2,
+      "q": "Un champ produit 20 000 Sm³/j d'huile avec un rapport gaz-huile de 150. Quel est le débit de gaz associé ?",
+      "choices": [
+        "133 Sm³/j",
+        "300 000 Sm³/j",
+        "3 000 000 Sm³/j (20 000 × 150)",
+        "20 150 Sm³/j au total"
+      ],
+      "answer": 2,
+      "explain": "Gaz = huile × RGH = 20 000 × 150 = 3 000 000 Sm³/j. 133 correspond à une division, 300 000 à une erreur de zéros, 20 150 à une addition.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-047",
+      "theme": "Eau, gaz et torchage",
+      "level": 2,
+      "q": "Un champ produit 2 000 000 Sm³/j de gaz associé, en consomme 300 000 comme combustible, en réinjecte 1 500 000 et torche le reste. Quel est le débit torché ?",
+      "choices": [
+        "200 000 Sm³/j torchés",
+        "500 000 Sm³/j au total",
+        "300 000 Sm³/j",
+        "1 700 000 Sm³/j au total"
+      ],
+      "answer": 0,
+      "explain": "Torché = 2 000 000 − 300 000 − 1 500 000 = 200 000 Sm³/j. 500 000 oublie la réinjection ; 300 000 est le combustible ; 1 700 000 additionne combustible et réinjection.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-048",
+      "theme": "Eau, gaz et torchage",
+      "level": 2,
+      "q": "Un opérateur dépasse le seuil de gaz fatal fixé pour un champ sans dérogation. Quel article de la loi sanctionne le dépassement des seuils de torchage ?",
+      "choices": [
+        "L'article 245 (compteurs)",
+        "L'article 267 (données)",
+        "L'article 278 (contrôles)",
+        "L'article 269"
+      ],
+      "answer": 3,
+      "explain": "L'article 269, deuxième alinéa, vise le contracteur qui n'exécute pas le plan de réduction ou ne respecte pas les seuils de torchage. L'article 245 concerne les compteurs agréés, l'article 267 la transmission de données, l'article 278 l'entrave aux contrôles.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 269",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-049",
+      "theme": "Eau, gaz et torchage",
+      "level": 3,
+      "q": "Un champ produit 1 500 000 Sm³/j de gaz associé. Le seuil fixé est de 5 % de torchage. L'opérateur torche 180 000 Sm³/j. Que concluez-vous ?",
+      "choices": [
+        "Le seuil est de 180 000 Sm³/j ; aucun dépassement n'est constaté sur ce champ",
+        "Seuil de 75 000 Sm³/j ; le dépassement atteint 180 000 Sm³/j, soit tout le volume torché",
+        "Seuil de 75 000 Sm³/j ; dépassement de 105 000 Sm³/j, pénalité de l'art. 269 possible",
+        "Le seuil est respecté puisque 12 % est inférieur à la limite de 15 %"
+      ],
+      "answer": 2,
+      "explain": "5 % de 1 500 000 = 75 000 Sm³/j. Torché : 180 000, donc dépassement de 105 000 Sm³/j (soit 12 % du gaz). Le dépassement des seuils est visé par l'article 269. Le seuil de 15 % n'existe pas dans l'énoncé.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 269",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-050",
+      "theme": "Eau, gaz et torchage",
+      "level": 3,
+      "q": "Un opérateur n'a pas équipé un champ nouvellement en production d'un compteur de gaz torché et dit estimer les volumes. Quelle position est correcte ?",
+      "choices": [
+        "Mesure et déclaration obligatoires (art. 127) ; une estimation ne suffit pas",
+        "L'estimation suffit pour un champ récent",
+        "L'obligation ne concerne que les champs à terre, pas les installations en mer",
+        "L'obligation n'existe que si le gaz torché dépasse 10 % de la production totale"
+      ],
+      "answer": 0,
+      "explain": "L'article 127 vise tous les champs en production et impose la mesure et la déclaration, le défaut de déclaration exposant à une amende fixée par voie réglementaire. Aucun seuil ni exception pour les champs récents ou offshore n'est prévu.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 127",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-051",
+      "theme": "Déclin, optimisation et arrêts",
+      "level": 1,
+      "q": "Qu'appelle-t-on « production différée » ?",
+      "choices": [
+        "La production vendue avec retard de paiement par l'acheteur de l'huile exportée",
+        "La production perdue par évaporation",
+        "La production mesurée à une mauvaise température puis corrigée a posteriori",
+        "La quantité non produite à cause d'un arrêt, récupérable plus tard"
+      ],
+      "answer": 3,
+      "explain": "La production différée est celle qu'un arrêt a empêchée : si le réservoir garde sa pression, la quantité peut être récupérée ultérieurement. Les autres définitions n'ont pas de rapport avec un arrêt.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-052",
+      "theme": "Déclin, optimisation et arrêts",
+      "level": 1,
+      "q": "Quelle formule décrit un déclin exponentiel ?",
+      "choices": [
+        "q(t) = q₀ + D·t + t²",
+        "q(t) = q₀ × e^(−D·t)",
+        "q(t) = q₀ ÷ t²",
+        "q(t) = D × t"
+      ],
+      "answer": 1,
+      "explain": "Le déclin exponentiel suppose une perte constante en pourcentage par unité de temps. Les autres formules décrivent une croissance linéaire, une loi en inverse du carré ou une proportionnalité simple.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-053",
+      "theme": "Déclin, optimisation et arrêts",
+      "level": 1,
+      "q": "Parmi ces arrêts, lequel est un arrêt programmé ?",
+      "choices": [
+        "L'arrêt général de maintenance planifié à l'avance",
+        "La panne soudaine d'un compresseur de réinjection",
+        "La coupure d'électricité imprévue sur le réseau",
+        "Le déclenchement d'urgence après une fuite de gaz détectée"
+      ],
+      "answer": 0,
+      "explain": "Un arrêt programmé est planifié (maintenance, inspection réglementaire). Les autres sont subis ou déclenchés par la sécurité.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-054",
+      "theme": "Déclin, optimisation et arrêts",
+      "level": 1,
+      "q": "Selon l'article 256, que fait le ministère chargé des Hydrocarbures à propos des budgets des activités amont ?",
+      "choices": [
+        "Il les rédige à la place de l'opérateur, poste par poste, avant exécution",
+        "Il les ignore, car ces budgets restent des documents purement privés",
+        "Il les paie directement au contracteur sur le budget de l'État gabonais",
+        "Il approuve les budgets amont et valide les dépenses qui en résultent"
+      ],
+      "answer": 3,
+      "explain": "L'article 256 donne au ministère l'approbation des budgets amont et la validation des dépenses. Il ne rédige pas les budgets et ne paie pas les dépenses.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 256",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-055",
+      "theme": "Déclin, optimisation et arrêts",
+      "level": 2,
+      "q": "Un champ de 20 000 b/j connaît un déclin effectif de 10 % par an. Quel sera son débit après deux ans ?",
+      "choices": [
+        "16 000 b/j",
+        "16 200 b/j (20 000 × 0,9 × 0,9)",
+        "18 000 b/j après deux ans",
+        "10 000 b/j"
+      ],
+      "answer": 1,
+      "explain": "20 000 × 0,9 × 0,9 = 16 200 b/j. 16 000 additionne deux fois 10 % de la valeur initiale (déclin linéaire) ; 18 000 correspond à un an ; 10 000 est une division par deux sans fondement.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-056",
+      "theme": "Déclin, optimisation et arrêts",
+      "level": 2,
+      "q": "Un champ de 15 000 b/j est arrêté pendant 4 jours. Quelle est la production différée ?",
+      "choices": [
+        "15 000 barils",
+        "3 750 barils",
+        "60 000 barils",
+        "600 000 barils"
+      ],
+      "answer": 2,
+      "explain": "15 000 × 4 = 60 000 barils. 15 000 ne compte qu'un jour ; 3 750 résulte d'une division ; 600 000 est une erreur de zéros.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-057",
+      "theme": "Déclin, optimisation et arrêts",
+      "level": 2,
+      "q": "Une unité a été arrêtée 3 jours sur un mois de 30 jours. Quel est son taux de disponibilité ?",
+      "choices": [
+        "97 % environ",
+        "10 % d'indisponibilité",
+        "70 %",
+        "90 %"
+      ],
+      "answer": 3,
+      "explain": "(30 − 3) / 30 = 0,9, soit 90 %. 10 % est le taux d'indisponibilité ; 97 % et 70 % ne correspondent à aucun calcul correct.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-058",
+      "theme": "Déclin, optimisation et arrêts",
+      "level": 2,
+      "q": "Un champ chute plus vite que la prévision du plan de développement approuvé. Quelle action est la plus pertinente pour le ministère ?",
+      "choices": [
+        "Réduire d'office les redevances de l'opérateur pour compenser le déclin constaté",
+        "Demander une analyse écrite du comportement du réservoir et un plan d'action",
+        "Ne rien faire, car un déclin du réservoir est toujours normal et attendu",
+        "Arrêter immédiatement la production du champ sans autre forme de procédure"
+      ],
+      "answer": 1,
+      "explain": "Un écart avec le plan de développement (art. 86) justifie une demande d'explications écrites. Le ministère ne réduit pas les redevances d'office, ne néglige pas un écart notable et n'arrête pas un champ sans motif grave.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 86",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-059",
+      "theme": "Déclin, optimisation et arrêts",
+      "level": 3,
+      "q": "Un arrêt non programmé de 5 jours touche un champ de 12 000 b/j, avec un stock plein et un pétrolier retardé. L'opérateur n'a rien déclaré. Quelle analyse faites-vous ?",
+      "choices": [
+        "Production différée de 12 000 barils ; l'information n'est pas obligatoire ici",
+        "Production différée de 60 000 barils ; l'opérateur n'a pas à informer l'administration",
+        "Production différée de 60 000 barils ; information sans délai due (art. 241)",
+        "Pas de production différée, car le stock plein explique à lui seul l'arrêt"
+      ],
+      "answer": 2,
+      "explain": "12 000 × 5 = 60 000 barils différés. L'article 241 impose l'information sans délai d'une perturbation ayant un impact. Le stock plein explique la cause de l'arrêt (arrêt imposé), pas l'absence de différé.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 241",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-060",
+      "theme": "Déclin, optimisation et arrêts",
+      "level": 3,
+      "q": "Un opérateur propose, pour contrer le déclin, de réinjecter l'essentiel du gaz associé plutôt que de le torcher. Que dit la loi ?",
+      "choices": [
+        "Elle favorise récupération et réinjection du gaz pour conserver la ressource (art. 128)",
+        "Elle l'interdit, car le gaz associé appartient à l'opérateur et non à l'État gabonais, selon la loi",
+        "Elle l'autorise seulement avec l'accord écrit de chaque partenaire du contrat",
+        "Elle ne dit rien sur ce sujet, qui relève uniquement des contrats privés"
+      ],
+      "answer": 0,
+      "explain": "L'article 128 oblige les sociétés amont à développer ou utiliser des techniques adaptées de récupération et de réinjection du gaz, aux fins d'optimisation de la production et de conservation de la ressource. La réinjection n'est donc pas interdite.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 128",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-061",
+      "theme": "Rapports, écarts et vérifications",
+      "level": 1,
+      "q": "Selon l'article 182, que doit fournir le titulaire d'une autorisation aux services compétents ?",
+      "choices": [
+        "Uniquement un rapport financier annuel certifié par un commissaire aux comptes",
+        "Un rapport sur l'état de ses activités et les informations utiles",
+        "Uniquement la liste de son personnel",
+        "Uniquement les contrats de vente de l'huile et les factures commerciales des cargaisons exportées"
+      ],
+      "answer": 1,
+      "explain": "L'article 182 vise un rapport sur l'état des activités et toute information administrative, technique, économique et financière, dans les conditions et délais requis.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 182",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-062",
+      "theme": "Rapports, écarts et vérifications",
+      "level": 1,
+      "q": "Dans quel délai de mise en demeure s'applique la pénalité de l'article 267 pour défaut de transmission des données et rapports ?",
+      "choices": [
+        "Quarante-huit heures",
+        "Trente jours",
+        "Quinze jours",
+        "Six mois"
+      ],
+      "answer": 2,
+      "explain": "L'article 267 prévoit une pénalité de 500 000 à 5 000 000 FCFA après mise en demeure de quinze jours.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 267",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-063",
+      "theme": "Rapports, écarts et vérifications",
+      "level": 1,
+      "q": "Selon l'article 265, que devient une pénalité en cas de récidive ?",
+      "choices": [
+        "Elle est portée au double, avec retrait possible",
+        "Elle est supprimée dès la première récidive",
+        "Elle est divisée par deux si l'opérateur paie",
+        "Elle reste inchangée"
+      ],
+      "answer": 0,
+      "explain": "L'article 265 porte les pénalités au double en cas de récidive, et la récidive peut aussi être sanctionnée du retrait de l'autorisation.",
+      "seconds": 40,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 265",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-064",
+      "theme": "Rapports, écarts et vérifications",
+      "level": 1,
+      "q": "Quel article prévoit que le point de comptage fiscal est placé sous le contrôle et la supervision des services du ministère ?",
+      "choices": [
+        "L'article 182 (rapports)",
+        "L'article 256",
+        "L'article 278 (entrave aux contrôles)",
+        "L'article 247 (contrôle)"
+      ],
+      "answer": 3,
+      "explain": "L'article 247 place le point de comptage fiscal sous le contrôle et la supervision du ministère. L'article 182 concerne l'information, le 256 les budgets et le 278 l'entrave aux contrôles.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 247",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-065",
+      "theme": "Rapports, écarts et vérifications",
+      "level": 2,
+      "q": "Stock d'ouverture 80 000 barils, stock de clôture 110 000 barils, enlèvements 600 000 barils. Quelle est la production attendue du mois ?",
+      "choices": [
+        "570 000 barils",
+        "600 000 barils",
+        "630 000 barils (600 000 + 30 000)",
+        "690 000 barils, stock final inclus"
+      ],
+      "answer": 2,
+      "explain": "Production = enlèvements + variation de stock = 600 000 + 30 000 = 630 000 barils. 570 000 soustrait la variation, 600 000 l'ignore, 690 000 additionne le stock final.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-066",
+      "theme": "Rapports, écarts et vérifications",
+      "level": 2,
+      "q": "Un rapport annonce 1 050 000 barils pour un bilan de 1 000 000 barils. Quel est l'écart relatif ?",
+      "choices": [
+        "5 %",
+        "0,5 %",
+        "50 % environ ou plus",
+        "10 %"
+      ],
+      "answer": 0,
+      "explain": "L'écart est de 50 000 barils sur 1 000 000, soit 5 %. 0,5 %, 50 % et 10 % décalent ou doublent le résultat.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-067",
+      "theme": "Rapports, écarts et vérifications",
+      "level": 2,
+      "q": "Un opérateur refuse de laisser les agents accéder au point de comptage fiscal pour un contrôle. Quelle sanction la loi prévoit-elle ?",
+      "choices": [
+        "Pas de sanction : le contrôle est facultatif pour l'opérateur titulaire du contrat",
+        "Une pénalité de 500 000 à 5 000 000 FCFA pour défaut de transmission",
+        "Une pénalité de 1 à 2,5 milliards de FCFA pour la seule entrave au contrôle",
+        "Pénalité de 10 à 100 millions de FCFA pour entrave aux contrôles (art. 278)"
+      ],
+      "answer": 3,
+      "explain": "L'article 278 sanctionne l'entrave aux missions de contrôle de 10 à 100 millions de FCFA. L'article 246 organise le contrôle régulier des appareils en présence de l'opérateur.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Articles 246 et 278",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-068",
+      "theme": "Rapports, écarts et vérifications",
+      "level": 2,
+      "q": "Quel contrôle de cohérence est le premier à réaliser sur un rapport mensuel de production ?",
+      "choices": [
+        "Vérifier la couleur et la charte graphique du rapport transmis par l'opérateur",
+        "Vérifier le bilan : production = enlèvements + variation des stocks + usages",
+        "Vérifier le nombre de pages et la police utilisée dans le rapport mensuel",
+        "Vérifier que le rapport est signé et daté par un avocat du cabinet de l'opérateur"
+      ],
+      "answer": 1,
+      "explain": "Le bilan matière est la vérification de base : il relie production, enlèvements et stocks. Les autres points n'ont aucun contenu technique.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-production-069",
+      "theme": "Rapports, écarts et vérifications",
+      "level": 3,
+      "q": "Un rapport mensuel déclare 2 000 000 barils. Le bilan donne 1 940 000 barils. L'opérateur invoque l'arrondi des compteurs. La tolérance contractuelle est de 0,5 %. Que faites-vous ?",
+      "choices": [
+        "Écart de 60 000 barils (3 %) : exiger explication et justificatifs écrits",
+        "Accepter l'écart, car 3 % est inférieur à 5 % et l'arrondi des compteurs suffit à l'expliquer",
+        "Constater un écart de 0,3 % seulement et clore le dossier sans demande d'explication",
+        "Retenir le chiffre de l'opérateur, plus élevé"
+      ],
+      "answer": 0,
+      "explain": "L'écart est de 60 000 sur 2 000 000, soit 3 %, six fois la tolérance de 0,5 %. Le ministère exerce un contrôle technique et comptable (art. 243) et le défaut d'explication peut conduire à des redressements. Le chiffre le plus élevé n'est pas retenu par défaut.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Article 243",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-070",
+      "theme": "Rapports, écarts et vérifications",
+      "level": 3,
+      "q": "Une société refuse la mise en demeure et ne transmet pas les rapports demandés. Elle récidive l'année suivante. Quelles conséquences possibles ?",
+      "choices": [
+        "Pas de conséquence : la récidive n'est pas prévue par la loi pour ce type de manquement",
+        "Une simple lettre d'avertissement",
+        "Uniquement un contrôle de la comptabilité sans aucune pénalité financière pour la société",
+        "Pénalité de l'art. 267, doublée en cas de récidive, avec retrait possible (art. 265)"
+      ],
+      "answer": 3,
+      "explain": "L'article 267 sanctionne le défaut de transmission, l'article 265 double les pénalités en cas de récidive et prévoit une possible sanction de retrait de l'autorisation. Une lettre d'avertissement n'est pas la seule réponse prévue.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Articles 265 et 267",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-production-071",
+      "theme": "Rapports, écarts et vérifications",
+      "level": 3,
+      "q": "Un bilan présente un écart inexpliqué de 2 % sur le mois, et les compteurs en série diffèrent de 1,5 %. Quelle démarche est la plus rigoureuse ?",
+      "choices": [
+        "Corriger arbitrairement les compteurs de 2 % pour que le bilan boucle sans autre analyse",
+        "Croiser étalonnages, scellés, facteurs de compteur et cargaisons, puis tracer l'écart",
+        "Attendre la clôture annuelle pour examiner les écarts avec les comptes de l'exercice",
+        "Demander à l'opérateur de rectifier ses chiffres sans justification ni pièce à l'appui"
+      ],
+      "answer": 1,
+      "explain": "Un écart de cette taille dépasse l'incertitude attendue d'un compteur (de l'ordre de 0,25 %) : il faut croiser les sources et tracer l'analyse (art. 246 et 249). Corriger arbitrairement, attendre un an ou demander une simple rectification sans preuve ne résout rien.",
+      "seconds": 110,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "Articles 246 et 249",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    }
+  ]
+}

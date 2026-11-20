@@ -1,0 +1,1430 @@
+{
+  "profile": "min-donnees",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Les types de données pétrolières",
+      "theme": "Types de données pétrolières",
+      "minutes": 10,
+      "body": "Les données pétrolières sont l'ensemble des informations acquises ou produites au cours des opérations pétrolières. On les range en trois grandes familles, qui suivent la vie d'un gisement : la sismique, les puits et la production.\n\n**Données sismiques.** La sismique réflexion envoie des ondes dans le sous-sol et enregistre leur retour pour imager les couches géologiques. La *sismique 2D* porte sur des lignes isolées ; la *3D* couvre une zone sous forme de cube ; la *4D* répète une 3D dans le temps pour suivre un réservoir en production. Ces données existent à trois états : *données de terrain* (brutes), *données traitées* (empilées, migrées) et *interprétation* (horizons, failles). Elles sont très volumineuses : un levé 3D en mer peut atteindre plusieurs dizaines de téraoctets (ordre de grandeur indicatif). Les formats d'échange usuels sont le SEG-D pour les données de terrain et le SEG-Y pour les données traitées.\n\n**Données de puits.** Un puits produit de nombreux éléments : rapports journaliers de forage, trajectoire, *déblais de forage*, *carottes*, *diagraphies* (mesures le long du puits : rayons gamma, résistivité, densité, porosité), essais de puits (pression et débit) et analyses de fluides. Les diagraphies sont échangées en formats LAS ou DLIS. Attention : carottes et échantillons sont des données *physiques*. Elles se conservent en carothèque, avec leur inventaire, et pas seulement sur un serveur.\n\n**Données de production.** Ce sont les volumes d'huile, de gaz et d'eau par puits, champ et installation, les volumes torchés, consommés et exportés, ainsi que pressions et températures. Les volumes fiscaux sont mesurés au *point de comptage fiscal*, placé sous le contrôle et la supervision des services du Ministère chargé des Hydrocarbures (article 247 de la loi n° 002/2019). Ces chiffres servent à calculer la part de l'État, les redevances et les coûts pétroliers.\n\n**Autres données.** Cartes et données géologiques, gravimétrie et magnétisme, estimations de réserves et ressources, études environnementales, informations sur les blocs et les titres (cadastre), pièces contractuelles et financières.\n\n**Brute, traitée, interprétée.** La donnée brute est irremplaçable : refaire un levé coûte très cher, parfois des millions de dollars (ordre de grandeur indicatif). La donnée traitée dépend d'une chaîne de traitement qu'il faut documenter. L'interprétation est un produit d'analyse, qui peut changer d'un interprète à l'autre.\n\n**Exemple.** Un agent de la Direction de l'Amont reçoit, pour un même puits, un fichier de diagraphies, un rapport de fin de forage en PDF, 30 m de carotte et un compte rendu d'essai. Quatre supports différents : pour ne pas les perdre, tous doivent être rattachés au puits par un identifiant unique et inscrits à l'inventaire.",
+      "keyPoints": [
+        "Trois familles de données : sismique, puits et production.",
+        "La sismique existe en 2D, 3D et 4D, à l’état brut, traité ou interprété.",
+        "Carottes et déblais sont des données physiques à conserver en carothèque.",
+        "Les volumes fiscaux sont mesurés au point de comptage fiscal, sous contrôle du Ministère (art. 247).",
+        "La donnée brute est irremplaçable ; l’interprétation est un produit d’analyse."
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Propriété des données par l’État et cadastre des hydrocarbures",
+      "theme": "Propriété des données et cadastre",
+      "minutes": 10,
+      "body": "En droit gabonais, les données pétrolières appartiennent à l'État. L'**article 10 de la loi n° 002/2019 du 16 juillet 2019** dispose que les ressources d'hydrocarbures, les infrastructures essentielles, les études, les données et les informations du cadastre des hydrocarbures, acquises ou réalisées dans le cadre des opérations pétrolières, sont la **propriété exclusive de l'État**. Cela vaut même si l'opérateur a payé l'acquisition : il finance, l'État reste propriétaire.\n\n**Droit d'usage de l'opérateur.** Selon l'article 12, le contracteur transmet données, études et informations au Ministère chargé des Hydrocarbures au fur et à mesure de leur acquisition. Il a le droit de les utiliser dans le seul cadre de la conduite des opérations pétrolières et ne peut les divulguer à un tiers sans l'accord préalable de l'autorité compétente. L'article 63 applique le même principe aux découvertes : information prioritaire et sans délai de l'administration, et toute communication aux tiers soumise à son autorisation préalable.\n\n**Le cadastre des hydrocarbures.** L'article 15 prévoit que le domaine pétrolier est découpé en blocs, dont la liste et les coordonnées sont établies par voie réglementaire. Les informations relatives aux blocs et aux titres pétroliers sont consignées dans le *cadastre des hydrocarbures*, tenu par le Ministère. Ces informations sont publiées dans les conditions et selon les modalités fixées par voie réglementaire. Concrètement, le cadastre indique pour chaque bloc son périmètre, son titulaire, la nature et les dates du titre : c'est le registre de référence, que l'on consulte avant toute cession ou toute demande d'information d'un investisseur.\n\n**Secret professionnel.** L'article 22 impose aux agents de l'administration des Hydrocarbures le secret professionnel, conformément aux textes en vigueur. Les données ne sont donc pas librement communicables par l'agent qui les détient.\n\n**Tiers et cession.** Pour un contrat de services, la mise à disposition de données au profit de tiers est soumise à l'approbation préalable de l'autorité compétente (article 49). Lors d'une cession partielle de droits à un partenaire, l'opérateur ne peut donc pas lui remettre des données sans cet accord.\n\n**Exemple.** Une société étrangère écrit au chef de service pour obtenir « les données du bloc X ». Il vérifie d'abord dans le cadastre le statut du bloc, puis oriente la demande vers la procédure officielle d'accès : il ne transmet rien de sa propre initiative.\n\n**À confirmer.** Le périmètre exact de ce qui est publié au cadastre et les modalités pratiques relèvent de textes réglementaires qu'il convient de consulter à jour ; la Direction des Affaires économiques, juridiques et de la gestion des données est citée sur le site du Ministère, mais l'organisation a évolué récemment.",
+      "keyPoints": [
+        "Données, études et informations : propriété exclusive de l’État (art. 10).",
+        "Le contracteur ne peut utiliser les données que pour les opérations et ne peut les divulguer sans accord (art. 12).",
+        "Le cadastre des hydrocarbures, tenu par le Ministère, consigne les informations sur blocs et titres (art. 15).",
+        "Les agents sont tenus au secret professionnel (art. 22).",
+        "Toute mise à disposition de données à un tiers exige l’aval de l’autorité compétente."
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Obligations de remise des données par les opérateurs",
+      "theme": "Obligations de remise par les opérateurs",
+      "minutes": 10,
+      "body": "L'État étant propriétaire des données, il doit les recevoir. La loi n° 002/2019 organise cette remise à plusieurs niveaux.\n\n**Remise au fil de l'eau.** L'article 12 oblige le contracteur à transmettre données, études et informations au Ministère chargé des Hydrocarbures *au fur et à mesure de leur acquisition*. Il n'est donc pas permis d'attendre la fin du contrat pour tout remettre d'un coup.\n\n**Rapports d'activité.** Selon l'article 182, le titulaire d'une autorisation fournit aux services compétents de l'administration un rapport sur l'état de ses activités et toute information administrative, technique, économique et financière relative à sa responsabilité industrielle, à la qualité, à la santé et à l'environnement, dans les conditions et délais requis. Les délais précis sont fixés par le contrat et la réglementation.\n\n**Information immédiate.** Deux situations exigent un signalement sans délai : la découverte d'un gisement, avec information prioritaire de l'administration (article 63), et toute perturbation, incident ou accident susceptible d'avoir un impact sur les activités (article 241).\n\n**Production et mesurage.** Le point de comptage fiscal est placé sous le contrôle et la supervision des services du Ministère (article 247), ce qui permet de recouper les volumes déclarés par l'opérateur.\n\n**Sanction du retard.** L'article 267 prévoit que tout contracteur qui ne transmet pas, dans les délais prévus par le contrat, les données, études, rapports et autres documents requis pour les activités amont est passible, *après mise en demeure de quinze jours*, d'une pénalité de 500 000 à 5 000 000 de francs CFA, sans préjudice des autres sanctions prévues par les contrats.\n\n**Que doit contenir une remise ?** En pratique, un lot complet comporte : les données (fichiers au format convenu), les métadonnées (qui, quand, où, système de coordonnées, unités), le rapport de traitement ou d'acquisition, et un bordereau de transmission daté et signé. Sans métadonnées, la donnée est difficilement exploitable.\n\n**Procédure type pour un agent.**\n- Enregistrer la réception (date, expéditeur, contenu) dans un registre.\n- Contrôler la conformité : format, complétude, lisibilité, cohérence avec le contrat.\n- Notifier l'opérateur des anomalies et fixer un délai de correction.\n- En cas de silence, envoyer la mise en demeure ; la pénalité de l'article 267 ne court qu'après ce préalable de quinze jours.\n- Verser le lot validé dans la base du Ministère et en informer le service concerné.\n\n**Exemple.** Un opérateur doit remettre les diagraphies d'un puits dans le délai fixé au contrat (ici fictif : 60 jours après la fin du forage). À l'échéance, rien n'est arrivé : le chef de service rédige la mise en demeure ; sans réponse sous quinze jours, la pénalité est applicable.",
+      "keyPoints": [
+        "Transmission au fur et à mesure de l’acquisition, pas en fin de contrat (art. 12).",
+        "Rapport d’activité et informations techniques, économiques et financières dans les délais requis (art. 182).",
+        "Découverte et incident : information sans délai (art. 63 et 241).",
+        "Retard de remise : mise en demeure de 15 jours, puis pénalité de 500 000 à 5 000 000 FCFA (art. 267).",
+        "Un lot de remise complet comprend données, métadonnées, rapport et bordereau."
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Qualité et normalisation des données",
+      "theme": "Qualité et normalisation des données",
+      "minutes": 10,
+      "body": "Une donnée conservée mais inexploitable ne vaut rien. La qualité et la normalisation garantissent que les données remises par différents opérateurs sont comparables et réutilisables dans le temps.\n\n**Dimensions de la qualité.** On évalue une donnée selon :\n- sa *complétude* (rien ne manque) ;\n- son *exactitude* (proche de la réalité mesurée) ;\n- sa *cohérence* (pas de contradiction entre deux sources) ;\n- son *actualité* ;\n- son *unicité* (pas de doublon) ;\n- sa *traçabilité* (on sait d'où elle vient et ce qu'elle a subi).\n\n**Métadonnées.** Ce sont les « données sur les données » : date d'acquisition, entreprise, instrument, système de coordonnées, unités, version. Un fichier de diagraphies sans unité de profondeur (mètres ou pieds ?) conduit à des erreurs graves.\n\n**Référentiels communs.** Il faut un identifiant unique de puits et de bloc, des listes de valeurs communes (types de puits, statuts), un système de coordonnées unique documenté (code EPSG pour les systèmes de référence) et un système d'unités explicite. Dans un même pays, deux appellations d'un même puits créent des doublons.\n\n**Normes et formats d'échange.** Le monde pétrolier s'appuie sur des formats et modèles reconnus : SEG-Y et SEG-D pour la sismique, LAS et DLIS pour les diagraphies, le modèle de données PPDM (association d'origine nord-américaine) pour structurer une base, et les normes d'échange d'Energistics (WITSML pour le forage, PRODML pour la production). L'initiative OSDU vise une plateforme ouverte de données pour le secteur. Ces normes sont des références professionnelles, non des textes du droit gabonais ; le Ministère peut les imposer par contrat ou par instruction.\n\n**Contrôle qualité à la réception.** Un agent applique une liste de vérifications : le fichier s'ouvre-t-il ? Le nombre de traces ou de lignes correspond-il au rapport ? Les coordonnées tombent-elles dans le bloc attribué ? Les profondeurs sont-elles croissantes ? Les valeurs sont-elles dans des fourchettes plausibles ?\n\n**Exemple chiffré (fictif).** Sur 200 fichiers de diagraphies reçus, 12 sont illisibles, 18 sans unité et 10 en doublon : 40 anomalies, soit 20 %. Le taux de conformité est de 80 %, inférieur à l'objectif de 95 % fixé par le service : lot renvoyé à l'opérateur.\n\n**Gouvernance.** Désigner un responsable de chaque jeu de données, tenir un catalogue et mesurer régulièrement la qualité : sans propriétaire, la qualité se dégrade.",
+      "keyPoints": [
+        "Qualité : complétude, exactitude, cohérence, actualité, unicité, traçabilité.",
+        "Les métadonnées (unités, coordonnées, date, version) rendent la donnée exploitable.",
+        "Identifiants uniques de puits et de bloc, et système de coordonnées documenté.",
+        "Formats courants : SEG-Y/SEG-D, LAS/DLIS ; modèle PPDM ; normes Energistics.",
+        "Un contrôle à la réception avec seuil de conformité évite d’archiver des données inutilisables."
+      ]
+    },
+    {
+      "id": "m5",
+      "title": "Conservation et sauvegarde des données",
+      "theme": "Conservation et sauvegarde",
+      "minutes": 10,
+      "body": "Les données pétrolières ont une durée de vie très supérieure à celle des logiciels et des supports qui les contiennent. Un puits foré aujourd'hui peut être réinterprété dans trente ans. La conservation est donc une obligation de gestion et, pour les pièces des opérateurs, une obligation légale.\n\n**Ce que dit la loi.** L'article 225 de la loi n° 002/2019 impose au contracteur de conserver *au Gabon* les originaux des registres, livres de comptes et contrats ainsi que toutes les pièces justificatives inhérentes aux activités d'hydrocarbures. L'État peut, pour chaque année civile, les faire examiner et vérifier par les services compétents des Ministères chargés de l'Économie et des Hydrocarbures. Les données techniques, elles, appartiennent à l'État (article 10) : c'est à lui d'en assurer la pérennité.\n\n**Principes de conservation.**\n- *Un original, plusieurs copies* : la règle de sauvegarde « 3-2-1 » recommande trois copies, sur deux types de supports, dont une hors site.\n- *Séparer les sites* : une copie conservée à plusieurs kilomètres résiste à un incendie ou à une inondation.\n- *Tester la restauration* : une sauvegarde jamais restaurée n'est pas une sauvegarde.\n- *Migrer les supports* : les bandes magnétiques vieillissent (quelques dizaines d'années au mieux, dans de bonnes conditions) ; il faut recopier avant la fin de vie du support et du lecteur.\n- *Conserver les formats* ouverts et documentés, et les métadonnées qui permettent de comprendre les fichiers.\n\n**Données physiques.** Carottes, lames minces et déblais se conservent en carothèque, avec température et humidité contrôlées, inventaire à jour et accès tracé. Un échantillon détruit ne se refait pas.\n\n**Sauvegarde et archivage : deux notions différentes.** La *sauvegarde* sert à restaurer rapidement après un incident ; l'*archivage* conserve à long terme des données figées et indexées. Une copie récente d'un serveur n'est pas une archive.\n\n**Plan de continuité.** On fixe deux objectifs : le temps maximal de reprise (combien de temps le service peut être arrêté) et la perte de données maximale acceptable (par exemple, au plus la dernière journée de travail). Ces valeurs dictent la fréquence des sauvegardes.\n\n**Exemple.** Le service dispose d'une seule copie de la sismique 3D d'un bloc, sur un disque dans son bureau. Action correcte : créer une deuxième copie sur un support différent, une troisième hors site, vérifier la lisibilité et consigner l'opération au registre de sauvegarde.",
+      "keyPoints": [
+        "Le contracteur conserve au Gabon les originaux des registres, contrats et pièces justificatives (art. 225).",
+        "Règle 3-2-1 : trois copies, deux supports, une copie hors site.",
+        "Tester régulièrement la restauration et migrer les supports avant leur fin de vie.",
+        "Les carottes et échantillons exigent une carothèque contrôlée et un inventaire.",
+        "Sauvegarde (reprise rapide) et archivage (long terme) sont distincts."
+      ]
+    },
+    {
+      "id": "m6",
+      "title": "Confidentialité, délais de levée et accès des investisseurs",
+      "theme": "Confidentialité, délais de levée et accès des investisseurs",
+      "minutes": 11,
+      "body": "Une donnée pétrolière a une valeur commerciale forte : elle ne peut être ni cachée pour toujours, ni diffusée dès l'acquisition. D'où la notion de *période de confidentialité*.\n\n**Principe.** Pendant une période fixée, les données restent réservées à l'État et au contracteur ; passé ce délai, elles peuvent être mises à la disposition de tiers (investisseurs, universitaires, autres opérateurs). C'est la *levée de la confidentialité*. Le délai varie selon la nature de la donnée (une sismique de reconnaissance et des données de puits ne sont pas traitées de la même façon) et selon le contrat. La loi n° 002/2019 ne fixe pas de délai uniforme dans les dispositions consultées pour cette formation : l'article 12 interdit la divulgation à un tiers sans l'accord préalable de l'autorité compétente, et les durées relèvent des contrats d'hydrocarbures et de la réglementation. Une durée précise est donc **à confirmer** dans le contrat concerné ; ne jamais en annoncer une de mémoire.\n\n**Qui décide ?** L'autorité compétente, c'est-à-dire le Ministre chargé des Hydrocarbures (article 9), donne l'accord. L'agent qui détient les données est tenu au secret professionnel (article 22). Sauf décision, il refuse.\n\n**Accès pour les investisseurs.** Lors d'un appel d'offres ou d'une promotion de blocs, le Ministère met en général à disposition un *lot de données* : cartes, résultats de forage, sismique, rapports. Le moyen classique est la **salle de données** : un espace, physique ou numérique, où les candidats consultent les données sous conditions.\n\nBonnes pratiques :\n- accord de confidentialité signé avant l'accès ;\n- liste des candidats autorisés, avec comptes nominatifs ;\n- journal des consultations et téléchargements ;\n- formats lisibles mais copie contrôlée ;\n- tarification éventuelle de l'accès, fixée par le Ministère ;\n- égalité de traitement des candidats : même lot, mêmes délais.\n\n**Cession de droits.** Un partenaire entrant dans un contrat par cession doit être approuvé (article 54) ; l'accès aux données n'est ouvert qu'avec l'autorisation de l'autorité compétente (article 12, et article 49 pour le contrat de services).\n\n**Exemple.** Le Ministère organise une consultation sur un bloc. Un candidat demande à emporter la sismique complète sur disque. L'agent refuse : consultation sur place ou en ligne sous conditions, selon le règlement de la salle de données, avec accord de confidentialité signé.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+      "keyPoints": [
+        "La confidentialité est temporaire : après le délai, la donnée peut être mise à disposition de tiers.",
+        "La loi n° 002/2019 impose l’accord préalable de l’autorité compétente (art. 12) ; les durées relèvent des contrats et de la réglementation.",
+        "Les agents sont tenus au secret professionnel (art. 22).",
+        "Salle de données : accord de confidentialité, comptes nominatifs, journal de consultation.",
+        "Tous les candidats reçoivent le même lot, aux mêmes conditions."
+      ]
+    },
+    {
+      "id": "m7",
+      "title": "Sécurité informatique et protection des données",
+      "theme": "Sécurité informatique et protection des données",
+      "minutes": 11,
+      "body": "Les données pétrolières sont un actif stratégique : une fuite avant un appel d'offres, une altération des chiffres de production ou un blocage par rançongiciel causeraient un préjudice financier et d'image à l'État. La sécurité repose sur trois critères : **confidentialité** (seuls les ayants droit accèdent), **intégrité** (la donnée n'est pas modifiée à l'insu de son propriétaire) et **disponibilité** (elle est accessible quand il faut).\n\n**Menaces courantes.** Hameçonnage (courriel imitant un expéditeur de confiance pour voler un mot de passe), rançongiciel (chiffrement des fichiers contre rançon), clés USB infectées, erreur humaine (envoi à un mauvais destinataire), départ d'un agent avec des droits restés actifs, accès à distance mal protégé.\n\n**Mesures de base.**\n- *Gestion des accès* : un compte nominatif par agent, droits limités au strict besoin (principe du moindre privilège), retrait des droits au départ ou au changement de poste.\n- *Authentification forte* : mot de passe long et unique, complété par un second facteur.\n- *Chiffrement* des disques portables et des transferts de fichiers sensibles.\n- *Journalisation* : conserver la trace de qui a consulté, copié ou supprimé des données.\n- *Mises à jour* des systèmes et pare-feu.\n- *Sauvegardes déconnectées* du réseau, pour résister à un rançongiciel.\n- *Sensibilisation* régulière des agents : le maillon faible est souvent humain.\n\n**Classification.** On classe les données (public, interne, confidentiel, très sensible) pour appliquer la protection adaptée : la sismique et les données de puits d'un bloc non encore attribué sont confidentielles.\n\n**Protection des données à caractère personnel.** Les fichiers du Ministère contiennent aussi des données de personnes (agents, candidats, contacts d'opérateurs). Elles relèvent de la **loi n° 001/2011 du 25 septembre 2011 relative à la protection des données à caractère personnel**, modifiée par la loi n° 025/2023, dont le contrôle est confié à la Commission nationale pour la protection des données à caractère personnel (CNPDCP). Principes généraux : finalité déterminée, collecte limitée au nécessaire, durée de conservation limitée, sécurité, droits d'accès et de rectification des personnes. Les modalités précises (déclaration préalable, etc.) sont à vérifier dans le texte à jour.\n\n**Incident.** Si un agent croit avoir cliqué sur un lien frauduleux : déconnecter le poste du réseau, prévenir immédiatement le responsable informatique, ne pas tenter de réparer seul. Plus l'alerte est rapide, plus les dégâts sont limités.\n\n**Exemple.** Un agent reçoit un courriel « urgent » d'un prétendu opérateur demandant de renvoyer la liste des blocs avec leurs données. Réflexe : ne pas répondre, vérifier l'expéditeur par un autre canal, signaler le message.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+      "keyPoints": [
+        "Trois critères : confidentialité, intégrité, disponibilité.",
+        "Comptes nominatifs, moindre privilège, retrait des droits au départ.",
+        "Sauvegardes déconnectées et chiffrement contre rançongiciel et vol.",
+        "Données personnelles : loi n° 001/2011 modifiée par la loi n° 025/2023, contrôle par la CNPDCP.",
+        "En cas d’incident : déconnecter, alerter, ne pas réparer seul."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "min-donnees-001",
+      "theme": "Types de données pétrolières",
+      "level": 1,
+      "q": "Qu’appelle-t-on une sismique 4D ?",
+      "choices": [
+        "Une sismique en quatre dimensions de profondeur obtenue par un seul passage du navire",
+        "Une sismique 2D réalisée sur quatre lignes parallèles, espacées de quelques kilomètres",
+        "Une sismique 3D répétée à plusieurs dates pour suivre un réservoir",
+        "Une sismique traitée par quatre sociétés indépendantes pour comparaison"
+      ],
+      "answer": 2,
+      "explain": "La 4D ajoute le temps : on compare plusieurs levés 3D du même champ pour voir le déplacement des fluides. Les autres propositions inventent un sens littéral du « 4 » sans rapport avec la méthode.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-002",
+      "theme": "Types de données pétrolières",
+      "level": 1,
+      "q": "Parmi ces éléments, lequel est une donnée de puits ?",
+      "choices": [
+        "Une diagraphie de résistivité",
+        "Un levé de sismique marine 3D",
+        "Le tonnage mensuel de brut chargé sur un navire",
+        "Le plan de découpage des blocs du domaine pétrolier"
+      ],
+      "answer": 0,
+      "explain": "La diagraphie est une mesure faite le long du puits. Le levé sismique est une donnée sismique, le chargement relève de la production ou de l’export, le découpage en blocs du cadastre.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-003",
+      "theme": "Types de données pétrolières",
+      "level": 1,
+      "q": "Où le point de comptage fiscal est-il placé, selon la loi n° 002/2019 ?",
+      "choices": [
+        "Sous la seule responsabilité de l’opérateur du champ, qui en assure le mesurage",
+        "Sous la tutelle exclusive de l’autorité de régulation, qui valide chaque relevé",
+        "Sous l’autorité du seul ministère chargé de l’Économie, pour des raisons fiscales",
+        "Sous la supervision des services du Ministère chargé des Hydrocarbures"
+      ],
+      "answer": 3,
+      "explain": "L’article 247 place le point de comptage fiscal sous le contrôle et la supervision des services du Ministère chargé des Hydrocarbures. Les autres réponses retirent ce rôle au Ministère à tort.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 247",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-004",
+      "theme": "Types de données pétrolières",
+      "level": 1,
+      "q": "Quel format est classiquement utilisé pour échanger des données sismiques traitées ?",
+      "choices": [
+        "LAS",
+        "SEG-Y",
+        "PDF",
+        "WITSML"
+      ],
+      "answer": 1,
+      "explain": "SEG-Y est le format d’échange usuel pour la sismique traitée. LAS sert aux diagraphies, WITSML au transfert des données de forage ; le PDF convient aux rapports, pas aux traces sismiques.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-005",
+      "theme": "Types de données pétrolières",
+      "level": 2,
+      "q": "Un puits vient d’être terminé. Vous recevez un fichier de diagraphies, un rapport de fin de forage, 30 m de carotte et un compte rendu d’essai. Quelle mesure est la plus adaptée ?",
+      "choices": [
+        "Ne garder que les fichiers numériques, la carotte restant sous la responsabilité de l’opérateur",
+        "Classer chaque pièce dans le dossier du service qui l’a reçue, sans lien entre elles",
+        "Rattacher les quatre pièces au puits par un identifiant unique et inventorier la carotte",
+        "Détruire les déblais et la carotte une fois les diagraphies lues pour libérer de la place"
+      ],
+      "answer": 2,
+      "explain": "Un identifiant unique évite que les pièces d’un même puits soient dispersées. La carotte est une donnée physique de l’État, qui exige un inventaire. Garder seulement le numérique, éparpiller ou détruire fait perdre des informations irremplaçables.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-006",
+      "theme": "Types de données pétrolières",
+      "level": 2,
+      "q": "Une direction veut calculer la part de l’État sur la production du mois. Quelle famille de données lui est indispensable ?",
+      "choices": [
+        "Les données sismiques traitées du bloc",
+        "Les données de production mesurées au point de comptage fiscal",
+        "Les carottes et lames minces du premier puits",
+        "Les cartes d’interprétation des horizons"
+      ],
+      "answer": 1,
+      "explain": "La part de l’État se calcule à partir des volumes produits et mesurés. Sismique, carottes et cartes servent à comprendre le sous-sol, pas à calculer des volumes fiscaux.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-007",
+      "theme": "Types de données pétrolières",
+      "level": 2,
+      "q": "Un opérateur remet « les données du levé 3D » sous forme d’un seul cube migré. Que manque-t-il pour que l’État dispose d’un jeu complet ?",
+      "choices": [
+        "Les données de terrain, ou leur lieu de conservation, et le rapport de traitement",
+        "Rien : le cube migré remplace pour toujours les données de terrain et leur rapport",
+        "Uniquement la liste des employés ayant réalisé le levé et leurs qualifications",
+        "Le prix du levé, seule donnée utile pour un éventuel nouveau traitement"
+      ],
+      "answer": 0,
+      "explain": "Le cube migré est un produit traité. La donnée de terrain est irremplaçable et le rapport de traitement permet de comprendre ce qui a été fait. Le prix ou la liste des employés n’aident pas à retraiter la sismique.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-008",
+      "theme": "Types de données pétrolières",
+      "level": 2,
+      "q": "Parmi ces éléments, lequel est une donnée physique et non numérique ?",
+      "choices": [
+        "Un fichier LAS de diagraphies",
+        "Un rapport journalier de forage scanné",
+        "Un cube sismique stocké sur bande",
+        "Un échantillon de carotte prélevé dans un réservoir"
+      ],
+      "answer": 3,
+      "explain": "La carotte est un objet : elle se conserve en carothèque. Les trois autres éléments sont des fichiers, même s’ils reposent sur des supports.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-009",
+      "theme": "Types de données pétrolières",
+      "level": 3,
+      "q": "Vous êtes chef de service. Un opérateur veut ne remettre que l’interprétation de ses cartes en conservant les données brutes. Quelle position est correcte ?",
+      "choices": [
+        "Accepter, car l’interprétation résume fidèlement toutes les données brutes du bloc",
+        "Exiger aussi les données brutes : l’interprétation n’est qu’une analyse",
+        "Accepter, car les données brutes appartiennent en toute circonstance à l’opérateur",
+        "Refuser, mais seulement si les cartes remises ne sont pas fournies en couleur"
+      ],
+      "answer": 1,
+      "explain": "L’interprétation peut changer d’un interprète à l’autre et ne permet pas de refaire le travail. Les données brutes sont propriété de l’État (art. 10) et l’opérateur doit les transmettre (art. 12). Les deux autres réponses nient ces principes ou n’ont aucun fondement.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 10 et 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-010",
+      "theme": "Types de données pétrolières",
+      "level": 3,
+      "q": "Une suite de diagraphies est reçue sans mention de l’unité de profondeur. Quelle est la conséquence la plus probable si l’on ne réagit pas ?",
+      "choices": [
+        "Sans conséquence, car l’unité se devine toujours à la forme de la courbe enregistrée",
+        "Seule la mise en page du rapport sera touchée, les valeurs restant inchangées",
+        "Le fichier deviendra automatiquement illisible dès son enregistrement dans la base",
+        "Des erreurs d’interprétation : un mètre vaut plus de trois pieds"
+      ],
+      "answer": 3,
+      "explain": "Un pied vaut environ 0,3048 m : un mètre vaut donc plus de trois pieds, et confondre les unités fausse fortement les profondeurs et les corrélations entre puits. La forme de la courbe ne révèle pas l’unité, et l’absence de métadonnée ne rend pas le fichier illisible.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-011",
+      "theme": "Propriété des données et cadastre",
+      "level": 1,
+      "q": "Selon l’article 10 de la loi n° 002/2019, à qui appartiennent les données acquises dans le cadre des opérations pétrolières ?",
+      "choices": [
+        "À l’opérateur qui les a financées",
+        "À l’État, qui en détient la propriété exclusive",
+        "Au sous-traitant qui a réalisé l’acquisition",
+        "À l’opérateur et à l’État à parts égales"
+      ],
+      "answer": 1,
+      "explain": "L’article 10 range les études, données et informations du cadastre parmi les biens de propriété exclusive de l’État. Le financement ou la réalisation par un tiers ne transfère pas la propriété.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 10",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-012",
+      "theme": "Propriété des données et cadastre",
+      "level": 1,
+      "q": "Qui tient le cadastre des hydrocarbures ?",
+      "choices": [
+        "Le Ministère chargé des Hydrocarbures",
+        "L’opérateur national",
+        "Chaque contracteur pour ses propres blocs",
+        "Le ministère chargé de la Justice"
+      ],
+      "answer": 0,
+      "explain": "Selon l’article 15, les informations relatives aux blocs et aux titres sont consignées dans le cadastre tenu par le Ministère. Un opérateur ne tient pas le registre dont il est lui-même titulaire.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 15",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-013",
+      "theme": "Propriété des données et cadastre",
+      "level": 1,
+      "q": "Que contient principalement le cadastre des hydrocarbures ?",
+      "choices": [
+        "Les données sismiques brutes de tous les opérateurs",
+        "Les comptes bancaires des sociétés pétrolières",
+        "Les informations relatives aux blocs et aux titres pétroliers",
+        "Les dossiers individuels des agents du Ministère"
+      ],
+      "answer": 2,
+      "explain": "L’article 15 vise les informations sur les blocs et les titres. Le cadastre n’est ni un entrepôt de sismique, ni un fichier financier ou de personnel.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 15",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-014",
+      "theme": "Propriété des données et cadastre",
+      "level": 1,
+      "q": "Un contracteur peut-il divulguer à un tiers des données obtenues dans l’exécution de son contrat ?",
+      "choices": [
+        "Oui, dès lors qu’il a financé l’acquisition",
+        "Oui, après un simple courrier d’information au Ministère",
+        "Oui, si le tiers est une société de son groupe, dans tous les cas",
+        "Non, pas sans l’accord préalable de l’autorité compétente"
+      ],
+      "answer": 3,
+      "explain": "L’article 12 impose l’accord préalable de l’autorité compétente. Les autres réponses croient à tort que le financement, une simple information ou l’appartenance au même groupe suffisent.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-015",
+      "theme": "Propriété des données et cadastre",
+      "level": 2,
+      "q": "Un candidat étranger demande « toutes les données du bloc X ». Vous êtes chef de service. Quelle est la bonne conduite ?",
+      "choices": [
+        "Envoyer les données par courriel dès aujourd’hui pour ne pas perdre le candidat intéressé",
+        "Vérifier le statut du bloc au cadastre et orienter vers la procédure officielle d’accès",
+        "Transférer la demande à l’opérateur du bloc, qui décide seul de la suite à donner",
+        "Refuser sans explication au candidat et supprimer le message de la messagerie"
+      ],
+      "answer": 1,
+      "explain": "Le statut au cadastre éclaire la demande, et seule l’autorité compétente peut autoriser une mise à disposition. Transmettre de sa propre initiative viole le secret professionnel (art. 22) ; laisser l’opérateur décider méconnaît la propriété de l’État.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 10, 12 et 22",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-016",
+      "theme": "Propriété des données et cadastre",
+      "level": 2,
+      "q": "Un opérateur cède une partie de ses droits à un partenaire et lui remet des données du bloc avant l’approbation. Que faut-il en dire ?",
+      "choices": [
+        "Elle exige l’accord préalable de l’autorité compétente ; sans lui, elle est irrégulière",
+        "Elle est régulière, car les partenaires d’un contrat sont toujours co-propriétaires des données",
+        "Elle est régulière si la cession a simplement été notifiée au Ministère par courriel",
+        "Elle est régulière dès lors que le partenaire a signé un simple reçu de remise"
+      ],
+      "answer": 0,
+      "explain": "L’article 12 interdit la divulgation à un tiers sans accord de l’autorité compétente, et la cession elle-même est soumise à approbation (art. 54). Notification ou reçu ne remplacent pas l’accord.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12 et 54",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-017",
+      "theme": "Propriété des données et cadastre",
+      "level": 2,
+      "q": "Un opérateur découvre un gisement et prévient d’abord une banque qui finance le projet. Quelle règle est méconnue ?",
+      "choices": [
+        "L’obligation de publier la découverte dans la presse locale avant tout autre acte",
+        "L’obligation d’informer d’abord le Parlement par une communication écrite",
+        "L’information prioritaire et sans délai de l’administration des hydrocarbures",
+        "L’obligation de faire valider d’abord la découverte par l’opérateur national"
+      ],
+      "answer": 2,
+      "explain": "L’article 63 impose d’informer en priorité et sans délai l’administration des hydrocarbures, et soumet toute communication aux tiers à son autorisation préalable. Les autres obligations citées n’y figurent pas.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 63",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-018",
+      "theme": "Propriété des données et cadastre",
+      "level": 2,
+      "q": "Un agent du cadastre donne par téléphone à un consultant le détail d’un dossier de cession encore confidentiel. Quel principe est méconnu ?",
+      "choices": [
+        "L’obligation de conserver les originaux au Gabon",
+        "Le droit de préemption de l’État",
+        "L’interdiction du torchage",
+        "Le secret professionnel des agents de l’administration des Hydrocarbures"
+      ],
+      "answer": 3,
+      "explain": "L’article 22 soumet les agents au secret professionnel. La conservation des originaux (art. 225) concerne le contracteur, la préemption les cessions, le torchage les opérations : aucun n’est en cause ici.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 22",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-019",
+      "theme": "Propriété des données et cadastre",
+      "level": 3,
+      "q": "Une société sollicite l’accès aux résultats d’un puits foré par un opérateur au titre d’un contrat en cours, en soutenant que, l’État en étant propriétaire, il suffit d’une demande orale. Que répondez-vous ?",
+      "choices": [
+        "Puisque l’État est propriétaire, tout agent peut accorder l’accès à la demande de n’importe qui",
+        "La propriété de l’État n’exclut pas la procédure : l’autorité compétente autorise l’accès",
+        "Puisque l’opérateur a financé le puits, seul son accord compte pour toute communication aux tiers",
+        "Les résultats de puits ne sont jamais communicables, quelles que soient les conditions posées"
+      ],
+      "answer": 1,
+      "explain": "Propriété de l’État ne signifie pas libre diffusion : l’accès est autorisé par l’autorité compétente, dans le cadre du contrat. Les agents sont tenus au secret (art. 22), et refuser toute communication à jamais est excessif puisque la confidentialité est temporaire.",
+      "seconds": 110,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 10, 12 et 22",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-020",
+      "theme": "Propriété des données et cadastre",
+      "level": 3,
+      "q": "Un nouveau bloc est créé par voie réglementaire. Quelle suite de gestion des informations est correcte ?",
+      "choices": [
+        "Attendre le premier forage avant d’inscrire la moindre information au cadastre",
+        "Laisser l’opérateur tenir sa propre fiche de bloc, sans registre tenu par le Ministère",
+        "Inscrire bloc, coordonnées et titulaire au cadastre, puis publier",
+        "Publier immédiatement toutes les données techniques du bloc sur le site du Ministère"
+      ],
+      "answer": 2,
+      "explain": "L’article 15 prévoit l’inscription des informations sur blocs et titres au cadastre, publiées selon les modalités réglementaires. Les données techniques, elles, restent protégées par les règles de confidentialité.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 15",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-021",
+      "theme": "Obligations de remise par les opérateurs",
+      "level": 1,
+      "q": "À quel moment le contracteur doit-il transmettre ses données au Ministère ?",
+      "choices": [
+        "Au fur et à mesure de leur acquisition",
+        "À la fin du contrat uniquement",
+        "Une fois par an, en bloc",
+        "Sur simple demande de l’administration"
+      ],
+      "answer": 0,
+      "explain": "L’article 12 impose la transmission au fur et à mesure de l’acquisition. Attendre la fin du contrat ou la demande de l’administration est contraire à cette règle.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-022",
+      "theme": "Obligations de remise par les opérateurs",
+      "level": 1,
+      "q": "Que doit fournir le titulaire d’une autorisation, selon l’article 182 de la loi n° 002/2019 ?",
+      "choices": [
+        "Uniquement ses états financiers annuels, certifiés par un commissaire aux comptes",
+        "Une copie des données bancaires personnelles de ses dirigeants et salariés",
+        "Un rapport trimestriel destiné au seul public, sans transmission au Ministère",
+        "Un rapport sur l’état de ses activités et les informations requises"
+      ],
+      "answer": 3,
+      "explain": "L’article 182 vise un rapport sur l’état des activités et toute information administrative, technique, économique et financière. Il ne se limite pas aux états financiers et ne vise pas des données personnelles.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 182",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-023",
+      "theme": "Obligations de remise par les opérateurs",
+      "level": 1,
+      "q": "Quelle sanction prévoit l’article 267 en cas de non-transmission de données dans les délais du contrat ?",
+      "choices": [
+        "Le retrait immédiat du titre pétrolier, sans préavis ni mise en demeure préalable",
+        "Une pénalité de 500 000 à 5 000 000 FCFA après mise en demeure de quinze jours",
+        "Une amende de 50 millions de francs CFA par jour de retard, dès le premier jour",
+        "Un simple avertissement oral du chef de service, sans suite administrative ni sanction"
+      ],
+      "answer": 1,
+      "explain": "L’article 267 fixe une pénalité de 500 000 à 5 000 000 FCFA après mise en demeure de quinze jours, sans préjudice d’autres sanctions du contrat. Le retrait sans préavis ou l’amende journalière ne figurent pas dans cet article.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 267",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-024",
+      "theme": "Obligations de remise par les opérateurs",
+      "level": 1,
+      "q": "Quel événement exige d’informer l’administration sans délai ?",
+      "choices": [
+        "Le renouvellement du contrat de nettoyage et de gardiennage des bureaux du site",
+        "Le choix de la couleur et du marquage des véhicules de chantier utilisés",
+        "Un incident ou un accident susceptible d’avoir un impact sur les activités",
+        "La publication du rapport annuel du groupe sur son site institutionnel"
+      ],
+      "answer": 2,
+      "explain": "L’article 241 exige d’informer sans délai de toute perturbation, incident ou accident. Les autres événements sont sans rapport avec la sécurité ou la continuité des activités.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 241",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-025",
+      "theme": "Obligations de remise par les opérateurs",
+      "level": 2,
+      "q": "Un opérateur n’a pas remis les diagraphies d’un puits à l’échéance prévue au contrat. Que faites-vous en premier ?",
+      "choices": [
+        "Appliquer immédiatement la pénalité maximale de 5 000 000 de francs CFA prévue",
+        "Attendre la fin du contrat pour demander à l’opérateur de régulariser le tout",
+        "Demander les données à l’opérateur du bloc voisin pour compléter le dossier",
+        "Adresser une mise en demeure, préalable obligatoire à la pénalité"
+      ],
+      "answer": 3,
+      "explain": "L’article 267 conditionne la pénalité à une mise en demeure de quinze jours. Appliquer d’emblée le maximum ignore cette étape, et attendre ou solliciter un tiers ne régularise rien.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 267",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-026",
+      "theme": "Obligations de remise par les opérateurs",
+      "level": 2,
+      "q": "Vous recevez un lot de remise. Quel est le premier geste d’un agent rigoureux ?",
+      "choices": [
+        "Verser directement le lot dans la base de données sans l’avoir ouvert ni lu",
+        "Enregistrer la réception, puis contrôler la conformité au contrat",
+        "Retourner le lot à l’opérateur si le courrier d’envoi est mal plié ou froissé",
+        "Transmettre le lot au service juridique sans l’avoir ouvert ni examiné"
+      ],
+      "answer": 1,
+      "explain": "L’enregistrement fixe la date de remise, utile en cas de litige de délai ; le contrôle de conformité suit. Verser sans vérifier archive des erreurs ; les autres gestes ne traitent pas la remise.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-027",
+      "theme": "Obligations de remise par les opérateurs",
+      "level": 2,
+      "q": "Un opérateur transmet des fichiers sans métadonnées (unités, système de coordonnées, date). Que décidez-vous ?",
+      "choices": [
+        "Notifier l’anomalie et demander les métadonnées dans un délai fixé",
+        "Archiver le lot tel quel, le Ministère retrouvera les unités et coordonnées plus tard",
+        "Détruire le lot sans prévenir l’opérateur, qui devra de lui-même tout renvoyer",
+        "Compléter les métadonnées de mémoire, sans demander à l’opérateur de confirmer"
+      ],
+      "answer": 0,
+      "explain": "Le lot est incomplet : l’opérateur doit corriger. Archiver tel quel fige un lot inutilisable, détruire n’est pas une réponse, et deviner des unités risque d’introduire des erreurs.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-028",
+      "theme": "Obligations de remise par les opérateurs",
+      "level": 2,
+      "q": "Un accident survient sur une installation vendredi soir. L’opérateur prévient le Ministère le mercredi suivant. Quelle règle est méconnue ?",
+      "choices": [
+        "L’obligation de conserver les originaux au Gabon (art. 225)",
+        "L’interdiction de divulguer les données à un tiers (art. 12)",
+        "L’obligation d’informer sans délai l’administration (art. 241)",
+        "L’obligation de livrer une quote-part de brut au marché intérieur"
+      ],
+      "answer": 2,
+      "explain": "L’article 241 impose une information sans délai. Un retard de plusieurs jours la méconnaît. Les autres obligations relèvent de la conservation, de la confidentialité et de l’approvisionnement.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 241",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-029",
+      "theme": "Obligations de remise par les opérateurs",
+      "level": 3,
+      "q": "Un opérateur invoque que le contrat ne fixe aucun délai de remise et propose de tout remettre à la fin de la phase d’exploration. Quelle analyse est la plus juste ?",
+      "choices": [
+        "L’opérateur a raison : sans délai écrit au contrat, aucune obligation de remise n’existe",
+        "L’opérateur a raison si la phase d’exploration dure moins de deux ans au total",
+        "L’opérateur a raison à condition de verser une garantie bancaire équivalente",
+        "L’article 12 impose une transmission continue, et le contrat ne peut y déroger"
+      ],
+      "answer": 3,
+      "explain": "Toute clause contraire à la loi est nulle (art. 42), et l’article 12 impose une transmission continue. Le silence du contrat n’efface donc pas l’obligation, et ni la durée de la phase ni une garantie ne la remplacent.",
+      "seconds": 110,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12 et 42",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-030",
+      "theme": "Obligations de remise par les opérateurs",
+      "level": 3,
+      "q": "Vous devez bâtir une procédure de recoupement des volumes de production. Quel dispositif s’appuie sur la loi ?",
+      "choices": [
+        "Se fier uniquement aux volumes déclarés par l’opérateur dans ses rapports mensuels",
+        "Comparer les volumes déclarés à ceux du point de comptage fiscal",
+        "Utiliser uniquement les prévisions de production du plan de développement approuvé",
+        "Demander aux investisseurs potentiels leur propre estimation des volumes produits"
+      ],
+      "answer": 1,
+      "explain": "L’article 247 donne au Ministère le contrôle et la supervision du point de comptage fiscal, ce qui permet un recoupement. Les déclarations seules, les prévisions ou les avis d’investisseurs ne constituent pas un contrôle.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 247",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-031",
+      "theme": "Qualité et normalisation des données",
+      "level": 1,
+      "q": "Que sont les métadonnées ?",
+      "choices": [
+        "Des données supprimées par erreur lors d’une opération de maintenance du serveur",
+        "Des données de sismique en quatre dimensions, répétées à intervalles réguliers",
+        "Des informations qui décrivent une donnée : origine, date, unités, coordonnées",
+        "Des données exclusivement financières, produites par la comptabilité de l’opérateur"
+      ],
+      "answer": 2,
+      "explain": "Les métadonnées décrivent la donnée et la rendent exploitable. Les autres définitions confondent avec la suppression, la sismique 4D ou la comptabilité.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-032",
+      "theme": "Qualité et normalisation des données",
+      "level": 1,
+      "q": "Laquelle de ces dimensions fait partie de la qualité d’une donnée ?",
+      "choices": [
+        "La complétude",
+        "La couleur du support",
+        "Le poids du fichier compressé",
+        "Le nom de l’agent qui l’a reçue"
+      ],
+      "answer": 0,
+      "explain": "La complétude (rien ne manque) est une dimension classique de la qualité, avec l’exactitude, la cohérence, l’actualité, l’unicité et la traçabilité. Les autres propositions ne mesurent pas la qualité.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-033",
+      "theme": "Qualité et normalisation des données",
+      "level": 1,
+      "q": "Quel format est classique pour les diagraphies de puits ?",
+      "choices": [
+        "SEG-Y",
+        "LAS ou DLIS",
+        "JPEG",
+        "MP3"
+      ],
+      "answer": 1,
+      "explain": "LAS et DLIS sont les formats d’échange usuels pour les diagraphies. SEG-Y est destiné à la sismique traitée ; JPEG et MP3 ne conviennent pas aux mesures de puits.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-034",
+      "theme": "Qualité et normalisation des données",
+      "level": 1,
+      "q": "Pourquoi un identifiant unique de puits est-il utile ?",
+      "choices": [
+        "Pour augmenter la taille des fichiers",
+        "Pour supprimer la confidentialité des données",
+        "Pour remplacer les contrôles de qualité",
+        "Pour éviter les doublons et relier toutes les données d’un même puits"
+      ],
+      "answer": 3,
+      "explain": "Un identifiant commun relie diagraphies, rapports, carottes et essais, et empêche que deux noms désignent le même puits. Il ne règle ni la confidentialité ni le contrôle qualité.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-035",
+      "theme": "Qualité et normalisation des données",
+      "level": 2,
+      "q": "Sur 200 fichiers reçus, 12 sont illisibles, 18 sans unité et 10 en doublon (aucun fichier n’a deux anomalies). Quel est le taux de conformité ?",
+      "choices": [
+        "80 %",
+        "60 %",
+        "90 %",
+        "95 %"
+      ],
+      "answer": 0,
+      "explain": "40 anomalies sur 200 fichiers donnent 20 % de non-conformité, soit 80 % de conformité. Les autres valeurs proviennent d’erreurs de calcul (60 % : double comptage ; 90 % et 95 % : anomalies sous-estimées).",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-036",
+      "theme": "Qualité et normalisation des données",
+      "level": 2,
+      "q": "Un fichier de diagraphies annonce des profondeurs de 3 000 à 3 300 sans unité. Quelle est la meilleure réaction ?",
+      "choices": [
+        "Supposer des mètres, puisque c’est l’unité légale du système international",
+        "Demander l’unité à l’opérateur avant d’intégrer le fichier",
+        "Supposer des pieds, puisque l’industrie pétrolière les emploie très souvent",
+        "Intégrer le fichier et ajouter l’unité plus tard dans un commentaire libre"
+      ],
+      "answer": 1,
+      "explain": "Aucune supposition n’est sûre : 300 pieds font environ 91 m. Il faut obtenir la métadonnée avant l’intégration. Intégrer d’abord puis compléter fait circuler des données ambiguës.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-037",
+      "theme": "Qualité et normalisation des données",
+      "level": 2,
+      "q": "Deux opérateurs nomment le même puits « NZ-1 » et « Nzé 1 ». Que risque-t-il d’arriver et que faire ?",
+      "choices": [
+        "Rien de grave, car la base de données reconnaît seule les noms synonymes",
+        "Un blocage du serveur, à régler en redémarrant toutes les machines du service",
+        "Un doublon dans la base ; rattacher les deux noms à un identifiant unique",
+        "Une pénalité automatique, dont il faut informer le juge compétent sans attendre"
+      ],
+      "answer": 2,
+      "explain": "Sans référentiel, la base traite deux noms comme deux puits. L’identifiant unique avec liste d’alias règle le problème. Une base ne reconnaît pas seule les synonymes, et il ne s’agit ni d’un incident technique ni d’une infraction.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-038",
+      "theme": "Qualité et normalisation des données",
+      "level": 2,
+      "q": "Quel contrôle simple, à la réception d’un levé sismique, détecte une erreur de localisation ?",
+      "choices": [
+        "Compter le nombre de pages du rapport d’acquisition joint au lot",
+        "Comparer la taille du fichier avec celle d’un film en haute définition",
+        "Vérifier l’orthographe des titres de section du rapport joint",
+        "Vérifier que les coordonnées tombent dans le bloc attribué"
+      ],
+      "answer": 3,
+      "explain": "La cohérence entre les coordonnées et le périmètre du bloc révèle des erreurs de système de référence ou d’unité. Les autres vérifications n’ont aucun rapport avec la localisation.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-039",
+      "theme": "Qualité et normalisation des données",
+      "level": 3,
+      "q": "Vous dirigez un service qui reçoit des données de six opérateurs aux conventions différentes. Quelle démarche améliore durablement la qualité ?",
+      "choices": [
+        "Exiger un référentiel commun (identifiants, coordonnées, unités) et suivre la conformité",
+        "Corriger à la main chaque fichier reçu, sans rien exiger des six opérateurs, qui gardent leurs habitudes",
+        "Adopter le format de l’opérateur le plus important du pays et ignorer ceux des cinq autres",
+        "Attendre qu’un incident majeur survienne pour traiter enfin la question de la qualité"
+      ],
+      "answer": 0,
+      "explain": "Un référentiel exigé à la source, accompagné d’un indicateur de conformité, évite de corriger sans fin. La correction manuelle ne passe pas à l’échelle, imposer un seul opérateur est inéquitable et attendre l’incident coûte plus cher.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-040",
+      "theme": "Qualité et normalisation des données",
+      "level": 3,
+      "q": "Un cabinet propose de vous fournir une plateforme de données conforme aux normes OSDU et vous affirme que cela vous dispense d’établir un référentiel et des responsables de données. Que répondez-vous ?",
+      "choices": [
+        "Il a raison : dès lors qu’elle respecte les normes, une plateforme garantit seule la qualité",
+        "Une plateforme n’est qu’un outil : sans référentiel ni responsables, la qualité se dégrade",
+        "Il a raison pour tous les types de données, sauf la sismique, qui est trop volumineuse",
+        "Il a tort, car l’usage des normes professionnelles est interdit au Gabon par la loi"
+      ],
+      "answer": 1,
+      "explain": "Les normes et plateformes facilitent l’échange, mais la gouvernance (responsables, règles, contrôles) reste indispensable. Il est faux qu’une plateforme suffise, et les normes professionnelles ne sont pas interdites ; elles peuvent être imposées par contrat.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-041",
+      "theme": "Conservation et sauvegarde",
+      "level": 1,
+      "q": "Selon l’article 225 de la loi n° 002/2019, où le contracteur conserve-t-il les originaux des registres, livres de comptes et contrats ?",
+      "choices": [
+        "Au siège de sa maison mère à l’étranger",
+        "Chez son commissaire aux comptes, où qu’il soit",
+        "Au Gabon",
+        "Dans le pays de son choix, selon ses besoins"
+      ],
+      "answer": 2,
+      "explain": "L’article 225 impose la conservation des originaux au Gabon, ce qui permet à l’État de les faire examiner chaque année. Les autres propositions contredisent cette règle.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 225",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-042",
+      "theme": "Conservation et sauvegarde",
+      "level": 1,
+      "q": "Que signifie la règle de sauvegarde 3-2-1 ?",
+      "choices": [
+        "Trois copies, sur deux types de supports, dont une hors site",
+        "Trois mots de passe, deux agents et un serveur",
+        "Trois sauvegardes par an, deux par mois et une par jour",
+        "Trois sites, deux pare-feu et une salle de contrôle"
+      ],
+      "answer": 0,
+      "explain": "La règle 3-2-1 organise la redondance et la séparation géographique. Les autres propositions détournent les chiffres sans rapport avec la sauvegarde.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-043",
+      "theme": "Conservation et sauvegarde",
+      "level": 1,
+      "q": "Où conserve-t-on correctement les carottes et lames minces ?",
+      "choices": [
+        "Dans un couloir du bureau, tant qu’il y a de la place",
+        "Chez l’opérateur uniquement, sans inventaire",
+        "À l’air libre, pour qu’elles sèchent",
+        "En carothèque, avec conditions contrôlées et inventaire à jour"
+      ],
+      "answer": 3,
+      "explain": "Ce sont des données physiques irremplaçables : température, humidité et traçabilité sont nécessaires. Les autres solutions les exposent à la dégradation ou à la perte.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-044",
+      "theme": "Conservation et sauvegarde",
+      "level": 1,
+      "q": "Quelle est la différence entre sauvegarde et archivage ?",
+      "choices": [
+        "Pas de différence : les deux mots désignent une seule et même opération de copie, à fréquence variable",
+        "Sauvegarde : reprise rapide après incident ; archivage : conservation longue de données figées",
+        "La sauvegarde est réservée aux documents papier, alors que l’archivage concerne les seuls fichiers numériques",
+        "La sauvegarde est définitive tandis que l’archivage est temporaire, révisable chaque année"
+      ],
+      "answer": 1,
+      "explain": "Les deux ont des objectifs différents : reprise rapide d’un côté, conservation pérenne de l’autre. Les autres définitions inversent ou confondent les rôles.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-045",
+      "theme": "Conservation et sauvegarde",
+      "level": 2,
+      "q": "Le service ne possède qu’une copie de la sismique 3D d’un bloc, sur un disque de bureau. Quelle action est la plus adaptée ?",
+      "choices": [
+        "Acheter un disque plus grand et conserver la copie unique avec beaucoup de soin",
+        "Envoyer l’unique copie par courriel à un collègue pour qu’il la garde aussi",
+        "Créer deux copies de plus sur d’autres supports, dont une hors site",
+        "Ne rien faire tant qu’aucun incident ne s’est produit sur le disque de bureau"
+      ],
+      "answer": 2,
+      "explain": "La donnée est irremplaçable et sa perte coûterait très cher : la règle 3-2-1 s’applique. Un seul disque reste un point de défaillance, et l’envoi par courriel n’est ni une sauvegarde ni sécurisé.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-046",
+      "theme": "Conservation et sauvegarde",
+      "level": 2,
+      "q": "Les sauvegardes sont faites depuis cinq ans sur les mêmes bandes, jamais relues. Quel risque majeur faut-il traiter ?",
+      "choices": [
+        "Supports et lecteurs peuvent être illisibles : tester une restauration, puis migrer",
+        "Pas de risque : des bandes magnétiques bien rangées se conservent indéfiniment, sans migration",
+        "Un risque seulement si les bandes changent de couleur ou se déforment à la vue",
+        "Le risque que la loi interdise un jour la sauvegarde sur supports magnétiques anciens"
+      ],
+      "answer": 0,
+      "explain": "Un support vieillit et son lecteur disparaît ; seule une restauration test prouve la sauvegarde. Les autres propositions nient le vieillissement ou inventent une interdiction.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-047",
+      "theme": "Conservation et sauvegarde",
+      "level": 2,
+      "q": "Un responsable fixe « perte de données maximale acceptable : une journée de travail ». Que doit-il en déduire ?",
+      "choices": [
+        "Sauvegarder une fois par mois",
+        "Sauvegarder au moins chaque jour",
+        "Sauvegarder uniquement avant les audits",
+        "Supprimer les anciennes sauvegardes chaque soir"
+      ],
+      "answer": 1,
+      "explain": "La fréquence de sauvegarde doit rester inférieure à la perte acceptable ; ici, quotidienne au minimum. Mensuelle ou à la veille des audits laisserait perdre bien plus d’une journée ; supprimer l’historique est dangereux.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-048",
+      "theme": "Conservation et sauvegarde",
+      "level": 2,
+      "q": "Une inondation menace le local où se trouvent le serveur et la seule copie hors ligne. Quelle faiblesse cela révèle-t-il ?",
+      "choices": [
+        "Un manque de pare-feu",
+        "Un défaut de format de fichier",
+        "Une absence de mot de passe",
+        "Des copies au même endroit : il faut séparer les sites"
+      ],
+      "answer": 3,
+      "explain": "Séparer les sites protège contre incendie, inondation ou vol. Pare-feu, formats et mots de passe répondent à d’autres risques.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-049",
+      "theme": "Conservation et sauvegarde",
+      "level": 3,
+      "q": "Un opérateur propose d’héberger les originaux de ses contrats et pièces justificatives sur un serveur à l’étranger, avec accès permanent pour le Ministère. Quelle réponse est la plus rigoureuse ?",
+      "choices": [
+        "Accepter, car un accès permanent du Ministère équivaut à une conservation sur le territoire",
+        "Accepter si le serveur est hébergé dans un pays européen réputé pour sa sécurité",
+        "Refuser : l’article 225 impose la conservation des originaux au Gabon, pas à distance",
+        "Accepter si l’opérateur verse chaque année une redevance spécifique à l’État pour cela"
+      ],
+      "answer": 2,
+      "explain": "La loi vise les originaux et le lieu : Gabon. Un accès à distance n’équivaut pas à leur présence sur le territoire, et ni la localisation européenne ni une redevance ne changent la règle.",
+      "seconds": 110,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 225",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-050",
+      "theme": "Conservation et sauvegarde",
+      "level": 3,
+      "q": "Votre direction dispose d’un budget limité. Que protégez-vous en priorité ?",
+      "choices": [
+        "Les présentations commerciales du service, car ce sont les fichiers les plus consultés",
+        "Les données irremplaçables (terrain, carottes, originaux), en trois copies",
+        "L’ensemble des données à égalité, avec une copie unique de chacune pour tenir le budget",
+        "Seulement les données récentes, car les anciennes n’ont plus aucune valeur utile"
+      ],
+      "answer": 1,
+      "explain": "La priorité se fixe selon l’irremplaçabilité et le coût de reconstitution. Les données anciennes, comme d’anciens levés, valent souvent très cher ; une copie unique pour tout ne protège rien.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-051",
+      "theme": "Confidentialité, délais de levée et accès des investisseurs",
+      "level": 1,
+      "q": "Que désigne la « levée de la confidentialité » ?",
+      "choices": [
+        "La destruction définitive des données arrivées au terme de leur durée de conservation",
+        "La fin de la période où les données étaient réservées à l’État et au contracteur",
+        "Le transfert de la propriété des données de l’État vers l’opérateur qui les a financées",
+        "La publication immédiate de tous les contrats d’hydrocarbures sur le site du Ministère"
+      ],
+      "answer": 1,
+      "explain": "La confidentialité est temporaire ; à son terme, les données peuvent être mises à disposition de tiers. Elle n’entraîne ni destruction ni changement de propriétaire.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-052",
+      "theme": "Confidentialité, délais de levée et accès des investisseurs",
+      "level": 1,
+      "q": "Qu’est-ce qu’une salle de données ?",
+      "choices": [
+        "Un espace où des candidats consultent des données sous conditions",
+        "Une salle de formation réservée aux agents nouvellement recrutés du Ministère",
+        "Un entrepôt de carottes maintenues à la température ambiante, sans inventaire",
+        "Un bureau où l’on détruit les archives arrivées en fin de conservation"
+      ],
+      "answer": 0,
+      "explain": "La salle de données organise la consultation par des investisseurs. Les autres définitions ne correspondent à aucun usage du terme.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-053",
+      "theme": "Confidentialité, délais de levée et accès des investisseurs",
+      "level": 1,
+      "q": "Qui donne l’accord pour la divulgation d’une donnée à un tiers selon l’article 12 de la loi n° 002/2019 ?",
+      "choices": [
+        "L’opérateur seul",
+        "Le sous-traitant qui a acquis la donnée",
+        "Le tiers demandeur",
+        "L’autorité compétente"
+      ],
+      "answer": 3,
+      "explain": "L’article 12 exige l’accord préalable de l’autorité compétente, soit le Ministre chargé des Hydrocarbures (art. 9). Ni l’opérateur seul, ni le sous-traitant, ni le demandeur ne peuvent s’en dispenser.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 9 et 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-054",
+      "theme": "Confidentialité, délais de levée et accès des investisseurs",
+      "level": 1,
+      "q": "La loi n° 002/2019 fixe-t-elle, dans les articles examinés ici, un délai de confidentialité unique pour toutes les données ?",
+      "choices": [
+        "Oui, un délai uniforme de dix ans s’applique à toutes les données pétrolières",
+        "Oui, six mois seulement pour la sismique, sans limite pour les autres données",
+        "Non : les durées relèvent des contrats et de la réglementation, à confirmer",
+        "Oui, une durée illimitée, valable pour toutes les données pétrolières du pays"
+      ],
+      "answer": 2,
+      "explain": "L’article 12 pose l’accord préalable ; les durées sont à rechercher dans le contrat concerné et la réglementation. Annoncer une durée de mémoire exposerait à une erreur.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-055",
+      "theme": "Confidentialité, délais de levée et accès des investisseurs",
+      "level": 2,
+      "q": "Un candidat à une consultation demande à emporter la sismique complète sur disque. Que faites-vous ?",
+      "choices": [
+        "Accepter, car un candidat officiel à la consultation a droit à tous les fichiers",
+        "Refuser l’emport, proposer une consultation sous accord de confidentialité",
+        "Accepter s’il règle le prix demandé en espèces auprès du service concerné",
+        "Accepter si un collègue du service donne son accord oral, sans trace écrite"
+      ],
+      "answer": 1,
+      "explain": "L’autorité compétente décide des conditions d’accès ; la salle de données permet de tracer les consultations. Le statut de candidat, un paiement en espèces ou un accord oral ne remplacent pas une procédure.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-056",
+      "theme": "Confidentialité, délais de levée et accès des investisseurs",
+      "level": 2,
+      "q": "Quelle mesure garantit l’égalité de traitement entre les candidats à une consultation ?",
+      "choices": [
+        "Même lot de données et mêmes délais d’accès pour tous",
+        "Donner plus de données au candidat qui paie le plus tôt",
+        "Réserver les données à l’opérateur national seul",
+        "Laisser chaque candidat négocier son propre lot"
+      ],
+      "answer": 0,
+      "explain": "L’égalité exige un lot et des conditions identiques. Les autres pratiques créent des avantages injustifiés.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-057",
+      "theme": "Confidentialité, délais de levée et accès des investisseurs",
+      "level": 2,
+      "q": "Un candidat se plaint de ne pouvoir consulter que les données, sans pouvoir les copier. Que lui répondez-vous ?",
+      "choices": [
+        "La copie est un droit absolu de tout candidat retenu, quel que soit le règlement",
+        "Les données ne sont pas consultables du tout : la salle sert seulement à les archiver",
+        "Le règlement s’applique aux candidats nationaux mais peut être ignoré par les étrangers",
+        "La copie est contrôlée pour protéger ces données ; la consultation suit le règlement"
+      ],
+      "answer": 3,
+      "explain": "Le règlement protège l’actif de l’État tout en permettant l’évaluation. La copie libre n’est pas un droit ; la consultation est justement l’objet de la salle ; le règlement s’applique à tous.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-058",
+      "theme": "Confidentialité, délais de levée et accès des investisseurs",
+      "level": 2,
+      "q": "Quel document faut-il signer avant l’accès d’un candidat à la salle de données ?",
+      "choices": [
+        "Un contrat de vente des données",
+        "Un permis de forage",
+        "Un accord de confidentialité",
+        "Une quittance de loyer"
+      ],
+      "answer": 2,
+      "explain": "L’accord de confidentialité engage le candidat à ne pas divulguer ce qu’il consulte. Les autres documents n’ont aucun lien avec l’accès.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-059",
+      "theme": "Confidentialité, délais de levée et accès des investisseurs",
+      "level": 3,
+      "q": "Un investisseur affirme que, le contrat de l’opérateur actuel ayant presque dix ans, la confidentialité est « forcément levée » et exige l’accès immédiat à tout. Comment réagissez-vous ?",
+      "choices": [
+        "Donner l’accès à toutes les données, car dix ans suffisent partout pour lever la confidentialité",
+        "Vérifier le délai de chaque donnée au contrat, puis saisir l’autorité compétente",
+        "Refuser définitivement, car la confidentialité est perpétuelle pour toutes les données pétrolières",
+        "Demander à l’investisseur de fixer lui-même le délai de confidentialité applicable à sa demande"
+      ],
+      "answer": 1,
+      "explain": "Les durées varient selon la donnée et le contrat ; la loi exige l’accord de l’autorité compétente (art. 12). Un délai supposé ne dispense pas de vérifier, et une confidentialité perpétuelle serait contraire à la logique de levée.",
+      "seconds": 110,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-060",
+      "theme": "Confidentialité, délais de levée et accès des investisseurs",
+      "level": 3,
+      "q": "Lors d’une consultation, un employé d’un candidat copie des fichiers sur une clé USB personnelle. Quelle réponse de gestion est la plus complète ?",
+      "choices": [
+        "Interrompre l’accès, consigner l’incident, rappeler les engagements et alerter",
+        "Ne rien faire pour ne pas froisser le candidat et préserver la relation commerciale",
+        "Effacer le journal d’accès pour éviter un scandale et classer l’affaire sans suite",
+        "Autoriser la même copie aux autres candidats, afin de garantir l’égalité de traitement"
+      ],
+      "answer": 0,
+      "explain": "La traçabilité et la réaction rapide protègent les données ; la hiérarchie décide des suites. Ignorer ou effacer la trace aggrave la faute, et étendre la copie à tous détruit la valeur de la confidentialité.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-061",
+      "theme": "Sécurité informatique et protection des données",
+      "level": 1,
+      "q": "Quels sont les trois critères de la sécurité de l’information ?",
+      "choices": [
+        "Rapidité, couleur, volume",
+        "Prix, délai, marque",
+        "Localisation, taille, nom",
+        "Confidentialité, intégrité, disponibilité"
+      ],
+      "answer": 3,
+      "explain": "Confidentialité (accès réservé), intégrité (non-altération) et disponibilité (accès quand il faut) forment la base. Les autres séries ne sont pas des critères de sécurité.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-062",
+      "theme": "Sécurité informatique et protection des données",
+      "level": 1,
+      "q": "Qu’est-ce que l’hameçonnage ?",
+      "choices": [
+        "Une méthode de sauvegarde automatique des données sismiques sur site distant",
+        "Un message imitant un expéditeur de confiance pour voler des identifiants",
+        "Un format de fichier propre aux diagraphies de puits et à leurs courbes",
+        "Une technique de forage horizontal employée dans les réservoirs peu perméables"
+      ],
+      "answer": 1,
+      "explain": "L’hameçonnage vise à tromper l’utilisateur. Les autres propositions ne sont pas des attaques.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-063",
+      "theme": "Sécurité informatique et protection des données",
+      "level": 1,
+      "q": "Que prévoit le principe du moindre privilège ?",
+      "choices": [
+        "Chaque agent n’a que les droits strictement nécessaires à ses missions",
+        "Les nouveaux agents reçoivent tous les droits",
+        "Un compte commun est partagé dans le service",
+        "Les droits ne sont jamais retirés"
+      ],
+      "answer": 0,
+      "explain": "Limiter les droits réduit les dégâts d’une erreur ou d’une intrusion. Les trois autres pratiques augmentent le risque.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-064",
+      "theme": "Sécurité informatique et protection des données",
+      "level": 1,
+      "q": "Quelle loi gabonaise porte sur la protection des données à caractère personnel ?",
+      "choices": [
+        "La loi n° 002/2019 sur les hydrocarbures, seule",
+        "La loi n° 001/2011 du 25 septembre 2011, modifiée par la loi n° 025/2023",
+        "La loi de finances de l’année en cours",
+        "La loi n° 025/2023 seulement, car elle a abrogé toute autre loi"
+      ],
+      "answer": 1,
+      "explain": "La loi n° 001/2011 fonde le régime, la loi n° 025/2023 la modifie. La loi sur les hydrocarbures ne traite pas des données personnelles, et la loi de 2023 modifie la loi de 2011 sans la remplacer d’après son intitulé.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 001/2011 du 25 septembre 2011 relative à la protection des données à caractère personnel, modifiée par la loi n° 025/2023",
+          "art": "intitulé",
+          "url": "https://www.afapdp.org/wp-content/uploads/2023/12/Gabon-Loi-025-2023-du-12-juillet-2023-portant-modification-de-la-loi-001-2011-du-25-septembre-relative-a-la-protection-des-donnees-a-caractere-personnel.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-065",
+      "theme": "Sécurité informatique et protection des données",
+      "level": 2,
+      "q": "Un agent reçoit un courriel « urgent » d’un prétendu opérateur demandant la liste des blocs avec leurs données. Quel est le bon réflexe ?",
+      "choices": [
+        "Ne pas répondre, vérifier l’expéditeur par un autre canal et le signaler",
+        "Répondre rapidement pour montrer sa diligence et la qualité du service rendu",
+        "Transférer le message à tous les collègues du service pour recueillir leur avis",
+        "Ouvrir la pièce jointe pour vérifier par soi-même si elle est dangereuse"
+      ],
+      "answer": 0,
+      "explain": "Un message pressant qui réclame des données est un signe d’hameçonnage. La rapidité, le transfert massif ou l’ouverture de pièce jointe aggravent le risque.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-066",
+      "theme": "Sécurité informatique et protection des données",
+      "level": 2,
+      "q": "Un agent quitte le service pour un autre ministère. Que faut-il faire pour la sécurité ?",
+      "choices": [
+        "Laisser ses droits actifs, au cas où",
+        "Lui laisser son mot de passe pour dépanner",
+        "Supprimer son compte six mois après",
+        "Retirer ou adapter ses droits d’accès dès son départ"
+      ],
+      "answer": 3,
+      "explain": "Des droits oubliés sont une porte d’entrée fréquente. Le retrait ou l’adaptation doit être immédiat, non différé.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-067",
+      "theme": "Sécurité informatique et protection des données",
+      "level": 2,
+      "q": "Un rançongiciel chiffre les fichiers du serveur. Quelle protection aurait limité les dégâts ?",
+      "choices": [
+        "Un fond d’écran plus sobre",
+        "Un mot de passe partagé par tout le service",
+        "Une sauvegarde déconnectée du réseau et testée",
+        "Une sauvegarde stockée sur le même serveur"
+      ],
+      "answer": 2,
+      "explain": "Une copie hors réseau échappe au chiffrement ; elle doit être testée. Une sauvegarde sur le même serveur sera chiffrée aussi ; les autres mesures n’ont aucun effet.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-068",
+      "theme": "Sécurité informatique et protection des données",
+      "level": 2,
+      "q": "Que faire si un agent croit avoir cliqué sur un lien frauduleux ?",
+      "choices": [
+        "Redémarrer le poste de travail et ne rien dire à personne dans le service",
+        "Déconnecter le poste du réseau et prévenir aussitôt le responsable informatique",
+        "Essayer de réparer seul le poste pendant la nuit, sans en parler à la hiérarchie",
+        "Attendre quelques jours de voir si quelque chose d’anormal se passe sur le poste"
+      ],
+      "answer": 1,
+      "explain": "La vitesse d’alerte limite la propagation. Se taire, réparer seul ou attendre laisse l’attaque se poursuivre.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-069",
+      "theme": "Sécurité informatique et protection des données",
+      "level": 2,
+      "q": "Vous enregistrez les coordonnées de candidats à une consultation. Quel principe de protection des données personnelles faut-il respecter ?",
+      "choices": [
+        "Ne collecter que le nécessaire, pour une finalité précise, avec une durée limitée",
+        "Collecter le plus d’informations possible, au cas où elles serviraient un jour",
+        "Conserver indéfiniment toute donnée personnelle, même sans utilité pour le service",
+        "Publier la liste complète des candidats sur le site du Ministère pour la transparence"
+      ],
+      "answer": 0,
+      "explain": "Finalité, minimisation et durée limitée sont les principes de base de la protection des données personnelles ; les modalités précises sont à vérifier dans le texte à jour. Collecter ou conserver sans limite, ou publier, les méconnaît.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 001/2011 du 25 septembre 2011 relative à la protection des données à caractère personnel, modifiée par la loi n° 025/2023",
+          "art": "principes généraux",
+          "url": "https://www.afapdp.org/wp-content/uploads/2023/12/Gabon-Loi-025-2023-du-12-juillet-2023-portant-modification-de-la-loi-001-2011-du-25-septembre-relative-a-la-protection-des-donnees-a-caractere-personnel.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-donnees-070",
+      "theme": "Sécurité informatique et protection des données",
+      "level": 3,
+      "q": "Le Ministère veut permettre à des candidats de consulter des données à distance. Quel dispositif de sécurité est le plus complet ?",
+      "choices": [
+        "Un mot de passe unique distribué à tous les candidats, changé chaque année",
+        "Un accès libre sur Internet, protégé seulement par un accord signé au préalable",
+        "Un envoi des données par courriel non chiffré à chaque candidat qui les demande",
+        "Comptes nominatifs à second facteur, droits limités, chiffrement et journal"
+      ],
+      "answer": 3,
+      "explain": "La combinaison identification forte, moindre privilège, chiffrement et traçabilité protège confidentialité et intégrité. Le mot de passe commun supprime l’imputabilité ; l’accord seul ne protège pas techniquement ; le courriel non chiffré expose les données.",
+      "seconds": 110,
+      "status": "draft"
+    },
+    {
+      "id": "min-donnees-071",
+      "theme": "Sécurité informatique et protection des données",
+      "level": 3,
+      "q": "Après un incident, vous constatez que des données de production ont été modifiées sans trace. Quelle mesure corrective est la plus pertinente ?",
+      "choices": [
+        "Supprimer les anciens journaux pour libérer de l’espace sur le serveur et gagner en rapidité",
+        "Donner à tous les droits d’écriture afin de corriger plus vite les données altérées",
+        "Journaliser les accès, limiter les droits d’écriture et restaurer une sauvegarde saine",
+        "Ne rien changer, puisque l’erreur est déjà commise et ne se reproduira sans doute pas"
+      ],
+      "answer": 2,
+      "explain": "La traçabilité et la limitation des droits protègent l’intégrité, et la restauration rétablit les données saines. Les autres réponses aggravent la situation ou renoncent à corriger.",
+      "seconds": 100,
+      "status": "draft"
+    }
+  ]
+}

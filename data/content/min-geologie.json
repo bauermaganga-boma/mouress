@@ -1,0 +1,1656 @@
+{
+  "profile": "min-geologie",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Bassins sédimentaires du Gabon",
+      "theme": "Bassins sédimentaires du Gabon",
+      "minutes": 11,
+      "body": "Le Gabon est situé sur la marge passive de l'Atlantique Sud. Au Crétacé inférieur, l'ouverture de cet océan, qui sépare l'Afrique de l'Amérique du Sud, a créé un **rift** puis une marge où se sont accumulés des sédiments. C'est le **bassin côtier** (parfois appelé bassin salifère gabonais), exploré à terre, sur le plateau continental et désormais en eau profonde.\n\n**Colonne sédimentaire simplifiée** (d'après la littérature publiée, à confirmer avec les rapports du Ministère) :\n\n- **Socle** précambrien.\n- **Rift (syn-rift)** : sédiments fluviatiles et lacustres. On y trouve les schistes lacustres des formations **Melania** et **Kissenda**, principales roches mères, et les grès de la formation **Dentale**, réservoir.\n- **Transgression marine** : grès littoraux de **Gamba**, réservoir majeur, puis schistes de **Vemba** (l'orthographe varie selon les auteurs).\n- **Sel aptien**, appelé sel d'Ezanga dans plusieurs publications, déposé dans un bassin restreint. Il sert de couverture et déforme les couches qui le surmontent.\n- **Post-sel** : plateforme carbonatée albienne de **Madiela**, puis séries du Crétacé supérieur et du Tertiaire, plus récentes.\n\nOn parle donc de **pré-sel** pour ce qui se trouve sous la couche de sel (rift et transition) et de **post-sel** pour ce qui se trouve au-dessus. Les champs de **Rabi-Kounga** et de **Gamba** produisent sous le sel aptien. En 2013, le puits **Diaman-1** (bloc Diaba, environ 1 700 m d'eau) a rencontré du gaz et du condensat dans la formation Dentale : il a montré que le jeu pré-sel peut exister en mer profonde.\n\n**Vocabulaire et loi.** Un **système pétrolier** réunit une roche mère, un chemin de migration, un réservoir, une couverture et un piège, avec un bon synchronisme. La loi n° 002/2019 définit la zone conventionnelle (0 à 500 m d'eau) et la zone de mer profonde et très profonde (au-delà de 500 m) à l'article 9. Cette distinction a des effets pratiques, par exemple sur la durée des autorisations de production (article 89). Le domaine pétrolier est découpé en blocs (article 15).\n\n**Ne pas confondre.** Le bassin intérieur de Franceville est un bassin très ancien (paléoprotérozoïque) : son histoire n'a rien à voir avec celle du bassin côtier, et on ne peut pas lui appliquer le même modèle de roche mère et de réservoir sans preuve.\n\n**Exemple d'usage.** Un opérateur présente un prospect en eau profonde en citant Rabi-Kounga comme analogue. L'agent doit demander ce qui est comparable (nature du réservoir, mode de piégeage, profondeur d'enfouissement, origine de la charge en hydrocarbures) avant de retenir l'argument. Un analogue n'est une preuve que si le contexte géologique est réellement similaire.\n\n**Méfiance utile.** La formation d'un agent chargé du contrôle consiste d'abord à savoir où il se trouve dans la colonne et ce qui est prouvé : une roche mère mature, un réservoir foré, un piège cartographié. Chacun de ces éléments doit être appuyé par une donnée précise, pas par un récit.",
+      "keyPoints": [
+        "Bassin côtier gabonais : marge passive née de l'ouverture de l'Atlantique Sud au Crétacé inférieur.",
+        "Roches mères lacustres du rift : Melania et Kissenda ; réservoirs : Dentale (rift) et Gamba (transgression).",
+        "Sel aptien : couverture du pré-sel et source de difficultés d'imagerie pour le post-sel.",
+        "Zone conventionnelle (0 à 500 m) et mer profonde (au-delà de 500 m) : définitions de l'article 9 de la loi n° 002/2019.",
+        "Un analogue (Rabi-Kounga, Diaman-1) n'est valable que si réservoir, piège et charge sont comparables."
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Sismique 2D et 3D : acquisition et traitement",
+      "theme": "Sismique 2D et 3D : acquisition et traitement",
+      "minutes": 11,
+      "body": "La **sismique réflexion** consiste à émettre une onde acoustique dans le sous-sol et à enregistrer les échos renvoyés par les interfaces entre couches de nature différente (contraste d'*impédance acoustique*, produit de la vitesse par la masse volumique). Le temps d'aller-retour de l'onde, ou *temps double*, permet de situer ces interfaces.\n\n**Acquisition.** En mer, la source est un réseau de **canons à air** tracté par un navire ; les récepteurs (hydrophones) sont placés dans des **flûtes sismiques** longues de plusieurs kilomètres. À terre, on emploie des **camions vibrateurs** ou des charges explosives, enregistrées par des géophones. En eau profonde ou sous le sel, des flûtes plus longues et plusieurs navires aident à mieux éclairer les cibles.\n\n- **2D** : une ligne donne une coupe verticale. Les lignes sont espacées de plusieurs centaines de mètres à plusieurs kilomètres : on cartographie par interpolation entre lignes, avec un risque de manquer ou de déformer un piège plus étroit que l'espacement.\n- **3D** : un maillage dense de sources et de récepteurs donne un volume (« cube »). La *maille* est la plus petite cellule de l'image (par exemple 12,5 m sur 25 m, valeur d'exemple). La *couverture* est le nombre de traces sommées par point : elle améliore le rapport signal sur bruit approximativement comme la racine carrée de ce nombre.\n\n**Résolution.** Elle dépend de la longueur d'onde λ = v / f. Exemple chiffré : v = 3 000 m/s et fréquence dominante 30 Hz donnent λ = 100 m. La résolution verticale est de l'ordre de λ/4, soit environ 25 m : un banc de grès de 8 m d'épaisseur n'est donc pas distinct, il est seulement perçu par un effet global. En profondeur, les fréquences diminuent et la résolution se dégrade.\n\n**Traitement.** Il transforme les enregistrements bruts (formats de terrain, par exemple SEG-D) en image (formats de sortie, par exemple SEG-Y). Séquence typique : édition des traces, corrections statiques (à terre), atténuation du bruit, **déconvolution** (affiner l'impulsion), **analyse des vitesses**, correction dynamique, **sommation**, puis **migration**. La migration replace les réflecteurs pentés et les diffractions à leur vraie position ; la migration en profondeur avant sommation est nécessaire sous le sel, où les vitesses varient brutalement.\n\n**Pour l'agent de contrôle.** Ne jamais juger un cube sans le rapport d'acquisition (géométrie, couverture, source) ni le rapport de traitement (paramètres, filtres, modèle de vitesse). Deux traitements d'un même jeu de données peuvent donner des structures différentes. Selon l'article 12 de la loi n° 002/2019, le contracteur transmet données et études au Ministère au fur et à mesure de leur acquisition : l'agent peut donc réclamer les données de terrain et les versions successives traitées, pas seulement l'image finale.",
+      "keyPoints": [
+        "La sismique réflexion mesure le temps d'aller-retour d'ondes réfléchies aux contrastes d'impédance acoustique.",
+        "2D : coupe sous une ligne ; 3D : volume, grâce à un maillage dense de sources et récepteurs.",
+        "Résolution verticale ≈ λ/4 : avec 3 000 m/s et 30 Hz, environ 25 m (exemple).",
+        "Traitement : déconvolution, analyse des vitesses, sommation, migration ; en profondeur avant sommation sous le sel.",
+        "Exiger rapports d'acquisition et de traitement et données de terrain (article 12 de la loi n° 002/2019)."
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Interprétation sismique et incertitudes",
+      "theme": "Interprétation sismique et incertitudes",
+      "minutes": 10,
+      "body": "L'**interprétation** transforme un cube ou des lignes en cartes de structures et en modèles de pièges. Elle suit des étapes précises, et chacune introduit des incertitudes que l'agent doit savoir repérer.\n\n**1. Calage puits-sismique.** Un **sismogramme synthétique** est calculé à partir des diagraphies de vitesse et de densité d'un puits ; il est comparé à la trace sismique réelle. Il permet de relier une formation connue en profondeur à un réflecteur lu en temps. Sans calage, un « horizon » n'est qu'une hypothèse.\n\n**2. Pointé des horizons et des failles.** L'interprète suit un réflecteur de trace en trace et repère les failles qui le décalent. Dans le sel et en zones complexes, plusieurs scénarios sont possibles.\n\n**3. Cartes en temps puis en profondeur.** Les cartes sont d'abord en *temps double*. La conversion en profondeur exige un **modèle de vitesse**. Exemple : un réflecteur à 2 000 ms (temps double) avec une vitesse moyenne de 2 500 m/s est à 2 500 × 2,0 / 2 = **2 500 m**. Oublier la division par deux est une erreur classique. Une incertitude de 5 % sur la vitesse donne ici environ 125 m d'écart en profondeur.\n\n**4. Piège et fermeture.** Un piège est efficace si une surface est *fermée* (le sommet de la structure est entouré de courbes de niveau fermées jusqu'au point de fuite). Une fermeture de 30 m, avec une incertitude de conversion de ± 40 m, n'est pas démontrée.\n\n**Pièges de lecture.**\n\n- **Remontée apparente (en temps)** : sous un corps rapide comme le sel ou un carbonate, les réflecteurs sous-jacents semblent plus hauts en temps, ce qui peut créer une fausse structure.\n- **Anomalies d'amplitude** : une forte amplitude peut venir d'un gaz, mais aussi d'un carbonate, d'un sel ou d'un banc dur. C'est un indice, à confirmer par la variation de l'amplitude avec le déport et par les puits voisins.\n- **Interprétation unique** : une présentation honnête montre des scénarios alternatifs et leur effet sur les volumes.\n\n**Retour d'expérience.** Après un forage, l'écart entre profondeur prévue et profondeur réelle du réservoir doit être analysé : il révèle les défauts du modèle de vitesse et sert à recalibrer les prospects voisins. Le rapport de fin de sondage et les données de puits sont à transmettre au Ministère (article 12 de la loi n° 002/2019).\n\n**Réflexe de contrôle.** Pour chaque carte présentée, poser trois questions : de quel horizon s'agit-il et comment est-il calé sur un puits ? quelle vitesse a servi à la conversion ? quelle marge d'erreur en profondeur et quel effet sur la fermeture et le volume ?",
+      "keyPoints": [
+        "Un horizon doit être calé sur un puits par un sismogramme synthétique.",
+        "Profondeur = vitesse moyenne × temps double / 2 (exemple : 2 500 m/s et 2 000 ms donnent 2 500 m).",
+        "Une fermeture inférieure à l'incertitude de conversion n'est pas démontrée.",
+        "Sous le sel ou un carbonate rapide, la remontée apparente peut créer de fausses structures.",
+        "Une anomalie d'amplitude est un indice, jamais une preuve d'hydrocarbures."
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Diagraphies et carottes",
+      "theme": "Diagraphies et carottes",
+      "minutes": 11,
+      "body": "Les **diagraphies** sont des mesures continues le long d'un puits, enregistrées par des outils descendus au câble ou intégrés au train de forage. Les **carottes** sont des échantillons de roche. Ensemble, ils fournissent la vérité de terrain qui sert à étalonner la sismique.\n\n**Principales mesures.**\n\n- **Rayonnement gamma naturel** : élevé dans les schistes (argiles), faible dans les grès et carbonates propres. Sert à repérer les couches réservoirs.\n- **Résistivité** : les hydrocarbures résistent au courant, l'eau salée de formation le conduit. Une zone très résistante et poreuse suggère des hydrocarbures.\n- **Densité, neutron, sonique** : donnent la porosité et la nature de la roche. Un **croisement neutron-densité** (densité apparente plus faible que le neutron dans un réservoir propre) évoque du gaz.\n- **Calibre** et **imagerie de paroi** : état du trou, fractures, pendages.\n\n**Calculs de base (valeurs d'exemple).**\n\n- *Porosité densité* : φ = (ρ matrice − ρ mesurée) / (ρ matrice − ρ fluide). Avec 2,65 ; 2,35 et 1,00 g/cm³ : φ = 0,30 / 1,65 ≈ **0,18**.\n- *Loi d'Archie* : Sw = [(a × Rw) / (φ^m × Rt)]^(1/n). Avec a = 1, m = n = 2, Rw = 0,05 Ω·m, φ = 0,20 et Rt = 20 Ω·m : Sw = √(0,05 / 0,8) = **0,25**, soit 75 % d'hydrocarbures dans les pores.\n- *Épaisseur utile* : somme des intervalles qui respectent des **seuils de coupure** (porosité minimale, argilosité maximale, saturation maximale). Elle change selon les seuils : un rapport sérieux les indique et les justifie.\n\n**Carottes.** Une carotte conventionnelle est prélevée avec une couronne creuse et donne un cylindre continu ; une carotte de paroi est un petit échantillon prélevé après forage ; les **déblais** sont des fragments remontés par la boue. Les analyses courantes mesurent porosité, perméabilité et densité de grain. Les analyses spéciales mesurent pression capillaire, perméabilités relatives ou sensibilité à la contrainte. La carotte sert à étalonner les diagraphies : une perméabilité de laboratoire de 150 mD contre 20 mD à l'essai de puits s'explique souvent par un effet d'échelle ou de fractures, pas par une faute.\n\n**Cadre juridique.** Les données et les études acquises lors des opérations pétrolières sont la propriété exclusive de l'État (article 10 de la loi n° 002/2019) et ne peuvent être divulguées à un tiers sans accord de l'autorité compétente (article 12). Le sort exact des carottes et des échantillons dépend du contrat et des textes d'application : l'agent s'y reporte avant d'autoriser leur envoi à l'étranger ou leur destruction.",
+      "keyPoints": [
+        "Gamma naturel : repère les argiles ; résistivité : distingue hydrocarbures et eau salée.",
+        "Porosité densité : (ρ matrice − ρ mesurée) / (ρ matrice − ρ fluide), soit ≈ 0,18 dans l'exemple.",
+        "Archie : avec les valeurs de l'exemple, Sw = 0,25, soit 75 % d'hydrocarbures.",
+        "L'épaisseur utile dépend des seuils de coupure, qui doivent être précisés et justifiés.",
+        "Données et études : propriété de l'État (article 10) ; sort des carottes : contrat et textes à vérifier."
+      ]
+    },
+    {
+      "id": "m5",
+      "title": "Évaluation du potentiel d'un bloc",
+      "theme": "Évaluation du potentiel d'un bloc",
+      "minutes": 12,
+      "body": "Évaluer le potentiel d'un bloc, c'est estimer **ce qu'il peut contenir** et **avec quelle probabilité**. Un agent du Ministère n'a pas à refaire le travail de l'opérateur, mais à vérifier que la méthode est complète et cohérente.\n\n**1. Le système pétrolier.** Il faut démontrer ou estimer cinq éléments : roche mère, migration, réservoir, couverture, piège, plus le *synchronisme* (le piège existait avant la charge). Chacun reçoit une probabilité.\n\n**2. Probabilité de succès géologique (Pg).** C'est le produit des probabilités des éléments, supposés indépendants. Exemple (valeurs fictives) : roche mère 0,8 ; réservoir 0,7 ; piège 0,6 ; migration et couverture 0,7. Pg = 0,8 × 0,7 × 0,6 × 0,7 ≈ **0,24**.\n\n**3. Volume.** Le volume d'huile en place se calcule ainsi : surface × épaisseur utile × porosité × (1 − Sw) / Bo (facteur volumétrique de fond). Exemple : 20 km² (20 × 10⁶ m²), 15 m, φ = 0,18, Sw = 0,30, Bo = 1,2 donnent 31,5 millions de m³, soit environ **198 millions de barils** (1 m³ ≈ 6,29 barils). Avec un taux de récupération de 25 %, on obtient environ 50 millions de barils récupérables.\n\n**4. Fourchettes.** Chaque paramètre est incertain. On présente des volumes **P90** (valeur qu'on a 90 % de chances de dépasser, estimation basse), **P50** (médiane) et **P10** (estimation haute). Les ressources non découvertes sont dites **prospectives**.\n\n**5. Classification.** Selon le système de gestion des ressources pétrolières (PRMS, normes professionnelles), les ressources prospectives sont des quantités potentiellement récupérables d'accumulations non encore découvertes. Elles ne sont pas des réserves : une réserve suppose une découverte et un projet de développement commercialement viable. En droit gabonais, la commercialité d'un gisement fait l'objet d'une déclaration signée par l'État et le contracteur (article 64 de la loi n° 002/2019).\n\n**6. Valeur espérée.** Valeur monétaire espérée = Pg × valeur en cas de succès − coût du puits (valeurs d'exemple : 0,2 × 300 M$ − 40 M$ = 20 M$). Un prospect isolé peut être mal noté ; un **portefeuille** de prospects répartit le risque.\n\n**Cas de comparaison.** Bloc A : Pg 30 %, P50 de 50 Mbbl ; bloc B : Pg 10 %, P50 de 300 Mbbl. Volumes risqués : A = 15 ; B = 30. B a une espérance plus forte mais un risque d'échec plus élevé. La décision dépend aussi des coûts, des infrastructures voisines et de la tolérance au risque : il n'existe pas de réponse unique.\n\n**Vigilance.** Lorsqu'une communication annonce « 500 millions de barils » à propos d'un prospect, il s'agit de ressources prospectives risquées, pas de réserves.",
+      "keyPoints": [
+        "Cinq éléments du système pétrolier, plus le synchronisme, chacun avec une probabilité.",
+        "Pg = produit des probabilités : 0,8 × 0,7 × 0,6 × 0,7 ≈ 0,24 (exemple fictif).",
+        "Volume d'huile en place = surface × épaisseur utile × porosité × (1 − Sw) / Bo.",
+        "P90 = estimation basse, P50 = médiane, P10 = estimation haute.",
+        "Ressources prospectives ne sont pas des réserves ; commercialité déclarée selon l'article 64 de la loi n° 002/2019."
+      ]
+    },
+    {
+      "id": "m6",
+      "title": "Lecture critique d'un rapport d'exploration",
+      "theme": "Lecture critique d'un rapport d'exploration",
+      "minutes": 10,
+      "body": "Un rapport d'exploration (rapport d'activité, rapport de fin de sondage, étude de prospect) est un document de **plaidoyer** autant qu'un document technique. L'agent du Ministère doit pouvoir le lire de façon critique, avec méthode.\n\n**Base légale.** Le titulaire d'une autorisation fournit aux services compétents un rapport sur l'état de ses activités et toute information technique, économique et financière utile, dans les conditions et délais requis (article 182 de la loi n° 002/2019). En cas de découverte, il informe en priorité et sans délai l'administration (article 63) ; il engage les travaux d'appréciation dans les 18 mois (zone conventionnelle) ou 24 mois (mer profonde et très profonde) après notification (article 64).\n\n**Grille de lecture en six questions.**\n\n1. **Les données soutiennent-elles la conclusion ?** Chaque affirmation doit renvoyer à une figure, une diagraphie, un essai. « Puits sec » sans diagraphies ni rapport de forage est une conclusion non étayée.\n2. **Les calculs sont-ils reproductibles ?** Exemple : une surface de 10 km², 20 m d'épaisseur utile, φ = 0,20, Sw = 0,30 et Bo = 1,25 donnent environ 141 millions de barils. Un rapport qui annonce 300 millions avec les mêmes paramètres doit s'en expliquer.\n3. **Les paramètres sont-ils stables ?** Passer de Sw = 0,30 à Sw = 0,20 sans justification fait gagner environ 14 % de volume (0,80 / 0,70). Un changement de paramètre non documenté est un signal d'alerte.\n4. **L'incertitude est-elle chiffrée ?** On attend une fourchette P90 à P10 et des scénarios alternatifs, pas un chiffre unique.\n5. **La qualité des données est-elle suffisante ?** Quelques anciennes lignes 2D de qualité médiocre ne justifient pas un forage coûteux sur un piège étroit.\n6. **L'auteur est-il indépendant ?** Un bureau d'études payé par l'opérateur peut être compétent, mais ne dispense pas du recoupement avec les données que l'État détient (articles 10 et 12).\n\n**Réflexes pratiques.** Comparer le texte, les cartes et les tableaux (mêmes unités, mêmes surfaces) ; vérifier les échelles et les systèmes de coordonnées ; distinguer ce qui est mesuré (puits), calculé (volume) et supposé (analogue) ; noter les écarts entre rapports successifs ; demander les fichiers numériques plutôt que des images.\n\n**Une découverte annoncée** sans résultats d'essais de production ne peut être jugée : l'agent réclame les données d'essai avant toute conclusion sur son caractère commercial.\n\n**Produire un avis.** Une note de contrôle claire se compose de quatre parties : ce qui est démontré, ce qui est supposé, les incohérences, les demandes précises adressées à l'opérateur avec un délai.",
+      "keyPoints": [
+        "Obligation de rapport sur l'état des activités : article 182 de la loi n° 002/2019.",
+        "Découverte : information sans délai (art. 63) ; appréciation sous 18 ou 24 mois (art. 64).",
+        "Toute conclusion doit renvoyer à une donnée ; recalculer les volumes avec les paramètres annoncés.",
+        "Un changement de paramètre non justifié (Sw, épaisseur utile, surface) est un signal d'alerte.",
+        "Distinguer le mesuré, le calculé et le supposé ; terminer par des demandes précises et datées."
+      ]
+    },
+    {
+      "id": "m7",
+      "title": "Programme minimum de travaux et suivi",
+      "theme": "Programme minimum de travaux et suivi",
+      "minutes": 10,
+      "body": "Le **programme minimum de travaux** est l'engagement d'exploration pris par le contracteur dans le contrat. Il est l'un des principaux leviers de contrôle de l'État sur un bloc.\n\n**Textes.** Le contrat d'exploration et de partage de production comporte notamment un programme minimum de travaux, les modalités de récupération des coûts pétroliers et le partage de la production (article 61 de la loi n° 002/2019). L'autorisation exclusive d'exploration donne le droit exclusif de réaliser sismique, forages d'exploration et d'appréciation (article 81). La période d'exploration dure **huit ans**, en phases fixées par le contrat, prorogeable d'un an ; les extensions de phases n'excèdent pas douze mois toutes phases confondues ; la durée totale ne peut dépasser **dix ans** (article 83).\n\n**Contenu usuel.** Chaque phase prévoit des engagements en unités de travail : kilomètres de sismique 2D, kilomètres carrés de 3D, retraitement de données anciennes, études, nombre de puits avec profondeur ou formation objectif, avec un **engagement financier minimum**. Les modalités précises sont celles du contrat : l'agent lit le texte, il ne présume rien.\n\n**Sanction.** Le contracteur qui n'exécute pas tout ou partie du programme minimum est passible d'une pénalité calculée proportionnellement à la valeur de l'engagement financier minimum (article 270), sans préjudice des autres sanctions prévues par le contrat. Exemple (valeurs fictives) : 3D de 500 km² évaluée à 15 M$, un puits à 40 M$ ; si seul le 3D est réalisé, la part non exécutée est de 40 / 55, soit environ 73 %. La formule réelle de pénalité est celle du contrat.\n\n**Suivi.** Il passe par des **comités techniques de suivi** et par des rapports. Le contracteur qui, malgré mise en demeure, ne tient pas ces réunions encourt une pénalité de 10 à 100 millions de francs CFA (article 277). Le retard dans la transmission des données, études et rapports, après mise en demeure de quinze jours, entraîne une pénalité de 500 000 à 5 000 000 de francs CFA (article 267) : c'est une sanction distincte de l'inexécution du programme.\n\n**Cas pratiques.**\n\n- *Substituer un puits par du retraitement sismique* : seule la voie prévue par le contrat peut le permettre. La renégociation intervient dans les conditions du contrat (article 45), et un simple échange de courriers ne modifie pas un engagement.\n- *Puits arrêté avant l'objectif* : on vérifie la définition contractuelle d'un puits réalisé (profondeur minimale ou formation).\n- *Demande d'extension de 18 mois* : refusée, car les extensions de phases sont plafonnées à douze mois en tout.\n\n**Bonne pratique.** Tenir un tableau de bord par bloc : engagements, dates, travaux réalisés, preuves reçues, écarts, décisions.",
+      "keyPoints": [
+        "Programme minimum de travaux : clause du contrat d'exploration et de partage de production (art. 61).",
+        "Exploration : 8 ans, prorogation d'un an, extensions limitées à 12 mois en tout, 10 ans au maximum (art. 83).",
+        "Inexécution : pénalité proportionnelle à l'engagement financier minimum (art. 270).",
+        "Retard de transmission des données : pénalité de 500 000 à 5 000 000 de francs CFA après mise en demeure de 15 jours (art. 267).",
+        "Comités techniques de suivi : pénalité de 10 à 100 millions de francs CFA en cas de refus malgré mise en demeure (art. 277)."
+      ]
+    },
+    {
+      "id": "m8",
+      "title": "Restitution des données à l'État et cadastre",
+      "theme": "Restitution des données à l'État et cadastre",
+      "minutes": 10,
+      "body": "Les données géologiques et géophysiques sont l'un des principaux actifs de l'État. Le cadre légal et la pratique de restitution reposent sur quelques articles simples de la loi n° 002/2019 du 16 juillet 2019.\n\n**Propriété.** Les ressources d'hydrocarbures, les infrastructures essentielles, les études, les données et les informations du cadastre acquises ou réalisées dans le cadre des opérations pétrolières sont la propriété exclusive de l'État (article 10).\n\n**Obligation de transmettre.** Le contracteur transmet les données, études et informations au Ministère en charge des hydrocarbures **au fur et à mesure de leur acquisition**. Il peut les utiliser dans le seul cadre de la conduite des opérations pétrolières et ne peut les divulguer à un tiers sans l'accord préalable de l'autorité compétente (article 12). Le retard de transmission, après mise en demeure de quinze jours, est puni d'une pénalité de 500 000 à 5 000 000 de francs CFA (article 267).\n\n**Cadastre des hydrocarbures.** Défini à l'article 9, c'est la cartographie délimitant les surfaces en blocs à explorer ou en exploration, à exploiter ou en exploitation. Le domaine pétrolier est découpé en blocs dont la liste et les coordonnées sont établies par voie réglementaire. Les informations relatives aux blocs et aux titres sont consignées dans le cadastre tenu par le Ministère et publiées dans les conditions fixées par voie réglementaire (article 15). Il faut distinguer les informations de blocs et de titres, publiables selon cette réglementation, et les données techniques, confidentielles selon l'article 12.\n\n**Ce que l'on doit recevoir (pratique usuelle, précisée par le contrat).**\n\n- Sismique : données de terrain (par exemple au format SEG-D), données traitées (SEG-Y), rapports d'acquisition et de traitement, données de navigation.\n- Puits : diagraphies (par exemple formats LAS ou DLIS), rapport de fin de sondage, résultats d'essais, analyses de carottes.\n- Pour chaque lot : **métadonnées** (système de coordonnées, référence d'altitude, unités, date, auteur). Sans elles, une donnée n'est pas exploitable.\n\n**Gestion.** Selon le site du Ministère, la Direction des affaires économiques, juridiques et de la gestion des données figure parmi les directions citées ; l'organisation ayant évolué, elle est à confirmer. Un bon service tient un **registre** (qui a livré quoi, quand, sous quel format), contrôle la lisibilité des supports, conserve des copies sûres et trace chaque consultation.\n\n**Cas pratiques.**\n\n- *Cession de droits* : l'entrée d'un partenaire ne l'autorise pas à recevoir les données sans accord préalable ; la cession elle-même est soumise à l'approbation de l'autorité compétente (article 54).\n- *Fin de titre* : l'ancien titulaire ne peut réutiliser les données pour un autre projet sans accord (article 12). L'accès d'un tiers aux données d'un bloc rendu relève de l'État propriétaire, dans les règles en vigueur.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+      "keyPoints": [
+        "Données, études et informations du cadastre : propriété exclusive de l'État (art. 10).",
+        "Transmission au Ministère au fur et à mesure de l'acquisition ; divulgation à un tiers sous accord préalable (art. 12).",
+        "Cadastre : cartographie des blocs (art. 9), tenu par le Ministère, informations de blocs et titres publiées selon la réglementation (art. 15).",
+        "Retard de transmission : mise en demeure de 15 jours puis pénalité de 500 000 à 5 000 000 de francs CFA (art. 267).",
+        "Un lot de données est exploitable seulement avec ses métadonnées et ses rapports d'acquisition."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "min-geologie-001",
+      "theme": "Bassins sédimentaires du Gabon",
+      "level": 1,
+      "q": "Quel phénomène géologique est à l'origine du bassin côtier gabonais ?",
+      "choices": [
+        "Une collision continentale au Paléozoïque ayant plissé l'ensemble de la marge",
+        "Le dépôt d'un delta moderne au Quaternaire sur un socle resté stable",
+        "L'ouverture de l'Atlantique Sud au Crétacé inférieur, avec rift puis dérive des continents",
+        "L'effondrement d'un bassin intracratonique précambrien sans lien avec l'océan"
+      ],
+      "answer": 2,
+      "explain": "Le bassin côtier appartient à la marge passive atlantique : le rift du Crétacé inférieur a créé l'espace d'accumulation, suivi du dépôt du sel aptien puis de séries marines. Les autres propositions décrivent d'autres contextes, notamment celui du bassin intérieur de Franceville, beaucoup plus ancien.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "GeoExpro, « New plays from old : frontier exploration at the western edge of Gabon's salt basin »",
+          "art": "",
+          "url": "https://geoexpro.com/new-plays-from-old/"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-002",
+      "theme": "Bassins sédimentaires du Gabon",
+      "level": 1,
+      "q": "Que désigne-t-on par « pré-sel » dans le bassin gabonais ?",
+      "choices": [
+        "Les formations situées sous la couche de sel aptien, du rift à la transition marine",
+        "Les hydrocarbures stockés avant leur envoi vers une raffinerie",
+        "Les roches du socle précambrien situées sous les sédiments",
+        "Les puits situés à plus de 500 m de profondeur d'eau"
+      ],
+      "answer": 0,
+      "explain": "Le pré-sel est une position stratigraphique : ce qui se trouve sous le sel (Melania, Kissenda, Dentale, Gamba). La profondeur d'eau (zone conventionnelle ou mer profonde) est un tout autre critère, défini à l'article 9 de la loi.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "GeoExpro, « New plays from old : frontier exploration at the western edge of Gabon's salt basin »",
+          "art": "",
+          "url": "https://geoexpro.com/new-plays-from-old/"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-003",
+      "theme": "Bassins sédimentaires du Gabon",
+      "level": 1,
+      "q": "Quel est le rôle des formations Melania et Kissenda dans le système pétrolier du sud du Gabon ?",
+      "choices": [
+        "Ce sont des grès littoraux qui jouent le rôle de réservoirs principaux",
+        "Ce sont des évaporites qui assurent l'étanchéité du piège",
+        "Ce sont des carbonates de plateforme qui servent de réservoirs post-sel",
+        "Ce sont des schistes lacustres du rift qui jouent le rôle de roches mères"
+      ],
+      "answer": 3,
+      "explain": "Melania et Kissenda sont des schistes lacustres riches en matière organique, déposés pendant le rift. Les grès sont plutôt Dentale et Gamba, le sel est l'évaporite aptienne, et les carbonates correspondent à la plateforme albienne de Madiela.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "AAPG, Search and Discovery, 2018 (Rodriguez et Hodgson), jeu pré-sel du sud du Gabon",
+          "art": "",
+          "url": "https://www.searchanddiscovery.com/abstracts/html/2018/ice2018/abstracts/2992315.html"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-004",
+      "theme": "Bassins sédimentaires du Gabon",
+      "level": 1,
+      "q": "Quelles formations constituent des réservoirs gréseux du pré-sel gabonais ?",
+      "choices": [
+        "Melania et Kissenda, déposées dans des lacs profonds",
+        "Dentale (rift) et Gamba (transgression marine)",
+        "Ezanga et Madiela, déposées en milieu évaporitique",
+        "Vemba et Melania, formées de schistes marins"
+      ],
+      "answer": 1,
+      "explain": "Dentale et Gamba sont les réservoirs gréseux cités par la littérature (champs de Rabi-Kounga et de Gamba, découverte de Diaman-1). Melania, Kissenda et Vemba sont des schistes ; Ezanga est le sel et Madiela une plateforme carbonatée.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "GeoExpro, « New plays from old : frontier exploration at the western edge of Gabon's salt basin »",
+          "art": "",
+          "url": "https://geoexpro.com/new-plays-from-old/"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-005",
+      "theme": "Bassins sédimentaires du Gabon",
+      "level": 2,
+      "q": "Un rapport indique que le sel aptien « complique le projet ». Quelle conséquence réelle le sel a-t-il sur un programme d'exploration ?",
+      "choices": [
+        "Il remplace la roche mère et fournit lui-même les hydrocarbures",
+        "Il rend le pré-sel inaccessible par forage, quelle que soit la technique",
+        "Il n'a d'effet que sur la qualité de l'eau de la boue de forage",
+        "Il peut jouer en couverture pour le pré-sel mais perturbe l'imagerie sismique des cibles situées dessous"
+      ],
+      "answer": 3,
+      "explain": "Le sel est un bon couvercle potentiel, mais sa vitesse élevée et sa géométrie irrégulière déforment l'image sismique, d'où la migration en profondeur. Il n'est pas une roche mère, et le pré-sel est foré (Rabi-Kounga, Gamba, Diaman-1).",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "AAPG, Search and Discovery, 2018 (Rodriguez et Hodgson), jeu pré-sel du sud du Gabon",
+          "art": "",
+          "url": "https://www.searchanddiscovery.com/abstracts/html/2018/ice2018/abstracts/2992315.html"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-006",
+      "theme": "Bassins sédimentaires du Gabon",
+      "level": 2,
+      "q": "Vous êtes chef de service. Un dossier concerne un bloc dont la profondeur d'eau est de 800 m. Dans quelle catégorie de la loi n° 002/2019 le classez-vous ?",
+      "choices": [
+        "En zone conventionnelle, car celle-ci s'étend jusqu'à 1 000 m de profondeur d'eau selon la loi",
+        "En zone de mer profonde et très profonde, car la profondeur dépasse 500 m",
+        "En zone conventionnelle, car 800 m reste inférieur à 2 000 m",
+        "En zone de mer très profonde uniquement, à partir de 1 500 m"
+      ],
+      "answer": 1,
+      "explain": "L'article 9 fixe la zone conventionnelle de 0 à 500 m ; au-delà de 500 m, il s'agit de la zone de mer profonde et très profonde. Cela a des effets, par exemple sur la durée des autorisations de développement et de production (article 89).",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 9 et art. 89",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-007",
+      "theme": "Bassins sédimentaires du Gabon",
+      "level": 2,
+      "q": "Un opérateur présente un prospect en eau profonde en invoquant Rabi-Kounga comme « analogue prouvé ». Quelle est votre demande ?",
+      "choices": [
+        "Comparer réservoir, piège, charge en hydrocarbures et profondeur d'enfouissement avant d'accepter l'analogie",
+        "Accepter l'analogie, puisque les deux sites sont au Gabon",
+        "Rejeter toute analogie, car un champ ne prouve jamais rien pour un autre",
+        "Exiger seulement le nom de la société qui exploite Rabi-Kounga"
+      ],
+      "answer": 0,
+      "explain": "Une analogie est valable seulement si les paramètres déterminants sont comparables. Appartenir au même pays ne suffit pas, mais refuser toute analogie est excessif : l'industrie s'en sert, sous réserve de justification.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "GeoExpro, « New plays from old : frontier exploration at the western edge of Gabon's salt basin »",
+          "art": "",
+          "url": "https://geoexpro.com/new-plays-from-old/"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-008",
+      "theme": "Bassins sédimentaires du Gabon",
+      "level": 2,
+      "q": "Un dossier affirme qu'un prospect post-sel sera chargé par les schistes Melania situés sous le sel. Quelle question posez-vous en priorité ?",
+      "choices": [
+        "Quel prix du baril, quel taux d'actualisation et quel calendrier de dépenses a-t-on retenus dans le plan d'affaires ?",
+        "Quelle est la couleur des cartes présentées ?",
+        "Par quel chemin les hydrocarbures traversent ou contournent-ils le sel pour atteindre le piège ?",
+        "Combien de navires sismiques ont été utilisés ?"
+      ],
+      "answer": 2,
+      "explain": "La charge d'un piège post-sel par une roche mère pré-sel suppose une migration à travers ou autour de la couche de sel (fenêtres, failles). C'est un maillon du système pétrolier, à démontrer ; les autres questions sont sans rapport avec ce risque.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "GeoExpro, « New plays from old : frontier exploration at the western edge of Gabon's salt basin »",
+          "art": "",
+          "url": "https://geoexpro.com/new-plays-from-old/"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-009",
+      "theme": "Bassins sédimentaires du Gabon",
+      "level": 3,
+      "q": "Le puits Diaman-1 (2013, environ 1 700 m d'eau) a rencontré du gaz et du condensat dans la formation Dentale. Quelle conclusion est correcte ?",
+      "choices": [
+        "Il prouve que tout le domaine pré-sel en eau profonde est commercial",
+        "Il montre qu'un jeu pré-sel peut fonctionner en mer profonde, mais ne prouve ni volume ni commercialité",
+        "Il prouve que le sel aptien est absent de la zone",
+        "Il prouve que la roche mère est située au-dessus du sel"
+      ],
+      "answer": 1,
+      "explain": "Un puits de découverte démontre la présence d'hydrocarbures, donc un système actif ; la commercialité exige une appréciation (volumes, essais) puis une déclaration de commercialité (article 64). Le sel est au contraire présent dans la région.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "GeoExpro, « New plays from old : frontier exploration at the western edge of Gabon's salt basin »",
+          "art": "",
+          "url": "https://geoexpro.com/new-plays-from-old/"
+        },
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 9",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-010",
+      "theme": "Bassins sédimentaires du Gabon",
+      "level": 3,
+      "q": "Un opérateur propose de transposer au bassin intérieur de Franceville le modèle de roche mère et de réservoir du bassin côtier. Quelle est votre réponse ?",
+      "choices": [
+        "Il est transposable car les deux bassins sont gabonais",
+        "Il est transposable car les deux bassins sont du même âge crétacé",
+        "Le modèle n'est pas transposable sans preuve : âge, histoire et roches sont différents, il faut des données propres au bassin",
+        "Il est impossible de forer dans un bassin intérieur, quelle que soit la preuve"
+      ],
+      "answer": 2,
+      "explain": "Le bassin de Franceville est paléoprotérozoïque, très antérieur au rift atlantique du Crétacé. Un modèle propre à la marge ne peut lui être appliqué sans données spécifiques ; il ne faut pas pour autant exclure tout travail, mais exiger une démonstration.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "GeoExpro, « New plays from old : frontier exploration at the western edge of Gabon's salt basin »",
+          "art": "",
+          "url": "https://geoexpro.com/new-plays-from-old/"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-011",
+      "theme": "Sismique 2D et 3D : acquisition et traitement",
+      "level": 1,
+      "q": "Que mesure la sismique réflexion ?",
+      "choices": [
+        "Le champ de gravité terrestre et ses variations locales à la surface du sol, mesurés par des gravimètres",
+        "La radioactivité naturelle des roches traversées par un puits",
+        "La conductivité électrique de l'eau de mer",
+        "Le temps d'aller-retour d'ondes acoustiques réfléchies par les interfaces entre couches"
+      ],
+      "answer": 3,
+      "explain": "La sismique réflexion émet une onde et enregistre ses échos aux contrastes d'impédance acoustique. Gravimétrie, diagraphie gamma et mesures de conductivité sont d'autres méthodes.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-012",
+      "theme": "Sismique 2D et 3D : acquisition et traitement",
+      "level": 1,
+      "q": "Quelles sont les sources sismiques les plus courantes en mer et à terre ?",
+      "choices": [
+        "Lasers en mer, associés à des marteaux-piqueurs à terre pour frapper le sol de façon répétée",
+        "Canons à air en mer ; camions vibrateurs ou charges explosives à terre",
+        "Sirènes de navire en mer ; aimants à terre",
+        "Magnétomètres en mer ; gravimètres à terre"
+      ],
+      "answer": 1,
+      "explain": "Les canons à air (mer) et les vibrateurs ou explosifs (terre) sont les sources de la sismique réflexion. Les autres appareils appartiennent à des méthodes différentes ou n'émettent pas d'énergie acoustique utilisable.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-013",
+      "theme": "Sismique 2D et 3D : acquisition et traitement",
+      "level": 1,
+      "q": "Quelle est la différence essentielle entre sismique 2D et sismique 3D ?",
+      "choices": [
+        "La 2D donne une coupe verticale sous une ligne ; la 3D donne un volume grâce à un maillage dense",
+        "La 2D mesure directement la profondeur, la 3D seulement le temps",
+        "La 3D n'utilise que des sources, jamais de récepteurs",
+        "La 2D est une technique plus récente que la 3D"
+      ],
+      "answer": 0,
+      "explain": "La 2D image un plan vertical sous la ligne ; la 3D enregistre un volume, utile pour cartographier précisément un piège. Les deux mesurent des temps, et la 3D est plus récente et plus coûteuse.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-014",
+      "theme": "Sismique 2D et 3D : acquisition et traitement",
+      "level": 1,
+      "q": "À quoi sert la migration dans le traitement sismique ?",
+      "choices": [
+        "À convertir directement les volumes de roche en barils récupérables à l'aide du facteur volumétrique",
+        "À supprimer uniquement le bruit des navires",
+        "À replacer les réflecteurs pentés et les diffractions à leur vraie position",
+        "À déplacer les hydrocarbures vers le piège"
+      ],
+      "answer": 2,
+      "explain": "La migration corrige l'effet des pendages et des diffractions pour que l'image représente la géométrie réelle du sous-sol. Elle n'a aucun effet sur les fluides ni sur les volumes en barils.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-015",
+      "theme": "Sismique 2D et 3D : acquisition et traitement",
+      "level": 2,
+      "q": "Dans un traitement, quelle séquence d'étapes est la plus logique ?",
+      "choices": [
+        "Édition des traces, déconvolution, analyse des vitesses, sommation, migration",
+        "Migration, sommation, édition des traces, analyse des vitesses",
+        "Sommation, édition, migration, déconvolution",
+        "Analyse des vitesses, migration, édition, déconvolution"
+      ],
+      "answer": 0,
+      "explain": "On nettoie d'abord les traces, on affine l'impulsion, on détermine les vitesses (nécessaires à la correction dynamique et à la sommation), puis on migre. Inverser ces étapes produit une image erronée.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-016",
+      "theme": "Sismique 2D et 3D : acquisition et traitement",
+      "level": 2,
+      "q": "Avec une vitesse de 3 000 m/s et une fréquence dominante de 30 Hz (valeurs d'exemple), peut-on distinguer un banc de grès de 8 m d'épaisseur ?",
+      "choices": [
+        "Oui : la sismique moderne distingue tout banc de plus de 1 m d'épaisseur, quelle que soit la profondeur",
+        "Oui : à condition de migrer les données en profondeur",
+        "Non : la résolution verticale est d'environ 25 m (λ/4), le banc n'est pas distinct",
+        "Non : un grès n'a jamais de contraste d'impédance avec un schiste"
+      ],
+      "answer": 2,
+      "explain": "λ = 3 000 / 30 = 100 m, d'où une résolution d'environ 25 m. Un banc de 8 m produit un effet d'ensemble mais n'est pas séparé. Le contraste d'impédance existe souvent, mais l'épaisseur est trop faible.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-017",
+      "theme": "Sismique 2D et 3D : acquisition et traitement",
+      "level": 2,
+      "q": "Pourquoi la couverture (nombre de traces sommées par point) est-elle un critère de contrôle d'une campagne 3D ?",
+      "choices": [
+        "Parce qu'elle fixe le prix du baril et détermine le montant des primes versées à l'État par l'opérateur",
+        "Parce qu'elle améliore le rapport signal sur bruit (environ la racine carrée du nombre de traces)",
+        "Parce qu'elle détermine la couleur de l'image",
+        "Parce qu'elle supprime le besoin de traitement"
+      ],
+      "answer": 1,
+      "explain": "La sommation renforce le signal cohérent et atténue le bruit aléatoire : doubler la couverture améliore le rapport d'environ 1,4. Elle ne dispense jamais d'un traitement soigné.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-018",
+      "theme": "Sismique 2D et 3D : acquisition et traitement",
+      "level": 2,
+      "q": "Un programme 2D prévoit des lignes espacées de 5 km pour cartographier un piège large de 2 km. Quel est votre avis ?",
+      "choices": [
+        "Le programme est suffisant : l'interpolation entre lignes comblera correctement les vides du maillage",
+        "Le programme est trop dense, il faut l'espacer davantage",
+        "L'espacement n'a pas d'importance si le navire est récent",
+        "Le piège peut passer entre deux lignes : il faut resserrer le maillage ou prévoir de la 3D"
+      ],
+      "answer": 3,
+      "explain": "Un piège plus étroit que l'espacement entre lignes peut passer entre deux lignes ; l'interpolation invente alors des structures. Un maillage plus serré ou la 3D s'impose.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-019",
+      "theme": "Sismique 2D et 3D : acquisition et traitement",
+      "level": 3,
+      "q": "Deux traitements d'un même jeu de données donnent des structures différentes de 120 m sous le sel. Que demandez-vous ?",
+      "choices": [
+        "De retenir la version qui donne la plus grande structure",
+        "De ne retenir aucune version et de refuser tout forage",
+        "Les modèles de vitesse, les paramètres de traitement et le calage sur les puits pour chaque version, afin de comparer",
+        "De retenir la version la plus récente sans autre examen"
+      ],
+      "answer": 2,
+      "explain": "Sous le sel, le modèle de vitesse commande la position des réflecteurs. L'écart doit être traité comme une incertitude chiffrée, à documenter : on compare, on cale sur les puits et on conserve les deux scénarios si l'écart subsiste.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-020",
+      "theme": "Sismique 2D et 3D : acquisition et traitement",
+      "level": 3,
+      "q": "Un opérateur remet un cube dont le filtrage a été renforcé « pour améliorer son aspect ». Quelle est la bonne conduite ?",
+      "choices": [
+        "Accepter le cube, puisqu'il est plus lisible",
+        "Détruire les anciennes versions pour éviter la confusion",
+        "Refuser tout cube filtré par principe",
+        "Réclamer les versions successives, les paramètres de filtrage et le rapport de traitement, ainsi que les données de terrain"
+      ],
+      "answer": 3,
+      "explain": "Un filtrage excessif peut supprimer des fréquences utiles et créer des artefacts. L'article 12 impose la transmission des données au fur et à mesure de leur acquisition, ce qui permet de réclamer données de terrain et versions successives.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-021",
+      "theme": "Interprétation sismique et incertitudes",
+      "level": 1,
+      "q": "À quoi sert un sismogramme synthétique ?",
+      "choices": [
+        "À relier les formations connues dans un puits aux réflecteurs lus en temps sur la sismique",
+        "À calculer la teneur en soufre du pétrole",
+        "À mesurer la pression dans le réservoir",
+        "À remplacer la carotte quand elle est perdue"
+      ],
+      "answer": 0,
+      "explain": "Calculé à partir des diagraphies de vitesse et de densité, il est comparé à la trace sismique réelle pour caler le puits en temps. Il ne mesure ni pression ni composition.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-022",
+      "theme": "Interprétation sismique et incertitudes",
+      "level": 1,
+      "q": "Que faut-il obligatoirement pour convertir une carte en temps en carte en profondeur ?",
+      "choices": [
+        "Un modèle de prix du pétrole",
+        "Une carte topographique du fond marin seulement",
+        "Un modèle de vitesse",
+        "Un inventaire des navires"
+      ],
+      "answer": 2,
+      "explain": "La profondeur se calcule à partir du temps et de la vitesse. Sans modèle de vitesse, la conversion n'est pas possible, et l'incertitude sur la vitesse devient une incertitude sur la profondeur.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-023",
+      "theme": "Interprétation sismique et incertitudes",
+      "level": 1,
+      "q": "Qu'appelle-t-on « pointé » d'un horizon ?",
+      "choices": [
+        "La mesure de la température et de la pression en fond de puits avant la descente du tubage",
+        "Le suivi d'un réflecteur de trace en trace pour en tracer la surface",
+        "Le calcul du facteur volumétrique du pétrole",
+        "L'inventaire des déblais de forage"
+      ],
+      "answer": 1,
+      "explain": "Le pointé consiste à suivre un même réflecteur sur la sismique pour établir sa carte. Les autres propositions relèvent d'autres métiers.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-024",
+      "theme": "Interprétation sismique et incertitudes",
+      "level": 1,
+      "q": "Qu'est-ce qu'une fermeture structurale ?",
+      "choices": [
+        "Une faille bouchée par un ciment",
+        "La fin d'une campagne sismique",
+        "La clôture administrative d'un dossier de permis",
+        "Une surface entourée de courbes de niveau fermées jusqu'au point de fuite, qui peut retenir des hydrocarbures"
+      ],
+      "answer": 3,
+      "explain": "La fermeture est la hauteur entre le sommet du piège et son point de fuite. C'est une condition géométrique du piégeage, à comparer à l'incertitude de conversion.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-025",
+      "theme": "Interprétation sismique et incertitudes",
+      "level": 2,
+      "q": "Un réflecteur est à 2 000 ms (temps double) et la vitesse moyenne est de 2 500 m/s (valeurs d'exemple). Quelle est sa profondeur ?",
+      "choices": [
+        "5 000 m",
+        "2 500 m",
+        "1 250 m",
+        "Environ 4 000 m, après correction du niveau de référence"
+      ],
+      "answer": 1,
+      "explain": "Le temps lu est un aller-retour : profondeur = 2 500 × 2,0 / 2 = 2 500 m. 5 000 m correspond à l'oubli de la division par deux ; 1 250 m à une division en trop ; 4 000 m n'a pas de justification.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-026",
+      "theme": "Interprétation sismique et incertitudes",
+      "level": 2,
+      "q": "Une forte anomalie d'amplitude est présentée comme preuve de gaz. Quelle est votre analyse ?",
+      "choices": [
+        "C'est une preuve définitive, car seul le gaz crée de fortes amplitudes",
+        "C'est sans valeur, car les amplitudes ne sont jamais interprétables",
+        "C'est la preuve de la présence d'eau douce",
+        "C'est un indice à confirmer par la variation de l'amplitude avec le déport et par les puits voisins, car un carbonate ou un banc dur peut donner le même effet"
+      ],
+      "answer": 3,
+      "explain": "Une amplitude forte peut venir d'un gaz, mais aussi d'un carbonate, d'un sel ou d'un banc dur. On la confirme avec des analyses complémentaires et des puits ; ni preuve absolue ni indice négligeable.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-027",
+      "theme": "Interprétation sismique et incertitudes",
+      "level": 2,
+      "q": "Sous un corps rapide (sel ou carbonate), les réflecteurs profonds paraissent plus hauts en temps. Quel risque en découle ?",
+      "choices": [
+        "Une disparition totale du signal sismique au-dessous du corps rapide, qui devient opaque",
+        "Une augmentation de la porosité",
+        "Une fausse structure ou une surestimation de la fermeture",
+        "Une réduction de la couverture"
+      ],
+      "answer": 2,
+      "explain": "Cette remontée apparente est un effet de vitesse : l'onde traverse plus vite le corps rapide, donc revient plus tôt. Elle peut créer des structures qui n'existent pas en profondeur.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-028",
+      "theme": "Interprétation sismique et incertitudes",
+      "level": 2,
+      "q": "Un prospect présente une fermeture de 30 m, alors que l'incertitude de conversion en profondeur est de ± 40 m. Que concluez-vous ?",
+      "choices": [
+        "La fermeture n'est pas démontrée : elle est inférieure à l'incertitude",
+        "La fermeture est certaine, puisque 30 m est positif",
+        "La fermeture est de 70 m, car il faut additionner la fermeture et l'incertitude de conversion",
+        "La fermeture est nulle, car il y a une incertitude"
+      ],
+      "answer": 0,
+      "explain": "Une fermeture plus faible que la marge d'erreur peut disparaître avec un autre modèle de vitesse : elle est possible, non démontrée. Les autres propositions ne respectent pas la logique des incertitudes.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-029",
+      "theme": "Interprétation sismique et incertitudes",
+      "level": 3,
+      "q": "Un opérateur présente une seule interprétation de faille pour un prospect dont le volume dépend du jeu de cette faille. Que demandez-vous ?",
+      "choices": [
+        "Aucun changement, une interprétation unique est plus claire",
+        "Un abandon du prospect",
+        "Une simple augmentation du nombre de couleurs sur la carte",
+        "Des scénarios alternatifs de faille avec leur effet sur le volume et sur la probabilité de succès"
+      ],
+      "answer": 3,
+      "explain": "Quand le résultat dépend d'une hypothèse structurale, la présentation doit chiffrer l'effet des alternatives. Une interprétation unique cache une part de l'incertitude, mais on ne rejette pas le prospect pour autant.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-030",
+      "theme": "Interprétation sismique et incertitudes",
+      "level": 3,
+      "q": "Un puits d'exploration atteint le réservoir 60 m plus bas que prévu. Que doit exiger le service de contrôle ?",
+      "choices": [
+        "Un retour d'expérience comparant profondeur prévue et réelle, l'analyse du modèle de vitesse et la transmission des données du puits",
+        "Rien, l'écart est normal et sans intérêt",
+        "Une sanction automatique pour erreur de prévision",
+        "La mise sous scellés des cartes sismiques"
+      ],
+      "answer": 0,
+      "explain": "L'écart révèle un défaut du modèle de vitesse ; son analyse sert à recalibrer les prospects voisins. Les données du puits sont à transmettre (article 12). Une erreur de prévision n'est pas une infraction en soi.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-031",
+      "theme": "Diagraphies et carottes",
+      "level": 1,
+      "q": "Que mesure principalement la diagraphie de rayonnement gamma naturel ?",
+      "choices": [
+        "La résistivité électrique de l'eau de formation et la vitesse du son dans la roche traversée",
+        "La radioactivité naturelle de la roche, plus forte dans les argiles",
+        "La vitesse du son dans la boue",
+        "La température du fluide"
+      ],
+      "answer": 1,
+      "explain": "Le gamma naturel est élevé dans les schistes (potassium, uranium, thorium) et faible dans les grès et carbonates propres : c'est un indicateur de lithologie.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-032",
+      "theme": "Diagraphies et carottes",
+      "level": 1,
+      "q": "Pourquoi la résistivité est-elle utile pour reconnaître des hydrocarbures ?",
+      "choices": [
+        "Parce que le pétrole conduit mieux l'électricité que l'eau salée",
+        "Parce que la résistivité est identique pour tous les fluides",
+        "Parce qu'elle donne directement la perméabilité",
+        "Parce que les hydrocarbures résistent au courant alors que l'eau salée de formation le conduit"
+      ],
+      "answer": 3,
+      "explain": "Un réservoir poreux rempli d'hydrocarbures est plus résistant qu'un réservoir rempli d'eau salée. La résistivité ne donne pas la perméabilité, qui doit venir d'autres sources.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-033",
+      "theme": "Diagraphies et carottes",
+      "level": 1,
+      "q": "Quelle est la différence entre une carotte et des déblais de forage ?",
+      "choices": [
+        "La carotte est un échantillon de boue séchée au laboratoire ; les déblais sont des cylindres de roche prélevés",
+        "Il n'y a aucune différence",
+        "Carotte : cylindre de roche continu ; déblais : petits fragments remontés par la boue",
+        "Les déblais sont prélevés après forage, la carotte avant"
+      ],
+      "answer": 2,
+      "explain": "La carotte conserve la structure de la roche et permet des mesures précises ; les déblais sont mélangés et d'origine moins précise. Les deux sont des échantillons de roche, pas de boue.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-034",
+      "theme": "Diagraphies et carottes",
+      "level": 1,
+      "q": "Que sont la porosité et la perméabilité ?",
+      "choices": [
+        "La porosité est la fraction de vide de la roche ; la perméabilité est son aptitude à laisser circuler un fluide",
+        "La porosité est l'aptitude à laisser circuler un fluide ; la perméabilité est la fraction de vide",
+        "Les deux désignent la même grandeur",
+        "La porosité mesure la dureté, la perméabilité la couleur"
+      ],
+      "answer": 0,
+      "explain": "Une roche peut être très poreuse mais peu perméable si les pores sont mal connectés. Les définitions des autres propositions sont inversées ou fausses.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-035",
+      "theme": "Diagraphies et carottes",
+      "level": 2,
+      "q": "Une diagraphie donne ρ mesurée = 2,35 g/cm³, la matrice a ρ = 2,65 et le fluide ρ = 1,00 (valeurs d'exemple). Quelle porosité obtient-on ?",
+      "choices": [
+        "Environ 0,30 (différence de densités seule)",
+        "Environ 0,50",
+        "Environ 0,18",
+        "Environ 0,08"
+      ],
+      "answer": 2,
+      "explain": "φ = (2,65 − 2,35) / (2,65 − 1,00) = 0,30 / 1,65 ≈ 0,18. La valeur 0,30 est le numérateur seul ; les deux autres n'ont pas de justification.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-036",
+      "theme": "Diagraphies et carottes",
+      "level": 2,
+      "q": "Avec a = 1, m = n = 2, Rw = 0,05 Ω·m, φ = 0,20 et Rt = 20 Ω·m (valeurs d'exemple), quelle est la saturation en eau selon Archie ?",
+      "choices": [
+        "25 %",
+        "6 %",
+        "50 %",
+        "75 % (complément à 100 %)"
+      ],
+      "answer": 0,
+      "explain": "Sw = √(0,05 / (0,04 × 20)) = √0,0625 = 0,25. 75 % est la saturation en hydrocarbures, complément de l'eau ; 6 % est Sw² ; 50 % n'a pas de justification.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-037",
+      "theme": "Diagraphies et carottes",
+      "level": 2,
+      "q": "Dans un réservoir propre, la courbe densité passe à gauche du neutron (croisement). Quelle interprétation est la plus courante ?",
+      "choices": [
+        "La présence de sel massif, qui donne toujours un croisement entre densité et neutron",
+        "Un trou effondré uniquement",
+        "Une roche mère très riche",
+        "Un indice de gaz, à confirmer par d'autres mesures"
+      ],
+      "answer": 3,
+      "explain": "Le gaz réduit la densité et l'indice neutron apparents, produisant le croisement caractéristique. Il s'agit d'un indice à confirmer (essais, pression, résistivité).",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-038",
+      "theme": "Diagraphies et carottes",
+      "level": 2,
+      "q": "Un rapport annonce 40 m d'épaisseur utile sans préciser les seuils de coupure. Quelle est votre demande ?",
+      "choices": [
+        "Rien : 40 m est un chiffre suffisant, car il provient d'un opérateur qualifié et reconnu",
+        "Les seuils (porosité, argilosité, saturation) et leur justification",
+        "Une conversion de 40 m en pieds",
+        "L'ajout d'une couleur sur la diagraphie"
+      ],
+      "answer": 1,
+      "explain": "L'épaisseur utile est une construction qui dépend des seuils. Sans eux, le chiffre n'est ni reproductible ni comparable avec d'autres puits.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-039",
+      "theme": "Diagraphies et carottes",
+      "level": 3,
+      "q": "Le laboratoire donne 150 mD sur la carotte alors que l'essai de puits indique 20 mD. Que faites-vous ?",
+      "choices": [
+        "J'analyse l'effet d'échelle, les fractures et les conditions de mesure avant de conclure à une erreur",
+        "Je rejette les deux mesures",
+        "Je ne retiens que la valeur la plus élevée",
+        "Je conclus que le laboratoire a falsifié ses résultats"
+      ],
+      "answer": 0,
+      "explain": "Une carotte représente quelques centimètres, un essai plusieurs dizaines de mètres : les deux échelles diffèrent. L'écart est classique et s'explique souvent par des hétérogénéités ou des conditions de contrainte, pas par une faute.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-040",
+      "theme": "Diagraphies et carottes",
+      "level": 3,
+      "q": "Un opérateur veut envoyer les carottes à l'étranger pour analyse, puis les détruire. Quelle est la position à adopter ?",
+      "choices": [
+        "Autoriser librement, car les carottes appartiennent à l'opérateur",
+        "Subordonner tout envoi ou toute destruction à l'accord de l'administration, exiger les résultats d'analyse et vérifier le contrat",
+        "Autoriser librement, car le coût est récupérable",
+        "Interdire toute analyse à l'étranger, sans examen"
+      ],
+      "answer": 1,
+      "explain": "Les données et études sont la propriété de l'État (article 10) et ne peuvent être divulguées sans accord (article 12). Le régime exact des échantillons dépend du contrat : on l'examine avant de décider ; le remboursement des coûts ne transfère pas la propriété.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 10 et art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-041",
+      "theme": "Évaluation du potentiel d'un bloc",
+      "level": 1,
+      "q": "Quels éléments composent un système pétrolier ?",
+      "choices": [
+        "Raffinerie, oléoduc, terminal pétrolier, navire et station-service, de l'amont à la distribution",
+        "Foreuse, boue, tubage et tête de puits",
+        "Roche mère, migration, réservoir, couverture et piège, avec un bon synchronisme",
+        "Permis, contrat, décret et arrêté"
+      ],
+      "answer": 2,
+      "explain": "Un système pétrolier est un ensemble d'éléments géologiques et de processus. Les autres listes décrivent l'aval, le forage ou le cadre juridique.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-042",
+      "theme": "Évaluation du potentiel d'un bloc",
+      "level": 1,
+      "q": "Que sont les ressources prospectives ?",
+      "choices": [
+        "Des quantités potentiellement récupérables d'accumulations non encore découvertes",
+        "Des réserves déjà reconnues comme commerciales et déjà en production sur un champ voisin",
+        "Des volumes déjà vendus à l'export",
+        "Des stocks de brut dans les bacs d'un terminal"
+      ],
+      "answer": 0,
+      "explain": "Une ressource prospective est estimée pour un prospect non foré ; elle comporte un risque d'échec. Ce n'est ni une réserve ni un stock.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-043",
+      "theme": "Évaluation du potentiel d'un bloc",
+      "level": 1,
+      "q": "Que signifie un volume P90 ?",
+      "choices": [
+        "Une valeur dépassée seulement dans 10 % des cas, donc une estimation haute",
+        "La valeur du baril en dollars",
+        "Le volume exact et certain",
+        "Une valeur dépassée dans 90 % des cas : une estimation basse"
+      ],
+      "answer": 3,
+      "explain": "P90 est le quantile à 90 % de probabilité de dépassement : l'estimation prudente. P10 est l'estimation haute, P50 la médiane. Aucune de ces valeurs n'est une certitude.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-044",
+      "theme": "Évaluation du potentiel d'un bloc",
+      "level": 1,
+      "q": "Comment calcule-t-on la probabilité de succès géologique d'un prospect (Pg) ?",
+      "choices": [
+        "En additionnant les probabilités des éléments puis en divisant par leur nombre",
+        "En multipliant les probabilités des éléments du système",
+        "En prenant la plus forte probabilité",
+        "En divisant le volume par la surface"
+      ],
+      "answer": 1,
+      "explain": "Le succès exige que tous les éléments soient réunis : on multiplie donc leurs probabilités. Une addition dépasserait 100 %, et le maximum ignore les maillons faibles.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-045",
+      "theme": "Évaluation du potentiel d'un bloc",
+      "level": 2,
+      "q": "Un prospect couvre 20 km², avec 15 m d'épaisseur utile, φ = 0,18, Sw = 0,30 et Bo = 1,2 (valeurs d'exemple). Quel volume d'huile en place obtient-on ?",
+      "choices": [
+        "Environ 31,5 millions de barils",
+        "Environ 283 millions de barils",
+        "Environ 1,6 milliard de barils",
+        "Environ 198 millions de barils"
+      ],
+      "answer": 3,
+      "explain": "Volume = 20 × 10⁶ × 15 × 0,18 × 0,70 / 1,2 = 31,5 millions de m³, soit environ 198 millions de barils. 31,5 correspond au m³ non converti ; 283 oublie le terme (1 − Sw).",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-046",
+      "theme": "Évaluation du potentiel d'un bloc",
+      "level": 2,
+      "q": "Les probabilités sont : roche mère 0,8 ; réservoir 0,7 ; piège 0,6 ; migration et couverture 0,7 (valeurs fictives). Quelle est la Pg ?",
+      "choices": [
+        "Environ 70 %",
+        "Environ 24 %",
+        "Environ 2,8 %",
+        "Environ 60 %"
+      ],
+      "answer": 1,
+      "explain": "0,8 × 0,7 × 0,6 × 0,7 = 0,235. 70 % serait la moyenne approximative des facteurs ; 60 % la plus faible des quatre ; 2,8 % ne correspond à aucun calcul valable.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-047",
+      "theme": "Évaluation du potentiel d'un bloc",
+      "level": 2,
+      "q": "Pg = 0,2, valeur en cas de succès 300 M$ (avant coût du puits), coût du puits 40 M$ (valeurs d'exemple). Quelle est la valeur monétaire espérée ?",
+      "choices": [
+        "20 M$",
+        "260 M$",
+        "60 M$",
+        "−20 M$"
+      ],
+      "answer": 0,
+      "explain": "VME = 0,2 × 300 − 40 = 20 M$. 260 oublie la probabilité ; 60 ignore le coût du puits ; −20 inverse la lecture du résultat.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-048",
+      "theme": "Évaluation du potentiel d'un bloc",
+      "level": 2,
+      "q": "Un bloc ne compte qu'un prospect de forte taille mais de Pg 8 %. Comment l'État doit-il apprécier son attractivité ?",
+      "choices": [
+        "En ne retenant que le plus gros volume annoncé, sans tenir compte du risque d'échec",
+        "En le jugeant sans intérêt, car la Pg est inférieure à 10 %",
+        "En regardant le portefeuille de prospects et la valeur espérée",
+        "En doublant sa Pg pour compenser le risque"
+      ],
+      "answer": 2,
+      "explain": "Un bloc se juge sur l'ensemble de ses prospects, leurs probabilités et les coûts. Un seul gros volume très risqué peut être attractif ou non selon la valeur espérée.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-049",
+      "theme": "Évaluation du potentiel d'un bloc",
+      "level": 3,
+      "q": "Un communiqué annonce « 500 millions de barils » pour un prospect non foré. Un journaliste parle de « réserves ». Que répondez-vous ?",
+      "choices": [
+        "Ce sont bien des réserves, puisque le chiffre annoncé est élevé et que le permis est valide",
+        "Ressources prospectives risquées, non réserves : ni découverte ni commercialité déclarée",
+        "Ce sont des réserves dès que le permis est signé",
+        "Ce sont des réserves dès que la sismique est terminée"
+      ],
+      "answer": 1,
+      "explain": "Une réserve suppose une découverte et un projet commercial ; la commercialité fait l'objet d'une déclaration signée par l'État et le contracteur (article 64). Un prospect non foré relève des ressources prospectives.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 64",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-050",
+      "theme": "Évaluation du potentiel d'un bloc",
+      "level": 3,
+      "q": "Bloc A : Pg 30 %, P50 = 50 Mbbl. Bloc B : Pg 10 %, P50 = 300 Mbbl. Quelle conclusion est la plus rigoureuse ?",
+      "choices": [
+        "A est toujours préférable, car sa probabilité de succès est trois fois plus forte que celle de B, quels que soient les coûts",
+        "B est toujours préférable, car son volume est plus grand",
+        "B a la plus forte espérance (30 contre 15) mais plus de risque ; la décision dépend aussi des coûts",
+        "Les deux blocs sont strictement équivalents"
+      ],
+      "answer": 2,
+      "explain": "Volumes risqués : A = 0,30 × 50 = 15 ; B = 0,10 × 300 = 30. L'espérance favorise B, mais le risque d'échec est supérieur. Il n'existe pas de réponse unique sans coûts et sans politique de risque.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-051",
+      "theme": "Lecture critique d'un rapport d'exploration",
+      "level": 1,
+      "q": "Quel article fonde l'obligation du titulaire de fournir un rapport sur l'état de ses activités ?",
+      "choices": [
+        "L'article 1er de la loi n° 002/2019",
+        "L'article 125 de la loi n° 002/2019",
+        "L'article 255 de la loi n° 002/2019, relatif aux audits",
+        "L'article 182 de la loi n° 002/2019"
+      ],
+      "answer": 3,
+      "explain": "L'article 182 impose de fournir aux services compétents un rapport sur l'état des activités et les informations techniques, économiques et financières utiles. L'article 125 traite du torchage, l'article 255 des redressements après audits.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 182",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-052",
+      "theme": "Lecture critique d'un rapport d'exploration",
+      "level": 1,
+      "q": "Quelle est la première vérification d'un rapport d'exploration ?",
+      "choices": [
+        "Que le rapport soit relié, illustré de nombreuses figures et signé par plusieurs auteurs réputés",
+        "Que chaque conclusion renvoie à une donnée précise (figure, diagraphie, essai)",
+        "Que les auteurs soient nombreux",
+        "Que le rapport soit long"
+      ],
+      "answer": 1,
+      "explain": "Un rapport vaut par ses preuves. La présentation, le nombre d'auteurs ou la longueur ne garantissent pas la qualité des conclusions.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-053",
+      "theme": "Lecture critique d'un rapport d'exploration",
+      "level": 1,
+      "q": "Pourquoi demander une fourchette P90 à P10 plutôt qu'un chiffre unique ?",
+      "choices": [
+        "Parce que les paramètres sont incertains et que l'incertitude doit être visible",
+        "Parce que la loi interdit les chiffres uniques",
+        "Parce que les fourchettes sont plus faciles à vendre aux investisseurs et aux partenaires",
+        "Parce que P50 est toujours faux"
+      ],
+      "answer": 0,
+      "explain": "Une estimation honnête indique le domaine des valeurs plausibles. Un chiffre unique masque le risque. Aucun texte n'interdit les chiffres uniques et P50 est la médiane, pas une erreur.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-054",
+      "theme": "Lecture critique d'un rapport d'exploration",
+      "level": 1,
+      "q": "En cas de découverte, quelle est l'obligation immédiate du contracteur ?",
+      "choices": [
+        "Attendre la fin de l'année pour la mentionner au rapport annuel",
+        "Informer d'abord la presse",
+        "Informer en priorité et sans délai l'administration des hydrocarbures",
+        "Informer d'abord ses actionnaires, puis l'administration au bout de trois mois"
+      ],
+      "answer": 2,
+      "explain": "L'article 63 impose d'informer en priorité et sans délai l'administration en cas de découverte. Les autres propositions inversent l'ordre ou ajoutent des délais inexistants.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 63",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-055",
+      "theme": "Lecture critique d'un rapport d'exploration",
+      "level": 2,
+      "q": "Un rapport conclut à un « puits sec » sans joindre diagraphies ni rapport de forage. Que faites-vous ?",
+      "choices": [
+        "Je réclame les données brutes du puits, que le contracteur doit transmettre au fur et à mesure",
+        "J'accepte la conclusion, car l'opérateur est mieux informé",
+        "Je rejette le rapport pour tout motif",
+        "Je classe le dossier sans suite"
+      ],
+      "answer": 0,
+      "explain": "Le contracteur doit transmettre données et études au fur et à mesure (article 12). Sans elles, la conclusion n'est pas vérifiable : on demande les données avant de décider.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-056",
+      "theme": "Lecture critique d'un rapport d'exploration",
+      "level": 2,
+      "q": "Un rapport annonce 300 millions de barils pour 10 km², 20 m d'épaisseur utile, φ = 0,20, Sw = 0,30, Bo = 1,25. Que concluez-vous ?",
+      "choices": [
+        "Le chiffre est exact, car l'opérateur est un spécialiste reconnu qui connaît mieux son bloc",
+        "Le calcul est trop complexe pour être vérifié",
+        "Le recalcul donne environ 141 millions : l'écart doit être justifié",
+        "Le résultat est exact si l'on ajoute une marge de 10 %"
+      ],
+      "answer": 2,
+      "explain": "Volume = 10 × 10⁶ × 20 × 0,20 × 0,70 / 1,25 ≈ 22,4 millions de m³, soit environ 141 millions de barils. L'écart avec 300 doit s'expliquer par d'autres paramètres ou une erreur.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-057",
+      "theme": "Lecture critique d'un rapport d'exploration",
+      "level": 2,
+      "q": "Un rapport justifie un forage coûteux sur un piège étroit avec quelques anciennes lignes 2D de médiocre qualité. Quelle est la lacune principale ?",
+      "choices": [
+        "Le nom donné aux lignes sismiques et la date à laquelle elles ont été enregistrées initialement",
+        "Données trop rares et de qualité insuffisante : retraitement ou 3D avant de décider",
+        "L'âge du navire",
+        "La couleur des cartes"
+      ],
+      "answer": 1,
+      "explain": "Un piège étroit exige un maillage dense. Quelques lignes anciennes laissent trop d'incertitude pour engager une dépense lourde. Les autres éléments sont sans effet sur la qualité de l'image.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-058",
+      "theme": "Lecture critique d'un rapport d'exploration",
+      "level": 2,
+      "q": "Un rapport annonce une « découverte » sans fournir les résultats d'essais de production. Que demandez-vous ?",
+      "choices": [
+        "Rien : une découverte annoncée par l'opérateur n'exige aucune donnée justificative supplémentaire",
+        "Un renoncement immédiat au bloc",
+        "La publication du rapport dans la presse",
+        "Les résultats d'essai ; la commercialité reste à déclarer après appréciation"
+      ],
+      "answer": 3,
+      "explain": "La découverte doit être notifiée (article 63), et l'appréciation puis la déclaration de commercialité suivent (article 64). Sans essais, on ne peut apprécier le caractère commercial.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 63 et art. 64",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-059",
+      "theme": "Lecture critique d'un rapport d'exploration",
+      "level": 3,
+      "q": "Entre deux rapports, la saturation en eau passe de 0,30 à 0,20 sans explication. Quel effet sur le volume et quelle attitude adopter ?",
+      "choices": [
+        "Aucun effet notable sur le volume ; on classe l'écart sans suite, car l'opérateur est compétent",
+        "Le volume baisse de 14 % ; on félicite l'opérateur",
+        "Le volume augmente d'environ 14 % ; on demande la justification des données",
+        "Le volume double ; on ouvre une enquête pénale"
+      ],
+      "answer": 2,
+      "explain": "(1 − 0,20) / (1 − 0,30) = 0,80 / 0,70 ≈ 1,14. Un changement de paramètre non documenté fait varier le volume : on demande les justifications sans présumer de mauvaise foi.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-060",
+      "theme": "Lecture critique d'un rapport d'exploration",
+      "level": 3,
+      "q": "Un bureau d'études payé par l'opérateur certifie des ressources élevées. Quel est le réflexe d'un agent de contrôle ?",
+      "choices": [
+        "Accepter le chiffre, car la signature d'un bureau d'études reconnu constitue une garantie suffisante",
+        "Rejeter le chiffre, car le bureau est payé par l'opérateur",
+        "Demander uniquement un second avis du même bureau",
+        "Recouper avec les données que l'État détient et exiger la traçabilité des calculs"
+      ],
+      "answer": 3,
+      "explain": "Les données sont la propriété de l'État (article 10) et transmises au Ministère (article 12) : on peut donc recouper. Un bureau payé peut être compétent, mais sa signature ne dispense pas de vérification.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 10 et art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-061",
+      "theme": "Programme minimum de travaux et suivi",
+      "level": 1,
+      "q": "Dans quel contrat figure notamment un programme minimum de travaux ?",
+      "choices": [
+        "Le contrat d'exploration et de partage de production",
+        "Le contrat de vente de gaz domestique",
+        "Le contrat de bail d'un bureau",
+        "La convention collective du secteur"
+      ],
+      "answer": 0,
+      "explain": "L'article 61 prévoit que ce contrat comporte notamment un programme minimum de travaux, les modalités de récupération des coûts pétroliers et le partage de la production.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 61",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-062",
+      "theme": "Programme minimum de travaux et suivi",
+      "level": 1,
+      "q": "Quelle sanction l'article 270 prévoit-il en cas d'inexécution du programme minimum ?",
+      "choices": [
+        "Une amende fixe et symbolique de 1 000 francs CFA, quelle que soit l'ampleur de l'inexécution",
+        "Le retrait automatique de tous les titres de la société, sans exception",
+        "Une pénalité proportionnelle à l'engagement financier minimum",
+        "Seulement un avertissement écrit, sans conséquence financière ni autre mesure"
+      ],
+      "answer": 2,
+      "explain": "L'article 270 prévoit une pénalité proportionnelle à l'engagement financier minimum, sans préjudice des autres sanctions prévues au contrat. Il ne prévoit ni montant dérisoire ni retrait automatique.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 270",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-063",
+      "theme": "Programme minimum de travaux et suivi",
+      "level": 1,
+      "q": "Quelle est la durée de la période d'exploration prévue à l'article 83 ?",
+      "choices": [
+        "Trois ans, non prorogeable, puis passage obligatoire à la phase de production",
+        "Huit ans, prorogeable d'un an, dix ans au maximum avec les extensions",
+        "Vingt ans, renouvelable sans limite",
+        "Quinze ans, sans prorogation"
+      ],
+      "answer": 1,
+      "explain": "La période d'exploration est de huit ans en phases, prorogeable d'un an ; les extensions de phases n'excèdent pas douze mois, et la durée totale ne peut dépasser dix ans.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 83",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-064",
+      "theme": "Programme minimum de travaux et suivi",
+      "level": 1,
+      "q": "Que donne l'autorisation exclusive d'exploration à son titulaire selon l'article 81 ?",
+      "choices": [
+        "Le droit de vendre librement la zone à un tiers, sans l'accord ni l'approbation de l'autorité compétente",
+        "Le droit d'ignorer l'État pour les données",
+        "Le droit de produire sans plan de développement",
+        "Le droit exclusif de réaliser sismique et forages d'exploration et d'appréciation"
+      ],
+      "answer": 3,
+      "explain": "L'article 81 vise les travaux d'exploration au nom et pour le compte de l'État. Les titres sont incessibles (article 77) et la production exige un autre titre.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 81",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-065",
+      "theme": "Programme minimum de travaux et suivi",
+      "level": 2,
+      "q": "Engagement minimum : 3D de 500 km² (15 M$) et un puits (40 M$) ; seul le 3D est réalisé (valeurs d'exemple). Quelle est la part financière non exécutée ?",
+      "choices": [
+        "Environ 27 %",
+        "Environ 73 %",
+        "Environ 50 %",
+        "100 %, car le puits est l'engagement principal"
+      ],
+      "answer": 1,
+      "explain": "40 / 55 ≈ 0,73. 27 % correspond à la part exécutée. La formule réelle de la pénalité est fixée par le contrat, mais la base proportionnelle est la valeur de l'engagement.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 270",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-066",
+      "theme": "Programme minimum de travaux et suivi",
+      "level": 2,
+      "q": "L'opérateur propose de remplacer un puits obligatoire par du retraitement sismique. Que répondez-vous ?",
+      "choices": [
+        "Accord immédiat, car le retraitement coûte nettement moins cher et apporte des informations utiles",
+        "Refus définitif, quelles que soient les clauses",
+        "Accord après versement d'un petit montant en liquide",
+        "Seule la renégociation prévue au contrat peut le permettre, pas un courrier"
+      ],
+      "answer": 3,
+      "explain": "L'article 45 prévoit la renégociation à l'initiative de l'une des parties dans les conditions du contrat. Un engagement ne se modifie ni par courrier ni de façon verbale.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 45",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-067",
+      "theme": "Programme minimum de travaux et suivi",
+      "level": 2,
+      "q": "Un puits est arrêté pour incident avant l'objectif. Compte-t-il dans le programme minimum ?",
+      "choices": [
+        "Oui, dans tous les cas, puisque le forage a été engagé et que les coûts ont été supportés",
+        "Non, dans tous les cas",
+        "Cela dépend de la définition du puits réalisé dans le contrat",
+        "Oui, si l'opérateur le déclare"
+      ],
+      "answer": 2,
+      "explain": "Les contrats définissent habituellement le puits par une profondeur ou une formation à atteindre. Il faut lire le texte, sans présumer.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-068",
+      "theme": "Programme minimum de travaux et suivi",
+      "level": 2,
+      "q": "Le contracteur refuse de tenir les comités techniques de suivi malgré mise en demeure. Quel levier la loi prévoit-elle ?",
+      "choices": [
+        "Une pénalité de 10 à 100 millions de francs CFA (article 277)",
+        "Aucun levier : la loi ne prévoit rien pour les comités de suivi, seulement le contrat",
+        "Une pénalité de 500 000 francs CFA maximum",
+        "La saisie automatique du bloc voisin"
+      ],
+      "answer": 0,
+      "explain": "L'article 277 prévoit une pénalité de 10 à 100 millions de francs CFA pour le contracteur qui, malgré mise en demeure, ne tient pas les comités de suivi.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 277",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-069",
+      "theme": "Programme minimum de travaux et suivi",
+      "level": 3,
+      "q": "En fin de phase, l'opérateur demande une extension de 18 mois. Que répondez-vous ?",
+      "choices": [
+        "Accord, car 18 mois est inférieur à la durée totale de huit ans de la période d'exploration",
+        "Accord, car l'extension n'est pas encadrée",
+        "Refus, car la prorogation d'un an a été supprimée",
+        "Refus : les extensions de phases sont limitées à douze mois en tout"
+      ],
+      "answer": 3,
+      "explain": "L'article 83 limite les extensions de phases à douze mois en tout ; la prorogation d'un an est une autre faculté, et la durée totale ne peut jamais dépasser dix ans.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 83",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-070",
+      "theme": "Programme minimum de travaux et suivi",
+      "level": 3,
+      "q": "Un contracteur a exécuté tout son programme minimum, mais a remis ses données avec trois mois de retard. Quelle sanction invoquer ?",
+      "choices": [
+        "Celle de l'article 267 : pénalité de 500 000 à 5 000 000 de francs CFA après mise en demeure de quinze jours",
+        "Celle de l'article 270, car le programme n'est pas respecté",
+        "Il n'existe aucune sanction pour un simple retard de transmission des données",
+        "Le retrait immédiat du titre pour ce seul motif"
+      ],
+      "answer": 0,
+      "explain": "Le programme est exécuté : l'article 270 ne s'applique pas. Le retard de transmission relève de l'article 267, avec mise en demeure de quinze jours. Il s'agit de deux sanctions distinctes.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 267 et art. 270",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-071",
+      "theme": "Restitution des données à l'État et cadastre",
+      "level": 1,
+      "q": "À qui appartiennent les données et études acquises dans le cadre des opérations pétrolières ?",
+      "choices": [
+        "Au contracteur seul, puisqu'il a financé l'acquisition de ces données",
+        "À l'État, qui en a la propriété exclusive",
+        "À la société de services sismiques",
+        "À tous, sans restriction"
+      ],
+      "answer": 1,
+      "explain": "L'article 10 dispose que les études, données et informations du cadastre acquises dans le cadre des opérations pétrolières sont la propriété exclusive de l'État.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 10",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-072",
+      "theme": "Restitution des données à l'État et cadastre",
+      "level": 1,
+      "q": "Quand le contracteur doit-il transmettre ses données au Ministère ?",
+      "choices": [
+        "Seulement à la fin du contrat, lors de l'arrêt de l'exploration",
+        "Seulement sur demande de la presse",
+        "Uniquement en cas de découverte",
+        "Au fur et à mesure de leur acquisition"
+      ],
+      "answer": 3,
+      "explain": "L'article 12 impose la transmission au fur et à mesure. Il ne la limite ni à la fin du contrat ni aux seules découvertes.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-073",
+      "theme": "Restitution des données à l'État et cadastre",
+      "level": 1,
+      "q": "Que recense le cadastre des hydrocarbures ?",
+      "choices": [
+        "Les noms et qualifications de tous les salariés du secteur pétrolier gabonais",
+        "Les cours quotidiens du brut",
+        "Les blocs et les informations sur les titres pétroliers",
+        "Les cartes routières nationales"
+      ],
+      "answer": 2,
+      "explain": "Le cadastre est une cartographie délimitant les blocs à explorer, en exploration, à exploiter ou en exploitation ; le Ministère le tient (articles 9 et 15).",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 9 et art. 15",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-074",
+      "theme": "Restitution des données à l'État et cadastre",
+      "level": 1,
+      "q": "Un contracteur peut-il divulguer des données à un tiers ?",
+      "choices": [
+        "Non, sauf accord préalable de l'autorité compétente",
+        "Oui, librement après un an",
+        "Oui, s'il paie une taxe",
+        "Oui, si le tiers est étranger"
+      ],
+      "answer": 0,
+      "explain": "L'article 12 interdit toute divulgation à un tiers sans l'accord préalable de l'autorité compétente. Ce n'est pas un délai ni une taxe qui lève cette interdiction.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-075",
+      "theme": "Restitution des données à l'État et cadastre",
+      "level": 2,
+      "q": "Une société tierce demande à consulter les données anciennes d'un bloc rendu. Qui décide ?",
+      "choices": [
+        "L'ancien opérateur seul, puisqu'il a acquis les données à ses frais",
+        "La société de services qui a acquis les données",
+        "L'État, propriétaire des données, dans les règles en vigueur",
+        "Le premier qui en fait la demande"
+      ],
+      "answer": 2,
+      "explain": "Les données appartiennent à l'État (article 10). L'ancien opérateur ne peut les divulguer sans accord (article 12) ; la décision de mise à disposition revient à l'État.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 10 et art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-076",
+      "theme": "Restitution des données à l'État et cadastre",
+      "level": 2,
+      "q": "Quel jeu de livraison est le plus exploitable pour une campagne sismique ?",
+      "choices": [
+        "Données de terrain (par exemple SEG-D), données traitées (SEG-Y), rapports d'acquisition et de traitement, données de navigation",
+        "Une capture d'écran de l'image finale",
+        "Un tableau de synthèse sans données",
+        "Le seul nom du navire"
+      ],
+      "answer": 0,
+      "explain": "Les formats numériques et les rapports permettent de retraiter et de vérifier. Une image seule n'est pas exploitable. La liste exacte des livrables est fixée par le contrat (pratique usuelle de l'industrie).",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-077",
+      "theme": "Restitution des données à l'État et cadastre",
+      "level": 2,
+      "q": "Le Ministère reçoit un lot de données sans système de coordonnées ni unités. Que faites-vous ?",
+      "choices": [
+        "J'accepte le lot tel quel et je laisse les utilisateurs deviner le système de coordonnées",
+        "Je détruis le lot",
+        "Je devine le système de coordonnées pour gagner du temps",
+        "J'exige les métadonnées, sans lesquelles les données sont inexploitables"
+      ],
+      "answer": 3,
+      "explain": "Sans métadonnées (système de coordonnées, altitude de référence, unités, auteur), une donnée peut être mal positionnée ou mal interprétée. Deviner est risqué.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-geologie-078",
+      "theme": "Restitution des données à l'État et cadastre",
+      "level": 2,
+      "q": "Un journaliste demande les coordonnées des blocs attribués. Que lui répondez-vous ?",
+      "choices": [
+        "Tout est secret, y compris l'existence et les coordonnées des blocs attribués aux sociétés, à titre de principe",
+        "Blocs et titres : publiés selon la réglementation (art. 15) ; données techniques : accord préalable (art. 12)",
+        "Tout est public, y compris les cubes sismiques",
+        "Seuls les journalistes étrangers y ont droit"
+      ],
+      "answer": 1,
+      "explain": "L'article 15 prévoit la publication des informations de blocs et de titres dans les conditions réglementaires. Les données techniques relèvent de l'article 12. Il faut distinguer les deux catégories.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 12 et art. 15",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-079",
+      "theme": "Restitution des données à l'État et cadastre",
+      "level": 3,
+      "q": "Un partenaire sortant, après une cession, conserve une copie des données du bloc. Quelle est l'analyse ?",
+      "choices": [
+        "Les données restent propriété de l'État ; le cédant ne peut ni les divulguer ni les réutiliser sans accord",
+        "Elles lui appartiennent, car il les a financées",
+        "Elles lui appartiennent pour dix ans",
+        "L'État n'a aucun droit sur les copies"
+      ],
+      "answer": 0,
+      "explain": "L'article 10 vise les données acquises dans le cadre des opérations pétrolières, quel que soit le financeur. L'article 12 limite l'usage au cadre des opérations pétrolières et interdit la divulgation sans accord. La cession est soumise à approbation (article 54).",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 10, 12 et 54",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-geologie-080",
+      "theme": "Restitution des données à l'État et cadastre",
+      "level": 3,
+      "q": "Après l'expiration d'un permis, l'ancien titulaire utilise les données du bloc pour candidater à un bloc voisin. Que peut-on lui opposer ?",
+      "choices": [
+        "Rien, car les données lui appartiennent définitivement une fois le permis arrivé à son terme normal, sans formalité",
+        "L'article 12 : usage limité aux opérations pétrolières, tout autre usage requiert l'accord préalable",
+        "Rien, car le bloc voisin est dans le même pays",
+        "Seulement une amende fixe de 1 000 francs CFA"
+      ],
+      "answer": 1,
+      "explain": "Selon l'article 12, le contracteur n'a le droit d'utiliser les données que dans le cadre des opérations pétrolières. Une réutilisation pour un autre projet nécessite l'accord préalable de l'autorité compétente ; elles restent propriété de l'État.",
+      "seconds": 100,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "art": "art. 10 et art. 12",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf"
+        }
+      ]
+    }
+  ]
+}

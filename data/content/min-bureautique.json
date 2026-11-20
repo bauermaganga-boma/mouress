@@ -1,0 +1,1399 @@
+{
+  "profile": "min-bureautique",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Traitement de texte : styles, plan et table des matières",
+      "theme": "Traitement de texte : styles et table des matières",
+      "minutes": 10,
+      "body": "Un document administratif de plusieurs pages (rapport, guide de procédure, compte rendu de mission) se construit comme une structure, pas comme une suite de paragraphes mis en forme à la main. L'outil de base est le **style** : un ensemble enregistré de réglages (police, taille, couleur, espacement, alignement) que l'on applique d'un clic à un paragraphe ou à un caractère. Quel que soit le logiciel de traitement de texte, on retrouve les mêmes familles : *Normal* ou *Corps de texte* pour le texte courant, *Titre 1*, *Titre 2*, *Titre 3* pour les intertitres hiérarchisés, *Titre* pour le titre du document, *Légende* pour les tableaux et figures, *Citation* ou *Liste à puces* pour des éléments particuliers.\n\n**Pourquoi utiliser les styles ?** Premièrement, la cohérence : si vous décidez de passer tous les titres de niveau 1 de bleu à noir, il suffit de modifier le style *Titre 1* et les quarante titres du document changent d'un seul coup. Deuxièmement, la navigation : le volet de navigation (ou *Plan*) affiche la hiérarchie des titres et permet de se déplacer dans un document de cent pages. Troisièmement, l'automatisation : la table des matières, les renvois et les numéros de chapitre s'appuient sur les styles de titre. À l'inverse, mettre un intertitre « en gras, taille 14 » à la main ne crée aucun niveau de plan : il restera invisible pour la table des matières.\n\n**Étapes pour un rapport structuré** :\n\n- Saisissez le texte au kilomètre, sans mise en forme, en appliquant dès la saisie le style *Titre 1* aux grandes parties et *Titre 2* aux sous-parties.\n- Adaptez les styles une seule fois (menu *Accueil*, groupe *Styles*, commande *Modifier le style*) : police sobre, interligne uniforme, espacement après le paragraphe plutôt que des lignes vides.\n- Activez la **numérotation à plusieurs niveaux** liée aux titres (1, 1.1, 1.1.1) pour numéroter automatiquement les chapitres.\n- Insérez la **table des matières automatique** (menu *Références*, commande *Table des matières*). Elle liste les titres avec leurs numéros de page et des liens cliquables.\n- Après chaque modification, **mettez à jour le champ** : clic droit sur la table puis *Mettre à jour les champs* (touche F9 dans beaucoup de logiciels), en choisissant *Mettre à jour toute la table*. Sans cette étape, les numéros de page restent ceux de l'ancienne version.\n\n**Éléments complémentaires** : les **sauts de page** (et non les retours à la ligne répétés) pour démarrer un chapitre sur une nouvelle page ; les **sections**, qui permettent de changer l'orientation (paysage pour un grand tableau) ou la numérotation de page ; les **en-têtes et pieds de page**, avec le numéro de page inséré comme champ ; les **légendes** et **renvois** automatiques (« voir tableau 3 ») qui se mettent à jour si l'on ajoute un tableau .\n\n**Exemple concret (données fictives)** : un chef de service rédige un rapport de 24 pages sur l'activité de son service. Il applique *Titre 1* à « 1. Contexte », « 2. Activités réalisées », « 3. Difficultés », « 4. Recommandations », puis *Titre 2* aux sous-parties. La table des matières générée affiche quatre entrées principales et douze sous-entrées. À la relecture, la direction demande d'insérer une page de synthèse au début : les chapitres se décalent. Il suffit de mettre à jour la table pour que toutes les pages soient correctes, sans retaper un seul numéro.\n\n**Erreurs fréquentes** : utiliser la touche Entrée pour descendre en bas de page, aligner du texte avec des espaces, mélanger plusieurs polices, copier du texte depuis une page web en conservant sa mise en forme (préférez *Collage spécial*, option *Texte seul*, puis appliquez vos styles).",
+      "keyPoints": [
+        "Un style est un ensemble de réglages enregistré ; modifier le style change tous les paragraphes concernés.",
+        "La table des matières automatique repose sur les styles Titre 1, Titre 2, etc. : un titre mis en gras à la main n'y figure pas.",
+        "Après toute modification, mettre à jour les champs (clic droit, ou touche F9) pour actualiser numéros de page et titres.",
+        "Saut de page et espacement des paragraphes remplacent les retours à la ligne répétés.",
+        "Les sections permettent de changer l'orientation ou la numérotation de page au milieu d'un document."
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Mettre en page une note ou une lettre administrative",
+      "theme": "Mise en page d'une note officielle",
+      "minutes": 9,
+      "body": "La **mise en page** d'une note, d'un courrier ou d'une note de service participe à la crédibilité de l'administration. Un document clair, sobre et conforme au modèle en usage se lit plus vite et inspire confiance. Chaque administration possède ses modèles et ses règles de présentation (en-tête, références, formules de politesse) : **appliquez toujours le modèle en vigueur dans votre ministère**, et ne vous servez des conseils ci-dessous que pour ce qui n'est pas imposé.\n\n**Les éléments habituels d'une note administrative** : l'en-tête (pays, ministère, direction ou service émetteur), la référence du document (numéro, service, année), le lieu et la date, l'indication du destinataire, l'**objet** (une phrase courte qui annonce le sujet), éventuellement la mention des pièces jointes (« PJ : 2 »), le corps du texte, la formule de clôture et la signature avec la qualité du signataire. Selon le cas, une mention de **confidentialité** ou de degré d'urgence figure en haut de page. L'objet doit se comprendre sans ouvrir le document : « Demande de validation du calendrier de l'inventaire annuel » est meilleur que « Demande ».\n\n**Réglages de page à maîtriser** (menu *Mise en page*) : format **A4** en portrait ; marges homogènes (environ 2 à 2,5 cm de chaque côté, selon le modèle) ; police lisible et sobre en taille 11 ou 12 points ; interligne simple ou 1,15 ; alignement à gauche ou justifié ; espacement entre paragraphes réglé dans le style, jamais avec des lignes vides ; **numéro de page** inséré automatiquement dans le pied de page pour tout document de plus d'une page ; en-tête et pied de page distincts pour la première page si le modèle le demande (option *Première page différente*).\n\n**Modèles de documents** : plutôt que de recopier l'ancienne note en effaçant son contenu (au risque de conserver des informations obsolètes ou confidentielles), enregistrez un **modèle** (fichier de type « modèle de document ») contenant l'en-tête, les styles et les zones à compléter. Vous ouvrirez ainsi un nouveau document vierge à chaque fois, dans la mise en forme validée. Les **champs automatiques** (date du jour, numéro de page) évitent les oublis, mais attention : une date insérée en « mise à jour automatique » change à chaque ouverture ; pour une note signée, fixez la date de rédaction.\n\n**Avant l'envoi ou la signature** : relisez avec la vérification orthographique, activez l'affichage des marques de mise en forme pour repérer espaces doubles et retours inutiles, vérifiez les noms, les dates et les montants, puis contrôlez la pagination. Diffusez la version définitive en **PDF** : le rendu est identique chez le destinataire, la mise en forme ne se déplace pas et le fichier est plus difficile à modifier par inadvertance. Un document destiné à rester modifiable (projet de texte soumis à relecture) se transmet en format de traitement de texte.\n\n**Exemple concret (fictif)** : un chef de service prépare une note d'une page et demie sur l'organisation d'un atelier de formation du personnel. Il ouvre le modèle de note du service, saisit un objet précis, rédige trois paragraphes courts et un tableau de deux lignes (dates, lieux), contrôle que le numéro de page apparaît en bas, fixe la date, puis exporte en PDF pour la signature.\n\n**Métadonnées** : un fichier conserve parfois le nom de l'auteur, des commentaires et d'anciennes versions. Avant diffusion externe, utilisez la fonction d'inspection du document pour les supprimer.",
+      "keyPoints": [
+        "Le modèle de note en vigueur dans l'administration prime sur toute préférence personnelle de présentation.",
+        "L'objet doit annoncer clairement le sujet ; pièces jointes et mention de confidentialité sont indiquées en tête.",
+        "Marges homogènes, police sobre de 11 ou 12 points, numéro de page automatique en pied de page.",
+        "Enregistrer un modèle de document évite de réutiliser une ancienne note et ses informations obsolètes.",
+        "Diffuser la version définitive en PDF ; inspecter le document pour retirer les métadonnées avant un envoi externe."
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Tableur : formules de base et références de cellules",
+      "theme": "Tableur : formules et références",
+      "minutes": 11,
+      "body": "Un **tableur** organise les données en lignes (numérotées) et colonnes (lettrées) ; chaque case est une **cellule**, désignée par sa colonne et sa ligne (B3 : colonne B, ligne 3). Une **formule** commence toujours par le signe égal (=) : sans lui, le logiciel lit du texte. Une formule peut contenir des opérateurs (+, −, *, /), des références de cellules et des **fonctions**, c'est-à-dire des calculs prédéfinis dont le nom est en français dans les logiciels francophones et dont les arguments sont séparés par un point-virgule.\n\n**Fonctions de base** :\n\n- **SOMME** : =SOMME(B2:B10) additionne la plage de B2 à B10.\n- **MOYENNE**, **MIN**, **MAX** : moyenne, plus petite et plus grande valeur d'une plage.\n- **NB** compte les cellules contenant des nombres ; **NBVAL** compte les cellules non vides.\n- **SI** : =SI(test; valeur si vrai; valeur si faux). Exemple : =SI(A2>100000;\"Visa direction\";\"Visa chef de service\").\n- **NB.SI** et **SOMME.SI** comptent ou additionnent selon un critère : =SOMME.SI(A2:A7;\"Carburant\";B2:B7) additionne les montants de B2:B7 dont la ligne correspondante de A2:A7 vaut « Carburant ».\n- **RECHERCHEV** (ou sa version moderne RECHERCHEX) renvoie une valeur d'un tableau à partir d'un code : =RECHERCHEV(E2;A2:B5;2;FAUX) cherche E2 dans la première colonne de A2:B5 et rend la deuxième colonne, avec correspondance exacte.\n\n**Références relatives, absolues et mixtes** : c'est la notion qui sépare un tableau fiable d'un tableau faux. Une référence **relative** (B2) s'adapte quand on recopie la formule : copiée une ligne plus bas, B2 devient B3. Une référence **absolue** ($B$2) reste fixe, grâce aux signes dollar (touche F4 pour les ajouter). Une référence **mixte** fixe seulement la ligne (B$2) ou la colonne ($B2). Cas typique : un taux de TVA saisi en F1 (valeur fictive de 20 %) et des montants hors taxe en colonne B. La formule =B2*F1 recopiée vers le bas devient =B3*F2, =B4*F3, et les résultats sont faux. La bonne formule est =B2*$F$1.\n\n**Exemple chiffré fictif** : un service enregistre ses dépenses en milliers de francs CFA. Carburant : 150, 120 et 30 ; fournitures : 80 et 40 ; entretien : 60. Le total général est 480. La formule SOMME.SI sur « Carburant » donne 150 + 120 + 30 = 300 ; la part du carburant est 300/480 = 62,5 %, que l'on met au format pourcentage. Autre exemple : quatre notes de 12, 15, 9 et 14 donnent une moyenne de (12 + 15 + 9 + 14)/4 = 12,5. Attention : une cellule **vide** est ignorée par MOYENNE, alors qu'un **0 saisi** est compté et fait baisser la moyenne.\n\n**Messages d'erreur courants** :\n\n- **#DIV/0!** : division par zéro ou par une cellule vide.\n- **#NOM?** : nom de fonction mal écrit ou texte non reconnu.\n- **#VALEUR!** : opération sur un type incorrect, par exemple additionner du texte et un nombre.\n- **#REF!** : référence supprimée (ligne ou colonne effacée).\n- **#N/A** : valeur introuvable, fréquent avec RECHERCHEV quand le code n'existe pas ou contient une espace en trop. On peut l'encadrer par =SIERREUR(formule; \"à vérifier\").\n\n**Bonnes pratiques** : séparer les données, les paramètres (taux, seuils) et les résultats ; saisir les paramètres dans des cellules nommées plutôt qu'au milieu des formules ; ne pas mélanger texte et nombre dans une colonne ; figer les volets pour garder les titres visibles ; vérifier un total par un calcul indépendant ; enregistrer une copie avant une grosse modification. Un tableau de calcul destiné à d'autres agents gagne à comporter une feuille « Mode d'emploi ».",
+      "keyPoints": [
+        "Toute formule commence par =, et les arguments sont séparés par un point-virgule dans un logiciel francophone.",
+        "SOMME, MOYENNE, NB.SI, SOMME.SI et SI couvrent l'essentiel des calculs administratifs courants.",
+        "Une référence relative s'adapte à la recopie ; une référence absolue ($B$2) reste fixe ; la mixte fixe la ligne ou la colonne.",
+        "Une cellule vide est ignorée par MOYENNE, mais un 0 saisi est compté.",
+        "Les erreurs #DIV/0!, #REF!, #NOM?, #VALEUR! et #N/A ont chacune une cause identifiable ; SIERREUR permet de les encadrer."
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Tableur : trier, filtrer, synthétiser et représenter",
+      "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
+      "minutes": 11,
+      "body": "Une fois les données saisies, le tableur sert à les **organiser**, les **synthétiser** et les **représenter**. Pour que ces outils fonctionnent, la présentation des données doit être irréprochable : une ligne de titres de colonnes unique, **une ligne par enregistrement**, aucune ligne ni colonne entièrement vide au milieu, aucune cellule fusionnée dans la zone de données et un seul type d'information par colonne. Transformer la zone en **tableau** (fonction *Mettre sous forme de tableau*) facilite beaucoup les manipulations : les formules et formats s'étendent automatiquement aux nouvelles lignes.\n\n**Trier** : classer les lignes selon une ou plusieurs colonnes (ordre croissant ou décroissant, de A à Z, du plus petit au plus grand, du plus ancien au plus récent). Cliquez dans le tableau (sans sélectionner une seule colonne) puis utilisez la commande *Trier*. Le piège classique est de ne sélectionner qu'une colonne : le tableur peut alors trier cette colonne seule et **dissocier les montants de leurs libellés**, ce qui falsifie les données sans que l'on s'en aperçoive. Un tri sur plusieurs niveaux (par service, puis par montant décroissant) s'obtient avec la boîte de dialogue *Tri personnalisé*.\n\n**Filtrer** : afficher uniquement les lignes qui répondent à un critère, sans rien supprimer. Les lignes masquées sont toujours présentes ; elles réapparaissent quand on efface le filtre. Les filtres peuvent se combiner (service = « Logistique » **et** montant supérieur à 50 000), ce qui revient à un ET entre critères portant sur des colonnes différentes. Exemple fictif : quatre lignes Logistique 60 000 ; Logistique 30 000 ; Archives 70 000 ; Logistique 90 000. Le filtre « Logistique » et « supérieur à 50 000 » affiche deux lignes (60 000 et 90 000). Pour un total qui tient compte des filtres, utilisez la fonction **SOUS.TOTAL**, car SOMME additionne aussi les lignes masquées.\n\n**Tableau croisé dynamique (TCD)** : outil de synthèse qui regroupe et totalise des données sans les modifier. On glisse des champs dans quatre zones : *Lignes*, *Colonnes*, *Valeurs* (avec une opération : somme, nombre, moyenne) et *Filtres*. Exemple fictif, en millions de francs CFA : (Direction A, T1, 100), (A, T2, 150), (B, T1, 80), (B, T2, 120), (A, T1, 50), (B, T2, 30). Avec les directions en lignes et la somme des montants, on lit A = 300 et B = 230, total général 530. Si l'on place aussi les trimestres en colonnes, B au deuxième trimestre = 120 + 30 = 150. Point essentiel : **le TCD ne se met pas à jour tout seul** quand les données sources changent ; il faut l'*Actualiser*. Il faut aussi vérifier que le champ numérique est bien additionné (et non compté) et que la source est complète.\n\n**Graphiques** : le choix du type dépend du message.\n\n- **Courbe** : évolution dans le temps (recettes mensuelles).\n- **Histogramme (colonnes)** ou **barres** : comparaison entre catégories.\n- **Secteurs (« camembert »)** : parts d'un tout, avec peu de catégories (cinq au maximum) dont la somme fait 100 %.\n- Évitez les effets 3D, les couleurs superflues et les légendes inutiles.\n\nUn bon graphique a un **titre explicite**, des **axes légendés avec leurs unités**, une source et une échelle honnête : pour des colonnes, l'axe vertical doit commencer à zéro, sinon une différence minime paraît énorme. Un graphique lié aux cellules se met à jour avec elles.\n\n**Mise en forme conditionnelle** : colorer automatiquement les cellules selon une règle (retard supérieur à 30 jours en rouge). Elle attire l'œil, mais n'en abusez pas : plus de trois couleurs brouillent le message.",
+      "keyPoints": [
+        "Des données bien structurées (une ligne par enregistrement, titres uniques, pas de cellule fusionnée) conditionnent tris, filtres et TCD.",
+        "Un tri doit porter sur tout le tableau : trier une seule colonne dissocie les montants de leurs libellés.",
+        "Un filtre masque les lignes sans les supprimer ; SOUS.TOTAL tient compte des filtres, pas SOMME.",
+        "Un tableau croisé dynamique synthétise sans modifier la source, mais doit être actualisé après chaque changement des données.",
+        "Courbe pour une évolution, histogramme pour comparer, secteurs pour des parts d'un tout ; l'axe des colonnes commence à zéro."
+      ]
+    },
+    {
+      "id": "m5",
+      "title": "Concevoir et projeter une présentation efficace",
+      "theme": "Présentation assistée par ordinateur",
+      "minutes": 9,
+      "body": "Un logiciel de **présentation** (diaporama) sert à appuyer un propos oral devant un comité, une réunion de service ou une formation. Il ne remplace ni la note écrite ni le discours : la diapositive aide l'auditoire à retenir, l'orateur explique. La première erreur est d'en faire un document à lire, avec des paragraphes entiers que personne ne lit pendant que l'orateur parle.\n\n**Préparer avant d'ouvrir le logiciel** : définir l'objectif (informer, convaincre, obtenir une décision), le public (hiérarchie, partenaires, agents) et la durée. Comptez en général une à deux minutes par diapositive : dix minutes de présentation, c'est environ cinq à dix diapositives. Écrivez le plan sur papier : **une idée par diapositive**, et un fil conducteur clair (contexte, constat, options, recommandation, décision attendue). Pour un comité de décision, annoncez dès le début l'enjeu et la décision demandée.\n\n**Mise en forme** :\n\n- Utilisez les **dispositions** prédéfinies (titre, titre et contenu, deux contenus) plutôt que des zones de texte posées librement : le contenu reste structuré et alimente le plan.\n- Modifiez la mise en forme commune une seule fois dans le **masque des diapositives** : police, couleurs, logo, numéro de page apparaissent sur toutes les diapositives.\n- Limitez le texte : quelques lignes courtes par diapositive, des verbes, des mots-clés, une police sans empattement de taille suffisante (environ 24 points au minimum pour le corps du texte, afin d'être lisible au fond d'une salle).\n- Soignez le **contraste** : texte sombre sur fond clair, ou l'inverse. Un gris clair sur fond blanc disparaît à la projection.\n- Préférez un **graphique** simple à un tableau de quarante chiffres ; donnez-lui un titre qui énonce le message (« Les recettes progressent de 8 % »), citez la source et indiquez l'unité.\n- Pas plus de deux polices et trois couleurs ; peu d'animations, aucune qui retarde le propos.\n\n**Accessibilité** : ajoutez un **texte de remplacement** (texte alternatif) aux images et graphiques pour les lecteurs d'écran, n'utilisez pas la couleur seule pour transmettre une information, et vérifiez l'ordre de lecture avec le vérificateur d'accessibilité du logiciel.\n\n**Notes du présentateur** : chaque diapositive peut recevoir des notes visibles uniquement par l'orateur dans le **mode présentateur** (avec chronomètre et aperçu de la diapositive suivante). Elles permettent de ne pas surcharger la diapositive. Attention : si vous diffusez le fichier tel quel, **les notes voyagent avec lui**. Avant un envoi à l'extérieur, supprimez-les ou exportez en PDF sans les notes, puis utilisez la fonction d'inspection du document pour retirer commentaires et informations personnelles.\n\n**Répétition et logistique** : répétez à voix haute en chronométrant ; prévoyez un plan B (le fichier en PDF sur une clé ou sur un espace partagé) au cas où le logiciel ou la connexion échouerait ; testez le câble, la résolution et le son avant l'arrivée du public ; pour un diaporama intégrant des liens ou des vidéos, vérifiez qu'ils fonctionnent sur l'ordinateur de la salle. Pendant l'exposé, regardez le public, pas l'écran, et terminez par une diapositive de conclusion : message clé et prochaines étapes.\n\n**Exemple concret (fictif)** : un chef de service doit présenter en dix minutes le bilan de l'inventaire annuel à sa direction. Il prépare huit diapositives : enjeu et décision demandée, méthode, résultats chiffrés (un graphique), écarts constatés, deux options, recommandation, calendrier, prochaines étapes. Ses explications détaillées sont dans les notes du présentateur et dans une annexe écrite distincte.",
+      "keyPoints": [
+        "Une diapositive soutient l'oral : une idée par diapositive, peu de texte, mots-clés plutôt que phrases.",
+        "Le masque des diapositives centralise la mise en forme (police, couleurs, logo, numéros).",
+        "Contraste, taille de police suffisante et textes de remplacement pour les images garantissent lisibilité et accessibilité.",
+        "Les notes du présentateur ne sont pas visibles du public, mais restent dans le fichier : les retirer avant tout envoi externe.",
+        "Répéter en chronométrant et prévoir un plan B (PDF) sont des réflexes indispensables."
+      ]
+    },
+    {
+      "id": "m6",
+      "title": "Messagerie professionnelle : bon usage, pièces jointes, confidentialité",
+      "theme": "Messagerie professionnelle",
+      "minutes": 11,
+      "body": "La messagerie électronique est devenue le canal courant de l'administration. Un message professionnel engage l'agent et son service : il peut être produit comme pièce, transmis à des tiers et conservé longtemps. Il se rédige donc avec le même soin qu'un courrier papier.\n\n**Rédiger** : un message = un sujet. L'**objet** doit être précis (« Demande de validation du programme d'inventaire, avant le 30 », plutôt que « Urgent »). Commencez par une formule d'appel adaptée au destinataire, exposez la demande dès les premières lignes, indiquez l'échéance et l'action attendue, terminez par une formule de politesse et une **signature** normalisée (nom, fonction, direction, téléphone). Préférez des phrases courtes et évitez les majuscules, qui équivalent à crier. Relisez avant d'envoyer : une adresse mal choisie ou une pièce jointe oubliée sont les erreurs les plus fréquentes. Utilisez l'adresse **institutionnelle** pour les échanges de service et évitez les messageries personnelles pour des informations professionnelles.\n\n**À, Cc, Cci** : dans le champ **À** figurent les destinataires qui doivent agir ; en **Cc** (copie), ceux qui doivent seulement être informés ; en **Cci** (copie cachée), des destinataires dont les adresses ne doivent pas être visibles des autres. Pour écrire à une liste de partenaires externes qui ne se connaissent pas, utilisez Cci ou une liste de diffusion : mettre quarante adresses en clair dans À divulgue des coordonnées. **Répondre à tous** n'est justifié que si chaque destinataire a besoin de la réponse ; sinon répondez à l'expéditeur seul et évitez de saturer les boîtes. Le **transfert** d'un message doit s'accompagner d'une ligne de contexte : on ne transfère pas un fil de vingt-cinq messages sans dire ce qu'on attend du destinataire.\n\n**Pièces jointes** : nommez les fichiers clairement (voir le module sur les fichiers), vérifiez leur contenu, et respectez la limite de taille de la messagerie (souvent de l'ordre de quelques dizaines de mégaoctets : renseignez-vous auprès du service informatique). Pour un document volumineux ou un document que plusieurs personnes doivent modifier, envoyez plutôt un **lien de partage** vers l'espace du service, avec des droits adaptés, afin de ne pas multiplier les copies. Ne dépassez pas ce qui est nécessaire : n'envoyez pas tout un classeur contenant des feuilles confidentielles si une seule feuille est demandée, et préférez le PDF pour un document figé.\n\n**Confidentialité et sécurité** : n'envoyez pas d'informations sensibles (données personnelles d'agents, éléments d'un marché en cours, données non publiées) sans nécessité, ni à un destinataire non habilité. Si le document est sensible, protégez-le (mot de passe ou chiffrement) et transmettez le mot de passe par **un autre canal** (téléphone, par exemple). Une erreur de destinataire se traite sans attendre : informez l'expéditeur du risque, demandez la suppression au destinataire involontaire et prévenez votre hiérarchie et le service informatique selon la procédure interne. **Hameçonnage** : message qui imite une institution pour obtenir un mot de passe ou une action (« votre compte expire, cliquez ici »). Indices : expéditeur inattendu, adresse légèrement différente, urgence, fautes, lien dont l'adresse réelle diffère du texte affiché. Ne cliquez pas, n'ouvrez pas la pièce jointe, signalez le message au service informatique, et si vous avez saisi votre mot de passe, prévenez-le immédiatement. Une demande de virement ou de changement de coordonnées bancaires reçue par message doit toujours être **confirmée par un second canal**.\n\n**Organisation** : créez des dossiers par sujet, archivez les messages ayant valeur de décision ou de preuve dans l'espace du service, videz la boîte régulièrement. Pour toute absence de plus de quelques jours, programmez une **réponse automatique d'absence** indiquant les dates de retour et le contact de remplacement.",
+      "keyPoints": [
+        "Un message professionnel = un sujet, un objet précis, la demande et l'échéance dès les premières lignes.",
+        "À pour ceux qui agissent, Cc pour informer, Cci pour masquer les adresses ; Répondre à tous seulement si utile à chacun.",
+        "Pour un fichier volumineux ou à modifier à plusieurs, préférer un lien de partage à une pièce jointe.",
+        "Document sensible : le protéger, et transmettre le mot de passe par un autre canal.",
+        "Un message suspect (hameçonnage) ne se clique pas, se signale ; toute demande de virement se confirme par un second canal."
+      ]
+    },
+    {
+      "id": "m7",
+      "title": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "theme": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "minutes": 10,
+      "body": "Un service qui produit des centaines de documents par an perd un temps considérable si chacun les nomme et les range à sa manière. Une bonne **gestion des fichiers** repose sur trois piliers : un **nommage** cohérent, une **arborescence** claire et une **politique de versions et de sauvegarde**.\n\n**Nommer** : le nom doit permettre d'identifier le contenu sans ouvrir le fichier. Une convention simple peut combiner la date, le sujet, le type et la version, séparés par des tirets bas : **2026-03-15_Note_Calendrier-inventaire_v02.docx**. Quelques règles : date au format **AAAA-MM-JJ** en début de nom (le tri alphabétique donne alors l'ordre chronologique) ; pas d'espaces ni d'accents ni de caractères spéciaux (\\ / : * ? \" < > | sont interdits par certains systèmes) ; noms courts mais explicites ; éviter « nouveau », « final », « final2 », « vraiment-final ». Le mot « final » est trompeur, car il y a presque toujours une modification de plus.\n\n**Ranger** : l'arborescence reflète l'organisation du travail, par exemple *Service > Année > Dossier > Type de document*. Limitez la profondeur à trois ou quatre niveaux, évitez les dossiers « Divers » ou « Nouveau dossier », archivez chaque année les dossiers clos. Les documents de travail restent dans l'espace du service (serveur, espace en ligne institutionnel), pas sur le bureau de l'ordinateur, ni sur une clé USB personnelle. Un fichier existe en **un seul exemplaire de référence** ; ailleurs, on place un raccourci ou un lien plutôt qu'une copie.\n\n**Versions** : conservez la trace des étapes importantes. Deux approches complémentaires : la numérotation manuelle (v01, v02, v03 : version majeure à chaque diffusion ou validation) et l'**historique des versions** de l'espace de partage, qui garde automatiquement les anciennes versions et permet de les restaurer. Désignez pour chaque document un responsable de la version de référence. Lors d'une relecture à plusieurs, il vaut mieux travailler dans un seul fichier partagé avec suivi des modifications que d'échanger des copies par messagerie, qui produisent des versions concurrentes difficiles à fusionner.\n\n**Formats** : pour l'échange, un format largement lisible (PDF) ; pour l'archivage de longue durée, un format ouvert et stable (PDF/A, formats ouverts de documents) ; pour la modification, le format du logiciel d'origine.\n\n**Sauvegarder** : un disque dur peut tomber en panne, un ordinateur être volé ou infecté. La règle dite **3-2-1** recommande trois copies des données (l'original et deux sauvegardes), sur deux supports différents, dont une copie conservée hors du site (autre bâtiment ou espace en ligne sécurisé). Une copie qui reste en permanence connectée à l'ordinateur peut être chiffrée ou effacée avec lui par un logiciel malveillant : prévoyez donc une copie **déconnectée**. Automatisez la sauvegarde (quotidienne ou hebdomadaire selon la valeur des données) et surtout **testez la restauration** : une sauvegarde jamais testée n'est qu'une hypothèse. La **corbeille** n'est pas une sauvegarde : elle se vide, et une suppression sur un espace partagé peut concerner tout le monde.\n\n**Cycle de vie et sécurité** : définissez la durée de conservation de chaque type de document selon les règles d'archivage de votre administration, supprimez ensuite les copies inutiles, protégez par des droits d'accès (lecture, modification) les dossiers sensibles et n'utilisez pas de support amovible d'origine inconnue.\n\n**Exemple chiffré fictif** : un service de dix agents produit environ 600 documents par an ; si chaque agent perd quinze minutes par semaine à chercher un fichier mal nommé, cela représente 10 × 15 × 48 = 7 200 minutes, soit 120 heures par an, soit plus de trois semaines de travail d'un agent à temps plein.",
+      "keyPoints": [
+        "Un nom de fichier explicite suit une convention : date AAAA-MM-JJ, sujet, version, sans espaces ni caractères spéciaux.",
+        "L'arborescence reflète l'organisation du travail et reste dans l'espace du service, pas sur le bureau ni sur une clé personnelle.",
+        "Un seul fichier de référence ; les versions sont numérotées ou conservées par l'historique, avec un responsable désigné.",
+        "Règle 3-2-1 : trois copies, deux supports, une copie hors site, et une restauration testée.",
+        "La corbeille n'est pas une sauvegarde ; une copie toujours connectée peut être détruite avec l'original."
+      ]
+    },
+    {
+      "id": "m8",
+      "title": "Travail collaboratif, documents partagés et visioconférence",
+      "theme": "Travail collaboratif et visioconférence",
+      "minutes": 10,
+      "body": "Les outils collaboratifs (espaces de documents partagés, messagerie instantanée, visioconférence, agendas partagés) permettent à des agents de plusieurs directions, voire de plusieurs villes, de produire ensemble. Leur apport suppose des règles d'usage : sans elles, on multiplie les copies, on mélange les canaux et on expose des informations.\n\n**Documents partagés et co-édition** : un document hébergé dans un espace partagé peut être ouvert par plusieurs personnes en même temps (**co-édition**) ; chacun voit les modifications des autres. Les droits se règlent par document ou par dossier : **lecture seule** (consulter), **commentaire** (annoter sans modifier), **modification** (éditer) et, pour le propriétaire, **partage** (gérer les accès). Appliquez le **principe du moindre droit** : donnez le niveau minimal nécessaire. Pour partager avec une personne extérieure, ciblez des personnes nommées plutôt qu'un lien ouvert à « toute personne disposant du lien », fixez une date d'expiration si l'outil le permet et retirez l'accès une fois le travail terminé.\n\n**Suivi des modifications et commentaires** : le **suivi des modifications** conserve la trace de chaque insertion et suppression, avec son auteur, et permet d'accepter ou de rejeter chaque proposition ; les **commentaires** servent à poser une question ou justifier un choix sans toucher au texte. Le rédacteur responsable arbitre. L'**historique des versions** permet de revenir à un état antérieur, de voir qui a modifié quoi et de récupérer un passage effacé par erreur. Convenez de règles : un seul fichier de référence, un responsable, des échéances pour les relectures, une version « validée » identifiée.\n\n**Messagerie instantanée et canaux d'équipe** : pratiques pour les échanges brefs ; réservez le courrier électronique aux échanges formels et aux décisions, et ne diffusez pas d'informations sensibles dans des groupes dont vous ne maîtrisez pas les membres.\n\n**Visioconférence : avant, pendant, après**.\n\n- **Avant** : envoyer l'invitation avec l'ordre du jour, l'heure (en précisant le fuseau si nécessaire), le lien et les documents à lire ; tester micro, caméra, haut-parleurs ; choisir un lieu calme avec un fond neutre ; se connecter quelques minutes en avance.\n- **Pendant** : couper son micro quand on ne parle pas, utiliser la fonction « lever la main » ou la conversation écrite pour demander la parole, se présenter, respecter le temps de parole. Pour **partager l'écran**, partagez de préférence **la fenêtre concernée** plutôt que tout l'écran, fermez au préalable les messages et les documents sans rapport, et désactivez les notifications. En cas de connexion faible, coupez la caméra et gardez le son ; à l'extrême, passez en audio seul.\n- **Enregistrement** : n'enregistrez qu'avec une finalité claire et en **informant les participants avant de démarrer** (voir les règles de votre administration sur la protection des données personnelles) ; conservez l'enregistrement dans un espace protégé, avec une durée de conservation définie.\n- **Après** : diffuser sous quelques jours un compte rendu court (décisions, responsables, échéances), conserver le document partagé de référence.\n\n**Exemple concret (fictif)** : un atelier réunit dix agents de trois directions, dont un en région avec une connexion irrégulière. Le chef de service envoie la veille l'ordre du jour et le document de travail dans l'espace partagé (droit de commentaire pour tous, droit de modification pour deux rédacteurs). Pendant la réunion, la caméra du participant en région est coupée pour préserver le son, et un compte rendu de dix lignes est diffusé le lendemain.\n\n**Départs et mutations** : les documents doivent se trouver dans l'espace d'équipe, pas dans l'espace personnel d'un agent ; en cas de départ, transférez la propriété des fichiers avant la fermeture du compte.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+      "keyPoints": [
+        "La co-édition permet à plusieurs personnes de modifier simultanément un seul document partagé ; l'historique des versions permet de restaurer.",
+        "Les droits (lecture, commentaire, modification) suivent le principe du moindre droit ; avec des externes, cibler des personnes nommées.",
+        "Le suivi des modifications propose, le rédacteur responsable arbitre ; un commentaire pose une question sans toucher au texte.",
+        "En visioconférence : invitation avec ordre du jour, micro coupé hors prise de parole, partage de fenêtre plutôt que de tout l'écran.",
+        "Enregistrer une réunion suppose d'en informer les participants avant ; les documents d'équipe se conservent dans l'espace d'équipe."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "min-bureautique-001",
+      "theme": "Traitement de texte : styles et table des matières",
+      "level": 1,
+      "q": "Dans un traitement de texte, quel est l'intérêt principal d'un style de titre (par exemple Titre 1) par rapport à une mise en forme manuelle ?",
+      "choices": [
+        "Il garantit que le texte sera imprimé en couleur et en gras sur n'importe quelle imprimante du service",
+        "Il empêche toute autre personne de modifier la police du document partagé par la suite",
+        "Il définit un niveau de plan : le titre apparaît dans la table des matières et le volet de navigation, et se modifie globalement",
+        "Il compresse le document afin qu'il occupe nettement moins d'espace sur le serveur du service et se transmette plus vite, quel que soit son contenu"
+      ],
+      "answer": 2,
+      "explain": "Le style de titre attribue un niveau hiérarchique. C'est ce niveau qui alimente le plan, la navigation et la table des matières, et la modification du style se répercute partout. Il n'a rien à voir avec la couleur d'impression, le verrouillage de la mise en forme ni la compression du fichier.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-002",
+      "theme": "Traitement de texte : styles et table des matières",
+      "level": 1,
+      "q": "Quelle est la commande qui génère une table des matières à partir des titres d'un document ?",
+      "choices": [
+        "Le menu « Références », commande « Table des matières », qui repose sur les styles de titre appliqués",
+        "Le menu « Mise en page », commande « Colonnes », qui répartit les titres du document sur plusieurs colonnes de texte côte à côte",
+        "Le menu « Révision », commande « Orthographe », qui relève les titres mal écrits",
+        "Le menu « Insertion », commande « En-tête », qui reprend le premier titre sur chaque page"
+      ],
+      "answer": 0,
+      "explain": "La table des matières automatique se trouve dans l'onglet Références (ou équivalent selon le logiciel) et lit les styles de titre. Les colonnes, la vérification orthographique et les en-têtes ont d'autres fonctions.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-003",
+      "theme": "Traitement de texte : styles et table des matières",
+      "level": 1,
+      "q": "Pourquoi faut-il « mettre à jour les champs » après avoir ajouté deux pages au milieu d'un rapport ?",
+      "choices": [
+        "Pour que le logiciel enregistre une copie de sauvegarde du fichier sur le serveur du service avant toute modification de la mise en page",
+        "Pour que les deux pages ajoutées soient automatiquement relues par le correcteur",
+        "Pour supprimer les styles inutilisés et alléger le document avant l'envoi",
+        "Pour que la table des matières et les renvois reflètent les nouveaux numéros de page"
+      ],
+      "answer": 3,
+      "explain": "La table des matières est un champ calculé : elle ne se recalcule pas toute seule à chaque frappe. La mise à jour (clic droit ou F9) actualise les numéros de page. Elle n'effectue ni sauvegarde, ni correction, ni nettoyage des styles.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-004",
+      "theme": "Traitement de texte : styles et table des matières",
+      "level": 1,
+      "q": "Pour commencer un nouveau chapitre en haut d'une page, que faut-il faire ?",
+      "choices": [
+        "Appuyer sur la touche Entrée jusqu'à atteindre le haut de la page suivante",
+        "Insérer un saut de page, ou régler le style de titre pour qu'il commence sur une nouvelle page",
+        "Ajouter des espaces à la fin du dernier paragraphe pour pousser le texte",
+        "Réduire la taille de la police du chapitre précédent jusqu'à ce qu'il tienne"
+      ],
+      "answer": 1,
+      "explain": "Le saut de page est l'outil prévu : il reste correct même si le texte précédent change. Les retours à la ligne et les espaces répétés se décalent dès qu'on modifie le texte, et réduire la police n'organise pas la pagination.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-005",
+      "theme": "Traitement de texte : styles et table des matières",
+      "level": 2,
+      "q": "Un agent a mis ses intertitres en gras taille 14 sans appliquer de style. Il génère la table des matières : elle est vide. Quelle est la cause et la correction ?",
+      "choices": [
+        "La table des matières est protégée en écriture ; il faut demander le mot de passe de déverrouillage à l'administrateur du réseau du ministère",
+        "Aucun style de titre n'est appliqué ; il faut affecter Titre 1 ou Titre 2 à chaque intertitre puis mettre à jour la table",
+        "Le gras n'est pas reconnu ; il suffit de passer les intertitres en italique pour qu'ils soient lus",
+        "Le document est trop court ; une table des matières n'est possible qu'à partir de cinquante pages"
+      ],
+      "answer": 1,
+      "explain": "La table se construit à partir des niveaux de plan fournis par les styles de titre. Une mise en forme manuelle n'en crée pas. Il n'existe pas de mot de passe sur ce champ, l'italique n'a aucun effet et il n'y a pas de seuil de pages.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-006",
+      "theme": "Traitement de texte : styles et table des matières",
+      "level": 2,
+      "q": "Un chef de service veut passer tous les titres de niveau 1 de son rapport (vingt titres) du bleu au noir. Quelle méthode est la plus fiable ?",
+      "choices": [
+        "Sélectionner chaque titre l'un après l'autre, puis changer sa couleur manuellement en vérifiant chaque page du rapport",
+        "Utiliser Rechercher et remplacer pour retaper chaque titre en police noire",
+        "Imprimer le document en noir et blanc pour que la couleur disparaisse",
+        "Modifier une seule fois le style Titre 1 afin que tous les titres concernés soient mis à jour"
+      ],
+      "answer": 3,
+      "explain": "La modification du style est la méthode prévue : un seul réglage, appliqué à tous les paragraphes du même style, sans oubli possible. Les autres solutions sont longues, risquées ou ne changent pas le fichier lui-même.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-007",
+      "theme": "Traitement de texte : styles et table des matières",
+      "level": 2,
+      "q": "Votre rapport contient un tableau très large qui ne tient pas en portrait. Comment l'insérer proprement sans modifier le reste du document ?",
+      "choices": [
+        "Créer une section dédiée en orientation paysage pour la page du tableau",
+        "Réduire les marges de tout le document à zéro pour agrandir la zone d'écriture",
+        "Tourner la feuille d'impression à la main avant de lancer la copie",
+        "Coller le tableau sous forme d'image minuscule que l'on ne pourra plus lire"
+      ],
+      "answer": 0,
+      "explain": "Les sections permettent de changer l'orientation, les marges ou la numérotation sur certaines pages seulement. Supprimer les marges dégrade tout le document, la rotation manuelle ne règle pas l'affichage et une image trop réduite est illisible.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-008",
+      "theme": "Traitement de texte : styles et table des matières",
+      "level": 2,
+      "q": "Vous collez dans votre rapport un paragraphe copié depuis une page web ; sa police et sa couleur ne correspondent pas à votre document. Quelle est la bonne pratique ?",
+      "choices": [
+        "Garder la mise en forme d'origine de la page web et adapter ensuite tout le reste du rapport à cette police et à cette couleur",
+        "Coller le texte dans un message électronique, puis le recopier dans le document",
+        "Utiliser le collage spécial en « texte seul », puis laisser vos styles s'appliquer au paragraphe",
+        "Passer tout le document en police de la page web pour conserver l'unité"
+      ],
+      "answer": 2,
+      "explain": "Le collage en texte seul retire la mise en forme importée, et les styles du document donnent ensuite un rendu uniforme. Les autres solutions sont plus longues ou dégradent la cohérence du document.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-009",
+      "theme": "Traitement de texte : styles et table des matières",
+      "level": 3,
+      "q": "Vous recevez un rapport de 60 pages où les titres sont en gras manuel, la numérotation « 1.1 » est tapée à la main et les pages sont séparées par des retours à la ligne. La direction exige une version avec table des matières fiable en deux heures. Que faites-vous ?",
+      "choices": [
+        "Retaper la table des matières à la main en relevant tous les numéros de page, puis la verrouiller avec un mot de passe pour éviter les changements",
+        "Convertir le document en image, puis ajouter la table des matières dans un autre fichier distinct que l'on enverra séparément avec le rapport",
+        "Demander à la direction un délai d'une semaine entière, car la structure d'un document ne peut plus être corrigée une fois rédigée",
+        "Appliquer les styles de titre, passer à la numérotation automatique, remplacer les retours par des sauts de page, puis générer la table"
+      ],
+      "answer": 3,
+      "explain": "Il faut restructurer le document avec les styles et la numérotation automatique : le travail est limité et le résultat durable. Une table tapée à la main est fausse dès la moindre modification, et une conversion en image supprime toute fonction.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-010",
+      "theme": "Traitement de texte : styles et table des matières",
+      "level": 3,
+      "q": "Dans un rapport long, vous insérez des légendes « Tableau 1 », « Tableau 2 »… tapées à la main, puis vous ajoutez un nouveau tableau au milieu. Que se passe-t-il et quelle est la bonne méthode ?",
+      "choices": [
+        "Les numéros tapés restent faux ; il faut utiliser Insérer une légende et des renvois automatiques qui se renumérotent",
+        "Le logiciel renumérote seul tous les tableaux dès l'insertion d'un nouveau tableau, même si aucune fonction de légende n'a été utilisée",
+        "Les tableaux se renumérotent à l'impression, il suffit donc de ne rien faire avant",
+        "La numérotation des tableaux est impossible dans un traitement de texte ; il faut renoncer à numéroter les tableaux dans un rapport"
+      ],
+      "answer": 0,
+      "explain": "Un numéro tapé est du texte ordinaire : il ne bouge pas. La fonction Insérer une légende crée un champ numéroté et les renvois qui s'actualisent à la mise à jour des champs. L'impression ne corrige rien et la numérotation automatique est bien possible.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-011",
+      "theme": "Mise en page d'une note officielle",
+      "level": 1,
+      "q": "Quel est le rôle de l'objet dans une note administrative ?",
+      "choices": [
+        "Remplacer entièrement le corps du texte lorsque la note est urgente et que le temps de lecture du destinataire est limité",
+        "Annoncer en une phrase courte et précise le sujet de la note, avant même la lecture du corps",
+        "Indiquer le nombre de pages de la note ainsi que le format du papier utilisé",
+        "Préciser le nom de la personne qui a tapé le document sur l'ordinateur"
+      ],
+      "answer": 1,
+      "explain": "L'objet permet de comprendre le sujet sans ouvrir le document et de classer la note. Il ne remplace pas le texte, ne sert pas à compter les pages et n'indique pas qui a saisi le document.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-012",
+      "theme": "Mise en page d'une note officielle",
+      "level": 1,
+      "q": "Quelle mention signale que deux documents sont joints à une note ?",
+      "choices": [
+        "« Objet : 2 », placé en haut de la page, à droite de la mention du ministère, avant la date et le lieu",
+        "« Ref : 2 », placé à la fin du dernier paragraphe du texte",
+        "« Cc : 2 », placé juste avant la formule de politesse",
+        "« PJ : 2 », placé sous la signature ou à l'endroit prévu par le modèle"
+      ],
+      "answer": 3,
+      "explain": "La mention « PJ » (pièces jointes) suivie du nombre est la convention habituelle. L'objet, la référence et la copie conforme ont d'autres fonctions.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-013",
+      "theme": "Mise en page d'une note officielle",
+      "level": 1,
+      "q": "Comment faire apparaître automatiquement le numéro de page sur toutes les pages d'une note de plusieurs pages ?",
+      "choices": [
+        "Insérer un champ « numéro de page » dans le pied de page (ou l'en-tête)",
+        "Taper le numéro à la main en bas de chaque page après la mise en page",
+        "Ajouter le numéro dans le nom du fichier avant de l'enregistrer",
+        "Écrire le numéro en filigrane sur la première page uniquement"
+      ],
+      "answer": 0,
+      "explain": "Le champ numéro de page, inséré dans le pied de page, s'actualise tout seul si le contenu bouge. Une saisie manuelle devient fausse dès qu'on modifie le texte.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-014",
+      "theme": "Mise en page d'une note officielle",
+      "level": 1,
+      "q": "Pourquoi diffuse-t-on en général la version définitive d'une note signée en PDF ?",
+      "choices": [
+        "Parce que le PDF permet toujours à chacun des destinataires de corriger librement et rapidement le texte du document reçu",
+        "Parce que le PDF est le seul format de fichier que les messageries acceptent en pièce jointe sans le bloquer automatiquement",
+        "Parce que la mise en forme reste identique chez le destinataire et que le fichier est moins facile à modifier par erreur",
+        "Parce que le PDF double automatiquement la taille des polices pour la lecture"
+      ],
+      "answer": 2,
+      "explain": "Le PDF fige la présentation (polices, pagination) quel que soit le poste du lecteur. Il n'est pas fait pour être modifié, d'autres formats passent aussi par la messagerie et il ne change pas la taille des polices.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-015",
+      "theme": "Mise en page d'une note officielle",
+      "level": 2,
+      "q": "Un agent rédige une nouvelle note en ouvrant l'ancienne et en effaçant son contenu pour réécrire. Quel risque principal court-il, et que lui conseillez-vous ?",
+      "choices": [
+        "Perdre définitivement l'ancienne note, ce qui prouve qu'il vaut mieux ne jamais enregistrer les notes déjà envoyées",
+        "Dépasser le nombre de pages autorisé pour une note ; il faut donc choisir un format de papier plus grand que l'A4",
+        "Conserver des informations obsolètes ou confidentielles cachées ; utiliser plutôt un modèle de document vierge",
+        "Voir la date s'imprimer en rouge ; il suffit de changer la couleur de la police"
+      ],
+      "answer": 2,
+      "explain": "En réutilisant un ancien fichier, on peut garder un commentaire, une date, un nom ou une donnée périmée. Un modèle contient seulement l'en-tête, les styles et les zones à compléter. Les autres risques n'existent pas.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-016",
+      "theme": "Mise en page d'une note officielle",
+      "level": 2,
+      "q": "Vous insérez la date du jour avec un champ « mise à jour automatique » dans une note que vous signez aujourd'hui. Quel problème pose cette option ?",
+      "choices": [
+        "La date changera à chaque ouverture du fichier ; il faut fixer la date de rédaction pour un document signé",
+        "La date ne s'affichera jamais, car ce type de champ ne fonctionne que dans les tableaux et pas dans le corps d'un texte",
+        "La date sera convertie automatiquement en chiffres romains à l'impression, ce qui la rendra illisible pour le destinataire",
+        "La date sera remplacée par le numéro de version du logiciel lors de l'envoi"
+      ],
+      "answer": 0,
+      "explain": "Un champ de date automatique reflète la date d'ouverture, ce qui est inadapté pour un acte daté et signé : il faut saisir une date fixe. Les autres effets décrits n'existent pas.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-017",
+      "theme": "Mise en page d'une note officielle",
+      "level": 2,
+      "q": "Votre note de deux pages contient un tableau qui se coupe d'une page à l'autre, sans titre de colonnes sur la seconde. Que faites-vous ?",
+      "choices": [
+        "Supprimer tous les titres de colonnes pour que le tableau se lise plus vite",
+        "Réduire la police du tableau à 5 points pour tout faire tenir sur une page",
+        "Transformer le tableau en image et la coller en bas de la première page",
+        "Activer la répétition de la ligne d'en-tête sur chaque page et vérifier le saut de page avant le tableau"
+      ],
+      "answer": 3,
+      "explain": "La répétition de la ligne d'en-tête rend le tableau lisible sur plusieurs pages. Sans titres, un tableau perd son sens ; une police minuscule ou une image rend la lecture pénible et non modifiable.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-018",
+      "theme": "Mise en page d'une note officielle",
+      "level": 2,
+      "q": "Un chef de service veut transmettre à un partenaire externe un projet de texte qu'il devra pouvoir corriger, et à sa hiérarchie la note signée. Quels formats choisissez-vous ?",
+      "choices": [
+        "Un PDF pour le projet que le partenaire doit corriger, et un fichier de traitement de texte pour la note que votre hiérarchie signera",
+        "Un fichier de traitement de texte pour le projet à corriger et un PDF pour la note signée",
+        "Une image de chaque document pour les deux destinataires, afin de simplifier",
+        "Un fichier de tableur pour les deux, car il s'ouvre sur tous les ordinateurs"
+      ],
+      "answer": 1,
+      "explain": "Un texte appelé à être modifié se transmet dans un format modifiable ; un document signé et définitif en PDF pour le figer. Inverser ou utiliser une image ou un tableur ne répond pas aux besoins des destinataires.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-019",
+      "theme": "Mise en page d'une note officielle",
+      "level": 3,
+      "q": "Vous devez envoyer à un partenaire extérieur le rapport d'activité de votre direction, rédigé à partir d'un ancien document qui contient des commentaires internes et le nom de plusieurs auteurs dans les propriétés. Que faites-vous avant l'envoi ?",
+      "choices": [
+        "Accepter ou supprimer les commentaires, inspecter le document pour retirer les informations personnelles, puis exporter en PDF",
+        "Envoyer le fichier tel quel, car les commentaires et les propriétés sont invisibles pour les personnes extérieures à l'administration",
+        "Renommer le fichier avec un nom plus court, ce qui efface automatiquement les propriétés",
+        "Protéger le fichier par mot de passe, sans toucher ni au contenu ni aux commentaires, puis transmettre le mot de passe par message"
+      ],
+      "answer": 0,
+      "explain": "Les commentaires et les propriétés (auteur, historique) restent dans le fichier : il faut les traiter, d'où l'inspection du document, puis diffuser en PDF. Renommer ne supprime rien et un mot de passe ne retire pas les commentaires pour celui qui l'a.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-020",
+      "theme": "Mise en page d'une note officielle",
+      "level": 3,
+      "q": "Votre direction harmonise ses notes : certaines ont des marges de 1 cm, d'autres de 4 cm, trois polices différentes et des espaces utilisés pour aligner les titres. Quelle démarche est la plus efficace pour les prochaines notes ?",
+      "choices": [
+        "Envoyer un message demandant à chaque agent de choisir lui-même ses marges, sa police et la présentation qu'il préfère pour ses notes",
+        "Imprimer toutes les notes en réduisant l'échelle à l'impression pour qu'elles semblent identiques, sans corriger les fichiers eux-mêmes",
+        "Interdire l'usage des traitements de texte et revenir à la dactylographie",
+        "Créer un modèle validé avec styles, marges, en-tête et pied de page, puis le diffuser à tous les agents"
+      ],
+      "answer": 3,
+      "explain": "Un modèle commun, avec styles et réglages de page intégrés, uniformise durablement la présentation sans effort supplémentaire. Laisser libre choix accroît le désordre, la réduction à l'impression ne corrige pas les fichiers et la dactylographie n'est pas une réponse.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-021",
+      "theme": "Tableur : formules et références",
+      "level": 1,
+      "q": "Par quel signe doit commencer une formule dans un tableur ?",
+      "choices": [
+        "Le signe dollar ($)",
+        "Le point-virgule (;)",
+        "Le signe dièse (#)",
+        "Le signe égal (=)"
+      ],
+      "answer": 3,
+      "explain": "Le signe égal indique au logiciel qu'il doit calculer. Sans lui, le contenu est lu comme du texte. Le dollar fixe une référence, le point-virgule sépare les arguments et le dièse figure dans certains messages d'erreur.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-022",
+      "theme": "Tableur : formules et références",
+      "level": 1,
+      "q": "Quelle formule additionne les valeurs des cellules B2 à B10 ?",
+      "choices": [
+        "=SOMME(B2;B10;1)",
+        "=SOMME(B2:B10)",
+        "=B2:B10+SOMME",
+        "=TOTAL(B2-B10)"
+      ],
+      "answer": 1,
+      "explain": "La plage B2:B10 se note avec deux-points, et SOMME l'additionne. =SOMME(B2;B10) n'additionnerait que deux cellules, et les deux autres écritures ne sont pas des formules valides.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-023",
+      "theme": "Tableur : formules et références",
+      "level": 1,
+      "q": "Que signifie la référence $B$2 dans une formule ?",
+      "choices": [
+        "La cellule B2 est convertie en euros avant le calcul",
+        "La cellule B2 est masquée et n'apparaît plus à l'impression",
+        "La cellule B2 est fixée : elle ne change pas quand la formule est recopiée",
+        "La cellule B2 est comptée deux fois dans le total"
+      ],
+      "answer": 2,
+      "explain": "Les signes dollar rendent la référence absolue : colonne et ligne restent identiques à la recopie. Ils n'ont aucun effet de conversion monétaire, de masquage ou de double comptage.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-024",
+      "theme": "Tableur : formules et références",
+      "level": 1,
+      "q": "Que signifie le message d'erreur #DIV/0! ?",
+      "choices": [
+        "Une division par zéro ou par une cellule vide a été tentée",
+        "Une cellule référencée dans la formule a été supprimée du classeur, ce qui a rendu la référence invalide",
+        "Un nom de fonction est mal orthographié dans la formule",
+        "Une valeur recherchée est introuvable dans le tableau"
+      ],
+      "answer": 0,
+      "explain": "#DIV/0! apparaît quand le diviseur vaut zéro ou est vide. Une référence supprimée donne #REF!, une fonction mal écrite #NOM? et une valeur introuvable #N/A.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-025",
+      "theme": "Tableur : formules et références",
+      "level": 2,
+      "q": "Un taux de 20 % (valeur fictive) est saisi en F1 ; les montants hors taxe sont en B2:B20. Vous écrivez =B2*F1 en C2 et la recopiez vers le bas : les résultats deviennent faux dès C3. Quelle est la correction ?",
+      "choices": [
+        "Écrire =B2*$F$1 en C2 puis recopier, pour que le taux reste fixe",
+        "Écrire =B2*F1 dans chaque cellule en tapant la formule ligne par ligne",
+        "Mettre le taux en F1 au format texte pour qu'il ne bouge plus",
+        "Supprimer la ligne 1 pour que le taux se décale à chaque recopie"
+      ],
+      "answer": 0,
+      "explain": "Seule la référence absolue maintient le taux en F1. Retaper chaque formule donnerait le même défaut, le format texte empêcherait le calcul et supprimer la ligne produirait #REF!.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-026",
+      "theme": "Tableur : formules et références",
+      "level": 2,
+      "q": "En A2:A6, des montants : 120 000 ; 85 000 ; 40 000 ; 200 000 ; 55 000 (valeurs fictives). En B6 vous saisissez =SI(A6>100000;\"Visa direction\";\"Visa chef de service\"). Quel texte s'affiche ?",
+      "choices": [
+        "« Visa direction », car le test porte sur la ligne 2 et non la ligne 6",
+        "« Visa direction », car 55 000 est inférieur à 100 000",
+        "« Visa chef de service », car 55 000 n'est pas supérieur à 100 000",
+        "Un message d'erreur, car le texte ne peut pas figurer dans un SI"
+      ],
+      "answer": 2,
+      "explain": "A6 vaut 55 000, le test A6>100000 est faux : c'est la troisième partie de la formule qui s'affiche. Un SI peut renvoyer du texte entre guillemets, et la formule teste bien A6.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-027",
+      "theme": "Tableur : formules et références",
+      "level": 2,
+      "q": "Plage A2:A7 : Carburant, Fournitures, Carburant, Entretien, Fournitures, Carburant. Plage B2:B7 : 150, 80, 120, 60, 40, 30 (milliers de francs CFA, valeurs fictives). Quel résultat donne =SOMME.SI(A2:A7;\"Carburant\";B2:B7) ?",
+      "choices": [
+        "480, soit la somme de toutes les dépenses",
+        "300, soit 150 + 120 + 30",
+        "3, soit le nombre de lignes concernées",
+        "180, soit la somme des fournitures et de l'entretien"
+      ],
+      "answer": 1,
+      "explain": "SOMME.SI additionne les montants correspondant au critère : 150 + 120 + 30 = 300. 480 est le total général, 3 serait un NB.SI, et 180 additionne d'autres catégories (80 + 60 + 40).",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-028",
+      "theme": "Tableur : formules et références",
+      "level": 2,
+      "q": "Les notes saisies en B2:B6 sont 12, 15, 9, 14, et la cellule B6 est vide. Quelle valeur renvoie =MOYENNE(B2:B6) ?",
+      "choices": [
+        "10, car la cellule vide est comptée comme un zéro",
+        "50, car la fonction additionne les valeurs",
+        "14, car la fonction renvoie la dernière valeur saisie",
+        "12,5, car la cellule vide est ignorée"
+      ],
+      "answer": 3,
+      "explain": "MOYENNE ignore les cellules vides : 50/4 = 12,5. Seul un 0 réellement saisi serait compté (50/5 = 10). 50 est la somme et MOYENNE ne renvoie pas la dernière valeur.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-029",
+      "theme": "Tableur : formules et références",
+      "level": 3,
+      "q": "=RECHERCHEV(E2;A2:B5;2;FAUX) renvoie #N/A pour le code « D12 » alors que vous le voyez dans la liste. Quelle démarche est la plus pertinente ?",
+      "choices": [
+        "Remplacer FAUX par VRAI pour que le tableur devine le code le plus proche",
+        "Supprimer la colonne B pour forcer la lecture de la colonne A",
+        "Vérifier la présence d'espaces ou de formats différents dans le code, et encadrer au besoin par SIERREUR",
+        "Recopier la formule dans une autre feuille sans rien vérifier"
+      ],
+      "answer": 2,
+      "explain": "#N/A signifie que la valeur exacte n'est pas trouvée en première colonne : espaces superflus, texte ou nombre, faute de frappe. Passer à VRAI donne des correspondances approchées et faussées, supprimer la colonne casse la formule.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-030",
+      "theme": "Tableur : formules et références",
+      "level": 3,
+      "q": "En B3 se trouve =B$2*$A3. Vous recopiez cette formule en C4. Quelle formule contient C4 ?",
+      "choices": [
+        "=B$2*$A3, car la formule recopiée ne change jamais, puisque certaines références comportent des signes dollar",
+        "=C$2*$A4, car seule la ligne 2 et la colonne A sont fixées",
+        "=C$3*$B4, car toutes les références se décalent",
+        "=C$2*$A3, car la ligne 3 est également fixée"
+      ],
+      "answer": 1,
+      "explain": "B$2 fixe la ligne 2 mais laisse la colonne varier (B devient C) ; $A3 fixe la colonne A mais laisse la ligne varier (3 devient 4). D'où =C$2*$A4. Les autres combinaisons ignorent la règle des références mixtes.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-031",
+      "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
+      "level": 1,
+      "q": "Quel est l'effet d'un filtre appliqué à une colonne d'un tableau de données ?",
+      "choices": [
+        "Il masque temporairement les lignes qui ne répondent pas au critère, sans les supprimer",
+        "Il supprime définitivement toutes les lignes qui ne répondent pas au critère, et l'action ne peut plus être annulée",
+        "Il copie les lignes correspondantes dans un nouveau classeur",
+        "Il remplace les valeurs de la colonne par le critère saisi"
+      ],
+      "answer": 0,
+      "explain": "Un filtre est un affichage : les lignes masquées existent toujours et reviennent quand on retire le filtre. Il ne supprime rien, ne copie pas dans un autre fichier et ne modifie pas les valeurs.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-032",
+      "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
+      "level": 1,
+      "q": "Quel type de graphique convient le mieux pour montrer l'évolution mensuelle des recettes d'un service sur une année ?",
+      "choices": [
+        "Un secteur, car il y a douze mois à comparer sur un même cercle",
+        "Un nuage de points sans axes gradués",
+        "Une courbe, car l'axe horizontal représente le temps",
+        "Un histogramme en trois dimensions avec des couleurs différentes par mois"
+      ],
+      "answer": 2,
+      "explain": "La courbe met en évidence une tendance dans le temps. Les secteurs montrent des parts d'un tout et deviennent illisibles avec douze parts ; la 3D et les couleurs superflues nuisent à la lecture.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-033",
+      "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
+      "level": 1,
+      "q": "À quoi sert un tableau croisé dynamique ?",
+      "choices": [
+        "À protéger un classeur par un mot de passe lors de l'envoi",
+        "À regrouper et totaliser les données selon plusieurs critères sans modifier les données d'origine",
+        "À convertir automatiquement un classeur de tableur en un document de traitement de texte prêt à être imprimé",
+        "À supprimer les doublons de la messagerie du service"
+      ],
+      "answer": 1,
+      "explain": "Le TCD synthétise : sommes, moyennes ou nombres par catégorie, en laissant la source intacte. Il ne protège pas un fichier, ne convertit pas de format et ne gère pas la messagerie.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-034",
+      "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
+      "level": 1,
+      "q": "Combien de niveaux de tri peut-on en pratique combiner dans le Tri personnalisé (par exemple service, puis montant décroissant) ?",
+      "choices": [
+        "Un seul : le deuxième tri efface toujours le premier",
+        "Aucun : le tri ne s'applique qu'aux nombres",
+        "Deux exactement, jamais davantage ni moins",
+        "Plusieurs : on ajoute autant de niveaux de tri que nécessaire"
+      ],
+      "answer": 3,
+      "explain": "La boîte de dialogue Tri personnalisé permet d'empiler plusieurs niveaux de tri. Le tri s'applique aussi aux textes et aux dates, et il n'est pas limité à deux critères.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-035",
+      "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
+      "level": 2,
+      "q": "Un agent sélectionne uniquement la colonne « Montant » d'un tableau de dépenses et la trie du plus petit au plus grand. Les libellés ne bougent pas. Quel est le résultat et comment l'éviter ?",
+      "choices": [
+        "Les libellés se trient seuls aussi ; il n'y a aucun risque d'erreur",
+        "Le tableur refuse toujours d'exécuter ce tri sur une seule colonne ; il faut redémarrer le logiciel avant de recommencer",
+        "Les montants sont supprimés du tableau : il faut alors les ressaisir un par un à partir d'un document papier d'archive",
+        "Les montants sont dissociés de leurs libellés ; il faut cliquer dans le tableau pour étendre le tri à toutes les colonnes"
+      ],
+      "answer": 3,
+      "explain": "Trier une seule colonne désolidarise les valeurs des lignes d'origine : les chiffres ne correspondent plus aux libellés. Il faut trier l'ensemble du tableau. Le logiciel n'avertit pas toujours et ne supprime pas les données.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-036",
+      "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
+      "level": 2,
+      "q": "Votre tableau croisé dynamique affiche des totaux par direction. Un collègue corrige trois montants dans la source, mais le TCD ne bouge pas. Que faites-vous ?",
+      "choices": [
+        "Supprimer le TCD et ressaisir tous les totaux à la main",
+        "Actualiser le tableau croisé dynamique, qui ne se met pas à jour automatiquement",
+        "Fermer puis rouvrir le classeur dix fois de suite, sans effectuer aucune autre action sur le tableau croisé dynamique",
+        "Trier la source du plus petit au plus grand, pour obliger le tableur à recalculer tous les totaux du tableau croisé"
+      ],
+      "answer": 1,
+      "explain": "Un TCD garde ses résultats jusqu'à l'actualisation (clic droit, Actualiser). Ressaisir est inutile et risqué ; rouvrir ou trier la source n'actualise pas le tableau.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-037",
+      "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
+      "level": 2,
+      "q": "Un budget fictif se répartit ainsi : direction A 40 %, B 30 %, C 20 %, D 10 %. Quel graphique choisissez-vous pour montrer la part de chacune dans le total ?",
+      "choices": [
+        "Une courbe reliant les quatre directions dans l'ordre alphabétique, avec une ligne pour suggérer la tendance entre elles",
+        "Un nuage de points sans titre ni légende",
+        "Un graphique en secteurs, avec quatre parts dont la somme fait 100 %",
+        "Un histogramme dont l'axe vertical commence à 30 %"
+      ],
+      "answer": 2,
+      "explain": "Avec peu de catégories formant un tout, les secteurs conviennent. Une courbe suggère une évolution qui n'existe pas, et un axe tronqué à 30 % déformerait les écarts.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-038",
+      "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
+      "level": 2,
+      "q": "Un tableau fictif : Logistique 60 000 ; Logistique 30 000 ; Archives 70 000 ; Logistique 90 000. Vous filtrez Service = « Logistique » et Montant supérieur à 50 000. Combien de lignes restent affichées ?",
+      "choices": [
+        "Deux lignes (60 000 et 90 000)",
+        "Une ligne (90 000 seulement)",
+        "Trois lignes (toutes les lignes Logistique)",
+        "Quatre lignes (aucune n'est masquée)"
+      ],
+      "answer": 0,
+      "explain": "Les deux critères se cumulent (ET) : les lignes Logistique sont au nombre de trois, mais 30 000 n'est pas supérieur à 50 000. Restent 60 000 et 90 000. La ligne Archives est exclue par le premier critère.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-039",
+      "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
+      "level": 3,
+      "q": "Données fictives en millions de francs CFA : (A, T1, 100), (A, T2, 150), (B, T1, 80), (B, T2, 120), (A, T1, 50), (B, T2, 30). Dans un TCD avec les directions en lignes, les trimestres en colonnes et la somme des montants, quelle valeur figure à l'intersection de B et T2 ?",
+      "choices": [
+        "120, car seule la première ligne correspondante est lue",
+        "150, soit 120 + 30",
+        "30, car seule la dernière ligne correspondante est lue",
+        "230, car c'est le total de la direction B"
+      ],
+      "answer": 1,
+      "explain": "Le TCD additionne toutes les lignes de B pour T2 : 120 + 30 = 150. Il ne lit pas qu'une ligne. 230 est le total de B sur les deux trimestres (80 + 120 + 30).",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-040",
+      "theme": "Tableur : tris, filtres, tableaux croisés et graphiques",
+      "level": 3,
+      "q": "Dans une note à destination de la direction, un histogramme compare deux années : 96 et 100 (en pourcentage de réalisation). L'axe vertical commence à 95 et la deuxième colonne paraît cinq fois plus haute. Que lui reprochez-vous et que proposez-vous ?",
+      "choices": [
+        "Rien à reprocher : un graphique doit toujours viser à montrer des écarts spectaculaires pour retenir l'attention de la direction",
+        "Les colonnes sont trop larges ; il faut les remplacer par un camembert",
+        "L'axe tronqué exagère l'écart ; il faut le faire commencer à zéro et afficher les valeurs sur les colonnes",
+        "Le titre est trop précis ; il vaut mieux ne pas en mettre du tout pour éviter les critiques de la direction"
+      ],
+      "answer": 2,
+      "explain": "Un axe qui ne part pas de zéro dans un histogramme déforme la perception : 4 points d'écart paraissent énormes. Une échelle honnête et des valeurs affichées garantissent la lecture. Le camembert et la suppression du titre n'apportent rien.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-041",
+      "theme": "Présentation assistée par ordinateur",
+      "level": 1,
+      "q": "Dans un logiciel de présentation, à quoi sert le masque des diapositives ?",
+      "choices": [
+        "À cacher définitivement certaines diapositives au public pendant la projection",
+        "À protéger le diaporama par un mot de passe lors de l'envoi",
+        "À définir une fois la mise en forme commune (police, couleurs, logo, numéro de page) appliquée à toutes les diapositives",
+        "À enregistrer la voix de l'orateur pendant la répétition"
+      ],
+      "answer": 2,
+      "explain": "Le masque centralise la mise en forme d'ensemble ; une modification s'y répercute partout. Masquer une diapositive, mettre un mot de passe ou enregistrer la voix sont d'autres fonctions.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-042",
+      "theme": "Présentation assistée par ordinateur",
+      "level": 1,
+      "q": "Que contiennent les notes du présentateur et qui peut les voir pendant la projection ?",
+      "choices": [
+        "Un commentaire destiné au public, qui s'affiche automatiquement sous chaque diapositive projetée sur l'écran de la salle",
+        "La liste des participants, visible par tous les spectateurs",
+        "Les mots de passe du fichier, visibles seulement par l'administrateur",
+        "Un texte d'aide pour l'orateur, visible uniquement en mode présentateur et non par le public"
+      ],
+      "answer": 3,
+      "explain": "Les notes servent d'aide-mémoire à l'orateur et ne s'affichent pas à l'écran projeté. Elles ne sont pas faites pour le public, n'ont rien à voir avec les participants ni avec des mots de passe.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-043",
+      "theme": "Présentation assistée par ordinateur",
+      "level": 1,
+      "q": "Quelle règle générale s'applique au contenu d'une diapositive ?",
+      "choices": [
+        "Une seule idée principale, exprimée en quelques mots-clés ou lignes courtes",
+        "Le plus de texte possible sur chaque diapositive, pour que le public n'ait pas besoin d'écouter ce que dit l'orateur",
+        "Un tableau de quarante lignes, afin d'être exhaustif devant le comité",
+        "Un paragraphe complet recopié de la note écrite"
+      ],
+      "answer": 0,
+      "explain": "Une diapositive aide à retenir une idée ; le détail passe à l'oral ou dans un document d'accompagnement. Les paragraphes et les grands tableaux ne sont pas lisibles à la projection.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-044",
+      "theme": "Présentation assistée par ordinateur",
+      "level": 1,
+      "q": "Pourquoi ajouter un texte de remplacement (texte alternatif) à une image ou à un graphique ?",
+      "choices": [
+        "Pour agrandir automatiquement l'image à l'écran lors de la projection, quelle que soit la résolution du projecteur",
+        "Pour permettre aux lecteurs d'écran de décrire l'image aux personnes qui ne la voient pas",
+        "Pour cacher l'image lorsque le fichier est imprimé en noir et blanc",
+        "Pour réduire la taille du fichier en supprimant l'image"
+      ],
+      "answer": 1,
+      "explain": "Le texte de remplacement décrit le contenu de l'image pour l'accessibilité. Il n'agrandit rien, ne masque rien et ne supprime pas l'image.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-045",
+      "theme": "Présentation assistée par ordinateur",
+      "level": 2,
+      "q": "Votre diapositive de synthèse compte 200 mots en police 12 points. En salle de réunion, les derniers rangs ne lisent rien. Que faites-vous ?",
+      "choices": [
+        "Réduire encore la taille de la police pour tout faire tenir sur une seule diapositive sans rien retirer du texte",
+        "La ramener à quelques points clés en grande police et déplacer le détail dans les notes ou un document remis",
+        "Projeter la diapositive telle quelle sans la commenter, en espérant que chacun lise malgré la distance de la salle",
+        "Ajouter des animations pour que le texte apparaisse ligne par ligne"
+      ],
+      "answer": 1,
+      "explain": "Un texte dense est illisible à distance : il faut synthétiser et déporter le détail. Réduire la police aggrave le problème, ne pas commenter perd le public et les animations ne résolvent pas la lisibilité.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-046",
+      "theme": "Présentation assistée par ordinateur",
+      "level": 2,
+      "q": "Un chef de service utilise du gris clair sur fond blanc pour le texte, car il trouve cela élégant. Au projecteur, certains participants ne distinguent pas le texte. Quelle correction apportez-vous ?",
+      "choices": [
+        "Augmenter le contraste : texte foncé sur fond clair (ou l'inverse), dans une police suffisamment grande",
+        "Ajouter une ombre portée de couleur à chaque lettre",
+        "Baisser la luminosité du projecteur pour adoucir l'image",
+        "Passer le texte en italique pour le rendre plus visible"
+      ],
+      "answer": 0,
+      "explain": "Le contraste entre texte et fond est le premier critère de lisibilité. Les ombres colorées, une luminosité réduite ou l'italique n'améliorent pas, voire aggravent, la lecture.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-047",
+      "theme": "Présentation assistée par ordinateur",
+      "level": 2,
+      "q": "Vous insérez un graphique de recettes dans une diapositive. Quelle version est la plus utile pour l'auditoire ?",
+      "choices": [
+        "Le tableau complet des chiffres en petits caractères sous le graphique",
+        "Un graphique en trois dimensions avec une couleur différente par barre, des ombres portées et sans légende ni unité",
+        "Une capture d'écran du tableur, avec le curseur et les menus visibles",
+        "Un graphique simple, avec un titre qui énonce le message, l'unité et la source"
+      ],
+      "answer": 3,
+      "explain": "Le titre qui énonce le message, l'unité et la source rendent le graphique immédiatement compréhensible. Un tableau dense, un effet 3D ou une capture d'écran brute brouillent la lecture.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-048",
+      "theme": "Présentation assistée par ordinateur",
+      "level": 2,
+      "q": "La veille d'une présentation, vous découvrez que le projecteur de la salle n'accepte pas votre fichier à cause d'une police absente. Quelle précaution aurait évité l'incident ?",
+      "choices": [
+        "Utiliser une police rare et originale choisie pour se démarquer des autres présentations de la direction",
+        "Tout reprendre en recopiant les diapositives sur des feuilles de papier remises ensuite à chaque participant",
+        "Prévoir une copie du diaporama exportée en PDF et tester le fichier sur l'ordinateur de la salle",
+        "Ne tester le matériel que dix minutes après le début de la réunion, lorsque tous les participants sont arrivés"
+      ],
+      "answer": 2,
+      "explain": "Un PDF conserve la mise en page quelle que soit la machine, et un essai préalable révèle les problèmes. Une police rare aggrave le risque, et tester en séance est trop tard.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-049",
+      "theme": "Présentation assistée par ordinateur",
+      "level": 3,
+      "q": "Vous disposez de dix minutes devant un comité pour obtenir la validation d'un calendrier de formation. Quelle structure est la plus adaptée ?",
+      "choices": [
+        "Commencer par l'enjeu et la décision demandée, exposer brièvement la situation, les options et la recommandation, puis conclure",
+        "Raconter l'historique complet du projet en quarante diapositives, de sa création jusqu'à aujourd'hui, avant d'arriver à la demande de décision",
+        "Projeter uniquement un tableau de chiffres, sans commentaire oral",
+        "Commencer par les remerciements, puis improviser la suite de l'exposé en fonction des réactions et des questions du public"
+      ],
+      "answer": 0,
+      "explain": "Pour une décision, on annonce d'emblée l'enjeu et la demande, puis on structure en peu de diapositives. Un long historique épuise le temps, un tableau seul ne guide pas, l'improvisation est risquée.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-050",
+      "theme": "Présentation assistée par ordinateur",
+      "level": 3,
+      "q": "Vous envoyez à un partenaire extérieur le fichier de présentation de vos résultats. Vos notes du présentateur contiennent des remarques internes sur des difficultés non publiées, et un commentaire mentionne un collègue. Que faites-vous avant l'envoi ?",
+      "choices": [
+        "Envoyer le fichier tel quel, car les notes ne sont pas visibles en mode diaporama",
+        "Renommer le fichier avec le mot « public » dans son nom, ce qui masque les notes",
+        "Demander au partenaire de ne pas ouvrir le volet des notes",
+        "Supprimer notes et commentaires, inspecter le document, puis envoyer un PDF plutôt que le fichier modifiable"
+      ],
+      "answer": 3,
+      "explain": "Les notes et commentaires restent dans le fichier et sont lisibles dès qu'il est ouvert en édition. Il faut les retirer, inspecter, et privilégier le PDF. Le nom du fichier n'a aucun effet et on ne peut pas compter sur la discrétion du lecteur.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-051",
+      "theme": "Messagerie professionnelle",
+      "level": 1,
+      "q": "Dans quel champ place-t-on les destinataires dont les adresses ne doivent pas être visibles des autres ?",
+      "choices": [
+        "À (destinataires principaux)",
+        "Cci (copie cachée)",
+        "Cc (copie visible)",
+        "Objet (sujet du message)"
+      ],
+      "answer": 1,
+      "explain": "Cci masque les adresses aux autres destinataires. À et Cc les affichent. Le champ Objet reçoit le sujet, non des adresses.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-052",
+      "theme": "Messagerie professionnelle",
+      "level": 1,
+      "q": "Quelle caractéristique doit avoir l'objet d'un message professionnel ?",
+      "choices": [
+        "Il est précis et annonce le sujet ou l'action attendue",
+        "Il reste vide pour que le message soit lu en priorité",
+        "Il est écrit entièrement en majuscules pour marquer l'urgence",
+        "Il reprend simplement le mot « Bonjour »"
+      ],
+      "answer": 0,
+      "explain": "Un objet précis permet de comprendre, classer et retrouver le message. Un objet vide, en majuscules ou sans contenu informatif est mal perçu et peu utile.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-053",
+      "theme": "Messagerie professionnelle",
+      "level": 1,
+      "q": "Quand utiliser « Répondre à tous » ?",
+      "choices": [
+        "Toujours, par politesse envers l'ensemble des destinataires",
+        "Jamais, car la fonction est réservée aux administrateurs",
+        "Uniquement pour les messages comportant une pièce jointe",
+        "Seulement si tous les destinataires ont besoin de votre réponse"
+      ],
+      "answer": 3,
+      "explain": "Répondre à tous encombre les boîtes si la réponse ne concerne qu'une personne. La fonction n'est ni obligatoire ni réservée, et elle ne dépend pas des pièces jointes.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-054",
+      "theme": "Messagerie professionnelle",
+      "level": 1,
+      "q": "Que faire d'un message inattendu qui demande de cliquer sur un lien pour « éviter la fermeture de votre compte » ?",
+      "choices": [
+        "Cliquer sur le lien pour vérifier rapidement si le site est authentique, puis refermer la page",
+        "Le transférer à tous les collègues du service pour les prévenir, sans l'avoir signalé au service informatique",
+        "Ne pas cliquer et le signaler au service informatique, car c'est vraisemblablement de l'hameçonnage",
+        "Répondre au message en indiquant votre mot de passe pour régulariser la situation du compte avant l'échéance"
+      ],
+      "answer": 2,
+      "explain": "L'urgence, l'expéditeur inattendu et le lien sont des indices d'hameçonnage. La bonne réaction est de ne pas interagir et de signaler. Cliquer, répondre avec un mot de passe ou diffuser à tous aggrave le risque.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-055",
+      "theme": "Messagerie professionnelle",
+      "level": 2,
+      "q": "Vous devez informer quarante partenaires externes d'un changement de date d'atelier. Comment envoyez-vous le message ?",
+      "choices": [
+        "En plaçant les quarante adresses dans le champ À, pour que chacun puisse voir qui d'autre a reçu le message",
+        "En envoyant le message à vous-même, puis en le transférant un par un à chaque partenaire sans ajouter de contexte",
+        "En répondant à un ancien message avec « Répondre à tous » sans vérifier",
+        "En plaçant les adresses en Cci, ou via une liste de diffusion, pour ne pas divulguer les coordonnées"
+      ],
+      "answer": 3,
+      "explain": "Cci protège les adresses de personnes qui ne se connaissent pas. Placer toutes les adresses en clair les divulgue. Les autres méthodes sont lourdes ou risquent d'inclure des destinataires inappropriés.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-056",
+      "theme": "Messagerie professionnelle",
+      "level": 2,
+      "q": "Un fichier de 80 Mo doit être communiqué à trois collègues, qui le modifieront chacun. Quelle solution adoptez-vous ?",
+      "choices": [
+        "Envoyer trois messages avec le fichier joint, et laisser chaque collègue conserver sa propre copie sur son poste",
+        "Couper le fichier en plusieurs parties envoyées dans des messages successifs",
+        "Déposer le fichier dans l'espace partagé du service et envoyer un lien avec des droits adaptés",
+        "L'envoyer à une adresse personnelle pour ne pas saturer la messagerie du service, puis le retransmettre depuis cette adresse"
+      ],
+      "answer": 2,
+      "explain": "Le lien de partage évite les limites de taille et les copies concurrentes, tout en permettant de contrôler les droits. Les autres options multiplient les versions ou sortent les données du cadre professionnel.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-057",
+      "theme": "Messagerie professionnelle",
+      "level": 2,
+      "q": "Vous venez d'envoyer par erreur un document interne à un contact externe portant le même prénom qu'un collègue. Que faites-vous en priorité ?",
+      "choices": [
+        "Prévenir sans attendre votre hiérarchie et le service informatique selon la procédure, et demander la suppression au destinataire",
+        "Ne rien dire en espérant que le destinataire n'ouvrira pas le message",
+        "Envoyer dix autres documents pour noyer le premier message",
+        "Supprimer le message de votre boîte d'envoi en considérant l'incident clos"
+      ],
+      "answer": 0,
+      "explain": "Supprimer votre copie n'efface pas celle du destinataire. Il faut agir vite et signaler l'incident pour limiter les conséquences. Se taire ou noyer le message n'a aucun effet protecteur.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-058",
+      "theme": "Messagerie professionnelle",
+      "level": 2,
+      "q": "Vous partez en mission quinze jours et serez injoignable. Que mettez-vous en place sur votre messagerie ?",
+      "choices": [
+        "Une redirection de tous vos messages vers l'adresse personnelle d'un proche",
+        "Une réponse automatique indiquant vos dates d'absence et un contact de remplacement",
+        "Rien, car les expéditeurs comprendront votre silence",
+        "Votre mot de passe dans la signature, pour que n'importe quel collègue accède à votre boîte"
+      ],
+      "answer": 1,
+      "explain": "La réponse d'absence informe les expéditeurs et oriente vers un remplaçant, sans compromettre la sécurité. Rediriger vers une adresse personnelle ou partager un mot de passe viole la confidentialité.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-059",
+      "theme": "Messagerie professionnelle",
+      "level": 3,
+      "q": "Vous recevez de la messagerie personnelle d'une personne se présentant comme votre directeur un message urgent : « Effectuez ce virement aujourd'hui, ne m'appelez pas, je suis en réunion ». Que faites-vous ?",
+      "choices": [
+        "Effectuer le virement rapidement pour répondre à l'urgence",
+        "Répondre à l'adresse personnelle en demandant les coordonnées bancaires complètes du service, puis préparer le virement en attendant",
+        "Ne pas agir, confirmer la demande par un autre canal (téléphone), puis alerter votre hiérarchie et le service informatique",
+        "Transférer le message à vos collègues en leur demandant de réaliser le virement pendant que vous préparez le dossier"
+      ],
+      "answer": 2,
+      "explain": "C'est un schéma classique de fraude au président : expéditeur inhabituel, urgence, interdiction de vérifier. La confirmation par un second canal et le signalement s'imposent. Agir ou diffuser l'ordre expose l'administration à une perte.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-060",
+      "theme": "Messagerie professionnelle",
+      "level": 3,
+      "q": "Vous préparez l'envoi d'un tableur contenant trois feuilles : une feuille de synthèse destinée à un partenaire, et deux feuilles de données personnelles d'agents. Que faites-vous ?",
+      "choices": [
+        "Envoyer le classeur entier en masquant les deux feuilles",
+        "N'envoyer que la synthèse, extraite dans un fichier distinct en PDF, ou un classeur ne contenant pas les autres feuilles",
+        "Envoyer le classeur entier en précisant dans le message de ne pas ouvrir les autres feuilles",
+        "Protéger le classeur par un mot de passe écrit dans le corps du même message"
+      ],
+      "answer": 1,
+      "explain": "Une feuille masquée reste accessible, et une consigne verbale n'offre aucune protection. Il faut limiter la diffusion au strict nécessaire. Un mot de passe placé dans le même message annule son intérêt.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-061",
+      "theme": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "level": 1,
+      "q": "Quel format de date en début de nom de fichier permet un tri chronologique automatique ?",
+      "choices": [
+        "JJ-MM-AAAA (par exemple 15-03-2026)",
+        "Mois en toutes lettres (par exemple mars)",
+        "Date saisie à la fin du nom, après la version",
+        "AAAA-MM-JJ (par exemple 2026-03-15)"
+      ],
+      "answer": 3,
+      "explain": "Avec l'année en premier, puis le mois et le jour, l'ordre alphabétique est aussi chronologique. Les autres écritures mélangent les années ou ne se trient pas chronologiquement.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-062",
+      "theme": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "level": 1,
+      "q": "Que prévoit la règle de sauvegarde dite 3-2-1 ?",
+      "choices": [
+        "Trois sauvegardes par jour, réparties sur deux disques durs, pendant une seule semaine avant de les effacer",
+        "Trois personnes responsables, deux ordinateurs et une seule clé USB",
+        "Trois copies des données, sur deux supports différents, dont une hors site",
+        "Trois mots de passe, deux sauvegardes et un seul exemplaire du fichier"
+      ],
+      "answer": 2,
+      "explain": "La règle 3-2-1 combine nombre de copies, diversité des supports et copie externalisée. Elle ne concerne ni la fréquence journalière, ni le nombre de personnes, ni les mots de passe.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-063",
+      "theme": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "level": 1,
+      "q": "Pourquoi la corbeille de l'ordinateur ne constitue-t-elle pas une sauvegarde ?",
+      "choices": [
+        "Elle conserve les fichiers pendant dix ans sans intervention",
+        "Elle peut être vidée et ne protège ni d'une panne du disque ni d'un vol",
+        "Elle copie automatiquement chaque fichier sur un second site",
+        "Elle chiffre les fichiers supprimés pour éviter toute perte"
+      ],
+      "answer": 1,
+      "explain": "La corbeille est un espace temporaire sur le même disque. Elle ne protège donc pas contre la panne ou le vol, et son contenu se vide. Elle n'externalise ni ne chiffre rien.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-064",
+      "theme": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "level": 1,
+      "q": "Quel nom de fichier est le mieux adapté à une note signée de mars 2026 sur le calendrier d'inventaire ?",
+      "choices": [
+        "2026-03-15_Note_Calendrier-inventaire_v02.pdf",
+        "Note finale vraiment finale (2) !!.pdf",
+        "nouveau document.pdf",
+        "Calendrier inventaire mars (copie de copie).pdf"
+      ],
+      "answer": 0,
+      "explain": "Le premier nom suit une convention : date, type, sujet, version, sans espaces ni caractères spéciaux. Les autres sont ambigus et mélangent « final », « copie » ou des signes à éviter.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-065",
+      "theme": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "level": 2,
+      "q": "Deux collègues relisent chacun une copie d'un rapport reçue par message, puis renvoient leurs corrections. Vous recevez deux versions différentes à fusionner. Quelle organisation évite ce problème à l'avenir ?",
+      "choices": [
+        "Un seul fichier de référence partagé, relu avec le suivi des modifications, et un responsable de version désigné",
+        "Une impression papier de chaque version avec fusion manuelle à la main",
+        "Un envoi de la même version à toute la direction sans date de retour",
+        "L'abandon du suivi des modifications pour accélérer la relecture"
+      ],
+      "answer": 0,
+      "explain": "Un fichier partagé unique, avec suivi des modifications, supprime les versions concurrentes. L'impression papier et les envois multiples reproduisent le problème, et supprimer le suivi fait perdre la traçabilité.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-066",
+      "theme": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "level": 2,
+      "q": "Un agent conserve le seul exemplaire d'un rapport important sur une clé USB personnelle. Quel risque principal le menace, et que conseillez-vous ?",
+      "choices": [
+        "Aucun risque, car les clés USB sont plus fiables que les serveurs",
+        "Perte ou vol de la clé sans copie ; déposer le document dans l'espace du service sauvegardé",
+        "Expiration automatique du fichier au bout d'un mois ; il faut donc le renommer chaque semaine pour le conserver",
+        "Interdiction légale d'utiliser un ordinateur pour les rapports importants ; il faut utiliser uniquement le papier"
+      ],
+      "answer": 1,
+      "explain": "Une clé se perd, se vole ou tombe en panne, et l'exemplaire unique disparaît avec elle. L'espace du service est sauvegardé. Un fichier n'expire pas en un mois, et rien n'interdit l'ordinateur.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-067",
+      "theme": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "level": 2,
+      "q": "Votre service doit conserver des documents pendant plusieurs années et les relire sans problème. Quel format privilégiez-vous pour l'archive ?",
+      "choices": [
+        "Un format propriétaire ancien dépendant d'un logiciel qui n'est plus mis à jour",
+        "Une capture d'écran de chaque page enregistrée en image",
+        "Un format ouvert et stable, tel que PDF/A, en plus de la version modifiable",
+        "Un fichier compressé protégé par un mot de passe que seul l'auteur connaît"
+      ],
+      "answer": 2,
+      "explain": "Les formats ouverts et normalisés restent lisibles longtemps. Un format dépendant d'un logiciel disparu, des images non indexables ou un mot de passe connu d'une seule personne compromettent la relecture.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-068",
+      "theme": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "level": 2,
+      "q": "L'arborescence de votre service comporte des dossiers « Divers », « Nouveau dossier (3) » et « À trier ». Que proposez-vous ?",
+      "choices": [
+        "Créer encore plus de dossiers « Divers » pour répartir les fichiers",
+        "Mettre tous les fichiers à la racine pour les retrouver par la recherche",
+        "Laisser chaque agent ranger à sa guise sur son bureau",
+        "Une structure Service > Année > Dossier > Type, avec un archivage annuel des dossiers clos"
+      ],
+      "answer": 3,
+      "explain": "Une arborescence logique, limitée en profondeur et archivée régulièrement facilite la recherche. Multiplier les dossiers fourre-tout ou tout mettre à la racine accroît le désordre ; le rangement individuel empêche le partage.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-069",
+      "theme": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "level": 3,
+      "q": "Un service sauvegarde chaque nuit ses fichiers sur un disque externe toujours branché au serveur. Un logiciel malveillant chiffre le serveur et le disque. Que manquait-il, et que faites-vous ensuite ?",
+      "choices": [
+        "Une sauvegarde plus fréquente, toutes les heures, sur le même disque externe branché en permanence au serveur",
+        "Une copie déconnectée ou hors site ; il faut en ajouter une et tester régulièrement la restauration",
+        "Un fond d'écran plus sobre et un avertissement affiché au démarrage pour décourager les attaques",
+        "Une seconde corbeille activée sur chaque poste de travail"
+      ],
+      "answer": 1,
+      "explain": "Une sauvegarde toujours connectée est atteinte avec l'original. La règle 3-2-1 impose une copie hors site ou déconnectée, et il faut vérifier qu'on sait restaurer. Une fréquence accrue sur le même disque, un fond d'écran ou une corbeille n'y changent rien.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-070",
+      "theme": "Gestion des fichiers : nommage, versions et sauvegarde",
+      "level": 3,
+      "q": "Un chef de service constate que dix agents perdent chacun quinze minutes par semaine, sur quarante-huit semaines, à chercher des fichiers mal nommés. Quel investissement de temps est justifié pour instaurer une convention de nommage et former le personnel ?",
+      "choices": [
+        "Jusqu'à plusieurs dizaines d'heures, car la perte annuelle atteint 120 heures (10 × 15 × 48 = 7 200 minutes)",
+        "Aucun, car la perte est négligeable (moins d'une heure par an)",
+        "Exactement une minute par agent, car la convention n'a aucun effet mesurable sur le temps de recherche des fichiers",
+        "Un budget supérieur à la perte annuelle en toutes circonstances, sans aucune analyse préalable du coût et du bénéfice"
+      ],
+      "answer": 0,
+      "explain": "Le calcul donne 7 200 minutes, soit 120 heures par an : un investissement de quelques dizaines d'heures est rentable. La perte n'est donc pas négligeable, et il n'y a pas lieu de dépenser davantage que le gain sans analyse.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-071",
+      "theme": "Travail collaboratif et visioconférence",
+      "level": 1,
+      "q": "Que permet la co-édition d'un document partagé ?",
+      "choices": [
+        "À plusieurs personnes de modifier en même temps le même document, chacun voyant les changements des autres",
+        "À une seule personne de modifier, les autres devant attendre qu'elle ferme le fichier",
+        "D'envoyer le document en copie à chaque participant pour qu'il le modifie à part",
+        "De convertir automatiquement le document en présentation"
+      ],
+      "answer": 0,
+      "explain": "La co-édition repose sur un fichier unique en ligne édité simultanément. Le travail à tour de rôle, les copies séparées et la conversion de format sont d'autres pratiques.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-072",
+      "theme": "Travail collaboratif et visioconférence",
+      "level": 1,
+      "q": "Quel droit donne la possibilité d'annoter un document sans en modifier le texte ?",
+      "choices": [
+        "Le droit de propriété du document",
+        "Le droit de commentaire",
+        "Le droit de suppression du dossier",
+        "Le droit de partage avec toute personne"
+      ],
+      "answer": 1,
+      "explain": "Le droit de commentaire permet d'ajouter des remarques sans modifier le contenu. Les autres droits offrent davantage de pouvoirs : gestion des accès, suppression ou partage large.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-073",
+      "theme": "Travail collaboratif et visioconférence",
+      "level": 1,
+      "q": "À quoi sert l'historique des versions d'un document partagé ?",
+      "choices": [
+        "À imprimer le document en plusieurs exemplaires automatiquement",
+        "À augmenter la taille de stockage disponible pour l'équipe",
+        "À retrouver qui a modifié quoi et à restaurer un état antérieur du document",
+        "À bloquer l'accès au document pour tous les participants"
+      ],
+      "answer": 2,
+      "explain": "L'historique conserve les états successifs et leurs auteurs, ce qui permet de revenir en arrière. Il n'imprime pas, n'augmente pas le stockage et ne verrouille pas l'accès.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-074",
+      "theme": "Travail collaboratif et visioconférence",
+      "level": 1,
+      "q": "En visioconférence, quelle bonne pratique s'applique à un participant qui n'est pas en train de parler ?",
+      "choices": [
+        "Allumer son haut-parleur au maximum pour mieux entendre",
+        "Partager son écran pour montrer qu'il est présent",
+        "Se déconnecter puis se reconnecter à chaque intervention",
+        "Couper son micro pour éviter les bruits parasites"
+      ],
+      "answer": 3,
+      "explain": "Un micro actif capte bruits et échos et gêne la réunion. Les autres comportements n'améliorent pas la qualité des échanges.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-075",
+      "theme": "Travail collaboratif et visioconférence",
+      "level": 2,
+      "q": "Vous voulez faire relire un projet de texte par un partenaire externe, sans qu'il puisse modifier le texte ni le transmettre à d'autres. Comment procédez-vous ?",
+      "choices": [
+        "Rendre le document accessible à toute personne disposant du lien, avec un droit de modification sans date de fin",
+        "Envoyer le document en pièce jointe à son adresse personnelle, sans suivi",
+        "Partager le document avec cette personne nommée, en droit de commentaire, avec une date d'expiration",
+        "Mettre le fichier sur un espace public sans protection pendant une semaine, le temps de la relecture"
+      ],
+      "answer": 2,
+      "explain": "Un partage ciblé avec le droit minimal et une date de fin respecte le principe du moindre droit. Un lien ouvert, une pièce jointe sans suivi ou un espace public exposent le document.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-076",
+      "theme": "Travail collaboratif et visioconférence",
+      "level": 2,
+      "q": "Vous souhaitez enregistrer une réunion en visioconférence pour la rédaction du compte rendu. Que devez-vous faire ?",
+      "choices": [
+        "Démarrer l'enregistrement discrètement pour ne pas gêner la discussion",
+        "Publier l'enregistrement sur un espace ouvert à tous les agents de l'administration",
+        "Envoyer l'enregistrement à des personnes extérieures pour avis",
+        "Informer les participants avant de démarrer l'enregistrement, en précisant sa finalité, et le conserver dans un espace protégé"
+      ],
+      "answer": 3,
+      "explain": "L'enregistrement implique des données personnelles (voix, image) : il faut informer, limiter l'usage et protéger la conservation. Enregistrer discrètement ou diffuser largement est contraire à ces principes.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-077",
+      "theme": "Travail collaboratif et visioconférence",
+      "level": 2,
+      "q": "Vous devez présenter un tableau de chiffres en visioconférence. Votre écran contient plusieurs documents ouverts, dont des messages privés qui s'affichent en notifications. Que faites-vous ?",
+      "choices": [
+        "Partager tout l'écran en espérant qu'aucun message ni aucune notification n'apparaisse pendant la présentation du tableau",
+        "Partager uniquement la fenêtre du tableau, fermer les autres documents et désactiver les notifications",
+        "Demander aux participants de ne pas regarder les notifications ni les documents ouverts pendant le partage d'écran",
+        "Envoyer le tableau en photo prise avec un téléphone"
+      ],
+      "answer": 1,
+      "explain": "Le partage de fenêtre limite l'exposition d'informations, et la fermeture des autres documents et des notifications évite les fuites. Compter sur la discrétion des autres ou envoyer une photo n'est ni fiable ni professionnel.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-078",
+      "theme": "Travail collaboratif et visioconférence",
+      "level": 2,
+      "q": "Vous voulez proposer des corrections dans un texte rédigé par un collègue, qui reste responsable du document. Quelle fonction utilisez-vous ?",
+      "choices": [
+        "Le suivi des modifications (ou mode suggestion), pour que le rédacteur accepte ou refuse chaque proposition",
+        "La suppression directe des passages avec le droit de modification, sans trace",
+        "La copie du texte dans un nouveau fichier renommé à votre nom",
+        "L'envoi d'un message vocal décrivant les corrections à faire de mémoire"
+      ],
+      "answer": 0,
+      "explain": "Le suivi des modifications garde la trace des changements et laisse le rédacteur arbitrer. Les modifications sans trace, les copies concurrentes et les consignes orales de mémoire font perdre l'information.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-079",
+      "theme": "Travail collaboratif et visioconférence",
+      "level": 3,
+      "q": "Un agent quitte la direction pour une autre administration. La plupart de ses documents de travail sont dans son espace personnel en ligne. Quelle mesure est la plus pertinente ?",
+      "choices": [
+        "Laisser son compte ouvert indéfiniment pour que l'équipe puisse y accéder, sans changer le mot de passe ni les droits",
+        "Supprimer son espace personnel sans vérifier ce qu'il contient",
+        "Demander à l'agent d'emporter ses fichiers sur une clé USB personnelle et de supprimer ensuite sa copie en ligne",
+        "Transférer la propriété des documents vers l'espace d'équipe avant la fermeture du compte, puis vérifier les droits d'accès"
+      ],
+      "answer": 3,
+      "explain": "Les documents d'équipe doivent être dans l'espace d'équipe ; le transfert préalable préserve la continuité. Un compte ouvert indéfiniment est un risque, une suppression aveugle détruit des données et la clé personnelle sort les données de l'administration.",
+      "seconds": 100,
+      "status": "draft"
+    },
+    {
+      "id": "min-bureautique-080",
+      "theme": "Travail collaboratif et visioconférence",
+      "level": 3,
+      "q": "Réunion fictive de dix participants à distance. L'un d'eux, en région, a une connexion instable : le son se coupe, l'image se fige, et la réunion prend du retard. Quelle conduite est la plus adaptée ?",
+      "choices": [
+        "Lui demander de rester en vidéo et de répéter chaque phrase jusqu'à ce qu'elle passe",
+        "Exclure le participant de la réunion pour ne pas retarder les autres",
+        "Lui proposer de couper sa caméra, de garder le son (ou d'appeler par téléphone) et lui envoyer les documents à l'avance",
+        "Continuer sans lui parler et lui envoyer le compte rendu le mois suivant"
+      ],
+      "answer": 2,
+      "explain": "La vidéo consomme beaucoup de débit : la couper préserve l'audio, et le partage préalable des documents permet de suivre. Les autres options pénalisent le participant ou la qualité de la réunion.",
+      "seconds": 100,
+      "status": "draft"
+    }
+  ]
+}

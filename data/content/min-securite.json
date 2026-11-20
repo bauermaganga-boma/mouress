@@ -1,0 +1,1442 @@
+{
+  "profile": "min-securite",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Dangers, risques et matrice de criticité",
+      "theme": "Dangers, risques et matrice de criticité",
+      "minutes": 10,
+      "body": "Un **danger** est une propriété ou une situation capable de causer un dommage : un hydrocarbure inflammable, un gaz sous pression, un produit toxique comme le sulfure d'hydrogène (H2S), une charge suspendue. Le **risque** est la combinaison de la **probabilité** (ou fréquence) qu'un événement dangereux se produise et de sa **gravité**. Un réservoir d'essence est un danger permanent ; le risque dépend de la manière dont il est conçu, exploité et surveillé.\n\n**Le processus d'analyse.** La norme ISO 31000 décrit le management du risque en étapes : établir le contexte, identifier, analyser, évaluer, traiter, puis suivre et revoir. Appliqué à un dépôt pétrolier, cela donne : lister les scénarios (débordement, fuite sur bride, incendie de cuvette), estimer leur probabilité et leur gravité, comparer le résultat à un niveau acceptable, puis décider des mesures à ajouter.\n\n**Les méthodes courantes** sont l'analyse préliminaire des risques, l'étude HAZOP (étude de dangers et d'exploitabilité, qui passe en revue les dérives des paramètres d'un procédé : trop de pression, pas de débit, niveau trop haut), l'arbre des défaillances et le **nœud papillon**, qui relie à gauche les causes d'un événement redouté et, à droite, ses conséquences, avec les barrières entre les deux.\n\n**La matrice de criticité** croise deux échelles. Exemple illustratif (chaque exploitant définit les siennes) : probabilité de 1 (improbable) à 5 (fréquent), gravité de 1 (négligeable) à 5 (catastrophique, plusieurs décès). Le score est le produit des deux : 1 à 4 vert (acceptable), 5 à 9 jaune (à surveiller), 10 à 15 orange (à réduire), 16 à 25 rouge (inacceptable, mesures immédiates). Un scénario de gravité 5 et de probabilité 2 obtient 10 : il est orange, donc des barrières supplémentaires sont attendues.\n\n**Limites de la matrice.** Elle donne un classement, pas une mesure exacte ; les échelles doivent être documentées ; un événement rare mais catastrophique peut paraître moyen alors qu'il ne l'est pas. C'est pourquoi les scénarios de gravité maximale sont souvent traités à part, quelle que soit leur probabilité estimée.\n\n**Le principe ALARP** (« aussi bas que raisonnablement possible ») impose de réduire le risque tant que le coût de la mesure n'est pas manifestement disproportionné au gain de sécurité. Le risque qui reste après traitement est le **risque résiduel** ; il doit être connu, accepté et suivi.\n\n**Hiérarchie des mesures.** On préfère d'abord supprimer le danger, puis le remplacer par un moins dangereux, puis agir par des protections techniques, puis par l'organisation (procédures, formation), et en dernier recours par les équipements de protection individuelle.\n\n**Accident du travail et accident majeur.** Le premier est fréquent et touche une personne ; le second est rare, mais touche de nombreuses personnes, l'environnement et les riverains. Un faible nombre de blessés au travail ne prouve donc pas la maîtrise des accidents majeurs.\n\n**Cas de l'agent du ministère.** Face au dossier d'un dépôt de carburants, l'agent ne refait pas l'étude : il vérifie que les scénarios majeurs sont identifiés, que les échelles sont explicites, que les risques élevés sont assortis de mesures et que le risque résiduel est justifié.",
+      "keyPoints": [
+        "Le risque combine probabilité et gravité ; le danger est la source potentielle de dommage.",
+        "La matrice de criticité classe les scénarios ; ses échelles doivent être documentées et ne remplacent pas le jugement.",
+        "Le principe ALARP impose de réduire le risque tant que la mesure n'est pas manifestement disproportionnée.",
+        "On préfère supprimer le danger plutôt que compter sur les équipements de protection individuelle.",
+        "Un bon taux d'accidents du travail ne garantit pas la maîtrise des accidents majeurs."
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Barrières de sécurité et défense en profondeur",
+      "theme": "Barrières de sécurité et défense en profondeur",
+      "minutes": 10,
+      "body": "Une **barrière de sécurité** est un moyen technique, humain ou organisationnel qui empêche un événement dangereux de se produire (barrière de prévention) ou en limite les conséquences (barrière de protection ou d'atténuation). La **défense en profondeur** consiste à empiler plusieurs barrières indépendantes : si l'une cède, la suivante prend le relais.\n\n**Les familles de barrières.**\n- *Passives* : cuvette de rétention, mur coupe-feu, distance d'implantation, enrobage ignifuge. Elles agissent sans intervention.\n- *Actives* : soupape de sécurité, détecteur de gaz, arrêt d'urgence, système de déluge, vanne de coupure automatique.\n- *Humaines et organisationnelles* : procédure, rondes, permis de travail, consigne d'astreinte. Elles dépendent de la formation et de la vigilance, donc sont les plus fragiles.\n\n**Les critères de qualité d'une barrière.** Pour être comptée dans une analyse, elle doit être *efficace* (elle remplit sa fonction face au scénario), *indépendante* (elle ne tombe pas en panne pour la même cause que l'événement qu'elle doit arrêter), *disponible* (elle est testée et entretenue) et avoir un temps de réponse compatible avec l'évolution de l'accident.\n\n**Instrumentation de sécurité.** Les fonctions automatiques de sécurité sont dimensionnées par niveau d'intégrité de sécurité (SIL), selon les normes CEI 61508 et CEI 61511. Le niveau exigé dépend de la réduction de risque à obtenir. Une instrumentation de sécurité doit rester séparée de la régulation normale du procédé.\n\n**Le modèle du fromage suisse** (James Reason) illustre le principe : chaque barrière est une tranche percée de trous (défauts latents). L'accident survient quand les trous s'alignent. Les trous naissent d'une maintenance repoussée, d'un dispositif neutralisé « pour un test », d'une procédure contournée.\n\n**Exemple chiffré (illustratif).** Si un scénario de débordement est attendu une fois tous les 10 ans sans protection et qu'une barrière fiable réduit ce risque d'un facteur 100, la fréquence passe à une fois tous les 1 000 ans. Si la barrière est inopérante sans que personne le sache, on revient à une fois tous les 10 ans. Une barrière non testée n'est donc qu'une hypothèse.\n\n**Neutralisations.** Inhiber un détecteur ou contourner un arrêt automatique est une dérogation temporaire : elle doit être autorisée, limitée dans le temps, compensée par une mesure équivalente et tracée.\n\n**Pourquoi la loi s'y intéresse.** La loi n° 002/2019 impose à toute personne exerçant une activité d'hydrocarbures de respecter les prescriptions d'hygiène, santé, sécurité, sûreté et environnement fixées par voie réglementaire (**article 171**). Le titulaire doit aussi informer sans délai l'administration de toute perturbation, incident ou accident (**article 241**). Les incidents où une barrière a manqué sont de précieux signaux d'alerte.\n\n**Cas de l'agent du ministère.** Lors d'une visite d'inspection, il ne se contente pas de constater que le détecteur existe : il demande les derniers essais, les alarmes déclenchées, la liste des dispositifs neutralisés et les actions correctives décidées.",
+      "keyPoints": [
+        "Une barrière prévient l'événement ou en limite les conséquences ; la défense en profondeur en cumule plusieurs.",
+        "Efficacité, indépendance, disponibilité et temps de réponse conditionnent la valeur d'une barrière.",
+        "Les barrières humaines sont les plus fragiles ; les barrières passives, les plus robustes.",
+        "Une barrière non testée ni entretenue n'est qu'une hypothèse, pas une protection.",
+        "Toute neutralisation doit être autorisée, limitée dans le temps, compensée et tracée."
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Accidents majeurs et retour d'expérience",
+      "theme": "Accidents majeurs et retour d'expérience",
+      "minutes": 12,
+      "body": "Le **retour d'expérience** consiste à tirer des accidents passés des leçons qui évitent leur répétition. Cinq cas, documentés par des rapports officiels, servent de références mondiales.\n\n**Seveso (Italie, 10 juillet 1976).** Un rejet de dioxine par une usine chimique contamine une commune voisine. Cet accident a donné son nom à la directive européenne sur la maîtrise des dangers liés aux accidents majeurs, aujourd'hui la directive 2012/18/UE (dite Seveso 3), qui impose notamment un rapport de sécurité, des plans d'urgence internes et externes et une maîtrise de l'urbanisation autour des sites.\n\n**Piper Alpha (mer du Nord, 6 juillet 1988).** Une fuite de condensats de gaz s'enflamme sur la plateforme et provoque 167 morts. Une soupape de sécurité avait été déposée pour maintenance ; l'équipe suivante, non informée, remit en service la pompe concernée. L'enquête présidée par Lord Cullen (106 recommandations) a conclu que le système de permis de travail était insuffisant et souvent contourné. Elle a conduit au régime de **dossier de sécurité** imposé à chaque installation en mer au Royaume-Uni (règlement de 1992).\n\n**Texas City (États-Unis, 23 mars 2005).** Pendant le redémarrage d'une unité d'isomérisation de la raffinerie BP, une colonne a débordé, du liquide inflammable est sorti d'un ballon de purge ouvert à l'air libre et le nuage s'est enflammé : 15 morts et environ 180 blessés. Les victimes se trouvaient dans des bureaux provisoires trop proches de l'unité. Le Bureau d'enquête américain (CSB) a mis en cause la gestion, des instruments de niveau défaillants et l'emplacement des bâtiments.\n\n**Buncefield (Royaume-Uni, 11 décembre 2005).** Un réservoir d'un grand dépôt pétrolier a débordé ; le nuage de vapeurs d'essence a explosé, sans décès mais avec des dégâts considérables. La jauge de niveau était bloquée et l'interrupteur indépendant de niveau très haut était inopérant, faute d'un verrou de maintien en position de service.\n\n**Deepwater Horizon (golfe du Mexique, 20 avril 2010).** Une éruption (venue de gaz et d'hydrocarbures non maîtrisée) provoque l'explosion de la plateforme : 11 morts et une pollution majeure. Le bloc obturateur de puits n'a pas fermé le puits, et un test de pression avait été mal interprété.\n\n**Ce que ces cas ont en commun.** Des barrières défaillantes en même temps, des signaux d'alerte ignorés, des changements mal gérés, des permis ou transmissions de consignes déficients, et des décisions où la production primait sur la prudence. Les causes sont rarement uniquement techniques.\n\n**Pour l'administration.** Chaque accident majeur justifie de vérifier chez les opérateurs de son périmètre les mêmes points faibles : entretien des barrières, permis de travail, gestion des modifications, implantation des bâtiments occupés, exercices d'urgence.\n\n**Exploiter un retour d'expérience.** Décrire les faits, chercher les causes organisationnelles, formuler des actions précises avec un responsable et une échéance, puis vérifier leur mise en œuvre.",
+      "keyPoints": [
+        "Seveso (1976) est à l'origine de la directive européenne sur les accidents majeurs, aujourd'hui la directive 2012/18/UE.",
+        "Piper Alpha (1988, 167 morts) : le permis de travail et la transmission des consignes étaient défaillants ; le dossier de sécurité en est issu.",
+        "Texas City (2005, 15 morts) : bâtiments occupés trop proches d'une unité et instruments de niveau défaillants.",
+        "Buncefield (2005) : une barrière de secours rendue inopérante par un défaut de maintenance suffit à provoquer l'accident.",
+        "Deepwater Horizon (2010, 11 morts) : l'échec d'une barrière ultime après une cascade d'erreurs de décision."
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Plan d'urgence et d'évacuation",
+      "theme": "Plan d'urgence et d'évacuation",
+      "minutes": 10,
+      "body": "Malgré les barrières, un accident reste possible. Le **plan d'urgence** organise la réponse pour protéger d'abord les personnes, puis l'environnement et les biens. On distingue le plan **interne**, sous la responsabilité de l'exploitant et limité au site, et le plan **externe**, déclenché par l'autorité publique lorsque les conséquences dépassent les limites du site (riverains, routes, cours d'eau, mer).\n\n**Contenu minimal d'un plan interne.**\n- les scénarios d'accident retenus, issus de l'étude de dangers ;\n- l'organisation : qui décide (directeur des opérations d'urgence), qui coordonne sur le terrain, qui alerte ;\n- la chaîne d'alerte : détection, alarme sonore, appel du poste de contrôle, information des autorités ;\n- les moyens : eau incendie, émulseurs, pompes, matériel de lutte contre la pollution, équipe d'intervention ;\n- les itinéraires d'évacuation, points de rassemblement et règles de comptage de l'effectif présent ;\n- les relations avec les secours extérieurs, l'hôpital, la presse et les familles.\n\n**Évacuation.** Le principe est simple : alerter, quitter la zone dangereuse en s'éloignant du danger et, pour un nuage de gaz, en se plaçant face au vent ou de côté, se regrouper au point de rassemblement, se faire compter. Le point de rassemblement doit être choisi hors des zones d'effet des scénarios majeurs et, de préférence, accessible par deux itinéraires. Le comptage des personnes présentes (salariés, sous-traitants, visiteurs) suppose un registre à jour à l'entrée du site : c'est souvent là que les plans échouent.\n\n**Exemple chiffré (illustratif).** Sur un site de 120 personnes présentes, un exercice d'évacuation mesure un rassemblement complet en 9 minutes alors que le plan en prévoit 5 : l'écart doit être analysé (alarme peu audible, issue encombrée, absence de registre), puis corrigé et l'exercice répété.\n\n**Les exercices.** Un plan non testé n'est qu'un document. On pratique des exercices partiels (alarme, comptage), des exercices de terrain avec les secours et des exercices de gestion de crise. Chaque exercice se termine par un compte rendu et un plan d'actions.\n\n**Niveaux de crise.** On classe généralement les événements en trois niveaux : maîtrisé par les moyens du site, nécessitant des renforts régionaux, nécessitant une mobilisation nationale ou internationale. Chaque niveau précise qui commande.\n\n**Cadre légal.** La loi n° 002/2019 impose au titulaire d'informer sans délai l'administration de toute perturbation, incident ou accident (**article 241**) et le rend responsable de l'ensemble des dommages causés, y compris au-delà du périmètre de son autorisation (**article 179**) ; il doit aussi souscrire des assurances couvrant l'ensemble des risques (**article 180**). Les prescriptions détaillées relèvent des textes réglementaires.\n\n**Cas de l'agent du ministère.** Appelé à examiner un plan d'urgence, il vérifie la cohérence avec l'étude de dangers, la mise à jour des numéros d'alerte, la date et le bilan du dernier exercice, ainsi que la prise en compte des sous-traitants.",
+      "keyPoints": [
+        "Le plan interne relève de l'exploitant ; le plan externe est déclenché par l'autorité quand les effets sortent du site.",
+        "Un plan d'urgence découle des scénarios de l'étude de dangers et définit organisation, alerte, moyens et évacuation.",
+        "Le comptage des personnes présentes repose sur un registre à jour, sous-traitants et visiteurs compris.",
+        "Seuls les exercices réguliers, suivis d'un compte rendu et d'actions, prouvent qu'un plan fonctionne.",
+        "L'article 241 impose d'informer sans délai l'administration de tout incident ou accident."
+      ]
+    },
+    {
+      "id": "m5",
+      "title": "Permis de travail et maîtrise des interventions",
+      "theme": "Permis de travail et maîtrise des interventions",
+      "minutes": 10,
+      "body": "Le **permis de travail** est un document écrit, signé avant le début d'une intervention à risque, qui décrit le travail, ses dangers et les mesures préalables à prendre. Il n'est pas une formalité : il formalise le dialogue entre celui qui exploite l'installation et celui qui intervient.\n\n**Quand l'exiger.** Travaux par point chaud (soudage, meulage, découpage) appelés permis de feu, entrée en espace confiné (cuve, bac, capacité), travaux en hauteur, levage, fouilles, intervention sur circuit sous pression ou électrique, ouverture de ligne. Les travaux de routine bien maîtrisés par une procédure peuvent ne pas nécessiter de permis spécifique.\n\n**Les étapes.**\n1. *Demande* par l'entreprise intervenante, avec analyse des risques de la tâche.\n2. *Visite préalable* du lieu par l'exploitant et l'intervenant.\n3. *Préparation* : isolement du circuit, vidange, purge, **consignation** (verrouillage des sources d'énergie avec cadenas et étiquette), balisage, mesure des gaz.\n4. *Autorisation* signée par l'émetteur (exploitant) et l'exécutant.\n5. *Exécution* sous surveillance, avec contrôle des gaz si nécessaire.\n6. *Clôture* : travail terminé, outils retirés, remise en service organisée, permis annulé.\n\n**Mesure des gaz.** Avant un travail à chaud, on mesure l'atmosphère en pourcentage de la **limite inférieure d'explosivité** (LIE). Exemple de seuil souvent retenu : arrêt au-delà de 10 % de la LIE (valeur illustrative, la règle interne de l'exploitant fait foi). Pour un espace confiné, on contrôle aussi l'oxygène et les gaz toxiques.\n\n**Activités simultanées.** Faire souder en un point pendant qu'une vidange d'hydrocarbure a lieu deux niveaux plus bas est un scénario classique d'accident. Les permis sont alors coordonnés, et la chaîne de décision est unique.\n\n**Relèves d'équipe.** C'est le point critique révélé par Piper Alpha : un équipement isolé pour maintenance doit apparaître dans les consignes écrites de passage de poste, afin qu'on ne le remette pas en service sans le savoir.\n\n**Dérives courantes.** Permis signés à l'avance, prolongés sans visite, copiés d'une fois sur l'autre, ou délivrés sans lire l'analyse des risques. Un permis valable un poste (par exemple 8 à 12 heures) doit être renouvelé et non prolongé indéfiniment.\n\n**Le rôle de l'administration.** Elle ne délivre pas les permis de travail : ils relèvent de l'exploitant. Elle vérifie que le système existe, qu'il est appliqué (sondage de permis récents, cohérence des dates et signatures), et que les accidents liés à une intervention sont analysés. La loi n° 002/2019 fait peser sur le titulaire la responsabilité des dommages (**article 179**) et le rend garant de l'exécution de ses sous-traitants (**article 187**).",
+      "keyPoints": [
+        "Le permis de travail est un dialogue écrit entre exploitant et intervenant, pas une simple formalité.",
+        "La consignation et le contrôle des gaz précèdent tout travail par point chaud ou en espace confiné.",
+        "Les activités simultanées exigent une coordination des permis.",
+        "La transmission écrite des consignes lors des relèves a été au centre de Piper Alpha.",
+        "L'exploitant délivre les permis ; l'administration contrôle l'existence et l'application du système."
+      ]
+    },
+    {
+      "id": "m6",
+      "title": "Études de dangers et cadre réglementaire",
+      "theme": "Études de dangers et cadre réglementaire",
+      "minutes": 11,
+      "body": "L'**étude de dangers** est le document par lequel l'exploitant démontre qu'il a identifié les scénarios d'accident possibles de son installation, évalué leurs conséquences et leur probabilité, et mis en place les barrières nécessaires. Elle sert de base au plan d'urgence, à la définition des distances à respecter et à l'information des autorités.\n\n**Ce que dit la loi gabonaise.** La loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures pose le cadre :\n- les activités d'hydrocarbures s'exercent selon les principes du développement durable, de la qualité, de la santé, de l'hygiène, de la sécurité et de l'environnement (**article 3**) ;\n- toute personne exerçant une activité d'hydrocarbures respecte les prescriptions d'hygiène, santé, sécurité, sûreté et environnement définies par voie réglementaire (**article 171**) ;\n- **seuls les cabinets agréés réalisent les études de dangers**, qui sont validées par les services techniques compétents et révisées périodiquement (**article 172**) ;\n- le titulaire répond de tous les dommages causés (**article 179**) et souscrit des assurances (**article 180**).\n\nLes prescriptions techniques détaillées (contenu type, périodicité, critères d'acceptabilité) relèvent de textes réglementaires d'application, à vérifier auprès de l'administration avant tout contrôle.\n\n**Contenu type d'une étude de dangers** (structure courante, issue des bonnes pratiques internationales) :\n1. description de l'installation et de son environnement (habitations, cours d'eau, route) ;\n2. produits dangereux présents et quantités ;\n3. identification des scénarios, par exemple fuite sur canalisation, débordement de bac, boule de feu ;\n4. évaluation des conséquences : rayons d'effets thermiques, de surpression, de toxicité ;\n5. estimation de la probabilité, des barrières et du risque résiduel ;\n6. mesures de maîtrise, plan d'urgence, programme de suivi.\n\n**Un ordre de grandeur (illustratif).** Si le rayon d'effet létal d'un scénario d'incendie de cuvette est de 80 mètres et qu'un logement est à 60 mètres, le dossier ne peut pas conclure que le risque est négligeable sans mesures supplémentaires.\n\n**Comparaison internationale.** Dans l'Union européenne, la directive 2012/18/UE (Seveso 3) distingue des établissements à seuil bas et à seuil haut selon les quantités de substances dangereuses, impose un rapport de sécurité pour les sites à seuil haut, et exige des plans d'urgence internes et externes. Au Royaume-Uni, le dossier de sécurité des installations en mer est né de Piper Alpha. Ces références inspirent la pratique sans s'appliquer directement au Gabon.\n\n**La validation.** L'agent qui instruit une étude vérifie la complétude, la cohérence des scénarios avec la nature réelle des produits, l'agrément du cabinet auteur, la prise en compte des activités voisines et la date de la dernière révision. Il peut demander des compléments ; il ne se substitue pas à l'auteur.\n\n**Révision.** Toute modification notable (nouveau produit, capacité accrue, nouvelle construction à proximité) ou accident significatif doit entraîner une mise à jour.",
+      "keyPoints": [
+        "L'étude de dangers démontre la maîtrise des scénarios d'accident et fonde le plan d'urgence.",
+        "L'article 172 de la loi 002/2019 réserve sa réalisation aux cabinets agréés et prévoit validation et révision périodique.",
+        "Les prescriptions techniques détaillées relèvent des textes d'application, à vérifier avant tout contrôle.",
+        "Les scénarios sont évalués par leurs effets (thermiques, surpression, toxiques) et leur probabilité.",
+        "Toute modification notable ou accident significatif appelle une révision de l'étude."
+      ]
+    },
+    {
+      "id": "m7",
+      "title": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "theme": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "minutes": 12,
+      "body": "La **culture de sécurité** est l'ensemble des valeurs, comportements et pratiques qui font qu'une organisation place réellement la sécurité au même niveau que la production. Elle se voit dans les décisions quand elles sont difficiles : arrêter une unité qui produit, reporter un chantier, croire un opérateur qui signale un doute.\n\n**Ses composantes.** Engagement visible de la direction, signalement sans crainte de sanction injuste, apprentissage des incidents, respect des procédures, implication des sous-traitants, compétence du personnel. La norme ISO 45001 (système de management de la santé et de la sécurité au travail) donne un cadre de management pour y parvenir.\n\n**Les indicateurs.** On distingue :\n- les **indicateurs de résultat** (décalés, ou « retardés ») : nombre d'accidents avec arrêt, taux de fréquence, pertes de confinement ;\n- les **indicateurs avancés** (ou « d'avance ») : proportion d'essais de barrières réalisés à l'échéance, retards de maintenance de sécurité, exercices d'urgence tenus, actions correctives soldées dans les délais, alarmes non traitées.\n\nExemple chiffré (illustratif) : un site n'a eu aucun accident avec arrêt depuis 3 ans, mais 35 % des essais de ses détecteurs de gaz sont en retard. Le bon résultat masque un risque qui monte. Les accidents majeurs surviennent parfois sur des sites aux bons chiffres de sécurité au travail, car ceux-ci ne mesurent pas la santé des barrières de sécurité des procédés. Le guide HSG254 de l'autorité britannique HSE explique comment construire des indicateurs de sécurité des procédés.\n\n**Quelques erreurs à éviter.** Un objectif « zéro accident » transformé en pression sur les chiffres : les déclarations disparaissent au lieu des accidents. Des indicateurs trop nombreux pour être lus. Des chiffres qui ne remontent pas jusqu'à la direction.\n\n**Rôle de l'administration.** La loi n° 002/2019 confie le contrôle de l'application de la réglementation aux agents des services compétents du Ministère en charge des Hydrocarbures (**article 18**). Ceux qui ont prêté serment ont la qualité d'officiers de police judiciaire spéciaux et leurs procès-verbaux font foi jusqu'à preuve contraire (**articles 19 et 20**). Le contrôle comprend le volet technique (**article 243**). L'entrave aux contrôles est sanctionnée par une pénalité de 10 000 000 à 100 000 000 FCFA (**article 278**), et le non-respect des obligations de santé, sécurité et environnement expose à des pénalités propres (articles 271 à 273). La récidive double les pénalités (**article 265**).\n\n**Bonnes pratiques d'un contrôleur.** Préparer la visite à partir des incidents notifiés (**article 241**) ; échanger avec les opérateurs de terrain autant qu'avec les cadres ; vérifier des preuves (registres, essais) et non des déclarations ; remettre un rapport clair avec des écarts classés par gravité ; suivre leur levée ; rester impartial.\n\n**Attention.** La répartition précise des compétences entre directions et avec l'administration chargée de l'environnement évolue ; elle doit être confirmée auprès du ministère.\n\nContenu de formation à faire valider par le ministère avant diffusion.",
+      "keyPoints": [
+        "La culture de sécurité se mesure aux décisions difficiles, pas aux affiches.",
+        "Les indicateurs avancés préviennent mieux que les seuls indicateurs de résultat.",
+        "Un bon taux d'accidents du travail peut masquer des barrières mal entretenues.",
+        "Les agents assermentés sont officiers de police judiciaire spéciaux ; leurs procès-verbaux font foi (articles 18 à 20).",
+        "L'entrave aux contrôles (article 278) et la récidive (article 265) sont sanctionnées."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "min-securite-001",
+      "theme": "Dangers, risques et matrice de criticité",
+      "level": 1,
+      "q": "Dans l'analyse des risques industriels, que désigne le mot « risque » ?",
+      "choices": [
+        "La seule probabilité qu'un accident se produise au cours d'une année",
+        "La combinaison de la probabilité d'un événement dangereux et de sa gravité",
+        "L'énergie maximale stockée dans une installation donnée",
+        "Le nombre d'accidents du travail enregistrés sur le site chaque année"
+      ],
+      "answer": 1,
+      "explain": "Le risque associe probabilité (ou fréquence) et gravité. La probabilité seule ignore les conséquences ; l'énergie stockée caractérise un danger, pas un risque ; le nombre d'accidents du travail est un indicateur de résultat, qui ne mesure pas le risque d'accident majeur.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "ISO 31000 — Management du risque",
+          "art": "Principes et lignes directrices",
+          "url": "https://www.iso.org/iso-31000-risk-management.html"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-002",
+      "theme": "Dangers, risques et matrice de criticité",
+      "level": 1,
+      "q": "Lequel de ces éléments est un danger, au sens strict du terme ?",
+      "choices": [
+        "Un score de 12 obtenu dans la matrice de criticité",
+        "Une probabilité de fuite d'une chance sur mille par an",
+        "Un détecteur de gaz en panne dans une zone de chargement",
+        "Une cuve de 500 m³ d'essence, source potentielle de dommage"
+      ],
+      "answer": 3,
+      "explain": "Le danger est une propriété ou une situation capable de causer un dommage : ici la quantité d'essence inflammable. Le score de la matrice et la probabilité de fuite sont des mesures du risque ; le détecteur en panne est une défaillance de barrière.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-003",
+      "theme": "Dangers, risques et matrice de criticité",
+      "level": 1,
+      "q": "Que désigne l'étude HAZOP dans l'industrie des hydrocarbures ?",
+      "choices": [
+        "Un audit des coûts pétroliers déclarés par un titulaire auprès de l'administration",
+        "Un exercice d'évacuation grandeur nature mené avec les secours extérieurs",
+        "Une revue systématique des dérives de paramètres du procédé (pression, débit, niveau)",
+        "Un permis délivré avant des travaux par point chaud sur une installation"
+      ],
+      "answer": 2,
+      "explain": "HAZOP signifie étude de dangers et d'exploitabilité : une équipe examine, nœud par nœud, ce qui se passe si un paramètre dérive (trop, pas assez, inverse). Les trois autres propositions désignent respectivement un audit financier, un exercice d'urgence et un permis de travail.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-004",
+      "theme": "Dangers, risques et matrice de criticité",
+      "level": 1,
+      "q": "Que signifie le principe ALARP appliqué à la gestion des risques ?",
+      "choices": [
+        "Réduire le risque tant que le coût d'une mesure n'est pas manifestement disproportionné",
+        "Supprimer tout risque résiduel, quel qu'en soit le coût pour l'exploitant",
+        "Accepter tout risque inférieur au seuil fixé par la direction financière du groupe",
+        "Transférer entièrement le risque à l'assureur de l'installation concernée"
+      ],
+      "answer": 0,
+      "explain": "ALARP signifie « aussi bas que raisonnablement possible » : on poursuit la réduction du risque jusqu'à ce que le sacrifice demandé soit manifestement disproportionné. Le risque nul n'existe pas, un seuil financier n'est pas un critère de sécurité, et l'assurance indemnise sans réduire le risque.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-005",
+      "theme": "Dangers, risques et matrice de criticité",
+      "level": 2,
+      "q": "Avec l'échelle du cours (vert 1-4, jaune 5-9, orange 10-15, rouge 16-25), comment classer un scénario de probabilité 4 et de gravité 3 ?",
+      "choices": [
+        "Jaune, score 7 : une simple surveillance suffit",
+        "Rouge, score 16 : l'arrêt immédiat est obligatoire",
+        "Orange, score 12 : des mesures de réduction sont attendues",
+        "Vert, score 3 : aucune action n'est nécessaire"
+      ],
+      "answer": 2,
+      "explain": "Le score est le produit : 4 × 3 = 12, soit la zone orange (10 à 15), à réduire. Les autres scores proposés ne correspondent pas au calcul. Rappel : l'échelle est un exemple, chaque exploitant définit la sienne.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-006",
+      "theme": "Dangers, risques et matrice de criticité",
+      "level": 2,
+      "q": "Un exploitant propose des masques pour protéger les ouvriers contre un solvant toxique, alors qu'un produit moins dangereux existe. Que recommandez-vous ?",
+      "choices": [
+        "Accepter les masques, qui coûtent moins cher et suffisent en pratique courante",
+        "Former le personnel à la procédure, ce qui supprime le danger à la source",
+        "Substituer d'abord le produit ; les masques restent un dernier recours",
+        "Réduire les horaires d'exposition sans changer le produit utilisé"
+      ],
+      "answer": 2,
+      "explain": "La hiérarchie des mesures place la suppression ou la substitution du danger avant la protection technique, l'organisation puis les équipements individuels. La formation et la réduction d'horaire ne suppriment pas le danger ; elles s'ajoutent au mieux à une mesure plus efficace.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-007",
+      "theme": "Dangers, risques et matrice de criticité",
+      "level": 2,
+      "q": "Un dossier mentionne l'absence d'accident avec arrêt depuis quatre ans et en conclut que le risque d'accident majeur est maîtrisé. Cette conclusion est-elle recevable ?",
+      "choices": [
+        "Non : un faible taux d'accidents du travail ne prouve rien sur les scénarios graves",
+        "Oui : quatre années sans accident prouvent que l'ensemble des barrières fonctionne correctement",
+        "Oui, tant que le taux reste inférieur à un accident par an et par site",
+        "Non : seuls les accidents mortels comptent dans l'analyse des risques majeurs"
+      ],
+      "answer": 0,
+      "explain": "Les accidents majeurs sont rares : une longue période sans accident ne prouve rien sur l'état des barrières de sécurité des procédés. Il faut des preuves de leur entretien et de leurs essais. Les deux dernières réponses reposent sur un seuil arbitraire ou une restriction qui n'existe pas.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-008",
+      "theme": "Dangers, risques et matrice de criticité",
+      "level": 2,
+      "q": "Un exploitant classe en jaune (score 5) un scénario de gravité maximale (5) et de probabilité 1, et ne prévoit aucune mesure. Que lui répondez-vous ?",
+      "choices": [
+        "Les scénarios de gravité maximale demandent un examen à part, la matrice seule ne suffit pas",
+        "Le classement est correct, la gravité ne compte que lorsque la probabilité est élevée",
+        "Le classement est correct, car un score inférieur à 10 dispense de toute mesure",
+        "Il faut le déclasser en vert pour harmoniser avec les autres scénarios"
+      ],
+      "answer": 0,
+      "explain": "Un événement très rare mais catastrophique peut paraître moyen dans une matrice. Les scénarios de gravité maximale sont donc souvent examinés séparément, avec leurs barrières, quelle que soit leur probabilité estimée. Dire que la gravité ne compte pas ou que le score justifie l'inaction est une erreur d'interprétation.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-009",
+      "theme": "Dangers, risques et matrice de criticité",
+      "level": 3,
+      "q": "Un dossier comporte trois scénarios : A (probabilité 5, gravité 2), B (probabilité 2, gravité 5), C (probabilité 3, gravité 3). Quelle lecture est la plus pertinente ?",
+      "choices": [
+        "Les scénarios A et B sont orange ; B demande en plus un examen de ses barrières",
+        "Les trois scénarios sont équivalents, donc un même traitement suffit pour chacun d'eux",
+        "Le scénario C est prioritaire car son score est le plus proche de la zone verte",
+        "Seul le scénario A est à traiter, la fréquence l'emportant toujours sur la gravité"
+      ],
+      "answer": 0,
+      "explain": "A donne 10 et B donne 10 : même zone orange. Mais B concerne la gravité maximale, donc ses barrières doivent être examinées spécifiquement. C vaut 9, donc jaune : il n'est pas prioritaire. Aucune règle ne fait toujours primer la fréquence.",
+      "seconds": 90,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-010",
+      "theme": "Dangers, risques et matrice de criticité",
+      "level": 3,
+      "q": "Dans un dossier, la gravité est notée « faible, moyenne, forte » sans définition ni valeur chiffrée. Quelle exigence formulez-vous ?",
+      "choices": [
+        "Le choix de l'échelle est libre : seul le résultat final de l'analyse compte",
+        "L'adoption d'une échelle unique, imposée par une norme étrangère obligatoire",
+        "Le remplacement de la matrice par le seul taux d'accidents du travail annuel",
+        "Des échelles documentées et chiffrées (décès, rayons d'effets, fréquences)"
+      ],
+      "answer": 3,
+      "explain": "Sans définitions, deux analystes classeraient le même scénario différemment et l'administration ne peut ni vérifier ni comparer. Il faut des échelles explicites. Aucun texte cité ne fait de l'échelle étrangère une obligation, et le taux d'accidents du travail ne remplace pas une analyse de scénarios.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-011",
+      "theme": "Barrières de sécurité et défense en profondeur",
+      "level": 1,
+      "q": "Quel dispositif est une barrière passive ?",
+      "choices": [
+        "Une cuvette de rétention autour d'un bac",
+        "Un détecteur de gaz relié à une alarme",
+        "Une vanne d'arrêt d'urgence à fermeture automatique",
+        "Une ronde d'inspection toutes les deux heures"
+      ],
+      "answer": 0,
+      "explain": "Une barrière passive agit sans intervention ni énergie : cuvette, mur coupe-feu, distance. Le détecteur et la vanne automatique sont des barrières actives ; la ronde est une barrière humaine et organisationnelle.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-012",
+      "theme": "Barrières de sécurité et défense en profondeur",
+      "level": 1,
+      "q": "Lequel de ces dispositifs est une barrière d'atténuation des conséquences ?",
+      "choices": [
+        "Une alarme de niveau haut avertissant d'un risque de débordement du bac",
+        "Un permis de travail signé avant un soudage sur une ligne",
+        "Un système de déluge qui refroidit un bac voisin lors d'un incendie",
+        "Un essai hebdomadaire de l'alarme de détection de gaz du site"
+      ],
+      "answer": 2,
+      "explain": "L'atténuation intervient après le début de l'événement pour en limiter les effets, comme le déluge. L'alarme de niveau haut et le permis de travail préviennent l'événement ; l'essai de l'alarme maintient une barrière sans en être une.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-013",
+      "theme": "Barrières de sécurité et défense en profondeur",
+      "level": 1,
+      "q": "Que signifie la « défense en profondeur » ?",
+      "choices": [
+        "Enterrer les installations sensibles à plus de dix mètres sous le niveau du sol",
+        "Doubler les effectifs de nuit sur l'ensemble des postes de travail du site",
+        "Cumuler des barrières indépendantes : l'une rattrape la défaillance de l'autre",
+        "Placer en premier la barrière la plus coûteuse, la moins coûteuse ensuite"
+      ],
+      "answer": 2,
+      "explain": "Le principe est la succession de barrières indépendantes. L'enfouissement, le doublement d'effectifs ou le coût ne définissent pas le principe.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-014",
+      "theme": "Barrières de sécurité et défense en profondeur",
+      "level": 1,
+      "q": "Dans le modèle du fromage suisse de James Reason, que représentent les trous des tranches ?",
+      "choices": [
+        "Les zones d'évacuation prévues au plan d'urgence",
+        "Les défauts, souvent latents, des barrières",
+        "Les ouvertures de vannes en exploitation normale",
+        "Les intervalles de temps entre deux inspections"
+      ],
+      "answer": 1,
+      "explain": "Chaque tranche est une barrière ; les trous sont ses faiblesses (maintenance repoussée, procédure contournée). L'accident survient quand les trous s'alignent. Les trois autres propositions n'ont pas de rapport avec ce modèle.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-015",
+      "theme": "Barrières de sécurité et défense en profondeur",
+      "level": 2,
+      "q": "Dans un bac, l'alarme de niveau haut et la vanne de coupure automatique dépendent du même capteur de niveau. Que concluez-vous ?",
+      "choices": [
+        "Elles sont redondantes : deux protections distinctes doublent la fiabilité du dispositif",
+        "Elles sont indépendantes, puisque ce sont deux appareils physiquement distincts",
+        "La conception est correcte tant que le capteur est neuf et étalonné",
+        "Elles ne sont pas indépendantes : une panne du capteur les neutralise toutes les deux"
+      ],
+      "answer": 3,
+      "explain": "L'indépendance suppose qu'une même cause ne puisse pas défaillir les deux barrières. Avec un capteur commun, une seule panne les rend inopérantes : c'est une cause commune, comme à Buncefield avec la jauge. Des appareils distincts ne suffisent pas.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-016",
+      "theme": "Barrières de sécurité et défense en profondeur",
+      "level": 2,
+      "q": "Sans protection, un débordement est attendu une fois tous les 10 ans (valeur d'exemple). Une barrière fiable divise ce risque par 100. Si elle est en panne sans que personne le sache, quelle est la fréquence réelle ?",
+      "choices": [
+        "Une fois tous les 1 000 ans : la barrière protège malgré tout",
+        "Une fois tous les 100 ans : la moitié de la protection subsiste",
+        "Une fois tous les 10 ans : la réduction est perdue",
+        "Une fois tous les 10 000 ans : la redondance compense"
+      ],
+      "answer": 2,
+      "explain": "Une barrière inopérante n'apporte aucune réduction : on revient à la fréquence initiale. Les 1 000 ans n'ont de sens que si elle fonctionne. C'est pourquoi les essais et l'entretien sont indispensables.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-017",
+      "theme": "Barrières de sécurité et défense en profondeur",
+      "level": 2,
+      "q": "Lors d'une inspection, vous constatez qu'un détecteur de gaz est inhibé depuis trois semaines, sans autorisation, à cause de fausses alarmes. Que faites-vous ?",
+      "choices": [
+        "Exiger une dérogation formelle, des mesures compensatoires et la réparation rapide",
+        "Accepter l'inhibition : des fausses alarmes répétées la justifient pour une durée indéterminée",
+        "Se contenter d'une promesse orale de réparation dans les prochaines semaines",
+        "Ignorer l'écart tant qu'aucune fuite de gaz ne s'est produite sur le site"
+      ],
+      "answer": 0,
+      "explain": "Une neutralisation doit être autorisée, limitée dans le temps, compensée et tracée, et sa cause (fausses alarmes) traitée. Une promesse orale ou l'inaction attendent l'accident pour réagir.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-018",
+      "theme": "Barrières de sécurité et défense en profondeur",
+      "level": 2,
+      "q": "Quelle est la principale caractéristique d'une barrière humaine, comme une ronde ou une procédure ?",
+      "choices": [
+        "Elle est plus fiable qu'un automatisme car l'humain s'adapte",
+        "Elle est passive : elle agit sans intervention de l'opérateur",
+        "Elle ne peut jamais être prise en compte dans une analyse de risques",
+        "Elle dépend de la formation, de la vigilance et de la charge de travail, donc elle est plus fragile"
+      ],
+      "answer": 3,
+      "explain": "Les barrières humaines varient avec la fatigue, la formation et la pression ; leur crédit dans l'analyse est donc limité. Elles ne sont pas passives et peuvent compter, avec prudence. Prétendre qu'elles sont plus fiables qu'un automatisme est contraire à l'expérience.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-019",
+      "theme": "Barrières de sécurité et défense en profondeur",
+      "level": 3,
+      "q": "Un dépôt dispose, pour un bac, d'une jauge, d'une alarme de niveau très haut branchée sur cette même jauge, et d'un opérateur. Vous pensez à Buncefield. Quelle amélioration demandez-vous ?",
+      "choices": [
+        "Une seconde alarme sonore plus puissante, réglée sur la même jauge de niveau du bac",
+        "Un opérateur supplémentaire chargé de la surveillance du dépôt pendant la nuit",
+        "Un panneau rappelant la capacité maximale autorisée de remplissage du bac",
+        "Un interrupteur de niveau très haut indépendant de la jauge, commandant l'arrêt du pompage"
+      ],
+      "answer": 3,
+      "explain": "À Buncefield, la jauge bloquée et l'interrupteur indépendant inopérant ont laissé le bac déborder. Il faut une barrière réellement indépendante, agissant sur l'arrêt du pompage et testée. Une alarme sur la même jauge tombe en panne avec elle ; l'humain seul et l'affichage restent faibles.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Major Incident Investigation Board, Buncefield",
+          "art": "Rapport final",
+          "url": "https://www.icheme.org/media/10706/buncefield-report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-020",
+      "theme": "Barrières de sécurité et défense en profondeur",
+      "level": 3,
+      "q": "L'exploitant affirme qu'une fonction de sécurité de niveau SIL 3 est installée, mais elle n'a jamais été testée depuis cinq ans. Que répondez-vous ?",
+      "choices": [
+        "La performance n'est démontrée que si la fonction est testée et entretenue",
+        "Le niveau SIL est une propriété définitive du matériel, valable dès son achat",
+        "La fonction reste valable tant qu'elle n'a pas déclenché de façon intempestive",
+        "Les fonctions SIL doivent être remplacées tous les deux ans, par principe"
+      ],
+      "answer": 0,
+      "explain": "Le niveau d'intégrité de sécurité se maintient par des essais périodiques et l'entretien, selon les normes CEI 61508 et 61511. Un matériel conforme à l'achat ne garantit rien cinq ans plus tard. Aucun remplacement systématique tous les deux ans n'est une règle générale.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-021",
+      "theme": "Accidents majeurs et retour d'expérience",
+      "level": 1,
+      "q": "Quel accident, survenu en Italie en 1976 après un rejet de dioxine, a donné son nom à la directive européenne sur les accidents majeurs ?",
+      "choices": [
+        "Bhopal, en Inde, en 1984",
+        "Seveso",
+        "Buncefield, au Royaume-Uni, en 2005",
+        "Piper Alpha, en mer du Nord, en 1988"
+      ],
+      "answer": 1,
+      "explain": "La directive européenne sur la maîtrise des dangers liés aux accidents majeurs, aujourd'hui la directive 2012/18/UE, porte le nom de Seveso. Bhopal (Inde, 1984), Piper Alpha (1988) et Buncefield (2005) sont d'autres accidents célèbres, mais ne sont pas à l'origine de ce nom.",
+      "seconds": 40,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Directive 2012/18/UE (Seveso 3)",
+          "art": "Ensemble de la directive",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32012L0018"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-022",
+      "theme": "Accidents majeurs et retour d'expérience",
+      "level": 1,
+      "q": "Quel est le bilan humain de l'accident de la plateforme Piper Alpha en 1988 ?",
+      "choices": [
+        "11 morts",
+        "15 morts",
+        "43 morts",
+        "167 morts"
+      ],
+      "answer": 3,
+      "explain": "Piper Alpha a fait 167 morts. 11 est le bilan de Deepwater Horizon (2010) et 15 celui de Texas City (2005).",
+      "seconds": 40,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Piper Alpha : rapport d'enquête Cullen (synthèse)",
+          "art": "Accident du 6 juillet 1988",
+          "url": "https://www.thechemicalengineer.com/features/piper-alpha-the-disaster-in-detail/"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-023",
+      "theme": "Accidents majeurs et retour d'expérience",
+      "level": 1,
+      "q": "À quoi l'enquête sur Piper Alpha, présidée par Lord Cullen, a-t-elle conduit pour les installations en mer britanniques ?",
+      "choices": [
+        "À l'interdiction de toute exploitation en mer du Nord",
+        "À la création d'un fonds mondial d'indemnisation",
+        "À l'obligation d'un dossier de sécurité accepté par l'autorité",
+        "À la suppression des permis de travail jugés inutiles"
+      ],
+      "answer": 2,
+      "explain": "Le rapport Cullen (1990) a recommandé que chaque installation en mer soumette un dossier de sécurité à l'autorité ; le règlement correspondant date de 1992. L'enquête a au contraire souligné la nécessité de permis de travail mieux appliqués. L'exploitation en mer du Nord n'a pas été interdite.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Piper Alpha : rapport d'enquête Cullen (synthèse)",
+          "art": "Accident du 6 juillet 1988",
+          "url": "https://www.thechemicalengineer.com/features/piper-alpha-the-disaster-in-detail/"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-024",
+      "theme": "Accidents majeurs et retour d'expérience",
+      "level": 1,
+      "q": "À Texas City en 2005, où se trouvaient la plupart des victimes ?",
+      "choices": [
+        "Dans la salle de contrôle de la raffinerie",
+        "À bord d'un navire en cours de chargement",
+        "Dans le quartier d'habitation voisin",
+        "Dans des bureaux provisoires placés trop près de l'unité"
+      ],
+      "answer": 3,
+      "explain": "Les 15 personnes tuées travaillaient dans ou près de bureaux provisoires installés à proximité du ballon de purge. Le choix de l'emplacement des bâtiments occupés est l'un des enseignements du rapport du Bureau d'enquête américain.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Chemical Safety Board (États-Unis), raffinerie BP de Texas City",
+          "art": "Accident du 23 mars 2005",
+          "url": "https://csb.gov/bp-america-texas-city-refinery-explosion/"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-025",
+      "theme": "Accidents majeurs et retour d'expérience",
+      "level": 2,
+      "q": "Qu'est-ce qui a empêché l'arrêt automatique du remplissage du réservoir à Buncefield ?",
+      "choices": [
+        "L'interrupteur indépendant de niveau très haut était inopérant (verrou absent)",
+        "Une coupure d'électricité générale ayant privé l'ensemble du site de toute alimentation",
+        "Une erreur de lecture de l'opérateur sur un manomètre de la salle de contrôle",
+        "Un séisme local ayant endommagé plusieurs tuyauteries de raccordement du dépôt"
+      ],
+      "answer": 0,
+      "explain": "L'enquête a établi que la jauge s'était bloquée et que l'interrupteur indépendant de niveau très haut, censé couper le pompage, ne pouvait pas fonctionner car son verrou n'était pas posé. Aucune coupure générale, séisme ou erreur de manomètre n'est à l'origine.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Major Incident Investigation Board, Buncefield",
+          "art": "Rapport final",
+          "url": "https://www.icheme.org/media/10706/buncefield-report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-026",
+      "theme": "Accidents majeurs et retour d'expérience",
+      "level": 2,
+      "q": "Quelle est la nature de l'événement initial de Deepwater Horizon en 2010 ?",
+      "choices": [
+        "Une collision entre la plateforme et un navire ravitailleur en approche",
+        "Une éruption, que le bloc obturateur de puits n'a pas réussi à arrêter",
+        "Un incendie de cuvette survenu sur un dépôt pétrolier côtier voisin",
+        "Le naufrage de la plateforme causé par une tempête tropicale"
+      ],
+      "answer": 1,
+      "explain": "Une éruption (venue non maîtrisée de gaz et d'hydrocarbures) a mené à l'explosion de la plateforme : 11 morts. Le bloc obturateur du puits n'a pas fermé le puits. Les autres scénarios ne correspondent pas aux conclusions des enquêtes.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Chemical Safety Board (États-Unis), accident Macondo / Deepwater Horizon",
+          "art": "Résumé du rapport final",
+          "url": "https://csb.gov/assets/1/20/20160412_Macondo_Full_Exec_Summary.pdf"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-027",
+      "theme": "Accidents majeurs et retour d'expérience",
+      "level": 2,
+      "q": "Quel enseignement commun se dégage de Piper Alpha, Texas City et Buncefield ?",
+      "choices": [
+        "Plusieurs barrières ont défailli en même temps, avec des causes organisationnelles",
+        "La cause était purement technique, sans facteur humain",
+        "Une erreur isolée d'un seul opérateur a tout déclenché",
+        "Les pays concernés n'avaient aucun texte de sécurité"
+      ],
+      "answer": 0,
+      "explain": "Les rapports d'enquête décrivent des défaillances multiples, souvent organisationnelles : transmission des consignes, maintenance, implantation, gestion du changement. Réduire l'accident à une erreur individuelle est une lecture que les enquêteurs rejettent.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-028",
+      "theme": "Accidents majeurs et retour d'expérience",
+      "level": 2,
+      "q": "Vous recevez la notification d'un incident sans blessé sur un dépôt : une perte de confinement de 2 m³ d'hydrocarbure, rapidement contenue. Pourquoi l'examiner de près ?",
+      "choices": [
+        "Sans blessé ni dommage, il n'a aucun intérêt pour l'administration",
+        "Il ne sert qu'à calculer les primes d'assurance du titulaire",
+        "Il révèle des barrières qui ont manqué, donc un accident potentiel",
+        "Il doit être classé jusqu'à ce qu'un accident survienne"
+      ],
+      "answer": 2,
+      "explain": "Un quasi-accident est un avertissement gratuit. L'article 241 impose au titulaire d'informer sans délai l'administration de tout incident ou accident, précisément pour permettre d'analyser ces signaux. Le classer sans suite attend l'accident pour réagir.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Article 241"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-029",
+      "theme": "Accidents majeurs et retour d'expérience",
+      "level": 3,
+      "q": "Vous préparez l'inspection d'un parc de stockage en vous appuyant sur Piper Alpha et Buncefield. Quels points contrôlez-vous en priorité ?",
+      "choices": [
+        "La comptabilité de l'exploitant et ses déclarations fiscales des trois dernières années",
+        "Permis de travail, relèves, protections de niveau indépendantes, neutralisations",
+        "L'état des uniformes, du marquage au sol et des places de stationnement",
+        "Le nombre de réunions de direction tenues pendant l'année écoulée"
+      ],
+      "answer": 1,
+      "explain": "Piper Alpha a mis en cause les permis de travail et la transmission des consignes ; Buncefield, une protection de niveau indépendante inopérante. Ces deux points, avec les dispositifs neutralisés, sont les premiers à vérifier. Les trois autres propositions n'ont pas de lien avec les causes observées.",
+      "seconds": 80,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-030",
+      "theme": "Accidents majeurs et retour d'expérience",
+      "level": 3,
+      "q": "Quelle mesure aurait réduit le nombre de victimes à Texas City, quelle que soit la cause du déversement ?",
+      "choices": [
+        "Renforcer le contrôle des accès à l'ensemble du périmètre de la raffinerie",
+        "Multiplier les panneaux d'interdiction de fumer dans toutes les unités",
+        "Remplacer les ballons de purge par des cuves plus petites et plus nombreuses",
+        "Éloigner les bâtiments occupés des unités, surtout pendant les démarrages"
+      ],
+      "answer": 3,
+      "explain": "Les victimes se trouvaient dans des bureaux provisoires proches de l'unité : l'éloignement des occupants limite les conséquences, quel que soit l'événement initial. Le contrôle d'accès et les panneaux ne protègent pas contre un nuage ; réduire la taille des cuves ne règle pas la question de l'implantation.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Chemical Safety Board (États-Unis), raffinerie BP de Texas City",
+          "art": "Accident du 23 mars 2005",
+          "url": "https://csb.gov/bp-america-texas-city-refinery-explosion/"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-031",
+      "theme": "Plan d'urgence et d'évacuation",
+      "level": 1,
+      "q": "Qui est responsable de l'élaboration et de la mise en œuvre du plan d'urgence interne d'un site ?",
+      "choices": [
+        "La mairie voisine du site",
+        "Le seul ministère chargé des Hydrocarbures",
+        "L'exploitant du site",
+        "L'assureur du site"
+      ],
+      "answer": 2,
+      "explain": "Le plan interne est sous la responsabilité de l'exploitant, qui connaît ses installations et dispose des moyens sur place. Les pouvoirs publics pilotent le plan externe lorsque les effets dépassent le site.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-032",
+      "theme": "Plan d'urgence et d'évacuation",
+      "level": 1,
+      "q": "Quand un plan d'urgence externe est-il déclenché ?",
+      "choices": [
+        "Quand les effets dépassent le site, à l'initiative de l'autorité publique",
+        "Dès que l'alarme sonore retentit sur le site, quelle que soit la situation",
+        "Seulement lorsque le bilan dépasse cent morts parmi le personnel du site",
+        "À la demande de l'assureur de l'exploitant, après expertise du sinistre"
+      ],
+      "answer": 0,
+      "explain": "Le plan externe protège les personnes et l'environnement hors du site (riverains, routes, cours d'eau, mer) et relève de l'autorité publique. Une simple alarme interne ne le déclenche pas, et aucun seuil de cent morts ne conditionne sa mise en œuvre.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-033",
+      "theme": "Plan d'urgence et d'évacuation",
+      "level": 1,
+      "q": "Selon l'article 241 de la loi n° 002/2019, que doit faire le titulaire en cas de perturbation, d'incident ou d'accident ?",
+      "choices": [
+        "Attendre le rapport annuel pour les mentionner",
+        "En informer d'abord la presse",
+        "N'informer l'administration que si les dommages dépassent un seuil qu'il fixe lui-même",
+        "En informer sans délai l'administration"
+      ],
+      "answer": 3,
+      "explain": "L'article 241 impose d'informer sans délai l'administration. Il ne prévoit ni report au rapport annuel, ni seuil laissé à l'appréciation du titulaire, ni priorité à la presse.",
+      "seconds": 40,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Article 241"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-034",
+      "theme": "Plan d'urgence et d'évacuation",
+      "level": 1,
+      "q": "Où doit être situé le point de rassemblement d'un plan d'évacuation ?",
+      "choices": [
+        "Au plus près de l'unité pour intervenir plus vite",
+        "Hors des zones d'effet des scénarios majeurs identifiés",
+        "Devant le bâtiment administratif, quel que soit le scénario",
+        "Au pied de la torche, point le plus visible du site"
+      ],
+      "answer": 1,
+      "explain": "Le point de rassemblement doit rester sûr dans les scénarios retenus par l'étude de dangers, et idéalement accessible par deux itinéraires. Se rassembler près de l'unité ou de la torche expose les personnes ; l'emplacement doit être choisi selon les scénarios, non par habitude.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-035",
+      "theme": "Plan d'urgence et d'évacuation",
+      "level": 2,
+      "q": "Un exercice d'évacuation mesure un rassemblement complet en 9 minutes, alors que le plan en prévoit 5. Que faites-vous ?",
+      "choices": [
+        "Analyser les causes de l'écart, corriger puis refaire l'exercice",
+        "Modifier le plan pour afficher 9 minutes, sans autre action corrective",
+        "Conclure que le plan est validé puisque tout le monde est sorti",
+        "Supprimer le comptage pour gagner du temps"
+      ],
+      "answer": 0,
+      "explain": "Un exercice sert à révéler les écarts (alarme peu audible, issue encombrée, registre absent). L'écart doit être analysé, corrigé et testé à nouveau. Ajuster le chiffre ou supprimer le comptage cache le problème au lieu de le résoudre.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-036",
+      "theme": "Plan d'urgence et d'évacuation",
+      "level": 2,
+      "q": "Après l'alarme, 118 personnes sont comptées au point de rassemblement alors que le registre d'entrée en indique 120. Que faites-vous ?",
+      "choices": [
+        "Clore l'exercice, car un taux de 98 % de présents est jugé largement suffisant ici",
+        "Considérer deux personnes manquantes et engager leur recherche avec les secours",
+        "Attendre que les deux personnes se manifestent d'elles-mêmes au point de rassemblement",
+        "Renvoyer tout le monde au poste de travail"
+      ],
+      "answer": 1,
+      "explain": "Le but du comptage est de savoir qui manque. Deux personnes sont à rechercher immédiatement, en informant le chef d'intervention. Un pourcentage de réussite n'a aucun sens quand des vies sont en jeu.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-037",
+      "theme": "Plan d'urgence et d'évacuation",
+      "level": 2,
+      "q": "En cas de nuage de gaz issu d'une fuite, quel déplacement convient pour un salarié du site ?",
+      "choices": [
+        "Suivre le vent pour courir plus vite",
+        "Se déplacer de côté ou à contre-vent par rapport à la source, vers le point de rassemblement",
+        "Se rendre dans le local technique le plus proche pour couper l'alimentation, quelle que soit la distance",
+        "Monter sur une structure élevée pour mieux voir la fuite"
+      ],
+      "answer": 1,
+      "explain": "Le nuage est entraîné par le vent : s'éloigner de côté ou à contre-vent évite de rester sur sa trajectoire. Suivre le vent expose au nuage ; retourner vers la zone ou monter pour observer augmente l'exposition.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-038",
+      "theme": "Plan d'urgence et d'évacuation",
+      "level": 2,
+      "q": "Le plan d'urgence d'un titulaire ne mentionne pas les sous-traitants présents sur le site. Que demandez-vous ?",
+      "choices": [
+        "Rien : l'exploitant est uniquement responsable de son personnel salarié permanent, pas des autres",
+        "Qu'ils élaborent chacun leur propre plan, sans lien avec celui du site d'accueil",
+        "Les intégrer au plan : information, comptage et rôle, car le titulaire reste responsable",
+        "Qu'ils soient exclus des exercices pour ne pas perturber l'activité du site"
+      ],
+      "answer": 2,
+      "explain": "Les sous-traitants sont exposés comme les salariés. La loi n° 002/2019 rend le titulaire responsable envers l'État de l'exécution de leurs contrats (article 187) et de l'ensemble des dommages (article 179). Des plans séparés ou leur exclusion des exercices créent des failles.",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Articles 179 et 187"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-039",
+      "theme": "Plan d'urgence et d'évacuation",
+      "level": 3,
+      "q": "Un incendie sur un dépôt côtier dépasse les moyens du site ; le panache se dirige vers un village à 600 m. Que faites-vous en priorité ?",
+      "choices": [
+        "Gérer seul pendant plusieurs heures et n'informer qu'ensuite, dans le rapport trimestriel",
+        "Évacuer uniquement le personnel du site et prévenir le village le lendemain matin",
+        "Alerter en interne, informer sans délai l'administration, demander le plan externe",
+        "Attendre la fin de l'incendie avant toute information externe à l'administration"
+      ],
+      "answer": 2,
+      "explain": "Les effets sortent du site : le plan externe doit être activé et l'administration informée sans délai (article 241). Le titulaire est responsable des dommages, y compris au-delà de son périmètre (article 179). Retarder l'information expose la population.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Articles 179 et 241"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-040",
+      "theme": "Plan d'urgence et d'évacuation",
+      "level": 3,
+      "q": "Après un accident, un riverain situé à 2 km subit un dommage. L'exploitant répond que cela dépasse le périmètre de son titre. Que prévoit la loi n° 002/2019 ?",
+      "choices": [
+        "Elle s'arrête aux limites du périmètre de l'autorisation, au-delà desquelles rien ne s'applique",
+        "Seul l'État répond des dommages subis hors du périmètre du titre",
+        "Sa responsabilité couvre tous les dommages et effets induits, même hors du périmètre",
+        "Elle est plafonnée au montant des assurances souscrites par le titulaire"
+      ],
+      "answer": 2,
+      "explain": "L'article 179 étend la responsabilité du titulaire à l'ensemble des dommages causés par son activité et à leurs effets induits, y compris hors périmètre. Les assurances (article 180) servent à la couvrir sans la limiter.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Articles 179 et 180"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-041",
+      "theme": "Permis de travail et maîtrise des interventions",
+      "level": 1,
+      "q": "Pour quels travaux exige-t-on un permis de feu ?",
+      "choices": [
+        "Le soudage, le meulage et le découpage, qui produisent des points chauds",
+        "La peinture intérieure de bureaux",
+        "Le nettoyage des vitres d'un bâtiment",
+        "L'inventaire des stocks de pièces de rechange"
+      ],
+      "answer": 0,
+      "explain": "Un permis de feu encadre les travaux susceptibles d'enflammer une atmosphère ou des matières inflammables : soudage, meulage, découpage. Les trois autres activités ne génèrent pas de points chauds.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-042",
+      "theme": "Permis de travail et maîtrise des interventions",
+      "level": 1,
+      "q": "Qu'est-ce que la consignation avant une intervention ?",
+      "choices": [
+        "L'inscription de l'intervention au registre des archives de l'établissement",
+        "Le verrouillage des énergies et alimentations, avec cadenas et étiquette",
+        "La fermeture complète du site pendant un week-end de maintenance",
+        "Le dépôt des clés du bureau chez le chef de site"
+      ],
+      "answer": 1,
+      "explain": "La consignation isole et verrouille les énergies et les produits pour que l'équipement ne puisse pas être remis en service pendant le travail. Les autres propositions relèvent de l'administration ou de la sûreté générale.",
+      "seconds": 45,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-043",
+      "theme": "Permis de travail et maîtrise des interventions",
+      "level": 1,
+      "q": "Que désigne la limite inférieure d'explosivité (LIE) ?",
+      "choices": [
+        "La concentration d'un gaz à partir de laquelle il devient toxique pour l'homme",
+        "La concentration minimale de gaz dans l'air permettant l'inflammation du mélange",
+        "La température de fusion d'un hydrocarbure stocké dans un réservoir sous pression",
+        "La pression maximale admissible d'un réservoir de stockage d'hydrocarbures"
+      ],
+      "answer": 1,
+      "explain": "En dessous de la LIE, le mélange air-vapeur est trop pauvre pour brûler. On l'utilise pour décider d'autoriser ou non un travail à chaud. La toxicité, la fusion et la pression relèvent d'autres grandeurs.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-044",
+      "theme": "Permis de travail et maîtrise des interventions",
+      "level": 1,
+      "q": "Qui délivre les permis de travail sur un site pétrolier ?",
+      "choices": [
+        "L'exploitant du site, par son responsable habilité",
+        "L'agent d'inspection du ministère, après visite préalable du chantier",
+        "L'entreprise sous-traitante, pour elle-même",
+        "Le maire de la commune d'implantation"
+      ],
+      "answer": 0,
+      "explain": "Le permis de travail est un outil de l'exploitant, qui connaît l'état de ses installations. L'administration contrôle le système sans délivrer les permis, et un intervenant ne peut se l'accorder à lui-même.",
+      "seconds": 40,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-045",
+      "theme": "Permis de travail et maîtrise des interventions",
+      "level": 2,
+      "q": "Un permis de feu valable un poste de 8 heures doit être prolongé le lendemain. Le chef de chantier propose de le prolonger par une simple mention. Que répondez-vous ?",
+      "choices": [
+        "Il faut une revalidation avec visite, nouvelle mesure de gaz et nouvelle signature",
+        "La prolongation est acceptable, la nature du travail n'ayant pas changé",
+        "Un seul exécutant peut signer pour toute la semaine",
+        "Les mesures de gaz du premier jour suffisent"
+      ],
+      "answer": 0,
+      "explain": "Les conditions peuvent changer d'un jour à l'autre (produits, travaux voisins, météo). Le permis doit être revalidé sur place. Prolonger sans visite est une dérive courante des permis de travail.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-046",
+      "theme": "Permis de travail et maîtrise des interventions",
+      "level": 2,
+      "q": "Un équipement a été isolé pour maintenance par l'équipe de jour, et l'équipe de nuit n'en est pas informée. Quelle pratique aurait évité le risque ?",
+      "choices": [
+        "Afficher la liste des numéros d'urgence à l'entrée de chaque unité du site",
+        "Organiser une relève verbale rapide à la porte du site entre les deux équipes",
+        "Noter par écrit, à la relève, les équipements isolés et les permis en cours",
+        "Renforcer le port des équipements de protection individuelle sur les chantiers"
+      ],
+      "answer": 2,
+      "explain": "Piper Alpha a montré l'importance de la transmission écrite des équipements indisponibles. Une relève verbale rapide laisse des angles morts ; les numéros d'urgence et les équipements individuels ne préviennent pas la remise en service involontaire.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Piper Alpha : rapport d'enquête Cullen (synthèse)",
+          "art": "Accident du 6 juillet 1988",
+          "url": "https://www.thechemicalengineer.com/features/piper-alpha-the-disaster-in-detail/"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-047",
+      "theme": "Permis de travail et maîtrise des interventions",
+      "level": 2,
+      "q": "Avant un soudage, la mesure indique 15 % de la LIE, alors que le seuil interne est de 10 %. Que faites-vous ?",
+      "choices": [
+        "Commencer, car 15 % reste très loin de la valeur de 100 % de la LIE",
+        "Arrêter, ventiler, chercher la source, ne reprendre qu'après retour sous le seuil",
+        "Commencer en doublant le nombre d'extincteurs placés autour de la zone de soudage",
+        "Attendre la fin des travaux pour refaire la mesure de gaz de la zone"
+      ],
+      "answer": 1,
+      "explain": "Le seuil interne est dépassé : on ne soude pas. On ventile, on identifie la fuite ou la source, puis on mesure à nouveau. Se rassurer avec la distance à 100 % est dangereux, car la combustion peut commencer bien avant.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-048",
+      "theme": "Permis de travail et maîtrise des interventions",
+      "level": 2,
+      "q": "Deux équipes demandent des permis : l'une pour souder sur une plateforme, l'autre pour vidanger un hydrocarbure deux niveaux plus bas. Que faites-vous ?",
+      "choices": [
+        "Laisser les deux équipes s'arranger entre elles sur le terrain, selon leur calendrier",
+        "Délivrer les deux permis par des signataires distincts, sans échange entre eux",
+        "Poser une couverture ignifuge sur la vanne de vidange et lancer les deux travaux",
+        "Coordonner les permis et suspendre un travail jusqu'à maîtrise des risques croisés"
+      ],
+      "answer": 3,
+      "explain": "Les activités simultanées créent des risques que chaque permis, pris isolément, ne voit pas. Une coordination unique est nécessaire. Séparer les signataires ou compter sur une couverture ignifuge ne suffit pas.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-049",
+      "theme": "Permis de travail et maîtrise des interventions",
+      "level": 3,
+      "q": "Sur dix permis de feu examinés, six sont signés à l'avance, les mesures de gaz sont postérieures au début des travaux et l'analyse de risques est copiée d'un permis à l'autre. Quelle est la suite appropriée ?",
+      "choices": [
+        "Classer sans suite des écarts de forme, puisqu'aucun accident n'a eu lieu cette année",
+        "Sanctionner individuellement les six signataires sans examiner le système de permis",
+        "Remplacer les permis papier par un simple panneau d'affichage dans l'unité",
+        "Consigner un écart systémique, exiger l'analyse des causes, puis vérifier la levée"
+      ],
+      "answer": 3,
+      "explain": "Le constat touche l'ensemble du système de permis : c'est un écart systémique. L'administration peut le consigner, exiger des actions et en suivre la levée dans le cadre de son contrôle technique (article 243). Sanctionner seulement les personnes ou changer de support ne traite pas la cause.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Articles 18 et 243"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-050",
+      "theme": "Permis de travail et maîtrise des interventions",
+      "level": 3,
+      "q": "Un sous-traitant est blessé pendant une intervention chez le titulaire, qui répond que c'est l'affaire du sous-traitant. Que dit la loi n° 002/2019 sur ses engagements ?",
+      "choices": [
+        "Il est dégagé de toute responsabilité dès qu'un contrat est signé",
+        "Le titulaire reste responsable envers l'État de l'exécution du contrat de sous-traitance",
+        "L'État devient responsable de l'exécution du contrat",
+        "Seul le sous-traitant répond devant l'administration"
+      ],
+      "answer": 1,
+      "explain": "L'article 187 maintient la responsabilité du titulaire envers l'État pour l'exécution du contrat de sous-traitance, et l'article 179 couvre l'ensemble des dommages causés par son activité. Un contrat ne transfère pas cette responsabilité.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Articles 179 et 187"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-051",
+      "theme": "Études de dangers et cadre réglementaire",
+      "level": 1,
+      "q": "Selon l'article 172 de la loi n° 002/2019, qui peut réaliser les études de dangers ?",
+      "choices": [
+        "Tout bureau d'études, agréé ou non",
+        "Seuls les cabinets agréés",
+        "Exclusivement les services de l'administration",
+        "Le seul exploitant, sans intervention extérieure"
+      ],
+      "answer": 1,
+      "explain": "L'article 172 réserve la réalisation des études de dangers aux cabinets agréés ; elles sont validées par les services techniques compétents et révisées périodiquement.",
+      "seconds": 40,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Article 172"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-052",
+      "theme": "Études de dangers et cadre réglementaire",
+      "level": 1,
+      "q": "À quelles prescriptions toute personne exerçant une activité d'hydrocarbures doit-elle se conformer selon l'article 171 ?",
+      "choices": [
+        "Celles que l'exploitant fixe librement dans son règlement intérieur, sans contrôle extérieur",
+        "Celles d'hygiène, santé, sécurité, sûreté et environnement fixées par voie réglementaire",
+        "Seulement celles de sa maison mère étrangère, appliquées à toutes ses filiales",
+        "Seulement des normes volontaires, sans caractère obligatoire ni contrôle"
+      ],
+      "answer": 1,
+      "explain": "L'article 171 impose le respect des prescriptions définies par voie réglementaire. Le règlement intérieur ou les normes internes ne s'y substituent pas.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Article 171"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-053",
+      "theme": "Études de dangers et cadre réglementaire",
+      "level": 1,
+      "q": "Comment une étude de dangers évalue-t-elle les conséquences d'un scénario d'accident ?",
+      "choices": [
+        "Par le seul coût de remplacement des équipements",
+        "Par ses rayons d'effets thermiques, de surpression et de toxicité",
+        "Par le nombre d'employés en contrat à durée indéterminée",
+        "Par la date d'ouverture de l'installation"
+      ],
+      "answer": 1,
+      "explain": "Les effets d'un accident se mesurent en distances atteintes par la chaleur, l'onde de pression et les produits toxiques, ce qui permet de situer les personnes exposées. Les autres propositions ne mesurent pas les conséquences sur les personnes.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-054",
+      "theme": "Études de dangers et cadre réglementaire",
+      "level": 1,
+      "q": "Que désigne la directive 2012/18/UE, dite Seveso 3 ?",
+      "choices": [
+        "Un texte européen sur la taxation des carburants et des produits pétroliers",
+        "Une directive sur la qualité de l'air extérieur et les émissions des véhicules",
+        "Un règlement sur la part de contenu local dans les marchés publics",
+        "La directive européenne sur la maîtrise des dangers liés aux accidents majeurs"
+      ],
+      "answer": 3,
+      "explain": "Seveso 3 est la directive 2012/18/UE sur les accidents majeurs, avec seuils bas et hauts, rapport de sécurité et plans d'urgence. Elle sert de référence internationale sans s'appliquer directement au Gabon.",
+      "seconds": 50,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Directive 2012/18/UE (Seveso 3)",
+          "art": "Ensemble de la directive",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32012L0018"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-055",
+      "theme": "Études de dangers et cadre réglementaire",
+      "level": 2,
+      "q": "Une étude indique 80 mètres de rayon d'effet létal pour un incendie de cuvette, et un logement se trouve à 60 mètres. Que concluez-vous ?",
+      "choices": [
+        "Le dossier ne peut conclure à un risque négligeable sans mesures complémentaires",
+        "Le risque est négligeable, car un logement est un bâtiment fermé",
+        "Le risque est acceptable, la distance dépassant 50 mètres",
+        "L'assurance suffit à régler le problème"
+      ],
+      "answer": 0,
+      "explain": "Le logement est dans la zone d'effets létaux : il faut des mesures (distance, barrières, limitation de l'urbanisation). Un bâtiment fermé ne protège pas d'un effet thermique létal, et l'assurance n'éteint pas le risque.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-056",
+      "theme": "Études de dangers et cadre réglementaire",
+      "level": 2,
+      "q": "Vous instruisez une étude de dangers dont le cabinet auteur ne justifie pas son agrément. Que faites-vous ?",
+      "choices": [
+        "Demander la preuve de l'agrément et, à défaut, ne pas valider l'étude",
+        "La valider, la qualité technique primant sur l'agrément",
+        "La valider sous réserve d'un courrier ultérieur du cabinet",
+        "La faire valider par l'exploitant lui-même"
+      ],
+      "answer": 0,
+      "explain": "L'article 172 réserve ces études aux cabinets agréés. Sans agrément, l'étude ne peut être validée. Valider d'abord et régulariser après, ou faire valider par l'exploitant, contourne la loi.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Article 172"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-057",
+      "theme": "Études de dangers et cadre réglementaire",
+      "level": 2,
+      "q": "Un exploitant augmente de 30 % la capacité de son dépôt, dont l'étude de dangers date de plusieurs années. Que demandez-vous ?",
+      "choices": [
+        "Rien : une étude validée reste valable sans limite",
+        "Seulement l'achat d'un extincteur supplémentaire",
+        "Une mise à jour de l'étude, car une modification notable change les scénarios",
+        "La suppression de l'étude pour la remplacer par un courrier"
+      ],
+      "answer": 2,
+      "explain": "L'article 172 prévoit une révision périodique, et toute modification notable (capacité, produit, environnement) doit déclencher une mise à jour : les quantités changent les effets et les distances. Un extincteur ou un courrier ne les évalue pas.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Article 172"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-058",
+      "theme": "Études de dangers et cadre réglementaire",
+      "level": 2,
+      "q": "Les scénarios d'une étude omettent le produit le plus dangereux réellement stocké sur le site (du gaz de pétrole liquéfié). Que faites-vous ?",
+      "choices": [
+        "Accepter, car une étude de dangers n'a qu'une valeur indicative non contraignante",
+        "Ignorer le point, ce produit relevant d'une autre direction du ministère",
+        "Demander des compléments : les scénarios doivent couvrir les produits présents",
+        "Se limiter à corriger les fautes d'orthographe du document remis"
+      ],
+      "answer": 2,
+      "explain": "Une étude qui ignore le produit le plus dangereux sous-estime le risque. L'agent doit en demander l'intégration. Considérer l'étude comme purement indicative ou renvoyer vers une autre direction laisse l'écart subsister.",
+      "seconds": 60,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-059",
+      "theme": "Études de dangers et cadre réglementaire",
+      "level": 3,
+      "q": "Une étude validée il y a six ans n'a pas été révisée ; depuis, un lotissement s'est construit à 150 m et un nouveau poste de chargement a été ajouté. Que faites-vous ?",
+      "choices": [
+        "Ne rien faire : l'étude a déjà été validée par l'administration il y a six ans",
+        "Demander seulement l'affichage d'une information dans le quartier voisin",
+        "Interdire le lotissement sans aucune analyse préalable ni concertation",
+        "Demander la révision de l'étude, puis réexaminer plan d'urgence et distances"
+      ],
+      "answer": 3,
+      "explain": "L'étude doit rester fidèle à la réalité : un nouvel environnement et un nouvel équipement imposent une révision, puis un réexamen du plan d'urgence. Une validation passée ne vaut pas pour une situation modifiée ; l'affichage seul ou une interdiction sans analyse ne répondent pas à la démarche.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Article 172"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-060",
+      "theme": "Études de dangers et cadre réglementaire",
+      "level": 3,
+      "q": "Un collègue affirme que la loi n° 002/2019 fixe elle-même la périodicité exacte de révision des études de dangers. Que lui répondez-vous ?",
+      "choices": [
+        "Oui : l'article 172 fixe la périodicité à un nombre d'années précis et unique",
+        "L'article 172 pose le principe ; la périodicité détaillée est à vérifier",
+        "Non : aucune révision n'est prévue pour ces études après leur validation",
+        "Non : la périodicité est choisie librement par chaque cabinet agréé"
+      ],
+      "answer": 1,
+      "explain": "L'article 172 pose le principe d'une révision périodique. La périodicité et les prescriptions détaillées relèvent de textes réglementaires qu'il faut vérifier avant de les opposer. Il ne faut ni inventer une durée ni nier la révision.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Article 172"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-061",
+      "theme": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "level": 1,
+      "q": "Selon l'article 18 de la loi n° 002/2019, qui assure le contrôle de l'application de la réglementation des hydrocarbures ?",
+      "choices": [
+        "Exclusivement les services de la douane, sur les sites d'exploitation",
+        "Les syndicats de salariés des compagnies, lors de leurs visites",
+        "Les agents des services compétents du ministère chargé des Hydrocarbures",
+        "Les compagnies pétrolières elles-mêmes, par leur seul autocontrôle interne"
+      ],
+      "answer": 2,
+      "explain": "L'article 18 confie le contrôle aux agents des services compétents du ministère en charge des Hydrocarbures. L'autocontrôle des compagnies complète le contrôle sans le remplacer.",
+      "seconds": 40,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Article 18"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-062",
+      "theme": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "level": 1,
+      "q": "Quelle qualité possèdent les agents du ministère qui ont prêté serment ?",
+      "choices": [
+        "Officiers de police judiciaire spéciaux, leurs procès-verbaux faisant foi",
+        "Magistrats instructeurs chargés des affaires pétrolières devant les tribunaux",
+        "Experts judiciaires privés désignés par les compagnies pétrolières",
+        "Simples observateurs, sans pouvoir de constat des infractions"
+      ],
+      "answer": 0,
+      "explain": "Selon les articles 19 et 20, les agents assermentés ont la qualité d'officiers de police judiciaire spéciaux, constatent les infractions et dressent des procès-verbaux qui font foi jusqu'à preuve contraire.",
+      "seconds": 45,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Articles 19 et 20"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-063",
+      "theme": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "level": 1,
+      "q": "Lequel de ces indicateurs est un indicateur avancé de sécurité ?",
+      "choices": [
+        "Le nombre d'accidents avec arrêt de travail de l'année",
+        "Le nombre de décès enregistrés",
+        "Le taux de fréquence annuel des accidents",
+        "La proportion d'essais de barrières réalisés dans les délais"
+      ],
+      "answer": 3,
+      "explain": "Un indicateur avancé mesure ce qui prévient l'accident : essais réalisés, maintenance de sécurité, actions soldées. Les trois autres sont des indicateurs de résultat, qui constatent les accidents après coup.",
+      "seconds": 40,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "HSE (Royaume-Uni), HSG254 Developing process safety indicators",
+          "art": "Guide",
+          "url": "https://www.hse.gov.uk/pubns/books/hsg254.htm"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-064",
+      "theme": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "level": 1,
+      "q": "Quel signe indique une bonne culture de sécurité ?",
+      "choices": [
+        "Un silence total sur les incidents pendant toute l'année écoulée",
+        "De nombreuses affiches de sécurité placées dans tous les couloirs et ateliers",
+        "Un slogan « zéro accident » imposé par la direction à tous les services",
+        "Un opérateur peut arrêter un chantier sur un doute sans crainte de sanction"
+      ],
+      "answer": 3,
+      "explain": "La culture de sécurité se voit dans les décisions et dans la confiance qui permet de signaler. Un silence total, des affiches ou un slogan peuvent au contraire révéler une pression à ne pas déclarer.",
+      "seconds": 50,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-065",
+      "theme": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "level": 2,
+      "q": "Un exploitant refuse l'accès du site à des agents munis d'un ordre de mission. Que prévoit la loi n° 002/2019 ?",
+      "choices": [
+        "Une pénalité de 500 000 à 5 000 000 FCFA pour défaut de transmission de données",
+        "Une pénalité de 50 000 000 à 2 500 000 000 FCFA, réservée au torchage",
+        "Le refus relève d'un simple désaccord, sans sanction prévue par la loi",
+        "Une pénalité de 10 000 000 à 100 000 000 FCFA pour entrave aux contrôles"
+      ],
+      "answer": 3,
+      "explain": "L'article 278 sanctionne l'entrave aux contrôles d'une pénalité de 10 à 100 millions de FCFA. Les montants de 0,5 à 5 millions concernent le défaut de transmission de données (article 267), et ceux de 50 millions à 2,5 milliards le torchage (article 269).",
+      "seconds": 70,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Article 278"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-066",
+      "theme": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "level": 2,
+      "q": "Un exploitant déjà sanctionné commet la même infraction. Quel est l'effet prévu par la loi n° 002/2019 ?",
+      "choices": [
+        "Pénalités doublées, retrait possible de l'autorisation, interdiction d'exercer",
+        "Les pénalités sont plafonnées au montant initial en vertu du principe de non-cumul",
+        "La procédure est classée sans suite au vu de l'antécédent du titulaire",
+        "Le montant est réduit de moitié pour tenir compte de l'antécédent"
+      ],
+      "answer": 0,
+      "explain": "L'article 265 double les pénalités en cas de récidive et permet le retrait de l'autorisation et l'interdiction d'exercer. L'article 264 écarte le non-cumul des pénalités : il ne les plafonne donc pas.",
+      "seconds": 60,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Articles 264 et 265"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-067",
+      "theme": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "level": 2,
+      "q": "Un site n'a eu aucun accident avec arrêt depuis trois ans, mais 35 % des essais de ses détecteurs de gaz sont en retard. Comment l'analysez-vous ?",
+      "choices": [
+        "Le site est exemplaire : les visites de contrôle peuvent être espacées",
+        "Le risque est nul puisqu'aucun accident avec arrêt n'est survenu en trois ans",
+        "Signal d'alerte : le bon résultat masque la dégradation des barrières",
+        "Seuls les accidents comptent, pas les essais de détecteurs de gaz"
+      ],
+      "answer": 2,
+      "explain": "Les indicateurs avancés signalent la dégradation des barrières avant l'accident. Un taux d'essais en retard de 35 % (exemple) appelle un plan de rattrapage. Un bon résultat récent ne garantit pas la sécurité future.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-068",
+      "theme": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "level": 2,
+      "q": "Après la mise en place d'une prime collective « zéro accident », les déclarations d'incidents baissent de 60 % (chiffre d'exemple). Que faites-vous ?",
+      "choices": [
+        "Y voir une amélioration de la sécurité de 60 % sur l'année écoulée",
+        "Supprimer la déclaration des quasi-accidents pour alléger l'administration",
+        "Augmenter le montant de la prime pour renforcer l'effet obtenu",
+        "Suspecter une sous-déclaration et vérifier registres et entretiens"
+      ],
+      "answer": 3,
+      "explain": "Une prime liée à l'absence d'accident incite à ne pas déclarer. Une baisse aussi forte des déclarations est suspecte : il faut croiser registres, entretiens et constats de terrain. Supprimer des déclarations ou renforcer la prime aggraverait le biais.",
+      "seconds": 70,
+      "status": "draft"
+    },
+    {
+      "id": "min-securite-069",
+      "theme": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "level": 3,
+      "q": "Vous préparez le contrôle d'un dépôt. Quelle démarche est la plus pertinente ?",
+      "choices": [
+        "Lire les rapports remis par l'exploitant et rédiger le compte rendu sans se déplacer",
+        "Cibler les barrières liées aux incidents notifiés, vérifier registres et essais, classer les écarts",
+        "Visiter le site sans préparation et ne s'entretenir qu'avec la direction du site",
+        "Constater les écarts visibles de loin sans rien consigner dans un rapport"
+      ],
+      "answer": 1,
+      "explain": "Un bon contrôle part des incidents notifiés (article 241), vérifie des preuves et croise la parole des cadres et celle du terrain, avant de classer les écarts par gravité. Le contrôle sur pièces seul ou sans trace est insuffisant.",
+      "seconds": 90,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Articles 18 et 241"
+        }
+      ]
+    },
+    {
+      "id": "min-securite-070",
+      "theme": "Culture de sécurité, indicateurs et rôle de l'administration",
+      "level": 3,
+      "q": "Lors d'un contrôle de sécurité, vous constatez un rejet vers un cours d'eau, qui relève probablement de l'administration chargée de l'environnement. Que faites-vous ?",
+      "choices": [
+        "Ne rien consigner, car le rejet ne relève pas de votre direction d'affectation actuelle",
+        "Consigner les faits dans un procès-verbal et en informer l'autorité compétente",
+        "Attendre que l'exploitant décide lui-même de signaler le rejet aux autorités",
+        "Fixer seul la sanction environnementale applicable à l'exploitant concerné"
+      ],
+      "answer": 1,
+      "explain": "Un agent assermenté constate et consigne les infractions (articles 19 et 20) et transmet l'information aux autorités compétentes ; la répartition précise des compétences est à confirmer auprès du ministère. Se taire, attendre l'exploitant ou sanctionner hors de sa compétence sont inadaptés.",
+      "seconds": 80,
+      "status": "draft",
+      "refs": [
+        {
+          "doc": "Loi n° 002/2019 du 16 juillet 2019 portant réglementation du secteur des hydrocarbures",
+          "url": "https://faolex.fao.org/docs/pdf/Gab189548.pdf",
+          "art": "Articles 19 et 20"
+        }
+      ]
+    }
+  ]
+}
