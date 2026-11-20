@@ -3,7 +3,7 @@
 // - JSON de contenu (data/*.json) et images (assets/img) : cache-first, remplis Ã  la demande.
 // - Mise Ã  jour propre : nouvelle version = nouveau nom de cache ; l'ancienne est supprimÃ©e Ã  l'activation ;
 //   la nouvelle version attend (waiting) jusqu'Ã  ce que l'utilisateur clique Â« Actualiser Â» (message SKIP_WAITING).
-const VERSION = 'mrs-v43';
+const VERSION = 'mrs-v44';
 const SHELL = `${VERSION}-shell`;
 const CONTENT = `${VERSION}-content`;
 
@@ -19,7 +19,8 @@ const SHELL_FILES = [
 ];
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(SHELL).then((c) => Promise.all(SHELL_FILES.map((f) => c.add(f).catch(() => {})))));
+  self.skipWaiting(); // la nouvelle version s'active tout de suite : plus d'ancien contenu affiché
+  e.waitUntil(caches.open(SHELL).then((c) => Promise.all(SHELL_FILES.map((f) => c.add(f, { cache: 'reload' }).catch(() => {})))));
 });
 
 self.addEventListener('activate', (e) => {
@@ -38,6 +39,10 @@ self.addEventListener('fetch', (e) => {
   if (url.origin !== location.origin) return; // polices Google, etc. : rÃ©seau normal
   const isContent = /\/(data|assets\/img)\//.test(url.pathname);
   e.respondWith((async () => {
+    // Données (data/*.json) : réseau d'abord pour toujours montrer la dernière version, cache en secours hors connexion.
+    if (/\/data\/[^/]*\.json$/.test(url.pathname) || url.pathname.endsWith('content-index.json')) {
+      try { const r = await fetch(req, { cache: 'no-cache' }); if (r.ok) { const copy = r.clone(); caches.open(CONTENT).then((c) => c.put(req, copy)); } return r; } catch { const hit = await caches.match(req, { ignoreSearch: true }); if (hit) return hit; throw new Error('offline'); }
+    }
     const cached = await caches.match(req, { ignoreSearch: true });
     if (cached) {
       // Cache-first, avec rafraÃ®chissement en arriÃ¨re-plan (prochain chargement Ã  jour ; contenus validÃ©s plus tard inclus).
