@@ -100,7 +100,7 @@ function renderShell() {
   document.getElementById('site-header').innerHTML = `<div class="container bar-inner">
     <a class="brand" href="${corp ? '#/' : '#/training'}" aria-label="${corp ? 'MOURESS — accueil' : 'MOURESS Training — accueil'}">${logo('clair')}</a>
     <nav class="nav-main" aria-label="Navigation principale">${NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${n.label}</a>`).join('')}</nav>
-    <div class="header-actions">${langSwitchHTML()}${corp ? `<a class="btn btn-primary btn-sm" href="#/training">${icon('award', 16)} MOURESS Training</a>` : `<a class="back-site back-ico" href="#/" aria-label="Retour" title="Retour">${icon('arrow', 18, 'flip')}</a>`}${corp ? '' : state.user
+    <div class="header-actions">${langSwitchHTML()}${corp ? `<a class="btn btn-primary btn-sm" href="#/training">${icon('award', 16)} MOURESS Training</a>` : `<a class="back-site back-ico" data-back href="${backFallback()}" aria-label="Retour" title="Retour">${icon('arrow', 18, 'flip')}</a>`}${corp ? '' : state.user
       ? `<span class="user-chip">${esc(state.user.name)}</span><button type="button" class="btn btn-light btn-sm btn-logout" data-logout aria-label="Déconnexion">${icon('login', 16)}<span class="lbl">Déconnexion</span></button>`
       : `<a class="btn btn-primary btn-sm btn-login" href="#/connexion">${icon('login', 16)} Connexion<span class="lbl-long">&nbsp;entreprise</span></a>`}</div></div>`;
   document.getElementById('tabbar').innerHTML = NAV.map((n) => `<a href="${n.href}"${cur(n.key)}>${icon(n.icon)}<span>${n.short || n.label}</span></a>`).join('');
@@ -115,12 +115,22 @@ function renderShell() {
     <p class="footer-legal">© ${new Date().getFullYear()} MOURESS SAS — Libreville. Les attestations MOURESS Training ne constituent pas des diplômes officiels. · <a href="credits.html">Crédits photos</a></p></div>`;
 }
 
+/** Sans historique (arrivée directe) : remonte d'un niveau dans l'URL, sinon Training. */
+function backFallback() {
+  const segs = (location.hash.replace(/^#\/?/, '').split('?')[0] || '').split('/').filter(Boolean);
+  return segs.length > 1 ? '#/' + segs.slice(0, -1).join('/') : '#/training';
+}
+
 async function render() {
   const token = ++state.token;
   // nettoyage de la vue précédente (minuteurs, etc.)
   for (const fn of state.leave.splice(0)) { try { fn(); } catch { /* ignore */ } }
   document.body.dataset.chrome = 'full';
   const { path, query, segs } = parseHash();
+  // historique interne : sert au bouton retour (niveau précédent)
+  const hist = state.hist || (state.hist = []);
+  if (hist.length > 1 && hist[hist.length - 2] === location.hash) hist.pop();
+  else if (hist[hist.length - 1] !== location.hash) hist.push(location.hash);
   const main = document.getElementById('main');
   const m = match(segs);
   state.user = await store.currentUser();
@@ -165,6 +175,8 @@ async function render() {
 
 function setupGlobalHandlers() {
   document.addEventListener('click', async (e) => {
+    const bk = e.target.closest('[data-back]');
+    if (bk && state.hist && state.hist.length > 1) { e.preventDefault(); history.back(); return; }
     const lg = e.target.closest('[data-lang]');
     if (lg) { setLang(lg.dataset.lang); return; }
     const logout = e.target.closest('[data-logout]');
