@@ -3,6 +3,7 @@
 // PATTERNS : [expression régulière ancrée sur le texte entier, remplacement avec $1 $2…] pour les textes à nombres, noms ou dates.
 // Les patterns les plus spécifiques sont placés avant les plus génériques ; les dates françaises (« 19 novembre 2026 ») sont converties en fin de liste.
 export const EXACT = {
+  "Administration MOURESS": "MOURESS administration",
   "Direction générale": "General management",
   "Chef de département": "Department head",
   "Chef de service": "Service head",
@@ -474,7 +475,7 @@ export const EXACT = {
   "3 terminés · 1 en cours": "3 completed · 1 in progress",
   "Pour les RH": "For HR",
   "Évaluer vos candidats en trois étapes": "Assess your candidates in three steps",
-  "Côté candidat, un parcours comme pour le code de la route": "On the candidate side, a path like learning to drive",
+  "Côté candidat, un parcours en trois étapes": "On the candidate side, a three-step path",
   "Cours": "Courses",
   "Entraînement": "Practice",
   "Examen chronométré": "Timed exam",

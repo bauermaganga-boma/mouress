@@ -135,11 +135,11 @@ export async function renderPilotage(ctx, host, company, data, sessions, employe
     deptsRisk: { label: 'Départements à surveiller', value: deptRows.filter((d) => d.value < 40 || d.late).length, def: 'Avancement sous 40 % ou thématiques en retard.', t: deptRows.some((d) => d.value < 40 || d.late) ? 'warn' : 'ok' },
   };
   const sets = {
-    dg: ['effectif', 'avance', 'retard', 'conf', 'budget', 'recrut', 'deptsRisk', 'revues'],
+    dg: ['effectif', 'avance', 'retard', 'conf', 'recrut', 'deptsRisk', 'revues'],
     dept: ['effectif', 'avance', 'valid', 'retard', 'revues', 'conf', 'renew', 'plans'],
     service: ['effectif', 'avance', 'valid', 'retard', 'revues', 'conf', 'renew', 'plans'],
     manager: ['effectif', 'avance', 'retard', 'revues', 'renew', 'plans'],
-    rh: ['effectif', 'avance', 'valid', 'retard', 'revues', 'conf', 'renew', 'plans', 'budget', 'recrut', 'cat'],
+    rh: ['effectif', 'avance', 'valid', 'retard', 'revues', 'conf', 'renew', 'plans', 'recrut', 'cat'],
   };
   const kpis = `<div class="kpi-grid">${sets[role].map((k) => kpi(K[k])).join('')}</div>`;
 

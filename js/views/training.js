@@ -47,7 +47,7 @@ export default async function render(ctx, root) {
       <div class="section-head"><p class="eyebrow dark">Pour les RH</p><h2>Évaluer vos candidats en trois étapes</h2></div>
       <div class="grid grid-3">${STEPS.map((s) => `<article class="card step"><div class="step-n">${s.n}</div><div class="step-ico">${icon(s.ico, 26)}</div><h3>${s.t}</h3><p class="muted">${s.d}</p></article>`).join('')}</div>
       <div class="path">
-        <p class="label">Côté candidat, un parcours comme pour le code de la route</p>
+        <p class="label">Côté candidat, un parcours en trois étapes</p>
         <ol class="path-list path-steps">
           <li><span class="step-n">1</span>${icon('book', 22)}<strong>Cours</strong><span class="xs muted">Modules courts</span></li>
           <li><span class="step-n">2</span>${icon('target', 22)}<strong>Entraînement</strong><span class="xs muted">Corrigé immédiat</span></li>

@@ -23,6 +23,7 @@ export const CONFIG = {
   // Durée de validité d'une attestation (habilitation), en mois. PROVISOIRE : à valider par la direction.
   // Un champ facultatif `validityMonths` dans data/profiles.json l'emporte pour un profil donné.
   VALIDITY_MONTHS_DEFAULT: 24,
+  ADMIN_HASH: '137c0f1f061fdd52b05523f7c0002379a064d8d2cfdf90bf3bfd52333293bea9', // accès Administration MOURESS (empreinte du mot de passe)
   ALERT_DAYS: 90,           // alerte « expire bientôt » : habilitations qui expirent sous ce délai
 
   CONTACT: {

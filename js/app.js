@@ -35,6 +35,7 @@ const ROUTES = [
   { p: 'connexion', view: 'auth', fn: 'login' },
   { p: 'inscription', view: 'auth', fn: 'signup' },
   { p: 'mon-espace', view: 'espace' },
+  { p: 'admin', view: 'admin' },
 ];
 
 const state = { user: null, leave: [], token: 0 };
@@ -107,7 +108,7 @@ function renderShell() {
     <div><h4>Contact</h4><ul><li>${esc(CONFIG.CONTACT.address)}</li><li><a href="${CONFIG.CONTACT.phoneHref}">${esc(CONFIG.CONTACT.phone)}</a></li><li><a href="${CONFIG.CONTACT.whatsapp}" target="_blank" rel="noopener">WhatsApp</a></li></ul></div></div>
     <p class="footer-legal">© ${new Date().getFullYear()} MOURESS SAS — Libreville. · <a href="credits.html">Crédits photos</a></p></div>` : `<div class="container"><div class="footer-grid">
     <div>${logo('sombre')}<p>Tests d’aptitude et formation pour les équipes techniques et leurs fonctions support.</p></div>
-    <div><h4>Plateforme</h4><ul><li><a href="#/">Accueil</a></li><li><a href="#/formation">Catalogue de formation</a></li><li><a href="#/rh">Espace entreprise</a></li><li><a href="#/mon-espace">Mon espace candidat</a></li><li><a href="#/verifier">Vérifier une attestation</a></li></ul></div>
+    <div><h4>Plateforme</h4><ul><li><a href="#/">Accueil</a></li><li><a href="#/formation">Catalogue de formation</a></li><li><a href="#/rh">Espace entreprise</a></li><li><a href="#/mon-espace">Mon espace candidat</a></li><li><a href="#/verifier">Vérifier une attestation</a></li><li><a href="#/admin">Administration MOURESS</a></li></ul></div>
     <div><h4>MOURESS</h4><ul><li>${esc(CONFIG.CONTACT.address)}</li><li><a href="${CONFIG.CONTACT.phoneHref}">${esc(CONFIG.CONTACT.phone)}</a></li><li><a href="${CONFIG.CONTACT.whatsapp}" target="_blank" rel="noopener">WhatsApp</a></li></ul></div></div>
     <p class="footer-legal">© ${new Date().getFullYear()} MOURESS SAS — Libreville. Les attestations MOURESS Training ne constituent pas des diplômes officiels. · <a href="credits.html">Crédits photos</a></p></div>`;
 }
