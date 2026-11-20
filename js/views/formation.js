@@ -74,7 +74,7 @@ export default async function render(ctx, root) {
           if (g) { if (!items.some((i) => i.id === g.id)) items.push({ id: g.id, name: g.name, icon: g.icon, desc: g.desc, count: new Set((data.domains || []).filter((x) => x.group === g.id).flatMap((x) => postes(data, { domain: x.id }).map((p) => p.id))).size }); }
           else items.push({ id: dm.id, name: dm.name, icon: dm.icon, desc: dm.desc, count: postes(data, { domain: dm.id }).length });
         }
-        out.innerHTML = `<div class="grid grid-2 funnel-grid">${items.map((i) => bigCard({ href: `#/formation/${i.id}`, ico: i.icon, title: i.name, desc: i.desc, count: i.count })).join('')}</div>`;
+        out.innerHTML = `<div class="grid grid-2 funnel-grid min-compact">${items.map((i) => bigCard({ href: `#/formation/${i.id}`, ico: i.icon, title: i.name, desc: i.desc, count: i.count, meta: i.id === 'ministere-hydrocarbures' ? `${i.count} formations` : undefined })).join('')}</div>`;
         return;
       }
       const list = data.profiles.filter((p) => norm(`${p.name} ${p.desc} ${(p.domains || []).map((x) => domainOf(data, x)?.name).join(' ')}`).includes(q));
