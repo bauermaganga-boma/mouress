@@ -4,7 +4,7 @@
 /** Liste des secteurs : les groupes (Pétrole & gaz) puis les domaines qui n'appartiennent à aucun groupe. */
 export function sectorList(data) {
   const groups = (data.groups || []).map((g) => ({ id: g.id, name: g.name, icon: g.icon || 'factory', desc: g.desc || '', domains: (data.domains || []).filter((d) => d.group === g.id).map((d) => d.id), shared: g.shared || [] }));
-  const alone = (data.domains || []).filter((d) => !d.group).map((d) => ({ id: d.id, name: d.name, icon: d.icon || 'factory', desc: d.desc || '', domains: [d.id], shared: [] }));
+  const alone = (data.domains || []).filter((d) => !d.group && !d.institution).map((d) => ({ id: d.id, name: d.name, icon: d.icon || 'factory', desc: d.desc || '', domains: [d.id], shared: [] }));
   return [...groups, ...alone];
 }
 export const sectorById = (data, id) => sectorList(data).find((s) => s.id === id) || null;

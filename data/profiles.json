@@ -1,986 +1,1703 @@
 {
-  "sectors": [
-    {
-      "id": "amont",
-      "name": "Pétrole & gaz : Amont",
-      "short": "Amont",
-      "icon": "rig",
-      "desc": "Production, puits, réservoir, offshore et onshore."
-    },
-    {
-      "id": "aval",
-      "name": "Aval & raffinerie",
-      "short": "Aval",
-      "icon": "refinery",
-      "desc": "Procédés, raffinage, stockage, transport."
-    },
-    {
-      "id": "mines",
-      "name": "Mines",
-      "short": "Mines",
-      "icon": "mine",
-      "desc": "Exploitation, traitement du minerai, sécurité minière."
-    },
-    {
-      "id": "qhse",
-      "name": "QHSE",
-      "short": "QHSE",
-      "icon": "shield",
-      "desc": "Qualité, hygiène, sécurité, environnement."
-    },
-    {
-      "id": "support",
-      "name": "Fonctions support",
-      "short": "Support",
-      "icon": "briefcase",
-      "desc": "RH, comptabilité, logistique, juridique."
-    },
-    {
-      "id": "port",
-      "name": "Logistique & Port",
-      "short": "Port",
-      "icon": "ship",
-      "desc": "Manutention portuaire, transit, entreposage, supply chain."
-    }
-  ],
-  "levels": [
-    {
-      "id": "tech",
-      "name": "Opérateur / Technicien"
-    },
-    {
-      "id": "sup",
-      "name": "Superviseur"
-    },
-    {
-      "id": "ing",
-      "name": "Ingénieur / Cadre"
-    },
-    {
-      "id": "mgr",
-      "name": "Chef de site / Management"
-    },
-    {
-      "id": "cadre",
-      "name": "Cadre (Bac +5)"
-    },
-    {
-      "id": "assist",
-      "name": "Agent / Assistant"
-    },
-    {
-      "id": "tous",
-      "name": "Tous niveaux"
-    }
-  ],
-  "profiles": [
-    {
-      "id": "op-prod",
-      "sector": "amont",
-      "level": "tech",
-      "name": "Opérateur de production (offshore / onshore)",
-      "desc": "Conduite des installations de production : séparateurs, pompes, compresseurs, têtes de puits, torche.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "tech-meca",
-      "sector": "amont",
-      "level": "tech",
-      "name": "Technicien mécanicien, machines tournantes",
-      "desc": "Pompes, compresseurs, turbines, moteurs : maintenance, alignement, vibrations, étanchéité.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "tech-elec",
-      "sector": "amont",
-      "level": "tech",
-      "name": "Technicien électricien industriel",
-      "desc": "Distribution BT/HT, moteurs, variateurs, protections, zones ATEX, consignation.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "tech-instru",
-      "sector": "amont",
-      "level": "tech",
-      "name": "Technicien instrumentiste",
-      "desc": "Capteurs, boucles 4-20 mA, vannes de régulation, étalonnage, SIS, automates.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "tech-tuyau",
-      "sector": "amont",
-      "level": "tech",
-      "name": "Tuyauteur / Soudeur / Inspecteur tuyauterie",
-      "desc": "Lecture d'isométriques, brides, soudage, contrôles non destructifs, épreuves hydrauliques.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "sup-travaux",
-      "sector": "amont",
-      "level": "sup",
-      "name": "Superviseur travaux & maintenance",
-      "desc": "Planification, permis de travail, coordination des corps de métier, arrêts, sécurité chantier.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-prod",
-      "sector": "amont",
-      "level": "ing",
-      "name": "Ingénieur production",
-      "desc": "Optimisation de la production, traitement des effluents, allocation, gestion des anomalies.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-wellperf",
-      "sector": "amont",
-      "level": "ing",
-      "name": "Ingénieur well performance & artificial lift",
-      "desc": "IPR/VLP, analyse nodale, ESP, gas lift, pompes à tiges, diagnostic de puits.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-reservoir",
-      "sector": "amont",
-      "level": "ing",
-      "name": "Ingénieur réservoir & géosciences",
-      "desc": "Géologie pétrolière, sismique, diagraphies, pétrophysique, mécanismes de drainage, réserves.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-forage",
-      "sector": "amont",
-      "level": "ing",
-      "name": "Ingénieur forage & puits",
-      "desc": "Programme de forage, boues, tubage, cimentation, contrôle de puits, BOP.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-maint",
-      "sector": "amont",
-      "level": "ing",
-      "name": "Ingénieur maintenance & intégrité",
-      "desc": "Stratégies de maintenance, RBI, corrosion, fiabilité, GMAO, KPI.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-eia",
-      "sector": "amont",
-      "level": "ing",
-      "name": "Ingénieur EIA (électricité, instrumentation, automatisme)",
-      "desc": "Architectures électriques, DCS/SCADA, SIL, études, mise en service.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "oim",
-      "sector": "amont",
-      "level": "mgr",
-      "name": "OIM (Offshore Installation Manager)",
-      "desc": "Autorité à bord : sécurité, plan d'urgence, permis et SIMOPS, production, logistique, leadership et gestion d'équipage.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "chef-site",
-      "sector": "amont",
-      "level": "mgr",
-      "name": "Chef de site / Field Manager (onshore & terminal)",
-      "desc": "Direction d'un site de production : performance, HSE, budget, intégrité, relations communautés et autorités.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "sup-prod",
-      "sector": "amont",
-      "level": "sup",
-      "name": "Superintendant / Superviseur production",
-      "desc": "Conduite de la production au quotidien : consignes, arbitrages, anomalies, démarrages, interface maintenance.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-petrole",
-      "sector": "amont",
-      "level": "ing",
-      "name": "Ingénieur pétrolier (généraliste E&P)",
-      "desc": "Vision intégrée réservoir – puits – installations, économie d'un champ, développement, réserves, récupération assistée.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-completion",
-      "sector": "amont",
-      "level": "ing",
-      "name": "Ingénieur complétion & workover",
-      "desc": "Architectures de complétion, perforation, stimulation, interventions câble/coiled tubing, barrières de puits.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-facilities",
-      "sector": "amont",
-      "level": "ing",
-      "name": "Ingénieur installations de surface (engineering)",
-      "desc": "Conception et modifications d'installations : process, mécanique, tuyauterie, sécurité, MOC, pré-démarrage.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "tech-foreur",
-      "sector": "amont",
-      "level": "tech",
-      "name": "Technicien foreur / Driller",
-      "desc": "Équipements de forage, circulation, boues, manœuvres, détection de venue, contrôle de puits, sécurité plancher.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "op-salle-controle",
-      "sector": "amont",
-      "level": "tech",
-      "name": "Opérateur salle de contrôle (DCS)",
-      "desc": "Supervision de procédé, alarmes, boucles de régulation, arrêts d'urgence, conduite en situation dégradée.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "insp-corrosion-end",
-      "sector": "amont",
-      "level": "tech",
-      "name": "Inspecteur corrosion & END",
-      "desc": "Mécanismes de corrosion, mesures d'épaisseur, contrôles non destructifs, protection cathodique, rapports d'inspection.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "tech-turbines-compresseurs",
-      "sector": "amont",
-      "level": "tech",
-      "name": "Technicien turbines & compresseurs",
-      "desc": "Turbines à gaz, compresseurs alternatifs et centrifuges, systèmes d'huile et d'étanchéité, surveillance, dépannage.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "planif-maintenance",
-      "sector": "amont",
-      "level": "sup",
-      "name": "Planificateur maintenance",
-      "desc": "GMAO, préparation des travaux, ordonnancement, gestion des pièces, arrêts programmés, indicateurs.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "tech-hse-offshore",
-      "sector": "qhse",
-      "level": "tech",
-      "name": "Technicien HSE offshore",
-      "desc": "Sécurité à bord, survie en mer, plans d'urgence, permis de travail, détection gaz, levage et hélistation.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "meca-engins-lourds",
-      "sector": "mines",
-      "level": "tech",
-      "name": "Mécanicien engins lourds",
-      "desc": "Hydraulique, transmissions, moteurs diesel, freinage, maintenance préventive d'engins de mine et de chantier.",
-      "domains": [
-        "mines",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "conducteur-engins-miniers",
-      "sector": "mines",
-      "level": "tech",
-      "name": "Conducteur d'engins miniers",
-      "desc": "Camions, pelles, chargeuses : contrôles avant poste, circulation, chargement, sécurité de piste, fatigue.",
-      "domains": [
-        "mines"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "tech-laboratoire",
-      "sector": "mines",
-      "level": "tech",
-      "name": "Technicien laboratoire (échantillonnage & analyses)",
-      "desc": "Prélèvement, préparation d'échantillons, analyses chimiques, qualité, contamination, traçabilité, sécurité labo.",
-      "domains": [
-        "petrole-gaz-aval",
-        "mines",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "geologue-minier",
-      "sector": "mines",
-      "level": "ing",
-      "name": "Géologue minier",
-      "desc": "Cartographie, carottage, interprétation de sondages, modèle géologique, teneurs, ressources et réserves.",
-      "domains": [
-        "mines"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "op-raff",
-      "sector": "aval",
-      "level": "tech",
-      "name": "Opérateur raffinerie / procédés",
-      "desc": "Distillation, fours, échangeurs, utilités, démarrages et arrêts, sécurité procédé.",
-      "domains": [
-        "petrole-gaz-aval"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-process",
-      "sector": "aval",
-      "level": "ing",
-      "name": "Ingénieur procédés",
-      "desc": "Bilans matière/énergie, dimensionnement, P&ID, HAZOP, optimisation d'unité.",
-      "domains": [
-        "petrole-gaz-aval",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "tech-mines",
-      "sector": "mines",
-      "level": "tech",
-      "name": "Opérateur / Technicien exploitation minière",
-      "desc": "Forage-tir, engins de chargement et transport, ventilation, soutènement, sécurité mine.",
-      "domains": [
-        "mines"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "sup-mines",
-      "sector": "mines",
-      "level": "sup",
-      "name": "Superviseur / Chef de poste mine",
-      "desc": "Conduite d'un poste, cycles d'exploitation, productivité, gestion des risques au front.",
-      "domains": [
-        "mines"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-mines",
-      "sector": "mines",
-      "level": "ing",
-      "name": "Ingénieur mines (planification, forage-tir, géotechnique)",
-      "desc": "Plan minier, teneur de coupure, stabilité des pentes, explosifs, coûts d'exploitation.",
-      "domains": [
-        "mines"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "ing-minerals",
-      "sector": "mines",
-      "level": "ing",
-      "name": "Ingénieur traitement du minerai",
-      "desc": "Concassage, broyage, flottation, lixiviation, récupération, bilans métallurgiques.",
-      "domains": [
-        "mines"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "hse-agent",
-      "sector": "qhse",
-      "level": "tech",
-      "name": "Agent / Animateur HSE",
-      "desc": "Causeries sécurité, EPI, permis de travail, premiers secours, incendie, observation des tâches.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "qhse-resp",
-      "sector": "qhse",
-      "level": "ing",
-      "name": "Responsable / Ingénieur QHSE",
-      "desc": "ISO 9001/14001/45001, analyse de risques, audits, indicateurs, gestion des incidents.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "rh",
-      "sector": "support",
-      "level": "cadre",
-      "name": "Gestionnaire RH & paie",
-      "desc": "Droit du travail, recrutement, paie, cotisations sociales, formation, relations sociales.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support"
-    },
-    {
-      "id": "compta",
-      "sector": "support",
-      "level": "cadre",
-      "name": "Comptable / Contrôleur de gestion",
-      "desc": "SYSCOHADA, écritures, clôture, trésorerie, budget, analyse des coûts.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support"
-    },
-    {
-      "id": "fiscalite",
-      "sector": "support",
-      "level": "cadre",
-      "name": "Fiscaliste / Comptable fiscaliste",
-      "desc": "TVA, impôt sur les sociétés, retenues à la source, déclarations, contrôle et contentieux fiscal, fiscalité des entreprises pétrolières et minières.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support",
-      "legal": true
-    },
-    {
-      "id": "logistique",
-      "sector": "support",
-      "level": "cadre",
-      "name": "Logisticien / Acheteur / Supply chain",
-      "desc": "Achats, Incoterms, stocks, transport, douane, magasin, appels d'offres.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support"
-    },
-    {
-      "id": "juriste",
-      "sector": "support",
-      "level": "cadre",
-      "legal": true,
-      "name": "Juriste d'entreprise",
-      "desc": "Droit OHADA, contrats, sociétés, droit du travail, conformité, contrats pétroliers et miniers.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support"
-    },
-    {
-      "id": "port-conducteur-engins",
-      "sector": "port",
-      "level": "tech",
-      "name": "Conducteur de portique, grue et cariste portuaire",
-      "desc": "Manutention des conteneurs et du général cargo : portiques, RTG, chariots, élingage, signaux, sécurité des quais.",
-      "domains": [
-        "logistique-port"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "port-agent-transit",
-      "sector": "port",
-      "level": "tech",
-      "name": "Agent de transit / déclarant en douane",
-      "desc": "Dédouanement, déclaration, régimes douaniers, documents d’import-export, suivi des dossiers.",
-      "domains": [
-        "logistique-port"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "port-agent-operations",
-      "sector": "port",
-      "level": "tech",
-      "name": "Agent d’opérations portuaires (plan de parc, pointage)",
-      "desc": "Planification du parc à conteneurs, pointage, escales, plan d’arrimage, relations avec les lignes maritimes.",
-      "domains": [
-        "logistique-port"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "port-hse",
-      "sector": "port",
-      "level": "tech",
-      "name": "Agent HSE portuaire et marchandises dangereuses",
-      "desc": "Sécurité des quais, code IMDG, ISPS, produits dangereux, plans d’urgence, protection de l’environnement.",
-      "domains": [
-        "logistique-port"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "port-superviseur-terminal",
-      "sector": "port",
-      "level": "sup",
-      "name": "Superviseur de terminal / de parc",
-      "desc": "Encadrement des équipes de quai, organisation des postes, productivité, sécurité et qualité de service.",
-      "domains": [
-        "logistique-port"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "port-resp-logistique",
-      "sector": "port",
-      "level": "ing",
-      "name": "Responsable logistique et supply chain portuaire",
-      "desc": "Chaîne logistique de bout en bout : transport, entreposage, stocks, prévisions, coûts, indicateurs.",
-      "domains": [
-        "logistique-port"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "port-ingenieur-exploitation",
-      "sector": "port",
-      "level": "ing",
-      "name": "Ingénieur exploitation portuaire / terminal",
-      "desc": "Dimensionnement des moyens, productivité des quais, maintenance des équipements, amélioration continue.",
-      "domains": [
-        "logistique-port"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "port-chef-terminal",
-      "sector": "port",
-      "level": "mgr",
-      "name": "Chef de terminal / directeur d’exploitation portuaire",
-      "desc": "Pilotage du terminal : budget, concession, sécurité, clients, performance et conformité.",
-      "domains": [
-        "logistique-port"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "fiscaliste-auditeur",
-      "sector": "support",
-      "level": "cadre",
-      "name": "Fiscaliste / Auditeur (fiscalité et audit)",
-      "desc": "IS, TVA, TPS/CSS, retenues, déclarations, contrôle fiscal, revue des comptes, procédures d’audit et rapport.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support",
-      "legal": true
-    },
-    {
-      "id": "auditeur-interne",
-      "sector": "support",
-      "level": "cadre",
-      "name": "Auditeur interne / contrôle interne",
-      "desc": "Cartographie des risques, contrôle interne, plan d’audit, tests, constats, recommandations, suivi.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support",
-      "legal": true
-    },
-    {
-      "id": "paie-sage",
-      "sector": "support",
-      "level": "assist",
-      "name": "Gestionnaire de paie et administration du personnel",
-      "desc": "Bulletin de paie, cotisations, DAS, contrats de travail, période d’essai, congés, préavis, logiciel de paie.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support",
-      "legal": true
-    },
-    {
-      "id": "tresorier-financement",
-      "sector": "support",
-      "level": "cadre",
-      "name": "Trésorier / Chargé de financement",
-      "desc": "Trésorerie, plan de trésorerie, modes de financement, crédit bancaire, relations banques, risques de change.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support"
-    },
-    {
-      "id": "gestionnaire-stocks",
-      "sector": "support",
-      "level": "assist",
-      "name": "Gestionnaire de stocks et inventaire",
-      "desc": "Gestion des stocks, inventaire, valorisation, rotation, écarts, magasin, approvisionnement.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support"
-    },
-    {
-      "id": "juriste-contrats",
-      "sector": "support",
-      "level": "cadre",
-      "legal": true,
-      "name": "Juriste contrats et achats",
-      "desc": "Rédaction et négociation des contrats, clauses clés, responsabilité, marchés et sous-traitance, gestion du contentieux contractuel.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support"
-    },
-    {
-      "id": "juriste-social",
-      "sector": "support",
-      "level": "cadre",
-      "name": "Juriste droit social",
-      "desc": "Relations individuelles et collectives de travail, procédures disciplinaires, ruptures, contrôle de l’inspection du travail, contentieux prud’homal.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support",
-      "legal": true
-    },
-    {
-      "id": "juriste-conformite",
-      "sector": "support",
-      "level": "cadre",
-      "name": "Juriste conformité et éthique",
-      "desc": "Conformité, anticorruption, sanctions, protection des données, devoir de vigilance, programme de conformité, enquêtes internes.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support",
-      "legal": true
-    },
-    {
-      "id": "juriste-petrole-mines",
-      "sector": "support",
-      "level": "cadre",
-      "name": "Juriste droit pétrolier, minier et énergie",
-      "desc": "Titres et permis, conventions d’établissement, contrats de partage et d’association, contenu local, fiscalité sectorielle, environnement.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support",
-      "legal": true
-    },
-    {
-      "id": "assistant-juridique",
-      "sector": "support",
-      "level": "assist",
-      "name": "Assistant juridique / gestionnaire de contrats",
-      "desc": "Suivi des contrats et échéances, archivage, formalités, registres, courriers, veille juridique, appui au juriste.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval",
-        "mines",
-        "energie",
-        "industrie",
-        "logistique-port"
-      ],
-      "branch": "support",
-      "legal": true
-    },
-    {
-      "id": "iwcf-niveau-4",
-      "sector": "amont",
-      "level": "sup",
-      "name": "Préparer son IWCF niveau 4 (Well Control, superviseur)",
-      "desc": "Préparation à la certification IWCF Well Control niveau 4 : pressions, détection de kick, fermeture du puits, BOP, méthodes de contrôle, feuille de contrôle (kill sheet), calculs et leadership.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "wireline-operateur",
-      "sector": "amont",
-      "level": "tech",
-      "name": "Opérateur Wireline / Slickline",
-      "desc": "Opérations au câble : slickline, câble électrique, lubricateur, presse-étoupe, BOP wireline, outils de fond, pêche, sécurité et contrôle du puits.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "wireline-superviseur",
-      "sector": "amont",
-      "level": "sup",
-      "name": "Superviseur Wireline / interventions câble",
-      "desc": "Préparation et conduite des interventions câble : programmes, barrières, tests, gestion des risques, communication et réponse aux incidents.",
-      "domains": [
-        "petrole-gaz-amont"
-      ],
-      "branch": "technique"
-    },
-    {
-      "id": "loi-hydrocarbures-gabon",
-      "sector": "amont",
-      "level": "tous",
-      "legal": true,
-      "name": "Comprendre le Code gabonais des hydrocarbures (Loi n° 002/2019)",
-      "desc": "Titres et contrats pétroliers, contenu local, fiscalité, aval, sécurité et environnement, sanctions : chaque réponse renvoie à l’article de la loi, avec un lien.",
-      "domains": [
-        "petrole-gaz-amont",
-        "petrole-gaz-aval"
-      ],
-      "branch": "reglementation",
-      "cardTitle": "Code des hydrocarbures gabonais",
-      "cardDesc": "Loi n° 002/2019, valable pour l’amont et l’aval. Chaque réponse cite son article."
-    }
-  ],
-  "domains": [
-    {
-      "id": "petrole-gaz-amont",
-      "name": "Pétrole & gaz : Amont",
-      "icon": "rig",
-      "desc": "Exploration-production : offshore, onshore, puits, installations de production.",
-      "group": "petrole-gaz"
-    },
-    {
-      "id": "petrole-gaz-aval",
-      "name": "Pétrole & gaz : Aval / Raffinerie",
-      "icon": "refinery",
-      "desc": "Raffinage, procédés, stockage et terminaux.",
-      "group": "petrole-gaz"
-    },
-    {
-      "id": "mines",
-      "name": "Mines",
-      "icon": "mine",
-      "desc": "Exploitation, traitement du minerai, géologie, engins."
-    },
-    {
-      "id": "energie",
-      "name": "Énergie",
-      "icon": "bolt",
-      "desc": "Production et distribution d'énergie, électricité, turbines."
-    },
-    {
-      "id": "industrie",
-      "name": "Industrie",
-      "icon": "factory",
-      "desc": "Sites industriels : maintenance, procédés, utilités."
-    },
-    {
-      "id": "logistique-port",
-      "name": "Logistique & Port",
-      "icon": "ship",
-      "desc": "Terminaux à conteneurs, manutention, transit et douane, entreposage, transport, marchandises dangereuses."
-    }
-  ],
-  "branches": [
-    {
-      "id": "technique",
-      "name": "Métiers techniques",
-      "desc": "Opérateurs, techniciens, superviseurs, ingénieurs, HSE / QHSE."
-    },
-    {
-      "id": "support",
-      "name": "Fonctions support",
-      "desc": "RH, comptabilité, fiscalité, logistique, juridique.",
-      "noLevel": true
-    },
-    {
-      "id": "reglementation",
-      "name": "Cadre légal et réglementation",
-      "desc": "Code gabonais des hydrocarbures (Loi n° 002/2019).",
-      "noLevel": true,
-      "sharedOnly": true
-    }
-  ],
-  "groups": [
-    {
-      "id": "petrole-gaz",
-      "name": "Pétrole & gaz",
-      "icon": "rig",
-      "desc": "Amont (exploration-production) ou aval (raffinerie, stockage, terminaux).",
-      "shared": [
-        "loi-hydrocarbures-gabon"
-      ]
-    }
-  ]
+ "sectors": [
+  {
+   "id": "amont",
+   "name": "Pétrole & gaz : Amont",
+   "short": "Amont",
+   "icon": "rig",
+   "desc": "Production, puits, réservoir, offshore et onshore."
+  },
+  {
+   "id": "aval",
+   "name": "Aval & raffinerie",
+   "short": "Aval",
+   "icon": "refinery",
+   "desc": "Procédés, raffinage, stockage, transport."
+  },
+  {
+   "id": "mines",
+   "name": "Mines",
+   "short": "Mines",
+   "icon": "mine",
+   "desc": "Exploitation, traitement du minerai, sécurité minière."
+  },
+  {
+   "id": "qhse",
+   "name": "QHSE",
+   "short": "QHSE",
+   "icon": "shield",
+   "desc": "Qualité, hygiène, sécurité, environnement."
+  },
+  {
+   "id": "support",
+   "name": "Fonctions support",
+   "short": "Support",
+   "icon": "briefcase",
+   "desc": "RH, comptabilité, logistique, juridique."
+  },
+  {
+   "id": "port",
+   "name": "Logistique & Port",
+   "short": "Port",
+   "icon": "ship",
+   "desc": "Manutention portuaire, transit, entreposage, supply chain."
+  },
+  {
+   "id": "ministere",
+   "name": "Ministère des Hydrocarbures",
+   "short": "Ministère",
+   "icon": "building",
+   "desc": "Formation des agents du ministère."
+  }
+ ],
+ "levels": [
+  {
+   "id": "tech",
+   "name": "Opérateur / Technicien"
+  },
+  {
+   "id": "sup",
+   "name": "Superviseur"
+  },
+  {
+   "id": "ing",
+   "name": "Ingénieur / Cadre"
+  },
+  {
+   "id": "mgr",
+   "name": "Chef de site / Management"
+  },
+  {
+   "id": "cadre",
+   "name": "Cadre (Bac +5)"
+  },
+  {
+   "id": "assist",
+   "name": "Agent / Assistant"
+  },
+  {
+   "id": "tous",
+   "name": "Tous niveaux"
+  }
+ ],
+ "profiles": [
+  {
+   "id": "op-prod",
+   "sector": "amont",
+   "level": "tech",
+   "name": "Opérateur de production (offshore / onshore)",
+   "desc": "Conduite des installations de production : séparateurs, pompes, compresseurs, têtes de puits, torche.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "tech-meca",
+   "sector": "amont",
+   "level": "tech",
+   "name": "Technicien mécanicien, machines tournantes",
+   "desc": "Pompes, compresseurs, turbines, moteurs : maintenance, alignement, vibrations, étanchéité.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "tech-elec",
+   "sector": "amont",
+   "level": "tech",
+   "name": "Technicien électricien industriel",
+   "desc": "Distribution BT/HT, moteurs, variateurs, protections, zones ATEX, consignation.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "tech-instru",
+   "sector": "amont",
+   "level": "tech",
+   "name": "Technicien instrumentiste",
+   "desc": "Capteurs, boucles 4-20 mA, vannes de régulation, étalonnage, SIS, automates.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "tech-tuyau",
+   "sector": "amont",
+   "level": "tech",
+   "name": "Tuyauteur / Soudeur / Inspecteur tuyauterie",
+   "desc": "Lecture d'isométriques, brides, soudage, contrôles non destructifs, épreuves hydrauliques.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "sup-travaux",
+   "sector": "amont",
+   "level": "sup",
+   "name": "Superviseur travaux & maintenance",
+   "desc": "Planification, permis de travail, coordination des corps de métier, arrêts, sécurité chantier.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-prod",
+   "sector": "amont",
+   "level": "ing",
+   "name": "Ingénieur production",
+   "desc": "Optimisation de la production, traitement des effluents, allocation, gestion des anomalies.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-wellperf",
+   "sector": "amont",
+   "level": "ing",
+   "name": "Ingénieur well performance & artificial lift",
+   "desc": "IPR/VLP, analyse nodale, ESP, gas lift, pompes à tiges, diagnostic de puits.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-reservoir",
+   "sector": "amont",
+   "level": "ing",
+   "name": "Ingénieur réservoir & géosciences",
+   "desc": "Géologie pétrolière, sismique, diagraphies, pétrophysique, mécanismes de drainage, réserves.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-forage",
+   "sector": "amont",
+   "level": "ing",
+   "name": "Ingénieur forage & puits",
+   "desc": "Programme de forage, boues, tubage, cimentation, contrôle de puits, BOP.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-maint",
+   "sector": "amont",
+   "level": "ing",
+   "name": "Ingénieur maintenance & intégrité",
+   "desc": "Stratégies de maintenance, RBI, corrosion, fiabilité, GMAO, KPI.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-eia",
+   "sector": "amont",
+   "level": "ing",
+   "name": "Ingénieur EIA (électricité, instrumentation, automatisme)",
+   "desc": "Architectures électriques, DCS/SCADA, SIL, études, mise en service.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "oim",
+   "sector": "amont",
+   "level": "mgr",
+   "name": "OIM (Offshore Installation Manager)",
+   "desc": "Autorité à bord : sécurité, plan d'urgence, permis et SIMOPS, production, logistique, leadership et gestion d'équipage.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "chef-site",
+   "sector": "amont",
+   "level": "mgr",
+   "name": "Chef de site / Field Manager (onshore & terminal)",
+   "desc": "Direction d'un site de production : performance, HSE, budget, intégrité, relations communautés et autorités.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "sup-prod",
+   "sector": "amont",
+   "level": "sup",
+   "name": "Superintendant / Superviseur production",
+   "desc": "Conduite de la production au quotidien : consignes, arbitrages, anomalies, démarrages, interface maintenance.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-petrole",
+   "sector": "amont",
+   "level": "ing",
+   "name": "Ingénieur pétrolier (généraliste E&P)",
+   "desc": "Vision intégrée réservoir – puits – installations, économie d'un champ, développement, réserves, récupération assistée.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-completion",
+   "sector": "amont",
+   "level": "ing",
+   "name": "Ingénieur complétion & workover",
+   "desc": "Architectures de complétion, perforation, stimulation, interventions câble/coiled tubing, barrières de puits.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-facilities",
+   "sector": "amont",
+   "level": "ing",
+   "name": "Ingénieur installations de surface (engineering)",
+   "desc": "Conception et modifications d'installations : process, mécanique, tuyauterie, sécurité, MOC, pré-démarrage.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "tech-foreur",
+   "sector": "amont",
+   "level": "tech",
+   "name": "Technicien foreur / Driller",
+   "desc": "Équipements de forage, circulation, boues, manœuvres, détection de venue, contrôle de puits, sécurité plancher.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "op-salle-controle",
+   "sector": "amont",
+   "level": "tech",
+   "name": "Opérateur salle de contrôle (DCS)",
+   "desc": "Supervision de procédé, alarmes, boucles de régulation, arrêts d'urgence, conduite en situation dégradée.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "insp-corrosion-end",
+   "sector": "amont",
+   "level": "tech",
+   "name": "Inspecteur corrosion & END",
+   "desc": "Mécanismes de corrosion, mesures d'épaisseur, contrôles non destructifs, protection cathodique, rapports d'inspection.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "tech-turbines-compresseurs",
+   "sector": "amont",
+   "level": "tech",
+   "name": "Technicien turbines & compresseurs",
+   "desc": "Turbines à gaz, compresseurs alternatifs et centrifuges, systèmes d'huile et d'étanchéité, surveillance, dépannage.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "planif-maintenance",
+   "sector": "amont",
+   "level": "sup",
+   "name": "Planificateur maintenance",
+   "desc": "GMAO, préparation des travaux, ordonnancement, gestion des pièces, arrêts programmés, indicateurs.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "tech-hse-offshore",
+   "sector": "qhse",
+   "level": "tech",
+   "name": "Technicien HSE offshore",
+   "desc": "Sécurité à bord, survie en mer, plans d'urgence, permis de travail, détection gaz, levage et hélistation.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "meca-engins-lourds",
+   "sector": "mines",
+   "level": "tech",
+   "name": "Mécanicien engins lourds",
+   "desc": "Hydraulique, transmissions, moteurs diesel, freinage, maintenance préventive d'engins de mine et de chantier.",
+   "domains": [
+    "mines",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "conducteur-engins-miniers",
+   "sector": "mines",
+   "level": "tech",
+   "name": "Conducteur d'engins miniers",
+   "desc": "Camions, pelles, chargeuses : contrôles avant poste, circulation, chargement, sécurité de piste, fatigue.",
+   "domains": [
+    "mines"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "tech-laboratoire",
+   "sector": "mines",
+   "level": "tech",
+   "name": "Technicien laboratoire (échantillonnage & analyses)",
+   "desc": "Prélèvement, préparation d'échantillons, analyses chimiques, qualité, contamination, traçabilité, sécurité labo.",
+   "domains": [
+    "petrole-gaz-aval",
+    "mines",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "geologue-minier",
+   "sector": "mines",
+   "level": "ing",
+   "name": "Géologue minier",
+   "desc": "Cartographie, carottage, interprétation de sondages, modèle géologique, teneurs, ressources et réserves.",
+   "domains": [
+    "mines"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "op-raff",
+   "sector": "aval",
+   "level": "tech",
+   "name": "Opérateur raffinerie / procédés",
+   "desc": "Distillation, fours, échangeurs, utilités, démarrages et arrêts, sécurité procédé.",
+   "domains": [
+    "petrole-gaz-aval"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-process",
+   "sector": "aval",
+   "level": "ing",
+   "name": "Ingénieur procédés",
+   "desc": "Bilans matière/énergie, dimensionnement, P&ID, HAZOP, optimisation d'unité.",
+   "domains": [
+    "petrole-gaz-aval",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "tech-mines",
+   "sector": "mines",
+   "level": "tech",
+   "name": "Opérateur / Technicien exploitation minière",
+   "desc": "Forage-tir, engins de chargement et transport, ventilation, soutènement, sécurité mine.",
+   "domains": [
+    "mines"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "sup-mines",
+   "sector": "mines",
+   "level": "sup",
+   "name": "Superviseur / Chef de poste mine",
+   "desc": "Conduite d'un poste, cycles d'exploitation, productivité, gestion des risques au front.",
+   "domains": [
+    "mines"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-mines",
+   "sector": "mines",
+   "level": "ing",
+   "name": "Ingénieur mines (planification, forage-tir, géotechnique)",
+   "desc": "Plan minier, teneur de coupure, stabilité des pentes, explosifs, coûts d'exploitation.",
+   "domains": [
+    "mines"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "ing-minerals",
+   "sector": "mines",
+   "level": "ing",
+   "name": "Ingénieur traitement du minerai",
+   "desc": "Concassage, broyage, flottation, lixiviation, récupération, bilans métallurgiques.",
+   "domains": [
+    "mines"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "hse-agent",
+   "sector": "qhse",
+   "level": "tech",
+   "name": "Agent / Animateur HSE",
+   "desc": "Causeries sécurité, EPI, permis de travail, premiers secours, incendie, observation des tâches.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "qhse-resp",
+   "sector": "qhse",
+   "level": "ing",
+   "name": "Responsable / Ingénieur QHSE",
+   "desc": "ISO 9001/14001/45001, analyse de risques, audits, indicateurs, gestion des incidents.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "rh",
+   "sector": "support",
+   "level": "cadre",
+   "name": "Gestionnaire RH & paie",
+   "desc": "Droit du travail, recrutement, paie, cotisations sociales, formation, relations sociales.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support"
+  },
+  {
+   "id": "compta",
+   "sector": "support",
+   "level": "cadre",
+   "name": "Comptable / Contrôleur de gestion",
+   "desc": "SYSCOHADA, écritures, clôture, trésorerie, budget, analyse des coûts.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support"
+  },
+  {
+   "id": "fiscalite",
+   "sector": "support",
+   "level": "cadre",
+   "name": "Fiscaliste / Comptable fiscaliste",
+   "desc": "TVA, impôt sur les sociétés, retenues à la source, déclarations, contrôle et contentieux fiscal, fiscalité des entreprises pétrolières et minières.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support",
+   "legal": true
+  },
+  {
+   "id": "logistique",
+   "sector": "support",
+   "level": "cadre",
+   "name": "Logisticien / Acheteur / Supply chain",
+   "desc": "Achats, Incoterms, stocks, transport, douane, magasin, appels d'offres.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support"
+  },
+  {
+   "id": "juriste",
+   "sector": "support",
+   "level": "cadre",
+   "legal": true,
+   "name": "Juriste d'entreprise",
+   "desc": "Droit OHADA, contrats, sociétés, droit du travail, conformité, contrats pétroliers et miniers.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support"
+  },
+  {
+   "id": "port-conducteur-engins",
+   "sector": "port",
+   "level": "tech",
+   "name": "Conducteur de portique, grue et cariste portuaire",
+   "desc": "Manutention des conteneurs et du général cargo : portiques, RTG, chariots, élingage, signaux, sécurité des quais.",
+   "domains": [
+    "logistique-port"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "port-agent-transit",
+   "sector": "port",
+   "level": "tech",
+   "name": "Agent de transit / déclarant en douane",
+   "desc": "Dédouanement, déclaration, régimes douaniers, documents d’import-export, suivi des dossiers.",
+   "domains": [
+    "logistique-port"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "port-agent-operations",
+   "sector": "port",
+   "level": "tech",
+   "name": "Agent d’opérations portuaires (plan de parc, pointage)",
+   "desc": "Planification du parc à conteneurs, pointage, escales, plan d’arrimage, relations avec les lignes maritimes.",
+   "domains": [
+    "logistique-port"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "port-hse",
+   "sector": "port",
+   "level": "tech",
+   "name": "Agent HSE portuaire et marchandises dangereuses",
+   "desc": "Sécurité des quais, code IMDG, ISPS, produits dangereux, plans d’urgence, protection de l’environnement.",
+   "domains": [
+    "logistique-port"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "port-superviseur-terminal",
+   "sector": "port",
+   "level": "sup",
+   "name": "Superviseur de terminal / de parc",
+   "desc": "Encadrement des équipes de quai, organisation des postes, productivité, sécurité et qualité de service.",
+   "domains": [
+    "logistique-port"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "port-resp-logistique",
+   "sector": "port",
+   "level": "ing",
+   "name": "Responsable logistique et supply chain portuaire",
+   "desc": "Chaîne logistique de bout en bout : transport, entreposage, stocks, prévisions, coûts, indicateurs.",
+   "domains": [
+    "logistique-port"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "port-ingenieur-exploitation",
+   "sector": "port",
+   "level": "ing",
+   "name": "Ingénieur exploitation portuaire / terminal",
+   "desc": "Dimensionnement des moyens, productivité des quais, maintenance des équipements, amélioration continue.",
+   "domains": [
+    "logistique-port"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "port-chef-terminal",
+   "sector": "port",
+   "level": "mgr",
+   "name": "Chef de terminal / directeur d’exploitation portuaire",
+   "desc": "Pilotage du terminal : budget, concession, sécurité, clients, performance et conformité.",
+   "domains": [
+    "logistique-port"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "fiscaliste-auditeur",
+   "sector": "support",
+   "level": "cadre",
+   "name": "Fiscaliste / Auditeur (fiscalité et audit)",
+   "desc": "IS, TVA, TPS/CSS, retenues, déclarations, contrôle fiscal, revue des comptes, procédures d’audit et rapport.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support",
+   "legal": true
+  },
+  {
+   "id": "auditeur-interne",
+   "sector": "support",
+   "level": "cadre",
+   "name": "Auditeur interne / contrôle interne",
+   "desc": "Cartographie des risques, contrôle interne, plan d’audit, tests, constats, recommandations, suivi.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support",
+   "legal": true
+  },
+  {
+   "id": "paie-sage",
+   "sector": "support",
+   "level": "assist",
+   "name": "Gestionnaire de paie et administration du personnel",
+   "desc": "Bulletin de paie, cotisations, DAS, contrats de travail, période d’essai, congés, préavis, logiciel de paie.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support",
+   "legal": true
+  },
+  {
+   "id": "tresorier-financement",
+   "sector": "support",
+   "level": "cadre",
+   "name": "Trésorier / Chargé de financement",
+   "desc": "Trésorerie, plan de trésorerie, modes de financement, crédit bancaire, relations banques, risques de change.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support"
+  },
+  {
+   "id": "gestionnaire-stocks",
+   "sector": "support",
+   "level": "assist",
+   "name": "Gestionnaire de stocks et inventaire",
+   "desc": "Gestion des stocks, inventaire, valorisation, rotation, écarts, magasin, approvisionnement.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support"
+  },
+  {
+   "id": "juriste-contrats",
+   "sector": "support",
+   "level": "cadre",
+   "legal": true,
+   "name": "Juriste contrats et achats",
+   "desc": "Rédaction et négociation des contrats, clauses clés, responsabilité, marchés et sous-traitance, gestion du contentieux contractuel.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support"
+  },
+  {
+   "id": "juriste-social",
+   "sector": "support",
+   "level": "cadre",
+   "name": "Juriste droit social",
+   "desc": "Relations individuelles et collectives de travail, procédures disciplinaires, ruptures, contrôle de l’inspection du travail, contentieux prud’homal.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support",
+   "legal": true
+  },
+  {
+   "id": "juriste-conformite",
+   "sector": "support",
+   "level": "cadre",
+   "name": "Juriste conformité et éthique",
+   "desc": "Conformité, anticorruption, sanctions, protection des données, devoir de vigilance, programme de conformité, enquêtes internes.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support",
+   "legal": true
+  },
+  {
+   "id": "juriste-petrole-mines",
+   "sector": "support",
+   "level": "cadre",
+   "name": "Juriste droit pétrolier, minier et énergie",
+   "desc": "Titres et permis, conventions d’établissement, contrats de partage et d’association, contenu local, fiscalité sectorielle, environnement.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support",
+   "legal": true
+  },
+  {
+   "id": "assistant-juridique",
+   "sector": "support",
+   "level": "assist",
+   "name": "Assistant juridique / gestionnaire de contrats",
+   "desc": "Suivi des contrats et échéances, archivage, formalités, registres, courriers, veille juridique, appui au juriste.",
+   "domains": [
+    "petrole-gaz-amont",
+    "petrole-gaz-aval",
+    "mines",
+    "energie",
+    "industrie",
+    "logistique-port"
+   ],
+   "branch": "support",
+   "legal": true
+  },
+  {
+   "id": "iwcf-niveau-4",
+   "sector": "amont",
+   "level": "sup",
+   "name": "Préparer son IWCF niveau 4 (Well Control, superviseur)",
+   "desc": "Préparation à la certification IWCF Well Control niveau 4 : pressions, détection de kick, fermeture du puits, BOP, méthodes de contrôle, feuille de contrôle (kill sheet), calculs et leadership.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "wireline-operateur",
+   "sector": "amont",
+   "level": "tech",
+   "name": "Opérateur Wireline / Slickline",
+   "desc": "Opérations au câble : slickline, câble électrique, lubricateur, presse-étoupe, BOP wireline, outils de fond, pêche, sécurité et contrôle du puits.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "wireline-superviseur",
+   "sector": "amont",
+   "level": "sup",
+   "name": "Superviseur Wireline / interventions câble",
+   "desc": "Préparation et conduite des interventions câble : programmes, barrières, tests, gestion des risques, communication et réponse aux incidents.",
+   "domains": [
+    "petrole-gaz-amont"
+   ],
+   "branch": "technique"
+  },
+  {
+   "id": "loi-hydrocarbures-gabon",
+   "sector": "amont",
+   "level": "tous",
+   "legal": true,
+   "name": "Comprendre le Code gabonais des hydrocarbures (Loi n° 002/2019)",
+   "desc": "Titres et contrats pétroliers, contenu local, fiscalité, aval, sécurité et environnement, sanctions : chaque réponse renvoie à l’article de la loi, avec un lien.",
+   "domains": [
+    "ministere-hydrocarbures",
+    "petrole-gaz-amont",
+    "petrole-gaz-aval"
+   ],
+   "branch": "min-cadre-legal",
+   "cardTitle": "Code des hydrocarbures gabonais",
+   "cardDesc": "Loi n° 002/2019, valable pour l’amont et l’aval. Chaque réponse cite son article."
+  },
+  {
+   "id": "min-missions",
+   "sector": "ministere",
+   "level": "tous",
+   "name": "Le ministère des Hydrocarbures : missions et organisation",
+   "desc": "Rôle de l’État dans le secteur, directions générales et directions centrales, circuit d’une décision.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-institution"
+  },
+  {
+   "id": "min-tutelle",
+   "sector": "ministere",
+   "level": "tous",
+   "name": "Sociétés publiques et organismes sous tutelle",
+   "desc": "Qui fait quoi autour du ministère : société nationale, établissements publics, régulation, leurs liens avec l’État.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-institution"
+  },
+  {
+   "id": "min-acteurs",
+   "sector": "ministere",
+   "level": "tous",
+   "name": "Les acteurs du secteur : opérateurs, sociétés de services, partenaires",
+   "desc": "Compagnies pétrolières, prestataires, associés de l’État, organisations professionnelles.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-institution"
+  },
+  {
+   "id": "min-institutions-partenaires",
+   "sector": "ministere",
+   "level": "tous",
+   "name": "Les autres administrations et institutions partenaires",
+   "desc": "Finances, Économie, Environnement, Mines, Énergie, Parlement, juridictions : savoir à qui s’adresser et pourquoi.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-institution"
+  },
+  {
+   "id": "min-secteur-gabon",
+   "sector": "ministere",
+   "level": "tous",
+   "name": "Le secteur pétrolier et gazier gabonais : histoire, chiffres, enjeux",
+   "desc": "Production, réserves, bassins, grandes étapes, défis de la diversification et de la transition.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-institution"
+  },
+  {
+   "id": "min-international",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Coopération et organisations internationales",
+   "desc": "Organisations de producteurs, partenariats, conventions, transparence du secteur.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-institution"
+  },
+  {
+   "id": "min-contrats",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Les contrats pétroliers : partage de production, concession, service",
+   "desc": "Principes, clauses essentielles, droits et obligations de l’État et de l’opérateur, suivi d’exécution.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-cadre-legal"
+  },
+  {
+   "id": "min-textes",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Textes d’application : décrets, arrêtés, procédures",
+   "desc": "Hiérarchie des textes, rédaction d’un acte, publication, entrée en vigueur.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-cadre-legal"
+  },
+  {
+   "id": "min-marches",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Marchés publics et achats publics",
+   "desc": "Seuils, procédures, passation, contrôle, erreurs fréquentes.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-cadre-legal"
+  },
+  {
+   "id": "min-ethique",
+   "sector": "ministere",
+   "level": "tous",
+   "name": "Éthique, déontologie et lutte contre la corruption",
+   "desc": "Conflits d’intérêts, cadeaux, devoir de réserve, signalement, protection des données.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-cadre-legal"
+  },
+  {
+   "id": "min-droit-admin",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Droit administratif et procédure administrative",
+   "desc": "Acte administratif, délais, recours, responsabilité de l’agent.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-cadre-legal"
+  },
+  {
+   "id": "min-amont-bases",
+   "sector": "ministere",
+   "level": "tous",
+   "name": "Les bases de l’exploration-production",
+   "desc": "De la roche mère au baril : chaîne de valeur, vocabulaire, grandes étapes d’un projet.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-amont"
+  },
+  {
+   "id": "min-geologie",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Géologie et géophysique pétrolières pour le contrôle",
+   "desc": "Bassins, sismique, évaluation d’un permis, lecture d’un rapport technique.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-amont"
+  },
+  {
+   "id": "min-forage",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Forage et puits : ce que l’agent doit savoir contrôler",
+   "desc": "Programme de forage, sécurité des puits, déclarations et rapports d’opérations.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-amont"
+  },
+  {
+   "id": "min-reserves",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Réservoirs, réserves et ressources",
+   "desc": "Classification, estimation, déclaration annuelle, vérification.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-amont"
+  },
+  {
+   "id": "min-production",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Production offshore et onshore : suivi et mesurage",
+   "desc": "Installations, allocation, comptage fiscal, écarts et vérifications.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-amont"
+  },
+  {
+   "id": "min-developpement",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Plans de développement et décisions d’investissement",
+   "desc": "Instruction d’un plan de développement, critères d’approbation, suivi des jalons.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-amont"
+  },
+  {
+   "id": "min-abandon",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Fin de vie des champs : démantèlement et remise en état",
+   "desc": "Obligations, provisions, contrôle des opérations d’abandon.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-amont"
+  },
+  {
+   "id": "min-gaz",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Gaz : valorisation, torchage et marché domestique",
+   "desc": "Gaz associé, réduction du torchage, projets de valorisation, usage local.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-amont"
+  },
+  {
+   "id": "min-aval-bases",
+   "sector": "ministere",
+   "level": "tous",
+   "name": "Les bases de l’aval pétrolier",
+   "desc": "Du brut au produit fini : raffinage, produits pétroliers, circuits de distribution.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-aval"
+  },
+  {
+   "id": "min-raffinage",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Raffinage : procédés, rendement et contrôle",
+   "desc": "Schéma d’une raffinerie, indicateurs, arrêts programmés, suivi réglementaire.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-aval"
+  },
+  {
+   "id": "min-stockage",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Stockage, transport et terminaux",
+   "desc": "Dépôts, pipelines, cabotage, sécurité des stocks, contrôle des installations.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-aval"
+  },
+  {
+   "id": "min-distribution",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Distribution, stations-service et qualité des produits",
+   "desc": "Autorisations, inspections, normes de qualité, lutte contre la fraude.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-aval"
+  },
+  {
+   "id": "min-gpl",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Gaz domestique : chaîne, sécurité et contrôle",
+   "desc": "Remplissage, consignation, sécurité, suivi du marché.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-aval"
+  },
+  {
+   "id": "min-prix",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Structure des prix et sécurité d’approvisionnement",
+   "desc": "Composantes d’un prix, subventions, stocks stratégiques, gestion des ruptures.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-aval"
+  },
+  {
+   "id": "min-economie-petroliere",
+   "sector": "ministere",
+   "level": "tous",
+   "name": "Économie pétrolière : cours, marché et budget de l’État",
+   "desc": "Formation des prix, dépendance aux recettes, hypothèses budgétaires.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-economie"
+  },
+  {
+   "id": "min-fiscalite",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Fiscalité et recettes pétrolières",
+   "desc": "Redevances, impôts, parts de l’État, vérification des déclarations.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-economie"
+  },
+  {
+   "id": "min-couts",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Audit et contrôle des coûts pétroliers",
+   "desc": "Coûts récupérables, justification des dépenses, audits des opérateurs.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-economie"
+  },
+  {
+   "id": "min-donnees",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Gestion des données pétrolières et gazières",
+   "desc": "Collecte, qualité, conservation, confidentialité, accès aux données.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-economie"
+  },
+  {
+   "id": "min-statistiques",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Statistiques et rapports sectoriels",
+   "desc": "Indicateurs, tableaux de bord, rapport annuel, lecture des chiffres.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-economie"
+  },
+  {
+   "id": "min-finances-publiques",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Budget et exécution de la dépense publique",
+   "desc": "Cycle budgétaire, engagement, liquidation, ordonnancement, paiement.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-economie"
+  },
+  {
+   "id": "min-contenu-local",
+   "sector": "ministere",
+   "level": "tous",
+   "name": "La politique de contenu local",
+   "desc": "Objectifs, textes, obligations des opérateurs, rôle de l’administration.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-local"
+  },
+  {
+   "id": "min-suivi-local",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Suivre les plans de formation, de recrutement et de sous-traitance",
+   "desc": "Lire un plan, vérifier la réalisation, relancer, sanctionner.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-local"
+  },
+  {
+   "id": "min-pme",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "PME nationales et sociétés de services : accompagnement et référencement",
+   "desc": "Critères, qualification, accès aux marchés pétroliers.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-local"
+  },
+  {
+   "id": "min-inspection",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Méthode d’inspection des installations pétrolières",
+   "desc": "Préparer, conduire, constater, rédiger un rapport, suivre les suites.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-controle"
+  },
+  {
+   "id": "min-mesurage",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Mesurage et comptage des hydrocarbures",
+   "desc": "Principes, équipements, étalonnage, contrôle fiscal des volumes.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-controle"
+  },
+  {
+   "id": "min-pv",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Procès-verbaux, constats et sanctions",
+   "desc": "Rédiger un constat valable, procédure contradictoire, suites données.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-controle"
+  },
+  {
+   "id": "min-securite",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Sécurité industrielle et gestion des risques majeurs",
+   "desc": "Dangers, barrières, plans d’urgence, retour d’expérience.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-hse"
+  },
+  {
+   "id": "min-environnement",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Environnement : études d’impact, déversements et suivi",
+   "desc": "Étude d’impact, plan de gestion, pollution, remise en état.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-hse"
+  },
+  {
+   "id": "min-transition",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Climat, torchage et transition énergétique",
+   "desc": "Émissions, engagements, énergies alternatives, rôle du ministère.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-hse"
+  },
+  {
+   "id": "min-crise",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Gestion de crise : accident, pollution, rupture d’approvisionnement",
+   "desc": "Cellule de crise, communication, décisions, retour d’expérience.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-hse"
+  },
+  {
+   "id": "min-leadership",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Leadership et posture du cadre dans l’administration",
+   "desc": "Responsabilité, exemplarité, décision, autorité et délégation.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-management"
+  },
+  {
+   "id": "min-equipe",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Manager une équipe : objectifs, évaluation, motivation",
+   "desc": "Fixer des objectifs, évaluer, féliciter, corriger, gérer les conflits.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-management"
+  },
+  {
+   "id": "min-projet",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Conduite de projet dans l’administration",
+   "desc": "Cadrage, planning, risques, suivi, clôture et retour d’expérience.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-management"
+  },
+  {
+   "id": "min-changement",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Conduire le changement et la réorganisation",
+   "desc": "Expliquer, impliquer, former, mesurer l’adoption.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-management"
+  },
+  {
+   "id": "min-communication",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Communication, négociation et prise de parole",
+   "desc": "Note de synthèse, réunion efficace, négociation avec un opérateur, relations presse.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-management"
+  },
+  {
+   "id": "min-pilotage",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Piloter par les indicateurs et rendre compte",
+   "desc": "Tableau de bord, revues de performance, rapport au cabinet.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-management"
+  },
+  {
+   "id": "min-rh",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Gestion des ressources humaines de la fonction publique",
+   "desc": "Statut, carrière, congés, évaluation, dossier de l’agent.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-support"
+  },
+  {
+   "id": "min-redaction",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Rédaction administrative et gestion du courrier",
+   "desc": "Note, lettre, compte rendu, circuit du courrier, style clair.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-support"
+  },
+  {
+   "id": "min-archives",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Archivage et gestion documentaire",
+   "desc": "Classement, conservation, confidentialité, numérisation.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-support"
+  },
+  {
+   "id": "min-accueil",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Accueil et relation avec les usagers et les opérateurs",
+   "desc": "Orientation, courtoisie, traitement d’une demande, réclamations.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-support"
+  },
+  {
+   "id": "min-compta-publique",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Comptabilité publique et gestion du patrimoine",
+   "desc": "Pièces comptables, inventaire, entretien, parc automobile.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-support"
+  },
+  {
+   "id": "min-bureautique",
+   "sector": "ministere",
+   "level": "assist",
+   "name": "Bureautique et outils collaboratifs",
+   "desc": "Traitement de texte, tableur, messagerie, partage de documents.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-numerique"
+  },
+  {
+   "id": "min-cyber",
+   "sector": "ministere",
+   "level": "tous",
+   "name": "Cybersécurité et protection de l’information",
+   "desc": "Mots de passe, hameçonnage, données sensibles, bons réflexes.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-numerique"
+  },
+  {
+   "id": "min-donnees-tableaux",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Analyse de données et tableaux de bord",
+   "desc": "Nettoyer, calculer, représenter, présenter une décision.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-numerique"
+  },
+  {
+   "id": "min-ia",
+   "sector": "ministere",
+   "level": "cadre",
+   "name": "Intelligence artificielle : usages et limites dans l’administration",
+   "desc": "Cas d’usage, vérification des résultats, confidentialité, règles d’emploi.",
+   "domains": [
+    "ministere-hydrocarbures"
+   ],
+   "branch": "min-numerique"
+  }
+ ],
+ "domains": [
+  {
+   "id": "petrole-gaz-amont",
+   "name": "Pétrole & gaz : Amont",
+   "icon": "rig",
+   "desc": "Exploration-production : offshore, onshore, puits, installations de production.",
+   "group": "petrole-gaz"
+  },
+  {
+   "id": "petrole-gaz-aval",
+   "name": "Pétrole & gaz : Aval / Raffinerie",
+   "icon": "refinery",
+   "desc": "Raffinage, procédés, stockage et terminaux.",
+   "group": "petrole-gaz"
+  },
+  {
+   "id": "mines",
+   "name": "Mines",
+   "icon": "mine",
+   "desc": "Exploitation, traitement du minerai, géologie, engins."
+  },
+  {
+   "id": "energie",
+   "name": "Énergie",
+   "icon": "bolt",
+   "desc": "Production et distribution d'énergie, électricité, turbines."
+  },
+  {
+   "id": "industrie",
+   "name": "Industrie",
+   "icon": "factory",
+   "desc": "Sites industriels : maintenance, procédés, utilités."
+  },
+  {
+   "id": "logistique-port",
+   "name": "Logistique & Port",
+   "icon": "ship",
+   "desc": "Terminaux à conteneurs, manutention, transit et douane, entreposage, transport, marchandises dangereuses."
+  },
+  {
+   "id": "ministere-hydrocarbures",
+   "name": "Ministère des Hydrocarbures",
+   "icon": "building",
+   "desc": "Formation de tous les agents du ministère : institution, cadre légal, amont et aval, économie, contrôle, management et fonctions support.",
+   "institution": true
+  }
+ ],
+ "branches": [
+  {
+   "id": "technique",
+   "name": "Métiers techniques",
+   "desc": "Opérateurs, techniciens, superviseurs, ingénieurs, HSE / QHSE."
+  },
+  {
+   "id": "support",
+   "name": "Fonctions support",
+   "desc": "RH, comptabilité, fiscalité, logistique, juridique.",
+   "noLevel": true
+  },
+  {
+   "id": "reglementation",
+   "name": "Cadre légal et réglementation",
+   "desc": "Code gabonais des hydrocarbures (Loi n° 002/2019).",
+   "noLevel": true,
+   "sharedOnly": true
+  },
+  {
+   "id": "min-institution",
+   "name": "Comprendre le ministère et son environnement",
+   "desc": "Missions, organisation, organismes sous tutelle, acteurs et partenaires du secteur.",
+   "noLevel": true,
+   "icon": "building",
+   "ministry": true
+  },
+  {
+   "id": "min-cadre-legal",
+   "name": "Cadre légal et conformité",
+   "desc": "Code des hydrocarbures, contrats pétroliers, marchés publics, éthique et droit administratif.",
+   "noLevel": true,
+   "icon": "book",
+   "ministry": true
+  },
+  {
+   "id": "min-amont",
+   "name": "Amont : exploration et production",
+   "desc": "Notions techniques pour comprendre, contrôler et suivre l’activité des opérateurs.",
+   "noLevel": true,
+   "icon": "rig",
+   "ministry": true
+  },
+  {
+   "id": "min-aval",
+   "name": "Aval : raffinage, stockage et distribution",
+   "desc": "Raffinage, transport, stockage, approvisionnement du marché et qualité des produits.",
+   "noLevel": true,
+   "icon": "refinery",
+   "ministry": true
+  },
+  {
+   "id": "min-economie",
+   "name": "Économie, finances et données pétrolières",
+   "desc": "Recettes, fiscalité, contrôle des coûts, statistiques et gestion des données.",
+   "noLevel": true,
+   "icon": "chart",
+   "ministry": true
+  },
+  {
+   "id": "min-local",
+   "name": "Contenu local et développement national",
+   "desc": "Suivi des engagements des opérateurs en emploi, formation et sous-traitance nationale.",
+   "noLevel": true,
+   "icon": "users",
+   "ministry": true
+  },
+  {
+   "id": "min-controle",
+   "name": "Inspection et contrôle",
+   "desc": "Missions de terrain : inspecter, mesurer, constater et rendre compte.",
+   "noLevel": true,
+   "icon": "shield",
+   "ministry": true
+  },
+  {
+   "id": "min-hse",
+   "name": "Sécurité, environnement et transition",
+   "desc": "Prévenir les risques, protéger l’environnement et accompagner la transition énergétique.",
+   "noLevel": true,
+   "icon": "shield",
+   "ministry": true
+  },
+  {
+   "id": "min-management",
+   "name": "Management et leadership",
+   "desc": "Poste de cadre : diriger, décider, communiquer et piloter la performance.",
+   "noLevel": true,
+   "icon": "users",
+   "ministry": true
+  },
+  {
+   "id": "min-support",
+   "name": "Administration et fonctions support",
+   "desc": "Ressources humaines, courrier, archives, accueil, comptabilité publique et moyens généraux.",
+   "noLevel": true,
+   "icon": "briefcase",
+   "ministry": true
+  },
+  {
+   "id": "min-numerique",
+   "name": "Numérique et outils de travail",
+   "desc": "Bureautique, données, cybersécurité et intelligence artificielle au service de l’administration.",
+   "noLevel": true,
+   "icon": "bolt",
+   "ministry": true
+  }
+ ],
+ "groups": [
+  {
+   "id": "petrole-gaz",
+   "name": "Pétrole & gaz",
+   "icon": "rig",
+   "desc": "Amont (exploration-production) ou aval (raffinerie, stockage, terminaux).",
+   "shared": []
+  }
+ ]
 }
