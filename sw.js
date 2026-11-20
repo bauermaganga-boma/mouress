@@ -1,9 +1,9 @@
-// Service worker MOURESS Training.
-// - Shell (HTML, CSS, JS, logos, icônes) : mis en cache à l'installation, cache-first.
-// - JSON de contenu (data/*.json) et images (assets/img) : cache-first, remplis à la demande.
-// - Mise à jour propre : nouvelle version = nouveau nom de cache ; l'ancienne est supprimée à l'activation ;
-//   la nouvelle version attend (waiting) jusqu'à ce que l'utilisateur clique « Actualiser » (message SKIP_WAITING).
-const VERSION = 'mrs-v35';
+﻿// Service worker MOURESS Training.
+// - Shell (HTML, CSS, JS, logos, icÃ´nes) : mis en cache Ã  l'installation, cache-first.
+// - JSON de contenu (data/*.json) et images (assets/img) : cache-first, remplis Ã  la demande.
+// - Mise Ã  jour propre : nouvelle version = nouveau nom de cache ; l'ancienne est supprimÃ©e Ã  l'activation ;
+//   la nouvelle version attend (waiting) jusqu'Ã  ce que l'utilisateur clique Â« Actualiser Â» (message SKIP_WAITING).
+const VERSION = 'mrs-v38';
 const SHELL = `${VERSION}-shell`;
 const CONTENT = `${VERSION}-content`;
 
@@ -35,12 +35,12 @@ self.addEventListener('fetch', (e) => {
   const req = e.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  if (url.origin !== location.origin) return; // polices Google, etc. : réseau normal
+  if (url.origin !== location.origin) return; // polices Google, etc. : rÃ©seau normal
   const isContent = /\/(data|assets\/img)\//.test(url.pathname);
   e.respondWith((async () => {
     const cached = await caches.match(req, { ignoreSearch: true });
     if (cached) {
-      // Cache-first, avec rafraîchissement en arrière-plan (prochain chargement à jour ; contenus validés plus tard inclus).
+      // Cache-first, avec rafraÃ®chissement en arriÃ¨re-plan (prochain chargement Ã  jour ; contenus validÃ©s plus tard inclus).
       e.waitUntil(fetch(req).then((r) => { if (r.ok) return caches.open(isContent ? CONTENT : SHELL).then((c) => c.put(req, r)); }).catch(() => {}));
       return cached;
     }
