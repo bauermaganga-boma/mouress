@@ -5,6 +5,32 @@ import { esc, fmtDate, pct, isEmail } from '../util.js';
 import { icon, badge, bar } from '../ui.js';
 import { sampleCertificateHTML } from '../certificate.js';
 import { gaps, collabStats, recommend, dueState, assignmentTitle, assignmentHref } from '../skills.js';
+import { buildModel, reviewState, nextAction, actionHref } from '../parcours.js';
+import { KINDS, STATUS_P } from '../parcours-store.js';
+
+/** Lien personnel envoyé par l'entreprise : renseigne le profil de l'appareil puis ouvre « Mon espace ». */
+export async function lien(ctx, root) {
+  const id = await ctx.store.employeeIdByToken(ctx.params.token);
+  const emp = id ? await ctx.store.getEmployee(id) : null;
+  if (!emp) { (await import('./notfound.js')).default(ctx, root); return; }
+  local.setMe({ name: emp.name, email: emp.email });
+  ctx.toast(`Bonjour ${emp.name}, voici votre parcours.`);
+  ctx.go('/mon-espace');
+}
+
+/** Parcours de poste de l'utilisateur, d'après son e-mail, dans les entreprises qui en ont défini un. */
+async function myPostes(ctx, email, data, progress) {
+  if (!email) return [];
+  const out = [];
+  for (const cid of await ctx.store.parcoursCompanyIds()) {
+    const company = await ctx.store.getCompany(cid); if (!company) continue;
+    for (const emp of (await ctx.store.listEmployees(cid)).filter((e) => e.email === email.toLowerCase() && e.profileId)) {
+      const model = await buildModel(ctx, company, [emp]); const x = model.per.get(emp.id);
+      if (x.total) out.push({ company, emp, x, poste: data.profiles.find((p) => p.id === emp.profileId), practice: progress[emp.profileId]?.practice || {} });
+    }
+  }
+  return out;
+}
 
 export default async function render(ctx, root) {
   ctx.setTitle('Mon espace');
@@ -14,6 +40,7 @@ export default async function render(ctx, root) {
   const certs = await ctx.store.listCertificatesByDevice();
   const collabs = me.email ? await ctx.store.listCollabByEmail(me.email) : [];
   const progress = local.getProgress();
+  const postes = await myPostes(ctx, me.email, data, progress);
   if (!ctx.alive()) return;
   const pname = (id) => data.profiles.find((p) => p.id === id)?.name || id;
 
@@ -64,6 +91,12 @@ export default async function render(ctx, root) {
       <div class="field"><label for="me-name">Nom et prénom</label><input id="me-name" type="text" autocomplete="name" value="${esc(me.name)}"></div>
       <div class="field"><label for="me-email">E-mail <span class="hint">(relie votre compte à votre parcours d’entreprise)</span></label><input id="me-email" type="email" autocomplete="email" value="${esc(me.email)}"></div></div>
       <div class="field-error" id="me-err" role="alert"></div><button class="btn btn-outline btn-sm" type="submit">Enregistrer</button></form>
+
+    ${postes.length ? `<section class="block"><h2>Mon parcours de poste</h2>${postes.map(({ company, emp, x, poste, practice }) => { const na = nextAction(x.rows); const href = na ? actionHref(na, poste.id) : ''; const rs = reviewState(x.review);
+      return `<article class="card parcours"><div class="split" style="align-items:flex-start"><div><p class="eyebrow dark">${esc(company.name)}</p><h3>${esc(poste.name)}</h3><p class="muted small">${x.valide} / ${x.total} thématiques validées${emp.team ? ' · ' + esc(emp.team) : ''}</p></div><strong class="stat-n">${x.pct} %</strong></div>${bar(x.pct, x.pct >= 70 ? 'ok' : '')}
+        ${na ? `<p class="small" style="margin-top:var(--sp-3)">Prochaine étape : <strong>${esc(na.item.title)}</strong> ${href ? `<a class="btn btn-primary btn-sm" href="${esc(href)}" ${href.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}>Commencer</a>` : ''}</p>` : '<p class="small" style="margin-top:var(--sp-3)">Bravo, toutes vos thématiques sont validées.</p>'}
+        <ul class="due-list">${x.rows.map((r) => { const pr = r.item.source === 'theme' ? practice[r.item.theme] : null; return `<li>${badge(STATUS_P[r.status].label, STATUS_P[r.status].tone)}<span><strong>${esc(r.item.title)}</strong> ${badge(KINDS[r.item.kind].label, KINDS[r.item.kind].tone)}<br><span class="xs muted">${r.item.hours ? r.item.hours + ' h' : ''}${pr ? ` · entraînement : ${pct(pr.ok, pr.total)} %` : ''}${r.comment ? ` · ${esc(r.comment)}` : ''}</span></span>${r.item.source === 'theme' ? `<a class="btn btn-light btn-sm" href="#/entrainement/${esc(poste.id)}?theme=${encodeURIComponent(r.item.theme)}">S’entraîner</a>` : ''}</li>`; }).join('')}</ul>
+        <p class="xs muted" style="margin-top:var(--sp-3)">${badge(rs.label, rs.tone)} ${x.review?.next ? 'Prochaine revue avec votre responsable le ' + fmtDate(x.review.next) + '.' : ''}</p></article>`; }).join('')}</section>` : ''}
 
     <section class="block"><h2>Mon parcours</h2>
       ${parcours || `<div class="card"><p class="muted">${me.email ? 'Aucun parcours d’entreprise n’est associé à cet e-mail. Si votre employeur vous a envoyé un lien, ouvrez-le depuis cet appareil.' : 'Renseignez votre e-mail ci-dessus pour afficher le parcours proposé par votre entreprise.'}</p></div>`}

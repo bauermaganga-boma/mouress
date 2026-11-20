@@ -72,7 +72,8 @@ export function recruitView(env, helpers) {
       <div class="btn-row cand-actions">
         <button type="button" class="btn btn-sm ${inv.decision === 'hired' ? 'btn-navy' : 'btn-light'}" data-decide="hired" data-id="${esc(inv.id)}" aria-pressed="${inv.decision === 'hired'}">${icon('check', 14)} Retenir</button>
         <button type="button" class="btn btn-sm ${inv.decision === 'rejected' ? 'btn-danger' : 'btn-light'}" data-decide="rejected" data-id="${esc(inv.id)}" aria-pressed="${inv.decision === 'rejected'}">${icon('x', 14)} Refuser</button>
-        <details class="link-d"><summary class="btn btn-sm btn-ghost">Lien du Pass</summary>${helpers.shareButtons(inv, s, company.name)}</details></div>
+      </div>
+      <div class="cand-link"><span class="xs muted">Lien du Pass à envoyer au candidat</span>${helpers.shareButtons(inv, s, company.name)}</div>
     </article>`;
   };
 

@@ -1,0 +1,65 @@
+/* Espace entreprise : pilotage (indicateurs), parcours par poste, suivi de management */
+.seg.seg-4 { grid-template-columns: repeat(4, 1fr); }
+.seg-4 .seg-tab > span .xs { display: block; }
+@media (max-width: 899px) { .seg.seg-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 599px) { .seg-4 .seg-tab .ico { display: none; } .seg-4 .seg-tab > span .xs { display: none; } }
+
+.kpis-top { margin-bottom: var(--sp-4); }
+.kpi { border-left: 5px solid var(--c-line-strong); }
+.kpi-ok { border-left-color: var(--c-ok); } .kpi-warn { border-left-color: #D99A1E; } .kpi-ko { border-left-color: var(--c-ko); }
+.kpi-ko .stat-n { color: var(--c-ko); } .kpi-ok .stat-n { color: var(--c-ok); }
+
+.pil-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: var(--sp-4); margin-bottom: var(--sp-5); }
+.pil-card { display: grid; gap: var(--sp-3); align-content: start; }
+.pil-card h3 { margin: 0; font-size: var(--fs-md, 1.05rem); }
+
+.donut { display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; }
+.donut svg { width: 150px; height: 150px; flex: none; }
+.dn { transform-origin: 50% 50%; }
+.dn-ok { stroke: var(--c-ok); } .dn-mid { stroke: #E0A526; } .dn-todo { stroke: #B9B3A6; } .dn-ko { stroke: var(--c-ko); }
+.dn-t { font-size: 6.5px; font-weight: 800; fill: var(--c-navy); }
+.legend-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; font-size: var(--fs-sm); }
+.lg-dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: .5rem; }
+.dn-bg-ok { background: var(--c-ok); } .dn-bg-mid { background: #E0A526; } .dn-bg-todo { background: #B9B3A6; } .dn-bg-ko { background: var(--c-ko); }
+
+.hbars { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-3); }
+.hbars li { display: grid; gap: .2rem; }
+
+.cols { width: 100%; height: auto; max-height: 190px; }
+.col { fill: var(--c-navy); } .col-n { font-size: 11px; font-weight: 700; fill: var(--c-navy); } .col-l { font-size: 11px; fill: var(--c-muted); }
+
+.funnel-mini { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
+.funnel-mini li { display: grid; grid-template-columns: 9.5rem 1fr 2rem; gap: .6rem; align-items: center; }
+.fm-bar { height: 12px; border-radius: 6px; background: var(--c-surface-2); overflow: hidden; }
+.fm-bar span { display: block; height: 100%; background: var(--c-orange); border-radius: 6px; }
+@media (max-width: 480px) { .funnel-mini li { grid-template-columns: 7rem 1fr 1.6rem; } }
+
+.stack-bar { display: flex; height: 18px; border-radius: 9px; overflow: hidden; background: var(--c-surface-2); }
+.stack-bar span { display: block; height: 100%; }
+.sb-ok { background: var(--c-ok); } .sb-warn { background: #E0A526; } .sb-ko { background: var(--c-ko); } .sb-none { background: #B9B3A6; }
+
+/* Parcours d'un poste */
+.th-card { display: grid; grid-template-columns: auto 1fr auto; gap: var(--sp-3); align-items: start; padding: var(--sp-3) var(--sp-4); }
+.th-order { display: grid; justify-items: center; gap: 0; }
+.th-order .btn { min-height: 28px; padding: 0 .5rem; line-height: 1; }
+.th-n { font-weight: 800; color: var(--c-navy); }
+.th-main h3 { margin: .2rem 0; font-size: 1.02rem; }
+.th-act { display: flex; gap: .3rem; align-items: start; flex-wrap: wrap; justify-content: flex-end; }
+.th-edit { margin-top: var(--sp-2); min-width: min(100%, 380px); }
+.th-card details[open] { grid-column: 1 / -1; }
+@media (max-width: 599px) { .th-card { grid-template-columns: auto 1fr; } .th-act { grid-column: 1 / -1; justify-content: flex-start; } }
+.sugg-card { margin-top: var(--sp-4); background: var(--c-info-bg); border-color: transparent; }
+.sugg-card .chips { margin: var(--sp-3) 0 0; }
+
+/* Suivi */
+.sv-table td.sv { min-width: 140px; }
+.sv-sel { max-width: 100%; font-weight: 600; }
+.sv-valide .sv-sel { background: var(--c-ok-bg); border-color: var(--c-ok); color: var(--c-ok); }
+.sv-en_cours .sv-sel { background: var(--c-warn-bg); border-color: #D99A1E; color: var(--c-warn); }
+.sv-a_faire .sv-sel { background: #fff; }
+.sv span.xs { display: block; }
+.ep-com { width: 100%; min-width: 180px; }
+.link-row { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); flex-wrap: wrap; padding: var(--sp-3) var(--sp-4); }
+.link-row p { margin: 0; }
+.review-card { margin-top: var(--sp-4); display: grid; gap: var(--sp-2); }
+.cand-link { display: grid; gap: .3rem; border-top: 1px dashed var(--c-line-strong); padding-top: var(--sp-3); }

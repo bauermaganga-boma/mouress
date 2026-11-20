@@ -2,6 +2,8 @@
 import { esc, fmtDate, fmtDateInput, addMonths, pct } from '../util.js';
 import { icon, badge, bar, avatar, pageHead } from '../ui.js';
 import { CATEGORIES, MODES, REC_STATUS, SUGGESTIONS } from '../formations-store.js';
+import { getProfilesData } from '../data.js';
+import { buildModel } from '../parcours.js';
 
 const opts = (list, sel) => list.map((c) => `<option value="${esc(c)}" ${c === sel ? 'selected' : ''}>${esc(c)}</option>`).join('');
 const dayTs = (v) => (v ? new Date(v + 'T12:00:00').getTime() : null);
@@ -31,13 +33,27 @@ async function loadAll(ctx, company) {
 
 /** Onglet « Mes formations » du tableau de bord. */
 export async function renderFormationsTab(ctx, host, company, redraw) {
-  const { formations, records } = await loadAll(ctx, company);
+  const { formations, records, employees } = await loadAll(ctx, company);
+  const data = await getProfilesData();
+  const model = await buildModel(ctx, company, employees);
   if (!ctx.alive()) return;
+  const posteIds = [...new Set([...employees.map((e) => e.profileId).filter(Boolean), ...model.byProfile.keys()])];
+  const posteCards = posteIds.map((pid) => {
+    const p = data.profiles.find((x) => x.id === pid); if (!p) return '';
+    const its = model.byProfile.get(pid) || []; const xs = employees.filter((e) => e.profileId === pid).map((e) => model.per.get(e.id));
+    const avg = xs.length && its.length ? Math.round(xs.reduce((a, x) => a + x.pct, 0) / xs.length) : 0;
+    return `<a class="card card-link sess" href="#/rh/poste/${esc(pid)}"><div class="split" style="align-items:flex-start">${badge(its.length ? `${its.length} thématique${its.length > 1 ? 's' : ''}` : 'À définir', its.length ? 'info' : 'warn')}<span class="xs muted">${xs.length} collaborateur${xs.length > 1 ? 's' : ''}</span></div><h3>${esc(p.name)}</h3><p class="xs muted">${its.filter((i) => i.kind === 'obligatoire').length} obligatoire(s) · ${its.filter((i) => i.kind === 'interne').length} interne(s)</p><div class="split small"><span>Progression moyenne</span><strong>${avg} %</strong></div>${bar(avg, avg >= 70 ? 'ok' : '')}</a>`;
+  }).join('');
+  const levelOpts = (data.levels || []).map((lv) => { const ps = data.profiles.filter((p) => p.level === lv.id); return ps.length ? `<optgroup label="${esc(lv.name)}">${ps.map((p) => `<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('')}</optgroup>` : ''; }).join('');
   const doneAll = records.filter((r) => r.status === 'done').length;
   host.innerHTML = `<div class="grid grid-3 stats">
       <div class="card stat"><span class="stat-n">${formations.length}</span><span class="muted small">formation${formations.length > 1 ? 's' : ''} au catalogue</span></div>
       <div class="card stat"><span class="stat-n">${records.length}</span><span class="muted small">inscription${records.length > 1 ? 's' : ''} de collaborateurs</span></div>
       <div class="card stat"><span class="stat-n">${doneAll}</span><span class="muted small">terminée${doneAll > 1 ? 's' : ''}</span></div></div>
+    <section class="block"><div class="split"><h2>Parcours par poste</h2></div>
+      <p class="muted small">Chaque poste a sa série de thématiques : modules obligatoires et thématiques internes pour monter en compétences. Elle s’applique à tous les collaborateurs du poste et alimente leur profil.</p>
+      ${posteCards ? `<div class="grid grid-2">${posteCards}</div>` : ''}
+      <form class="due-pick" id="poste-go" novalidate><label for="poste-sel" class="label">Définir le parcours d’un poste</label><select id="poste-sel">${levelOpts}</select><button class="btn btn-primary btn-sm" type="submit">${icon('plus', 14)} Ouvrir</button></form></section>
     <section class="block"><div class="split"><h2>Catalogue de l’entreprise</h2></div>
       <details class="card add-box" id="new-formation" ${formations.length ? '' : 'open'}><summary class="btn btn-primary btn-sm">${icon('plus', 14)} Nouvelle formation</summary>
         <form id="f-new" novalidate style="margin-top:var(--sp-4)">
@@ -65,6 +81,7 @@ export async function renderFormationsTab(ctx, host, company, redraw) {
       await ctx.store.deleteFormation(f.id); ctx.toast('Formation retirée.'); await redraw();
     }
   });
+  host.querySelector('#poste-go').addEventListener('submit', (e) => { e.preventDefault(); ctx.go(`/rh/poste/${host.querySelector('#poste-sel').value}`); });
   host.querySelector('#f-new').addEventListener('submit', async (e) => {
     e.preventDefault();
     const v = readForm(host, 'n'); const err = host.querySelector('#n-err');

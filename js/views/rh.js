@@ -54,6 +54,7 @@ const sessionStats = (s) => {
 export { dashboard } from './rh-dash.js';
 export { employee } from './rh-teams.js';
 export { formation } from './rh-formations.js';
+export { poste } from './rh-poste.js';
 export const teamHome = (ctx) => ctx.go('/rh?vue=equipes');
 
 /* ------------------------------------------------------------------ Achat de Pass */

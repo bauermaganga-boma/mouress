@@ -6,6 +6,7 @@ import { icon, badge, bar, pageHead, crumbs, whatsappLink, avatar } from '../ui.
 import { COMPLIANCE, habilitations, compliance, passPrice, validity } from '../pass.js';
 import { band, BAND_LABEL, collabStats, matrixThemes, gaps, recommend } from '../skills.js';
 import { employeeFormations } from './rh-formations.js';
+import { employeeParcours, bindEmployeeParcours } from './rh-emp-parcours.js';
 
 const DAY = 86400000;
 const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -241,6 +242,8 @@ export async function employee(ctx, root) {
             <div class="field-error" id="pl-err" role="alert"></div><button class="btn btn-primary" type="submit">Ajouter au plan</button></form></details>
         <p class="xs muted" style="margin-top:var(--sp-3)">Une formation planifiée devient active quand vous achetez le Pass correspondant (prix selon le niveau du poste) : le collaborateur reçoit alors son lien.</p></section>
 
+      ${await employeeParcours(ctx, company, emp)}
+
       ${await employeeFormations(ctx, company, emp)}
 
       <section class="block"><h2>Historique des examens et compétences</h2>
@@ -264,6 +267,7 @@ export async function employee(ctx, root) {
   await draw();
   if (!ctx.alive()) return;
 
+  bindEmployeeParcours(ctx, root, company, () => root._ctxData.emp, draw);
   const setPhoto = async (photo) => { const { emp } = root._ctxData; await ctx.store.saveEmployee({ ...emp, photo }); ctx.toast(photo ? 'Photo enregistrée.' : 'Photo retirée.'); await draw(); };
   root.addEventListener('change', (ev) => {
     if (ev.target.id !== 'x-photo') return;

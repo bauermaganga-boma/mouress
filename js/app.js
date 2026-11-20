@@ -27,6 +27,8 @@ const ROUTES = [
   { p: 'rh/nouvelle-session', view: 'rh', fn: 'invite', auth: true },
   { p: 'rh/session/:id', view: 'rh', fn: 'session', auth: true },
   { p: 'rh/formation/:id', view: 'rh', fn: 'formation', auth: true },
+  { p: 'rh/poste/:id', view: 'rh', fn: 'poste', auth: true },
+  { p: 'p/:token', view: 'espace', fn: 'lien' },
   { p: 'rh/facturation', view: 'rh', fn: 'billing', auth: true },
   { p: 'rh/credits', view: 'rh', fn: 'billing', auth: true },
   { p: 'rh/recu/:id', view: 'rh', fn: 'receipt', auth: true },
@@ -175,6 +177,8 @@ async function render() {
 
 function setupGlobalHandlers() {
   document.addEventListener('click', async (e) => {
+    const sc = e.target.closest('[data-share-copy]');
+    if (sc) { const { copyText } = await import('./util.js'); toast((await copyText(sc.dataset.shareCopy)) ? 'Lien copié.' : 'Copie impossible : sélectionnez le lien manuellement.'); return; }
     const bk = e.target.closest('[data-back]');
     if (bk && state.hist && state.hist.length > 1) { e.preventDefault(); history.back(); return; }
     const lg = e.target.closest('[data-lang]');
