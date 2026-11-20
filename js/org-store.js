@@ -5,26 +5,17 @@ const empty = () => ({ sectors: {}, org: {}, demo: {} });
 const read = () => { try { const v = JSON.parse(localStorage.getItem(KEY) || 'null'); return v && v.org ? { ...empty(), ...v } : empty(); } catch { return empty(); } };
 const write = (d) => { try { localStorage.setItem(KEY, JSON.stringify(d)); } catch { /* stockage plein ou indisponible */ } };
 const clean = (s, n = 80) => String(s ?? '').trim().slice(0, n);
-const BLANK = { dept: '', managerId: '', base: '', regime: '', workPlace: '', siteName: '', cycleStart: null, absence: null };
 
 export const orgMethods = {
   async getCompanySector(companyId) { return read().sectors[companyId] || ''; },
   async setCompanySector(companyId, sectorId) { const d = read(); d.sectors[companyId] = clean(sectorId, 40); write(d); },
-  /** Organisation et présence d'un collaborateur : département, responsable, base de rattachement, régime de rotation,
-   *  lieu de travail en rotation, début de la période de présence en cours, absence en cours. */
-  async getOrg(employeeId) { return { ...BLANK, ...(read().org[employeeId] || {}) }; },
+  /** Département et responsable d'un collaborateur : { dept, managerId }. */
+  async getOrg(employeeId) { return read().org[employeeId] || { dept: '', managerId: '' }; },
   async listOrg() { return read().org; },
-  async setOrg(employeeId, patch) {
-    const d = read(); const cur = { ...BLANK, ...(d.org[employeeId] || {}) };
-    const n = { ...cur };
-    for (const k of ['dept', 'base', 'siteName']) if (patch[k] !== undefined) n[k] = clean(patch[k]);
-    if (patch.managerId !== undefined) n.managerId = clean(patch.managerId, 60);
-    if (patch.regime !== undefined) n.regime = ['sedentaire', '7/7', '14/14', '21/21', '28/28'].includes(patch.regime) ? patch.regime : '';
-    if (patch.workPlace !== undefined) n.workPlace = patch.workPlace === 'site' ? 'site' : patch.workPlace === 'offshore' ? 'offshore' : '';
-    if (patch.cycleStart !== undefined) n.cycleStart = Number(patch.cycleStart) > 0 ? Number(patch.cycleStart) : null;
-    if (patch.absence !== undefined) n.absence = patch.absence && patch.absence.type && patch.absence.from && patch.absence.to ? { type: clean(patch.absence.type, 20), from: Number(patch.absence.from), to: Number(patch.absence.to) } : null;
-    const empty = !n.dept && !n.managerId && !n.base && !n.siteName && !n.regime && !n.workPlace && !n.cycleStart && !n.absence;
-    if (empty) delete d.org[employeeId]; else d.org[employeeId] = n;
+  async setOrg(employeeId, { dept, managerId }) {
+    const d = read(); const cur = d.org[employeeId] || { dept: '', managerId: '' };
+    d.org[employeeId] = { dept: dept === undefined ? cur.dept : clean(dept), managerId: managerId === undefined ? cur.managerId : clean(managerId, 60) };
+    if (!d.org[employeeId].dept && !d.org[employeeId].managerId) delete d.org[employeeId];
     write(d);
   },
   async orgDemoDone(companyId) { return !!read().demo[companyId]; },

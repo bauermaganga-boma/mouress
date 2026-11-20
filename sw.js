@@ -3,7 +3,7 @@
 // - JSON de contenu (data/*.json) et images (assets/img) : cache-first, remplis à la demande.
 // - Mise à jour propre : nouvelle version = nouveau nom de cache ; l'ancienne est supprimée à l'activation ;
 //   la nouvelle version attend (waiting) jusqu'à ce que l'utilisateur clique « Actualiser » (message SKIP_WAITING).
-const VERSION = 'mrs-v37';
+const VERSION = 'mrs-v35';
 const SHELL = `${VERSION}-shell`;
 const CONTENT = `${VERSION}-content`;
 
@@ -12,7 +12,7 @@ const SHELL_FILES = [
   'css/tokens.css', 'css/base.css', 'css/layout.css', 'css/landing.css', 'css/formation.css', 'css/funnel.css', 'css/team.css', 'css/quiz.css', 'css/rh.css', 'css/certificate.css', 'css/mobile.css', 'css/corporate.css', 'css/nav.css', 'css/lang.css', 'css/compact.css', 'css/formations.css', 'css/pilotage.css',
   'js/app.js', 'js/util.js', 'js/i18n.js', 'js/i18n-dict.js', 'js/ui.js', 'js/data.js', 'js/store.js', 'js/seed.js', 'js/quiz.js', 'js/qview.js', 'js/examrunner.js', 'js/payments.js', 'js/certificate.js', 'js/skills.js', 'js/pass.js',
   'js/views/landing.js', 'js/views/training.js', 'js/views/formation.js', 'js/views/profil.js', 'js/views/cours.js', 'js/views/entrainement.js', 'js/views/examen.js', 'js/views/resultat.js',
-  'js/views/attestation.js', 'js/views/verifier.js', 'js/views/candidat.js', 'js/views/auth.js', 'js/views/rh.js', 'js/views/rh-invite.js', 'js/views/rh-recruit.js', 'js/views/rh-teams.js', 'js/views/rh-formations.js', 'js/views/rh-pilotage.js', 'js/views/rh-poste.js', 'js/views/rh-emp-parcours.js', 'js/formations-store.js', 'js/parcours-store.js', 'js/org-store.js', 'js/sector.js', 'js/presence.js', 'js/views/rh-presence.js', 'js/formation-suggest.js', 'js/parcours.js', 'js/share.js', 'js/views/rh-dash.js', 'js/views/espace.js', 'js/views/notfound.js',
+  'js/views/attestation.js', 'js/views/verifier.js', 'js/views/candidat.js', 'js/views/auth.js', 'js/views/rh.js', 'js/views/rh-invite.js', 'js/views/rh-recruit.js', 'js/views/rh-teams.js', 'js/views/rh-formations.js', 'js/views/rh-pilotage.js', 'js/views/rh-poste.js', 'js/views/rh-emp-parcours.js', 'js/formations-store.js', 'js/parcours-store.js', 'js/org-store.js', 'js/sector.js', 'js/formation-suggest.js', 'js/parcours.js', 'js/share.js', 'js/views/rh-dash.js', 'js/views/espace.js', 'js/views/notfound.js',
   'vendor/qrcode.mjs', 'data/profiles.json', 'content-index.json',
   'assets/logo/mouress-logo-horizontal-couleur-pour-fond-clair.svg', 'assets/logo/mouress-logo-horizontal-couleur-pour-fond-sombre.svg',
   'assets/logo/favicon-32.png', 'assets/logo/apple-touch-icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png',
